@@ -101,6 +101,7 @@ def load():
                         mins=_int(r.get("s_mins")), yellow=_int(r.get("s_yellow")), red=_int(r.get("s_red"))),
             career=dict(ap=_int(r.get("c_apps")), g=_int(r.get("c_goals")), a=_int(r.get("c_assists"))),
             injury=(r.get("injury") or "").strip() or None, transfers=[],
+            rating=(r.get("avg_rating") or "").strip(),
             photo=(r.get("photo") or "").strip(),
             photo_credit=(r.get("photo_credit") or "").strip(),
             fixtures=fixtures.get(slug, []), results=results.get(slug, [])))
@@ -113,9 +114,10 @@ def load():
         else: lv["results"].append((r["date"], r["opponent"], r["score"], r["competition"]))
     news = [(r["tag"], r["headline"], r["standfirst"], r["player_slug"]) for r in _rows("manual/news.csv")]
     matches = _merge_rows("matches.csv", ("kickoff","home","away"))
-    return players, ireland, news, matches
+    articles = sorted(_rows("manual/articles.csv"), key=lambda r: r.get("date",""), reverse=True)
+    return players, ireland, news, matches, articles
 
-PLAYERS, IRELAND, NEWS, MATCHES = load()
+PLAYERS, IRELAND, NEWS, MATCHES, ARTICLES = load()
 TIERS = {"abroad-top":"Abroad — top divisions",
          "abroad-lower":"Abroad — second tier & smaller leagues",
          "loi":"League of Ireland"}
@@ -126,7 +128,7 @@ OUT = "site"
 CSS = open(os.path.join(HERE, "style.css")).read()
 APPJS = open(os.path.join(HERE, "app.js")).read()
 
-NAV = [("Players","players.html"),("Abroad","abroad.html"),("League of Ireland","league-of-ireland.html"),
+NAV = [("News","news.html"),("Players","players.html"),("Abroad","abroad.html"),("League of Ireland","league-of-ireland.html"),
        ("Clubs","clubs.html"),("Ireland","ireland.html"),("Fixtures","fixtures.html"),("Alerts","alerts.html")]
 
 def shell(title, desc, root, active, body, extra_head="", canonical="", body_attr=""):
@@ -209,10 +211,19 @@ def player_row(p, root=""):
     return (f'<a class="plrow" href="{plink(p,root)}">{avatar(p, root, "sm")}'
             f'<div class="nm">{esc(p["n"])} '
             f'<span class="cl">{esc(p["club"])}</span></div><div class="ev">{ev}</div>'
-            f'<div class="mn">{mins}\'</div>{star(p)}</a>')
+            f'<div class="mn">{rating_chip(p, True)}</div>{star(p)}</a>')
 
 
 
+
+
+def rating_chip(p, small=False):
+    v = p.get("rating","")
+    if not v: return '<span class="rate none">—</span>'
+    try: f = float(v)
+    except: return '<span class="rate none">—</span>'
+    cls = "hi" if f >= 7.3 else ("md" if f >= 6.5 else "lo")
+    return f'<span class="rate {cls}{" sm" if small else ""}">{f:.2f}</span>'
 
 def star(p):
     return f'<button class="star" data-fav="{p["slug"]}" aria-pressed="false" aria-label="Follow {esc(p["n"])}">★</button>'
@@ -265,9 +276,10 @@ def signup(root="", compact=False):
 # ================= HOME =================
 def build_index():
     GOALS = [p for p in PLAYERS if p["results"] and (p["results"][0][5] or p["results"][0][6])]
-    HEAD = NEWS
+    HEAD = [(a.get("tag",""), a.get("headline",""), a.get("standfirst",""), a["slug"]) for a in ARTICLES[:5]] or NEWS
+    HEAD_IS_ARTICLE = bool(ARTICLES)
     slides = "".join(
-      f'<a class="slide {"on" if i==0 else ""}" data-i="{i}" href="player/{s[3]}.html">'
+      f'<a class="slide" data-i="{i}" href="{"news/" + s[3] + ".html" if HEAD_IS_ARTICLE else "player/" + s[3] + ".html"}">'
       f'<div class="tag">{esc(s[0])}</div><h3>{esc(s[1])}</h3><p>{esc(s[2])}</p></a>'
       for i,s in enumerate(HEAD))
     dots = "".join(f'<button aria-current="{"true" if i==0 else "false"}" data-i="{i}"></button>' for i in range(len(HEAD)))
@@ -319,8 +331,9 @@ def build_index():
         return (f'<div class="sec"><h2>{title}</h2><a class="more" href="{href}">All {len(group)} →</a></div>'
                 f'<div class="tiergroup">{rows}</div>') if group else ""
 
-    news_block = (f'<div class="sec" style="margin-top:26px"><h2>News</h2></div>'
-                  f'<div class="carousel">{slides}<div class="dots">{dots}</div></div>') if HEAD else ""
+    news_block = (f'<div class="sec" style="margin-top:26px"><h2>News</h2><a class="more" href="news.html">All news →</a></div>'
+                  f'<div class="carousel-wrap"><div class="carousel" id="carousel">{slides}</div>'
+                  f'<div class="dots">{dots}</div></div>') if HEAD else ""
 
     fbp = {p["slug"]: dict(n=esc(p["n"]), club=esc(p["club"]), ini=initials(p["n"]),
                            next=next_fixture(p)) for p in PLAYERS}
@@ -352,10 +365,134 @@ def build_index():
       window.FB_MATCHES={json.dumps(mc)};
       window.FB_SUBSCRIBE_URL={json.dumps(NEWSLETTER_ACTION)};
     </script>
+    <script>
+    (function(){{
+      var track=document.getElementById('carousel');
+      if(!track) return;
+      var slides=[].slice.call(track.querySelectorAll('.slide'));
+      var dots=[].slice.call(document.querySelectorAll('.dots button'));
+      var timer, paused=false, raf;
+
+      function current(){{ return Math.round(track.scrollLeft / track.clientWidth); }}
+      function paint(){{
+        var i=current();
+        dots.forEach(function(d,j){{ d.setAttribute('aria-current', j===i ? 'true':'false'); }});
+      }}
+      function go(i, smooth){{
+        track.scrollTo({{left: i*track.clientWidth, behavior: smooth===false ? 'auto':'smooth'}});
+      }}
+      function next(){{
+        if(paused) return;
+        var i=current()+1; if(i>=slides.length) i=0;
+        go(i);
+      }}
+      function restart(){{ clearInterval(timer); timer=setInterval(next, 5200); }}
+
+      dots.forEach(function(d,j){{
+        d.addEventListener('click', function(e){{ e.preventDefault(); go(j); restart(); }});
+      }});
+
+      track.addEventListener('scroll', function(){{
+        if(raf) cancelAnimationFrame(raf);
+        raf=requestAnimationFrame(paint);
+      }}, {{passive:true}});
+
+      ['touchstart','pointerdown','mouseenter'].forEach(function(ev){{
+        track.addEventListener(ev, function(){{ paused=true; }}, {{passive:true}});
+      }});
+      ['touchend','pointerup','mouseleave'].forEach(function(ev){{
+        track.addEventListener(ev, function(){{ paused=false; restart(); }}, {{passive:true}});
+      }});
+
+      // a drag shouldn't open the article
+      var sx=0, sy=0, moved=false;
+      track.addEventListener('touchstart', function(e){{
+        sx=e.touches[0].clientX; sy=e.touches[0].clientY; moved=false;
+      }}, {{passive:true}});
+      track.addEventListener('touchmove', function(e){{
+        if(Math.abs(e.touches[0].clientX-sx)>8) moved=true;
+      }}, {{passive:true}});
+      slides.forEach(function(s){{
+        s.addEventListener('click', function(e){{ if(moved) e.preventDefault(); }});
+      }});
+
+      window.addEventListener('resize', function(){{ go(current(), false); }});
+      paint(); restart();
+    }})();
+    </script>
 '''
     return shell("FOOTBALLERS — every Irish professional, tracked",
                  "News, goal involvements and the full weekend round-up for every Irish professional footballer.",
                  "", "index.html", body, canonical="")
+
+
+def art_link(a, root=""): return f'{root}news/{a["slug"]}.html'
+
+def art_img(a, root="", cls="artthumb"):
+    """No image? Render nothing at all — no placeholder block."""
+    if not (a.get("image") or "").strip():
+        return ""
+    u = a["image"] if a["image"].startswith("http") else f'{root}{a["image"]}'
+    return f'<div class="{cls}"><img src="{esc(u)}" alt="" loading="lazy"></div>'
+
+def pretty_date(d):
+    try:
+        y, m, dd = d.split("-")
+        months = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"]
+        return f"{int(dd)} {months[int(m)-1]} {y}"
+    except Exception:
+        return d
+
+def build_news():
+    if not ARTICLES:
+        cards = '<div class="emptybox">No articles yet.</div>'
+    else:
+        lead, rest = ARTICLES[0], ARTICLES[1:]
+        cards = (f'<a class="leadart" href="{art_link(lead)}">{art_img(lead,"","leadimg")}'
+                 f'<div class="leadbody"><div class="arttag">{esc(lead.get("tag",""))} · {esc(pretty_date(lead.get("date","")))}</div>'
+                 f'<h3>{esc(lead.get("headline",""))}</h3><p>{esc(lead.get("standfirst",""))}</p>'
+                 f'<div class="artby">{esc(lead.get("author",""))}</div></div></a>')
+        if rest:
+            cards += '<div class="artgrid">' + "".join(
+                f'<a class="artcard" href="{art_link(a)}">{art_img(a)}'
+                f'<div class="artbody"><div class="arttag">{esc(a.get("tag",""))} · {esc(pretty_date(a.get("date","")))}</div>'
+                f'<h4>{esc(a.get("headline",""))}</h4><p>{esc(a.get("standfirst",""))}</p>'
+                f'<div class="artby">{esc(a.get("author",""))}</div></div></a>' for a in rest) + '</div>'
+    body = f'''
+    <div class="pagehead"><h1>News</h1><p>Reporting on Irish players at home and abroad.</p></div>
+    {cards}
+    '''
+    return shell("News — FOOTBALLERS", "Latest news on Irish professional footballers.",
+                 "", "news.html", body, canonical="news.html")
+
+def build_article(a):
+    paras = "".join(f'<p>{esc(x.strip())}</p>' for x in (a.get("body") or "").split("\n") if x.strip())
+    p = next((x for x in PLAYERS if x["slug"] == a.get("player_slug")), None)
+    related = ""
+    if p:
+        related = (f'<div class="sec"><h2>Player</h2></div><div class="tiergroup">'
+                   f'<a class="plrow" href="../player/{p["slug"]}.html">{avatar(p,"../","sm")}'
+                   f'<div class="nm">{esc(p["n"])} <span class="cl">{esc(p["club"])}</span></div>'
+                   f'<div class="ev"></div><div class="mn">{rating_chip(p, True)}</div>{star(p)}</a></div>')
+    hero = ""
+    if a.get("image"):
+        u = a["image"] if a["image"].startswith("http") else f'../{a["image"]}'
+        hero = f'<div class="arthero"><img src="{esc(u)}" alt=""></div>'
+    body = f'''
+    <a class="crumb" data-back href="../news.html">← Back</a>
+    <article class="article">
+      <div class="arttag">{esc(a.get("tag",""))} · {esc(pretty_date(a.get("date","")))}</div>
+      <h1>{esc(a.get("headline",""))}</h1>
+      <p class="standfirst">{esc(a.get("standfirst",""))}</p>
+      <div class="artmeta">By {esc(a.get("author","") or "Footballers")}</div>
+      {hero}
+      <div class="artcontent">{paras}</div>
+    </article>
+    {related}
+    '''
+    return shell(f'{a.get("headline","")} — FOOTBALLERS',
+                 a.get("standfirst",""), "../", "news.html", body,
+                 canonical=f'news/{a["slug"]}.html')
 
 # ================= LIST PAGES =================
 def build_list(fname, title, sub, data):
@@ -363,10 +500,12 @@ def build_list(fname, title, sub, data):
     for p in data:
         ev, mins = ev_str(p)
         rows += (f'<a class="plrow pl-item" data-name="{esc(p["n"]).lower()} {esc(p["club"]).lower()}" '
-                 f'data-pos="{p["pos"]}" data-league="{esc(p["league"])}" href="{plink(p)}">'
+                 f'data-pos="{p["pos"]}" data-league="{esc(p["league"])}" '
+                 f'data-rating="{p.get("rating","") or 0}" data-goals="{p["season"]["g"]}" '
+                 f'href="{plink(p)}">'
                  f'{avatar(p)}'
                  f'<div class="nm">{esc(p["n"])} <span class="cl">{esc(p["club"])}</span></div>'
-                 f'<div class="ev">{ev}</div><div class="mn">{mins}\'</div>{star(p)}</a>')
+                 f'<div class="ev">{ev}</div><div class="mn">{rating_chip(p, True)}</div>{star(p)}</a>')
     leagues = sorted(set(p["league"] for p in data))
     lopts = "".join(f'<option>{esc(l)}</option>' for l in leagues)
     body = f'''
@@ -375,7 +514,14 @@ def build_list(fname, title, sub, data):
       <input type="search" id="q" placeholder="Search player or club">
       <select id="posf"><option value="">All positions</option><option>GK</option><option>DEF</option><option>MID</option><option>FWD</option></select>
       <select id="lgf"><option value="">All leagues</option>{lopts}</select>
+      <select id="sortf">
+        <option value="name">A–Z</option>
+        <option value="rating">Top rated</option>
+        <option value="goals">Most goals</option>
+      </select>
     </div>
+    <div class="sortnote" id="sortnote" style="display:none">Ratings aren't comparable across
+      different leagues — pick a league to rank like for like.</div>
     <div class="tiergroup"><h4><span id="count">{len(data)} players</span><span></span></h4>{rows}</div>
     <div class="emptystate" id="empty">No players match that. Clear the search or try another filter.</div>
     <script>
@@ -386,7 +532,19 @@ def build_list(fname, title, sub, data):
       items.forEach(function(el){{var ok=(!ps||el.dataset.pos===ps)&&(!lg||el.dataset.league===lg)&&(!t||el.dataset.name.indexOf(t)>-1);
         el.style.display=ok?'':'none';if(ok)s++;}});
       count.textContent=s+' player'+(s===1?'':'s');empty.style.display=s?'none':'block';}}
-    q.oninput=draw;posf.onchange=draw;lgf.onchange=draw;
+    var sortf=document.getElementById('sortf'), note=document.getElementById('sortnote');
+    function sortRows(){{
+      var mode=sortf.value, parent=items.length?items[0].parentNode:null;
+      if(!parent) return;
+      var arr=items.slice();
+      if(mode==='rating') arr.sort(function(a,b){{return (+b.dataset.rating)-(+a.dataset.rating);}});
+      else if(mode==='goals') arr.sort(function(a,b){{return (+b.dataset.goals)-(+a.dataset.goals);}});
+      else arr.sort(function(a,b){{return a.dataset.name.localeCompare(b.dataset.name);}});
+      arr.forEach(function(el){{parent.appendChild(el);}});
+      note.style.display = (mode==='rating' && !lgf.value) ? 'block' : 'none';
+    }}
+    sortf.onchange=function(){{sortRows();draw();}};
+    q.oninput=draw;posf.onchange=draw;lgf.onchange=function(){{sortRows();draw();}};
     </script>'''
     return shell(f"{title} — FOOTBALLERS", sub, "", fname, body, canonical=fname)
 
@@ -411,7 +569,7 @@ def build_club(cname, ps):
                   f'<span class="ha">{"H" if h=="H" else "A"}</span></div><div class="fxc">{esc(c)}</div></div>'
                   for d,o,h,c in fx)
     body = f'''
-    <a class="crumb" href="../clubs.html">← All clubs</a>
+    <a class="crumb" data-back href="../clubs.html">← Back</a>
     <div class="pagehead"><h1>{esc(cname)}</h1><p>{esc(ps[0]["league"]) + " · " if ps[0]["league"] not in ("","—") else ""}{len(ps)} Irish player{"s" if len(ps)!=1 else ""} tracked</p></div>
     <div class="sec"><h2>Irish players</h2></div>
     <div class="tiergroup">{rows}</div>
@@ -578,7 +736,7 @@ def build_match(m, involved):
         f'<div class="nm">{esc(p["n"])} <span class="cl">{esc(p["club"])}</span></div>'
         f'<div class="ev">{p["pos"]}</div><div class="mn"></div>{star(p)}</a>' for p in involved)
     body = f'''
-    <a class="crumb" href="../fixtures.html">← All fixtures</a>
+    <a class="crumb" data-back href="../fixtures.html">← Back</a>
     <div class="matchhead">
       <div class="mcrow"><span class="mccomp">{esc(m.get("competition",""))}</span>{chip}</div>
       <div class="mteams">
@@ -648,7 +806,7 @@ def build_player(p):
                     f'<div class="tfee">{esc(fee)}</div></div>' for y,f,t,fee in p["transfers"])
 
     body = f'''
-    <a class="crumb" href="../players.html">← All players</a>
+    <a class="crumb" data-back href="../players.html">← Back</a>
     <div class="pdhead">
       <div class="pdid">
         {avatar(p, "../")}
@@ -679,6 +837,7 @@ def build_player(p):
       <div class="pds"><div class="n">{s["a"]}</div><div class="l">Assists</div></div>
       <div class="pds"><div class="n">{s["mins"]}</div><div class="l">Minutes</div></div>
       <div class="pds"><div class="n">{s["yellow"]}/{s["red"]}</div><div class="l">Cards</div></div>
+      <div class="pds"><div class="n">{rating_chip(p)}</div><div class="l">Avg rating</div></div>
       <div class="pds"><div class="n">{c["ap"]}</div><div class="l">Career apps</div></div>
       <div class="pds"><div class="n">{c["g"]}</div><div class="l">Career goals</div></div>
     </div>
@@ -800,10 +959,11 @@ def build_404():
     return shell("Page not found — FOOTBALLERS", "That page doesn't exist on Footballers.", "/", "", body)
 
 def build_sitemap():
-    urls = ["", "players.html", "abroad.html", "league-of-ireland.html", "clubs.html",
+    urls = ["", "news.html", "players.html", "abroad.html", "league-of-ireland.html", "clubs.html",
             "ireland.html", "fixtures.html", "milestones.html", "compare.html", "newsletter.html", "alerts.html"]
     urls += [f"club/{club_slug(c)}.html" for c in sorted(set(p["club"] for p in PLAYERS))]
     urls += [f"player/{p['slug']}.html" for p in PLAYERS]
+    urls += [f"news/{a['slug']}.html" for a in ARTICLES]
     items = "".join(f"  <url><loc>{SITE_URL}/{u}</loc></url>\n" for u in urls)
     return f'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n{items}</urlset>\n'
 
@@ -825,6 +985,10 @@ open(f"{OUT}/players.html","w").write(build_list("players.html","All players","E
 open(f"{OUT}/abroad.html","w").write(build_list("abroad.html","Abroad","Irish players at clubs outside Ireland, top flight to smaller leagues.",[p for p in PLAYERS if p["tier"].startswith("abroad")]))
 open(f"{OUT}/league-of-ireland.html","w").write(build_list("league-of-ireland.html","League of Ireland","Every Irish pro playing their football at home.",[p for p in PLAYERS if p["tier"]=="loi"]))
 open(f"{OUT}/clubs.html","w").write(build_clubs_index())
+open(f"{OUT}/news.html","w").write(build_news())
+os.makedirs(f"{OUT}/news", exist_ok=True)
+for _a in ARTICLES:
+    open(f"{OUT}/news/{_a['slug']}.html","w").write(build_article(_a))
 open(f"{OUT}/ireland.html","w").write(build_ireland())
 open(f"{OUT}/fixtures.html","w").write(build_fixtures())
 open(f"{OUT}/milestones.html","w").write(build_milestones())

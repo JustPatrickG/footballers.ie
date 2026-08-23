@@ -136,6 +136,7 @@ def main():
         p = match["player"]
         stats = match.get("statistics", [{}])
         agg = dict(apps=0, starts=0, goals=0, assists=0, mins=0, yellow=0, red=0)
+        rating_sum, rating_apps = 0.0, 0
         club = league = ""
         for s in stats:
             g = s.get("games", {}) or {}
@@ -146,6 +147,15 @@ def main():
             agg["assists"]+= (s.get("goals", {}) or {}).get("assists") or 0
             agg["yellow"] += (s.get("cards", {}) or {}).get("yellow") or 0
             agg["red"]    += (s.get("cards", {}) or {}).get("red") or 0
+            # average rating, weighted by appearances in that competition
+            try:
+                r = float(g.get("rating") or 0)
+                a = g.get("appearences") or 0
+                if r > 0 and a > 0:
+                    rating_sum += r * a
+                    rating_apps += a
+            except (TypeError, ValueError):
+                pass
             if not club:
                 club   = (s.get("team", {}) or {}).get("name","")
                 league = (s.get("league", {}) or {}).get("name","")
@@ -160,8 +170,10 @@ def main():
             s_apps=agg["apps"], s_starts=agg["starts"], s_goals=agg["goals"],
             s_assists=agg["assists"], s_mins=agg["mins"],
             s_yellow=agg["yellow"], s_red=agg["red"],
+            avg_rating=(f"{rating_sum/rating_apps:.2f}" if rating_apps else ""),
             c_apps="", c_goals="", c_assists="", injury=""))
-        print(f"  ✓ {p.get('name',name)} — {club} ({agg['apps']} apps, {agg['goals']}g {agg['assists']}a)")
+        rt = f", {rating_sum/rating_apps:.2f} avg" if rating_apps else ""
+        print(f"  ✓ {p.get('name',name)} — {club} ({agg['apps']} apps, {agg['goals']}g {agg['assists']}a{rt})")
 
     if players:
         write("players.csv", list(players[0].keys()), players)

@@ -53,15 +53,30 @@ nav{display:flex;justify-content:space-between;align-items:center;padding:18px 0
 .pagehead p{color:var(--mute);margin-top:8px;font-size:14px;max-width:56ch}
 .crumb{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--mute);padding-top:22px;display:inline-block}
 .crumb:hover{color:var(--white)}
-.carousel{position:relative;border:1px solid var(--line);border-radius:8px;overflow:hidden;min-height:172px;background:var(--panel)}
-.slide{position:absolute;inset:0;padding:26px 28px;display:flex;flex-direction:column;justify-content:center;opacity:0;transition:opacity .4s;pointer-events:none}
-.slide.on{opacity:1;pointer-events:auto;position:relative}
+.carousel-wrap{position:relative}
+.carousel{
+  display:flex;overflow-x:auto;scroll-snap-type:x mandatory;
+  -webkit-overflow-scrolling:touch;scrollbar-width:none;
+  border:1px solid var(--line);border-radius:8px;background:var(--panel);
+}
+.carousel::-webkit-scrollbar{display:none}
+.slide{
+  flex:0 0 100%;scroll-snap-align:start;scroll-snap-stop:always;
+  padding:26px 28px 44px;display:flex;flex-direction:column;justify-content:center;
+  min-height:172px;
+}
 .slide .tag{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--teal);margin-bottom:10px}
 .slide h3{font-size:clamp(20px,3vw,28px);font-weight:700;letter-spacing:-.01em;max-width:34ch;line-height:1.15}
 .slide p{color:var(--mute);margin-top:8px;font-size:14px;max-width:50ch}
-.dots{position:absolute;bottom:16px;right:20px;display:flex;gap:6px;z-index:2}
-.dots button{width:20px;height:3px;border-radius:2px;background:var(--line);padding:0}
-.dots button[aria-current="true"]{background:var(--yellow)}
+.dots{position:absolute;bottom:14px;right:18px;display:flex;gap:6px;z-index:2}
+.dots button{width:20px;height:3px;border-radius:2px;background:var(--line);padding:0;transition:background .2s,width .2s}
+.dots button[aria-current="true"]{background:var(--yellow);width:26px}
+@media(max-width:700px){
+  .slide{padding:20px 18px 42px;min-height:0}
+  .slide h3{font-size:20px;line-height:1.2}
+  .slide p{font-size:13px}
+  .dots{bottom:12px;right:14px}
+}
 .giband{display:flex;gap:1px;overflow-x:auto;background:var(--line);border:1px solid var(--line);border-radius:6px;scrollbar-width:thin;scrollbar-color:var(--line) transparent}
 .giband::-webkit-scrollbar{height:6px}
 .giband::-webkit-scrollbar-track{background:transparent}
@@ -497,6 +512,50 @@ img,svg,iframe{max-width:100%}
   .fbgate,.fbg-card{transition:opacity .2s}
   .fbg-star{animation:none}
 }
+
+/* ============ RATINGS ============ */
+.rate{font-family:'IBM Plex Mono',monospace;font-weight:600;font-size:15px;padding:3px 8px;border-radius:5px;display:inline-block}
+.rate.sm{font-size:12px;padding:2px 6px;min-width:44px;text-align:center}
+.rate.hi{background:rgba(53,212,191,.15);color:var(--teal)}
+.rate.md{background:rgba(119,131,127,.16);color:var(--white)}
+.rate.lo{background:rgba(255,90,72,.14);color:var(--red)}
+.rate.none{background:transparent;color:#39423F}
+.sortnote{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--yellow);
+  background:rgba(245,197,24,.08);border:1px solid rgba(245,197,24,.2);
+  border-radius:6px;padding:9px 12px;margin:-10px 0 18px;line-height:1.5}
+
+/* ============ NEWS ============ */
+.arttag{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--teal)}
+.artby{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.08em;color:var(--mute);margin-top:10px}
+.leadart{display:block;border:1px solid var(--line);border-radius:10px;overflow:hidden;background:var(--panel);margin-bottom:14px;transition:border-color .12s}
+.leadart:hover{border-color:var(--mute)}
+.leadimg{aspect-ratio:16/7;background:var(--panel2);overflow:hidden}
+.leadimg img{width:100%;height:100%;object-fit:cover;display:block}
+.leadbody{padding:18px 20px 20px}
+.leadbody h3{font-size:clamp(21px,3.4vw,29px);font-weight:700;letter-spacing:-.01em;line-height:1.15;margin-top:9px}
+.leadbody p{color:var(--mute);font-size:14.5px;margin-top:9px;max-width:58ch;line-height:1.5}
+.artgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px}
+.artcard{display:block;border:1px solid var(--line);border-radius:10px;overflow:hidden;background:var(--panel);transition:border-color .12s}
+.artcard:hover{border-color:var(--mute)}
+.artthumb{aspect-ratio:16/9;background:var(--panel2);overflow:hidden}
+.artthumb img{width:100%;height:100%;object-fit:cover;display:block}
+.artbody{padding:14px 15px 16px}
+.artbody h4{font-size:17px;font-weight:700;line-height:1.25;margin-top:8px}
+.artbody p{color:var(--mute);font-size:13.5px;margin-top:7px;line-height:1.5}
+.article{max-width:66ch;margin:0 auto}
+.article h1{font-size:clamp(26px,5vw,40px);font-weight:700;letter-spacing:-.02em;line-height:1.1;margin-top:10px}
+.article .standfirst{font-size:clamp(16px,2.4vw,19px);color:var(--mute);line-height:1.5;margin-top:14px}
+.artmeta{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--mute);margin-top:16px;padding-top:14px;border-top:1px solid var(--line)}
+.arthero{margin:20px 0;border-radius:10px;overflow:hidden;border:1px solid var(--line)}
+.arthero img{width:100%;display:block}
+.artcontent{margin-top:20px}
+.artcontent p{font-size:17px;line-height:1.68;margin-bottom:19px;color:#DCE3E0}
+@media(max-width:700px){
+  .leadbody{padding:15px 16px 17px}
+  .artgrid{grid-template-columns:1fr}
+  .artcontent p{font-size:16px;line-height:1.62}
+}
 </style>
 </head>
 <body data-player="liam-scales">
@@ -506,7 +565,7 @@ img,svg,iframe{max-width:100%}
   <button class="burger" id="burger" aria-label="Menu" aria-expanded="false" aria-controls="navlinks">
     <span></span><span></span><span></span>
   </button>
-  <div class="navlinks" id="navlinks"><a class="" href="../players.html">Players</a><a class="" href="../abroad.html">Abroad</a><a class="" href="../league-of-ireland.html">League of Ireland</a><a class="" href="../clubs.html">Clubs</a><a class="" href="../ireland.html">Ireland</a><a class="" href="../fixtures.html">Fixtures</a><a class="" href="../alerts.html">Alerts</a></div>
+  <div class="navlinks" id="navlinks"><a class="" href="../news.html">News</a><a class="" href="../players.html">Players</a><a class="" href="../abroad.html">Abroad</a><a class="" href="../league-of-ireland.html">League of Ireland</a><a class="" href="../clubs.html">Clubs</a><a class="" href="../ireland.html">Ireland</a><a class="" href="../fixtures.html">Fixtures</a><a class="" href="../alerts.html">Alerts</a></div>
   <div class="navmeta">MW04 · 22-23 AUG · <b>123</b> TRACKED</div>
 </nav>
 <script>
@@ -520,7 +579,7 @@ img,svg,iframe{max-width:100%}
 })();
 </script>
 
-    <a class="crumb" href="../players.html">← All players</a>
+    <a class="crumb" data-back href="../players.html">← Back</a>
     <div class="pdhead">
       <div class="pdid">
         <div class="pavatar"><span>LS</span></div>
@@ -545,6 +604,7 @@ img,svg,iframe{max-width:100%}
       <div class="pds"><div class="n">0</div><div class="l">Assists</div></div>
       <div class="pds"><div class="n">0</div><div class="l">Minutes</div></div>
       <div class="pds"><div class="n">0/0</div><div class="l">Cards</div></div>
+      <div class="pds"><div class="n"><span class="rate none">—</span></div><div class="l">Avg rating</div></div>
       <div class="pds"><div class="n">0</div><div class="l">Career apps</div></div>
       <div class="pds"><div class="n">0</div><div class="l">Career goals</div></div>
     </div>
@@ -905,6 +965,31 @@ img,svg,iframe{max-width:100%}
       proceed();
     });
   };
+})();
+
+/* ---------- BACK LINK ----------
+   "← Back" returns to wherever you actually came from. We mark the session on
+   each page view, so if this isn't the first page in the tab we can safely use
+   history. A direct landing (shared link, search result) uses the href fallback. */
+(function () {
+  var NAV = 'fb_nav_v1';
+  var visitedBefore = false;
+  try {
+    visitedBefore = sessionStorage.getItem(NAV) === '1';
+    sessionStorage.setItem(NAV, '1');
+  } catch (e) {}
+
+  var links = document.querySelectorAll('.crumb[data-back]');
+  if (!links.length) return;
+
+  for (var i = 0; i < links.length; i++) {
+    links[i].addEventListener('click', function (e) {
+      if (visitedBefore && history.length > 1) {
+        e.preventDefault();
+        history.back();
+      }
+    });
+  }
 })();
 </script>
 </body>

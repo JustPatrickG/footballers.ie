@@ -335,3 +335,28 @@
     });
   };
 })();
+
+/* ---------- BACK LINK ----------
+   "← Back" returns to wherever you actually came from. We mark the session on
+   each page view, so if this isn't the first page in the tab we can safely use
+   history. A direct landing (shared link, search result) uses the href fallback. */
+(function () {
+  var NAV = 'fb_nav_v1';
+  var visitedBefore = false;
+  try {
+    visitedBefore = sessionStorage.getItem(NAV) === '1';
+    sessionStorage.setItem(NAV, '1');
+  } catch (e) {}
+
+  var links = document.querySelectorAll('.crumb[data-back]');
+  if (!links.length) return;
+
+  for (var i = 0; i < links.length; i++) {
+    links[i].addEventListener('click', function (e) {
+      if (visitedBefore && history.length > 1) {
+        e.preventDefault();
+        history.back();
+      }
+    });
+  }
+})();

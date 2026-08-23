@@ -53,15 +53,30 @@ nav{display:flex;justify-content:space-between;align-items:center;padding:18px 0
 .pagehead p{color:var(--mute);margin-top:8px;font-size:14px;max-width:56ch}
 .crumb{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--mute);padding-top:22px;display:inline-block}
 .crumb:hover{color:var(--white)}
-.carousel{position:relative;border:1px solid var(--line);border-radius:8px;overflow:hidden;min-height:172px;background:var(--panel)}
-.slide{position:absolute;inset:0;padding:26px 28px;display:flex;flex-direction:column;justify-content:center;opacity:0;transition:opacity .4s;pointer-events:none}
-.slide.on{opacity:1;pointer-events:auto;position:relative}
+.carousel-wrap{position:relative}
+.carousel{
+  display:flex;overflow-x:auto;scroll-snap-type:x mandatory;
+  -webkit-overflow-scrolling:touch;scrollbar-width:none;
+  border:1px solid var(--line);border-radius:8px;background:var(--panel);
+}
+.carousel::-webkit-scrollbar{display:none}
+.slide{
+  flex:0 0 100%;scroll-snap-align:start;scroll-snap-stop:always;
+  padding:26px 28px 44px;display:flex;flex-direction:column;justify-content:center;
+  min-height:172px;
+}
 .slide .tag{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--teal);margin-bottom:10px}
 .slide h3{font-size:clamp(20px,3vw,28px);font-weight:700;letter-spacing:-.01em;max-width:34ch;line-height:1.15}
 .slide p{color:var(--mute);margin-top:8px;font-size:14px;max-width:50ch}
-.dots{position:absolute;bottom:16px;right:20px;display:flex;gap:6px;z-index:2}
-.dots button{width:20px;height:3px;border-radius:2px;background:var(--line);padding:0}
-.dots button[aria-current="true"]{background:var(--yellow)}
+.dots{position:absolute;bottom:14px;right:18px;display:flex;gap:6px;z-index:2}
+.dots button{width:20px;height:3px;border-radius:2px;background:var(--line);padding:0;transition:background .2s,width .2s}
+.dots button[aria-current="true"]{background:var(--yellow);width:26px}
+@media(max-width:700px){
+  .slide{padding:20px 18px 42px;min-height:0}
+  .slide h3{font-size:20px;line-height:1.2}
+  .slide p{font-size:13px}
+  .dots{bottom:12px;right:14px}
+}
 .giband{display:flex;gap:1px;overflow-x:auto;background:var(--line);border:1px solid var(--line);border-radius:6px;scrollbar-width:thin;scrollbar-color:var(--line) transparent}
 .giband::-webkit-scrollbar{height:6px}
 .giband::-webkit-scrollbar-track{background:transparent}
@@ -497,6 +512,50 @@ img,svg,iframe{max-width:100%}
   .fbgate,.fbg-card{transition:opacity .2s}
   .fbg-star{animation:none}
 }
+
+/* ============ RATINGS ============ */
+.rate{font-family:'IBM Plex Mono',monospace;font-weight:600;font-size:15px;padding:3px 8px;border-radius:5px;display:inline-block}
+.rate.sm{font-size:12px;padding:2px 6px;min-width:44px;text-align:center}
+.rate.hi{background:rgba(53,212,191,.15);color:var(--teal)}
+.rate.md{background:rgba(119,131,127,.16);color:var(--white)}
+.rate.lo{background:rgba(255,90,72,.14);color:var(--red)}
+.rate.none{background:transparent;color:#39423F}
+.sortnote{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--yellow);
+  background:rgba(245,197,24,.08);border:1px solid rgba(245,197,24,.2);
+  border-radius:6px;padding:9px 12px;margin:-10px 0 18px;line-height:1.5}
+
+/* ============ NEWS ============ */
+.arttag{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--teal)}
+.artby{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.08em;color:var(--mute);margin-top:10px}
+.leadart{display:block;border:1px solid var(--line);border-radius:10px;overflow:hidden;background:var(--panel);margin-bottom:14px;transition:border-color .12s}
+.leadart:hover{border-color:var(--mute)}
+.leadimg{aspect-ratio:16/7;background:var(--panel2);overflow:hidden}
+.leadimg img{width:100%;height:100%;object-fit:cover;display:block}
+.leadbody{padding:18px 20px 20px}
+.leadbody h3{font-size:clamp(21px,3.4vw,29px);font-weight:700;letter-spacing:-.01em;line-height:1.15;margin-top:9px}
+.leadbody p{color:var(--mute);font-size:14.5px;margin-top:9px;max-width:58ch;line-height:1.5}
+.artgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px}
+.artcard{display:block;border:1px solid var(--line);border-radius:10px;overflow:hidden;background:var(--panel);transition:border-color .12s}
+.artcard:hover{border-color:var(--mute)}
+.artthumb{aspect-ratio:16/9;background:var(--panel2);overflow:hidden}
+.artthumb img{width:100%;height:100%;object-fit:cover;display:block}
+.artbody{padding:14px 15px 16px}
+.artbody h4{font-size:17px;font-weight:700;line-height:1.25;margin-top:8px}
+.artbody p{color:var(--mute);font-size:13.5px;margin-top:7px;line-height:1.5}
+.article{max-width:66ch;margin:0 auto}
+.article h1{font-size:clamp(26px,5vw,40px);font-weight:700;letter-spacing:-.02em;line-height:1.1;margin-top:10px}
+.article .standfirst{font-size:clamp(16px,2.4vw,19px);color:var(--mute);line-height:1.5;margin-top:14px}
+.artmeta{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--mute);margin-top:16px;padding-top:14px;border-top:1px solid var(--line)}
+.arthero{margin:20px 0;border-radius:10px;overflow:hidden;border:1px solid var(--line)}
+.arthero img{width:100%;display:block}
+.artcontent{margin-top:20px}
+.artcontent p{font-size:17px;line-height:1.68;margin-bottom:19px;color:#DCE3E0}
+@media(max-width:700px){
+  .leadbody{padding:15px 16px 17px}
+  .artgrid{grid-template-columns:1fr}
+  .artcontent p{font-size:16px;line-height:1.62}
+}
 </style>
 </head>
 <body>
@@ -506,7 +565,7 @@ img,svg,iframe{max-width:100%}
   <button class="burger" id="burger" aria-label="Menu" aria-expanded="false" aria-controls="navlinks">
     <span></span><span></span><span></span>
   </button>
-  <div class="navlinks" id="navlinks"><a class="" href="players.html">Players</a><a class="" href="abroad.html">Abroad</a><a class="" href="league-of-ireland.html">League of Ireland</a><a class="" href="clubs.html">Clubs</a><a class="" href="ireland.html">Ireland</a><a class="" href="fixtures.html">Fixtures</a><a class="" href="alerts.html">Alerts</a></div>
+  <div class="navlinks" id="navlinks"><a class="" href="news.html">News</a><a class="" href="players.html">Players</a><a class="" href="abroad.html">Abroad</a><a class="" href="league-of-ireland.html">League of Ireland</a><a class="" href="clubs.html">Clubs</a><a class="" href="ireland.html">Ireland</a><a class="" href="fixtures.html">Fixtures</a><a class="" href="alerts.html">Alerts</a></div>
   <div class="navmeta">MW04 · 22-23 AUG · <b>123</b> TRACKED</div>
 </nav>
 <script>
@@ -520,7 +579,7 @@ img,svg,iframe{max-width:100%}
 })();
 </script>
 
-    <div class="sec" style="margin-top:26px"><h2>News</h2></div><div class="carousel"><a class="slide on" data-i="0" href="player/evan-ferguson.html"><div class="tag">Serie A · Roma</div><h3>Ferguson's double sends Roma top</h3><p>Two headers in twenty minutes — the third different Irish name on the scoresheet in Italy this month.</p></a><a class="slide " data-i="1" href="player/dara-fitzgerald.html"><div class="tag">League of Ireland · Cork City</div><h3>Dara Fitzgerald's senior debut, straight off the bench</h3><p>The 18-year-old came on at Turner's Cross to a standing ovation in his first pro appearance.</p></a><a class="slide " data-i="2" href="player/josh-cullen.html"><div class="tag">Milestone</div><h3>Josh Cullen reaches 250 club appearances</h3><p>Marked with a clean sheet and the armband at Turf Moor.</p></a><div class="dots"><button aria-current="true" data-i="0"></button><button aria-current="false" data-i="1"></button><button aria-current="false" data-i="2"></button></div></div>
+    <div class="sec" style="margin-top:26px"><h2>News</h2><a class="more" href="news.html">All news →</a></div><div class="carousel-wrap"><div class="carousel" id="carousel"><a class="slide" data-i="0" href="news/ferguson-double-roma-top.html"><div class="tag">Serie A</div><h3>Ferguson's double sends Roma top</h3><p>Two headers in twenty minutes — the third different Irish name on the scoresheet in Italy this month.</p></a><a class="slide" data-i="1" href="news/fitzgerald-cork-debut.html"><div class="tag">League of Ireland</div><h3>Dara Fitzgerald's senior debut, straight off the bench</h3><p>The 18-year-old came on at Turner's Cross to a standing ovation in his first pro appearance.</p></a><a class="slide" data-i="2" href="news/cullen-250-appearances.html"><div class="tag">Milestone</div><h3>Josh Cullen reaches 250 club appearances</h3><p>Marked with a clean sheet and the armband at Turf Moor.</p></a></div><div class="dots"><button aria-current="true" data-i="0"></button><button aria-current="false" data-i="1"></button><button aria-current="false" data-i="2"></button></div></div>
 
     <div id="mc-sec" style="display:none">
       <div class="sec"><h2>Match centre</h2><a class="more" id="mc-more" href="fixtures.html" style="display:none">See all →</a></div>
@@ -537,8 +596,8 @@ img,svg,iframe{max-width:100%}
       <a href="alerts.html">Get an email when they play →</a>
     </div>
 
-    <div class="sec"><h2>Abroad</h2><a class="more" href="abroad.html">All 80 →</a></div><div class="tiergroup"><a class="plrow" href="player/aaron-maguire.html"><div class="pavatar sm"><span>AM</span></div><div class="nm">Aaron Maguire <span class="cl">Tottenham Hotspur</span></div><div class="ev">—</div><div class="mn">0'</div><button class="star" data-fav="aaron-maguire" aria-pressed="false" aria-label="Follow Aaron Maguire">★</button></a><a class="plrow" href="player/adam-idah.html"><div class="pavatar sm"><span>AI</span></div><div class="nm">Adam Idah <span class="cl">Celtic</span></div><div class="ev">—</div><div class="mn">0'</div><button class="star" data-fav="adam-idah" aria-pressed="false" aria-label="Follow Adam Idah">★</button></a><a class="plrow" href="player/ade-solanke.html"><div class="pavatar sm"><span>AS</span></div><div class="nm">Ade Solanke <span class="cl">Bournemouth</span></div><div class="ev">—</div><div class="mn">0'</div><button class="star" data-fav="ade-solanke" aria-pressed="false" aria-label="Follow Ade Solanke">★</button></a><a class="plrow" href="player/aidomo-emakhu.html"><div class="pavatar sm"><span>AE</span></div><div class="nm">Aidomo Emakhu <span class="cl">Millwall</span></div><div class="ev">—</div><div class="mn">0'</div><button class="star" data-fav="aidomo-emakhu" aria-pressed="false" aria-label="Follow Aidomo Emakhu">★</button></a><a class="plrow" href="player/alan-browne.html"><div class="pavatar sm"><span>AB</span></div><div class="nm">Alan Browne <span class="cl">Sunderland</span></div><div class="ev">—</div><div class="mn">0'</div><button class="star" data-fav="alan-browne" aria-pressed="false" aria-label="Follow Alan Browne">★</button></a><a class="plrow" href="player/andrew-moran.html"><div class="pavatar sm"><span>AM</span></div><div class="nm">Andrew Moran <span class="cl">Preston North End</span></div><div class="ev">—</div><div class="mn">0'</div><button class="star" data-fav="andrew-moran" aria-pressed="false" aria-label="Follow Andrew Moran">★</button></a><a class="plrow" href="player/andrew-omobamidele.html"><div class="pavatar sm"><span>AO</span></div><div class="nm">Andrew Omobamidele <span class="cl">Nottingham Forest</span></div><div class="ev">—</div><div class="mn">0'</div><button class="star" data-fav="andrew-omobamidele" aria-pressed="false" aria-label="Follow Andrew Omobamidele">★</button></a><a class="plrow" href="player/ben-quinn.html"><div class="pavatar sm"><span>BQ</span></div><div class="nm">Ben Quinn <span class="cl">Portadown</span></div><div class="ev">—</div><div class="mn">0'</div><button class="star" data-fav="ben-quinn" aria-pressed="false" aria-label="Follow Ben Quinn">★</button></a></div>
-    <div class="sec"><h2>League of Ireland</h2><a class="more" href="league-of-ireland.html">All 43 →</a></div><div class="tiergroup"><a class="plrow" href="player/adam-brennan.html"><div class="pavatar sm"><span>AB</span></div><div class="nm">Adam Brennan <span class="cl">Shamrock Rovers</span></div><div class="ev">—</div><div class="mn">0'</div><button class="star" data-fav="adam-brennan" aria-pressed="false" aria-label="Follow Adam Brennan">★</button></a><a class="plrow" href="player/ben-mccormack.html"><div class="pavatar sm"><span>BM</span></div><div class="nm">Ben McCormack <span class="cl">Bray Wanderers</span></div><div class="ev">—</div><div class="mn">0'</div><button class="star" data-fav="ben-mccormack" aria-pressed="false" aria-label="Follow Ben McCormack">★</button></a><a class="plrow" href="player/billy-oneill.html"><div class="pavatar sm"><span>BO</span></div><div class="nm">Billy O'Neill <span class="cl">Bray Wanderers</span></div><div class="ev">—</div><div class="mn">0'</div><button class="star" data-fav="billy-oneill" aria-pressed="false" aria-label="Follow Billy O'Neill">★</button></a><a class="plrow" href="player/brody-lee.html"><div class="pavatar sm"><span>BL</span></div><div class="nm">Brody Lee <span class="cl">Cork City</span></div><div class="ev">—</div><div class="mn">0'</div><button class="star" data-fav="brody-lee" aria-pressed="false" aria-label="Follow Brody Lee">★</button></a><a class="plrow" href="player/charles-akinrintoyo.html"><div class="pavatar sm"><span>CA</span></div><div class="nm">Charles Akinrintoyo <span class="cl">UCD</span></div><div class="ev">—</div><div class="mn">0'</div><button class="star" data-fav="charles-akinrintoyo" aria-pressed="false" aria-label="Follow Charles Akinrintoyo">★</button></a><a class="plrow" href="player/cillian-murphy.html"><div class="pavatar sm"><span>CM</span></div><div class="nm">Cillian Murphy <span class="cl">Cork City</span></div><div class="ev">—</div><div class="mn">0'</div><button class="star" data-fav="cillian-murphy" aria-pressed="false" aria-label="Follow Cillian Murphy">★</button></a><a class="plrow" href="player/cillian-tollett.html"><div class="pavatar sm"><span>CT</span></div><div class="nm">Cillian Tollett <span class="cl">Galway United</span></div><div class="ev">—</div><div class="mn">0'</div><button class="star" data-fav="cillian-tollett" aria-pressed="false" aria-label="Follow Cillian Tollett">★</button></a><a class="plrow" href="player/conor-walsh.html"><div class="pavatar sm"><span>CW</span></div><div class="nm">Conor Walsh <span class="cl">Shelbourne</span></div><div class="ev">—</div><div class="mn">0'</div><button class="star" data-fav="conor-walsh" aria-pressed="false" aria-label="Follow Conor Walsh">★</button></a></div>
+    <div class="sec"><h2>Abroad</h2><a class="more" href="abroad.html">All 80 →</a></div><div class="tiergroup"><a class="plrow" href="player/aaron-maguire.html"><div class="pavatar sm"><span>AM</span></div><div class="nm">Aaron Maguire <span class="cl">Tottenham Hotspur</span></div><div class="ev">—</div><div class="mn"><span class="rate none">—</span></div><button class="star" data-fav="aaron-maguire" aria-pressed="false" aria-label="Follow Aaron Maguire">★</button></a><a class="plrow" href="player/adam-idah.html"><div class="pavatar sm"><span>AI</span></div><div class="nm">Adam Idah <span class="cl">Celtic</span></div><div class="ev">—</div><div class="mn"><span class="rate lo sm">6.42</span></div><button class="star" data-fav="adam-idah" aria-pressed="false" aria-label="Follow Adam Idah">★</button></a><a class="plrow" href="player/ade-solanke.html"><div class="pavatar sm"><span>AS</span></div><div class="nm">Ade Solanke <span class="cl">Bournemouth</span></div><div class="ev">—</div><div class="mn"><span class="rate none">—</span></div><button class="star" data-fav="ade-solanke" aria-pressed="false" aria-label="Follow Ade Solanke">★</button></a><a class="plrow" href="player/aidomo-emakhu.html"><div class="pavatar sm"><span>AE</span></div><div class="nm">Aidomo Emakhu <span class="cl">Millwall</span></div><div class="ev">—</div><div class="mn"><span class="rate none">—</span></div><button class="star" data-fav="aidomo-emakhu" aria-pressed="false" aria-label="Follow Aidomo Emakhu">★</button></a><a class="plrow" href="player/alan-browne.html"><div class="pavatar sm"><span>AB</span></div><div class="nm">Alan Browne <span class="cl">Sunderland</span></div><div class="ev">—</div><div class="mn"><span class="rate none">—</span></div><button class="star" data-fav="alan-browne" aria-pressed="false" aria-label="Follow Alan Browne">★</button></a><a class="plrow" href="player/andrew-moran.html"><div class="pavatar sm"><span>AM</span></div><div class="nm">Andrew Moran <span class="cl">Preston North End</span></div><div class="ev">—</div><div class="mn"><span class="rate none">—</span></div><button class="star" data-fav="andrew-moran" aria-pressed="false" aria-label="Follow Andrew Moran">★</button></a><a class="plrow" href="player/andrew-omobamidele.html"><div class="pavatar sm"><span>AO</span></div><div class="nm">Andrew Omobamidele <span class="cl">Nottingham Forest</span></div><div class="ev">—</div><div class="mn"><span class="rate none">—</span></div><button class="star" data-fav="andrew-omobamidele" aria-pressed="false" aria-label="Follow Andrew Omobamidele">★</button></a><a class="plrow" href="player/ben-quinn.html"><div class="pavatar sm"><span>BQ</span></div><div class="nm">Ben Quinn <span class="cl">Portadown</span></div><div class="ev">—</div><div class="mn"><span class="rate none">—</span></div><button class="star" data-fav="ben-quinn" aria-pressed="false" aria-label="Follow Ben Quinn">★</button></a></div>
+    <div class="sec"><h2>League of Ireland</h2><a class="more" href="league-of-ireland.html">All 43 →</a></div><div class="tiergroup"><a class="plrow" href="player/adam-brennan.html"><div class="pavatar sm"><span>AB</span></div><div class="nm">Adam Brennan <span class="cl">Shamrock Rovers</span></div><div class="ev">—</div><div class="mn"><span class="rate none">—</span></div><button class="star" data-fav="adam-brennan" aria-pressed="false" aria-label="Follow Adam Brennan">★</button></a><a class="plrow" href="player/ben-mccormack.html"><div class="pavatar sm"><span>BM</span></div><div class="nm">Ben McCormack <span class="cl">Bray Wanderers</span></div><div class="ev">—</div><div class="mn"><span class="rate none">—</span></div><button class="star" data-fav="ben-mccormack" aria-pressed="false" aria-label="Follow Ben McCormack">★</button></a><a class="plrow" href="player/billy-oneill.html"><div class="pavatar sm"><span>BO</span></div><div class="nm">Billy O'Neill <span class="cl">Bray Wanderers</span></div><div class="ev">—</div><div class="mn"><span class="rate none">—</span></div><button class="star" data-fav="billy-oneill" aria-pressed="false" aria-label="Follow Billy O'Neill">★</button></a><a class="plrow" href="player/brody-lee.html"><div class="pavatar sm"><span>BL</span></div><div class="nm">Brody Lee <span class="cl">Cork City</span></div><div class="ev">—</div><div class="mn"><span class="rate none">—</span></div><button class="star" data-fav="brody-lee" aria-pressed="false" aria-label="Follow Brody Lee">★</button></a><a class="plrow" href="player/charles-akinrintoyo.html"><div class="pavatar sm"><span>CA</span></div><div class="nm">Charles Akinrintoyo <span class="cl">UCD</span></div><div class="ev">—</div><div class="mn"><span class="rate none">—</span></div><button class="star" data-fav="charles-akinrintoyo" aria-pressed="false" aria-label="Follow Charles Akinrintoyo">★</button></a><a class="plrow" href="player/cillian-murphy.html"><div class="pavatar sm"><span>CM</span></div><div class="nm">Cillian Murphy <span class="cl">Cork City</span></div><div class="ev">—</div><div class="mn"><span class="rate none">—</span></div><button class="star" data-fav="cillian-murphy" aria-pressed="false" aria-label="Follow Cillian Murphy">★</button></a><a class="plrow" href="player/cillian-tollett.html"><div class="pavatar sm"><span>CT</span></div><div class="nm">Cillian Tollett <span class="cl">Galway United</span></div><div class="ev">—</div><div class="mn"><span class="rate none">—</span></div><button class="star" data-fav="cillian-tollett" aria-pressed="false" aria-label="Follow Cillian Tollett">★</button></a><a class="plrow" href="player/conor-walsh.html"><div class="pavatar sm"><span>CW</span></div><div class="nm">Conor Walsh <span class="cl">Shelbourne</span></div><div class="ev">—</div><div class="mn"><span class="rate none">—</span></div><button class="star" data-fav="conor-walsh" aria-pressed="false" aria-label="Follow Conor Walsh">★</button></a></div>
 
     <div class="nlbox">
       <div class="nltag">Newsletter</div>
@@ -560,6 +619,61 @@ img,svg,iframe{max-width:100%}
       window.FB_PLAYERS={"aaron-maguire": {"n": "Aaron Maguire", "club": "Tottenham Hotspur", "ini": "AM", "next": ""}, "adam-brennan": {"n": "Adam Brennan", "club": "Shamrock Rovers", "ini": "AB", "next": ""}, "adam-idah": {"n": "Adam Idah", "club": "Celtic", "ini": "AI", "next": ""}, "ade-solanke": {"n": "Ade Solanke", "club": "Bournemouth", "ini": "AS", "next": ""}, "aidomo-emakhu": {"n": "Aidomo Emakhu", "club": "Millwall", "ini": "AE", "next": ""}, "alan-browne": {"n": "Alan Browne", "club": "Sunderland", "ini": "AB", "next": ""}, "andrew-moran": {"n": "Andrew Moran", "club": "Preston North End", "ini": "AM", "next": ""}, "andrew-omobamidele": {"n": "Andrew Omobamidele", "club": "Nottingham Forest", "ini": "AO", "next": ""}, "ben-mccormack": {"n": "Ben McCormack", "club": "Bray Wanderers", "ini": "BM", "next": ""}, "ben-quinn": {"n": "Ben Quinn", "club": "Portadown", "ini": "BQ", "next": ""}, "billy-oneill": {"n": "Billy O'Neill", "club": "Bray Wanderers", "ini": "BO", "next": ""}, "bosun-lawal": {"n": "Bosun Lawal", "club": "Stoke City", "ini": "BL", "next": ""}, "brody-lee": {"n": "Brody Lee", "club": "Cork City", "ini": "BL", "next": ""}, "callum-odowda": {"n": "Callum O'Dowda", "club": "Cardiff City", "ini": "CO", "next": ""}, "caoimhin-kelleher": {"n": "Caoimh\u00edn Kelleher", "club": "Brentford", "ini": "CK", "next": ""}, "cathal-osullivan": {"n": "Cathal O'Sullivan", "club": "Preston North End", "ini": "CO", "next": ""}, "charles-akinrintoyo": {"n": "Charles Akinrintoyo", "club": "UCD", "ini": "CA", "next": ""}, "chiedozie-ogbene": {"n": "Chiedozie Ogbene", "club": "Coventry City", "ini": "CO", "next": ""}, "christopher-atherton": {"n": "Christopher Atherton", "club": "Chelsea", "ini": "CA", "next": ""}, "cillian-murphy": {"n": "Cillian Murphy", "club": "Cork City", "ini": "CM", "next": ""}, "cillian-tollett": {"n": "Cillian Tollett", "club": "Galway United", "ini": "CT", "next": ""}, "connor-oriordan": {"n": "Connor O'Riordan", "club": "Blackburn Rovers", "ini": "CO", "next": ""}, "conor-coventry": {"n": "Conor Coventry", "club": "Charlton Athletic", "ini": "CC", "next": ""}, "conor-mcmanus": {"n": "Conor McManus", "club": "Brentford", "ini": "CM", "next": ""}, "conor-walsh": {"n": "Conor Walsh", "club": "Shelbourne", "ini": "CW", "next": ""}, "corrie-ndaba": {"n": "Corrie Ndaba", "club": "Ipswich Town", "ini": "CN", "next": ""}, "cory-osullivan": {"n": "Cory O'Sullivan", "club": "Shamrock Rovers", "ini": "CO", "next": ""}, "danny-burke": {"n": "Danny Burke", "club": "Shamrock Rovers", "ini": "DB", "next": ""}, "dara-oshea": {"n": "Dara O'Shea", "club": "Ipswich Town", "ini": "DO", "next": ""}, "darius-lipsiuc": {"n": "Darius Lipsiuc", "club": "Stoke City", "ini": "DL", "next": ""}, "darragh-brunton": {"n": "Darragh Brunton", "club": "St Patrick's Athletic", "ini": "DB", "next": ""}, "david-dunne": {"n": "David Dunne", "club": "Monaco", "ini": "DD", "next": ""}, "david-okagbue": {"n": "David Okagbue", "club": "Peterborough United", "ini": "DO", "next": ""}, "dawson-devoy": {"n": "Dawson Devoy", "club": "Bohemians", "ini": "DD", "next": ""}, "desmond-armstrong": {"n": "Desmond Armstrong", "club": "Lorient", "ini": "DA", "next": ""}, "evan-ferguson": {"n": "Evan Ferguson", "club": "Brighton &amp; Hove Albion", "ini": "EF", "next": ""}, "festy-ebosele": {"n": "Festy Ebosele", "club": "Watford", "ini": "FE", "next": ""}, "finn-azaz": {"n": "Finn Azaz", "club": "Middlesbrough", "ini": "FA", "next": ""}, "finn-sherlock": {"n": "Finn Sherlock", "club": "Hoffenheim", "ini": "FS", "next": ""}, "gabriel-kelly": {"n": "Gabriel Kelly", "club": "Stoke City", "ini": "GK", "next": ""}, "gavin-mcateer": {"n": "Gavin McAteer", "club": "Finn Harps", "ini": "GM", "next": ""}, "gbemi-arubi": {"n": "Gbemi Arubi", "club": "Dundalk", "ini": "GA", "next": ""}, "george-moloney": {"n": "George Moloney", "club": "Southampton", "ini": "GM", "next": ""}, "glenn-ilunga": {"n": "Glenn Ilunga", "club": "Burnley", "ini": "GI", "next": ""}, "goodness-ogbonna": {"n": "Goodness Ogbonna", "club": "UCD", "ini": "GO", "next": ""}, "grady-mcdonnell": {"n": "Grady McDonnell", "club": "Club Brugge", "ini": "GM", "next": ""}, "harry-vaughan": {"n": "Harry Vaughan", "club": "Bohemians", "ini": "HV", "next": ""}, "harvey-vale": {"n": "Harvey Vale", "club": "Chelsea", "ini": "HV", "next": ""}, "hugh-martin": {"n": "Hugh Martin", "club": "Bohemians", "ini": "HM", "next": ""}, "jack-moylan": {"n": "Jack Moylan", "club": "St Patrick's Athletic", "ini": "JM", "next": ""}, "jack-taylor": {"n": "Jack Taylor", "club": "Ipswich Town", "ini": "JT", "next": ""}, "jacob-devaney": {"n": "Jacob Devaney", "club": "Manchester United", "ini": "JD", "next": ""}, "jaden-umeh": {"n": "Jaden Umeh", "club": "Benfica", "ini": "JU", "next": ""}, "jake-obrien": {"n": "Jake O'Brien", "club": "Everton", "ini": "JO", "next": ""}, "james-abankwah": {"n": "James Abankwah", "club": "Watford", "ini": "JA", "next": ""}, "james-mcgrath": {"n": "James McGrath", "club": "Mansfield Town", "ini": "JM", "next": ""}, "jamie-mullins": {"n": "Jamie Mullins", "club": "Wycombe Wanderers", "ini": "JM", "next": ""}, "jason-knight": {"n": "Jason Knight", "club": "Bristol City", "ini": "JK", "next": ""}, "jason-spelman": {"n": "Jason Spelman", "club": "St Patrick's Athletic", "ini": "JS", "next": ""}, "jayson-molumby": {"n": "Jayson Molumby", "club": "West Bromwich Albion", "ini": "JM", "next": ""}, "jimmy-dunne": {"n": "Jimmy Dunne", "club": "Birmingham City", "ini": "JD", "next": ""}, "joe-byrne": {"n": "Joe Byrne", "club": "St Patrick's Athletic", "ini": "JB", "next": ""}, "joe-hodge": {"n": "Joe Hodge", "club": "Huddersfield Town", "ini": "JH", "next": ""}, "joey-wuna": {"n": "Joey Wuna", "club": "Shelbourne", "ini": "JW", "next": ""}, "john-egan": {"n": "John Egan", "club": "Burnley", "ini": "JE", "next": ""}, "john-osullivan": {"n": "John O'Sullivan", "club": "Shamrock Rovers", "ini": "JO", "next": ""}, "johnny-kenny": {"n": "Johnny Kenny", "club": "Shamrock Rovers", "ini": "JK", "next": ""}, "josh-cullen": {"n": "Josh Cullen", "club": "Finn Harps", "ini": "JC", "next": ""}, "josh-harpur": {"n": "Josh Harpur", "club": "Bohemians", "ini": "JH", "next": ""}, "josh-honohan": {"n": "Josh Honohan", "club": "Lincoln City", "ini": "JH", "next": ""}, "josh-keeley": {"n": "Josh Keeley", "club": "Tottenham Hotspur", "ini": "JK", "next": ""}, "josh-odwyer": {"n": "Josh O'Dwyer", "club": "Shamrock Rovers", "ini": "JO", "next": ""}, "kasey-mcateer": {"n": "Kasey McAteer", "club": "Leicester City", "ini": "KM", "next": ""}, "kian-leavy": {"n": "Kian Leavy", "club": "St Patrick's Athletic", "ini": "KL", "next": ""}, "kian-mcmahon-brown": {"n": "Kian McMahon-Brown", "club": "Burnley", "ini": "KM", "next": ""}, "kian-quigley": {"n": "Kian Quigley", "club": "St Patrick's Athletic", "ini": "KQ", "next": ""}, "killian-phillips": {"n": "Killian Phillips", "club": "Crystal Palace", "ini": "KP", "next": ""}, "liam-scales": {"n": "Liam Scales", "club": "Celtic", "ini": "LS", "next": ""}, "luke-cullen": {"n": "Luke Cullen", "club": "St Patrick's Athletic", "ini": "LC", "next": ""}, "mark-mcguinness": {"n": "Mark McGuinness", "club": "Sheffield United", "ini": "MM", "next": ""}, "mark-sykes": {"n": "Mark Sykes", "club": "Bristol City", "ini": "MS", "next": ""}, "mark-travers": {"n": "Mark Travers", "club": "Bournemouth", "ini": "MT", "next": ""}, "mason-melia": {"n": "Mason Melia", "club": "AZ Alkmaar", "ini": "MM", "next": ""}, "matt-doherty": {"n": "Matt Doherty", "club": "Wolverhampton Wanderers", "ini": "MD", "next": ""}, "max-oleary": {"n": "Max O'Leary", "club": "Bristol City", "ini": "MO", "next": ""}, "maxim-afonin": {"n": "Maxim Afonin", "club": "Shamrock Rovers", "ini": "MA", "next": ""}, "michael-noonan": {"n": "Michael Noonan", "club": "Shamrock Rovers", "ini": "MN", "next": ""}, "mikey-johnston": {"n": "Mikey Johnston", "club": "West Bromwich Albion", "ini": "MJ", "next": ""}, "millenic-alli": {"n": "Millenic Alli", "club": "St Mirren", "ini": "MA", "next": ""}, "muhammad-oladiti": {"n": "Muhammad Oladiti", "club": "Waterford", "ini": "MO", "next": ""}, "naj-razi": {"n": "Naj Razi", "club": "Shamrock Rovers", "ini": "NR", "next": ""}, "nathan-collins": {"n": "Nathan Collins", "club": "Brentford", "ini": "NC", "next": ""}, "niall-morahan": {"n": "Niall Morahan", "club": "Bohemians", "ini": "NM", "next": ""}, "noah-jauny": {"n": "Noah Jauny", "club": "Stade Brestois", "ini": "NJ", "next": ""}, "oisin-mcdonagh": {"n": "Oisin McDonagh", "club": "Venezia", "ini": "OM", "next": ""}, "oisin-gallagher": {"n": "Ois\u00edn Gallagher", "club": "Lincoln City", "ini": "OG", "next": ""}, "ramon-martos": {"n": "Ramon Martos", "club": "Almer\u00eda", "ini": "RM", "next": ""}, "robbie-brady": {"n": "Robbie Brady", "club": "Preston North End", "ini": "RB", "next": ""}, "rocco-vata": {"n": "Rocco Vata", "club": "Watford", "ini": "RV", "next": ""}, "ronan-maher": {"n": "Ronan Maher", "club": "Walsall", "ini": "RM", "next": ""}, "rory-finneran": {"n": "Rory Finneran", "club": "Newcastle United", "ini": "RF", "next": ""}, "ryan-butler": {"n": "Ryan Butler", "club": "Wexford", "ini": "RB", "next": ""}, "ryan-manning": {"n": "Ryan Manning", "club": "Southampton", "ini": "RM", "next": ""}, "ryan-sheridan": {"n": "Ryan Sheridan", "club": "St Patrick's Athletic", "ini": "RS", "next": ""}, "sam-curtis": {"n": "Sam Curtis", "club": "Sheffield United", "ini": "SC", "next": ""}, "sammie-szmodics": {"n": "Sammie Szmodics", "club": "Blackburn Rovers", "ini": "SS", "next": ""}, "sean-grehan": {"n": "Sean Grehan", "club": "Doncaster Rovers", "ini": "SG", "next": ""}, "sean-keogh": {"n": "Sean Keogh", "club": "Brighton &amp; Hove Albion", "ini": "SK", "next": ""}, "sean-murphy": {"n": "Sean Murphy", "club": "UCD", "ini": "SM", "next": ""}, "sean-spaight": {"n": "Sean Spaight", "club": "Dundalk", "ini": "SS", "next": ""}, "shane-duffy": {"n": "Shane Duffy", "club": "Dundalk", "ini": "SD", "next": ""}, "seamus-coleman": {"n": "S\u00e9amus Coleman", "club": "Everton", "ini": "SC", "next": ""}, "tadhg-prizeman": {"n": "Tadhg Prizeman", "club": "Shamrock Rovers", "ini": "TP", "next": ""}, "tayo-adaramola": {"n": "Tayo Adaramola", "club": "Crystal Palace", "ini": "TA", "next": ""}, "thomas-oconnor": {"n": "Thomas O'Connor", "club": "Wrexham", "ini": "TO", "next": ""}, "tom-cannon": {"n": "Tom Cannon", "club": "Sheffield United", "ini": "TC", "next": ""}, "tom-mcgrath": {"n": "Tom McGrath", "club": "Cork City", "ini": "TM", "next": ""}, "tommy-lonergan": {"n": "Tommy Lonergan", "club": "Waterford", "ini": "TL", "next": ""}, "troy-parrott": {"n": "Troy Parrott", "club": "AZ Alkmaar", "ini": "TP", "next": ""}, "victor-ozhianvuna": {"n": "Victor Ozhianvuna", "club": "Shamrock Rovers", "ini": "VO", "next": ""}, "vinnie-leonard": {"n": "Vinnie Leonard", "club": "Norwich City", "ini": "VL", "next": ""}, "will-ferry": {"n": "Will Ferry", "club": "Dundee United", "ini": "WF", "next": ""}, "will-smallbone": {"n": "Will Smallbone", "club": "Stoke City", "ini": "WS", "next": ""}};
       window.FB_MATCHES=[{"id": "2026-08-23-roma-v-lazio", "kickoff": "2026-08-23T19:45:00Z", "comp": "Serie A", "home": "Roma", "away": "Lazio", "hs": "2", "as_": "1", "status": "live", "minute": "67", "players": [{"slug": "evan-ferguson", "n": "Evan Ferguson", "club": "Brighton &amp; Hove Albion", "ini": "EF", "pos": "FWD"}]}, {"id": "2026-08-23-ajax-v-feyenoord", "kickoff": "2026-08-23T19:00:00Z", "comp": "Eredivisie", "home": "Ajax", "away": "Feyenoord", "hs": "1", "as_": "0", "status": "live", "minute": "82", "players": [{"slug": "troy-parrott", "n": "Troy Parrott", "club": "AZ Alkmaar", "ini": "TP", "pos": "FWD"}, {"slug": "mason-melia", "n": "Mason Melia", "club": "AZ Alkmaar", "ini": "MM", "pos": "FWD"}]}, {"id": "2026-08-23-shamrock-rovers-v-bohemians", "kickoff": "2026-08-23T18:30:00Z", "comp": "LOI Premier", "home": "Shamrock Rovers", "away": "Bohemians", "hs": "1", "as_": "1", "status": "ft", "minute": "90", "players": [{"slug": "johnny-kenny", "n": "Johnny Kenny", "club": "Shamrock Rovers", "ini": "JK", "pos": "FWD"}, {"slug": "dawson-devoy", "n": "Dawson Devoy", "club": "Bohemians", "ini": "DD", "pos": "MID"}, {"slug": "harry-vaughan", "n": "Harry Vaughan", "club": "Bohemians", "ini": "HV", "pos": "MID"}]}, {"id": "2026-08-23-watford-v-millwall", "kickoff": "2026-08-23T21:00:00Z", "comp": "Championship", "home": "Watford", "away": "Millwall", "hs": "", "as_": "", "status": "scheduled", "minute": "", "players": [{"slug": "james-abankwah", "n": "James Abankwah", "club": "Watford", "ini": "JA", "pos": "DEF"}, {"slug": "rocco-vata", "n": "Rocco Vata", "club": "Watford", "ini": "RV", "pos": "MID"}, {"slug": "festy-ebosele", "n": "Festy Ebosele", "club": "Watford", "ini": "FE", "pos": "MID"}, {"slug": "aidomo-emakhu", "n": "Aidomo Emakhu", "club": "Millwall", "ini": "AE", "pos": "FWD"}]}];
       window.FB_SUBSCRIBE_URL="";
+    </script>
+    <script>
+    (function(){
+      var track=document.getElementById('carousel');
+      if(!track) return;
+      var slides=[].slice.call(track.querySelectorAll('.slide'));
+      var dots=[].slice.call(document.querySelectorAll('.dots button'));
+      var timer, paused=false, raf;
+
+      function current(){ return Math.round(track.scrollLeft / track.clientWidth); }
+      function paint(){
+        var i=current();
+        dots.forEach(function(d,j){ d.setAttribute('aria-current', j===i ? 'true':'false'); });
+      }
+      function go(i, smooth){
+        track.scrollTo({left: i*track.clientWidth, behavior: smooth===false ? 'auto':'smooth'});
+      }
+      function next(){
+        if(paused) return;
+        var i=current()+1; if(i>=slides.length) i=0;
+        go(i);
+      }
+      function restart(){ clearInterval(timer); timer=setInterval(next, 5200); }
+
+      dots.forEach(function(d,j){
+        d.addEventListener('click', function(e){ e.preventDefault(); go(j); restart(); });
+      });
+
+      track.addEventListener('scroll', function(){
+        if(raf) cancelAnimationFrame(raf);
+        raf=requestAnimationFrame(paint);
+      }, {passive:true});
+
+      ['touchstart','pointerdown','mouseenter'].forEach(function(ev){
+        track.addEventListener(ev, function(){ paused=true; }, {passive:true});
+      });
+      ['touchend','pointerup','mouseleave'].forEach(function(ev){
+        track.addEventListener(ev, function(){ paused=false; restart(); }, {passive:true});
+      });
+
+      // a drag shouldn't open the article
+      var sx=0, sy=0, moved=false;
+      track.addEventListener('touchstart', function(e){
+        sx=e.touches[0].clientX; sy=e.touches[0].clientY; moved=false;
+      }, {passive:true});
+      track.addEventListener('touchmove', function(e){
+        if(Math.abs(e.touches[0].clientX-sx)>8) moved=true;
+      }, {passive:true});
+      slides.forEach(function(s){
+        s.addEventListener('click', function(e){ if(moved) e.preventDefault(); });
+      });
+
+      window.addEventListener('resize', function(){ go(current(), false); });
+      paint(); restart();
+    })();
     </script>
 
 <footer>
@@ -904,6 +1018,31 @@ img,svg,iframe{max-width:100%}
       proceed();
     });
   };
+})();
+
+/* ---------- BACK LINK ----------
+   "← Back" returns to wherever you actually came from. We mark the session on
+   each page view, so if this isn't the first page in the tab we can safely use
+   history. A direct landing (shared link, search result) uses the href fallback. */
+(function () {
+  var NAV = 'fb_nav_v1';
+  var visitedBefore = false;
+  try {
+    visitedBefore = sessionStorage.getItem(NAV) === '1';
+    sessionStorage.setItem(NAV, '1');
+  } catch (e) {}
+
+  var links = document.querySelectorAll('.crumb[data-back]');
+  if (!links.length) return;
+
+  for (var i = 0; i < links.length; i++) {
+    links[i].addEventListener('click', function (e) {
+      if (visitedBefore && history.length > 1) {
+        e.preventDefault();
+        history.back();
+      }
+    });
+  }
 })();
 </script>
 </body>
