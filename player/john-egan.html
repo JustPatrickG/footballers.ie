@@ -557,9 +557,58 @@ img,svg,iframe{max-width:100%}
   .artcontent p{font-size:16px;line-height:1.62}
 }
 .mcday{font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--mute);display:block;margin-bottom:2px}
+
+/* ============ PAGE LOADER ============ */
+#fbload{
+  position:fixed;inset:0;z-index:400;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:20px;
+  background:var(--bg);opacity:1;transition:opacity .32s ease;
+}
+#fbload.out{opacity:0;pointer-events:none}
+.fbl-mark{
+  font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:22px;letter-spacing:-.01em;
+  color:var(--white);opacity:0;animation:fblIn .42s ease forwards;
+}
+.fbl-mark i{font-style:normal;color:var(--yellow)}
+@keyframes fblIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+.fbl-bar{
+  width:132px;height:2px;background:var(--line);border-radius:2px;overflow:hidden;position:relative;
+}
+.fbl-bar span{
+  position:absolute;inset:0;display:block;border-radius:2px;
+  background:linear-gradient(90deg,transparent,var(--yellow),transparent);
+  transform:translateX(-100%);animation:fblSweep 1s cubic-bezier(.5,0,.4,1) infinite;
+}
+@keyframes fblSweep{to{transform:translateX(100%)}}
+@media(prefers-reduced-motion:reduce){
+  .fbl-mark{animation:none;opacity:1}
+  .fbl-bar span{animation:none;transform:none;background:var(--yellow);opacity:.5}
+}
 </style>
 </head>
 <body data-player="john-egan">
+<div id="fbload" aria-hidden="true">
+  <div class="fbl-mark">footballers<i>.ie</i></div>
+  <div class="fbl-bar"><span></span></div>
+</div>
+<script>
+/* hide the loader as soon as the page is ready — kept short on purpose */
+(function(){
+  var el=document.getElementById('fbload');
+  if(!el) return;
+  var t0=Date.now(), MIN=420;
+  function done(){
+    var wait=Math.max(0, MIN-(Date.now()-t0));
+    setTimeout(function(){
+      el.classList.add('out');
+      setTimeout(function(){ if(el.parentNode) el.parentNode.removeChild(el); }, 340);
+    }, wait);
+  }
+  if(document.readyState==='complete') done();
+  else window.addEventListener('load', done);
+  setTimeout(done, 2500);   // never let it hang
+})();
+</script>
 <div class="wrap">
 <nav>
   <a class="mark" href="../index.html">footballers<i>.ie</i></a>

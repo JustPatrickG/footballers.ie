@@ -163,6 +163,28 @@ def shell(title, desc, root, active, body, extra_head="", canonical="", body_att
 <style>{CSS}</style>{extra_head}
 </head>
 <body{body_attr}>
+<div id="fbload" aria-hidden="true">
+  <div class="fbl-mark">footballers<i>.ie</i></div>
+  <div class="fbl-bar"><span></span></div>
+</div>
+<script>
+/* hide the loader as soon as the page is ready — kept short on purpose */
+(function(){{
+  var el=document.getElementById('fbload');
+  if(!el) return;
+  var t0=Date.now(), MIN=420;
+  function done(){{
+    var wait=Math.max(0, MIN-(Date.now()-t0));
+    setTimeout(function(){{
+      el.classList.add('out');
+      setTimeout(function(){{ if(el.parentNode) el.parentNode.removeChild(el); }}, 340);
+    }}, wait);
+  }}
+  if(document.readyState==='complete') done();
+  else window.addEventListener('load', done);
+  setTimeout(done, 2500);   // never let it hang
+}})();
+</script>
 <div class="wrap">
 <nav>
   <a class="mark" href="{root}index.html">footballers<i>.ie</i></a>
