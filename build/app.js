@@ -36,9 +36,15 @@
         paint(btn);
         btn.addEventListener('click', function (e) {
           e.preventDefault(); e.stopPropagation();
-          toggle(btn.dataset.fav);
-          var all = document.querySelectorAll('[data-fav="' + btn.dataset.fav + '"]');
-          for (var j = 0; j < all.length; j++) paint(all[j]);
+          var slug = btn.dataset.fav;
+          function apply() {
+            toggle(slug);
+            var all = document.querySelectorAll('[data-fav="' + slug + '"]');
+            for (var j = 0; j < all.length; j++) paint(all[j]);
+          }
+          // unfollowing never asks; following asks once
+          if (has(slug) || !window.FB_GATE) { apply(); return; }
+          FB_GATE(slug, apply);
         });
       })(stars[i]);
     }
@@ -90,10 +96,14 @@
       (function (btn) {
         btn.addEventListener('click', function (e) {
           e.preventDefault(); e.stopPropagation();
-          toggle(btn.dataset.fav);
-          renderMine(); updateCount();
-          var all = document.querySelectorAll('[data-fav="' + btn.dataset.fav + '"]');
-          for (var j = 0; j < all.length; j++) paint(all[j]);
+          var slug = btn.dataset.fav;
+          function apply() {
+            toggle(slug); renderMine(); updateCount();
+            var all = document.querySelectorAll('[data-fav="' + slug + '"]');
+            for (var j = 0; j < all.length; j++) paint(all[j]);
+          }
+          if (has(slug) || !window.FB_GATE) { apply(); return; }
+          FB_GATE(slug, apply);
         });
       })(stars[i]);
     }
@@ -155,7 +165,7 @@
       return new Date(a.kickoff) - new Date(b.kickoff);
     });
 
-    var shown = live.slice(0, 3);
+    var shown = live.slice(0, 2);
     box.innerHTML = shown.map(function (m) {
       var players = m.players.slice(0, 2).map(function (p) {
         return '<a class="mcp" href="player/' + p.slug + '.html" title="' + p.n + '">' +
@@ -165,7 +175,7 @@
       if (m.players.length > 2) {
         players += '<span class="mcmore">+' + (m.players.length - 2) + ' more</span>';
       }
-      return '<div class="mccard">' +
+      return '<div class="mccard" data-href="match/' + m.id + '.html" role="link" tabindex="0">' +
              '<div class="mcrow">' +
                '<span class="mccomp">' + m.comp + '</span>' + statusChip(m, now) +
              '</div>' +
@@ -174,9 +184,24 @@
              '<div class="mcplayers">' + players + '</div></div>';
     }).join('');
 
+    // card click -> match page (player chips keep their own links)
+    var cards = box.querySelectorAll('.mccard');
+    for (var c = 0; c < cards.length; c++) {
+      (function (card) {
+        function go(e) {
+          if (e.target.closest && e.target.closest('a')) return;   // let chip links win
+          location.href = card.getAttribute('data-href');
+        }
+        card.addEventListener('click', go);
+        card.addEventListener('keydown', function (e) {
+          if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); go(e); }
+        });
+      })(cards[c]);
+    }
+
     var more = document.getElementById('mc-more');
     if (more) {
-      if (live.length > 3) {
+      if (live.length > 2) {
         more.style.display = '';
         more.textContent = 'See all ' + live.length + ' →';
       } else {
@@ -188,4 +213,125 @@
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', render);
   else render();
   setInterval(render, 60000);   // re-check every minute so it appears/disappears on its own
+})();
+
+/* ---------- FOLLOW PROMPT ----------
+   A small toast that slides in the first time someone opens a player page,
+   then again every 10th player after that. Dismissed by tapping or following. */
+(function () {
+  var KEY = 'fb_seen_players_v1', DISMISS = 'fb_prompt_off_v1';
+  var slug = document.body.getAttribute('data-player');
+  if (!slug) return;                                   // only on player pages
+  if (localStorage.getItem(DISMISS) === '1') return;   // user closed it for good
+
+  var seen;
+  try { seen = JSON.parse(localStorage.getItem(KEY)) || []; } catch (e) { seen = []; }
+  if (seen.indexOf(slug) === -1) { seen.push(slug); }
+  try { localStorage.setItem(KEY, JSON.stringify(seen)); } catch (e) {}
+
+  var n = seen.length;
+  if (!(n === 1 || n % 10 === 0)) return;
+  if (window.FB && FB.has(slug)) return;               // already following this one
+
+  function show() {
+    var t = document.createElement('div');
+    t.className = 'fbtoast';
+    t.innerHTML =
+      '<div class="fbt-star">★</div>' +
+      '<div class="fbt-copy"><b>Follow this player</b>' +
+      '<span>Tap the star to get their goals, ratings and kick-offs.</span></div>' +
+      '<button class="fbt-x" aria-label="Dismiss">×</button>';
+    document.body.appendChild(t);
+    requestAnimationFrame(function () { t.classList.add('in'); });
+
+    var starBtn = document.querySelector('.starbtn');
+    if (starBtn) {
+      starBtn.classList.add('pulse');
+      setTimeout(function () { starBtn.classList.remove('pulse'); }, 4000);
+    }
+
+    function close(forever) {
+      t.classList.remove('in');
+      setTimeout(function () { if (t.parentNode) t.parentNode.removeChild(t); }, 400);
+      if (forever) { try { localStorage.setItem(DISMISS, '1'); } catch (e) {} }
+    }
+    t.querySelector('.fbt-x').addEventListener('click', function (e) { e.stopPropagation(); close(true); });
+    t.addEventListener('click', function () {
+      if (starBtn) starBtn.click();
+      close(false);
+    });
+    document.addEventListener('favschange', function () { close(false); });
+    setTimeout(function () { close(false); }, 8000);
+  }
+
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', function(){ setTimeout(show, 700); });
+  else setTimeout(show, 700);
+})();
+
+/* ---------- EMAIL GATE ----------
+   The first time someone follows a player we ask for an email, so their list
+   can be synced and alerts can be sent. Asked once per browser, then never again. */
+(function () {
+  var EKEY = 'fb_email_v1';
+
+  function saved() { try { return localStorage.getItem(EKEY) || ''; } catch (e) { return ''; } }
+  window.FB_EMAIL = saved;
+
+  function send(email, slug) {
+    try { localStorage.setItem(EKEY, email); } catch (e) {}
+    var url = window.FB_SUBSCRIBE_URL;
+    if (url) {
+      try {
+        fetch(url, {
+          method: 'POST', mode: 'no-cors',
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+          body: 'email=' + encodeURIComponent(email) + '&players=' + encodeURIComponent(slug || '')
+        });
+      } catch (e) {}
+    }
+  }
+
+  /* returns true if we can follow straight away */
+  window.FB_GATE = function (slug, proceed) {
+    if (saved()) { proceed(); return; }
+
+    var wrap = document.createElement('div');
+    wrap.className = 'fbgate';
+    wrap.innerHTML =
+      '<div class="fbg-card" role="dialog" aria-modal="true" aria-labelledby="fbg-t">' +
+        '<button class="fbg-x" aria-label="Cancel">×</button>' +
+        '<div class="fbg-star">★</div>' +
+        '<h3 id="fbg-t">Save your players</h3>' +
+        '<p>Pop in your email and we\'ll keep your list safe — and let you know ' +
+           'when your players are about to play, score or get rated.</p>' +
+        '<form class="fbg-form">' +
+          '<input type="email" required placeholder="your@email.ie" aria-label="Email address" autocomplete="email">' +
+          '<button type="submit">Follow</button>' +
+        '</form>' +
+        '<div class="fbg-fine">One email to set up. Unsubscribe any time.</div>' +
+      '</div>';
+    document.body.appendChild(wrap);
+    requestAnimationFrame(function () { wrap.classList.add('in'); });
+    var input = wrap.querySelector('input');
+    setTimeout(function () { input.focus(); }, 260);
+
+    function close() {
+      wrap.classList.remove('in');
+      setTimeout(function () { if (wrap.parentNode) wrap.parentNode.removeChild(wrap); }, 280);
+      document.removeEventListener('keydown', onKey);
+    }
+    function onKey(e) { if (e.key === 'Escape') close(); }
+    document.addEventListener('keydown', onKey);
+
+    wrap.querySelector('.fbg-x').addEventListener('click', close);
+    wrap.addEventListener('click', function (e) { if (e.target === wrap) close(); });
+    wrap.querySelector('.fbg-form').addEventListener('submit', function (e) {
+      e.preventDefault();
+      var v = input.value.trim();
+      if (!v || v.indexOf('@') === -1) { input.focus(); return; }
+      send(v, slug);
+      close();
+      proceed();
+    });
+  };
 })();

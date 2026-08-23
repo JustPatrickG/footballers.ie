@@ -129,7 +129,7 @@ APPJS = open(os.path.join(HERE, "app.js")).read()
 NAV = [("Players","players.html"),("Abroad","abroad.html"),("League of Ireland","league-of-ireland.html"),
        ("Clubs","clubs.html"),("Ireland","ireland.html"),("Fixtures","fixtures.html"),("Alerts","alerts.html")]
 
-def shell(title, desc, root, active, body, extra_head="", canonical=""):
+def shell(title, desc, root, active, body, extra_head="", canonical="", body_attr=""):
     links = "".join(f'<a class="{"on" if active==href else ""}" href="{root}{href}">{l}</a>' for l,href in NAV)
     can = f"{SITE_URL}/{canonical}" if canonical else SITE_URL
     return f"""<!DOCTYPE html>
@@ -160,7 +160,7 @@ def shell(title, desc, root, active, body, extra_head="", canonical=""):
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <style>{CSS}</style>{extra_head}
 </head>
-<body>
+<body{body_attr}>
 <div class="wrap">
 <nav>
   <a class="mark" href="{root}index.html">footballers<i>.ie</i></a>
@@ -186,6 +186,7 @@ def shell(title, desc, root, active, body, extra_head="", canonical=""):
   Every Irish player at a professional club — abroad, senior international and League of Ireland
 </footer>
 </div>
+<script>window.FB_SUBSCRIBE_URL={json.dumps(NEWSLETTER_ACTION)};</script>
 <script>{APPJS}</script>
 </body>
 </html>"""
@@ -304,7 +305,7 @@ def build_index():
             if p: involved.append(dict(slug=s, n=esc(p["n"]), club=esc(p["club"]),
                                        ini=initials(p["n"]), pos=p["pos"]))
         if not involved: continue
-        mc.append(dict(kickoff=m["kickoff"], comp=esc(m.get("competition","")),
+        mc.append(dict(id=match_id(m), kickoff=m["kickoff"], comp=esc(m.get("competition","")),
                        home=esc(m.get("home","")), away=esc(m.get("away","")),
                        hs=m.get("home_score",""), as_=m.get("away_score",""),
                        status=(m.get("status") or "scheduled"), minute=m.get("minute",""),
@@ -349,6 +350,7 @@ def build_index():
     <script>
       window.FB_PLAYERS={json.dumps(fbp)};
       window.FB_MATCHES={json.dumps(mc)};
+      window.FB_SUBSCRIBE_URL={json.dumps(NEWSLETTER_ACTION)};
     </script>
 '''
     return shell("FOOTBALLERS — every Irish professional, tracked",
@@ -557,6 +559,43 @@ def build_compare():
     </script>'''
     return shell("Compare players — FOOTBALLERS","Compare any two Irish professionals side by side.","", "compare.html", body, canonical="compare.html")
 
+
+def match_id(m):
+    return (m.get("kickoff","")[:10] + "-" + club_slug(m.get("home","")) + "-v-" + club_slug(m.get("away",""))).strip("-")
+
+def build_match(m, involved):
+    hs, as_ = m.get("home_score",""), m.get("away_score","")
+    status = (m.get("status") or "scheduled")
+    when = m.get("kickoff","")[11:16] + " · " + m.get("kickoff","")[:10]
+    chip = (f'<span class="mcstat live"><i></i>{esc(m.get("minute",""))}\'</span>' if status=="live"
+            else '<span class="mcstat ft">Full time</span>' if status=="ft"
+            else f'<span class="mcstat soon">{esc(when)}</span>')
+    scoreline = (f'<div class="mscore">{esc(hs)}<span>–</span>{esc(as_)}</div>'
+                 if status != "scheduled" and str(hs) != "" else
+                 f'<div class="mscore ko">{esc(m.get("kickoff","")[11:16])}</div>')
+    rows = "".join(
+        f'<a class="plrow" href="../player/{p["slug"]}.html">{avatar(p,"../","sm")}'
+        f'<div class="nm">{esc(p["n"])} <span class="cl">{esc(p["club"])}</span></div>'
+        f'<div class="ev">{p["pos"]}</div><div class="mn"></div>{star(p)}</a>' for p in involved)
+    body = f'''
+    <a class="crumb" href="../fixtures.html">← All fixtures</a>
+    <div class="matchhead">
+      <div class="mcrow"><span class="mccomp">{esc(m.get("competition",""))}</span>{chip}</div>
+      <div class="mteams">
+        <div class="mteam">{esc(m.get("home",""))}</div>
+        {scoreline}
+        <div class="mteam right">{esc(m.get("away",""))}</div>
+      </div>
+    </div>
+    <div class="sec"><h2>Irish players in this match</h2>
+      <span class="more" style="border:0">{len(involved)}</span></div>
+    <div class="tiergroup">{rows}</div>
+    '''
+    title = f'{m.get("home","")} v {m.get("away","")} — Irish players'
+    return shell(f"{title} — FOOTBALLERS",
+                 f"Irish players involved in {m.get('home','')} v {m.get('away','')}.",
+                 "../", "fixtures.html", body, canonical=f"match/{match_id(m)}.html")
+
 # ================= PLAYER =================
 def build_player(p):
     s, c = p["season"], p["career"]
@@ -660,7 +699,8 @@ def build_player(p):
     '''
     return shell(f"{p['n']} — FOOTBALLERS",
                  f"{p['n']} ({p['club']}, {p['league']}) — season stats, fixtures, results and international record.",
-                 "../", "", body, canonical=f"player/{p['slug']}.html")
+                 "../", "", body, canonical=f"player/{p['slug']}.html",
+                 body_attr=f' data-player="{p["slug"]}"')
 
 
 
@@ -802,5 +842,15 @@ for cname, ps in clubs.items():
     open(f"{OUT}/club/{club_slug(cname)}.html","w").write(build_club(cname, ps))
 for p in PLAYERS:
     open(f"{OUT}/player/{p['slug']}.html","w").write(build_player(p))
+
+os.makedirs(f"{OUT}/match", exist_ok=True)
+_pmap = {p["slug"]: p for p in PLAYERS}
+_nmatch = 0
+for m in MATCHES:
+    inv = [_pmap[s] for s in [x.strip() for x in (m.get("players") or "").split(";") if x.strip()] if s in _pmap]
+    if not inv: continue
+    open(f"{OUT}/match/{match_id(m)}.html","w").write(build_match(m, inv))
+    _nmatch += 1
+print(f"  + {_nmatch} match pages")
 
 print(f"Built {9 + len(clubs) + len(PLAYERS)} pages ({len(clubs)} clubs, {len(PLAYERS)} players)")
