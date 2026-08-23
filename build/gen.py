@@ -165,7 +165,17 @@ def shell(title, desc, root, active, body, extra_head="", canonical="", body_att
 <body{body_attr}>
 <div id="fbload" aria-hidden="true">
   <div class="fbl-mark">footballers<i>.ie</i></div>
-  <div class="fbl-bar"><span></span></div>
+  <div class="fbl-pitch">
+    <svg class="fbl-boot" viewBox="0 0 40 44" aria-hidden="true">
+      <g class="fbl-leg">
+        <line x1="20" y1="4" x2="20" y2="24"/>
+        <line x1="20" y1="24" x2="16" y2="38"/>
+        <line x1="16" y1="38" x2="30" y2="40"/>
+      </g>
+    </svg>
+    <div class="fbl-ball"><i></i></div>
+    <div class="fbl-line"></div>
+  </div>
 </div>
 <script>
 /* hide the loader as soon as the page is ready — kept short on purpose */
