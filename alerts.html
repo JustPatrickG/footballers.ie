@@ -3,24 +3,24 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Leicester City — Irish players — FOOTBALLERS</title>
-<meta name="description" content="Irish professionals at Leicester City, plus upcoming fixtures.">
-<link rel="canonical" href="https://footballers.ie/club/leicester-city.html">
+<title>Player alerts — FOOTBALLERS</title>
+<meta name="description" content="Follow Irish players and get an email when they play, score or assist.">
+<link rel="canonical" href="https://footballers.ie/alerts.html">
 <meta name="theme-color" content="#0C0F10">
 <meta property="og:site_name" content="Footballers">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Leicester City — Irish players — FOOTBALLERS">
-<meta property="og:description" content="Irish professionals at Leicester City, plus upcoming fixtures.">
-<meta property="og:url" content="https://footballers.ie/club/leicester-city.html">
+<meta property="og:title" content="Player alerts — FOOTBALLERS">
+<meta property="og:description" content="Follow Irish players and get an email when they play, score or assist.">
+<meta property="og:url" content="https://footballers.ie/alerts.html">
 <meta property="og:image" content="https://footballers.ie/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Leicester City — Irish players — FOOTBALLERS">
-<meta name="twitter:description" content="Irish professionals at Leicester City, plus upcoming fixtures.">
+<meta name="twitter:title" content="Player alerts — FOOTBALLERS">
+<meta name="twitter:description" content="Follow Irish players and get an email when they play, score or assist.">
 <meta name="twitter:image" content="https://footballers.ie/og-image.png">
-<link rel="icon" href="../favicon.svg" type="image/svg+xml">
-<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -396,11 +396,11 @@ img,svg,iframe{max-width:100%}
 <body>
 <div class="wrap">
 <nav>
-  <a class="mark" href="../index.html">footballers<i>.ie</i></a>
+  <a class="mark" href="index.html">footballers<i>.ie</i></a>
   <button class="burger" id="burger" aria-label="Menu" aria-expanded="false" aria-controls="navlinks">
     <span></span><span></span><span></span>
   </button>
-  <div class="navlinks" id="navlinks"><a class="" href="../players.html">Players</a><a class="" href="../abroad.html">Abroad</a><a class="" href="../league-of-ireland.html">League of Ireland</a><a class="on" href="../clubs.html">Clubs</a><a class="" href="../ireland.html">Ireland</a><a class="" href="../fixtures.html">Fixtures</a><a class="" href="../alerts.html">Alerts</a></div>
+  <div class="navlinks" id="navlinks"><a class="" href="players.html">Players</a><a class="" href="abroad.html">Abroad</a><a class="" href="league-of-ireland.html">League of Ireland</a><a class="" href="clubs.html">Clubs</a><a class="" href="ireland.html">Ireland</a><a class="" href="fixtures.html">Fixtures</a><a class="on" href="alerts.html">Alerts</a></div>
   <div class="navmeta">MW04 · 22-23 AUG · <b>123</b> TRACKED</div>
 </nav>
 <script>
@@ -414,13 +414,57 @@ img,svg,iframe{max-width:100%}
 })();
 </script>
 
-    <a class="crumb" href="../clubs.html">← All clubs</a>
-    <div class="pagehead"><h1>Leicester City</h1><p>1 Irish player tracked</p></div>
-    <div class="sec"><h2>Irish players</h2></div>
-    <div class="tiergroup"><a class="plrow" href="../player/kasey-mcateer.html"><div class="pavatar sm"><span>KM</span></div><div class="nm">Kasey McAteer <span class="cl">Leicester City</span></div><div class="ev">—</div><div class="mn">0'</div><button class="star" data-fav="kasey-mcateer" aria-pressed="false" aria-label="Follow Kasey McAteer">★</button></a></div>
-    <div class="sec"><h2>Upcoming fixtures</h2></div>
-    <div class="fxlist"><div class="emptystate" style="display:block">No fixtures listed.</div></div>
-    
+    <div class="pagehead"><h1>Player <i>alerts</i></h1>
+      <p>Follow players with the ★ anywhere on the site, then get an email when they're involved.</p></div>
+
+    <div class="nlbox">
+      <div class="nltag">Alerts</div>
+      <h3 class="nlh">Your players, straight to your inbox</h3>
+      <div class="alertgrid">
+        <label class="alertopt"><input type="checkbox" name="alert_lineup" checked> <span><b>About to play</b>
+          An hour before kick-off when one of your players is named in the squad.</span></label>
+        <label class="alertopt"><input type="checkbox" name="alert_goal" checked> <span><b>Goal or assist</b>
+          The moment they're involved.</span></label>
+        <label class="alertopt"><input type="checkbox" name="alert_rating"> <span><b>Full-time rating</b>
+          Their match rating and minutes once the game's done.</span></label>
+        <label class="alertopt"><input type="checkbox" name="alert_news"> <span><b>Transfers &amp; injuries</b>
+          Moves, call-ups and fitness news.</span></label>
+      </div>
+      <div class="alertwho">Following <b data-fav-count>0</b> player<span data-fav-plural></span>.
+        <span id="alertnames"></span></div>
+      <form class="nlform" onsubmit="event.preventDefault();document.getElementById('alertnote').style.display='block';">
+        <input type="email" name="email" placeholder="your@email.ie" required aria-label="Email address">
+        <input type="hidden" name="players" id="alertplayers">
+        <button type="submit">Turn on alerts</button>
+      </form>
+      <div class="nlnote" id="alertnote" style="display:none">Alerts aren't switched on yet — the list opens shortly.</div>
+      <div class="nlfine">Coming to the app as push notifications.</div>
+    </div>
+
+    <div class="sec"><h2>How it works</h2></div>
+    <div class="nlgrid">
+      <div class="nlcard"><div class="nlday">1 · Follow</div>
+        <ul><li>Tap the ★ beside any player</li><li>Saved in your browser — no account needed</li>
+            <li>They appear at the top of the homepage</li></ul></div>
+      <div class="nlcard"><div class="nlday">2 · Get alerted</div>
+        <ul><li>Email before they play</li><li>Email when they score or assist</li>
+            <li>Full-time rating if you want it</li></ul></div>
+    </div>
+    <script>
+    (function(){
+      function upd(){
+        var f = (window.FB ? FB.read() : []);
+        var el = document.getElementById('alertplayers');
+        if (el) el.value = f.join(',');
+        var names = document.getElementById('alertnames');
+        var pl = document.querySelectorAll('[data-fav-plural]');
+        for (var i=0;i<pl.length;i++) pl[i].textContent = f.length===1 ? '' : 's';
+        if (names) names.textContent = f.length ? '' : 'Tap the ★ on any player first.';
+      }
+      document.addEventListener('favschange', upd);
+      if (document.readyState==='loading') document.addEventListener('DOMContentLoaded', upd); else upd();
+    })();
+    </script>
 <footer>
   Footballers · prototype · sample data<br>
   Every Irish player at a professional club — abroad, senior international and League of Ireland

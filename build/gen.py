@@ -123,9 +123,10 @@ def esc(s): return H.escape(str(s), quote=False)
 OUT = "site"
 
 CSS = open(os.path.join(HERE, "style.css")).read()
+APPJS = open(os.path.join(HERE, "app.js")).read()
 
 NAV = [("Players","players.html"),("Abroad","abroad.html"),("League of Ireland","league-of-ireland.html"),
-       ("Clubs","clubs.html"),("Ireland","ireland.html"),("Fixtures","fixtures.html"),("Newsletter","newsletter.html")]
+       ("Clubs","clubs.html"),("Ireland","ireland.html"),("Fixtures","fixtures.html"),("Alerts","alerts.html")]
 
 def shell(title, desc, root, active, body, extra_head="", canonical=""):
     links = "".join(f'<a class="{"on" if active==href else ""}" href="{root}{href}">{l}</a>' for l,href in NAV)
@@ -161,7 +162,7 @@ def shell(title, desc, root, active, body, extra_head="", canonical=""):
 <body>
 <div class="wrap">
 <nav>
-  <a class="mark" href="{root}index.html">FOOTBALLERS</a>
+  <a class="mark" href="{root}index.html">footballers<i>.ie</i></a>
   <button class="burger" id="burger" aria-label="Menu" aria-expanded="false" aria-controls="navlinks">
     <span></span><span></span><span></span>
   </button>
@@ -184,6 +185,7 @@ def shell(title, desc, root, active, body, extra_head="", canonical=""):
   Every Irish player at a professional club — abroad, senior international and League of Ireland
 </footer>
 </div>
+<script>{APPJS}</script>
 </body>
 </html>"""
 
@@ -205,9 +207,16 @@ def player_row(p, root=""):
     return (f'<a class="plrow" href="{plink(p,root)}">{avatar(p, root, "sm")}'
             f'<div class="nm">{esc(p["n"])} '
             f'<span class="cl">{esc(p["club"])}</span></div><div class="ev">{ev}</div>'
-            f'<div class="mn">{mins}\'</div></a>')
+            f'<div class="mn">{mins}\'</div>{star(p)}</a>')
 
 
+
+
+def star(p):
+    return f'<button class="star" data-fav="{p["slug"]}" aria-pressed="false" aria-label="Follow {esc(p["n"])}">★</button>'
+
+def next_fixture(p):
+    return f'{p["fixtures"][0][0]} v {p["fixtures"][0][1]}' if p["fixtures"] else ""
 
 def initials(name):
     parts = [p for p in name.split() if p]
@@ -283,33 +292,66 @@ def build_index():
     msh = "".join(f'<a class="mscard" href="{plink(m["p"])}"><div class="mstag">{esc(m["tag"])}</div>'
                   f'<div class="msn">{esc(m["p"]["n"])}</div><div class="msd">{esc(m["text"])}</div></a>' for m in ms)
 
-    news_block = (f'<div class="sec" style="margin-top:28px"><h2>News</h2></div>'
+    # ---- who's playing, grouped by date ----
+    byday = {}
+    for p in PLAYERS:
+        for d, o, h, comp in p["fixtures"]:
+            byday.setdefault(d, []).append((p, o, h, comp))
+    def fxrow(p, o, h, comp):
+        return (f'<a class="plrow" href="{plink(p)}">{avatar(p,"","sm")}'
+                f'<div class="nm">{esc(p["n"])} <span class="cl">{esc(p["club"])}</span></div>'
+                f'<div class="ev">v {esc(o)} <span class="ha">{h}</span></div>'
+                f'<div class="mn">{esc(comp)}</div>{star(p)}</a>')
+    upcoming = ""
+    for d in list(byday.keys())[:4]:
+        items = "".join(fxrow(*x) for x in byday[d])
+        upcoming += (f'<div class="tiergroup"><h4><span>{esc(d)}</span>'
+                     f'<span>{len(byday[d])} Irish player{"s" if len(byday[d])!=1 else ""}</span></h4>{items}</div>')
+    fixtures_block = (f'<div class="sec"><h2>Playing next</h2><a class="more" href="fixtures.html">All fixtures →</a></div>'
+                      f'{upcoming}') if byday else (
+                      '<div class="sec"><h2>Playing next</h2></div>'
+                      '<div class="emptybox">No fixtures loaded yet. They appear here as soon as the '
+                      'fixture feed is connected — every Irish player, every game, newest first.</div>')
+
+    # ---- abroad / LOI split ----
+    abroad = [p for p in PLAYERS if p["tier"].startswith("abroad")]
+    loi    = [p for p in PLAYERS if p["tier"] == "loi"]
+    def block(title, group, href, limit=8):
+        rows = "".join(player_row(p) for p in group[:limit])
+        return (f'<div class="sec"><h2>{title}</h2><a class="more" href="{href}">All {len(group)} →</a></div>'
+                f'<div class="tiergroup">{rows}</div>') if group else ""
+
+    news_block = (f'<div class="sec"><h2>News</h2></div>'
                   f'<div class="carousel">{slides}<div class="dots">{dots}</div></div>') if HEAD else ""
     goals_block = (f'<div class="sec"><h2>Goal involvements</h2><a class="more" href="abroad.html">All →</a></div>'
                    f'<div class="giband">{gi}</div>') if GOALS else ""
-    ms_block = (f'<div class="sec"><h2>Approaching milestones</h2><a class="more" href="milestones.html">All →</a></div>'
-                f'<div class="msgrid">{msh}</div>') if ms else ""
+
+    # ---- data for the client-side favourites rail ----
+    fbp = {p["slug"]: dict(n=esc(p["n"]), club=esc(p["club"]), ini=initials(p["n"]),
+                           next=next_fixture(p)) for p in PLAYERS}
 
     body = f'''
+    <div id="myplayers-sec" style="display:none">
+      <div class="sec" style="margin-top:26px"><h2>Your players <span class="cnt" data-fav-count>0</span></h2>
+        <a class="more" href="alerts.html">Get alerts →</a></div>
+      <div class="tiergroup" id="myplayers"></div>
+    </div>
+    <div class="emptybox" id="myplayers-empty" style="display:none">
+      <b>Follow your players.</b> Tap the ★ beside any name and they'll appear up here —
+      who they're playing next, how they got on. <a href="alerts.html">Get an email when they play →</a>
+    </div>
+
+    {fixtures_block}
+
+    {block("Abroad", abroad, "abroad.html")}
+    {block("League of Ireland", loi, "league-of-ireland.html")}
+
     {news_block}
     {goals_block}
 
-    <div class="sec"><h2>Players</h2><a class="more" href="players.html">All {len(PLAYERS)} →</a></div>
-    {roundup}
-
-    {ms_block}
-
     {signup()}
-    <script>
-    var slides=[].slice.call(document.querySelectorAll('.slide')),
-        dots=[].slice.call(document.querySelectorAll('.dots button')),ci=0,timer;
-    function show(i){{slides.forEach(function(s){{s.classList.toggle('on',+s.dataset.i===i)}});
-      dots.forEach(function(d){{d.setAttribute('aria-current',+d.dataset.i===i)}});ci=i;}}
-    function next(){{show((ci+1)%slides.length)}}
-    function restart(){{clearInterval(timer);timer=setInterval(next,4800)}}
-    dots.forEach(function(d){{d.onclick=function(e){{e.preventDefault();show(+d.dataset.i);restart()}}}});
-    restart();
-    </script>'''
+    <script>window.FB_PLAYERS={json.dumps(fbp)};</script>
+'''
     return shell("FOOTBALLERS — every Irish professional, tracked",
                  "News, goal involvements and the full weekend round-up for every Irish professional footballer.",
                  "", "index.html", body, canonical="")
@@ -323,7 +365,7 @@ def build_list(fname, title, sub, data):
                  f'data-pos="{p["pos"]}" data-league="{esc(p["league"])}" href="{plink(p)}">'
                  f'{avatar(p)}'
                  f'<div class="nm">{esc(p["n"])} <span class="cl">{esc(p["club"])}</span></div>'
-                 f'<div class="ev">{ev}</div><div class="mn">{mins}\'</div></a>')
+                 f'<div class="ev">{ev}</div><div class="mn">{mins}\'</div>{star(p)}</a>')
     leagues = sorted(set(p["league"] for p in data))
     lopts = "".join(f'<option>{esc(l)}</option>' for l in leagues)
     body = f'''
@@ -585,7 +627,10 @@ def build_player(p):
         {f'<div class="pcredit">Photo: {esc(p["photo_credit"])}</div>' if p.get("photo_credit") else ""}
         </div>
       </div>
-      <div class="pdbadge">{badge}</div>
+      <div class="pdactions">
+        <button class="starbtn" data-fav="{p["slug"]}" aria-pressed="false">★ <span>Follow</span></button>
+        <div class="pdbadge">{badge}</div>
+      </div>
     </div>
 
     <div class="sec"><h2>Season {esc(SEASON)}</h2></div>
@@ -640,6 +685,66 @@ def build_newsletter():
                  "Two emails a week on every Irish professional footballer — Monday round-up and Friday preview.",
                  "", "newsletter.html", body, canonical="newsletter.html")
 
+
+def build_alerts():
+    form_open = f'<form class="nlform" action="{NEWSLETTER_ACTION}" method="post" target="_blank">' if NEWSLETTER_ACTION \
+                else '<form class="nlform" onsubmit="event.preventDefault();document.getElementById(\'alertnote\').style.display=\'block\';">'
+    body = f'''
+    <div class="pagehead"><h1>Player <i>alerts</i></h1>
+      <p>Follow players with the ★ anywhere on the site, then get an email when they're involved.</p></div>
+
+    <div class="nlbox">
+      <div class="nltag">Alerts</div>
+      <h3 class="nlh">Your players, straight to your inbox</h3>
+      <div class="alertgrid">
+        <label class="alertopt"><input type="checkbox" name="alert_lineup" checked> <span><b>About to play</b>
+          An hour before kick-off when one of your players is named in the squad.</span></label>
+        <label class="alertopt"><input type="checkbox" name="alert_goal" checked> <span><b>Goal or assist</b>
+          The moment they're involved.</span></label>
+        <label class="alertopt"><input type="checkbox" name="alert_rating"> <span><b>Full-time rating</b>
+          Their match rating and minutes once the game's done.</span></label>
+        <label class="alertopt"><input type="checkbox" name="alert_news"> <span><b>Transfers &amp; injuries</b>
+          Moves, call-ups and fitness news.</span></label>
+      </div>
+      <div class="alertwho">Following <b data-fav-count>0</b> player<span data-fav-plural></span>.
+        <span id="alertnames"></span></div>
+      {form_open}
+        <input type="email" name="{NEWSLETTER_FIELD}" placeholder="your@email.ie" required aria-label="Email address">
+        <input type="hidden" name="players" id="alertplayers">
+        <button type="submit">Turn on alerts</button>
+      </form>
+      <div class="nlnote" id="alertnote" style="display:none">Alerts aren't switched on yet — the list opens shortly.</div>
+      <div class="nlfine">Coming to the app as push notifications.</div>
+    </div>
+
+    <div class="sec"><h2>How it works</h2></div>
+    <div class="nlgrid">
+      <div class="nlcard"><div class="nlday">1 · Follow</div>
+        <ul><li>Tap the ★ beside any player</li><li>Saved in your browser — no account needed</li>
+            <li>They appear at the top of the homepage</li></ul></div>
+      <div class="nlcard"><div class="nlday">2 · Get alerted</div>
+        <ul><li>Email before they play</li><li>Email when they score or assist</li>
+            <li>Full-time rating if you want it</li></ul></div>
+    </div>
+    <script>
+    (function(){{
+      function upd(){{
+        var f = (window.FB ? FB.read() : []);
+        var el = document.getElementById('alertplayers');
+        if (el) el.value = f.join(',');
+        var names = document.getElementById('alertnames');
+        var pl = document.querySelectorAll('[data-fav-plural]');
+        for (var i=0;i<pl.length;i++) pl[i].textContent = f.length===1 ? '' : 's';
+        if (names) names.textContent = f.length ? '' : 'Tap the ★ on any player first.';
+      }}
+      document.addEventListener('favschange', upd);
+      if (document.readyState==='loading') document.addEventListener('DOMContentLoaded', upd); else upd();
+    }})();
+    </script>'''
+    return shell("Player alerts — FOOTBALLERS",
+                 "Follow Irish players and get an email when they play, score or assist.",
+                 "", "alerts.html", body, canonical="alerts.html")
+
 # ================= 404 / SITEMAP / ROBOTS =================
 def build_404():
     body = """
@@ -657,7 +762,7 @@ def build_404():
 
 def build_sitemap():
     urls = ["", "players.html", "abroad.html", "league-of-ireland.html", "clubs.html",
-            "ireland.html", "fixtures.html", "milestones.html", "compare.html", "newsletter.html"]
+            "ireland.html", "fixtures.html", "milestones.html", "compare.html", "newsletter.html", "alerts.html"]
     urls += [f"club/{club_slug(c)}.html" for c in sorted(set(p["club"] for p in PLAYERS))]
     urls += [f"player/{p['slug']}.html" for p in PLAYERS]
     items = "".join(f"  <url><loc>{SITE_URL}/{u}</loc></url>\n" for u in urls)
@@ -686,6 +791,7 @@ open(f"{OUT}/fixtures.html","w").write(build_fixtures())
 open(f"{OUT}/milestones.html","w").write(build_milestones())
 open(f"{OUT}/compare.html","w").write(build_compare())
 open(f"{OUT}/newsletter.html","w").write(build_newsletter())
+open(f"{OUT}/alerts.html","w").write(build_alerts())
 open(f"{OUT}/404.html","w").write(build_404())
 open(f"{OUT}/sitemap.xml","w").write(build_sitemap())
 open(f"{OUT}/robots.txt","w").write(build_robots())

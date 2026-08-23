@@ -35,8 +35,8 @@ body{background:var(--bg);color:var(--white);font-family:'Space Grotesk',sans-se
 a{color:inherit;text-decoration:none}
 button{font-family:inherit;background:none;border:0;color:inherit;cursor:pointer}
 nav{display:flex;justify-content:space-between;align-items:center;padding:18px 0;border-bottom:1px solid var(--line);gap:14px;flex-wrap:wrap}
-.mark{font-weight:700;font-size:19px}
-.mark i{font-style:normal;color:var(--yellow)}
+.mark{font-weight:700;font-size:19px;letter-spacing:-.01em}
+.mark i{font-style:normal;color:var(--yellow);font-weight:600}
 .navlinks{display:flex;gap:18px;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--mute);flex-wrap:wrap}
 .navlinks a{padding-bottom:2px;border-bottom:1px solid transparent}
 .navlinks a:hover{color:var(--white)}
@@ -362,16 +362,45 @@ img,svg,iframe{max-width:100%}
   .pdid{gap:13px}
   .plrow{grid-template-columns:34px 1fr auto}
 }
+
+/* ============ FAVOURITES & ALERTS ============ */
+.star{font-size:17px;line-height:1;color:#2E3739;padding:6px 2px 6px 10px;flex:none;transition:color .12s,transform .12s}
+.star:hover{color:var(--mute);transform:scale(1.15)}
+.star.on{color:var(--yellow)}
+.plrow{grid-template-columns:34px 1fr auto auto auto}
+.starbtn{border:1px solid var(--line);background:var(--panel);border-radius:20px;padding:8px 15px;
+  font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--mute)}
+.starbtn:hover{color:var(--white);border-color:var(--mute)}
+.starbtn.on{background:var(--yellow);color:#0C0F10;border-color:var(--yellow);font-weight:600}
+.starbtn.on span:after{content:"ing"}
+.pdactions{display:flex;flex-direction:column;gap:10px;align-items:flex-end}
+.cnt{background:var(--yellow);color:#0C0F10;border-radius:20px;padding:1px 8px;font-size:11px;margin-left:6px}
+.emptybox{border:1px dashed var(--line);border-radius:8px;padding:20px;color:var(--mute);
+  font-size:14px;line-height:1.6;background:var(--panel)}
+.emptybox b{color:var(--white)}
+.emptybox a{color:var(--teal)}
+.alertgrid{display:grid;gap:1px;background:var(--line);border:1px solid var(--line);border-radius:6px;overflow:hidden;margin:16px 0}
+.alertopt{display:flex;gap:12px;background:var(--bg);padding:14px;cursor:pointer;align-items:flex-start}
+.alertopt input{margin-top:3px;width:auto;flex:none;accent-color:var(--yellow)}
+.alertopt b{display:block;font-size:14px;margin-bottom:3px}
+.alertopt span{color:var(--mute);font-size:13px;line-height:1.5}
+.alertwho{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--mute);margin-bottom:12px}
+.alertwho b{color:var(--yellow)}
+@media(max-width:700px){
+  .plrow{grid-template-columns:34px 1fr auto auto}
+  .plrow .mn{display:none}
+  .pdactions{flex-direction:row;align-items:center}
+}
 </style>
 </head>
 <body>
 <div class="wrap">
 <nav>
-  <a class="mark" href="../index.html">FOOTBALLERS</a>
+  <a class="mark" href="../index.html">footballers<i>.ie</i></a>
   <button class="burger" id="burger" aria-label="Menu" aria-expanded="false" aria-controls="navlinks">
     <span></span><span></span><span></span>
   </button>
-  <div class="navlinks" id="navlinks"><a class="" href="../players.html">Players</a><a class="" href="../abroad.html">Abroad</a><a class="" href="../league-of-ireland.html">League of Ireland</a><a class="on" href="../clubs.html">Clubs</a><a class="" href="../ireland.html">Ireland</a><a class="" href="../fixtures.html">Fixtures</a><a class="" href="../newsletter.html">Newsletter</a></div>
+  <div class="navlinks" id="navlinks"><a class="" href="../players.html">Players</a><a class="" href="../abroad.html">Abroad</a><a class="" href="../league-of-ireland.html">League of Ireland</a><a class="on" href="../clubs.html">Clubs</a><a class="" href="../ireland.html">Ireland</a><a class="" href="../fixtures.html">Fixtures</a><a class="" href="../alerts.html">Alerts</a></div>
   <div class="navmeta">MW04 · 22-23 AUG · <b>123</b> TRACKED</div>
 </nav>
 <script>
@@ -388,7 +417,7 @@ img,svg,iframe{max-width:100%}
     <a class="crumb" href="../clubs.html">← All clubs</a>
     <div class="pagehead"><h1>Lorient</h1><p>1 Irish player tracked</p></div>
     <div class="sec"><h2>Irish players</h2></div>
-    <div class="tiergroup"><a class="plrow" href="../player/desmond-armstrong.html"><div class="pavatar sm"><span>DA</span></div><div class="nm">Desmond Armstrong <span class="cl">Lorient</span></div><div class="ev">—</div><div class="mn">0'</div></a></div>
+    <div class="tiergroup"><a class="plrow" href="../player/desmond-armstrong.html"><div class="pavatar sm"><span>DA</span></div><div class="nm">Desmond Armstrong <span class="cl">Lorient</span></div><div class="ev">—</div><div class="mn">0'</div><button class="star" data-fav="desmond-armstrong" aria-pressed="false" aria-label="Follow Desmond Armstrong">★</button></a></div>
     <div class="sec"><h2>Upcoming fixtures</h2></div>
     <div class="fxlist"><div class="emptystate" style="display:block">No fixtures listed.</div></div>
     
@@ -397,5 +426,112 @@ img,svg,iframe{max-width:100%}
   Every Irish player at a professional club — abroad, senior international and League of Ireland
 </footer>
 </div>
+<script>/* footballers.ie — favourites
+   Stored in the browser (localStorage). No account needed.
+   Powers: star toggles, the "Your players" rail, and the alerts page. */
+(function () {
+  var KEY = 'fb_favs_v1';
+
+  function read() {
+    try { return JSON.parse(localStorage.getItem(KEY)) || []; }
+    catch (e) { return []; }
+  }
+  function write(list) {
+    try { localStorage.setItem(KEY, JSON.stringify(list)); } catch (e) {}
+    document.dispatchEvent(new CustomEvent('favschange', { detail: list }));
+  }
+  function has(slug) { return read().indexOf(slug) > -1; }
+  function toggle(slug) {
+    var list = read(), i = list.indexOf(slug);
+    if (i > -1) list.splice(i, 1); else list.push(slug);
+    write(list);
+    return list.indexOf(slug) > -1;
+  }
+
+  window.FB = { read: read, write: write, has: has, toggle: toggle };
+
+  /* ---- wire up every star on the page ---- */
+  function paint(btn) {
+    var on = has(btn.dataset.fav);
+    btn.classList.toggle('on', on);
+    btn.setAttribute('aria-pressed', on ? 'true' : 'false');
+    btn.title = on ? 'Remove from your players' : 'Add to your players';
+  }
+  function init() {
+    var stars = document.querySelectorAll('[data-fav]');
+    for (var i = 0; i < stars.length; i++) {
+      (function (btn) {
+        paint(btn);
+        btn.addEventListener('click', function (e) {
+          e.preventDefault(); e.stopPropagation();
+          toggle(btn.dataset.fav);
+          var all = document.querySelectorAll('[data-fav="' + btn.dataset.fav + '"]');
+          for (var j = 0; j < all.length; j++) paint(all[j]);
+        });
+      })(stars[i]);
+    }
+    renderMine();
+    updateCount();
+  }
+
+  function updateCount() {
+    var n = read().length;
+    var els = document.querySelectorAll('[data-fav-count]');
+    for (var i = 0; i < els.length; i++) els[i].textContent = n;
+    var nav = document.getElementById('nav-mine');
+    if (nav) nav.style.display = n ? '' : 'none';
+  }
+
+  /* ---- "Your players" rail on the homepage ---- */
+  function renderMine() {
+    var wrap = document.getElementById('myplayers');
+    if (!wrap || !window.FB_PLAYERS) return;
+    var favs = read();
+    var empty = document.getElementById('myplayers-empty');
+
+    if (!favs.length) {
+      wrap.innerHTML = '';
+      if (empty) empty.style.display = 'block';
+      var sec = document.getElementById('myplayers-sec');
+      if (sec) sec.style.display = 'none';
+      return;
+    }
+    if (empty) empty.style.display = 'none';
+    var sec2 = document.getElementById('myplayers-sec');
+    if (sec2) sec2.style.display = '';
+
+    var rows = '';
+    favs.forEach(function (slug) {
+      var p = window.FB_PLAYERS[slug];
+      if (!p) return;
+      var when = p.next ? p.next : 'No fixture listed';
+      rows += '<a class="plrow" href="player/' + slug + '.html">' +
+              '<div class="pavatar sm"><span>' + p.ini + '</span></div>' +
+              '<div class="nm">' + p.n + ' <span class="cl">' + p.club + '</span></div>' +
+              '<div class="ev">' + when + '</div>' +
+              '<button class="star on" data-fav="' + slug + '" aria-pressed="true">★</button></a>';
+    });
+    wrap.innerHTML = rows;
+
+    var stars = wrap.querySelectorAll('[data-fav]');
+    for (var i = 0; i < stars.length; i++) {
+      (function (btn) {
+        btn.addEventListener('click', function (e) {
+          e.preventDefault(); e.stopPropagation();
+          toggle(btn.dataset.fav);
+          renderMine(); updateCount();
+          var all = document.querySelectorAll('[data-fav="' + btn.dataset.fav + '"]');
+          for (var j = 0; j < all.length; j++) paint(all[j]);
+        });
+      })(stars[i]);
+    }
+  }
+
+  document.addEventListener('favschange', function () { renderMine(); updateCount(); });
+
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);
+  else init();
+})();
+</script>
 </body>
 </html>
