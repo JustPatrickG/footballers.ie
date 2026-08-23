@@ -561,61 +561,72 @@ img,svg,iframe{max-width:100%}
 /* ============ PAGE LOADER ============ */
 #fbload{
   position:fixed;inset:0;z-index:400;
-  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:22px;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:26px;
   background:var(--bg);opacity:1;transition:opacity .32s ease;
 }
 #fbload.out{opacity:0;pointer-events:none}
 .fbl-mark{
   font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:22px;letter-spacing:-.01em;
-  color:var(--white);opacity:0;animation:fblIn .42s ease forwards;
+  color:var(--white);opacity:0;animation:fblIn .5s ease forwards;
 }
 .fbl-mark i{font-style:normal;color:var(--yellow)}
 @keyframes fblIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
 
-.fbl-pitch{position:relative;width:150px;height:48px}
-.fbl-line{position:absolute;left:0;right:0;bottom:6px;height:1px;background:var(--line)}
+/* the stage: ball sits dead centre under the wordmark, boot arrives from the left */
+.fbl-pitch{position:relative;width:240px;height:60px;overflow:hidden}
 
-/* the leg: plants, swings through, resets */
-.fbl-boot{position:absolute;left:2px;bottom:4px;width:30px;height:34px;overflow:visible}
-.fbl-leg line{stroke:var(--mute);stroke-width:2.6;stroke-linecap:round;fill:none}
-.fbl-leg{transform-origin:20px 6px;animation:fblKick 1.15s cubic-bezier(.4,0,.3,1) infinite}
-@keyframes fblKick{
-  0%,18%   {transform:rotate(16deg)}
-  30%      {transform:rotate(-34deg)}   /* wind up */
-  40%      {transform:rotate(24deg)}    /* strike */
-  62%      {transform:rotate(10deg)}
-  100%     {transform:rotate(16deg)}
-}
-
-/* the ball: struck at the moment of contact, arcs away, comes back */
 .fbl-ball{
-  position:absolute;left:26px;bottom:5px;width:12px;height:12px;
-  animation:fblFly 1.15s cubic-bezier(.25,.6,.4,1) infinite;
+  position:absolute;left:50%;top:50%;width:22px;height:22px;margin:-11px 0 0 -11px;
+  animation:fblFly 2.4s cubic-bezier(.22,.7,.35,1) infinite;
 }
 .fbl-ball i{
   display:block;width:100%;height:100%;border-radius:50%;background:var(--white);
-  background-image:radial-gradient(circle at 32% 34%, #0C0F10 0 1.6px, transparent 1.7px),
-                   radial-gradient(circle at 70% 62%, #0C0F10 0 1.4px, transparent 1.5px);
-  animation:fblSpin 1.15s linear infinite;
+  background-image:radial-gradient(circle at 33% 32%, #0C0F10 0 3px, transparent 3.2px),
+                   radial-gradient(circle at 70% 64%, #0C0F10 0 2.4px, transparent 2.6px),
+                   radial-gradient(circle at 52% 88%, #0C0F10 0 1.8px, transparent 2px);
+  animation:fblSpin 2.4s cubic-bezier(.22,.7,.35,1) infinite;
 }
 @keyframes fblFly{
-  0%,36%   {transform:translate(0,0);opacity:1}
-  52%      {transform:translate(48px,-22px)}
-  68%      {transform:translate(88px,-10px)}
-  82%      {transform:translate(118px,0);opacity:1}
-  90%      {transform:translate(134px,0);opacity:0}
-  91%      {transform:translate(0,0);opacity:0}
-  100%     {transform:translate(0,0);opacity:1}
+  0%, 20%  {transform:translate(0,0);opacity:0}      /* ball fades in first */
+  26%      {transform:translate(0,0);opacity:1}
+  46%      {transform:translate(0,0);opacity:1}      /* waits for the boot */
+  62%      {transform:translate(78px,-26px);opacity:1}
+  76%      {transform:translate(150px,-14px);opacity:1}
+  86%      {transform:translate(210px,10px);opacity:0}  /* out of frame */
+  100%     {transform:translate(210px,10px);opacity:0}
 }
 @keyframes fblSpin{
-  0%,36%{transform:rotate(0)}
-  90%,100%{transform:rotate(700deg)}
+  0%,46%{transform:rotate(0)}
+  86%,100%{transform:rotate(620deg)}
+}
+
+/* boot slides in from the left, plants, swings through the ball, retreats */
+.fbl-boot{
+  position:absolute;left:50%;top:50%;width:38px;height:44px;margin:-26px 0 0 -62px;
+  overflow:visible;opacity:0;
+  animation:fblBootIn 2.4s cubic-bezier(.3,.7,.3,1) infinite;
+}
+.fbl-leg line{stroke:var(--mute);stroke-width:2.8;stroke-linecap:round;fill:none}
+.fbl-leg{transform-origin:20px 4px;animation:fblKick 2.4s cubic-bezier(.35,0,.25,1) infinite}
+@keyframes fblBootIn{
+  0%,24%  {opacity:0;transform:translateX(-26px)}
+  34%     {opacity:1;transform:translateX(0)}
+  70%     {opacity:1;transform:translateX(0)}
+  84%,100%{opacity:0;transform:translateX(-20px)}
+}
+@keyframes fblKick{
+  0%,36%  {transform:rotate(14deg)}
+  48%     {transform:rotate(-32deg)}   /* wind up */
+  58%     {transform:rotate(30deg)}    /* strike */
+  74%     {transform:rotate(12deg)}
+  100%    {transform:rotate(14deg)}
 }
 
 @media(prefers-reduced-motion:reduce){
   .fbl-mark{animation:none;opacity:1}
-  .fbl-leg,.fbl-ball{animation:none}
-  .fbl-ball{left:60px}
+  .fbl-leg,.fbl-ball,.fbl-ball i,.fbl-boot{animation:none}
+  .fbl-ball{opacity:1}
+  .fbl-boot{opacity:1;transform:none}
 }
 </style>
 </head>
@@ -623,15 +634,14 @@ img,svg,iframe{max-width:100%}
 <div id="fbload" aria-hidden="true">
   <div class="fbl-mark">footballers<i>.ie</i></div>
   <div class="fbl-pitch">
+    <div class="fbl-ball"><i></i></div>
     <svg class="fbl-boot" viewBox="0 0 40 44" aria-hidden="true">
       <g class="fbl-leg">
-        <line x1="20" y1="4" x2="20" y2="24"/>
-        <line x1="20" y1="24" x2="16" y2="38"/>
-        <line x1="16" y1="38" x2="30" y2="40"/>
+        <line x1="20" y1="2" x2="20" y2="24"/>
+        <line x1="20" y1="24" x2="15" y2="38"/>
+        <line x1="15" y1="38" x2="31" y2="40"/>
       </g>
     </svg>
-    <div class="fbl-ball"><i></i></div>
-    <div class="fbl-line"></div>
   </div>
 </div>
 <script>
@@ -639,7 +649,7 @@ img,svg,iframe{max-width:100%}
 (function(){
   var el=document.getElementById('fbload');
   if(!el) return;
-  var t0=Date.now(), MIN=420;
+  var t0=Date.now(), MIN=2150;
   function done(){
     var wait=Math.max(0, MIN-(Date.now()-t0));
     setTimeout(function(){
@@ -649,7 +659,7 @@ img,svg,iframe{max-width:100%}
   }
   if(document.readyState==='complete') done();
   else window.addEventListener('load', done);
-  setTimeout(done, 2500);   // never let it hang
+  setTimeout(done, 3600);   // never let it hang
 })();
 </script>
 <div class="wrap">
