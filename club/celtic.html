@@ -148,14 +148,146 @@ a.fxrow.lnk:hover{background:var(--panel2)}
 .cmpv{background:var(--panel);padding:12px 14px;font-family:'IBM Plex Mono',monospace;font-size:14px}
 .cmpv.win{color:var(--teal);font-weight:600}
 footer{margin-top:60px;border-top:1px solid var(--line);padding:20px 0 44px;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--mute);line-height:2}
-@media(max-width:760px){
-  .pdstats{grid-template-columns:repeat(2,1fr)}
-  .fxrow{grid-template-columns:64px 1fr auto;font-size:13px}
-  .fxc{display:none}
-  .plrow{grid-template-columns:1fr auto}
+
+/* ============ RESPONSIVE ============ */
+html{-webkit-text-size-adjust:100%}
+body{overflow-x:hidden}
+img,svg,iframe{max-width:100%}
+.burger{display:none;width:44px;height:44px;border:1px solid var(--line);border-radius:6px;padding:0;position:relative;flex:none}
+.burger span{display:block;position:absolute;left:12px;width:20px;height:2px;background:var(--white);transition:transform .2s,opacity .2s}
+.burger span:nth-child(1){top:15px}
+.burger span:nth-child(2){top:21px}
+.burger span:nth-child(3){top:27px}
+.burger.x span:nth-child(1){transform:translateY(6px) rotate(45deg)}
+.burger.x span:nth-child(2){opacity:0}
+.burger.x span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
+
+@media(hover:none){
+  a,button,select,input{-webkit-tap-highlight-color:rgba(245,197,24,.18)}
+  .plrow,.gicard,.squadcard,.clubcard,.mscard,a.fxrow{min-height:52px}
+}
+
+/* ---- tablet ---- */
+@media(max-width:900px){
+  .wrap{padding:0 16px}
+  .navlinks{gap:14px;font-size:10px}
+  .pdstats{grid-template-columns:repeat(4,1fr)}
+}
+
+/* ---- phone ---- */
+@media(max-width:700px){
+  .wrap{padding:0 14px}
+
+  /* nav becomes a drawer */
+  nav{padding:14px 0;flex-wrap:nowrap;gap:10px}
+  .mark{font-size:17px;flex:1}
+  .burger{display:block}
+  .navmeta{display:none}
+  .navlinks{
+    display:none;position:absolute;left:0;right:0;top:100%;z-index:60;
+    flex-direction:column;gap:0;background:var(--panel);
+    border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+  }
+  nav{position:relative}
+  .navlinks.open{display:flex}
+  .navlinks a{
+    padding:15px 16px;border-bottom:1px solid var(--line);border-left:2px solid transparent;
+    font-size:12px;letter-spacing:.12em;
+  }
+  .navlinks a:last-child{border-bottom:0}
+  .navlinks a.on{border-left-color:var(--yellow);border-bottom-color:var(--line);background:var(--panel2)}
+
+  /* headings */
+  .pagehead{padding:24px 0 4px}
+  .pagehead h1{font-size:26px}
+  .pagehead p{font-size:14px}
+  .sec{margin:28px 0 12px}
+  .sec h2{font-size:11px;letter-spacing:.14em}
+
+  /* carousel */
+  .carousel{min-height:0}
+  .slide{padding:20px 18px 46px}
+  .slide h3{font-size:20px;line-height:1.2}
+  .slide p{font-size:13px}
+  .dots{bottom:14px;right:16px}
+
+  /* horizontal strips get edge-to-edge scroll */
+  .giband{border-radius:0;border-left:0;border-right:0;margin:0 -14px;scroll-snap-type:x mandatory}
+  .gicard{flex:0 0 76vw;max-width:280px;scroll-snap-align:start}
+
+  /* player rows */
+  .plrow{grid-template-columns:1fr auto;gap:10px;padding:13px 2px}
+  .plrow .nm{font-size:15px;line-height:1.25}
+  .plrow .cl{display:block;margin-top:2px}
   .plrow .mn{display:none}
-  .cmpgrid{grid-template-columns:1fr}
-  .cmpk{border-top:1px solid var(--line)}
+
+  /* fixtures & results: drop the trailing competition column, keep the numbers */
+  .fxlist{border-radius:6px}
+  .fxrow{grid-template-columns:58px 1fr auto;gap:10px;padding:12px;font-size:14px}
+  .fxc{display:none}
+  .fxv{font-size:12px}
+  .fxs,.fxev{font-size:13px}
+  .fxm{min-width:32px;font-size:11px}
+
+  /* player header */
+  .pdhead{padding:10px 0 4px;gap:12px}
+  .pdname{font-size:28px;line-height:1.05}
+  .pdmeta{font-size:11px;line-height:1.7}
+  .pdbadge{font-size:10px;padding:5px 10px}
+  .pdstats{grid-template-columns:repeat(2,1fr)}
+  .pds{padding:13px 12px}
+  .pds .n{font-size:19px}
+
+  /* grids collapse to single column */
+  .squadgrid,.clubgrid,.msgrid{grid-template-columns:1fr}
+  .squadcard,.clubcard,.mscard{padding:14px}
+
+  /* filters stack full width and stay tappable */
+  .filterbar{gap:8px;margin:16px 0 20px}
+  .filterbar input,.filterbar select{flex:1 1 100%;min-height:46px;font-size:16px}
+
+  /* international blocks */
+  .intlblock{padding:12px 13px}
+  .ilvl{font-size:14px}
+  .ilvl span{display:block;margin-left:0;margin-top:4px}
+
+  /* eligibility cards full width */
+  .eliglist{flex-direction:column}
+  .elig{min-width:0;width:100%}
+  .eligNote{font-size:12px;line-height:1.65}
+
+  /* transfers */
+  .trow{grid-template-columns:50px 1fr;gap:8px;padding:12px;font-size:13px}
+  .tfee{grid-column:2;font-size:11px}
+
+  /* tabs scroll horizontally rather than wrapping into a block */
+  .tabbar{flex-wrap:nowrap;overflow-x:auto;margin:16px -14px 4px;padding:0 14px 4px;scrollbar-width:none}
+  .tabbar::-webkit-scrollbar{display:none}
+  .tab{flex:none;padding:9px 15px;font-size:11px}
+
+  /* compare stays 3 columns — stacking loses the comparison */
+  .cmpgrid{grid-template-columns:1.1fr 1fr 1fr}
+  .cmphead{padding:11px 9px;font-size:13px}
+  .cmpk{padding:10px 9px;font-size:9px;letter-spacing:.04em}
+  .cmpv{padding:10px 9px;font-size:12px}
+
+  footer{margin-top:40px;padding:18px 0 36px;font-size:9px}
+}
+
+/* ---- small phone ---- */
+@media(max-width:380px){
+  .pagehead h1{font-size:23px}
+  .pdname{font-size:24px}
+  .pdstats{grid-template-columns:repeat(2,1fr)}
+  .gicard{flex:0 0 84vw}
+  .cmpgrid{grid-template-columns:1fr 1fr 1fr}
+  .cmpk{font-size:8px}
+}
+
+/* notch / home-indicator safe areas */
+@supports(padding:max(0px)){
+  .wrap{padding-left:max(14px,env(safe-area-inset-left));padding-right:max(14px,env(safe-area-inset-right))}
+  footer{padding-bottom:max(36px,env(safe-area-inset-bottom))}
 }
 </style>
 </head>
@@ -163,9 +295,22 @@ footer{margin-top:60px;border-top:1px solid var(--line);padding:20px 0 44px;font
 <div class="wrap">
 <nav>
   <a class="mark" href="../index.html">FOOTBALLERS<i>*</i></a>
-  <div class="navlinks"><a class="" href="../players.html">Players</a><a class="" href="../abroad.html">Abroad</a><a class="" href="../league-of-ireland.html">League of Ireland</a><a class="on" href="../clubs.html">Clubs</a><a class="" href="../ireland.html">Ireland</a><a class="" href="../fixtures.html">Fixtures</a></div>
+  <button class="burger" id="burger" aria-label="Menu" aria-expanded="false" aria-controls="navlinks">
+    <span></span><span></span><span></span>
+  </button>
+  <div class="navlinks" id="navlinks"><a class="" href="../players.html">Players</a><a class="" href="../abroad.html">Abroad</a><a class="" href="../league-of-ireland.html">League of Ireland</a><a class="on" href="../clubs.html">Clubs</a><a class="" href="../ireland.html">Ireland</a><a class="" href="../fixtures.html">Fixtures</a></div>
   <div class="navmeta">MW04 · 22–23 AUG · <b>19</b> TRACKED</div>
 </nav>
+<script>
+(function(){
+  var b=document.getElementById('burger'),n=document.getElementById('navlinks');
+  b.addEventListener('click',function(){
+    var open=n.classList.toggle('open');
+    b.setAttribute('aria-expanded',open?'true':'false');
+    b.classList.toggle('x',open);
+  });
+})();
+</script>
 
     <a class="crumb" href="../clubs.html">← All clubs</a>
     <div class="pagehead"><h1>Celtic</h1><p>Scottish Premiership · 1 Irish player tracked</p></div>

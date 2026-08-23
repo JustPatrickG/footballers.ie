@@ -453,14 +453,7 @@ function Intro({ onDone, accent = '#F5C518', accent2 = '#35D4BF', hud = true }) 
   const done = React.useRef(false);
 
   React.useEffect(() => {
-    const resize = () => {
-      const contain = Math.min(innerWidth / W, innerHeight / H);
-      const cover   = Math.max(innerWidth / W, innerHeight / H);
-      /* portrait phones: fill the screen (crop the wide edges) rather than
-         letterboxing the action into a thin strip */
-      const portrait = innerHeight > innerWidth;
-      setFit(portrait ? Math.min(cover, contain * 2.2) : contain);
-    };
+    const resize = () => setFit(Math.min(innerWidth / W, innerHeight / H));
     resize(); addEventListener('resize', resize);
     let raf, t0 = performance.now();
     const tick = now => {
