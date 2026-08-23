@@ -5,7 +5,7 @@
 <title>FOOTBALLERS.ie — loading animation</title>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
 <style>
-  html, body { margin: 0; height: 100%; background: #0C0F10; overflow: hidden; }
+  html, body { margin: 0; height: 100%; background: transparent; overflow: hidden; }
   #root { position: fixed; inset: 0; }
 </style>
 <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
@@ -276,31 +276,6 @@ function Flap({ ch, p, i }) {
   </div>;
 }
 
-/* ---------- the site behind the gates ---------- */
-function Site() {
-  const card = k => <div key={k} style={{ flex: 1, background: '#111517', border: '1px solid rgba(255,255,255,0.06)', borderRadius: 4, overflow: 'hidden' }}>
-    <div style={{ height: 190, background: 'repeating-linear-gradient(135deg, rgba(255,255,255,0.05) 0 8px, rgba(255,255,255,0) 8px 16px)' }} />
-    <div style={{ padding: '18px 20px', display: 'flex', flexDirection: 'column', gap: 10 }}>
-      <div style={{ font: `500 13px/1 ${MONO}`, letterSpacing: '0.16em', color: TEAL }}>{['SERIE A', 'EFL CHAMP.', 'EREDIVISIE', 'LA LIGA'][k]}</div>
-      <div style={{ font: `600 26px/1 ${DISP}`, color: '#E8EAEA' }}>{['—', '—', '—', '—'][k]}</div>
-      <div style={{ height: 8, width: '70%', background: 'rgba(255,255,255,0.07)' }} />
-    </div>
-  </div>;
-  return <div style={{ position: 'absolute', inset: 0, background: BG, display: 'flex', flexDirection: 'column' }}>
-    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '38px 64px', borderBottom: '1px solid rgba(255,255,255,0.07)' }}>
-      <div style={{ font: `700 26px/1 ${DISP}`, letterSpacing: '0.2em', color: YEL }}>FOOTBALLERS</div>
-      <div style={{ display: 'flex', gap: 44, font: `400 15px/1 ${MONO}`, letterSpacing: '0.18em', color: 'rgba(232,234,234,0.55)' }}>
-        <span>PLAYERS</span><span>FIXTURES</span><span>MINUTES</span><span>TABLE</span>
-      </div>
-    </div>
-    <div style={{ padding: '86px 64px 54px', display: 'flex', flexDirection: 'column', gap: 24 }}>
-      <div style={{ font: `400 15px/1 ${MONO}`, letterSpacing: '0.3em', color: TEAL }}>MATCHDAY / 96'</div>
-      <div style={{ font: `700 92px/0.94 ${DISP}`, letterSpacing: '-0.02em', color: '#F2F4F4', maxWidth: 1200 }}>Every Irish footballer, every league, every minute.</div>
-    </div>
-    <div style={{ display: 'flex', gap: 24, padding: '0 64px' }}>{[0, 1, 2, 3].map(card)}</div>
-  </div>;
-}
-
 /* ---------- action layer (rendered twice, clipped into two gates) ---------- */
 function Action({ T, C, total, hud }) {
   /* camera */
@@ -458,10 +433,8 @@ function Piece({ hud }) {
     </div>
   );
 
-  return <div style={{ position: 'absolute', inset: 0, background: BG, overflow: 'hidden' }}>
-    <div style={{ position: 'absolute', inset: 0, transform: `scale(${MOTION.glide(1.05, 1, C.Gates, authoredTotal)(T)})` }}>
-      <Site />
-    </div>
+  const behindGates = T < C.Gates ? BG : 'transparent';
+  return <div style={{ position: 'absolute', inset: 0, background: behindGates, overflow: 'hidden' }}>
     <div style={{ position: 'absolute', inset: 0, transform: `translate(${sx}px, ${sy}px) rotate(${sr}deg) scale(${1 + shake / 900})` }}>
       {half('L')}{half('R')}
     </div>
@@ -497,7 +470,7 @@ function Intro({ onDone, accent = '#F5C518', accent2 = '#35D4BF', hud = true }) 
 
   return (
     <div onClick={skip} style={{
-      position: 'fixed', inset: 0, background: BG, cursor: 'pointer',
+      position: 'fixed', inset: 0, background: (T < CUES.Gates ? BG : 'transparent'), cursor: 'pointer',
       display: 'flex', alignItems: 'center', justifyContent: 'center', overflow: 'hidden',
     }}>
       <div style={{ width: W, height: H, transform: `scale(${fit})`, position: 'relative', flex: 'none' }}>
