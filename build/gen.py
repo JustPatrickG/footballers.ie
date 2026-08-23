@@ -112,9 +112,10 @@ def load():
         if r["type"] == "fixture": lv["fixtures"].append((r["date"], r["opponent"], r["home_away"], r["competition"]))
         else: lv["results"].append((r["date"], r["opponent"], r["score"], r["competition"]))
     news = [(r["tag"], r["headline"], r["standfirst"], r["player_slug"]) for r in _rows("manual/news.csv")]
-    return players, ireland, news
+    matches = _merge_rows("matches.csv", ("kickoff","home","away"))
+    return players, ireland, news, matches
 
-PLAYERS, IRELAND, NEWS = load()
+PLAYERS, IRELAND, NEWS, MATCHES = load()
 TIERS = {"abroad-top":"Abroad — top divisions",
          "abroad-lower":"Abroad — second tier & smaller leagues",
          "loi":"League of Ireland"}
@@ -292,26 +293,22 @@ def build_index():
     msh = "".join(f'<a class="mscard" href="{plink(m["p"])}"><div class="mstag">{esc(m["tag"])}</div>'
                   f'<div class="msn">{esc(m["p"]["n"])}</div><div class="msd">{esc(m["text"])}</div></a>' for m in ms)
 
-    # ---- who's playing, grouped by date ----
-    byday = {}
-    for p in PLAYERS:
-        for d, o, h, comp in p["fixtures"]:
-            byday.setdefault(d, []).append((p, o, h, comp))
-    def fxrow(p, o, h, comp):
-        return (f'<a class="plrow" href="{plink(p)}">{avatar(p,"","sm")}'
-                f'<div class="nm">{esc(p["n"])} <span class="cl">{esc(p["club"])}</span></div>'
-                f'<div class="ev">v {esc(o)} <span class="ha">{h}</span></div>'
-                f'<div class="mn">{esc(comp)}</div>{star(p)}</a>')
-    upcoming = ""
-    for d in list(byday.keys())[:4]:
-        items = "".join(fxrow(*x) for x in byday[d])
-        upcoming += (f'<div class="tiergroup"><h4><span>{esc(d)}</span>'
-                     f'<span>{len(byday[d])} Irish player{"s" if len(byday[d])!=1 else ""}</span></h4>{items}</div>')
-    fixtures_block = (f'<div class="sec"><h2>Playing next</h2><a class="more" href="fixtures.html">All fixtures →</a></div>'
-                      f'{upcoming}') if byday else (
-                      '<div class="sec"><h2>Playing next</h2></div>'
-                      '<div class="emptybox">No fixtures loaded yet. They appear here as soon as the '
-                      'fixture feed is connected — every Irish player, every game, newest first.</div>')
+    # ---- match centre payload (filtered client-side to a live window) ----
+    pmap = {p["slug"]: p for p in PLAYERS}
+    mc = []
+    for m in MATCHES:
+        if not m.get("kickoff"): continue
+        involved = []
+        for s in [x.strip() for x in (m.get("players") or "").split(";") if x.strip()]:
+            p = pmap.get(s)
+            if p: involved.append(dict(slug=s, n=esc(p["n"]), club=esc(p["club"]),
+                                       ini=initials(p["n"]), pos=p["pos"]))
+        if not involved: continue
+        mc.append(dict(kickoff=m["kickoff"], comp=esc(m.get("competition","")),
+                       home=esc(m.get("home","")), away=esc(m.get("away","")),
+                       hs=m.get("home_score",""), as_=m.get("away_score",""),
+                       status=(m.get("status") or "scheduled"), minute=m.get("minute",""),
+                       players=involved))
 
     # ---- abroad / LOI split ----
     abroad = [p for p in PLAYERS if p["tier"].startswith("abroad")]
@@ -321,36 +318,38 @@ def build_index():
         return (f'<div class="sec"><h2>{title}</h2><a class="more" href="{href}">All {len(group)} →</a></div>'
                 f'<div class="tiergroup">{rows}</div>') if group else ""
 
-    news_block = (f'<div class="sec"><h2>News</h2></div>'
+    news_block = (f'<div class="sec" style="margin-top:26px"><h2>News</h2></div>'
                   f'<div class="carousel">{slides}<div class="dots">{dots}</div></div>') if HEAD else ""
-    goals_block = (f'<div class="sec"><h2>Goal involvements</h2><a class="more" href="abroad.html">All →</a></div>'
-                   f'<div class="giband">{gi}</div>') if GOALS else ""
 
-    # ---- data for the client-side favourites rail ----
     fbp = {p["slug"]: dict(n=esc(p["n"]), club=esc(p["club"]), ini=initials(p["n"]),
                            next=next_fixture(p)) for p in PLAYERS}
 
     body = f'''
+    {news_block}
+
+    <div id="mc-sec" style="display:none">
+      <div class="sec"><h2>Match centre</h2><a class="more" id="mc-more" href="fixtures.html" style="display:none">See all →</a></div>
+      <div id="mc"></div>
+    </div>
+
     <div id="myplayers-sec" style="display:none">
-      <div class="sec" style="margin-top:26px"><h2>Your players <span class="cnt" data-fav-count>0</span></h2>
+      <div class="sec"><h2>Your players <span class="cnt" data-fav-count>0</span></h2>
         <a class="more" href="alerts.html">Get alerts →</a></div>
       <div class="tiergroup" id="myplayers"></div>
     </div>
     <div class="emptybox" id="myplayers-empty" style="display:none">
-      <b>Follow your players.</b> Tap the ★ beside any name and they'll appear up here —
-      who they're playing next, how they got on. <a href="alerts.html">Get an email when they play →</a>
+      <b>Follow your players.</b> Tap the ★ beside any name and they'll appear up here.
+      <a href="alerts.html">Get an email when they play →</a>
     </div>
-
-    {fixtures_block}
 
     {block("Abroad", abroad, "abroad.html")}
     {block("League of Ireland", loi, "league-of-ireland.html")}
 
-    {news_block}
-    {goals_block}
-
     {signup()}
-    <script>window.FB_PLAYERS={json.dumps(fbp)};</script>
+    <script>
+      window.FB_PLAYERS={json.dumps(fbp)};
+      window.FB_MATCHES={json.dumps(mc)};
+    </script>
 '''
     return shell("FOOTBALLERS — every Irish professional, tracked",
                  "News, goal involvements and the full weekend round-up for every Irish professional footballer.",

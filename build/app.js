@@ -104,3 +104,88 @@
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);
   else init();
 })();
+
+/* ---------- MATCH CENTRE ----------
+   Shows a match only if it kicks off within the next hour, is in progress,
+   or finished less than an hour ago. Hides the whole section otherwise.
+   Filtered in the browser so the window follows the visitor's clock. */
+(function () {
+  var WINDOW_MS = 60 * 60 * 1000;
+
+  function within(m, now) {
+    var ko = new Date(m.kickoff).getTime();
+    if (isNaN(ko)) return false;
+    var since = now - ko;
+    // live: only while the match could plausibly still be on
+    if (m.status === 'live') return since >= -WINDOW_MS && since < (2.75 * 60 * 60 * 1000);
+    // finished: show for about an hour after the final whistle
+    if (m.status === 'ft')   return since >= 0 && since < (3 * 60 * 60 * 1000);
+    // upcoming: appears once it's an hour out or less
+    return (ko - now) <= WINDOW_MS && ko > now;
+  }
+
+  function statusChip(m, now) {
+    if (m.status === 'live') return '<span class="mcstat live"><i></i>' + (m.minute ? m.minute + "'" : 'LIVE') + '</span>';
+    if (m.status === 'ft')   return '<span class="mcstat ft">FT</span>';
+    var mins = Math.max(0, Math.round((new Date(m.kickoff).getTime() - now) / 60000));
+    return '<span class="mcstat soon">' + (mins <= 1 ? 'Kick-off' : 'in ' + mins + ' min') + '</span>';
+  }
+
+  function score(m) {
+    if (m.status === 'scheduled' || m.hs === '' || m.hs === null)
+      return '<div class="mcko">' + new Date(m.kickoff).toLocaleTimeString([], {hour:'2-digit', minute:'2-digit'}) + '</div>';
+    return '<div class="mcscore">' + m.hs + '<span>–</span>' + m.as_ + '</div>';
+  }
+
+  function render() {
+    var sec = document.getElementById('mc-sec'), box = document.getElementById('mc');
+    if (!sec || !box || !window.FB_MATCHES) return;
+    var now = Date.now();
+    var live = FB_MATCHES.filter(function (m) { return within(m, now); });
+
+    if (!live.length) { sec.style.display = 'none'; return; }
+    sec.style.display = '';
+
+    // live games first, then kicking off soon, then finished
+    var rank = { live: 0, scheduled: 1, ft: 2 };
+    live.sort(function (a, b) {
+      var d = (rank[a.status] === undefined ? 9 : rank[a.status]) -
+              (rank[b.status] === undefined ? 9 : rank[b.status]);
+      if (d !== 0) return d;
+      return new Date(a.kickoff) - new Date(b.kickoff);
+    });
+
+    var shown = live.slice(0, 3);
+    box.innerHTML = shown.map(function (m) {
+      var players = m.players.slice(0, 2).map(function (p) {
+        return '<a class="mcp" href="player/' + p.slug + '.html" title="' + p.n + '">' +
+               '<div class="pavatar sm"><span>' + p.ini + '</span></div>' +
+               '<span class="mcpn">' + p.n + '</span></a>';
+      }).join('');
+      if (m.players.length > 2) {
+        players += '<span class="mcmore">+' + (m.players.length - 2) + ' more</span>';
+      }
+      return '<div class="mccard">' +
+             '<div class="mcrow">' +
+               '<span class="mccomp">' + m.comp + '</span>' + statusChip(m, now) +
+             '</div>' +
+             '<div class="mcteams"><div class="mct">' + m.home + '</div>' + score(m) +
+             '<div class="mct right">' + m.away + '</div></div>' +
+             '<div class="mcplayers">' + players + '</div></div>';
+    }).join('');
+
+    var more = document.getElementById('mc-more');
+    if (more) {
+      if (live.length > 3) {
+        more.style.display = '';
+        more.textContent = 'See all ' + live.length + ' →';
+      } else {
+        more.style.display = 'none';
+      }
+    }
+  }
+
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', render);
+  else render();
+  setInterval(render, 60000);   // re-check every minute so it appears/disappears on its own
+})();
