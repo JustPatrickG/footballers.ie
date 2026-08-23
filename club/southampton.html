@@ -5,6 +5,22 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Southampton — Irish players — FOOTBALLERS</title>
 <meta name="description" content="Irish professionals at Southampton, plus upcoming fixtures.">
+<link rel="canonical" href="https://footballers.ie/club/southampton.html">
+<meta name="theme-color" content="#0C0F10">
+<meta property="og:site_name" content="Footballers">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Southampton — Irish players — FOOTBALLERS">
+<meta property="og:description" content="Irish professionals at Southampton, plus upcoming fixtures.">
+<meta property="og:url" content="https://footballers.ie/club/southampton.html">
+<meta property="og:image" content="https://footballers.ie/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Southampton — Irish players — FOOTBALLERS">
+<meta name="twitter:description" content="Irish professionals at Southampton, plus upcoming fixtures.">
+<meta name="twitter:image" content="https://footballers.ie/og-image.png">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -289,17 +305,51 @@ img,svg,iframe{max-width:100%}
   .wrap{padding-left:max(14px,env(safe-area-inset-left));padding-right:max(14px,env(safe-area-inset-right))}
   footer{padding-bottom:max(36px,env(safe-area-inset-bottom))}
 }
+
+/* ============ NEWSLETTER ============ */
+.nlbar{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;
+  border:1px solid var(--line);border-radius:8px;background:var(--panel);padding:16px 18px;margin:30px 0}
+.nltext{font-size:14px;color:var(--mute)}
+.nltext b{color:var(--white);font-weight:600}
+.nlbox{border:1px solid var(--line);border-radius:8px;background:var(--panel);padding:24px;margin:34px 0}
+.nltag{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--yellow)}
+.nlh{font-size:clamp(19px,2.6vw,25px);font-weight:700;margin-top:10px;letter-spacing:-.01em;max-width:26ch}
+.nlcols{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line);
+  border-radius:6px;overflow:hidden;margin:18px 0}
+.nlcol{background:var(--bg);padding:15px}
+.nlday{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--teal)}
+.nlcol p{color:var(--mute);font-size:13.5px;margin-top:7px;line-height:1.5}
+.nlform{display:flex;gap:8px;flex-wrap:wrap}
+.nlform input{flex:1 1 220px;background:var(--bg);border:1px solid var(--line);color:var(--white);
+  padding:12px 14px;border-radius:6px;font-family:'Space Grotesk',sans-serif;font-size:15px;min-height:46px}
+.nlform input::placeholder{color:var(--mute)}
+.nlform button{background:var(--yellow);color:#0C0F10;border:0;font-weight:700;padding:0 22px;
+  border-radius:6px;font-size:14px;min-height:46px;flex:0 0 auto}
+.nlform button:hover{filter:brightness(1.08)}
+.nlnote{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--yellow);margin-top:10px}
+.nlfine{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.08em;color:var(--mute);margin-top:12px}
+.nlgrid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line);
+  border-radius:6px;overflow:hidden}
+.nlcard{background:var(--panel);padding:18px}
+.nlcard ul{margin:10px 0 0 16px;color:var(--mute);font-size:14px;line-height:1.75}
+@media(max-width:700px){
+  .nlbar{flex-direction:column;align-items:stretch}
+  .nlcols,.nlgrid{grid-template-columns:1fr}
+  .nlbox{padding:18px}
+  .nlform input,.nlform button{flex:1 1 100%}
+  .nlform input{font-size:16px}
+}
 </style>
 </head>
 <body>
 <div class="wrap">
 <nav>
-  <a class="mark" href="../index.html">FOOTBALLERS<i>*</i></a>
+  <a class="mark" href="../index.html">FOOTBALLERS</a>
   <button class="burger" id="burger" aria-label="Menu" aria-expanded="false" aria-controls="navlinks">
     <span></span><span></span><span></span>
   </button>
-  <div class="navlinks" id="navlinks"><a class="" href="../players.html">Players</a><a class="" href="../abroad.html">Abroad</a><a class="" href="../league-of-ireland.html">League of Ireland</a><a class="on" href="../clubs.html">Clubs</a><a class="" href="../ireland.html">Ireland</a><a class="" href="../fixtures.html">Fixtures</a></div>
-  <div class="navmeta">MW04 · 22–23 AUG · <b>19</b> TRACKED</div>
+  <div class="navlinks" id="navlinks"><a class="" href="../players.html">Players</a><a class="" href="../abroad.html">Abroad</a><a class="" href="../league-of-ireland.html">League of Ireland</a><a class="on" href="../clubs.html">Clubs</a><a class="" href="../ireland.html">Ireland</a><a class="" href="../fixtures.html">Fixtures</a><a class="" href="../newsletter.html">Newsletter</a></div>
+  <div class="navmeta">MW04 · 22-23 AUG · <b>123</b> TRACKED</div>
 </nav>
 <script>
 (function(){
@@ -313,14 +363,14 @@ img,svg,iframe{max-width:100%}
 </script>
 
     <a class="crumb" href="../clubs.html">← All clubs</a>
-    <div class="pagehead"><h1>Southampton</h1><p>Championship · 2 Irish players tracked</p></div>
+    <div class="pagehead"><h1>Southampton</h1><p>2 Irish players tracked</p></div>
     <div class="sec"><h2>Irish players</h2></div>
-    <div class="tiergroup"><a class="plrow" href="../player/gavin-bazunu.html"><div class="nm">Gavin Bazunu <span class="cl">Southampton</span></div><div class="ev">—</div><div class="mn">90'</div></a><a class="plrow" href="../player/will-smallbone.html"><div class="nm">Will Smallbone <span class="cl">Southampton</span></div><div class="ev">🅰</div><div class="mn">90'</div></a></div>
+    <div class="tiergroup"><a class="plrow" href="../player/george-moloney.html"><div class="nm">George Moloney <span class="cl">Southampton</span></div><div class="ev">—</div><div class="mn">0'</div></a><a class="plrow" href="../player/ryan-manning.html"><div class="nm">Ryan Manning <span class="cl">Southampton</span></div><div class="ev">—</div><div class="mn">0'</div></a></div>
     <div class="sec"><h2>Upcoming fixtures</h2></div>
-    <div class="fxlist"><div class="fxrow"><div class="fxd">30 Aug</div><div class="fxo">Norwich <span class="ha">H</span></div><div class="fxc">Championship</div></div><div class="fxrow"><div class="fxd">13 Sep</div><div class="fxo">Watford <span class="ha">A</span></div><div class="fxc">Championship</div></div></div>
+    <div class="fxlist"><div class="emptystate" style="display:block">No fixtures listed.</div></div>
     
 <footer>
-  Footballers* · prototype · sample data<br>
+  Footballers · prototype · sample data<br>
   Every Irish player at a professional club — abroad, senior international and League of Ireland
 </footer>
 </div>

@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Footballers — admin</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0C0F10;--panel:#151A1B;--panel2:#181E1F;--line:#242B2C;--white:#EFF3F1;
+      --mute:#77837F;--yellow:#F5C518;--teal:#35D4BF;--red:#FF5A48}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--white);font-family:'Space Grotesk',sans-serif;font-size:14px;padding:20px}
+.wrap{max-width:1400px;margin:0 auto}
+h1{font-size:22px;margin-bottom:4px}
+.sub{color:var(--mute);font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase}
+.bar{display:flex;gap:8px;flex-wrap:wrap;margin:18px 0}
+button,.btn{background:var(--panel);border:1px solid var(--line);color:var(--white);
+  padding:10px 15px;border-radius:6px;cursor:pointer;font-family:inherit;font-size:13px}
+button:hover{background:var(--panel2)}
+button.pri{background:var(--yellow);color:#0C0F10;border-color:var(--yellow);font-weight:700}
+button.danger{border-color:#5a2a26;color:var(--red)}
+input,select,textarea{background:var(--panel);border:1px solid var(--line);color:var(--white);
+  padding:9px 11px;border-radius:6px;font-family:inherit;font-size:13px}
+textarea{width:100%;min-height:190px;font-family:'IBM Plex Mono',monospace;font-size:13px;line-height:1.6}
+.panel{border:1px solid var(--line);border-radius:8px;background:var(--panel);padding:18px;margin-bottom:18px}
+.panel h2{font-size:12px;font-family:'IBM Plex Mono',monospace;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--yellow);margin-bottom:12px}
+.hint{color:var(--mute);font-size:12.5px;line-height:1.6;margin-bottom:12px}
+.hint code{background:var(--bg);padding:2px 6px;border-radius:3px;color:var(--teal);font-family:'IBM Plex Mono',monospace}
+table{width:100%;border-collapse:collapse;font-size:13px}
+th{text-align:left;font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--mute);padding:9px 7px;border-bottom:1px solid var(--line);
+  position:sticky;top:0;background:var(--panel2);white-space:nowrap}
+td{padding:3px 4px;border-bottom:1px solid #1B2122}
+td input,td select{width:100%;padding:6px 7px;font-size:12.5px;border-color:transparent;background:transparent}
+td input:focus,td select:focus{border-color:var(--yellow);background:var(--bg);outline:none}
+td.slug{font-family:'IBM Plex Mono',monospace;color:var(--mute);font-size:11px;padding-left:8px;white-space:nowrap}
+.src{font-family:'IBM Plex Mono',monospace;font-size:9px;padding:2px 6px;border-radius:3px;white-space:nowrap}
+.src.manual{background:rgba(245,197,24,.15);color:var(--yellow)}
+.src.api{background:rgba(53,212,191,.14);color:var(--teal)}
+.tblwrap{max-height:62vh;overflow:auto;border:1px solid var(--line);border-radius:8px}
+.count{font-family:'IBM Plex Mono',monospace;color:var(--mute);font-size:12px;padding:8px 2px}
+.ok{color:var(--teal)}
+.warn{color:var(--yellow)}
+.note{font-family:'IBM Plex Mono',monospace;font-size:12px;margin-top:10px}
+.rowdel{color:var(--red);cursor:pointer;padding:0 8px;background:none;border:0;font-size:16px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Footballers — admin</h1>
+  <div class="sub">Local editor · edits the manual layer only</div>
+
+  <div class="panel">
+    <h2>1 · Bulk add players</h2>
+    <p class="hint">
+      Paste your list — one player per line, <code>Name, Club</code>.
+      Optionally add position and league: <code>Name, Club, POS, League</code>.<br>
+      Lines starting with <code>#</code> are ignored. Existing players are skipped, not duplicated.
+    </p>
+    <textarea id="paste" placeholder="Evan Ferguson, Roma
+Troy Parrott, Ajax
+Cathal McCarthy, Hull City, MID, Championship
+Rocco Vata, Watford, FWD, Championship"></textarea>
+    <div class="bar">
+      <button class="pri" onclick="importPaste()">Add to table</button>
+      <button onclick="document.getElementById('paste').value=''">Clear box</button>
+    </div>
+    <div id="importnote" class="note"></div>
+  </div>
+
+  <div class="panel">
+    <h2>2 · Edit</h2>
+    <div class="bar">
+      <input id="search" placeholder="Search name or club" oninput="render()" style="flex:1;min-width:200px">
+      <select id="tierf" onchange="render()">
+        <option value="">All tiers</option>
+        <option value="abroad-top">Abroad — top</option>
+        <option value="abroad-lower">Abroad — lower</option>
+        <option value="loi">League of Ireland</option>
+      </select>
+      <button onclick="addBlank()">+ Add one</button>
+    </div>
+    <div class="count" id="count"></div>
+    <div class="tblwrap">
+      <table>
+        <thead><tr>
+          <th></th><th>Slug</th><th>Name</th><th>Club</th><th>League</th><th>Tier</th>
+          <th>Pos</th><th>Age</th><th>Cap status</th><th>Youth caps</th><th>Eligible for</th>
+          <th>Lock</th><th></th>
+        </tr></thead>
+        <tbody id="tbody"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="panel">
+    <h2>3 · Save</h2>
+    <p class="hint">
+      Downloads <code>players.csv</code>. Put it in <code>data/manual/</code>, replacing the old one,
+      then commit and push — the site rebuilds itself.<br>
+      Blank cells fall back to the API. Anything you type here wins. <code>Lock</code> = ignore the API entirely for that player.
+    </p>
+    <div class="bar">
+      <button class="pri" onclick="exportCsv()">Download players.csv</button>
+      <label class="btn" style="display:inline-flex;align-items:center;gap:8px">
+        Load existing CSV
+        <input type="file" id="file" accept=".csv" style="display:none" onchange="loadCsv(event)">
+      </label>
+      <button class="danger" onclick="if(confirm('Clear the whole table?')){rows=[];render();}">Clear table</button>
+    </div>
+    <div id="savenote" class="note"></div>
+  </div>
+</div>
+
+<script>
+const COLS = ["slug","name","club","league","tier","pos","age","born","foot","cap_status",
+              "senior_caps","senior_goals","senior_debut","youth","eligible",
+              "s_apps","s_starts","s_goals","s_assists","s_mins","s_yellow","s_red",
+              "c_apps","c_goals","c_assists","injury","locked","notes"];
+let rows = [];
+
+function slugify(n){
+  return n.normalize("NFKD").replace(/[\u0300-\u036f]/g,"")
+          .replace(/['\u2019]/g,"")
+          .replace(/[^a-zA-Z0-9]+/g,"-").replace(/^-|-$/g,"").toLowerCase();
+}
+function blank(){ const o={}; COLS.forEach(c=>o[c]=""); return o; }
+
+function importPaste(){
+  const txt = document.getElementById('paste').value;
+  let added=0, skipped=0;
+  txt.split(/\r?\n/).forEach(line=>{
+    line=line.trim();
+    if(!line || line.startsWith('#')) return;
+    const parts=line.split(',').map(s=>s.trim());
+    const name=parts[0]; if(!name) return;
+    const slug=slugify(name);
+    if(rows.some(r=>r.slug===slug)){ skipped++; return; }
+    const r=blank();
+    r.slug=slug; r.name=name;
+    r.club=parts[1]||""; r.pos=parts[2]||""; r.league=parts[3]||"";
+    if(!r.tier) r.tier = /league of ireland|loi/i.test(r.league) ? "loi" : "abroad-lower";
+    r.cap_status="uncapped";
+    r.eligible="Republic of Ireland:eligible";
+    rows.push(r); added++;
+  });
+  document.getElementById('importnote').innerHTML =
+    `<span class="ok">Added ${added}.</span>` + (skipped?` <span class="warn">${skipped} already in the table.</span>`:'');
+  render();
+}
+
+function addBlank(){ const r=blank(); r.eligible="Republic of Ireland:eligible"; r.cap_status="uncapped"; rows.unshift(r); render(); }
+
+function render(){
+  const q=(document.getElementById('search').value||'').toLowerCase();
+  const tf=document.getElementById('tierf').value;
+  const tb=document.getElementById('tbody');
+  tb.innerHTML='';
+  let shown=0;
+  rows.forEach((r,i)=>{
+    if(tf && r.tier!==tf) return;
+    if(q && !((r.name+' '+r.club).toLowerCase().includes(q))) return;
+    shown++;
+    const tr=document.createElement('tr');
+    const filled = r.club||r.league||r.pos;
+    tr.innerHTML=`
+      <td><span class="src ${filled?'manual':'api'}">${filled?'MANUAL':'API'}</span></td>
+      <td class="slug">${r.slug||'—'}</td>
+      <td><input value="${esc(r.name)}" oninput="upd(${i},'name',this.value,true)"></td>
+      <td><input value="${esc(r.club)}" oninput="upd(${i},'club',this.value)"></td>
+      <td><input value="${esc(r.league)}" oninput="upd(${i},'league',this.value)"></td>
+      <td><select onchange="upd(${i},'tier',this.value)">
+        ${['','abroad-top','abroad-lower','loi'].map(t=>`<option ${r.tier===t?'selected':''} value="${t}">${t||'—'}</option>`).join('')}
+      </select></td>
+      <td><select onchange="upd(${i},'pos',this.value)">
+        ${['','GK','DEF','MID','FWD'].map(p=>`<option ${r.pos===p?'selected':''} value="${p}">${p||'—'}</option>`).join('')}
+      </select></td>
+      <td><input style="width:52px" value="${esc(r.age)}" oninput="upd(${i},'age',this.value)"></td>
+      <td><select onchange="upd(${i},'cap_status',this.value)">
+        ${['uncapped','youth','senior_friendly','senior_comp'].map(c=>`<option ${r.cap_status===c?'selected':''} value="${c}">${c}</option>`).join('')}
+      </select></td>
+      <td><input value="${esc(r.youth)}" placeholder="U21:4:1:2024" oninput="upd(${i},'youth',this.value)"></td>
+      <td><input value="${esc(r.eligible)}" oninput="upd(${i},'eligible',this.value)"></td>
+      <td style="text-align:center"><input type="checkbox" ${/^(y|yes|true|1)$/i.test(r.locked)?'checked':''}
+        onchange="upd(${i},'locked',this.checked?'yes':'')" style="width:auto"></td>
+      <td><button class="rowdel" title="Remove" onclick="del(${i})">×</button></td>`;
+    tb.appendChild(tr);
+  });
+  document.getElementById('count').textContent = `${shown} shown · ${rows.length} total`;
+}
+function esc(v){ return String(v==null?'':v).replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(/</g,'&lt;'); }
+function upd(i,k,v,reslug){
+  rows[i][k]=v;
+  if(reslug && v.trim()) rows[i].slug=slugify(v);
+  if(reslug) render();
+}
+function del(i){ rows.splice(i,1); render(); }
+
+function loadCsv(e){
+  const f=e.target.files[0]; if(!f) return;
+  const rd=new FileReader();
+  rd.onload=()=>{
+    const lines=rd.result.split(/\r?\n/).filter(l=>l.trim());
+    const hdr=parseLine(lines[0]);
+    rows=lines.slice(1).map(l=>{
+      const vals=parseLine(l), o=blank();
+      hdr.forEach((h,i)=>{ if(COLS.includes(h)) o[h]=vals[i]||''; });
+      return o;
+    }).filter(r=>r.slug||r.name);
+    document.getElementById('savenote').innerHTML=`<span class="ok">Loaded ${rows.length} rows.</span>`;
+    render();
+  };
+  rd.readAsText(f);
+}
+function parseLine(line){
+  const out=[]; let cur='', q=false;
+  for(let i=0;i<line.length;i++){
+    const c=line[i];
+    if(c==='"'){ if(q && line[i+1]==='"'){cur+='"';i++;} else q=!q; }
+    else if(c===',' && !q){ out.push(cur); cur=''; }
+    else cur+=c;
+  }
+  out.push(cur); return out.map(s=>s.trim());
+}
+function exportCsv(){
+  const esc2=v=>{ v=String(v==null?'':v); return /[",\n]/.test(v)?'"'+v.replace(/"/g,'""')+'"':v; };
+  const body=[COLS.join(',')].concat(
+    rows.filter(r=>r.slug||r.name).map(r=>COLS.map(c=>esc2(r[c])).join(','))).join('\n');
+  const blob=new Blob([body],{type:'text/csv'});
+  const a=document.createElement('a');
+  a.href=URL.createObjectURL(blob); a.download='players.csv'; a.click();
+  document.getElementById('savenote').innerHTML=
+    `<span class="ok">Downloaded ${rows.filter(r=>r.slug||r.name).length} rows.</span> Drop it into <code>data/manual/</code>, then push.`;
+}
+render();
+</script>
+</body>
+</html>
