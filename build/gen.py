@@ -101,6 +101,8 @@ def load():
                         mins=_int(r.get("s_mins")), yellow=_int(r.get("s_yellow")), red=_int(r.get("s_red"))),
             career=dict(ap=_int(r.get("c_apps")), g=_int(r.get("c_goals")), a=_int(r.get("c_assists"))),
             injury=(r.get("injury") or "").strip() or None, transfers=[],
+            photo=(r.get("photo") or "").strip(),
+            photo_credit=(r.get("photo_credit") or "").strip(),
             fixtures=fixtures.get(slug, []), results=results.get(slug, [])))
     players.sort(key=lambda p: p["n"])
 
@@ -200,10 +202,24 @@ def ev_str(p):
 
 def player_row(p, root=""):
     ev, mins = ev_str(p)
-    return (f'<a class="plrow" href="{plink(p,root)}"><div class="nm">{esc(p["n"])} '
+    return (f'<a class="plrow" href="{plink(p,root)}">{avatar(p, root, "sm")}'
+            f'<div class="nm">{esc(p["n"])} '
             f'<span class="cl">{esc(p["club"])}</span></div><div class="ev">{ev}</div>'
             f'<div class="mn">{mins}\'</div></a>')
 
+
+
+def initials(name):
+    parts = [p for p in name.split() if p]
+    return (parts[0][0] + parts[-1][0]).upper() if len(parts) > 1 else (parts[0][:2].upper() if parts else "?")
+
+def avatar(p, root="", size="lg"):
+    cls = "pavatar" + (" sm" if size == "sm" else "")
+    if p.get("photo"):
+        src_url = p["photo"] if p["photo"].startswith("http") else f'{root}{p["photo"]}'
+        return (f'<div class="{cls}"><img src="{esc(src_url)}" alt="{esc(p["n"])}" loading="lazy" '
+                f'onerror="this.parentNode.innerHTML=\'<span>{initials(p["n"])}</span>\'"></div>')
+    return f'<div class="{cls}"><span>{initials(p["n"])}</span></div>'
 
 def signup(root="", compact=False):
     if NEWSLETTER_ACTION:
@@ -250,14 +266,16 @@ def build_index():
         _,_,_,_,mins,g,a = p["results"][0]
         tags = "".join(f'<span class="gitag">⚽</span>' for _ in range(g)) + \
                "".join(f'<span class="gitag a">🅰</span>' for _ in range(a))
-        gi += (f'<a class="gicard" href="{plink(p)}"><div class="who">{esc(p["n"])}</div>'
+        gi += (f'<a class="gicard" href="{plink(p)}">{avatar(p)}<div class="who">{esc(p["n"])}</div>'
                f'<div class="cl">{esc(p["club"])} · {esc(p["league"])}</div><div class="what">{tags}</div></a>')
 
     roundup = ""
     for t,label in TIERS.items():
         grp = [p for p in PLAYERS if p["tier"]==t]
         if not grp: continue
-        roundup += (f'<div class="tiergroup"><h4><span>{esc(label)}</span><span>{len(grp)} played</span></h4>'
+        n_played = sum(1 for p in grp if p["results"])
+        tag = f'{n_played} played' if n_played else f'{len(grp)} tracked'
+        roundup += (f'<div class="tiergroup"><h4><span>{esc(label)}</span><span>{tag}</span></h4>'
                     + "".join(player_row(p) for p in grp) + '</div>')
 
     # milestones
@@ -265,20 +283,21 @@ def build_index():
     msh = "".join(f'<a class="mscard" href="{plink(m["p"])}"><div class="mstag">{esc(m["tag"])}</div>'
                   f'<div class="msn">{esc(m["p"]["n"])}</div><div class="msd">{esc(m["text"])}</div></a>' for m in ms)
 
+    news_block = (f'<div class="sec" style="margin-top:28px"><h2>News</h2></div>'
+                  f'<div class="carousel">{slides}<div class="dots">{dots}</div></div>') if HEAD else ""
+    goals_block = (f'<div class="sec"><h2>Goal involvements</h2><a class="more" href="abroad.html">All →</a></div>'
+                   f'<div class="giband">{gi}</div>') if GOALS else ""
+    ms_block = (f'<div class="sec"><h2>Approaching milestones</h2><a class="more" href="milestones.html">All →</a></div>'
+                f'<div class="msgrid">{msh}</div>') if ms else ""
+
     body = f'''
-    <div class="sec" style="margin-top:32px"><h2>News</h2></div>
-    <div class="carousel">{slides}<div class="dots">{dots}</div></div>
+    {news_block}
+    {goals_block}
 
-    <div class="sec"><h2>Goal involvements</h2><a class="more" href="abroad.html">All →</a></div>
-    <div class="giband">{gi}</div>
-
-    <div class="sec"><h2>Approaching milestones</h2><a class="more" href="milestones.html">All →</a></div>
-    <div class="msgrid">{msh}</div>
-
-    {signup(compact=True)}
-
-    <div class="sec"><h2>Full round-up</h2><span class="more" style="border:0">Grouped by tier, not ranked</span></div>
+    <div class="sec"><h2>Players</h2><a class="more" href="players.html">All {len(PLAYERS)} →</a></div>
     {roundup}
+
+    {ms_block}
 
     {signup()}
     <script>
@@ -302,6 +321,7 @@ def build_list(fname, title, sub, data):
         ev, mins = ev_str(p)
         rows += (f'<a class="plrow pl-item" data-name="{esc(p["n"]).lower()} {esc(p["club"]).lower()}" '
                  f'data-pos="{p["pos"]}" data-league="{esc(p["league"])}" href="{plink(p)}">'
+                 f'{avatar(p)}'
                  f'<div class="nm">{esc(p["n"])} <span class="cl">{esc(p["club"])}</span></div>'
                  f'<div class="ev">{ev}</div><div class="mn">{mins}\'</div></a>')
     leagues = sorted(set(p["league"] for p in data))
@@ -550,7 +570,9 @@ def build_player(p):
     body = f'''
     <a class="crumb" href="../players.html">← All players</a>
     <div class="pdhead">
-      <div>
+      <div class="pdid">
+        {avatar(p, "../")}
+        <div>
         <div class="pdname">{esc(p["n"])}</div>
         <div class="pdmeta">{" · ".join(filter(None,[
             f'<a href="{clink(p["club"],"../")}">{esc(p["club"])}</a>',
@@ -560,6 +582,8 @@ def build_player(p):
             (f'<b>{p["intl_senior"]["caps"]} caps</b>' if p["intl_senior"]["caps"] is not None
              else '<b>Senior international</b>') if p["intl_senior"] else ""]))}</div>
         {f'<div class="pdborn">Born {esc(p["born"])}' + (" · " + esc(p["foot"]) + " footed" if p["foot"] else "") + "</div>" if p["born"] else ""}
+        {f'<div class="pcredit">Photo: {esc(p["photo_credit"])}</div>' if p.get("photo_credit") else ""}
+        </div>
       </div>
       <div class="pdbadge">{badge}</div>
     </div>

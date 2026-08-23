@@ -339,6 +339,29 @@ img,svg,iframe{max-width:100%}
   .nlform input,.nlform button{flex:1 1 100%}
   .nlform input{font-size:16px}
 }
+
+/* ============ PLAYER PHOTOS ============ */
+.pavatar{width:96px;height:96px;border-radius:50%;overflow:hidden;flex:none;
+  background:var(--panel2);border:1px solid var(--line);display:grid;place-items:center}
+.pavatar img{width:100%;height:100%;object-fit:cover;display:block}
+.pavatar span{font-family:'IBM Plex Mono',monospace;font-size:30px;font-weight:600;color:var(--mute)}
+.pavatar.sm{width:34px;height:34px}
+.pavatar.sm span{font-size:12px}
+.pdid{display:flex;gap:18px;align-items:flex-start}
+.pcredit{font-family:'IBM Plex Mono',monospace;font-size:10px;color:var(--mute);margin-top:8px;opacity:.75}
+.plrow{grid-template-columns:34px 1fr auto auto;gap:12px}
+.plrow .pavatar{width:34px;height:34px}
+.plrow .pavatar span{font-size:12px}
+.gicard .pavatar{width:44px;height:44px;margin-bottom:10px}
+.gicard .pavatar span{font-size:15px}
+.squadcard .pavatar{width:48px;height:48px;margin-bottom:10px}
+.squadcard .pavatar span{font-size:16px}
+@media(max-width:700px){
+  .pavatar{width:66px;height:66px}
+  .pavatar span{font-size:22px}
+  .pdid{gap:13px}
+  .plrow{grid-template-columns:34px 1fr auto}
+}
 </style>
 </head>
 <body>
@@ -365,7 +388,7 @@ img,svg,iframe{max-width:100%}
     <a class="crumb" href="../clubs.html">← All clubs</a>
     <div class="pagehead"><h1>Club Brugge</h1><p>1 Irish player tracked</p></div>
     <div class="sec"><h2>Irish players</h2></div>
-    <div class="tiergroup"><a class="plrow" href="../player/grady-mcdonnell.html"><div class="nm">Grady McDonnell <span class="cl">Club Brugge</span></div><div class="ev">—</div><div class="mn">0'</div></a></div>
+    <div class="tiergroup"><a class="plrow" href="../player/grady-mcdonnell.html"><div class="pavatar sm"><span>GM</span></div><div class="nm">Grady McDonnell <span class="cl">Club Brugge</span></div><div class="ev">—</div><div class="mn">0'</div></a></div>
     <div class="sec"><h2>Upcoming fixtures</h2></div>
     <div class="fxlist"><div class="emptystate" style="display:block">No fixtures listed.</div></div>
     
