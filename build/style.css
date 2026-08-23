@@ -530,3 +530,4 @@ img,svg,iframe{max-width:100%}
   .artgrid{grid-template-columns:1fr}
   .artcontent p{font-size:16px;line-height:1.62}
 }
+.mcday{font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--mute);display:block;margin-bottom:2px}

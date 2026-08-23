@@ -341,7 +341,7 @@ def build_index():
     body = f'''
     {news_block}
 
-    <div id="mc-sec" style="display:none">
+    <div id="mc-sec">
       <div class="sec"><h2>Match centre</h2><a class="more" id="mc-more" href="fixtures.html" style="display:none">See all →</a></div>
       <div id="mc"></div>
     </div>
