@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>REPTRACKER — every Irish footballer, one database</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0C0F10; --panel:#151A1B; --panel2:#181E1F; --line:#242B2C;
+  --white:#EFF3F1; --mute:#77837F; --yellow:#F5C518; --teal:#35D4BF; --red:#FF5A48;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--white);font-family:'Space Grotesk',sans-serif;line-height:1.4}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+:focus-visible{outline:2px solid var(--yellow);outline-offset:2px}
+a{color:inherit}
+button{font-family:inherit}
+
+/* nav */
+nav{display:flex;justify-content:space-between;align-items:center;padding:18px 0;border-bottom:1px solid var(--line);gap:14px;flex-wrap:wrap}
+.mark{font-weight:700;font-size:19px;letter-spacing:.01em}
+.mark i{font-style:normal;color:var(--yellow)}
+.navlinks{display:flex;gap:22px;font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--mute)}
+.navlinks a:hover{color:var(--white)}
+.navmeta{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.1em;color:var(--mute)}
+.navmeta b{color:var(--teal);font-weight:500}
+
+/* ---------- search hero : the database ---------- */
+.dbhero{padding:44px 0 30px;border-bottom:1px solid var(--line)}
+.dbhero h1{font-size:clamp(26px,4vw,38px);font-weight:700;letter-spacing:-.01em;line-height:1.1;max-width:14ch}
+.dbhero h1 i{font-style:normal;color:var(--teal)}
+.dbhero p{color:var(--mute);margin-top:10px;max-width:52ch;font-size:15px}
+.searchbar{display:flex;gap:8px;margin-top:20px;flex-wrap:wrap}
+.searchbar input{
+  flex:1 1 260px;background:var(--panel);border:1px solid var(--line);color:var(--white);
+  padding:13px 16px;border-radius:6px;font-family:'Space Grotesk',sans-serif;font-size:15px;
+}
+.searchbar input::placeholder{color:var(--mute)}
+.searchbar button{
+  background:var(--yellow);color:#0C0F10;border:0;font-weight:600;
+  padding:0 22px;border-radius:6px;cursor:pointer;font-size:14px;
+}
+.dbtiers{display:flex;gap:8px;margin-top:14px;flex-wrap:wrap}
+.tierpill{
+  font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase;
+  border:1px solid var(--line);color:var(--mute);padding:7px 12px;border-radius:20px;
+  display:flex;align-items:center;gap:7px;background:var(--panel);cursor:pointer;
+}
+.tierpill:hover{color:var(--white);border-color:var(--mute)}
+.tierpill b{color:var(--teal);font-weight:500}
+.dbcount{
+  margin-top:22px;display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));
+  gap:1px;background:var(--line);border:1px solid var(--line);border-radius:6px;overflow:hidden;
+}
+.dbc{background:var(--panel);padding:13px 15px}
+.dbc .n{font-family:'IBM Plex Mono',monospace;font-size:20px;font-weight:600;color:var(--white)}
+.dbc .l{font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:var(--mute);margin-top:4px}
+
+/* section header shared */
+.sec{margin:44px 0 16px;display:flex;justify-content:space-between;align-items:baseline;gap:10px;flex-wrap:wrap}
+.sec h2{font-size:13px;font-family:'IBM Plex Mono',monospace;letter-spacing:.18em;text-transform:uppercase;color:var(--yellow)}
+.sec .more{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--mute);border-bottom:1px solid var(--line);padding-bottom:2px}
+.sec .more:hover{color:var(--white)}
+
+/* ---------- headline carousel ---------- */
+.carousel{position:relative;border:1px solid var(--line);border-radius:8px;overflow:hidden;min-height:172px;background:var(--panel)}
+.slide{position:absolute;inset:0;padding:26px 28px;display:flex;flex-direction:column;justify-content:center;opacity:0;transition:opacity .4s;pointer-events:none}
+.slide.on{opacity:1;pointer-events:auto;position:relative}
+.slide .tag{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--teal);margin-bottom:10px}
+.slide h3{font-size:clamp(20px,3vw,28px);font-weight:700;letter-spacing:-.01em;max-width:34ch;line-height:1.15}
+.slide p{color:var(--mute);margin-top:8px;font-size:14px;max-width:50ch}
+.dots{position:absolute;bottom:16px;right:20px;display:flex;gap:6px}
+.dots button{width:20px;height:3px;border-radius:2px;border:0;background:var(--line);cursor:pointer;padding:0}
+.dots button[aria-current="true"]{background:var(--yellow)}
+
+/* ---------- goal involvements ---------- */
+.giband{display:flex;gap:1px;overflow-x:auto;background:var(--line);border:1px solid var(--line);border-radius:6px;scrollbar-width:thin;scrollbar-color:var(--line) transparent}
+.giband::-webkit-scrollbar{height:6px}
+.giband::-webkit-scrollbar-track{background:transparent}
+.giband::-webkit-scrollbar-thumb{background:var(--line);border-radius:3px}
+.giband::-webkit-scrollbar-thumb:hover{background:var(--mute)}
+.gicard{
+  flex:0 0 210px;background:var(--panel);padding:15px;
+}
+.gicard .who{font-weight:600;font-size:15px}
+.gicard .cl{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--mute);margin-top:2px}
+.gicard .what{margin-top:10px;display:flex;gap:6px;flex-wrap:wrap}
+.gitag{font-family:'IBM Plex Mono',monospace;font-size:10px;padding:3px 7px;border-radius:3px;background:rgba(53,212,191,.14);color:var(--teal)}
+.gitag.a{background:rgba(245,197,24,.14);color:var(--yellow)}
+
+/* ---------- tiered roundup ---------- */
+.tiergroup{margin-bottom:26px}
+.tiergroup h4{
+  font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--mute);padding-bottom:8px;border-bottom:1px solid var(--line);margin-bottom:2px;
+  display:flex;justify-content:space-between;
+}
+.plrow{
+  display:grid;grid-template-columns:1fr auto auto;gap:14px;align-items:center;
+  padding:11px 4px;border-bottom:1px solid #1B2122;font-size:14px;
+}
+.plrow:last-child{border-bottom:0}
+.plrow .nm{font-weight:600}
+.plrow .cl{color:var(--mute);font-family:'IBM Plex Mono',monospace;font-size:12px}
+.plrow .ev{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--teal);white-space:nowrap}
+.plrow .mn{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--mute);white-space:nowrap;text-align:right;min-width:38px}
+
+footer{margin-top:60px;border-top:1px solid var(--line);padding:20px 0 44px;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--mute);line-height:2}
+
+@media(max-width:640px){
+  .plrow{grid-template-columns:1fr auto}
+  .plrow .mn{display:none}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<nav>
+  <div class="mark">REPTRACKER<i>*</i></div>
+  <div class="navlinks">
+    <a href="#">Players</a><a href="#">Abroad</a><a href="#">League of Ireland</a><a href="#">Ireland</a>
+  </div>
+  <div class="navmeta">MW04 · 22–23 AUG · <b>826</b> PLAYERS TRACKED</div>
+</nav>
+
+<!-- ================= HEADLINE CAROUSEL ================= -->
+<div class="sec" style="margin-top:32px"><h2>News</h2></div>
+<div class="carousel" id="carousel">
+  <div class="slide on" data-i="0">
+    <div class="tag">Serie A · Roma</div>
+    <h3>Ferguson's double sends Roma top</h3>
+    <p>Two headers in twenty minutes — the third different Irish name on the scoresheet in Italy this month.</p>
+  </div>
+  <div class="slide" data-i="1">
+    <div class="tag">League of Ireland · Cork City</div>
+    <h3>Dara Fitzgerald's senior debut, straight off the bench</h3>
+    <p>The 18-year-old came on at Turner's Cross to a standing ovation in his first pro appearance.</p>
+  </div>
+  <div class="slide" data-i="2">
+    <div class="tag">Milestone</div>
+    <h3>Josh Cullen reaches 250 club appearances</h3>
+    <p>Marked with a clean sheet and the armband at Turf Moor.</p>
+  </div>
+  <div class="dots">
+    <button aria-current="true" data-i="0"></button>
+    <button aria-current="false" data-i="1"></button>
+    <button aria-current="false" data-i="2"></button>
+  </div>
+</div>
+
+<!-- ================= GOAL INVOLVEMENTS ================= -->
+<div class="sec"><h2>Goal involvements</h2><a class="more" href="#">All 19 →</a></div>
+<div class="giband">
+  <div class="gicard"><div class="who">Evan Ferguson</div><div class="cl">Roma · Serie A</div><div class="what"><span class="gitag">⚽ 12'</span><span class="gitag">⚽ 31'</span></div></div>
+  <div class="gicard"><div class="who">Troy Parrott</div><div class="cl">Ajax · Eredivisie</div><div class="what"><span class="gitag">⚽ 55'</span><span class="gitag a">🅰 71'</span></div></div>
+  <div class="gicard"><div class="who">Finn Azaz</div><div class="cl">Middlesbrough · Champ</div><div class="what"><span class="gitag">⚽ 18'</span><span class="gitag a">🅰 x2</span></div></div>
+  <div class="gicard"><div class="who">Dara O'Shea</div><div class="cl">Ipswich · Champ</div><div class="what"><span class="gitag">⚽ 63'</span></div></div>
+  <div class="gicard"><div class="who">Adam Idah</div><div class="cl">Celtic · Scot Prem</div><div class="what"><span class="gitag">⚽ 47'</span></div></div>
+  <div class="gicard"><div class="who">Cian Byrne</div><div class="cl">Bohemians · LOI</div><div class="what"><span class="gitag">⚽ 8'</span><span class="gitag">⚽ 74'</span></div></div>
+  <div class="gicard"><div class="who">Michael Duffy</div><div class="cl">Dundalk · LOI</div><div class="what"><span class="gitag a">🅰 51'</span></div></div>
+</div>
+
+<!-- ================= FULL ROUNDUP, BY TIER ================= -->
+<div class="sec"><h2>Full round-up</h2><span class="more">Grouped by tier, not ranked</span></div>
+
+<div class="tiergroup">
+  <h4><span>Abroad — top divisions</span><span>7 played</span></h4>
+  <div class="plrow"><div class="nm">Evan Ferguson <span class="cl">Roma</span></div><div class="ev">⚽⚽</div><div class="mn">78'</div></div>
+  <div class="plrow"><div class="nm">Troy Parrott <span class="cl">Ajax</span></div><div class="ev">⚽ 🅰</div><div class="mn">90'</div></div>
+  <div class="plrow"><div class="nm">Caoimhín Kelleher <span class="cl">Brentford</span></div><div class="ev">6 saves</div><div class="mn">90'</div></div>
+  <div class="plrow"><div class="nm">Nathan Collins <span class="cl">Brentford</span></div><div class="ev">🅰</div><div class="mn">90'</div></div>
+  <div class="plrow"><div class="nm">Josh Cullen <span class="cl">Burnley</span></div><div class="ev">94% pass</div><div class="mn">90'</div></div>
+  <div class="plrow"><div class="nm">Jake O'Brien <span class="cl">Everton</span></div><div class="ev">9 clear.</div><div class="mn">90'</div></div>
+  <div class="plrow"><div class="nm">Gavin Bazunu <span class="cl">Southampton</span></div><div class="ev">—</div><div class="mn">90'</div></div>
+</div>
+
+<div class="tiergroup">
+  <h4><span>Abroad — second tier &amp; smaller leagues</span><span>5 played</span></h4>
+  <div class="plrow"><div class="nm">Dara O'Shea <span class="cl">Ipswich</span></div><div class="ev">⚽</div><div class="mn">90'</div></div>
+  <div class="plrow"><div class="nm">Finn Azaz <span class="cl">Middlesbrough</span></div><div class="ev">⚽ 🅰🅰</div><div class="mn">90'</div></div>
+  <div class="plrow"><div class="nm">Chiedozie Ogbene <span class="cl">Ipswich</span></div><div class="ev">⚽</div><div class="mn">82'</div></div>
+  <div class="plrow"><div class="nm">Will Smallbone <span class="cl">Southampton</span></div><div class="ev">🅰</div><div class="mn">90'</div></div>
+  <div class="plrow"><div class="nm">Festy Ebosele <span class="cl">Başakşehir</span></div><div class="ev">🅰</div><div class="mn">90'</div></div>
+</div>
+
+<div class="tiergroup">
+  <h4><span>League of Ireland</span><span>11 played</span></h4>
+  <div class="plrow"><div class="nm">Cian Byrne <span class="cl">Bohemians</span></div><div class="ev">⚽⚽</div><div class="mn">90'</div></div>
+  <div class="plrow"><div class="nm">Michael Duffy <span class="cl">Dundalk</span></div><div class="ev">🅰</div><div class="mn">86'</div></div>
+  <div class="plrow"><div class="nm">Aaron McEneff <span class="cl">Shamrock Rovers</span></div><div class="ev">—</div><div class="mn">90'</div></div>
+  <div class="plrow"><div class="nm">+ 8 more this round</div><div class="ev"></div><div class="mn"></div></div>
+</div>
+
+<div class="tiergroup">
+  <h4><span>League of Ireland — continued</span><span>8 more</span></h4>
+  <div class="plrow"><div class="nm">Dara Fitzgerald <span class="cl">Cork City</span></div><div class="ev">Debut</div><div class="mn">18'</div></div>
+  <div class="plrow"><div class="nm">+ 7 more this round</div><div class="ev"></div><div class="mn"></div></div>
+</div>
+
+<footer>
+  Reptracker* — a Matchweek site · prototype · sample data<br>
+  Covers Irish players at professional clubs — abroad, senior international and League of Ireland
+</footer>
+
+</div>
+
+<script>
+const slides=[...document.querySelectorAll('.slide')];
+const dots=[...document.querySelectorAll('.dots button')];
+let ci=0,timer;
+function show(i){
+  slides.forEach(s=>s.classList.toggle('on', +s.dataset.i===i));
+  dots.forEach(d=>d.setAttribute('aria-current', +d.dataset.i===i));
+  ci=i;
+}
+function next(){show((ci+1)%slides.length);}
+function restart(){clearInterval(timer);timer=setInterval(next,4800);}
+dots.forEach(d=>d.onclick=()=>{show(+d.dataset.i);restart();});
+restart();
+</script>
+</body>
+</html>
