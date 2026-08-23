@@ -8,8 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-<style>
-:root{
+<style>:root{
   --bg:#0C0F10; --panel:#151A1B; --panel2:#181E1F; --line:#242B2C;
   --white:#EFF3F1; --mute:#77837F; --yellow:#F5C518; --teal:#35D4BF; --red:#FF5A48;
 }
@@ -20,15 +19,15 @@ body{background:var(--bg);color:var(--white);font-family:'Space Grotesk',sans-se
 a{color:inherit;text-decoration:none}
 button{font-family:inherit;background:none;border:0;color:inherit;cursor:pointer}
 nav{display:flex;justify-content:space-between;align-items:center;padding:18px 0;border-bottom:1px solid var(--line);gap:14px;flex-wrap:wrap}
-.mark{font-weight:700;font-size:19px;letter-spacing:.01em}
+.mark{font-weight:700;font-size:19px}
 .mark i{font-style:normal;color:var(--yellow)}
-.navlinks{display:flex;gap:22px;font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--mute)}
+.navlinks{display:flex;gap:18px;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--mute);flex-wrap:wrap}
 .navlinks a{padding-bottom:2px;border-bottom:1px solid transparent}
 .navlinks a:hover{color:var(--white)}
 .navlinks a.on{color:var(--yellow);border-color:var(--yellow)}
 .navmeta{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.1em;color:var(--mute)}
 .navmeta b{color:var(--teal);font-weight:500}
-.sec{margin:36px 0 16px;display:flex;justify-content:space-between;align-items:baseline;gap:10px;flex-wrap:wrap}
+.sec{margin:36px 0 14px;display:flex;justify-content:space-between;align-items:baseline;gap:10px;flex-wrap:wrap}
 .sec h2{font-size:13px;font-family:'IBM Plex Mono',monospace;letter-spacing:.18em;text-transform:uppercase;color:var(--yellow)}
 .sec .more{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--mute);border-bottom:1px solid var(--line);padding-bottom:2px}
 .sec .more:hover{color:var(--white)}
@@ -45,7 +44,7 @@ nav{display:flex;justify-content:space-between;align-items:center;padding:18px 0
 .slide h3{font-size:clamp(20px,3vw,28px);font-weight:700;letter-spacing:-.01em;max-width:34ch;line-height:1.15}
 .slide p{color:var(--mute);margin-top:8px;font-size:14px;max-width:50ch}
 .dots{position:absolute;bottom:16px;right:20px;display:flex;gap:6px;z-index:2}
-.dots button{width:20px;height:3px;border-radius:2px;background:var(--line);cursor:pointer;padding:0}
+.dots button{width:20px;height:3px;border-radius:2px;background:var(--line);padding:0}
 .dots button[aria-current="true"]{background:var(--yellow)}
 .giband{display:flex;gap:1px;overflow-x:auto;background:var(--line);border:1px solid var(--line);border-radius:6px;scrollbar-width:thin;scrollbar-color:var(--line) transparent}
 .giband::-webkit-scrollbar{height:6px}
@@ -58,43 +57,105 @@ nav{display:flex;justify-content:space-between;align-items:center;padding:18px 0
 .gicard .what{margin-top:10px;display:flex;gap:6px;flex-wrap:wrap}
 .gitag{font-family:'IBM Plex Mono',monospace;font-size:10px;padding:3px 7px;border-radius:3px;background:rgba(53,212,191,.14);color:var(--teal)}
 .gitag.a{background:rgba(245,197,24,.14);color:var(--yellow)}
-.tiergroup{margin-bottom:26px}
+.tiergroup{margin-bottom:24px}
 .tiergroup h4{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--mute);padding-bottom:8px;border-bottom:1px solid var(--line);margin-bottom:2px;display:flex;justify-content:space-between}
-.plrow{display:grid;grid-template-columns:1fr auto auto;gap:14px;align-items:center;padding:11px 4px;border-bottom:1px solid #1B2122;font-size:14px;width:100%;text-align:left}
+.plrow{display:grid;grid-template-columns:1fr auto auto;gap:14px;align-items:center;padding:11px 4px;border-bottom:1px solid #1B2122;font-size:14px}
 .plrow:hover{background:var(--panel)}
 .plrow:last-child{border-bottom:0}
 .plrow .nm{font-weight:600}
 .plrow .cl{color:var(--mute);font-family:'IBM Plex Mono',monospace;font-size:12px}
 .plrow .ev{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--teal);white-space:nowrap}
 .plrow .mn{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--mute);white-space:nowrap;text-align:right;min-width:38px}
-.filterbar{display:flex;gap:8px;flex-wrap:wrap;margin:20px 0 26px}
-.filterbar input{flex:1 1 220px;background:var(--panel);border:1px solid var(--line);color:var(--white);padding:11px 14px;border-radius:6px;font-family:'Space Grotesk',sans-serif;font-size:14px}
+.filterbar{display:flex;gap:8px;flex-wrap:wrap;margin:20px 0 24px}
+.filterbar input{flex:1 1 200px;background:var(--panel);border:1px solid var(--line);color:var(--white);padding:11px 14px;border-radius:6px;font-family:'Space Grotesk',sans-serif;font-size:14px}
 .filterbar input::placeholder{color:var(--mute)}
-.filterbar select{background:var(--panel);border:1px solid var(--line);color:var(--white);padding:0 12px;border-radius:6px;font-family:'IBM Plex Mono',monospace;font-size:12px}
-.emptystate{padding:34px 4px;color:var(--mute);font-family:'IBM Plex Mono',monospace;font-size:13px;display:none}
-.squadgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:6px;overflow:hidden}
+.filterbar select{flex:0 1 200px;background:var(--panel);border:1px solid var(--line);color:var(--white);padding:11px 12px;border-radius:6px;font-family:'IBM Plex Mono',monospace;font-size:12px}
+.emptystate{padding:30px 4px;color:var(--mute);font-family:'IBM Plex Mono',monospace;font-size:13px;display:none}
+.squadgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(215px,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:6px;overflow:hidden}
 .squadcard{background:var(--panel);padding:15px;display:block;transition:background .12s}
 .squadcard:hover{background:var(--panel2)}
 .squadcard .pos{font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.12em;color:var(--yellow)}
 .squadcard .who{font-weight:600;font-size:16px;margin-top:5px}
 .squadcard .cl{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--mute);margin-top:3px}
 .squadcard .caps{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--teal);margin-top:9px}
-.pdhead{display:flex;justify-content:space-between;align-items:flex-start;gap:20px;flex-wrap:wrap;padding:14px 0 24px}
+.clubgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:6px;overflow:hidden}
+.clubcard{background:var(--panel);padding:16px;display:block;transition:background .12s}
+.clubcard:hover{background:var(--panel2)}
+.clubcard .cn{font-weight:600;font-size:16px}
+.clubcard .cl2{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--mute);margin-top:4px}
+.clubcard .cc{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--teal);margin-top:10px}
+.fxlist{border:1px solid var(--line);border-radius:6px;overflow:hidden}
+.fxrow{display:grid;grid-template-columns:78px 1fr auto auto auto;gap:12px;align-items:center;padding:11px 14px;background:var(--panel);border-bottom:1px solid var(--line);font-size:14px}
+.fxrow:last-child{border-bottom:0}
+a.fxrow.lnk:hover{background:var(--panel2)}
+.fxd{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--mute)}
+.fxo{font-weight:500}
+.fxo .cl{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--mute)}
+.fxv{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--mute)}
+.ha{font-family:'IBM Plex Mono',monospace;font-size:10px;color:var(--yellow);border:1px solid var(--line);padding:1px 5px;border-radius:3px;margin-left:4px}
+.fxc{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--mute);text-align:right}
+.fxs{font-family:'IBM Plex Mono',monospace;font-weight:600;font-size:13px}
+.fxev{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--teal)}
+.fxm{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--mute);text-align:right;min-width:38px}
+.pdhead{display:flex;justify-content:space-between;align-items:flex-start;gap:20px;flex-wrap:wrap;padding:14px 0 6px}
 .pdname{font-size:clamp(26px,4.5vw,42px);font-weight:700;letter-spacing:-.01em}
 .pdmeta{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--mute);margin-top:8px;letter-spacing:.04em}
+.pdmeta a{color:var(--teal)}
 .pdmeta b{color:var(--teal);font-weight:500}
+.pdborn{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--mute);margin-top:6px}
 .pdbadge{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;padding:6px 12px;border-radius:20px;border:1px solid var(--line);color:var(--mute);white-space:nowrap}
-.pdstats{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:6px;overflow:hidden;margin-bottom:30px}
-.pds{background:var(--panel);padding:16px 14px}
-.pds .n{font-family:'IBM Plex Mono',monospace;font-size:22px;font-weight:600;color:var(--white)}
+.pdstats{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:6px;overflow:hidden}
+.pds{background:var(--panel);padding:15px 14px}
+.pds .n{font-family:'IBM Plex Mono',monospace;font-size:21px;font-weight:600}
 .pds .l{font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:var(--mute);margin-top:5px}
-.pdnote{color:var(--mute);font-size:15px;max-width:60ch;margin-bottom:6px}
+.intlblock{border:1px solid var(--line);border-radius:6px;padding:14px 16px;margin-bottom:10px;background:var(--panel)}
+.ilvl{font-weight:600;font-size:15px}
+.ilvl span{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--mute);font-weight:400;margin-left:8px}
+.isub{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--mute);margin:14px 0 7px}
+.intlblock .fxlist{border-color:#1F2627}
+.intlblock .fxrow{background:var(--bg)}
+.eliglist{display:flex;gap:8px;flex-wrap:wrap}
+.elig{border:1px solid var(--line);border-radius:6px;padding:11px 14px;background:var(--panel);min-width:170px}
+.elig .ec{display:block;font-weight:600;font-size:15px}
+.elig .en{display:block;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;margin-top:4px}
+.elig.tied .ec{color:var(--teal)}
+.elig.tied .en{color:var(--teal)}
+.elig.open .en{color:var(--yellow)}
+.elig.blocked{opacity:.38}
+.elig.blocked .en{color:var(--mute);text-decoration:line-through}
+.eligNote{color:var(--mute);font-size:13px;margin-top:12px;max-width:70ch;font-family:'IBM Plex Mono',monospace;line-height:1.7}
+.tlist{border:1px solid var(--line);border-radius:6px;overflow:hidden}
+.trow{display:grid;grid-template-columns:60px 1fr auto;gap:12px;padding:11px 14px;background:var(--panel);border-bottom:1px solid var(--line);font-size:14px}
+.trow:last-child{border-bottom:0}
+.ty{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--mute)}
+.tfee{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--teal)}
+.msgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:6px;overflow:hidden}
+.mscard{background:var(--panel);padding:15px;display:block;transition:background .12s}
+.mscard:hover{background:var(--panel2)}
+.mstag{font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:var(--yellow)}
+.msn{font-weight:600;font-size:16px;margin-top:6px}
+.msd{color:var(--mute);font-size:13px;margin-top:5px}
+.msc{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--teal);margin-top:9px}
+.tabbar{display:flex;gap:6px;flex-wrap:wrap;margin:22px 0 4px}
+.tab{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.1em;text-transform:uppercase;border:1px solid var(--line);border-radius:20px;padding:8px 16px;color:var(--mute);background:var(--panel)}
+.tab:hover{color:var(--white)}
+.tab.on{background:var(--yellow);color:#0C0F10;border-color:var(--yellow)}
+.tabpanel{display:none}
+.tabpanel.on{display:block}
+.cmpgrid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line);border-radius:6px;overflow:hidden}
+.cmphead{background:var(--panel2);padding:14px;font-weight:700;font-size:15px}
+.cmpk{background:var(--panel);padding:12px 14px;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--mute)}
+.cmpv{background:var(--panel);padding:12px 14px;font-family:'IBM Plex Mono',monospace;font-size:14px}
+.cmpv.win{color:var(--teal);font-weight:600}
 footer{margin-top:60px;border-top:1px solid var(--line);padding:20px 0 44px;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--mute);line-height:2}
-@media(max-width:640px){
+@media(max-width:760px){
+  .pdstats{grid-template-columns:repeat(2,1fr)}
+  .fxrow{grid-template-columns:64px 1fr auto;font-size:13px}
+  .fxc{display:none}
   .plrow{grid-template-columns:1fr auto}
   .plrow .mn{display:none}
-  .navlinks{gap:14px;font-size:10px}
-  .pdstats{grid-template-columns:repeat(2,1fr)}
+  .cmpgrid{grid-template-columns:1fr}
+  .cmpk{border-top:1px solid var(--line)}
 }
 </style>
 </head>
@@ -102,43 +163,31 @@ footer{margin-top:60px;border-top:1px solid var(--line);padding:20px 0 44px;font
 <div class="wrap">
 <nav>
   <a class="mark" href="index.html">FOOTBALLERS<i>*</i></a>
-  <div class="navlinks"><a class="on" href="players.html">Players</a><a class="" href="abroad.html">Abroad</a><a class="" href="league-of-ireland.html">League of Ireland</a><a class="" href="ireland.html">Ireland</a></div>
-  <div class="navmeta">MW04 · 22–23 AUG · <b>826</b> PLAYERS TRACKED</div>
+  <div class="navlinks"><a class="on" href="players.html">Players</a><a class="" href="abroad.html">Abroad</a><a class="" href="league-of-ireland.html">League of Ireland</a><a class="" href="clubs.html">Clubs</a><a class="" href="ireland.html">Ireland</a><a class="" href="fixtures.html">Fixtures</a></div>
+  <div class="navmeta">MW04 · 22–23 AUG · <b>19</b> TRACKED</div>
 </nav>
 
-        <div class="pagehead"><h1>All players</h1><p>Every professional Irish player on the books — abroad and at home.</p></div>
-        <div class="filterbar">
-          <input type="search" id="q" placeholder="Search player or club">
-          <select id="posf">
-            <option value="">All positions</option>
-            <option>GK</option><option>DEF</option><option>MID</option><option>FWD</option>
-          </select>
-        </div>
-        <div class="tiergroup"><h4><span id="count">19 players</span><span></span></h4>
-          <a class="plrow pl-item" data-name="evan ferguson roma" data-pos="FWD" href="player/evan-ferguson.html"><div class="nm">Evan Ferguson <span class="cl">Roma</span></div><div class="ev">⚽ 12' ⚽ 31'</div><div class="mn">78'</div></a><a class="plrow pl-item" data-name="troy parrott ajax" data-pos="FWD" href="player/troy-parrott.html"><div class="nm">Troy Parrott <span class="cl">Ajax</span></div><div class="ev">⚽ 55' 🅰 71'</div><div class="mn">90'</div></a><a class="plrow pl-item" data-name="caoimhín kelleher brentford" data-pos="GK" href="player/caoimhin-kelleher.html"><div class="nm">Caoimhín Kelleher <span class="cl">Brentford</span></div><div class="ev">6 saves</div><div class="mn">90'</div></a><a class="plrow pl-item" data-name="nathan collins brentford" data-pos="DEF" href="player/nathan-collins.html"><div class="nm">Nathan Collins <span class="cl">Brentford</span></div><div class="ev">🅰</div><div class="mn">90'</div></a><a class="plrow pl-item" data-name="josh cullen burnley" data-pos="MID" href="player/josh-cullen.html"><div class="nm">Josh Cullen <span class="cl">Burnley</span></div><div class="ev">94% pass</div><div class="mn">90'</div></a><a class="plrow pl-item" data-name="jake o'brien everton" data-pos="DEF" href="player/jake-obrien.html"><div class="nm">Jake O'Brien <span class="cl">Everton</span></div><div class="ev">9 clearances</div><div class="mn">90'</div></a><a class="plrow pl-item" data-name="gavin bazunu southampton" data-pos="GK" href="player/gavin-bazunu.html"><div class="nm">Gavin Bazunu <span class="cl">Southampton</span></div><div class="ev">—</div><div class="mn">90'</div></a><a class="plrow pl-item" data-name="dara o'shea ipswich town" data-pos="DEF" href="player/dara-oshea.html"><div class="nm">Dara O'Shea <span class="cl">Ipswich Town</span></div><div class="ev">⚽</div><div class="mn">90'</div></a><a class="plrow pl-item" data-name="finn azaz middlesbrough" data-pos="MID" href="player/finn-azaz.html"><div class="nm">Finn Azaz <span class="cl">Middlesbrough</span></div><div class="ev">⚽ 🅰🅰</div><div class="mn">90'</div></a><a class="plrow pl-item" data-name="chiedozie ogbene ipswich town" data-pos="FWD" href="player/chiedozie-ogbene.html"><div class="nm">Chiedozie Ogbene <span class="cl">Ipswich Town</span></div><div class="ev">⚽</div><div class="mn">82'</div></a><a class="plrow pl-item" data-name="will smallbone southampton" data-pos="MID" href="player/will-smallbone.html"><div class="nm">Will Smallbone <span class="cl">Southampton</span></div><div class="ev">🅰</div><div class="mn">90'</div></a><a class="plrow pl-item" data-name="festy ebosele i̇stanbul başakşehir" data-pos="DEF" href="player/festy-ebosele.html"><div class="nm">Festy Ebosele <span class="cl">İstanbul Başakşehir</span></div><div class="ev">🅰</div><div class="mn">90'</div></a><a class="plrow pl-item" data-name="adam idah celtic" data-pos="FWD" href="player/adam-idah.html"><div class="nm">Adam Idah <span class="cl">Celtic</span></div><div class="ev">⚽</div><div class="mn">64'</div></a><a class="plrow pl-item" data-name="cian byrne bohemians" data-pos="FWD" href="player/cian-byrne.html"><div class="nm">Cian Byrne <span class="cl">Bohemians</span></div><div class="ev">⚽ ⚽</div><div class="mn">90'</div></a><a class="plrow pl-item" data-name="michael duffy dundalk" data-pos="MID" href="player/michael-duffy.html"><div class="nm">Michael Duffy <span class="cl">Dundalk</span></div><div class="ev">🅰</div><div class="mn">86'</div></a><a class="plrow pl-item" data-name="aaron mceneff shamrock rovers" data-pos="MID" href="player/aaron-mceneff.html"><div class="nm">Aaron McEneff <span class="cl">Shamrock Rovers</span></div><div class="ev">—</div><div class="mn">90'</div></a><a class="plrow pl-item" data-name="dara fitzgerald cork city" data-pos="MID" href="player/dara-fitzgerald.html"><div class="nm">Dara Fitzgerald <span class="cl">Cork City</span></div><div class="ev">Debut</div><div class="mn">18'</div></a><a class="plrow pl-item" data-name="seán gannon shelbourne" data-pos="DEF" href="player/sean-gannon.html"><div class="nm">Seán Gannon <span class="cl">Shelbourne</span></div><div class="ev">Clean sheet</div><div class="mn">90'</div></a><a class="plrow pl-item" data-name="jack moylan st patrick's athletic" data-pos="MID" href="player/jack-moylan.html"><div class="nm">Jack Moylan <span class="cl">St Patrick's Athletic</span></div><div class="ev">—</div><div class="mn">73'</div></a>
-        </div>
-        <div class="emptystate" id="empty">No players match that. Clear the search or try another position.</div>
-        <script>
-        const q=document.getElementById('q'), posf=document.getElementById('posf');
-        const items=[...document.querySelectorAll('.pl-item')];
-        const empty=document.getElementById('empty'), count=document.getElementById('count');
-        function draw(){
-          const term=q.value.trim().toLowerCase(), pos=posf.value;
-          let shown=0;
-          items.forEach(el=>{
-            const ok=(!pos||el.dataset.pos===pos)&&(!term||el.dataset.name.includes(term));
-            el.style.display=ok?'':'none';
-            if(ok)shown++;
-          });
-          count.textContent=shown+' player'+(shown===1?'':'s');
-          empty.style.display=shown?'none':'block';
-        }
-        q.oninput=draw; posf.onchange=draw;
-        </script>
-        
+    <div class="pagehead"><h1>All players</h1><p>Every professional Irish player on the books — abroad and at home.</p></div>
+    <div class="filterbar">
+      <input type="search" id="q" placeholder="Search player or club">
+      <select id="posf"><option value="">All positions</option><option>GK</option><option>DEF</option><option>MID</option><option>FWD</option></select>
+      <select id="lgf"><option value="">All leagues</option><option>Championship</option><option>Eredivisie</option><option>League of Ireland</option><option>Premier League</option><option>Scottish Premiership</option><option>Serie A</option><option>Süper Lig</option></select>
+    </div>
+    <div class="tiergroup"><h4><span id="count">19 players</span><span></span></h4><a class="plrow pl-item" data-name="evan ferguson roma" data-pos="FWD" data-league="Serie A" href="player/evan-ferguson.html"><div class="nm">Evan Ferguson <span class="cl">Roma</span></div><div class="ev">⚽⚽</div><div class="mn">78'</div></a><a class="plrow pl-item" data-name="troy parrott ajax" data-pos="FWD" data-league="Eredivisie" href="player/troy-parrott.html"><div class="nm">Troy Parrott <span class="cl">Ajax</span></div><div class="ev">⚽ 🅰</div><div class="mn">90'</div></a><a class="plrow pl-item" data-name="caoimhín kelleher brentford" data-pos="GK" data-league="Premier League" href="player/caoimhin-kelleher.html"><div class="nm">Caoimhín Kelleher <span class="cl">Brentford</span></div><div class="ev">—</div><div class="mn">90'</div></a><a class="plrow pl-item" data-name="nathan collins brentford" data-pos="DEF" data-league="Premier League" href="player/nathan-collins.html"><div class="nm">Nathan Collins <span class="cl">Brentford</span></div><div class="ev">🅰</div><div class="mn">90'</div></a><a class="plrow pl-item" data-name="josh cullen burnley" data-pos="MID" data-league="Premier League" href="player/josh-cullen.html"><div class="nm">Josh Cullen <span class="cl">Burnley</span></div><div class="ev">—</div><div class="mn">90'</div></a><a class="plrow pl-item" data-name="jake o'brien everton" data-pos="DEF" data-league="Premier League" href="player/jake-obrien.html"><div class="nm">Jake O'Brien <span class="cl">Everton</span></div><div class="ev">—</div><div class="mn">90'</div></a><a class="plrow pl-item" data-name="gavin bazunu southampton" data-pos="GK" data-league="Championship" href="player/gavin-bazunu.html"><div class="nm">Gavin Bazunu <span class="cl">Southampton</span></div><div class="ev">—</div><div class="mn">90'</div></a><a class="plrow pl-item" data-name="dara o'shea ipswich town" data-pos="DEF" data-league="Championship" href="player/dara-oshea.html"><div class="nm">Dara O'Shea <span class="cl">Ipswich Town</span></div><div class="ev">⚽</div><div class="mn">90'</div></a><a class="plrow pl-item" data-name="finn azaz middlesbrough" data-pos="MID" data-league="Championship" href="player/finn-azaz.html"><div class="nm">Finn Azaz <span class="cl">Middlesbrough</span></div><div class="ev">⚽ 🅰🅰</div><div class="mn">90'</div></a><a class="plrow pl-item" data-name="chiedozie ogbene ipswich town" data-pos="FWD" data-league="Championship" href="player/chiedozie-ogbene.html"><div class="nm">Chiedozie Ogbene <span class="cl">Ipswich Town</span></div><div class="ev">⚽</div><div class="mn">82'</div></a><a class="plrow pl-item" data-name="will smallbone southampton" data-pos="MID" data-league="Championship" href="player/will-smallbone.html"><div class="nm">Will Smallbone <span class="cl">Southampton</span></div><div class="ev">🅰</div><div class="mn">90'</div></a><a class="plrow pl-item" data-name="festy ebosele i̇stanbul başakşehir" data-pos="DEF" data-league="Süper Lig" href="player/festy-ebosele.html"><div class="nm">Festy Ebosele <span class="cl">İstanbul Başakşehir</span></div><div class="ev">🅰</div><div class="mn">90'</div></a><a class="plrow pl-item" data-name="adam idah celtic" data-pos="FWD" data-league="Scottish Premiership" href="player/adam-idah.html"><div class="nm">Adam Idah <span class="cl">Celtic</span></div><div class="ev">⚽</div><div class="mn">64'</div></a><a class="plrow pl-item" data-name="cian byrne bohemians" data-pos="FWD" data-league="League of Ireland" href="player/cian-byrne.html"><div class="nm">Cian Byrne <span class="cl">Bohemians</span></div><div class="ev">⚽⚽</div><div class="mn">90'</div></a><a class="plrow pl-item" data-name="michael duffy dundalk" data-pos="MID" data-league="League of Ireland" href="player/michael-duffy.html"><div class="nm">Michael Duffy <span class="cl">Dundalk</span></div><div class="ev">🅰</div><div class="mn">86'</div></a><a class="plrow pl-item" data-name="aaron mceneff shamrock rovers" data-pos="MID" data-league="League of Ireland" href="player/aaron-mceneff.html"><div class="nm">Aaron McEneff <span class="cl">Shamrock Rovers</span></div><div class="ev">—</div><div class="mn">90'</div></a><a class="plrow pl-item" data-name="dara fitzgerald cork city" data-pos="MID" data-league="League of Ireland" href="player/dara-fitzgerald.html"><div class="nm">Dara Fitzgerald <span class="cl">Cork City</span></div><div class="ev">—</div><div class="mn">18'</div></a><a class="plrow pl-item" data-name="seán gannon shelbourne" data-pos="DEF" data-league="League of Ireland" href="player/sean-gannon.html"><div class="nm">Seán Gannon <span class="cl">Shelbourne</span></div><div class="ev">—</div><div class="mn">90'</div></a><a class="plrow pl-item" data-name="jack moylan st patrick's athletic" data-pos="MID" data-league="League of Ireland" href="player/jack-moylan.html"><div class="nm">Jack Moylan <span class="cl">St Patrick's Athletic</span></div><div class="ev">—</div><div class="mn">73'</div></a></div>
+    <div class="emptystate" id="empty">No players match that. Clear the search or try another filter.</div>
+    <script>
+    var q=document.getElementById('q'),posf=document.getElementById('posf'),lgf=document.getElementById('lgf'),
+        items=[].slice.call(document.querySelectorAll('.pl-item')),
+        empty=document.getElementById('empty'),count=document.getElementById('count');
+    function draw(){var t=q.value.trim().toLowerCase(),ps=posf.value,lg=lgf.value,s=0;
+      items.forEach(function(el){var ok=(!ps||el.dataset.pos===ps)&&(!lg||el.dataset.league===lg)&&(!t||el.dataset.name.indexOf(t)>-1);
+        el.style.display=ok?'':'none';if(ok)s++;});
+      count.textContent=s+' player'+(s===1?'':'s');empty.style.display=s?'none':'block';}
+    q.oninput=draw;posf.onchange=draw;lgf.onchange=draw;
+    </script>
 <footer>
   Footballers* · prototype · sample data<br>
-  Covers Irish players at professional clubs — abroad, senior international and League of Ireland
+  Every Irish player at a professional club — abroad, senior international and League of Ireland
 </footer>
 </div>
 </body>
