@@ -768,7 +768,7 @@ def scrape(args):
         age, born, foot = extract_personal(blob)
         players_rows.append([
             slug,
-            season["league"] or p.get("league", ""),
+            p.get("league", "") or season["league"],
             age, born, foot,
             sr_caps, sr_goals, sr_debut, youth,
             season["apps"], season["starts"], season["goals"],
