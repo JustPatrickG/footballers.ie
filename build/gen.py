@@ -25,9 +25,27 @@ def _int(v, d=0):
     except: return d
 
 def _merge_players():
-    """API layer provides the facts; manual layer overrides any non-empty cell.
-    A manual row with locked=yes ignores the API entirely."""
-    api = {r["slug"]: r for r in _rows("api/players.csv") if r.get("slug")}
+    """Three layers, lowest first:
+         scraper/players_list.csv  — the roster (name, club, position)
+         data/api/players.csv      — scraped stats, keyed on slug
+         data/manual/players.csv   — your edits, always win
+       A manual row with locked=yes ignores the scraped data entirely."""
+    roster = {}
+    roster_path = os.path.join(HERE, "..", "scraper", "players_list.csv")
+    if os.path.exists(roster_path):
+        with open(roster_path, newline="", encoding="utf-8") as f:
+            for r in csv.DictReader(f):
+                if r.get("slug"): roster[r["slug"]] = r
+
+    api = {}
+    for r in _rows("api/players.csv"):
+        if not r.get("slug"): continue
+        base = dict(roster.get(r["slug"], {}))          # name/club/pos from the roster
+        for k, v in r.items():
+            if (v or "").strip(): base[k] = v            # stats layer on top
+        api[r["slug"]] = base
+    for slug, r in roster.items():                       # roster-only players still show
+        api.setdefault(slug, dict(r))
     man = {r["slug"]: r for r in _rows("manual/players.csv") if r.get("slug")}
     out = {}
     for slug in set(api) | set(man):
@@ -266,8 +284,17 @@ def initials(name):
     parts = [p for p in name.split() if p]
     return (parts[0][0] + parts[-1][0]).upper() if len(parts) > 1 else (parts[0][:2].upper() if parts else "?")
 
+IMG_DIR = os.path.join(HERE, "..", "img", "players")
+HAVE_IMG = set()
+if os.path.isdir(IMG_DIR):
+    HAVE_IMG = {f.rsplit(".",1)[0] for f in os.listdir(IMG_DIR) if f.lower().endswith((".png",".jpg",".jpeg",".webp"))}
+
 def avatar(p, root="", size="lg"):
     cls = "pavatar" + (" sm" if size == "sm" else "")
+    if not p.get("photo") and p["slug"] in HAVE_IMG:
+        return (f'<div class="{cls}"><img src="{root}img/players/{p["slug"]}.png" '
+                f'alt="{esc(p["n"])}" loading="lazy" '
+                f'onerror="this.parentNode.innerHTML=\'<span>{initials(p["n"])}</span>\'"></div>')
     if p.get("photo"):
         src_url = p["photo"] if p["photo"].startswith("http") else f'{root}{p["photo"]}'
         return (f'<div class="{cls}"><img src="{esc(src_url)}" alt="{esc(p["n"])}" loading="lazy" '
