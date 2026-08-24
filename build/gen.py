@@ -147,7 +147,7 @@ OUT = "site"
 CSS = open(os.path.join(HERE, "style.css")).read()
 APPJS = open(os.path.join(HERE, "app.js")).read()
 
-NAV = [("News","news.html"),("Players","players.html"),("Abroad","abroad.html"),("League of Ireland","league-of-ireland.html"),
+NAV = [("News","news.html"),("Players","players.html"),
        ("Clubs","clubs.html"),("Ireland","ireland.html"),("Fixtures","fixtures.html"),("Alerts","alerts.html")]
 
 
@@ -639,6 +639,30 @@ def build_article(a):
                  a.get("standfirst",""), "../", "news.html", body,
                  canonical=f'news/{a["slug"]}.html')
 
+
+LEAGUE_COUNTRY = {
+    "premier division":"Ireland", "league of ireland":"Ireland", "first division":"Ireland",
+    "premier league":"England", "championship":"England", "league one":"England",
+    "league two":"England", "national league":"England", "premier league 2":"England",
+    "national league cup group a":"England", "efl cup":"England", "fa cup":"England",
+    "premiership":"Scotland", "scottish premiership":"Scotland",
+    "nifl premiership":"Northern Ireland",
+    "serie a":"Italy", "serie b":"Italy",
+    "ligue 1":"France", "ligue 2":"France",
+    "eredivisie":"Netherlands", "first division b":"Belgium", "jupiler pro league":"Belgium",
+    "liga portugal":"Portugal", "super lig":"Turkey", "süper lig":"Turkey",
+    "nb i":"Hungary", "bundesliga":"Germany", "la liga":"Spain",
+}
+def country_of(league):
+    l=(league or "").strip().lower()
+    if not l: return "Other"
+    if l in LEAGUE_COUNTRY: return LEAGUE_COUNTRY[l]
+    for k,v in LEAGUE_COUNTRY.items():
+        if k in l or l in k: return v
+    return "Other"
+
+def country_slug(c): return club_slug(c)
+
 # ================= LIST PAGES =================
 def build_list(fname, title, sub, data):
     rows = ""
@@ -695,17 +719,66 @@ def build_list(fname, title, sub, data):
 
 # ================= CLUBS =================
 def build_clubs_index():
-    clubs = {}
-    for p in PLAYERS: clubs.setdefault(p["club"], []).append(p)
+    """Top level: pick a country."""
+    by_country = {}
+    for p in PLAYERS:
+        by_country.setdefault(country_of(p["league"]), []).append(p)
+    order = sorted(by_country, key=lambda c: (-len(by_country[c]), c))
     cards = ""
-    for c in sorted(clubs):
-        ps = clubs[c]
-        cards += (f'<a class="clubcard" href="{clink(c)}"><div class="cn">{esc(c)}</div>'
-                  f'<div class="cl2">{esc(ps[0]["league"]) if ps[0]["league"] not in ("","—") else "&nbsp;"}</div>'
+    for c in order:
+        ps = by_country[c]
+        leagues = len({p["league"] for p in ps if p["league"] not in ("","—")})
+        cards += (f'<a class="clubcard" href="country/{country_slug(c)}.html">'
+                  f'<div class="cn">{esc(c)}</div>'
+                  f'<div class="cl2">{leagues} league{"s" if leagues!=1 else ""}</div>'
                   f'<div class="cc">{len(ps)} Irish player{"s" if len(ps)!=1 else ""}</div></a>')
-    body = (f'<div class="pagehead"><h1>Clubs</h1><p>Every club with an Irish professional on the books, at home and abroad.</p></div>'
+    body = (f'<div class="pagehead"><h1>Clubs</h1>'
+            f'<p>Pick a country, then a league, then a club.</p></div>'
             f'<div class="clubgrid">{cards}</div>')
-    return shell("Clubs — FOOTBALLERS","Every club with an Irish professional on the books.","", "clubs.html", body, canonical="clubs.html")
+    return shell("Clubs — FOOTBALLERS","Irish players by country, league and club.","", "clubs.html", body, canonical="clubs.html")
+
+def build_country(cname, ps):
+    """Second level: leagues within a country."""
+    by_league = {}
+    for p in ps:
+        by_league.setdefault(p["league"] or "Other", []).append(p)
+    order = sorted(by_league, key=lambda l: (-len(by_league[l]), l))
+    cards = ""
+    for l in order:
+        lp = by_league[l]
+        clubs = len({p["club"] for p in lp})
+        cards += (f'<a class="clubcard" href="../league/{club_slug(cname)}-{club_slug(l)}.html">'
+                  f'<div class="cn">{esc(l)}</div>'
+                  f'<div class="cl2">{clubs} club{"s" if clubs!=1 else ""}</div>'
+                  f'<div class="cc">{len(lp)} Irish player{"s" if len(lp)!=1 else ""}</div></a>')
+    body = (f'<a class="crumb" data-back href="../clubs.html">← Back</a>'
+            f'<div class="pagehead"><h1>{esc(cname)}</h1>'
+            f'<p>{len(ps)} Irish player{"s" if len(ps)!=1 else ""} across {len(order)} league{"s" if len(order)!=1 else ""}.</p></div>'
+            f'<div class="clubgrid">{cards}</div>')
+    return shell(f"{cname} — Irish players — FOOTBALLERS",
+                 f"Irish players in {cname}, by league.", "../", "clubs.html", body,
+                 canonical=f"country/{country_slug(cname)}.html")
+
+def build_league(cname, lname, ps):
+    """Third level: clubs within a league."""
+    by_club = {}
+    for p in ps:
+        by_club.setdefault(p["club"], []).append(p)
+    order = sorted(by_club, key=lambda c: (-len(by_club[c]), c))
+    cards = ""
+    for c in order:
+        cp = by_club[c]
+        cards += (f'<a class="clubcard" href="../{clink(c)}">'
+                  f'<div class="cn">{esc(c)}</div>'
+                  f'<div class="cl2">{esc(lname)}</div>'
+                  f'<div class="cc">{len(cp)} Irish player{"s" if len(cp)!=1 else ""}</div></a>')
+    body = (f'<a class="crumb" data-back href="../country/{country_slug(cname)}.html">← Back</a>'
+            f'<div class="pagehead"><h1>{esc(lname)}</h1>'
+            f'<p>{esc(cname)} · {len(ps)} Irish player{"s" if len(ps)!=1 else ""} at {len(order)} club{"s" if len(order)!=1 else ""}.</p></div>'
+            f'<div class="clubgrid">{cards}</div>')
+    return shell(f"{lname} — Irish players — FOOTBALLERS",
+                 f"Irish players in the {lname}.", "../", "clubs.html", body,
+                 canonical=f"league/{club_slug(cname)}-{club_slug(lname)}.html")
 
 def build_club(cname, ps):
     rows = "".join(player_row(p, "../") for p in ps)
@@ -728,9 +801,17 @@ def build_club(cname, ps):
 # ================= IRELAND =================
 def build_ireland():
     tabs, panels = "", ""
+    def rate(p):
+        try: return float(p.get("rating") or 0)
+        except: return 0.0
     for i,(lvl,info) in enumerate(IRELAND.items()):
-        squad = [p for p in PLAYERS if (lvl=="Senior" and p["intl_senior"]) or
-                 (lvl!="Senior" and any(y[0]==lvl for y in p["intl_youth"]))]
+        # only players who have actually played at this level
+        if lvl == "Senior":
+            squad = [p for p in PLAYERS if p["intl_senior"]]
+        else:
+            squad = [p for p in PLAYERS if any(y[0] == lvl for y in p["intl_youth"])]
+        squad.sort(key=lambda p: -rate(p))
+
         cards = ""
         for p in squad:
             if lvl=="Senior":
@@ -738,25 +819,26 @@ def build_ireland():
                 meta = f'{c} caps · {p["intl_senior"]["goals"]} goals' if c is not None else "Capped"
             else:
                 y = next(y for y in p["intl_youth"] if y[0]==lvl)
-                meta = f'{y[1]} caps · {y[2]} goals' if y[1] is not None else "In the squad"
-            cards += (f'<a class="squadcard" href="{plink(p)}"><div class="pos">{p["pos"]}</div>'
+                meta = f'{y[1]} caps · {y[2]} goals' if y[1] is not None else "Played at this level"
+            cards += (f'<a class="squadcard" href="{plink(p)}">{avatar(p)}<div class="pos">{p["pos"]}</div>'
                       f'<div class="who">{esc(p["n"])}</div><div class="cl">{esc(p["club"])}</div>'
-                      f'<div class="caps">{meta}</div></a>')
-        fxr = "".join(f'<div class="fxrow"><div class="fxd">{esc(d)}</div>'
-                      f'<div class="fxo">{esc(o)} <span class="ha">{h}</span></div><div class="fxc">{esc(c)}</div></div>'
-                      for d,o,h,c in info["fixtures"])
+                      f'<div class="caps">{meta}</div>'
+                      f'<div class="sqrate">{rating_chip(p, True)}</div></a>')
+        fxr = "".join(f'<div class="fxrow"><div class="fxd">{esc(d)}</div><div class="fxo">{esc(o)} '
+                      f'<span class="ha">{h}</span></div><div class="fxc">{esc(cp)}</div></div>'
+                      for d,o,h,cp in info["fixtures"])
         rsr = "".join(f'<div class="fxrow"><div class="fxd">{esc(d)}</div><div class="fxo">{esc(o)}</div>'
-                      f'<div class="fxs">{esc(s)}</div><div class="fxc">{esc(c)}</div></div>'
-                      for d,o,s,c in info["results"])
+                      f'<div class="fxs">{esc(sc)}</div><div class="fxc">{esc(cp)}</div></div>'
+                      for d,o,sc,cp in info["results"])
         tabs += f'<button class="tab {"on" if i==0 else ""}" data-t="{lvl}">{esc(lvl)}</button>'
         panels += f'''<div class="tabpanel {"on" if i==0 else ""}" data-t="{lvl}">
           <div class="sec"><h2>Fixtures</h2></div><div class="fxlist">{fxr or '<div class="emptystate" style="display:block">None listed.</div>'}</div>
           <div class="sec"><h2>Recent results</h2></div><div class="fxlist">{rsr or '<div class="emptystate" style="display:block">None listed.</div>'}</div>
-          <div class="sec"><h2>Tracked players at this level</h2></div>
-          <div class="squadgrid">{cards or '<div class="emptystate" style="display:block">No tracked players.</div>'}</div>
+          <div class="sec"><h2>Players capped at this level</h2><span class="more" style="border:0">{len(squad)} · by rating</span></div>
+          <div class="squadgrid">{cards or '<div class="emptystate" style="display:block">No tracked players at this level yet.</div>'}</div>
         </div>'''
     body = f'''
-    <div class="pagehead"><h1>Republic of <i>Ireland</i></h1><p>Fixtures, results and tracked players from senior down through the underage sides.</p></div>
+    <div class="pagehead"><h1>Republic of <i>Ireland</i></h1><p>Fixtures, results and every tracked player capped at each level.</p></div>
     <div class="tabbar">{tabs}</div>
     {panels}
     <script>
@@ -767,9 +849,8 @@ def build_ireland():
     }}}});
     </script>'''
     return shell("Republic of Ireland — FOOTBALLERS",
-                 "Ireland fixtures, results and tracked players from senior to underage level.","", "ireland.html", body, canonical="ireland.html")
+                 "Ireland fixtures, results and capped players at every level.","", "ireland.html", body, canonical="ireland.html")
 
-# ================= FIXTURES =================
 def build_fixtures():
     rows = []
     for p in PLAYERS:
@@ -779,7 +860,7 @@ def build_fixtures():
     for d,p,o,h,c in rows: order.setdefault(d, []).append((p,o,h,c))
     out = ""
     for d in sorted(order, key=lambda x:(x.split()[1], int(x.split()[0]))):
-        items = "".join(f'<a class="fxrow lnk" href="{plink(p)}"><div class="fxo">{esc(p["n"])} '
+        items = "".join(f'<a class="fxrow lnk pfx" href="{plink(p)}"><div class="fxo">{esc(p["n"])} '
                         f'<span class="cl">{esc(p["club"])}</span></div>'
                         f'<div class="fxv">v {esc(o)} <span class="ha">{h}</span></div>'
                         f'<div class="fxc">{esc(c)}</div></a>' for p,o,h,c in order[d])
@@ -1130,6 +1211,16 @@ open(f"{OUT}/players.html","w").write(build_list("players.html","All players","E
 open(f"{OUT}/abroad.html","w").write(build_list("abroad.html","Abroad","Irish players at clubs outside Ireland, top flight to smaller leagues.",[p for p in PLAYERS if p["tier"].startswith("abroad")]))
 open(f"{OUT}/league-of-ireland.html","w").write(build_list("league-of-ireland.html","League of Ireland","Every Irish pro playing their football at home.",[p for p in PLAYERS if p["tier"]=="loi"]))
 open(f"{OUT}/clubs.html","w").write(build_clubs_index())
+os.makedirs(f"{OUT}/country", exist_ok=True)
+os.makedirs(f"{OUT}/league", exist_ok=True)
+_by_country = {}
+for _p in PLAYERS: _by_country.setdefault(country_of(_p["league"]), []).append(_p)
+for _c, _ps in _by_country.items():
+    open(f"{OUT}/country/{country_slug(_c)}.html","w").write(build_country(_c, _ps))
+    _by_league = {}
+    for _p in _ps: _by_league.setdefault(_p["league"] or "Other", []).append(_p)
+    for _l, _lp in _by_league.items():
+        open(f"{OUT}/league/{club_slug(_c)}-{club_slug(_l)}.html","w").write(build_league(_c, _l, _lp))
 open(f"{OUT}/news.html","w").write(build_news())
 os.makedirs(f"{OUT}/news", exist_ok=True)
 for _a in ARTICLES:

@@ -610,3 +610,14 @@ img,svg,iframe{max-width:100%}
 .wkh{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;
   color:var(--mute);margin:10px 0 6px;display:flex;justify-content:space-between}
 .wkh span{opacity:.6}
+
+/* fixtures page rows have no date cell — don't squeeze the name into the date column */
+.fxrow.pfx{grid-template-columns:1fr auto auto;gap:12px;align-items:center}
+.fxrow.pfx .fxo{min-width:0}
+.fxrow.pfx .fxo .cl{display:block;margin-top:2px}
+.fxrow.pfx .fxv{white-space:nowrap;text-align:right}
+.squadcard .sqrate{margin-top:8px}
+@media(max-width:700px){
+  .fxrow.pfx{grid-template-columns:1fr auto;gap:10px}
+  .fxrow.pfx .fxc{display:none}
+}

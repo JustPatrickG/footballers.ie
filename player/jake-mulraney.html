@@ -636,6 +636,17 @@ img,svg,iframe{max-width:100%}
 .wkh{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;
   color:var(--mute);margin:10px 0 6px;display:flex;justify-content:space-between}
 .wkh span{opacity:.6}
+
+/* fixtures page rows have no date cell — don't squeeze the name into the date column */
+.fxrow.pfx{grid-template-columns:1fr auto auto;gap:12px;align-items:center}
+.fxrow.pfx .fxo{min-width:0}
+.fxrow.pfx .fxo .cl{display:block;margin-top:2px}
+.fxrow.pfx .fxv{white-space:nowrap;text-align:right}
+.squadcard .sqrate{margin-top:8px}
+@media(max-width:700px){
+  .fxrow.pfx{grid-template-columns:1fr auto;gap:10px}
+  .fxrow.pfx .fxc{display:none}
+}
 </style>
 </head>
 <body data-player="jake-mulraney">
@@ -676,7 +687,7 @@ img,svg,iframe{max-width:100%}
   <button class="burger" id="burger" aria-label="Menu" aria-expanded="false" aria-controls="navlinks">
     <span></span><span></span><span></span>
   </button>
-  <div class="navlinks" id="navlinks"><a class="" href="../news.html">News</a><a class="" href="../players.html">Players</a><a class="" href="../abroad.html">Abroad</a><a class="" href="../league-of-ireland.html">League of Ireland</a><a class="" href="../clubs.html">Clubs</a><a class="" href="../ireland.html">Ireland</a><a class="" href="../fixtures.html">Fixtures</a><a class="" href="../alerts.html">Alerts</a></div>
+  <div class="navlinks" id="navlinks"><a class="" href="../news.html">News</a><a class="" href="../players.html">Players</a><a class="" href="../clubs.html">Clubs</a><a class="" href="../ireland.html">Ireland</a><a class="" href="../fixtures.html">Fixtures</a><a class="" href="../alerts.html">Alerts</a></div>
   <div class="navmeta"><span id="navdate">21-27 AUG</span> · <b>334</b> TRACKED</div>
 </nav>
 <script>
