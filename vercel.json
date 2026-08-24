@@ -1,0 +1,5 @@
+{
+  "buildCommand": "python3 build/gen.py && cp -R build/site/. ./ && rm -rf build/site",
+  "outputDirectory": ".",
+  "framework": null
+}

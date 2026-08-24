@@ -293,8 +293,16 @@ def shell(title, desc, root, active, body, extra_head="", canonical="", body_att
 </script>
 {body}
 <footer>
-  {'Footballers · prototype · sample data<br>' if SAMPLE_DATA else 'Footballers<br>'}
+  <div class="foothead">
+    {'Footballers · prototype · sample data' if SAMPLE_DATA else 'Footballers'}
+    <span class="updated" data-stamp="{DATA_STAMP}">checking for updates…</span>
+  </div>
   Every Irish player at a professional club — abroad, senior international and League of Ireland
+  <div class="footlinks">
+    <a href="{root}faq.html">Where does this data come from?</a>
+    <a href="{root}where-are-the-irish.html">Where are the Irish?</a>
+    <a href="{root}alerts.html">Alerts</a>
+  </div>
 </footer>
 </div>
 <script>window.FB_SUBSCRIBE_URL={json.dumps(NEWSLETTER_ACTION)};window.FB_ACCOUNTS={json.dumps([{k:a.get(k,"") for k in ("email","name","role","hash")} for a in ACCOUNTS])};</script>
@@ -726,6 +734,22 @@ def season_is_current(label):
         return int(lab) == now.year
     return True
 
+
+def data_stamp():
+    """Newest modification time across the data files — shown as 'updated X ago'."""
+    import datetime
+    newest = 0
+    for rel in ("api/players.csv","api/matches.csv","manual/results.csv",
+                "manual/fixtures.csv","manual/articles.csv"):
+        p = os.path.join(DATA, rel)
+        if os.path.exists(p):
+            newest = max(newest, os.path.getmtime(p))
+    if not newest:
+        newest = datetime.datetime.now().timestamp()
+    return datetime.datetime.fromtimestamp(newest, datetime.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+
+DATA_STAMP = data_stamp()
+
 def day_label(d):
     """Show dates as '26 Aug' whether the source sends ISO or 'DD Mon'."""
     d = (d or "").strip()
@@ -755,6 +779,181 @@ def date_key(d):
         return (int(m), int(dd))
     except Exception:
         return (99, 99)
+
+
+FAQ = [
+ ("Where does this data come from?",
+  "Match results, appearances, minutes, goals, assists, cards and ratings are collected "
+  "automatically from public football data sites and refreshed on a schedule. International "
+  "caps and career totals come from the same sources. Anything we correct by hand — a transfer "
+  "the feed hasn't caught, a loan, a missing player — is stored separately and overrides the "
+  "automated data."),
+
+ ("Who calculates the ratings?",
+  "We don't. Ratings are produced by the statistics providers we collect from, using their own "
+  "models of what a player did in a match. We store the number and average it — we don't adjust, "
+  "weight or recalculate it."),
+
+ ("What does a rating of 8.52 actually mean?",
+  "It's an average across every match this season where a rating was published, weighted by "
+  "appearances. Roughly: below 6.5 is a difficult afternoon, 6.5–7.3 is solid, 7.3+ is strong, "
+  "8+ is one of the best performances on the pitch. A goalkeeper and a striker are scored on very "
+  "different things, so compare like with like."),
+
+ ("Can I compare ratings between leagues?",
+  "Not reliably. A 7.2 in the Premier League and a 7.2 in the First Division are not the same "
+  "achievement — the models are scaled within each competition. That's why sorting by rating warns "
+  "you when no league filter is applied. Treat it as a guide to form, not a ranking of ability."),
+
+ ("Which matches are included?",
+  "Every senior competitive match the provider covers for that player's club — league, domestic "
+  "cups and European ties — plus international appearances. Academy and U21 fixtures appear where "
+  "the player featured in them. Friendlies are included in match lists but don't always carry a "
+  "rating."),
+
+ ("How often is it updated?",
+  "The data refreshes on a schedule and the site rebuilds when it does. The footer on every page "
+  "shows exactly when the current data landed, so you never have to guess whether you're looking "
+  "at something stale."),
+
+ ("How is a player classified as Irish?",
+  "A player is tracked if they've represented the Republic of Ireland at any level — senior, U21, "
+  "U19, U17 — or are eligible and playing professionally. Eligibility is shown honestly on each "
+  "profile: cap-tied, played underage but can still switch, or eligible and never played. Youth "
+  "caps and friendlies don't tie a player to a country under FIFA rules; a competitive senior "
+  "appearance does."),
+
+ ("What counts as a professional club?",
+  "Any club in a fully professional or semi-professional senior league that the data covers — the "
+  "League of Ireland, the English pyramid down to the National League, the Scottish and Northern "
+  "Irish leagues, and the major European divisions. Academy and U21 teams are included where the "
+  "player is contracted to the senior club."),
+
+ ("When was a player's club last verified?",
+  "Clubs come from the automated feed and are refreshed every time it runs — see the timestamp in "
+  "the footer. Transfers can take a day or two to appear, and loan moves sometimes show the parent "
+  "club first. If you spot one that's wrong, hit Report on the player's page and we'll fix it."),
+
+ ("Something's wrong or someone's missing.",
+  "Use the Report button in the bottom corner of any page. It knows which player or match you were "
+  "looking at, so you only have to describe the problem. Every report is read."),
+]
+
+def build_faq():
+    items = "".join(
+        f'<details class="faq"><summary>{esc(q)}</summary><p>{esc(a)}</p></details>'
+        for q, a in FAQ)
+    body = (f'<div class="pagehead"><h1>Where does this data come from?</h1>'
+            f'<p>How the numbers on this site are collected, what they mean, and what they don\'t.</p></div>'
+            f'{items}'
+            f'<div class="faqfoot">Still not answered? Hit <b>Report</b> in the corner of any page.</div>')
+    return shell("Where the data comes from — FOOTBALLERS",
+                 "How footballers.ie collects and calculates its data.",
+                 "", "faq.html", body, canonical="faq.html")
+
+
+# rough centre of each country we track, for the map
+COUNTRY_POINT = {
+ "Ireland":(53.35,-7.7,7), "England":(52.6,-1.3,6), "Scotland":(56.5,-4.2,7),
+ "Northern Ireland":(54.6,-6.4,8), "Wales":(52.3,-3.7,8),
+ "Italy":(42.8,12.6,6), "France":(46.6,2.4,6), "Germany":(51.2,10.4,6),
+ "Netherlands":(52.2,5.3,7), "Belgium":(50.6,4.5,8), "Spain":(40.2,-3.7,6),
+ "Portugal":(39.6,-8.0,7), "Turkey":(39.0,35.2,6), "Hungary":(47.2,19.5,7),
+ "Denmark":(56.0,10.0,7), "Sweden":(60.0,15.0,5), "Norway":(61.0,9.0,5),
+ "Poland":(52.1,19.4,6), "Switzerland":(46.8,8.2,7), "Austria":(47.6,14.1,7),
+ "Greece":(39.0,22.0,6), "USA":(39.8,-98.5,4), "Other":(48.0,10.0,4),
+}
+
+def build_map():
+    """Where are the Irish? — a map you can click into."""
+    by_country = {}
+    for p in PLAYERS:
+        by_country.setdefault(country_of(p["league"]), []).append(p)
+
+    points = []
+    for c, ps in sorted(by_country.items(), key=lambda kv: -len(kv[1])):
+        lat, lon, zoom = COUNTRY_POINT.get(c, COUNTRY_POINT["Other"])
+        clubs = {}
+        for p in ps:
+            clubs.setdefault(p["club"], 0)
+            clubs[p["club"]] += 1
+        top = sorted(clubs.items(), key=lambda kv: (-kv[1], kv[0]))
+        points.append(dict(
+            name=c, lat=lat, lon=lon, zoom=zoom, n=len(ps),
+            url=f"country/{country_slug(c)}.html",
+            clubs=[dict(name=k, n=v, url=clink(k)) for k, v in top[:12]],
+            more=max(0, len(top) - 12),
+        ))
+
+    total = sum(p["n"] for p in points)
+    legend = "".join(
+        f'<button class="cbtn" data-i="{i}"><span class="cn">{esc(p["name"])}</span>'
+        f'<span class="cnum">{p["n"]}</span></button>' for i, p in enumerate(points))
+
+    body = f'''
+    <div class="pagehead"><h1>Where are the Irish?</h1>
+      <p>{total} tracked players across {len(points)} countries. Tap a marker or a country to zoom in.</p></div>
+    <div id="mapwrap">
+      <div id="themap"></div>
+      <button id="resetmap" title="Back to the full map">Reset</button>
+    </div>
+    <div class="clegend">{legend}</div>
+    <div id="cpanel"></div>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script>
+    var PTS = {json.dumps(points)};
+    (function(){{
+      if (typeof L === 'undefined') {{
+        document.getElementById('mapwrap').innerHTML =
+          '<div class="mapfail">Map could not load. The country list below still works.</div>';
+        return;
+      }}
+      var map = L.map('themap', {{ scrollWheelZoom:false, attributionControl:true }}).setView([50,2], 4);
+      L.tileLayer('https://{{s}}.basemaps.cartocdn.com/dark_all/{{z}}/{{x}}/{{y}}{{r}}.png', {{
+        attribution:'&copy; OpenStreetMap &copy; CARTO', subdomains:'abcd', maxZoom:12
+      }}).addTo(map);
+
+      function radius(n){{ return Math.max(9, Math.min(34, 7 + Math.sqrt(n)*3.2)); }}
+
+      var panel = document.getElementById('cpanel');
+      function openCountry(p){{
+        map.flyTo([p.lat, p.lon], p.zoom, {{duration:.7}});
+        var clubs = p.clubs.map(function(c){{
+          return '<a class="crow" href="'+c.url+'"><span>'+c.name+'</span>'+
+                 '<b>'+c.n+'</b></a>';
+        }}).join('');
+        panel.innerHTML =
+          '<div class="sec"><h2>'+p.name+'</h2>'+
+          '<a class="more" href="'+p.url+'">All clubs →</a></div>'+
+          '<div class="cgrid">'+clubs+'</div>'+
+          (p.more ? '<div class="cmore">+'+p.more+' more clubs</div>' : '');
+        panel.scrollIntoView({{behavior:'smooth', block:'nearest'}});
+      }}
+
+      PTS.forEach(function(p, i){{
+        var m = L.circleMarker([p.lat, p.lon], {{
+          radius: radius(p.n), color:'#F5C518', weight:2,
+          fillColor:'#F5C518', fillOpacity:.28
+        }}).addTo(map);
+        m.bindTooltip(p.name + ' · ' + p.n + (p.n===1?' player':' players'), {{direction:'top'}});
+        m.on('click', function(){{ openCountry(p); }});
+        p._marker = m;
+      }});
+
+      document.querySelectorAll('.cbtn').forEach(function(b){{
+        b.addEventListener('click', function(){{ openCountry(PTS[+b.dataset.i]); }});
+      }});
+      document.getElementById('resetmap').addEventListener('click', function(){{
+        map.flyTo([50,2], 4, {{duration:.6}});
+        panel.innerHTML = '';
+      }});
+    }})();
+    </script>
+    '''
+    return shell("Where are the Irish? — FOOTBALLERS",
+                 "A map of every country where tracked Irish players are playing.",
+                 "", "clubs.html", body, canonical="where-are-the-irish.html")
 
 # ================= LIST PAGES =================
 def build_list(fname, title, sub, data):
@@ -827,6 +1026,9 @@ def build_clubs_index():
                   f'<div class="cc">{len(ps)} Irish player{"s" if len(ps)!=1 else ""}</div></a>')
     body = (f'<div class="pagehead"><h1>Clubs</h1>'
             f'<p>Pick a country, then a league, then a club.</p></div>'
+            f'<a class="mapcta" href="where-are-the-irish.html">'
+            f'<div><b>Where are the Irish?</b><span>See every country on a map</span></div>'
+            f'<span class="go">Open map →</span></a>'
             f'<div class="clubgrid">{cards}</div>')
     return shell("Clubs — FOOTBALLERS","Irish players by country, league and club.","", "clubs.html", body, canonical="clubs.html")
 
@@ -1308,7 +1510,7 @@ def build_404():
     return shell("Page not found — FOOTBALLERS", "That page doesn't exist on Footballers.", "/", "", body)
 
 def build_sitemap():
-    urls = ["", "news.html", "players.html", "abroad.html", "league-of-ireland.html", "clubs.html",
+    urls = ["", "news.html", "faq.html", "where-are-the-irish.html", "players.html", "abroad.html", "league-of-ireland.html", "clubs.html",
             "ireland.html", "fixtures.html", "milestones.html", "compare.html", "newsletter.html", "alerts.html"]
     urls += [f"club/{club_slug(c)}.html" for c in sorted(set(p["club"] for p in PLAYERS))]
     urls += [f"player/{p['slug']}.html" for p in PLAYERS]
@@ -1334,6 +1536,8 @@ open(f"{OUT}/players.html","w").write(build_list("players.html","All players","E
 open(f"{OUT}/abroad.html","w").write(build_list("abroad.html","Abroad","Irish players at clubs outside Ireland, top flight to smaller leagues.",[p for p in PLAYERS if p["tier"].startswith("abroad")]))
 open(f"{OUT}/league-of-ireland.html","w").write(build_list("league-of-ireland.html","League of Ireland","Every Irish pro playing their football at home.",[p for p in PLAYERS if p["tier"]=="loi"]))
 open(f"{OUT}/clubs.html","w").write(build_clubs_index())
+open(f"{OUT}/faq.html","w").write(build_faq())
+open(f"{OUT}/where-are-the-irish.html","w").write(build_map())
 os.makedirs(f"{OUT}/country", exist_ok=True)
 os.makedirs(f"{OUT}/league", exist_ok=True)
 _by_country = {}

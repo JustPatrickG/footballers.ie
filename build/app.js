@@ -695,3 +695,33 @@
     obs.observe(empty, { attributes: true, attributeFilter: ['style'] });
   });
 })();
+
+/* ---------- LAST UPDATED ----------
+   The build stamps the newest data file; turn it into "updated 4 hours ago". */
+(function () {
+  var el = document.querySelector('.updated');
+  if (!el) return;
+  var stamp = el.getAttribute('data-stamp');
+  var d = new Date(stamp);
+  if (isNaN(d)) { el.textContent = ''; return; }
+
+  function render() {
+    var mins = Math.round((Date.now() - d.getTime()) / 60000);
+    var rel;
+    if (mins < 1)        rel = 'just now';
+    else if (mins < 60)  rel = mins + (mins === 1 ? ' minute ago' : ' minutes ago');
+    else if (mins < 1440) {
+      var h = Math.floor(mins / 60);
+      rel = h + (h === 1 ? ' hour ago' : ' hours ago');
+    } else {
+      var days = Math.floor(mins / 1440);
+      rel = days + (days === 1 ? ' day ago' : ' days ago');
+    }
+    var when = d.toLocaleString([], {
+      day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit'
+    });
+    el.textContent = 'Data updated ' + rel + ' · ' + when;
+  }
+  render();
+  setInterval(render, 60000);
+})();
