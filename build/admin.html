@@ -397,6 +397,65 @@ function articleView(){
   return v;
 }
 
+async function sha256(s){
+  if(window.crypto&&crypto.subtle&&window.isSecureContext){
+    const b=await crypto.subtle.digest('SHA-256',new TextEncoder().encode(s));
+    return Array.from(new Uint8Array(b)).map(x=>x.toString(16).padStart(2,'0')).join('');
+  }
+  return null;
+}
+function accountsExtra(){
+  const p=document.createElement('div');
+  p.className='panel';
+  p.innerHTML=`<h2>Add someone / set a password</h2>
+    <div class="hint">Type their email and a password — the hash is generated for you and the row
+    is created or updated. Then hit <b>Publish changes</b>.<br>
+    Roles: <code>owner</code> · <code>admin</code> · <code>editor</code> · <code>journalist</code> ·
+    <code>data</code> · <code>viewer</code></div>
+    <div class="artrow">
+      <div><label>Email</label><input id="pw_email" placeholder="writer@footballers.ie"></div>
+      <div><label>Name</label><input id="pw_name" placeholder="Their name"></div>
+    </div>
+    <div class="artrow">
+      <div><label>Password</label><input id="pw_pass" type="text" placeholder="something long"></div>
+      <div><label>Role</label>
+        <select id="pw_role">
+          <option value="journalist">journalist</option>
+          <option value="editor">editor</option>
+          <option value="data">data</option>
+          <option value="admin">admin</option>
+          <option value="viewer">viewer</option>
+          <option value="owner">owner</option>
+        </select></div>
+    </div>
+    <div class="bar"><button class="pri" id="pw_go">Set password</button></div>
+    <div class="note" id="pw_note"></div>`;
+  setTimeout(()=>{
+    p.querySelector('#pw_go').onclick=async()=>{
+      const em=(p.querySelector('#pw_email').value||'').trim().toLowerCase();
+      const pwv=p.querySelector('#pw_pass').value;
+      const nmv=(p.querySelector('#pw_name').value||'').trim();
+      const rl=p.querySelector('#pw_role').value;
+      const note=p.querySelector('#pw_note');
+      if(!em||!pwv){ note.innerHTML='<span class="warn">Fill in email and password.</span>'; return; }
+      const h=await sha256(em+':'+pwv);
+      if(!h){ note.innerHTML='<span class="warn">Open the admin over https to hash passwords.</span>'; return; }
+      const d=data.accounts;
+      let row=d.rows.find(r=>(r.email||'').toLowerCase()===em);
+      const isNew=!row;
+      if(isNew){ row={}; d.cols.forEach(c=>row[c]=''); row.email=em; d.rows.push(row); }
+      row.hash=h;
+      if(nmv) row.name=nmv;
+      if(rl)  row.role=rl;
+      markDirty(); render();
+      const n2=document.getElementById('pw_note');
+      if(n2) n2.innerHTML='<span class="ok">'+(isNew?'Added ':'Updated ')+em+
+        ' — now hit Publish changes.</span>';
+    };
+  },0);
+  return p;
+}
+
 function publishNote(){
   const p=document.createElement('div');
   p.className='panel';
