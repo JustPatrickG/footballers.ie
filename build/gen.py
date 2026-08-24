@@ -37,12 +37,19 @@ def _merge_players():
             for r in csv.DictReader(f):
                 if r.get("slug"): roster[r["slug"]] = r
 
+    # Fields the scraper is authoritative on — these overwrite the hand-typed
+    # roster, because clubs and leagues change and the roster goes stale.
+    SCRAPED_WINS = ("club", "league", "age", "foot", "avg_rating")
+
     api = {}
     for r in _rows("api/players.csv"):
         if not r.get("slug"): continue
-        base = dict(roster.get(r["slug"], {}))          # name/club/pos from the roster
+        base = dict(roster.get(r["slug"], {}))          # name/pos from the roster
         for k, v in r.items():
-            if (v or "").strip(): base[k] = v            # stats layer on top
+            if (v or "").strip():
+                base[k] = v
+            elif k in SCRAPED_WINS and k in base:
+                pass                                     # blank scrape: keep what we had
         api[r["slug"]] = base
     for slug, r in roster.items():                       # roster-only players still show
         api.setdefault(slug, dict(r))
@@ -56,8 +63,13 @@ def _merge_players():
         else:
             merged = dict(a)
             for k, v in m.items():
-                if (v or "").strip():          # manual wins when filled in
-                    merged[k] = v
+                if not (v or "").strip():
+                    continue
+                # the scraper is the source of truth for club/league — a stale
+                # hand-typed value shouldn't override a live one
+                if k in ("club", "league") and (a.get(k) or "").strip():
+                    continue
+                merged[k] = v
         merged["slug"] = slug
         merged["_source"] = "manual" if slug in man and slug not in api else ("api+manual" if slug in man else "api")
         out[slug] = merged
@@ -119,10 +131,15 @@ def load():
                         mins=_int(r.get("s_mins")), yellow=_int(r.get("s_yellow")), red=_int(r.get("s_red"))),
             career=dict(ap=_int(r.get("c_apps")), g=_int(r.get("c_goals")), a=_int(r.get("c_assists"))),
             injury=(r.get("injury") or "").strip() or None, transfers=[],
+            loan=(r.get("on_loan_at") or "").strip(),
+            parent_club=(r.get("club") or "").strip(),
             rating=(r.get("avg_rating") or "").strip(),
             photo=(r.get("photo") or "").strip(),
             photo_credit=(r.get("photo_credit") or "").strip(),
             fixtures=fixtures.get(slug, []), results=results.get(slug, [])))
+    for p in players:
+        if p.get("loan"):
+            p["club"] = p["loan"]          # display the club they're actually at
     players.sort(key=lambda p: p["n"])
 
     ireland = {}
@@ -1044,6 +1061,8 @@ def build_player(p):
             esc(p["league"]) if p["league"] not in ("","—") else "",
             p["pos"] if p["pos"] not in ("","—") else "",
             str(p["age"]) if p["age"] else "",
+            (f'<span class="loanfrom">on loan from {esc(p["parent_club"])}</span>'
+             if p.get("loan") and p.get("parent_club") and p["parent_club"] != p["club"] else ""),
             (f'<b>{p["intl_senior"]["caps"]} caps</b>' if p["intl_senior"]["caps"] is not None
              else '<b>Senior international</b>') if p["intl_senior"] else ""]))}</div>
         {f'<div class="pdborn">Born {esc(p["born"])}' + (" · " + esc(p["foot"]) + " footed" if p["foot"] else "") + "</div>" if p["born"] else ""}

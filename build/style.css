@@ -621,3 +621,4 @@ img,svg,iframe{max-width:100%}
   .fxrow.pfx{grid-template-columns:1fr auto;gap:10px}
   .fxrow.pfx .fxc{display:none}
 }
+.loanfrom{color:var(--yellow);font-family:'IBM Plex Mono',monospace;font-size:11px}
