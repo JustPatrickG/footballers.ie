@@ -623,6 +623,7 @@ def extract_matches(blob):
             rating = ""
         out.append({
             "id": str(m.get("id") or utc),
+            "team": team,
             "url": m.get("matchPageUrl", "") or "",
             "utc": utc,
             "comp": m.get("leagueName", "") or "",
@@ -656,6 +657,7 @@ def extract_matches(blob):
             ongoing = bool(st.get("started")) and not st.get("finished")
             out.append({
                 "id": str(nm.get("matchId")),
+                "team": team,
                 "url": nm.get("matchUrl", "") or "",
                 "utc": utc,
                 "comp": nm.get("leagueName", "") or "",
@@ -805,7 +807,9 @@ def season_from_matches(mlist, league, now):
     list. Used when the source's stats block is a season behind."""
     label, (start, end) = current_season_label(now)
     played = [m for m in mlist
-              if m["played"] and start <= m["utc"] <= end]
+              if m["played"] and start <= m["utc"] <= end
+              and "friendl" not in norm(m["comp"])
+              and "ireland" not in norm(m.get("team", ""))]
     if league:
         inleague = [m for m in played if norm(m["comp"]) == norm(league)]
         if inleague:
@@ -961,11 +965,6 @@ def scrape(args):
 
         # players.csv row
         season = extract_season_stats(blob)
-        cur_label, _ = current_season_label(now, season["season"])
-        if season["season"] != cur_label:
-            live_season = season_from_matches(mlist, season["league"], now)
-            if live_season:
-                season = live_season
         (sr_caps, sr_goals, sr_debut, youth,
          c_apps, c_goals, c_assists) = extract_career(blob)
         age, born, foot = extract_personal(blob)
@@ -973,6 +972,13 @@ def scrape(args):
         source_club = pt.get("teamName", "")
         source_league = team_primary_league(pt.get("teamId"), source_club) \
             if source_club else ""
+        cur_label, _ = current_season_label(now, season["season"])
+        if season["season"] != cur_label:
+            live_season = season_from_matches(
+                mlist, source_league or season["league"], now)
+            if live_season:
+                live_season["league"] = source_league or season["league"]
+                season = live_season
         players_rows.append([
             slug,
             source_league,
