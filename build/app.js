@@ -565,3 +565,133 @@
     })(els[i]);
   }
 })();
+
+/* ---------- REPORT A PROBLEM ----------
+   A small button on every page. Knows which page it's on, so a report from a
+   player page arrives already tagged with that player. */
+(function () {
+  function context() {
+    var slug = document.body.getAttribute('data-player');
+    if (slug) {
+      var h1 = document.querySelector('.pdname');
+      return { kind: 'player', label: h1 ? h1.textContent.trim() : slug };
+    }
+    if (/\/match\//.test(location.pathname)) {
+      var t = document.querySelectorAll('.mteam');
+      return { kind: 'match', label: t.length > 1 ? t[0].textContent.trim() + ' v ' + t[1].textContent.trim() : 'this match' };
+    }
+    if (/\/club\//.test(location.pathname)) {
+      var c = document.querySelector('h1');
+      return { kind: 'club', label: c ? c.textContent.trim() : 'this club' };
+    }
+    return { kind: 'page', label: document.title.replace(' — FOOTBALLERS', '') };
+  }
+
+  function open(preset) {
+    var ctx = context();
+    var wrap = document.createElement('div');
+    wrap.className = 'fbgate';
+    wrap.innerHTML =
+      '<div class="fbg-card rep" role="dialog" aria-modal="true">' +
+        '<button class="fbg-x" aria-label="Close">×</button>' +
+        '<h3>Report a problem</h3>' +
+        '<p>Spotted a missing player or something wrong? Tell us and we\'ll fix it.</p>' +
+        '<form class="repform">' +
+          '<label>What\'s wrong</label>' +
+          '<select id="rt">' +
+            '<option value="missing">A player is missing</option>' +
+            '<option value="wrong">Wrong stats or details</option>' +
+            '<option value="club">Wrong club or league</option>' +
+            '<option value="match">Something wrong with a match</option>' +
+            '<option value="other">Something else</option>' +
+          '</select>' +
+          '<label>Details</label>' +
+          '<textarea id="rd" rows="4" placeholder="' +
+            (ctx.kind === 'player' ? 'e.g. he signed for a new club last week' :
+             ctx.kind === 'match'  ? 'e.g. the score is wrong' :
+             'e.g. Séamus Coleman isn\'t listed') + '"></textarea>' +
+          '<label>Your email <span class="opt">optional — only if you want a reply</span></label>' +
+          '<input type="email" id="re" placeholder="you@email.ie" autocomplete="email">' +
+          '<input type="text" id="rw" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">' +
+          '<button type="submit">Send report</button>' +
+        '</form>' +
+        '<div class="repctx">About: <b>' + ctx.label + '</b></div>' +
+        '<div class="nlnote" id="rerr" style="display:none"></div>' +
+      '</div>';
+    document.body.appendChild(wrap);
+    requestAnimationFrame(function () { wrap.classList.add('in'); });
+    if (preset) { var sel = wrap.querySelector('#rt'); if (sel) sel.value = preset; }
+    setTimeout(function () { var d = wrap.querySelector('#rd'); if (d) d.focus(); }, 240);
+
+    function close() {
+      wrap.classList.remove('in');
+      setTimeout(function () { if (wrap.parentNode) wrap.parentNode.removeChild(wrap); }, 280);
+      document.removeEventListener('keydown', onKey);
+    }
+    function onKey(e) { if (e.key === 'Escape') close(); }
+    document.addEventListener('keydown', onKey);
+    wrap.querySelector('.fbg-x').addEventListener('click', close);
+    wrap.addEventListener('click', function (e) { if (e.target === wrap) close(); });
+
+    wrap.querySelector('.repform').addEventListener('submit', async function (e) {
+      e.preventDefault();
+      var err = wrap.querySelector('#rerr');
+      var details = wrap.querySelector('#rd').value.trim();
+      if (details.length < 5) { err.style.display = 'block'; err.textContent = 'Add a bit more detail.'; return; }
+      var btn = wrap.querySelector('.repform button');
+      btn.disabled = true; btn.textContent = 'Sending…';
+      try {
+        var res = await fetch('/api/report', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            type: wrap.querySelector('#rt').value,
+            details: details,
+            email: wrap.querySelector('#re').value.trim(),
+            website: wrap.querySelector('#rw').value,
+            subject: ctx.label,
+            page: location.pathname + location.search
+          })
+        });
+        var out = await res.json().catch(function () { return {}; });
+        if (!res.ok) throw new Error(out.error || 'Could not send.');
+        wrap.querySelector('.fbg-card').innerHTML =
+          '<div class="repdone"><div class="tick">✓</div><h3>Thanks</h3>' +
+          '<p>That\'s logged. We\'ll get it sorted.</p></div>';
+        setTimeout(close, 1900);
+      } catch (ex) {
+        btn.disabled = false; btn.textContent = 'Send report';
+        err.style.display = 'block';
+        err.textContent = ex.message || 'Could not send. Try again later.';
+      }
+    });
+  }
+
+  window.FB_REPORT = open;
+
+  // floating button on every page
+  var b = document.createElement('button');
+  b.className = 'repbtn';
+  b.setAttribute('aria-label', 'Report a problem');
+  b.innerHTML = '<span>!</span> Report';
+  b.addEventListener('click', function () { open(); });
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', function () { document.body.appendChild(b); });
+  } else { document.body.appendChild(b); }
+
+  // "player missing?" prompt when a search finds nothing
+  document.addEventListener('DOMContentLoaded', function () {
+    var empty = document.getElementById('empty');
+    if (!empty) return;
+    var obs = new MutationObserver(function () {
+      if (empty.style.display !== 'none' && !empty.querySelector('.repmiss')) {
+        var a = document.createElement('button');
+        a.className = 'repmiss';
+        a.textContent = 'Player missing? Tell us →';
+        a.addEventListener('click', function () { open('missing'); });
+        empty.appendChild(a);
+      }
+    });
+    obs.observe(empty, { attributes: true, attributeFilter: ['style'] });
+  });
+})();

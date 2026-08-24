@@ -639,3 +639,36 @@ a.intlblock.lnk:hover{border-color:var(--teal)}
 .elig.open{border-color:rgba(53,212,191,.35);background:rgba(53,212,191,.06)}
 .elig.open .ec{color:var(--teal)}
 .elig.open .en{color:var(--teal)}
+
+/* ============ REPORT ============ */
+.repbtn{position:fixed;right:14px;bottom:14px;z-index:120;display:flex;align-items:center;gap:7px;
+  background:var(--panel);border:1px solid var(--line);color:var(--mute);border-radius:22px;
+  padding:9px 14px 9px 10px;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.1em;
+  text-transform:uppercase;box-shadow:0 6px 20px rgba(0,0,0,.4);cursor:pointer}
+.repbtn:hover{color:var(--white);border-color:var(--mute)}
+.repbtn span{width:17px;height:17px;border-radius:50%;background:rgba(245,197,24,.16);color:var(--yellow);
+  display:grid;place-items:center;font-size:11px;font-weight:700}
+.fbg-card.rep{text-align:left}
+.fbg-card.rep h3,.fbg-card.rep p{text-align:center}
+.repform{display:block;margin-top:16px}
+.repform label{display:block;font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--mute);margin:12px 0 5px}
+.repform label .opt{text-transform:none;letter-spacing:0;opacity:.75}
+.repform select,.repform textarea,.repform input[type=email]{width:100%;background:var(--bg);
+  border:1px solid var(--line);color:var(--white);padding:11px 12px;border-radius:8px;
+  font-family:'Space Grotesk',sans-serif;font-size:15px}
+.repform textarea{resize:vertical;line-height:1.5}
+.repform button{width:100%;margin-top:16px;min-height:46px;background:var(--yellow);color:#0C0F10;
+  border:0;font-weight:700;border-radius:8px;font-size:15px;cursor:pointer}
+.repform button:disabled{opacity:.6}
+.repform .hp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
+.repctx{font-family:'IBM Plex Mono',monospace;font-size:10px;color:var(--mute);margin-top:12px;
+  text-align:center;letter-spacing:.06em}
+.repctx b{color:var(--white)}
+.repdone{text-align:center;padding:12px 0}
+.repdone .tick{width:48px;height:48px;margin:0 auto 12px;border-radius:50%;display:grid;place-items:center;
+  background:rgba(53,212,191,.14);color:var(--teal);font-size:23px}
+.repmiss{display:block;margin:14px auto 0;background:var(--panel);border:1px solid var(--line);
+  color:var(--yellow);border-radius:8px;padding:11px 16px;font-size:14px;cursor:pointer}
+.repmiss:hover{border-color:var(--yellow)}
+@media(max-width:700px){ .repbtn{right:10px;bottom:10px;padding:8px 12px 8px 9px;font-size:10px} }

@@ -388,7 +388,9 @@ def week_activity():
     def norm(s): return (s or "").strip().lstrip("0")
     out = []
     for p in PLAYERS:
-        for (d, opp, sc, comp, mins, g, a) in p["results"]:
+        # results carry no year, so "16 Aug" from last season looks identical to
+        # this one — only consider each player's most recent handful of games
+        for (d, opp, sc, comp, mins, g, a) in p["results"][-6:]:
             if norm(d) not in ftdates: continue
             if not (g or a): continue
             club = (p["club"] or "").replace(" FC","")

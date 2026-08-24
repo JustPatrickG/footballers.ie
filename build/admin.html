@@ -108,8 +108,8 @@ var SESSION=null;
 /* what each role can touch */
 var ROLES = {
   owner:      {label:'Owner',      tabs:'*',                                          note:'Full access, including accounts.'},
-  admin:      {label:'Admin',      tabs:['players','matches','articles','fixtures','results','ireland'], note:'Everything except accounts.'},
-  editor:     {label:'Editor',     tabs:['articles','players'],                       note:'News and player details.'},
+  admin:      {label:'Admin',      tabs:['players','matches','articles','fixtures','results','ireland','reports'], note:'Everything except accounts.'},
+  editor:     {label:'Editor',     tabs:['articles','players','reports'],                       note:'News and player details.'},
   journalist: {label:'Journalist', tabs:['articles'],  ownOnly:true,                  note:'Write and edit your own articles.'},
   data:       {label:'Data',       tabs:['players','matches','fixtures','results','ireland'], note:'Stats and fixtures, no news.'},
   viewer:     {label:'Viewer',     tabs:'*', readOnly:true,                           note:'Can look, cannot change anything.'}
@@ -129,6 +129,7 @@ const FILES = {
   results:  {path:'manual/results.csv',  label:'Results'},
   ireland:  {path:'manual/ireland.csv',  label:'Ireland'},
   accounts: {path:'manual/accounts.csv', label:'Accounts'},
+  reports:  {path:null, label:'Reports'},
 };
 const WIDE=['name','club','league','headline','standfirst','author','born','eligible','youth','players','home','away','opponent','competition','image','photo','notes','body'];
 const NUMS=['age','senior_caps','senior_goals','s_apps','s_starts','s_goals','s_assists','s_mins','s_yellow','s_red','c_apps','c_goals','c_assists','avg_rating','minutes','goals','assists','home_score','away_score','minute'];
@@ -177,6 +178,7 @@ async function loadAll(){
   badge.textContent='Loading…'; badge.className='badge';
   let ok=0;
   for(const k of Object.keys(FILES)){
+    if(!FILES[k].path){ data[k]={cols:[],rows:[],dirty:false}; continue; }
     try{
       const res=await fetch('../data/'+FILES[k].path+'?t='+Date.now());
       if(!res.ok) throw new Error(res.status);
@@ -185,7 +187,7 @@ async function loadAll(){
     }catch(e){ data[k]={cols:[],rows:[],dirty:false}; }
   }
   loaded=true;
-  badge.textContent=`Loaded ${ok}/${Object.keys(FILES).length} files`;
+  badge.textContent=`Loaded ${ok}/${Object.keys(FILES).filter(k=>FILES[k].path).length} files`;
   badge.className='badge ok';
   renderTabs(); render();
 }
@@ -212,7 +214,7 @@ async function ghPut(path, text, sha){
 async function saveAll(){
   const badge=document.getElementById('folderbadge');
   if(!token()){ askToken(); return; }
-  const dirty=Object.keys(FILES).filter(k=>data[k]&&data[k].dirty&&data[k].cols.length);
+  const dirty=Object.keys(FILES).filter(k=>FILES[k].path&&data[k]&&data[k].dirty&&data[k].cols.length);
   if(!dirty.length){ badge.textContent='Nothing changed'; badge.className='badge'; return; }
   badge.textContent='Publishing…'; badge.className='badge';
   try{
@@ -470,9 +472,70 @@ function publishNote(){
   return p;
 }
 
+async function reportsView(){
+  const v=document.createElement('div');
+  v.innerHTML=`<div class="bar"><button id="refr">Refresh</button>
+    <span class="count" id="rcount">Loading reports…</span></div>
+    <div id="rlist"></div>`;
+  async function load(){
+    const list=v.querySelector('#rlist'), cnt=v.querySelector('#rcount');
+    if(!token()){
+      cnt.textContent='';
+      list.innerHTML='<div class="panel"><h2>Not connected</h2><div class="hint">'+
+        'Reports are stored as GitHub issues. Add your token to read them.</div>'+
+        '<div class="bar"><button class="pri" id="tk">Add token</button></div></div>';
+      list.querySelector('#tk').onclick=askToken;
+      return;
+    }
+    try{
+      const r=await fetch(`https://api.github.com/repos/${REPO.owner}/${REPO.repo}/issues?state=open&labels=report&per_page=50`,
+        {headers:{Authorization:'token '+token(), Accept:'application/vnd.github+json'}});
+      if(!r.ok) throw new Error('GitHub said '+r.status);
+      const issues=await r.json();
+      cnt.textContent=issues.length+' open';
+      if(!issues.length){ list.innerHTML='<div class="panel"><div class="hint">No open reports. </div></div>'; return; }
+      list.innerHTML=issues.map(i=>{
+        const labels=(i.labels||[]).map(l=>typeof l==='string'?l:l.name).filter(n=>n!=='report');
+        return `<div class="panel" style="margin-bottom:10px">
+          <div style="display:flex;justify-content:space-between;gap:12px;align-items:baseline">
+            <b style="font-size:15px">${esc(i.title)}</b>
+            <span class="count">#${i.number}</span></div>
+          <div class="hint" style="white-space:pre-wrap;margin:9px 0 10px">${esc(i.body||'')}</div>
+          <div class="bar">
+            ${labels.map(l=>`<span class="badge">${esc(l)}</span>`).join('')}
+            <span class="spacer"></span>
+            <a class="btn" href="${i.html_url}" target="_blank" rel="noopener">Open</a>
+            <button data-close="${i.number}">Mark done</button>
+          </div></div>`;
+      }).join('');
+      list.querySelectorAll('[data-close]').forEach(b=>{
+        b.onclick=async()=>{
+          b.disabled=true; b.textContent='Closing…';
+          try{
+            await fetch(`https://api.github.com/repos/${REPO.owner}/${REPO.repo}/issues/${b.dataset.close}`,
+              {method:'PATCH', headers:{Authorization:'token '+token(),
+               Accept:'application/vnd.github+json','Content-Type':'application/json'},
+               body:JSON.stringify({state:'closed'})});
+            load();
+          }catch(e){ b.disabled=false; b.textContent='Mark done'; }
+        };
+      });
+    }catch(e){
+      cnt.textContent='';
+      list.innerHTML='<div class="panel"><div class="hint">Could not load reports: '+esc(e.message)+'</div></div>';
+    }
+  }
+  setTimeout(()=>{ v.querySelector('#refr').onclick=load; load(); },0);
+  return v;
+}
+
 function render(){
   const v=document.getElementById('view'); v.innerHTML='';
   if(!loaded){ v.innerHTML='<div class="panel"><h2>Loading</h2><div class="hint">Reading the site data…</div></div>'; return; }
+  if(active==='reports'){
+    reportsView().then(el=>{ v.innerHTML=''; v.appendChild(el); });
+    return;
+  }
   const content = active==='articles' ? articleView() : tableView();
   if(typeof content==='string') v.innerHTML=content; else v.appendChild(content);
   if(active==='accounts') v.appendChild(accountsExtra());
