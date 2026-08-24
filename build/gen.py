@@ -1581,3 +1581,26 @@ for m in MATCHES:
 print(f"  + {_nmatch} match pages")
 
 print(f"Built {9 + len(clubs) + len(PLAYERS)} pages ({len(clubs)} clubs, {len(PLAYERS)} players)")
+
+# ---- assets: make build/site a complete, servable site ----
+import shutil
+for _d in ("img", "images", "photos", "data"):
+    _src = os.path.join(HERE, "..", _d)
+    if os.path.isdir(_src):
+        _dst = os.path.join(OUT, _d)
+        if os.path.isdir(_dst): shutil.rmtree(_dst)
+        shutil.copytree(_src, _dst)
+
+# the admin lives under /build/ on the live site
+os.makedirs(os.path.join(OUT, "build"), exist_ok=True)
+for _f in ("admin.html",):
+    _p = os.path.join(HERE, _f)
+    if os.path.exists(_p):
+        shutil.copy2(_p, os.path.join(OUT, "build", _f))
+
+for _f in ("og-image.png", "apple-touch-icon.png", "favicon.svg", "favicon.ico"):
+    _p = os.path.join(HERE, "..", _f)
+    if os.path.exists(_p):
+        shutil.copy2(_p, os.path.join(OUT, _f))
+
+print(f"  + assets copied into {OUT}")

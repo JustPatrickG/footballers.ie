@@ -1,5 +1,6 @@
 {
-  "buildCommand": "python3 build/gen.py && cp -R build/site/. ./ && rm -rf build/site",
-  "outputDirectory": ".",
+  "buildCommand": "python3 build/gen.py",
+  "outputDirectory": "build/site",
+  "installCommand": "echo no-install",
   "framework": null
 }
