@@ -708,6 +708,24 @@ MONTHS = {"jan":1,"feb":2,"mar":3,"apr":4,"may":5,"jun":6,
           "jul":7,"aug":8,"sep":9,"oct":10,"nov":11,"dec":12}
 
 
+
+def season_is_current(label):
+    """The source mixes formats: '2026/27', '2026', '2025/26', '2025', or blank.
+    Work out whether the stats block covers the season we're in now."""
+    import datetime
+    lab = (label or "").strip()
+    if not lab:
+        return True                      # nothing said — assume current
+    now = datetime.date.today()
+    # a split season (Aug-May) is named by the year it started
+    start_year = now.year if now.month >= 7 else now.year - 1
+    if "/" in lab:                        # 2026/27 or 2026/2027
+        head = lab.split("/")[0].strip()
+        return head.isdigit() and int(head) == start_year
+    if lab.isdigit():                     # calendar-year league: 2026
+        return int(lab) == now.year
+    return True
+
 def day_label(d):
     """Show dates as '26 Aug' whether the source sends ISO or 'DD Mon'."""
     d = (d or "").strip()
@@ -1153,8 +1171,8 @@ def build_player(p):
     </div>
 
     <div class="sec"><h2>Season {esc(p.get("season_label") or SEASON)}</h2>
-      {'<span class="more stale" style="border:0">Last season · no appearances yet in ' + esc(SEASON) + '</span>'
-       if p.get("season_label") and p["season_label"] != SEASON else ''}</div>
+      {'<span class="more stale" style="border:0">Last season · no appearances yet this season</span>'
+       if not season_is_current(p.get("season_label")) else ''}</div>
     <div class="pdstats">
       <div class="pds"><div class="n">{s["ap"]}</div><div class="l">Apps</div></div>
       <div class="pds"><div class="n">{s["starts"]}</div><div class="l">Starts</div></div>
