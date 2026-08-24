@@ -207,8 +207,26 @@ async function ghPut(path, text, sha){
   const r=await fetch(`https://api.github.com/repos/${REPO.owner}/${REPO.repo}/contents/${path}`,
     {method:'PUT', headers:{Authorization:'token '+token(), Accept:'application/vnd.github+json',
      'Content-Type':'application/json'}, body:JSON.stringify(body)});
-  if(!r.ok) throw new Error('GitHub write failed ('+r.status+')');
+  if(!r.ok){
+    const detail = await r.text().catch(()=> '');
+    const err = new Error('GitHub write failed ('+r.status+')');
+    err.status = r.status; err.detail = detail;
+    throw err;
+  }
   return r.json();
+}
+
+/* 409 means the file moved on since we loaded it — refetch and retry */
+async function ghSave(path, text){
+  for(let attempt=0; attempt<3; attempt++){
+    try{
+      const cur = await ghGet(path);
+      return await ghPut(path, text, cur && cur.sha);
+    }catch(e){
+      if(e.status===409 && attempt<2){ await new Promise(r=>setTimeout(r, 700)); continue; }
+      throw e;
+    }
+  }
 }
 
 async function saveAll(){
@@ -220,15 +238,19 @@ async function saveAll(){
   try{
     for(const k of dirty){
       const path='data/'+FILES[k].path;
-      const cur=await ghGet(path);
-      await ghPut(path, toCSV(data[k].cols, data[k].rows), cur&&cur.sha);
+      await ghSave(path, toCSV(data[k].cols, data[k].rows));
       data[k].dirty=false;
     }
     badge.textContent='Published · site rebuilding'; badge.className='badge ok';
     renderTabs();
   }catch(e){
     badge.textContent=String(e.message||e); badge.className='badge';
-    alert(e.message+'\n\nIf this is a permissions error, your token needs "repo" scope.');
+    var hint = e.status===409
+      ? 'The file changed on the server while you were editing.\nReload the admin and make the change again.'
+      : e.status===401 || e.status===403
+        ? 'Your GitHub token needs "repo" scope, or it has expired.'
+        : (e.detail || '').slice(0,200);
+    alert(e.message + (hint ? '\n\n' + hint : ''));
   }
 }
 
