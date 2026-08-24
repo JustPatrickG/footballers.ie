@@ -707,6 +707,20 @@ def country_slug(c): return club_slug(c)
 MONTHS = {"jan":1,"feb":2,"mar":3,"apr":4,"may":5,"jun":6,
           "jul":7,"aug":8,"sep":9,"oct":10,"nov":11,"dec":12}
 
+
+def day_label(d):
+    """Show dates as '26 Aug' whether the source sends ISO or 'DD Mon'."""
+    d = (d or "").strip()
+    if not d: return ""
+    if len(d) >= 10 and d[4] == "-" and d[7] == "-":
+        try:
+            y, m, dd = d[:10].split("-")
+            mons = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"]
+            return f"{int(dd):02d} {mons[int(m)-1]}"
+        except Exception:
+            return d
+    return d
+
 def date_key(d):
     """Sort 'DD Mon' safely. Anything unexpected sorts last instead of crashing."""
     parts = (d or "").strip().split()
@@ -844,7 +858,7 @@ def build_league(cname, lname, ps):
 def build_club(cname, ps):
     rows = "".join(player_row(p, "../") for p in ps)
     fx = ps[0]["fixtures"]
-    fxr = "".join(f'<div class="fxrow"><div class="fxd">{esc(d)}</div><div class="fxo">{esc(o)} '
+    fxr = "".join(f'<div class="fxrow"><div class="fxd">{esc(day_label(d))}</div><div class="fxo">{esc(o)} '
                   f'<span class="ha">{"H" if h=="H" else "A"}</span></div><div class="fxc">{esc(c)}</div></div>'
                   for d,o,h,c in fx)
     body = f'''
@@ -885,10 +899,10 @@ def build_ireland():
                       f'<div class="who">{esc(p["n"])}</div><div class="cl">{esc(p["club"])}</div>'
                       f'<div class="caps">{meta}</div>'
                       f'<div class="sqrate">{rating_chip(p, True)}</div></a>')
-        fxr = "".join(f'<div class="fxrow"><div class="fxd">{esc(d)}</div><div class="fxo">{esc(o)} '
+        fxr = "".join(f'<div class="fxrow"><div class="fxd">{esc(day_label(d))}</div><div class="fxo">{esc(o)} '
                       f'<span class="ha">{h}</span></div><div class="fxc">{esc(cp)}</div></div>'
                       for d,o,h,cp in info["fixtures"])
-        rsr = "".join(f'<div class="fxrow"><div class="fxd">{esc(d)}</div><div class="fxo">{esc(o)}</div>'
+        rsr = "".join(f'<div class="fxrow"><div class="fxd">{esc(day_label(d))}</div><div class="fxo">{esc(o)}</div>'
                       f'<div class="fxs">{esc(sc)}</div><div class="fxc">{esc(cp)}</div></div>'
                       for d,o,sc,cp in info["results"])
         tabs += f'<button class="tab {"on" if i==0 else ""}" data-t="{lvl}">{esc(lvl)}</button>'
@@ -933,7 +947,7 @@ def build_fixtures():
                         f'<span class="cl">{esc(p["club"])}</span></div>'
                         f'<div class="fxv">v {esc(o)} <span class="ha">{h}</span></div>'
                         f'<div class="fxc">{esc(c)}</div></a>' for p,o,h,c in order[d])
-        out += f'<div class="tiergroup"><h4><span>{esc(d)}</span><span>{len(order[d])} match{"es" if len(order[d])!=1 else ""}</span></h4>{items}</div>'
+        out += f'<div class="tiergroup"><h4><span>{esc(day_label(d))}</span><span>{len(order[d])} match{"es" if len(order[d])!=1 else ""}</span></h4>{items}</div>'
     body = (f'<div class="pagehead"><h1>Fixtures</h1><p>Every upcoming game a tracked Irish player could feature in.</p></div>{out}')
     return shell("Fixtures — FOOTBALLERS","Every upcoming game a tracked Irish player could feature in.","", "fixtures.html", body, canonical="fixtures.html")
 
@@ -1055,14 +1069,14 @@ def build_player(p):
     s, c = p["season"], p["career"]
     badge = "League of Ireland" if p["tier"]=="loi" else ("Abroad · top flight" if p["tier"]=="abroad-top" else "Abroad")
 
-    fxr = "".join(f'<div class="fxrow"><div class="fxd">{esc(d)}</div><div class="fxo">{esc(o)} '
+    fxr = "".join(f'<div class="fxrow"><div class="fxd">{esc(day_label(d))}</div><div class="fxo">{esc(o)} '
                   f'<span class="ha">{h}</span></div><div class="fxc">{esc(cp)}</div></div>'
                   for d,o,h,cp in p["fixtures"])
     rsr = ""
     recent_results = list(reversed(p["results"]))[:10]   # feed is oldest-first
     for d,o,sc,cp,mins,g,a in recent_results:
         ev = ("⚽"*g) + ("🅰"*a)
-        rsr += (f'<div class="fxrow"><div class="fxd">{esc(d)}</div><div class="fxo">{esc(o)}</div>'
+        rsr += (f'<div class="fxrow"><div class="fxd">{esc(day_label(d))}</div><div class="fxo">{esc(o)}</div>'
                 f'<div class="fxs">{esc(sc)}</div><div class="fxev">{ev}</div>'
                 f'<div class="fxm">{mins}\'</div></div>')
 
@@ -1073,10 +1087,10 @@ def build_player(p):
         if p["intl_senior"]:
             i = p["intl_senior"]
             lv = IRELAND["Senior"]
-            fx = "".join(f'<div class="fxrow"><div class="fxd">{esc(d)}</div><div class="fxo">{esc(o)} '
+            fx = "".join(f'<div class="fxrow"><div class="fxd">{esc(day_label(d))}</div><div class="fxo">{esc(o)} '
                          f'<span class="ha">{h}</span></div><div class="fxc">{esc(cp)}</div></div>'
                          for d,o,h,cp in lv["fixtures"])
-            rs = "".join(f'<div class="fxrow"><div class="fxd">{esc(d)}</div><div class="fxo">{esc(o)}</div>'
+            rs = "".join(f'<div class="fxrow"><div class="fxd">{esc(day_label(d))}</div><div class="fxo">{esc(o)}</div>'
                          f'<div class="fxs">{esc(sc)}</div><div class="fxc">{esc(cp)}</div></div>'
                          for d,o,sc,cp in lv["results"])
             blocks += (f'<a class="intlblock lnk" href="../ireland.html?level=Senior">'
