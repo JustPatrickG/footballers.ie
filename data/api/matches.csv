@@ -1,6 +1,6 @@
 kickoff,competition,home,away,home_score,away_score,status,minute,players
-2026-08-17T15:30:00Z,NB I,Zalaegerszeg,Ferencvaros,0,1,ft,,callum-odowda
 2026-08-17T18:00:00Z,First Division B,FC Liege,Francs Borains,1,2,ft,,noah-jauny
+2026-08-17T18:30:00Z,Super Lig,Samsunspor,Göztepe,3,3,ft,,sinclair-armstrong
 2026-08-17T19:00:00Z,Championship,Cardiff City,Wrexham,1,1,ft,,jack-moylan
 2026-08-17T19:15:00Z,Coppa Italia,Palermo,Lecce,2,0,ft,,corrie-ndaba
 2026-08-18T18:00:00Z,National League Cup Group A,Scunthorpe United,Stoke City U21,4,0,ft,,gabriel-kelly
@@ -8,10 +8,12 @@ kickoff,competition,home,away,home_score,away_score,status,minute,players
 2026-08-18T18:00:00Z,EFL Trophy Southern Grp. C,Reading,Wycombe Wanderers,1,1,ft,,jamie-mullins
 2026-08-18T18:00:00Z,EFL Trophy Southern Grp. G,Northampton Town,Brighton & Hove Albion U21,0,3,ft,,sean-keogh
 2026-08-18T18:45:00Z,EFL Trophy Southern Grp. F,Barnet,Arsenal U21,5,1,ft,,oisin-gallagher
+2026-08-18T19:00:00Z,Champions League Qualification,Levski Sofia,AEK Athens,0,0,ft,,armstrong-oko-flex
 2026-08-19T19:00:00Z,Champions League Qualification,Celtic,LASK,3,0,ft,,johnny-kenny;liam-scales
 2026-08-20T17:00:00Z,Europa League Qualification,Trabzonspor,Ferencvaros,0,1,ft,,callum-odowda
 2026-08-20T18:30:00Z,Conference League Qualification,Motherwell,Freiburg,1,3,ft,,joe-hodge
 2026-08-20T19:00:00Z,Conference League Qualification,Shamrock Rovers,KuPS,1,1,ft,,aaron-greene;adam-brennan;alex-noonan;ben-mahon;cory-osullivan;daniel-mandroiu;dylan-watts;edward-mcginty;enda-stevens;graham-burke;jack-byrne;jake-mulraney;john-osullivan;jonathan-afolabi;lee-grace;lee-steacy;luke-oregan;matthew-healy;michael-noonan;stephen-bradley;tunmise-sobowale;william-fitzgerald
+2026-08-21T16:00:00Z,DFB Pokal,Waldhof Mannheim,Kaiserslautern,0,1,ft,,alex-murphy
 2026-08-21T18:00:00Z,Premier League 2,Stoke City U21,Brentford Academy,2,3,ft,,gabriel-kelly
 2026-08-21T18:00:00Z,Premier League 2,Fulham U21,Burnley U21,4,3,ft,,kian-mcmahon-brown
 2026-08-21T18:00:00Z,Premier League 2,Aston Villa U21,Brighton & Hove Albion U21,2,1,ft,,sean-keogh
@@ -44,9 +46,11 @@ kickoff,competition,home,away,home_score,away_score,status,minute,players
 2026-08-22T16:30:00Z,Premier League,Brentford,Tottenham Hotspur,3,0,ft,,caoimhin-kelleher;nathan-collins
 2026-08-22T16:30:00Z,Serie A,Udinese,Como,1,1,ft,,james-abankwah
 2026-08-22T16:45:00Z,Premiership,Dundee United,Dundee FC,0,2,ft,,will-ferry
+2026-08-22T18:15:00Z,First Professional League,Levski Sofia,Spartak Varna,6,0,ft,,armstrong-oko-flex
 2026-08-23T11:00:00Z,Championship,West Bromwich Albion,Burnley,3,1,ft,,jayson-molumby;max-oleary
 2026-08-23T16:30:00Z,Serie A,Venezia,Lecce,0,2,ft,,corrie-ndaba
 2026-08-23T17:15:00Z,First Division B,Francs Borains,Sporting Hasselt,0,1,ft,,noah-jauny
+2026-08-23T18:30:00Z,Super Lig,Göztepe,Gençlerbirliği,0,1,ft,,sinclair-armstrong
 2026-08-24T18:00:00Z,Premier League 2,Newcastle United U21,Tottenham Hotspur U21,,,scheduled,,aaron-maguire;rory-finneran
 2026-08-24T18:00:00Z,Premier League 2,Sunderland U21,Nottingham Forest U21,,,scheduled,,grady-mcdonnell
 2026-08-24T18:00:00Z,Premier League 2,Manchester United U21,Ipswich Town U21,,,scheduled,,jacob-devaney
@@ -66,6 +70,7 @@ kickoff,competition,home,away,home_score,away_score,status,minute,players
 2026-08-26T18:45:00Z,EFL Cup,Tottenham Hotspur,Charlton Athletic,,,scheduled,,conor-coventry;millenic-alli
 2026-08-26T18:45:00Z,EFL Cup,Newcastle United,West Bromwich Albion,,,scheduled,,jayson-molumby;max-oleary
 2026-08-26T19:00:00Z,EFL Cup,Preston North End,Everton,,,scheduled,,andrew-moran;jake-obrien;mark-travers
+2026-08-26T19:00:00Z,Champions League Qualification,AEK Athens,Levski Sofia,,,scheduled,,armstrong-oko-flex
 2026-08-27T15:00:00Z,Conference League Qualification,KuPS,Shamrock Rovers,,,scheduled,,aaron-greene;adam-brennan;alex-noonan;ben-mahon;cory-osullivan;daniel-cleary;daniel-grant;daniel-mandroiu;dylan-watts;edward-mcginty;enda-stevens;gary-oneil;graham-burke;jack-byrne;jake-mulraney;john-osullivan;jonathan-afolabi;lee-grace;lee-steacy;luke-oregan;matthew-healy;max-kovalevskis;michael-noonan;naj-razi;rory-gaffney;stephen-bradley;todd-bazunu;tunmise-sobowale;victor-ozhianvuna;william-fitzgerald
 2026-08-27T16:45:00Z,Conference League Qualification,Freiburg,Motherwell,,,scheduled,,joe-hodge
 2026-08-27T18:30:00Z,Europa League Qualification,Ferencvaros,Trabzonspor,,,scheduled,,callum-odowda
@@ -91,9 +96,13 @@ kickoff,competition,home,away,home_score,away_score,status,minute,players
 2026-08-29T14:00:00Z,Championship,Blackburn Rovers,Queens Park Rangers,,,scheduled,,harvey-vale;jimmy-dunne
 2026-08-29T14:00:00Z,League One,Stockport County,Wycombe Wanderers,,,scheduled,,jamie-mullins
 2026-08-29T14:00:00Z,Championship,Bristol City,Portsmouth,,,scheduled,,jason-knight
+2026-08-29T14:00:00Z,Eliteserien,Vålerenga,Molde,,,scheduled,,trent-kone-doherty
 2026-08-29T14:00:00Z,Premiership,Kilmarnock,Dundee United,,,scheduled,,will-ferry
 2026-08-29T15:15:00Z,Ligue 1,Strasbourg,Lens,,,scheduled,,andrew-omobamidele
 2026-08-29T16:30:00Z,Serie A,Monza,Udinese,,,scheduled,,james-abankwah
+2026-08-29T18:30:00Z,Super Lig,Galatasaray,Göztepe,,,scheduled,,sinclair-armstrong
+2026-08-29T19:00:00Z,Serie C,Cosenza,Potenza,,,scheduled,,ed-mcjannett
+2026-08-30T11:30:00Z,2. Bundesliga,St. Pauli,Kaiserslautern,,,scheduled,,alex-murphy
 2026-08-30T13:00:00Z,Premier League,Sunderland,Fulham,,,scheduled,,alan-browne
 2026-08-30T14:00:00Z,Premiership,St. Mirren,Motherwell,,,scheduled,,killian-phillips
 2026-08-30T14:00:00Z,First Division B,Virton,Francs Borains,,,scheduled,,noah-jauny

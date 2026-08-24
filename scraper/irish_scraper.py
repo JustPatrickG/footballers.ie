@@ -437,6 +437,141 @@ def discover_loi(args):
         print("\nno new players found")
 
 
+def append_players(new_players, cache, note="added"):
+    """Append players (dicts with slug/name/club/pos/ireland_level +
+    fotmob_id) to players_list.csv and the ID cache. Skips known."""
+    players = read_player_list()
+    known_slugs = {p["slug"] for p in players}
+    known_ids = {v.get("fotmob_id") for v in cache.values()}
+    added = []
+    for np in new_players:
+        if np["slug"] in known_slugs or np["fotmob_id"] in known_ids:
+            continue
+        players.append({"slug": np["slug"], "name": np["name"],
+                        "club": np.get("club", ""),
+                        "league": np.get("league", ""),
+                        "tier": np.get("tier", ""),
+                        "pos": np.get("pos", ""),
+                        "ireland_level": np.get("ireland_level", "")})
+        cache[np["slug"]] = {"fotmob_id": np["fotmob_id"],
+                             "fotmob_name": np["name"],
+                             "fotmob_team": np.get("club", ""),
+                             "note": note}
+        known_slugs.add(np["slug"])
+        added.append(np["slug"])
+    if added:
+        cols = ["slug", "name", "club", "league", "tier", "pos",
+                "ireland_level"]
+        players.sort(key=lambda p: p["slug"])
+        with open(PLAYER_LIST, "w", newline="", encoding="utf-8") as f:
+            w = csv.DictWriter(f, fieldnames=cols, extrasaction="ignore")
+            w.writeheader()
+            w.writerows(players)
+        write_id_cache(cache)
+    return added
+
+
+def add_players(args):
+    cache = read_id_cache()
+    new = []
+    for raw in args.ids:
+        m = re.search(r"(\d{4,})", raw)
+        if not m:
+            print(f"  no id in '{raw}' - skipped")
+            continue
+        pid = m.group(1)
+        try:
+            data = get_next_data(PLAYER_URL.format(pid=pid, slug="x"))
+            blob = get_player_blob(data)
+        except Exception as e:
+            print(f"  {pid}: fetch failed ({e})")
+            continue
+        name = blob.get("name") or first(find_all(blob, "name")) or pid
+        pt = blob.get("primaryTeam") or {}
+        pos = ""
+        pd = blob.get("positionDescription") or {}
+        prim = pd.get("primaryPosition") or {}
+        if isinstance(prim, dict):
+            lab = norm(str(prim.get("label") or ""))
+            for k, v in {"keeper": "GK", "back": "DEF", "defend": "DEF",
+                         "midfield": "MID", "winger": "FWD",
+                         "striker": "FWD", "forward": "FWD"}.items():
+                if k in lab:
+                    pos = v
+                    break
+        new.append({"slug": slugify(str(name)), "name": str(name),
+                    "club": pt.get("teamName", ""), "fotmob_id": pid,
+                    "pos": pos})
+        print(f"  {pid}: {name} ({pt.get('teamName', 'no club')})")
+        time.sleep(SLEEP)
+    added = append_players(new, cache, note="added by id")
+    print(f"\nadded {len(added)}: {', '.join(added) if added else '-'}")
+    if added:
+        print("run `scrape` to pull their data.")
+
+
+IRELAND_TEAMS = ["Republic of Ireland", "Ireland U21", "Ireland U20",
+                 "Ireland U19", "Ireland U17"]
+
+
+def find_team_id(term):
+    data = get_json(SEARCH_URL.format(term=requests.utils.quote(term)))
+    hits = []
+
+    def walk(obj):
+        if isinstance(obj, dict):
+            t = str(obj.get("type", "")).lower()
+            name = str(obj.get("name") or obj.get("text") or "")
+            oid = obj.get("id") or obj.get("teamId")
+            if oid and norm(name.split("|")[0]) == norm(term) and \
+                    "player" not in t:
+                hits.append(str(oid).split("|")[-1])
+            if "|" in name and norm(name.rsplit("|", 1)[0]) == norm(term):
+                tail = name.rsplit("|", 1)[-1]
+                if tail.isdigit():
+                    hits.append(tail)
+            for v in obj.values():
+                walk(v)
+        elif isinstance(obj, list):
+            for i in obj:
+                walk(i)
+
+    walk(data)
+    return hits[0] if hits else None
+
+
+def discover_ireland(args):
+    cache = read_id_cache()
+    level_of = {"republic of ireland": "Senior", "ireland u21": "U21",
+                "ireland u20": "U20", "ireland u19": "U19",
+                "ireland u17": "U17"}
+    total = []
+    for term in IRELAND_TEAMS:
+        tid = find_team_id(term)
+        time.sleep(SLEEP)
+        if not tid:
+            print(f"{term}: team not found on source - skipped")
+            continue
+        try:
+            squad = team_irish_players(tid, term, debug=args.debug)
+        except Exception as e:
+            print(f"{term}: FAILED ({e})")
+            continue
+        lvl = level_of[norm(term)]
+        new = [{"slug": slugify(n), "name": n, "fotmob_id": pid,
+                "pos": pos, "ireland_level": lvl}
+               for pid, (n, pos) in squad.items()]
+        added = append_players(new, cache, note=f"ireland {lvl} squad")
+        total += added
+        print(f"{term}: {len(squad)} in squad, {len(added)} new")
+        time.sleep(SLEEP)
+    print(f"\ntotal new: {len(total)}")
+    for a in total:
+        print(f"  + {a}")
+    if total:
+        print("run `scrape` to pull their data.")
+
+
 # ---------------------------------------------------------------- scrape
 
 def parse_iso(ts):
@@ -689,6 +824,26 @@ def download_image(pid, slug, img_dir, refresh=False):
     return "none"
 
 
+def team_primary_league(tid, tname, _cache={}):
+    """Current club's league name from its team page. Cached per run."""
+    if tid in _cache:
+        return _cache[tid]
+    league = ""
+    try:
+        data = get_next_data(
+            f"https://www.fotmob.com/teams/{tid}/overview/"
+            f"{slugify(tname or 'team')}")
+        for v in find_all(data, "primaryLeagueName"):
+            if v:
+                league = str(v)
+                break
+        time.sleep(SLEEP)
+    except Exception:
+        pass
+    _cache[tid] = league
+    return league
+
+
 def scrape(args):
     players = read_player_list()
     cache = read_id_cache()
@@ -745,7 +900,7 @@ def scrape(args):
                 opp = m["ascore"] if side == "H" else m["hscore"]
                 results_rows.append([
                     slug,
-                    m["utc"].strftime("%d %b"),
+                    m["utc"].strftime("%Y-%m-%d"),
                     m["opponent"],
                     f"{own}-{opp}" if own != "" and opp != "" else "",
                     m["comp"],
@@ -757,7 +912,7 @@ def scrape(args):
             elif not m["finished"] and not m["ongoing"] and side \
                     and m["utc"] >= now:
                 fixtures_rows.append([
-                    slug, m["utc"].strftime("%d %b"), m["opponent"], side,
+                    slug, m["utc"].strftime("%Y-%m-%d"), m["opponent"], side,
                     m["comp"], m["utc"],
                 ])
 
@@ -766,10 +921,13 @@ def scrape(args):
         (sr_caps, sr_goals, sr_debut, youth,
          c_apps, c_goals, c_assists) = extract_career(blob)
         age, born, foot = extract_personal(blob)
-        source_club = (blob.get("primaryTeam") or {}).get("teamName", "")
+        pt = blob.get("primaryTeam") or {}
+        source_club = pt.get("teamName", "")
+        source_league = team_primary_league(pt.get("teamId"), source_club) \
+            if source_club else ""
         players_rows.append([
             slug,
-            p.get("league", "") or season["league"],
+            source_league,
             source_club,
             age, born, foot,
             sr_caps, sr_goals, sr_debut, youth,
@@ -994,6 +1152,15 @@ def main():
                         "(auto-detected if omitted)")
     d.add_argument("--debug", action="store_true")
 
+    ad = sub.add_parser("add", help="add players by source id or URL")
+    ad.add_argument("ids", nargs="+",
+                    help="player ids or page URLs")
+
+    di = sub.add_parser("discover-ireland",
+                        help="add everyone in Ireland senior/U21/U20/"
+                             "U19/U17 squads")
+    di.add_argument("--debug", action="store_true")
+
     lv = sub.add_parser("live", help="write live.json for matches "
                                      "within +-3h")
     lv.add_argument("--out", default=".")
@@ -1011,6 +1178,10 @@ def main():
         discover_loi(args)
     elif args.cmd == "live":
         live(args)
+    elif args.cmd == "add":
+        add_players(args)
+    elif args.cmd == "discover-ireland":
+        discover_ireland(args)
     elif args.cmd == "scrape":
         scrape(args)
     else:

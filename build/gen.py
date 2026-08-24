@@ -682,6 +682,27 @@ def country_of(league):
 
 def country_slug(c): return club_slug(c)
 
+
+MONTHS = {"jan":1,"feb":2,"mar":3,"apr":4,"may":5,"jun":6,
+          "jul":7,"aug":8,"sep":9,"oct":10,"nov":11,"dec":12}
+
+def date_key(d):
+    """Sort 'DD Mon' safely. Anything unexpected sorts last instead of crashing."""
+    parts = (d or "").strip().split()
+    if len(parts) >= 2:
+        try:
+            day = int(parts[0])
+            mon = MONTHS.get(parts[1][:3].lower(), 13)
+            return (mon, day)
+        except ValueError:
+            pass
+    # ISO date, if the scraper ever sends one
+    try:
+        y, m, dd = (d or "").split("-")
+        return (int(m), int(dd))
+    except Exception:
+        return (99, 99)
+
 # ================= LIST PAGES =================
 def build_list(fname, title, sub, data):
     rows = ""
@@ -886,7 +907,7 @@ def build_fixtures():
     order = {}
     for d,p,o,h,c in rows: order.setdefault(d, []).append((p,o,h,c))
     out = ""
-    for d in sorted(order, key=lambda x:(x.split()[1], int(x.split()[0]))):
+    for d in sorted(order, key=date_key):
         items = "".join(f'<a class="fxrow lnk pfx" href="{plink(p)}"><div class="fxo">{esc(p["n"])} '
                         f'<span class="cl">{esc(p["club"])}</span></div>'
                         f'<div class="fxv">v {esc(o)} <span class="ha">{h}</span></div>'

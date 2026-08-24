@@ -524,6 +524,28 @@
   ]
  },
  {
+  "fotmob_id": "5750700",
+  "url": "/matches/kaiserslautern-vs-waldhof-mannheim/2pgli2#5750700",
+  "kickoff": "2026-08-21T16:00:00Z",
+  "comp": "DFB Pokal",
+  "home": "Waldhof Mannheim",
+  "away": "Kaiserslautern",
+  "slugs": [
+   "alex-murphy"
+  ]
+ },
+ {
+  "fotmob_id": "5881653",
+  "url": "/matches/st-pauli-vs-kaiserslautern/292ozv#5881653",
+  "kickoff": "2026-08-30T11:30:00Z",
+  "comp": "2. Bundesliga",
+  "home": "St. Pauli",
+  "away": "Kaiserslautern",
+  "slugs": [
+   "alex-murphy"
+  ]
+ },
+ {
   "fotmob_id": "5836771",
   "url": "/matches/preston-north-end-vs-wolverhampton-wanderers/2e68pd#5836771",
   "kickoff": "2026-08-22T14:00:00Z",
@@ -567,6 +589,39 @@
   "away": "Lens",
   "slugs": [
    "andrew-omobamidele"
+  ]
+ },
+ {
+  "fotmob_id": "5760470",
+  "url": "/matches/levski-sofia-vs-spartak-varna/2wyuhp#5760470",
+  "kickoff": "2026-08-22T18:15:00Z",
+  "comp": "First Professional League",
+  "home": "Levski Sofia",
+  "away": "Spartak Varna",
+  "slugs": [
+   "armstrong-oko-flex"
+  ]
+ },
+ {
+  "fotmob_id": "5987798",
+  "url": "/matches/aek-athens-vs-levski-sofia/2g0yqy#5987798",
+  "kickoff": "2026-08-18T19:00:00Z",
+  "comp": "Champions League Qualification",
+  "home": "Levski Sofia",
+  "away": "AEK Athens",
+  "slugs": [
+   "armstrong-oko-flex"
+  ]
+ },
+ {
+  "fotmob_id": "5987805",
+  "url": "/matches/aek-athens-vs-levski-sofia/2g0yqy#5987805",
+  "kickoff": "2026-08-26T19:00:00Z",
+  "comp": "Champions League Qualification",
+  "home": "AEK Athens",
+  "away": "Levski Sofia",
+  "slugs": [
+   "armstrong-oko-flex"
   ]
  },
  {
@@ -624,17 +679,6 @@
   "kickoff": "2026-08-20T17:00:00Z",
   "comp": "Europa League Qualification",
   "home": "Trabzonspor",
-  "away": "Ferencvaros",
-  "slugs": [
-   "callum-odowda"
-  ]
- },
- {
-  "fotmob_id": "5865445",
-  "url": "/matches/zalaegerszeg-vs-ferencvaros/t4aof#5865445",
-  "kickoff": "2026-08-17T15:30:00Z",
-  "comp": "NB I",
-  "home": "Zalaegerszeg",
   "away": "Ferencvaros",
   "slugs": [
    "callum-odowda"
@@ -829,6 +873,17 @@
    "david-okagbue",
    "rocco-vata",
    "thomas-oconnor"
+  ]
+ },
+ {
+  "fotmob_id": "5991401",
+  "url": "/matches/potenza-vs-cosenza/1axj3u#5991401",
+  "kickoff": "2026-08-29T19:00:00Z",
+  "comp": "Serie C",
+  "home": "Cosenza",
+  "away": "Potenza",
+  "slugs": [
+   "ed-mcjannett"
   ]
  },
  {
@@ -1449,6 +1504,39 @@
   ]
  },
  {
+  "fotmob_id": "5904717",
+  "url": "/matches/goztepe-vs-genclerbirligi/s5ta3#5904717",
+  "kickoff": "2026-08-23T18:30:00Z",
+  "comp": "Super Lig",
+  "home": "G\u00f6ztepe",
+  "away": "Gen\u00e7lerbirli\u011fi",
+  "slugs": [
+   "sinclair-armstrong"
+  ]
+ },
+ {
+  "fotmob_id": "5904712",
+  "url": "/matches/goztepe-vs-samsunspor/14l32o#5904712",
+  "kickoff": "2026-08-17T18:30:00Z",
+  "comp": "Super Lig",
+  "home": "Samsunspor",
+  "away": "G\u00f6ztepe",
+  "slugs": [
+   "sinclair-armstrong"
+  ]
+ },
+ {
+  "fotmob_id": "5904728",
+  "url": "/matches/goztepe-vs-galatasaray/x7t9c#5904728",
+  "kickoff": "2026-08-29T18:30:00Z",
+  "comp": "Super Lig",
+  "home": "Galatasaray",
+  "away": "G\u00f6ztepe",
+  "slugs": [
+   "sinclair-armstrong"
+  ]
+ },
+ {
   "fotmob_id": "5837105",
   "url": "/matches/peterborough-united-vs-mansfield-town/2tu88q#5837105",
   "kickoff": "2026-08-22T14:00:00Z",
@@ -1457,6 +1545,17 @@
   "away": "Mansfield Town",
   "slugs": [
    "thomas-oconnor"
+  ]
+ },
+ {
+  "fotmob_id": "5104992",
+  "url": "/matches/valerenga-vs-molde/2nnd8n#5104992",
+  "kickoff": "2026-08-29T14:00:00Z",
+  "comp": "Eliteserien",
+  "home": "V\u00e5lerenga",
+  "away": "Molde",
+  "slugs": [
+   "trent-kone-doherty"
   ]
  },
  {
