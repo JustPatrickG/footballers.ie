@@ -673,3 +673,7 @@ a.intlblock.lnk:hover{border-color:var(--teal)}
 .repmiss:hover{border-color:var(--yellow)}
 @media(max-width:700px){ .repbtn{right:10px;bottom:10px;padding:8px 12px 8px 9px;font-size:10px} }
 .more.stale{color:var(--yellow);letter-spacing:.06em}
+.card{display:inline-block;min-width:26px;padding:4px 8px;border-radius:4px;
+  font-family:'IBM Plex Mono',monospace;font-weight:600;font-size:17px;line-height:1.1;text-align:center}
+.card.yel{background:#F5C518;color:#0C0F10}
+.card.red{background:#E03A2B;color:#fff}

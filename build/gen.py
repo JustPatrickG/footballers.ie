@@ -1087,9 +1087,13 @@ def build_player(p):
     s, c = p["season"], p["career"]
     badge = "League of Ireland" if p["tier"]=="loi" else ("Abroad · top flight" if p["tier"]=="abroad-top" else "Abroad")
 
+    upcoming = p["fixtures"][:3]
+    n_fx = len(p["fixtures"])
+    fx_more = (f'<a class="more" href="../fixtures.html">See all {n_fx} →</a>'
+               if n_fx > 3 else '<a class="more" href="../fixtures.html">All fixtures →</a>')
     fxr = "".join(f'<div class="fxrow"><div class="fxd">{esc(day_label(d))}</div><div class="fxo">{esc(o)} '
                   f'<span class="ha">{h}</span></div><div class="fxc">{esc(cp)}</div></div>'
-                  for d,o,h,cp in p["fixtures"])
+                  for d,o,h,cp in upcoming)
     rsr = ""
     recent_results = list(reversed(p["results"]))[:10]   # feed is oldest-first
     for d,o,sc,cp,mins,g,a in recent_results:
@@ -1179,13 +1183,14 @@ def build_player(p):
       <div class="pds"><div class="n">{s["g"]}</div><div class="l">Goals</div></div>
       <div class="pds"><div class="n">{s["a"]}</div><div class="l">Assists</div></div>
       <div class="pds"><div class="n">{s["mins"]}</div><div class="l">Minutes</div></div>
-      <div class="pds"><div class="n">{s["yellow"]}/{s["red"]}</div><div class="l">Cards</div></div>
+      <div class="pds"><div class="n"><span class="card yel">{s["yellow"]}</span></div><div class="l">Yellow cards</div></div>
+      <div class="pds"><div class="n"><span class="card red">{s["red"]}</span></div><div class="l">Red cards</div></div>
       <div class="pds"><div class="n">{rating_chip(p)}</div><div class="l">Avg rating</div></div>
       <div class="pds"><div class="n">{c["ap"]}</div><div class="l">Career apps</div></div>
       <div class="pds"><div class="n">{c["g"]}</div><div class="l">Career goals</div></div>
     </div>
 
-    <div class="sec"><h2>Upcoming fixtures</h2><span class="more" style="border:0">{esc(p["club"])}</span></div>
+    <div class="sec"><h2>Upcoming fixtures</h2>{fx_more}</div>
     <div class="fxlist">{fxr or '<div class="emptystate" style="display:block">No fixtures listed.</div>'}</div>
 
     <div class="sec"><h2>Recent matches</h2>
