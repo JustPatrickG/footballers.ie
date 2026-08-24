@@ -669,7 +669,7 @@ img,svg,iframe{max-width:100%}
     <span></span><span></span><span></span>
   </button>
   <div class="navlinks" id="navlinks"><a class="" href="../news.html">News</a><a class="" href="../players.html">Players</a><a class="" href="../abroad.html">Abroad</a><a class="" href="../league-of-ireland.html">League of Ireland</a><a class="on" href="../clubs.html">Clubs</a><a class="" href="../ireland.html">Ireland</a><a class="" href="../fixtures.html">Fixtures</a><a class="" href="../alerts.html">Alerts</a></div>
-  <div class="navmeta">MW04 · 22-23 AUG · <b>334</b> TRACKED</div>
+  <div class="navmeta"><span id="navdate">21-27 AUG</span> · <b>334</b> TRACKED</div>
 </nav>
 <script>
 (function(){
@@ -780,8 +780,12 @@ img,svg,iframe{max-width:100%}
       var p = window.FB_PLAYERS[slug];
       if (!p) return;
       var when = p.next ? p.next : 'No fixture listed';
-      rows += '<a class="plrow" href="player/' + slug + '.html">' +
-              '<div class="pavatar sm"><span>' + p.ini + '</span></div>' +
+      var face2 = p.img ? 'img/players/' + slug + '.png' : '';
+      var av2 = face2
+        ? '<div class="pavatar sm"><img src="' + face2 + '" alt="" loading="lazy" ' +
+          'onerror="this.parentNode.innerHTML=\'<span>' + p.ini + '</span>\'"></div>'
+        : '<div class="pavatar sm"><span>' + p.ini + '</span></div>';
+      rows += '<a class="plrow" href="player/' + slug + '.html">' + av2 +
               '<div class="nm">' + p.n + ' <span class="cl">' + p.club + '</span></div>' +
               '<div class="ev">' + when + '</div>' +
               '<button class="star on" data-fav="' + slug + '" aria-pressed="true">★</button></a>';
@@ -901,9 +905,13 @@ img,svg,iframe{max-width:100%}
 
     box.innerHTML = shown.map(function (m) {
       var players = m.players.slice(0, 2).map(function (p) {
+        var face = p.photo ? p.photo : (p.img ? 'img/players/' + p.slug + '.png' : '');
+        var av = face
+          ? '<div class="pavatar sm"><img src="' + face + '" alt="" loading="lazy" ' +
+            'onerror="this.parentNode.innerHTML=\'<span>' + p.ini + '</span>\'"></div>'
+          : '<div class="pavatar sm"><span>' + p.ini + '</span></div>';
         return '<a class="mcp" href="player/' + p.slug + '.html" title="' + p.n + '">' +
-               '<div class="pavatar sm"><span>' + p.ini + '</span></div>' +
-               '<span class="mcpn">' + p.n + '</span></a>';
+               av + '<span class="mcpn">' + p.n + '</span></a>';
       }).join('');
       if (m.players.length > 2) {
         players += '<span class="mcmore">+' + (m.players.length - 2) + ' more</span>';
@@ -1091,6 +1099,17 @@ img,svg,iframe{max-width:100%}
       }
     });
   }
+})();
+
+
+/* ---------- NAV DATE ----------
+   Written in the browser so it's right even if the site was built days ago. */
+(function () {
+  var el = document.getElementById('navdate');
+  if (!el) return;
+  var d = new Date();
+  var mon = ['JAN','FEB','MAR','APR','MAY','JUN','JUL','AUG','SEP','OCT','NOV','DEC'];
+  el.textContent = d.getDate() + ' ' + mon[d.getMonth()];
 })();
 </script>
 </body>

@@ -556,9 +556,112 @@ img,svg,iframe{max-width:100%}
   .artgrid{grid-template-columns:1fr}
   .artcontent p{font-size:16px;line-height:1.62}
 }
+.mcday{font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--mute);display:block;margin-bottom:2px}
+
+/* ============ PAGE LOADER ============ */
+#fbload{
+  position:fixed;inset:0;z-index:400;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:26px;
+  background:var(--bg);opacity:1;transition:opacity .32s ease;
+}
+#fbload.out{opacity:0;pointer-events:none}
+.fbl-mark{
+  font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:22px;letter-spacing:-.01em;
+  color:var(--white);opacity:0;animation:fblIn .5s ease forwards;
+}
+.fbl-mark i{font-style:normal;color:var(--yellow)}
+@keyframes fblIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+
+/* the stage: ball sits dead centre under the wordmark, boot arrives from the left */
+.fbl-pitch{position:relative;width:240px;height:60px;overflow:hidden}
+
+.fbl-ball{
+  position:absolute;left:50%;top:50%;width:22px;height:22px;margin:-11px 0 0 -11px;
+  animation:fblFly 2.4s cubic-bezier(.22,.7,.35,1) infinite;
+}
+.fbl-ball i{
+  display:block;width:100%;height:100%;border-radius:50%;background:var(--white);
+  background-image:radial-gradient(circle at 33% 32%, #0C0F10 0 3px, transparent 3.2px),
+                   radial-gradient(circle at 70% 64%, #0C0F10 0 2.4px, transparent 2.6px),
+                   radial-gradient(circle at 52% 88%, #0C0F10 0 1.8px, transparent 2px);
+  animation:fblSpin 2.4s cubic-bezier(.22,.7,.35,1) infinite;
+}
+@keyframes fblFly{
+  0%, 20%  {transform:translate(0,0);opacity:0}      /* ball fades in first */
+  26%      {transform:translate(0,0);opacity:1}
+  46%      {transform:translate(0,0);opacity:1}      /* waits for the boot */
+  62%      {transform:translate(78px,-26px);opacity:1}
+  76%      {transform:translate(150px,-14px);opacity:1}
+  86%      {transform:translate(210px,10px);opacity:0}  /* out of frame */
+  100%     {transform:translate(210px,10px);opacity:0}
+}
+@keyframes fblSpin{
+  0%,46%{transform:rotate(0)}
+  86%,100%{transform:rotate(620deg)}
+}
+
+/* boot slides in from the left, plants, swings through the ball, retreats */
+.fbl-boot{
+  position:absolute;left:50%;top:50%;width:38px;height:44px;margin:-26px 0 0 -62px;
+  overflow:visible;opacity:0;
+  animation:fblBootIn 2.4s cubic-bezier(.3,.7,.3,1) infinite;
+}
+.fbl-leg line{stroke:var(--mute);stroke-width:2.8;stroke-linecap:round;fill:none}
+.fbl-leg{transform-origin:20px 4px;animation:fblKick 2.4s cubic-bezier(.35,0,.25,1) infinite}
+@keyframes fblBootIn{
+  0%,24%  {opacity:0;transform:translateX(-26px)}
+  34%     {opacity:1;transform:translateX(0)}
+  70%     {opacity:1;transform:translateX(0)}
+  84%,100%{opacity:0;transform:translateX(-20px)}
+}
+@keyframes fblKick{
+  0%,36%  {transform:rotate(14deg)}
+  48%     {transform:rotate(-32deg)}   /* wind up */
+  58%     {transform:rotate(30deg)}    /* strike */
+  74%     {transform:rotate(12deg)}
+  100%    {transform:rotate(14deg)}
+}
+
+@media(prefers-reduced-motion:reduce){
+  .fbl-mark{animation:none;opacity:1}
+  .fbl-leg,.fbl-ball,.fbl-ball i,.fbl-boot{animation:none}
+  .fbl-ball{opacity:1}
+  .fbl-boot{opacity:1;transform:none}
+}
 </style>
 </head>
 <body>
+<div id="fbload" aria-hidden="true">
+  <div class="fbl-mark">footballers<i>.ie</i></div>
+  <div class="fbl-pitch">
+    <div class="fbl-ball"><i></i></div>
+    <svg class="fbl-boot" viewBox="0 0 40 44" aria-hidden="true">
+      <g class="fbl-leg">
+        <line x1="20" y1="2" x2="20" y2="24"/>
+        <line x1="20" y1="24" x2="15" y2="38"/>
+        <line x1="15" y1="38" x2="31" y2="40"/>
+      </g>
+    </svg>
+  </div>
+</div>
+<script>
+/* hide the loader as soon as the page is ready — kept short on purpose */
+(function(){
+  var el=document.getElementById('fbload');
+  if(!el) return;
+  var t0=Date.now(), MIN=2150;
+  function done(){
+    var wait=Math.max(0, MIN-(Date.now()-t0));
+    setTimeout(function(){
+      el.classList.add('out');
+      setTimeout(function(){ if(el.parentNode) el.parentNode.removeChild(el); }, 340);
+    }, wait);
+  }
+  if(document.readyState==='complete') done();
+  else window.addEventListener('load', done);
+  setTimeout(done, 3600);   // never let it hang
+})();
+</script>
 <div class="wrap">
 <nav>
   <a class="mark" href="../index.html">footballers<i>.ie</i></a>
@@ -566,7 +669,7 @@ img,svg,iframe{max-width:100%}
     <span></span><span></span><span></span>
   </button>
   <div class="navlinks" id="navlinks"><a class="" href="../news.html">News</a><a class="" href="../players.html">Players</a><a class="" href="../abroad.html">Abroad</a><a class="" href="../league-of-ireland.html">League of Ireland</a><a class="on" href="../clubs.html">Clubs</a><a class="" href="../ireland.html">Ireland</a><a class="" href="../fixtures.html">Fixtures</a><a class="" href="../alerts.html">Alerts</a></div>
-  <div class="navmeta">MW04 · 22-23 AUG · <b>123</b> TRACKED</div>
+  <div class="navmeta"><span id="navdate">21-27 AUG</span> · <b>334</b> TRACKED</div>
 </nav>
 <script>
 (function(){
@@ -580,11 +683,11 @@ img,svg,iframe{max-width:100%}
 </script>
 
     <a class="crumb" data-back href="../clubs.html">← Back</a>
-    <div class="pagehead"><h1>Peterborough United</h1><p>1 Irish player tracked</p></div>
+    <div class="pagehead"><h1>Peterborough United</h1><p>League One · 1 Irish player tracked</p></div>
     <div class="sec"><h2>Irish players</h2></div>
-    <div class="tiergroup"><a class="plrow" href="../player/david-okagbue.html"><div class="pavatar sm"><span>DO</span></div><div class="nm">David Okagbue <span class="cl">Peterborough United</span></div><div class="ev">—</div><div class="mn"><span class="rate none">—</span></div><button class="star" data-fav="david-okagbue" aria-pressed="false" aria-label="Follow David Okagbue">★</button></a></div>
+    <div class="tiergroup"><a class="plrow" href="../player/david-okagbue.html"><div class="pavatar sm"><img src="../img/players/david-okagbue.png" alt="David Okagbue" loading="lazy" onerror="this.parentNode.innerHTML='<span>DO</span>'"></div><div class="nm">David Okagbue <span class="cl">Peterborough United</span></div><div class="ev">—</div><div class="mn"><span class="rate lo sm">5.41</span></div><button class="star" data-fav="david-okagbue" aria-pressed="false" aria-label="Follow David Okagbue">★</button></a></div>
     <div class="sec"><h2>Upcoming fixtures</h2></div>
-    <div class="fxlist"><div class="emptystate" style="display:block">No fixtures listed.</div></div>
+    <div class="fxlist"><div class="fxrow"><div class="fxd">25 Aug</div><div class="fxo">Watford <span class="ha">A</span></div><div class="fxc">EFL Cup</div></div></div>
     
 <footer>
   Footballers · prototype · sample data<br>
@@ -677,8 +780,12 @@ img,svg,iframe{max-width:100%}
       var p = window.FB_PLAYERS[slug];
       if (!p) return;
       var when = p.next ? p.next : 'No fixture listed';
-      rows += '<a class="plrow" href="player/' + slug + '.html">' +
-              '<div class="pavatar sm"><span>' + p.ini + '</span></div>' +
+      var face2 = p.img ? 'img/players/' + slug + '.png' : '';
+      var av2 = face2
+        ? '<div class="pavatar sm"><img src="' + face2 + '" alt="" loading="lazy" ' +
+          'onerror="this.parentNode.innerHTML=\'<span>' + p.ini + '</span>\'"></div>'
+        : '<div class="pavatar sm"><span>' + p.ini + '</span></div>';
+      rows += '<a class="plrow" href="player/' + slug + '.html">' + av2 +
               '<div class="nm">' + p.n + ' <span class="cl">' + p.club + '</span></div>' +
               '<div class="ev">' + when + '</div>' +
               '<button class="star on" data-fav="' + slug + '" aria-pressed="true">★</button></a>';
@@ -710,61 +817,101 @@ img,svg,iframe{max-width:100%}
 })();
 
 /* ---------- MATCH CENTRE ----------
-   Shows a match only if it kicks off within the next hour, is in progress,
-   or finished less than an hour ago. Hides the whole section otherwise.
-   Filtered in the browser so the window follows the visitor's clock. */
+   Always on. What it shows depends on where "now" sits between matches:
+     · anything live  -> always shown first
+     · just finished  -> the result stays up until the halfway point to the next
+                         kick-off, then the upcoming match takes over
+   So if the next game is 7 days away, the last result sits there for 3½ days,
+   then flips to "in 3 days" counting down to the next one. */
 (function () {
-  var WINDOW_MS = 60 * 60 * 1000;
+  var MATCH_LEN = 2 * 60 * 60 * 1000;   // treat a match as ~2h long
 
-  function within(m, now) {
-    var ko = new Date(m.kickoff).getTime();
-    if (isNaN(ko)) return false;
-    var since = now - ko;
-    // live: only while the match could plausibly still be on
-    if (m.status === 'live') return since >= -WINDOW_MS && since < (2.75 * 60 * 60 * 1000);
-    // finished: show for about an hour after the final whistle
-    if (m.status === 'ft')   return since >= 0 && since < (3 * 60 * 60 * 1000);
-    // upcoming: appears once it's an hour out or less
-    return (ko - now) <= WINDOW_MS && ko > now;
-  }
+  function ko(m) { return new Date(m.kickoff).getTime(); }
+  function ended(m) { return ko(m) + MATCH_LEN; }
 
   function statusChip(m, now) {
-    if (m.status === 'live') return '<span class="mcstat live"><i></i>' + (m.minute ? m.minute + "'" : 'LIVE') + '</span>';
-    if (m.status === 'ft')   return '<span class="mcstat ft">FT</span>';
-    var mins = Math.max(0, Math.round((new Date(m.kickoff).getTime() - now) / 60000));
+    if (m.status === 'live') {
+      return '<span class="mcstat live"><i></i>' + (m.minute ? m.minute + "'" : 'LIVE') + '</span>';
+    }
+    if (m.status === 'ft' || ended(m) < now) {
+      var ago = now - ended(m);
+      var d = Math.floor(ago / 86400000);
+      if (d >= 1) return '<span class="mcstat ft">FT · ' + d + (d === 1 ? ' day ago' : ' days ago') + '</span>';
+      var h = Math.floor(ago / 3600000);
+      if (h >= 1) return '<span class="mcstat ft">FT · ' + h + 'h ago</span>';
+      return '<span class="mcstat ft">Full time</span>';
+    }
+    var until = ko(m) - now;
+    var days = Math.floor(until / 86400000);
+    if (days >= 1) return '<span class="mcstat soon">in ' + days + (days === 1 ? ' day' : ' days') + '</span>';
+    var hrs = Math.floor(until / 3600000);
+    if (hrs >= 1) return '<span class="mcstat soon">in ' + hrs + (hrs === 1 ? ' hour' : ' hours') + '</span>';
+    var mins = Math.max(0, Math.round(until / 60000));
     return '<span class="mcstat soon">' + (mins <= 1 ? 'Kick-off' : 'in ' + mins + ' min') + '</span>';
   }
 
-  function score(m) {
-    if (m.status === 'scheduled' || m.hs === '' || m.hs === null)
-      return '<div class="mcko">' + new Date(m.kickoff).toLocaleTimeString([], {hour:'2-digit', minute:'2-digit'}) + '</div>';
+  function score(m, now) {
+    var played = m.status === 'live' || m.status === 'ft' || ended(m) < now;
+    if (!played || m.hs === '' || m.hs === null || m.hs === undefined) {
+      var d = new Date(m.kickoff);
+      var day = d.toLocaleDateString([], { weekday: 'short' });
+      var time = d.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+      return '<div class="mcko"><span class="mcday">' + day + '</span>' + time + '</div>';
+    }
     return '<div class="mcscore">' + m.hs + '<span>–</span>' + m.as_ + '</div>';
+  }
+
+  /* Decide which matches deserve the two slots. */
+  function choose(all, now) {
+    var live = [], past = [], future = [];
+    all.forEach(function (m) {
+      if (m.status === 'live' && ended(m) > now) live.push(m);
+      else if (m.status === 'ft' || ended(m) <= now) past.push(m);
+      else future.push(m);
+    });
+    past.sort(function (a, b) { return ko(b) - ko(a); });     // most recent first
+    future.sort(function (a, b) { return ko(a) - ko(b); });   // soonest first
+
+    if (live.length) return live.concat(future).slice(0, 2);
+
+    var lastM = past[0], nextM = future[0];
+
+    if (lastM && nextM) {
+      var midpoint = ended(lastM) + (ko(nextM) - ended(lastM)) / 2;
+      // before halfway: the result still leads. after: the next game leads.
+      return (now < midpoint) ? [lastM, nextM] : [nextM, lastM];
+    }
+    if (nextM) return future.slice(0, 2);
+    if (lastM) return past.slice(0, 2);
+    return [];
   }
 
   function render() {
     var sec = document.getElementById('mc-sec'), box = document.getElementById('mc');
     if (!sec || !box || !window.FB_MATCHES) return;
     var now = Date.now();
-    var live = FB_MATCHES.filter(function (m) { return within(m, now); });
+    var all = FB_MATCHES.slice();
 
-    if (!live.length) { sec.style.display = 'none'; return; }
-    sec.style.display = '';
+    sec.style.display = '';                       // always on
 
-    // live games first, then kicking off soon, then finished
-    var rank = { live: 0, scheduled: 1, ft: 2 };
-    live.sort(function (a, b) {
-      var d = (rank[a.status] === undefined ? 9 : rank[a.status]) -
-              (rank[b.status] === undefined ? 9 : rank[b.status]);
-      if (d !== 0) return d;
-      return new Date(a.kickoff) - new Date(b.kickoff);
-    });
+    if (!all.length) {
+      box.innerHTML = '<div class="emptybox">No fixtures loaded yet.</div>';
+      var m0 = document.getElementById('mc-more');
+      if (m0) m0.style.display = 'none';
+      return;
+    }
 
-    var shown = live.slice(0, 2);
+    var shown = choose(all, now);
+
     box.innerHTML = shown.map(function (m) {
       var players = m.players.slice(0, 2).map(function (p) {
+        var face = p.photo ? p.photo : (p.img ? 'img/players/' + p.slug + '.png' : '');
+        var av = face
+          ? '<div class="pavatar sm"><img src="' + face + '" alt="" loading="lazy" ' +
+            'onerror="this.parentNode.innerHTML=\'<span>' + p.ini + '</span>\'"></div>'
+          : '<div class="pavatar sm"><span>' + p.ini + '</span></div>';
         return '<a class="mcp" href="player/' + p.slug + '.html" title="' + p.n + '">' +
-               '<div class="pavatar sm"><span>' + p.ini + '</span></div>' +
-               '<span class="mcpn">' + p.n + '</span></a>';
+               av + '<span class="mcpn">' + p.n + '</span></a>';
       }).join('');
       if (m.players.length > 2) {
         players += '<span class="mcmore">+' + (m.players.length - 2) + ' more</span>';
@@ -773,17 +920,16 @@ img,svg,iframe{max-width:100%}
              '<div class="mcrow">' +
                '<span class="mccomp">' + m.comp + '</span>' + statusChip(m, now) +
              '</div>' +
-             '<div class="mcteams"><div class="mct">' + m.home + '</div>' + score(m) +
+             '<div class="mcteams"><div class="mct">' + m.home + '</div>' + score(m, now) +
              '<div class="mct right">' + m.away + '</div></div>' +
              '<div class="mcplayers">' + players + '</div></div>';
     }).join('');
 
-    // card click -> match page (player chips keep their own links)
     var cards = box.querySelectorAll('.mccard');
     for (var c = 0; c < cards.length; c++) {
       (function (card) {
         function go(e) {
-          if (e.target.closest && e.target.closest('a')) return;   // let chip links win
+          if (e.target.closest && e.target.closest('a')) return;
           location.href = card.getAttribute('data-href');
         }
         card.addEventListener('click', go);
@@ -795,9 +941,9 @@ img,svg,iframe{max-width:100%}
 
     var more = document.getElementById('mc-more');
     if (more) {
-      if (live.length > 2) {
+      if (all.length > shown.length) {
         more.style.display = '';
-        more.textContent = 'See all ' + live.length + ' →';
+        more.textContent = 'See all ' + all.length + ' →';
       } else {
         more.style.display = 'none';
       }
@@ -806,7 +952,7 @@ img,svg,iframe{max-width:100%}
 
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', render);
   else render();
-  setInterval(render, 60000);   // re-check every minute so it appears/disappears on its own
+  setInterval(render, 60000);
 })();
 
 /* ---------- FOLLOW PROMPT ----------
@@ -953,6 +1099,17 @@ img,svg,iframe{max-width:100%}
       }
     });
   }
+})();
+
+
+/* ---------- NAV DATE ----------
+   Written in the browser so it's right even if the site was built days ago. */
+(function () {
+  var el = document.getElementById('navdate');
+  if (!el) return;
+  var d = new Date();
+  var mon = ['JAN','FEB','MAR','APR','MAY','JUN','JUL','AUG','SEP','OCT','NOV','DEC'];
+  el.textContent = d.getDate() + ' ' + mon[d.getMonth()];
 })();
 </script>
 </body>

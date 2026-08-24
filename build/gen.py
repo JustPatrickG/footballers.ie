@@ -6,7 +6,7 @@ DATA = os.path.join(HERE, "..", "data")
 # ---- config ----
 SITE_URL   = "https://footballers.ie"
 SEASON     = "2026/27"
-MATCHWEEK  = "MW04 · 22-23 AUG"
+MATCHWEEK  = ""   # leave blank to work it out from the fixtures
 SAMPLE_DATA = True   # set False once every figure on the site is real
 
 # Newsletter: paste your provider's form-action URL here (Buttondown, Beehiiv,
@@ -25,9 +25,27 @@ def _int(v, d=0):
     except: return d
 
 def _merge_players():
-    """API layer provides the facts; manual layer overrides any non-empty cell.
-    A manual row with locked=yes ignores the API entirely."""
-    api = {r["slug"]: r for r in _rows("api/players.csv") if r.get("slug")}
+    """Three layers, lowest first:
+         scraper/players_list.csv  — the roster (name, club, position)
+         data/api/players.csv      — scraped stats, keyed on slug
+         data/manual/players.csv   — your edits, always win
+       A manual row with locked=yes ignores the scraped data entirely."""
+    roster = {}
+    roster_path = os.path.join(HERE, "..", "scraper", "players_list.csv")
+    if os.path.exists(roster_path):
+        with open(roster_path, newline="", encoding="utf-8") as f:
+            for r in csv.DictReader(f):
+                if r.get("slug"): roster[r["slug"]] = r
+
+    api = {}
+    for r in _rows("api/players.csv"):
+        if not r.get("slug"): continue
+        base = dict(roster.get(r["slug"], {}))          # name/club/pos from the roster
+        for k, v in r.items():
+            if (v or "").strip(): base[k] = v            # stats layer on top
+        api[r["slug"]] = base
+    for slug, r in roster.items():                       # roster-only players still show
+        api.setdefault(slug, dict(r))
     man = {r["slug"]: r for r in _rows("manual/players.csv") if r.get("slug")}
     out = {}
     for slug in set(api) | set(man):
@@ -131,6 +149,27 @@ APPJS = open(os.path.join(HERE, "app.js")).read()
 NAV = [("News","news.html"),("Players","players.html"),("Abroad","abroad.html"),("League of Ireland","league-of-ireland.html"),
        ("Clubs","clubs.html"),("Ireland","ireland.html"),("Fixtures","fixtures.html"),("Alerts","alerts.html")]
 
+
+def matchweek_label():
+    """Work out the label from the data: the window the current fixtures cover."""
+    if MATCHWEEK: return MATCHWEEK
+    import datetime
+    days = []
+    for m in MATCHES:
+        k = (m.get("kickoff") or "")[:10]
+        if len(k) == 10:
+            try: days.append(datetime.date.fromisoformat(k))
+            except ValueError: pass
+    if not days: return "FIXTURES PENDING"
+    today = datetime.date.today()
+    near = sorted(days, key=lambda d: abs((d - today).days))[:1][0]
+    week = [d for d in days if abs((d - near).days) <= 3]
+    lo, hi = min(week), max(week)
+    mon = ["JAN","FEB","MAR","APR","MAY","JUN","JUL","AUG","SEP","OCT","NOV","DEC"]
+    if lo == hi: return f"{lo.day} {mon[lo.month-1]}"
+    if lo.month == hi.month: return f"{lo.day}-{hi.day} {mon[hi.month-1]}"
+    return f"{lo.day} {mon[lo.month-1]}-{hi.day} {mon[hi.month-1]}"
+
 def shell(title, desc, root, active, body, extra_head="", canonical="", body_attr=""):
     links = "".join(f'<a class="{"on" if active==href else ""}" href="{root}{href}">{l}</a>' for l,href in NAV)
     can = f"{SITE_URL}/{canonical}" if canonical else SITE_URL
@@ -163,6 +202,37 @@ def shell(title, desc, root, active, body, extra_head="", canonical="", body_att
 <style>{CSS}</style>{extra_head}
 </head>
 <body{body_attr}>
+<div id="fbload" aria-hidden="true">
+  <div class="fbl-mark">footballers<i>.ie</i></div>
+  <div class="fbl-pitch">
+    <div class="fbl-ball"><i></i></div>
+    <svg class="fbl-boot" viewBox="0 0 40 44" aria-hidden="true">
+      <g class="fbl-leg">
+        <line x1="20" y1="2" x2="20" y2="24"/>
+        <line x1="20" y1="24" x2="15" y2="38"/>
+        <line x1="15" y1="38" x2="31" y2="40"/>
+      </g>
+    </svg>
+  </div>
+</div>
+<script>
+/* hide the loader as soon as the page is ready — kept short on purpose */
+(function(){{
+  var el=document.getElementById('fbload');
+  if(!el) return;
+  var t0=Date.now(), MIN=2150;
+  function done(){{
+    var wait=Math.max(0, MIN-(Date.now()-t0));
+    setTimeout(function(){{
+      el.classList.add('out');
+      setTimeout(function(){{ if(el.parentNode) el.parentNode.removeChild(el); }}, 340);
+    }}, wait);
+  }}
+  if(document.readyState==='complete') done();
+  else window.addEventListener('load', done);
+  setTimeout(done, 3600);   // never let it hang
+}})();
+</script>
 <div class="wrap">
 <nav>
   <a class="mark" href="{root}index.html">footballers<i>.ie</i></a>
@@ -170,7 +240,7 @@ def shell(title, desc, root, active, body, extra_head="", canonical="", body_att
     <span></span><span></span><span></span>
   </button>
   <div class="navlinks" id="navlinks">{links}</div>
-  <div class="navmeta">{esc(MATCHWEEK)} · <b>{len(PLAYERS)}</b> TRACKED</div>
+  <div class="navmeta"><span id="navdate">{esc(matchweek_label())}</span> · <b>{len(PLAYERS)}</b> TRACKED</div>
 </nav>
 <script>
 (function(){{
@@ -235,8 +305,17 @@ def initials(name):
     parts = [p for p in name.split() if p]
     return (parts[0][0] + parts[-1][0]).upper() if len(parts) > 1 else (parts[0][:2].upper() if parts else "?")
 
+IMG_DIR = os.path.join(HERE, "..", "img", "players")
+HAVE_IMG = set()
+if os.path.isdir(IMG_DIR):
+    HAVE_IMG = {f.rsplit(".",1)[0] for f in os.listdir(IMG_DIR) if f.lower().endswith((".png",".jpg",".jpeg",".webp"))}
+
 def avatar(p, root="", size="lg"):
     cls = "pavatar" + (" sm" if size == "sm" else "")
+    if not p.get("photo") and p["slug"] in HAVE_IMG:
+        return (f'<div class="{cls}"><img src="{root}img/players/{p["slug"]}.png" '
+                f'alt="{esc(p["n"])}" loading="lazy" '
+                f'onerror="this.parentNode.innerHTML=\'<span>{initials(p["n"])}</span>\'"></div>')
     if p.get("photo"):
         src_url = p["photo"] if p["photo"].startswith("http") else f'{root}{p["photo"]}'
         return (f'<div class="{cls}"><img src="{esc(src_url)}" alt="{esc(p["n"])}" loading="lazy" '
@@ -315,7 +394,9 @@ def build_index():
         for s in [x.strip() for x in (m.get("players") or "").split(";") if x.strip()]:
             p = pmap.get(s)
             if p: involved.append(dict(slug=s, n=esc(p["n"]), club=esc(p["club"]),
-                                       ini=initials(p["n"]), pos=p["pos"]))
+                                       ini=initials(p["n"]), pos=p["pos"],
+                                       img=(1 if (not p.get("photo") and s in HAVE_IMG) else 0),
+                                       photo=(p.get("photo") or "")))
         if not involved: continue
         mc.append(dict(id=match_id(m), kickoff=m["kickoff"], comp=esc(m.get("competition","")),
                        home=esc(m.get("home","")), away=esc(m.get("away","")),
@@ -336,12 +417,13 @@ def build_index():
                   f'<div class="dots">{dots}</div></div>') if HEAD else ""
 
     fbp = {p["slug"]: dict(n=esc(p["n"]), club=esc(p["club"]), ini=initials(p["n"]),
+                           img=(1 if (not p.get("photo") and p["slug"] in HAVE_IMG) else 0),
                            next=next_fixture(p)) for p in PLAYERS}
 
     body = f'''
     {news_block}
 
-    <div id="mc-sec" style="display:none">
+    <div id="mc-sec">
       <div class="sec"><h2>Match centre</h2><a class="more" id="mc-more" href="fixtures.html" style="display:none">See all →</a></div>
       <div id="mc"></div>
     </div>
