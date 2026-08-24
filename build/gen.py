@@ -25,27 +25,9 @@ def _int(v, d=0):
     except: return d
 
 def _merge_players():
-    """Three layers, lowest first:
-         scraper/players_list.csv  — the roster (name, club, position)
-         data/api/players.csv      — scraped stats, keyed on slug
-         data/manual/players.csv   — your edits, always win
-       A manual row with locked=yes ignores the scraped data entirely."""
-    roster = {}
-    roster_path = os.path.join(HERE, "..", "scraper", "players_list.csv")
-    if os.path.exists(roster_path):
-        with open(roster_path, newline="", encoding="utf-8") as f:
-            for r in csv.DictReader(f):
-                if r.get("slug"): roster[r["slug"]] = r
-
-    api = {}
-    for r in _rows("api/players.csv"):
-        if not r.get("slug"): continue
-        base = dict(roster.get(r["slug"], {}))          # name/club/pos from the roster
-        for k, v in r.items():
-            if (v or "").strip(): base[k] = v            # stats layer on top
-        api[r["slug"]] = base
-    for slug, r in roster.items():                       # roster-only players still show
-        api.setdefault(slug, dict(r))
+    """API layer provides the facts; manual layer overrides any non-empty cell.
+    A manual row with locked=yes ignores the API entirely."""
+    api = {r["slug"]: r for r in _rows("api/players.csv") if r.get("slug")}
     man = {r["slug"]: r for r in _rows("manual/players.csv") if r.get("slug")}
     out = {}
     for slug in set(api) | set(man):
@@ -181,37 +163,6 @@ def shell(title, desc, root, active, body, extra_head="", canonical="", body_att
 <style>{CSS}</style>{extra_head}
 </head>
 <body{body_attr}>
-<div id="fbload" aria-hidden="true">
-  <div class="fbl-mark">footballers<i>.ie</i></div>
-  <div class="fbl-pitch">
-    <div class="fbl-ball"><i></i></div>
-    <svg class="fbl-boot" viewBox="0 0 40 44" aria-hidden="true">
-      <g class="fbl-leg">
-        <line x1="20" y1="2" x2="20" y2="24"/>
-        <line x1="20" y1="24" x2="15" y2="38"/>
-        <line x1="15" y1="38" x2="31" y2="40"/>
-      </g>
-    </svg>
-  </div>
-</div>
-<script>
-/* hide the loader as soon as the page is ready — kept short on purpose */
-(function(){{
-  var el=document.getElementById('fbload');
-  if(!el) return;
-  var t0=Date.now(), MIN=2150;
-  function done(){{
-    var wait=Math.max(0, MIN-(Date.now()-t0));
-    setTimeout(function(){{
-      el.classList.add('out');
-      setTimeout(function(){{ if(el.parentNode) el.parentNode.removeChild(el); }}, 340);
-    }}, wait);
-  }}
-  if(document.readyState==='complete') done();
-  else window.addEventListener('load', done);
-  setTimeout(done, 3600);   // never let it hang
-}})();
-</script>
 <div class="wrap">
 <nav>
   <a class="mark" href="{root}index.html">footballers<i>.ie</i></a>
@@ -284,17 +235,8 @@ def initials(name):
     parts = [p for p in name.split() if p]
     return (parts[0][0] + parts[-1][0]).upper() if len(parts) > 1 else (parts[0][:2].upper() if parts else "?")
 
-IMG_DIR = os.path.join(HERE, "..", "img", "players")
-HAVE_IMG = set()
-if os.path.isdir(IMG_DIR):
-    HAVE_IMG = {f.rsplit(".",1)[0] for f in os.listdir(IMG_DIR) if f.lower().endswith((".png",".jpg",".jpeg",".webp"))}
-
 def avatar(p, root="", size="lg"):
     cls = "pavatar" + (" sm" if size == "sm" else "")
-    if not p.get("photo") and p["slug"] in HAVE_IMG:
-        return (f'<div class="{cls}"><img src="{root}img/players/{p["slug"]}.png" '
-                f'alt="{esc(p["n"])}" loading="lazy" '
-                f'onerror="this.parentNode.innerHTML=\'<span>{initials(p["n"])}</span>\'"></div>')
     if p.get("photo"):
         src_url = p["photo"] if p["photo"].startswith("http") else f'{root}{p["photo"]}'
         return (f'<div class="{cls}"><img src="{esc(src_url)}" alt="{esc(p["n"])}" loading="lazy" '
@@ -399,7 +341,7 @@ def build_index():
     body = f'''
     {news_block}
 
-    <div id="mc-sec">
+    <div id="mc-sec" style="display:none">
       <div class="sec"><h2>Match centre</h2><a class="more" id="mc-more" href="fixtures.html" style="display:none">See all →</a></div>
       <div id="mc"></div>
     </div>
