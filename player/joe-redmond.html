@@ -628,6 +628,14 @@ img,svg,iframe{max-width:100%}
   .fbl-ball{opacity:1}
   .fbl-boot{opacity:1;transform:none}
 }
+
+/* ============ THIS WEEK ============ */
+.wkgroup{margin-bottom:20px}
+.wklabel{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--teal);margin:0 0 8px}
+.wkh{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--mute);margin:10px 0 6px;display:flex;justify-content:space-between}
+.wkh span{opacity:.6}
 </style>
 </head>
 <body data-player="joe-redmond">
@@ -731,7 +739,7 @@ img,svg,iframe{max-width:100%}
   Every Irish player at a professional club — abroad, senior international and League of Ireland
 </footer>
 </div>
-<script>window.FB_SUBSCRIBE_URL="";</script>
+<script>window.FB_SUBSCRIBE_URL="";window.FB_ACCOUNTS=[{"email": "business@matchweek.ie", "name": "Owner", "role": "owner", "hash": "1b9f81291f1a6b0e6c1b135aa1ab58608e1f96e88ef490935ec97041b89b1450"}, {"email": "editor@footballers.ie", "name": "Editor", "role": "editor", "hash": "1d5c990ab4b660edea1b9a24484dffee52d12f9b68c369ddab8b02ec5d79a789"}, {"email": "writer@footballers.ie", "name": "Example Writer", "role": "journalist", "hash": "0f1f96b3f10518d3ab8cc7d4aa1aba02406779d55632fb6f9f3613d7d3f04e19"}];</script>
 <script>/* footballers.ie — favourites
    Stored in the browser (localStorage). No account needed.
    Powers: star toggles, the "Your players" rail, and the alerts page. */
@@ -1147,6 +1155,136 @@ img,svg,iframe{max-width:100%}
   var d = new Date();
   var mon = ['JAN','FEB','MAR','APR','MAY','JUN','JUL','AUG','SEP','OCT','NOV','DEC'];
   el.textContent = d.getDate() + ' ' + mon[d.getMonth()];
+})();
+
+/* ---------- ADMIN DOOR ----------
+   Double-click the wordmark to sign in. Accounts and roles come from
+   data/manual/accounts.csv. Remembered after the first sign-in.
+   Note: this check runs in the browser — it keeps visitors out, it is not
+   server-side security. */
+(function () {
+  var SESS = 'fb_session_v1';
+  var mark = document.querySelector('.mark');
+  if (!mark) return;
+
+  function adminUrl() {
+    var inSub = /\/(player|club|news|match)\//.test(location.pathname);
+    return (inSub ? '../' : '') + 'build/admin.html';
+  }
+  function session() {
+    try { return JSON.parse(localStorage.getItem(SESS) || 'null'); } catch (e) { return null; }
+  }
+
+  async function sha256(s) {
+    if (window.crypto && crypto.subtle && window.isSecureContext) {
+      var buf = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(s));
+      return Array.from(new Uint8Array(buf)).map(function (b) {
+        return b.toString(16).padStart(2, '0');
+      }).join('');
+    }
+    return sha256js(s);
+  }
+  function sha256js(ascii) {
+    function rr(n, x) { return (x >>> n) | (x << (32 - n)); }
+    var K = [], H = [], i, j, p = 2, primes = [];
+    function isP(n){ for(var d=2;d*d<=n;d++) if(n%d===0) return false; return true; }
+    while (primes.length < 64) { if (isP(p)) primes.push(p); p++; }
+    for (i = 0; i < 64; i++) K[i] = (Math.pow(primes[i], 1/3) % 1 * Math.pow(2,32)) | 0;
+    for (i = 0; i < 8; i++) H[i] = (Math.pow(primes[i], 1/2) % 1 * Math.pow(2,32)) | 0;
+    var bytes = unescape(encodeURIComponent(ascii)), len = bytes.length, words = [];
+    for (i = 0; i < len; i++) words[i>>2] |= bytes.charCodeAt(i) << ((3 - i % 4) * 8);
+    words[len>>2] |= 0x80 << ((3 - len % 4) * 8);
+    words[((len + 8 >> 6) + 1) * 16 - 1] = len * 8;
+    var w = [], a,b,c,d,e,f,g,h,t1,t2;
+    for (j = 0; j < words.length; j += 16) {
+      a=H[0];b=H[1];c=H[2];d=H[3];e=H[4];f=H[5];g=H[6];h=H[7];
+      for (i = 0; i < 64; i++) {
+        w[i] = i < 16 ? (words[j+i]|0) :
+          (rr(17,w[i-2])^rr(19,w[i-2])^(w[i-2]>>>10)) + (w[i-7]|0) +
+          (rr(7,w[i-15])^rr(18,w[i-15])^(w[i-15]>>>3)) + (w[i-16]|0);
+        t1 = h + (rr(6,e)^rr(11,e)^rr(25,e)) + ((e&f)^(~e&g)) + K[i] + (w[i]|0);
+        t2 = (rr(2,a)^rr(13,a)^rr(22,a)) + ((a&b)^(a&c)^(b&c));
+        h=g;g=f;f=e;e=(d+t1)|0;d=c;c=b;b=a;a=(t1+t2)|0;
+      }
+      H[0]=(H[0]+a)|0;H[1]=(H[1]+b)|0;H[2]=(H[2]+c)|0;H[3]=(H[3]+d)|0;
+      H[4]=(H[4]+e)|0;H[5]=(H[5]+f)|0;H[6]=(H[6]+g)|0;H[7]=(H[7]+h)|0;
+    }
+    return H.map(function(x){ return ((x>>>0).toString(16)).padStart(8,'0'); }).join('');
+  }
+
+  function open() {
+    if (session()) { location.href = adminUrl(); return; }
+
+    var wrap = document.createElement('div');
+    wrap.className = 'fbgate';
+    wrap.innerHTML =
+      '<div class="fbg-card" role="dialog" aria-modal="true">' +
+        '<button class="fbg-x" aria-label="Close">×</button>' +
+        '<h3>Sign in</h3><p>Staff access.</p>' +
+        '<form class="fbg-form" style="flex-direction:column">' +
+          '<input type="email" id="ae" placeholder="Email" autocomplete="username" required>' +
+          '<input type="password" id="ap" placeholder="Password" autocomplete="current-password" required>' +
+          '<button type="submit" style="width:100%">Sign in</button>' +
+        '</form>' +
+        '<div class="nlnote" id="aerr" style="display:none">Wrong email or password.</div>' +
+      '</div>';
+    document.body.appendChild(wrap);
+    requestAnimationFrame(function () { wrap.classList.add('in'); });
+    setTimeout(function () { var e = wrap.querySelector('#ae'); if (e) e.focus(); }, 240);
+
+    function close() {
+      wrap.classList.remove('in');
+      setTimeout(function () { if (wrap.parentNode) wrap.parentNode.removeChild(wrap); }, 280);
+      document.removeEventListener('keydown', onKey);
+    }
+    function onKey(e) { if (e.key === 'Escape') close(); }
+    document.addEventListener('keydown', onKey);
+    wrap.querySelector('.fbg-x').addEventListener('click', close);
+    wrap.addEventListener('click', function (e) { if (e.target === wrap) close(); });
+
+    wrap.querySelector('.fbg-form').addEventListener('submit', async function (e) {
+      e.preventDefault();
+      var em = wrap.querySelector('#ae').value.trim().toLowerCase();
+      var pw = wrap.querySelector('#ap').value;
+      var h = await sha256(em + ':' + pw);
+      var accounts = window.FB_ACCOUNTS || [];
+      var found = null;
+      for (var i = 0; i < accounts.length; i++) {
+        if ((accounts[i].email || '').toLowerCase() === em && accounts[i].hash === h) { found = accounts[i]; break; }
+      }
+      if (found) {
+        try {
+          localStorage.setItem(SESS, JSON.stringify({
+            email: found.email, name: found.name, role: found.role, hash: h
+          }));
+        } catch (err) {}
+        close();
+        location.href = adminUrl();
+      } else {
+        wrap.querySelector('#aerr').style.display = 'block';
+        wrap.querySelector('#ap').value = '';
+        wrap.querySelector('#ap').focus();
+      }
+    });
+  }
+
+  var clicks = 0, timer = null;
+  mark.addEventListener('click', function (e) {
+    e.preventDefault();
+    clicks++;
+    if (clicks === 1) {
+      timer = setTimeout(function () { clicks = 0; location.href = mark.getAttribute('href'); }, 260);
+    } else {
+      clearTimeout(timer); clicks = 0; open();
+    }
+  });
+  var hold;
+  mark.addEventListener('touchstart', function () {
+    hold = setTimeout(function () { clicks = 0; clearTimeout(timer); open(); }, 650);
+  }, {passive:true});
+  ['touchend','touchmove','touchcancel'].forEach(function (ev) {
+    mark.addEventListener(ev, function () { clearTimeout(hold); }, {passive:true});
+  });
 })();
 </script>
 </body>

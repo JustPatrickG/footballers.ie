@@ -133,9 +133,10 @@ def load():
     news = [(r["tag"], r["headline"], r["standfirst"], r["player_slug"]) for r in _rows("manual/news.csv")]
     matches = _merge_rows("matches.csv", ("kickoff","home","away"))
     articles = sorted(_rows("manual/articles.csv"), key=lambda r: r.get("date",""), reverse=True)
-    return players, ireland, news, matches, articles
+    accounts = _rows("manual/accounts.csv")
+    return players, ireland, news, matches, articles, accounts
 
-PLAYERS, IRELAND, NEWS, MATCHES, ARTICLES = load()
+PLAYERS, IRELAND, NEWS, MATCHES, ARTICLES, ACCOUNTS = load()
 TIERS = {"abroad-top":"Abroad — top divisions",
          "abroad-lower":"Abroad — second tier & smaller leagues",
          "loi":"League of Ireland"}
@@ -258,7 +259,7 @@ def shell(title, desc, root, active, body, extra_head="", canonical="", body_att
   Every Irish player at a professional club — abroad, senior international and League of Ireland
 </footer>
 </div>
-<script>window.FB_SUBSCRIBE_URL={json.dumps(NEWSLETTER_ACTION)};</script>
+<script>window.FB_SUBSCRIBE_URL={json.dumps(NEWSLETTER_ACTION)};window.FB_ACCOUNTS={json.dumps([{k:a.get(k,"") for k in ("email","name","role","hash")} for a in ACCOUNTS])};</script>
 <script>{APPJS}</script>
 </body>
 </html>"""
@@ -352,6 +353,35 @@ def signup(root="", compact=False):
       <div class="nlfine">Written by hand. No spam, unsubscribe any time.</div>
     </div>'''
 
+
+def week_activity():
+    """Goals and assists from the last few days, split abroad / League of Ireland."""
+    import datetime
+    ftdates = set()
+    for m in MATCHES:
+        if (m.get("status") or "") != "ft": continue
+        k = (m.get("kickoff") or "")
+        try:
+            d = datetime.datetime.fromisoformat(k.replace("Z","+00:00"))
+        except Exception:
+            continue
+        if (datetime.datetime.now(datetime.timezone.utc) - d).days <= 5:
+            ftdates.add(d.strftime("%d %b").lstrip("0"))
+
+    def norm(s): return (s or "").strip().lstrip("0")
+    out = []
+    for p in PLAYERS:
+        for (d, opp, sc, comp, mins, g, a) in p["results"]:
+            if norm(d) not in ftdates: continue
+            if not (g or a): continue
+            club = (p["club"] or "").replace(" FC","")
+            out.append(dict(p=p, g=g, a=a, opp=(opp or "").replace(" FC",""),
+                            score=sc, comp=comp,
+                            line=f'{club} {sc} {(opp or "").replace(" FC","")}' if sc else f'v {opp}',
+                            loi=(p["tier"] == "loi")))
+    out.sort(key=lambda x: (-x["g"], -x["a"]))
+    return out
+
 # ================= HOME =================
 def build_index():
     GOALS = [p for p in PLAYERS if p["results"] and (p["results"][0][5] or p["results"][0][6])]
@@ -416,6 +446,37 @@ def build_index():
                   f'<div class="carousel-wrap"><div class="carousel" id="carousel">{slides}</div>'
                   f'<div class="dots">{dots}</div></div>') if HEAD else ""
 
+    # ---- this week: goals & assists, abroad vs LOI ----
+    wk = week_activity()
+    def wk_rows(items, kind):
+        rows = ""
+        for it in items:
+            p = it["p"]
+            ev = (f'{it["g"]} goal' + ("s" if it["g"] > 1 else "")) if kind == "g" else \
+                 (f'{it["a"]} assist' + ("s" if it["a"] > 1 else ""))
+            icon = "⚽" if kind == "g" else "🅰"
+            rows += (f'<a class="plrow" href="{plink(p)}">{avatar(p,"","sm")}'
+                     f'<div class="nm">{esc(p["n"])} '
+                     f'<span class="cl">{icon} {ev} · {esc(it["line"])}</span></div>'
+                     f'<div class="ev"></div><div class="mn">{rating_chip(p, True)}</div>{star(p)}</a>')
+        return rows
+
+    def wk_block(label, arr):
+        goals = [x for x in arr if x["g"]][:5]
+        assists = [x for x in arr if x["a"] and not x["g"]][:5]
+        if not goals and not assists: return ""
+        out = f'<div class="wkgroup"><div class="wklabel">{label}</div>'
+        if goals:   out += f'<h4 class="wkh">Goals <span>{len(goals)}</span></h4><div class="tiergroup">{wk_rows(goals,"g")}</div>'
+        if assists: out += f'<h4 class="wkh">Assists <span>{len(assists)}</span></h4><div class="tiergroup">{wk_rows(assists,"a")}</div>'
+        return out + '</div>'
+
+    week_block = ""
+    ab = wk_block("Abroad", [x for x in wk if not x["loi"]])
+    lo = wk_block("League of Ireland", [x for x in wk if x["loi"]])
+    if ab or lo:
+        week_block = (f'<div class="sec"><h2>This week</h2>'
+                      f'<span class="more" style="border:0">goals &amp; assists</span></div>{ab}{lo}')
+
     fbp = {p["slug"]: dict(n=esc(p["n"]), club=esc(p["club"]), ini=initials(p["n"]),
                            img=(1 if (not p.get("photo") and p["slug"] in HAVE_IMG) else 0),
                            next=next_fixture(p)) for p in PLAYERS}
@@ -427,6 +488,8 @@ def build_index():
       <div class="sec"><h2>Match centre</h2><a class="more" id="mc-more" href="fixtures.html" style="display:none">See all →</a></div>
       <div id="mc"></div>
     </div>
+
+    {week_block}
 
     <div id="myplayers-sec" style="display:none">
       <div class="sec"><h2>Your players <span class="cnt" data-fav-count>0</span></h2>

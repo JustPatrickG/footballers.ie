@@ -602,3 +602,11 @@ img,svg,iframe{max-width:100%}
   .fbl-ball{opacity:1}
   .fbl-boot{opacity:1;transform:none}
 }
+
+/* ============ THIS WEEK ============ */
+.wkgroup{margin-bottom:20px}
+.wklabel{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--teal);margin:0 0 8px}
+.wkh{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--mute);margin:10px 0 6px;display:flex;justify-content:space-between}
+.wkh span{opacity:.6}

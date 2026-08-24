@@ -3,239 +3,464 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Footballers — admin</title>
+<title>footballers.ie — admin</title>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root{--bg:#0C0F10;--panel:#151A1B;--panel2:#181E1F;--line:#242B2C;--white:#EFF3F1;
       --mute:#77837F;--yellow:#F5C518;--teal:#35D4BF;--red:#FF5A48}
 *{box-sizing:border-box;margin:0;padding:0}
-body{background:var(--bg);color:var(--white);font-family:'Space Grotesk',sans-serif;font-size:14px;padding:20px}
-.wrap{max-width:1400px;margin:0 auto}
-h1{font-size:22px;margin-bottom:4px}
-.sub{color:var(--mute);font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase}
-.bar{display:flex;gap:8px;flex-wrap:wrap;margin:18px 0}
-button,.btn{background:var(--panel);border:1px solid var(--line);color:var(--white);
-  padding:10px 15px;border-radius:6px;cursor:pointer;font-family:inherit;font-size:13px}
+body{background:var(--bg);color:var(--white);font-family:'Space Grotesk',sans-serif;font-size:14px}
+.top{position:sticky;top:0;z-index:20;background:var(--bg);border-bottom:1px solid var(--line);padding:14px 20px}
+.toprow{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+h1{font-size:19px;font-weight:700}
+h1 i{font-style:normal;color:var(--yellow)}
+.badge{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;
+  padding:4px 9px;border-radius:20px;border:1px solid var(--line);color:var(--mute)}
+.badge.ok{border-color:rgba(53,212,191,.4);color:var(--teal)}
+.spacer{flex:1}
+button,.btn{background:var(--panel);border:1px solid var(--line);color:var(--white);padding:9px 14px;
+  border-radius:7px;cursor:pointer;font-family:inherit;font-size:13px}
 button:hover{background:var(--panel2)}
 button.pri{background:var(--yellow);color:#0C0F10;border-color:var(--yellow);font-weight:700}
-button.danger{border-color:#5a2a26;color:var(--red)}
+button:disabled{opacity:.4;cursor:not-allowed}
+.tabs{display:flex;gap:6px;margin-top:12px;flex-wrap:wrap}
+.tab{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;
+  padding:8px 14px;border-radius:20px;border:1px solid var(--line);background:var(--panel);color:var(--mute)}
+.tab.on{background:var(--yellow);color:#0C0F10;border-color:var(--yellow);font-weight:600}
+.tab span{opacity:.7;margin-left:6px}
+.wrap{padding:18px 20px 60px}
+.bar{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:14px}
 input,select,textarea{background:var(--panel);border:1px solid var(--line);color:var(--white);
-  padding:9px 11px;border-radius:6px;font-family:inherit;font-size:13px}
-textarea{width:100%;min-height:190px;font-family:'IBM Plex Mono',monospace;font-size:13px;line-height:1.6}
-.panel{border:1px solid var(--line);border-radius:8px;background:var(--panel);padding:18px;margin-bottom:18px}
-.panel h2{font-size:12px;font-family:'IBM Plex Mono',monospace;letter-spacing:.16em;
-  text-transform:uppercase;color:var(--yellow);margin-bottom:12px}
+  padding:9px 11px;border-radius:7px;font-family:inherit;font-size:13px}
+input[type=search]{flex:1;min-width:180px}
+textarea{width:100%;min-height:150px;font-family:'IBM Plex Mono',monospace;line-height:1.6}
 .hint{color:var(--mute);font-size:12.5px;line-height:1.6;margin-bottom:12px}
-.hint code{background:var(--bg);padding:2px 6px;border-radius:3px;color:var(--teal);font-family:'IBM Plex Mono',monospace}
-table{width:100%;border-collapse:collapse;font-size:13px}
-th{text-align:left;font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.1em;
-  text-transform:uppercase;color:var(--mute);padding:9px 7px;border-bottom:1px solid var(--line);
-  position:sticky;top:0;background:var(--panel2);white-space:nowrap}
-td{padding:3px 4px;border-bottom:1px solid #1B2122}
-td input,td select{width:100%;padding:6px 7px;font-size:12.5px;border-color:transparent;background:transparent}
-td input:focus,td select:focus{border-color:var(--yellow);background:var(--bg);outline:none}
-td.slug{font-family:'IBM Plex Mono',monospace;color:var(--mute);font-size:11px;padding-left:8px;white-space:nowrap}
-.src{font-family:'IBM Plex Mono',monospace;font-size:9px;padding:2px 6px;border-radius:3px;white-space:nowrap}
-.src.manual{background:rgba(245,197,24,.15);color:var(--yellow)}
-.src.api{background:rgba(53,212,191,.14);color:var(--teal)}
-.tblwrap{max-height:62vh;overflow:auto;border:1px solid var(--line);border-radius:8px}
-.count{font-family:'IBM Plex Mono',monospace;color:var(--mute);font-size:12px;padding:8px 2px}
-.ok{color:var(--teal)}
-.warn{color:var(--yellow)}
+.hint code{background:var(--panel);padding:2px 6px;border-radius:3px;color:var(--teal);font-family:'IBM Plex Mono',monospace}
+.tblwrap{max-height:65vh;overflow:auto;border:1px solid var(--line);border-radius:8px}
+table{width:100%;border-collapse:collapse;font-size:12.5px}
+th{position:sticky;top:0;background:var(--panel2);text-align:left;padding:9px 7px;white-space:nowrap;
+  font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--mute);border-bottom:1px solid var(--line);z-index:2}
+td{padding:2px 3px;border-bottom:1px solid #1B2122;vertical-align:top}
+td input{width:100%;min-width:80px;padding:6px;font-size:12.5px;border-color:transparent;background:transparent}
+td input:focus{border-color:var(--yellow);background:var(--bg);outline:none}
+td.wide input{min-width:190px}
+td.num input{min-width:56px;text-align:right;font-family:'IBM Plex Mono',monospace}
+.rowdel{color:var(--red);background:none;border:0;font-size:16px;padding:0 8px;cursor:pointer}
+.count{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--mute);padding:6px 0}
+.panel{border:1px solid var(--line);border-radius:8px;background:var(--panel);padding:18px;margin-bottom:16px}
+.panel h2{font-size:12px;font-family:'IBM Plex Mono',monospace;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--yellow);margin-bottom:11px}
 .note{font-family:'IBM Plex Mono',monospace;font-size:12px;margin-top:10px}
-.rowdel{color:var(--red);cursor:pointer;padding:0 8px;background:none;border:0;font-size:16px}
+.ok{color:var(--teal)} .warn{color:var(--yellow)}
+.artrow{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:10px}
+label{display:block;font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--mute);margin-bottom:4px}
+.artrow input{width:100%}
+.artfull{margin-bottom:10px}
+.artfull input{width:100%}
+.artlist{display:grid;gap:8px;margin-bottom:16px}
+.artitem{display:flex;gap:10px;align-items:center;background:var(--panel2);border:1px solid var(--line);
+  border-radius:7px;padding:10px 12px;cursor:pointer}
+.artitem:hover{border-color:var(--mute)}
+.artitem.on{border-color:var(--yellow)}
+.artitem b{font-size:13px}
+.artitem small{color:var(--mute);font-family:'IBM Plex Mono',monospace;font-size:10px}
+.deploy{font-family:'IBM Plex Mono',monospace;font-size:12px;background:var(--bg);border:1px solid var(--line);
+  border-radius:7px;padding:12px;color:var(--teal);overflow-x:auto;white-space:pre;margin-top:8px}
+@media(max-width:700px){ .artrow{grid-template-columns:1fr} }
 </style>
 </head>
 <body>
-<div class="wrap">
-  <h1>Footballers — admin</h1>
-  <div class="sub">Local editor · edits the manual layer only</div>
 
-  <div class="panel">
-    <h2>1 · Bulk add players</h2>
-    <p class="hint">
-      Paste your list — one player per line, <code>Name, Club</code>.
-      Optionally add position and league: <code>Name, Club, POS, League</code>.<br>
-      Lines starting with <code>#</code> are ignored. Existing players are skipped, not duplicated.
-    </p>
-    <textarea id="paste" placeholder="Evan Ferguson, Roma
-Troy Parrott, Ajax
-Cathal McCarthy, Hull City, MID, Championship
-Rocco Vata, Watford, FWD, Championship"></textarea>
-    <div class="bar">
-      <button class="pri" onclick="importPaste()">Add to table</button>
-      <button onclick="document.getElementById('paste').value=''">Clear box</button>
-    </div>
-    <div id="importnote" class="note"></div>
+<div class="top">
+  <div class="toprow">
+    <h1>footballers<i>.ie</i> admin</h1>
+    <span class="badge" id="whoami"></span>
+    <span class="badge" id="folderbadge">No folder connected</span>
+    <span class="spacer"></span>
+    <button id="connect" class="pri">Connect data folder</button>
+    <button id="saveall" disabled>Save all</button>
+    <button id="signout">Sign out</button>
   </div>
-
-  <div class="panel">
-    <h2>2 · Edit</h2>
-    <div class="bar">
-      <input id="search" placeholder="Search name or club" oninput="render()" style="flex:1;min-width:200px">
-      <select id="tierf" onchange="render()">
-        <option value="">All tiers</option>
-        <option value="abroad-top">Abroad — top</option>
-        <option value="abroad-lower">Abroad — lower</option>
-        <option value="loi">League of Ireland</option>
-      </select>
-      <button onclick="addBlank()">+ Add one</button>
-    </div>
-    <div class="count" id="count"></div>
-    <div class="tblwrap">
-      <table>
-        <thead><tr>
-          <th></th><th>Slug</th><th>Name</th><th>Club</th><th>League</th><th>Tier</th>
-          <th>Pos</th><th>Age</th><th>Cap status</th><th>Youth caps</th><th>Eligible for</th><th>Photo URL</th><th>Credit</th>
-          <th>Lock</th><th></th>
-        </tr></thead>
-        <tbody id="tbody"></tbody>
-      </table>
-    </div>
-  </div>
-
-  <div class="panel">
-    <h2>3 · Save</h2>
-    <p class="hint">
-      Downloads <code>players.csv</code>. Put it in <code>data/manual/</code>, replacing the old one,
-      then commit and push — the site rebuilds itself.<br>
-      Blank cells fall back to the API. Anything you type here wins. <code>Lock</code> = ignore the API entirely for that player.
-    </p>
-    <div class="bar">
-      <button class="pri" onclick="exportCsv()">Download players.csv</button>
-      <label class="btn" style="display:inline-flex;align-items:center;gap:8px">
-        Load existing CSV
-        <input type="file" id="file" accept=".csv" style="display:none" onchange="loadCsv(event)">
-      </label>
-      <button class="danger" onclick="if(confirm('Clear the whole table?')){rows=[];render();}">Clear table</button>
-    </div>
-    <div id="savenote" class="note"></div>
-  </div>
+  <div class="tabs" id="tabs"></div>
 </div>
 
+<div class="wrap"><div id="view"></div></div>
+
 <script>
-const COLS = ["slug","name","club","league","tier","pos","age","born","foot","cap_status",
-              "senior_caps","senior_goals","senior_debut","youth","eligible","ireland_level",
-              "s_apps","s_starts","s_goals","s_assists","s_mins","s_yellow","s_red",
-              "c_apps","c_goals","c_assists","injury","photo","photo_credit","locked","notes"];
-let rows = [];
+/* gate: must have signed in via the site */
+var SESSION=null;
+(function(){
+  try{ SESSION=JSON.parse(localStorage.getItem('fb_session_v1')||'null'); }catch(e){}
+  if(!SESSION){
+    document.body.innerHTML='<div style="min-height:100vh;display:grid;place-items:center;'+
+      'font-family:Space Grotesk,sans-serif;color:#EFF3F1;text-align:center;padding:24px">'+
+      '<div><div style="font-size:20px;font-weight:700;margin-bottom:10px">Not signed in</div>'+
+      '<div style="color:#77837F;font-size:14px;line-height:1.6;max-width:36ch">Go to the site and '+
+      'double-click the <b>footballers.ie</b> logo in the top left to sign in.</div>'+
+      '<div style="margin-top:18px"><a href="../index.html" style="color:#F5C518;font-family:IBM Plex Mono,monospace;'+
+      'font-size:12px;letter-spacing:.1em;text-transform:uppercase">← Back to site</a></div></div></div>';
+    throw new Error('not signed in');
+  }
+})();
 
+/* what each role can touch */
+var ROLES = {
+  owner:      {label:'Owner',      tabs:'*',                                          note:'Full access, including accounts.'},
+  admin:      {label:'Admin',      tabs:['players','matches','articles','fixtures','results','ireland'], note:'Everything except accounts.'},
+  editor:     {label:'Editor',     tabs:['articles','players'],                       note:'News and player details.'},
+  journalist: {label:'Journalist', tabs:['articles'],  ownOnly:true,                  note:'Write and edit your own articles.'},
+  data:       {label:'Data',       tabs:['players','matches','fixtures','results','ireland'], note:'Stats and fixtures, no news.'},
+  viewer:     {label:'Viewer',     tabs:'*', readOnly:true,                           note:'Can look, cannot change anything.'}
+};
+function role(){ return ROLES[(SESSION.role||'').toLowerCase()] || ROLES.viewer; }
+function can(tab){ var r=role(); return r.tabs==='*' || r.tabs.indexOf(tab)>-1; }
+function readOnly(){ return !!role().readOnly; }
+function ownOnly(){ return !!role().ownOnly; }
+</script>
+
+<script>
+const FILES = {
+  players:  {path:'manual/players.csv',  label:'Players'},
+  matches:  {path:'api/matches.csv',     label:'Matches'},
+  articles: {path:'manual/articles.csv', label:'News'},
+  fixtures: {path:'manual/fixtures.csv', label:'Fixtures'},
+  results:  {path:'manual/results.csv',  label:'Results'},
+  ireland:  {path:'manual/ireland.csv',  label:'Ireland'},
+  accounts: {path:'manual/accounts.csv', label:'Accounts'},
+};
+const WIDE=['name','club','league','headline','standfirst','author','born','eligible','youth','players','home','away','opponent','competition','image','photo','notes','body'];
+const NUMS=['age','senior_caps','senior_goals','s_apps','s_starts','s_goals','s_assists','s_mins','s_yellow','s_red','c_apps','c_goals','c_assists','avg_rating','minutes','goals','assists','home_score','away_score','minute'];
+
+let dirHandle=null, data={}, active='players', selectedArticle=0;
+setTimeout(()=>{},0);
+
+function parseCSV(text){
+  const rows=[]; let row=[], cur='', q=false;
+  for(let i=0;i<text.length;i++){
+    const c=text[i];
+    if(q){
+      if(c==='"'&&text[i+1]==='"'){cur+='"';i++;}
+      else if(c==='"'){q=false;}
+      else cur+=c;
+    } else {
+      if(c==='"') q=true;
+      else if(c===','){row.push(cur);cur='';}
+      else if(c==='\n'){row.push(cur);rows.push(row);row=[];cur='';}
+      else if(c!=='\r') cur+=c;
+    }
+  }
+  if(cur!==''||row.length){row.push(cur);rows.push(row);}
+  if(!rows.length) return {cols:[],rows:[]};
+  const cols=rows[0].map(s=>s.trim());
+  const out=rows.slice(1).filter(r=>r.some(v=>(v||'').trim()))
+    .map(r=>{const o={};cols.forEach((c,i)=>o[c]=(r[i]!==undefined?r[i]:''));return o;});
+  return {cols,rows:out};
+}
+function toCSV(cols,rows){
+  const esc=v=>{v=String(v==null?'':v);return /[",\n]/.test(v)?'"'+v.replace(/"/g,'""')+'"':v;};
+  return [cols.join(',')].concat(rows.map(r=>cols.map(c=>esc(r[c])).join(','))).join('\n')+'\n';
+}
 function slugify(n){
-  return n.normalize("NFKD").replace(/[\u0300-\u036f]/g,"")
-          .replace(/['\u2019]/g,"")
-          .replace(/[^a-zA-Z0-9]+/g,"-").replace(/^-|-$/g,"").toLowerCase();
-}
-function blank(){ const o={}; COLS.forEach(c=>o[c]=""); return o; }
-
-function importPaste(){
-  const txt = document.getElementById('paste').value;
-  let added=0, skipped=0;
-  txt.split(/\r?\n/).forEach(line=>{
-    line=line.trim();
-    if(!line || line.startsWith('#')) return;
-    const parts=line.split(',').map(s=>s.trim());
-    const name=parts[0]; if(!name) return;
-    const slug=slugify(name);
-    if(rows.some(r=>r.slug===slug)){ skipped++; return; }
-    const r=blank();
-    r.slug=slug; r.name=name;
-    r.club=parts[1]||""; r.pos=parts[2]||""; r.league=parts[3]||"";
-    if(!r.tier) r.tier = /league of ireland|loi/i.test(r.league) ? "loi" : "abroad-lower";
-    r.cap_status="uncapped";
-    r.eligible="Republic of Ireland:eligible";
-    rows.push(r); added++;
-  });
-  document.getElementById('importnote').innerHTML =
-    `<span class="ok">Added ${added}.</span>` + (skipped?` <span class="warn">${skipped} already in the table.</span>`:'');
-  render();
-}
-
-function addBlank(){ const r=blank(); r.eligible="Republic of Ireland:eligible"; r.cap_status="uncapped"; rows.unshift(r); render(); }
-
-function render(){
-  const q=(document.getElementById('search').value||'').toLowerCase();
-  const tf=document.getElementById('tierf').value;
-  const tb=document.getElementById('tbody');
-  tb.innerHTML='';
-  let shown=0;
-  rows.forEach((r,i)=>{
-    if(tf && r.tier!==tf) return;
-    if(q && !((r.name+' '+r.club).toLowerCase().includes(q))) return;
-    shown++;
-    const tr=document.createElement('tr');
-    const filled = r.club||r.league||r.pos;
-    tr.innerHTML=`
-      <td><span class="src ${filled?'manual':'api'}">${filled?'MANUAL':'API'}</span></td>
-      <td class="slug">${r.slug||'—'}</td>
-      <td><input value="${esc(r.name)}" oninput="upd(${i},'name',this.value,true)"></td>
-      <td><input value="${esc(r.club)}" oninput="upd(${i},'club',this.value)"></td>
-      <td><input value="${esc(r.league)}" oninput="upd(${i},'league',this.value)"></td>
-      <td><select onchange="upd(${i},'tier',this.value)">
-        ${['','abroad-top','abroad-lower','loi'].map(t=>`<option ${r.tier===t?'selected':''} value="${t}">${t||'—'}</option>`).join('')}
-      </select></td>
-      <td><select onchange="upd(${i},'pos',this.value)">
-        ${['','GK','DEF','MID','FWD'].map(p=>`<option ${r.pos===p?'selected':''} value="${p}">${p||'—'}</option>`).join('')}
-      </select></td>
-      <td><input style="width:52px" value="${esc(r.age)}" oninput="upd(${i},'age',this.value)"></td>
-      <td><select onchange="upd(${i},'cap_status',this.value)">
-        ${['uncapped','youth','senior_friendly','senior_comp'].map(c=>`<option ${r.cap_status===c?'selected':''} value="${c}">${c}</option>`).join('')}
-      </select></td>
-      <td><input value="${esc(r.youth)}" placeholder="U21:4:1:2024" oninput="upd(${i},'youth',this.value)"></td>
-      <td><input value="${esc(r.eligible)}" oninput="upd(${i},'eligible',this.value)"></td>
-      <td><input value="${esc(r.photo)}" placeholder="photos/name.jpg" oninput="upd(${i},'photo',this.value)"></td>
-      <td><input value="${esc(r.photo_credit)}" placeholder="© Photographer" oninput="upd(${i},'photo_credit',this.value)"></td>
-      <td style="text-align:center"><input type="checkbox" ${/^(y|yes|true|1)$/i.test(r.locked)?'checked':''}
-        onchange="upd(${i},'locked',this.checked?'yes':'')" style="width:auto"></td>
-      <td><button class="rowdel" title="Remove" onclick="del(${i})">×</button></td>`;
-    tb.appendChild(tr);
-  });
-  document.getElementById('count').textContent = `${shown} shown · ${rows.length} total`;
+  return (n||'').normalize('NFKD').replace(/[\u0300-\u036f]/g,'')
+    .replace(/['\u2019]/g,'').replace(/[^a-zA-Z0-9]+/g,'-').replace(/^-|-$/g,'').toLowerCase();
 }
 function esc(v){ return String(v==null?'':v).replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(/</g,'&lt;'); }
-function upd(i,k,v,reslug){
-  rows[i][k]=v;
-  if(reslug && v.trim()) rows[i].slug=slugify(v);
-  if(reslug) render();
-}
-function del(i){ rows.splice(i,1); render(); }
 
-function loadCsv(e){
-  const f=e.target.files[0]; if(!f) return;
-  const rd=new FileReader();
-  rd.onload=()=>{
-    const lines=rd.result.split(/\r?\n/).filter(l=>l.trim());
-    const hdr=parseLine(lines[0]);
-    rows=lines.slice(1).map(l=>{
-      const vals=parseLine(l), o=blank();
-      hdr.forEach((h,i)=>{ if(COLS.includes(h)) o[h]=vals[i]||''; });
-      return o;
-    }).filter(r=>r.slug||r.name);
-    document.getElementById('savenote').innerHTML=`<span class="ok">Loaded ${rows.length} rows.</span>`;
-    render();
-  };
-  rd.readAsText(f);
-}
-function parseLine(line){
-  const out=[]; let cur='', q=false;
-  for(let i=0;i<line.length;i++){
-    const c=line[i];
-    if(c==='"'){ if(q && line[i+1]==='"'){cur+='"';i++;} else q=!q; }
-    else if(c===',' && !q){ out.push(cur); cur=''; }
-    else cur+=c;
+async function connect(){
+  if(!window.showDirectoryPicker){
+    alert("This browser can't open folders. Use Chrome, Edge or Brave.");
+    return;
   }
-  out.push(cur); return out.map(s=>s.trim());
+  try{ dirHandle=await window.showDirectoryPicker({mode:'readwrite'}); }
+  catch(e){ return; }
+  await loadAll();
 }
-function exportCsv(){
-  const esc2=v=>{ v=String(v==null?'':v); return /[",\n]/.test(v)?'"'+v.replace(/"/g,'""')+'"':v; };
-  const body=[COLS.join(',')].concat(
-    rows.filter(r=>r.slug||r.name).map(r=>COLS.map(c=>esc2(r[c])).join(','))).join('\n');
-  const blob=new Blob([body],{type:'text/csv'});
-  const a=document.createElement('a');
-  a.href=URL.createObjectURL(blob); a.download='players.csv'; a.click();
-  document.getElementById('savenote').innerHTML=
-    `<span class="ok">Downloaded ${rows.filter(r=>r.slug||r.name).length} rows.</span> Drop it into <code>data/manual/</code>, then push.`;
+async function readFile(rel){
+  const p=rel.split('/'); let d=dirHandle;
+  for(let i=0;i<p.length-1;i++) d=await d.getDirectoryHandle(p[i]);
+  return (await (await d.getFileHandle(p[p.length-1])).getFile()).text();
 }
-render();
+async function writeFile(rel,text){
+  const p=rel.split('/'); let d=dirHandle;
+  for(let i=0;i<p.length-1;i++) d=await d.getDirectoryHandle(p[i],{create:true});
+  const fh=await d.getFileHandle(p[p.length-1],{create:true});
+  const w=await fh.createWritable(); await w.write(text); await w.close();
+}
+async function loadAll(){
+  let loaded=0;
+  for(const k of Object.keys(FILES)){
+    try{ data[k]={...parseCSV(await readFile(FILES[k].path)),dirty:false}; loaded++; }
+    catch(e){ data[k]={cols:[],rows:[],dirty:false}; }
+  }
+  const b=document.getElementById('folderbadge');
+  b.textContent=`Connected · ${loaded}/${Object.keys(FILES).length} files`;
+  b.className='badge ok';
+  document.getElementById('saveall').disabled=false;
+  renderTabs(); render();
+}
+async function saveAll(){
+  if(!dirHandle) return;
+  let n=0;
+  for(const k of Object.keys(FILES)){
+    const d=data[k];
+    if(!d||!d.cols.length) continue;
+    await writeFile(FILES[k].path,toCSV(d.cols,d.rows));
+    d.dirty=false; n++;
+  }
+  const b=document.getElementById('folderbadge');
+  b.textContent=`Saved ${n} files · ${new Date().toLocaleTimeString()}`;
+  b.className='badge ok';
+  renderTabs();
+}
+
+function renderTabs(){
+  const who=document.getElementById('whoami');
+  if(who){ who.textContent=(SESSION.name||SESSION.email)+' · '+role().label; who.className='badge ok'; }
+  const t=document.getElementById('tabs'); t.innerHTML='';
+  Object.keys(FILES).forEach(k=>{
+    if(k==='accounts' && (SESSION.role||'').toLowerCase()!=='owner') return;
+    if(!can(k)) return;
+    const b=document.createElement('button');
+    b.className='tab'+(k===active?' on':'');
+    const n=data[k]?data[k].rows.length:0;
+    b.innerHTML=FILES[k].label+'<span>'+n+(data[k]&&data[k].dirty?' •':'')+'</span>';
+    b.onclick=()=>{active=k;selectedArticle=0;renderTabs();render();};
+    t.appendChild(b);
+  });
+}
+function markDirty(){ data[active].dirty=true; renderTabs(); }
+
+function tableView(){
+  const d=data[active];
+  if(!d.cols.length) return `<div class="panel"><h2>${FILES[active].label}</h2>
+    <div class="hint">Couldn't find <code>data/${FILES[active].path}</code>.</div></div>`;
+  const v=document.createElement('div');
+  v.innerHTML=`
+    <div class="bar">
+      <input type="search" id="q" placeholder="Search…">
+      <button id="addrow">+ Add row</button>
+      ${active==='players'?'<button id="bulk">Bulk add</button>':''}
+      <span class="count" id="count"></span>
+    </div>
+    <div id="bulkbox"></div>
+    <div class="tblwrap"><table><thead><tr>${d.cols.map(c=>`<th>${c}</th>`).join('')}<th></th></tr></thead>
+    <tbody id="tb"></tbody></table></div>`;
+  setTimeout(()=>{
+    const q=v.querySelector('#q'), tb=v.querySelector('#tb');
+    function draw(){
+      const term=(q.value||'').toLowerCase();
+      tb.innerHTML=''; let shown=0;
+      d.rows.forEach((r,i)=>{
+        if(term && !Object.values(r).join(' ').toLowerCase().includes(term)) return;
+        shown++;
+        const tr=document.createElement('tr');
+        d.cols.forEach(c=>{
+          const td=document.createElement('td');
+          td.className=NUMS.includes(c)?'num':(WIDE.includes(c)?'wide':'');
+          const inp=document.createElement('input');
+          inp.value=r[c]||'';
+          if(readOnly()) inp.readOnly=true;
+          inp.oninput=()=>{ r[c]=inp.value;
+            if(c==='name'&&'slug' in r&&!r.slug) r.slug=slugify(inp.value);
+            markDirty(); };
+          td.appendChild(inp); tr.appendChild(td);
+        });
+        const td=document.createElement('td');
+        const del=document.createElement('button');
+        del.className='rowdel'; del.textContent='×';
+        del.onclick=()=>{ if(confirm('Delete this row?')){ d.rows.splice(i,1); markDirty(); draw(); } };
+        td.appendChild(del); tr.appendChild(td); tb.appendChild(tr);
+      });
+      v.querySelector('#count').textContent=`${shown} shown · ${d.rows.length} total`;
+    }
+    q.oninput=draw;
+    v.querySelector('#addrow').onclick=()=>{
+      const o={}; d.cols.forEach(c=>o[c]=''); d.rows.unshift(o); markDirty(); draw();
+    };
+    const bulk=v.querySelector('#bulk');
+    if(bulk) bulk.onclick=()=>{
+      const box=v.querySelector('#bulkbox');
+      if(box.innerHTML){ box.innerHTML=''; return; }
+      box.innerHTML=`<div class="panel"><h2>Bulk add players</h2>
+        <div class="hint">One per line: <code>Name, Club</code> or <code>Name, Club, POS, League</code>.</div>
+        <textarea id="bt" placeholder="Cathal McCarthy, Hull City, MID, Championship"></textarea>
+        <div class="bar" style="margin-top:10px"><button class="pri" id="bgo">Add</button></div>
+        <div class="note" id="bn"></div></div>`;
+      box.querySelector('#bgo').onclick=()=>{
+        let added=0,skipped=0;
+        box.querySelector('#bt').value.split(/\r?\n/).forEach(l=>{
+          l=l.trim(); if(!l||l.startsWith('#'))return;
+          const p=l.split(',').map(s=>s.trim());
+          const slug=slugify(p[0]); if(!slug)return;
+          if(d.rows.some(r=>r.slug===slug)){skipped++;return;}
+          const o={}; d.cols.forEach(c=>o[c]='');
+          o.slug=slug; o.name=p[0]; o.club=p[1]||''; o.pos=p[2]||''; o.league=p[3]||'';
+          o.tier=/league of ireland|loi/i.test(o.league)?'loi':'abroad-lower';
+          if('cap_status' in o) o.cap_status='uncapped';
+          if('eligible' in o) o.eligible='Republic of Ireland:eligible';
+          d.rows.unshift(o); added++;
+        });
+        box.querySelector('#bn').innerHTML=`<span class="ok">Added ${added}.</span>`+(skipped?` <span class="warn">${skipped} already there.</span>`:'');
+        markDirty(); draw();
+      };
+    };
+    draw();
+  },0);
+  return v;
+}
+
+function myArticles(d){
+  if(!ownOnly()) return d.rows.map((r,i)=>({r,i}));
+  const me=(SESSION.name||'').toLowerCase(), em=(SESSION.email||'').toLowerCase();
+  return d.rows.map((r,i)=>({r,i})).filter(x=>{
+    const a=(x.r.author||'').toLowerCase();
+    return a===me || a===em || !a;
+  });
+}
+function articleView(){
+  const d=data.articles;
+  if(!d.cols.length) return `<div class="panel"><h2>News</h2><div class="hint">No articles.csv found.</div></div>`;
+  const v=document.createElement('div');
+  const a=d.rows[selectedArticle]||{};
+  v.innerHTML=`
+    <div class="bar"><button id="newart" class="pri">+ New article</button>
+      <span class="count">${myArticles(d).length} article${myArticles(d).length===1?"":"s"}</span></div>
+    <div class="artlist">${myArticles(d).map(({r:x,i})=>`<div class="artitem${i===selectedArticle?' on':''}" data-i="${i}">
+      <div style="flex:1"><b>${esc(x.headline)||'(untitled)'}</b><br>
+      <small>${esc(x.date)} · ${esc(x.tag)} · ${esc(x.author)}</small></div>
+      <button class="rowdel" data-del="${i}">×</button></div>`).join('')}</div>
+    <div class="panel"><h2>Edit article</h2>
+      <div class="artfull"><label>Headline</label><input id="f_headline" value="${esc(a.headline)}"></div>
+      <div class="artfull"><label>Standfirst</label><input id="f_standfirst" value="${esc(a.standfirst)}"></div>
+      <div class="artrow">
+        <div><label>Date (YYYY-MM-DD)</label><input id="f_date" value="${esc(a.date)}"></div>
+        <div><label>Tag</label><input id="f_tag" value="${esc(a.tag)}"></div></div>
+      <div class="artrow">
+        <div><label>Author</label><input id="f_author" value="${esc(a.author)}"></div>
+        <div><label>Player slug (optional)</label><input id="f_player_slug" value="${esc(a.player_slug)}"></div></div>
+      <div class="artrow">
+        <div><label>Slug (URL)</label><input id="f_slug" value="${esc(a.slug)}"></div>
+        <div><label>Image path</label><input id="f_image" value="${esc(a.image)}" placeholder="images/file.jpg"></div></div>
+      <div class="artfull"><label>Body — blank line between paragraphs</label>
+        <textarea id="f_body"></textarea></div>
+    </div>`;
+  setTimeout(()=>{
+    const ta=v.querySelector('#f_body');
+    if(ta) ta.value=String(a.body||'').split('\\n').join('\n');
+    v.querySelectorAll('.artitem').forEach(el=>{
+      el.onclick=e=>{ if(e.target.dataset.del!==undefined) return;
+        selectedArticle=+el.dataset.i; render(); };
+    });
+    v.querySelectorAll('[data-del]').forEach(b=>{
+      b.onclick=e=>{ e.stopPropagation();
+        if(confirm('Delete this article?')){ d.rows.splice(+b.dataset.del,1); selectedArticle=0; markDirty(); render(); } };
+    });
+    v.querySelector('#newart').onclick=()=>{
+      const o={}; d.cols.forEach(c=>o[c]='');
+      o.date=new Date().toISOString().slice(0,10); o.author=SESSION.name||'Footballers Staff';
+      d.rows.unshift(o); selectedArticle=0; markDirty(); render();
+    };
+    ['headline','standfirst','date','tag','author','player_slug','slug','image','body'].forEach(f=>{
+      const el=v.querySelector('#f_'+f); if(!el) return;
+      el.oninput=()=>{
+        const row=d.rows[selectedArticle]; if(!row) return;
+        row[f] = f==='body' ? el.value.split('\n').join('\\n') : el.value;
+        if(f==='headline' && !row.slug) row.slug=slugify(el.value);
+        markDirty();
+      };
+    });
+  },0);
+  return v;
+}
+
+function connectPrompt(){
+  return `<div class="panel"><h2>Get started</h2>
+    <div class="hint">Click <b>Connect data folder</b> above and pick the <code>data</code> folder
+    inside <code>footballers.ie</code>. It reads straight from there, and <b>Save all</b> writes
+    back to the same files — no downloads, no copying.</div>
+    <div class="hint">Chrome, Edge or Brave only — Safari can't open folders.</div></div>`;
+}
+
+function deployPanel(){
+  const CMD='cd ~/Desktop/footballers.ie/build && python3 gen.py && cd .. && cp -r build/site/. ./ && rm -rf build/site && git add -A && git commit -m "Update content" && git push';
+  const p=document.createElement('div');
+  p.className='panel';
+  p.innerHTML=`<h2>Publish</h2>
+    <div class="hint">Hit <b>Save all</b> first, then run this in Terminal to rebuild and push.</div>
+    <div class="deploy">${esc(CMD)}</div>
+    <div class="bar" style="margin-top:10px"><button id="copycmd">Copy command</button></div>
+    <div class="note" id="copynote"></div>`;
+  setTimeout(()=>{
+    p.querySelector('#copycmd').onclick=()=>{
+      navigator.clipboard.writeText(CMD).then(()=>{
+        p.querySelector('#copynote').innerHTML='<span class="ok">Copied — paste into Terminal.</span>';
+      });
+    };
+  },0);
+  return p;
+}
+
+async function sha256(s){
+  if(window.crypto&&crypto.subtle&&window.isSecureContext){
+    const b=await crypto.subtle.digest('SHA-256',new TextEncoder().encode(s));
+    return Array.from(new Uint8Array(b)).map(x=>x.toString(16).padStart(2,'0')).join('');
+  }
+  return null;
+}
+function accountsExtra(){
+  const p=document.createElement('div');
+  p.className='panel';
+  p.innerHTML=`<h2>Set a password</h2>
+    <div class="hint">Pick the account's email, type a new password, and the hash is filled in for you.
+    Roles: <code>owner</code> · <code>admin</code> · <code>editor</code> · <code>journalist</code> ·
+    <code>data</code> · <code>viewer</code></div>
+    <div class="artrow">
+      <div><label>Email</label><input id="pw_email" placeholder="writer@footballers.ie"></div>
+      <div><label>New password</label><input id="pw_pass" type="text" placeholder="something long"></div>
+    </div>
+    <div class="bar"><button class="pri" id="pw_go">Generate &amp; apply</button></div>
+    <div class="note" id="pw_note"></div>`;
+  setTimeout(()=>{
+    p.querySelector('#pw_go').onclick=async()=>{
+      const em=(p.querySelector('#pw_email').value||'').trim().toLowerCase();
+      const pwv=p.querySelector('#pw_pass').value;
+      const note=p.querySelector('#pw_note');
+      if(!em||!pwv){ note.innerHTML='<span class="warn">Fill both fields.</span>'; return; }
+      const h=await sha256(em+':'+pwv);
+      if(!h){ note.innerHTML='<span class="warn">Open the admin over https (or localhost) to hash passwords.</span>'; return; }
+      const d=data.accounts;
+      let row=d.rows.find(r=>(r.email||'').toLowerCase()===em);
+      if(!row){ row={}; d.cols.forEach(c=>row[c]=''); row.email=em; row.role='journalist'; d.rows.push(row); }
+      row.hash=h;
+      markDirty(); render();
+      note.innerHTML='<span class="ok">Password set for '+em+'. Hit Save all.</span>';
+    };
+  },0);
+  return p;
+}
+
+function render(){
+  const v=document.getElementById('view'); v.innerHTML='';
+  if(!dirHandle){ v.innerHTML=connectPrompt(); return; }
+  const content = active==='articles' ? articleView() : tableView();
+  if(typeof content==='string') v.innerHTML=content; else v.appendChild(content);
+  if(active==='accounts') v.appendChild(accountsExtra());
+  if(!readOnly()) v.appendChild(deployPanel());
+}
+
+document.getElementById('signout').onclick=()=>{
+  try{ localStorage.removeItem('fb_session_v1'); }catch(e){}
+  location.href='../index.html';
+};
+document.getElementById('connect').onclick=connect;
+document.getElementById('saveall').onclick=saveAll;
+window.addEventListener('beforeunload',e=>{
+  if(Object.values(data).some(d=>d&&d.dirty)){ e.preventDefault(); e.returnValue=''; }
+});
+if(!can(active)){ active = (role().tabs==='*') ? 'players' : role().tabs[0]; }
+renderTabs(); render();
 </script>
 </body>
 </html>
