@@ -689,6 +689,26 @@ def download_image(pid, slug, img_dir, refresh=False):
     return "none"
 
 
+def team_primary_league(tid, tname, _cache={}):
+    """Current club's league name from its team page. Cached per run."""
+    if tid in _cache:
+        return _cache[tid]
+    league = ""
+    try:
+        data = get_next_data(
+            f"https://www.fotmob.com/teams/{tid}/overview/"
+            f"{slugify(tname or 'team')}")
+        for v in find_all(data, "primaryLeagueName"):
+            if v:
+                league = str(v)
+                break
+        time.sleep(SLEEP)
+    except Exception:
+        pass
+    _cache[tid] = league
+    return league
+
+
 def scrape(args):
     players = read_player_list()
     cache = read_id_cache()
@@ -745,7 +765,7 @@ def scrape(args):
                 opp = m["ascore"] if side == "H" else m["hscore"]
                 results_rows.append([
                     slug,
-                    m["utc"].strftime("%d %b"),
+                    m["utc"].strftime("%Y-%m-%d"),
                     m["opponent"],
                     f"{own}-{opp}" if own != "" and opp != "" else "",
                     m["comp"],
@@ -766,10 +786,13 @@ def scrape(args):
         (sr_caps, sr_goals, sr_debut, youth,
          c_apps, c_goals, c_assists) = extract_career(blob)
         age, born, foot = extract_personal(blob)
-        source_club = (blob.get("primaryTeam") or {}).get("teamName", "")
+        pt = blob.get("primaryTeam") or {}
+        source_club = pt.get("teamName", "")
+        source_league = team_primary_league(pt.get("teamId"), source_club) \
+            if source_club else ""
         players_rows.append([
             slug,
-            p.get("league", "") or season["league"],
+            source_league,
             source_club,
             age, born, foot,
             sr_caps, sr_goals, sr_debut, youth,
