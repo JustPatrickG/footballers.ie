@@ -777,7 +777,7 @@ def scrape(args):
             elif not m["finished"] and not m["ongoing"] and side \
                     and m["utc"] >= now:
                 fixtures_rows.append([
-                    slug, m["utc"].strftime("%d %b"), m["opponent"], side,
+                    slug, m["utc"].strftime("%Y-%m-%d"), m["opponent"], side,
                     m["comp"], m["utc"],
                 ])
 
