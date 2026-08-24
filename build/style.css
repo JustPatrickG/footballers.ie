@@ -42,9 +42,9 @@ nav{display:flex;justify-content:space-between;align-items:center;padding:18px 0
 .slide .tag{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--teal);margin-bottom:10px}
 .slide h3{font-size:clamp(20px,3vw,28px);font-weight:700;letter-spacing:-.01em;max-width:34ch;line-height:1.15}
 .slide p{color:var(--mute);margin-top:8px;font-size:14px;max-width:50ch}
-.dots{position:absolute;bottom:14px;right:18px;display:flex;gap:6px;z-index:2}
-.dots button{width:20px;height:3px;border-radius:2px;background:var(--line);padding:0;transition:background .2s,width .2s}
-.dots button[aria-current="true"]{background:var(--yellow);width:26px}
+.dots{position:absolute;bottom:14px;right:18px;display:flex;gap:8px;z-index:2}
+.dots button{width:26px;height:4px;border-radius:3px;background:var(--line);padding:0;cursor:pointer;transition:background .2s,width .2s}
+.dots button[aria-current="true"]{background:var(--yellow);width:34px}
 @media(max-width:700px){
   .slide{padding:20px 18px 42px;min-height:0}
   .slide h3{font-size:20px;line-height:1.2}
@@ -743,3 +743,15 @@ a.intlblock.lnk:hover{border-color:var(--teal)}
 @media(min-width:701px){ .slide h3{font-size:26px;line-height:1.15} }
 .slide{min-height:172px}
 @media(max-width:700px){ .slide{min-height:150px} }
+
+
+/* bigger, easier carousel controls on desktop */
+@media(min-width:701px){
+  .dots{bottom:18px;right:22px;gap:10px}
+  .dots button{width:44px;height:6px;border-radius:4px;position:relative}
+  /* invisible padding so the whole area is clickable, not just the 6px bar */
+  .dots button:before{content:"";position:absolute;inset:-12px -4px}
+  .dots button:hover{background:var(--mute)}
+  .dots button[aria-current="true"]{width:56px}
+  .dots button[aria-current="true"]:hover{background:var(--yellow)}
+}
