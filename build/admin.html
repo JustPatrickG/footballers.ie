@@ -77,10 +77,10 @@ label{display:block;font-family:'IBM Plex Mono',monospace;font-size:9px;letter-s
   <div class="toprow">
     <h1>footballers<i>.ie</i> admin</h1>
     <span class="badge" id="whoami"></span>
-    <span class="badge" id="folderbadge">No folder connected</span>
+    <span class="badge" id="folderbadge">Loading…</span>
     <span class="spacer"></span>
-    <button id="connect" class="pri">Connect data folder</button>
-    <button id="saveall" disabled>Save all</button>
+    <button id="publish" class="pri">Publish changes</button>
+    
     <button id="signout">Sign out</button>
   </div>
   <div class="tabs" id="tabs"></div>
@@ -133,8 +133,11 @@ const FILES = {
 const WIDE=['name','club','league','headline','standfirst','author','born','eligible','youth','players','home','away','opponent','competition','image','photo','notes','body'];
 const NUMS=['age','senior_caps','senior_goals','s_apps','s_starts','s_goals','s_assists','s_mins','s_yellow','s_red','c_apps','c_goals','c_assists','avg_rating','minutes','goals','assists','home_score','away_score','minute'];
 
-let dirHandle=null, data={}, active='players', selectedArticle=0;
-setTimeout(()=>{},0);
+const REPO={owner:'JustPatrickG', repo:'footballers.ie', branch:'main'};
+let data={}, active='players', selectedArticle=0, shas={}, loaded=false;
+
+function token(){ try{ return localStorage.getItem('fb_gh_token')||''; }catch(e){ return ''; } }
+function setToken(t){ try{ localStorage.setItem('fb_gh_token',t); }catch(e){} }
 
 function parseCSV(text){
   const rows=[]; let row=[], cur='', q=false;
@@ -168,51 +171,70 @@ function slugify(n){
 }
 function esc(v){ return String(v==null?'':v).replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(/</g,'&lt;'); }
 
-async function connect(){
-  if(!window.showDirectoryPicker){
-    alert("This browser can't open folders. Use Chrome, Edge or Brave.");
-    return;
-  }
-  try{ dirHandle=await window.showDirectoryPicker({mode:'readwrite'}); }
-  catch(e){ return; }
-  await loadAll();
-}
-async function readFile(rel){
-  const p=rel.split('/'); let d=dirHandle;
-  for(let i=0;i<p.length-1;i++) d=await d.getDirectoryHandle(p[i]);
-  return (await (await d.getFileHandle(p[p.length-1])).getFile()).text();
-}
-async function writeFile(rel,text){
-  const p=rel.split('/'); let d=dirHandle;
-  for(let i=0;i<p.length-1;i++) d=await d.getDirectoryHandle(p[i],{create:true});
-  const fh=await d.getFileHandle(p[p.length-1],{create:true});
-  const w=await fh.createWritable(); await w.write(text); await w.close();
-}
+/* read the CSVs straight off the site — no folder picker */
 async function loadAll(){
-  let loaded=0;
+  const badge=document.getElementById('folderbadge');
+  badge.textContent='Loading…'; badge.className='badge';
+  let ok=0;
   for(const k of Object.keys(FILES)){
-    try{ data[k]={...parseCSV(await readFile(FILES[k].path)),dirty:false}; loaded++; }
-    catch(e){ data[k]={cols:[],rows:[],dirty:false}; }
+    try{
+      const res=await fetch('../data/'+FILES[k].path+'?t='+Date.now());
+      if(!res.ok) throw new Error(res.status);
+      data[k]={...parseCSV(await res.text()), dirty:false};
+      ok++;
+    }catch(e){ data[k]={cols:[],rows:[],dirty:false}; }
   }
-  const b=document.getElementById('folderbadge');
-  b.textContent=`Connected · ${loaded}/${Object.keys(FILES).length} files`;
-  b.className='badge ok';
-  document.getElementById('saveall').disabled=false;
+  loaded=true;
+  badge.textContent=`Loaded ${ok}/${Object.keys(FILES).length} files`;
+  badge.className='badge ok';
   renderTabs(); render();
 }
+
+/* save = commit to GitHub, Vercel redeploys */
+async function ghGet(path){
+  const r=await fetch(`https://api.github.com/repos/${REPO.owner}/${REPO.repo}/contents/${path}?ref=${REPO.branch}`,
+    {headers:{Authorization:'token '+token(), Accept:'application/vnd.github+json'}});
+  if(r.status===404) return null;
+  if(!r.ok) throw new Error('GitHub read failed ('+r.status+')');
+  return r.json();
+}
+async function ghPut(path, text, sha){
+  const body={message:'Update '+path+' via admin', branch:REPO.branch,
+              content:btoa(unescape(encodeURIComponent(text)))};
+  if(sha) body.sha=sha;
+  const r=await fetch(`https://api.github.com/repos/${REPO.owner}/${REPO.repo}/contents/${path}`,
+    {method:'PUT', headers:{Authorization:'token '+token(), Accept:'application/vnd.github+json',
+     'Content-Type':'application/json'}, body:JSON.stringify(body)});
+  if(!r.ok) throw new Error('GitHub write failed ('+r.status+')');
+  return r.json();
+}
+
 async function saveAll(){
-  if(!dirHandle) return;
-  let n=0;
-  for(const k of Object.keys(FILES)){
-    const d=data[k];
-    if(!d||!d.cols.length) continue;
-    await writeFile(FILES[k].path,toCSV(d.cols,d.rows));
-    d.dirty=false; n++;
+  const badge=document.getElementById('folderbadge');
+  if(!token()){ askToken(); return; }
+  const dirty=Object.keys(FILES).filter(k=>data[k]&&data[k].dirty&&data[k].cols.length);
+  if(!dirty.length){ badge.textContent='Nothing changed'; badge.className='badge'; return; }
+  badge.textContent='Publishing…'; badge.className='badge';
+  try{
+    for(const k of dirty){
+      const path='data/'+FILES[k].path;
+      const cur=await ghGet(path);
+      await ghPut(path, toCSV(data[k].cols, data[k].rows), cur&&cur.sha);
+      data[k].dirty=false;
+    }
+    badge.textContent='Published · site rebuilding'; badge.className='badge ok';
+    renderTabs();
+  }catch(e){
+    badge.textContent=String(e.message||e); badge.className='badge';
+    alert(e.message+'\n\nIf this is a permissions error, your token needs "repo" scope.');
   }
-  const b=document.getElementById('folderbadge');
-  b.textContent=`Saved ${n} files · ${new Date().toLocaleTimeString()}`;
-  b.className='badge ok';
-  renderTabs();
+}
+
+function askToken(){
+  const t=prompt('Paste a GitHub personal access token with "repo" scope.\n'+
+                 'Create one at github.com/settings/tokens\n\n'+
+                 'Stored only in this browser.');
+  if(t){ setToken(t.trim()); saveAll(); }
 }
 
 function renderTabs(){
@@ -375,92 +397,42 @@ function articleView(){
   return v;
 }
 
-function connectPrompt(){
-  return `<div class="panel"><h2>Get started</h2>
-    <div class="hint">Click <b>Connect data folder</b> above and pick the <code>data</code> folder
-    inside <code>footballers.ie</code>. It reads straight from there, and <b>Save all</b> writes
-    back to the same files — no downloads, no copying.</div>
-    <div class="hint">Chrome, Edge or Brave only — Safari can't open folders.</div></div>`;
-}
-
-function deployPanel(){
-  const CMD='cd ~/Desktop/footballers.ie/build && python3 gen.py && cd .. && cp -r build/site/. ./ && rm -rf build/site && git add -A && git commit -m "Update content" && git push';
+function publishNote(){
   const p=document.createElement('div');
   p.className='panel';
-  p.innerHTML=`<h2>Publish</h2>
-    <div class="hint">Hit <b>Save all</b> first, then run this in Terminal to rebuild and push.</div>
-    <div class="deploy">${esc(CMD)}</div>
-    <div class="bar" style="margin-top:10px"><button id="copycmd">Copy command</button></div>
-    <div class="note" id="copynote"></div>`;
-  setTimeout(()=>{
-    p.querySelector('#copycmd').onclick=()=>{
-      navigator.clipboard.writeText(CMD).then(()=>{
-        p.querySelector('#copynote').innerHTML='<span class="ok">Copied — paste into Terminal.</span>';
-      });
-    };
-  },0);
-  return p;
-}
-
-async function sha256(s){
-  if(window.crypto&&crypto.subtle&&window.isSecureContext){
-    const b=await crypto.subtle.digest('SHA-256',new TextEncoder().encode(s));
-    return Array.from(new Uint8Array(b)).map(x=>x.toString(16).padStart(2,'0')).join('');
-  }
-  return null;
-}
-function accountsExtra(){
-  const p=document.createElement('div');
-  p.className='panel';
-  p.innerHTML=`<h2>Set a password</h2>
-    <div class="hint">Pick the account's email, type a new password, and the hash is filled in for you.
-    Roles: <code>owner</code> · <code>admin</code> · <code>editor</code> · <code>journalist</code> ·
-    <code>data</code> · <code>viewer</code></div>
-    <div class="artrow">
-      <div><label>Email</label><input id="pw_email" placeholder="writer@footballers.ie"></div>
-      <div><label>New password</label><input id="pw_pass" type="text" placeholder="something long"></div>
-    </div>
-    <div class="bar"><button class="pri" id="pw_go">Generate &amp; apply</button></div>
-    <div class="note" id="pw_note"></div>`;
-  setTimeout(()=>{
-    p.querySelector('#pw_go').onclick=async()=>{
-      const em=(p.querySelector('#pw_email').value||'').trim().toLowerCase();
-      const pwv=p.querySelector('#pw_pass').value;
-      const note=p.querySelector('#pw_note');
-      if(!em||!pwv){ note.innerHTML='<span class="warn">Fill both fields.</span>'; return; }
-      const h=await sha256(em+':'+pwv);
-      if(!h){ note.innerHTML='<span class="warn">Open the admin over https (or localhost) to hash passwords.</span>'; return; }
-      const d=data.accounts;
-      let row=d.rows.find(r=>(r.email||'').toLowerCase()===em);
-      if(!row){ row={}; d.cols.forEach(c=>row[c]=''); row.email=em; row.role='journalist'; d.rows.push(row); }
-      row.hash=h;
-      markDirty(); render();
-      note.innerHTML='<span class="ok">Password set for '+em+'. Hit Save all.</span>';
-    };
-  },0);
+  p.innerHTML=`<h2>Publishing</h2>
+    <div class="hint">Edit anything above, then hit <b>Publish changes</b>. It commits straight to
+    the site and rebuilds automatically — no terminal, no files.</div>
+    <div class="bar"><button id="chtok">Change GitHub token</button></div>`;
+  setTimeout(()=>{p.querySelector('#chtok').onclick=()=>{
+    try{ localStorage.removeItem('fb_gh_token'); }catch(e){}
+    askToken();
+  };},0);
   return p;
 }
 
 function render(){
   const v=document.getElementById('view'); v.innerHTML='';
-  if(!dirHandle){ v.innerHTML=connectPrompt(); return; }
+  if(!loaded){ v.innerHTML='<div class="panel"><h2>Loading</h2><div class="hint">Reading the site data…</div></div>'; return; }
   const content = active==='articles' ? articleView() : tableView();
   if(typeof content==='string') v.innerHTML=content; else v.appendChild(content);
   if(active==='accounts') v.appendChild(accountsExtra());
-  if(!readOnly()) v.appendChild(deployPanel());
+  if(!readOnly()) v.appendChild(publishNote());
+  
 }
 
 document.getElementById('signout').onclick=()=>{
   try{ localStorage.removeItem('fb_session_v1'); }catch(e){}
   location.href='../index.html';
 };
-document.getElementById('connect').onclick=connect;
-document.getElementById('saveall').onclick=saveAll;
+document.getElementById('publish').onclick=saveAll;
+window.saveAll=saveAll;
 window.addEventListener('beforeunload',e=>{
   if(Object.values(data).some(d=>d&&d.dirty)){ e.preventDefault(); e.returnValue=''; }
 });
 if(!can(active)){ active = (role().tabs==='*') ? 'players' : role().tabs[0]; }
 renderTabs(); render();
+loadAll();
 </script>
 </body>
 </html>
