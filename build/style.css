@@ -155,7 +155,7 @@ a.fxrow.lnk:hover{background:var(--panel2)}
 footer{margin-top:60px;border-top:1px solid var(--line);padding:20px 0 44px;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--mute);line-height:2}
 
 /* ============ RESPONSIVE ============ */
-html{-webkit-text-size-adjust:100%}
+html,body{-webkit-text-size-adjust:100%;text-size-adjust:100%}
 body{overflow-x:hidden}
 img,svg,iframe{max-width:100%}
 .burger{display:none;width:44px;height:44px;border:1px solid var(--line);border-radius:6px;padding:0;position:relative;flex:none}
@@ -729,3 +729,17 @@ a.intlblock.lnk:hover{border-color:var(--teal)}
 .mapcta span{display:block;font-size:13px;color:var(--mute);margin-top:3px}
 .mapcta .go{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--yellow);letter-spacing:.08em}
 @media(max-width:700px){ #themap{height:56vh} .cgrid{grid-template-columns:1fr} }
+
+
+/* iOS Safari inflates text per block based on content length, which made the
+   two news headlines render at different sizes. Pin them. */
+.slide h3, .slide p, .slide .tag,
+.leadbody h3, .artbody h4{
+  -webkit-text-size-adjust:100%;
+  text-size-adjust:100%;
+  max-height:none;
+}
+.slide h3{font-size:20px;line-height:1.2;text-wrap:balance}
+@media(min-width:701px){ .slide h3{font-size:26px;line-height:1.15} }
+.slide{min-height:172px}
+@media(max-width:700px){ .slide{min-height:150px} }
