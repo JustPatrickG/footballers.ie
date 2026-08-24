@@ -665,40 +665,44 @@ a.intlblock.lnk:hover{border-color:var(--teal)}
 .elig.open{border-color:rgba(53,212,191,.35);background:rgba(53,212,191,.06)}
 .elig.open .ec{color:var(--teal)}
 .elig.open .en{color:var(--teal)}
+
+/* ============ REPORT ============ */
+.repbtn{position:fixed;right:14px;bottom:14px;z-index:120;display:flex;align-items:center;gap:7px;
+  background:var(--panel);border:1px solid var(--line);color:var(--mute);border-radius:22px;
+  padding:9px 14px 9px 10px;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.1em;
+  text-transform:uppercase;box-shadow:0 6px 20px rgba(0,0,0,.4);cursor:pointer}
+.repbtn:hover{color:var(--white);border-color:var(--mute)}
+.repbtn span{width:17px;height:17px;border-radius:50%;background:rgba(245,197,24,.16);color:var(--yellow);
+  display:grid;place-items:center;font-size:11px;font-weight:700}
+.fbg-card.rep{text-align:left}
+.fbg-card.rep h3,.fbg-card.rep p{text-align:center}
+.repform{display:block;margin-top:16px}
+.repform label{display:block;font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--mute);margin:12px 0 5px}
+.repform label .opt{text-transform:none;letter-spacing:0;opacity:.75}
+.repform select,.repform textarea,.repform input[type=email]{width:100%;background:var(--bg);
+  border:1px solid var(--line);color:var(--white);padding:11px 12px;border-radius:8px;
+  font-family:'Space Grotesk',sans-serif;font-size:15px}
+.repform textarea{resize:vertical;line-height:1.5}
+.repform button{width:100%;margin-top:16px;min-height:46px;background:var(--yellow);color:#0C0F10;
+  border:0;font-weight:700;border-radius:8px;font-size:15px;cursor:pointer}
+.repform button:disabled{opacity:.6}
+.repform .hp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
+.repctx{font-family:'IBM Plex Mono',monospace;font-size:10px;color:var(--mute);margin-top:12px;
+  text-align:center;letter-spacing:.06em}
+.repctx b{color:var(--white)}
+.repdone{text-align:center;padding:12px 0}
+.repdone .tick{width:48px;height:48px;margin:0 auto 12px;border-radius:50%;display:grid;place-items:center;
+  background:rgba(53,212,191,.14);color:var(--teal);font-size:23px}
+.repmiss{display:block;margin:14px auto 0;background:var(--panel);border:1px solid var(--line);
+  color:var(--yellow);border-radius:8px;padding:11px 16px;font-size:14px;cursor:pointer}
+.repmiss:hover{border-color:var(--yellow)}
+@media(max-width:700px){ .repbtn{right:10px;bottom:10px;padding:8px 12px 8px 9px;font-size:10px} }
+.more.stale{color:var(--yellow);letter-spacing:.06em}
 </style>
 </head>
 <body>
-<div id="fbload" aria-hidden="true">
-  <div class="fbl-mark">footballers<i>.ie</i></div>
-  <div class="fbl-pitch">
-    <div class="fbl-ball"><i></i></div>
-    <svg class="fbl-boot" viewBox="0 0 40 44" aria-hidden="true">
-      <g class="fbl-leg">
-        <line x1="20" y1="2" x2="20" y2="24"/>
-        <line x1="20" y1="24" x2="15" y2="38"/>
-        <line x1="15" y1="38" x2="31" y2="40"/>
-      </g>
-    </svg>
-  </div>
-</div>
-<script>
-/* hide the loader as soon as the page is ready — kept short on purpose */
-(function(){
-  var el=document.getElementById('fbload');
-  if(!el) return;
-  var t0=Date.now(), MIN=2150;
-  function done(){
-    var wait=Math.max(0, MIN-(Date.now()-t0));
-    setTimeout(function(){
-      el.classList.add('out');
-      setTimeout(function(){ if(el.parentNode) el.parentNode.removeChild(el); }, 340);
-    }, wait);
-  }
-  if(document.readyState==='complete') done();
-  else window.addEventListener('load', done);
-  setTimeout(done, 3600);   // never let it hang
-})();
-</script>
+
 <div class="wrap">
 <nav>
   <a class="mark" href="../index.html">footballers<i>.ie</i></a>
@@ -706,7 +710,7 @@ a.intlblock.lnk:hover{border-color:var(--teal)}
     <span></span><span></span><span></span>
   </button>
   <div class="navlinks" id="navlinks"><a class="" href="../news.html">News</a><a class="" href="../players.html">Players</a><a class="on" href="../clubs.html">Clubs</a><a class="" href="../ireland.html">Ireland</a><a class="" href="../fixtures.html">Fixtures</a><a class="" href="../alerts.html">Alerts</a></div>
-  <div class="navmeta"><span id="navdate">21-27 AUG</span> · <b>334</b> TRACKED</div>
+  <div class="navmeta"><span id="navdate">21-27 AUG</span> · <b>339</b> TRACKED</div>
 </nav>
 <script>
 (function(){
@@ -720,7 +724,7 @@ a.intlblock.lnk:hover{border-color:var(--teal)}
 </script>
 
     <a class="crumb" data-back href="../clubs.html">← Back</a>
-    <div class="pagehead"><h1>Shamrock Rovers</h1><p>League of Ireland · 33 Irish players tracked</p></div>
+    <div class="pagehead"><h1>Shamrock Rovers</h1><p>Premier Division · 33 Irish players tracked</p></div>
     <div class="sec"><h2>Irish players</h2></div>
     <div class="tiergroup"><a class="plrow" href="../player/aaron-greene.html"><div class="pavatar sm"><img src="../img/players/aaron-greene.png" alt="Aaron Greene" loading="lazy" onerror="this.parentNode.innerHTML='<span>AG</span>'"></div><div class="nm">Aaron Greene <span class="cl">Shamrock Rovers</span></div><div class="ev">—</div><div class="mn"><span class="rate lo sm">6.45</span></div><button class="star" data-fav="aaron-greene" aria-pressed="false" aria-label="Follow Aaron Greene">★</button></a><a class="plrow" href="../player/adam-brennan.html"><div class="pavatar sm"><img src="../img/players/adam-brennan.png" alt="Adam Brennan" loading="lazy" onerror="this.parentNode.innerHTML='<span>AB</span>'"></div><div class="nm">Adam Brennan <span class="cl">Shamrock Rovers</span></div><div class="ev">—</div><div class="mn"><span class="rate md sm">6.93</span></div><button class="star" data-fav="adam-brennan" aria-pressed="false" aria-label="Follow Adam Brennan">★</button></a><a class="plrow" href="../player/alex-noonan.html"><div class="pavatar sm"><img src="../img/players/alex-noonan.png" alt="Alex Noonan" loading="lazy" onerror="this.parentNode.innerHTML='<span>AN</span>'"></div><div class="nm">Alex Noonan <span class="cl">Shamrock Rovers</span></div><div class="ev">—</div><div class="mn"><span class="rate none">—</span></div><button class="star" data-fav="alex-noonan" aria-pressed="false" aria-label="Follow Alex Noonan">★</button></a><a class="plrow" href="../player/ben-mahon.html"><div class="pavatar sm"><img src="../img/players/ben-mahon.png" alt="Ben Mahon" loading="lazy" onerror="this.parentNode.innerHTML='<span>BM</span>'"></div><div class="nm">Ben Mahon <span class="cl">Shamrock Rovers</span></div><div class="ev">—</div><div class="mn"><span class="rate lo sm">5.74</span></div><button class="star" data-fav="ben-mahon" aria-pressed="false" aria-label="Follow Ben Mahon">★</button></a><a class="plrow" href="../player/cory-osullivan.html"><div class="pavatar sm"><img src="../img/players/cory-osullivan.png" alt="Cory O'Sullivan" loading="lazy" onerror="this.parentNode.innerHTML='<span>CO</span>'"></div><div class="nm">Cory O'Sullivan <span class="cl">Shamrock Rovers</span></div><div class="ev">—</div><div class="mn"><span class="rate md sm">6.92</span></div><button class="star" data-fav="cory-osullivan" aria-pressed="false" aria-label="Follow Cory O'Sullivan">★</button></a><a class="plrow" href="../player/daniel-cleary.html"><div class="pavatar sm"><img src="../img/players/daniel-cleary.png" alt="Daniel Cleary" loading="lazy" onerror="this.parentNode.innerHTML='<span>DC</span>'"></div><div class="nm">Daniel Cleary <span class="cl">Shamrock Rovers</span></div><div class="ev">—</div><div class="mn"><span class="rate md sm">6.90</span></div><button class="star" data-fav="daniel-cleary" aria-pressed="false" aria-label="Follow Daniel Cleary">★</button></a><a class="plrow" href="../player/daniel-grant.html"><div class="pavatar sm"><img src="../img/players/daniel-grant.png" alt="Daniel Grant" loading="lazy" onerror="this.parentNode.innerHTML='<span>DG</span>'"></div><div class="nm">Daniel Grant <span class="cl">Shamrock Rovers</span></div><div class="ev">—</div><div class="mn"><span class="rate md sm">6.93</span></div><button class="star" data-fav="daniel-grant" aria-pressed="false" aria-label="Follow Daniel Grant">★</button></a><a class="plrow" href="../player/daniel-mandroiu.html"><div class="pavatar sm"><img src="../img/players/daniel-mandroiu.png" alt="Daniel Mândroiu" loading="lazy" onerror="this.parentNode.innerHTML='<span>DM</span>'"></div><div class="nm">Daniel Mândroiu <span class="cl">Shamrock Rovers</span></div><div class="ev">—</div><div class="mn"><span class="rate md sm">6.99</span></div><button class="star" data-fav="daniel-mandroiu" aria-pressed="false" aria-label="Follow Daniel Mândroiu">★</button></a><a class="plrow" href="../player/danny-burke.html"><div class="pavatar sm"><span>DB</span></div><div class="nm">Danny Burke <span class="cl">Shamrock Rovers</span></div><div class="ev">—</div><div class="mn"><span class="rate none">—</span></div><button class="star" data-fav="danny-burke" aria-pressed="false" aria-label="Follow Danny Burke">★</button></a><a class="plrow" href="../player/dylan-watts.html"><div class="pavatar sm"><img src="../img/players/dylan-watts.png" alt="Dylan Watts" loading="lazy" onerror="this.parentNode.innerHTML='<span>DW</span>'"></div><div class="nm">Dylan Watts <span class="cl">Shamrock Rovers</span></div><div class="ev">—</div><div class="mn"><span class="rate md sm">7.03</span></div><button class="star" data-fav="dylan-watts" aria-pressed="false" aria-label="Follow Dylan Watts">★</button></a><a class="plrow" href="../player/edward-mcginty.html"><div class="pavatar sm"><img src="../img/players/edward-mcginty.png" alt="Edward McGinty" loading="lazy" onerror="this.parentNode.innerHTML='<span>EM</span>'"></div><div class="nm">Edward McGinty <span class="cl">Shamrock Rovers</span></div><div class="ev">—</div><div class="mn"><span class="rate md sm">7.11</span></div><button class="star" data-fav="edward-mcginty" aria-pressed="false" aria-label="Follow Edward McGinty">★</button></a><a class="plrow" href="../player/enda-stevens.html"><div class="pavatar sm"><img src="../img/players/enda-stevens.png" alt="Enda Stevens" loading="lazy" onerror="this.parentNode.innerHTML='<span>ES</span>'"></div><div class="nm">Enda Stevens <span class="cl">Shamrock Rovers</span></div><div class="ev">—</div><div class="mn"><span class="rate hi sm">7.42</span></div><button class="star" data-fav="enda-stevens" aria-pressed="false" aria-label="Follow Enda Stevens">★</button></a><a class="plrow" href="../player/gary-oneil.html"><div class="pavatar sm"><img src="../img/players/gary-oneil.png" alt="Gary O'Neil" loading="lazy" onerror="this.parentNode.innerHTML='<span>GO</span>'"></div><div class="nm">Gary O'Neil <span class="cl">Shamrock Rovers</span></div><div class="ev">—</div><div class="mn"><span class="rate md sm">6.72</span></div><button class="star" data-fav="gary-oneil" aria-pressed="false" aria-label="Follow Gary O'Neil">★</button></a><a class="plrow" href="../player/graham-burke.html"><div class="pavatar sm"><img src="../img/players/graham-burke.png" alt="Graham Burke" loading="lazy" onerror="this.parentNode.innerHTML='<span>GB</span>'"></div><div class="nm">Graham Burke <span class="cl">Shamrock Rovers</span></div><div class="ev">—</div><div class="mn"><span class="rate md sm">6.90</span></div><button class="star" data-fav="graham-burke" aria-pressed="false" aria-label="Follow Graham Burke">★</button></a><a class="plrow" href="../player/jack-byrne.html"><div class="pavatar sm"><img src="../img/players/jack-byrne.png" alt="Jack Byrne" loading="lazy" onerror="this.parentNode.innerHTML='<span>JB</span>'"></div><div class="nm">Jack Byrne <span class="cl">Shamrock Rovers</span></div><div class="ev">—</div><div class="mn"><span class="rate md sm">7.19</span></div><button class="star" data-fav="jack-byrne" aria-pressed="false" aria-label="Follow Jack Byrne">★</button></a><a class="plrow" href="../player/jake-mulraney.html"><div class="pavatar sm"><img src="../img/players/jake-mulraney.png" alt="Jake Mulraney" loading="lazy" onerror="this.parentNode.innerHTML='<span>JM</span>'"></div><div class="nm">Jake Mulraney <span class="cl">Shamrock Rovers</span></div><div class="ev">—</div><div class="mn"><span class="rate md sm">6.68</span></div><button class="star" data-fav="jake-mulraney" aria-pressed="false" aria-label="Follow Jake Mulraney">★</button></a><a class="plrow" href="../player/john-osullivan.html"><div class="pavatar sm"><img src="../img/players/john-osullivan.png" alt="John O'Sullivan" loading="lazy" onerror="this.parentNode.innerHTML='<span>JO</span>'"></div><div class="nm">John O'Sullivan <span class="cl">Shamrock Rovers</span></div><div class="ev">—</div><div class="mn"><span class="rate md sm">6.76</span></div><button class="star" data-fav="john-osullivan" aria-pressed="false" aria-label="Follow John O'Sullivan">★</button></a><a class="plrow" href="../player/jonathan-afolabi.html"><div class="pavatar sm"><img src="../img/players/jonathan-afolabi.png" alt="Jonathan Afolabi" loading="lazy" onerror="this.parentNode.innerHTML='<span>JA</span>'"></div><div class="nm">Jonathan Afolabi <span class="cl">Shamrock Rovers</span></div><div class="ev">⚽</div><div class="mn"><span class="rate hi sm">7.34</span></div><button class="star" data-fav="jonathan-afolabi" aria-pressed="false" aria-label="Follow Jonathan Afolabi">★</button></a><a class="plrow" href="../player/lee-grace.html"><div class="pavatar sm"><img src="../img/players/lee-grace.png" alt="Lee Grace" loading="lazy" onerror="this.parentNode.innerHTML='<span>LG</span>'"></div><div class="nm">Lee Grace <span class="cl">Shamrock Rovers</span></div><div class="ev">—</div><div class="mn"><span class="rate hi sm">7.41</span></div><button class="star" data-fav="lee-grace" aria-pressed="false" aria-label="Follow Lee Grace">★</button></a><a class="plrow" href="../player/lee-steacy.html"><div class="pavatar sm"><img src="../img/players/lee-steacy.png" alt="Lee Steacy" loading="lazy" onerror="this.parentNode.innerHTML='<span>LS</span>'"></div><div class="nm">Lee Steacy <span class="cl">Shamrock Rovers</span></div><div class="ev">—</div><div class="mn"><span class="rate md sm">6.89</span></div><button class="star" data-fav="lee-steacy" aria-pressed="false" aria-label="Follow Lee Steacy">★</button></a><a class="plrow" href="../player/luke-oregan.html"><div class="pavatar sm"><img src="../img/players/luke-oregan.png" alt="Luke O'Regan" loading="lazy" onerror="this.parentNode.innerHTML='<span>LO</span>'"></div><div class="nm">Luke O'Regan <span class="cl">Shamrock Rovers</span></div><div class="ev">—</div><div class="mn"><span class="rate md sm">6.78</span></div><button class="star" data-fav="luke-oregan" aria-pressed="false" aria-label="Follow Luke O'Regan">★</button></a><a class="plrow" href="../player/matthew-healy.html"><div class="pavatar sm"><img src="../img/players/matthew-healy.png" alt="Matthew Healy" loading="lazy" onerror="this.parentNode.innerHTML='<span>MH</span>'"></div><div class="nm">Matthew Healy <span class="cl">Shamrock Rovers</span></div><div class="ev">—</div><div class="mn"><span class="rate hi sm">7.47</span></div><button class="star" data-fav="matthew-healy" aria-pressed="false" aria-label="Follow Matthew Healy">★</button></a><a class="plrow" href="../player/max-kovalevskis.html"><div class="pavatar sm"><img src="../img/players/max-kovalevskis.png" alt="Max Kovalevskis" loading="lazy" onerror="this.parentNode.innerHTML='<span>MK</span>'"></div><div class="nm">Max Kovalevskis <span class="cl">Shamrock Rovers</span></div><div class="ev">—</div><div class="mn"><span class="rate lo sm">6.26</span></div><button class="star" data-fav="max-kovalevskis" aria-pressed="false" aria-label="Follow Max Kovalevskis">★</button></a><a class="plrow" href="../player/maxim-afonin.html"><div class="pavatar sm"><span>MA</span></div><div class="nm">Maxim Afonin <span class="cl">Shamrock Rovers</span></div><div class="ev">—</div><div class="mn"><span class="rate none">—</span></div><button class="star" data-fav="maxim-afonin" aria-pressed="false" aria-label="Follow Maxim Afonin">★</button></a><a class="plrow" href="../player/michael-noonan.html"><div class="pavatar sm"><img src="../img/players/michael-noonan.png" alt="Michael Noonan" loading="lazy" onerror="this.parentNode.innerHTML='<span>MN</span>'"></div><div class="nm">Michael Noonan <span class="cl">Shamrock Rovers</span></div><div class="ev">—</div><div class="mn"><span class="rate lo sm">6.44</span></div><button class="star" data-fav="michael-noonan" aria-pressed="false" aria-label="Follow Michael Noonan">★</button></a><a class="plrow" href="../player/naj-razi.html"><div class="pavatar sm"><img src="../img/players/naj-razi.png" alt="Naj Razi" loading="lazy" onerror="this.parentNode.innerHTML='<span>NR</span>'"></div><div class="nm">Naj Razi <span class="cl">Shamrock Rovers</span></div><div class="ev">—</div><div class="mn"><span class="rate lo sm">6.26</span></div><button class="star" data-fav="naj-razi" aria-pressed="false" aria-label="Follow Naj Razi">★</button></a><a class="plrow" href="../player/rory-gaffney.html"><div class="pavatar sm"><img src="../img/players/rory-gaffney.png" alt="Rory Gaffney" loading="lazy" onerror="this.parentNode.innerHTML='<span>RG</span>'"></div><div class="nm">Rory Gaffney <span class="cl">Shamrock Rovers</span></div><div class="ev">—</div><div class="mn"><span class="rate md sm">6.61</span></div><button class="star" data-fav="rory-gaffney" aria-pressed="false" aria-label="Follow Rory Gaffney">★</button></a><a class="plrow" href="../player/stephen-bradley.html"><div class="pavatar sm"><img src="../img/players/stephen-bradley.png" alt="Stephen Bradley" loading="lazy" onerror="this.parentNode.innerHTML='<span>SB</span>'"></div><div class="nm">Stephen Bradley <span class="cl">Shamrock Rovers</span></div><div class="ev">—</div><div class="mn"><span class="rate none">—</span></div><button class="star" data-fav="stephen-bradley" aria-pressed="false" aria-label="Follow Stephen Bradley">★</button></a><a class="plrow" href="../player/tadhg-prizeman.html"><div class="pavatar sm"><span>TP</span></div><div class="nm">Tadhg Prizeman <span class="cl">Shamrock Rovers</span></div><div class="ev">—</div><div class="mn"><span class="rate none">—</span></div><button class="star" data-fav="tadhg-prizeman" aria-pressed="false" aria-label="Follow Tadhg Prizeman">★</button></a><a class="plrow" href="../player/todd-bazunu.html"><div class="pavatar sm"><img src="../img/players/todd-bazunu.png" alt="Todd Bazunu" loading="lazy" onerror="this.parentNode.innerHTML='<span>TB</span>'"></div><div class="nm">Todd Bazunu <span class="cl">Shamrock Rovers</span></div><div class="ev">—</div><div class="mn"><span class="rate none">—</span></div><button class="star" data-fav="todd-bazunu" aria-pressed="false" aria-label="Follow Todd Bazunu">★</button></a><a class="plrow" href="../player/tunmise-sobowale.html"><div class="pavatar sm"><img src="../img/players/tunmise-sobowale.png" alt="Tunmise Sobowale" loading="lazy" onerror="this.parentNode.innerHTML='<span>TS</span>'"></div><div class="nm">Tunmise Sobowale <span class="cl">Shamrock Rovers</span></div><div class="ev">—</div><div class="mn"><span class="rate md sm">7.15</span></div><button class="star" data-fav="tunmise-sobowale" aria-pressed="false" aria-label="Follow Tunmise Sobowale">★</button></a><a class="plrow" href="../player/victor-ozhianvuna.html"><div class="pavatar sm"><img src="../img/players/victor-ozhianvuna.png" alt="Victor Ozhianvuna" loading="lazy" onerror="this.parentNode.innerHTML='<span>VO</span>'"></div><div class="nm">Victor Ozhianvuna <span class="cl">Shamrock Rovers</span></div><div class="ev">—</div><div class="mn"><span class="rate md sm">6.92</span></div><button class="star" data-fav="victor-ozhianvuna" aria-pressed="false" aria-label="Follow Victor Ozhianvuna">★</button></a><a class="plrow" href="../player/william-fitzgerald.html"><div class="pavatar sm"><img src="../img/players/william-fitzgerald.png" alt="William Fitzgerald" loading="lazy" onerror="this.parentNode.innerHTML='<span>WF</span>'"></div><div class="nm">William Fitzgerald <span class="cl">Shamrock Rovers</span></div><div class="ev">—</div><div class="mn"><span class="rate md sm">7.01</span></div><button class="star" data-fav="william-fitzgerald" aria-pressed="false" aria-label="Follow William Fitzgerald">★</button></a></div>
     <div class="sec"><h2>Upcoming fixtures</h2></div>
@@ -1298,6 +1302,136 @@ a.intlblock.lnk:hover{border-color:var(--teal)}
       }
     })(els[i]);
   }
+})();
+
+/* ---------- REPORT A PROBLEM ----------
+   A small button on every page. Knows which page it's on, so a report from a
+   player page arrives already tagged with that player. */
+(function () {
+  function context() {
+    var slug = document.body.getAttribute('data-player');
+    if (slug) {
+      var h1 = document.querySelector('.pdname');
+      return { kind: 'player', label: h1 ? h1.textContent.trim() : slug };
+    }
+    if (/\/match\//.test(location.pathname)) {
+      var t = document.querySelectorAll('.mteam');
+      return { kind: 'match', label: t.length > 1 ? t[0].textContent.trim() + ' v ' + t[1].textContent.trim() : 'this match' };
+    }
+    if (/\/club\//.test(location.pathname)) {
+      var c = document.querySelector('h1');
+      return { kind: 'club', label: c ? c.textContent.trim() : 'this club' };
+    }
+    return { kind: 'page', label: document.title.replace(' — FOOTBALLERS', '') };
+  }
+
+  function open(preset) {
+    var ctx = context();
+    var wrap = document.createElement('div');
+    wrap.className = 'fbgate';
+    wrap.innerHTML =
+      '<div class="fbg-card rep" role="dialog" aria-modal="true">' +
+        '<button class="fbg-x" aria-label="Close">×</button>' +
+        '<h3>Report a problem</h3>' +
+        '<p>Spotted a missing player or something wrong? Tell us and we\'ll fix it.</p>' +
+        '<form class="repform">' +
+          '<label>What\'s wrong</label>' +
+          '<select id="rt">' +
+            '<option value="missing">A player is missing</option>' +
+            '<option value="wrong">Wrong stats or details</option>' +
+            '<option value="club">Wrong club or league</option>' +
+            '<option value="match">Something wrong with a match</option>' +
+            '<option value="other">Something else</option>' +
+          '</select>' +
+          '<label>Details</label>' +
+          '<textarea id="rd" rows="4" placeholder="' +
+            (ctx.kind === 'player' ? 'e.g. he signed for a new club last week' :
+             ctx.kind === 'match'  ? 'e.g. the score is wrong' :
+             'e.g. Séamus Coleman isn\'t listed') + '"></textarea>' +
+          '<label>Your email <span class="opt">optional — only if you want a reply</span></label>' +
+          '<input type="email" id="re" placeholder="you@email.ie" autocomplete="email">' +
+          '<input type="text" id="rw" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">' +
+          '<button type="submit">Send report</button>' +
+        '</form>' +
+        '<div class="repctx">About: <b>' + ctx.label + '</b></div>' +
+        '<div class="nlnote" id="rerr" style="display:none"></div>' +
+      '</div>';
+    document.body.appendChild(wrap);
+    requestAnimationFrame(function () { wrap.classList.add('in'); });
+    if (preset) { var sel = wrap.querySelector('#rt'); if (sel) sel.value = preset; }
+    setTimeout(function () { var d = wrap.querySelector('#rd'); if (d) d.focus(); }, 240);
+
+    function close() {
+      wrap.classList.remove('in');
+      setTimeout(function () { if (wrap.parentNode) wrap.parentNode.removeChild(wrap); }, 280);
+      document.removeEventListener('keydown', onKey);
+    }
+    function onKey(e) { if (e.key === 'Escape') close(); }
+    document.addEventListener('keydown', onKey);
+    wrap.querySelector('.fbg-x').addEventListener('click', close);
+    wrap.addEventListener('click', function (e) { if (e.target === wrap) close(); });
+
+    wrap.querySelector('.repform').addEventListener('submit', async function (e) {
+      e.preventDefault();
+      var err = wrap.querySelector('#rerr');
+      var details = wrap.querySelector('#rd').value.trim();
+      if (details.length < 5) { err.style.display = 'block'; err.textContent = 'Add a bit more detail.'; return; }
+      var btn = wrap.querySelector('.repform button');
+      btn.disabled = true; btn.textContent = 'Sending…';
+      try {
+        var res = await fetch('/api/report', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            type: wrap.querySelector('#rt').value,
+            details: details,
+            email: wrap.querySelector('#re').value.trim(),
+            website: wrap.querySelector('#rw').value,
+            subject: ctx.label,
+            page: location.pathname + location.search
+          })
+        });
+        var out = await res.json().catch(function () { return {}; });
+        if (!res.ok) throw new Error(out.error || 'Could not send.');
+        wrap.querySelector('.fbg-card').innerHTML =
+          '<div class="repdone"><div class="tick">✓</div><h3>Thanks</h3>' +
+          '<p>That\'s logged. We\'ll get it sorted.</p></div>';
+        setTimeout(close, 1900);
+      } catch (ex) {
+        btn.disabled = false; btn.textContent = 'Send report';
+        err.style.display = 'block';
+        err.textContent = ex.message || 'Could not send. Try again later.';
+      }
+    });
+  }
+
+  window.FB_REPORT = open;
+
+  // floating button on every page
+  var b = document.createElement('button');
+  b.className = 'repbtn';
+  b.setAttribute('aria-label', 'Report a problem');
+  b.innerHTML = '<span>!</span> Report';
+  b.addEventListener('click', function () { open(); });
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', function () { document.body.appendChild(b); });
+  } else { document.body.appendChild(b); }
+
+  // "player missing?" prompt when a search finds nothing
+  document.addEventListener('DOMContentLoaded', function () {
+    var empty = document.getElementById('empty');
+    if (!empty) return;
+    var obs = new MutationObserver(function () {
+      if (empty.style.display !== 'none' && !empty.querySelector('.repmiss')) {
+        var a = document.createElement('button');
+        a.className = 'repmiss';
+        a.textContent = 'Player missing? Tell us →';
+        a.addEventListener('click', function () { open('missing'); });
+        empty.appendChild(a);
+      }
+    });
+    obs.observe(empty, { attributes: true, attributeFilter: ['style'] });
+  });
 })();
 </script>
 </body>

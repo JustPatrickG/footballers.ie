@@ -665,40 +665,44 @@ a.intlblock.lnk:hover{border-color:var(--teal)}
 .elig.open{border-color:rgba(53,212,191,.35);background:rgba(53,212,191,.06)}
 .elig.open .ec{color:var(--teal)}
 .elig.open .en{color:var(--teal)}
+
+/* ============ REPORT ============ */
+.repbtn{position:fixed;right:14px;bottom:14px;z-index:120;display:flex;align-items:center;gap:7px;
+  background:var(--panel);border:1px solid var(--line);color:var(--mute);border-radius:22px;
+  padding:9px 14px 9px 10px;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.1em;
+  text-transform:uppercase;box-shadow:0 6px 20px rgba(0,0,0,.4);cursor:pointer}
+.repbtn:hover{color:var(--white);border-color:var(--mute)}
+.repbtn span{width:17px;height:17px;border-radius:50%;background:rgba(245,197,24,.16);color:var(--yellow);
+  display:grid;place-items:center;font-size:11px;font-weight:700}
+.fbg-card.rep{text-align:left}
+.fbg-card.rep h3,.fbg-card.rep p{text-align:center}
+.repform{display:block;margin-top:16px}
+.repform label{display:block;font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--mute);margin:12px 0 5px}
+.repform label .opt{text-transform:none;letter-spacing:0;opacity:.75}
+.repform select,.repform textarea,.repform input[type=email]{width:100%;background:var(--bg);
+  border:1px solid var(--line);color:var(--white);padding:11px 12px;border-radius:8px;
+  font-family:'Space Grotesk',sans-serif;font-size:15px}
+.repform textarea{resize:vertical;line-height:1.5}
+.repform button{width:100%;margin-top:16px;min-height:46px;background:var(--yellow);color:#0C0F10;
+  border:0;font-weight:700;border-radius:8px;font-size:15px;cursor:pointer}
+.repform button:disabled{opacity:.6}
+.repform .hp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
+.repctx{font-family:'IBM Plex Mono',monospace;font-size:10px;color:var(--mute);margin-top:12px;
+  text-align:center;letter-spacing:.06em}
+.repctx b{color:var(--white)}
+.repdone{text-align:center;padding:12px 0}
+.repdone .tick{width:48px;height:48px;margin:0 auto 12px;border-radius:50%;display:grid;place-items:center;
+  background:rgba(53,212,191,.14);color:var(--teal);font-size:23px}
+.repmiss{display:block;margin:14px auto 0;background:var(--panel);border:1px solid var(--line);
+  color:var(--yellow);border-radius:8px;padding:11px 16px;font-size:14px;cursor:pointer}
+.repmiss:hover{border-color:var(--yellow)}
+@media(max-width:700px){ .repbtn{right:10px;bottom:10px;padding:8px 12px 8px 9px;font-size:10px} }
+.more.stale{color:var(--yellow);letter-spacing:.06em}
 </style>
 </head>
 <body>
-<div id="fbload" aria-hidden="true">
-  <div class="fbl-mark">footballers<i>.ie</i></div>
-  <div class="fbl-pitch">
-    <div class="fbl-ball"><i></i></div>
-    <svg class="fbl-boot" viewBox="0 0 40 44" aria-hidden="true">
-      <g class="fbl-leg">
-        <line x1="20" y1="2" x2="20" y2="24"/>
-        <line x1="20" y1="24" x2="15" y2="38"/>
-        <line x1="15" y1="38" x2="31" y2="40"/>
-      </g>
-    </svg>
-  </div>
-</div>
-<script>
-/* hide the loader as soon as the page is ready — kept short on purpose */
-(function(){
-  var el=document.getElementById('fbload');
-  if(!el) return;
-  var t0=Date.now(), MIN=2150;
-  function done(){
-    var wait=Math.max(0, MIN-(Date.now()-t0));
-    setTimeout(function(){
-      el.classList.add('out');
-      setTimeout(function(){ if(el.parentNode) el.parentNode.removeChild(el); }, 340);
-    }, wait);
-  }
-  if(document.readyState==='complete') done();
-  else window.addEventListener('load', done);
-  setTimeout(done, 3600);   // never let it hang
-})();
-</script>
+
 <div class="wrap">
 <nav>
   <a class="mark" href="../index.html">footballers<i>.ie</i></a>
@@ -706,7 +710,7 @@ a.intlblock.lnk:hover{border-color:var(--teal)}
     <span></span><span></span><span></span>
   </button>
   <div class="navlinks" id="navlinks"><a class="" href="../news.html">News</a><a class="" href="../players.html">Players</a><a class="on" href="../clubs.html">Clubs</a><a class="" href="../ireland.html">Ireland</a><a class="" href="../fixtures.html">Fixtures</a><a class="" href="../alerts.html">Alerts</a></div>
-  <div class="navmeta"><span id="navdate">21-27 AUG</span> · <b>334</b> TRACKED</div>
+  <div class="navmeta"><span id="navdate">21-27 AUG</span> · <b>339</b> TRACKED</div>
 </nav>
 <script>
 (function(){
@@ -720,7 +724,7 @@ a.intlblock.lnk:hover{border-color:var(--teal)}
 </script>
 
     <a class="crumb" data-back href="../clubs.html">← Back</a>
-    <div class="pagehead"><h1>Dundalk</h1><p>League of Ireland · 31 Irish players tracked</p></div>
+    <div class="pagehead"><h1>Dundalk</h1><p>Premier Division · 31 Irish players tracked</p></div>
     <div class="sec"><h2>Irish players</h2></div>
     <div class="tiergroup"><a class="plrow" href="../player/aaron-keogh.html"><div class="pavatar sm"><span>AK</span></div><div class="nm">Aaron Keogh <span class="cl">Dundalk</span></div><div class="ev">⚽</div><div class="mn"><span class="rate none">—</span></div><button class="star" data-fav="aaron-keogh" aria-pressed="false" aria-label="Follow Aaron Keogh">★</button></a><a class="plrow" href="../player/aodh-dervin.html"><div class="pavatar sm"><img src="../img/players/aodh-dervin.png" alt="Aodh Dervin" loading="lazy" onerror="this.parentNode.innerHTML='<span>AD</span>'"></div><div class="nm">Aodh Dervin <span class="cl">Dundalk</span></div><div class="ev">—</div><div class="mn"><span class="rate md sm">6.88</span></div><button class="star" data-fav="aodh-dervin" aria-pressed="false" aria-label="Follow Aodh Dervin">★</button></a><a class="plrow" href="../player/cian-dillon.html"><div class="pavatar sm"><img src="../img/players/cian-dillon.png" alt="Cian Dillon" loading="lazy" onerror="this.parentNode.innerHTML='<span>CD</span>'"></div><div class="nm">Cian Dillon <span class="cl">Dundalk</span></div><div class="ev">—</div><div class="mn"><span class="rate lo sm">6.30</span></div><button class="star" data-fav="cian-dillon" aria-pressed="false" aria-label="Follow Cian Dillon">★</button></a><a class="plrow" href="../player/cian-spaight.html"><div class="pavatar sm"><span>CS</span></div><div class="nm">Cian Spaight <span class="cl">Dundalk</span></div><div class="ev">—</div><div class="mn"><span class="rate none">—</span></div><button class="star" data-fav="cian-spaight" aria-pressed="false" aria-label="Follow Cian Spaight">★</button></a><a class="plrow" href="../player/ciaran-kilduff.html"><div class="pavatar sm"><img src="../img/players/ciaran-kilduff.png" alt="Ciarán Kilduff" loading="lazy" onerror="this.parentNode.innerHTML='<span>CK</span>'"></div><div class="nm">Ciarán Kilduff <span class="cl">Dundalk</span></div><div class="ev">—</div><div class="mn"><span class="rate none">—</span></div><button class="star" data-fav="ciaran-kilduff" aria-pressed="false" aria-label="Follow Ciarán Kilduff">★</button></a><a class="plrow" href="../player/conall-alfred.html"><div class="pavatar sm"><span>CA</span></div><div class="nm">Conall Alfred <span class="cl">Dundalk</span></div><div class="ev">—</div><div class="mn"><span class="rate none">—</span></div><button class="star" data-fav="conall-alfred" aria-pressed="false" aria-label="Follow Conall Alfred">★</button></a><a class="plrow" href="../player/conor-kearns.html"><div class="pavatar sm"><img src="../img/players/conor-kearns.png" alt="Conor Kearns" loading="lazy" onerror="this.parentNode.innerHTML='<span>CK</span>'"></div><div class="nm">Conor Kearns <span class="cl">Dundalk</span></div><div class="ev">—</div><div class="mn"><span class="rate md sm">6.58</span></div><button class="star" data-fav="conor-kearns" aria-pressed="false" aria-label="Follow Conor Kearns">★</button></a><a class="plrow" href="../player/conor-okeeffe.html"><div class="pavatar sm"><img src="../img/players/conor-okeeffe.png" alt="Conor O'Keeffe" loading="lazy" onerror="this.parentNode.innerHTML='<span>CO</span>'"></div><div class="nm">Conor O'Keeffe <span class="cl">Dundalk</span></div><div class="ev">—</div><div class="mn"><span class="rate md sm">7.13</span></div><button class="star" data-fav="conor-okeeffe" aria-pressed="false" aria-label="Follow Conor O'Keeffe">★</button></a><a class="plrow" href="../player/daryl-horgan.html"><div class="pavatar sm"><img src="../img/players/daryl-horgan.png" alt="Daryl Horgan" loading="lazy" onerror="this.parentNode.innerHTML='<span>DH</span>'"></div><div class="nm">Daryl Horgan <span class="cl">Dundalk</span></div><div class="ev">🅰</div><div class="mn"><span class="rate hi sm">7.62</span></div><button class="star" data-fav="daryl-horgan" aria-pressed="false" aria-label="Follow Daryl Horgan">★</button></a><a class="plrow" href="../player/daithi-folan.html"><div class="pavatar sm"><img src="../img/players/daithi-folan.png" alt="Dáithí Folan" loading="lazy" onerror="this.parentNode.innerHTML='<span>DF</span>'"></div><div class="nm">Dáithí Folan <span class="cl">Dundalk</span></div><div class="ev">—</div><div class="mn"><span class="rate none">—</span></div><button class="star" data-fav="daithi-folan" aria-pressed="false" aria-label="Follow Dáithí Folan">★</button></a><a class="plrow" href="../player/egor-vassenin.html"><div class="pavatar sm"><img src="../img/players/egor-vassenin.png" alt="Egor Vassenin" loading="lazy" onerror="this.parentNode.innerHTML='<span>EV</span>'"></div><div class="nm">Egor Vassenin <span class="cl">Dundalk</span></div><div class="ev">—</div><div class="mn"><span class="rate md sm">6.65</span></div><button class="star" data-fav="egor-vassenin" aria-pressed="false" aria-label="Follow Egor Vassenin">★</button></a><a class="plrow" href="../player/enda-minogue.html"><div class="pavatar sm"><img src="../img/players/enda-minogue.png" alt="Enda Minogue" loading="lazy" onerror="this.parentNode.innerHTML='<span>EM</span>'"></div><div class="nm">Enda Minogue <span class="cl">Dundalk</span></div><div class="ev">—</div><div class="mn"><span class="rate md sm">6.97</span></div><button class="star" data-fav="enda-minogue" aria-pressed="false" aria-label="Follow Enda Minogue">★</button></a><a class="plrow" href="../player/ethan-hall.html"><div class="pavatar sm"><span>EH</span></div><div class="nm">Ethan Hall <span class="cl">Dundalk</span></div><div class="ev">—</div><div class="mn"><span class="rate none">—</span></div><button class="star" data-fav="ethan-hall" aria-pressed="false" aria-label="Follow Ethan Hall">★</button></a><a class="plrow" href="../player/harry-groome.html"><div class="pavatar sm"><img src="../img/players/harry-groome.png" alt="Harry Groome" loading="lazy" onerror="this.parentNode.innerHTML='<span>HG</span>'"></div><div class="nm">Harry Groome <span class="cl">Dundalk</span></div><div class="ev">—</div><div class="mn"><span class="rate lo sm">6.48</span></div><button class="star" data-fav="harry-groome" aria-pressed="false" aria-label="Follow Harry Groome">★</button></a><a class="plrow" href="../player/harvey-warren.html"><div class="pavatar sm"><img src="../img/players/harvey-warren.png" alt="Harvey Warren" loading="lazy" onerror="this.parentNode.innerHTML='<span>HW</span>'"></div><div class="nm">Harvey Warren <span class="cl">Dundalk</span></div><div class="ev">—</div><div class="mn"><span class="rate md sm">6.92</span></div><button class="star" data-fav="harvey-warren" aria-pressed="false" aria-label="Follow Harvey Warren">★</button></a><a class="plrow" href="../player/john-ross-wilson.html"><div class="pavatar sm"><img src="../img/players/john-ross-wilson.png" alt="John Ross Wilson" loading="lazy" onerror="this.parentNode.innerHTML='<span>JW</span>'"></div><div class="nm">John Ross Wilson <span class="cl">Dundalk</span></div><div class="ev">🅰</div><div class="mn"><span class="rate md sm">7.00</span></div><button class="star" data-fav="john-ross-wilson" aria-pressed="false" aria-label="Follow John Ross Wilson">★</button></a><a class="plrow" href="../player/keith-buckley.html"><div class="pavatar sm"><img src="../img/players/keith-buckley.png" alt="Keith Buckley" loading="lazy" onerror="this.parentNode.innerHTML='<span>KB</span>'"></div><div class="nm">Keith Buckley <span class="cl">Dundalk</span></div><div class="ev">—</div><div class="mn"><span class="rate md sm">6.76</span></div><button class="star" data-fav="keith-buckley" aria-pressed="false" aria-label="Follow Keith Buckley">★</button></a><a class="plrow" href="../player/keith-ward.html"><div class="pavatar sm"><img src="../img/players/keith-ward.png" alt="Keith Ward" loading="lazy" onerror="this.parentNode.innerHTML='<span>KW</span>'"></div><div class="nm">Keith Ward <span class="cl">Dundalk</span></div><div class="ev">—</div><div class="mn"><span class="rate none">—</span></div><button class="star" data-fav="keith-ward" aria-pressed="false" aria-label="Follow Keith Ward">★</button></a><a class="plrow" href="../player/luke-mulligan.html"><div class="pavatar sm"><img src="../img/players/luke-mulligan.png" alt="Luke Mulligan" loading="lazy" onerror="this.parentNode.innerHTML='<span>LM</span>'"></div><div class="nm">Luke Mulligan <span class="cl">Dundalk</span></div><div class="ev">—</div><div class="mn"><span class="rate none">—</span></div><button class="star" data-fav="luke-mulligan" aria-pressed="false" aria-label="Follow Luke Mulligan">★</button></a><a class="plrow" href="../player/max-ferguson.html"><div class="pavatar sm"><span>MF</span></div><div class="nm">Max Ferguson <span class="cl">Dundalk</span></div><div class="ev">—</div><div class="mn"><span class="rate none">—</span></div><button class="star" data-fav="max-ferguson" aria-pressed="false" aria-label="Follow Max Ferguson">★</button></a><a class="plrow" href="../player/mayowa-animasahun.html"><div class="pavatar sm"><img src="../img/players/mayowa-animasahun.png" alt="Mayowa Animasahun" loading="lazy" onerror="this.parentNode.innerHTML='<span>MA</span>'"></div><div class="nm">Mayowa Animasahun <span class="cl">Dundalk</span></div><div class="ev">—</div><div class="mn"><span class="rate md sm">6.96</span></div><button class="star" data-fav="mayowa-animasahun" aria-pressed="false" aria-label="Follow Mayowa Animasahun">★</button></a><a class="plrow" href="../player/robert-cornwall.html"><div class="pavatar sm"><img src="../img/players/robert-cornwall.png" alt="Robert Cornwall" loading="lazy" onerror="this.parentNode.innerHTML='<span>RC</span>'"></div><div class="nm">Robert Cornwall <span class="cl">Dundalk</span></div><div class="ev">—</div><div class="mn"><span class="rate md sm">6.85</span></div><button class="star" data-fav="robert-cornwall" aria-pressed="false" aria-label="Follow Robert Cornwall">★</button></a><a class="plrow" href="../player/ronan-teahan.html"><div class="pavatar sm"><img src="../img/players/ronan-teahan.png" alt="Ronan Teahan" loading="lazy" onerror="this.parentNode.innerHTML='<span>RT</span>'"></div><div class="nm">Ronan Teahan <span class="cl">Dundalk</span></div><div class="ev">—</div><div class="mn"><span class="rate md sm">6.78</span></div><button class="star" data-fav="ronan-teahan" aria-pressed="false" aria-label="Follow Ronan Teahan">★</button></a><a class="plrow" href="../player/samuel-safaei.html"><div class="pavatar sm"><img src="../img/players/samuel-safaei.png" alt="Samuel Safaei" loading="lazy" onerror="this.parentNode.innerHTML='<span>SS</span>'"></div><div class="nm">Samuel Safaei <span class="cl">Dundalk</span></div><div class="ev">—</div><div class="mn"><span class="rate none">—</span></div><button class="star" data-fav="samuel-safaei" aria-pressed="false" aria-label="Follow Samuel Safaei">★</button></a><a class="plrow" href="../player/sean-spaight.html"><div class="pavatar sm"><img src="../img/players/sean-spaight.png" alt="Sean Spaight" loading="lazy" onerror="this.parentNode.innerHTML='<span>SS</span>'"></div><div class="nm">Sean Spaight <span class="cl">Dundalk</span></div><div class="ev">—</div><div class="mn"><span class="rate lo sm">6.46</span></div><button class="star" data-fav="sean-spaight" aria-pressed="false" aria-label="Follow Sean Spaight">★</button></a><a class="plrow" href="../player/shane-duffy.html"><div class="pavatar sm"><img src="../img/players/shane-duffy.png" alt="Shane Duffy" loading="lazy" onerror="this.parentNode.innerHTML='<span>SD</span>'"></div><div class="nm">Shane Duffy <span class="cl">Dundalk</span></div><div class="ev">—</div><div class="mn"><span class="rate md sm">6.53</span></div><button class="star" data-fav="shane-duffy" aria-pressed="false" aria-label="Follow Shane Duffy">★</button></a><a class="plrow" href="../player/shane-tracey.html"><div class="pavatar sm"><img src="../img/players/shane-tracey.png" alt="Shane Tracey" loading="lazy" onerror="this.parentNode.innerHTML='<span>ST</span>'"></div><div class="nm">Shane Tracey <span class="cl">Dundalk</span></div><div class="ev">—</div><div class="mn"><span class="rate md sm">6.62</span></div><button class="star" data-fav="shane-tracey" aria-pressed="false" aria-label="Follow Shane Tracey">★</button></a><a class="plrow" href="../player/shaun-platt.html"><div class="pavatar sm"><span>SP</span></div><div class="nm">Shaun Platt <span class="cl">Dundalk</span></div><div class="ev">—</div><div class="mn"><span class="rate none">—</span></div><button class="star" data-fav="shaun-platt" aria-pressed="false" aria-label="Follow Shaun Platt">★</button></a><a class="plrow" href="../player/shay-casey.html"><div class="pavatar sm"><span>SC</span></div><div class="nm">Shay Casey <span class="cl">Dundalk</span></div><div class="ev">—</div><div class="mn"><span class="rate none">—</span></div><button class="star" data-fav="shay-casey" aria-pressed="false" aria-label="Follow Shay Casey">★</button></a><a class="plrow" href="../player/trevor-clarke.html"><div class="pavatar sm"><img src="../img/players/trevor-clarke.png" alt="Trevor Clarke" loading="lazy" onerror="this.parentNode.innerHTML='<span>TC</span>'"></div><div class="nm">Trevor Clarke <span class="cl">Dundalk</span></div><div class="ev">—</div><div class="mn"><span class="rate md sm">6.63</span></div><button class="star" data-fav="trevor-clarke" aria-pressed="false" aria-label="Follow Trevor Clarke">★</button></a><a class="plrow" href="../player/tyreke-wilson.html"><div class="pavatar sm"><img src="../img/players/tyreke-wilson.png" alt="Tyreke Wilson" loading="lazy" onerror="this.parentNode.innerHTML='<span>TW</span>'"></div><div class="nm">Tyreke Wilson <span class="cl">Dundalk</span></div><div class="ev">—</div><div class="mn"><span class="rate md sm">7.07</span></div><button class="star" data-fav="tyreke-wilson" aria-pressed="false" aria-label="Follow Tyreke Wilson">★</button></a></div>
     <div class="sec"><h2>Upcoming fixtures</h2></div>
@@ -1298,6 +1302,136 @@ a.intlblock.lnk:hover{border-color:var(--teal)}
       }
     })(els[i]);
   }
+})();
+
+/* ---------- REPORT A PROBLEM ----------
+   A small button on every page. Knows which page it's on, so a report from a
+   player page arrives already tagged with that player. */
+(function () {
+  function context() {
+    var slug = document.body.getAttribute('data-player');
+    if (slug) {
+      var h1 = document.querySelector('.pdname');
+      return { kind: 'player', label: h1 ? h1.textContent.trim() : slug };
+    }
+    if (/\/match\//.test(location.pathname)) {
+      var t = document.querySelectorAll('.mteam');
+      return { kind: 'match', label: t.length > 1 ? t[0].textContent.trim() + ' v ' + t[1].textContent.trim() : 'this match' };
+    }
+    if (/\/club\//.test(location.pathname)) {
+      var c = document.querySelector('h1');
+      return { kind: 'club', label: c ? c.textContent.trim() : 'this club' };
+    }
+    return { kind: 'page', label: document.title.replace(' — FOOTBALLERS', '') };
+  }
+
+  function open(preset) {
+    var ctx = context();
+    var wrap = document.createElement('div');
+    wrap.className = 'fbgate';
+    wrap.innerHTML =
+      '<div class="fbg-card rep" role="dialog" aria-modal="true">' +
+        '<button class="fbg-x" aria-label="Close">×</button>' +
+        '<h3>Report a problem</h3>' +
+        '<p>Spotted a missing player or something wrong? Tell us and we\'ll fix it.</p>' +
+        '<form class="repform">' +
+          '<label>What\'s wrong</label>' +
+          '<select id="rt">' +
+            '<option value="missing">A player is missing</option>' +
+            '<option value="wrong">Wrong stats or details</option>' +
+            '<option value="club">Wrong club or league</option>' +
+            '<option value="match">Something wrong with a match</option>' +
+            '<option value="other">Something else</option>' +
+          '</select>' +
+          '<label>Details</label>' +
+          '<textarea id="rd" rows="4" placeholder="' +
+            (ctx.kind === 'player' ? 'e.g. he signed for a new club last week' :
+             ctx.kind === 'match'  ? 'e.g. the score is wrong' :
+             'e.g. Séamus Coleman isn\'t listed') + '"></textarea>' +
+          '<label>Your email <span class="opt">optional — only if you want a reply</span></label>' +
+          '<input type="email" id="re" placeholder="you@email.ie" autocomplete="email">' +
+          '<input type="text" id="rw" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">' +
+          '<button type="submit">Send report</button>' +
+        '</form>' +
+        '<div class="repctx">About: <b>' + ctx.label + '</b></div>' +
+        '<div class="nlnote" id="rerr" style="display:none"></div>' +
+      '</div>';
+    document.body.appendChild(wrap);
+    requestAnimationFrame(function () { wrap.classList.add('in'); });
+    if (preset) { var sel = wrap.querySelector('#rt'); if (sel) sel.value = preset; }
+    setTimeout(function () { var d = wrap.querySelector('#rd'); if (d) d.focus(); }, 240);
+
+    function close() {
+      wrap.classList.remove('in');
+      setTimeout(function () { if (wrap.parentNode) wrap.parentNode.removeChild(wrap); }, 280);
+      document.removeEventListener('keydown', onKey);
+    }
+    function onKey(e) { if (e.key === 'Escape') close(); }
+    document.addEventListener('keydown', onKey);
+    wrap.querySelector('.fbg-x').addEventListener('click', close);
+    wrap.addEventListener('click', function (e) { if (e.target === wrap) close(); });
+
+    wrap.querySelector('.repform').addEventListener('submit', async function (e) {
+      e.preventDefault();
+      var err = wrap.querySelector('#rerr');
+      var details = wrap.querySelector('#rd').value.trim();
+      if (details.length < 5) { err.style.display = 'block'; err.textContent = 'Add a bit more detail.'; return; }
+      var btn = wrap.querySelector('.repform button');
+      btn.disabled = true; btn.textContent = 'Sending…';
+      try {
+        var res = await fetch('/api/report', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            type: wrap.querySelector('#rt').value,
+            details: details,
+            email: wrap.querySelector('#re').value.trim(),
+            website: wrap.querySelector('#rw').value,
+            subject: ctx.label,
+            page: location.pathname + location.search
+          })
+        });
+        var out = await res.json().catch(function () { return {}; });
+        if (!res.ok) throw new Error(out.error || 'Could not send.');
+        wrap.querySelector('.fbg-card').innerHTML =
+          '<div class="repdone"><div class="tick">✓</div><h3>Thanks</h3>' +
+          '<p>That\'s logged. We\'ll get it sorted.</p></div>';
+        setTimeout(close, 1900);
+      } catch (ex) {
+        btn.disabled = false; btn.textContent = 'Send report';
+        err.style.display = 'block';
+        err.textContent = ex.message || 'Could not send. Try again later.';
+      }
+    });
+  }
+
+  window.FB_REPORT = open;
+
+  // floating button on every page
+  var b = document.createElement('button');
+  b.className = 'repbtn';
+  b.setAttribute('aria-label', 'Report a problem');
+  b.innerHTML = '<span>!</span> Report';
+  b.addEventListener('click', function () { open(); });
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', function () { document.body.appendChild(b); });
+  } else { document.body.appendChild(b); }
+
+  // "player missing?" prompt when a search finds nothing
+  document.addEventListener('DOMContentLoaded', function () {
+    var empty = document.getElementById('empty');
+    if (!empty) return;
+    var obs = new MutationObserver(function () {
+      if (empty.style.display !== 'none' && !empty.querySelector('.repmiss')) {
+        var a = document.createElement('button');
+        a.className = 'repmiss';
+        a.textContent = 'Player missing? Tell us →';
+        a.addEventListener('click', function () { open('missing'); });
+        empty.appendChild(a);
+      }
+    });
+    obs.observe(empty, { attributes: true, attributeFilter: ['style'] });
+  });
 })();
 </script>
 </body>

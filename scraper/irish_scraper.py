@@ -786,6 +786,45 @@ def extract_season_stats(blob):
     return stats
 
 
+def current_season_label(now, sample=""):
+    """Label for the season in progress. Calendar-year leagues (LOI) use
+    a bare year, matching how the source labels them."""
+    if re.fullmatch(r"\d{4}", str(sample or "").strip()):
+        return str(now.year), (dt.datetime(now.year, 1, 1,
+                                           tzinfo=dt.timezone.utc),
+                               dt.datetime(now.year, 12, 31,
+                                           tzinfo=dt.timezone.utc))
+    y = now.year if now.month >= 7 else now.year - 1
+    return (f"{y}/{str(y + 1)[2:]}",
+            (dt.datetime(y, 7, 1, tzinfo=dt.timezone.utc),
+             dt.datetime(y + 1, 6, 30, tzinfo=dt.timezone.utc)))
+
+
+def season_from_matches(mlist, league, now):
+    """Aggregate this season's club stats from the player's own match
+    list. Used when the source's stats block is a season behind."""
+    label, (start, end) = current_season_label(now)
+    played = [m for m in mlist
+              if m["played"] and start <= m["utc"] <= end]
+    if league:
+        inleague = [m for m in played if norm(m["comp"]) == norm(league)]
+        if inleague:
+            played = inleague
+    if not played:
+        return None
+    mins = sum(int(m["minutes"] or 0) for m in played)
+    goals = sum(int(m["goals"] or 0) for m in played)
+    assists = sum(int(m["assists"] or 0) for m in played)
+    rated = [(float(m["rating"]), 1) for m in played
+             if str(m["rating"]) not in ("", "None")]
+    rating = (f"{sum(r for r, _ in rated) / len(rated):.2f}"
+              if rated else "")
+    return {"season": label, "apps": len(played), "starts": "",
+            "goals": goals, "assists": assists, "mins": mins,
+            "yellow": "", "red": "", "rating": rating,
+            "league": league}
+
+
 def extract_personal(blob):
     """age, born(blank - fotmob lacks town), foot."""
     age = foot = ""
@@ -922,6 +961,11 @@ def scrape(args):
 
         # players.csv row
         season = extract_season_stats(blob)
+        cur_label, _ = current_season_label(now, season["season"])
+        if season["season"] != cur_label:
+            live_season = season_from_matches(mlist, season["league"], now)
+            if live_season:
+                season = live_season
         (sr_caps, sr_goals, sr_debut, youth,
          c_apps, c_goals, c_assists) = extract_career(blob)
         age, born, foot = extract_personal(blob)
