@@ -648,6 +648,23 @@ img,svg,iframe{max-width:100%}
   .fxrow.pfx .fxc{display:none}
 }
 .loanfrom{color:var(--yellow);font-family:'IBM Plex Mono',monospace;font-size:11px}
+
+/* international blocks are links now */
+a.intlblock.lnk{display:block;transition:border-color .12s}
+a.intlblock.lnk:hover{border-color:var(--teal)}
+.ilvl .go{float:right;font-family:'IBM Plex Mono',monospace;font-size:10px;color:var(--teal);
+  letter-spacing:.08em;font-weight:400}
+
+/* eligibility: green = tied, amber = underage only, blue = eligible, grey = closed */
+.elig.tied{border-color:rgba(35,200,122,.45);background:rgba(35,200,122,.07)}
+.elig.tied .ec{color:#3BD68A}
+.elig.tied .en{color:#3BD68A}
+.elig.youth{border-color:rgba(245,197,24,.4);background:rgba(245,197,24,.06)}
+.elig.youth .ec{color:var(--yellow)}
+.elig.youth .en{color:var(--yellow)}
+.elig.open{border-color:rgba(53,212,191,.35);background:rgba(53,212,191,.06)}
+.elig.open .ec{color:var(--teal)}
+.elig.open .en{color:var(--teal)}
 </style>
 </head>
 <body>

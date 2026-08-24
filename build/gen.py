@@ -860,10 +860,18 @@ def build_ireland():
     {panels}
     <script>
     var tabs=[].slice.call(document.querySelectorAll('.tab')),panels=[].slice.call(document.querySelectorAll('.tabpanel'));
-    tabs.forEach(function(t){{t.onclick=function(){{
-      tabs.forEach(function(x){{x.classList.toggle('on',x===t)}});
-      panels.forEach(function(p){{p.classList.toggle('on',p.dataset.t===t.dataset.t)}});
-    }}}});
+    function openTab(name){{
+      var found=false;
+      tabs.forEach(function(x){{
+        var hit=x.dataset.t===name;
+        x.classList.toggle('on',hit); if(hit) found=true;
+      }});
+      panels.forEach(function(p){{p.classList.toggle('on',p.dataset.t===name)}});
+      return found;
+    }}
+    tabs.forEach(function(t){{t.onclick=function(){{ openTab(t.dataset.t); }}}});
+    var want=new URLSearchParams(location.search).get('level');
+    if(want) openTab(want);
     </script>'''
     return shell("Republic of Ireland — FOOTBALLERS",
                  "Ireland fixtures, results and capped players at every level.","", "ireland.html", body, canonical="ireland.html")
@@ -1007,7 +1015,8 @@ def build_player(p):
                   f'<span class="ha">{h}</span></div><div class="fxc">{esc(cp)}</div></div>'
                   for d,o,h,cp in p["fixtures"])
     rsr = ""
-    for d,o,sc,cp,mins,g,a in p["results"]:
+    recent_results = list(reversed(p["results"]))[:10]   # feed is oldest-first
+    for d,o,sc,cp,mins,g,a in recent_results:
         ev = ("⚽"*g) + ("🅰"*a)
         rsr += (f'<div class="fxrow"><div class="fxd">{esc(d)}</div><div class="fxo">{esc(o)}</div>'
                 f'<div class="fxs">{esc(sc)}</div><div class="fxev">{ev}</div>'
@@ -1026,19 +1035,29 @@ def build_player(p):
             rs = "".join(f'<div class="fxrow"><div class="fxd">{esc(d)}</div><div class="fxo">{esc(o)}</div>'
                          f'<div class="fxs">{esc(sc)}</div><div class="fxc">{esc(cp)}</div></div>'
                          for d,o,sc,cp in lv["results"])
-            blocks += (f'<div class="intlblock"><div class="ilvl">Senior <span>{i["caps"]} caps · {i["goals"]} goals · debut {i["debut"]}</span></div>'
+            blocks += (f'<a class="intlblock lnk" href="../ireland.html?level=Senior">'
+                       f'<div class="ilvl">Senior <span>{i["caps"]} caps · {i["goals"]} goals · debut {i["debut"]}</span>'
+                       f'<span class="go">View squad →</span></div>'
                        f'<div class="isub">Upcoming</div><div class="fxlist">{fx}</div>'
-                       f'<div class="isub">Recent results</div><div class="fxlist">{rs}</div></div>')
+                       f'<div class="isub">Recent results</div><div class="fxlist">{rs}</div></a>')
         for lvl, caps, goals, since in p["intl_youth"]:
             txt = f'{caps} caps · {goals} goals · from {since}' if caps is not None else "Called up at this level"
-            blocks += (f'<div class="intlblock"><div class="ilvl">{esc(lvl)} <span>{txt}</span></div></div>')
+            blocks += (f'<a class="intlblock lnk" href="../ireland.html?level={esc(lvl)}">'
+                       f'<div class="ilvl">{esc(lvl)} <span>{txt}</span>'
+                       f'<span class="go">View squad →</span></div></a>')
         intl = f'<div class="sec"><h2>International</h2><a class="more" href="../ireland.html">Ireland hub →</a></div>{blocks}'
 
     # eligibility
     elig = ""
     for country, status in p["eligible"]:
-        cls = {"tied":"elig tied","blocked":"elig blocked","eligible":"elig open"}[status]
-        note = {"tied":"Committed","blocked":"No longer available","eligible":"Still eligible"}[status]
+        if status == "blocked":
+            cls, note = "elig blocked", "No longer available"
+        elif status == "tied":
+            cls, note = "elig tied", "Cap-tied · committed"
+        elif p["intl_youth"] and country == "Republic of Ireland":
+            cls, note = "elig youth", "Played underage · can still switch"
+        else:
+            cls, note = "elig open", "Eligible · never played"
         elig += f'<div class="{cls}"><span class="ec">{esc(country)}</span><span class="en">{note}</span></div>'
     tie_note = ("Cap-tied to Ireland — a competitive senior appearance means the other associations below are closed off."
                 if p["cap_status"]=="senior_comp" else
@@ -1091,7 +1110,8 @@ def build_player(p):
     <div class="sec"><h2>Upcoming fixtures</h2><span class="more" style="border:0">{esc(p["club"])}</span></div>
     <div class="fxlist">{fxr or '<div class="emptystate" style="display:block">No fixtures listed.</div>'}</div>
 
-    <div class="sec"><h2>This season's results</h2></div>
+    <div class="sec"><h2>Recent matches</h2>
+      <span class="more" style="border:0">last {len(recent_results)} of {len(p["results"])}</span></div>
     <div class="fxlist">{rsr or '<div class="emptystate" style="display:block">No appearances yet.</div>'}</div>
 
     {intl}

@@ -648,6 +648,23 @@ img,svg,iframe{max-width:100%}
   .fxrow.pfx .fxc{display:none}
 }
 .loanfrom{color:var(--yellow);font-family:'IBM Plex Mono',monospace;font-size:11px}
+
+/* international blocks are links now */
+a.intlblock.lnk{display:block;transition:border-color .12s}
+a.intlblock.lnk:hover{border-color:var(--teal)}
+.ilvl .go{float:right;font-family:'IBM Plex Mono',monospace;font-size:10px;color:var(--teal);
+  letter-spacing:.08em;font-weight:400}
+
+/* eligibility: green = tied, amber = underage only, blue = eligible, grey = closed */
+.elig.tied{border-color:rgba(35,200,122,.45);background:rgba(35,200,122,.07)}
+.elig.tied .ec{color:#3BD68A}
+.elig.tied .en{color:#3BD68A}
+.elig.youth{border-color:rgba(245,197,24,.4);background:rgba(245,197,24,.06)}
+.elig.youth .ec{color:var(--yellow)}
+.elig.youth .en{color:var(--yellow)}
+.elig.open{border-color:rgba(53,212,191,.35);background:rgba(53,212,191,.06)}
+.elig.open .ec{color:var(--teal)}
+.elig.open .en{color:var(--teal)}
 </style>
 </head>
 <body data-player="ethan-obrien">
@@ -735,13 +752,14 @@ img,svg,iframe{max-width:100%}
     <div class="sec"><h2>Upcoming fixtures</h2><span class="more" style="border:0">Drogheda United</span></div>
     <div class="fxlist"><div class="fxrow"><div class="fxd">28 Aug</div><div class="fxo">Dundalk <span class="ha">H</span></div><div class="fxc">Premier Division</div></div></div>
 
-    <div class="sec"><h2>This season's results</h2></div>
-    <div class="fxlist"><div class="fxrow"><div class="fxd">23 Aug</div><div class="fxo">Chattanooga FC</div><div class="fxs">0-1</div><div class="fxev"></div><div class="fxm">90'</div></div><div class="fxrow"><div class="fxd">30 Aug</div><div class="fxo">Atlanta United 2</div><div class="fxs">0-2</div><div class="fxev"></div><div class="fxm">59'</div></div><div class="fxrow"><div class="fxd">08 Sep</div><div class="fxo">New England Revolution II</div><div class="fxs">0-1</div><div class="fxev"></div><div class="fxm">48'</div></div><div class="fxrow"><div class="fxd">14 Sep</div><div class="fxo">Red Bull New York  II</div><div class="fxs">2-3</div><div class="fxev"></div><div class="fxm">90'</div></div><div class="fxrow"><div class="fxd">21 Sep</div><div class="fxo">Orlando City B</div><div class="fxs">1-0</div><div class="fxev"></div><div class="fxm">14'</div></div><div class="fxrow"><div class="fxd">29 Sep</div><div class="fxo">Inter Miami CF II</div><div class="fxs">4-1</div><div class="fxev"></div><div class="fxm">90'</div></div><div class="fxrow"><div class="fxd">05 Oct</div><div class="fxo">Carolina Core FC</div><div class="fxs">3-0</div><div class="fxev"></div><div class="fxm">84'</div></div><div class="fxrow"><div class="fxd">19 Oct</div><div class="fxo">Chattanooga FC</div><div class="fxs">2-0</div><div class="fxev"></div><div class="fxm">21'</div></div><div class="fxrow"><div class="fxd">06 Feb</div><div class="fxo">Galway United FC</div><div class="fxs">1-0</div><div class="fxev"></div><div class="fxm">90'</div></div><div class="fxrow"><div class="fxd">13 Feb</div><div class="fxo">Waterford FC</div><div class="fxs">2-0</div><div class="fxev"></div><div class="fxm">90'</div></div><div class="fxrow"><div class="fxd">20 Feb</div><div class="fxo">Dundalk</div><div class="fxs">1-1</div><div class="fxev"></div><div class="fxm">72'</div></div><div class="fxrow"><div class="fxd">27 Feb</div><div class="fxo">Shelbourne</div><div class="fxs">1-2</div><div class="fxev"></div><div class="fxm">69'</div></div><div class="fxrow"><div class="fxd">07 Mar</div><div class="fxo">Sligo Rovers</div><div class="fxs">1-2</div><div class="fxev"></div><div class="fxm">76'</div></div><div class="fxrow"><div class="fxd">13 Mar</div><div class="fxo">St. Patrick's Athletic</div><div class="fxs">1-4</div><div class="fxev"></div><div class="fxm">17'</div></div><div class="fxrow"><div class="fxd">16 Mar</div><div class="fxo">Shamrock Rovers</div><div class="fxs">0-0</div><div class="fxev"></div><div class="fxm">90'</div></div><div class="fxrow"><div class="fxd">20 Mar</div><div class="fxo">Derry City</div><div class="fxs">2-2</div><div class="fxev"></div><div class="fxm">90'</div></div><div class="fxrow"><div class="fxd">03 Apr</div><div class="fxo">Bohemian FC</div><div class="fxs">0-0</div><div class="fxev"></div><div class="fxm">90'</div></div><div class="fxrow"><div class="fxd">06 Apr</div><div class="fxo">Galway United FC</div><div class="fxs">2-3</div><div class="fxev"></div><div class="fxm">26'</div></div><div class="fxrow"><div class="fxd">22 May</div><div class="fxo">Dundalk</div><div class="fxs">1-1</div><div class="fxev"></div><div class="fxm">16'</div></div><div class="fxrow"><div class="fxd">29 May</div><div class="fxo">Waterford FC</div><div class="fxs">3-3</div><div class="fxev"></div><div class="fxm">83'</div></div><div class="fxrow"><div class="fxd">12 Jun</div><div class="fxo">St. Patrick's Athletic</div><div class="fxs">0-2</div><div class="fxev"></div><div class="fxm">66'</div></div><div class="fxrow"><div class="fxd">19 Jun</div><div class="fxo">Shelbourne</div><div class="fxs">2-2</div><div class="fxev"></div><div class="fxm">36'</div></div><div class="fxrow"><div class="fxd">26 Jun</div><div class="fxo">Derry City</div><div class="fxs">0-2</div><div class="fxev"></div><div class="fxm">30'</div></div><div class="fxrow"><div class="fxd">03 Jul</div><div class="fxo">Bohemian FC</div><div class="fxs">0-2</div><div class="fxev"></div><div class="fxm">89'</div></div></div>
+    <div class="sec"><h2>Recent matches</h2>
+      <span class="more" style="border:0">last 10 of 24</span></div>
+    <div class="fxlist"><div class="fxrow"><div class="fxd">03 Jul</div><div class="fxo">Bohemian FC</div><div class="fxs">0-2</div><div class="fxev"></div><div class="fxm">89'</div></div><div class="fxrow"><div class="fxd">26 Jun</div><div class="fxo">Derry City</div><div class="fxs">0-2</div><div class="fxev"></div><div class="fxm">30'</div></div><div class="fxrow"><div class="fxd">19 Jun</div><div class="fxo">Shelbourne</div><div class="fxs">2-2</div><div class="fxev"></div><div class="fxm">36'</div></div><div class="fxrow"><div class="fxd">12 Jun</div><div class="fxo">St. Patrick's Athletic</div><div class="fxs">0-2</div><div class="fxev"></div><div class="fxm">66'</div></div><div class="fxrow"><div class="fxd">29 May</div><div class="fxo">Waterford FC</div><div class="fxs">3-3</div><div class="fxev"></div><div class="fxm">83'</div></div><div class="fxrow"><div class="fxd">22 May</div><div class="fxo">Dundalk</div><div class="fxs">1-1</div><div class="fxev"></div><div class="fxm">16'</div></div><div class="fxrow"><div class="fxd">06 Apr</div><div class="fxo">Galway United FC</div><div class="fxs">2-3</div><div class="fxev"></div><div class="fxm">26'</div></div><div class="fxrow"><div class="fxd">03 Apr</div><div class="fxo">Bohemian FC</div><div class="fxs">0-0</div><div class="fxev"></div><div class="fxm">90'</div></div><div class="fxrow"><div class="fxd">20 Mar</div><div class="fxo">Derry City</div><div class="fxs">2-2</div><div class="fxev"></div><div class="fxm">90'</div></div><div class="fxrow"><div class="fxd">16 Mar</div><div class="fxo">Shamrock Rovers</div><div class="fxs">0-0</div><div class="fxev"></div><div class="fxm">90'</div></div></div>
 
     
 
     <div class="sec"><h2>Eligibility</h2></div>
-    <div class="eliglist"><div class="elig open"><span class="ec">Republic of Ireland</span><span class="en">Still eligible</span></div></div>
+    <div class="eliglist"><div class="elig open"><span class="ec">Republic of Ireland</span><span class="en">Eligible · never played</span></div></div>
     <p class="eligNote">Uncapped at any level — free to commit to any association they qualify for.</p>
 
     

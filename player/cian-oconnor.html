@@ -648,6 +648,23 @@ img,svg,iframe{max-width:100%}
   .fxrow.pfx .fxc{display:none}
 }
 .loanfrom{color:var(--yellow);font-family:'IBM Plex Mono',monospace;font-size:11px}
+
+/* international blocks are links now */
+a.intlblock.lnk{display:block;transition:border-color .12s}
+a.intlblock.lnk:hover{border-color:var(--teal)}
+.ilvl .go{float:right;font-family:'IBM Plex Mono',monospace;font-size:10px;color:var(--teal);
+  letter-spacing:.08em;font-weight:400}
+
+/* eligibility: green = tied, amber = underage only, blue = eligible, grey = closed */
+.elig.tied{border-color:rgba(35,200,122,.45);background:rgba(35,200,122,.07)}
+.elig.tied .ec{color:#3BD68A}
+.elig.tied .en{color:#3BD68A}
+.elig.youth{border-color:rgba(245,197,24,.4);background:rgba(245,197,24,.06)}
+.elig.youth .ec{color:var(--yellow)}
+.elig.youth .en{color:var(--yellow)}
+.elig.open{border-color:rgba(53,212,191,.35);background:rgba(53,212,191,.06)}
+.elig.open .ec{color:var(--teal)}
+.elig.open .en{color:var(--teal)}
 </style>
 </head>
 <body data-player="cian-oconnor">
@@ -735,13 +752,14 @@ img,svg,iframe{max-width:100%}
     <div class="sec"><h2>Upcoming fixtures</h2><span class="more" style="border:0">Drogheda United</span></div>
     <div class="fxlist"><div class="fxrow"><div class="fxd">28 Aug</div><div class="fxo">Dundalk <span class="ha">H</span></div><div class="fxc">Premier Division</div></div></div>
 
-    <div class="sec"><h2>This season's results</h2></div>
+    <div class="sec"><h2>Recent matches</h2>
+      <span class="more" style="border:0">last 1 of 1</span></div>
     <div class="fxlist"><div class="fxrow"><div class="fxd">17 Apr</div><div class="fxo">St. Patrick's Athletic</div><div class="fxs">1-3</div><div class="fxev"></div><div class="fxm">3'</div></div></div>
 
     
 
     <div class="sec"><h2>Eligibility</h2></div>
-    <div class="eliglist"><div class="elig open"><span class="ec">Republic of Ireland</span><span class="en">Still eligible</span></div></div>
+    <div class="eliglist"><div class="elig open"><span class="ec">Republic of Ireland</span><span class="en">Eligible · never played</span></div></div>
     <p class="eligNote">Uncapped at any level — free to commit to any association they qualify for.</p>
 
     

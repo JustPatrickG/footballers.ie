@@ -647,6 +647,24 @@ img,svg,iframe{max-width:100%}
   .fxrow.pfx{grid-template-columns:1fr auto;gap:10px}
   .fxrow.pfx .fxc{display:none}
 }
+.loanfrom{color:var(--yellow);font-family:'IBM Plex Mono',monospace;font-size:11px}
+
+/* international blocks are links now */
+a.intlblock.lnk{display:block;transition:border-color .12s}
+a.intlblock.lnk:hover{border-color:var(--teal)}
+.ilvl .go{float:right;font-family:'IBM Plex Mono',monospace;font-size:10px;color:var(--teal);
+  letter-spacing:.08em;font-weight:400}
+
+/* eligibility: green = tied, amber = underage only, blue = eligible, grey = closed */
+.elig.tied{border-color:rgba(35,200,122,.45);background:rgba(35,200,122,.07)}
+.elig.tied .ec{color:#3BD68A}
+.elig.tied .en{color:#3BD68A}
+.elig.youth{border-color:rgba(245,197,24,.4);background:rgba(245,197,24,.06)}
+.elig.youth .ec{color:var(--yellow)}
+.elig.youth .en{color:var(--yellow)}
+.elig.open{border-color:rgba(53,212,191,.35);background:rgba(53,212,191,.06)}
+.elig.open .ec{color:var(--teal)}
+.elig.open .en{color:var(--teal)}
 </style>
 </head>
 <body data-player="dylan-connolly">
@@ -734,13 +752,14 @@ img,svg,iframe{max-width:100%}
     <div class="sec"><h2>Upcoming fixtures</h2><span class="more" style="border:0">Galway United FC</span></div>
     <div class="fxlist"><div class="fxrow"><div class="fxd">28 Aug</div><div class="fxo">Shelbourne <span class="ha">H</span></div><div class="fxc">Premier Division</div></div></div>
 
-    <div class="sec"><h2>This season's results</h2></div>
-    <div class="fxlist"><div class="fxrow"><div class="fxd">03 Jul</div><div class="fxo">St. Patrick's Athletic</div><div class="fxs">0-3</div><div class="fxev"></div><div class="fxm">18'</div></div><div class="fxrow"><div class="fxd">02 Aug</div><div class="fxo">Bohemian FC</div><div class="fxs">1-1</div><div class="fxev"></div><div class="fxm">63'</div></div><div class="fxrow"><div class="fxd">07 Aug</div><div class="fxo">Drogheda United</div><div class="fxs">0-0</div><div class="fxev"></div><div class="fxm">8'</div></div></div>
+    <div class="sec"><h2>Recent matches</h2>
+      <span class="more" style="border:0">last 3 of 3</span></div>
+    <div class="fxlist"><div class="fxrow"><div class="fxd">07 Aug</div><div class="fxo">Drogheda United</div><div class="fxs">0-0</div><div class="fxev"></div><div class="fxm">8'</div></div><div class="fxrow"><div class="fxd">02 Aug</div><div class="fxo">Bohemian FC</div><div class="fxs">1-1</div><div class="fxev"></div><div class="fxm">63'</div></div><div class="fxrow"><div class="fxd">03 Jul</div><div class="fxo">St. Patrick's Athletic</div><div class="fxs">0-3</div><div class="fxev"></div><div class="fxm">18'</div></div></div>
 
-    <div class="sec"><h2>International</h2><a class="more" href="../ireland.html">Ireland hub →</a></div><div class="intlblock"><div class="ilvl">U21 <span>6 caps · 1 goals · from 2015</span></div></div><div class="intlblock"><div class="ilvl">U19 <span>3 caps · 0 goals · from 2014</span></div></div>
+    <div class="sec"><h2>International</h2><a class="more" href="../ireland.html">Ireland hub →</a></div><a class="intlblock lnk" href="../ireland.html?level=U21"><div class="ilvl">U21 <span>6 caps · 1 goals · from 2015</span><span class="go">View squad →</span></div></a><a class="intlblock lnk" href="../ireland.html?level=U19"><div class="ilvl">U19 <span>3 caps · 0 goals · from 2014</span><span class="go">View squad →</span></div></a>
 
     <div class="sec"><h2>Eligibility</h2></div>
-    <div class="eliglist"><div class="elig open"><span class="ec">Republic of Ireland</span><span class="en">Still eligible</span></div></div>
+    <div class="eliglist"><div class="elig youth"><span class="ec">Republic of Ireland</span><span class="en">Played underage · can still switch</span></div></div>
     <p class="eligNote">Uncapped at any level — free to commit to any association they qualify for.</p>
 
     

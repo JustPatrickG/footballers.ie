@@ -647,6 +647,24 @@ img,svg,iframe{max-width:100%}
   .fxrow.pfx{grid-template-columns:1fr auto;gap:10px}
   .fxrow.pfx .fxc{display:none}
 }
+.loanfrom{color:var(--yellow);font-family:'IBM Plex Mono',monospace;font-size:11px}
+
+/* international blocks are links now */
+a.intlblock.lnk{display:block;transition:border-color .12s}
+a.intlblock.lnk:hover{border-color:var(--teal)}
+.ilvl .go{float:right;font-family:'IBM Plex Mono',monospace;font-size:10px;color:var(--teal);
+  letter-spacing:.08em;font-weight:400}
+
+/* eligibility: green = tied, amber = underage only, blue = eligible, grey = closed */
+.elig.tied{border-color:rgba(35,200,122,.45);background:rgba(35,200,122,.07)}
+.elig.tied .ec{color:#3BD68A}
+.elig.tied .en{color:#3BD68A}
+.elig.youth{border-color:rgba(245,197,24,.4);background:rgba(245,197,24,.06)}
+.elig.youth .ec{color:var(--yellow)}
+.elig.youth .en{color:var(--yellow)}
+.elig.open{border-color:rgba(53,212,191,.35);background:rgba(53,212,191,.06)}
+.elig.open .ec{color:var(--teal)}
+.elig.open .en{color:var(--teal)}
 </style>
 </head>
 <body data-player="muhammad-oladiti">
@@ -734,13 +752,14 @@ img,svg,iframe{max-width:100%}
     <div class="sec"><h2>Upcoming fixtures</h2><span class="more" style="border:0">Fleetwood Town Academy</span></div>
     <div class="fxlist"><div class="emptystate" style="display:block">No fixtures listed.</div></div>
 
-    <div class="sec"><h2>This season's results</h2></div>
+    <div class="sec"><h2>Recent matches</h2>
+      <span class="more" style="border:0">last 0 of 0</span></div>
     <div class="fxlist"><div class="emptystate" style="display:block">No appearances yet.</div></div>
 
-    <div class="sec"><h2>International</h2><a class="more" href="../ireland.html">Ireland hub →</a></div><div class="intlblock"><div class="ilvl">U19 <span>2 caps · 0 goals · from 2025</span></div></div><div class="intlblock"><div class="ilvl">U18 <span>0 caps · 0 goals · from 2026</span></div></div><div class="intlblock"><div class="ilvl">U17 <span>2 caps · 0 goals · from 2024</span></div></div>
+    <div class="sec"><h2>International</h2><a class="more" href="../ireland.html">Ireland hub →</a></div><a class="intlblock lnk" href="../ireland.html?level=U19"><div class="ilvl">U19 <span>2 caps · 0 goals · from 2025</span><span class="go">View squad →</span></div></a><a class="intlblock lnk" href="../ireland.html?level=U18"><div class="ilvl">U18 <span>0 caps · 0 goals · from 2026</span><span class="go">View squad →</span></div></a><a class="intlblock lnk" href="../ireland.html?level=U17"><div class="ilvl">U17 <span>2 caps · 0 goals · from 2024</span><span class="go">View squad →</span></div></a>
 
     <div class="sec"><h2>Eligibility</h2></div>
-    <div class="eliglist"><div class="elig open"><span class="ec">Republic of Ireland</span><span class="en">Still eligible</span></div></div>
+    <div class="eliglist"><div class="elig youth"><span class="ec">Republic of Ireland</span><span class="en">Played underage · can still switch</span></div></div>
     <p class="eligNote">Youth caps and senior friendlies don't cap-tie a player, so a switch is still possible under FIFA rules.</p>
 
     
