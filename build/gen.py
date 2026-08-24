@@ -160,7 +160,7 @@ TIERS = {"abroad-top":"Abroad — top divisions",
          "loi":"League of Ireland"}
 
 def esc(s): return H.escape(str(s), quote=False)
-OUT = "site"
+OUT = os.path.join(HERE, "..", "site")   # always repo-root/site, whatever the CWD
 
 CSS = open(os.path.join(HERE, "style.css")).read()
 APPJS = open(os.path.join(HERE, "app.js")).read()

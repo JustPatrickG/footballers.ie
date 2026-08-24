@@ -1,6 +1,6 @@
 {
   "buildCommand": "python3 build/gen.py",
-  "outputDirectory": "build/site",
-  "installCommand": "echo no-install",
+  "outputDirectory": "site",
+  "installCommand": "echo skip",
   "framework": null
 }
