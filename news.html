@@ -705,7 +705,7 @@ img,svg,iframe{max-width:100%}
     <a class="leadart" href="news/ferguson-double-roma-top.html"><div class="leadbody"><div class="arttag">Serie A · 23 Aug 2026</div><h3>Ferguson's double sends Roma top</h3><p>Two headers in twenty minutes — the third different Irish name on the scoresheet in Italy this month.</p><div class="artby">Footballers Staff</div></div></a><div class="artgrid"><a class="artcard" href="news/fitzgerald-cork-debut.html"><div class="artbody"><div class="arttag">League of Ireland · 23 Aug 2026</div><h4>Dara Fitzgerald's senior debut, straight off the bench</h4><p>The 18-year-old came on at Turner's Cross to a standing ovation in his first pro appearance.</p><div class="artby">Footballers Staff</div></div></a><a class="artcard" href="news/cullen-250-appearances.html"><div class="artbody"><div class="arttag">Milestone · 22 Aug 2026</div><h4>Josh Cullen reaches 250 club appearances</h4><p>Marked with a clean sheet and the armband at Turf Moor.</p><div class="artby">Footballers Staff</div></div></a></div>
     
 <footer>
-  Footballers · prototype · sample data<br>
+  Footballers<br>
   Every Irish player at a professional club — abroad, senior international and League of Ireland
 </footer>
 </div>
@@ -1255,6 +1255,27 @@ img,svg,iframe{max-width:100%}
   ['touchend','touchmove','touchcancel'].forEach(function (ev) {
     mark.addEventListener(ev, function () { clearTimeout(hold); }, {passive:true});
   });
+})();
+
+/* ---------- LOCAL KICK-OFF TIMES ----------
+   Match pages are built with UTC timestamps; show them in the visitor's own
+   timezone so they match the homepage. */
+(function () {
+  var els = document.querySelectorAll('[data-ko]');
+  for (var i = 0; i < els.length; i++) {
+    (function (el) {
+      var d = new Date(el.getAttribute('data-ko'));
+      if (isNaN(d)) return;
+      var time = d.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+      if (el.classList.contains('ko-time')) {
+        el.textContent = time;
+      } else {
+        el.textContent = time + ' · ' + d.toLocaleDateString([], {
+          weekday: 'short', day: 'numeric', month: 'short'
+        });
+      }
+    })(els[i]);
+  }
 })();
 </script>
 </body>

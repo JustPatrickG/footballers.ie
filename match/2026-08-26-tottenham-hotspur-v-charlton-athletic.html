@@ -703,10 +703,10 @@ img,svg,iframe{max-width:100%}
 
     <a class="crumb" data-back href="../fixtures.html">← Back</a>
     <div class="matchhead">
-      <div class="mcrow"><span class="mccomp">EFL Cup</span><span class="mcstat soon">18:45 · 2026-08-26</span></div>
+      <div class="mcrow"><span class="mccomp">EFL Cup</span><span class="mcstat soon"><span class="ko-local" data-ko="2026-08-26T18:45:00Z">18:45 · 2026-08-26</span></span></div>
       <div class="mteams">
         <div class="mteam">Tottenham Hotspur</div>
-        <div class="mscore ko">18:45</div>
+        <div class="mscore ko"><span class="ko-time" data-ko="2026-08-26T18:45:00Z">18:45</span></div>
         <div class="mteam right">Charlton Athletic</div>
       </div>
     </div>
@@ -715,7 +715,7 @@ img,svg,iframe{max-width:100%}
     <div class="tiergroup"><a class="plrow" href="../player/conor-coventry.html"><div class="pavatar sm"><img src="../img/players/conor-coventry.png" alt="Conor Coventry" loading="lazy" onerror="this.parentNode.innerHTML='<span>CC</span>'"></div><div class="nm">Conor Coventry <span class="cl">Charlton Athletic</span></div><div class="ev">MID</div><div class="mn"></div><button class="star" data-fav="conor-coventry" aria-pressed="false" aria-label="Follow Conor Coventry">★</button></a><a class="plrow" href="../player/millenic-alli.html"><div class="pavatar sm"><img src="../img/players/millenic-alli.png" alt="Millenic Alli" loading="lazy" onerror="this.parentNode.innerHTML='<span>MA</span>'"></div><div class="nm">Millenic Alli <span class="cl">St Mirren</span></div><div class="ev">FWD</div><div class="mn"></div><button class="star" data-fav="millenic-alli" aria-pressed="false" aria-label="Follow Millenic Alli">★</button></a></div>
     
 <footer>
-  Footballers · prototype · sample data<br>
+  Footballers<br>
   Every Irish player at a professional club — abroad, senior international and League of Ireland
 </footer>
 </div>
@@ -1265,6 +1265,27 @@ img,svg,iframe{max-width:100%}
   ['touchend','touchmove','touchcancel'].forEach(function (ev) {
     mark.addEventListener(ev, function () { clearTimeout(hold); }, {passive:true});
   });
+})();
+
+/* ---------- LOCAL KICK-OFF TIMES ----------
+   Match pages are built with UTC timestamps; show them in the visitor's own
+   timezone so they match the homepage. */
+(function () {
+  var els = document.querySelectorAll('[data-ko]');
+  for (var i = 0; i < els.length; i++) {
+    (function (el) {
+      var d = new Date(el.getAttribute('data-ko'));
+      if (isNaN(d)) return;
+      var time = d.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+      if (el.classList.contains('ko-time')) {
+        el.textContent = time;
+      } else {
+        el.textContent = time + ' · ' + d.toLocaleDateString([], {
+          weekday: 'short', day: 'numeric', month: 'short'
+        });
+      }
+    })(els[i]);
+  }
 })();
 </script>
 </body>

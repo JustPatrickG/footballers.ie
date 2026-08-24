@@ -702,7 +702,7 @@ img,svg,iframe{max-width:100%}
 </script>
 <a class="crumb" data-back href="../country/england.html">← Back</a><div class="pagehead"><h1>League Two</h1><p>England · 4 Irish players at 4 clubs.</p></div><div class="clubgrid"><a class="clubcard" href="../club/bohemian-fc.html"><div class="cn">Bohemian FC</div><div class="cl2">League Two</div><div class="cc">1 Irish player</div></a><a class="clubcard" href="../club/brentford.html"><div class="cn">Brentford</div><div class="cl2">League Two</div><div class="cc">1 Irish player</div></a><a class="clubcard" href="../club/lincoln-city.html"><div class="cn">Lincoln City</div><div class="cl2">League Two</div><div class="cc">1 Irish player</div></a><a class="clubcard" href="../club/sheffield-united.html"><div class="cn">Sheffield United</div><div class="cl2">League Two</div><div class="cc">1 Irish player</div></a></div>
 <footer>
-  Footballers · prototype · sample data<br>
+  Footballers<br>
   Every Irish player at a professional club — abroad, senior international and League of Ireland
 </footer>
 </div>
@@ -1252,6 +1252,27 @@ img,svg,iframe{max-width:100%}
   ['touchend','touchmove','touchcancel'].forEach(function (ev) {
     mark.addEventListener(ev, function () { clearTimeout(hold); }, {passive:true});
   });
+})();
+
+/* ---------- LOCAL KICK-OFF TIMES ----------
+   Match pages are built with UTC timestamps; show them in the visitor's own
+   timezone so they match the homepage. */
+(function () {
+  var els = document.querySelectorAll('[data-ko]');
+  for (var i = 0; i < els.length; i++) {
+    (function (el) {
+      var d = new Date(el.getAttribute('data-ko'));
+      if (isNaN(d)) return;
+      var time = d.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+      if (el.classList.contains('ko-time')) {
+        el.textContent = time;
+      } else {
+        el.textContent = time + ' · ' + d.toLocaleDateString([], {
+          weekday: 'short', day: 'numeric', month: 'short'
+        });
+      }
+    })(els[i]);
+  }
 })();
 </script>
 </body>

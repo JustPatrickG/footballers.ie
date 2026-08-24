@@ -702,7 +702,7 @@ img,svg,iframe{max-width:100%}
 </script>
 <a class="crumb" data-back href="../country/other.html">← Back</a><div class="pagehead"><h1>—</h1><p>Other · 17 Irish players at 16 clubs.</p></div><div class="clubgrid"><a class="clubcard" href="../club/bournemouth.html"><div class="cn">Bournemouth</div><div class="cl2">—</div><div class="cc">2 Irish players</div></a><a class="clubcard" href="../club/almería.html"><div class="cn">Almería</div><div class="cl2">—</div><div class="cc">1 Irish player</div></a><a class="clubcard" href="../club/benfica.html"><div class="cn">Benfica</div><div class="cl2">—</div><div class="cc">1 Irish player</div></a><a class="clubcard" href="../club/burnley.html"><div class="cn">Burnley</div><div class="cl2">—</div><div class="cc">1 Irish player</div></a><a class="clubcard" href="../club/chelsea.html"><div class="cn">Chelsea</div><div class="cl2">—</div><div class="cc">1 Irish player</div></a><a class="clubcard" href="../club/crystal-palace.html"><div class="cn">Crystal Palace</div><div class="cl2">—</div><div class="cc">1 Irish player</div></a><a class="clubcard" href="../club/hoffenheim.html"><div class="cn">Hoffenheim</div><div class="cl2">—</div><div class="cc">1 Irish player</div></a><a class="clubcard" href="../club/lincoln-city.html"><div class="cn">Lincoln City</div><div class="cl2">—</div><div class="cc">1 Irish player</div></a><a class="clubcard" href="../club/lorient.html"><div class="cn">Lorient</div><div class="cl2">—</div><div class="cc">1 Irish player</div></a><a class="clubcard" href="../club/mansfield-town.html"><div class="cn">Mansfield Town</div><div class="cl2">—</div><div class="cc">1 Irish player</div></a><a class="clubcard" href="../club/norwich-city.html"><div class="cn">Norwich City</div><div class="cl2">—</div><div class="cc">1 Irish player</div></a><a class="clubcard" href="../club/preston-north-end.html"><div class="cn">Preston North End</div><div class="cl2">—</div><div class="cc">1 Irish player</div></a><a class="clubcard" href="../club/sheffield-united.html"><div class="cn">Sheffield United</div><div class="cl2">—</div><div class="cc">1 Irish player</div></a><a class="clubcard" href="../club/stade-brestois.html"><div class="cn">Stade Brestois</div><div class="cl2">—</div><div class="cc">1 Irish player</div></a><a class="clubcard" href="../club/venezia.html"><div class="cn">Venezia</div><div class="cl2">—</div><div class="cc">1 Irish player</div></a><a class="clubcard" href="../club/west-bromwich-albion.html"><div class="cn">West Bromwich Albion</div><div class="cl2">—</div><div class="cc">1 Irish player</div></a></div>
 <footer>
-  Footballers · prototype · sample data<br>
+  Footballers<br>
   Every Irish player at a professional club — abroad, senior international and League of Ireland
 </footer>
 </div>
@@ -1252,6 +1252,27 @@ img,svg,iframe{max-width:100%}
   ['touchend','touchmove','touchcancel'].forEach(function (ev) {
     mark.addEventListener(ev, function () { clearTimeout(hold); }, {passive:true});
   });
+})();
+
+/* ---------- LOCAL KICK-OFF TIMES ----------
+   Match pages are built with UTC timestamps; show them in the visitor's own
+   timezone so they match the homepage. */
+(function () {
+  var els = document.querySelectorAll('[data-ko]');
+  for (var i = 0; i < els.length; i++) {
+    (function (el) {
+      var d = new Date(el.getAttribute('data-ko'));
+      if (isNaN(d)) return;
+      var time = d.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+      if (el.classList.contains('ko-time')) {
+        el.textContent = time;
+      } else {
+        el.textContent = time + ' · ' + d.toLocaleDateString([], {
+          weekday: 'short', day: 'numeric', month: 'short'
+        });
+      }
+    })(els[i]);
+  }
 })();
 </script>
 </body>

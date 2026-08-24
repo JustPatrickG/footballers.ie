@@ -715,7 +715,7 @@ img,svg,iframe{max-width:100%}
     <div class="tiergroup"><a class="plrow" href="../player/jake-obrien.html"><div class="pavatar sm"><img src="../img/players/jake-obrien.png" alt="Jake O'Brien" loading="lazy" onerror="this.parentNode.innerHTML='<span>JO</span>'"></div><div class="nm">Jake O'Brien <span class="cl">Everton</span></div><div class="ev">DEF</div><div class="mn"></div><button class="star" data-fav="jake-obrien" aria-pressed="false" aria-label="Follow Jake O'Brien">★</button></a><a class="plrow" href="../player/mark-travers.html"><div class="pavatar sm"><img src="../img/players/mark-travers.png" alt="Mark Travers" loading="lazy" onerror="this.parentNode.innerHTML='<span>MT</span>'"></div><div class="nm">Mark Travers <span class="cl">Bournemouth</span></div><div class="ev">GK</div><div class="mn"></div><button class="star" data-fav="mark-travers" aria-pressed="false" aria-label="Follow Mark Travers">★</button></a></div>
     
 <footer>
-  Footballers · prototype · sample data<br>
+  Footballers<br>
   Every Irish player at a professional club — abroad, senior international and League of Ireland
 </footer>
 </div>
@@ -1265,6 +1265,27 @@ img,svg,iframe{max-width:100%}
   ['touchend','touchmove','touchcancel'].forEach(function (ev) {
     mark.addEventListener(ev, function () { clearTimeout(hold); }, {passive:true});
   });
+})();
+
+/* ---------- LOCAL KICK-OFF TIMES ----------
+   Match pages are built with UTC timestamps; show them in the visitor's own
+   timezone so they match the homepage. */
+(function () {
+  var els = document.querySelectorAll('[data-ko]');
+  for (var i = 0; i < els.length; i++) {
+    (function (el) {
+      var d = new Date(el.getAttribute('data-ko'));
+      if (isNaN(d)) return;
+      var time = d.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+      if (el.classList.contains('ko-time')) {
+        el.textContent = time;
+      } else {
+        el.textContent = time + ' · ' + d.toLocaleDateString([], {
+          weekday: 'short', day: 'numeric', month: 'short'
+        });
+      }
+    })(els[i]);
+  }
 })();
 </script>
 </body>

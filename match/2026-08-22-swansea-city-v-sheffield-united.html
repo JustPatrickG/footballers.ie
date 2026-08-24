@@ -715,7 +715,7 @@ img,svg,iframe{max-width:100%}
     <div class="tiergroup"><a class="plrow" href="../player/adam-idah.html"><div class="pavatar sm"><img src="../img/players/adam-idah.png" alt="Adam Idah" loading="lazy" onerror="this.parentNode.innerHTML='<span>AI</span>'"></div><div class="nm">Adam Idah <span class="cl">Celtic</span></div><div class="ev">FWD</div><div class="mn"></div><button class="star" data-fav="adam-idah" aria-pressed="false" aria-label="Follow Adam Idah">★</button></a><a class="plrow" href="../player/mark-mcguinness.html"><div class="pavatar sm"><img src="../img/players/mark-mcguinness.png" alt="Mark McGuinness" loading="lazy" onerror="this.parentNode.innerHTML='<span>MM</span>'"></div><div class="nm">Mark McGuinness <span class="cl">Sheffield United</span></div><div class="ev">DEF</div><div class="mn"></div><button class="star" data-fav="mark-mcguinness" aria-pressed="false" aria-label="Follow Mark McGuinness">★</button></a><a class="plrow" href="../player/matt-doherty.html"><div class="pavatar sm"><img src="../img/players/matt-doherty.png" alt="Matt Doherty" loading="lazy" onerror="this.parentNode.innerHTML='<span>MD</span>'"></div><div class="nm">Matt Doherty <span class="cl">Wolverhampton Wanderers</span></div><div class="ev">DEF</div><div class="mn"></div><button class="star" data-fav="matt-doherty" aria-pressed="false" aria-label="Follow Matt Doherty">★</button></a></div>
     
 <footer>
-  Footballers · prototype · sample data<br>
+  Footballers<br>
   Every Irish player at a professional club — abroad, senior international and League of Ireland
 </footer>
 </div>
@@ -1265,6 +1265,27 @@ img,svg,iframe{max-width:100%}
   ['touchend','touchmove','touchcancel'].forEach(function (ev) {
     mark.addEventListener(ev, function () { clearTimeout(hold); }, {passive:true});
   });
+})();
+
+/* ---------- LOCAL KICK-OFF TIMES ----------
+   Match pages are built with UTC timestamps; show them in the visitor's own
+   timezone so they match the homepage. */
+(function () {
+  var els = document.querySelectorAll('[data-ko]');
+  for (var i = 0; i < els.length; i++) {
+    (function (el) {
+      var d = new Date(el.getAttribute('data-ko'));
+      if (isNaN(d)) return;
+      var time = d.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+      if (el.classList.contains('ko-time')) {
+        el.textContent = time;
+      } else {
+        el.textContent = time + ' · ' + d.toLocaleDateString([], {
+          weekday: 'short', day: 'numeric', month: 'short'
+        });
+      }
+    })(els[i]);
+  }
 })();
 </script>
 </body>

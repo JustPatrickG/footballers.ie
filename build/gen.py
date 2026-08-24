@@ -7,7 +7,7 @@ DATA = os.path.join(HERE, "..", "data")
 SITE_URL   = "https://footballers.ie"
 SEASON     = "2026/27"
 MATCHWEEK  = ""   # leave blank to work it out from the fixtures
-SAMPLE_DATA = True   # set False once every figure on the site is real
+SAMPLE_DATA = False   # set False once every figure on the site is real
 
 # Newsletter: paste your provider's form-action URL here (Buttondown, Beehiiv,
 # Mailchimp, Kit — they all give you one). Until then the form shows a notice.
@@ -950,13 +950,14 @@ def match_id(m):
 def build_match(m, involved):
     hs, as_ = m.get("home_score",""), m.get("away_score","")
     status = (m.get("status") or "scheduled")
-    when = m.get("kickoff","")[11:16] + " · " + m.get("kickoff","")[:10]
+    when = f'<span class="ko-local" data-ko="{esc(m.get("kickoff",""))}">{m.get("kickoff","")[11:16]} · {m.get("kickoff","")[:10]}</span>'
     chip = (f'<span class="mcstat live"><i></i>{esc(m.get("minute",""))}\'</span>' if status=="live"
             else '<span class="mcstat ft">Full time</span>' if status=="ft"
-            else f'<span class="mcstat soon">{esc(when)}</span>')
+            else f'<span class="mcstat soon">{when}</span>')
     scoreline = (f'<div class="mscore">{esc(hs)}<span>–</span>{esc(as_)}</div>'
                  if status != "scheduled" and str(hs) != "" else
-                 f'<div class="mscore ko">{esc(m.get("kickoff","")[11:16])}</div>')
+                 f'<div class="mscore ko"><span class="ko-time" data-ko="{esc(m.get("kickoff",""))}">'
+                 f'{esc(m.get("kickoff","")[11:16])}</span></div>')
     rows = "".join(
         f'<a class="plrow" href="../player/{p["slug"]}.html">{avatar(p,"../","sm")}'
         f'<div class="nm">{esc(p["n"])} <span class="cl">{esc(p["club"])}</span></div>'

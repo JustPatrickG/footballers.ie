@@ -713,7 +713,7 @@ img,svg,iframe{max-width:100%}
     <div class="sec"><h2>Player</h2></div><div class="tiergroup"><a class="plrow" href="../player/josh-cullen.html"><div class="pavatar sm"><img src="../img/players/josh-cullen.png" alt="Josh Cullen" loading="lazy" onerror="this.parentNode.innerHTML='<span>JC</span>'"></div><div class="nm">Josh Cullen <span class="cl">Finn Harps</span></div><div class="ev"></div><div class="mn"><span class="rate none">—</span></div><button class="star" data-fav="josh-cullen" aria-pressed="false" aria-label="Follow Josh Cullen">★</button></a></div>
     
 <footer>
-  Footballers · prototype · sample data<br>
+  Footballers<br>
   Every Irish player at a professional club — abroad, senior international and League of Ireland
 </footer>
 </div>
@@ -1263,6 +1263,27 @@ img,svg,iframe{max-width:100%}
   ['touchend','touchmove','touchcancel'].forEach(function (ev) {
     mark.addEventListener(ev, function () { clearTimeout(hold); }, {passive:true});
   });
+})();
+
+/* ---------- LOCAL KICK-OFF TIMES ----------
+   Match pages are built with UTC timestamps; show them in the visitor's own
+   timezone so they match the homepage. */
+(function () {
+  var els = document.querySelectorAll('[data-ko]');
+  for (var i = 0; i < els.length; i++) {
+    (function (el) {
+      var d = new Date(el.getAttribute('data-ko'));
+      if (isNaN(d)) return;
+      var time = d.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+      if (el.classList.contains('ko-time')) {
+        el.textContent = time;
+      } else {
+        el.textContent = time + ' · ' + d.toLocaleDateString([], {
+          weekday: 'short', day: 'numeric', month: 'short'
+        });
+      }
+    })(els[i]);
+  }
 })();
 </script>
 </body>

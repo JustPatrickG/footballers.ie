@@ -703,10 +703,10 @@ img,svg,iframe{max-width:100%}
 
     <a class="crumb" data-back href="../fixtures.html">← Back</a>
     <div class="matchhead">
-      <div class="mcrow"><span class="mccomp">First Division</span><span class="mcstat soon">18:45 · 2026-08-28</span></div>
+      <div class="mcrow"><span class="mccomp">First Division</span><span class="mcstat soon"><span class="ko-local" data-ko="2026-08-28T18:45:00Z">18:45 · 2026-08-28</span></span></div>
       <div class="mteams">
         <div class="mteam">UCD</div>
-        <div class="mscore ko">18:45</div>
+        <div class="mscore ko"><span class="ko-time" data-ko="2026-08-28T18:45:00Z">18:45</span></div>
         <div class="mteam right">Finn Harps</div>
       </div>
     </div>
@@ -715,7 +715,7 @@ img,svg,iframe{max-width:100%}
     <div class="tiergroup"><a class="plrow" href="../player/gavin-mcateer.html"><div class="pavatar sm"><img src="../img/players/gavin-mcateer.png" alt="Gavin McAteer" loading="lazy" onerror="this.parentNode.innerHTML='<span>GM</span>'"></div><div class="nm">Gavin McAteer <span class="cl">Finn Harps</span></div><div class="ev">MID</div><div class="mn"></div><button class="star" data-fav="gavin-mcateer" aria-pressed="false" aria-label="Follow Gavin McAteer">★</button></a><a class="plrow" href="../player/goodness-ogbonna.html"><div class="pavatar sm"><span>GO</span></div><div class="nm">Goodness Ogbonna <span class="cl">UCD</span></div><div class="ev">MID</div><div class="mn"></div><button class="star" data-fav="goodness-ogbonna" aria-pressed="false" aria-label="Follow Goodness Ogbonna">★</button></a><a class="plrow" href="../player/josh-cullen.html"><div class="pavatar sm"><img src="../img/players/josh-cullen.png" alt="Josh Cullen" loading="lazy" onerror="this.parentNode.innerHTML='<span>JC</span>'"></div><div class="nm">Josh Cullen <span class="cl">Finn Harps</span></div><div class="ev">DEF</div><div class="mn"></div><button class="star" data-fav="josh-cullen" aria-pressed="false" aria-label="Follow Josh Cullen">★</button></a><a class="plrow" href="../player/sean-murphy.html"><div class="pavatar sm"><span>SM</span></div><div class="nm">Sean Murphy <span class="cl">UCD</span></div><div class="ev">DEF</div><div class="mn"></div><button class="star" data-fav="sean-murphy" aria-pressed="false" aria-label="Follow Sean Murphy">★</button></a></div>
     
 <footer>
-  Footballers · prototype · sample data<br>
+  Footballers<br>
   Every Irish player at a professional club — abroad, senior international and League of Ireland
 </footer>
 </div>
@@ -1265,6 +1265,27 @@ img,svg,iframe{max-width:100%}
   ['touchend','touchmove','touchcancel'].forEach(function (ev) {
     mark.addEventListener(ev, function () { clearTimeout(hold); }, {passive:true});
   });
+})();
+
+/* ---------- LOCAL KICK-OFF TIMES ----------
+   Match pages are built with UTC timestamps; show them in the visitor's own
+   timezone so they match the homepage. */
+(function () {
+  var els = document.querySelectorAll('[data-ko]');
+  for (var i = 0; i < els.length; i++) {
+    (function (el) {
+      var d = new Date(el.getAttribute('data-ko'));
+      if (isNaN(d)) return;
+      var time = d.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+      if (el.classList.contains('ko-time')) {
+        el.textContent = time;
+      } else {
+        el.textContent = time + ' · ' + d.toLocaleDateString([], {
+          weekday: 'short', day: 'numeric', month: 'short'
+        });
+      }
+    })(els[i]);
+  }
 })();
 </script>
 </body>

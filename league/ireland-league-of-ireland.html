@@ -702,7 +702,7 @@ img,svg,iframe{max-width:100%}
 </script>
 <a class="crumb" data-back href="../country/ireland.html">← Back</a><div class="pagehead"><h1>League of Ireland</h1><p>Ireland · 103 Irish players at 19 clubs.</p></div><div class="clubgrid"><a class="clubcard" href="../club/dundalk.html"><div class="cn">Dundalk</div><div class="cl2">League of Ireland</div><div class="cc">14 Irish players</div></a><a class="clubcard" href="../club/shamrock-rovers.html"><div class="cn">Shamrock Rovers</div><div class="cl2">League of Ireland</div><div class="cc">13 Irish players</div></a><a class="clubcard" href="../club/st-patricks-athletic.html"><div class="cn">St. Patrick's Athletic</div><div class="cl2">League of Ireland</div><div class="cc">13 Irish players</div></a><a class="clubcard" href="../club/shelbourne.html"><div class="cn">Shelbourne</div><div class="cl2">League of Ireland</div><div class="cc">9 Irish players</div></a><a class="clubcard" href="../club/st-patricks-athletic.html"><div class="cn">St Patrick's Athletic</div><div class="cl2">League of Ireland</div><div class="cc">8 Irish players</div></a><a class="clubcard" href="../club/galway-united-fc.html"><div class="cn">Galway United FC</div><div class="cl2">League of Ireland</div><div class="cc">6 Irish players</div></a><a class="clubcard" href="../club/waterford-fc.html"><div class="cn">Waterford FC</div><div class="cl2">League of Ireland</div><div class="cc">6 Irish players</div></a><a class="clubcard" href="../club/bohemians.html"><div class="cn">Bohemians</div><div class="cl2">League of Ireland</div><div class="cc">5 Irish players</div></a><a class="clubcard" href="../club/derry-city.html"><div class="cn">Derry City</div><div class="cl2">League of Ireland</div><div class="cc">5 Irish players</div></a><a class="clubcard" href="../club/sligo-rovers.html"><div class="cn">Sligo Rovers</div><div class="cl2">League of Ireland</div><div class="cc">5 Irish players</div></a><a class="clubcard" href="../club/cork-city.html"><div class="cn">Cork City</div><div class="cl2">League of Ireland</div><div class="cc">3 Irish players</div></a><a class="clubcard" href="../club/drogheda-united.html"><div class="cn">Drogheda United</div><div class="cl2">League of Ireland</div><div class="cc">3 Irish players</div></a><a class="clubcard" href="../club/ucd.html"><div class="cn">UCD</div><div class="cl2">League of Ireland</div><div class="cc">3 Irish players</div></a><a class="clubcard" href="../club/bohemian-fc.html"><div class="cn">Bohemian FC</div><div class="cl2">League of Ireland</div><div class="cc">2 Irish players</div></a><a class="clubcard" href="../club/bray-wanderers.html"><div class="cn">Bray Wanderers</div><div class="cl2">League of Ireland</div><div class="cc">2 Irish players</div></a><a class="clubcard" href="../club/finn-harps.html"><div class="cn">Finn Harps</div><div class="cl2">League of Ireland</div><div class="cc">2 Irish players</div></a><a class="clubcard" href="../club/waterford.html"><div class="cn">Waterford</div><div class="cl2">League of Ireland</div><div class="cc">2 Irish players</div></a><a class="clubcard" href="../club/galway-united.html"><div class="cn">Galway United</div><div class="cl2">League of Ireland</div><div class="cc">1 Irish player</div></a><a class="clubcard" href="../club/wexford.html"><div class="cn">Wexford</div><div class="cl2">League of Ireland</div><div class="cc">1 Irish player</div></a></div>
 <footer>
-  Footballers · prototype · sample data<br>
+  Footballers<br>
   Every Irish player at a professional club — abroad, senior international and League of Ireland
 </footer>
 </div>
@@ -1252,6 +1252,27 @@ img,svg,iframe{max-width:100%}
   ['touchend','touchmove','touchcancel'].forEach(function (ev) {
     mark.addEventListener(ev, function () { clearTimeout(hold); }, {passive:true});
   });
+})();
+
+/* ---------- LOCAL KICK-OFF TIMES ----------
+   Match pages are built with UTC timestamps; show them in the visitor's own
+   timezone so they match the homepage. */
+(function () {
+  var els = document.querySelectorAll('[data-ko]');
+  for (var i = 0; i < els.length; i++) {
+    (function (el) {
+      var d = new Date(el.getAttribute('data-ko'));
+      if (isNaN(d)) return;
+      var time = d.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+      if (el.classList.contains('ko-time')) {
+        el.textContent = time;
+      } else {
+        el.textContent = time + ' · ' + d.toLocaleDateString([], {
+          weekday: 'short', day: 'numeric', month: 'short'
+        });
+      }
+    })(els[i]);
+  }
 })();
 </script>
 </body>

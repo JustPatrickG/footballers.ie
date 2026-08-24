@@ -702,7 +702,7 @@ img,svg,iframe{max-width:100%}
 </script>
 <a class="crumb" data-back href="../country/scotland.html">← Back</a><div class="pagehead"><h1>Premiership</h1><p>Scotland · 3 Irish players at 3 clubs.</p></div><div class="clubgrid"><a class="clubcard" href="../club/celtic.html"><div class="cn">Celtic</div><div class="cl2">Premiership</div><div class="cc">1 Irish player</div></a><a class="clubcard" href="../club/crystal-palace.html"><div class="cn">Crystal Palace</div><div class="cl2">Premiership</div><div class="cc">1 Irish player</div></a><a class="clubcard" href="../club/dundee-united.html"><div class="cn">Dundee United</div><div class="cl2">Premiership</div><div class="cc">1 Irish player</div></a></div>
 <footer>
-  Footballers · prototype · sample data<br>
+  Footballers<br>
   Every Irish player at a professional club — abroad, senior international and League of Ireland
 </footer>
 </div>
@@ -1252,6 +1252,27 @@ img,svg,iframe{max-width:100%}
   ['touchend','touchmove','touchcancel'].forEach(function (ev) {
     mark.addEventListener(ev, function () { clearTimeout(hold); }, {passive:true});
   });
+})();
+
+/* ---------- LOCAL KICK-OFF TIMES ----------
+   Match pages are built with UTC timestamps; show them in the visitor's own
+   timezone so they match the homepage. */
+(function () {
+  var els = document.querySelectorAll('[data-ko]');
+  for (var i = 0; i < els.length; i++) {
+    (function (el) {
+      var d = new Date(el.getAttribute('data-ko'));
+      if (isNaN(d)) return;
+      var time = d.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+      if (el.classList.contains('ko-time')) {
+        el.textContent = time;
+      } else {
+        el.textContent = time + ' · ' + d.toLocaleDateString([], {
+          weekday: 'short', day: 'numeric', month: 'short'
+        });
+      }
+    })(els[i]);
+  }
 })();
 </script>
 </body>

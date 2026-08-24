@@ -703,10 +703,10 @@ img,svg,iframe{max-width:100%}
 
     <a class="crumb" data-back href="../fixtures.html">← Back</a>
     <div class="matchhead">
-      <div class="mcrow"><span class="mccomp">First Division</span><span class="mcstat soon">18:45 · 2026-08-28</span></div>
+      <div class="mcrow"><span class="mccomp">First Division</span><span class="mcstat soon"><span class="ko-local" data-ko="2026-08-28T18:45:00Z">18:45 · 2026-08-28</span></span></div>
       <div class="mteams">
         <div class="mteam">Athlone Town</div>
-        <div class="mscore ko">18:45</div>
+        <div class="mscore ko"><span class="ko-time" data-ko="2026-08-28T18:45:00Z">18:45</span></div>
         <div class="mteam right">Bray Wanderers</div>
       </div>
     </div>
@@ -715,7 +715,7 @@ img,svg,iframe{max-width:100%}
     <div class="tiergroup"><a class="plrow" href="../player/ben-mccormack.html"><div class="pavatar sm"><img src="../img/players/ben-mccormack.png" alt="Ben McCormack" loading="lazy" onerror="this.parentNode.innerHTML='<span>BM</span>'"></div><div class="nm">Ben McCormack <span class="cl">Bray Wanderers</span></div><div class="ev">MID</div><div class="mn"></div><button class="star" data-fav="ben-mccormack" aria-pressed="false" aria-label="Follow Ben McCormack">★</button></a><a class="plrow" href="../player/billy-oneill.html"><div class="pavatar sm"><img src="../img/players/billy-oneill.png" alt="Billy O'Neill" loading="lazy" onerror="this.parentNode.innerHTML='<span>BO</span>'"></div><div class="nm">Billy O'Neill <span class="cl">Bray Wanderers</span></div><div class="ev">FWD</div><div class="mn"></div><button class="star" data-fav="billy-oneill" aria-pressed="false" aria-label="Follow Billy O'Neill">★</button></a><a class="plrow" href="../player/cillian-tollett.html"><div class="pavatar sm"><img src="../img/players/cillian-tollett.png" alt="Cillian Tollett" loading="lazy" onerror="this.parentNode.innerHTML='<span>CT</span>'"></div><div class="nm">Cillian Tollett <span class="cl">Galway United</span></div><div class="ev">FWD</div><div class="mn"></div><button class="star" data-fav="cillian-tollett" aria-pressed="false" aria-label="Follow Cillian Tollett">★</button></a></div>
     
 <footer>
-  Footballers · prototype · sample data<br>
+  Footballers<br>
   Every Irish player at a professional club — abroad, senior international and League of Ireland
 </footer>
 </div>
@@ -1265,6 +1265,27 @@ img,svg,iframe{max-width:100%}
   ['touchend','touchmove','touchcancel'].forEach(function (ev) {
     mark.addEventListener(ev, function () { clearTimeout(hold); }, {passive:true});
   });
+})();
+
+/* ---------- LOCAL KICK-OFF TIMES ----------
+   Match pages are built with UTC timestamps; show them in the visitor's own
+   timezone so they match the homepage. */
+(function () {
+  var els = document.querySelectorAll('[data-ko]');
+  for (var i = 0; i < els.length; i++) {
+    (function (el) {
+      var d = new Date(el.getAttribute('data-ko'));
+      if (isNaN(d)) return;
+      var time = d.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+      if (el.classList.contains('ko-time')) {
+        el.textContent = time;
+      } else {
+        el.textContent = time + ' · ' + d.toLocaleDateString([], {
+          weekday: 'short', day: 'numeric', month: 'short'
+        });
+      }
+    })(els[i]);
+  }
 })();
 </script>
 </body>

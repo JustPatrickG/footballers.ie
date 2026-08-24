@@ -702,7 +702,7 @@ img,svg,iframe{max-width:100%}
 </script>
 <a class="crumb" data-back href="../country/ireland.html">← Back</a><div class="pagehead"><h1>Premier Division</h1><p>Ireland · 152 Irish players at 12 clubs.</p></div><div class="clubgrid"><a class="clubcard" href="../club/shamrock-rovers.html"><div class="cn">Shamrock Rovers</div><div class="cl2">Premier Division</div><div class="cc">22 Irish players</div></a><a class="clubcard" href="../club/drogheda-united.html"><div class="cn">Drogheda United</div><div class="cl2">Premier Division</div><div class="cc">18 Irish players</div></a><a class="clubcard" href="../club/dundalk.html"><div class="cn">Dundalk</div><div class="cl2">Premier Division</div><div class="cc">18 Irish players</div></a><a class="clubcard" href="../club/galway-united-fc.html"><div class="cn">Galway United FC</div><div class="cl2">Premier Division</div><div class="cc">17 Irish players</div></a><a class="clubcard" href="../club/st-patricks-athletic.html"><div class="cn">St. Patrick's Athletic</div><div class="cl2">Premier Division</div><div class="cc">17 Irish players</div></a><a class="clubcard" href="../club/sligo-rovers.html"><div class="cn">Sligo Rovers</div><div class="cl2">Premier Division</div><div class="cc">14 Irish players</div></a><a class="clubcard" href="../club/shelbourne.html"><div class="cn">Shelbourne</div><div class="cl2">Premier Division</div><div class="cc">13 Irish players</div></a><a class="clubcard" href="../club/derry-city.html"><div class="cn">Derry City</div><div class="cl2">Premier Division</div><div class="cc">11 Irish players</div></a><a class="clubcard" href="../club/bohemian-fc.html"><div class="cn">Bohemian FC</div><div class="cl2">Premier Division</div><div class="cc">10 Irish players</div></a><a class="clubcard" href="../club/waterford-fc.html"><div class="cn">Waterford FC</div><div class="cl2">Premier Division</div><div class="cc">10 Irish players</div></a><a class="clubcard" href="../club/monaco.html"><div class="cn">Monaco</div><div class="cl2">Premier Division</div><div class="cc">1 Irish player</div></a><a class="clubcard" href="../club/preston-north-end.html"><div class="cn">Preston North End</div><div class="cl2">Premier Division</div><div class="cc">1 Irish player</div></a></div>
 <footer>
-  Footballers · prototype · sample data<br>
+  Footballers<br>
   Every Irish player at a professional club — abroad, senior international and League of Ireland
 </footer>
 </div>
@@ -1252,6 +1252,27 @@ img,svg,iframe{max-width:100%}
   ['touchend','touchmove','touchcancel'].forEach(function (ev) {
     mark.addEventListener(ev, function () { clearTimeout(hold); }, {passive:true});
   });
+})();
+
+/* ---------- LOCAL KICK-OFF TIMES ----------
+   Match pages are built with UTC timestamps; show them in the visitor's own
+   timezone so they match the homepage. */
+(function () {
+  var els = document.querySelectorAll('[data-ko]');
+  for (var i = 0; i < els.length; i++) {
+    (function (el) {
+      var d = new Date(el.getAttribute('data-ko'));
+      if (isNaN(d)) return;
+      var time = d.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+      if (el.classList.contains('ko-time')) {
+        el.textContent = time;
+      } else {
+        el.textContent = time + ' · ' + d.toLocaleDateString([], {
+          weekday: 'short', day: 'numeric', month: 'short'
+        });
+      }
+    })(els[i]);
+  }
 })();
 </script>
 </body>
