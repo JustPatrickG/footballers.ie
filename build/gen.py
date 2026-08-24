@@ -134,6 +134,7 @@ def load():
             loan=(r.get("on_loan_at") or "").strip(),
             parent_club=(r.get("club") or "").strip(),
             rating=(r.get("avg_rating") or "").strip(),
+            season_label=(r.get("season") or "").strip(),
             photo=(r.get("photo") or "").strip(),
             photo_credit=(r.get("photo_credit") or "").strip(),
             fixtures=fixtures.get(slug, []), results=results.get(slug, [])))
@@ -188,7 +189,57 @@ def matchweek_label():
     if lo.month == hi.month: return f"{lo.day}-{hi.day} {mon[hi.month-1]}"
     return f"{lo.day} {mon[lo.month-1]}-{hi.day} {mon[hi.month-1]}"
 
+
+LOADER_HTML = '''<div id="fbload" aria-hidden="true">
+  <div class="fbl-mark">footballers<i>.ie</i></div>
+  <div class="fbl-pitch">
+    <div class="fbl-ball"><i></i></div>
+    <svg class="fbl-boot" viewBox="0 0 40 44" aria-hidden="true">
+      <g class="fbl-leg">
+        <line x1="20" y1="2" x2="20" y2="24"/>
+        <line x1="20" y1="24" x2="15" y2="38"/>
+        <line x1="15" y1="38" x2="31" y2="40"/>
+      </g>
+    </svg>
+  </div>
+</div>'''
+
+LOADER_JS = """<script>
+/* The kick only plays on a fresh arrival at the homepage — opening the site or
+   refreshing it. Coming back from a player or match page skips it. */
+(function(){
+  var el=document.getElementById('fbload');
+  if(!el) return;
+
+  var nav=(performance.getEntriesByType && performance.getEntriesByType('navigation')[0]) || null;
+  var kind = nav ? nav.type : (performance.navigation && performance.navigation.type===1 ? 'reload' : 'navigate');
+  var internal=false;
+  try{ internal = sessionStorage.getItem('fb_nav_v1')==='1'; }catch(e){}
+
+  // already been on the site this tab, and this isn't a reload? don't replay it
+  if(internal && kind!=='reload'){
+    el.parentNode && el.parentNode.removeChild(el);
+    return;
+  }
+
+  var t0=Date.now(), MIN=2150;
+  function done(){
+    var wait=Math.max(0, MIN-(Date.now()-t0));
+    setTimeout(function(){
+      el.classList.add('out');
+      setTimeout(function(){ if(el.parentNode) el.parentNode.removeChild(el); }, 340);
+    }, wait);
+  }
+  if(document.readyState==='complete') done();
+  else window.addEventListener('load', done);
+  setTimeout(done, 3600);
+})();
+</script>"""
+
 def shell(title, desc, root, active, body, extra_head="", canonical="", body_attr=""):
+    is_home = (root == "" and active in ("index.html", ""))
+    loader    = LOADER_HTML if is_home else ""
+    loader_js = LOADER_JS   if is_home else ""
     links = "".join(f'<a class="{"on" if active==href else ""}" href="{root}{href}">{l}</a>' for l,href in NAV)
     can = f"{SITE_URL}/{canonical}" if canonical else SITE_URL
     return f"""<!DOCTYPE html>
@@ -220,38 +271,8 @@ def shell(title, desc, root, active, body, extra_head="", canonical="", body_att
 <style>{CSS}</style>{extra_head}
 </head>
 <body{body_attr}>
-<div id="fbload" aria-hidden="true">
-  <div class="fbl-mark">footballers<i>.ie</i></div>
-  <div class="fbl-pitch">
-    <div class="fbl-ball"><i></i></div>
-    <svg class="fbl-boot" viewBox="0 0 40 44" aria-hidden="true">
-      <g class="fbl-leg">
-        <line x1="20" y1="2" x2="20" y2="24"/>
-        <line x1="20" y1="24" x2="15" y2="38"/>
-        <line x1="15" y1="38" x2="31" y2="40"/>
-      </g>
-    </svg>
-  </div>
-</div>
-<script>
-/* hide the loader as soon as the page is ready — kept short on purpose */
-(function(){{
-  var el=document.getElementById('fbload');
-  if(!el) return;
-  var t0=Date.now(), MIN=2150;
-  function done(){{
-    var wait=Math.max(0, MIN-(Date.now()-t0));
-    setTimeout(function(){{
-      el.classList.add('out');
-      setTimeout(function(){{ if(el.parentNode) el.parentNode.removeChild(el); }}, 340);
-    }}, wait);
-  }}
-  if(document.readyState==='complete') done();
-  else window.addEventListener('load', done);
-  setTimeout(done, 3600);   // never let it hang
-}})();
-</script>
-<div class="wrap">
+{loader}
+{loader_js}<div class="wrap">
 <nav>
   <a class="mark" href="{root}index.html">footballers<i>.ie</i></a>
   <button class="burger" id="burger" aria-label="Menu" aria-expanded="false" aria-controls="navlinks">
@@ -1117,7 +1138,9 @@ def build_player(p):
       </div>
     </div>
 
-    <div class="sec"><h2>Season {esc(SEASON)}</h2></div>
+    <div class="sec"><h2>Season {esc(p.get("season_label") or SEASON)}</h2>
+      {'<span class="more stale" style="border:0">Last season · no appearances yet in ' + esc(SEASON) + '</span>'
+       if p.get("season_label") and p["season_label"] != SEASON else ''}</div>
     <div class="pdstats">
       <div class="pds"><div class="n">{s["ap"]}</div><div class="l">Apps</div></div>
       <div class="pds"><div class="n">{s["starts"]}</div><div class="l">Starts</div></div>

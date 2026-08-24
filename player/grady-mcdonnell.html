@@ -698,40 +698,11 @@ a.intlblock.lnk:hover{border-color:var(--teal)}
   color:var(--yellow);border-radius:8px;padding:11px 16px;font-size:14px;cursor:pointer}
 .repmiss:hover{border-color:var(--yellow)}
 @media(max-width:700px){ .repbtn{right:10px;bottom:10px;padding:8px 12px 8px 9px;font-size:10px} }
+.more.stale{color:var(--yellow);letter-spacing:.06em}
 </style>
 </head>
 <body data-player="grady-mcdonnell">
-<div id="fbload" aria-hidden="true">
-  <div class="fbl-mark">footballers<i>.ie</i></div>
-  <div class="fbl-pitch">
-    <div class="fbl-ball"><i></i></div>
-    <svg class="fbl-boot" viewBox="0 0 40 44" aria-hidden="true">
-      <g class="fbl-leg">
-        <line x1="20" y1="2" x2="20" y2="24"/>
-        <line x1="20" y1="24" x2="15" y2="38"/>
-        <line x1="15" y1="38" x2="31" y2="40"/>
-      </g>
-    </svg>
-  </div>
-</div>
-<script>
-/* hide the loader as soon as the page is ready — kept short on purpose */
-(function(){
-  var el=document.getElementById('fbload');
-  if(!el) return;
-  var t0=Date.now(), MIN=2150;
-  function done(){
-    var wait=Math.max(0, MIN-(Date.now()-t0));
-    setTimeout(function(){
-      el.classList.add('out');
-      setTimeout(function(){ if(el.parentNode) el.parentNode.removeChild(el); }, 340);
-    }, wait);
-  }
-  if(document.readyState==='complete') done();
-  else window.addEventListener('load', done);
-  setTimeout(done, 3600);   // never let it hang
-})();
-</script>
+
 <div class="wrap">
 <nav>
   <a class="mark" href="../index.html">footballers<i>.ie</i></a>
@@ -769,7 +740,8 @@ a.intlblock.lnk:hover{border-color:var(--teal)}
       </div>
     </div>
 
-    <div class="sec"><h2>Season 2026/27</h2></div>
+    <div class="sec"><h2>Season 2026/27</h2>
+      </div>
     <div class="pdstats">
       <div class="pds"><div class="n">1</div><div class="l">Apps</div></div>
       <div class="pds"><div class="n">1</div><div class="l">Starts</div></div>

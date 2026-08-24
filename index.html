@@ -698,6 +698,7 @@ a.intlblock.lnk:hover{border-color:var(--teal)}
   color:var(--yellow);border-radius:8px;padding:11px 16px;font-size:14px;cursor:pointer}
 .repmiss:hover{border-color:var(--yellow)}
 @media(max-width:700px){ .repbtn{right:10px;bottom:10px;padding:8px 12px 8px 9px;font-size:10px} }
+.more.stale{color:var(--yellow);letter-spacing:.06em}
 </style>
 </head>
 <body>
@@ -715,10 +716,23 @@ a.intlblock.lnk:hover{border-color:var(--teal)}
   </div>
 </div>
 <script>
-/* hide the loader as soon as the page is ready — kept short on purpose */
+/* The kick only plays on a fresh arrival at the homepage — opening the site or
+   refreshing it. Coming back from a player or match page skips it. */
 (function(){
   var el=document.getElementById('fbload');
   if(!el) return;
+
+  var nav=(performance.getEntriesByType && performance.getEntriesByType('navigation')[0]) || null;
+  var kind = nav ? nav.type : (performance.navigation && performance.navigation.type===1 ? 'reload' : 'navigate');
+  var internal=false;
+  try{ internal = sessionStorage.getItem('fb_nav_v1')==='1'; }catch(e){}
+
+  // already been on the site this tab, and this isn't a reload? don't replay it
+  if(internal && kind!=='reload'){
+    el.parentNode && el.parentNode.removeChild(el);
+    return;
+  }
+
   var t0=Date.now(), MIN=2150;
   function done(){
     var wait=Math.max(0, MIN-(Date.now()-t0));
@@ -729,10 +743,9 @@ a.intlblock.lnk:hover{border-color:var(--teal)}
   }
   if(document.readyState==='complete') done();
   else window.addEventListener('load', done);
-  setTimeout(done, 3600);   // never let it hang
+  setTimeout(done, 3600);
 })();
-</script>
-<div class="wrap">
+</script><div class="wrap">
 <nav>
   <a class="mark" href="index.html">footballers<i>.ie</i></a>
   <button class="burger" id="burger" aria-label="Menu" aria-expanded="false" aria-controls="navlinks">
