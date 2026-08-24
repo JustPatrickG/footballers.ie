@@ -766,9 +766,11 @@ def scrape(args):
         (sr_caps, sr_goals, sr_debut, youth,
          c_apps, c_goals, c_assists) = extract_career(blob)
         age, born, foot = extract_personal(blob)
+        source_club = (blob.get("primaryTeam") or {}).get("teamName", "")
         players_rows.append([
             slug,
-            season["league"] or p.get("league", ""),
+            p.get("league", "") or season["league"],
+            source_club,
             age, born, foot,
             sr_caps, sr_goals, sr_debut, youth,
             season["apps"], season["starts"], season["goals"],
@@ -818,7 +820,7 @@ def scrape(args):
               ["slug", "date", "opponent", "home_away", "competition"],
               [r[:-1] for r in fixtures_rows])
     write_csv(out_root / "data/api/players.csv",
-              ["slug", "league", "age", "born", "foot", "senior_caps",
+              ["slug", "league", "club", "age", "born", "foot", "senior_caps",
                "senior_goals", "senior_debut", "youth", "s_apps", "s_starts",
                "s_goals", "s_assists", "s_mins", "s_yellow", "s_red",
                "c_apps", "c_goals", "c_assists", "avg_rating"],
