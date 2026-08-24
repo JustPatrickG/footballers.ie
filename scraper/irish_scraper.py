@@ -751,9 +751,13 @@ def extract_season_stats(blob):
     """Best-effort current-season league stats + rating from mainLeague."""
     stats = {"apps": "", "starts": "", "goals": "", "assists": "",
              "mins": "", "yellow": "", "red": "", "rating": "", "league": ""}
+    stats["season"] = ""
     ml = first(find_all(blob, "mainLeague"))
     if isinstance(ml, dict):
         stats["league"] = ml.get("leagueName", "") or ""
+        sn = str(ml.get("season") or "")
+        m = re.match(r"(\d{4})/(\d{4})$", sn)
+        stats["season"] = f"{m.group(1)}/{m.group(2)[2:]}" if m else sn
         wanted = {
             "matches": "apps", "matches played": "apps",
             "appearances": "apps", "started": "starts", "starts": "starts",
@@ -931,6 +935,7 @@ def scrape(args):
             source_club,
             age, born, foot,
             sr_caps, sr_goals, sr_debut, youth,
+            season["season"],
             season["apps"], season["starts"], season["goals"],
             season["assists"], season["mins"], season["yellow"],
             season["red"],
@@ -979,7 +984,8 @@ def scrape(args):
               [r[:-1] for r in fixtures_rows])
     write_csv(out_root / "data/api/players.csv",
               ["slug", "league", "club", "age", "born", "foot", "senior_caps",
-               "senior_goals", "senior_debut", "youth", "s_apps", "s_starts",
+               "senior_goals", "senior_debut", "youth", "season",
+               "s_apps", "s_starts",
                "s_goals", "s_assists", "s_mins", "s_yellow", "s_red",
                "c_apps", "c_goals", "c_assists", "avg_rating"],
               players_rows)
