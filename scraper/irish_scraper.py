@@ -488,6 +488,7 @@ def extract_matches(blob):
             rating = ""
         out.append({
             "id": str(m.get("id") or utc),
+            "url": m.get("matchPageUrl", "") or "",
             "utc": utc,
             "comp": m.get("leagueName", "") or "",
             "home": team if is_home else opp,
@@ -520,6 +521,7 @@ def extract_matches(blob):
             ongoing = bool(st.get("started")) and not st.get("finished")
             out.append({
                 "id": str(nm.get("matchId")),
+                "url": nm.get("matchUrl", "") or "",
                 "utc": utc,
                 "comp": nm.get("leagueName", "") or "",
                 "home": home, "away": away,
@@ -822,10 +824,141 @@ def scrape(args):
                "c_apps", "c_goals", "c_assists", "avg_rating"],
               players_rows)
 
+    index = []
+    for m, slugs in matches_by_id.values():
+        index.append({
+            "fotmob_id": m["id"], "url": m["url"],
+            "kickoff": iso_z(m["utc"]), "comp": m["comp"],
+            "home": m["home"], "away": m["away"],
+            "slugs": sorted(slugs),
+        })
+    (SCRAPER_DIR / "match_index.json").write_text(
+        json.dumps(index, indent=1))
+    print(f"  wrote {SCRAPER_DIR / 'match_index.json'}  "
+          f"({len(index)} matches)")
+
     if skipped:
         print(f"\nskipped (no fotmob_id in cache): {', '.join(skipped)}")
     if failed:
         print(f"failed this run: {', '.join(failed)}")
+
+
+# ---------------------------------------------------------------- live
+
+LIVE_WINDOW_H = 3
+
+
+def parse_match_page(data):
+    """Hunt the match page JSON for teams+status. Returns
+    (hs, as_, status, minute) with None scores when unknown."""
+    def hunt(obj):
+        if isinstance(obj, dict):
+            teams = obj.get("teams")
+            status = obj.get("status")
+            if (isinstance(teams, list) and len(teams) == 2
+                    and all(isinstance(t, dict) and "name" in t
+                            for t in teams)
+                    and isinstance(status, dict)):
+                return teams, status
+            for v in obj.values():
+                r = hunt(v)
+                if r:
+                    return r
+        elif isinstance(obj, list):
+            for i in obj:
+                r = hunt(i)
+                if r:
+                    return r
+        return None
+
+    hit = hunt(data)
+    if not hit:
+        return None
+    teams, status = hit
+    hs, as_ = teams[0].get("score"), teams[1].get("score")
+    if hs is None or as_ is None:
+        ss = str(status.get("scoreStr") or "")
+        m = re.match(r"\s*(\d+)\s*-\s*(\d+)", ss)
+        if m:
+            hs, as_ = int(m.group(1)), int(m.group(2))
+    finished = bool(status.get("finished"))
+    started = bool(status.get("started"))
+    st = "ft" if finished else ("live" if started else "scheduled")
+    minute = ""
+    lt = status.get("liveTime") or {}
+    if isinstance(lt, dict):
+        minute = re.sub(r"[^0-9+]", "",
+                        str(lt.get("short") or lt.get("long") or ""))
+    if st != "live":
+        minute = ""
+    if st == "scheduled":
+        hs = as_ = None
+    return hs, as_, st, minute
+
+
+def live(args):
+    idx_path = SCRAPER_DIR / "match_index.json"
+    if not idx_path.exists():
+        sys.exit("No match_index.json - run `scrape` first.")
+    index = json.loads(idx_path.read_text())
+
+    plist = {p["slug"]: p for p in read_player_list()}
+    now = dt.datetime.now(dt.timezone.utc)
+    win = dt.timedelta(hours=LIVE_WINDOW_H)
+
+    out = []
+    for m in index:
+        ko = parse_iso(m["kickoff"])
+        if not ko or abs(ko - now) > win:
+            continue
+        hs = as_ = None
+        st, minute = "scheduled", ""
+        if m.get("url"):
+            try:
+                page = get_next_data(
+                    "https://www.fotmob.com" + m["url"].split("#")[0])
+                parsed = parse_match_page(page)
+                if parsed:
+                    hs, as_, st, minute = parsed
+            except Exception as e:
+                print(f"  fetch failed for {m['home']} v {m['away']}: {e}")
+                parsed = None
+        else:
+            parsed = None
+        if parsed is None:
+            # time-based guess when the page can't be read
+            if now >= ko + dt.timedelta(hours=2, minutes=10):
+                st = "ft"
+            elif now >= ko:
+                st = "live"
+
+        players = []
+        for slug in m["slugs"]:
+            p = plist.get(slug, {})
+            name = p.get("name", slug.replace("-", " ").title())
+            ini = "".join(w[0] for w in name.split()[:2]).upper()
+            players.append({"slug": slug, "n": name,
+                            "club": p.get("club", ""),
+                            "ini": ini, "pos": p.get("pos", "")})
+
+        out.append({
+            "id": (f"{ko.strftime('%Y-%m-%d')}-"
+                   f"{slugify(m['home'])}-v-{slugify(m['away'])}"),
+            "kickoff": iso_z(ko),
+            "comp": m["comp"],
+            "home": m["home"], "away": m["away"],
+            "hs": hs, "as_": as_,
+            "status": st, "minute": minute,
+            "players": players,
+        })
+        time.sleep(SLEEP)
+
+    out.sort(key=lambda x: x["kickoff"])
+    payload = {"updated": iso_z(now), "matches": out}
+    dest = Path(args.out) / "live.json"
+    dest.write_text(json.dumps(payload, separators=(",", ":"),
+                               ensure_ascii=False))
+    print(f"wrote {dest}  ({len(out)} matches in window)")
 
 
 def main():
@@ -859,6 +992,10 @@ def main():
                         "(auto-detected if omitted)")
     d.add_argument("--debug", action="store_true")
 
+    lv = sub.add_parser("live", help="write live.json for matches "
+                                     "within +-3h")
+    lv.add_argument("--out", default=".")
+
     a = sub.add_parser("all", help="resolve missing then scrape")
     a.add_argument("--out", default=".")
     a.add_argument("--debug", action="store_true")
@@ -870,6 +1007,8 @@ def main():
         resolve(args)
     elif args.cmd == "discover-loi":
         discover_loi(args)
+    elif args.cmd == "live":
+        live(args)
     elif args.cmd == "scrape":
         scrape(args)
     else:
