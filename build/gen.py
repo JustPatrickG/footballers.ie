@@ -2,7 +2,6 @@
 import os, sys, html as H, json, csv
 HERE = os.path.dirname(os.path.abspath(__file__))
 DATA = os.path.join(HERE, "..", "data")
-EMPTY_MS = '<div class="emptystate" style="display:block">Nothing close right now.</div>'
 
 # ---- config ----
 SITE_URL   = "https://irishfball.vercel.app"
@@ -14,6 +13,35 @@ SAMPLE_DATA = False   # set False once every figure on the site is real
 # Mailchimp, Kit — they all give you one). Until then the form shows a notice.
 NEWSLETTER_ACTION = ""      # e.g. "https://buttondown.email/api/emails/embed-subscribe/footballers"
 NEWSLETTER_FIELD  = "email" # Buttondown/Beehiiv use "email"; Mailchimp uses "EMAIL"
+
+
+# ---- Transfermarkt bio/contract layer (data/api/tm.csv) ----
+# Manual, refreshed every month or two — treat as possibly stale.
+# Every field can be blank; blank means unknown.
+
+def _tm_date(s):
+    """DD/MM/YYYY -> (iso, 'June 2027'). Returns ('','') if unparseable."""
+    s = (s or "").strip()
+    if not s: return "", ""
+    import datetime
+    for fmt in ("%d/%m/%Y", "%Y-%m-%d"):
+        try:
+            d = datetime.datetime.strptime(s, fmt)
+            return d.strftime("%Y-%m-%d"), d.strftime("%B %Y")
+        except ValueError:
+            continue
+    return "", s
+
+def _tm_height(cm):
+    cm = (cm or "").strip()
+    if not cm.replace(".", "").isdigit(): return ""
+    try: n = int(float(cm))
+    except ValueError: return ""
+    inches = round(n / 2.54)
+    return f"{n}cm · {inches // 12}ft {inches % 12}in"
+
+def _tm_nations(s):
+    return [x.strip() for x in (s or "").split("|") if x.strip()]
 
 def _rows(path):
     full = os.path.join(DATA, path)
@@ -86,6 +114,8 @@ def _merge_rows(name, key_fields):
     return list(keyed.values())
 
 def load():
+    tmdata = {r["slug"]: r for r in _rows("api/tm.csv") if r.get("slug")}
+    manual_players = {r["slug"]: r for r in _rows("manual/players.csv") if r.get("slug")}
     fixtures, results = {}, {}
     for r in _merge_rows("fixtures.csv", ("slug","date","opponent")):
         if r.get("slug"):
@@ -143,6 +173,46 @@ def load():
             photo=(r.get("photo") or "").strip(),
             photo_credit=(r.get("photo_credit") or "").strip(),
             fixtures=fixtures.get(slug, []), results=results.get(slug, [])))
+    # ---- Transfermarkt bio/contract ----
+    for p in players:
+        t = tmdata.get(p["slug"])
+        if not t:
+            p["tm"] = None
+            continue
+        iso_exp, exp_label = _tm_date(t.get("contract_expires"))
+        _, joined_label    = _tm_date(t.get("joined"))
+        p["tm"] = dict(
+            full_name   = (t.get("tm_name") or "").strip(),
+            dob         = (t.get("dob") or "").strip(),
+            birthplace  = (t.get("birthplace") or "").strip(),
+            height      = _tm_height(t.get("height_cm")),
+            nations     = _tm_nations(t.get("citizenship")),
+            position    = (t.get("position") or "").strip(),
+            foot        = (t.get("foot") or "").strip(),
+            agent       = (t.get("agent") or "").strip(),
+            club        = (t.get("tm_club") or "").strip(),
+            joined      = joined_label,
+            expires     = exp_label,
+            expires_iso = iso_exp,
+            option      = (t.get("contract_option") or "").strip(),
+            value       = (t.get("market_value") or "").strip(),
+        )
+        # birthplace is the only source we have for "born"
+        if not p.get("born") and p["tm"]["birthplace"]:
+            p["born"] = p["tm"]["birthplace"]
+        if not p.get("foot") and p["tm"]["foot"]:
+            p["foot"] = p["tm"]["foot"].title()
+
+        # club: trust this source over the stats feed, but never over a human edit
+        tmclub = p["tm"]["club"]
+        manual_row = manual_players.get(p["slug"], {})
+        human_set_club = bool((manual_row.get("club") or "").strip())
+        if tmclub and not human_set_club and not p.get("loan"):
+            if tmclub != p["club"]:
+                p["club_was"] = p["club"]        # keep what the stats feed said
+            p["club"] = tmclub
+            p["parent_club"] = tmclub
+
     for p in players:
         if p.get("loan"):
             p["club"] = p["loan"]          # display the club they're actually at
@@ -189,9 +259,9 @@ def load():
     articles = sorted(_rows("manual/articles.csv"), key=lambda r: r.get("date",""), reverse=True)
     accounts = _rows("manual/accounts.csv")
     clubgeo  = {r["club"]: r for r in _rows("manual/clubs.csv") if r.get("club")}
-    return players, ireland, news, matches, articles, accounts, clubgeo
+    return players, ireland, news, matches, articles, accounts, clubgeo, tmdata
 
-PLAYERS, IRELAND, NEWS, MATCHES, ARTICLES, ACCOUNTS, CLUBGEO = load()
+PLAYERS, IRELAND, NEWS, MATCHES, ARTICLES, ACCOUNTS, CLUBGEO, TM = load()
 TIERS = {"abroad-top":"Abroad — top divisions",
          "abroad-lower":"Abroad — second tier & smaller leagues",
          "loi":"League of Ireland"}
@@ -1324,7 +1394,7 @@ def build_milestones():
                     f'<div class="msn">{esc(m["p"]["n"])}</div><div class="msd">{esc(m["text"])}</div>'
                     f'<div class="msc">{esc(m["p"]["club"])}</div></a>' for m in items)
     body = (f'<div class="pagehead"><h1>Approaching milestones</h1><p>Players closing in on a round number — caps, goals or appearances.</p></div>'
-            f'<div class="msgrid">{cards or EMPTY_MS}</div>')
+            f'<div class="msgrid">{cards or "<div class=\'emptystate\' style=\'display:block\'>Nothing close right now.</div>"}</div>')
     return shell("Milestones — IRISH FBALL","Irish players approaching career and international milestones.","", "milestones.html", body, canonical="milestones.html")
 
 # ================= COMPARE =================
@@ -1405,6 +1475,55 @@ def build_match(m, involved):
                  "../", "fixtures.html", body, canonical=f"match/{match_id(m)}.html")
 
 # ================= PLAYER =================
+
+def bio_block(p):
+    """Birthplace, height, citizenship, agent, contract — all optional."""
+    t = p.get("tm")
+    if not t: return ""
+    rows = []
+    def add(label, value):
+        if value: rows.append(f'<div class="biorow"><div class="biol">{label}</div>'
+                              f'<div class="biov">{value}</div></div>')
+
+    if t["dob"]:
+        try:
+            import datetime
+            d = datetime.datetime.strptime(t["dob"], "%Y-%m-%d")
+            born = d.strftime("%-d %B %Y")
+        except (ValueError, TypeError):
+            born = t["dob"]
+        add("Born", esc(born) + (f' · {esc(t["birthplace"])}' if t["birthplace"] else ""))
+    elif t["birthplace"]:
+        add("Born", esc(t["birthplace"]))
+
+    add("Height", esc(t["height"]))
+    if t["nations"]:
+        add("Citizenship", " ".join(f'<span class="nat">{esc(n)}</span>' for n in t["nations"]))
+    add("Position", esc(t["position"]))
+    if t["foot"]: add("Foot", esc(t["foot"].title()))
+    add("Agent", esc(t["agent"]))
+    add("At club since", esc(t["joined"]))
+
+    if t["expires"]:
+        soon = ""
+        if t["expires_iso"]:
+            import datetime
+            try:
+                left = (datetime.datetime.strptime(t["expires_iso"], "%Y-%m-%d")
+                        - datetime.datetime.now()).days
+                if left < 0:    soon = ' <span class="cexp out">expired</span>'
+                elif left < 190: soon = ' <span class="cexp soon">under 6 months</span>'
+            except ValueError:
+                pass
+        add("Contract until", esc(t["expires"]) + soon +
+            (f'<span class="copt">{esc(t["option"])}</span>' if t["option"] else ""))
+    add("Market value", esc(t["value"]))
+
+    if not rows: return ""
+    return ('<div class="sec"><h2>Profile</h2>'
+            '<span class="more" style="border:0">updated periodically</span></div>'
+            f'<div class="biogrid">{"".join(rows)}</div>')
+
 def build_player(p):
     s, c = p["season"], p["career"]
     badge = "League of Ireland" if p["tier"]=="loi" else ("Abroad · top flight" if p["tier"]=="abroad-top" else "Abroad")
@@ -1510,6 +1629,8 @@ def build_player(p):
              if p.get("loan") and p.get("parent_club") and p["parent_club"] != p["club"] else ""),
             (f'<b>{p["intl_senior"]["caps"]} caps</b>' if p["intl_senior"]["caps"] is not None
              else '<b>Senior international</b>') if p["intl_senior"] else ""]))}</div>
+        {f'<div class="pdfull">{esc(p["tm"]["full_name"])}</div>'
+          if p.get("tm") and p["tm"]["full_name"] and p["tm"]["full_name"] != p["n"] else ""}
         {f'<div class="pdborn">Born {esc(p["born"])}' + (" · " + esc(p["foot"]) + " footed" if p["foot"] else "") + "</div>" if p["born"] else ""}
         {f'<div class="pcredit">Photo: {esc(p["photo_credit"])}</div>' if p.get("photo_credit") else ""}
         </div>
@@ -1521,6 +1642,7 @@ def build_player(p):
     </div>
 
     {statsblock}
+    {bio_block(p)}
 
     <div class="sec"><h2>Upcoming fixtures</h2>{fx_more}</div>
     <div class="fxlist">{fxr or '<div class="emptystate" style="display:block">No fixtures listed.</div>'}</div>
