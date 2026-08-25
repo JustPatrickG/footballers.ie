@@ -517,9 +517,17 @@ def build_index():
     # ---- abroad / LOI split ----
     abroad = [p for p in PLAYERS if p["tier"].startswith("abroad")]
     loi    = [p for p in PLAYERS if p["tier"] == "loi"]
-    def block(title, group, href, limit=8):
-        rows = "".join(player_row(p) for p in group[:limit])
-        return (f'<div class="sec"><h2>{title}</h2><a class="more" href="{href}">All {len(group)} →</a></div>'
+    def block(title, group, href, limit=9):
+        """Lead with the best-rated players this season, not alphabetical."""
+        def _r(p):
+            try: return float(p.get("rating") or 0)
+            except (TypeError, ValueError): return 0.0
+        ranked = sorted(group, key=lambda p: (-_r(p), p["n"]))
+        rows = "".join(player_row(p) for p in ranked[:limit])
+        rated = sum(1 for p in group if _r(p) > 0)
+        note = f'<span class="more" style="border:0">top {min(limit, len(ranked))} by rating</span>' if rated else ""
+        return (f'<div class="sec"><h2>{title}</h2>{note}'
+                f'<a class="more" href="{href}">All {len(group)} →</a></div>'
                 f'<div class="tiergroup">{rows}</div>') if group else ""
 
     news_block = (f'<div class="sec" style="margin-top:26px"><h2>News</h2><a class="more" href="news.html">All news →</a></div>'
