@@ -775,3 +775,4 @@ a.intlblock.lnk:hover{border-color:var(--teal)}
 }
 .nodata{border:1px solid var(--line);border-radius:10px;background:var(--panel);padding:16px 18px;
   color:var(--mute);font-size:14px;line-height:1.6}
+.nlok{color:var(--teal);font-family:'IBM Plex Mono',monospace;font-size:13px;padding:12px 0;letter-spacing:.04em}

@@ -1,4 +1,4 @@
-/* footballers.ie — favourites
+/* irishfball — favourites
    Stored in the browser (localStorage). No account needed.
    Powers: star toggles, the "Your players" rail, and the alerts page. */
 (function () {
@@ -361,6 +361,14 @@
 
   function send(email, slug) {
     try { localStorage.setItem(EKEY, email); } catch (e) {}
+    // save it where we can see it
+    try {
+      fetch('/api/subscribe', {
+        method: 'POST', headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email: email, source: 'follow', players: slug || '' })
+      });
+    } catch (e) {}
+    // and to the newsletter provider, if one is set up
     var url = window.FB_SUBSCRIBE_URL;
     if (url) {
       try {
@@ -623,7 +631,7 @@
       var c = document.querySelector('h1');
       return { kind: 'club', label: c ? c.textContent.trim() : 'this club' };
     }
-    return { kind: 'page', label: document.title.replace(' — FOOTBALLERS', '') };
+    return { kind: 'page', label: document.title.replace(' — IRISH FBALL', '') };
   }
 
   function open(preset) {
@@ -828,4 +836,50 @@
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', paintFixtures);
   else paintFixtures();
   setInterval(paintFixtures, 60000);
+})();
+
+
+/* ---------- SIGNUP FORMS ----------
+   Newsletter box and the alerts page post to /api/subscribe so the address
+   lands in the admin, whether or not a mail provider is connected. */
+(function () {
+  var forms = document.querySelectorAll('form.nlform, form.alertform');
+  for (var i = 0; i < forms.length; i++) {
+    (function (f) {
+      f.addEventListener('submit', async function (e) {
+        var input = f.querySelector('input[type=email]');
+        if (!input) return;
+        var email = input.value.trim();
+        if (!email || email.indexOf('@') === -1) return;
+        e.preventDefault();
+
+        var btn = f.querySelector('button[type=submit], button');
+        var label = btn ? btn.textContent : '';
+        if (btn) { btn.disabled = true; btn.textContent = 'Saving…'; }
+
+        var players = '';
+        try { players = (JSON.parse(localStorage.getItem('fb_favs_v1')) || []).join(';'); } catch (err) {}
+
+        try {
+          var res = await fetch('/api/subscribe', {
+            method: 'POST', headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              email: email,
+              source: f.classList.contains('alertform') ? 'alerts' : 'newsletter',
+              players: players
+            })
+          });
+          var out = await res.json().catch(function () { return {}; });
+          if (!res.ok) throw new Error(out.error || 'Could not save that.');
+          f.innerHTML = '<div class="nlok">You\'re on the list. Thanks.</div>';
+        } catch (ex) {
+          if (btn) { btn.disabled = false; btn.textContent = label; }
+          var note = f.querySelector('.nlnote') || document.createElement('div');
+          note.className = 'nlnote'; note.style.display = 'block';
+          note.textContent = ex.message || 'Could not save that. Try again shortly.';
+          f.appendChild(note);
+        }
+      });
+    })(forms[i]);
+  }
 })();

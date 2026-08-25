@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>footballers.ie — admin</title>
+<title>irishfball — admin</title>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root{--bg:#0C0F10;--panel:#151A1B;--panel2:#181E1F;--line:#242B2C;--white:#EFF3F1;
@@ -75,7 +75,7 @@ label{display:block;font-family:'IBM Plex Mono',monospace;font-size:9px;letter-s
 
 <div class="top">
   <div class="toprow">
-    <h1>footballers<i>.ie</i> admin</h1>
+    <h1>irish<i>fball</i> admin</h1>
     <span class="badge" id="whoami"></span>
     <span class="badge" id="folderbadge">Loading…</span>
     <span class="spacer"></span>
@@ -98,7 +98,7 @@ var SESSION=null;
       'font-family:Space Grotesk,sans-serif;color:#EFF3F1;text-align:center;padding:24px">'+
       '<div><div style="font-size:20px;font-weight:700;margin-bottom:10px">Not signed in</div>'+
       '<div style="color:#77837F;font-size:14px;line-height:1.6;max-width:36ch">Go to the site and '+
-      'double-click the <b>footballers.ie</b> logo in the top left to sign in.</div>'+
+      'double-click the <b>irishfball</b> logo in the top left to sign in.</div>'+
       '<div style="margin-top:18px"><a href="../index.html" style="color:#F5C518;font-family:IBM Plex Mono,monospace;'+
       'font-size:12px;letter-spacing:.1em;text-transform:uppercase">← Back to site</a></div></div></div>';
     throw new Error('not signed in');
@@ -108,7 +108,7 @@ var SESSION=null;
 /* what each role can touch */
 var ROLES = {
   owner:      {label:'Owner',      tabs:'*',                                          note:'Full access, including accounts.'},
-  admin:      {label:'Admin',      tabs:['players','matches','articles','fixtures','results','ireland','reports'], note:'Everything except accounts.'},
+  admin:      {label:'Admin',      tabs:['players','matches','articles','fixtures','results','ireland','reports','subs'], note:'Everything except accounts.'},
   editor:     {label:'Editor',     tabs:['articles','players','reports'],                       note:'News and player details.'},
   journalist: {label:'Journalist', tabs:['articles'],  ownOnly:true,                  note:'Write and edit your own articles.'},
   data:       {label:'Data',       tabs:['players','matches','fixtures','results','ireland'], note:'Stats and fixtures, no news.'},
@@ -130,6 +130,7 @@ const FILES = {
   ireland:  {path:'manual/ireland.csv',  label:'Ireland'},
   accounts: {path:'manual/accounts.csv', label:'Accounts'},
   reports:  {path:null, label:'Reports'},
+  subs:     {path:null, label:'Signups'},
 };
 const WIDE=['name','club','league','headline','standfirst','author','born','eligible','youth','players','home','away','opponent','competition','image','photo','notes','body'];
 const NUMS=['age','senior_caps','senior_goals','s_apps','s_starts','s_goals','s_assists','s_mins','s_yellow','s_red','c_apps','c_goals','c_assists','avg_rating','minutes','goals','assists','home_score','away_score','minute'];
@@ -405,7 +406,7 @@ function articleView(){
     });
     v.querySelector('#newart').onclick=()=>{
       const o={}; d.cols.forEach(c=>o[c]='');
-      o.date=new Date().toISOString().slice(0,10); o.author=SESSION.name||'Footballers Staff';
+      o.date=new Date().toISOString().slice(0,10); o.author=SESSION.name||'Irish Fball Staff';
       d.rows.unshift(o); selectedArticle=0; markDirty(); render();
     };
     ['headline','standfirst','date','tag','author','player_slug','slug','image','body'].forEach(f=>{
@@ -551,11 +552,80 @@ async function reportsView(){
   return v;
 }
 
+async function subsView(){
+  const v=document.createElement('div');
+  v.innerHTML=`<div class="bar"><button id="refr">Refresh</button>
+    <button id="dl">Download CSV</button>
+    <span class="count" id="scount">Loading…</span></div><div id="slist"></div>`;
+  let rows=[];
+  async function load(){
+    const list=v.querySelector('#slist'), cnt=v.querySelector('#scount');
+    const repo=(window.SUBS_REPO||'');
+    if(!token()){
+      cnt.textContent='';
+      list.innerHTML='<div class="panel"><h2>Not connected</h2><div class="hint">'+
+        'Add your GitHub token to read signups.</div>'+
+        '<div class="bar"><button class="pri" id="tk">Add token</button></div></div>';
+      list.querySelector('#tk').onclick=askToken; return;
+    }
+    if(!repo){
+      cnt.textContent='';
+      list.innerHTML='<div class="panel"><h2>Not configured</h2><div class="hint">'+
+        'Set <code>SUBSCRIBERS_REPO</code> in Vercel to a <b>private</b> repository, then add '+
+        'the same value here so the admin knows where to look.</div>'+
+        '<div class="bar"><button class="pri" id="sr">Set repo</button></div></div>';
+      list.querySelector('#sr').onclick=()=>{
+        const r=prompt('Private repo holding subscribers.csv (owner/name):');
+        if(r){ try{ localStorage.setItem('fb_subs_repo', r.trim()); }catch(e){} window.SUBS_REPO=r.trim(); load(); }
+      };
+      return;
+    }
+    try{
+      const r=await fetch(`https://api.github.com/repos/${repo}/contents/subscribers.csv`,
+        {headers:{Authorization:'token '+token(), Accept:'application/vnd.github+json'}});
+      if(r.status===404){ cnt.textContent='0'; list.innerHTML='<div class="panel"><div class="hint">No signups yet.</div></div>'; return; }
+      if(!r.ok) throw new Error('GitHub said '+r.status);
+      const j=await r.json();
+      const text=decodeURIComponent(escape(atob(j.content.replace(/\n/g,''))));
+      const parsed=parseCSV(text); rows=parsed.rows;
+      cnt.textContent=rows.length+' signups';
+      list.innerHTML='<div class="tblwrap"><table><thead><tr>'+
+        parsed.cols.map(c=>`<th>${c}</th>`).join('')+'</tr></thead><tbody>'+
+        rows.slice().reverse().map(x=>'<tr>'+parsed.cols.map(c=>
+          `<td style="padding:9px 7px">${esc(x[c]||'')}</td>`).join('')+'</tr>').join('')+
+        '</tbody></table></div>';
+    }catch(e){
+      cnt.textContent='';
+      list.innerHTML='<div class="panel"><div class="hint">Could not load signups: '+esc(e.message)+'</div></div>';
+    }
+  }
+  setTimeout(()=>{
+    v.querySelector('#refr').onclick=load;
+    v.querySelector('#dl').onclick=()=>{
+      if(!rows.length) return;
+      const cols=Object.keys(rows[0]);
+      const csv=[cols.join(',')].concat(rows.map(r=>cols.map(c=>{
+        const s=String(r[c]==null?'':r[c]);
+        return /[",\n]/.test(s)?'"'+s.replace(/"/g,'""')+'"':s;}).join(','))).join('\n');
+      const a=document.createElement('a');
+      a.href=URL.createObjectURL(new Blob([csv],{type:'text/csv'}));
+      a.download='subscribers.csv'; a.click();
+    };
+    try{ window.SUBS_REPO = localStorage.getItem('fb_subs_repo')||''; }catch(e){}
+    load();
+  },0);
+  return v;
+}
+
 function render(){
   const v=document.getElementById('view'); v.innerHTML='';
   if(!loaded){ v.innerHTML='<div class="panel"><h2>Loading</h2><div class="hint">Reading the site data…</div></div>'; return; }
   if(active==='reports'){
     reportsView().then(el=>{ v.innerHTML=''; v.appendChild(el); });
+    return;
+  }
+  if(active==='subs'){
+    subsView().then(el=>{ v.innerHTML=''; v.appendChild(el); });
     return;
   }
   const content = active==='articles' ? articleView() : tableView();

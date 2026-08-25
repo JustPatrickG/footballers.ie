@@ -4,7 +4,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 DATA = os.path.join(HERE, "..", "data")
 
 # ---- config ----
-SITE_URL   = "https://footballers.ie"
+SITE_URL   = "https://irishfball.vercel.app"
 SEASON     = "2026/27"
 MATCHWEEK  = ""   # leave blank to work it out from the fixtures
 SAMPLE_DATA = False   # set False once every figure on the site is real
@@ -227,7 +227,7 @@ def matchweek_label():
 
 
 LOADER_HTML = '''<div id="fbload" aria-hidden="true">
-  <div class="fbl-mark">footballers<i>.ie</i></div>
+  <div class="fbl-mark">irish<i>fball</i></div>
   <div class="fbl-pitch">
     <div class="fbl-ball"><i></i></div>
     <svg class="fbl-boot" viewBox="0 0 40 44" aria-hidden="true">
@@ -310,7 +310,7 @@ def shell(title, desc, root, active, body, extra_head="", canonical="", body_att
 {loader}
 {loader_js}<div class="wrap">
 <nav>
-  <a class="mark" href="{root}index.html">footballers<i>.ie</i></a>
+  <a class="mark" href="{root}index.html">irish<i>fball</i></a>
   <button class="burger" id="burger" aria-label="Menu" aria-expanded="false" aria-controls="navlinks">
     <span></span><span></span><span></span>
   </button>
@@ -330,7 +330,7 @@ def shell(title, desc, root, active, body, extra_head="", canonical="", body_att
 {body}
 <footer>
   <div class="foothead">
-    {'Footballers · prototype · sample data' if SAMPLE_DATA else 'Footballers'}
+    {'Irish Fball · prototype · sample data' if SAMPLE_DATA else 'Irish Fball'}
     <span class="updated" data-stamp="{DATA_STAMP}">checking for updates…</span>
   </div>
   Every Irish player at a professional club — abroad, senior international and League of Ireland
@@ -436,7 +436,7 @@ def signup(root="", compact=False):
           <button type="submit">Subscribe</button>
         </form>'''
     else:
-        form = '''<form class="nlform" onsubmit="event.preventDefault();this.nextElementSibling.style.display='block';">
+        form = '''<form class="nlform">
           <input type="email" placeholder="your@email.ie" required aria-label="Email address">
           <button type="submit">Subscribe</button>
         </form>
@@ -691,7 +691,7 @@ def build_index():
     }})();
     </script>
 '''
-    return shell("FOOTBALLERS — every Irish professional, tracked",
+    return shell("IRISH FBALL — every Irish professional, tracked",
                  "News, goal involvements and the full weekend round-up for every Irish professional footballer.",
                  "", "index.html", body, canonical="")
 
@@ -732,7 +732,7 @@ def build_news():
     <div class="pagehead"><h1>News</h1><p>Reporting on Irish players at home and abroad.</p></div>
     {cards}
     '''
-    return shell("News — FOOTBALLERS", "Latest news on Irish professional footballers.",
+    return shell("News — IRISH FBALL", "Latest news on Irish professional footballers.",
                  "", "news.html", body, canonical="news.html")
 
 def build_article(a):
@@ -760,7 +760,7 @@ def build_article(a):
     </article>
     {related}
     '''
-    return shell(f'{a.get("headline","")} — FOOTBALLERS',
+    return shell(f'{a.get("headline","")} — IRISH FBALL',
                  a.get("standfirst",""), "../", "news.html", body,
                  canonical=f'news/{a["slug"]}.html')
 
@@ -924,8 +924,8 @@ def build_faq():
             f'<p>How the numbers on this site are collected, what they mean, and what they don\'t.</p></div>'
             f'{items}'
             f'<div class="faqfoot">Still not answered? Hit <b>Report</b> in the corner of any page.</div>')
-    return shell("Where the data comes from — FOOTBALLERS",
-                 "How footballers.ie collects and calculates its data.",
+    return shell("Where the data comes from — IRISH FBALL",
+                 "How Irish Fball collects and calculates its data.",
                  "", "faq.html", body, canonical="faq.html")
 
 
@@ -1070,7 +1070,7 @@ def build_map():
     }})();
     </script>
     '''
-    return shell("Where are the Irish? — FOOTBALLERS",
+    return shell("Where are the Irish? — IRISH FBALL",
                  "A map of every country where tracked Irish players are playing.",
                  "", "clubs.html", body, canonical="where-are-the-irish.html")
 
@@ -1126,7 +1126,7 @@ def build_list(fname, title, sub, data):
     sortf.onchange=function(){{sortRows();draw();}};
     q.oninput=draw;posf.onchange=draw;lgf.onchange=function(){{sortRows();draw();}};
     </script>'''
-    return shell(f"{title} — FOOTBALLERS", sub, "", fname, body, canonical=fname)
+    return shell(f"{title} — IRISH FBALL", sub, "", fname, body, canonical=fname)
 
 # ================= CLUBS =================
 def build_clubs_index():
@@ -1149,7 +1149,7 @@ def build_clubs_index():
             f'<div><b>Where are the Irish?</b><span>See every country on a map</span></div>'
             f'<span class="go">Open map →</span></a>'
             f'<div class="clubgrid">{cards}</div>')
-    return shell("Clubs — FOOTBALLERS","Irish players by country, league and club.","", "clubs.html", body, canonical="clubs.html")
+    return shell("Clubs — IRISH FBALL","Irish players by country, league and club.","", "clubs.html", body, canonical="clubs.html")
 
 def build_country(cname, ps):
     """Second level: leagues within a country."""
@@ -1169,7 +1169,7 @@ def build_country(cname, ps):
             f'<div class="pagehead"><h1>{esc(cname)}</h1>'
             f'<p>{len(ps)} Irish player{"s" if len(ps)!=1 else ""} across {len(order)} league{"s" if len(order)!=1 else ""}.</p></div>'
             f'<div class="clubgrid">{cards}</div>')
-    return shell(f"{cname} — Irish players — FOOTBALLERS",
+    return shell(f"{cname} — Irish players — IRISH FBALL",
                  f"Irish players in {cname}, by league.", "../", "clubs.html", body,
                  canonical=f"country/{country_slug(cname)}.html")
 
@@ -1190,7 +1190,7 @@ def build_league(cname, lname, ps):
             f'<div class="pagehead"><h1>{esc(lname)}</h1>'
             f'<p>{esc(cname)} · {len(ps)} Irish player{"s" if len(ps)!=1 else ""} at {len(order)} club{"s" if len(order)!=1 else ""}.</p></div>'
             f'<div class="clubgrid">{cards}</div>')
-    return shell(f"{lname} — Irish players — FOOTBALLERS",
+    return shell(f"{lname} — Irish players — IRISH FBALL",
                  f"Irish players in the {lname}.", "../", "clubs.html", body,
                  canonical=f"league/{club_slug(cname)}-{club_slug(lname)}.html")
 
@@ -1208,7 +1208,7 @@ def build_club(cname, ps):
     <div class="sec"><h2>Upcoming fixtures</h2></div>
     <div class="fxlist">{fxr or '<div class="emptystate" style="display:block">No fixtures listed.</div>'}</div>
     '''
-    return shell(f"{cname} — Irish players — FOOTBALLERS",
+    return shell(f"{cname} — Irish players — IRISH FBALL",
                  f"Irish professionals at {cname}, plus upcoming fixtures.", "../", "clubs.html", body,
                  canonical=f"club/{club_slug(cname)}.html")
 
@@ -1270,7 +1270,7 @@ def build_ireland():
     var want=new URLSearchParams(location.search).get('level');
     if(want) openTab(want);
     </script>'''
-    return shell("Republic of Ireland — FOOTBALLERS",
+    return shell("Republic of Ireland — IRISH FBALL",
                  "Ireland fixtures, results and capped players at every level.","", "ireland.html", body, canonical="ireland.html")
 
 def build_fixtures():
@@ -1288,7 +1288,7 @@ def build_fixtures():
                         f'<div class="fxc">{esc(c)}</div></a>' for p,o,h,c in order[d])
         out += f'<div class="tiergroup"><h4><span>{esc(day_label(d))}</span><span>{len(order[d])} match{"es" if len(order[d])!=1 else ""}</span></h4>{items}</div>'
     body = (f'<div class="pagehead"><h1>Fixtures</h1><p>Every upcoming game a tracked Irish player could feature in.</p></div>{out}')
-    return shell("Fixtures — FOOTBALLERS","Every upcoming game a tracked Irish player could feature in.","", "fixtures.html", body, canonical="fixtures.html")
+    return shell("Fixtures — IRISH FBALL","Every upcoming game a tracked Irish player could feature in.","", "fixtures.html", body, canonical="fixtures.html")
 
 # ================= MILESTONES =================
 def milestone_items():
@@ -1324,7 +1324,7 @@ def build_milestones():
                     f'<div class="msc">{esc(m["p"]["club"])}</div></a>' for m in items)
     body = (f'<div class="pagehead"><h1>Approaching milestones</h1><p>Players closing in on a round number — caps, goals or appearances.</p></div>'
             f'<div class="msgrid">{cards or "<div class=\'emptystate\' style=\'display:block\'>Nothing close right now.</div>"}</div>')
-    return shell("Milestones — FOOTBALLERS","Irish players approaching career and international milestones.","", "milestones.html", body, canonical="milestones.html")
+    return shell("Milestones — IRISH FBALL","Irish players approaching career and international milestones.","", "milestones.html", body, canonical="milestones.html")
 
 # ================= COMPARE =================
 def build_compare():
@@ -1363,7 +1363,7 @@ def build_compare():
     }}
     a.onchange=draw;b.onchange=draw;draw();
     </script>'''
-    return shell("Compare players — FOOTBALLERS","Compare any two Irish professionals side by side.","", "compare.html", body, canonical="compare.html")
+    return shell("Compare players — IRISH FBALL","Compare any two Irish professionals side by side.","", "compare.html", body, canonical="compare.html")
 
 
 def match_id(m):
@@ -1399,7 +1399,7 @@ def build_match(m, involved):
     <div class="tiergroup">{rows}</div>
     '''
     title = f'{m.get("home","")} v {m.get("away","")} — Irish players'
-    return shell(f"{title} — FOOTBALLERS",
+    return shell(f"{title} — IRISH FBALL",
                  f"Irish players involved in {m.get('home','')} v {m.get('away','')}.",
                  "../", "fixtures.html", body, canonical=f"match/{match_id(m)}.html")
 
@@ -1536,7 +1536,7 @@ def build_player(p):
 
     {f'<div class="sec"><h2>Transfers</h2></div><div class="tlist">{trans}</div>' if trans else ''}
     '''
-    return shell(f"{p['n']} — FOOTBALLERS",
+    return shell(f"{p['n']} — IRISH FBALL",
                  f"{p['n']} ({p['club']}, {p['league']}) — season stats, fixtures, results and international record.",
                  "../", "", body, canonical=f"player/{p['slug']}.html",
                  body_attr=f' data-player="{p["slug"]}"')
@@ -1559,13 +1559,13 @@ def build_newsletter():
             <li>A recap of the midweek matches</li>
             <li>Injury news and who's back in contention</li></ul></div>
     </div>'''
-    return shell("Newsletter — FOOTBALLERS",
+    return shell("Newsletter — IRISH FBALL",
                  "Two emails a week on every Irish professional footballer — Monday round-up and Friday preview.",
                  "", "newsletter.html", body, canonical="newsletter.html")
 
 
 def build_alerts():
-    form_open = f'<form class="nlform" action="{NEWSLETTER_ACTION}" method="post" target="_blank">' if NEWSLETTER_ACTION \
+    form_open = f'<form class="alertform" action="{NEWSLETTER_ACTION}" method="post" target="_blank">' if NEWSLETTER_ACTION \
                 else '<form class="nlform" onsubmit="event.preventDefault();document.getElementById(\'alertnote\').style.display=\'block\';">'
     body = f'''
     <div class="pagehead"><h1>Player <i>alerts</i></h1>
@@ -1619,7 +1619,7 @@ def build_alerts():
       if (document.readyState==='loading') document.addEventListener('DOMContentLoaded', upd); else upd();
     }})();
     </script>'''
-    return shell("Player alerts — FOOTBALLERS",
+    return shell("Player alerts — IRISH FBALL",
                  "Follow Irish players and get an email when they play, score or assist.",
                  "", "alerts.html", body, canonical="alerts.html")
 
@@ -1636,7 +1636,7 @@ def build_404():
       <a class="tab" href="/league-of-ireland.html">League of Ireland</a>
       <a class="tab" href="/index.html">Home</a>
     </div>"""
-    return shell("Page not found — FOOTBALLERS", "That page doesn't exist on Footballers.", "/", "", body)
+    return shell("Page not found — IRISH FBALL", "That page doesn't exist on Footballers.", "/", "", body)
 
 def build_sitemap():
     urls = ["", "news.html", "faq.html", "where-are-the-irish.html", "players.html", "abroad.html", "league-of-ireland.html", "clubs.html",
