@@ -572,6 +572,177 @@ def discover_ireland(args):
         print("run `scrape` to pull their data.")
 
 
+TEAM_FIXTURES_URL = ("https://www.fotmob.com/teams/{tid}/fixtures/"
+                     "{tslug}")
+TEAM_OVERVIEW_URL = ("https://www.fotmob.com/teams/{tid}/overview/"
+                     "{tslug}")
+
+
+def parse_team_matches(data):
+    """Pull every match-like record out of a team page."""
+    out = {}
+
+    def add(m):
+        if not isinstance(m, dict):
+            return
+        home, away = m.get("home"), m.get("away")
+        st = m.get("status") or {}
+        utc = st.get("utcTime") or m.get("utcTime")
+        if not (isinstance(home, dict) and isinstance(away, dict) and utc):
+            return
+        d = parse_iso(utc)
+        if not d:
+            return
+        mid = str(m.get("id") or m.get("matchId") or utc)
+        scores = (home.get("score"), away.get("score"))
+        if scores == (None, None):
+            ss = str(st.get("scoreStr") or "")
+            mm = re.match(r"\s*(\d+)\s*-\s*(\d+)", ss)
+            scores = (int(mm.group(1)), int(mm.group(2))) if mm else ("", "")
+        out[mid] = {
+            "id": mid, "utc": d,
+            "comp": (m.get("tournament") or {}).get("name", "")
+            if isinstance(m.get("tournament"), dict)
+            else (m.get("leagueName") or ""),
+            "home": home.get("name", ""), "away": away.get("name", ""),
+            "hs": scores[0] if scores[0] is not None else "",
+            "as": scores[1] if scores[1] is not None else "",
+            "finished": bool(st.get("finished")),
+            "started": bool(st.get("started")),
+            "url": m.get("pageUrl", "") or "",
+        }
+
+    def walk(o):
+        if isinstance(o, dict):
+            add(o)
+            for v in o.values():
+                walk(v)
+        elif isinstance(o, list):
+            for i in o:
+                walk(i)
+
+    walk(data)
+    return sorted(out.values(), key=lambda m: m["utc"])
+
+
+def team_fixtures(tid, tname, debug=False, _cache={}):
+    if tid in _cache:
+        return _cache[tid]
+    ms = []
+    try:
+        data = get_next_data(
+            TEAM_FIXTURES_URL.format(tid=tid, tslug=slugify(tname or "team")),
+            debug_name=f"teamfix_{tid}" if debug else None)
+        ms = parse_team_matches(data)
+    except Exception as e:
+        print(f"    fixtures fetch failed for {tname}: {e}")
+    _cache[tid] = ms
+    time.sleep(SLEEP)
+    return ms
+
+
+def team_venue(tid, tname, debug=False, _cache={}):
+    """(lat, lon, town) for a club's stadium, blanks when unknown."""
+    if tid in _cache:
+        return _cache[tid]
+    lat = lon = town = ""
+    try:
+        data = get_next_data(
+            TEAM_OVERVIEW_URL.format(tid=tid, tslug=slugify(tname or "team")),
+            debug_name=f"teamvenue_{tid}" if debug else None)
+        for v in find_all(data, "venue"):
+            if not isinstance(v, dict):
+                continue
+            w = v.get("widget") or v
+            coords = w.get("location") or w.get("coordinates") or {}
+            if isinstance(coords, list) and len(coords) == 2:
+                lat, lon = coords[0], coords[1]
+            elif isinstance(coords, dict):
+                lat = coords.get("lat", coords.get("latitude", "")) or lat
+                lon = coords.get("lng", coords.get("longitude", "")) or lon
+            town = w.get("city") or w.get("town") or town
+            if lat and lon:
+                break
+        if not (lat and lon):
+            for c in find_all(data, "coordinates"):
+                if isinstance(c, list) and len(c) == 2:
+                    lat, lon = c
+                    break
+                if isinstance(c, dict) and c.get("lat"):
+                    lat, lon = c.get("lat"), c.get("lng") or c.get("lon")
+                    break
+        if not town:
+            town = first(find_all(data, "city")) or ""
+    except Exception as e:
+        print(f"    venue fetch failed for {tname}: {e}")
+    _cache[tid] = (str(lat or ""), str(lon or ""), str(town or ""))
+    time.sleep(SLEEP)
+    return _cache[tid]
+
+
+def clubs_file(args):
+    """Write data/manual/clubs.csv from the clubs in players.csv."""
+    ppath = Path(args.out) / "data/api/players.csv"
+    if not ppath.exists():
+        sys.exit("data/api/players.csv not found - run `scrape` first.")
+    with open(ppath, newline="", encoding="utf-8") as f:
+        club_names = sorted({r["club"] for r in csv.DictReader(f)
+                             if r.get("club")})
+    cache = read_id_cache()
+    team_ids = {}
+    for slug, e in cache.items():
+        if e.get("fotmob_team") and e.get("team_id"):
+            team_ids[e["fotmob_team"]] = e["team_id"]
+
+    rows, missing = [], []
+    for name in club_names:
+        tid = team_ids.get(name) or find_team_id(name)
+        time.sleep(SLEEP)
+        if not tid:
+            rows.append([name, "", "", ""])
+            missing.append(name)
+            continue
+        lat, lon, town = team_venue(tid, name, debug=args.debug)
+        rows.append([name, lat, lon, town])
+        if not (lat and lon):
+            missing.append(name)
+        print(f"  {name}: {lat or '?'},{lon or '?'} {town}")
+
+    write_csv(Path(args.out) / "data/manual/clubs.csv",
+              ["club", "lat", "lon", "town"], rows)
+    if missing:
+        print(f"\n{len(missing)} clubs with no coordinates from the source "
+              f"- fill by hand:")
+        for m in missing:
+            print(f"  - {m}")
+
+
+def ireland_file(args):
+    """Write data/manual/ireland.csv - senior + U21 fixtures & results."""
+    rows = []
+    for term, label in (("Republic of Ireland", "senior"),
+                        ("Ireland U21", "u21")):
+        tid = find_team_id(term)
+        time.sleep(SLEEP)
+        if not tid:
+            print(f"{term}: not found - skipped")
+            continue
+        ms = team_fixtures(tid, term, debug=args.debug)
+        for m in ms:
+            status = ("ft" if m["finished"]
+                      else "live" if m["started"] else "scheduled")
+            rows.append([label, iso_z(m["utc"]), m["comp"],
+                         m["home"], m["away"],
+                         m["hs"] if status != "scheduled" else "",
+                         m["as"] if status != "scheduled" else "",
+                         status])
+        print(f"{term}: {len(ms)} matches")
+    rows.sort(key=lambda r: (r[0], r[1]))
+    write_csv(Path(args.out) / "data/manual/ireland.csv",
+              ["team", "kickoff", "competition", "home", "away",
+               "home_score", "away_score", "status"], rows)
+
+
 # ---------------------------------------------------------------- scrape
 
 def parse_iso(ts):
@@ -891,6 +1062,53 @@ def team_primary_league(tid, tname, _cache={}):
     return league
 
 
+def merge_rows(path, new_rows, touched):
+    """Replace rows for the touched players, keep everyone else's."""
+    slugs = {p["slug"] for p in touched}
+    header, keep = None, []
+    if path.exists():
+        with open(path, newline="", encoding="utf-8") as f:
+            r = csv.reader(f)
+            header = next(r, None)
+            keep = [row for row in r if row and row[0] not in slugs]
+    if header is None:
+        return
+    rows = keep + [[("" if v is None else v) for v in row]
+                   for row in new_rows]
+    rows.sort(key=lambda x: (x[0], x[1] if len(x) > 1 else ""))
+    write_csv(path, header, rows)
+
+
+def merge_matches(path, matches_by_id, status_of):
+    """Upsert match rows by id, keeping matches for untouched players."""
+    header = ["kickoff", "competition", "home", "away", "home_score",
+              "away_score", "status", "minute", "players"]
+    existing = {}
+    if path.exists():
+        with open(path, newline="", encoding="utf-8") as f:
+            r = csv.DictReader(f)
+            for row in r:
+                existing[(row["kickoff"], row["home"], row["away"])] = row
+    for m, slugs in matches_by_id.values():
+        st = status_of(m)
+        key = (iso_z(m["utc"]), m["home"], m["away"])
+        prev = existing.get(key)
+        players = set(slugs)
+        if prev:
+            players |= set(filter(None, prev["players"].split(";")))
+        existing[key] = {
+            "kickoff": key[0], "competition": m["comp"],
+            "home": m["home"], "away": m["away"],
+            "home_score": m["hscore"] if st != "scheduled" else "",
+            "away_score": m["ascore"] if st != "scheduled" else "",
+            "status": st, "minute": m["minute"] if st == "live" else "",
+            "players": ";".join(sorted(players)),
+        }
+    rows = [[v[h] for h in header]
+            for v in sorted(existing.values(), key=lambda x: x["kickoff"])]
+    write_csv(path, header, rows)
+
+
 def scrape(args):
     players = read_player_list()
     cache = read_id_cache()
@@ -901,6 +1119,8 @@ def scrape(args):
     now = dt.datetime.now(dt.timezone.utc)
     past_cut = now - dt.timedelta(days=MATCH_PAST_DAYS)
     future_cut = now + dt.timedelta(days=MATCH_FUTURE_DAYS)
+    fixture_cut = now + dt.timedelta(weeks=args.fixture_weeks)
+    cache_dirty = False
 
     matches_by_id = {}   # match id -> (match dict, set(slugs))
     results_rows = []
@@ -911,6 +1131,22 @@ def scrape(args):
     todo = players
     if args.only:
         todo = [p for p in players if p["slug"] in set(args.only.split(","))]
+    elif getattr(args, "active", False):
+        idx_path = SCRAPER_DIR / "match_index.json"
+        if not idx_path.exists():
+            sys.exit("--active needs match_index.json - run a full scrape "
+                     "first.")
+        win = dt.timedelta(hours=36)
+        active = set()
+        for m in json.loads(idx_path.read_text()):
+            ko = parse_iso(m["kickoff"])
+            if ko and abs(ko - now) <= win:
+                active.update(m["slugs"])
+        todo = [p for p in players if p["slug"] in active]
+        print(f"--active: {len(todo)} players with a match within 36h")
+        if not todo:
+            print("nothing to do")
+            return
 
     for i, p in enumerate(todo):
         slug, club = p["slug"], p["club"]
@@ -956,12 +1192,7 @@ def scrape(args):
                     int(m["assists"] or 0),
                     m["utc"],
                 ])
-            elif not m["finished"] and not m["ongoing"] and side \
-                    and m["utc"] >= now:
-                fixtures_rows.append([
-                    slug, m["utc"].strftime("%Y-%m-%d"), m["opponent"], side,
-                    m["comp"], m["utc"],
-                ])
+            # upcoming games come from the club fixture list below
 
         # players.csv row
         season = extract_season_stats(blob)
@@ -970,6 +1201,10 @@ def scrape(args):
         age, born, foot = extract_personal(blob)
         pt = blob.get("primaryTeam") or {}
         source_club = pt.get("teamName", "")
+        if pt.get("teamId"):
+            entry["team_id"] = str(pt["teamId"])
+            cache[slug] = entry
+            cache_dirty = True
         source_league = team_primary_league(pt.get("teamId"), source_club) \
             if source_club else ""
         cur_label, _ = current_season_label(now, season["season"])
@@ -992,13 +1227,43 @@ def scrape(args):
             c_apps, c_goals, c_assists,
             season["rating"],
         ])
+        # upcoming fixtures for this player's club, next N weeks
+        if source_club and pt.get("teamId"):
+            for fm in team_fixtures(str(pt["teamId"]), source_club,
+                                    debug=args.debug):
+                if fm["finished"] or not (now <= fm["utc"] <= fixture_cut):
+                    continue
+                nc = norm(source_club)
+                side = ("H" if nc and (nc in norm(fm["home"])
+                                       or norm(fm["home"]) in nc)
+                        else "A" if nc and (nc in norm(fm["away"])
+                                            or norm(fm["away"]) in nc)
+                        else None)
+                if not side:
+                    continue
+                fixtures_rows.append([
+                    slug, iso_z(fm["utc"]),
+                    fm["away"] if side == "H" else fm["home"],
+                    side, fm["comp"], fm["utc"],
+                ])
+                if past_cut <= fm["utc"] <= future_cut:
+                    key = fm["id"]
+                    if key not in matches_by_id:
+                        matches_by_id[key] = ({
+                            "id": key, "utc": fm["utc"], "comp": fm["comp"],
+                            "home": fm["home"], "away": fm["away"],
+                            "hscore": "", "ascore": "", "finished": False,
+                            "ongoing": False, "minute": "",
+                            "url": fm["url"],
+                        }, set())
+                    matches_by_id[key][1].add(slug)
+
         img = download_image(pid, slug, out_root / args.img_dir,
                              refresh=args.refresh_images)
         print(f"  [{i+1}/{len(todo)}] {slug}: ok "
               f"({len(mlist)} matches, img {img})")
         time.sleep(SLEEP)
 
-    # ---- write files
     def status_of(m):
         if m["ongoing"]:
             return "live"
@@ -1006,8 +1271,21 @@ def scrape(args):
             return "ft"
         return "scheduled"
 
+    # same fixture can arrive from a player page and a club page
+    dedup = {}
+    for m, slugs in matches_by_id.values():
+        key = (m["utc"].strftime("%Y-%m-%d"), norm(m["home"]),
+               norm(m["away"]))
+        if key in dedup:
+            prev, pslugs = dedup[key]
+            pslugs |= slugs
+            if m["finished"] or m["ongoing"]:
+                dedup[key] = (m, pslugs)
+        else:
+            dedup[key] = (m, set(slugs))
+
     match_rows = []
-    for m, slugs in sorted(matches_by_id.values(), key=lambda x: x[0]["utc"]):
+    for m, slugs in sorted(dedup.values(), key=lambda x: x[0]["utc"]):
         st = status_of(m)
         match_rows.append([
             iso_z(m["utc"]), m["comp"], m["home"], m["away"],
@@ -1039,6 +1317,27 @@ def scrape(args):
                "s_goals", "s_assists", "s_mins", "s_yellow", "s_red",
                "c_apps", "c_goals", "c_assists", "avg_rating"],
               players_rows)
+
+    if cache_dirty:
+        write_id_cache(cache)
+
+    def status_of(m):
+        if m["ongoing"]:
+            return "live"
+        if m["finished"]:
+            return "ft"
+        return "scheduled"
+
+    if getattr(args, "active", False):
+        merge_rows(out_root / "data/manual/results.csv",
+                   [r[:-1] for r in results_rows], todo)
+        merge_rows(out_root / "data/manual/fixtures.csv",
+                   [r[:-1] for r in fixtures_rows], todo)
+        merge_rows(out_root / "data/api/players.csv", players_rows, todo)
+        merge_matches(out_root / "data/api/matches.csv", matches_by_id,
+                      status_of)
+        print("  merged active-player rows into existing CSVs")
+        return
 
     index = []
     for m, slugs in matches_by_id.values():
@@ -1199,6 +1498,20 @@ def main():
                         "(default: img/players)")
     s.add_argument("--refresh-images", action="store_true",
                    help="re-download images even if present")
+    s.add_argument("--active", action="store_true",
+                   help="only players with a match within 36h; merges "
+                        "into the existing CSVs (fast, for matchdays)")
+    s.add_argument("--fixture-weeks", type=int, default=6,
+                   help="how many weeks of upcoming fixtures (default 6)")
+
+    cl = sub.add_parser("clubs", help="write data/manual/clubs.csv")
+    cl.add_argument("--out", default=".")
+    cl.add_argument("--debug", action="store_true")
+
+    ie = sub.add_parser("ireland",
+                        help="write data/manual/ireland.csv (senior + U21)")
+    ie.add_argument("--out", default=".")
+    ie.add_argument("--debug", action="store_true")
 
     d = sub.add_parser("discover-loi",
                        help="add all Irish players from LOI Premier + "
@@ -1226,6 +1539,8 @@ def main():
     a.add_argument("--debug", action="store_true")
     a.add_argument("--img-dir", default="img/players")
     a.add_argument("--refresh-images", action="store_true")
+    a.add_argument("--active", action="store_false")
+    a.add_argument("--fixture-weeks", type=int, default=6)
 
     args = ap.parse_args()
     if args.cmd == "resolve":
@@ -1238,6 +1553,10 @@ def main():
         add_players(args)
     elif args.cmd == "discover-ireland":
         discover_ireland(args)
+    elif args.cmd == "clubs":
+        clubs_file(args)
+    elif args.cmd == "ireland":
+        ireland_file(args)
     elif args.cmd == "scrape":
         scrape(args)
     else:

@@ -1,17 +1,12 @@
-level,type,date,opponent,home_away,score,competition
-Senior,fixture,06 Sep,Hungary,A,,World Cup Qual.
-Senior,fixture,09 Sep,Armenia,H,,World Cup Qual.
-Senior,fixture,10 Oct,Portugal,H,,World Cup Qual.
-Senior,result,10 Jun,Luxembourg,,2-0,Friendly
-Senior,result,07 Jun,Senegal,,1-1,Friendly
-Senior,result,26 Mar,Bulgaria,,2-1,Nations League PO
-Senior,result,23 Mar,Bulgaria,,1-2,Nations League PO
-U21,fixture,05 Sep,Moldova,H,,Euro Qual.
-U21,fixture,09 Sep,Italy,A,,Euro Qual.
-U21,result,10 Jun,Andorra,,3-0,Euro Qual.
-U21,result,06 Jun,Norway,,1-2,Euro Qual.
-U19,fixture,12 Sep,Wales,H,,Euro Qual.
-U19,result,08 Jun,Iceland,,2-1,Euro Qual.
-U19,result,04 Jun,Denmark,,0-3,Euro Qual.
-U17,fixture,15 Sep,Scotland,A,,Euro Qual.
-U17,result,02 Jun,Belgium,,1-1,Friendly
+team,kickoff,competition,home,away,home_score,away_score,status
+u21,2025-09-04T16:00:00Z,EURO U21 Qualification Grp. D,Moldova U21,Ireland U21,1,2,ft
+u21,2025-09-09T18:30:00Z,EURO U21 Qualification Grp. D,Ireland U21,Andorra U21,1,0,ft
+u21,2025-10-10T18:30:00Z,EURO U21 Qualification Grp. D,Ireland U21,Slovakia U21,2,2,ft
+u21,2025-11-14T19:45:00Z,EURO U21 Qualification Grp. D,England U21,Ireland U21,2,0,ft
+u21,2025-11-18T18:30:00Z,EURO U21 Qualification Grp. D,Andorra U21,Ireland U21,4,0,ft
+u21,2026-03-26T17:15:00Z,EURO U21 Qualification Grp. D,Ireland U21,Moldova U21,1,1,ft
+u21,2026-03-31T15:00:00Z,EURO U21 Qualification Grp. D,Kazakhstan U21,Ireland U21,0,1,ft
+u21,2026-06-06T15:30:00Z,Friendlies U21,Croatia U21,Ireland U21,2,2,ft
+u21,2026-09-25T16:00:00Z,EURO U21 Qualification Grp. D,Slovakia U21,Ireland U21,,,scheduled
+u21,2026-09-29T16:00:00Z,EURO U21 Qualification Grp. D,Ireland U21,Kazakhstan U21,,,scheduled
+u21,2026-10-06T16:00:00Z,EURO U21 Qualification Grp. D,Ireland U21,England U21,,,scheduled
