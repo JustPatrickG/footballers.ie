@@ -2,6 +2,7 @@
 import os, sys, html as H, json, csv
 HERE = os.path.dirname(os.path.abspath(__file__))
 DATA = os.path.join(HERE, "..", "data")
+EMPTY_MS = '<div class="emptystate" style="display:block">Nothing close right now.</div>'
 
 # ---- config ----
 SITE_URL   = "https://irishfball.vercel.app"
@@ -1323,7 +1324,7 @@ def build_milestones():
                     f'<div class="msn">{esc(m["p"]["n"])}</div><div class="msd">{esc(m["text"])}</div>'
                     f'<div class="msc">{esc(m["p"]["club"])}</div></a>' for m in items)
     body = (f'<div class="pagehead"><h1>Approaching milestones</h1><p>Players closing in on a round number — caps, goals or appearances.</p></div>'
-            f'<div class="msgrid">{cards or "<div class=\'emptystate\' style=\'display:block\'>Nothing close right now.</div>"}</div>')
+            f'<div class="msgrid">{cards or EMPTY_MS}</div>')
     return shell("Milestones — IRISH FBALL","Irish players approaching career and international milestones.","", "milestones.html", body, canonical="milestones.html")
 
 # ================= COMPARE =================
