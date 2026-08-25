@@ -346,7 +346,20 @@ def shell(title, desc, root, active, body, extra_head="", canonical="", body_att
 </body>
 </html>"""
 
-def club_slug(c): return c.lower().replace("'","").replace(".","").replace("ı","i").replace("İ","i").replace(" ","-")
+def club_slug(c):
+    """Filename-safe slug. Club and league names contain slashes ("Highland / Lowland"),
+    ampersands, dots and accents — none of which can go into a path."""
+    import unicodedata, re
+    s = str(c or "")
+    for a, b in (("ø","o"),("Ø","O"),("æ","ae"),("Æ","AE"),("å","a"),("Å","A"),
+                 ("ß","ss"),("ð","d"),("Ð","D"),("þ","th"),("Þ","Th"),
+                 ("ı","i"),("İ","i"),("ł","l"),("Ł","L")):
+        s = s.replace(a, b)
+    s = unicodedata.normalize("NFKD", s)
+    s = s.encode("ascii", "ignore").decode()          # strip accents
+    s = s.replace("'", "").replace("\u2019", "")
+    s = re.sub(r"[^a-zA-Z0-9]+", "-", s)              # everything else becomes a hyphen
+    return re.sub(r"-{2,}", "-", s).strip("-").lower() or "other"
 def plink(p, root=""): return f'{root}player/{p["slug"]}.html'
 def clink(c, root=""): return f'{root}club/{club_slug(c)}.html'
 
