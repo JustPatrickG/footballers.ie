@@ -16,6 +16,7 @@ it. A full pass over ~490 players takes roughly 40 minutes.
 import argparse
 import csv
 import html
+import json
 import re
 import sys
 import time
@@ -257,6 +258,293 @@ def add_ids(args):
     write_cache(cache)
 
 
+# ---------------------------------------------------------------- sweep
+
+IRELAND_LAND_ID = 72          # from the flag asset id on their pages
+POOL_FILE = SCRAPER_DIR / "tm_ireland_pool.csv"
+STATE_FILE = SCRAPER_DIR / "tm_sweep_state.json"
+LIST_URL = (BASE + "/spieler-statistik/wertvollstespieler/marktwertetop"
+            "?land_id={land}&page={page}")
+POOL_COLUMNS = ["tm_id", "name", "club", "nat1", "nat2", "age",
+                "position", "market_value", "tracked"]
+
+
+def parse_items_rows(page):
+    """Rows out of a <table class="items"> listing. Same nested-table
+    trap as the search page, so split on the outer row class."""
+    gm = re.search(r'<table class="items".*?</tbody>', page, re.S)
+    if not gm:
+        return []
+    out, seen = [], set()
+    for row in re.split(r'<tr class="(?:odd|even)"[^>]*>', gm.group(0))[1:]:
+        pm = re.search(r'<a\b([^>]*/profil/spieler/(\d+)[^>]*)>(.*?)</a>',
+                       row, re.S)
+        if not pm:
+            continue
+        tid = pm.group(2)
+        if tid in seen:
+            continue
+        seen.add(tid)
+        name = _attr(pm.group(1), "title") or strip_tags(pm.group(3))
+        club = ""
+        for cm in re.finditer(r'<a\b([^>]*/startseite/verein/\d+[^>]*)>',
+                              row):
+            t = _attr(cm.group(1), "title")
+            if t and norm(t) not in ("unknown", "unknownunknown",
+                                     "without club", "retired"):
+                club = t
+                break
+        nats = []
+        for nm in re.finditer(r'<img\b([^>]*class="flaggenrahmen"[^>]*)>',
+                              row):
+            t = _attr(nm.group(1), "title") or _attr(nm.group(1), "alt")
+            if t and t not in nats:
+                nats.append(t)
+        agem = re.search(r'<td class="zentriert">(\d{1,2})</td>', row)
+        posm = re.search(r'<td class="zentriert">([A-Za-z][A-Za-z\- ]{1,24})'
+                         r'</td>', row)
+        mvm = re.search(r'<td class="rechts hauptlink">(?:<a[^>]*>)?'
+                        r'([^<]+)', row)
+        out.append({
+            "tm_id": tid, "name": name, "club": club,
+            "nat1": nats[0] if nats else "",
+            "nat2": nats[1] if len(nats) > 1 else "",
+            "age": agem.group(1) if agem else "",
+            "position": strip_tags(posm.group(1)) if posm else "",
+            "market_value": strip_tags(mvm.group(1)) if mvm else "",
+        })
+    return out
+
+
+def next_page_link(page_html, current_url):
+    """Find the pager's 'next' link on the page itself, rather than
+    assuming a ?page=N format."""
+    cands = []
+    for m in re.finditer(r'<a\b([^>]*)>(.*?)</a>', page_html, re.S):
+        attrs, label = m.group(1), strip_tags(m.group(2)).lower()
+        href = _attr(attrs, "href")
+        if not href or "spieler" not in href and "suche" not in href \
+                and "statistik" not in href:
+            continue
+        title = _attr(attrs, "title").lower()
+        cls = _attr(attrs, "class").lower()
+        nm = re.search(r"(?:page[=/]|seite[=/])(\d+)", href)
+        if not nm:
+            continue
+        num = int(nm.group(1))
+        score = 0
+        if "next" in title or "next" in label or "n\u00e4chste" in title:
+            score = 3
+        elif "arrow" in cls or ">" == label.strip():
+            score = 2
+        cands.append((score, num, href))
+    if not cands:
+        return None, None
+    cur = re.search(r"(?:page[=/]|seite[=/])(\d+)", current_url)
+    curnum = int(cur.group(1)) if cur else 1
+    nxt = [c for c in cands if c[1] == curnum + 1]
+    pick = max(nxt, key=lambda c: c[0]) if nxt else \
+        max((c for c in cands if c[1] > curnum), key=lambda c: -c[1],
+            default=None)
+    if not pick:
+        return None, None
+    href = pick[2]
+    return (href if href.startswith("http") else BASE + href), pick[1]
+
+
+def load_state():
+    if STATE_FILE.exists():
+        return json.loads(STATE_FILE.read_text())
+    return {"page": 1, "done": False}
+
+
+def save_state(state):
+    STATE_FILE.write_text(json.dumps(state))
+
+
+def load_pool():
+    pool = {}
+    if POOL_FILE.exists():
+        with open(POOL_FILE, newline="", encoding="utf-8") as f:
+            for row in csv.DictReader(f):
+                pool[row["tm_id"]] = row
+    return pool
+
+
+def save_pool(pool):
+    with open(POOL_FILE, "w", newline="", encoding="utf-8") as f:
+        w = csv.DictWriter(f, fieldnames=POOL_COLUMNS, extrasaction="ignore")
+        w.writeheader()
+        for tid in sorted(pool, key=lambda x: int(x)):
+            w.writerow(pool[tid])
+
+
+def sweep(args):
+    """Walk every page of the Ireland nationality listing.
+
+    Checkpointed: a 403 saves progress and exits, and the next run picks
+    up on the same page. Expect to run this several times.
+    """
+    pool = load_pool()
+    state = load_state()
+    if args.restart:
+        state = {"page": 1, "done": False}
+    if state.get("done") and not args.restart:
+        print(f"sweep already complete ({len(pool)} players in "
+              f"{POOL_FILE.name}). --restart to redo it.")
+        return
+
+    tracked = {p["slug"] for p in read_player_list()}
+    known_tm = {v.get("tm_id") for v in read_cache().values() if v.get("tm_id")}
+
+    page = state["page"]
+    url = state.get("url") or LIST_URL.format(land=args.land_id, page=page)
+    added_this_run = 0
+    empty_pages = 0
+    prev_ids = None
+    page_size = 0
+    while page <= args.max_page:
+        try:
+            html_page = get(url,
+                            debug_name=f"tmlist_{page}" if args.debug else None)
+        except Exception as e:
+            save_state({"page": page, "url": url, "done": False})
+            save_pool(pool)
+            print(f"\npage {page}: {e}")
+            print(f"progress saved - {len(pool)} players so far. "
+                  f"Rerun later and it continues from page {page}.")
+            return
+
+        rows = parse_items_rows(html_page)
+        if not rows:
+            empty_pages += 1
+            print(f"  page {page}: no rows")
+            if empty_pages >= 2:
+                state = {"page": page, "done": True}
+                break
+        else:
+            empty_pages = 0
+            new = 0
+            for r in rows:
+                if r["tm_id"] in pool:
+                    continue
+                r["tracked"] = ("yes" if (r["tm_id"] in known_tm
+                                          or slugify_name(r["name"])
+                                          in tracked) else "")
+                pool[r["tm_id"]] = r
+                new += 1
+            added_this_run += new
+            print(f"  page {page}: {len(rows)} rows, {new} new "
+                  f"(pool {len(pool)})")
+            ids = {r["tm_id"] for r in rows}
+            page_size = max(page_size, len(rows))
+            if prev_ids is not None and ids == prev_ids:
+                # the site re-serves the last page past the end of the list
+                print("\nsame rows as the previous page - end of list.")
+                state = {"page": page, "url": url, "done": True}
+                break
+            prev_ids = ids
+            if page_size and len(rows) < page_size:
+                print(f"  (short page - {len(rows)} of {page_size}, "
+                      f"this is the last one)")
+                state = {"page": page + 1, "url": url, "done": True}
+                break
+
+        nxt, nxtnum = next_page_link(html_page, url)
+        if nxt:
+            url, page = nxt, nxtnum
+        else:
+            page += 1
+            url = LIST_URL.format(land=args.land_id, page=page)
+        state = {"page": page, "url": url, "done": False}
+        save_state(state)
+        if page % 10 == 0:
+            save_pool(pool)
+        time.sleep(args.sleep)
+
+    save_state(state)
+    save_pool(pool)
+    untracked = [r for r in pool.values() if not r.get("tracked")]
+    print(f"\n{len(pool)} players in the pool "
+          f"({added_this_run} new this run)")
+    print(f"{len(untracked)} of them are not in players_list.csv yet")
+    print(f"pool written to {POOL_FILE}")
+    if state.get("done"):
+        print("sweep complete.")
+    else:
+        print(f"stopped at page {page} - rerun to continue.")
+
+
+def slugify_name(name):
+    s = unicodedata.normalize("NFKD", name)
+    s = "".join(c for c in s if not unicodedata.combining(c))
+    s = s.replace("'", "").replace("\u2019", "")
+    s = re.sub(r"[^a-zA-Z0-9]+", "-", s.lower())
+    return s.strip("-")
+
+
+def pool_add(args):
+    """Add pool players into players_list.csv + tm_ids.csv."""
+    pool = load_pool()
+    if not pool:
+        sys.exit(f"{POOL_FILE.name} not found - run `sweep` first.")
+    players = read_player_list()
+    cache = read_cache()
+    known_slugs = {p["slug"] for p in players}
+    known_tm = {v.get("tm_id") for v in cache.values() if v.get("tm_id")}
+
+    def eligible(r):
+        nats = [norm(r.get("nat1", "")), norm(r.get("nat2", ""))]
+        if "ireland" not in nats:
+            return False
+        if args.declared_only and norm(r.get("nat1", "")) != "ireland":
+            return False
+        if args.max_age and r.get("age"):
+            try:
+                if int(r["age"]) > args.max_age:
+                    return False
+            except ValueError:
+                pass
+        if args.clubs_only and not r.get("club"):
+            return False
+        return True
+
+    added = []
+    for tid, r in sorted(pool.items(), key=lambda x: int(x[0])):
+        if tid in known_tm or not eligible(r):
+            continue
+        slug = slugify_name(r["name"])
+        if slug in known_slugs:
+            continue
+        players.append({"slug": slug, "name": r["name"],
+                        "club": r.get("club", ""), "league": "",
+                        "tier": "", "pos": r.get("position", ""),
+                        "ireland_level": ""})
+        cache[slug] = {"tm_id": tid, "tm_name": r["name"],
+                       "tm_club": r.get("club", ""), "note": "from sweep"}
+        known_slugs.add(slug)
+        added.append(f"{slug} ({r.get('club') or 'no club'}, "
+                     f"{r.get('nat1','')}/{r.get('nat2','')})")
+
+    if added:
+        cols = ["slug", "name", "club", "league", "tier", "pos",
+                "ireland_level"]
+        players.sort(key=lambda p: p["slug"])
+        with open(PLAYER_LIST, "w", newline="", encoding="utf-8") as f:
+            w = csv.DictWriter(f, fieldnames=cols, extrasaction="ignore")
+            w.writeheader()
+            w.writerows(players)
+        write_cache(cache)
+    print(f"added {len(added)} players")
+    for a in added[:60]:
+        print(f"  + {a}")
+    if len(added) > 60:
+        print(f"  ... and {len(added) - 60} more")
+    if added:
+        print("\nthey have transfermarkt ids but no match data yet - run "
+              "the other scraper's `resolve` then `scrape` for that.")
+
+
 # ---------------------------------------------------------------- profile
 
 def info_pairs(page):
@@ -445,6 +733,23 @@ def main():
     a = sub.add_parser("add", help="add ids by hand: add <slug> <id> ...")
     a.add_argument("pairs", nargs="+")
 
+    sw = sub.add_parser("sweep",
+                        help="walk every Ireland-nationality listing page")
+    sw.add_argument("--land-id", type=int, default=IRELAND_LAND_ID)
+    sw.add_argument("--max-page", type=int, default=400)
+    sw.add_argument("--sleep", type=float, default=SLEEP)
+    sw.add_argument("--restart", action="store_true")
+    sw.add_argument("--debug", action="store_true")
+
+    pa = sub.add_parser("pool-add",
+                        help="add swept players into players_list.csv")
+    pa.add_argument("--declared-only", action="store_true",
+                    help="only players whose FIRST nationality is Ireland")
+    pa.add_argument("--max-age", type=int, default=0,
+                    help="skip players older than this")
+    pa.add_argument("--clubs-only", action="store_true",
+                    help="skip players with no current club")
+
     p = sub.add_parser("profiles", help="write data/api/tm.csv")
     p.add_argument("--out", default=".")
     p.add_argument("--only", default="", help="comma-separated slugs")
@@ -454,7 +759,8 @@ def main():
                    help="dump raw HTML to scraper/debug/")
 
     args = ap.parse_args()
-    {"resolve": resolve, "add": add_ids, "profiles": profiles}[args.cmd](args)
+    {"resolve": resolve, "add": add_ids, "profiles": profiles,
+     "sweep": sweep, "pool-add": pool_add}[args.cmd](args)
 
 
 if __name__ == "__main__":

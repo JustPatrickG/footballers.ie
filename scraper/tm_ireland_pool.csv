@@ -1,0 +1,413 @@
+tm_id,name,club,nat1,nat2,age,position,market_value,tracked
+35416,David McGoldrick,Mansfield Town,Ireland,England,38,,€25k,yes
+48226,Sam Foley,Chester FC,Ireland,England,39,,€25k,yes
+62640,James Collins,Lincoln City,Ireland,England,35,,€100k,
+68327,Jay O'Shea,Without ClubWithout Club,Ireland,Australia,38,,€200k,yes
+68333,Padraig Amond,Waterford FC,Ireland,,38,,€50k,yes
+68390,Séamus Coleman,Without ClubWithout Club,Ireland,,37,,€200k,yes
+70019,Seamus Conneely,Accrington Stanley,Ireland,England,38,,€25k,
+80339,Graham Carey,Livingston FC,Ireland,,37,,€25k,yes
+85706,Enda Stevens,Shamrock Rovers,Ireland,,36,,€75k,yes
+85935,James McClean,Derry City,Ireland,Northern Ireland,37,,€100k,yes
+92488,Paddy Madden,Bohemian Football Club,Ireland,,36,,€25k,yes
+96297,Chris Shields,Linfield FC,Ireland,,35,,€50k,
+111114,Kevin Long,Waterford FC,Ireland,,36,,€150k,yes
+118244,Sean McGinty,Montrose FC,Ireland,England,33,,€10k,
+118535,Will Keane,Without ClubWithout Club,Ireland,England,33,,€300k,yes
+119269,Shane Duffy,Without ClubWithout Club,Ireland,Northern Ireland,34,,€350k,yes
+119574,Joe Shaughnessy,Newcastle United Jets,Ireland,England,34,,€100k,
+121324,John Egan,Hull City,Ireland,,52,,€1.00m,yes
+121393,Anthony O'Connor,Galway United FC,Ireland,,33,,€100k,yes
+121536,Neill Byrne,Doncaster Rovers,Ireland,,33,,€50k,
+122407,Aaron Greene,Shamrock Rovers,Ireland,,36,,€50k,yes
+122736,Paddy Barrett,Shelbourne FC,Ireland,,33,,€175k,yes
+128229,Robbie Brady,Without ClubWithout Club,Ireland,,34,,€100k,yes
+130478,Cian Bolger,Without ClubWithout Club,Ireland,England,34,,€10k,
+136179,Jimmy Keohane,Galway United FC,Ireland,,35,,€75k,yes
+137591,Ryan Brennan,Drogheda United FC,Ireland,,34,,€50k,yes
+138473,Aaron McCarey,Portadown FC,Ireland,,34,,€100k,
+138783,Scott Hogan,Without ClubWithout Club,Ireland,England,34,,€150k,yes
+148907,Sean Murray,Ballymena United FC,Ireland,England,32,,€50k,
+148957,Carl McHugh,Sligo Rovers,Ireland,,33,,€275k,yes
+154260,Stephen Walsh,Galway United FC,Ireland,,35,,€50k,yes
+158623,Cyrus Christie,Bolton Wanderers,Ireland,England,33,,€125k,
+158951,Pat Hoban,Glentoran FC,Ireland,,35,,€100k,
+167264,Aaron McEneff,Glentoran FC,Ireland,Northern Ireland,31,,€300k,
+171679,Matt Doherty,Sheffield United,Ireland,,53,,€1.00m,yes
+173592,John O'Sullivan,Without ClubWithout Club,Ireland,,32,,€75k,yes
+175740,Joe Rafferty,Rotherham United,Ireland,England,32,,€200k,
+177892,Graham Burke,Shamrock Rovers,Ireland,,32,,€250k,yes
+178067,Stephen McLaughlin,Mansfield Town,Ireland,,36,,€50k,
+178139,Daryl Horgan,Dundalk FC,Ireland,,34,,€100k,yes
+180497,Chris Forrester,St. Patrick's Athletic,Ireland,,33,,€100k,yes
+181348,Robbie Benson,Without ClubWithout Club,Ireland,,34,,€50k,
+181349,Keith Buckley,Dundalk FC,Ireland,,34,,€50k,yes
+183162,Colm Horgan,Without ClubWithout Club,Ireland,,32,,€50k,yes
+183166,Ian Lawlor,Crewe Alexandra,Ireland,,31,,€75k,
+183167,Darragh Lenihan,Without ClubWithout Club,Ireland,,87,,€500k,yes
+183170,Kealan Dillon,Dungannon Swifts FC,Ireland,,32,,€175k,
+183172,Pierce Sweeney,Cheltenham Town,Ireland,,31,,€200k,yes
+183299,Callum Robinson,Cardiff City,Ireland,England,76,,€700k,
+184007,Rory Gaffney,Shamrock Rovers,Ireland,,36,,€75k,yes
+184670,Sean Gannon,Shelbourne FC,Ireland,,35,,€75k,yes
+185264,Garbhan Coughlan,Cashmere Technical FC,Ireland,,33,,€250k,
+185571,Ciarán Coll,Strabane Athletic FC,Ireland,,35,,€25k,yes
+188539,John Mountney,Glenavon FC,Ireland,,33,,€25k,
+192282,Daniel O'Reilly,Partick Thistle FC,Ireland,,31,,€175k,
+200956,Danny Rogers,St. Patrick's Athletic,Ireland,United States,32,,€100k,yes
+204401,Conor O'Keeffe,Dundalk FC,Ireland,,32,,€100k,yes
+209291,Jack Bonham,Bolton Wanderers,Ireland,England,32,,€225k,
+217752,Lee Steacy,Shamrock Rovers,Ireland,,33,,€50k,yes
+217757,Jack Byrne,Shamrock Rovers,Ireland,,96,,€400k,yes
+220496,Charles Dunne,Without ClubWithout Club,Ireland,England,33,,€100k,
+222740,Kieran Sadlier,Sporting Club Jacksonville,Ireland,England,31,,€150k,
+224799,Anto Breslin,St. Patrick's Athletic,Ireland,,29,,€150k,yes
+224816,Danny Kane,Cashmere Technical FC,Ireland,,29,,€125k,
+232068,Michael Duffy,Derry City,Ireland,Northern Ireland,32,,€275k,
+242606,Josh Cullen,Burnley FC,Ireland,England,18,,€4.00m,yes
+249879,Sean Hoare,St. Patrick's Athletic,Ireland,,32,,€150k,yes
+251822,Adam McDonnell,Bohemian Football Club,Ireland,,29,,€125k,yes
+251838,Dylan Connolly,Galway United FC,Ireland,,31,,€125k,yes
+252881,Lee Desmond,Sacramento Republic FC,Ireland,,31,,€150k,
+252986,Liam Kelly,Peterborough United,Ireland,England,30,,€300k,yes
+255626,Conor Shaughnessy,Portsmouth FC,Ireland,,63,,€800k,
+255679,Callum O'Dowda,Ferencvárosi TC,Ireland,England,61,,€900k,yes
+261902,Rob Cornwall,Dundalk FC,Ireland,,31,,€100k,yes
+262300,Ryan Manning,Southampton FC,Ireland,,29,,€2.80m,yes
+264176,Liam Bossin,Feyenoord Rotterdam,Ireland,Belgium,30,,€350k,
+264193,Dan Cleary,Shamrock Rovers,Ireland,,30,,€300k,yes
+264206,Jake Mulraney,Shamrock Rovers,Ireland,,30,,€275k,yes
+265132,Kevin Toner,Without ClubWithout Club,Ireland,,30,,€100k,
+270221,Dan Casey,Wycombe Wanderers,Ireland,,94,,€450k,
+277697,Alan Browne,Sunderland AFC,Ireland,,33,,€2.00m,yes
+280982,Eoghan O'Connell,Stockport County,Ireland,,97,,€400k,yes
+288323,Marcus Harness,Huddersfield Town,Ireland,England,73,,€750k,
+289791,Kieran O'Hara,Dundee FC,Ireland,England,30,,€100k,
+291115,Rory Hale,Cliftonville FC,Ireland,Northern Ireland,29,,€250k,
+292139,Sammie Szmodics,Derby County,Ireland,Hungary,22,,€3.50m,yes
+293779,Zack Elbouzedi,St. Patrick's Athletic,Ireland,Libya,28,,€225k,yes
+293782,JJ Lunney,Shelbourne FC,Ireland,,28,,€125k,yes
+293783,Daniel Mandroiu,Shamrock Rovers,Ireland,Romania,27,,€250k,yes
+293784,Conor Masterson,Without ClubWithout Club,Ireland,,27,,€175k,yes
+296582,Max O'Leary,West Bromwich Albion,Ireland,England,34,,€2.00m,yes
+297257,Mikey Johnston,West Bromwich Albion,Ireland,Scotland,19,,€4.00m,yes
+307513,Gary O'Neill,Shamrock Rovers,Ireland,,31,,€125k,yes
+315385,Darragh Markey,Derry City,Ireland,,29,,€150k,yes
+315984,Michael Kelly,Without ClubWithout Club,Ireland,,30,,€75k,
+316554,Ryan Delaney,Oldham Athletic,Ireland,,29,,€100k,yes
+320403,Mark Sykes,Millwall FC,Ireland,Northern Ireland,37,,€1.80m,yes
+324493,Stephen Mallon,Glenavon FC,Ireland,Northern Ireland,27,,€50k,
+325206,Darragh Leahy,Linfield FC,Ireland,,28,,€150k,
+325214,Corey O'Keeffe,Barnsley FC,Ireland,England,85,,€550k,
+325216,Anthony Scully,Without ClubWithout Club,Ireland,England,27,,€125k,yes
+337787,Connor Ronan,Aberdeen FC,Ireland,England,47,,€1.20m,yes
+340918,Caoimhín Kelleher,Brentford FC,Ireland,,2,,€28.00m,yes
+340920,Trevor Clarke,Dundalk FC,Ireland,,28,,€125k,yes
+340921,Jake Doyle-Hayes,Exeter City,Ireland,,27,,€350k,
+342184,Ronan Doherty,Larne FC,Ireland,,30,,€75k,
+343599,Mark Coyle,Coleraine FC,Ireland,,29,,€75k,
+344107,Jamie McGrath,Hibernian FC,Ireland,,48,,€1.20m,
+345282,Ronan Coughlan,Fleetwood Town,Ireland,,29,,€100k,
+347666,Ryan Sweeney,Mansfield Town,Ireland,England,98,,€400k,
+349712,Graham Kelly,Crusaders FC,Ireland,,28,,€10k,
+351071,Ryan Johansson,Preußen Münster,Ireland,Luxembourg,25,,€350k,yes
+357656,Jayson Molumby,West Bromwich Albion,Ireland,,23,,€3.50m,yes
+357658,Mark Travers,Everton FC,Ireland,,26,,€3.00m,yes
+357661,Thomas O'Connor,Peterborough United,Ireland,,88,,€500k,yes
+357671,Tyreke Wilson,Dundalk FC,Ireland,,26,,€175k,yes
+363880,Patrick McClean,Derry City,Ireland,Northern Ireland,29,,€125k,yes
+363882,Ronan Curtis,Plymouth Argyle,Ireland,England,30,,€200k,
+364024,Paudie O'Connor,Reading FC,Ireland,,78,,€650k,
+365180,Lee Grace,Shamrock Rovers,Ireland,,33,,€100k,yes
+365201,Dylan Watts,Shamrock Rovers,Ireland,,29,,€250k,yes
+365202,Daire O'Connor,Carrick Rangers FC,Ireland,,29,,€125k,yes
+366681,Lee O'Connor,Tranmere Rovers,Ireland,,26,,€200k,
+376252,Shane McLoughlin,Cambridge United,Ireland,United States,29,,€175k,
+377180,Conor Keeley,Drogheda United FC,Ireland,,28,,€250k,yes
+379347,Sean Boyd,Shelbourne FC,Ireland,,28,,€150k,yes
+382686,Conor McCarthy,Northampton Town,Ireland,,28,,€275k,
+385396,Ryan Nolan,Linfield FC,Ireland,,27,,€100k,yes
+385704,Jason McClelland,St. Patrick's Athletic,Ireland,,29,,€150k,yes
+386148,Joe Quigley,Bristol Rovers,Ireland,England,29,,€100k,
+391788,CJ Hamilton,Blackpool FC,Ireland,England,31,,€300k,
+392591,Chiedozie Ogbene,Ipswich Town,Ireland,Nigeria,20,,€4.00m,yes
+392860,Simon Power,St. Patrick's Athletic,Ireland,,28,,€150k,yes
+393284,Emmanuel Osadebe,Sutton United,Ireland,England,29,,€75k,yes
+396174,Jimmy Dunne,Queens Park Rangers,Ireland,Northern Ireland,14,,€5.00m,yes
+401320,Dara O'Shea,Ipswich Town,Ireland,,7,,€16.00m,yes
+401323,Aidan Keena,St. Patrick's Athletic,Ireland,,27,,€250k,yes
+403437,Ciarán Kelly,Bristol Rovers,Ireland,,28,,€200k,yes
+419025,Conor Coventry,Charlton Athletic,Ireland,England,35,,€2.00m,yes
+425800,Jordan Shipley,Cheltenham Town,Ireland,England,28,,€250k,yes
+426355,Mikey Place,Carrick Rangers FC,Ireland,,28,,€150k,
+428901,Aaron Molloy,Lexington SC,Ireland,,29,,€350k,
+428907,Mark Doyle,Drogheda United FC,Ireland,,27,,€225k,yes
+429247,Conor Kane,Drogheda United FC,Ireland,,27,,€200k,yes
+433329,Corrie Ndaba,US Lecce,Ireland,Ghana,62,,€900k,yes
+433842,Tom Field,Vancouver FC,Ireland,England,29,,€175k,
+434205,Brian Maher,Derry City,Ireland,,25,,€175k,yes
+434207,Aaron Connolly,Leyton Orient,Ireland,,38,,€1.80m,
+434216,Aaron Bolger,Galway United FC,Ireland,,26,,€125k,yes
+434217,Ryan Burke,Bohemian Football Club,Ireland,,25,,€125k,yes
+434218,Joe Redmond,St. Patrick's Athletic,Ireland,,26,,€350k,yes
+434221,Kameron Ledwidge,Shelbourne FC,Ireland,,25,,€200k,yes
+434223,Adam Idah,Swansea City,Ireland,Nigeria,17,,€4.50m,yes
+434244,Jordan Doherty,Livingston FC,Ireland,,25,,€150k,yes
+437573,James Brown,St. Patrick's Athletic,Ireland,,28,,€250k,yes
+437603,Conor Kearns,Dundalk FC,Ireland,,28,,€175k,yes
+437874,Kevin O'Toole,New York City FC,Ireland,United States,49,,€1.20m,
+438985,Paul Doyle,Dungannon Swifts FC,Ireland,,28,,€50k,
+438987,Killian Brouder,Galway United FC,Ireland,,28,,€150k,yes
+439497,Liam Scales,Celtic FC,Ireland,,15,,€5.00m,yes
+444208,Michael Obafemi,Burnley FC,Ireland,Nigeria,80,,€600k,
+444209,Jonathan Afolabi,Shamrock Rovers,Ireland,Nigeria,26,,€200k,yes
+444211,Will Smallbone,Without ClubWithout Club,Ireland,England,24,,€3.50m,yes
+449020,Warren O'Hora,Hibernian FC,Ireland,,86,,€550k,
+451942,Sam Todd,Bohemian Football Club,Ireland,,28,,€175k,yes
+458178,Jack Taylor,Ipswich Town,Ireland,England,27,,€3.00m,yes
+458633,Tunmise Sobowale,Shamrock Rovers,Ireland,Nigeria,27,,€300k,yes
+466106,Aaron Drinan,Swindon Town,Ireland,,89,,€500k,
+469050,Nathan Collins,Brentford FC,Ireland,,1,,€30.00m,yes
+469064,Gavin Kilkenny,Swindon Town,Ireland,,26,,€350k,
+469065,Brandon Kavanagh,Drogheda United FC,Ireland,,25,,€200k,yes
+470882,Fuad Sule,Ballymena United FC,Ireland,Nigeria,29,,€150k,
+478712,Ed McGinty,Shamrock Rovers,Ireland,Scotland,27,,€300k,yes
+480723,Finn Azaz,Southampton FC,Ireland,England,4,,€20.00m,yes
+482801,Ruari Paton,St. Johnstone FC,Ireland,,26,,€225k,yes
+490854,Barry Cotter,Derry City,Ireland,,27,,€275k,yes
+491216,John Mahon,Waterford FC,Ireland,,26,,€125k,yes
+491578,Neil Farrugia,Dundee United FC,Ireland,France,27,,€125k,
+491629,Dayle Rooney,Bohemian Football Club,Ireland,,28,,€200k,yes
+498175,Aodh Dervin,Dundalk FC,Ireland,,27,,€125k,yes
+503975,Joe Hodge,Motherwell FC,Ireland,England,77,,€700k,yes
+504115,John Martin,Shelbourne FC,Ireland,,27,,€225k,yes
+504856,Will Ferry,Dundee United FC,Ireland,England,50,,€1.20m,yes
+505548,Louie Watson,Crawley Town,Ireland,England,25,,€125k,
+505657,Tyreik Wright,Bradford City,Ireland,,24,,€350k,
+524210,Sean McLoughlin,Blackburn Rovers,Ireland,,74,,€750k,
+530780,Jason Knight,Bristol City,Ireland,,11,,€7.00m,yes
+531461,Armstrong Oko-Flex,Levski Sofia,Ireland,England,54,,€1.00m,yes
+532195,Joshua Kayode,Without ClubWithout Club,Ireland,Nigeria,26,,€100k,yes
+532460,Shane Blaney,Livingston FC,Ireland,,27,,€275k,
+535632,David Hurley,Galway United FC,Ireland,,27,,€150k,yes
+535670,Colm Whelan,Bohemian Football Club,Ireland,,26,,€225k,yes
+535785,Ryan Graydon,Salford City,Ireland,,27,,€300k,
+535927,Luke McNally,Bristol City,Ireland,,36,,€2.00m,
+536530,Barry Coffey,Hartford Athletic,Ireland,,25,,€100k,
+539577,John Ross Wilson,Dundalk FC,Ireland,,27,,€150k,yes
+540872,Darragh Nugent,St. Patrick's Athletic,Ireland,,25,,€150k,yes
+540876,Promise Omochere,Bristol Rovers,Ireland,Nigeria,25,,€275k,
+541448,Oisin McEntee,Heart of Midlothian FC,Ireland,United States,90,,€500k,
+542884,Alex Gilbert,Without ClubWithout Club,Ireland,England,55,,€1.00m,yes
+546024,Andy Lyons,Blackpool FC,Ireland,,26,,€375k,
+546159,Will Fitzgerald,Shamrock Rovers,Ireland,,27,,€225k,
+549569,Jordan McEneff,Larne FC,Ireland,Northern Ireland,25,,€175k,
+550134,Ciaran Brennan,Newport County,Ireland,,26,,€75k,
+550641,Reece Staunton,Grimsby Town,Ireland,England,24,,€300k,
+552652,Adam O'Reilly,Derry City,Ireland,,25,,€250k,yes
+552655,Troy Parrott,Real Betis Balompié,Ireland,,3,,€25.00m,yes
+561454,Mark McGuinness,Sheffield United,Ireland,England,12,,€7.00m,yes
+562553,Jon Gallagher,Austin FC,Ireland,,39,,€1.80m,
+567574,Shane Farrell,Drogheda United FC,Ireland,,26,,€175k,yes
+567749,Daniel Kelly,Shelbourne FC,Ireland,,30,,€150k,yes
+567750,Jamie Lennon,St. Patrick's Athletic,Ireland,,28,,€250k,yes
+568319,Luke Heeney,Waterford FC,Ireland,,27,,€125k,yes
+570864,Tony Springett,Leyton Orient,Ireland,England,64,,€800k,yes
+571827,Lewis Richards,Crawley Town,Ireland,England,24,,€150k,
+572780,Liam Kerrigan,AC Renate,Ireland,,26,,€150k,yes
+572810,Jaze Kabia,Leyton Orient,Ireland,England,26,,€200k,yes
+577557,Danny Grant,Shamrock Rovers,Ireland,,26,,€250k,yes
+579997,Conor Grant,Notts County,Ireland,,25,,€225k,
+580027,Luca Connell,Barnsley FC,Ireland,England,65,,€800k,
+580030,James Furlong,Walsall FC,Ireland,,24,,€100k,
+581330,Eiran Cashin,Brighton & Hove Albion,Ireland,England,16,,€5.00m,
+581670,Louie Barry,Sheffield Wednesday,Ireland,England,30,,€2.50m,yes
+581675,Harvey Vale,Queens Park Rangers,Ireland,England,21,,€4.00m,yes
+585550,Gavin Bazunu,Southampton FC,Ireland,Nigeria,9,,€8.00m,
+585658,Niall Morahan,Bohemian Football Club,Ireland,,26,,€150k,yes
+586628,Matthew Healy,Shamrock Rovers,Ireland,United States,91,,€500k,yes
+586755,Luke Turner,St. Patrick's Athletic,Ireland,,24,,€225k,yes
+586756,Festy Ebosele,Erzurumspor FK,Ireland,Nigeria,31,,€2.50m,yes
+593296,Harvey Neville,Sporting Club Jacksonville,Ireland,England,24,,€175k,
+595665,Jordan Adeyemo,KF Aegir,Ireland,Nigeria,26,,€75k,
+603084,Enda Minogue,Dundalk FC,Ireland,,24,,€125k,yes
+610786,Ollie O'Neill,Leyton Orient,Ireland,England,79,,€650k,
+614554,Kian Leavy,St. Patrick's Athletic,Ireland,,24,,€250k,yes
+614700,Dara Costelloe,Wigan Athletic,Ireland,,99,,€400k,
+614828,Zak Delaney,Raith Rovers FC,Ireland,England,24,,€100k,yes
+615177,Ali Reghba,NK Maribor,Ireland,Algeria,26,,€200k,
+621193,Kasey McAteer,Ipswich Town,Ireland,England,8,,€10.00m,yes
+621993,Andrew Omobamidele,RC Strasbourg Alsace,Ireland,Nigeria,10,,€8.00m,yes
+623740,Ross Tierney,Bohemian Football Club,Ireland,,25,,€325k,yes
+626334,Roland Idowu,FC Botosani,Ireland,Nigeria,24,,€150k,yes
+631904,Anselmo García MacNulty,1.FC Magdeburg,Ireland,Spain,41,,€1.50m,
+634366,Darragh Burns,Derry City,Ireland,Northern Ireland,24,,€200k,yes
+647138,Danny McNamara,Charlton Athletic,Ireland,England,42,,€1.50m,
+648032,James Abankwah,Udinese Calcio,Ireland,Ghana,25,,€3.50m,yes
+648041,Jamie Mullins,Wycombe Wanderers,Ireland,,21,,€225k,yes
+648044,Edwin Agbaje,Drogheda United FC,Ireland,Nigeria,22,,€175k,yes
+648046,Evan Ferguson,Brighton & Hove Albion,Ireland,England,5,,€20.00m,yes
+648049,Ben Quinn,Cliftonville FC,Ireland,,21,,€50k,yes
+650883,Zak Gilsenan,FC Halifax Town,Ireland,Australia,23,,€75k,yes
+651955,Shadrach Ogie,Woking FC,Ireland,Nigeria,25,,€200k,yes
+655259,Mark Byrne,Glenavon FC,Ireland,,25,,€50k,
+655880,Mipo Odubeko,Shelbourne FC,Ireland,Nigeria,23,,€150k,yes
+655998,Lee Devitt,Galway United FC,Ireland,,26,,€125k,yes
+669366,Tom Cannon,Sheffield United,Ireland,England,13,,€7.00m,yes
+677356,Thomas Oluwa,Drogheda United FC,Ireland,Nigeria,25,,€150k,yes
+683530,Dawson Devoy,Bohemian Football Club,Ireland,,24,,€350k,yes
+683665,Rob Slevin,Coleraine FC,Ireland,England,28,,€150k,
+683670,Darragh Power,Bohemian Football Club,Ireland,,25,,€175k,yes
+688673,Darragh O'Connor,East Kilbride FC,Ireland,England,27,,€50k,yes
+693750,Ryan O'Kane,Sligo Rovers,Ireland,,23,,€125k,
+698196,Calum Kavanagh,Oldham Athletic,Ireland,Wales,22,,€250k,
+700155,Tommy Lonergan,Waterford FC,Ireland,,22,,€225k,yes
+700441,Tyler Goodrham,Oxford United,Ireland,England,43,,€1.50m,
+701072,Cian Kavanagh,Sligo Rovers,Ireland,,23,,€125k,yes
+703194,Gabriel Adebambo,Without ClubWithout Club,Ireland,Nigeria,24,,€25k,
+711544,Jake O'Brien,Everton FC,Ireland,,6,,€18.00m,yes
+718171,Josh Honohan,Lincoln City,Ireland,,25,,€250k,yes
+718846,Ronan Boyce,St. Patrick's Athletic,Ireland,,25,,€175k,yes
+719980,James Clarke,Derry City,Ireland,,25,,€225k,yes
+721097,Arlo Doherty,Waterford FC,Ireland,England,22,,€100k,
+724529,Tayo Adaramola,Cercle Brugge ,Ireland,Nigeria,66,,€800k,yes
+724530,Leigh Kavanagh,Galway United FC,Ireland,,22,,€150k,yes
+724532,Sinclair Armstrong,Göztepe,Ireland,Nigeria,32,,€2.50m,yes
+724535,Robbie Mahon,Airdrieonians FC,Ireland,,23,,€50k,
+724536,Josh Keeley,Luton Town,Ireland,,67,,€800k,yes
+724537,Andrew Moran,Preston North End,Ireland,,44,,€1.50m,yes
+724540,Bosun Lawal,Stoke City,Ireland,Nigeria,28,,€3.00m,yes
+727025,Cian Hayes,Rochdale AFC,Ireland,England,23,,€325k,yes
+728478,Gavin Molloy,Aberdeen FC,Ireland,,81,,€600k,
+728480,Jack Moylan,Cardiff City,Ireland,,68,,€800k,yes
+731763,Josh Okpolokpo,Without ClubWithout Club,Ireland,England,23,,€150k,
+732748,Seán Roughan,Huddersfield Town,Ireland,,56,,€1.00m,
+738025,Ahu Obhakhan,Portadown FC,Ireland,Nigeria,29,,€50k,
+741225,Kevin Zefi,Sligo Rovers,Ireland,Albania,21,,€50k,yes
+741226,Conor Walsh,Shelbourne FC,Ireland,,21,,€50k,yes
+741228,Joe O'Brien-Whitmarsh,Northampton Town,Ireland,,21,,€200k,
+741229,Rocco Vata,Watford FC,Ireland,Albania,40,,€1.80m,yes
+741232,Cian Barrett,Shamrock Rovers,Ireland,,21,,€100k,yes
+741267,Sam Curtis,Sheffield United,Ireland,,20,,€200k,yes
+741268,Cathal Heffernan,Harrogate Town,Ireland,,21,,€125k,
+741269,James McManus,Sligo Rovers,Ireland,,21,,€150k,yes
+741271,Justin Ferizaj,Crawley Town,Ireland,Albania,21,,€50k,
+742163,Joel Bagan,Cardiff City,Ireland,England,57,,€1.00m,
+744956,Luke Pearce,Sligo Rovers,Ireland,England,22,,€50k,yes
+745716,Killian Cahill,Leyton Orient,Ireland,,22,,€175k,
+745722,Evan Caffrey,Shelbourne FC,Ireland,,23,,€175k,yes
+745726,Conan Noonan,Waterford FC,Ireland,,23,,€200k,yes
+745727,Dean McMenamy,Waterford FC,Ireland,,24,,€100k,yes
+745728,Dylan Duffy,Chesterfield FC,Ireland,,23,,€250k,
+745729,Alex Nolan,Sligo Rovers,Ireland,,23,,€125k,yes
+746115,Connor Barratt,Galway United FC,Ireland,England,22,,€125k,yes
+746338,Baba Adeeko,Rochdale AFC,Ireland,Nigeria,23,,€300k,
+746956,Evan Weir,Peterborough United,Ireland,,24,,€300k,yes
+746971,Aidomo Emakhu,Oxford United,Ireland,Nigeria,58,,€1.00m,yes
+748019,Andrew Quinn,Drogheda United FC,Ireland,,24,,€175k,yes
+750777,Dara McGuinness,Galway United FC,Ireland,,22,,€75k,yes
+796024,Jack Henry-Francis,Shelbourne FC,Ireland,England,22,,€250k,
+798171,Francely Lomboto,Galway United FC,Ireland,DR Congo,26,,€100k,yes
+798363,Uniss Kargbo,Colwyn Bay,Ireland,Sierra Leone,24,,€50k,
+798371,Olamide Ibrahim,Without ClubWithout Club,Ireland,Nigeria,22,,€50k,
+798864,Eoin Farrell,The New Saints,Ireland,,24,,€75k,
+801420,Killian Phillips,St. Mirren FC,Ireland,United States,59,,€1.00m,yes
+802243,Ed McJannet,Cosenza Calcio,Ireland,England,22,,€150k,
+809167,Ciaran Gilligan,Burton Albion,Ireland,England,24,,€75k,
+810188,David Okagbue,Peterborough United,Ireland,Nigeria,22,,€325k,yes
+818897,Kyle Degelman,Chanmari FC,Ireland,Canada,22,,€25k,
+838367,James Storer,Plymouth Argyle,Ireland,England,21,,€75k,yes
+841121,John Patrick,Stade Reims,Ireland,Spain,69,,€800k,
+854930,Jacob Slater,Tranmere Rovers,Ireland,England,21,,€150k,yes
+863741,Nathan Fraser,Wolverhampton Wanderers,Ireland,England,82,,€600k,
+867909,Harry Vaughan,Bohemian Football Club,Ireland,England,22,,€400k,yes
+875208,Johnny Kenny,Celtic FC,Ireland,,51,,€1.20m,yes
+875235,Seán Grehan,Doncaster Rovers,Ireland,,22,,€200k,yes
+877192,Harry Groome,Dundalk FC,Ireland,,24,,€125k,yes
+877211,Success Edogun,Ballymena United FC,Ireland,Nigeria,25,,€200k,
+877215,David Toure,Ballymena United FC,Ireland,Cote d'Ivoire,21,,€200k,
+877759,Kian Corbally,Dunfermline Athletic FC,Ireland,,22,,€200k,yes
+878277,Ed McCarthy,Galway United FC,Ireland,,25,,€125k,
+884910,Peter Maguire,Glenavon FC,Ireland,,23,,€50k,
+886909,Issa Kargbo,Colwyn Bay,Ireland,Sierra Leone,24,,€50k,
+888899,Mayowa Animasahun,Dundalk FC,Ireland,Nigeria,23,,€125k,yes
+900601,Alex Murphy,1.FC Kaiserslautern,Ireland,,45,,€1.50m,yes
+916542,Millenic Alli,Charlton Athletic,Ireland,England,46,,€1.50m,yes
+921513,Joe Gardner,Falkirk FC,Ireland,England,21,,€200k,yes
+928473,Josh O'Brien,Indy Eleven,Ireland,United States,23,,€150k,
+929715,Connor O'Riordan,Blackburn Rovers,Ireland,Scotland,83,,€600k,yes
+941420,Jack O'Reilly,Inchicore Athletic,Ireland,,22,,€75k,
+943549,Mark O'Mahony,Brighton & Hove Albion U21,Ireland,,21,,€375k,
+943560,Franco Umeh,Portsmouth FC,Ireland,Nigeria,92,,€500k,
+944090,Luke Browne,Notts County,Ireland,,20,,€50k,
+944140,Trent Koné-Doherty,Molde FK,Ireland,Northern Ireland,84,,€600k,yes
+944742,Owen Mason,Bromley FC,Ireland,,22,,€50k,yes
+950288,James Golding,Oxford United,Ireland,England,22,,€100k,
+953139,Kieran Cruise,Drogheda United FC,Ireland,,22,,€100k,yes
+953933,Jack Moorhouse,Manchester United U21,Ireland,England,20,,€100k,
+955724,Sean Moore,Shelbourne FC,Ireland,Northern Ireland,21,,€125k,yes
+957295,Naj Razi,Shamrock Rovers,Ireland,Algeria,19,,€275k,yes
+957316,Freddie Turley,Dunfermline Athletic FC,Ireland,,20,,€25k,yes
+957327,Cory O'Sullivan,Shamrock Rovers,Ireland,,20,,€250k,yes
+960538,Daniel McGrath,Without ClubWithout Club,Ireland,Brazil,20,,€100k,
+961075,Glenn McConnell,Cambridge United,Ireland,Brazil,21,,€75k,
+966649,Connor O'Brien,Accrington Stanley,Ireland,England,22,,€200k,
+967162,Jad Hakiki,Sligo Rovers,Ireland,Algeria,22,,€200k,yes
+967382,Len O'Sullivan,Ross County FC,Ireland,,22,,€75k,
+972827,Jimmy Mwanga,Without ClubWithout Club,Ireland,South Africa,27,,€150k,
+981903,Bridel Bosakani,Finn Harps,Ireland,Congo,22,,€75k,yes
+983805,Ivan Savshak,Orvietana Calcio,Ireland,Ukraine,21,,€50k,
+983806,Sean McHale,St. Patrick's Athletic,Ireland,,21,,€125k,yes
+983810,Senan Mullen,Bohemian Football Club,Ireland,,21,,€275k,yes
+990836,Romeo Akachukwu,Southampton FC U21,Ireland,Nigeria,20,,€150k,
+993050,Gbemi Arubi,Burton Albion,Ireland,Nigeria,22,,€200k,yes
+995598,Cian Byrne,Bohemian Football Club,Ireland,,23,,€125k,yes
+1005766,Mason Melia,Lincoln City,Ireland,,60,,€1.00m,yes
+1005776,Cathal O'Sullivan,Preston North End U21,Ireland,,19,,€125k,yes
+1018097,Shane Tracey,Dundalk FC,Ireland,,20,,€100k,yes
+1025248,Lewis Temple,Oldham Athletic,Ireland,,21,,€100k,yes
+1039207,Josh Ukek,Larne FC,Ireland,,27,,€100k,
+1039810,Ronan Maher,Walsall FC,Ireland,India,21,,€75k,yes
+1041609,Harvey Warren,Dundalk FC,Ireland,,22,,€125k,yes
+1061560,John O'Sullivan,Shamrock Rovers,Ireland,,20,,€100k,yes
+1061564,Onesime Tembe,Ragusa Calcio,Ireland,DR Congo,21,,€50k,yes
+1069449,Emmanuel Adegboyega,Rotherham United,Ireland,Nigeria,22,,€350k,
+1073032,Ike Orazi,Stade Reims B,Ireland,Nigeria,19,,€50k,
+1089316,Jay McGrath,Doncaster Rovers,Ireland,England,23,,€300k,
+1101078,Ronan Teahan,Dundalk FC,Ireland,,21,,€125k,yes
+1109299,Gavin Gilmore,Without ClubWithout Club,Ireland,,23,,€10k,
+1109572,Matthew Moore,TSG 1899 Hoffenheim II,Ireland,,75,,€750k,
+1109573,Matthew Murray,Cork City FC,Ireland,,18,,€50k,
+1109577,Aarón Ochoa,Málaga CF,Ireland,Spain,70,,€800k,
+1110017,Jesse Dempsey,Fleetwood Town,Ireland,,21,,€75k,yes
+1110018,Warren Davis,Drogheda United FC,Ireland,,21,,€200k,yes
+1110023,Adrien Thibaut,Crewe Alexandra,Ireland,England,22,,€100k,
+1110448,Jaden Umeh,SL Benfica U23,Ireland,Nigeria,71,,€800k,yes
+1112747,Rabby Tabu Minzamba,Portadown FC,Ireland,DR Congo,24,,€50k,
+1112908,Jacob Devaney,Hibernian FC,Ireland,England,19,,€250k,yes
+1113634,Cian O'Malley,Carrick Rangers FC,Ireland,,23,,€10k,
+1113888,Andrew Wogan,Stockport County,Ireland,,20,,€50k,
+1121566,Ronan Mansfield,Cobh Ramblers FC,Ireland,,20,,€100k,yes
+1127616,Owen Elding,Hibernian FC,Ireland,England,93,,€500k,
+1134229,Max Kovalevskis,Shamrock Rovers,Ireland,Ukraine,18,,€75k,yes
+1134230,Brody Lee,Cork City FC,Ireland,,18,,€25k,yes
+1134231,Michael Noonan,Shamrock Rovers,Ireland,,95,,€450k,yes
+1138971,Matteo Egan,FC Empoli,Ireland,Italy,18,,€50k,
+1148282,Gareth McElroy,Sligo Rovers,Ireland,,21,,€150k,yes
+1151999,Conor Reynolds,Sligo Rovers,Ireland,,19,,€100k,yes
+1153949,Lee Axworthy,Without ClubWithout Club,Ireland,,25,,€10k,
+1162910,Kyle McDonagh,Sligo Rovers,Ireland,,20,,€75k,yes
+1164964,Grady McDonnell,Nottingham Forest U21,Ireland,Canada,18,,€200k,yes
+1165198,Cillian Tollett,Athlone Town AFC,Ireland,Australia,18,,€50k,yes
+1167208,Daire Patton,Sligo Rovers,Ireland,,20,,€100k,yes
+1169146,Charlie Cummins,Exeter City,Ireland,Australia,21,,€75k,
+1198023,Gabriel Otegbayo,Sheffield Wednesday,Ireland,Nigeria,72,,€800k,
+1212264,Pijus Otegbayo,Stoke City U21,Ireland,Nigeria,19,,€200k,
+1231216,Vinnie Leonard,Norwich City U21,Ireland,,18,,€175k,yes
+1237271,Divin Isamala,Portadown FC,Ireland,,23,,€100k,
+1243646,Ethan O'Brien,Drogheda United FC,Ireland,United States,25,,€100k,yes
+1259889,Adam Brennan,Shamrock Rovers,Ireland,,19,,€150k,yes
+1260393,Victor Ozhianvuna,Shamrock Rovers,Ireland,Russia,17,,€350k,yes
+1262696,Cathal McCarthy,Kilmarnock FC,Ireland,,19,,€300k,yes
+1283632,James Bolger,Drogheda United FC,Ireland,,25,,€125k,yes
+1404861,Aaron Okpolokpo,FK Apolonia,Ireland,England,20,,€10k,
