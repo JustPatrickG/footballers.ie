@@ -152,9 +152,10 @@ def load():
     matches = _merge_rows("matches.csv", ("kickoff","home","away"))
     articles = sorted(_rows("manual/articles.csv"), key=lambda r: r.get("date",""), reverse=True)
     accounts = _rows("manual/accounts.csv")
-    return players, ireland, news, matches, articles, accounts
+    clubgeo  = {r["club"]: r for r in _rows("manual/clubs.csv") if r.get("club")}
+    return players, ireland, news, matches, articles, accounts, clubgeo
 
-PLAYERS, IRELAND, NEWS, MATCHES, ARTICLES, ACCOUNTS = load()
+PLAYERS, IRELAND, NEWS, MATCHES, ARTICLES, ACCOUNTS, CLUBGEO = load()
 TIERS = {"abroad-top":"Abroad — top divisions",
          "abroad-lower":"Abroad — second tier & smaller leagues",
          "loi":"League of Ireland"}
@@ -525,9 +526,18 @@ def build_index():
         week_block = (f'<div class="sec"><h2>This week</h2>'
                       f'<span class="more" style="border:0">goals &amp; assists</span></div>{ab}{lo}')
 
-    fbp = {p["slug"]: dict(n=esc(p["n"]), club=esc(p["club"]), ini=initials(p["n"]),
-                           img=(1 if (not p.get("photo") and p["slug"] in HAVE_IMG) else 0),
-                           next=next_fixture(p)) for p in PLAYERS}
+    def _next_raw(p):
+        return p["fixtures"][0] if p["fixtures"] else None
+    fbp = {}
+    for p in PLAYERS:
+        nx = _next_raw(p)
+        fbp[p["slug"]] = dict(
+            n=esc(p["n"]), club=esc(p["club"]), ini=initials(p["n"]),
+            img=(1 if (not p.get("photo") and p["slug"] in HAVE_IMG) else 0),
+            rating=(p.get("rating") or ""),
+            nextdate=(nx[0] if nx else ""), nextopp=(esc(nx[1]) if nx else ""),
+            nextha=(nx[2] if nx else ""),
+            next=next_fixture(p))
 
     body = f'''
     {news_block}
@@ -881,8 +891,12 @@ def build_map():
         points.append(dict(
             name=c, lat=lat, lon=lon, zoom=zoom, n=len(ps),
             url=f"country/{country_slug(c)}.html",
-            clubs=[dict(name=k, n=v, url=clink(k)) for k, v in top[:12]],
-            more=max(0, len(top) - 12),
+            clubs=[dict(name=k, n=v, url=clink(k),
+                        lat=(float(CLUBGEO[k]["lat"]) if k in CLUBGEO and CLUBGEO[k].get("lat") else None),
+                        lon=(float(CLUBGEO[k]["lon"]) if k in CLUBGEO and CLUBGEO[k].get("lon") else None),
+                        town=(CLUBGEO.get(k, {}).get("town") or ""))
+                   for k, v in top],
+            more=0,
         ))
 
     total = sum(p["n"] for p in points)
@@ -919,6 +933,7 @@ def build_map():
       var panel = document.getElementById('cpanel');
       function openCountry(p){{
         map.flyTo([p.lat, p.lon], p.zoom, {{duration:.7}});
+        var pinned = showClubs(p);
         var clubs = p.clubs.map(function(c){{
           return '<a class="crow" href="'+c.url+'"><span>'+c.name+'</span>'+
                  '<b>'+c.n+'</b></a>';
@@ -926,19 +941,56 @@ def build_map():
         panel.innerHTML =
           '<div class="sec"><h2>'+p.name+'</h2>'+
           '<a class="more" href="'+p.url+'">All clubs →</a></div>'+
-          '<div class="cgrid">'+clubs+'</div>'+
-          (p.more ? '<div class="cmore">+'+p.more+' more clubs</div>' : '');
+          (pinned ? '' : '<div class="cmore">No map pins for these clubs yet — '+
+                          'tap a club below.</div>')+
+          '<div class="cgrid">'+clubs+'</div>';
         panel.scrollIntoView({{behavior:'smooth', block:'nearest'}});
       }}
 
+      var countryLayer = L.layerGroup().addTo(map);
+      var clubLayer = L.layerGroup();
+      var current = null;
+
+      function showCountries(){{
+        clubLayer.remove();
+        countryLayer.addTo(map);
+        current = null;
+        panel.innerHTML = '';
+      }}
+
+      function showClubs(p){{
+        countryLayer.remove();
+        clubLayer.clearLayers();
+        var withGeo = p.clubs.filter(function(c){{ return c.lat && c.lon; }});
+        withGeo.forEach(function(c){{
+          var m = L.circleMarker([c.lat, c.lon], {{
+            radius: Math.max(7, Math.min(20, 5 + Math.sqrt(c.n) * 4)),
+            color:'#35D4BF', weight:2, fillColor:'#35D4BF', fillOpacity:.32
+          }});
+          m.bindTooltip(c.name + ' · ' + c.n + (c.n===1?' player':' players'), {{direction:'top'}});
+          m.on('click', function(){{ location.href = c.url; }});
+          clubLayer.addLayer(m);
+        }});
+        clubLayer.addTo(map);
+        current = p;
+        return withGeo.length;
+      }}
+
       PTS.forEach(function(p, i){{
+        // a wide beacon covering the country while zoomed out
         var m = L.circleMarker([p.lat, p.lon], {{
           radius: radius(p.n), color:'#F5C518', weight:2,
-          fillColor:'#F5C518', fillOpacity:.28
-        }}).addTo(map);
+          fillColor:'#F5C518', fillOpacity:.22
+        }});
         m.bindTooltip(p.name + ' · ' + p.n + (p.n===1?' player':' players'), {{direction:'top'}});
         m.on('click', function(){{ openCountry(p); }});
+        countryLayer.addLayer(m);
         p._marker = m;
+      }});
+
+      // zooming out on your own goes back to the country view
+      map.on('zoomend', function(){{
+        if (map.getZoom() <= 4 && current) showCountries();
       }});
 
       document.querySelectorAll('.cbtn').forEach(function(b){{
@@ -1289,12 +1341,12 @@ def build_player(p):
     s, c = p["season"], p["career"]
     badge = "League of Ireland" if p["tier"]=="loi" else ("Abroad · top flight" if p["tier"]=="abroad-top" else "Abroad")
 
-    upcoming = p["fixtures"][:3]
+    upcoming = p["fixtures"]
     n_fx = len(p["fixtures"])
-    fx_more = (f'<a class="more" href="../fixtures.html">See all {n_fx} →</a>'
-               if n_fx > 3 else '<a class="more" href="../fixtures.html">All fixtures →</a>')
-    fxr = "".join(f'<div class="fxrow"><div class="fxd">{esc(day_label(d))}</div><div class="fxo">{esc(o)} '
-                  f'<span class="ha">{h}</span></div><div class="fxc">{esc(cp)}</div></div>'
+    fx_more = f'<span class="more" style="border:0">{n_fx} upcoming</span>' if n_fx else ""
+    fxr = "".join(f'<div class="fxrow when" data-when="{esc(d)}" data-opp="{esc(o)}" data-ha="{h}">'
+                  f'<div class="fxwhen">{esc(day_label(d))}</div>'
+                  f'<div class="fxc">{esc(cp)}</div></div>'
                   for d,o,h,cp in upcoming)
     rsr = ""
     recent_results = list(reversed(p["results"]))[:10]   # feed is oldest-first

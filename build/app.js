@@ -83,14 +83,21 @@
       var p = window.FB_PLAYERS[slug];
       if (!p) return;
       var when = p.next ? p.next : 'No fixture listed';
+      var when = (window.FB_WHEN && p.nextdate) ? FB_WHEN(p.nextdate) : '';
+      var line = when
+        ? 'Playing ' + (p.nextopp || '') + (p.nextha ? ' (' + p.nextha + ')' : '') + ' ' + when
+        : (p.next || 'No fixture listed');
+      var rate = p.rating ? p.rating : '';
       var face2 = p.img ? 'img/players/' + slug + '.png' : '';
       var av2 = face2
         ? '<div class="pavatar sm"><img src="' + face2 + '" alt="" loading="lazy" ' +
           'onerror="this.parentNode.innerHTML=\'<span>' + p.ini + '</span>\'"></div>'
         : '<div class="pavatar sm"><span>' + p.ini + '</span></div>';
       rows += '<a class="plrow" href="player/' + slug + '.html">' + av2 +
-              '<div class="nm">' + p.n + ' <span class="cl">' + p.club + '</span></div>' +
-              '<div class="ev">' + when + '</div>' +
+              '<div class="nm">' + p.n + '<span class="cl">' + line + '</span></div>' +
+              '<div class="mn">' + (rate
+                 ? '<span class="rate ' + (parseFloat(rate) >= 7.3 ? 'hi' : parseFloat(rate) >= 6.5 ? 'md' : 'lo') + ' sm">' + rate + '</span>'
+                 : '<span class="rate none">—</span>') + '</div>' +
               '<button class="star on" data-fav="' + slug + '" aria-pressed="true">★</button></a>';
     });
     wrap.innerHTML = rows;
@@ -724,4 +731,69 @@
   }
   render();
   setInterval(render, 60000);
+})();
+
+/* ---------- WHEN IS HE PLAYING ----------
+   Turn a fixture date into "today at 17:00", "tomorrow at 19:45", "in 3 days". */
+(function () {
+  function parseWhen(s) {
+    if (!s) return null;
+    s = String(s).trim();
+    var d = null;
+    if (/^\d{4}-\d{2}-\d{2}/.test(s)) d = new Date(s.length > 10 ? s : s + 'T00:00:00');
+    if (!d || isNaN(d)) {
+      // "26 Aug" style — assume the nearest such date from now
+      var m = s.match(/^(\d{1,2})\s+([A-Za-z]{3})/);
+      if (!m) return null;
+      var mons = ['jan','feb','mar','apr','may','jun','jul','aug','sep','oct','nov','dec'];
+      var mi = mons.indexOf(m[2].toLowerCase());
+      if (mi < 0) return null;
+      var now = new Date();
+      d = new Date(now.getFullYear(), mi, +m[1]);
+      if (d - now < -1000 * 60 * 60 * 24 * 200) d.setFullYear(now.getFullYear() + 1);
+    }
+    return d;
+  }
+
+  function hasTime(s) { return /T\d{2}:\d{2}/.test(String(s || '')); }
+
+  window.FB_WHEN = function (raw) {
+    var d = parseWhen(raw);
+    if (!d) return '';
+    var now = new Date();
+    var time = hasTime(raw)
+      ? d.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
+      : '';
+
+    var startToday = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+    var startThat  = new Date(d.getFullYear(), d.getMonth(), d.getDate());
+    var days = Math.round((startThat - startToday) / 86400000);
+
+    if (days < 0)  return 'earlier';
+    if (days === 0) return time ? 'today at ' + time : 'today';
+    if (days === 1) return time ? 'tomorrow at ' + time : 'tomorrow';
+    if (days < 7)  return 'in ' + days + ' days';
+    if (days < 14) return 'in a week';
+    if (days < 31) return 'in ' + Math.round(days / 7) + ' weeks';
+    return 'in ' + Math.round(days / 30) + (Math.round(days / 30) === 1 ? ' month' : ' months');
+  };
+
+  // player pages: "Playing Watford (A) tomorrow at 19:45"
+  function paintFixtures() {
+    var rows = document.querySelectorAll('.fxrow.when');
+    for (var i = 0; i < rows.length; i++) {
+      var r = rows[i];
+      var when = FB_WHEN(r.getAttribute('data-when'));
+      var opp = r.getAttribute('data-opp') || '';
+      var ha = r.getAttribute('data-ha') || '';
+      var cell = r.querySelector('.fxwhen');
+      if (!cell || !when) continue;
+      cell.innerHTML = '<b>' + opp + '</b>' +
+        (ha ? ' <span class="ha">' + ha + '</span>' : '') +
+        '<span class="wsub">' + when + '</span>';
+    }
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', paintFixtures);
+  else paintFixtures();
+  setInterval(paintFixtures, 60000);
 })();

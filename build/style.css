@@ -755,3 +755,18 @@ a.intlblock.lnk:hover{border-color:var(--teal)}
   .dots button[aria-current="true"]{width:56px}
   .dots button[aria-current="true"]:hover{background:var(--yellow)}
 }
+
+/* fixture rows that read as sentences */
+.fxrow.when{grid-template-columns:1fr auto;gap:12px}
+.fxwhen b{font-size:15px;font-weight:600}
+.fxwhen .wsub{display:block;font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--yellow);margin-top:3px;letter-spacing:.06em}
+#myplayers .plrow .cl{display:block;margin-top:3px;font-size:12px}
+
+/* mobile menu needs to sit on top of the page, not blend into it */
+@media(max-width:820px){
+  .navlinks{background:#10171A;border:1px solid var(--line);border-radius:12px;
+    box-shadow:0 22px 50px rgba(0,0,0,.6);padding:8px;backdrop-filter:blur(14px)}
+  .navlinks a{padding:13px 14px;border-radius:8px;font-size:15px}
+  .navlinks a:not(:last-child){border-bottom:1px solid #1B2122}
+  .navlinks a:active{background:var(--panel2)}
+}
