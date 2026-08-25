@@ -376,8 +376,11 @@ img,svg,iframe{max-width:100%}
 .alertwho{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--mute);margin-bottom:12px}
 .alertwho b{color:var(--yellow)}
 @media(max-width:700px){
+  /* keep the rating visible on phones — it's the whole point of the row.
+     the goals/assists icons are the ones that can go. */
   .plrow{grid-template-columns:34px 1fr auto auto}
-  .plrow .mn{display:none}
+  .plrow .ev{display:none}
+  .plrow .mn{display:block;min-width:auto}
   .pdactions{flex-direction:row;align-items:center}
 }
 
