@@ -510,8 +510,21 @@ def add_players(args):
         print("run `scrape` to pull their data.")
 
 
-IRELAND_TEAMS = ["Republic of Ireland", "Ireland U21", "Ireland U20",
-                 "Ireland U19", "Ireland U17"]
+# the source labels the senior side plain "Ireland"; try both spellings
+IRELAND_TEAMS = [("Ireland", "Republic of Ireland"),
+                 ("Ireland U21", "Republic of Ireland U21"),
+                 ("Ireland U20", "Republic of Ireland U20"),
+                 ("Ireland U19", "Republic of Ireland U19"),
+                 ("Ireland U17", "Republic of Ireland U17")]
+
+
+def find_team_id_any(*terms):
+    for t in terms:
+        tid = find_team_id(t)
+        if tid:
+            return tid, t
+        time.sleep(SLEEP)
+    return None, terms[0]
 
 
 def find_team_id(term):
@@ -542,22 +555,21 @@ def find_team_id(term):
 
 def discover_ireland(args):
     cache = read_id_cache()
-    level_of = {"republic of ireland": "Senior", "ireland u21": "U21",
+    level_of = {"ireland": "Senior", "ireland u21": "U21",
                 "ireland u20": "U20", "ireland u19": "U19",
                 "ireland u17": "U17"}
     total = []
-    for term in IRELAND_TEAMS:
-        tid = find_team_id(term)
-        time.sleep(SLEEP)
+    for terms in IRELAND_TEAMS:
+        tid, term = find_team_id_any(*terms)
         if not tid:
-            print(f"{term}: team not found on source - skipped")
+            print(f"{terms[0]}: team not found on source - skipped")
             continue
         try:
             squad = team_irish_players(tid, term, debug=args.debug)
         except Exception as e:
             print(f"{term}: FAILED ({e})")
             continue
-        lvl = level_of[norm(term)]
+        lvl = level_of[norm(terms[0])]
         new = [{"slug": slugify(n), "name": n, "fotmob_id": pid,
                 "pos": pos, "ireland_level": lvl}
                for pid, (n, pos) in squad.items()]
@@ -694,19 +706,43 @@ def clubs_file(args):
         if e.get("fotmob_team") and e.get("team_id"):
             team_ids[e["fotmob_team"]] = e["team_id"]
 
-    rows, missing = [], []
+    def senior_name(name):
+        """'Benfica U19' / 'Southampton U18' / 'Fleetwood Town Academy'
+        -> the senior club name."""
+        s = re.sub(r"\s+(u|under[- ]?)\d{2}\b", "", name,
+                   flags=re.I)
+        s = re.sub(r"\s+(academy|reserves|youth|ii|b team)$", "", s,
+                   flags=re.I)
+        return s.strip()
+
+    rows, missing, resolved = [], [], {}
     for name in club_names:
         tid = team_ids.get(name) or find_team_id(name)
         time.sleep(SLEEP)
-        if not tid:
-            rows.append([name, "", "", ""])
-            missing.append(name)
-            continue
-        lat, lon, town = team_venue(tid, name, debug=args.debug)
-        rows.append([name, lat, lon, town])
+        lat = lon = town = ""
+        if tid:
+            lat, lon, town = team_venue(tid, name, debug=args.debug)
+        note = ""
         if not (lat and lon):
+            parent = senior_name(name)
+            if parent != name:
+                if parent in resolved:
+                    lat, lon, town = resolved[parent]
+                else:
+                    ptid = team_ids.get(parent) or find_team_id(parent)
+                    time.sleep(SLEEP)
+                    if ptid:
+                        lat, lon, town = team_venue(ptid, parent,
+                                                    debug=args.debug)
+                        resolved[parent] = (lat, lon, town)
+                if lat and lon:
+                    note = f"  (from {parent})"
+        rows.append([name, lat, lon, town])
+        if lat and lon:
+            resolved.setdefault(name, (lat, lon, town))
+        else:
             missing.append(name)
-        print(f"  {name}: {lat or '?'},{lon or '?'} {town}")
+        print(f"  {name}: {lat or '?'},{lon or '?'} {town}{note}")
 
     write_csv(Path(args.out) / "data/manual/clubs.csv",
               ["club", "lat", "lon", "town"], rows)
@@ -720,12 +756,12 @@ def clubs_file(args):
 def ireland_file(args):
     """Write data/manual/ireland.csv - senior + U21 fixtures & results."""
     rows = []
-    for term, label in (("Republic of Ireland", "senior"),
-                        ("Ireland U21", "u21")):
-        tid = find_team_id(term)
-        time.sleep(SLEEP)
+    for terms, label in ((("Ireland", "Republic of Ireland"), "senior"),
+                         (("Ireland U21", "Republic of Ireland U21"),
+                          "u21")):
+        tid, term = find_team_id_any(*terms)
         if not tid:
-            print(f"{term}: not found - skipped")
+            print(f"{terms[0]}: not found - skipped")
             continue
         ms = team_fixtures(tid, term, debug=args.debug)
         for m in ms:
