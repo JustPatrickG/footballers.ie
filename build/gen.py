@@ -143,11 +143,42 @@ def load():
             p["club"] = p["loan"]          # display the club they're actually at
     players.sort(key=lambda p: p["n"])
 
+    # The scraper writes: team,kickoff,competition,home,away,home_score,away_score,status
+    # The older hand-kept format was: level,type,date,opponent,home_away,score,competition
+    # Read either.
+    LEVEL_NAME = {"senior":"Senior","u21":"U21","u19":"U19","u17":"U17"}
     ireland = {}
     for r in _rows("manual/ireland.csv"):
-        lv = ireland.setdefault(r["level"], dict(label=r["level"], fixtures=[], results=[]))
-        if r["type"] == "fixture": lv["fixtures"].append((r["date"], r["opponent"], r["home_away"], r["competition"]))
-        else: lv["results"].append((r["date"], r["opponent"], r["score"], r["competition"]))
+        if r.get("team") or r.get("kickoff"):                     # scraper format
+            lvl = LEVEL_NAME.get((r.get("team") or "").strip().lower(),
+                                 (r.get("team") or "Senior").strip() or "Senior")
+            home, away = (r.get("home") or "").strip(), (r.get("away") or "").strip()
+            we_are_home = home.lower().startswith("ireland") or home.lower().startswith("republic")
+            opp = away if we_are_home else home
+            ha  = "H" if we_are_home else "A"
+            date = (r.get("kickoff") or "").strip()
+            comp = (r.get("competition") or "").strip()
+            hs, as_ = (r.get("home_score") or "").strip(), (r.get("away_score") or "").strip()
+            done = (r.get("status") or "").strip().lower() in ("ft","finished","played")
+            lv = ireland.setdefault(lvl, dict(label=lvl, fixtures=[], results=[]))
+            if done and hs != "" and as_ != "":
+                ours, theirs = (hs, as_) if we_are_home else (as_, hs)
+                lv["results"].append((date, opp, f"{ours}-{theirs}", comp))
+            else:
+                lv["fixtures"].append((date, opp, ha, comp))
+        else:                                                      # original format
+            lvl = r.get("level") or "Senior"
+            lv = ireland.setdefault(lvl, dict(label=lvl, fixtures=[], results=[]))
+            if r.get("type") == "fixture":
+                lv["fixtures"].append((r["date"], r["opponent"], r["home_away"], r["competition"]))
+            else:
+                lv["results"].append((r["date"], r["opponent"], r["score"], r["competition"]))
+
+    # newest results first, soonest fixtures first
+    for lv in ireland.values():
+        lv["fixtures"].sort(key=lambda x: x[0])
+        lv["results"].sort(key=lambda x: x[0], reverse=True)
+        lv["results"] = lv["results"][:6]
     news = [(r["tag"], r["headline"], r["standfirst"], r["player_slug"]) for r in _rows("manual/news.csv")]
     matches = _merge_rows("matches.csv", ("kickoff","home","away"))
     articles = sorted(_rows("manual/articles.csv"), key=lambda r: r.get("date",""), reverse=True)
