@@ -260,9 +260,41 @@
     }
   }
 
+  /* The scraper publishes /live.json every few minutes. Pull it in so scores
+     move without waiting for a rebuild; fall back to the built-in data. */
+  async function refresh() {
+    try {
+      var res = await fetch('/live.json?t=' + Date.now(), { cache: 'no-store' });
+      if (!res.ok) return;
+      var data = await res.json();
+      var list = Array.isArray(data) ? data : (data.matches || []);
+      if (!list.length) return;
+
+      var byId = {};
+      (window.FB_MATCHES || []).forEach(function (m) { byId[m.id] = m; });
+
+      list.forEach(function (l) {
+        var m = byId[l.id];
+        if (!m) return;                       // only update what the site knows about
+        if (l.status) m.status = l.status;
+        if (l.minute !== undefined) m.minute = l.minute;
+        if (l.hs !== undefined && l.hs !== null) m.hs = l.hs;
+        if (l.as_ !== undefined && l.as_ !== null) m.as_ = l.as_;
+        if (l.home_score !== undefined && l.home_score !== null) m.hs = l.home_score;
+        if (l.away_score !== undefined && l.away_score !== null) m.as_ = l.away_score;
+      });
+      render();
+      var stamp = document.querySelector('.updated');
+      if (stamp && data.updated) stamp.setAttribute('data-stamp', data.updated);
+    } catch (e) { /* offline or no live feed — the built page still stands */ }
+  }
+
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', render);
   else render();
   setInterval(render, 60000);
+
+  refresh();
+  setInterval(refresh, 60000);
 })();
 
 /* ---------- FOLLOW PROMPT ----------

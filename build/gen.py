@@ -135,6 +135,10 @@ def load():
             parent_club=(r.get("club") or "").strip(),
             rating=(r.get("avg_rating") or "").strip(),
             season_label=(r.get("season") or "").strip(),
+            source=(r.get("source") or "auto").strip().lower(),
+            blanks={k for k in ("s_apps","s_starts","s_goals","s_assists","s_mins",
+                                "s_yellow","s_red","c_apps","c_goals","c_assists")
+                    if not (r.get(k) or "").strip()},
             photo=(r.get("photo") or "").strip(),
             photo_credit=(r.get("photo_credit") or "").strip(),
             fixtures=fixtures.get(slug, []), results=results.get(slug, [])))
@@ -354,6 +358,17 @@ def ev_str(p):
     if g: bits.append("⚽"*g)
     if a: bits.append("🅰"*a)
     return (" ".join(bits) if bits else "—"), mins
+
+
+def stat(p, key, value):
+    """Blank in the feed means unknown, not zero."""
+    return "—" if key in p.get("blanks", ()) else value
+
+def has_data(p):
+    """Some players are tracked but the source has no page for them yet."""
+    if p.get("source") == "none": return False
+    s = p["season"]
+    return any([s["ap"], s["g"], s["a"], s["mins"], p.get("rating"), p["career"]["ap"]])
 
 def player_row(p, root=""):
     ev, mins = ev_str(p)
@@ -1380,6 +1395,30 @@ def build_player(p):
     s, c = p["season"], p["career"]
     badge = "League of Ireland" if p["tier"]=="loi" else ("Abroad · top flight" if p["tier"]=="abroad-top" else "Abroad")
 
+    if has_data(p):
+        statsblock = f'''
+    <div class="sec"><h2>Season {esc(p.get("season_label") or SEASON)}</h2>
+      {'<span class="more stale" style="border:0">Last season · no appearances yet this season</span>'
+       if not season_is_current(p.get("season_label")) else ''}</div>
+    <div class="pdstats">
+      <div class="pds"><div class="n">{stat(p,"s_apps",s["ap"])}</div><div class="l">Apps</div></div>
+      <div class="pds"><div class="n">{stat(p,"s_starts",s["starts"])}</div><div class="l">Starts</div></div>
+      <div class="pds"><div class="n">{stat(p,"s_goals",s["g"])}</div><div class="l">Goals</div></div>
+      <div class="pds"><div class="n">{stat(p,"s_assists",s["a"])}</div><div class="l">Assists</div></div>
+      <div class="pds"><div class="n">{stat(p,"s_mins",s["mins"])}</div><div class="l">Minutes</div></div>
+      <div class="pds"><div class="n"><span class="card yel">{stat(p,"s_yellow",s["yellow"])}</span></div><div class="l">Yellow cards</div></div>
+      <div class="pds"><div class="n"><span class="card red">{stat(p,"s_red",s["red"])}</span></div><div class="l">Red cards</div></div>
+      <div class="pds"><div class="n">{rating_chip(p)}</div><div class="l">Avg rating</div></div>
+      <div class="pds"><div class="n">{stat(p,"c_apps",c["ap"])}</div><div class="l">Career apps</div></div>
+      <div class="pds"><div class="n">{stat(p,"c_goals",c["g"])}</div><div class="l">Career goals</div></div>
+    </div>'''
+    else:
+        statsblock = (
+            '<div class="sec"><h2>Season data</h2></div>'
+            '<div class="nodata">We track this player, but our data source doesn\'t cover their '
+            'club yet — so there are no appearances, ratings or match records to show. '
+            'Their profile will fill in as soon as it does.</div>')
+
     upcoming = p["fixtures"]
     n_fx = len(p["fixtures"])
     fx_more = f'<span class="more" style="border:0">{n_fx} upcoming</span>' if n_fx else ""
@@ -1467,21 +1506,7 @@ def build_player(p):
       </div>
     </div>
 
-    <div class="sec"><h2>Season {esc(p.get("season_label") or SEASON)}</h2>
-      {'<span class="more stale" style="border:0">Last season · no appearances yet this season</span>'
-       if not season_is_current(p.get("season_label")) else ''}</div>
-    <div class="pdstats">
-      <div class="pds"><div class="n">{s["ap"]}</div><div class="l">Apps</div></div>
-      <div class="pds"><div class="n">{s["starts"]}</div><div class="l">Starts</div></div>
-      <div class="pds"><div class="n">{s["g"]}</div><div class="l">Goals</div></div>
-      <div class="pds"><div class="n">{s["a"]}</div><div class="l">Assists</div></div>
-      <div class="pds"><div class="n">{s["mins"]}</div><div class="l">Minutes</div></div>
-      <div class="pds"><div class="n"><span class="card yel">{s["yellow"]}</span></div><div class="l">Yellow cards</div></div>
-      <div class="pds"><div class="n"><span class="card red">{s["red"]}</span></div><div class="l">Red cards</div></div>
-      <div class="pds"><div class="n">{rating_chip(p)}</div><div class="l">Avg rating</div></div>
-      <div class="pds"><div class="n">{c["ap"]}</div><div class="l">Career apps</div></div>
-      <div class="pds"><div class="n">{c["g"]}</div><div class="l">Career goals</div></div>
-    </div>
+    {statsblock}
 
     <div class="sec"><h2>Upcoming fixtures</h2>{fx_more}</div>
     <div class="fxlist">{fxr or '<div class="emptystate" style="display:block">No fixtures listed.</div>'}</div>

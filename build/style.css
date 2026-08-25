@@ -773,3 +773,5 @@ a.intlblock.lnk:hover{border-color:var(--teal)}
   .navlinks a:not(:last-child){border-bottom:1px solid #1B2122}
   .navlinks a:active{background:var(--panel2)}
 }
+.nodata{border:1px solid var(--line);border-radius:10px;background:var(--panel);padding:16px 18px;
+  color:var(--mute);font-size:14px;line-height:1.6}
