@@ -533,9 +533,13 @@ def parse_transfer_line(line):
     left = re.split(r"\s+-\s+", left)[0]
     name = re.sub(r"[\ufe0f\u200d\U0001F000-\U0001FAFF"
                   r"\U000E0000-\U000E007F]", "", left).strip(" -")
-    if len(name.split()) < 2 or len(name) < 4:
+    words = name.split()
+    if not 2 <= len(words) <= 4 or len(name) < 4:
         return None
     if name.upper() == name:      # LEAGUE HEADERS
+        return None
+    # a name is Capitalised Words, not a sentence
+    if not all(w[:1].isupper() or w[:1] in "\u2018'" for w in words):
         return None
     return name, club
 
@@ -589,6 +593,8 @@ def add_list(args):
                     unsure.append(f"{name} ({club or 'no club'}) -> " +
                                   ", ".join(f"{c[1]}/{c[2] or '?'}#{c[0]}"
                                             for c in hits[:4]))
+        if pick and args.stub_only:
+            pick = None
         if pick:
             oid, cname, cteam = pick
             new.append({"slug": slugify(cname), "name": cname,
@@ -601,7 +607,25 @@ def add_list(args):
         time.sleep(SLEEP)
 
     added = append_players(new, cache, note="from transfer list")
-    print(f"\nadded {len(added)}")
+    print(f"\nadded {len(added)} with source data")
+
+    if args.stub_unmatched:
+        stubs = []
+        for label in unsure:
+            nm = label.split(" (")[0]
+            cl = label.split(" (")[1].split(")")[0] if " (" in label else ""
+            stubs.append({"slug": slugify(nm), "name": nm,
+                          "club": "" if cl == "no club" else cl,
+                          "fotmob_id": ""})
+        for label in notfound:
+            nm = label.split(" (")[0]
+            cl = label.split(" (")[1].split(")")[0] if " (" in label else ""
+            stubs.append({"slug": slugify(nm), "name": nm,
+                          "club": "" if cl == "no club" else cl,
+                          "fotmob_id": ""})
+        stubbed = append_players(stubs, cache, note="no source data")
+        print(f"added {len(stubbed)} as stubs (no match/result data "
+              f"until an id is filled in)")
     if unsure:
         print(f"\n{len(unsure)} ambiguous - add by id with "
               f"`add <id>` if you want them:")
@@ -1295,6 +1319,10 @@ def scrape(args):
         pid = entry.get("fotmob_id")
         if not pid:
             skipped.append(slug)
+            players_rows.append(
+                [slug, p.get("league", ""), p.get("club", ""), "", "", "",
+                 "", "", "", "", "", "", "", "", "", "", "", "", "", "",
+                 "", "none"])
             continue
         try:
             data = get_next_data(
@@ -1367,6 +1395,7 @@ def scrape(args):
             season["red"],
             c_apps, c_goals, c_assists,
             season["rating"],
+            "auto",
         ])
         # upcoming fixtures for this player's club, next N weeks
         if source_club and pt.get("teamId"):
@@ -1456,7 +1485,7 @@ def scrape(args):
                "senior_goals", "senior_debut", "youth", "season",
                "s_apps", "s_starts",
                "s_goals", "s_assists", "s_mins", "s_yellow", "s_red",
-               "c_apps", "c_goals", "c_assists", "avg_rating"],
+               "c_apps", "c_goals", "c_assists", "avg_rating", "source"],
               players_rows)
 
     if cache_dirty:
@@ -1670,6 +1699,11 @@ def main():
                         help="bulk-add players from a transfer list file")
     al.add_argument("file", nargs="?", default="scraper/transfers.txt",
                     help="path to the list (default scraper/transfers.txt)")
+    al.add_argument("--no-stubs", dest="stub_unmatched",
+                    action="store_false",
+                    help="don't add players the source doesn't cover")
+    al.add_argument("--stub-only", action="store_true",
+                    help="add every name as a stub, match nothing")
 
     di = sub.add_parser("discover-ireland",
                         help="add everyone in Ireland senior/U21/U20/"

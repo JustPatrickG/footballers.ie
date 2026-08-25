@@ -133,7 +133,7 @@ kickoff,competition,home,away,home_score,away_score,status,minute,players
 2026-08-27T15:00:00Z,Conference League Qualification,KuPS,Shamrock Rovers,,,scheduled,,aaron-greene;adam-brennan;alex-noonan;ben-mahon;cory-osullivan;daniel-cleary;daniel-grant;daniel-mandroiu;dylan-watts;edward-mcginty;enda-stevens;gary-oneil;graham-burke;jack-byrne;jake-mulraney;john-osullivan;jonathan-afolabi;lee-grace;lee-steacy;luke-oregan;matthew-healy;max-kovalevskis;michael-noonan;naj-razi;rory-gaffney;stephen-bradley;todd-bazunu;tunmise-sobowale;victor-ozhianvuna;william-fitzgerald
 2026-08-27T16:45:00Z,Conference League Qualification,Freiburg,Motherwell,,,scheduled,,joe-hodge
 2026-08-27T18:30:00Z,EFL Cup,Chelsea,Luton Town,,,scheduled,,callum-marshall;josh-keeley
-2026-08-27T18:30:00Z,Europa League Qualification,Ferencvaros,Trabzonspor,,,scheduled,,callum-odowda
+2026-08-27T18:30:00Z,Europa League Qualification,Ferencváros,Trabzonspor,,,scheduled,,callum-odowda
 2026-08-27T18:30:00Z,Conference League Qualification,Brighton & Hove Albion,Tromsø,,,scheduled,,evan-ferguson
 2026-08-27T18:45:00Z,National League,Boreham Wood,Boston United,,,scheduled,,gavan-holohan;niall-canavan
 2026-08-27T19:00:00Z,Conference League Qualification,Hibernian,Gent,,,scheduled,,jacob-devaney
@@ -290,7 +290,6 @@ kickoff,competition,home,away,home_score,away_score,status,minute,players
 2026-09-01T18:45:00Z,League One,Doncaster,Notts County,,,scheduled,,darius-lipsiuc;leon-ayinde;sean-grehan
 2026-09-01T18:45:00Z,League One,Peterborough,Stevenage,,,scheduled,,david-okagbue;evan-weir;liam-kelly;thomas-oconnor
 2026-09-01T18:45:00Z,Championship,Portsmouth,Derby,,,scheduled,,eoin-kenny;sammie-szmodics
-2026-09-01T18:45:00Z,Championship,Birmingham,Southampton,,,scheduled,,finn-azaz;ryan-manning
 2026-09-01T18:45:00Z,League Two,Tranmere,Rotherham,,,scheduled,,jacob-slater;joshua-kayode
 2026-09-01T18:45:00Z,League One,Leicester,Plymouth,,,scheduled,,james-storer
 2026-09-01T18:45:00Z,League One,Wycombe,Sheff Wed,,,scheduled,,jamie-mullins
@@ -298,6 +297,7 @@ kickoff,competition,home,away,home_score,away_score,status,minute,players
 2026-09-01T18:45:00Z,League Two,Cheltenham,York City,,,scheduled,,jordan-shipley;pierce-sweeney
 2026-09-01T18:45:00Z,League Two,Exeter,Barnet,,,scheduled,,oisin-gallagher
 2026-09-01T19:00:00Z,Championship,Stoke,Norwich,,,scheduled,,bosun-lawal
+2026-09-01T19:00:00Z,Championship,Birmingham,Southampton,,,scheduled,,finn-azaz;ryan-manning
 2026-09-02T16:00:00Z,Coppa Italia,Udinese,Venezia,,,scheduled,,james-abankwah
 2026-09-02T17:00:00Z,First Professional League,Slavia Sofia,Levski Sofia,,,scheduled,,armstrong-oko-flex
 2026-09-02T18:45:00Z,Premiership,Dundee FC,St. Johnstone,,,scheduled,,bobby-wales;ruari-paton
