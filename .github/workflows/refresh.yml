@@ -1,0 +1,38 @@
+name: hourly full refresh
+on:
+  schedule:
+    - cron: '5 * * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: data-write
+  cancel-in-progress: false
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install requests
+      - run: python3 scraper/irish_scraper.py scrape
+      - name: refresh Ireland fixtures (senior + U21)
+        run: python3 scraper/irish_scraper.py ireland
+      - name: commit if changed
+        run: |
+          git config user.name "scraper-bot"
+          git config user.email "actions@github.com"
+          git add data img scraper/match_index.json scraper/fotmob_ids.csv
+          if git diff --cached --quiet; then
+            echo "no change"
+          else
+            git commit -m "hourly data refresh"
+            git pull --rebase --autostash
+            git push
+          fi
