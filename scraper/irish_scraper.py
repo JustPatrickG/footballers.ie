@@ -511,6 +511,111 @@ def add_players(args):
 
 
 # the source labels the senior side plain "Ireland"; try both spellings
+ARROW = "\u27a1"
+
+
+def parse_transfer_line(line):
+    """'- Name (21) - LB | Old ➡️ New*' -> ('Name', 'New'). Returns None
+    for headers, blanks and comments."""
+    s = line.strip()
+    if not s or s.startswith("#"):
+        return None
+    if s[0] not in "-•*":
+        return None            # headers / section titles
+    s = re.sub(r"^[-•*]\s*", "", s)
+    s = s.replace("\u2019", "'").replace("*", "").replace("_", "")
+    if ARROW in s:
+        left, _, right = s.partition(ARROW)
+        club = re.sub(r"[\ufe0f\u200d]", "", right).strip(" .")
+    else:
+        left, club = s, ""
+    left = re.split(r"\s*[\(|]", left)[0]
+    left = re.split(r"\s+-\s+", left)[0]
+    name = re.sub(r"[\ufe0f\u200d\U0001F000-\U0001FAFF"
+                  r"\U000E0000-\U000E007F]", "", left).strip(" -")
+    if len(name.split()) < 2 or len(name) < 4:
+        return None
+    if name.upper() == name:      # LEAGUE HEADERS
+        return None
+    return name, club
+
+
+def add_list(args):
+    path = Path(args.file)
+    if not path.exists():
+        sys.exit(f"{path} not found")
+    entries = []
+    seen = set()
+    for line in path.read_text(encoding="utf-8").splitlines():
+        parsed = parse_transfer_line(line)
+        if parsed and norm(parsed[0]) not in seen:
+            seen.add(norm(parsed[0]))
+            entries.append(parsed)
+    print(f"parsed {len(entries)} names from {path.name}")
+
+    cache = read_id_cache()
+    have = {norm(p["name"]) for p in read_player_list()}
+    new, notfound, unsure = [], [], []
+
+    for i, (name, club) in enumerate(entries):
+        if norm(name) in have:
+            continue
+        try:
+            cands = search_candidates(name)
+        except Exception as e:
+            print(f"  [{i+1}/{len(entries)}] {name}: search failed ({e})")
+            notfound.append(name)
+            time.sleep(SLEEP)
+            continue
+        nname, nclub = norm(name), norm(club)
+        surname = nname.split()[-1]
+        hits = [c for c in cands
+                if norm(c[1]) == nname or nname in norm(c[1])
+                or surname in norm(c[1]).split()]
+        pick = None
+        if len(hits) == 1:
+            pick = hits[0]
+        elif hits:
+            for oid, cname, cteam in hits:
+                if nclub and norm(cteam) and (nclub in norm(cteam)
+                                              or norm(cteam) in nclub):
+                    pick = (oid, cname, cteam)
+                    break
+            if not pick:
+                exact = [h for h in hits if norm(h[1]) == nname]
+                if len(exact) == 1:
+                    pick = exact[0]
+                else:
+                    unsure.append(f"{name} ({club or 'no club'}) -> " +
+                                  ", ".join(f"{c[1]}/{c[2] or '?'}#{c[0]}"
+                                            for c in hits[:4]))
+        if pick:
+            oid, cname, cteam = pick
+            new.append({"slug": slugify(cname), "name": cname,
+                        "club": cteam or club, "fotmob_id": oid,
+                        "ireland_level": ""})
+            print(f"  [{i+1}/{len(entries)}] {name} -> {cname} "
+                  f"({cteam or club or 'no club'})")
+        elif not hits:
+            notfound.append(f"{name} ({club or 'no club'})")
+        time.sleep(SLEEP)
+
+    added = append_players(new, cache, note="from transfer list")
+    print(f"\nadded {len(added)}")
+    if unsure:
+        print(f"\n{len(unsure)} ambiguous - add by id with "
+              f"`add <id>` if you want them:")
+        for u in unsure:
+            print(f"  ? {u}")
+    if notfound:
+        print(f"\n{len(notfound)} not on the source (likely academy "
+              f"or non-league):")
+        for n in notfound:
+            print(f"  - {n}")
+    if added:
+        print("\nrun `scrape` to pull their data.")
+
+
 IRELAND_TEAMS = [("Ireland", "Republic of Ireland"),
                  ("Ireland U21", "Republic of Ireland U21"),
                  ("Ireland U20", "Republic of Ireland U20"),
@@ -1561,6 +1666,11 @@ def main():
     ad.add_argument("ids", nargs="+",
                     help="player ids or page URLs")
 
+    al = sub.add_parser("add-list",
+                        help="bulk-add players from a transfer list file")
+    al.add_argument("file", nargs="?", default="scraper/transfers.txt",
+                    help="path to the list (default scraper/transfers.txt)")
+
     di = sub.add_parser("discover-ireland",
                         help="add everyone in Ireland senior/U21/U20/"
                              "U19/U17 squads")
@@ -1587,6 +1697,8 @@ def main():
         live(args)
     elif args.cmd == "add":
         add_players(args)
+    elif args.cmd == "add-list":
+        add_list(args)
     elif args.cmd == "discover-ireland":
         discover_ireland(args)
     elif args.cmd == "clubs":
