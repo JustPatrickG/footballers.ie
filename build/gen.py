@@ -567,6 +567,27 @@ def week_activity():
     return out
 
 # ================= HOME =================
+def match_payload():
+    """Every match with at least one tracked player, for the client-side renderer."""
+    pmap = {p["slug"]: p for p in PLAYERS}
+    mc = []
+    for m in MATCHES:
+        if not m.get("kickoff"): continue
+        involved = []
+        for s in [x.strip() for x in (m.get("players") or "").split(";") if x.strip()]:
+            p = pmap.get(s)
+            if p: involved.append(dict(slug=s, n=esc(p["n"]), club=esc(p["club"]),
+                                       ini=initials(p["n"]), pos=p["pos"],
+                                       img=(1 if (not p.get("photo") and s in HAVE_IMG) else 0),
+                                       photo=(p.get("photo") or "")))
+        if not involved: continue
+        mc.append(dict(id=match_id(m), kickoff=m["kickoff"], comp=esc(m.get("competition","")),
+                       home=esc(m.get("home","")), away=esc(m.get("away","")),
+                       hs=m.get("home_score",""), as_=m.get("away_score",""),
+                       status=(m.get("status") or "scheduled"), minute=m.get("minute",""),
+                       players=involved))
+    return mc
+
 def build_index():
     GOALS = [p for p in PLAYERS if p["results"] and (p["results"][0][5] or p["results"][0][6])]
     # expiry: an article with `expires` in the past stays on the news page
@@ -619,24 +640,7 @@ def build_index():
     msh = "".join(f'<a class="mscard" href="{plink(m["p"])}"><div class="mstag">{esc(m["tag"])}</div>'
                   f'<div class="msn">{esc(m["p"]["n"])}</div><div class="msd">{esc(m["text"])}</div></a>' for m in ms)
 
-    # ---- match centre payload (filtered client-side to a live window) ----
-    pmap = {p["slug"]: p for p in PLAYERS}
-    mc = []
-    for m in MATCHES:
-        if not m.get("kickoff"): continue
-        involved = []
-        for s in [x.strip() for x in (m.get("players") or "").split(";") if x.strip()]:
-            p = pmap.get(s)
-            if p: involved.append(dict(slug=s, n=esc(p["n"]), club=esc(p["club"]),
-                                       ini=initials(p["n"]), pos=p["pos"],
-                                       img=(1 if (not p.get("photo") and s in HAVE_IMG) else 0),
-                                       photo=(p.get("photo") or "")))
-        if not involved: continue
-        mc.append(dict(id=match_id(m), kickoff=m["kickoff"], comp=esc(m.get("competition","")),
-                       home=esc(m.get("home","")), away=esc(m.get("away","")),
-                       hs=m.get("home_score",""), as_=m.get("away_score",""),
-                       status=(m.get("status") or "scheduled"), minute=m.get("minute",""),
-                       players=involved))
+    mc = match_payload()
 
     # ---- abroad / LOI split ----
     abroad = [p for p in PLAYERS if p["tier"].startswith("abroad")]
@@ -1370,21 +1374,12 @@ def build_ireland():
                  "Ireland fixtures, results and capped players at every level.","", "ireland.html", body, canonical="ireland.html")
 
 def build_fixtures():
-    rows = []
-    for p in PLAYERS:
-        for d,o,h,c in p["fixtures"]:
-            rows.append((d, p, o, h, c))
-    order = {}
-    for d,p,o,h,c in rows: order.setdefault(d, []).append((p,o,h,c))
-    out = ""
-    for d in sorted(order, key=date_key):
-        items = "".join(f'<a class="fxrow lnk pfx" href="{plink(p)}"><div class="fxo">{esc(p["n"])} '
-                        f'<span class="cl">{esc(p["club"])}</span></div>'
-                        f'<div class="fxv">v {esc(o)} <span class="ha">{h}</span></div>'
-                        f'<div class="fxc">{esc(c)}</div></a>' for p,o,h,c in order[d])
-        out += f'<div class="tiergroup"><h4><span>{esc(day_label(d))}</span><span>{len(order[d])} match{"es" if len(order[d])!=1 else ""}</span></h4>{items}</div>'
-    body = (f'<div class="pagehead"><h1>Fixtures</h1><p>Every upcoming game a tracked Irish player could feature in.</p></div>{out}')
-    return shell("Fixtures — IRISH FBALL","Every upcoming game a tracked Irish player could feature in.","", "fixtures.html", body, canonical="fixtures.html")
+    mc = match_payload()
+    body = (f'<div class="pagehead"><h1>Fixtures</h1><p>Every game a tracked Irish player is involved in. '
+            f'Scroll up for results, down for what\'s coming.</p></div>'
+            f'<div id="fxall"></div>'
+            f'<script>window.FB_MATCHES={json.dumps(mc)};</script>')
+    return shell("Fixtures — IRISH FBALL","Every game a tracked Irish player is involved in.","", "fixtures.html", body, canonical="fixtures.html")
 
 # ================= MILESTONES =================
 def milestone_items():

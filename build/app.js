@@ -196,7 +196,85 @@
     return [];
   }
 
+  function card(m, now, limit, root) {
+    root = root || '';
+    var list = limit ? m.players.slice(0, limit) : m.players;
+    var players = list.map(function (p) {
+      var face = p.photo ? p.photo : (p.img ? root + 'img/players/' + p.slug + '.png' : '');
+      var av = face
+        ? '<div class="pavatar sm"><img src="' + face + '" alt="" loading="lazy" ' +
+          'onerror="this.parentNode.innerHTML=\'<span>' + p.ini + '</span>\'"></div>'
+        : '<div class="pavatar sm"><span>' + p.ini + '</span></div>';
+      return '<a class="mcp" href="' + root + 'player/' + p.slug + '.html" title="' + p.n + '">' +
+             av + '<span class="mcpn">' + p.n + '</span></a>';
+    }).join('');
+    if (limit && m.players.length > limit) {
+      players += '<span class="mcmore">+' + (m.players.length - limit) + ' more</span>';
+    }
+    return '<div class="mccard" data-href="' + root + 'match/' + m.id + '.html" role="link" tabindex="0">' +
+           '<div class="mcrow">' +
+             '<span class="mccomp">' + m.comp + '</span>' + statusChip(m, now) +
+           '</div>' +
+           '<div class="mcteams"><div class="mct">' + m.home + '</div>' + score(m, now) +
+           '<div class="mct right">' + m.away + '</div></div>' +
+           '<div class="mcplayers">' + players + '</div></div>';
+  }
+
+  function wireCards(box) {
+    var cards = box.querySelectorAll('.mccard');
+    for (var c = 0; c < cards.length; c++) {
+      (function (card) {
+        function go(e) {
+          if (e.target.closest && e.target.closest('a')) return;
+          location.href = card.getAttribute('data-href');
+        }
+        card.addEventListener('click', go);
+        card.addEventListener('keydown', function (e) {
+          if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); go(e); }
+        });
+      })(cards[c]);
+    }
+  }
+
+  /* Fixtures page: every match, one card each, grouped by local day.
+     Results above, fixtures below; first load scrolls to today. */
+  var fxScrolled = false;
+  function renderAll() {
+    var box = document.getElementById('fxall');
+    if (!box || !window.FB_MATCHES) return;
+    var now = Date.now();
+    var all = FB_MATCHES.slice().sort(function (a, b) { return ko(a) - ko(b); });
+    if (!all.length) { box.innerHTML = '<div class="emptybox">No fixtures loaded yet.</div>'; return; }
+    var groups = [], byDay = {};
+    all.forEach(function (m) {
+      var d = new Date(m.kickoff);
+      var key = d.getFullYear() + '-' + (d.getMonth() + 1) + '-' + d.getDate();
+      if (!byDay[key]) { byDay[key] = { key: key, d: d, ms: [] }; groups.push(byDay[key]); }
+      byDay[key].ms.push(m);
+    });
+    var t = new Date(now), todayKey = t.getFullYear() + '-' + (t.getMonth() + 1) + '-' + t.getDate();
+    var anchorSet = false, html = '';
+    groups.forEach(function (g) {
+      var isPast = g.ms.every(function (m) { return m.status === 'ft' || ended(m) <= now; });
+      var anchor = '';
+      if (!anchorSet && !isPast) { anchor = ' id="fx-today"'; anchorSet = true; }
+      var label = g.d.toLocaleDateString([], { weekday: 'short', day: 'numeric', month: 'short' });
+      if (g.key === todayKey) label = 'Today · ' + label;
+      html += '<div class="tiergroup fxday' + (isPast ? ' past' : '') + '"' + anchor + '>' +
+              '<h4><span>' + label + '</span><span>' + g.ms.length + (g.ms.length === 1 ? ' match' : ' matches') + '</span></h4>' +
+              '<div class="fxcards">' + g.ms.map(function (m) { return card(m, now, 0, ''); }).join('') + '</div></div>';
+    });
+    box.innerHTML = html;
+    wireCards(box);
+    if (!fxScrolled) {
+      fxScrolled = true;
+      var el = document.getElementById('fx-today');
+      if (el) { el.scrollIntoView({ block: 'start' }); window.scrollBy(0, -70); }
+    }
+  }
+
   function render() {
+    renderAll();
     var sec = document.getElementById('mc-sec'), box = document.getElementById('mc');
     if (!sec || !box || !window.FB_MATCHES) return;
     var now = Date.now();
@@ -213,41 +291,9 @@
 
     var shown = choose(all, now);
 
-    box.innerHTML = shown.map(function (m) {
-      var players = m.players.slice(0, 2).map(function (p) {
-        var face = p.photo ? p.photo : (p.img ? 'img/players/' + p.slug + '.png' : '');
-        var av = face
-          ? '<div class="pavatar sm"><img src="' + face + '" alt="" loading="lazy" ' +
-            'onerror="this.parentNode.innerHTML=\'<span>' + p.ini + '</span>\'"></div>'
-          : '<div class="pavatar sm"><span>' + p.ini + '</span></div>';
-        return '<a class="mcp" href="player/' + p.slug + '.html" title="' + p.n + '">' +
-               av + '<span class="mcpn">' + p.n + '</span></a>';
-      }).join('');
-      if (m.players.length > 2) {
-        players += '<span class="mcmore">+' + (m.players.length - 2) + ' more</span>';
-      }
-      return '<div class="mccard" data-href="match/' + m.id + '.html" role="link" tabindex="0">' +
-             '<div class="mcrow">' +
-               '<span class="mccomp">' + m.comp + '</span>' + statusChip(m, now) +
-             '</div>' +
-             '<div class="mcteams"><div class="mct">' + m.home + '</div>' + score(m, now) +
-             '<div class="mct right">' + m.away + '</div></div>' +
-             '<div class="mcplayers">' + players + '</div></div>';
-    }).join('');
+    box.innerHTML = shown.map(function (m) { return card(m, now, 2, ''); }).join('');
 
-    var cards = box.querySelectorAll('.mccard');
-    for (var c = 0; c < cards.length; c++) {
-      (function (card) {
-        function go(e) {
-          if (e.target.closest && e.target.closest('a')) return;
-          location.href = card.getAttribute('data-href');
-        }
-        card.addEventListener('click', go);
-        card.addEventListener('keydown', function (e) {
-          if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); go(e); }
-        });
-      })(cards[c]);
-    }
+    wireCards(box);
 
     var more = document.getElementById('mc-more');
     if (more) {

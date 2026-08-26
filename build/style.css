@@ -867,3 +867,9 @@ a.intlblock.lnk:hover{border-color:var(--teal)}
 .nowdot{width:8px;height:8px;border-radius:50%;background:var(--red);animation:nowpulse 1.3s infinite}
 @keyframes nowpulse{50%{box-shadow:0 0 0 6px rgba(255,90,72,.18)}}
 [data-theme="pitch"] .slide.now{border-color:rgba(255,84,112,.5);background:linear-gradient(160deg,#241417,#111)}
+
+/* fixtures page */
+.fxcards{display:grid;gap:10px;padding-top:10px}
+@media(min-width:760px){.fxcards{grid-template-columns:1fr 1fr}}
+.fxday.past .mccard{opacity:.78}
+.fxday.past .mccard:hover{opacity:1}
