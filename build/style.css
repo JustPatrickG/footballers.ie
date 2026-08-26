@@ -1118,3 +1118,13 @@ a.intlblock.lnk:hover{border-color:var(--teal)}
 .nrow.noimg{grid-template-columns:1fr}
 .nlist .nrow{grid-template-columns:1fr}
 .nlist .nrowimg{display:none}
+
+/* article: left-aligned on desktop */
+.article{margin-left:0;max-width:760px}
+.article h1{font-size:clamp(26px,3.4vw,40px)}
+/* follow-sell: compact, no overlap */
+.followsell{margin:14px 0 8px;padding:14px 16px;gap:12px}
+.followsell b{font-size:15px}
+.followsell p{font-size:13px;line-height:1.45}
+.followsell .btn{padding:8px 13px;font-size:14px}
+@media(max-width:560px){.followsell{padding:12px 14px}.followsell .btn{width:100%;text-align:center}}
