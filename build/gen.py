@@ -275,6 +275,25 @@ def load():
     return players, ireland, news, matches, articles, accounts, clubgeo, tmdata
 
 PLAYERS, IRELAND, NEWS, MATCHES, ARTICLES, ACCOUNTS, CLUBGEO, TM = load()
+
+def _extend_matches():
+    """The scraper only writes matches.csv for a 2-week window. Every player fixture
+       beyond that still deserves a match page, so build the rest from fixtures.csv."""
+    have = {match_id(m) for m in MATCHES}
+    synth = {}
+    for p in PLAYERS:
+        club = p.get("club") or ""
+        if not club: continue
+        for d,o,h,cp in p["fixtures"]:
+            if len(d) < 10: continue
+            home, away = (club, o) if str(h).upper().startswith("H") else (o, club)
+            m = dict(kickoff=d, competition=cp, home=home, away=away, home_score="", away_score="",
+                     status="scheduled", minute="", players=p["slug"])
+            k = match_id(m)
+            if k in have: continue
+            if k in synth: synth[k]["players"] += ";" + p["slug"]
+            else: synth[k] = m
+    MATCHES.extend(synth.values())
 TIERS = {"abroad-top":"Abroad — top divisions",
          "abroad-lower":"Abroad — second tier & smaller leagues",
          "loi":"League of Ireland"}
@@ -606,7 +625,14 @@ def match_payload():
                        players=involved))
     return mc
 
+_EXT_DONE=False
+def _ensure_ext():
+    global _EXT_DONE
+    if not _EXT_DONE:
+        _EXT_DONE=True; _extend_matches()
+
 def build_index():
+    _ensure_ext()
     GOALS = [p for p in PLAYERS if p["results"] and (p["results"][0][5] or p["results"][0][6])]
     # expiry: an article with `expires` in the past stays on the news page
     # but drops out of the homepage carousel. NOW/LIVE/BREAKING pins first
@@ -1590,7 +1616,7 @@ def events_block(m, involved):
         hs = ", ".join(f'{esc(e.get("player",""))} {esc(e.get("minute",""))}\'' + (" (og)" if e.get("type")=="own_goal" else "") for e in sorted(scorers,key=_min) if (e.get("team","") or "").strip()==home.strip())
         as_ = ", ".join(f'{esc(e.get("player",""))} {esc(e.get("minute",""))}\'' + (" (og)" if e.get("type")=="own_goal" else "") for e in sorted(scorers,key=_min) if (e.get("team","") or "").strip()!=home.strip())
         summ = f'<div class="mscorers"><div>{hs or "—"}</div><div class="r">{as_ or "—"}</div></div>'
-    return (f'{summ}<div class="sec"><h2>Timeline</h2>{f"<span class=\"more\" style=\"border:0\">{esc(venue)}</span>" if venue else ""}</div>'
+    return (f'<div class="sec"><h2>Timeline</h2>{f"<span class=\"more\" style=\"border:0\">{esc(venue)}</span>" if venue else ""}</div>'
             f'<div class="timeline">{rows}</div>'
             f'<div class="rmnote">Irish players in <b class="ir">green</b>. Goals, cards and missed penalties only.</div>')
 
@@ -1806,7 +1832,7 @@ def build_player(p):
     tie_note = ("Cap-tied to Ireland — a competitive senior appearance means the other associations below are closed off."
                 if p["cap_status"]=="senior_comp" else
                 "Youth caps and senior friendlies don't cap-tie a player, so a switch is still possible under FIFA rules."
-                if p["cap_status"] in ("youth","senior_friendly") else
+                if p["cap_status"] in ("youth","senior_friendly") or p["intl_youth"] else
                 "Uncapped at any level — free to commit to any association they qualify for.")
 
     trans = "".join(f'<div class="trow"><div class="ty">{esc(y)}</div><div class="tf">{esc(f)} → <b>{esc(t)}</b></div>'
@@ -1986,6 +2012,7 @@ FAVICON = '''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
 os.makedirs(f"{OUT}/player", exist_ok=True)
 os.makedirs(f"{OUT}/club", exist_ok=True)
 
+_ensure_ext()
 open(f"{OUT}/index.html","w").write(build_index())
 open(f"{OUT}/players.html","w").write(build_list("players.html","All players","Every professional Irish player on the books — abroad and at home.",PLAYERS))
 open(f"{OUT}/abroad.html","w").write(build_list("abroad.html","Abroad","Irish players at clubs outside Ireland, top flight to smaller leagues.",[p for p in PLAYERS if p["tier"].startswith("abroad")]))

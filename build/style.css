@@ -1034,3 +1034,9 @@ a.intlblock.lnk:hover{border-color:var(--teal)}
 .cd{display:inline-block;width:9px;height:13px;border-radius:2px;vertical-align:middle}
 .cd.y{background:#E8A400}.cd.r{background:#FF5470}.cd.y2{background:linear-gradient(135deg,#E8A400 50%,#FF5470 50%)}
 @media(max-width:560px){.tl{grid-template-columns:1fr 60px 1fr;font-size:13px;padding:8px 10px}}
+
+/* international cards: keep "View squad" inside the box */
+.ilvl{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 8px}
+.ilvl>span:not(.go){margin-left:0}
+.ilvl .go{float:none;margin-left:auto;white-space:nowrap}
+@media(max-width:560px){.ilvl{flex-direction:column;align-items:flex-start}.ilvl .go{margin-left:0;margin-top:6px}}
