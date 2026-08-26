@@ -257,14 +257,18 @@
     return h;
   }
 
+  function bdg(id, cls) {
+    if (!id) return '<span class="badge ' + cls + ' none"></span>';
+    return '<img class="badge ' + cls + '" src="https://images.fotmob.com/image_resources/logo/teamlogo/' + id + '.png" alt="" loading="lazy" onerror="this.classList.add(\'none\')">';
+  }
   function card(m, now, limit, root) {
     root = root || '';
     return '<div class="mccard" data-href="' + root + 'match/' + m.id + '.html" role="link" tabindex="0">' +
            '<div class="mcrow">' +
              '<span class="mccomp">' + m.comp + '</span>' + statusChip(m, now) +
            '</div>' +
-           '<div class="mcteams"><div class="mct">' + m.home + '</div>' + score(m, now) +
-           '<div class="mct right">' + m.away + '</div></div>' +
+           '<div class="mcteams"><div class="mct">' + bdg(m.hb, 'sm') + m.home + '</div>' + score(m, now) +
+           '<div class="mct right">' + m.away + bdg(m.ab, 'sm') + '</div></div>' +
            '<div class="mcplayers">' + playersHtml(m, root, limit) + '</div></div>';
   }
 
@@ -347,7 +351,7 @@
     box.innerHTML = comps.map(function (c) {
       var rows = byComp[c].map(function (m) {
         return '<div class="fxmatch" data-href="match/' + m.id + '.html" role="link" tabindex="0">' +
-               '<div class="fxt"><div class="h">' + m.home + '</div>' + midRow(m, now) + '<div class="a">' + m.away + '</div></div>' +
+               '<div class="fxt"><div class="h">' + m.home + bdg(m.hb, 'sm') + '</div>' + midRow(m, now) + '<div class="a">' + bdg(m.ab, 'sm') + m.away + '</div></div>' +
                '<div class="fxp">' + playersHtml(m, '', 0) + '</div></div>';
       }).join('');
       return '<div class="fxcomp"><h4><span>' + c + '</span><small>' + byComp[c].length + (byComp[c].length === 1 ? ' match' : ' matches') + '</small></h4>' + rows + '</div>';

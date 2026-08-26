@@ -466,6 +466,32 @@ def club_slug(c):
 def plink(p, root=""): return f'{root}player/{p["slug"]}.html'
 def clink(c, root=""): return f'{root}club/{club_slug(c)}.html'
 
+CLUB_IDS = {}
+ACADEMY_RE = re.compile(r"\s+(u\d{2}|academy|reserves?|ii|b)$", re.I)
+def _register_club_ids():
+    """club name -> FotMob team id, from players.csv and clubs.csv.
+       Academy sides (U21/U18/Academy) borrow the senior club's badge when we have one."""
+    for r in _rows("api/players.csv"):
+        if (r.get("club") or "").strip() and (r.get("club_id") or "").strip():
+            CLUB_IDS.setdefault(r["club"].strip(), r["club_id"].strip())
+    for r in _rows("manual/clubs.csv"):
+        if (r.get("club") or "").strip() and (r.get("club_id") or "").strip():
+            CLUB_IDS.setdefault(r["club"].strip(), r["club_id"].strip())
+_register_club_ids()
+
+def club_id(name):
+    n = (name or "").strip()
+    if not n: return ""
+    parent = ACADEMY_RE.sub("", n)
+    if parent != n and parent in CLUB_IDS: return CLUB_IDS[parent]
+    return CLUB_IDS.get(n, "")
+
+def club_badge(name, size="sm"):
+    cid = club_id(name)
+    if not cid: return f'<span class="badge {size} none"></span>'
+    return (f'<img class="badge {size}" src="https://images.fotmob.com/image_resources/logo/teamlogo/{cid}.png" '
+            f'alt="" loading="lazy" onerror="this.classList.add(\'none\')">')
+
 def ev_str(p):
     r = p["results"][0] if p["results"] else None
     if not r: return "—", 0
@@ -490,7 +516,7 @@ def player_row(p, root=""):
     ev, mins = ev_str(p)
     return (f'<a class="plrow" href="{plink(p,root)}">{avatar(p, root, "sm")}'
             f'<div class="nm">{esc(p["n"])} '
-            f'<span class="cl">{esc(p["club"])}</span></div><div class="ev">{ev}</div>'
+            f'<span class="cl">{club_badge(p["club"],"xs")}{esc(p["club"])}</span></div><div class="ev">{ev}</div>'
             f'<div class="mn">{rating_chip(p, True)}</div>{star(p)}</a>')
 
 
@@ -619,6 +645,7 @@ def match_payload():
         if not involved: continue
         mc.append(dict(id=match_id(m), kickoff=m["kickoff"], comp=esc(m.get("competition","")),
                        home=esc(m.get("home","")), away=esc(m.get("away","")),
+                       hb=club_id(m.get("home","")), ab=club_id(m.get("away","")),
                        hs=m.get("home_score",""), as_=m.get("away_score",""),
                        status=(m.get("status") or "scheduled"), minute=m.get("minute",""),
                        loi=(1 if is_loi_match(m, involved) else 0),
@@ -1406,7 +1433,7 @@ def build_league(cname, lname, ps):
     for c in order:
         cp = by_club[c]
         cards += (f'<a class="clubcard" href="../{clink(c)}">'
-                  f'<div class="cn">{esc(c)}</div>'
+                  f'<div class="cn">{club_badge(c)}{esc(c)}</div>'
                   f'<div class="cl2">{esc(lname)}</div>'
                   f'<div class="cc">{len(cp)} Irish player{"s" if len(cp)!=1 else ""}</div></a>')
     body = (f'<a class="crumb" data-back href="../country/{country_slug(cname)}.html">← Back</a>'
@@ -1425,7 +1452,7 @@ def build_club(cname, ps):
                   for d,o,h,c in fx)
     body = f'''
     <a class="crumb" data-back href="../clubs.html">← Back</a>
-    <div class="pagehead"><h1>{esc(cname)}</h1><p>{esc(ps[0]["league"]) + " · " if ps[0]["league"] not in ("","—") else ""}{len(ps)} Irish player{"s" if len(ps)!=1 else ""} tracked</p></div>
+    <div class="pagehead"><h1>{club_badge(cname,"lg")}{esc(cname)}</h1><p>{esc(ps[0]["league"]) + " · " if ps[0]["league"] not in ("","—") else ""}{len(ps)} Irish player{"s" if len(ps)!=1 else ""} tracked</p></div>
     <div class="sec"><h2>Irish players</h2></div>
     <div class="tiergroup">{rows}</div>
     <div class="sec"><h2>Upcoming fixtures</h2></div>
@@ -1640,9 +1667,9 @@ def build_match(m, involved):
     <div class="matchhead">
       <div class="mcrow"><span class="mccomp">{esc(m.get("competition",""))}</span>{chip}</div>
       <div class="mteams">
-        <div class="mteam">{esc(m.get("home",""))}</div>
+        <div class="mteam">{club_badge(m.get("home",""),"md")}<span>{esc(m.get("home",""))}</span></div>
         {scoreline}
-        <div class="mteam right">{esc(m.get("away",""))}</div>
+        <div class="mteam right"><span>{esc(m.get("away",""))}</span>{club_badge(m.get("away",""),"md")}</div>
       </div>
     </div>
     {events_block(m, involved)}
@@ -1846,7 +1873,7 @@ def build_player(p):
         <div>
         <div class="pdname">{esc(p["n"])}</div>
         <div class="pdmeta">{" · ".join(filter(None,[
-            f'<a href="{clink(p["club"],"../")}">{esc(p["club"])}</a>',
+            f'<a href="{clink(p["club"],"../")}">{club_badge(p["club"])}{esc(p["club"])}</a>',
             esc(p["league"]) if p["league"] not in ("","—") else "",
             p["pos"] if p["pos"] not in ("","—") else "",
             str(p["age"]) if p["age"] else "",

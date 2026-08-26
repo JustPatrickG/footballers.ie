@@ -1040,3 +1040,18 @@ a.intlblock.lnk:hover{border-color:var(--teal)}
 .ilvl>span:not(.go){margin-left:0}
 .ilvl .go{float:none;margin-left:auto;white-space:nowrap}
 @media(max-width:560px){.ilvl{flex-direction:column;align-items:flex-start}.ilvl .go{margin-left:0;margin-top:6px}}
+
+/* club badges */
+.badge{display:inline-block;vertical-align:middle;object-fit:contain;flex:0 0 auto}
+.badge.xs{width:14px;height:14px;margin-right:5px}
+.badge.sm{width:20px;height:20px;margin:0 7px}
+.badge.md{width:34px;height:34px;margin:0 10px}
+.badge.lg{width:44px;height:44px;margin-right:12px;vertical-align:-10px}
+.badge.none{display:none}
+.mteam{display:flex;align-items:center;gap:4px}
+.mteam.right{justify-content:flex-end}
+.mct{display:flex;align-items:center}
+.mct.right{justify-content:flex-end}
+.fxmatch .fxt .h{display:flex;align-items:center;justify-content:flex-end}
+.fxmatch .fxt .a{display:flex;align-items:center}
+.clubcard .cn{display:flex;align-items:center;gap:6px}
