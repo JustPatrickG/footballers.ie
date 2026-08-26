@@ -733,7 +733,7 @@ def build_index():
                 f'<a class="more" href="{href}">All {len(group)} →</a></div>'
                 f'<div class="tiergroup">{rows}</div>') if group else ""
 
-    news_block = (f'<div class="sec" style="margin-top:26px"><h2>News</h2><a class="more" href="news.html">All news →</a></div>'
+    news_block = (f'<div class="sec" style="margin-top:8px"><h2>News</h2><a class="more" href="news.html">All news →</a></div>'
                   f'<div class="carousel-wrap"><div class="carousel" id="carousel">{slides}</div>'
                   f'<div class="dots">{dots}</div></div>') if HEAD else ""
 
@@ -819,6 +819,8 @@ def build_index():
       </div>
     </section>
 
+    {news_block}
+
     <div id="mc-sec">
       <div class="sec"><h2>Match centre</h2><a class="more" id="mc-more" href="fixtures.html" style="display:none">See all →</a></div>
       <div id="mc"></div>
@@ -833,8 +835,6 @@ def build_index():
       <div><b>Follow your players</b><p>Tap ★ beside any name. They'll show up here with their next match, and you can get an email when they play, score or get subbed on.</p></div>
       <a class="btn" href="players.html">Pick your players →</a>
     </div>
-
-    {news_block}
 
     <div id="thisweek"></div>
     {week_block}
