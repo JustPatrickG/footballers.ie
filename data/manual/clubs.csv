@@ -1,80 +1,235 @@
-club,lat,lon,town
-Athlone Town,53.427524606,-7.919147015,Athlone
-Barnet,51.602622431,-0.291717052,London
-Benfica U19,38.752648360,-9.184699059,Lisboa
-Blackburn Rovers,53.728578814,-2.489207983,"Blackburn, Lancashire"
-Bohemian FC,53.361885299,-6.275070906,Dublin
-Bray Wanderers,53.205708041,-6.102690697,Bray
-Brentford,51.490729000,-0.288884000,"Brentford, Middlesex"
-Brighton & Hove Albion,50.861579551,-0.083642006,"Falmer, East Sussex"
-Brighton & Hove Albion U21,50.830515394,-0.310798525,"Lancing, West Sussex"
-Bristol City,51.440122578,-2.620278150,Bristol
-Burnley U21,53.692918860,-2.694501579,"Leyland, Lancashire"
-Burton Albion,52.821911043,-1.626877785,"Burton-upon-Trent, Staffordshire"
-Cardiff City,51.472829314,-3.203115455,Cardiff (Caerdydd)
-Celtic,55.849719363,-4.205580354,Glasgow
-Charlton Athletic,51.486507384,0.036435127,London
-Cliftonville,54.619518177,-5.947270095,Belfast
-Cork City,51.885590794,-8.467841148,Cork
-Cosenza,39.079253732,17.116672397,Crotone
-Derby County,52.914904941,-1.447230130,Derby
-Derry City,54.990707986,-7.336254716,Derry (Londonderry)
-Doncaster Rovers,53.509820635,-1.113757789,"Doncaster, South Yorkshire"
-Drogheda United,53.723370533,-6.357307434,Drogheda
-Dundalk,53.998950181,-6.416589618,Dundalk
-Dundee United,56.474708794,-2.969014943,Dundee
-Erzurumspor FK,39.911164059,41.237976551,Erzurum
-Everton,53.424981480,-3.002691341,"Liverpool, Merseyside"
-FC Liefering,47.816293982,12.998183370,Wals-Siezenheim
-Ferencvaros,47.475514128,19.095286153,Budapest
-Finn Harps,54.797963665,-7.778674364,Ballybofey
-Fleetwood Town Academy,53.916497480,-3.024721742,"Fleetwood, Lancashire"
-Francs Borains,50.413515544,3.779329062,Boussu
-Galway United FC,53.284709881,-9.056307077,Galway
-Gillingham,51.384236275,0.560730547,"Gillingham, Kent"
-Göztepe,38.397034000,27.075879000,İzmir
-Hibernian,55.961782474,-3.165311068,Edinburgh
-Hull City,53.746239635,-0.367639661,Hull
-Ipswich Town,52.054949657,1.145263016,"Ipswich, Suffolk"
-Kaiserslautern,49.434711593,7.776432037,Kaiserslautern
-Lecce,40.365103138,18.208851814,Lecce
-Levski Sofia,42.705303512,23.363172412,Sofia
-Lincoln City,53.218342848,-0.540904999,"Lincoln, Lincolnshire"
-Luton Town,51.884226600,-0.431782007,"Luton, Bedfordshire"
-Millwall,51.485933664,-0.050959289,London
-Molde,62.734050390,7.148151398,Molde
-Monaco U19,43.727563789,7.415542156,Monaco
-Motherwell,55.780377351,-3.980151415,Motherwell
-Newcastle United U21,55.009830814,-1.563733220,Newcastle upon Tyne
-Nottingham Forest U21,52.759320893,-1.242447495,"Loughborough, Leicestershire"
-Notts County,52.942633203,-1.137188226,"Nottingham, Nottinghamshire"
-Oxford United,51.716487110,-1.207939535,"Oxford, Oxfordshire"
-Peterborough United,52.564692341,-0.240407735,"Peterborough, Cambridgeshire"
-Pike Rovers,,,
-Preston North End,53.772181168,-2.688431740,Preston
-Preston North End U23,53.772181168,-2.688431740,Preston
-Queens Park Rangers,51.509264976,-0.232138485,London
-Real Betis,37.417208903,-6.004661322,Sevilla
-Shamrock Rovers,53.283529667,-6.373690367,Dublin
-Sheffield United,53.370346199,-1.470864415,Sheffield
-Shelbourne,53.367512749,-6.251928806,Dublin
-Shelbourne U19,53.367512749,-6.251928806,Dublin
-Sligo Rovers,54.270061151,-8.487324715,Sligo
-Southampton,50.905894751,-1.391047239,"Southampton, Hampshire"
-Southampton U18,50.905894751,-1.391047239,"Southampton, Hampshire"
-St. Mirren,55.850520387,-4.444286227,Paisley
-St. Patrick's Athletic,53.340905457,-6.316634417,Dublin
-Stoke City,52.988405068,-2.175429761,"Stoke-on-Trent, Staffordshire"
-Stoke City U21,52.988405068,-2.175429761,"Stoke-on-Trent, Staffordshire"
-Strasbourg,48.560068724,7.755156755,Strasbourg
-Sunderland,54.914421504,-1.388177276,Sunderland
-Swansea City,51.642770770,-3.934704065,Swansea
-Tottenham Hotspur U21,51.889822181,-0.193666220,"Stevenage, Hertfordshire"
-UCD,53.310440380,-6.228167117,Dublin
-Udinese,46.081644302,13.200062513,Udine
-Walsall,52.565390156,-1.990437806,"Walsall, West Midlands"
-Waterford FC,52.246196269,-7.124633789,Waterford
-Watford,51.649907492,-0.401628613,Watford
-West Bromwich Albion,52.509074411,-1.963952333,West Bromwich
-Wexford FC,52.365550645,-6.515611402,"Newcastle, Crossabeg"
-Wycombe Wanderers,51.630559344,-0.800211579,"High Wycombe, Buckinghamshire"
+club,club_id,lat,lon,town
+AFC Bournemouth Academy,2128213,50.794766765,-1.965602534,"Wimborne, Dorset"
+Aberdeen,8485,57.159304441,-2.088797092,Aberdeen
+Accrington Stanley,8671,53.765400812,-2.371062040,"Accrington, Lancashire"
+Airdrieonians,8176,55.860131386,-3.959943652,Airdrie
+Aldershot Town,8465,51.248393171,-0.754800439,"Aldershot, Hampshire"
+Alfreton Town,6258,53.094494370,-1.381267905,"Alfreton, Derbyshire"
+Annagh United,,,,
+Armagh,,,,
+Aston Villa U18,1113564,52.509090736,-1.884841919,Birmingham
+Atherton Collieries,,,,
+Athlone Town,2378,53.427524606,-7.919147015,Athlone
+Austin FC,1218886,30.387726609,-97.719504563,"Austin, Texas"
+Bala Town,175654,52.912476791,-3.601466417,"Bala, Gwynedd"
+Ballinamallard United,,,,
+Ballymena United,4063,54.870118546,-6.265099006,Ballymena
+Bamber Bridge,282395,53.727890126,-2.671920061,"Preston, Lancashire"
+Barnet,8175,51.602622431,-0.291717052,London
+Barnsley,8283,53.552293580,-1.467644423,"Barnsley, South Yorkshire"
+Benfica U19,,38.752648360,-9.184699059,Lisboa
+Birmingham U21,1796111,52.438883474,-1.757243872,"Solihull, West Midlands"
+Blackburn Rovers,8655,53.728578814,-2.489207983,"Blackburn, Lancashire"
+Blackpool,8483,53.804902344,-3.048212528,"Blackpool, Lancashire"
+Bohemian FC,4594,53.361885299,-6.275070906,Dublin
+Bolton Wanderers,8559,53.580584154,-2.535661161,Bolton
+Boston United,8646,52.956387330,-0.028528936,"Boston, Lincolnshire"
+Botoșani,188191,47.748269432,26.651844978,Botoşani
+Brackley Town,158321,52.024593789,-1.144074798,"Brackley, Northamptonshire"
+Bradford City,8484,53.804226787,-1.759035587,"Bradford, West Yorkshire"
+Bray Wanderers,1629,53.205708041,-6.102690697,Bray
+Brentford,9937,51.490729000,-0.288884000,"Brentford, Middlesex"
+Brentford Academy,2054260,51.419727865,-0.502058566,"Staines, Surrey"
+Brighton & Hove Albion,10204,50.861579551,-0.083642006,"Falmer, East Sussex"
+Brighton & Hove Albion U21,773678,50.830515394,-0.310798525,"Lancing, West Sussex"
+Brisbane Roar FC,8118,-27.464838325,153.009569049,Brisbane
+Bristol City,8427,51.440122578,-2.620278150,Bristol
+Bristol Rovers,10104,51.486225118,-2.583148330,"Bristol, Gloucestershire"
+Bromley,45729,51.390098079,0.021055341,London
+Burgess Hill Town,282340,50.967168964,-0.124127269,"Burgess Hill, West Sussex"
+Burnley,8191,53.788983867,-2.230224609,Burnley
+Burnley U21,1796112,53.692918860,-2.694501579,"Leyland, Lancashire"
+Burnley Under 18 Academy,,53.788983867,-2.230224609,Burnley
+Burton Albion,9792,52.821911043,-1.626877785,"Burton-upon-Trent, Staffordshire"
+Cabinteely,,,,
+Cambridge United,9834,52.212111726,0.154149905,"Cambridge, Cambridgeshire"
+Cardiff City,8344,51.472829314,-3.203115455,Cardiff (Caerdydd)
+Carrick Rangers,187969,54.719703837,-5.800310020,Carrickfergus
+Cashmere Technical,,,,
+Celtic,9925,55.849719363,-4.205580354,Glasgow
+Cercle Brugge,9984,51.193451430,3.180541992,Brugge
+Charlotte FC,1323940,35.225823124,-80.852873325,"Charlotte, North Carolina"
+Charlton Athletic,8451,51.486507384,0.036435127,London
+Chelsea U21,773652,51.405082273,-0.281964540,"Kingston upon Thames, Surrey"
+Cheltenham Town,8680,51.906166225,-2.060196698,"Cheltenham, Gloucestershire"
+Chester FC,9797,53.189206187,-2.923511267,"Chester, Cheshire"
+Chesterfield,9786,53.253590086,-1.426194906,"Chesterfield, Derbyshire"
+Cliftonville,1703,54.619518177,-5.947270095,Belfast
+Cobh Ramblers,2383,51.852192574,-8.301544189,Cobh
+Colchester United,8416,51.923361186,0.897145271,"Colchester, Essex"
+Coleraine,2202,55.132850678,-6.660203934,Coleraine
+Columbus Crew,6001,39.968452368,-83.017099203,"Columbus, Ohio"
+Connah's Quay Nomads,2193,53.249148054,-3.125824928,"Y Fflint / Flint, Flintshire"
+Cork City,2201,51.885590794,-8.467841148,Cork
+Cosenza,6456,39.079253732,17.116672397,Crotone
+Crawley Town,8647,51.099705388,-0.194768608,"Crawley, West Sussex"
+Crewe Alexandra,9784,53.087445550,-2.435799837,"Crewe, Cheshire"
+Crystal Palace U18,1183385,51.398278578,-0.085503459,London
+Công An Hà Nội,614354,21.029837443,105.832972527,Hà Nội (Hanoi)
+Deportiva Minera,278805,37.627288551,-0.836656094,El Llano del Beal
+Derby County,10170,52.914904941,-1.447230130,Derby
+Derry City,8338,54.990707986,-7.336254716,Derry (Londonderry)
+Doncaster Rovers,9903,53.509820635,-1.113757789,"Doncaster, South Yorkshire"
+Dorking Wanderers,580438,51.234491323,-0.333414674,"Dorking, Surrey"
+Drogheda United,8339,53.723370533,-6.357307434,Drogheda
+Dundalk,1853,53.998950181,-6.416589618,Dundalk
+Dundee FC,8284,56.474672500,-2.973582745,Dundee
+Dundee United,9938,56.474708794,-2.969014943,Dundee
+Dunfermline Athletic,8457,56.075619304,-3.441933990,Dunfermline
+Dungannon Swifts,4615,54.489511818,-6.745975529,Dungannon
+East Kilbride,575419,55.748631029,-4.149988890,East Kilbride
+Empoli,8534,43.726490954,10.954790711,Empoli
+Engen Santos FC,,,,
+Erzurumspor FK,281467,39.911164059,41.237976551,Erzurum
+Estoril U23,1510636,38.715853620,-9.406411797,Estoril
+Everton,8668,53.424981480,-3.002691341,"Liverpool, Merseyside"
+Exeter City,9833,50.730716255,-3.521153033,"Exeter, Devon"
+FC Halifax Town,10195,53.716109284,-1.859138310,"Halifax, West Yorkshire"
+FC Liefering,1915,47.816293982,12.998183370,Wals-Siezenheim
+FC United of Manchester,161822,53.518182097,-2.181657153,Manchester
+Falkirk,8596,56.005364022,-3.752667904,Falkirk
+Ferencváros,8222,47.475514128,19.095286153,Budapest
+Feyenoord,10235,51.893854540,4.523191452,Rotterdam
+Finn Harps,1627,54.797963665,-7.778674364,Ballybofey
+Fleetwood Town,45723,53.916497480,-3.024721742,"Fleetwood, Lancashire"
+Fleetwood Town Academy,,53.916497480,-3.024721742,"Fleetwood, Lancashire"
+Francs Borains,96953,50.413515544,3.779329062,Boussu
+Galway United FC,520517,53.284709881,-9.056307077,Galway
+Gateshead FC,6189,54.961010318,-1.579676270,"Gateshead, Tyne and Wear"
+Gillingham,10173,51.384236275,0.560730547,"Gillingham, Kent"
+Glenavon,1956,54.453973529,-6.336536407,Lurgan
+Glentoran,2203,54.602965178,-5.891315192,Belfast
+Grimsby Town,10005,53.570208363,-0.046552420,"Cleethorpes, North East Lincolns"
+Göztepe,1925,38.397034000,27.075879000,İzmir
+HJK,9861,60.187723879,24.922742844,Helsinki
+Harland & Wolff Welders F.C.,,,,
+Harrogate Town,7946,53.991703484,-1.514493227,"Harrogate, North Yorkshire"
+Hartford Athletic,1003206,41.753769623,-72.661095858,Hartford
+Heart of Midlothian,9860,55.938987445,-3.232432008,Edinburgh
+Hednesford,9923,52.697599709,-1.988829821,"Hednesford, Staffordshire"
+Hibernian,10251,55.961782474,-3.165311068,Edinburgh
+Hitchin Town,161838,51.954529590,-0.284134448,"Hitchin, Hertfordshire"
+Hoffenheim II,94940,49.278287174,8.842127323,Sinsheim
+Horsham,105554,51.046892953,-0.340666840,"Horsham, West Sussex"
+Huddersfield Town,9796,53.654240277,-1.768423319,"Huddersfield, West Yorkshire"
+Hull City,8667,53.746239635,-0.367639661,Hull
+Indy Eleven,514649,39.771149479,-86.177841425,"Indianapolis, Indiana"
+Ipswich Town,9902,52.054949657,1.145263016,"Ipswich, Suffolk"
+Ipswich Town U18,1791531,52.054949657,1.145263016,"Ipswich, Suffolk"
+Kaiserslautern,8350,49.434711593,7.776432037,Kaiserslautern
+Kilmarnock,8597,55.604553980,-4.508256912,Kilmarnock
+King's Lynn Town,45731,52.750045069,0.407389998,"King's Lynn, Norfolk"
+Larne,2206,54.849984182,-5.827061534,Larne
+Larne U19,,54.849984182,-5.827061534,Larne
+Leamington,5764,52.244287950,-1.502863169,"Royal Leamington Spa, Warwickshi"
+Lecce,9888,40.365103138,18.208851814,Lecce
+Levski Sofia,8632,42.705303512,23.363172412,Sofia
+Lexington SC,1430405,37.960798887,-84.390512801,"Lexington, Kentucky"
+Leyton Orient,8351,51.560144960,-0.012674779,London
+Limerick,,,,
+Lincoln City,8430,53.218342848,-0.540904999,"Lincoln, Lincolnshire"
+Linfield,7971,54.582624505,-5.955187976,Belfast
+Livingston,8282,55.885959698,-3.521874547,Livingston
+Longford Town,4569,53.724230689,-7.853583097,Longford Town
+Loughgall,,,,
+Luton Town,8346,51.884226600,-0.431782007,"Luton, Bedfordshire"
+Magdeburg,8188,52.125149871,11.670784950,Magdeburg
+Maldon & Tiptree,282501,51.720830771,0.694005489,"Maldon, Essex"
+Manchester United U21,1070257,53.489708420,-2.530074120,"Leigh, Greater Manchester"
+Mansfield Town,9818,53.138056722,-1.200776696,"Mansfield, Nottinghamshire"
+Maribor,8340,46.562559865,15.640545487,Maribor
+Merthyr Town,5762,51.751201470,-3.377684355,Merthyr Tydfil
+Middlesbrough U18,1113557,54.578226047,-1.216840446,Middlesbrough
+Millwall,10004,51.485933664,-0.050959289,London
+Molde,9917,62.734050390,7.148151398,Molde
+Monaco U19,,43.727563789,7.415542156,Monaco
+Montrose,8257,56.713998566,-2.458920479,Montrose
+Motherwell,9927,55.780377351,-3.980151415,Motherwell
+Málaga,9864,36.734208947,-4.426602423,Málaga
+Napoli,9875,40.827974049,14.192930460,Napoli
+New York City FC,546238,40.829685963,-73.926202655,New York City
+Newcastle Jets,6454,-32.918894544,151.726571918,Newcastle
+Newcastle United U21,860798,55.009830814,-1.563733220,Newcastle upon Tyne
+Newington FC,,,,
+Newport County,10262,51.588229657,-2.987908423,Newport (Casnewydd)
+Northampton Town,8651,52.235185356,-0.933569670,"Northampton, East Midlands"
+Nottingham Forest U21,1389162,52.759320893,-1.242447495,"Loughborough, Leicestershire"
+Notts County,9819,52.942633203,-1.137188226,"Nottingham, Nottinghamshire"
+Oldham Athletic,9785,53.555133049,-2.128485739,"Oldham, Greater Manchester"
+Orvietana Calcio,,,,
+Oxford United,8653,51.716487110,-1.207939535,"Oxford, Oxfordshire"
+Partick Thistle,8426,55.881551862,-4.269567132,Glasgow
+Peterborough United,8677,52.564692341,-0.240407735,"Peterborough, Cambridgeshire"
+Pike Rovers,,,,
+Plymouth Argyle,8401,50.388137136,-4.150857925,Plymouth
+Portadown,7984,54.415933402,-6.458501816,Portadown
+Portsmouth,8462,50.796346713,-1.063804328,Portsmouth
+Preston North End,8411,53.772181168,-2.688431740,Preston
+Preston North End U23,,53.772181168,-2.688431740,Preston
+Preussen Münster,8171,51.929785477,7.624592185,Münster
+Queens Park Rangers,10172,51.509264976,-0.232138485,London
+Raith Rovers,10250,56.099841096,-3.168482780,Kirkcaldy
+Reading,9798,51.422379780,-0.982643366,"Reading, Berkshire"
+Real Betis,8603,37.417208903,-6.004661322,Sevilla
+Reims,9837,49.247147790,4.024729729,Reims
+Rochdale,8493,53.620793146,-2.179980129,"Rochdale, Greater Manchester"
+Ross County,8649,57.595989157,-4.418907166,Dingwall
+Rotherham United,8119,53.427908164,-1.362015009,"Rotherham, South Yorkshire"
+Rushall Olympic,274600,52.600877658,-1.952294111,"Walsall, West Midlands"
+SJK,162162,62.778732205,22.814810970,Seinäjoki
+SK Dynamo České Budějovice,7840,48.966928408,14.467576394,Ceské Budejovice
+Sacramento Republic FC,521004,38.591406822,-121.438123539,"Sacramento, California"
+Salford City,282326,53.513610351,-2.276771665,"Salford, Greater Manchester"
+Salisbury,1114695,51.104340456,-1.785777211,"Salisbury, Wiltshire"
+Scunthorpe United,8412,53.586690586,-0.695271492,Scunthorpe
+Shamrock Rovers,4131,53.283529667,-6.373690367,Dublin
+Sheffield United,8657,53.370346199,-1.470864415,Sheffield
+Sheffield Wednesday,10163,53.411423241,-1.500683874,Sheffield
+Shelbourne,5751,53.367512749,-6.251928806,Dublin
+Shelbourne U19,,53.367512749,-6.251928806,Dublin
+Shrewsbury Town,9896,52.688531857,-2.749242783,"Shrewsbury, Shropshire"
+Sligo Rovers,6361,54.270061151,-8.487324715,Sligo
+Solihull Moors,161801,52.438883474,-1.757243872,"Solihull, West Midlands"
+Southampton,8466,50.905894751,-1.391047239,"Southampton, Hampshire"
+Southampton U18,1113567,50.905894751,-1.391047239,"Southampton, Hampshire"
+Spartans FC,6661,55.971600841,-3.233209848,Edinburgh
+Sporting JAX,1737991,30.275142251,-81.511651673,"Jacksonville, Florida"
+St Mochta's,,,,
+St. Johnstone,8467,56.409909826,-3.476904631,Perth
+St. Mirren,9800,55.850520387,-4.444286227,Paisley
+St. Patrick's Athletic,1854,53.340905457,-6.316634417,Dublin
+Stockport County,10007,53.399688246,-2.166420221,"Stockport, Greater Manchester"
+Stoke City,10194,52.988405068,-2.175429761,"Stoke-on-Trent, Staffordshire"
+Stoke City U21,773650,52.988405068,-2.175429761,"Stoke-on-Trent, Staffordshire"
+Strabane Athletic,,,,
+Strasbourg,9848,48.560068724,7.755156755,Strasbourg
+Sunderland,8472,54.914421504,-1.388177276,Sunderland
+Sutton United,158316,51.367602538,-0.204338729,"Sutton, Surrey"
+Swansea City,10003,51.642770770,-3.934704065,Swansea
+Swindon Town,9795,51.564475277,-1.771097481,"Swindon, Wiltshire"
+TSV Aubstadt,340719,50.329607691,10.432425141,Aubstadt
+Taunton Town,282502,51.016719444,-3.085100949,"Taunton, Somerset"
+Ternana,6457,42.562152743,12.635339499,Terni
+The New Saints,7852,52.875884013,-3.026314974,"Oswestry / Croesoswallt, Shropsh"
+Tottenham Hotspur U21,860802,51.889822181,-0.193666220,"Stevenage, Hertfordshire"
+Tranmere Rovers,8313,53.373747530,-3.032548428,"Birkenhead, Merseyside"
+Treaty United,1233534,,,City
+Turriff United,351621,57.536456871,-2.467246056,Turriff
+UCD,1578,53.310440380,-6.228167117,Dublin
+Udinese,8600,46.081644302,13.200062513,Udine
+VVV-Venlo,9839,51.351955145,6.179762120,Venlo
+Vancouver FC,1436202,49.143847729,-122.665672661,"Langley, British Columbia"
+Walsall,10006,52.565390156,-1.990437806,"Walsall, West Midlands"
+Waterford FC,6042,52.246196269,-7.124633789,Waterford
+Watford,9817,51.649907492,-0.401628613,Watford
+Wealdstone,161812,51.569404534,-0.416638255,"Ruislip, Middlesex"
+West Bromwich Albion,8659,52.509074411,-1.963952333,West Bromwich
+Weston Super Mare,6314,51.330650184,-2.956067920,"Weston-super-Mare, Somerset"
+Wexford FC,62337,52.365550645,-6.515611402,"Newcastle, Crossabeg"
+Wigan Athletic,8528,53.547654733,-2.654032409,Wigan
+Without ClubWithout Club,,,,
+Woking,8345,51.306294400,-0.558913350,"Woking, Surrey"
+Wolverhampton Wanderers U21,773683,52.380485032,-2.242653966,"Kidderminster, Worcestershire"
+Worthing,282351,50.820360504,-0.384867489,"Worthing, West Sussex"
+Wycombe Wanderers,8676,51.630559344,-0.800211579,"High Wycombe, Buckinghamshire"
+Ægir,559291,,,City

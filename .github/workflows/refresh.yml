@@ -22,6 +22,8 @@ jobs:
           python-version: '3.12'
       - run: pip install requests
       - run: python3 scraper/irish_scraper.py scrape
+      - name: read scorers/cards/venues for recent matches
+        run: python3 scraper/irish_scraper.py events
       - name: refresh Ireland fixtures (senior + U21)
         run: python3 scraper/irish_scraper.py ireland
       - name: commit if changed
@@ -33,6 +35,6 @@ jobs:
             echo "no change"
           else
             git commit -m "hourly data refresh"
-            git pull --rebase --autostash -X theirs || (git rebase --abort; git reset --hard origin/main; echo "lost the race, next run will catch up")
+            git pull --rebase --autostash
             git push
           fi
