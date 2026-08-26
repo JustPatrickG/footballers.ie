@@ -1965,7 +1965,7 @@ for _f in ("admin.html",):
     if os.path.exists(_p):
         shutil.copy2(_p, os.path.join(OUT, "build", _f))
 
-for _f in ("og-image.png", "apple-touch-icon.png", "favicon.svg", "favicon.ico"):
+for _f in ("og-image.png", "apple-touch-icon.png", "favicon.svg", "favicon.ico", "live.json"):
     _p = os.path.join(HERE, "..", _f)
     if os.path.exists(_p):
         shutil.copy2(_p, os.path.join(OUT, _f))

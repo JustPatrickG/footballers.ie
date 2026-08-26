@@ -2,5 +2,22 @@
   "buildCommand": "python3 build/gen.py",
   "outputDirectory": "site",
   "installCommand": "echo skip",
-  "framework": null
+  "framework": null,
+  "rewrites": [
+    {
+      "source": "/live.json",
+      "destination": "https://raw.githubusercontent.com/JustPatrickG/footballers.ie/main/live.json"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/live.json",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "no-store"
+        }
+      ]
+    }
+  ]
 }
