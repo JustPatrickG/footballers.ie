@@ -269,7 +269,7 @@ def load():
         lv["results"] = lv["results"][:6]
     news = [(r["tag"], r["headline"], r["standfirst"], r["player_slug"]) for r in _rows("manual/news.csv")]
     matches = _merge_rows("matches.csv", ("kickoff","home","away"))
-    articles = sorted(_rows("manual/articles.csv"), key=lambda r: r.get("date",""), reverse=True)
+    articles = [r for r in _rows("manual/articles.csv") if r.get("slug")]   # CSV order = display order (drag to reorder in the admin)
     accounts = _rows("manual/accounts.csv")
     clubgeo  = {r["club"]: r for r in _rows("manual/clubs.csv") if r.get("club")}
     return players, ireland, news, matches, articles, accounts, clubgeo, tmdata
@@ -687,8 +687,8 @@ def build_index():
             for a in pool[:5]] or [(t,h,s,sl,False,None) for (t,h,s,sl) in NEWS]
     HEAD_IS_ARTICLE = bool(pool)
     slides = "".join(
-      f'<a class="slide{" now" if s[4] else ""}{" partner" if s[5] else ""}" data-i="{i}" href="{"news/" + s[3] + ".html" if HEAD_IS_ARTICLE else "player/" + s[3] + ".html"}">'
-      f'<div class="tag">{"<span class=\"nowdot\"></span>HAPPENING NOW" if s[4] else esc(s[0])}{f"<span class=\"pbadge\">{esc(s[5]["name"])}</span>" if s[5] else ""}</div>'
+      f'<a class="slide{" now" if s[4] else ""}" data-i="{i}" href="{"news/" + s[3] + ".html" if HEAD_IS_ARTICLE else "player/" + s[3] + ".html"}">'
+      f'<div class="tag">{"<span class=\"nowdot\"></span>HAPPENING NOW" if s[4] else esc(s[0])}</div>'
       f'<h3>{esc(s[1])}</h3><p>{esc(s[2])}</p></a>'
       for i,s in enumerate(HEAD))
     dots = "".join(f'<button aria-current="{"true" if i==0 else "false"}" data-i="{i}"></button>' for i in range(len(HEAD)))
@@ -958,10 +958,7 @@ def art_visual(a, root="", cls="artthumb"):
     if face:
         return (f'<div class="{cls} ph"><img src="{esc(face)}" alt="" loading="lazy" class="phface">'
                 f'<div class="phtag">{esc(a.get("tag",""))}</div></div>')
-    pt = partner_of(a)
-    if pt:
-        return f'<div class="{cls} ph partner"><div class="phword">{esc(pt["name"])}</div><div class="phtag">{esc(a.get("tag",""))}</div></div>'
-    return f'<div class="{cls} ph"><div class="phword">footballers<b>.ie</b></div><div class="phtag">{esc(a.get("tag",""))}</div></div>'
+    return ""     # no image by default — cards are text-only
 
 def byline(a, root=""):
     n=(a.get("author") or "").strip()
@@ -973,12 +970,14 @@ def art_card(a, root="", kind="card"):
     pt = partner_of(a); pc = " partner" if pt else ""
     pb = f'<span class="pbadge">{esc(pt["name"])}</span>' if pt else ""
     if kind=="lead":
-        return (f'<a class="nlead{pc}" href="{art_link(a,root)}" data-tag="{t}">{art_visual(a,root,"nleadimg")}'
+        vis = art_visual(a,root,"nleadimg")
+        return (f'<a class="nlead{pc}{" noimg" if not vis else ""}" href="{art_link(a,root)}" data-tag="{t}">{vis}'
                 f'<div class="nleadbody"><div class="arttag">{t}{pb}</div><h2>{h}</h2><p>{sf}</p>{byline(a,root)}</div></a>')
     if kind=="row":
         return (f'<a class="nrow{pc}" href="{art_link(a,root)}" data-tag="{t}">{art_visual(a,root,"nrowimg")}'
                 f'<div><div class="arttag">{t}{pb}</div><h4>{h}</h4>{byline(a,root)}</div></a>')
-    return (f'<a class="artcard{pc}" href="{art_link(a,root)}" data-tag="{t}">{art_visual(a,root)}'
+    vis = art_visual(a,root)
+    return (f'<a class="artcard{pc}{" noimg" if not vis else ""}" href="{art_link(a,root)}" data-tag="{t}">{vis}'
             f'<div class="artbody"><div class="arttag">{t}{pb}</div><h4>{h}</h4><p>{sf}</p>{byline(a,root)}</div></a>')
 
 def writers_block(root=""):

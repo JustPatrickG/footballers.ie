@@ -63,6 +63,9 @@ label{display:block;font-family:'IBM Plex Mono',monospace;font-size:9px;letter-s
 .artitem{display:flex;gap:10px;align-items:center;background:var(--panel2);border:1px solid var(--line);
   border-radius:7px;padding:10px 12px;cursor:pointer}
 .artitem:hover{border-color:var(--mute)}
+.artitem .grip{cursor:grab;color:var(--mute);font-size:14px;letter-spacing:-3px;user-select:none}
+.artitem.dragging{opacity:.4}
+.artitem.over{border-color:var(--yellow);border-style:dashed}
 .artitem.on{border-color:var(--yellow)}
 .artitem b{font-size:13px}
 .artitem small{color:var(--mute);font-family:'IBM Plex Mono',monospace;font-size:10px}
@@ -378,7 +381,9 @@ function articleView(){
   v.innerHTML=`
     <div class="bar"><button id="newart" class="pri">+ New article</button>
       <span class="count">${myArticles(d).length} article${myArticles(d).length===1?"":"s"}</span></div>
-    <div class="artlist">${myArticles(d).map(({r:x,i})=>`<div class="artitem${i===selectedArticle?' on':''}" data-i="${i}">
+    <div class="hint" style="margin-bottom:8px">Drag to reorder — top article leads the homepage carousel and the news page.</div>
+    <div class="artlist" id="artlist">${myArticles(d).map(({r:x,i})=>`<div class="artitem${i===selectedArticle?' on':''}" data-i="${i}" draggable="true">
+      <span class="grip" title="Drag">⋮⋮</span>
       <div style="flex:1"><b>${esc(x.headline)||'(untitled)'}</b><br>
       <small>${esc(x.date)} · ${esc(x.tag)} · ${esc(x.author)}</small></div>
       <button class="rowdel" data-del="${i}">×</button></div>`).join('')}</div>
@@ -413,6 +418,15 @@ function articleView(){
     v.querySelectorAll('.artitem').forEach(el=>{
       el.onclick=e=>{ if(e.target.dataset.del!==undefined) return;
         selectedArticle=+el.dataset.i; render(); };
+      el.ondragstart=e=>{ e.dataTransfer.setData('text/plain', el.dataset.i); el.classList.add('dragging'); };
+      el.ondragend=()=>el.classList.remove('dragging');
+      el.ondragover=e=>{ e.preventDefault(); el.classList.add('over'); };
+      el.ondragleave=()=>el.classList.remove('over');
+      el.ondrop=e=>{ e.preventDefault(); el.classList.remove('over');
+        const from=+e.dataTransfer.getData('text/plain'), to=+el.dataset.i;
+        if(from===to||isNaN(from)) return;
+        const row=d.rows.splice(from,1)[0]; d.rows.splice(to,0,row);
+        selectedArticle=to; markDirty(); render(); };
     });
     v.querySelectorAll('[data-del]').forEach(b=>{
       b.onclick=e=>{ e.stopPropagation();
