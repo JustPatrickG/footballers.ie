@@ -165,7 +165,7 @@
     if (!played || m.hs === '' || m.hs === null || m.hs === undefined) {
       var d = new Date(m.kickoff);
       var day = d.toLocaleDateString([], { weekday: 'short' });
-      var time = d.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+      var time = d.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', hour12: false });
       return '<div class="mcko"><span class="mcday">' + day + '</span>' + time + '</div>';
     }
     return '<div class="mcscore">' + m.hs + '<span>–</span>' + m.as_ + '</div>';
@@ -260,7 +260,7 @@
     if (m.status === 'live') return '<div class="mid sc lv">' + m.hs + ' – ' + m.as_ + '<br><small>' + (m.minute ? m.minute + "'" : 'LIVE') + '</small></div>';
     if (played && m.hs !== '' && m.hs !== null && m.hs !== undefined) return '<div class="mid sc">' + m.hs + ' – ' + m.as_ + '</div>';
     if (played) return '<div class="mid">FT</div>';
-    return '<div class="mid">' + new Date(m.kickoff).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }) + '</div>';
+    return '<div class="mid">' + new Date(m.kickoff).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', hour12: false }) + '</div>';
   }
   function renderAll() {
     var box = document.getElementById('fxall'), strip = document.getElementById('fxdays');
@@ -302,7 +302,7 @@
       box.innerHTML = '<div class="fxnone">No matches this day</div>' +
         (next ? '<div style="text-align:center"><div class="fxnext" data-day="' + dayKey(new Date(next.kickoff)) + '" role="button" tabindex="0">' +
                 '<span>' + next.home + '</span><span><b>' + new Date(next.kickoff).toLocaleDateString([], { weekday: 'long' }) + '</b>' +
-                '<small>' + new Date(next.kickoff).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }) + '</small></span>' +
+                '<small>' + new Date(next.kickoff).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', hour12: false }) + '</small></span>' +
                 '<span>' + next.away + '</span></div></div>' : '');
       wireCards(box); return;
     }
@@ -694,7 +694,7 @@
     (function (el) {
       var d = new Date(el.getAttribute('data-ko'));
       if (isNaN(d)) return;
-      var time = d.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+      var time = d.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', hour12: false });
       if (el.classList.contains('ko-time')) {
         el.textContent = time;
       } else {
@@ -895,7 +895,7 @@
     if (!d) return '';
     var now = new Date();
     var time = hasTime(raw)
-      ? d.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
+      ? d.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', hour12: false })
       : '';
 
     var startToday = new Date(now.getFullYear(), now.getMonth(), now.getDate());
