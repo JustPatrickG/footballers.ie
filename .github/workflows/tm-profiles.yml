@@ -26,6 +26,7 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+      - run: pip install requests
       - id: m
         run: |
           M=$(python3 scraper/tm_scraper.py shard-matrix \
@@ -72,6 +73,7 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+      - run: pip install requests
       - uses: actions/download-artifact@v4
         with:
           path: shards
