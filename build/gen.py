@@ -810,14 +810,6 @@ def build_index():
     moments = (f'<div class="sec"><h2>Milestones coming up</h2></div><div class="msgrid">{msh}</div>') if msh else ""
 
     body = f'''
-    <section class="hero">
-      <div class="strip"><b>{len(PLAYERS)}</b> Irish pros tracked · <b>{len(abroad)}</b> abroad · <b>{len(loi)}</b> League of Ireland · <a href="about.html">who counts? →</a></div>
-      <div class="todaybar">
-        <div class="tb"><span class="tbl">Today</span><span class="tbv">{today_line}</span><a href="fixtures.html">Fixtures →</a></div>
-        {f'<div class="tb"><span class="tbl">This week</span><span class="tbv">{week_line}</span><a href="#thisweek">See who →</a></div>' if week_line else ""}
-        {f'<div class="tb"><span class="tbl">Ireland</span><span class="tbv">{nxt_irl}</span><a href="ireland.html">Ireland hub →</a></div>' if nxt_irl else ""}
-      </div>
-    </section>
 
     {news_block}
 
