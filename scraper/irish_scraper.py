@@ -946,7 +946,7 @@ def clubs_file(args):
                         resolved[parent] = (lat, lon, town)
                 if lat and lon:
                     note = f"  (from {parent})"
-        rows.append([name, lat, lon, town])
+        rows.append([name, tid or "", lat, lon, town])
         if lat and lon:
             resolved.setdefault(name, (lat, lon, town))
         else:
@@ -954,7 +954,7 @@ def clubs_file(args):
         print(f"  {name}: {lat or '?'},{lon or '?'} {town}{note}")
 
     write_csv(Path(args.out) / "data/manual/clubs.csv",
-              ["club", "lat", "lon", "town"], rows)
+              ["club", "club_id", "lat", "lon", "town"], rows)
     if missing:
         print(f"\n{len(missing)} clubs with no coordinates from the source "
               f"- fill by hand:")
@@ -1402,7 +1402,7 @@ def scrape(args):
             players_rows.append(
                 [slug, p.get("league", ""), p.get("club", ""), "", "", "",
                  "", "", "", "", "", "", "", "", "", "", "", "", "", "",
-                 "", "none"])
+                 "", "", "none"])
             continue
         try:
             data = get_next_data(
@@ -1439,6 +1439,8 @@ def scrape(args):
                     int(m["minutes"] or 0),
                     int(m["goals"] or 0),
                     int(m["assists"] or 0),
+                    (f"{float(m['rating']):.2f}"
+                     if str(m["rating"]) not in ("", "None") else ""),
                     m["utc"],
                 ])
             # upcoming games come from the club fixture list below
@@ -1467,6 +1469,7 @@ def scrape(args):
             slug,
             source_league,
             source_club,
+            str(pt.get("teamId") or ""),
             age, born, foot,
             sr_caps, sr_goals, sr_debut, youth,
             season["season"],
@@ -1555,13 +1558,13 @@ def scrape(args):
               match_rows)
     write_csv(out_root / "data/manual/results.csv",
               ["slug", "date", "opponent", "score", "competition",
-               "minutes", "goals", "assists"],
+               "minutes", "goals", "assists", "rating"],
               [r[:-1] for r in results_rows])
     write_csv(out_root / "data/manual/fixtures.csv",
               ["slug", "date", "opponent", "home_away", "competition"],
               [r[:-1] for r in fixtures_rows])
     write_csv(out_root / "data/api/players.csv",
-              ["slug", "league", "club", "age", "born", "foot", "senior_caps",
+              ["slug", "league", "club", "club_id", "age", "born", "foot", "senior_caps",
                "senior_goals", "senior_debut", "youth", "season",
                "s_apps", "s_starts",
                "s_goals", "s_assists", "s_mins", "s_yellow", "s_red",
@@ -1606,6 +1609,152 @@ def scrape(args):
         print(f"\nskipped (no fotmob_id in cache): {', '.join(skipped)}")
     if failed:
         print(f"failed this run: {', '.join(failed)}")
+
+
+# ---------------------------------------------------------------- events
+
+EVENT_COLUMNS = ["match_id", "minute", "type", "player", "team", "venue"]
+
+
+def match_id_for(utc, home, away):
+    return f"{utc.strftime('%Y-%m-%d')}-{slugify(home)}-v-{slugify(away)}"
+
+
+def parse_match_events(data, home, away):
+    """(events, venue) from a match page. Events are dicts of
+    minute/type/player/team."""
+    def as_name(v):
+        if isinstance(v, str):
+            return v
+        if isinstance(v, dict):
+            return str(v.get("name") or v.get("stadium") or
+                       v.get("longName") or "")
+        return ""
+
+    venue = ""
+    for key in ("Stadium", "stadium", "venue", "stadiumName", "Venue"):
+        for v in find_all(data, key):
+            venue = as_name(v) or (as_name(v.get("widget"))
+                                   if isinstance(v, dict) else "")
+            if venue:
+                break
+        if venue:
+            break
+
+    type_map = {
+        "goal": "goal", "penalty": "penalty", "penaltygoal": "penalty",
+        "owngoal": "own_goal", "own goal": "own_goal",
+        "penaltymiss": "missed_penalty", "missedpenalty": "missed_penalty",
+        "yellowcard": "yellow", "yellow": "yellow",
+        "redcard": "red", "red": "red",
+        "secondyellow": "second_yellow", "yellowred": "second_yellow",
+        "substitution": "sub", "sub": "sub", "assist": "assist",
+    }
+    events, seen = [], set()
+
+    def add(ev):
+        if not isinstance(ev, dict):
+            return
+        raw = str(ev.get("type") or ev.get("eventType") or "")
+        if norm(raw) in ("card", "cards") or ev.get("card"):
+            raw = str(ev.get("card") or ev.get("cardType") or raw)
+        key = norm(raw).replace(" ", "")
+        etype = type_map.get(key)
+        if not etype:
+            return
+        if etype == "goal":
+            if ev.get("isPenaltyShootoutEvent"):
+                return
+            if ev.get("ownGoal") or ev.get("isOwnGoal"):
+                etype = "own_goal"
+            elif ev.get("penalty") or ev.get("isPenalty"):
+                etype = "penalty"
+        player = (ev.get("nameStr") or ev.get("player")
+                  or ev.get("playerName") or ev.get("fullName") or "")
+        if isinstance(player, dict):
+            player = player.get("name") or player.get("nameStr") or ""
+        minute = ev.get("time") or ev.get("minute") or ev.get("timeStr") or ""
+        if isinstance(minute, dict):
+            minute = minute.get("value") or minute.get("short") or ""
+        minute = re.sub(r"[^0-9+]", "", str(minute))
+        side = ev.get("isHome")
+        team = (home if side is True else away if side is False
+                else str(ev.get("teamName") or ""))
+        sig = (minute, etype, norm(str(player)), norm(team))
+        if not player or sig in seen:
+            return
+        seen.add(sig)
+        events.append({"minute": minute, "type": etype,
+                       "player": str(player).strip(), "team": team})
+
+    for key in ("events", "keyEvents", "matchEvents", "eventList"):
+        for hit in find_all(data, key):
+            items = hit if isinstance(hit, list) else [hit]
+            for it in items:
+                if isinstance(it, dict):
+                    add(it)
+                    for v in it.values():
+                        if isinstance(v, list):
+                            for sub_ev in v:
+                                add(sub_ev)
+
+    events.sort(key=lambda e: (int(re.sub(r"\D", "", e["minute"]) or 0),
+                               e["type"]))
+    return events, str(venue or "")
+
+
+def events_cmd(args):
+    idx_path = SCRAPER_DIR / "match_index.json"
+    if not idx_path.exists():
+        sys.exit("no match_index.json - run `scrape` first.")
+    index = json.loads(idx_path.read_text())
+    now = dt.datetime.now(dt.timezone.utc)
+    since = now - dt.timedelta(days=args.days)
+
+    out_path = Path(args.out) / "data/api/match_events.csv"
+    have = set()
+    rows = []
+    if out_path.exists() and not args.rebuild:
+        with open(out_path, newline="", encoding="utf-8") as f:
+            for row in csv.DictReader(f):
+                rows.append([row.get(c, "") for c in EVENT_COLUMNS])
+                have.add(row["match_id"])
+
+    todo = []
+    for m in index:
+        ko = parse_iso(m["kickoff"])
+        if not ko or not (since <= ko <= now):
+            continue
+        mid = match_id_for(ko, m["home"], m["away"])
+        if mid in have or not m.get("url"):
+            continue
+        todo.append((mid, m))
+    print(f"{len(todo)} finished matches to read")
+
+    done = 0
+    for i, (mid, m) in enumerate(todo):
+        try:
+            data = get_next_data(
+                "https://www.fotmob.com" + m["url"].split("#")[0],
+                debug_name=f"match_{mid}" if args.debug else None)
+            evs, venue = parse_match_events(data, m["home"], m["away"])
+        except Exception as e:
+            print(f"  [{i+1}/{len(todo)}] {mid}: failed ({e})")
+            time.sleep(SLEEP)
+            continue
+        for e in evs:
+            rows.append([mid, e["minute"], e["type"], e["player"],
+                         e["team"], venue])
+        if not evs:
+            rows.append([mid, "", "", "", "", venue])
+        done += 1
+        print(f"  [{i+1}/{len(todo)}] {mid}: {len(evs)} events"
+              + (f", {venue}" if venue else ""))
+        time.sleep(SLEEP)
+
+    rows.sort(key=lambda r: (r[0], int(re.sub(r"\D", "", r[1]) or 0)))
+    write_csv(out_path, EVENT_COLUMNS, rows)
+    print(f"{done} matches read this run")
 
 
 # ---------------------------------------------------------------- live
@@ -1795,6 +1944,15 @@ def main():
                              "U19/U17 squads")
     di.add_argument("--debug", action="store_true")
 
+    ev = sub.add_parser("events",
+                        help="write data/api/match_events.csv "
+                             "(scorers, cards, venue)")
+    ev.add_argument("--out", default=".")
+    ev.add_argument("--days", type=int, default=7,
+                    help="how far back to read matches (default 7)")
+    ev.add_argument("--rebuild", action="store_true")
+    ev.add_argument("--debug", action="store_true")
+
     lv = sub.add_parser("live", help="write live.json for matches "
                                      "within +-3h")
     lv.add_argument("--out", default=".")
@@ -1822,6 +1980,8 @@ def main():
         set_id(args)
     elif args.cmd == "discover-ireland":
         discover_ireland(args)
+    elif args.cmd == "events":
+        events_cmd(args)
     elif args.cmd == "clubs":
         clubs_file(args)
     elif args.cmd == "ireland":

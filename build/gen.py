@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-import os, sys, html as H, json, csv
+import os, sys, re, html as H, json, csv
 HERE = os.path.dirname(os.path.abspath(__file__))
 DATA = os.path.join(HERE, "..", "data")
 EMPTY_MS = '<div class="emptystate" style="display:block">Nothing close right now.</div>'
@@ -32,6 +32,12 @@ def _tm_date(s):
         except ValueError:
             continue
     return "", s
+
+def _tm_text(v):
+    """Agent / club must be words. The TM scraper sometimes drops a date in here — treat that as blank."""
+    v = (v or "").strip()
+    if not v or re.fullmatch(r"[\d\s./:€£$k-]+", v, re.I): return ""
+    return v
 
 def _tm_height(cm):
     cm = (cm or "").strip()
@@ -114,8 +120,14 @@ def _merge_rows(name, key_fields):
         keyed[tuple(r.get(k,"") for k in key_fields)] = r
     return list(keyed.values())
 
+EVENTS = {}
 def load():
     tmdata = {r["slug"]: r for r in _rows("api/tm.csv") if r.get("slug")}
+    global EVENTS
+    EVENTS = {}
+    for r in _rows("api/match_events.csv"):
+        if r.get("match_id") and r.get("type"):
+            EVENTS.setdefault(r["match_id"], []).append(r)
     manual_players = {r["slug"]: r for r in _rows("manual/players.csv") if r.get("slug")}
     fixtures, results = {}, {}
     for r in _merge_rows("fixtures.csv", ("slug","date","opponent")):
@@ -190,8 +202,8 @@ def load():
             nations     = _tm_nations(t.get("citizenship")),
             position    = (t.get("position") or "").strip(),
             foot        = (t.get("foot") or "").strip(),
-            agent       = (t.get("agent") or "").strip(),
-            club        = (t.get("tm_club") or "").strip(),
+            agent       = _tm_text(t.get("agent")),
+            club        = _tm_text(t.get("tm_club")),
             joined      = joined_label,
             expires     = exp_label,
             expires_iso = iso_exp,
@@ -1547,6 +1559,41 @@ def build_compare():
 def match_id(m):
     return (m.get("kickoff","")[:10] + "-" + club_slug(m.get("home","")) + "-v-" + club_slug(m.get("away",""))).strip("-")
 
+EV_ICON = {"goal":"⚽","own_goal":"⚽","yellow":"","red":"","second_yellow":"","missed_penalty":"✕"}
+EV_LABEL = {"own_goal":"own goal","missed_penalty":"penalty missed","second_yellow":"second yellow","red":"red card","yellow":"yellow card"}
+def events_block(m, involved):
+    evs = EVENTS.get(match_id(m), [])
+    if not evs: return ""
+    venue = next((e.get("venue","") for e in evs if e.get("venue")), "")
+    home = m.get("home",""); away = m.get("away","")
+    irish = {x["n"] for x in involved} | {p["n"] for p in PLAYERS}
+    def _min(e):
+        try: return int(str(e.get("minute","")).split("+")[0])
+        except ValueError: return 999
+    rows = ""
+    for e in sorted(evs, key=_min):
+        t = e.get("type","") or ""
+        if t not in EV_ICON: continue
+        side = "h" if (e.get("team","") or "").strip() == home.strip() else "a"
+        who = esc(e.get("player",""))
+        if e.get("player","") in irish: who = f'<b class="ir">{who}</b>'
+        lab = EV_LABEL.get(t, "")
+        ic = {"yellow":'<i class="cd y"></i>',"red":'<i class="cd r"></i>',"second_yellow":'<i class="cd y2"></i>'}.get(t, EV_ICON[t])
+        cell = f'<span class="evwho">{who}</span>' + (f' <small>{lab}</small>' if lab else "")
+        rows += (f'<div class="tl {side} {t}"><div class="tlh">{cell if side=="h" else ""}</div>'
+                 f'<div class="tlm">{esc(e.get("minute",""))}\'<span class="tli">{ic}</span></div>'
+                 f'<div class="tla">{cell if side=="a" else ""}</div></div>')
+    if not rows: return ""
+    scorers = [e for e in evs if (e.get("type") in ("goal","own_goal"))]
+    summ = ""
+    if scorers:
+        hs = ", ".join(f'{esc(e.get("player",""))} {esc(e.get("minute",""))}\'' + (" (og)" if e.get("type")=="own_goal" else "") for e in sorted(scorers,key=_min) if (e.get("team","") or "").strip()==home.strip())
+        as_ = ", ".join(f'{esc(e.get("player",""))} {esc(e.get("minute",""))}\'' + (" (og)" if e.get("type")=="own_goal" else "") for e in sorted(scorers,key=_min) if (e.get("team","") or "").strip()!=home.strip())
+        summ = f'<div class="mscorers"><div>{hs or "—"}</div><div class="r">{as_ or "—"}</div></div>'
+    return (f'{summ}<div class="sec"><h2>Timeline</h2>{f"<span class=\"more\" style=\"border:0\">{esc(venue)}</span>" if venue else ""}</div>'
+            f'<div class="timeline">{rows}</div>'
+            f'<div class="rmnote">Irish players in <b class="ir">green</b>. Goals, cards and missed penalties only.</div>')
+
 def build_match(m, involved):
     hs, as_ = m.get("home_score",""), m.get("away_score","")
     status = (m.get("status") or "scheduled")
@@ -1572,8 +1619,9 @@ def build_match(m, involved):
         <div class="mteam right">{esc(m.get("away",""))}</div>
       </div>
     </div>
-    <div class="pdactions" style="margin:-6px 0 14px"><button class="starbtn" data-favm="{match_id(m)}" aria-pressed="false">★ <span>Follow match</span></button>
-      <span class="more" style="border:0">Email updates when the score changes</span></div>
+    {events_block(m, involved)}
+    <div class="mactions"><button class="starbtn" data-favm="{match_id(m)}" aria-pressed="false">★ <span>Follow match</span></button>
+      <span class="mhint">Email updates when the score changes</span></div>
     <div class="sec"><h2>Irish players in this match</h2>
       <span class="more" style="border:0">{len(involved)}</span></div>
     <div class="tiergroup">{rows}</div>
@@ -1691,10 +1739,13 @@ def build_player(p):
     upcoming = p["fixtures"]
     n_fx = len(p["fixtures"])
     fx_more = f'<span class="more" style="border:0">{n_fx} upcoming</span>' if n_fx else ""
-    fxr = "".join(f'<div class="fxrow when" data-when="{esc(d)}" data-opp="{esc(o)}" data-ha="{h}">'
-                  f'<div class="fxwhen">{esc(day_label(d))}</div>'
-                  f'<div class="fxc">{esc(cp)}</div></div>'
-                  for d,o,h,cp in upcoming)
+    def _fxrow(d,o,h,cp):
+        mid = match_page_for(p, d, o)
+        tag, href = ("a", f' href="../match/{mid}.html"') if mid else ("div", "")
+        return (f'<{tag} class="fxrow when{" lnk" if mid else ""}"{href} data-when="{esc(d)}" data-opp="{esc(o)}" data-ha="{h}">'
+                f'<div class="fxwhen">{esc(day_label(d))}</div>'
+                f'<div class="fxc">{esc(cp)}</div></{tag}>')
+    fxr = "".join(_fxrow(d,o,h,cp) for d,o,h,cp in upcoming)
     rsr = ""
     recent_results = list(reversed(p["results"]))[:10]   # feed is oldest-first
     for row in recent_results:
