@@ -124,7 +124,7 @@ function ownOnly(){ return !!role().ownOnly; }
 const FILES = {
   players:  {path:'manual/players.csv',  label:'Players'},
   matches:  {path:'api/matches.csv',     label:'Matches'},
-  articles: {path:'manual/articles.csv', label:'News'},
+  articles: {path:'manual/articles.csv', ensure:['expires'], label:'News'},
   fixtures: {path:'manual/fixtures.csv', label:'Fixtures'},
   results:  {path:'manual/results.csv',  label:'Results'},
   ireland:  {path:'manual/ireland.csv',  label:'Ireland'},
@@ -183,7 +183,11 @@ async function loadAll(){
     try{
       const res=await fetch('../data/'+FILES[k].path+'?t='+Date.now());
       if(!res.ok) throw new Error(res.status);
-      data[k]={...parseCSV(await res.text()), dirty:false};
+      const p=parseCSV(await res.text());
+      (FILES[k].ensure||[]).forEach(c=>{
+        if(!p.cols.includes(c)){ p.cols.push(c); p.rows.forEach(r=>r[c]=r[c]||''); }
+      });
+      data[k]={...p, dirty:false};
       ok++;
     }catch(e){ data[k]={cols:[],rows:[],dirty:false}; }
   }
@@ -387,6 +391,10 @@ function articleView(){
       <div class="artrow">
         <div><label>Author</label><input id="f_author" value="${esc(a.author)}"></div>
         <div><label>Player slug (optional)</label><input id="f_player_slug" value="${esc(a.player_slug)}"></div></div>
+      <div class="frow">
+        <div><label>Expires (optional — drops out of the homepage carousel after this; stays on the news page)</label>
+          <input id="f_expires" type="datetime-local" value="${esc(a.expires||'')}"></div>
+        <div><label>Tip</label><div class="hint" style="padding-top:9px">Tag an article <b>NOW</b>, <b>LIVE</b> or <b>BREAKING</b> and it pins first in the carousel with a red "Happening now" treatment. Set it to expire when the moment's over.</div></div></div>
       <div class="artrow">
         <div><label>Slug (URL)</label><input id="f_slug" value="${esc(a.slug)}"></div>
         <div><label>Image path</label><input id="f_image" value="${esc(a.image)}" placeholder="images/file.jpg"></div></div>
@@ -409,7 +417,7 @@ function articleView(){
       o.date=new Date().toISOString().slice(0,10); o.author=SESSION.name||'Irish Fball Staff';
       d.rows.unshift(o); selectedArticle=0; markDirty(); render();
     };
-    ['headline','standfirst','date','tag','author','player_slug','slug','image','body'].forEach(f=>{
+    ['headline','standfirst','date','tag','author','player_slug','slug','image','body','expires'].forEach(f=>{
       const el=v.querySelector('#f_'+f); if(!el) return;
       el.oninput=()=>{
         const row=d.rows[selectedArticle]; if(!row) return;

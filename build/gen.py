@@ -2,6 +2,7 @@
 import os, sys, html as H, json, csv
 HERE = os.path.dirname(os.path.abspath(__file__))
 DATA = os.path.join(HERE, "..", "data")
+EMPTY_MS = '<div class="emptystate" style="display:block">Nothing close right now.</div>'
 
 # ---- config ----
 SITE_URL   = "https://irishfball.vercel.app"
@@ -353,6 +354,7 @@ def shell(title, desc, root, active, body, extra_head="", canonical="", body_att
 <html lang="en">
 <head>
 <meta charset="utf-8">
+<script>try{{if(localStorage.getItem('fb_theme')==='pitch')document.documentElement.setAttribute('data-theme','pitch');}}catch(e){{}}</script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{esc(title)}</title>
 <meta name="description" content="{esc(desc)}">
@@ -382,6 +384,9 @@ def shell(title, desc, root, active, body, extra_head="", canonical="", body_att
 {loader_js}<div class="wrap">
 <nav>
   <a class="mark" href="{root}index.html">irish<i>fball</i></a>
+  <button class="themetog" id="themetog" aria-label="Switch theme">
+    <span class="sw2"></span><span class="tlabel">Pitch</span>
+  </button>
   <button class="burger" id="burger" aria-label="Menu" aria-expanded="false" aria-controls="navlinks">
     <span></span><span></span><span></span>
   </button>
@@ -564,11 +569,31 @@ def week_activity():
 # ================= HOME =================
 def build_index():
     GOALS = [p for p in PLAYERS if p["results"] and (p["results"][0][5] or p["results"][0][6])]
-    HEAD = [(a.get("tag",""), a.get("headline",""), a.get("standfirst",""), a["slug"]) for a in ARTICLES[:5]] or NEWS
-    HEAD_IS_ARTICLE = bool(ARTICLES)
+    # expiry: an article with `expires` in the past stays on the news page
+    # but drops out of the homepage carousel. NOW/LIVE/BREAKING pins first
+    # and gets the happening-now treatment.
+    import datetime as _dt
+    def _unexpired(a):
+        e = (a.get("expires") or "").strip()
+        if not e: return True
+        try:
+            exp = _dt.datetime.strptime(e[:16], "%Y-%m-%dT%H:%M") if "T" in e \
+                  else _dt.datetime.strptime(e[:10], "%Y-%m-%d") + _dt.timedelta(hours=23, minutes=59)
+            return exp > _dt.datetime.utcnow()
+        except ValueError:
+            return True     # unparseable date never hides an article
+
+    def _is_now(a): return (a.get("tag") or "").strip().upper() in ("NOW","LIVE","BREAKING")
+
+    pool = [a for a in ARTICLES if _unexpired(a)]
+    pool.sort(key=lambda a: (0 if _is_now(a) else 1))     # stable: NOW first, then newest
+    HEAD = [(a.get("tag",""), a.get("headline",""), a.get("standfirst",""), a["slug"], _is_now(a))
+            for a in pool[:5]] or [(t,h,s,sl,False) for (t,h,s,sl) in NEWS]
+    HEAD_IS_ARTICLE = bool(pool)
     slides = "".join(
-      f'<a class="slide" data-i="{i}" href="{"news/" + s[3] + ".html" if HEAD_IS_ARTICLE else "player/" + s[3] + ".html"}">'
-      f'<div class="tag">{esc(s[0])}</div><h3>{esc(s[1])}</h3><p>{esc(s[2])}</p></a>'
+      f'<a class="slide{" now" if s[4] else ""}" data-i="{i}" href="{"news/" + s[3] + ".html" if HEAD_IS_ARTICLE else "player/" + s[3] + ".html"}">'
+      f'<div class="tag">{"<span class=\"nowdot\"></span>HAPPENING NOW" if s[4] else esc(s[0])}</div>'
+      f'<h3>{esc(s[1])}</h3><p>{esc(s[2])}</p></a>'
       for i,s in enumerate(HEAD))
     dots = "".join(f'<button aria-current="{"true" if i==0 else "false"}" data-i="{i}"></button>' for i in range(len(HEAD)))
 
@@ -1394,7 +1419,7 @@ def build_milestones():
                     f'<div class="msn">{esc(m["p"]["n"])}</div><div class="msd">{esc(m["text"])}</div>'
                     f'<div class="msc">{esc(m["p"]["club"])}</div></a>' for m in items)
     body = (f'<div class="pagehead"><h1>Approaching milestones</h1><p>Players closing in on a round number — caps, goals or appearances.</p></div>'
-            f'<div class="msgrid">{cards or "<div class=\'emptystate\' style=\'display:block\'>Nothing close right now.</div>"}</div>')
+            f'<div class="msgrid">{cards or EMPTY_MS}</div>')
     return shell("Milestones — IRISH FBALL","Irish players approaching career and international milestones.","", "milestones.html", body, canonical="milestones.html")
 
 # ================= COMPARE =================

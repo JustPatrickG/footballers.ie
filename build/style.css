@@ -796,3 +796,74 @@ a.intlblock.lnk:hover{border-color:var(--teal)}
 @media(max-width:700px){
   .biorow{grid-template-columns:1fr;gap:4px;padding:12px 14px}
 }
+
+/* ================================================================
+   THEME: PITCH — the second look. Near-black, one green, roomier
+   cards, sentence-case headings. Toggle in the nav; saved locally.
+   ================================================================ */
+[data-theme="pitch"]{
+  --bg:#0D0D0D; --panel:#191919; --panel2:#222222; --line:#2B2B2B;
+  --white:#F5F5F5; --mute:#8F8F8F; --yellow:#00B36B; --teal:#00B36B; --red:#FF5470;
+}
+[data-theme="pitch"] body,
+[data-theme="pitch"] button,
+[data-theme="pitch"] input,
+[data-theme="pitch"] select,
+[data-theme="pitch"] textarea{
+  font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
+}
+/* headings drop the mono/uppercase voice for a sentence-case one */
+[data-theme="pitch"] .sec h2{
+  font-family:inherit;text-transform:none;letter-spacing:-.01em;
+  font-size:16px;font-weight:700;color:var(--white);
+}
+[data-theme="pitch"] .navlinks{font-family:inherit;text-transform:none;letter-spacing:0;font-size:13px}
+[data-theme="pitch"] .navmeta,[data-theme="pitch"] .sec .more,
+[data-theme="pitch"] .updated,[data-theme="pitch"] .footlinks a{letter-spacing:.02em}
+/* roomier cards */
+[data-theme="pitch"] .slide,[data-theme="pitch"] .mccard,[data-theme="pitch"] .pdstats,
+[data-theme="pitch"] .biogrid,[data-theme="pitch"] .faq,[data-theme="pitch"] .nodata,
+[data-theme="pitch"] .clubcard,[data-theme="pitch"] .gicard,[data-theme="pitch"] .intlblock,
+[data-theme="pitch"] .mapcta,[data-theme="pitch"] .crow{border-radius:16px}
+[data-theme="pitch"] .slide{background:linear-gradient(165deg,#1E1E1E,#111)}
+[data-theme="pitch"] .chip{border-radius:8px}
+[data-theme="pitch"] .cbtn{border-radius:10px}
+/* ratings become solid blocks, the FotMob tell */
+[data-theme="pitch"] .rate{border-radius:6px;font-weight:700}
+[data-theme="pitch"] .rate.hi{background:#00B36B;color:#04140C}
+[data-theme="pitch"] .rate.md{background:#E8A400;color:#191100}
+[data-theme="pitch"] .rate.lo{background:#3A3A3A;color:#CFCFCF}
+[data-theme="pitch"] .rate.none{background:transparent;color:var(--mute)}
+[data-theme="pitch"] .card.yel{background:#E8A400;color:#191100}
+[data-theme="pitch"] .card.red{background:#FF5470;color:#1C0308}
+/* the follow star and dots pick up the green */
+[data-theme="pitch"] .dots button[aria-current="true"]{background:#00B36B}
+[data-theme="pitch"] .navlinks a.on{color:#00B36B;border-color:#00B36B}
+[data-theme="pitch"] .mark i{color:#00B36B}
+[data-theme="pitch"] :focus-visible{outline-color:#00B36B}
+/* buttons and pills */
+[data-theme="pitch"] .starbtn,[data-theme="pitch"] .tag2,
+[data-theme="pitch"] .cexp.soon{border-radius:10px}
+[data-theme="pitch"] .cexp.soon{background:rgba(0,179,107,.15);color:#2BD68F}
+/* the loading ball keeps its yellow — it's the one deliberate exception */
+
+/* theme toggle button */
+.themetog{display:inline-flex;align-items:center;gap:7px;border:1px solid var(--line);
+  border-radius:20px;padding:6px 12px;font-family:'IBM Plex Mono',monospace;font-size:10.5px;
+  letter-spacing:.08em;color:var(--mute);text-transform:uppercase}
+.themetog:hover{color:var(--white);border-color:var(--mute)}
+.themetog .sw2{width:22px;height:12px;border-radius:7px;background:var(--line);position:relative;flex:none}
+.themetog .sw2:after{content:"";position:absolute;top:2px;left:2px;width:8px;height:8px;border-radius:50%;
+  background:var(--mute);transition:left .18s}
+[data-theme="pitch"] .themetog .sw2:after{left:12px;background:#00B36B}
+[data-theme="pitch"] .themetog{font-family:inherit;text-transform:none;letter-spacing:0;font-size:12px}
+[data-theme="pitch"] .starbtn{box-shadow:0 0 0 6px rgba(0,179,107,.08);border-color:rgba(0,179,107,.4)}
+[data-theme="pitch"] .starbtn.on,[data-theme="pitch"] .star.on{color:#00B36B}
+[data-theme="pitch"] .followtip .ficon{background:rgba(0,179,107,.15);color:#00B36B}
+
+/* happening-now slide */
+.slide.now{border-color:rgba(255,90,72,.5);background:linear-gradient(160deg,#241517,var(--bg))}
+.slide.now .tag{color:var(--red);display:flex;align-items:center;gap:7px}
+.nowdot{width:8px;height:8px;border-radius:50%;background:var(--red);animation:nowpulse 1.3s infinite}
+@keyframes nowpulse{50%{box-shadow:0 0 0 6px rgba(255,90,72,.18)}}
+[data-theme="pitch"] .slide.now{border-color:rgba(255,84,112,.5);background:linear-gradient(160deg,#241417,#111)}

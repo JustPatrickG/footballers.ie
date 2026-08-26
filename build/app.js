@@ -883,3 +883,31 @@
     })(forms[i]);
   }
 })();
+
+/* ---------- THEME TOGGLE ----------
+   Two looks: the original, and Pitch (near-black + green). Saved locally,
+   applied in <head> before paint so there's no flash. */
+(function () {
+  var btn = document.getElementById('themetog');
+  if (!btn) return;
+  var label = btn.querySelector('.tlabel');
+
+  function current() {
+    return document.documentElement.getAttribute('data-theme') === 'pitch' ? 'pitch' : 'original';
+  }
+  function paint() {
+    if (label) label.textContent = current() === 'pitch' ? 'Original' : 'Pitch';
+    btn.setAttribute('aria-pressed', current() === 'pitch' ? 'true' : 'false');
+  }
+  btn.addEventListener('click', function () {
+    var next = current() === 'pitch' ? '' : 'pitch';
+    if (next) document.documentElement.setAttribute('data-theme', next);
+    else document.documentElement.removeAttribute('data-theme');
+    try {
+      if (next) localStorage.setItem('fb_theme', next);
+      else localStorage.removeItem('fb_theme');
+    } catch (e) {}
+    paint();
+  });
+  paint();
+})();
