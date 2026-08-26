@@ -2155,7 +2155,7 @@
  {
   "fotmob_id": "6059501",
   "url": "/matches/cong-ha-noi-vs-hong-linh-ha-tinh/j9hquoyf#6059501",
-  "kickoff": "2026-09-04T11:00:00Z",
+  "kickoff": "2026-09-05T12:15:00Z",
   "comp": "V-League",
   "home": "C\u00f4ng An H\u00e0 N\u1ed9i",
   "away": "Hong Linh Ha Tinh",
@@ -5680,6 +5680,29 @@
   "away": "Slough Town",
   "slugs": [
    "joshua-keeya"
+  ]
+ },
+ {
+  "fotmob_id": "1000019085",
+  "url": "/matches/chelsea-u21-vs-afc-bournemouth-academy/1hq8ivd5d#1000019085",
+  "kickoff": "2026-08-21T18:00:00Z",
+  "comp": "Premier League 2",
+  "home": "AFC Bournemouth Academy",
+  "away": "Chelsea U21",
+  "slugs": [
+   "justin-osagie"
+  ]
+ },
+ {
+  "fotmob_id": "1000019109",
+  "url": "/matches/west-ham-united-u21-vs-chelsea-u21/f9xdltqr#1000019109",
+  "kickoff": "2026-08-31T12:00:00Z",
+  "comp": "Premier League 2",
+  "home": "Chelsea U21",
+  "away": "West Ham United U21",
+  "slugs": [
+   "justin-osagie",
+   "shaun-wade"
   ]
  },
  {
