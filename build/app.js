@@ -1,4 +1,4 @@
-/* irishfball — favourites
+/* footballers.ie — favourites
    Stored in the browser (localStorage). No account needed.
    Powers: star toggles, the "Your players" rail, and the alerts page. */
 (function () {
@@ -20,7 +20,28 @@
     return list.indexOf(slug) > -1;
   }
 
-  window.FB = { read: read, write: write, has: has, toggle: toggle };
+  /* followed matches, same shape */
+  var MKEY = 'fb_favm_v1';
+  function mread() { try { return JSON.parse(localStorage.getItem(MKEY)) || []; } catch (e) { return []; } }
+  function mwrite(list) { try { localStorage.setItem(MKEY, JSON.stringify(list)); } catch (e) {} document.dispatchEvent(new CustomEvent('favschange', { detail: list })); }
+  function mhas(id) { return mread().indexOf(id) > -1; }
+  function mtoggle(id) { var l = mread(), i = l.indexOf(id); if (i > -1) l.splice(i, 1); else l.push(id); mwrite(l); return l.indexOf(id) > -1; }
+
+  window.FB = { read: read, write: write, has: has, toggle: toggle, mread: mread, mhas: mhas, mtoggle: mtoggle };
+
+  /* keep the account (email + follows) in sync server-side. no password: nothing here is secret. */
+  var syncT;
+  function sync() {
+    var email = window.FB_EMAIL && FB_EMAIL(); if (!email) return;
+    clearTimeout(syncT);
+    syncT = setTimeout(function () {
+      try {
+        fetch('/api/subscribe', { method: 'POST', headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email: email, source: 'sync', players: read().join(';'), matches: mread().join(';') }) });
+      } catch (e) {}
+    }, 800);
+  }
+  document.addEventListener('favschange', sync);
 
   /* ---- wire up every star on the page ---- */
   function paint(btn) {
@@ -47,6 +68,21 @@
           FB_GATE(slug, apply);
         });
       })(stars[i]);
+    }
+    var mstars = document.querySelectorAll('[data-favm]');
+    for (var k = 0; k < mstars.length; k++) {
+      (function (btn) {
+        function mpaint() { var on = mhas(btn.dataset.favm); btn.classList.toggle('on', on); btn.setAttribute('aria-pressed', on ? 'true' : 'false');
+          var sp = btn.querySelector('span'); if (sp) sp.textContent = on ? 'Following match' : 'Follow match'; }
+        mpaint();
+        btn.addEventListener('click', function (e) {
+          e.preventDefault(); e.stopPropagation();
+          var id = btn.dataset.favm;
+          function apply() { mtoggle(id); mpaint(); }
+          if (mhas(id) || !window.FB_GATE) { apply(); return; }
+          FB_GATE(id, apply);
+        });
+      })(mstars[k]);
     }
     renderMine();
     updateCount();
@@ -233,7 +269,7 @@
   }
 
   function wireCards(box) {
-    var cards = box.querySelectorAll('.mccard,.fxm,.fxnext');
+    var cards = box.querySelectorAll('.mccard,.fxmatch,.fxnext');
     for (var c = 0; c < cards.length; c++) {
       (function (card) {
         function go(e) {
@@ -310,7 +346,7 @@
     ms.forEach(function (m) { if (!byComp[m.comp]) { byComp[m.comp] = []; comps.push(m.comp); } byComp[m.comp].push(m); });
     box.innerHTML = comps.map(function (c) {
       var rows = byComp[c].map(function (m) {
-        return '<div class="fxm" data-href="match/' + m.id + '.html" role="link" tabindex="0">' +
+        return '<div class="fxmatch" data-href="match/' + m.id + '.html" role="link" tabindex="0">' +
                '<div class="fxt"><div class="h">' + m.home + '</div>' + midRow(m, now) + '<div class="a">' + m.away + '</div></div>' +
                '<div class="fxp">' + playersHtml(m, '', 0) + '</div></div>';
       }).join('');
@@ -724,7 +760,7 @@
       var c = document.querySelector('h1');
       return { kind: 'club', label: c ? c.textContent.trim() : 'this club' };
     }
-    return { kind: 'page', label: document.title.replace(' — IRISH FBALL', '') };
+    return { kind: 'page', label: document.title.replace(' — footballers.ie', '') };
   }
 
   function open(preset) {

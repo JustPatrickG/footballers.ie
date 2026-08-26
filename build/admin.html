@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>irishfball — admin</title>
+<title>footballers.ie — admin</title>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root{--bg:#0C0F10;--panel:#151A1B;--panel2:#181E1F;--line:#242B2C;--white:#EFF3F1;
@@ -98,7 +98,7 @@ var SESSION=null;
       'font-family:Space Grotesk,sans-serif;color:#EFF3F1;text-align:center;padding:24px">'+
       '<div><div style="font-size:20px;font-weight:700;margin-bottom:10px">Not signed in</div>'+
       '<div style="color:#77837F;font-size:14px;line-height:1.6;max-width:36ch">Go to the site and '+
-      'double-click the <b>irishfball</b> logo in the top left to sign in.</div>'+
+      'double-click the <b>footballers.ie</b> logo in the top left to sign in.</div>'+
       '<div style="margin-top:18px"><a href="../index.html" style="color:#F5C518;font-family:IBM Plex Mono,monospace;'+
       'font-size:12px;letter-spacing:.1em;text-transform:uppercase">← Back to site</a></div></div></div>';
     throw new Error('not signed in');
@@ -414,7 +414,7 @@ function articleView(){
     });
     v.querySelector('#newart').onclick=()=>{
       const o={}; d.cols.forEach(c=>o[c]='');
-      o.date=new Date().toISOString().slice(0,10); o.author=SESSION.name||'Irish Fball Staff';
+      o.date=new Date().toISOString().slice(0,10); o.author=SESSION.name||'footballers.ie Staff';
       d.rows.unshift(o); selectedArticle=0; markDirty(); render();
     };
     ['headline','standfirst','date','tag','author','player_slug','slug','image','body','expires'].forEach(f=>{

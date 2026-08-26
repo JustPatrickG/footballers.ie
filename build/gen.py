@@ -5,7 +5,7 @@ DATA = os.path.join(HERE, "..", "data")
 EMPTY_MS = '<div class="emptystate" style="display:block">Nothing close right now.</div>'
 
 # ---- config ----
-SITE_URL   = "https://irishfball.vercel.app"
+SITE_URL   = "https://footballers.ie"
 SEASON     = "2026/27"
 MATCHWEEK  = ""   # leave blank to work it out from the fixtures
 SAMPLE_DATA = False   # set False once every figure on the site is real
@@ -126,7 +126,7 @@ def load():
         if r.get("slug"):
             results.setdefault(r["slug"], []).append(
                 (r["date"], r["opponent"], r["score"], r["competition"],
-                 _int(r["minutes"]), _int(r["goals"]), _int(r["assists"])))
+                 _int(r["minutes"]), _int(r["goals"]), _int(r["assists"]), (r.get("rating") or "").strip()))
 
     players = []
     for slug, r in _merge_players().items():
@@ -299,7 +299,7 @@ def matchweek_label():
 
 
 LOADER_HTML = '''<div id="fbload" aria-hidden="true">
-  <div class="fbl-mark">irish<i>fball</i></div>
+  <div class="fbl-mark">footballers<i>.ie</i></div>
   <div class="fbl-pitch">
     <div class="fbl-ball"><i></i></div>
     <svg class="fbl-boot" viewBox="0 0 40 44" aria-hidden="true">
@@ -351,10 +351,9 @@ def shell(title, desc, root, active, body, extra_head="", canonical="", body_att
     links = "".join(f'<a class="{"on" if active==href else ""}" href="{root}{href}">{l}</a>' for l,href in NAV)
     can = f"{SITE_URL}/{canonical}" if canonical else SITE_URL
     return f"""<!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="pitch">
 <head>
 <meta charset="utf-8">
-<script>try{{if(localStorage.getItem('fb_theme')==='pitch')document.documentElement.setAttribute('data-theme','pitch');}}catch(e){{}}</script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{esc(title)}</title>
 <meta name="description" content="{esc(desc)}">
@@ -383,10 +382,7 @@ def shell(title, desc, root, active, body, extra_head="", canonical="", body_att
 {loader}
 {loader_js}<div class="wrap">
 <nav>
-  <a class="mark" href="{root}index.html">irish<i>fball</i></a>
-  <button class="themetog" id="themetog" aria-label="Switch theme">
-    <span class="sw2"></span><span class="tlabel">Pitch</span>
-  </button>
+  <a class="mark" href="{root}index.html">footballers<i>.ie</i></a>
   <button class="burger" id="burger" aria-label="Menu" aria-expanded="false" aria-controls="navlinks">
     <span></span><span></span><span></span>
   </button>
@@ -406,7 +402,7 @@ def shell(title, desc, root, active, body, extra_head="", canonical="", body_att
 {body}
 <footer>
   <div class="foothead">
-    {'Irish Fball · prototype · sample data' if SAMPLE_DATA else 'Irish Fball'}
+    {'footballers.ie · prototype · sample data' if SAMPLE_DATA else 'footballers.ie'}
     <span class="updated" data-stamp="{DATA_STAMP}">checking for updates…</span>
   </div>
   Every Irish player at a professional club — abroad, senior international and League of Ireland
@@ -442,7 +438,7 @@ def clink(c, root=""): return f'{root}club/{club_slug(c)}.html'
 def ev_str(p):
     r = p["results"][0] if p["results"] else None
     if not r: return "—", 0
-    _,_,_,_,mins,g,a = r
+    mins,g,a = r[4],r[5],r[6]
     bits = []
     if g: bits.append("⚽"*g)
     if a: bits.append("🅰"*a)
@@ -555,7 +551,7 @@ def week_activity():
     for p in PLAYERS:
         # results carry no year, so "16 Aug" from last season looks identical to
         # this one — only consider each player's most recent handful of games
-        for (d, opp, sc, comp, mins, g, a) in p["results"][-6:]:
+        for (d, opp, sc, comp, mins, g, a, *_x) in p["results"][-6:]:
             if norm(d) not in ftdates: continue
             if not (g or a): continue
             club = (p["club"] or "").replace(" FC","")
@@ -630,7 +626,7 @@ def build_index():
 
     gi = ""
     for p in GOALS:
-        _,_,_,_,mins,g,a = p["results"][0]
+        mins,g,a = p["results"][0][4], p["results"][0][5], p["results"][0][6]
         tags = "".join(f'<span class="gitag">⚽</span>' for _ in range(g)) + \
                "".join(f'<span class="gitag a">🅰</span>' for _ in range(a))
         gi += (f'<a class="gicard" href="{plink(p)}">{avatar(p)}<div class="who">{esc(p["n"])}</div>'
@@ -801,7 +797,7 @@ def build_index():
     }})();
     </script>
 '''
-    return shell("IRISH FBALL — every Irish professional, tracked",
+    return shell("footballers.ie — every Irish professional, tracked",
                  "News, goal involvements and the full weekend round-up for every Irish professional footballer.",
                  "", "index.html", body, canonical="")
 
@@ -871,7 +867,7 @@ def writers_block(root=""):
     return ('<div class="sbbox"><div class="sbh">Writers</div>' +
             "".join(f'<a class="writer" href="{root}author/{w["slug"]}.html"><div class="pavatar sm"><span>{initials(w["name"])}</span></div>'
                     f'<div><b>{esc(w["name"])}</b><small>{len(w["arts"])} article{"s" if len(w["arts"])!=1 else ""}</small></div></a>' for w in aus) +
-            f'<a class="sbcta" href="mailto:business@matchweek.ie?subject=Writing%20for%20Irish%20Fball">Want to write for us? →</a></div>')
+            f'<a class="sbcta" href="mailto:business@matchweek.ie?subject=Writing%20for%20footballers.ie">Want to write for us? →</a></div>')
 
 def build_news():
     tags = sorted({(a.get("tag") or "").strip().upper() for a in ARTICLES if a.get("tag")})
@@ -905,7 +901,7 @@ def build_news():
     }})();
     </script>
     '''
-    return shell("News — IRISH FBALL", "Latest news on Irish professional footballers.",
+    return shell("News — footballers.ie", "Latest news on Irish professional footballers.",
                  "", "news.html", body, canonical="news.html")
 
 def build_author(w):
@@ -913,11 +909,11 @@ def build_author(w):
     body = f'''
     <a class="crumb" data-back href="../news.html">← News</a>
     <div class="pagehead authhead"><div class="pavatar lg"><span>{initials(w["name"])}</span></div>
-      <div><h1>{esc(w["name"])}</h1><p>{len(w["arts"])} article{"s" if len(w["arts"])!=1 else ""} for Irish Fball</p></div></div>
+      <div><h1>{esc(w["name"])}</h1><p>{len(w["arts"])} article{"s" if len(w["arts"])!=1 else ""} for footballers.ie</p></div></div>
     {cards}
     <script>document.addEventListener('click',function(e){{var au=e.target.closest('.au');if(au){{e.preventDefault();location.href=au.getAttribute('data-href');}}}});</script>
     '''
-    return shell(f'{w["name"]} — IRISH FBALL', f'Articles by {w["name"]}.', "../", "news.html", body, canonical=f'author/{w["slug"]}.html')
+    return shell(f'{w["name"]} — footballers.ie', f'Articles by {w["name"]}.', "../", "news.html", body, canonical=f'author/{w["slug"]}.html')
 
 def build_article(a):
     paras = "".join(f'<p>{esc(x.strip())}</p>' for x in (a.get("body") or "").split("\n") if x.strip())
@@ -941,7 +937,7 @@ def build_article(a):
       <div class="arttag">{esc(a.get("tag",""))} · {esc(pretty_date(a.get("date","")))}</div>
       <h1>{esc(a.get("headline",""))}</h1>
       <p class="standfirst">{esc(a.get("standfirst",""))}</p>
-      <div class="artmeta">By <a class="lnk" href="../author/{author_slug(a.get("author"))}.html">{esc(a.get("author","") or "Irish Fball")}</a></div>
+      <div class="artmeta">By <a class="lnk" href="../author/{author_slug(a.get("author"))}.html">{esc(a.get("author","") or "footballers.ie")}</a></div>
       {hero}
       <div class="artcontent">{paras}</div>
     </article>
@@ -949,7 +945,7 @@ def build_article(a):
     {more}
     {signup("../", compact=True)}
     '''
-    return shell(f'{a.get("headline","")} — IRISH FBALL',
+    return shell(f'{a.get("headline","")} — footballers.ie',
                  a.get("standfirst",""), "../", "news.html", body,
                  canonical=f'news/{a["slug"]}.html')
 
@@ -1113,8 +1109,8 @@ def build_faq():
             f'<p>How the numbers on this site are collected, what they mean, and what they don\'t.</p></div>'
             f'{items}'
             f'<div class="faqfoot">Still not answered? Hit <b>Report</b> in the corner of any page.</div>')
-    return shell("Where the data comes from — IRISH FBALL",
-                 "How Irish Fball collects and calculates its data.",
+    return shell("Where the data comes from — footballers.ie",
+                 "How footballers.ie collects and calculates its data.",
                  "", "faq.html", body, canonical="faq.html")
 
 
@@ -1259,7 +1255,7 @@ def build_map():
     }})();
     </script>
     '''
-    return shell("Where are the Irish? — IRISH FBALL",
+    return shell("Where are the Irish? — footballers.ie",
                  "A map of every country where tracked Irish players are playing.",
                  "", "clubs.html", body, canonical="where-are-the-irish.html")
 
@@ -1315,7 +1311,7 @@ def build_list(fname, title, sub, data):
     sortf.onchange=function(){{sortRows();draw();}};
     q.oninput=draw;posf.onchange=draw;lgf.onchange=function(){{sortRows();draw();}};
     </script>'''
-    return shell(f"{title} — IRISH FBALL", sub, "", fname, body, canonical=fname)
+    return shell(f"{title} — footballers.ie", sub, "", fname, body, canonical=fname)
 
 # ================= CLUBS =================
 def build_clubs_index():
@@ -1338,7 +1334,7 @@ def build_clubs_index():
             f'<div><b>Where are the Irish?</b><span>See every country on a map</span></div>'
             f'<span class="go">Open map →</span></a>'
             f'<div class="clubgrid">{cards}</div>')
-    return shell("Clubs — IRISH FBALL","Irish players by country, league and club.","", "clubs.html", body, canonical="clubs.html")
+    return shell("Clubs — footballers.ie","Irish players by country, league and club.","", "clubs.html", body, canonical="clubs.html")
 
 def build_country(cname, ps):
     """Second level: leagues within a country."""
@@ -1358,7 +1354,7 @@ def build_country(cname, ps):
             f'<div class="pagehead"><h1>{esc(cname)}</h1>'
             f'<p>{len(ps)} Irish player{"s" if len(ps)!=1 else ""} across {len(order)} league{"s" if len(order)!=1 else ""}.</p></div>'
             f'<div class="clubgrid">{cards}</div>')
-    return shell(f"{cname} — Irish players — IRISH FBALL",
+    return shell(f"{cname} — Irish players — footballers.ie",
                  f"Irish players in {cname}, by league.", "../", "clubs.html", body,
                  canonical=f"country/{country_slug(cname)}.html")
 
@@ -1379,7 +1375,7 @@ def build_league(cname, lname, ps):
             f'<div class="pagehead"><h1>{esc(lname)}</h1>'
             f'<p>{esc(cname)} · {len(ps)} Irish player{"s" if len(ps)!=1 else ""} at {len(order)} club{"s" if len(order)!=1 else ""}.</p></div>'
             f'<div class="clubgrid">{cards}</div>')
-    return shell(f"{lname} — Irish players — IRISH FBALL",
+    return shell(f"{lname} — Irish players — footballers.ie",
                  f"Irish players in the {lname}.", "../", "clubs.html", body,
                  canonical=f"league/{club_slug(cname)}-{club_slug(lname)}.html")
 
@@ -1397,7 +1393,7 @@ def build_club(cname, ps):
     <div class="sec"><h2>Upcoming fixtures</h2></div>
     <div class="fxlist">{fxr or '<div class="emptystate" style="display:block">No fixtures listed.</div>'}</div>
     '''
-    return shell(f"{cname} — Irish players — IRISH FBALL",
+    return shell(f"{cname} — Irish players — footballers.ie",
                  f"Irish professionals at {cname}, plus upcoming fixtures.", "../", "clubs.html", body,
                  canonical=f"club/{club_slug(cname)}.html")
 
@@ -1459,7 +1455,7 @@ def build_ireland():
     var want=new URLSearchParams(location.search).get('level');
     if(want) openTab(want);
     </script>'''
-    return shell("Republic of Ireland — IRISH FBALL",
+    return shell("Republic of Ireland — footballers.ie",
                  "Ireland fixtures, results and capped players at every level.","", "ireland.html", body, canonical="ireland.html")
 
 def build_fixtures():
@@ -1470,7 +1466,7 @@ def build_fixtures():
             f'<button data-f="loi">League of Ireland</button><button data-f="all">All</button></div></div>'
             f'<div id="fxall"></div>'
             f'<script>window.FB_MATCHES={json.dumps(mc)};</script>')
-    return shell("Fixtures — IRISH FBALL","Every game a tracked Irish player is involved in.","", "fixtures.html", body, canonical="fixtures.html")
+    return shell("Fixtures — footballers.ie","Every game a tracked Irish player is involved in.","", "fixtures.html", body, canonical="fixtures.html")
 
 # ================= MILESTONES =================
 def milestone_items():
@@ -1506,7 +1502,7 @@ def build_milestones():
                     f'<div class="msc">{esc(m["p"]["club"])}</div></a>' for m in items)
     body = (f'<div class="pagehead"><h1>Approaching milestones</h1><p>Players closing in on a round number — caps, goals or appearances.</p></div>'
             f'<div class="msgrid">{cards or EMPTY_MS}</div>')
-    return shell("Milestones — IRISH FBALL","Irish players approaching career and international milestones.","", "milestones.html", body, canonical="milestones.html")
+    return shell("Milestones — footballers.ie","Irish players approaching career and international milestones.","", "milestones.html", body, canonical="milestones.html")
 
 # ================= COMPARE =================
 def build_compare():
@@ -1545,7 +1541,7 @@ def build_compare():
     }}
     a.onchange=draw;b.onchange=draw;draw();
     </script>'''
-    return shell("Compare players — IRISH FBALL","Compare any two Irish professionals side by side.","", "compare.html", body, canonical="compare.html")
+    return shell("Compare players — footballers.ie","Compare any two Irish professionals side by side.","", "compare.html", body, canonical="compare.html")
 
 
 def match_id(m):
@@ -1576,12 +1572,14 @@ def build_match(m, involved):
         <div class="mteam right">{esc(m.get("away",""))}</div>
       </div>
     </div>
+    <div class="pdactions" style="margin:-6px 0 14px"><button class="starbtn" data-favm="{match_id(m)}" aria-pressed="false">★ <span>Follow match</span></button>
+      <span class="more" style="border:0">Email updates when the score changes</span></div>
     <div class="sec"><h2>Irish players in this match</h2>
       <span class="more" style="border:0">{len(involved)}</span></div>
     <div class="tiergroup">{rows}</div>
     '''
     title = f'{m.get("home","")} v {m.get("away","")} — Irish players'
-    return shell(f"{title} — IRISH FBALL",
+    return shell(f"{title} — footballers.ie",
                  f"Irish players involved in {m.get('home','')} v {m.get('away','')}.",
                  "../", "fixtures.html", body, canonical=f"match/{match_id(m)}.html")
 
@@ -1635,6 +1633,32 @@ def bio_block(p):
             '<span class="more" style="border:0">updated periodically</span></div>'
             f'<div class="biogrid">{"".join(rows)}</div>')
 
+def result_class(sc):
+    try:
+        a,b = [int(x) for x in str(sc).replace("–","-").split("-")[:2]]
+        return "w" if a>b else "l" if a<b else "d"
+    except Exception:
+        return ""
+
+def rating_pill(rt):
+    if not rt: return '<span class="rt none">—</span>'
+    try: v=float(rt)
+    except ValueError: return f'<span class="rt none">{esc(rt)}</span>'
+    c = "hi" if v>=7.5 else "md" if v>=6.5 else "lo"
+    return f'<span class="rt {c}">{v:.1f}</span>'
+
+_MATCH_LOOKUP = None
+def match_page_for(p, date, opponent):
+    """Find the match page for a player's result row, if the match centre has that game."""
+    global _MATCH_LOOKUP
+    if _MATCH_LOOKUP is None:
+        _MATCH_LOOKUP = {}
+        for m in MATCHES:
+            k = m.get("kickoff","")[:10]
+            for side in ("home","away"):
+                _MATCH_LOOKUP.setdefault((k, club_slug(m.get(side,""))), match_id(m))
+    return _MATCH_LOOKUP.get(((date or "")[:10], club_slug(opponent)))
+
 def build_player(p):
     s, c = p["season"], p["career"]
     badge = "League of Ireland" if p["tier"]=="loi" else ("Abroad · top flight" if p["tier"]=="abroad-top" else "Abroad")
@@ -1661,7 +1685,8 @@ def build_player(p):
             '<div class="sec"><h2>Season data</h2></div>'
             '<div class="nodata">We track this player, but our data source doesn\'t cover their '
             'club yet — so there are no appearances, ratings or match records to show. '
-            'Their profile will fill in as soon as it does.</div>')
+            'Their profile will fill in as soon as it does. '
+            'Think that\'s wrong? <a href="#" onclick="window.FB_REPORT&&FB_REPORT();return false">Report it</a>.</div>')
 
     upcoming = p["fixtures"]
     n_fx = len(p["fixtures"])
@@ -1672,11 +1697,23 @@ def build_player(p):
                   for d,o,h,cp in upcoming)
     rsr = ""
     recent_results = list(reversed(p["results"]))[:10]   # feed is oldest-first
-    for d,o,sc,cp,mins,g,a in recent_results:
-        ev = ("⚽"*g) + ("🅰"*a)
-        rsr += (f'<div class="fxrow"><div class="fxd">{esc(day_label(d))}</div><div class="fxo">{esc(o)}</div>'
-                f'<div class="fxs">{esc(sc)}</div><div class="fxev">{ev}</div>'
-                f'<div class="fxm">{mins}\'</div></div>')
+    for row in recent_results:
+        d,o,sc,cp,mins,g,a = row[:7]
+        rt = row[7] if len(row) > 7 else ""
+        ev = "".join(f'<span class="evi g" title="Goal">⚽</span>' for _ in range(g or 0)) + \
+             "".join(f'<span class="evi a" title="Assist">A</span>' for _ in range(a or 0))
+        res = result_class(sc)
+        mid = match_page_for(p, d, o)
+        tag = "a" if mid else "div"
+        href = f' href="../match/{mid}.html"' if mid else ""
+        rsr += (f'<{tag} class="rmrow{" lnk" if mid else ""}"{href}><div class="rmd">{esc(day_label(d))}</div>'
+                f'<div class="rmo">{esc(o)}<span class="cl">{esc(cp)}</span></div>'
+                f'<div class="rms {res}">{esc(sc)}</div>'
+                f'<div class="rmm">{mins}\'</div>'
+                f'<div class="rme">{ev}</div>'
+                f'<div class="rmr">{rating_pill(rt)}</div></{tag}>')
+    if rsr:
+        rsr = ('<div class="rmhead"><div>Date</div><div>Opponent</div><div>Score</div><div>Mins</div><div>G/A</div><div>Rating</div></div>' + rsr)
 
     # international
     intl = ""
@@ -1760,7 +1797,10 @@ def build_player(p):
 
     <div class="sec"><h2>Recent matches</h2>
       <span class="more" style="border:0">last {len(recent_results)} of {len(p["results"])}</span></div>
-    <div class="fxlist">{rsr or '<div class="emptystate" style="display:block">No appearances yet.</div>'}</div>
+    <div class="fxlist rmlist">{rsr or '<div class="emptystate" style="display:block">No appearances yet.</div>'}</div>
+    <div class="rmnote">Only games they were on the pitch for. Unused subs and squad omissions aren\'t listed.
+      {'Match ratings aren\'t available for this player yet.' if not any(len(r)>7 and r[7] for r in p["results"]) else ''}
+      Something wrong? <a href="#" onclick="window.FB_REPORT&&FB_REPORT();return false">Report it</a>.</div>
 
     {intl}
 
@@ -1770,7 +1810,7 @@ def build_player(p):
 
     {f'<div class="sec"><h2>Transfers</h2></div><div class="tlist">{trans}</div>' if trans else ''}
     '''
-    return shell(f"{p['n']} — IRISH FBALL",
+    return shell(f"{p['n']} — footballers.ie",
                  f"{p['n']} ({p['club']}, {p['league']}) — season stats, fixtures, results and international record.",
                  "../", "", body, canonical=f"player/{p['slug']}.html",
                  body_attr=f' data-player="{p["slug"]}"')
@@ -1793,7 +1833,7 @@ def build_newsletter():
             <li>A recap of the midweek matches</li>
             <li>Injury news and who's back in contention</li></ul></div>
     </div>'''
-    return shell("Newsletter — IRISH FBALL",
+    return shell("Newsletter — footballers.ie",
                  "Two emails a week on every Irish professional footballer — Monday round-up and Friday preview.",
                  "", "newsletter.html", body, canonical="newsletter.html")
 
@@ -1853,7 +1893,7 @@ def build_alerts():
       if (document.readyState==='loading') document.addEventListener('DOMContentLoaded', upd); else upd();
     }})();
     </script>'''
-    return shell("Player alerts — IRISH FBALL",
+    return shell("Player alerts — footballers.ie",
                  "Follow Irish players and get an email when they play, score or assist.",
                  "", "alerts.html", body, canonical="alerts.html")
 
@@ -1870,7 +1910,7 @@ def build_404():
       <a class="tab" href="/league-of-ireland.html">League of Ireland</a>
       <a class="tab" href="/index.html">Home</a>
     </div>"""
-    return shell("Page not found — IRISH FBALL", "That page doesn't exist on Footballers.", "/", "", body)
+    return shell("Page not found — footballers.ie", "That page doesn't exist on Footballers.", "/", "", body)
 
 def build_sitemap():
     urls = ["", "news.html", "faq.html", "where-are-the-irish.html", "players.html", "abroad.html", "league-of-ireland.html", "clubs.html",

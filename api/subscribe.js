@@ -46,13 +46,19 @@ export default async function handler(req, res) {
       ? Buffer.from(cur.content, 'base64').toString('utf8')
       : 'email,signed_up,source,players\n';
 
-    // already there? treat as success, don't duplicate
-    if (text.split('\n').some(l => l.split(',')[0].trim().toLowerCase() === email)) {
-      return res.status(200).json({ ok: true, already: true });
-    }
-
     const esc = v => /[",\n]/.test(v) ? '"' + v.replace(/"/g, '""') + '"' : v;
-    text += [email, new Date().toISOString(), source, esc(players)].join(',') + '\n';
+    const matches = String(body.matches || '').slice(0, 2000);
+    const nowIso = new Date().toISOString();
+
+    // one row per email. a repeat signup / follow-sync updates the row in place
+    // (this is the whole "account": email + what they follow. no password — nothing here is secret)
+    let lines = text.split('\n').filter(l => l.length);
+    if (!lines[0].startsWith('email,')) lines.unshift('email,signed_up,source,players,matches,updated');
+    if (lines[0] === 'email,signed_up,source,players') lines[0] = 'email,signed_up,source,players,matches,updated';
+    const idx = lines.findIndex((l, i) => i > 0 && l.split(',')[0].trim().toLowerCase() === email);
+    const row = [email, idx > -1 ? (lines[idx].split(',')[1] || nowIso) : nowIso, source, esc(players), esc(matches), nowIso].join(',');
+    if (idx > -1) lines[idx] = row; else lines.push(row);
+    text = lines.join('\n') + '\n';
 
     const put = await fetch(`https://api.github.com/repos/${repo}/contents/${PATH}`, {
       method: 'PUT',
