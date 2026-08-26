@@ -1829,9 +1829,7 @@
   "away": "Blackpool",
   "slugs": [
    "andy-lyons",
-   "cj-hamilton",
-   "conor-masterson",
-   "paudie-oconnor"
+   "cj-hamilton"
   ]
  },
  {
@@ -1987,6 +1985,17 @@
   "comp": "First Professional League",
   "home": "Levski Sofia",
   "away": "CSKA 1948",
+  "slugs": [
+   "armstrong-oko-flex"
+  ]
+ },
+ {
+  "fotmob_id": "5801081",
+  "url": "/matches/levski-sofia-vs-cska-sofia/2wyg04#5801081",
+  "kickoff": "2026-09-09T16:00:00Z",
+  "comp": "Super Cup",
+  "home": "Levski Sofia",
+  "away": "CSKA Sofia",
   "slugs": [
    "armstrong-oko-flex"
   ]
@@ -3402,18 +3411,6 @@
    "paudie-oconnor",
    "ryan-sweeney",
    "stephen-mclaughlin"
-  ]
- },
- {
-  "fotmob_id": "5837118",
-  "url": "/matches/oxford-united-vs-reading/2tct1g#5837118",
-  "kickoff": "2026-09-08T18:45:00Z",
-  "comp": "League One",
-  "home": "Oxford Utd",
-  "away": "Reading",
-  "slugs": [
-   "conor-masterson",
-   "paudie-oconnor"
   ]
  },
  {
@@ -5985,17 +5982,6 @@
   "comp": "Regionalliga Bayern",
   "home": "VfB Eichst\u00e4tt",
   "away": "TSV Aubstadt",
-  "slugs": [
-   "kyle-degelman"
-  ]
- },
- {
-  "fotmob_id": "5911510",
-  "url": "/matches/ansbach-vs-tsv-aubstadt/qxml6kg#5911510",
-  "kickoff": "2026-09-04T17:00:00Z",
-  "comp": "Regionalliga Bayern",
-  "home": "TSV Aubstadt",
-  "away": "Ansbach",
   "slugs": [
    "kyle-degelman"
   ]
