@@ -3740,7 +3740,8 @@
   "home": "Hereford",
   "away": "Chester FC",
   "slugs": [
-   "jake-griffin"
+   "jake-griffin",
+   "sam-foley"
   ]
  },
  {
@@ -3751,7 +3752,8 @@
   "home": "Chester FC",
   "away": "Morecambe",
   "slugs": [
-   "jake-griffin"
+   "jake-griffin",
+   "sam-foley"
   ]
  },
  {
@@ -3762,7 +3764,8 @@
   "home": "Hebburn Town",
   "away": "Chester FC",
   "slugs": [
-   "jake-griffin"
+   "jake-griffin",
+   "sam-foley"
   ]
  },
  {
@@ -3774,7 +3777,8 @@
   "away": "Merthyr Town",
   "slugs": [
    "jake-griffin",
-   "matthew-harris"
+   "matthew-harris",
+   "sam-foley"
   ]
  },
  {
@@ -4943,7 +4947,7 @@
   "url": "/matches/botosani-vs-sepsi-osk/3suxzc3z#5853490",
   "kickoff": "2026-09-05T12:00:00Z",
   "comp": "Superliga",
-  "home": "Botosani",
+  "home": "Boto\u0219ani",
   "away": "Sepsi OSK",
   "slugs": [
    "roland-idowu"
