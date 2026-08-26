@@ -196,37 +196,51 @@
     return [];
   }
 
+  function avatarHtml(p, root) {
+    var face = p.photo ? p.photo : (p.img ? root + 'img/players/' + p.slug + '.png' : '');
+    return face
+      ? '<div class="pavatar sm"><img src="' + face + '" alt="" loading="lazy" ' +
+        'onerror="this.parentNode.innerHTML=\'<span>' + p.ini + '</span>\'"></div>'
+      : '<div class="pavatar sm"><span>' + p.ini + '</span></div>';
+  }
+  function chip(p, root) {
+    return '<a class="mcp" href="' + root + 'player/' + p.slug + '.html" title="' + p.n + '">' +
+           avatarHtml(p, root) + '<span class="mcpn">' + p.n + '</span></a>';
+  }
+  /* Overlapping faces + count — for LOI games where nearly everyone is Irish. */
+  function pile(m, root, n) {
+    var list = m.players.slice(0, n);
+    return '<span class="pile">' + list.map(function (p) { return avatarHtml(p, root); }).join('') + '</span>' +
+           '<span class="pilen">' + m.players.length + ' Irish players</span>';
+  }
+  function playersHtml(m, root, limit) {
+    if (m.loi) return pile(m, root, 6);
+    var list = limit ? m.players.slice(0, limit) : m.players;
+    var h = list.map(function (p) { return chip(p, root); }).join('');
+    if (limit && m.players.length > limit) h += '<span class="mcmore">+' + (m.players.length - limit) + ' more</span>';
+    return h;
+  }
+
   function card(m, now, limit, root) {
     root = root || '';
-    var list = limit ? m.players.slice(0, limit) : m.players;
-    var players = list.map(function (p) {
-      var face = p.photo ? p.photo : (p.img ? root + 'img/players/' + p.slug + '.png' : '');
-      var av = face
-        ? '<div class="pavatar sm"><img src="' + face + '" alt="" loading="lazy" ' +
-          'onerror="this.parentNode.innerHTML=\'<span>' + p.ini + '</span>\'"></div>'
-        : '<div class="pavatar sm"><span>' + p.ini + '</span></div>';
-      return '<a class="mcp" href="' + root + 'player/' + p.slug + '.html" title="' + p.n + '">' +
-             av + '<span class="mcpn">' + p.n + '</span></a>';
-    }).join('');
-    if (limit && m.players.length > limit) {
-      players += '<span class="mcmore">+' + (m.players.length - limit) + ' more</span>';
-    }
     return '<div class="mccard" data-href="' + root + 'match/' + m.id + '.html" role="link" tabindex="0">' +
            '<div class="mcrow">' +
              '<span class="mccomp">' + m.comp + '</span>' + statusChip(m, now) +
            '</div>' +
            '<div class="mcteams"><div class="mct">' + m.home + '</div>' + score(m, now) +
            '<div class="mct right">' + m.away + '</div></div>' +
-           '<div class="mcplayers">' + players + '</div></div>';
+           '<div class="mcplayers">' + playersHtml(m, root, limit) + '</div></div>';
   }
 
   function wireCards(box) {
-    var cards = box.querySelectorAll('.mccard');
+    var cards = box.querySelectorAll('.mccard,.fxm,.fxnext');
     for (var c = 0; c < cards.length; c++) {
       (function (card) {
         function go(e) {
           if (e.target.closest && e.target.closest('a')) return;
-          location.href = card.getAttribute('data-href');
+          var h = card.getAttribute('data-href'), d = card.getAttribute('data-day');
+          if (d) { fxSel = d; renderAll(); return; }
+          if (h) location.href = h;
         }
         card.addEventListener('click', go);
         card.addEventListener('keydown', function (e) {
@@ -236,41 +250,74 @@
     }
   }
 
-  /* Fixtures page: every match, one card each, grouped by local day.
-     Results above, fixtures below; first load scrolls to today. */
-  var fxScrolled = false;
+  /* ---------- Fixtures page (FotMob-style) ----------
+     One day at a time, a scrollable date strip on top, matches grouped by
+     competition. Abroad / LOI / All filter. Opens on today. */
+  var fxSel = null, fxFilter = 'abroad', fxStripBuilt = false;
+  function dayKey(d) { return d.getFullYear() + '-' + (d.getMonth() + 1) + '-' + d.getDate(); }
+  function midRow(m, now) {
+    var played = m.status === 'live' || m.status === 'ft' || ended(m) < now;
+    if (m.status === 'live') return '<div class="mid sc lv">' + m.hs + ' – ' + m.as_ + '<br><small>' + (m.minute ? m.minute + "'" : 'LIVE') + '</small></div>';
+    if (played && m.hs !== '' && m.hs !== null && m.hs !== undefined) return '<div class="mid sc">' + m.hs + ' – ' + m.as_ + '</div>';
+    if (played) return '<div class="mid">FT</div>';
+    return '<div class="mid">' + new Date(m.kickoff).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }) + '</div>';
+  }
   function renderAll() {
-    var box = document.getElementById('fxall');
-    if (!box || !window.FB_MATCHES) return;
-    var now = Date.now();
-    var all = FB_MATCHES.slice().sort(function (a, b) { return ko(a) - ko(b); });
-    if (!all.length) { box.innerHTML = '<div class="emptybox">No fixtures loaded yet.</div>'; return; }
-    var groups = [], byDay = {};
-    all.forEach(function (m) {
-      var d = new Date(m.kickoff);
-      var key = d.getFullYear() + '-' + (d.getMonth() + 1) + '-' + d.getDate();
-      if (!byDay[key]) { byDay[key] = { key: key, d: d, ms: [] }; groups.push(byDay[key]); }
-      byDay[key].ms.push(m);
-    });
-    var t = new Date(now), todayKey = t.getFullYear() + '-' + (t.getMonth() + 1) + '-' + t.getDate();
-    var anchorSet = false, html = '';
-    groups.forEach(function (g) {
-      var isPast = g.ms.every(function (m) { return m.status === 'ft' || ended(m) <= now; });
-      var anchor = '';
-      if (!anchorSet && !isPast) { anchor = ' id="fx-today"'; anchorSet = true; }
-      var label = g.d.toLocaleDateString([], { weekday: 'short', day: 'numeric', month: 'short' });
-      if (g.key === todayKey) label = 'Today · ' + label;
-      html += '<div class="tiergroup fxday' + (isPast ? ' past' : '') + '"' + anchor + '>' +
-              '<h4><span>' + label + '</span><span>' + g.ms.length + (g.ms.length === 1 ? ' match' : ' matches') + '</span></h4>' +
-              '<div class="fxcards">' + g.ms.map(function (m) { return card(m, now, 0, ''); }).join('') + '</div></div>';
-    });
-    box.innerHTML = html;
-    wireCards(box);
-    if (!fxScrolled) {
-      fxScrolled = true;
-      var el = document.getElementById('fx-today');
-      if (el) { el.scrollIntoView({ block: 'start' }); window.scrollBy(0, -70); }
+    var box = document.getElementById('fxall'), strip = document.getElementById('fxdays');
+    if (!box || !strip || !window.FB_MATCHES) return;
+    var now = Date.now(), today = new Date(now), todayKey = dayKey(today);
+    var pass = function (m) { return fxFilter === 'all' || (fxFilter === 'loi' ? !!m.loi : !m.loi); };
+    var all = FB_MATCHES.filter(pass).sort(function (a, b) { return ko(a) - ko(b); });
+    var byDay = {};
+    all.forEach(function (m) { var k = dayKey(new Date(m.kickoff)); (byDay[k] = byDay[k] || []).push(m); });
+    if (!fxSel) fxSel = todayKey;
+
+    // date strip: 14 days back, 21 forward
+    var html = '';
+    for (var i = -14; i <= 21; i++) {
+      var d = new Date(today.getFullYear(), today.getMonth(), today.getDate() + i);
+      var k = dayKey(d), label;
+      if (i === 0) label = 'Today'; else if (i === -1) label = 'Yesterday'; else if (i === 1) label = 'Tomorrow';
+      else label = d.toLocaleDateString([], { weekday: 'short', day: 'numeric', month: 'short' });
+      html += '<button data-day="' + k + '" class="' + (k === fxSel ? 'on ' : '') + (byDay[k] ? 'has' : '') + '">' + label + '</button>';
     }
+    strip.innerHTML = html;
+    var on = strip.querySelector('.on');
+    if (on && on.scrollIntoView) on.scrollIntoView({ inline: 'center', block: 'nearest' });
+
+    if (!fxStripBuilt) {
+      fxStripBuilt = true;
+      strip.addEventListener('click', function (e) { var b = e.target.closest('button'); if (b) { fxSel = b.getAttribute('data-day'); renderAll(); } });
+      var f = document.getElementById('fxfilt');
+      if (f) f.addEventListener('click', function (e) { var b = e.target.closest('button'); if (!b) return;
+        [].forEach.call(f.children, function (x) { x.classList.toggle('on', x === b); });
+        fxFilter = b.getAttribute('data-f'); renderAll(); });
+    }
+
+
+    var ms = byDay[fxSel] || [];
+    if (!ms.length) {
+      var sp = fxSel.split('-'), dayEnd = new Date(+sp[0], sp[1] - 1, +sp[2] + 1).getTime();
+      var next = all.filter(function (m) { return ko(m) >= dayEnd; })[0];
+      box.innerHTML = '<div class="fxnone">No matches this day</div>' +
+        (next ? '<div style="text-align:center"><div class="fxnext" data-day="' + dayKey(new Date(next.kickoff)) + '" role="button" tabindex="0">' +
+                '<span>' + next.home + '</span><span><b>' + new Date(next.kickoff).toLocaleDateString([], { weekday: 'long' }) + '</b>' +
+                '<small>' + new Date(next.kickoff).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }) + '</small></span>' +
+                '<span>' + next.away + '</span></div></div>' : '');
+      wireCards(box); return;
+    }
+    var comps = [], byComp = {};
+    ms.forEach(function (m) { if (!byComp[m.comp]) { byComp[m.comp] = []; comps.push(m.comp); } byComp[m.comp].push(m); });
+    box.innerHTML = comps.map(function (c) {
+      var rows = byComp[c].map(function (m) {
+        return '<div class="fxm" data-href="match/' + m.id + '.html" role="link" tabindex="0">' +
+               '<div class="fxt"><div class="h">' + m.home + '</div>' + midRow(m, now) + '<div class="a">' + m.away + '</div></div>' +
+               '<div class="fxp">' + playersHtml(m, '', 0) + '</div></div>';
+      }).join('');
+      return '<div class="fxcomp"><h4><span>' + c + '</span><small>' + byComp[c].length + (byComp[c].length === 1 ? ' match' : ' matches') + '</small></h4>' + rows + '</div>';
+    }).join('');
+    wireCards(box);
+
   }
 
   function render() {

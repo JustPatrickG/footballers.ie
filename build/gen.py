@@ -567,6 +567,15 @@ def week_activity():
     return out
 
 # ================= HOME =================
+LOI_COMPS = ("premier division","first division","league of ireland","fai cup","president's cup")
+def is_loi_match(m, involved):
+    """A League of Ireland game: nearly every player is Irish, so list them compactly."""
+    comp=(m.get("competition") or "").strip().lower()
+    if any(c in comp for c in LOI_COMPS): return True
+    pmap={p["slug"]:p for p in PLAYERS}
+    tiers=[(pmap.get(x["slug"]) or {}).get("tier","") for x in involved]
+    return bool(tiers) and sum(1 for t in tiers if t=="loi") > len(tiers)/2
+
 def match_payload():
     """Every match with at least one tracked player, for the client-side renderer."""
     pmap = {p["slug"]: p for p in PLAYERS}
@@ -585,6 +594,7 @@ def match_payload():
                        home=esc(m.get("home","")), away=esc(m.get("away","")),
                        hs=m.get("home_score",""), as_=m.get("away_score",""),
                        status=(m.get("status") or "scheduled"), minute=m.get("minute",""),
+                       loi=(1 if is_loi_match(m, involved) else 0),
                        players=involved))
     return mc
 
@@ -813,27 +823,72 @@ def pretty_date(d):
     except Exception:
         return d
 
+def author_slug(name): return club_slug(name or "staff")
+def authors():
+    """Everyone with a byline, newest article first."""
+    out = {}
+    for a in ARTICLES:
+        n=(a.get("author") or "").strip()
+        if not n: continue
+        out.setdefault(author_slug(n), dict(name=n, slug=author_slug(n), arts=[]))["arts"].append(a)
+    return list(out.values())
+
+def art_card(a, root="", lead=False):
+    by = f'<a class="artby lnk" href="{root}author/{author_slug(a.get("author"))}.html">{esc(a.get("author",""))}</a>' if a.get("author") else ""
+    if lead:
+        return (f'<a class="leadart" href="{art_link(a,root)}" data-tag="{esc(a.get("tag",""))}">{art_img(a,root,"leadimg")}'
+                f'<div class="leadbody"><div class="arttag">{esc(a.get("tag",""))} · {esc(pretty_date(a.get("date","")))}</div>'
+                f'<h3>{esc(a.get("headline",""))}</h3><p>{esc(a.get("standfirst",""))}</p>{by}</div></a>')
+    return (f'<a class="artcard" href="{art_link(a,root)}" data-tag="{esc(a.get("tag",""))}">{art_img(a,root)}'
+            f'<div class="artbody"><div class="arttag">{esc(a.get("tag",""))} · {esc(pretty_date(a.get("date","")))}</div>'
+            f'<h4>{esc(a.get("headline",""))}</h4><p>{esc(a.get("standfirst",""))}</p>{by}</div></a>')
+
 def build_news():
     if not ARTICLES:
-        cards = '<div class="emptybox">No articles yet.</div>'
+        cards = '<div class="emptybox">No articles yet.</div>'; tagbar = ""
     else:
+        tags = sorted({(a.get("tag") or "").strip().upper() for a in ARTICLES if a.get("tag")})
+        tagbar = ('<div class="tagbar" id="tagbar"><button class="on" data-t="">All</button>' +
+                  "".join(f'<button data-t="{esc(t)}">{esc(t.title())}</button>' for t in tags) + '</div>')
         lead, rest = ARTICLES[0], ARTICLES[1:]
-        cards = (f'<a class="leadart" href="{art_link(lead)}">{art_img(lead,"","leadimg")}'
-                 f'<div class="leadbody"><div class="arttag">{esc(lead.get("tag",""))} · {esc(pretty_date(lead.get("date","")))}</div>'
-                 f'<h3>{esc(lead.get("headline",""))}</h3><p>{esc(lead.get("standfirst",""))}</p>'
-                 f'<div class="artby">{esc(lead.get("author",""))}</div></div></a>')
-        if rest:
-            cards += '<div class="artgrid">' + "".join(
-                f'<a class="artcard" href="{art_link(a)}">{art_img(a)}'
-                f'<div class="artbody"><div class="arttag">{esc(a.get("tag",""))} · {esc(pretty_date(a.get("date","")))}</div>'
-                f'<h4>{esc(a.get("headline",""))}</h4><p>{esc(a.get("standfirst",""))}</p>'
-                f'<div class="artby">{esc(a.get("author",""))}</div></div></a>' for a in rest) + '</div>'
+        cards = art_card(lead, lead=True)
+        cards += '<div class="artgrid" id="artgrid">' + "".join(art_card(a) for a in rest) + '</div>'
+        cards += '<div class="emptybox" id="tagempty" style="display:none">Nothing under that tag yet.</div>'
+    aus = authors()
+    writers = ""
+    if aus:
+        writers = ('<div class="sec" style="margin-top:34px"><h2>Writers</h2></div><div class="writers">' +
+                   "".join(f'<a class="writer" href="author/{w["slug"]}.html"><div class="pavatar sm"><span>{initials(w["name"])}</span></div>'
+                           f'<div><b>{esc(w["name"])}</b><small>{len(w["arts"])} article{"s" if len(w["arts"])!=1 else ""}</small></div></a>' for w in aus) + '</div>')
     body = f'''
-    <div class="pagehead"><h1>News</h1><p>Reporting on Irish players at home and abroad.</p></div>
+    <div class="pagehead"><h1>News</h1><p>Reporting on Irish players at home and abroad — written by people, not scraped.</p></div>
+    {tagbar}
     {cards}
+    {writers}
+    <div class="writecta"><div><b>Want to write for Irish Fball?</b><p>We're building a team of journalists for the site and the newsletter. Get in touch.</p></div>
+      <a class="btn" href="mailto:business@matchweek.ie?subject=Writing%20for%20Irish%20Fball">Get in touch →</a></div>
+    {signup(compact=True)}
+    <script>
+    (function(){{var bar=document.getElementById('tagbar');if(!bar)return;
+      bar.addEventListener('click',function(e){{var b=e.target.closest('button');if(!b)return;
+        [].forEach.call(bar.children,function(x){{x.classList.toggle('on',x===b)}});
+        var t=b.getAttribute('data-t'),n=0;
+        document.querySelectorAll('[data-tag]').forEach(function(c){{var ok=!t||c.getAttribute('data-tag').toUpperCase()===t;c.style.display=ok?'':'none';if(ok)n++}});
+        document.getElementById('tagempty').style.display=n?'none':'';}});}})();
+    </script>
     '''
     return shell("News — IRISH FBALL", "Latest news on Irish professional footballers.",
                  "", "news.html", body, canonical="news.html")
+
+def build_author(w):
+    cards = '<div class="artgrid">' + "".join(art_card(a) for a in w["arts"]) + '</div>'
+    body = f'''
+    <a class="crumb" data-back href="../news.html">← News</a>
+    <div class="pagehead authhead"><div class="pavatar lg"><span>{initials(w["name"])}</span></div>
+      <div><h1>{esc(w["name"])}</h1><p>{len(w["arts"])} article{"s" if len(w["arts"])!=1 else ""} for Irish Fball</p></div></div>
+    {cards}
+    '''
+    return shell(f'{w["name"]} — IRISH FBALL', f'Articles by {w["name"]}.', "../", "news.html", body, canonical=f'author/{w["slug"]}.html')
 
 def build_article(a):
     paras = "".join(f'<p>{esc(x.strip())}</p>' for x in (a.get("body") or "").split("\n") if x.strip())
@@ -848,17 +903,22 @@ def build_article(a):
     if a.get("image"):
         u = a["image"] if a["image"].startswith("http") else f'../{a["image"]}'
         hero = f'<div class="arthero"><img src="{esc(u)}" alt=""></div>'
+    others=[x for x in ARTICLES if x["slug"]!=a["slug"]][:3]
+    more = ('<div class="sec"><h2>More news</h2><a class="more" href="../news.html">All news →</a></div><div class="artgrid">'
+            + "".join(art_card(x,"../") for x in others) + '</div>') if others else ""
     body = f'''
     <a class="crumb" data-back href="../news.html">← Back</a>
     <article class="article">
       <div class="arttag">{esc(a.get("tag",""))} · {esc(pretty_date(a.get("date","")))}</div>
       <h1>{esc(a.get("headline",""))}</h1>
       <p class="standfirst">{esc(a.get("standfirst",""))}</p>
-      <div class="artmeta">By {esc(a.get("author","") or "Footballers")}</div>
+      <div class="artmeta">By <a class="lnk" href="../author/{author_slug(a.get("author"))}.html">{esc(a.get("author","") or "Irish Fball")}</a></div>
       {hero}
       <div class="artcontent">{paras}</div>
     </article>
     {related}
+    {more}
+    {signup("../", compact=True)}
     '''
     return shell(f'{a.get("headline","")} — IRISH FBALL',
                  a.get("standfirst",""), "../", "news.html", body,
@@ -1375,8 +1435,10 @@ def build_ireland():
 
 def build_fixtures():
     mc = match_payload()
-    body = (f'<div class="pagehead"><h1>Fixtures</h1><p>Every game a tracked Irish player is involved in. '
-            f'Scroll up for results, down for what\'s coming.</p></div>'
+    body = (f'<div class="pagehead"><h1>Fixtures</h1><p>Every game a tracked Irish player is involved in.</p></div>'
+            f'<div class="fxbar"><div class="fxdays" id="fxdays"></div>'
+            f'<div class="fxfilt" id="fxfilt"><button data-f="abroad" class="on">Abroad</button>'
+            f'<button data-f="loi">League of Ireland</button><button data-f="all">All</button></div></div>'
             f'<div id="fxall"></div>'
             f'<script>window.FB_MATCHES={json.dumps(mc)};</script>')
     return shell("Fixtures — IRISH FBALL","Every game a tracked Irish player is involved in.","", "fixtures.html", body, canonical="fixtures.html")
@@ -1787,6 +1849,7 @@ def build_sitemap():
     urls += [f"club/{club_slug(c)}.html" for c in sorted(set(p["club"] for p in PLAYERS))]
     urls += [f"player/{p['slug']}.html" for p in PLAYERS]
     urls += [f"news/{a['slug']}.html" for a in ARTICLES]
+    urls += [f"author/{w['slug']}.html" for w in authors()]
     items = "".join(f"  <url><loc>{SITE_URL}/{u}</loc></url>\n" for u in urls)
     return f'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n{items}</urlset>\n'
 
@@ -1822,6 +1885,9 @@ for _c, _ps in _by_country.items():
         open(f"{OUT}/league/{club_slug(_c)}-{club_slug(_l)}.html","w").write(build_league(_c, _l, _lp))
 open(f"{OUT}/news.html","w").write(build_news())
 os.makedirs(f"{OUT}/news", exist_ok=True)
+os.makedirs(f"{OUT}/author", exist_ok=True)
+for _w in authors():
+    open(f"{OUT}/author/{_w['slug']}.html","w").write(build_author(_w))
 for _a in ARTICLES:
     open(f"{OUT}/news/{_a['slug']}.html","w").write(build_article(_a))
 open(f"{OUT}/ireland.html","w").write(build_ireland())
