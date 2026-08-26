@@ -1128,3 +1128,8 @@ a.intlblock.lnk:hover{border-color:var(--teal)}
 .followsell p{font-size:13px;line-height:1.45}
 .followsell .btn{padding:8px 13px;font-size:14px}
 @media(max-width:560px){.followsell{padding:12px 14px}.followsell .btn{width:100%;text-align:center}}
+
+/* neutral "also published at" box — no partner colouring */
+.partnerbox{border:1px solid var(--line);background:var(--panel)}
+.pbl{color:var(--mute)}
+.partnerbox .btn{background:var(--teal);color:var(--bg)}

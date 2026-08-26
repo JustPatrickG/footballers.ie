@@ -405,10 +405,10 @@ function articleView(){
         <div><label>Image path (optional)</label><input id="f_image" value="${esc(a.image)}" placeholder="images/file.jpg or https://…"></div></div>
       <div class="artrow">
         <div><label>Use player's photo as the image</label><select id="f_use_player_photo"><option value="">No (default — plain card)</option><option value="yes" ${a.use_player_photo==='yes'?'selected':''}>Yes — needs a player slug</option></select></div>
-        <div><label>Partner (leave blank for our own articles)</label><select id="f_partner"><option value="">None</option><option value="touchline" ${a.partner==='touchline'?'selected':''}>Touchline Studios</option></select></div></div>
+        <div><label>Also published at (optional — e.g. "Touchline Studios", "The 42")</label><input id="f_partner" value="${esc(a.partner||'')}" placeholder="Publication or newsletter name"></div></div>
       <div class="artrow">
-        <div><label>Partner link (optional — the specific post)</label><input id="f_partner_url" value="${esc(a.partner_url||'')}" placeholder="https://jamescallan3.substack.com/p/…"></div>
-        <div><label>Tip</label><div class="hint" style="padding-top:9px">Partner articles get an orange border and a "Read more on Substack" box instead of "More news".</div></div></div>
+        <div><label>Link to the original (optional)</label><input id="f_partner_url" value="${esc(a.partner_url||'')}" placeholder="https://…"></div>
+        <div><label>Tip</label><div class="hint" style="padding-top:9px">If you fill these in, the article ends with an "Also published at …" box linking out, instead of "More news". Works for any writer.</div></div></div>
       <div class="artfull"><label>Body — blank line between paragraphs</label>
         <textarea id="f_body"></textarea></div>
     </div>`;

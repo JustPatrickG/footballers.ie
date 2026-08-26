@@ -938,9 +938,11 @@ PARTNERS = {
                       blurb="Touchline Studios is James Callan's newsletter on how football clubs grow — governance, money and culture, with fans at the centre. This piece appears on footballers.ie in partnership."),
 }
 def partner_of(a):
-    k = (a.get("partner") or "").strip().lower()
+    """Any article can point at where else it lives: a Substack, a paper, a podcast page.
+       `partner` is the name shown, `partner_url` the link. 'touchline' has a preset."""
+    k = (a.get("partner") or "").strip()
     if not k: return None
-    pt = dict(PARTNERS.get(k, dict(name=k.title(), url="", cta="Read more", blurb="")))
+    pt = dict(PARTNERS.get(k.lower(), dict(name=k, url="", cta=f"Read more from {k}", blurb="")))
     if (a.get("partner_url") or "").strip(): pt["url"] = a["partner_url"].strip()
     return pt
 
@@ -967,8 +969,7 @@ def byline(a, root=""):
 
 def art_card(a, root="", kind="card"):
     t=esc(a.get("tag","")); h=esc(a.get("headline","")); sf=esc(a.get("standfirst",""))
-    pt = partner_of(a); pc = " partner" if pt else ""
-    pb = f'<span class="pbadge">{esc(pt["name"])}</span>' if pt else ""
+    pt = partner_of(a); pc = ""; pb = ""
     if kind=="lead":
         vis = art_visual(a,root,"nleadimg")
         return (f'<a class="nlead{pc}{" noimg" if not vis else ""}" href="{art_link(a,root)}" data-tag="{t}">{vis}'
@@ -1050,7 +1051,7 @@ def build_article(a):
     pt = partner_of(a)
     others=[x for x in ARTICLES if x["slug"]!=a["slug"]][:3]
     if pt:
-        more = (f'<div class="partnerbox"><div class="pbl">In partnership with</div><div class="pbn">{esc(pt["name"])}</div>'
+        more = (f'<div class="partnerbox"><div class="pbl">Also published at</div><div class="pbn">{esc(pt["name"])}</div>'
                 f'<p>{esc(pt["blurb"])}</p>'
                 + (f'<a class="btn" href="{esc(pt["url"])}" target="_blank" rel="noopener">{esc(pt["cta"])} →</a>' if pt["url"] else "")
                 + '</div>')
@@ -1058,8 +1059,8 @@ def build_article(a):
             + "".join(art_card(x,"../") for x in others) + '</div><script>document.addEventListener("click",function(e){var au=e.target.closest(".au");if(au){e.preventDefault();location.href=au.getAttribute("data-href");}});</script>') if others else ""
     body = f'''
     <a class="crumb" data-back href="../news.html">← Back</a>
-    <article class="article{" partner" if pt else ""}">
-      <div class="arttag">{esc(a.get("tag",""))} · {esc(pretty_date(a.get("date","")))}{f'<span class="pbadge">{esc(pt["name"])}</span>' if pt else ""}</div>
+    <article class="article">
+      <div class="arttag">{esc(a.get("tag",""))} · {esc(pretty_date(a.get("date","")))}</div>
       <h1>{esc(a.get("headline",""))}</h1>
       <p class="standfirst">{esc(a.get("standfirst",""))}</p>
       <div class="artmeta">By <a class="lnk" href="../author/{author_slug(a.get("author"))}.html">{esc(a.get("author","") or "footballers.ie")}</a>{f' · <a class="lnk" href="{esc(pt["url"])}" target="_blank" rel="noopener">{esc(pt["name"])}</a>' if pt and pt["url"] else ""}</div>
