@@ -683,12 +683,12 @@ def build_index():
 
     pool = [a for a in ARTICLES if _unexpired(a)]
     pool.sort(key=lambda a: (0 if _is_now(a) else 1))     # stable: NOW first, then newest
-    HEAD = [(a.get("tag",""), a.get("headline",""), a.get("standfirst",""), a["slug"], _is_now(a))
-            for a in pool[:5]] or [(t,h,s,sl,False) for (t,h,s,sl) in NEWS]
+    HEAD = [(a.get("tag",""), a.get("headline",""), a.get("standfirst",""), a["slug"], _is_now(a), partner_of(a))
+            for a in pool[:5]] or [(t,h,s,sl,False,None) for (t,h,s,sl) in NEWS]
     HEAD_IS_ARTICLE = bool(pool)
     slides = "".join(
-      f'<a class="slide{" now" if s[4] else ""}" data-i="{i}" href="{"news/" + s[3] + ".html" if HEAD_IS_ARTICLE else "player/" + s[3] + ".html"}">'
-      f'<div class="tag">{"<span class=\"nowdot\"></span>HAPPENING NOW" if s[4] else esc(s[0])}</div>'
+      f'<a class="slide{" now" if s[4] else ""}{" partner" if s[5] else ""}" data-i="{i}" href="{"news/" + s[3] + ".html" if HEAD_IS_ARTICLE else "player/" + s[3] + ".html"}">'
+      f'<div class="tag">{"<span class=\"nowdot\"></span>HAPPENING NOW" if s[4] else esc(s[0])}{f"<span class=\"pbadge\">{esc(s[5]["name"])}</span>" if s[5] else ""}</div>'
       f'<h3>{esc(s[1])}</h3><p>{esc(s[2])}</p></a>'
       for i,s in enumerate(HEAD))
     dots = "".join(f'<button aria-current="{"true" if i==0 else "false"}" data-i="{i}"></button>' for i in range(len(HEAD)))
@@ -933,6 +933,17 @@ def authors():
         out.setdefault(author_slug(n), dict(name=n, slug=author_slug(n), arts=[]))["arts"].append(a)
     return list(out.values())
 
+PARTNERS = {
+    "touchline": dict(name="Touchline Studios", url="https://jamescallan3.substack.com", cta="Read more on Substack",
+                      blurb="Touchline Studios is James Callan's newsletter on how football clubs grow — governance, money and culture, with fans at the centre. This piece appears on footballers.ie in partnership."),
+}
+def partner_of(a):
+    k = (a.get("partner") or "").strip().lower()
+    if not k: return None
+    pt = dict(PARTNERS.get(k, dict(name=k.title(), url="", cta="Read more", blurb="")))
+    if (a.get("partner_url") or "").strip(): pt["url"] = a["partner_url"].strip()
+    return pt
+
 def art_visual(a, root="", cls="artthumb"):
     """Image if there is one; otherwise the player's photo; otherwise a branded placeholder.
        Never an empty grey box."""
@@ -941,13 +952,16 @@ def art_visual(a, root="", cls="artthumb"):
         return f'<div class="{cls}"><img src="{esc(u)}" alt="" loading="lazy"></div>'
     p = next((x for x in PLAYERS if x["slug"] == a.get("player_slug")), None)
     face = ""
-    if p:
+    if p and str(a.get("use_player_photo","")).strip().lower() in ("yes","1","true","on"):
         if p.get("photo"): face = p["photo"]
         elif p["slug"] in HAVE_IMG: face = f'{root}img/players/{p["slug"]}.png'
     if face:
         return (f'<div class="{cls} ph"><img src="{esc(face)}" alt="" loading="lazy" class="phface">'
                 f'<div class="phtag">{esc(a.get("tag",""))}</div></div>')
-    return f'<div class="{cls} ph"><div class="phword">irish<b>fball</b></div><div class="phtag">{esc(a.get("tag",""))}</div></div>'
+    pt = partner_of(a)
+    if pt:
+        return f'<div class="{cls} ph partner"><div class="phword">{esc(pt["name"])}</div><div class="phtag">{esc(a.get("tag",""))}</div></div>'
+    return f'<div class="{cls} ph"><div class="phword">footballers<b>.ie</b></div><div class="phtag">{esc(a.get("tag",""))}</div></div>'
 
 def byline(a, root=""):
     n=(a.get("author") or "").strip()
@@ -956,14 +970,16 @@ def byline(a, root=""):
 
 def art_card(a, root="", kind="card"):
     t=esc(a.get("tag","")); h=esc(a.get("headline","")); sf=esc(a.get("standfirst",""))
+    pt = partner_of(a); pc = " partner" if pt else ""
+    pb = f'<span class="pbadge">{esc(pt["name"])}</span>' if pt else ""
     if kind=="lead":
-        return (f'<a class="nlead" href="{art_link(a,root)}" data-tag="{t}">{art_visual(a,root,"nleadimg")}'
-                f'<div class="nleadbody"><div class="arttag">{t}</div><h2>{h}</h2><p>{sf}</p>{byline(a,root)}</div></a>')
+        return (f'<a class="nlead{pc}" href="{art_link(a,root)}" data-tag="{t}">{art_visual(a,root,"nleadimg")}'
+                f'<div class="nleadbody"><div class="arttag">{t}{pb}</div><h2>{h}</h2><p>{sf}</p>{byline(a,root)}</div></a>')
     if kind=="row":
-        return (f'<a class="nrow" href="{art_link(a,root)}" data-tag="{t}">{art_visual(a,root,"nrowimg")}'
-                f'<div><div class="arttag">{t}</div><h4>{h}</h4>{byline(a,root)}</div></a>')
-    return (f'<a class="artcard" href="{art_link(a,root)}" data-tag="{t}">{art_visual(a,root)}'
-            f'<div class="artbody"><div class="arttag">{t}</div><h4>{h}</h4><p>{sf}</p>{byline(a,root)}</div></a>')
+        return (f'<a class="nrow{pc}" href="{art_link(a,root)}" data-tag="{t}">{art_visual(a,root,"nrowimg")}'
+                f'<div><div class="arttag">{t}{pb}</div><h4>{h}</h4>{byline(a,root)}</div></a>')
+    return (f'<a class="artcard{pc}" href="{art_link(a,root)}" data-tag="{t}">{art_visual(a,root)}'
+            f'<div class="artbody"><div class="arttag">{t}{pb}</div><h4>{h}</h4><p>{sf}</p>{byline(a,root)}</div></a>')
 
 def writers_block(root=""):
     aus = authors()
@@ -1020,7 +1036,7 @@ def build_author(w):
     return shell(f'{w["name"]} — footballers.ie', f'Articles by {w["name"]}.', "../", "news.html", body, canonical=f'author/{w["slug"]}.html')
 
 def build_article(a):
-    paras = "".join(f'<p>{esc(x.strip())}</p>' for x in (a.get("body") or "").split("\n") if x.strip())
+    paras = "".join(f'<p>{esc(x.strip())}</p>' for x in (a.get("body") or "").replace("\\n","\n").split("\n") if x.strip())
     p = next((x for x in PLAYERS if x["slug"] == a.get("player_slug")), None)
     related = ""
     if p:
@@ -1032,16 +1048,22 @@ def build_article(a):
     if a.get("image"):
         u = a["image"] if a["image"].startswith("http") else f'../{a["image"]}'
         hero = f'<div class="arthero"><img src="{esc(u)}" alt=""></div>'
+    pt = partner_of(a)
     others=[x for x in ARTICLES if x["slug"]!=a["slug"]][:3]
-    more = ('<div class="sec"><h2>More news</h2><a class="more" href="../news.html">All news →</a></div><div class="artgrid">'
+    if pt:
+        more = (f'<div class="partnerbox"><div class="pbl">In partnership with</div><div class="pbn">{esc(pt["name"])}</div>'
+                f'<p>{esc(pt["blurb"])}</p>'
+                + (f'<a class="btn" href="{esc(pt["url"])}" target="_blank" rel="noopener">{esc(pt["cta"])} →</a>' if pt["url"] else "")
+                + '</div>')
+    else: more = ('<div class="sec"><h2>More news</h2><a class="more" href="../news.html">All news →</a></div><div class="artgrid">'
             + "".join(art_card(x,"../") for x in others) + '</div><script>document.addEventListener("click",function(e){var au=e.target.closest(".au");if(au){e.preventDefault();location.href=au.getAttribute("data-href");}});</script>') if others else ""
     body = f'''
     <a class="crumb" data-back href="../news.html">← Back</a>
-    <article class="article">
-      <div class="arttag">{esc(a.get("tag",""))} · {esc(pretty_date(a.get("date","")))}</div>
+    <article class="article{" partner" if pt else ""}">
+      <div class="arttag">{esc(a.get("tag",""))} · {esc(pretty_date(a.get("date","")))}{f'<span class="pbadge">{esc(pt["name"])}</span>' if pt else ""}</div>
       <h1>{esc(a.get("headline",""))}</h1>
       <p class="standfirst">{esc(a.get("standfirst",""))}</p>
-      <div class="artmeta">By <a class="lnk" href="../author/{author_slug(a.get("author"))}.html">{esc(a.get("author","") or "footballers.ie")}</a></div>
+      <div class="artmeta">By <a class="lnk" href="../author/{author_slug(a.get("author"))}.html">{esc(a.get("author","") or "footballers.ie")}</a>{f' · <a class="lnk" href="{esc(pt["url"])}" target="_blank" rel="noopener">{esc(pt["name"])}</a>' if pt and pt["url"] else ""}</div>
       {hero}
       <div class="artcontent">{paras}</div>
     </article>

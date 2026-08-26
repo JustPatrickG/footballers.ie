@@ -124,7 +124,7 @@ function ownOnly(){ return !!role().ownOnly; }
 const FILES = {
   players:  {path:'manual/players.csv',  label:'Players'},
   matches:  {path:'api/matches.csv',     label:'Matches'},
-  articles: {path:'manual/articles.csv', ensure:['expires'], label:'News'},
+  articles: {path:'manual/articles.csv', ensure:['expires','use_player_photo','partner','partner_url'], label:'News'},
   fixtures: {path:'manual/fixtures.csv', label:'Fixtures'},
   results:  {path:'manual/results.csv',  label:'Results'},
   ireland:  {path:'manual/ireland.csv',  label:'Ireland'},
@@ -397,7 +397,13 @@ function articleView(){
         <div><label>Tip</label><div class="hint" style="padding-top:9px">Tag an article <b>NOW</b>, <b>LIVE</b> or <b>BREAKING</b> and it pins first in the carousel with a red "Happening now" treatment. Set it to expire when the moment's over.</div></div></div>
       <div class="artrow">
         <div><label>Slug (URL)</label><input id="f_slug" value="${esc(a.slug)}"></div>
-        <div><label>Image path</label><input id="f_image" value="${esc(a.image)}" placeholder="images/file.jpg"></div></div>
+        <div><label>Image path (optional)</label><input id="f_image" value="${esc(a.image)}" placeholder="images/file.jpg or https://…"></div></div>
+      <div class="artrow">
+        <div><label>Use player's photo as the image</label><select id="f_use_player_photo"><option value="">No (default — plain card)</option><option value="yes" ${a.use_player_photo==='yes'?'selected':''}>Yes — needs a player slug</option></select></div>
+        <div><label>Partner (leave blank for our own articles)</label><select id="f_partner"><option value="">None</option><option value="touchline" ${a.partner==='touchline'?'selected':''}>Touchline Studios</option></select></div></div>
+      <div class="artrow">
+        <div><label>Partner link (optional — the specific post)</label><input id="f_partner_url" value="${esc(a.partner_url||'')}" placeholder="https://jamescallan3.substack.com/p/…"></div>
+        <div><label>Tip</label><div class="hint" style="padding-top:9px">Partner articles get an orange border and a "Read more on Substack" box instead of "More news".</div></div></div>
       <div class="artfull"><label>Body — blank line between paragraphs</label>
         <textarea id="f_body"></textarea></div>
     </div>`;
@@ -417,9 +423,9 @@ function articleView(){
       o.date=new Date().toISOString().slice(0,10); o.author=SESSION.name||'footballers.ie Staff';
       d.rows.unshift(o); selectedArticle=0; markDirty(); render();
     };
-    ['headline','standfirst','date','tag','author','player_slug','slug','image','body','expires'].forEach(f=>{
+    ['headline','standfirst','date','tag','author','player_slug','slug','image','body','expires','use_player_photo','partner','partner_url'].forEach(f=>{
       const el=v.querySelector('#f_'+f); if(!el) return;
-      el.oninput=()=>{
+      el.oninput=el.onchange=()=>{
         const row=d.rows[selectedArticle]; if(!row) return;
         row[f] = f==='body' ? el.value.split('\n').join('\\n') : el.value;
         if(f==='headline' && !row.slug) row.slug=slugify(el.value);
