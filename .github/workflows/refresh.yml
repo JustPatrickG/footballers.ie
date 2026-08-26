@@ -33,6 +33,6 @@ jobs:
             echo "no change"
           else
             git commit -m "hourly data refresh"
-            git pull --rebase --autostash
+            git pull --rebase --autostash -X theirs || (git rebase --abort; git reset --hard origin/main; echo "lost the race, next run will catch up")
             git push
           fi
