@@ -191,6 +191,42 @@ def search_candidates(term, debug_name=None):
     return out
 
 
+NICKNAMES = {
+    "robbie": ["robert"], "mikey": ["michael"], "mike": ["michael"],
+    "tayo": ["omotayo"], "tommy": ["thomas"], "tom": ["thomas"],
+    "danny": ["daniel"], "dan": ["daniel"], "jimmy": ["james"],
+    "jim": ["james"], "jamie": ["james"], "willie": ["william"],
+    "will": ["william"], "billy": ["william"], "bill": ["william"],
+    "harry": ["harold", "henry"], "paddy": ["patrick"],
+    "pat": ["patrick"], "podge": ["patrick"], "joe": ["joseph"],
+    "joey": ["joseph"], "charlie": ["charles"], "chris": ["christopher"],
+    "matt": ["matthew"], "matty": ["matthew"], "nick": ["nicholas"],
+    "tony": ["anthony"], "andy": ["andrew"], "steve": ["stephen"],
+    "stevie": ["stephen"], "davy": ["david"], "dave": ["david"],
+    "eddie": ["edward"], "ed": ["edward"], "ollie": ["oliver"],
+    "sam": ["samuel"], "ben": ["benjamin"], "alex": ["alexander"],
+    "greg": ["gregory"], "mick": ["michael"], "micky": ["michael"],
+    "johnny": ["john", "jonathan"], "jonny": ["jonathan", "john"],
+    "ray": ["raymond"], "ronnie": ["ronald"], "gerry": ["gerard"],
+    "ger": ["gerard"], "seamie": ["seamus"], "cathal": ["charles"],
+    "zak": ["zachary"], "zach": ["zachary"], "kev": ["kevin"],
+    "rob": ["robert"], "bobby": ["robert"], "nat": ["nathan"],
+    "freddie": ["frederick"], "archie": ["archibald"],
+}
+
+
+def name_variants(name):
+    """'Robbie Brady' -> ['Robbie Brady', 'Robert Brady', 'Brady']."""
+    out = [name]
+    parts = name.split()
+    if len(parts) >= 2:
+        first = norm(parts[0])
+        for alt in NICKNAMES.get(first, []):
+            out.append(" ".join([alt.capitalize()] + parts[1:]))
+        out.append(" ".join(parts[1:]))     # surname only, last resort
+    return out
+
+
 def resolve(args):
     players = read_player_list()
     cache = read_id_cache()
@@ -203,8 +239,17 @@ def resolve(args):
     for i, p in enumerate(todo):
         slug, name, club = p["slug"], p["name"], p["club"]
         try:
-            cands = search_candidates(
-                name, debug_name=f"search_{slug}" if args.debug else None)
+            cands, used_name = [], name
+            for variant in name_variants(name):
+                cands = search_candidates(
+                    variant,
+                    debug_name=f"search_{slug}" if args.debug else None)
+                if cands:
+                    used_name = variant
+                    if variant != name:
+                        print(f"      (searched as '{variant}')")
+                    break
+                time.sleep(SLEEP)
         except Exception as e:
             print(f"  [{i+1}/{len(todo)}] {name}: search failed ({e})")
             unresolved.append(slug)
@@ -213,13 +258,14 @@ def resolve(args):
             continue
 
         nclub = norm(club)
-        nname = norm(name)
+        nname = norm(used_name)
+        roster_name = norm(name)
         nsurname = nname.split()[-1] if nname else ""
         name_hits = []
         for oid, cname, cteam in cands:
             nc = norm(cname)
-            if nc == nname or nname in nc or nc in nname or \
-                    (nsurname and nsurname in nc.split()):
+            if nc in (nname, roster_name) or nname in nc or nc in nname \
+                    or (nsurname and nsurname in nc.split()):
                 name_hits.append((oid, cname, cteam))
 
         best = None
@@ -638,6 +684,40 @@ def add_list(args):
             print(f"  - {n}")
     if added:
         print("\nrun `scrape` to pull their data.")
+
+
+def set_id(args):
+    """set-id <slug> <id> [<slug> <id> ...] - fill a fotmob id on a
+    player who's already in the list (name differs on the source)."""
+    if len(args.pairs) % 2:
+        sys.exit("give pairs: set-id <slug> <id> [<slug> <id> ...]")
+    players = {p["slug"] for p in read_player_list()}
+    cache = read_id_cache()
+    for slug, raw in zip(args.pairs[::2], args.pairs[1::2]):
+        m = re.search(r"(\d{3,})", raw)
+        if not m:
+            print(f"  no id in '{raw}'")
+            continue
+        if slug not in players:
+            print(f"  {slug} is not in players_list.csv - skipped")
+            continue
+        pid = m.group(1)
+        try:
+            blob = get_player_blob(get_next_data(
+                PLAYER_URL.format(pid=pid, slug=slug)))
+            nm = blob.get("name") or "?"
+            club = (blob.get("primaryTeam") or {}).get("teamName", "")
+        except Exception as e:
+            print(f"  {slug} -> {pid}: couldn't verify ({e})")
+            nm, club = "?", ""
+        entry = cache.get(slug, {})
+        entry.update({"fotmob_id": pid, "fotmob_name": nm,
+                      "fotmob_team": club, "note": "id set by hand"})
+        cache[slug] = entry
+        print(f"  {slug} -> {pid}  ({nm}, {club or 'no club'})")
+        time.sleep(SLEEP)
+    write_id_cache(cache)
+    print("\nrun `scrape` to pull their data.")
 
 
 IRELAND_TEAMS = [("Ireland", "Republic of Ireland"),
@@ -1705,6 +1785,11 @@ def main():
     al.add_argument("--stub-only", action="store_true",
                     help="add every name as a stub, match nothing")
 
+    si = sub.add_parser("set-id",
+                        help="fill a source id on an existing player "
+                             "(when the source spells the name differently)")
+    si.add_argument("pairs", nargs="+", help="<slug> <id> [<slug> <id> ...]")
+
     di = sub.add_parser("discover-ireland",
                         help="add everyone in Ireland senior/U21/U20/"
                              "U19/U17 squads")
@@ -1733,6 +1818,8 @@ def main():
         add_players(args)
     elif args.cmd == "add-list":
         add_list(args)
+    elif args.cmd == "set-id":
+        set_id(args)
     elif args.cmd == "discover-ireland":
         discover_ireland(args)
     elif args.cmd == "clubs":
