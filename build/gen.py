@@ -275,6 +275,10 @@ def load():
     return players, ireland, news, matches, articles, accounts, clubgeo, tmdata
 
 PLAYERS, IRELAND, NEWS, MATCHES, ARTICLES, ACCOUNTS, CLUBGEO, TM = load()
+for _p in PLAYERS:
+    if (_p.get("club") or "").strip().lower() in ("without club","no club","free agent",""):
+        _p["club"] = "Unattached"
+        if (_p.get("league") or "").strip().lower() in ("without club","no club","free agent"): _p["league"] = "—"
 
 def _extend_matches():
     """The scraper only writes matches.csv for a 2-week window. Every player fixture
@@ -439,6 +443,7 @@ def shell(title, desc, root, active, body, extra_head="", canonical="", body_att
   Every Irish player at a professional club — abroad, senior international and League of Ireland
   <div class="footlinks">
     <a href="{root}faq.html">Where does this data come from?</a>
+    <a href="{root}about.html">About &amp; methodology</a>
     <a href="{root}where-are-the-irish.html">Where are the Irish?</a>
     <a href="{root}alerts.html">Alerts</a>
   </div>
@@ -529,7 +534,7 @@ def rating_chip(p, small=False):
     try: f = float(v)
     except: return '<span class="rate none">—</span>'
     cls = "hi" if f >= 7.3 else ("md" if f >= 6.5 else "lo")
-    return f'<span class="rate {cls}{" sm" if small else ""}">{f:.2f}</span>'
+    return f'<span class="rate {cls}{" sm" if small else ""}" title="Season average FotMob match rating">{f:.2f}</span>'
 
 def star(p):
     return f'<button class="star" data-fav="{p["slug"]}" aria-pressed="false" aria-label="Follow {esc(p["n"])}">★</button>'
@@ -568,8 +573,7 @@ def signup(root="", compact=False):
         form = '''<form class="nlform">
           <input type="email" placeholder="your@email.ie" required aria-label="Email address">
           <button type="submit">Subscribe</button>
-        </form>
-        <div class="nlnote" style="display:none">Sign-ups open shortly — the list isn't live yet.</div>'''
+        </form>'''
     if compact:
         return f'''<div class="nlbar">
           <div class="nltext"><b>Two emails a week.</b> Monday round-up, Friday preview.</div>
@@ -577,7 +581,7 @@ def signup(root="", compact=False):
         </div>'''
     return f'''<div class="nlbox">
       <div class="nltag">Newsletter</div>
-      <h3 class="nlh">Every Irish pro, in your inbox twice a week</h3>
+      <h3 class="nlh">Never miss what happens to an Irish footballer</h3>
       <div class="nlcols">
         <div class="nlcol"><div class="nlday">Monday</div>
           <p>How every Irish player got on at the weekend, plus what's coming up — with a proper look at the midweek games that usually go unnoticed.</p></div>
@@ -585,7 +589,7 @@ def signup(root="", compact=False):
           <p>Who's playing this weekend, a recap of the weekday matches, and the latest injury news.</p></div>
       </div>
       {form}
-      <div class="nlfine">Written by hand. No spam, unsubscribe any time.</div>
+      <div class="nlfine">Free. No spam. Unsubscribe any time.</div>
     </div>'''
 
 
@@ -724,7 +728,7 @@ def build_index():
         ranked = sorted(group, key=lambda p: (-_r(p), p["n"]))
         rows = "".join(player_row(p) for p in ranked[:limit])
         rated = sum(1 for p in group if _r(p) > 0)
-        note = f'<span class="more" style="border:0">top {min(limit, len(ranked))} by rating</span>' if rated else ""
+        note = f'<span class="more" style="border:0">top {min(limit, len(ranked))} · season avg rating</span>' if rated else ""
         return (f'<div class="sec"><h2>{title}</h2>{note}'
                 f'<a class="more" href="{href}">All {len(group)} →</a></div>'
                 f'<div class="tiergroup">{rows}</div>') if group else ""
@@ -777,26 +781,69 @@ def build_index():
             nextha=(nx[2] if nx else ""),
             next=next_fixture(p))
 
+    # ---- today / this week, computed server-side ----
+    import datetime as _d
+    _today = _d.datetime.now(_d.timezone.utc).date()
+    def _kd(m):
+        try: return _d.datetime.strptime(m["kickoff"][:10], "%Y-%m-%d").date()
+        except Exception: return None
+    todays = [m for m in mc if _kd(m) == _today]
+    live_n = sum(1 for m in todays if m["status"] == "live")
+    t_players = sum(len(m["players"]) for m in todays)
+    tot_g = sum(x["g"] for x in wk); tot_a = sum(x["a"] for x in wk)
+    today_line = (f'<b>{live_n} live now</b> · ' if live_n else "") + \
+                 (f'<b>{len(todays)} match{"es" if len(todays)!=1 else ""}</b> with <b>{t_players}</b> Irish players today' if todays else "No Irish players in action today")
+    week_line = (f'<b>{tot_g}</b> goal{"s" if tot_g!=1 else ""} and <b>{tot_a}</b> assist{"s" if tot_a!=1 else ""} by Irish players this week' if (tot_g or tot_a) else "")
+    nxt_irl = ""
+    try:
+        upcoming_irl = [f for f in IRELAND.get("senior",{}).get("fixtures",[]) if str(f[0])[:10] >= str(_today)]
+        if upcoming_irl:
+            d,o,h,cp = upcoming_irl[0]
+            nxt_irl = f'Ireland v <b>{esc(o)}</b> · {esc(day_label(d))} · {esc(cp)}'
+    except Exception: pass
+    by_c = {}
+    for p in PLAYERS: by_c.setdefault(country_of(p["league"]), []).append(p)
+    ex = "".join(f'<a class="exc" href="country/{country_slug(c)}.html"><b>{esc(c)}</b><span>{len(by_c[c])}</span></a>'
+                 for c in sorted(by_c, key=lambda c: (-len(by_c[c]), c))[:12])
+    explore = (f'<div class="sec"><h2>Where are the Irish?</h2><a class="more" href="clubs.html">Every country →</a></div>'
+               f'<div class="exgrid">{ex}</div>')
+    moments = (f'<div class="sec"><h2>Milestones coming up</h2></div><div class="msgrid">{msh}</div>') if msh else ""
+
     body = f'''
-    {news_block}
+    <section class="hero">
+      <div class="strip"><b>{len(PLAYERS)}</b> Irish pros tracked · <b>{len(abroad)}</b> abroad · <b>{len(loi)}</b> League of Ireland · <a href="about.html">who counts? →</a></div>
+      <div class="todaybar">
+        <div class="tb"><span class="tbl">Today</span><span class="tbv">{today_line}</span><a href="fixtures.html">Fixtures →</a></div>
+        {f'<div class="tb"><span class="tbl">This week</span><span class="tbv">{week_line}</span><a href="#thisweek">See who →</a></div>' if week_line else ""}
+        {f'<div class="tb"><span class="tbl">Ireland</span><span class="tbv">{nxt_irl}</span><a href="ireland.html">Ireland hub →</a></div>' if nxt_irl else ""}
+      </div>
+    </section>
 
     <div id="mc-sec">
       <div class="sec"><h2>Match centre</h2><a class="more" id="mc-more" href="fixtures.html" style="display:none">See all →</a></div>
       <div id="mc"></div>
     </div>
 
-    {week_block}
-
     <div id="myplayers-sec" style="display:none">
       <div class="sec"><h2>Your players <span class="cnt" data-fav-count>0</span></h2>
         <a class="more" href="alerts.html">Get alerts →</a></div>
       <div class="tiergroup" id="myplayers"></div>
     </div>
-    <div class="emptybox" id="myplayers-empty" style="display:none">
-      <b>Follow your players.</b> Tap the ★ beside any name and they'll appear up here.
-      <a href="alerts.html">Get an email when they play →</a>
+    <div class="followsell" id="myplayers-empty" style="display:none">
+      <div><b>Follow your players</b><p>Tap ★ beside any name. They'll show up here with their next match, and you can get an email when they play, score or get subbed on.</p></div>
+      <a class="btn" href="players.html">Pick your players →</a>
     </div>
 
+    {news_block}
+
+    <div id="thisweek"></div>
+    {week_block}
+
+    {moments}
+
+    {explore}
+
+    <div class="sec" style="margin-top:26px"><h2>Form guide</h2><span class="more" style="border:0">FotMob ratings averaged over this season · <a href="about.html#ratings">how it works</a></span></div>
     {block("Abroad", abroad, "abroad.html")}
     {block("League of Ireland", loi, "league-of-ireland.html")}
 
@@ -1165,6 +1212,58 @@ FAQ = [
   "Use the Report button in the bottom corner of any page. It knows which player or match you were "
   "looking at, so you only have to describe the problem. Every report is read."),
 ]
+
+def build_about():
+    n_ab = sum(1 for p in PLAYERS if p["tier"].startswith("abroad")); n_loi = sum(1 for p in PLAYERS if p["tier"]=="loi")
+    body = f'''
+    <div class="pagehead"><h1>About footballers.ie</h1><p>Every Irish professional footballer, tracked. Here's exactly what that means and where the numbers come from.</p></div>
+
+    <div class="sec"><h2 id="who">Who counts as Irish?</h2></div>
+    <div class="abox">
+      <p>A player is on the site if <b>any</b> of these are true:</p>
+      <ul>
+        <li>They've played for the Republic of Ireland at any level, senior or underage</li>
+        <li>They're at a League of Ireland club (Premier or First Division) on a professional contract</li>
+        <li>They're Irish-eligible and at a professional club abroad, including academy and U21 sides</li>
+      </ul>
+      <p>So yes: dual nationals, youth internationals who may yet switch, and academy players all count. Northern Ireland internationals are included only if they're also eligible for the Republic. Each player's page shows their nationalities and whether they're cap-tied.</p>
+      <p>Right now that's <b>{len(PLAYERS)}</b> players — {n_ab} abroad and {n_loi} in the League of Ireland. Think someone's missing or shouldn't be here? Use the Report button on any page.</p>
+    </div>
+
+    <div class="sec"><h2 id="ratings">How ratings work</h2></div>
+    <div class="abox">
+      <p>Every rating on the site is a <b>FotMob match rating</b>. We don't calculate our own.</p>
+      <ul>
+        <li>On a match row: the player's FotMob rating for that game</li>
+        <li>Everywhere else (lists, homepage, profile): the <b>average of their match ratings this season</b>, only counting games they were on the pitch for</li>
+        <li>A dash means no rating yet: not enough games, or FotMob doesn't rate that competition</li>
+      </ul>
+      <p>Ratings are scaled within each competition, so a 7.8 in League Two and a 7.8 in the Premier League aren't the same thing. That's why a "by rating" list can put a lower-league player above a Premier League one. Treat it as a form guide, not a ranking.</p>
+    </div>
+
+    <div class="sec"><h2 id="data">Where the data comes from</h2></div>
+    <div class="abox">
+      <ul>
+        <li><b>Stats, fixtures, results, live scores:</b> FotMob. Refreshed hourly; players with a match today every 10 minutes; live scores every 5.</li>
+        <li><b>Bio, contract and market value:</b> Transfermarkt, refreshed roughly monthly</li>
+        <li><b>Roster:</b> maintained by us, checked weekly against Wikidata</li>
+        <li><b>News:</b> written by people. Every article has a named byline.</li>
+      </ul>
+      <p>The footer of every page shows when the data last updated.</p>
+    </div>
+
+    <div class="sec"><h2 id="team">Who's behind it</h2></div>
+    <div class="abox">
+      <p>footballers.ie is built in Kildare by <a href="https://matchweek.ie">Matchweek</a>. Independent — no club, agency or bookmaker involvement.</p>
+      <p>Writers, tips, corrections, partnerships: <a href="mailto:business@matchweek.ie">business@matchweek.ie</a></p>
+    </div>
+
+    <div class="sec"><h2 id="privacy">Your data</h2></div>
+    <div class="abox">
+      <p>If you follow players or subscribe, we store your email and what you follow so we can send you updates. Nothing else. We don't sell it, and every email has an unsubscribe link.</p>
+    </div>
+    '''
+    return shell("About — footballers.ie", "What footballers.ie is, who counts as Irish, and how the ratings work.", "", "about.html", body, canonical="about.html")
 
 def build_faq():
     items = "".join(
@@ -1664,15 +1763,16 @@ def build_match(m, involved):
         f'<div class="ev">{p["pos"]}</div><div class="mn"></div>{star(p)}</a>' for p in involved)
     body = f'''
     <a class="crumb" data-back href="../fixtures.html">← Back</a>
-    <div class="matchhead">
-      <div class="mcrow"><span class="mccomp">{esc(m.get("competition",""))}</span>{chip}</div>
+    <div class="matchhead" id="mhead" data-mid="{match_id(m)}">
+      <div class="mcrow"><span class="mccomp">{esc(m.get("competition",""))}</span><span id="mchip">{chip}</span></div>
       <div class="mteams">
         <div class="mteam">{club_badge(m.get("home",""),"md")}<span>{esc(m.get("home",""))}</span></div>
-        {scoreline}
+        <div id="mscorewrap">{scoreline}</div>
         <div class="mteam right"><span>{esc(m.get("away",""))}</span>{club_badge(m.get("away",""),"md")}</div>
       </div>
     </div>
     {events_block(m, involved)}
+    <script>window.FB_MATCHES=[{json.dumps(dict(id=match_id(m), kickoff=m.get("kickoff",""), comp=esc(m.get("competition","")), home=esc(m.get("home","")), away=esc(m.get("away","")), hs=hs, as_=as_, status=status, minute=m.get("minute",""), players=[], loi=0))}];</script>
     <div class="mactions"><button class="starbtn" data-favm="{match_id(m)}" aria-pressed="false">★ <span>Follow match</span></button>
       <span class="mhint">Email updates when the score changes</span></div>
     <div class="sec"><h2>Irish players in this match</h2>
@@ -1777,7 +1877,7 @@ def build_player(p):
       <div class="pds"><div class="n">{stat(p,"s_mins",s["mins"])}</div><div class="l">Minutes</div></div>
       <div class="pds"><div class="n"><span class="card yel">{stat(p,"s_yellow",s["yellow"])}</span></div><div class="l">Yellow cards</div></div>
       <div class="pds"><div class="n"><span class="card red">{stat(p,"s_red",s["red"])}</span></div><div class="l">Red cards</div></div>
-      <div class="pds"><div class="n">{rating_chip(p)}</div><div class="l">Avg rating</div></div>
+      <div class="pds"><div class="n">{rating_chip(p)}</div><div class="l">Avg rating · FotMob</div></div>
       <div class="pds"><div class="n">{stat(p,"c_apps",c["ap"])}</div><div class="l">Career apps</div></div>
       <div class="pds"><div class="n">{stat(p,"c_goals",c["g"])}</div><div class="l">Career goals</div></div>
     </div>'''
@@ -2017,7 +2117,7 @@ def build_404():
     return shell("Page not found — footballers.ie", "That page doesn't exist on Footballers.", "/", "", body)
 
 def build_sitemap():
-    urls = ["", "news.html", "faq.html", "where-are-the-irish.html", "players.html", "abroad.html", "league-of-ireland.html", "clubs.html",
+    urls = ["", "news.html", "faq.html", "about.html", "where-are-the-irish.html", "players.html", "abroad.html", "league-of-ireland.html", "clubs.html",
             "ireland.html", "fixtures.html", "milestones.html", "compare.html", "newsletter.html", "alerts.html"]
     urls += [f"club/{club_slug(c)}.html" for c in sorted(set(p["club"] for p in PLAYERS))]
     urls += [f"player/{p['slug']}.html" for p in PLAYERS]
@@ -2046,6 +2146,7 @@ open(f"{OUT}/abroad.html","w").write(build_list("abroad.html","Abroad","Irish pl
 open(f"{OUT}/league-of-ireland.html","w").write(build_list("league-of-ireland.html","League of Ireland","Every Irish pro playing their football at home.",[p for p in PLAYERS if p["tier"]=="loi"]))
 open(f"{OUT}/clubs.html","w").write(build_clubs_index())
 open(f"{OUT}/faq.html","w").write(build_faq())
+open(f"{OUT}/about.html","w").write(build_about())
 open(f"{OUT}/where-are-the-irish.html","w").write(build_map())
 os.makedirs(f"{OUT}/country", exist_ok=True)
 os.makedirs(f"{OUT}/league", exist_ok=True)

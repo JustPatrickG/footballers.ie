@@ -105,7 +105,7 @@
 
     if (!favs.length) {
       wrap.innerHTML = '';
-      if (empty) empty.style.display = 'block';
+      if (empty) empty.style.display = 'flex';
       var sec = document.getElementById('myplayers-sec');
       if (sec) sec.style.display = 'none';
       return;
@@ -360,8 +360,18 @@
 
   }
 
+  function renderHead() {
+    var head = document.getElementById('mhead');
+    if (!head || !window.FB_MATCHES || !FB_MATCHES.length) return;
+    var m = FB_MATCHES[0], now = Date.now();
+    var chip = document.getElementById('mchip'), sw = document.getElementById('mscorewrap');
+    if (chip) chip.innerHTML = statusChip(m, now);
+    if (sw) sw.innerHTML = (m.status !== 'scheduled' && m.hs !== '' && m.hs !== null && m.hs !== undefined)
+      ? '<div class="mscore">' + m.hs + '<span>–</span>' + m.as_ + '</div>'
+      : '<div class="mscore ko">' + new Date(m.kickoff).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', hour12: false }) + '</div>';
+  }
   function render() {
-    renderAll();
+    renderAll(); renderHead();
     var sec = document.getElementById('mc-sec'), box = document.getElementById('mc');
     if (!sec || !box || !window.FB_MATCHES) return;
     var now = Date.now();
