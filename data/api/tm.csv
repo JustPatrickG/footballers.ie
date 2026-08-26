@@ -1,10 +1,17 @@
 slug,tm_id,tm_name,dob,age,birthplace,height_cm,citizenship,position,foot,agent,tm_club,joined,contract_expires,contract_option,last_extension,market_value
 aaron-bolger,434216,Aaron Nigel Bolger,2000-02-02,26,"Avoca, Wicklow",170,Ireland,Midfield - Central Midfield,right,03/07/2025,03/07/2025,03/07/2025,30/11/2026,,11/12/2025,€ 125 k
 aaron-brennan,1580872,Aaron Brennan,,,,,Ireland,Defender - Right-Back,,,14/08/2026,14/08/2026,-,,,
+aaron-connolly,434207,Aaron Anthony Connolly,2000-01-28,26,Galway,175,Ireland,Attack - Centre-Forward,right,07/07/2025,07/07/2025,07/07/2025,30/06/2027,,,€ 1.80 m
+aaron-drinan,466106,Aaron John Drinan,1998-05-06,28,Cork,183,Ireland,Attack - Centre-Forward,left,,01/02/2024,01/02/2024,30/06/2028,,12/02/2026,€ 500 k
 aaron-greene,122407,Aaron Greene,1990-01-02,36,"Tallaght, Dublin",180,Ireland,Attack - Centre-Forward,left,,07/07/2018,07/07/2018,-,,02/12/2022,€ 50 k
 aaron-heaney,1165128,Aaron Heaney,2004-08-09,22,Mayo,175,Ireland,Midfield - Attacking Midfield,right,,17/07/2026,17/07/2026,30/06/2027,,,
 aaron-keogh,1461851,Aaron Michael Keogh,2008-01-10,18,,,Ireland,Midfield - Central Midfield,,,01/01/2026,01/01/2026,-,,,
 aaron-maguire,648030,Aaron Joseph Maguire,2004-07-25,22,London,,Ireland | England,Goalkeeper,,,01/07/2022,01/07/2022,30/06/2027,,,
+aaron-mccarey,138473,Aaron McCarey,1992-01-14,34,Monaghan,,Ireland,Goalkeeper,right,,01/07/2024,01/07/2024,30/06/2027,,29/04/2026,€ 100 k
+aaron-mceneff,167264,Aaron McEneff,1995-07-09,31,Derry,175,Ireland | Northern Ireland,Midfield - Central Midfield,right,,25/01/2026,25/01/2026,31/05/2027,,,€ 300 k
+aaron-molloy,428901,Aaron Molloy,1997-01-11,29,Dublin,178,Ireland,Midfield - Defensive Midfield,right,,18/12/2025,18/12/2025,30/11/2026,,,€ 350 k
+aaron-ochoa,1109577,Aarón Ochoa Moloney,2007-04-18,19,Marbella,168,Ireland | Spain,Midfield - Attacking Midfield,right,01/07/2024,01/07/2024,01/07/2024,30/06/2029,,09/02/2026,€ 800 k
+aaron-okpolokpo,1404861,Aaron Okpolokpo,2006-03-11,20,Dublin,185,Ireland | England,Defender - Left-Back,left,,21/02/2026,21/02/2026,-,,,€ 10 k
 aaron-oreilly,648036,Aaron Christopher O'Reilly,2004-06-29,22,Dublin,190,Ireland,Defender - Centre-Back,both,08/08/2026,08/08/2026,08/08/2026,-,,,
 adam-banim,1230520,Adam Banim,2005-11-13,20,"Lucan, Dublin",185,Ireland,Goalkeeper,right,,01/01/2026,01/01/2026,-,,,
 adam-brennan,1259889,Adam Brennan,2007-05-29,19,Blanchardstown,175,Ireland,Midfield - Attacking Midfield,right,30/01/2026,30/01/2026,30/01/2026,-,,,€ 150 k
@@ -17,6 +24,8 @@ adam-oreilly,552652,Adam Kieran O'Reilly,2001-05-11,25,Cork,168,Ireland,Midfield
 adam-rooney,37773,Adam Christopher David Rooney,1988-04-21,38,Dublin,178,Ireland,Attack - Centre-Forward,right,,06/03/2026,06/03/2026,-,,,
 ade-solanke,1109579,Ademide Solanke,2008-01-09,18,,175,Ireland | Nigeria,Defender - Left-Back,left,15/01/2026,15/01/2026,15/01/2026,-,,,
 ademipo-odubeko,655880,Ademipo Ibrahim Odubeko,2002-10-21,23,"Tallaght, Dublin",180,Ireland | Nigeria,Attack - Centre-Forward,right,01/01/2025,01/01/2025,01/01/2025,30/11/2026,,20/12/2024,€ 150 k
+adrien-thibaut,1110023,Adrien Tinashe Thibaut,2004-07-11,22,Slough,180,Ireland | England,Attack - Centre-Forward,right,,20/08/2024,20/08/2024,30/06/2028,club option 1 year,13/05/2026,€ 100 k
+ahu-obhakhan,738025,Ahu Adebame Obhakhan,1997-08-02,29,"Drogheda, Louth",185,Ireland | Nigeria,Attack - Centre-Forward,,30/07/2024,30/07/2024,30/07/2024,30/06/2027,,18/07/2026,€ 50 k
 aidan-gabbidon,1261926,Aidan Gabbidon,2009-01-23,17,,180,Ireland | United States,Defender - Right-Back,right,20/02/2026,20/02/2026,20/02/2026,-,,,
 aidan-keena,401323,Aidan Keena,1999-04-25,27,"Mullingar, Westmeath",180,Ireland,Attack - Centre-Forward,right,28/07/2024,28/07/2024,28/07/2024,30/11/2026,club option 1 year,,€ 250 k
 aidomo-emakhu,746971,Aidomo Abraham Emakhu,2003-10-26,22,"Clondalkin, Dublin",180,Ireland | Nigeria,Attack - Left Winger,right,02/02/2026,02/02/2026,02/02/2026,-,,,€ 1.00 m
@@ -31,4 +40,583 @@ alex-nolan,745729,Alex Nolan,2003-03-20,23,Dublin,183,Ireland,Attack - Left Wing
 alex-noonan,1134233,Alex Noonan,2008-07-15,18,,190,Ireland,Goalkeeper,right,,15/08/2024,15/08/2024,-,,,
 alfie-mulvenna,1449938,Alfie Mulvenna,2010-03-05,16,Larne,,Northern Ireland,Defender - Centre-Back,right,,29/07/2026,29/07/2026,30/06/2028,,,
 alfie-pollock,1449941,Alfie Pollock,2010-03-31,16,Portadown,,Northern Ireland,Defender - Centre-Back,,,25/07/2026,25/07/2026,-,,,
+ali-reghba,615177,Ali Reghba,2000-01-14,26,Essen,183,Ireland | Algeria,Attack - Left Winger,right,03/02/2025,03/02/2025,03/02/2025,31/05/2027,,,€ 200 k
 ali-topcu,1134234,Ali Topcu,2008-04-01,18,Dublin,178,Ireland | Türkiye,Goalkeeper,both,,11/07/2024,11/07/2024,-,,,
+andrew-moran,724537,Andrew Moran,2003-10-15,22,Dublin,178,Ireland,Midfield - Attacking Midfield,right,02/02/2026,02/02/2026,02/02/2026,30/06/2029,Option for a further year,,€ 1.50 m
+andrew-omobamidele,621993,Andrew Abiola Omobamidele,2002-06-23,24,Leixlip,188,Ireland | Nigeria,Defender - Centre-Back,right,01/07/2025,01/07/2025,01/07/2025,30/06/2029,,,€ 8.00 m
+andrew-quinn,748019,Andrew Quinn,2002-01-24,24,"Dunshaughlin, Meath",188,Ireland,Defender - Centre-Back,right,01/01/2024,01/01/2024,01/01/2024,30/11/2026,,11/11/2025,€ 175 k
+andrew-wogan,1113888,Andrew Brian Wogan,2005-12-01,20,"Ardee, Louth",188,Ireland,Goalkeeper,right,,07/07/2024,07/07/2024,-,,,€ 50 k
+andy-lyons,546024,Andrew Patrick Lyons,2000-08-02,26,"Naas, Kildare",178,Ireland,Defender - Right-Back,right,01/01/2023,01/01/2023,01/01/2023,30/06/2027,,05/05/2026,€ 375 k
+anselmo-garcia-macnulty,631904,Anselmo García MacNulty,2003-02-19,23,Sevilla,190,Ireland | Spain,Defender - Centre-Back,left,01/07/2026,01/07/2026,01/07/2026,-,,,€ 1.50 m
+anthony-breslin,224799,Anthony Breslin,1997-02-13,29,,173,Ireland,Defender - Left-Back,left,,01/01/2022,01/01/2022,30/11/2027,,29/10/2024,€ 150 k
+anthony-oconnor,121393,Anthony Dean O'Connor,1992-10-25,33,Cork,188,Ireland,Defender - Centre-Back,right,13/08/2026,13/08/2026,13/08/2026,-,,,€ 100 k
+aodh-dervin,498175,Aodh Dervin,1999-07-21,27,Longford,170,Ireland,Midfield - Central Midfield,right,,17/07/2024,17/07/2024,30/11/2026,,28/08/2025,€ 125 k
+aodhan-doherty,1077242,Aodhan Doherty,2006-05-03,20,Belfast,,Northern Ireland,Attack - Left Winger,left,25/07/2026,25/07/2026,25/07/2026,30/06/2027,,,€ 100 k
+aran-fitzpatrick,1203734,Aran Fitzpatrick,2006-02-07,20,,178,Ireland,Defender - Left-Back,left,,01/08/2026,01/08/2026,-,,,
+arlo-doherty,721097,Arlo Ricky Hugh Doherty,2003-09-08,22,,190,Ireland | England,Goalkeeper,right,01/01/2026,01/01/2026,01/01/2026,30/11/2026,,,€ 100 k
+armstrong-oko-flex,531461,Armstrong Inya Oko-Flex,2002-03-02,24,Dublin,180,Ireland | England,Attack - Left Winger,right,14/01/2026,14/01/2026,14/01/2026,31/12/2028,,,€ 1.00 m
+baba-adeeko,746338,Babajide Ezekiel Adeeko,2003-04-03,23,Ballybane,175,Ireland | Nigeria,Midfield - Central Midfield,right,14/08/2026,14/08/2026,14/08/2026,30/06/2027,,,€ 300 k
+barry-coffey,536530,Barry Coffey,2001-03-27,25,"Nenagh, Tipperary",,Ireland,Midfield - Central Midfield,right,23/01/2026,23/01/2026,23/01/2026,30/11/2026,,,€ 100 k
+barry-cotter,490854,Barry Noel Cotter,1998-12-04,27,"Ennis, Clare",183,Ireland,Defender - Right-Back,right,23/02/2026,23/02/2026,23/02/2026,-,,,€ 275 k
+ben-mahon,1380362,Ben Mahon,2009-03-06,17,,178,Ireland,Attack - Centre-Forward,right,,26/07/2025,26/07/2025,30/11/2028,,16/12/2025,
+ben-mccormack,724534,Ben McCormack,2003-04-04,23,Dublin,180,Ireland,Midfield - Central Midfield,right,,13/02/2026,13/02/2026,30/11/2026,,,
+ben-quinn,648049,Ben Mark Quinn,2004-11-11,21,Dublin,173,Ireland,Attack - Right Winger,right,,01/07/2026,01/07/2026,31/05/2027,,,€ 50 k
+billy-canny,1238018,Billy Canny,2008-05-28,18,,183,Ireland,Defender - Right-Back,right,,03/03/2025,03/03/2025,-,,,
+billy-hayes,1134228,Billy Hayes,2008-06-06,18,,178,Ireland,Attack - Left Winger,right,,30/05/2025,30/05/2025,-,,,
+billy-regan,1339598,Billy Regan,2007-10-22,18,,185,Ireland,Defender - Centre-Back,right,16/07/2026,16/07/2026,16/07/2026,-,,,
+bobby-jones,533476,Bobby Jones,2001-11-20,24,Darlington,188,Ireland | England,Goalkeeper,left,01/07/2026,01/07/2026,01/07/2026,30/06/2027,,,
+bobby-keohan,1377798,Bobby Keohan,2009-08-01,17,,178,Ireland,Attack - Centre-Forward,right,,21/02/2025,21/02/2025,-,,,
+bobby-wales,924850,Bobby Wales,2005-06-23,21,Hurlford,190,Scotland | Ireland,Attack - Centre-Forward,right,20/08/2026,20/08/2026,20/08/2026,30/06/2027,,,€ 350 k
+bosun-lawal,724540,Mohammed Bosun Lawal,2003-05-30,23,Dublin,190,Ireland | Nigeria,Defender - Centre-Back,right,12/08/2024,12/08/2024,12/08/2024,31/05/2028,,,€ 3.00 m
+brandon-kavanagh,469065,Brandon Kavanagh,2000-09-21,25,"Crumlin, Dublin",173,Ireland,Midfield - Attacking Midfield,left,01/01/2026,01/01/2026,01/01/2026,30/11/2027,,,€ 200 k
+brandon-ly,1090863,Brandon Michael Ly,2005-12-07,20,Longford,175,Ireland,Midfield - Defensive Midfield,right,05/08/2026,05/08/2026,05/08/2026,30/06/2027,,,
+brian-maher,434205,Brian Maher,2000-11-01,25,"Raheny, Dublin",185,Ireland,Goalkeeper,right,01/01/2022,01/01/2022,01/01/2022,30/11/2028,,28/06/2026,€ 175 k
+bridel-bosakani,981903,Bridel Bosakani,2004-08-16,22,Sligo,173,Ireland | Congo,Attack - Centre-Forward,,,03/07/2026,03/07/2026,30/11/2026,,,€ 75 k
+brody-lee,1134230,Brody Lee,2008-07-31,18,"Roscrea, Tipperary",173,Ireland,Attack - Left Winger,left,04/07/2025,04/07/2025,04/07/2025,-,,14/08/2025,€ 25 k
+brooklyn-lyons-foster,462698,Brooklyn Lyons-Foster,2000-12-01,25,London,183,England | Ireland,Defender - Right-Back,right,22/07/2026,22/07/2026,22/07/2026,-,,,€ 200 k
+brooks-lennon,345627,Brooks Howard Lennon,1997-09-22,28,"Paradise Valley, Arizona",178,United States | Ireland,Defender - Right-Back,right,01/07/2026,01/07/2026,01/07/2026,30/06/2027,club option 2 years,,€ 1.80 m
+callum-doherty,1299765,Callum Doherty,2007-10-22,18,Derry,175,Ireland | Northern Ireland,Midfield - Attacking Midfield,left,20/07/2026,20/07/2026,20/07/2026,30/06/2027,,,
+callum-downey,1260732,Callum Downey,2008-01-01,18,,178,Northern Ireland,Midfield - Central Midfield,right,,29/08/2025,29/08/2025,-,,,
+callum-honohan,1223529,Callum Honohan,2006-05-11,20,"Carrigaline, Cork",190,Ireland,Defender - Centre-Back,right,,16/01/2026,16/01/2026,30/11/2026,,,
+callum-lynch,1427981,Callum Lynch,2007-10-15,18,Sligo,180,Ireland,Midfield - Left Midfield,left,,18/07/2025,18/07/2025,-,,,
+callum-marshall,953135,Callum Marshall,2004-11-28,21,Glengormley,173,Northern Ireland,Attack - Centre-Forward,left,30/07/2026,30/07/2026,30/07/2026,-,,,€ 2.00 m
+callum-odowda,255679,Callum Joshua Ryan O'Dowda,1995-04-23,31,Oxford,180,Ireland | England,Midfield - Left Midfield,left,04/07/2025,04/07/2025,04/07/2025,-,,,€ 900 k
+callum-robinson,183299,Callum Jack Robinson,1995-02-02,31,Northampton,178,Ireland | England,Attack - Centre-Forward,right,01/09/2022,01/09/2022,01/09/2022,30/06/2027,,31/01/2025,€ 700 k
+calum-costello,1246785,Calum Costello,2006-05-11,20,"Carrick-on-Suir, Tipperary",175,Ireland,Attack - Centre-Forward,right,25/08/2026,25/08/2026,25/08/2026,22/09/2026,,,
+calum-donnelly,1539218,Calum Donnelly,2007-08-21,19,"Portarlington, Laois",,Ireland,Defender - Centre-Back,right,,22/05/2026,22/05/2026,-,,,
+calum-kavanagh,698196,Calum Graham Kavanagh,2003-09-05,22,Cardiff,183,Ireland | Wales,Attack - Centre-Forward,right,01/02/2026,01/02/2026,01/02/2026,30/06/2028,,,€ 250 k
+calum-ward,655135,Calum Brian Joseph Ward,2000-10-17,25,,188,England | Ireland,Goalkeeper,right,09/07/2026,09/07/2026,09/07/2026,-,,,€ 800 k
+cameron-reid,1392880,Cameron Reid,2007-11-09,18,,,Scotland,Goalkeeper,,,01/03/2025,01/03/2025,30/06/2027,,23/04/2025,
+caoimhin-kelleher,340918,Caoimhín Odhrán Kelleher,1998-11-23,27,Cork,188,Ireland,Goalkeeper,right,01/07/2025,01/07/2025,01/07/2025,30/06/2030,,,€ 28.00 m
+carl-mchugh,148957,Carl Gerard McHugh,1993-02-05,33,Lettermacaward,180,Ireland,Midfield - Defensive Midfield,left,01/01/2026,01/01/2026,01/01/2026,30/11/2027,,,€ 275 k
+cathal-heffernan,741268,Cathal Séan Heffernan Andrews,2005-04-27,21,Cork,188,Ireland,Defender - Centre-Back,right,,15/01/2026,15/01/2026,-,,,€ 125 k
+cathal-mccarthy,1262696,Cathal McCarthy,2006-08-31,19,Caragh,185,Ireland,Defender - Centre-Back,right,18/08/2026,18/08/2026,18/08/2026,31/05/2027,,,€ 300 k
+cathal-osullivan,1005776,Cathal O'Sullivan,2007-03-05,19,Cork,175,Ireland,Attack - Right Winger,left,05/03/2026,05/03/2026,05/03/2026,30/06/2028,,,€ 125 k
+charles-dunne,220496,Charles Dunne,1993-02-13,33,London,188,Ireland | England,Defender - Centre-Back,left,,01/07/2026,01/07/2026,-,,,€ 100 k
+charlie-cummins,1169146,Charlie James Cummins,2005-06-13,21,"Blarney, Cork",190,Ireland | Australia,Midfield - Central Midfield,right,26/01/2024,26/01/2024,26/01/2024,30/06/2027,,10/04/2026,€ 75 k
+charlie-mcgarvey,1333928,Charlie McGarvey,2010-04-11,16,,,Ireland,Goalkeeper,,,29/05/2026,29/05/2026,-,,,
+charlie-mcneill,614262,Charlie Martin McNeill,2003-09-09,22,Droylsden,180,England | Ireland,Attack - Centre-Forward,right,13/08/2026,13/08/2026,13/08/2026,30/06/2027,,,€ 800 k
+chiedozie-ogbene,392591,Chiedozie Somkelechukwu Ogbene,1997-05-01,29,Lagos,180,Ireland | Nigeria,Attack - Right Winger,right,28/08/2024,28/08/2024,28/08/2024,30/06/2028,,,€ 4.00 m
+chris-atherton,1061035,Christopher Atherton,2008-10-19,17,Clonmore,178,Ireland | Northern Ireland,Attack - Right Winger,right,,17/07/2026,17/07/2026,-,,,
+chris-forrester,180497,Christopher Forrester,1992-12-17,33,Dublin,180,Ireland,Midfield - Central Midfield,right,23/01/2019,23/01/2019,23/01/2019,30/11/2026,,20/12/2023,€ 100 k
+chris-shields,96297,Chris Shields,1990-12-27,35,"Clondalkin, Dublin",185,Ireland,Midfield - Defensive Midfield,right,01/07/2021,01/07/2021,01/07/2021,31/05/2027,,31/01/2026,€ 50 k
+christopher-atherton,1061035,Christopher Atherton,2008-10-19,17,Clonmore,178,Ireland | Northern Ireland,Attack - Right Winger,right,,17/07/2026,17/07/2026,-,,,
+christy-grogan,997888,Christy Grogan,2005-10-27,20,Manchester,193,Ireland | England,Defender - Centre-Back,right,05/07/2026,05/07/2026,05/07/2026,-,,,
+cian-barrett,741232,Cian Barrett,2005-04-19,21,,175,Ireland,Defender - Centre-Back,right,,01/01/2023,01/01/2023,-,,,€ 100 k
+cian-bolger,130478,Cian Thomas Bolger,1992-03-12,34,"Celbridge, Co. Kildare",193,Ireland | England,Defender - Centre-Back,right,,01/07/2026,01/07/2026,-,,,€ 10 k
+cian-dillon,1068357,Cian Dillon,2006-04-04,20,,,Ireland,Attack - Centre-Forward,right,21/07/2026,21/07/2026,21/07/2026,-,,,
+cian-doyle,1137106,Cian Doyle,2005-01-07,21,,178,Ireland,Midfield - Central Midfield,right,27/07/2026,27/07/2026,27/07/2026,30/06/2028,,,
+cian-hayes,727025,Cian Jude Hayes,2003-06-29,23,Preston,170,Ireland | England,Attack - Right Winger,left,02/07/2026,02/07/2026,02/07/2026,30/06/2029,,,€ 325 k
+cian-kavanagh,701072,Cian Kavanagh,2003-01-03,23,Dublin,175,Ireland,Attack - Centre-Forward,right,,01/01/2025,01/01/2025,30/11/2026,,29/11/2024,€ 125 k
+cian-oconnor,1523368,Cian O'Connor,2008-05-27,18,,,Ireland,Attack - Centre-Forward,,,07/03/2026,07/03/2026,-,,,
+cian-omalley,1113634,Cian O'Malley,2003-03-30,23,Dublin,,Ireland,Defender - Centre-Back,right,,01/01/2025,01/01/2025,31/05/2027,,23/05/2025,€ 10 k
+cian-spaight,1231250,Cian Spaight,2007-04-15,19,"Blackrock, Louth",178,Ireland,Midfield - Central Midfield,right,,09/05/2025,09/05/2025,-,,,
+ciaran-brennan,550134,Ciaran Thomas Brennan,2000-05-05,26,Kilkenny,188,Ireland,Defender - Centre-Back,right,01/07/2024,01/07/2024,01/07/2024,-,,16/06/2026,€ 75 k
+ciaran-coll,185571,Ciarán Coll,1991-08-19,35,"Letterkenny, Donegal",178,Ireland,Defender - Left-Back,left,,01/07/2026,01/07/2026,30/06/2027,,,€ 25 k
+ciaran-gilligan,809167,Ciaran Patrick Gilligan,2002-02-05,24,Derby,180,Ireland | England,Midfield - Central Midfield,right,01/07/2020,01/07/2020,01/07/2020,30/06/2027,,12/07/2024,€ 75 k
+ciaran-kelly,403437,Ciarán Kelly,1998-07-04,28,"Lucan, Dublin",190,Ireland,Defender - Centre-Back,left,01/07/2026,01/07/2026,01/07/2026,30/06/2028,,,€ 200 k
+ciaran-kilduff,68337,Ciarán Kilduff,1988-09-29,37,"Kilcock, Kildare",193,Ireland,Attack - Centre-Forward,left,,01/01/2021,01/01/2021,-,,,
+ciaran-mullan,1468362,Ciaran Mullan,2007-03-20,19,Derry,178,Ireland | Northern Ireland,Defender - Right-Back,right,,05/10/2025,05/10/2025,-,,,
+cillian-campion,1284436,Cillian Campion-Wigglesworth,2007-10-21,18,Dublin,180,Ireland,Goalkeeper,right,,04/02/2025,04/02/2025,-,,,
+cillian-murphy,1337112,Cillian Murphy,2009-07-22,17,Limerick,183,Ireland,Midfield - Attacking Midfield,left,19/07/2025,19/07/2025,19/07/2025,30/11/2027,,,
+cillian-ryan,1165133,Cillian Ryan,2008-03-05,18,,178,Ireland,Midfield - Right Midfield,right,,19/07/2025,19/07/2025,-,,,
+cillian-tollett,1165198,Cillian Tollett,2008-02-09,18,"Oughterard, Galway",185,Ireland | Australia,Attack - Centre-Forward,right,13/02/2026,13/02/2026,13/02/2026,-,,,€ 50 k
+cj-hamilton,391788,Christopher Nathan Hamilton,1995-03-23,31,London,185,Ireland | England,Attack - Left Winger,left,22/07/2020,22/07/2020,22/07/2020,30/06/2027,,05/05/2026,€ 300 k
+colm-horgan,183162,Colm Horgan,1994-07-02,32,Galway,173,Ireland,Defender - Right-Back,right,,01/01/2026,01/01/2026,-,,,€ 50 k
+conal-mcdermott,1354012,Conal McDermott,2007-07-23,19,Derry,188,Ireland | Northern Ireland,Goalkeeper,right,,06/08/2026,06/08/2026,-,,,
+conall-alfred,1455252,Conall Alfred,,,,,Ireland,Midfield - Left Midfield,,,05/09/2025,05/09/2025,-,,,
+conan-noonan,745726,Conan Noonan,2003-01-17,23,,180,Ireland,Midfield - Attacking Midfield,both,,01/01/2026,01/01/2026,30/11/2028,,,€ 200 k
+connor-barratt,746115,Connor James Barratt,2004-04-05,22,,190,Ireland | England,Defender - Centre-Back,right,,03/02/2026,03/02/2026,30/11/2026,,,€ 125 k
+connor-obrien,966649,Connor David O'Brien,2004-07-12,22,Accrington,180,Ireland | England,Defender - Right-Back,both,,01/07/2023,01/07/2023,30/06/2027,,04/05/2026,€ 200 k
+connor-oriordan,929715,Connor Patrick O'Riordan,2003-10-19,22,Crewe,193,Ireland | Scotland,Defender - Centre-Back,right,24/01/2024,24/01/2024,24/01/2024,-,,,€ 600 k
+connor-ronan,337787,Connor Patrick Ronan,1998-03-06,28,Rochdale,170,Ireland | England,Midfield - Central Midfield,right,01/07/2026,01/07/2026,01/07/2026,30/06/2028,,,€ 1.20 m
+connor-whittaker,1568292,Conor Whittaker,2008-11-13,17,,,Ireland | England,Midfield - Right Midfield,,,17/07/2026,17/07/2026,-,,,
+conor-cannon,1269989,Conor Cannon,2006-06-30,20,,,Ireland,Midfield,,,31/05/2024,31/05/2024,-,,,
+conor-carty,586765,Conor Thomas Carty,2002-05-25,24,Wicklow,183,Ireland,Attack - Centre-Forward,left,08/07/2026,08/07/2026,08/07/2026,-,,,
+conor-coventry,419025,Conor James Coventry,2000-03-25,26,London,178,Ireland | England,Midfield - Defensive Midfield,right,12/01/2024,12/01/2024,12/01/2024,30/06/2027,,,€ 2.00 m
+conor-grant,579997,Conor Michael Grant,2001-07-23,25,Dublin,178,Ireland,Midfield - Left Midfield,right,09/08/2024,09/08/2024,09/08/2024,30/06/2027,,,€ 225 k
+conor-kane,429247,Conor Kane,1998-11-05,27,"Palmerstown, Dublin",178,Ireland,Defender - Left-Back,left,,01/01/2024,01/01/2024,30/11/2026,,13/11/2025,€ 200 k
+conor-kearns,437603,Conor Kearns,1998-05-06,28,"Templeogue, Dublin",188,Ireland,Goalkeeper,right,01/01/2026,01/01/2026,01/01/2026,-,,,€ 175 k
+conor-keeley,377180,Conor Keeley,1997-12-13,28,"Dunboyne, Meath",201,Ireland,Defender - Centre-Back,right,01/01/2025,01/01/2025,01/01/2025,30/11/2027,,25/01/2026,€ 250 k
+conor-masterson,293784,Conor Ciaran Masterson,1998-09-08,27,"Celbridge, Co. Kildare",185,Ireland,Defender - Centre-Back,right,,25/08/2026,25/08/2026,31/12/2026,,,€ 175 k
+conor-mccarthy,382686,Conor McCarthy,1998-04-11,28,"Blarney, Cork",193,Ireland,Defender - Centre-Back,right,01/07/2025,01/07/2025,01/07/2025,30/06/2027,,,€ 275 k
+conor-mcmanus,1008162,Conor McManus,2004-06-16,22,,183,Ireland,Defender - Left-Back,,,03/08/2026,03/08/2026,-,,,
+conor-okeeffe,204401,Conor O'Keeffe,1993-09-19,32,"Mullingar, Westmeath",183,Ireland,Defender - Right-Back,right,,01/01/2025,01/01/2025,30/11/2026,,19/12/2025,€ 100 k
+conor-reynolds,1151999,Conor Reynolds,2006-12-16,19,,183,Ireland,Defender - Right-Back,,,07/07/2023,07/07/2023,30/11/2026,,15/10/2024,€ 100 k
+conor-shaughnessy,255626,Conor Glynn Shaughnessy,1996-06-30,30,Galway,190,Ireland,Defender - Centre-Back,right,01/07/2023,01/07/2023,01/07/2023,30/06/2027,club option 1 year,04/07/2024,€ 800 k
+conor-walsh,741226,Conor Walsh,2005-03-17,21,"Westport, Mayo",193,Ireland,Goalkeeper,right,01/01/2026,01/01/2026,01/01/2026,-,,,€ 50 k
+corey-okeeffe,325214,Corey James John O'Keeffe,1998-06-05,28,Birmingham,183,Ireland | England,Defender - Right-Back,right,,25/07/2023,25/07/2023,30/06/2027,,,€ 550 k
+corrie-ndaba,433329,Corrie Richard Ndaba,1999-12-25,26,Dublin,188,Ireland | Ghana,Defender - Left-Back,left,28/07/2025,28/07/2025,28/07/2025,30/06/2028,club option 2 years,,€ 900 k
+cory-osullivan,957327,Cory O'Sullivan,2006-05-02,20,"Ballyfermot, Dublin",173,Ireland,Defender - Centre-Back,left,,24/06/2022,24/06/2022,-,,,€ 250 k
+cyrus-christie,158623,Cyrus Sylvester Frederick Christie,1992-09-30,33,Coventry,188,Ireland | England,Defender - Right-Back,right,,01/09/2025,01/09/2025,-,Option for a further year,,€ 125 k
+daire-oconnor,365202,Daire O'Conchubhair,1997-04-15,29,"Arklow, Wicklow",173,Ireland,Attack - Right Winger,right,,01/07/2026,01/07/2026,-,,,€ 125 k
+daire-patton,1167208,Daire Patton,2006-01-15,20,Sligo,180,Ireland,Midfield - Attacking Midfield,left,11/08/2023,11/08/2023,11/08/2023,30/11/2026,,23/11/2025,€ 100 k
+daithi-folan,1028907,Dáithí Folan,2005-03-20,21,,185,Ireland,Goalkeeper,,,01/07/2025,01/07/2025,-,,,
+dan-casey,270221,Dan Casey,1997-10-29,28,Dublin,185,Ireland,Defender - Centre-Back,right,01/07/2025,01/07/2025,01/07/2025,-,,,€ 450 k
+daniel-chukwu,1113874,Daniel Chukwu,2005-03-11,21,Dublin,178,Ireland | Nigeria,Midfield - Right Midfield,left,,01/07/2026,01/07/2026,-,,,
+daniel-cleary,264193,Daniel Cleary,1996-03-09,30,Dublin,183,Ireland,Defender - Centre-Back,right,,28/07/2022,28/07/2022,-,,28/07/2022,€ 300 k
+daniel-grant,577557,Daniel Grant,1999-12-23,26,"Lucan, Dublin",178,Ireland,Midfield - Right Midfield,right,01/01/2025,01/01/2025,01/01/2025,30/11/2026,,11/12/2024,€ 250 k
+daniel-idiakhoa,1494781,Daniel Idiakhoa,2004-06-28,22,,,Ireland,Midfield - Attacking Midfield,,,01/08/2026,01/08/2026,-,,,
+daniel-kelly,567749,Daniel Kelly,1996-05-21,30,Dublin,183,Ireland,Attack - Right Winger,right,,01/01/2025,01/01/2025,30/11/2026,,26/11/2025,€ 150 k
+daniel-mandroiu,293783,Daniel Jordan Mandroiu,1998-10-20,27,Dublin,178,Ireland | Romania,Midfield - Attacking Midfield,right,19/08/2024,19/08/2024,19/08/2024,30/11/2026,,31/01/2025,€ 250 k
+daniel-mare,1005774,Daniel Mare,2007-04-01,19,Dublin,183,Ireland | Romania,Attack - Right Winger,right,01/01/2026,01/01/2026,01/01/2026,-,,,
+daniel-mcgrath,960538,Danniel Negry-McGrath,2006-01-28,20,,173,Ireland | Brazil,Midfield - Central Midfield,,07/07/2025,07/07/2025,07/07/2025,-,,,€ 100 k
+daniel-oreilly,192282,Daniel O'Reilly,1995-04-11,31,Dublin,183,Ireland,Defender - Centre-Back,left,,09/01/2024,09/01/2024,31/05/2027,both parties 1 year,09/10/2025,€ 175 k
+daniel-ring,1109578,Daniel Ring,2007-02-03,19,Dublin,188,Ireland,Attack - Centre-Forward,right,19/04/2024,19/04/2024,19/04/2024,-,,,
+daniel-rogers,200956,Daniel Rogers,1994-03-23,32,"New York City, New York",185,Ireland | United States,Goalkeeper,,14/08/2022,14/08/2022,14/08/2022,30/11/2026,,24/10/2024,€ 100 k
+danny-burke,1260403,Danny Burke,2009-04-13,17,,,Ireland,Defender - Left-Back,left,,-,-,-,,,
+danny-kane,224816,Danny Kane,1997-04-23,29,Dublin,188,Ireland,Defender - Centre-Back,right,,01/05/2023,01/05/2023,31/12/2026,,,€ 125 k
+danny-mcnamara,647138,Danny John McNamara,1998-12-27,27,Sidcup,180,Ireland | England,Defender - Right-Back,right,23/07/2026,23/07/2026,23/07/2026,30/06/2028,,,€ 1.50 m
+dara-costelloe,614700,Dara James Morgan Costelloe,2002-12-11,23,Limerick,175,Ireland,Attack - Left Winger,left,01/07/2025,01/07/2025,01/07/2025,30/06/2028,,,€ 400 k
+dara-mccormick,1382477,Dara McCormick,2005-10-13,20,,175,Ireland,Midfield - Central Midfield,,,07/07/2026,07/07/2026,-,,,
+dara-mcguinness,750777,Dara McGuinness,2004-02-12,22,Roscommon,183,Ireland,Attack - Centre-Forward,right,,23/07/2025,23/07/2025,30/11/2026,,11/12/2025,€ 75 k
+dara-oshea,401320,Dara Joseph O'Shea,1999-03-04,27,Dublin,188,Ireland,Defender - Centre-Back,right,25/08/2024,25/08/2024,25/08/2024,30/06/2030,,24/06/2025,€ 16.00 m
+dare-kareem,1230607,Dare Kareem,2006-01-17,20,Dublin,185,Nigeria | Ireland,Attack - Centre-Forward,right,21/07/2026,21/07/2026,21/07/2026,-,,,€ 125 k
+darius-lipsiuc,941441,Darius Lipsiuc,2005-09-16,20,Dublin,178,Ireland | Moldova,Midfield - Central Midfield,right,,01/07/2026,01/07/2026,30/06/2029,,,
+darragh-brunton,1260402,Darragh Brunton,2009-06-01,17,,,Ireland,Goalkeeper,,,05/02/2026,05/02/2026,-,,,
+darragh-burns,634366,Darragh Francis O'Brien Burns,2002-08-06,24,"Stamullen, Meath",175,Ireland | Northern Ireland,Midfield - Right Midfield,left,11/07/2026,11/07/2026,11/07/2026,-,,,€ 200 k
+darragh-leahy,325206,Darragh John Leahy,1998-04-15,28,Dublin,178,Ireland,Defender - Left-Back,left,14/01/2026,14/01/2026,14/01/2026,31/05/2027,,,€ 150 k
+darragh-lenihan,183167,Darragh Patrick Lenihan,1994-03-16,32,Dublin,188,Ireland,Defender - Centre-Back,right,01/07/2026,01/07/2026,01/07/2026,-,,,€ 500 k
+darragh-markey,315385,Darragh Markey,1997-05-23,29,"Lucan, Dublin",170,Ireland,Midfield - Attacking Midfield,right,,01/01/2026,01/01/2026,30/11/2027,,,€ 150 k
+darragh-nugent,540872,Darragh Nugent,2001-03-01,25,,183,Ireland,Midfield - Central Midfield,left,,08/01/2026,08/01/2026,30/11/2027,,,€ 150 k
+darragh-oconnor,688673,Darragh O'Connor,1999-08-05,27,"Croydon, London",188,Ireland | England,Defender - Centre-Back,right,,01/07/2026,01/07/2026,-,,,€ 50 k
+darragh-power,683670,Darragh Power,2000-12-29,25,"Kilmacthomas, Waterford",178,Ireland,Defender - Right-Back,right,29/01/2026,29/01/2026,29/01/2026,-,,,€ 175 k
+daryl-horgan,178139,Daryl Jeremiah Horgan,1992-08-10,34,Galway,170,Ireland,Midfield - Left Midfield,right,,01/08/2023,01/08/2023,30/11/2028,,17/04/2026,€ 100 k
+david-dunne,1260396,David Dunne,2009-02-01,17,,,Ireland,Attack - Left Winger,right,09/07/2025,09/07/2025,09/07/2025,-,,,
+david-eguaibor,985144,David Didi Eguaibor,2004-01-07,22,Waterford,193,Ireland | Nigeria,Attack - Centre-Forward,left,01/07/2026,01/07/2026,01/07/2026,-,,,
+david-ezeh,937987,David Ezeh,2006-02-13,20,Helsinki,188,Finland | Nigeria,Attack - Centre-Forward,,01/01/2023,01/01/2023,01/01/2023,31/12/2026,,11/05/2024,€ 150 k
+david-hurley,535632,David Hurley,1998-10-21,27,Cork,178,Ireland,Midfield - Central Midfield,left,,01/01/2021,01/01/2021,30/11/2026,,24/11/2025,€ 150 k
+david-jonathan,1259892,David Jonathan,2007-04-12,19,Longford,193,Ireland,Defender - Centre-Back,right,,26/04/2024,26/04/2024,-,,,
+david-mcgoldrick,35416,David James McGoldrick,1987-11-29,38,Nottingham,183,Ireland | England,Attack - Centre-Forward,right,01/07/2026,01/07/2026,01/07/2026,30/06/2027,,,€ 25 k
+david-okagbue,810188,David Chukwudubem Okagbue,2004-02-04,22,Dublin,183,Ireland | Nigeria,Defender - Centre-Back,right,21/07/2025,21/07/2025,21/07/2025,30/06/2029,,,€ 325 k
+david-toure,877215,David Toure,2004-10-01,21,Dublin,,Ireland | Cote d'Ivoire,Defender - Right-Back,right,01/07/2025,01/07/2025,01/07/2025,31/05/2027,,,€ 200 k
+dawson-devoy,683530,Dawson Devoy,2001-11-20,24,Dublin,178,Ireland,Midfield - Central Midfield,right,15/07/2024,15/07/2024,15/07/2024,30/11/2027,,,€ 350 k
+dayle-rooney,491629,Dayle Rooney,1998-02-24,28,"Ballymun, Dublin",,Ireland,Attack - Left Winger,left,,01/01/2024,01/01/2024,30/11/2027,,02/07/2025,€ 200 k
+dean-mcmenamy,745727,Dean McMenamy,2002-04-04,24,Dublin,173,Ireland,Midfield - Attacking Midfield,both,01/01/2023,01/01/2023,01/01/2023,30/11/2026,,21/11/2025,€ 100 k
+desmond-armstrong,1260399,Desmond Armstrong,2009-11-27,16,,,Ireland | Nigeria,Attack - Centre-Forward,,,10/02/2026,10/02/2026,-,,,
+divin-isamala,1237271,Divin Isamala,2003-05-25,23,Dublin,190,Ireland,Defender - Right-Back,right,01/07/2025,01/07/2025,01/07/2025,30/06/2027,,,€ 100 k
+dominic-bernard,376248,Dominic Archie Bernard,1997-03-29,29,Gloucester,180,Ireland | England,Defender - Centre-Back,right,01/07/2026,01/07/2026,01/07/2026,-,,,
+donal-oconnor,1514788,Donal O'Connor,2008-03-19,18,,185,Ireland,Defender - Centre-Back,,,12/08/2026,12/08/2026,30/06/2029,,,
+donnacha-sammon,1005763,Donnacha Sammon,2007-04-04,19,,178,Ireland,Attack - Centre-Forward,right,,11/07/2025,11/07/2025,-,,,
+dylan-connolly,251838,Dylan Edward Connolly,1995-05-02,31,Dublin,175,Ireland,Attack - Right Winger,right,,02/07/2026,02/07/2026,-,,,€ 125 k
+dylan-duffy,745728,Dylan Arthur Duffy,2002-11-28,23,,188,Ireland,Midfield - Left Midfield,left,31/01/2025,31/01/2025,31/01/2025,30/06/2027,,,€ 250 k
+dylan-watts,365201,Dylan Billy Watts,1997-04-11,29,Dublin,178,Ireland,Midfield - Central Midfield,right,,07/07/2018,07/07/2018,-,,05/01/2021,€ 250 k
+eanna-clancy,1025421,Éanna Clancy,2004-02-26,22,"Glenfarne, Leitrim",185,Ireland,Defender - Centre-Back,right,,23/07/2026,23/07/2026,30/06/2028,,,
+ed-mccarthy,878277,Ed McCarthy,2001-04-20,25,Limerick,170,Ireland,Midfield - Right Midfield,right,05/02/2022,05/02/2022,05/02/2022,30/11/2026,,29/11/2025,€ 125 k
+ed-mcjannet,802243,Edward John McJannet,2004-01-25,22,St Albans,183,Ireland | England,Midfield - Central Midfield,left,28/07/2026,28/07/2026,28/07/2026,30/06/2027,,,€ 150 k
+edward-mcginty,478712,Edward McGinty,1999-08-05,27,Motherwell,193,Ireland | Scotland,Goalkeeper,left,09/01/2025,09/01/2025,09/01/2025,-,,,€ 300 k
+edwin-agbaje,648044,Edwin Olamide Agbaje,2004-01-25,22,"Edenderry, Offaly",,Ireland | Nigeria,Defender - Right-Back,right,01/01/2026,01/01/2026,01/01/2026,30/11/2027,,,€ 175 k
+egor-vassenin,1109570,Egor Vassenin,2007-10-24,18,,190,Ireland | Estonia,Defender - Centre-Back,left,16/07/2026,16/07/2026,16/07/2026,-,,,
+eiran-cashin,581330,Eiran Joe Cashin,2001-11-09,24,Mansfield,183,Ireland | England,Defender - Centre-Back,left,31/01/2025,31/01/2025,31/01/2025,30/06/2030,,,€ 5.00 m
+emmanuel-adegboyega,1069449,Emmanuel Oluwanifemi Adegboyega,2003-09-16,22,"Dundalk, Louth",190,Ireland | Nigeria,Defender - Centre-Back,right,23/01/2026,23/01/2026,23/01/2026,30/06/2027,,,€ 350 k
+emmanuel-osadebe,393284,Emmanuel Ebuka Osadebe,1996-10-01,29,"Dundalk, Louth",188,Ireland | England,Midfield - Central Midfield,right,,01/07/2026,01/07/2026,-,,,€ 75 k
+enda-minogue,603084,Enda Minogue,2002-01-12,24,,190,Ireland,Goalkeeper,right,01/01/2025,01/01/2025,01/01/2025,30/11/2026,,18/12/2025,€ 125 k
+enda-stevens,85706,Enda John Stevens,1990-07-09,36,Dublin,183,Ireland,Defender - Left-Back,left,,01/01/2026,01/01/2026,-,,,€ 75 k
+eoghan-curran,1580873,Eoghan Curran,2009-10-25,16,Derry,,Ireland | Northern Ireland,Attack - Right Winger,right,,14/08/2026,14/08/2026,-,,,
+eoghan-oconnell,280982,Eoghan O'Connell,1995-08-13,31,Douglas,188,Ireland,Defender - Centre-Back,right,01/07/2026,01/07/2026,01/07/2026,30/06/2028,,,€ 400 k
+eoin-farrell,798864,Eoin Farrell,2002-03-27,24,"Athy, Kildare",,Ireland,Midfield - Central Midfield,,,08/01/2026,08/01/2026,-,,,€ 75 k
+eoin-kenny,1079595,Eoin Kenny,2005-12-30,20,Derry,178,Northern Ireland | Ireland,Attack - Centre-Forward,right,06/07/2026,06/07/2026,06/07/2026,30/06/2029,,,€ 150 k
+eric-yahaya,1163682,Eric Husseni Yahaya,1998-06-27,28,,188,Ireland,Attack - Centre-Forward,right,,15/08/2026,15/08/2026,-,,,
+erskine-rennie,1333342,Erskine Rennie,2010-01-28,16,,183,Scotland | Ireland,Attack - Centre-Forward,right,21/08/2026,21/08/2026,21/08/2026,-,,,
+ethan-hall,1319776,Ethan Hall,2006-03-26,20,,,Ireland,Defender - Right-Back,,,07/04/2026,07/04/2026,-,,,
+ethan-obrien,1243646,Ethan O'Brien,2001-01-24,25,Dublin,183,Ireland | United States,Midfield - Central Midfield,,01/01/2026,01/01/2026,01/01/2026,30/11/2026,,,€ 100 k
+evan-caffrey,745722,Evan Caffrey,2003-02-27,23,Dublin,175,Ireland,Midfield - Right Midfield,right,01/01/2023,01/01/2023,01/01/2023,30/11/2027,,19/02/2025,€ 175 k
+evan-ferguson,648046,Evan Joe Ferguson,2004-10-19,21,Bettystown,188,Ireland | England,Attack - Centre-Forward,right,01/07/2022,01/07/2022,01/07/2022,30/06/2029,,10/11/2023,€ 20.00 m
+evan-mclaughlin,811305,Evan McLaughlin,2002-03-30,24,Derry,173,Northern Ireland | Ireland,Midfield - Central Midfield,left,01/01/2026,01/01/2026,01/01/2026,-,,,€ 100 k
+evan-weir,746956,Evan Robert Weir,2002-04-16,24,"Ratoath, Meath",185,Ireland,Defender - Left-Back,left,01/07/2026,01/07/2026,01/07/2026,30/06/2029,,,€ 300 k
+festy-ebosele,586756,Festy Oseiwe Ebosele,2002-08-02,24,Enniscorthy,180,Ireland | Nigeria,Defender - Right-Back,right,07/08/2026,07/08/2026,07/08/2026,30/06/2027,,,€ 2.50 m
+finn-azaz,480723,Finn Isaac Azaz,2000-09-07,25,London,185,Ireland | England,Midfield - Attacking Midfield,right,29/08/2025,29/08/2025,29/08/2025,30/06/2029,,,€ 20.00 m
+finn-flanagan,1188920,Finn Frank Flangan,2005-05-04,21,Nottingham,,England | Ireland,Midfield - Defensive Midfield,,,10/08/2026,10/08/2026,31/05/2027,,,
+finn-mcdonnell,1260710,Finn McDonnell,2008-01-10,18,,,Northern Ireland,Goalkeeper,05/02/2026,,05/02/2026,05/02/2026,-,,,
+finn-mcgreevy,1468634,Finn Eamonn McGreevy,2008-03-18,18,London,178,Ireland | England,Attack - Right Winger,right,,27/07/2026,27/07/2026,30/06/2028,,,
+finn-moylan,1365582,Finn Moylan,2008-02-03,18,Meath,188,Ireland,Goalkeeper,right,,23/10/2025,23/10/2025,-,,,
+finn-sherlock,1134227,Finn Thomas Sherlock,2008-07-04,18,Cavan,173,Ireland,Defender - Left-Back,left,01/07/2026,01/07/2026,01/07/2026,30/06/2027,,,
+flynn-ryan,1465784,Flynn Ryan,2008-09-19,17,"Bray, Wicklow",,Ireland,Midfield - Attacking Midfield,right,,30/07/2026,30/07/2026,31/12/2026,,,
+francely-lomboto,798171,Francely Lomboto,2000-07-02,26,Galway,185,Ireland | DR Congo,Attack - Left Winger,right,,07/01/2026,07/01/2026,30/11/2026,,,€ 100 k
+franco-umeh,943560,Franco Umeh-Chibueze,2005-01-26,21,,178,Ireland | Nigeria,Attack - Right Winger,left,01/09/2025,01/09/2025,01/09/2025,30/06/2029,,,€ 500 k
+frankie-mcmahon-brown,1352708,Frankie McMahon-Brown,2007-08-06,19,,,Ireland,Midfield - Central Midfield,,01/08/2026,01/08/2026,01/08/2026,-,,,
+freddie-turley,957316,Freddie Michael Joseph Turley,2006-07-03,20,"Bray, Wicklow",,Ireland,Defender - Right-Back,right,,15/08/2026,15/08/2026,31/05/2027,,,€ 25 k
+fuad-sule,470882,Fuad Sule,1997-01-20,29,Ibadan,168,Ireland | Nigeria,Midfield - Defensive Midfield,right,,02/02/2026,02/02/2026,31/05/2027,,,€ 150 k
+gabriel-adebambo,703194,Oluwaseun Mobolaji Gabriel Adebambo,2002-02-27,24,,183,Ireland | Nigeria,Midfield - Central Midfield,left,01/07/2026,01/07/2026,01/07/2026,-,,,€ 25 k
+gabriel-kelly,1018096,Gabriel Kelly,2006-12-07,19,,,Ireland,Midfield - Defensive Midfield,,01/07/2025,01/07/2025,01/07/2025,30/06/2027,,18/09/2025,
+gabriel-otegbayo,1198023,Gabriel Algirdas Babatunde Otegbayo,2005-02-11,21,Cork,188,Ireland | Nigeria,Defender - Centre-Back,right,01/01/2025,01/01/2025,01/01/2025,30/06/2027,,03/02/2025,€ 800 k
+garbhan-coughlan,185264,Garbhan Coughlan,1993-01-24,33,Limerick,175,Ireland,Attack - Centre-Forward,,,01/03/2021,01/03/2021,31/12/2026,,,€ 250 k
+gareth-mcelroy,1148282,Gareth McElroy,2004-11-24,21,"Burnfoot, Donegal",196,Ireland,Defender - Centre-Back,right,23/06/2023,23/06/2023,23/06/2023,30/11/2028,,21/05/2026,€ 150 k
+gary-oneil,307513,Gary O'Neill,1995-01-27,31,"Tralee, Kerry",180,Ireland,Midfield - Defensive Midfield,right,,01/07/2019,01/07/2019,-,,05/11/2021,€ 125 k
+gavan-holohan,127805,Gavan Richard Holohan,1991-12-15,34,Kilkenny,180,Ireland,Midfield - Attacking Midfield,right,01/07/2026,01/07/2026,01/07/2026,-,,,
+gavin-bazunu,585550,Gavin Okeroghene Bazunu,2002-02-20,24,Dublin,188,Ireland | Nigeria,Goalkeeper,right,01/07/2022,01/07/2022,01/07/2022,30/06/2027,,,€ 8.00 m
+gavin-gilmore,1109299,Gavin Gilmore,2003-04-24,23,"Tallanstown, Louth",183,Ireland,Midfield - Left Midfield,right,01/07/2026,01/07/2026,01/07/2026,-,,,€ 10 k
+gavin-kilkenny,469064,Gavin Kilkenny,2000-02-01,26,Dublin,175,Ireland,Midfield - Central Midfield,right,29/08/2024,29/08/2024,29/08/2024,30/06/2028,,03/01/2026,€ 350 k
+gavin-mcateer,1261927,Gavin McAteer,2008-07-02,18,"Milford, Donegal",173,Ireland,Midfield - Attacking Midfield,left,03/05/2024,03/05/2024,03/05/2024,30/11/2027,,03/07/2024,
+gavin-molloy,728478,Gavin Molloy,2001-10-19,24,Dublin,,Ireland,Defender - Centre-Back,left,01/07/2024,01/07/2024,01/07/2024,31/05/2027,,,€ 600 k
+gbemi-arubi,993050,Gbemi Kingslyn Arubi,2004-05-26,22,Dublin,188,Ireland | Nigeria,Attack - Centre-Forward,both,18/07/2026,18/07/2026,18/07/2026,30/06/2029,Option for a further year,,€ 200 k
+george-moloney,1260387,George Moloney,2009-11-17,16,,188,Ireland,Goalkeeper,right,,01/07/2026,01/07/2026,30/06/2028,,,
+gideon-tetteh,741231,Gideon Tetteh,2005-05-30,21,Dublin,175,Ireland | Ghana,Attack - Left Winger,right,09/07/2026,09/07/2026,09/07/2026,30/11/2027,,,
+glenn-mcconnell,961075,Felipe Glenn Nascimento McConnell,2005-04-26,21,,173,Ireland | Brazil,Midfield - Attacking Midfield,right,01/07/2022,01/07/2022,01/07/2022,30/06/2028,,17/02/2026,€ 75 k
+glory-nzingo,648042,Glory Nzingo,2004-11-04,21,Dublin,180,Ireland | DR Congo,Midfield - Attacking Midfield,right,,27/07/2026,27/07/2026,-,,,
+goodness-ogbonna,1134240,Goodness Onyedikachi Ogbonna Ikechukwu,2008-01-02,18,,170,Ireland | Nigeria,Midfield - Attacking Midfield,right,10/07/2025,10/07/2025,10/07/2025,-,,,
+grady-mcdonnell,1164964,Grady Francis McDonnell,2008-02-17,18,"Surrey, British Columbia",185,Ireland | Canada,Midfield - Central Midfield,,01/07/2026,01/07/2026,01/07/2026,30/06/2029,,,€ 200 k
+graham-burke,177892,Graham Dylan Burke,1993-09-21,32,Dublin,180,Ireland,Attack - Second Striker,right,,01/07/2021,01/07/2021,-,,,€ 250 k
+graham-carey,80339,Graham Carey,1989-05-20,37,"Blanchardstown, Dublin",183,Ireland,Midfield - Left Midfield,left,01/07/2025,01/07/2025,01/07/2025,30/06/2027,,24/07/2026,€ 25 k
+graham-coughlan,20961,Graham Coughlan,1974-11-18,51,Dublin,188,Ireland,Defender - Centre-Back,right,,01/07/2013,01/07/2013,-,,,
+graham-kelly,349712,Graham Kelly,1997-10-16,28,Dublin,183,Ireland,Defender - Centre-Back,left,01/07/2026,01/07/2026,01/07/2026,31/05/2029,,,€ 10 k
+guilherme-rego-priosti,1140231,Guilherme Rego Priosti,2006-04-09,20,,175,Ireland | Brazil,Midfield - Attacking Midfield,,,24/07/2026,24/07/2026,30/11/2026,,,
+harry-groome,877192,Harry Groome,2001-11-09,24,,,Ireland,Midfield - Central Midfield,right,01/01/2025,01/01/2025,01/01/2025,30/11/2026,,30/11/2025,€ 125 k
+harry-vaughan,867909,Harry Patrick Vaughan,2004-04-06,22,Trafford,170,Ireland | England,Midfield - Attacking Midfield,right,01/07/2026,01/07/2026,01/07/2026,30/11/2026,,,€ 400 k
+harvey-boddy,1569757,Harvey Boddy,2008-08-09,18,,,Ireland,Midfield - Central Midfield,,,03/07/2026,03/07/2026,31/05/2027,,,
+harvey-neville,593296,Harvey James Neville,2002-06-26,24,Manchester,180,Ireland | England,Defender - Right-Back,right,,01/01/2026,01/01/2026,30/11/2026,,,€ 175 k
+harvey-vale,581675,Harvey James Vale,2003-09-11,22,Haywards Heath,180,Ireland | England,Midfield - Right Midfield,left,03/02/2025,03/02/2025,03/02/2025,30/06/2028,club option 1 year,,€ 4.00 m
+harvey-warren,1041609,Harvey Warren,2004-04-11,22,Wexford,185,Ireland,Defender - Centre-Back,right,01/01/2026,01/01/2026,01/01/2026,30/11/2026,,,€ 125 k
+hugh-martin,1380190,Hugh Martin,2010-01-01,16,,178,Ireland,Attack - Centre-Forward,right,,01/01/2026,01/01/2026,-,,,
+hugh-parker,1243000,Hugh William Parker,2006-04-18,20,Greystones,188,Ireland | England,Attack - Centre-Forward,both,14/08/2026,14/08/2026,14/08/2026,02/01/2027,,,
+ian-lawlor,183166,Ian John Lawlor,1994-10-27,31,Dublin,193,Ireland,Goalkeeper,right,10/01/2026,10/01/2026,10/01/2026,30/06/2027,Option for a further year,,€ 75 k
+ike-orazi,1073032,Ikechukwu Orazi,2007-06-11,19,Dublin,175,Ireland | Nigeria,Attack - Left Winger,right,01/07/2024,01/07/2024,01/07/2024,-,,,€ 50 k
+isaac-abankwah,1343679,Isaac Abankwah Junior,2002-05-26,24,,,Ireland | Ghana,Defender - Right-Back,right,01/07/2026,01/07/2026,01/07/2026,-,,,
+issa-kargbo,886909,Issa Kargbo,2002-01-07,24,,,Ireland | Sierra Leone,Defender - Right-Back,,,01/07/2025,01/07/2025,31/05/2027,,,€ 50 k
+ivan-savshak,983805,Савшак Іван Михайлович,2005-06-01,21,Louth,188,Ireland | Ukraine,Defender - Centre-Back,both,15/01/2025,15/01/2025,15/01/2025,30/06/2026,,15/01/2025,€ 50 k
+jack-bonham,209291,Jack Elliott Bonham,1993-09-14,32,Stevenage,193,Ireland | England,Goalkeeper,right,14/01/2026,14/01/2026,14/01/2026,30/06/2027,,,€ 225 k
+jack-byrne,217757,Jack Byrne,1996-04-24,30,Dublin,170,Ireland,Midfield - Central Midfield,right,01/01/2022,01/01/2022,01/01/2022,30/11/2026,,,€ 400 k
+jack-henry-francis,796024,Jack Henry-Francis,2003-09-23,22,London,180,Ireland | England,Midfield - Defensive Midfield,right,18/07/2025,18/07/2025,18/07/2025,30/11/2027,,,€ 250 k
+jack-moorhouse,953933,Jack Lee Moorhouse,2005-11-29,20,Manchester,183,Ireland | England,Midfield - Central Midfield,both,01/07/2024,01/07/2024,01/07/2024,-,,,€ 100 k
+jack-moylan,728480,Jack Moylan,2001-09-01,24,"Killbarrack, North Dublin",185,Ireland,Midfield - Attacking Midfield,right,,05/08/2026,05/08/2026,30/06/2030,,,€ 800 k
+jack-oreilly,941420,Jack O'Reilly,2004-02-20,22,Dublin,,Ireland,Attack - Right Winger,,01/07/2026,01/07/2026,01/07/2026,-,,,€ 75 k
+jack-taylor,458178,Jack Henry Philip Taylor,1998-06-23,28,London,185,Ireland | England,Midfield - Central Midfield,right,01/07/2023,01/07/2023,01/07/2023,30/06/2028,,10/10/2025,€ 3.00 m
+jacob-devaney,1112908,Jacob Devaney,2007-06-11,19,Barnsley,178,Ireland | England,Midfield - Defensive Midfield,right,23/08/2026,23/08/2026,23/08/2026,31/05/2027,Option to buy,,€ 250 k
+jacob-slater,854930,Jacob Vaughan Slater,2004-10-05,21,Sefton,183,Ireland | England,Defender - Left-Back,left,01/07/2026,01/07/2026,01/07/2026,30/06/2028,,,€ 150 k
+jad-hakiki,967162,جاد حقيقي,2004-06-23,22,Dublin,178,Ireland | Algeria,Midfield - Attacking Midfield,right,01/01/2025,01/01/2025,01/01/2025,30/11/2026,,,€ 200 k
+jaden-umeh,1110448,Jaden Chidi Umeh,2008-03-18,18,,185,Ireland | Nigeria,Attack - Left Winger,right,01/07/2025,01/07/2025,01/07/2025,30/06/2027,,,€ 800 k
+jake-doyle-hayes,340921,Jake Billy Doyle-Hayes,1998-12-30,27,"Ballyjamesduff, Cavan",175,Ireland,Midfield - Central Midfield,right,,01/08/2025,01/08/2025,30/06/2027,,,€ 350 k
+jake-griffin,955073,Jake Griffin,2005-12-30,20,,,Ireland | England,Defender - Centre-Back,right,01/07/2026,01/07/2026,01/07/2026,30/06/2028,,,
+jake-mulraney,264206,Jake Mulraney,1996-04-05,30,Dublin,173,Ireland,Attack - Right Winger,left,08/01/2026,08/01/2026,08/01/2026,-,,,€ 275 k
+jake-obrien,711544,Jake Patrick O'Brien,2001-05-15,25,Cork,198,Ireland,Defender - Right-Back,right,30/07/2024,30/07/2024,30/07/2024,30/06/2028,,,€ 18.00 m
+james-abankwah,648032,James Bright Adusei Abankwah,2004-01-16,22,Waterford,188,Ireland | Ghana,Defender - Centre-Back,right,26/01/2022,26/01/2022,26/01/2022,30/06/2029,,16/01/2025,€ 3.50 m
+james-bailey,1365581,James Bailey,2007-08-13,19,Dublin,180,Ireland,Midfield - Attacking Midfield,right,26/07/2026,26/07/2026,26/07/2026,-,,,
+james-bolger,1283632,James Bolger,2000-11-19,25,"Boyle, Roscommon",188,Ireland,Defender - Centre-Back,,,17/07/2024,17/07/2024,30/11/2027,,16/02/2026,€ 125 k
+james-brown,437573,James Brown,1998-06-04,28,Dublin,,Ireland,Defender - Right-Back,right,,22/02/2026,22/02/2026,30/11/2028,,,€ 250 k
+james-carroll,575812,James Carroll,2000-04-19,26,"Drogheda, Louth",,Ireland,Defender - Centre-Back,right,01/07/2026,01/07/2026,01/07/2026,30/06/2027,,,
+james-clarke,719980,James Clarke,2001-01-28,25,Meath,185,Ireland,Midfield - Attacking Midfield,right,,01/01/2026,01/01/2026,30/11/2028,,,€ 225 k
+james-collins,62640,James Steven Collins,1990-12-01,35,Coventry,188,Ireland | England,Attack - Centre-Forward,right,20/01/2025,20/01/2025,20/01/2025,30/06/2027,,13/01/2026,€ 100 k
+james-furlong,580030,Walter James Byrne Furlong,2002-06-07,24,Dublin,178,Ireland,Defender - Left-Back,left,24/08/2026,24/08/2026,24/08/2026,30/06/2027,,,€ 100 k
+james-golding,950288,James Anthony Golding,2004-08-10,22,Sutton,188,Ireland | England,Defender - Centre-Back,right,01/07/2023,01/07/2023,01/07/2023,30/06/2026,,31/05/2025,€ 100 k
+james-mcclean,85935,James Joseph McClean,1989-04-22,37,Derry,180,Ireland | Northern Ireland,Midfield - Left Midfield,left,17/01/2026,17/01/2026,17/01/2026,30/11/2027,,,€ 100 k
+james-mcmanus,741269,James McManus,2005-03-16,21,,175,Ireland,Midfield - Central Midfield,right,,22/02/2026,22/02/2026,-,,,€ 150 k
+james-morahan,1511469,James Morahan,,,,,Ireland,Defender - Centre-Back,,,05/02/2026,05/02/2026,-,,,
+james-roche,1005770,James Roche,2007-10-07,18,,183,Ireland,Defender - Centre-Back,right,14/01/2025,14/01/2025,14/01/2025,-,,,
+james-storer,838367,James Lee Storer,2004-10-04,21,Buxton,196,Ireland | England,Goalkeeper,right,01/07/2026,01/07/2026,01/07/2026,30/06/2028,,,€ 75 k
+jamie-brennan,1501888,Jamie Brennan,2008-04-28,18,,,Ireland,Defender - Left-Back,,,01/01/2026,01/01/2026,-,,,
+jamie-lennon,567750,Jamie Lennon,1998-05-09,28,Dublin,178,Ireland,Midfield - Defensive Midfield,right,01/01/2018,01/01/2018,01/01/2018,30/11/2027,,01/11/2024,€ 250 k
+jamie-mcgrath,344107,Jamie McGrath,1996-09-30,29,Athboy,175,Ireland,Midfield - Attacking Midfield,right,01/07/2025,01/07/2025,01/07/2025,31/05/2029,,,€ 1.20 m
+jamie-mullins,648041,Jamie Anthony Mullins,2004-09-29,21,,,Ireland,Midfield - Attacking Midfield,right,15/07/2025,15/07/2025,15/07/2025,-,,,€ 225 k
+jamie-odonnell,1465757,Jamie O'Donnell,2010-05-25,16,"Buncrana, Donegal",,Ireland,Attack - Centre-Forward,,,02/07/2026,02/07/2026,-,,,
+jason-healy,957309,Jason Healy,2006-03-06,20,Waterford,188,Ireland,Goalkeeper,right,25/07/2026,25/07/2026,25/07/2026,-,,,
+jason-knight,530780,Jason Paul Knight,2001-02-13,25,Dublin,173,Ireland,Midfield - Central Midfield,right,,11/07/2023,11/07/2023,30/06/2027,,,€ 7.00 m
+jason-mcclelland,385704,Jason McClelland,1997-03-05,29,Dublin,183,Ireland,Midfield - Left Midfield,left,,01/01/2020,01/01/2020,30/11/2027,,08/12/2025,€ 150 k
+jason-spelman,1260392,Jason Spelman,2009-04-02,17,,,Ireland,Midfield - Defensive Midfield,,,-,-,-,,,
+jay-mcgrath,1089316,John Alan McGrath,2003-04-15,23,Doncaster,190,Ireland | England,Defender - Centre-Back,left,04/01/2024,04/01/2024,04/01/2024,30/06/2028,Option for a further year,10/07/2025,€ 300 k
+jay-oshea,68327,James O'Shea,1988-08-10,38,Dublin,183,Ireland | Australia,Midfield - Central Midfield,right,01/07/2026,01/07/2026,01/07/2026,-,,,€ 200 k
+jayson-molumby,357656,Jayson Patrick Molumby,1999-08-06,27,Cappoquin,175,Ireland,Midfield - Central Midfield,right,01/07/2022,01/07/2022,01/07/2022,30/06/2028,,04/01/2025,€ 3.50 m
+jaze-kabia,572810,Jaze Kevin Kabia,2000-08-07,26,Cork,183,Ireland | England,Attack - Centre-Forward,right,07/08/2026,07/08/2026,07/08/2026,30/06/2029,,,€ 200 k
+jesse-dempsey,1110017,Jesse Dempsey,2005-01-15,21,Wexford,183,Ireland,Defender - Left-Back,left,31/07/2026,31/07/2026,31/07/2026,30/06/2027,,,€ 75 k
+jesse-nwabueze,878141,Jesse Chizoba Nwabueze,2003-09-27,22,,183,Ireland | Nigeria,Attack - Centre-Forward,right,01/07/2026,01/07/2026,01/07/2026,-,,,
+jevon-mills,944228,Jevon John Mills,2003-09-27,22,Nottingham,188,Ireland | England,Defender - Centre-Back,right,07/07/2026,07/07/2026,07/07/2026,30/06/2027,,07/07/2026,
+jimmy-keohane,136179,James Clifford John Keohane,1991-01-22,35,Kilkenny,180,Ireland,Midfield - Central Midfield,right,,01/07/2024,01/07/2024,30/11/2026,,27/11/2025,€ 75 k
+jimmy-mwanga,972827,Jimmy Emmanuel Mwanga,1999-02-01,27,"Johannesburg, Gauteng",190,Ireland | South Africa,Attack - Centre-Forward,right,16/07/2026,16/07/2026,16/07/2026,-,,,€ 150 k
+joe-byrne,1533837,Joe Byrne,,,,,Ireland,Midfield,,,01/07/1985,01/07/1985,-,,,
+joe-carroll-byrne,1260405,Joe Carroll-Byrne,2009-08-03,17,,,Ireland,Midfield - Right Midfield,right,,05/02/2026,05/02/2026,-,,,
+joe-gardner,921513,Joseph Charles Gardner,2005-06-06,21,,180,Ireland | England,Attack - Centre-Forward,right,,28/07/2026,28/07/2026,30/06/2029,,,€ 200 k
+joe-hodge,503975,Joseph Shaun Hodge,2002-09-14,23,Manchester,173,Ireland | England,Midfield - Defensive Midfield,right,,12/08/2026,12/08/2026,31/05/2028,club option 1 year,,€ 700 k
+joe-obrien-whitmarsh,741228,Joseph Paul O'Brien-Whitmarsh,2005-05-11,21,Cork,,Ireland,Midfield - Central Midfield,,17/08/2026,17/08/2026,17/08/2026,30/06/2029,,,€ 200 k
+joe-quigley,386148,Joseph Richard Quigley,1996-12-10,29,London,190,Ireland | England,Attack - Centre-Forward,right,02/02/2026,02/02/2026,02/02/2026,30/06/2028,,,€ 100 k
+joe-rafferty,175740,Joseph Gerard Rafferty,1993-10-06,32,Liverpool,180,Ireland | England,Defender - Right-Back,right,01/07/2024,01/07/2024,01/07/2024,30/06/2027,,08/05/2026,€ 200 k
+joe-redmond,434218,Joe Redmond,2000-01-23,26,Dublin,183,Ireland,Defender - Centre-Back,right,,01/01/2022,01/01/2022,30/11/2028,,18/12/2023,€ 350 k
+joe-shaughnessy,119574,Joseph Shaughnessy,1992-07-06,34,Galway,183,Ireland | England,Defender - Centre-Back,right,09/07/2025,09/07/2025,09/07/2025,30/06/2027,,25/06/2026,€ 100 k
+joel-bagan,742163,Joel Matthew Bagan,2001-09-03,24,Basingstoke,188,Ireland | England,Defender - Left-Back,left,04/08/2020,04/08/2020,04/08/2020,30/06/2030,,20/05/2026,€ 1.00 m
+joey-wuna,1442225,Joey Ikala Wuna,2009-08-19,17,,,Ireland,Attack - Centre-Forward,,,05/02/2026,05/02/2026,-,,,
+john-mahon,491216,John Mahon,1999-11-26,26,Sligo,185,Ireland,Defender - Centre-Back,right,01/01/2026,01/01/2026,01/01/2026,-,,,€ 125 k
+john-martin,504115,John Martin,1999-01-05,27,"Paulstown, Kilkenny",185,Ireland,Attack - Centre-Forward,right,01/01/2024,01/01/2024,01/01/2024,30/11/2027,,21/10/2025,€ 225 k
+john-mountney,188539,John Mountney,1993-02-22,33,"Bohola, Mayo",183,Ireland,Defender - Right-Back,right,16/01/2026,16/01/2026,16/01/2026,31/05/2027,,18/05/2026,€ 25 k
+john-osullivan,1061560,John O'Reilly-O'Sullivan,2006-01-29,20,,173,Ireland,Midfield - Central Midfield,left,,16/02/2024,16/02/2024,-,,,€ 100 k
+john-patrick,841121,John Joe Patrick Finn Benoa,2003-09-24,22,Madrid,193,Ireland | Spain,Midfield - Central Midfield,right,15/01/2025,15/01/2025,15/01/2025,30/06/2029,,,€ 800 k
+john-ross-wilson,539577,John Ross Wilson,1998-12-13,27,"Ringsend, Dublin",183,Ireland,Defender - Right-Back,right,,14/06/2025,14/06/2025,30/11/2026,,22/12/2025,€ 150 k
+john-russell,56954,John Russell,1985-05-18,41,Galway,173,Ireland,Midfield - Central Midfield,right,,01/01/2022,01/01/2022,-,,,
+jon-gallagher,562553,Jon Gallagher,1996-02-23,30,Dundalk,175,Ireland,Defender - Right-Back,right,13/12/2020,13/12/2020,13/12/2020,30/06/2028,club option 1 year,14/01/2026,€ 1.80 m
+jonathan-afolabi,444209,Jonathan Swanson Afolabi Oyewole,2000-01-14,26,Dublin,188,Ireland | Nigeria,Attack - Centre-Forward,left,05/07/2026,05/07/2026,05/07/2026,-,,,€ 200 k
+jonathan-lunney,293782,Jonathan Lunney,1998-02-02,28,"Swords, Dublin",175,Ireland,Midfield - Defensive Midfield,left,,01/01/2021,01/01/2021,30/11/2029,,26/08/2026,€ 125 k
+jonny-smith,424414,Jonathan Gary Smith,1997-07-28,29,Liverpool,178,England | Ireland,Attack - Right Winger,left,04/08/2026,04/08/2026,04/08/2026,30/06/2028,,,€ 175 k
+jordan-adeyemo,595665,Jordan Adeyemo,2000-07-02,26,,,Ireland | Nigeria,Attack - Centre-Forward,right,06/02/2025,06/02/2025,06/02/2025,-,,,€ 75 k
+jordan-doherty,434244,Jordan Doherty,2000-08-29,25,"Balbriggan, North Dublin",180,Ireland,Defender - Centre-Back,,01/07/2026,01/07/2026,01/07/2026,-,,,€ 150 k
+jordan-mceneff,549569,Jordan John McEneff,2001-01-08,25,Derry,183,Ireland | Northern Ireland,Midfield - Central Midfield,right,19/08/2024,19/08/2024,19/08/2024,31/05/2028,Option for a further year,30/01/2026,€ 175 k
+jordan-shipley,425800,Jordan Mark Edward James Shipley,1997-09-26,28,Leamington Spa,183,Ireland | England,Midfield - Left Midfield,left,01/07/2026,01/07/2026,01/07/2026,-,,,€ 250 k
+josh-adam,633654,Josh Adam,2004-02-03,22,Glasgow,178,Scotland | Ireland,Midfield - Attacking Midfield,03/08/2026,03/08/2026,03/08/2026,03/08/2026,30/11/2026,,,€ 150 k
+josh-barrett,325192,Joshua Lee Barrett,1998-06-21,28,Oxford,180,Ireland | England,Midfield - Attacking Midfield,right,,01/07/2026,01/07/2026,-,,,
+josh-cullen,1374612,Josh Cullen,2008-03-30,18,Donegal,183,Ireland,Defender - Centre-Back,right,11/02/2025,11/02/2025,11/02/2025,30/11/2027,,,
+josh-harpur,1380363,Josh Harpur,2009-08-27,16,,188,Ireland,Attack - Centre-Forward,right,18/07/2025,18/07/2025,18/07/2025,-,,,
+josh-honohan,718171,Joshua Honohan,2001-03-28,25,Cork,178,Ireland,Defender - Left-Back,right,01/01/2026,01/01/2026,01/01/2026,-,,,€ 250 k
+josh-keeley,724536,Josh Keeley,2003-05-17,23,"Dunboyne, Meath",190,Ireland,Goalkeeper,right,19/07/2025,19/07/2025,19/07/2025,-,,,€ 800 k
+josh-obrien,928473,Joshua Manfred O'Brien,2003-02-08,23,Dublin,193,Ireland | United States,Midfield - Defensive Midfield,right,01/02/2024,01/02/2024,01/02/2024,30/11/2026,,20/11/2024,€ 150 k
+josh-oconnor,1380428,Josh O'Connor,2009-06-09,17,,,Ireland,Defender - Centre-Back,,05/02/2026,05/02/2026,05/02/2026,-,,,
+josh-odwyer,1334055,Josh O'Dwyer,2010-03-17,16,Dublin,188,Ireland | Poland,Midfield - Defensive Midfield,left,01/07/2026,01/07/2026,01/07/2026,-,,,
+josh-okpolokpo,731763,Joshua Oghenrukewe Okpolokpo,2003-03-31,23,,193,Ireland | England,Defender - Centre-Back,right,15/07/2026,15/07/2026,15/07/2026,-,,,€ 150 k
+josh-seary,854932,Joshua David Seary,2004-09-10,21,Liverpool,180,Ireland | England,Defender - Right-Back,right,26/07/2026,26/07/2026,26/07/2026,30/06/2027,,,
+josh-ukek,1039207,Joshua Ukek,1999-07-17,27,Dublin,183,Ireland,Attack - Left Winger,right,01/07/2026,01/07/2026,01/07/2026,-,,,€ 100 k
+joshua-kayode,532195,Joshua Akinola Ogunfaolu-Kayode,2000-05-04,26,Lagos,190,Ireland | Nigeria,Attack - Centre-Forward,right,01/07/2026,01/07/2026,01/07/2026,-,,,€ 100 k
+joshua-keeya,1299555,Joshua Keeya,2003-11-18,22,Galway,188,Ireland,Midfield - Central Midfield,right,,01/07/2026,01/07/2026,-,,,
+junior-thiam,1404479,Junior Thiam,2006-10-28,19,Galway,188,Ireland,Midfield - Defensive Midfield,right,02/05/2025,02/05/2025,02/05/2025,30/11/2026,,11/12/2025,
+justin-ferizaj,741271,Justin Ferizaj,2005-01-13,21,Dublin,178,Ireland | Albania,Midfield - Central Midfield,both,26/01/2026,26/01/2026,26/01/2026,30/06/2028,,,€ 50 k
+kameron-ledwidge,434221,Kameron Malcolm Ledwidge,2001-04-07,25,Dublin,178,Ireland,Defender - Centre-Back,left,,30/07/2021,30/07/2021,30/11/2026,,21/06/2024,€ 200 k
+kasey-mcateer,621193,Kasey Ian McAteer,2001-11-22,24,Northampton,178,Ireland | England,Midfield - Right Midfield,right,22/08/2025,22/08/2025,22/08/2025,30/06/2029,,,€ 10.00 m
+kealan-dillon,183170,Kealan Dillon,1994-02-21,32,Athboy,173,Ireland,Midfield - Central Midfield,right,,01/07/2023,01/07/2023,31/05/2027,,03/10/2024,€ 175 k
+keith-buckley,181349,Keith Buckley,1992-06-17,34,Dublin,180,Ireland,Midfield - Central Midfield,right,,01/01/2026,01/01/2026,30/11/2026,,,€ 50 k
+keith-ward,96521,Keith Ward,1990-10-12,35,Dublin,168,Ireland,Midfield - Attacking Midfield,both,,06/02/2026,06/02/2026,-,,,
+kevin-doherty,24585,Kevin Doherty,1980-04-18,46,Dublin,193,Ireland,Defender - Centre-Back,right,,01/01/2010,01/01/2010,-,,,
+kevin-long,111114,Kevin Finbarr Long,1990-08-18,36,Cork,188,Ireland,Defender - Centre-Back,right,,15/03/2026,15/03/2026,-,,,€ 150 k
+kevin-otoole,437874,Kevin O'Toole,1998-12-14,27,"Montclair, New Jersey",178,Ireland | United States,Defender - Left-Back,left,11/01/2022,11/01/2022,11/01/2022,30/06/2029,club option 1 year,16/07/2026,€ 1.20 m
+kevin-toner,265132,Kevin Stephen Toner,1996-07-18,30,Ashbourne,180,Ireland,Defender - Centre-Back,left,,01/07/2026,01/07/2026,-,,,€ 100 k
+kevin-zefi,741225,Kevin Zefi,2005-02-11,21,Dublin,178,Ireland | Albania,Attack - Second Striker,right,,28/05/2026,28/05/2026,30/11/2026,,,€ 50 k
+kian-corbally,877759,Kian Corbally,2003-12-31,22,Dublin,173,Ireland,Midfield - Attacking Midfield,left,01/07/2026,01/07/2026,01/07/2026,31/05/2028,,,€ 200 k
+kian-leavy,614554,Kian Leavy,2002-03-21,24,"Ardee, Louth",173,Ireland,Midfield - Attacking Midfield,left,06/07/2023,06/07/2023,06/07/2023,30/11/2026,,08/02/2024,€ 250 k
+kian-mcmahon-brown,1165131,Kian McMahon-Brown,2008-08-03,18,,175,Ireland,Attack - Right Winger,,01/07/2026,01/07/2026,01/07/2026,30/06/2028,,10/07/2026,
+kian-quigley,1260400,Kian Quigley,2009-02-28,17,,,Ireland,Midfield - Defensive Midfield,,,07/08/2025,07/08/2025,-,,,
+kieran-cruise,953139,Kieran Cruise,2004-01-03,22,,178,Ireland,Defender - Left-Back,,,01/01/2025,01/01/2025,30/11/2026,,10/11/2025,€ 100 k
+kieran-morrison,1055345,Kieran Yusuf Morrison,2006-11-09,19,Manchester,173,Northern Ireland | England,Attack - Right Winger,left,20/08/2026,20/08/2026,20/08/2026,31/05/2027,,,
+kieran-ohara,289791,Kieran Michael O'Hara,1996-04-22,30,Manchester,193,Ireland | England,Goalkeeper,right,16/09/2025,16/09/2025,16/09/2025,31/05/2027,,,€ 100 k
+kieran-sadlier,222740,Kieran Paul Sadlier,1994-09-14,31,Haywards Heath,178,Ireland | England,Attack - Left Winger,right,21/01/2026,21/01/2026,21/01/2026,30/11/2026,,,€ 150 k
+killian-brouder,438987,Killian Brouder,1998-08-20,28,Limerick,188,Ireland,Defender - Centre-Back,left,,22/07/2019,22/07/2019,30/11/2026,,25/11/2025,€ 150 k
+killian-cahill,745716,Killian Cahill,2003-11-03,22,"Skyrne, Meath",193,Ireland,Goalkeeper,right,,01/07/2025,01/07/2025,30/06/2027,,,€ 175 k
+killian-cantwell,316548,Kilian Cantwell,1995-05-24,31,Kilkenny,,Ireland,Defender - Centre-Back,,,22/07/2026,22/07/2026,30/11/2026,,,
+killian-phillips,801420,Killian Phillips,2002-03-30,24,"San Diego, California",190,Ireland | United States,Midfield - Central Midfield,right,,01/07/2025,01/07/2025,31/05/2027,,20/02/2026,€ 1.00 m
+kyle-degelman,818897,"Kyle Patrick ""Ismael"" Degelman",2004-02-24,22,"Okotoks, Alberta",183,Ireland | Canada,Defender - Centre-Back,left,,02/03/2026,02/03/2026,-,,,€ 25 k
+kyle-mcdonagh,1162910,Kyle McDonagh,2006-01-23,20,"Tubbercurry, Sligo",175,Ireland,Midfield - Attacking Midfield,,04/08/2023,04/08/2023,04/08/2023,30/11/2026,,15/10/2024,€ 75 k
+kyle-robinson,869489,Kyle Robinson,2002-11-08,23,Dublin,188,Ireland,Attack - Centre-Forward,left,,01/07/2026,01/07/2026,31/05/2027,,,
+lee-axworthy,1153949,Lee Duggan Axworthy,2001-02-03,25,Dublin,185,Ireland,Goalkeeper,right,,01/07/2026,01/07/2026,-,,,€ 10 k
+lee-desmond,252881,Lee Desmond,1995-01-22,31,Dublin,183,Ireland,Defender - Centre-Back,left,01/01/2022,01/01/2022,01/01/2022,30/11/2026,,26/11/2025,€ 150 k
+lee-devitt,655998,Lee Devitt,2000-06-03,26,Clare,178,Ireland,Midfield - Central Midfield,left,,01/01/2026,01/01/2026,30/11/2026,,,€ 125 k
+lee-grace,365180,Lee Grace,1992-12-01,33,Carrick-on-Suir,188,Ireland,Defender - Centre-Back,right,,31/07/2017,31/07/2017,-,,03/12/2019,€ 100 k
+lee-oconnor,366681,Lee Patrick O'Connor,2000-07-28,26,Waterford,178,Ireland,Defender - Right-Back,right,25/01/2022,25/01/2022,25/01/2022,30/06/2027,,23/05/2025,€ 200 k
+lee-steacy,217752,Lee Steacy,1993-01-18,33,Dublin,180,Ireland,Goalkeeper,right,,01/01/2024,01/01/2024,-,,17/11/2023,€ 50 k
+leigh-kavanagh,724530,Leigh Robert Kavanagh,2003-12-27,22,,188,Ireland,Defender - Centre-Back,right,01/07/2026,01/07/2026,01/07/2026,30/11/2026,,,€ 150 k
+len-osullivan,967382,Len O'Sullivan,2003-11-09,22,"Rush, Dublin",178,Ireland,Defender - Left-Back,left,04/07/2025,04/07/2025,04/07/2025,31/05/2027,,,€ 75 k
+leon-ayinde,1116111,Leon Zion Oluwatobi Ayinde,2004-09-05,21,Cork,,Ireland | Nigeria,Attack - Left Winger,,01/07/2026,01/07/2026,01/07/2026,30/06/2028,,,
+leon-keogh,1388639,Leon Keogh,2006-07-24,20,Dublin,190,Ireland,Attack - Centre-Forward,right,,26/07/2026,26/07/2026,30/06/2027,,,
+lewis-richards,571827,Lewis Paul Jimmy Richards,2001-10-15,24,Liverpool,183,Ireland | England,Defender - Left-Back,left,16/01/2026,16/01/2026,16/01/2026,30/06/2027,,,€ 150 k
+lewis-temple,1025248,Lewis Temple,2005-06-11,21,"Bray, Wicklow",190,Ireland,Defender - Centre-Back,right,,06/08/2026,06/08/2026,31/05/2027,,,€ 100 k
+liam-bossin,264176,Liam Cathal Bossin,1996-07-15,30,Woluwe-Saint-Pierre,190,Ireland | Belgium,Goalkeeper,right,01/07/2025,01/07/2025,01/07/2025,30/06/2027,,,€ 350 k
+liam-kelly,252986,Liam Anthony Kelly,1995-11-22,30,Basingstoke,163,Ireland | England,Midfield - Central Midfield,right,13/08/2026,13/08/2026,13/08/2026,-,,,€ 300 k
+liam-kerrigan,572780,Liam Thomas Kerrigan,2000-05-09,26,Sligo,170,Ireland,Midfield - Left Midfield,right,14/07/2026,14/07/2026,14/07/2026,30/06/2028,,,€ 150 k
+liam-kinsella,334050,Liam Mark Kinsella,1996-02-23,30,Colchester,175,Ireland | England,Midfield - Defensive Midfield,right,22/01/2026,22/01/2026,22/01/2026,30/06/2027,,,
+liam-scales,439497,Liam Scales,1998-08-08,28,Dublin,188,Ireland,Defender - Centre-Back,left,27/08/2021,27/08/2021,27/08/2021,31/05/2030,club option 1 year,24/04/2026,€ 5.00 m
+louie-barry,581670,Louie Mark Barry,2003-06-21,23,Sutton Coldfield,175,Ireland | England,Attack - Left Winger,right,09/07/2026,09/07/2026,09/07/2026,30/06/2030,,,€ 2.50 m
+louie-watson,505548,Louie Shaun Watson,2001-06-07,25,London,180,Ireland | England,Midfield - Attacking Midfield,right,21/02/2025,21/02/2025,21/02/2025,30/06/2028,,23/06/2026,€ 125 k
+louis-dunne,325258,Louis Anthony Dunne,1998-09-07,27,Colchester,175,Ireland | England,Midfield - Attacking Midfield,left,01/07/2026,01/07/2026,01/07/2026,-,,,
+luca-cailloce,1109571,Luca Cailloce,2007-11-01,18,"Balbriggan, Dublin",180,Ireland | France,Defender - Centre-Back,right,01/01/2026,01/01/2026,01/01/2026,-,,,
+luca-connell,580027,Luca John Connell,2001-04-20,25,Liverpool,180,Ireland | England,Midfield - Defensive Midfield,left,01/07/2022,01/07/2022,01/07/2022,30/06/2027,club option 1 year,13/07/2023,€ 800 k
+luke-browne,944090,Luke Browne,2005-10-06,20,Dublin,183,Ireland,Defender - Centre-Back,right,,07/01/2026,07/01/2026,30/06/2028,club option 1 year,,€ 50 k
+luke-cullen,1165129,Luke Cullen,2008-12-10,17,"Saggart, Dublin",183,Ireland,Goalkeeper,left,,05/02/2026,05/02/2026,-,,,
+luke-heeney,568319,Luke Heeney,1999-02-06,27,Meath,175,Ireland,Midfield - Central Midfield,right,01/01/2026,01/01/2026,01/01/2026,30/11/2026,,,€ 125 k
+luke-kehir,957294,Luke Kehir,2006-02-02,20,"Leixlip, Kildare",175,Ireland,Midfield - Attacking Midfield,right,,01/01/2025,01/01/2025,-,,,
+luke-mcnally,535927,Luke McNally,1999-09-20,26,Enfield,193,Ireland,Defender - Centre-Back,right,30/08/2024,30/08/2024,30/08/2024,30/06/2028,,,€ 2.00 m
+luke-mulligan,1005773,Luke Mulligan,2007-11-13,18,Monaghan,180,Ireland,Defender - Right-Back,,,01/01/2024,01/01/2024,30/11/2026,,03/01/2026,
+luke-oregan,1124848,Luke O'Regan,2005-02-17,21,,183,Ireland,Defender - Right-Back,right,20/02/2026,20/02/2026,20/02/2026,-,,,
+luke-pearce,744956,Luke Edward Andrew Pearce,2004-06-08,22,,180,Ireland | England,Attack - Centre-Forward,right,,09/07/2026,09/07/2026,30/11/2027,,,€ 50 k
+luke-turner,586755,Luke Turner,2002-05-20,24,Dublin,185,Ireland,Defender - Centre-Back,left,30/01/2024,30/01/2024,30/01/2024,30/11/2029,,,€ 225 k
+macdarragh-scanlon,1456365,MacDarragh Scanlon,2007-01-11,19,"Ballybane, Galway",180,Ireland,Goalkeeper,right,,07/09/2025,07/09/2025,-,,,
+marcus-harness,288323,Marcus Anthony Myers-Harness,1996-02-24,30,Coventry,183,Ireland | England,Midfield - Attacking Midfield,right,01/07/2025,01/07/2025,01/07/2025,30/06/2028,,,€ 750 k
+mark-byrne,655259,Mark Byrne,2000-09-15,25,Dundalk,,Ireland,Goalkeeper,,,01/01/2024,01/01/2024,31/05/2028,,28/01/2025,€ 50 k
+mark-connolly,128285,Mark Gerard Connolly,1991-12-16,34,"Clones, Monaghan",185,Ireland,Defender - Centre-Back,right,,01/07/2026,01/07/2026,-,,,
+mark-coyle,343599,Mark Coyle,1997-02-13,29,"Burt, Donegal",178,Ireland,Midfield - Central Midfield,right,,08/01/2026,08/01/2026,31/05/2028,,,€ 75 k
+mark-doyle,428907,Mark Doyle,1998-11-19,27,Dublin,183,Ireland,Attack - Centre-Forward,right,01/01/2026,01/01/2026,01/01/2026,30/11/2027,,,€ 225 k
+mark-mcguinness,561454,Mark James McGuinness,2001-01-05,25,Slough,193,Ireland | England,Defender - Centre-Back,right,01/09/2025,01/09/2025,01/09/2025,30/06/2029,,,€ 7.00 m
+mark-omahony,943549,Mark Jeremiah O'Mahony,2005-01-14,21,"Carrigaline, Cork",183,Ireland,Attack - Centre-Forward,right,26/01/2023,26/01/2023,26/01/2023,30/06/2027,,10/04/2024,€ 375 k
+mark-sykes,320403,Mark Sykes,1997-08-04,29,Belfast,183,Ireland | Northern Ireland,Midfield - Right Midfield,right,09/07/2026,09/07/2026,09/07/2026,30/06/2028,,,€ 1.80 m
+mark-travers,357658,Mark Travers,1999-05-18,27,Maynooth,190,Ireland,Goalkeeper,right,15/07/2025,15/07/2025,15/07/2025,30/06/2029,,,€ 3.00 m
+mason-melia,1005766,Mason Melia,2007-09-22,18,Newtownmountkennedy,,Ireland,Attack - Centre-Forward,right,05/08/2026,05/08/2026,05/08/2026,31/05/2027,,,€ 1.00 m
+mason-murphy,1565790,Mason Murphy,,,,,Ireland,Attack - Centre-Forward,,,10/07/2026,10/07/2026,-,,,
+matt-doherty,171679,Matthew James Doherty,1992-01-16,34,Dublin,185,Ireland,Defender - Right-Back,right,20/07/2026,20/07/2026,20/07/2026,30/06/2027,Option for a further year,,€ 1.00 m
+matteo-egan,1138971,Matteo Gerard Egan,2007-11-19,18,San Frediano a Settimo,,Ireland | Italy,Midfield - Right Midfield,right,,01/07/2026,01/07/2026,-,,,€ 50 k
+matthew-harris,885776,Matthew John Harris,1988-09-24,37,Merthyr Tydfil,,Wales,Defender - Centre-Back,,,01/07/2021,01/07/2021,30/06/2027,,25/05/2024,
+matthew-healy,586628,Matthew James Healy,2002-04-12,24,"Boston, MA",178,Ireland | United States,Midfield - Central Midfield,right,14/01/2025,14/01/2025,14/01/2025,30/11/2027,,,€ 500 k
+matthew-moore,1109572,Matthew Alexander Moore,2007-03-27,19,"Carrigaline, Cork",170,Ireland,Midfield - Defensive Midfield,right,01/07/2026,01/07/2026,01/07/2026,30/06/2027,,,€ 750 k
+matthew-murray,1109573,Matthew Murray,2007-10-01,18,,178,Ireland,Attack - Left Winger,right,01/01/2024,01/01/2024,01/01/2024,30/11/2027,,31/10/2025,€ 50 k
+matthew-ohara,1226920,Matthew O'Hara,2006-04-15,20,,183,Ireland,Midfield - Attacking Midfield,right,29/07/2026,29/07/2026,29/07/2026,-,,,
+max-bardell,696578,Max James Bardell,2002-11-14,23,,180,England | Ireland,Defender - Right-Back,right,28/07/2026,28/07/2026,28/07/2026,-,,,
+max-ferguson,1474511,Max Ferguson,2008-05-02,18,,,Ireland,Attack - Centre-Forward,,,01/01/2026,01/01/2026,-,,,
+max-kovalevskis,1134229,Max Kovalevskis,2008-02-09,18,Dublin,180,Ireland | Ukraine,Attack - Right Winger,both,26/04/2024,26/04/2024,26/04/2024,-,,,€ 75 k
+max-oleary,296582,Max Edward O'Leary,1996-10-10,29,Bath,188,Ireland | England,Goalkeeper,right,22/01/2026,22/01/2026,22/01/2026,30/06/2029,,02/06/2026,€ 2.00 m
+maxim-afonin,1334053,Maxim Afonin,2010-02-06,16,,,Ireland,Defender - Centre-Back,,-,-,-,-,,,
+mayowa-animasahun,888899,Mayowa Animasahun,2003-08-08,23,"Dundalk, Louth",196,Ireland | Nigeria,Defender - Centre-Back,right,01/02/2021,01/02/2021,01/02/2021,30/11/2026,,16/12/2025,€ 125 k
+michael-duffy,232068,Michael Duffy,1994-07-28,32,Derry,180,Ireland | Northern Ireland,Attack - Left Winger,right,01/01/2022,01/01/2022,01/01/2022,30/11/2028,,29/09/2025,€ 275 k
+michael-kelly,315984,Michael Sean Kelly,1996-07-13,30,Leixlip,196,Ireland,Goalkeeper,right,01/07/2026,01/07/2026,01/07/2026,-,,,€ 75 k
+michael-mccolgan,1553934,Michael McColgan,,,,,Ireland,Attack - Centre-Forward,,,14/08/2026,14/08/2026,-,,,
+michael-noonan,1134231,Michael Noonan,2008-07-31,18,Dublin,185,Ireland,Attack - Centre-Forward,left,,15/01/2025,15/01/2025,30/11/2027,,,€ 450 k
+michael-obafemi,444208,Michael Oluwadurotimi Obafemi,2000-07-06,26,Dublin,170,Ireland | Nigeria,Attack - Centre-Forward,right,01/07/2023,01/07/2023,01/07/2023,30/06/2027,,,€ 600 k
+mikey-johnston,297257,Michael Andrew Johnston,1999-04-19,27,Glasgow,175,Ireland | Scotland,Attack - Left Winger,right,30/08/2024,30/08/2024,30/08/2024,30/06/2028,,,€ 4.00 m
+mikey-place,426355,Michael Place,1998-04-09,28,Galway,,Ireland,Defender - Right-Back,right,07/01/2026,07/01/2026,07/01/2026,31/05/2027,,,€ 150 k
+millenic-alli,916542,Millenic Oluwole Sulaiman Alli,2000-02-06,26,Dublin,175,Ireland | England,Attack - Left Winger,right,26/07/2026,26/07/2026,26/07/2026,30/06/2030,,,€ 1.50 m
+muhammad-oladiti,1134239,Muhammad Oladiti,2008-03-25,18,Waterford,,Ireland,Midfield - Defensive Midfield,right,,10/07/2026,10/07/2026,30/11/2026,,,
+naj-razi,957295,Najemedine Razi,2006-10-28,19,Tallaght,175,Ireland | Algeria,Midfield - Attacking Midfield,both,07/02/2026,07/02/2026,07/02/2026,-,,,€ 275 k
+nathan-collins,469050,Nathan Michael Collins,2001-04-30,25,Leixlip,193,Ireland,Defender - Centre-Back,right,04/07/2023,04/07/2023,04/07/2023,30/06/2029,club option 2 years,,€ 30.00 m
+nathan-fraser,863741,Nathan John Mark Fraser,2005-02-22,21,Wolverhampton,188,Ireland | England,Attack - Centre-Forward,right,01/01/2024,01/01/2024,01/01/2024,30/06/2028,,05/07/2024,€ 600 k
+neil-farrugia,491578,Neil Yves Farrugia,1999-05-19,27,Paris,188,Ireland | France,Midfield - Left Midfield,left,,14/01/2026,14/01/2026,31/05/2028,,,€ 125 k
+neill-byrne,121536,Neill Byrne,1993-02-02,33,Portmarnock,190,Ireland,Defender - Centre-Back,right,01/07/2026,01/07/2026,01/07/2026,30/06/2028,,,€ 50 k
+niall-canavan,122243,Niall David Stephen Canavan,1991-04-11,35,Leeds,193,Ireland | England,Defender - Centre-Back,right,01/08/2026,01/08/2026,01/08/2026,-,,,
+niall-morahan,585658,Niall Morahan,2000-05-30,26,Leitrim,175,Ireland,Midfield - Central Midfield,right,01/01/2025,01/01/2025,01/01/2025,30/11/2026,,,€ 150 k
+niall-sullivan,1260394,Niall Sullivan,2009-02-11,17,,,Ireland,Midfield - Central Midfield,,,05/02/2026,05/02/2026,-,,,
+noah-jauny,975438,Noah Jauny,2004-08-26,22,Dublin,193,Ireland,Goalkeeper,right,12/08/2026,12/08/2026,12/08/2026,30/06/2028,Option for a further year,,
+noah-obrien,1373784,Noah O'Brien,2008-04-17,18,,193,Ireland | England,Defender - Centre-Back,left,,15/02/2025,15/02/2025,-,,,
+odhran-casey,630884,Odhrán Casey,2002-04-09,24,Belfast,185,Northern Ireland,Defender - Centre-Back,right,14/01/2026,14/01/2026,14/01/2026,-,,,€ 175 k
+oisin-gallagher,939523,Oisín Jack Gallagher,2004-12-02,21,Derry,180,Ireland | Northern Ireland,Defender - Centre-Back,right,21/07/2026,21/07/2026,21/07/2026,31/05/2027,,,
+oisin-kelly,1515330,Oisin Kelly,,,,,Ireland,Midfield - Attacking Midfield,,,14/02/2026,14/02/2026,-,,,
+oisin-mcdonagh,1134237,Oisin McDonagh,2008-06-27,18,Wexford,183,Ireland,Defender - Centre-Back,right,01/07/2025,01/07/2025,01/07/2025,-,,,
+oisin-mcentee,541448,Oisin Michael McEntee,2001-01-05,25,"New York City, New York",190,Ireland | United States,Midfield - Defensive Midfield,right,01/07/2025,01/07/2025,01/07/2025,31/05/2028,,,€ 500 k
+oisin-obrien,1559827,Oisin O'Brien,2010-07-08,16,Donegal,,Ireland | Northern Ireland,Defender - Right-Back,right,,19/06/2026,19/06/2026,-,,,
+olamide-ibrahim,798371,Olamide Majid Ibrahim,2003-09-23,22,,,Ireland | Nigeria,Midfield - Central Midfield,,01/07/2026,01/07/2026,01/07/2026,-,,,€ 50 k
+ollie-oneill,610786,Oliver John O'Neill,2003-01-08,23,London,185,Ireland | England,Attack - Left Winger,right,23/01/2024,23/01/2024,23/01/2024,30/06/2028,,05/12/2025,€ 650 k
+onesime-tembe,1061564,Onesime Tembe,2004-09-14,21,,193,Ireland | DR Congo,Attack - Centre-Forward,right,08/08/2026,08/08/2026,08/08/2026,30/06/2027,,,€ 50 k
+orion-cala,1425612,Orion Cala,2009-12-28,16,,,Ireland | Albania,Attack - Centre-Forward,,,11/07/2025,11/07/2025,-,,,
+owen-elding,1127616,Owen Elding,2006-03-07,20,,188,Ireland | England,Attack - Centre-Forward,left,29/01/2026,29/01/2026,29/01/2026,31/05/2030,,,€ 500 k
+owen-mason,944742,Owen Mason,2004-03-24,22,,,Ireland,Goalkeeper,,14/08/2026,14/08/2026,14/08/2026,-,,,€ 50 k
+paddy-madden,92488,Patrick Stephen Madden,1990-03-04,36,Dublin,183,Ireland,Attack - Centre-Forward,right,11/08/2026,11/08/2026,11/08/2026,30/11/2026,,,€ 25 k
+padraig-amond,68333,Pádraig Amond,1988-04-15,38,Carlow,180,Ireland,Attack - Centre-Forward,,26/01/2024,26/01/2024,26/01/2024,30/11/2028,,04/02/2026,€ 50 k
+pat-hoban,158951,Patrick Jefferson Hoban,1991-07-28,35,"Loughrea, Galway",180,Ireland,Attack - Centre-Forward,right,10/07/2025,10/07/2025,10/07/2025,31/05/2027,,,€ 100 k
+patrick-barrett,122736,Patrick Barrett,1993-07-22,33,Waterford,183,Ireland,Defender - Centre-Back,right,,01/01/2023,01/01/2023,30/11/2026,,23/10/2024,€ 175 k
+patrick-mcclean,363880,Patrick McClean,1996-11-22,29,Derry,188,Ireland | Northern Ireland,Defender - Centre-Back,left,,16/01/2026,16/01/2026,30/11/2027,,,€ 125 k
+paudie-oconnor,364024,Padhraic John O'Connor,1997-07-14,29,Ballybrown,190,Ireland,Defender - Centre-Back,right,01/07/2025,01/07/2025,01/07/2025,30/06/2029,,,€ 650 k
+paul-doyle,438985,Paul Doyle,1998-04-10,28,"Westport, Co. Mayo",178,Ireland,Midfield - Central Midfield,left,,26/01/2026,26/01/2026,31/05/2028,,28/08/2026,€ 50 k
+paul-mcgovern,1130621,Paul McGovern,2008-01-09,18,Newry,,Northern Ireland,Attack - Right Winger,,,01/07/2026,01/07/2026,31/05/2029,,,€ 100 k
+pearse-obrien,796480,Pearse O'Brien,2004-10-26,21,"West Hartford, Connecticut",173,Ireland | United States,Midfield - Attacking Midfield,right,,01/08/2026,01/08/2026,-,,,
+peter-maguire,884910,Peter Maguire,2003-03-11,23,"Blacklion, Cavan",,Ireland,Defender - Centre-Back,left,,25/08/2026,25/08/2026,-,,,
+phoenix-blayney,1442136,Phoenix Blayney,2010-11-17,15,Belfast,,Northern Ireland,Goalkeeper,,-,-,-,-,,,
+pierce-sweeney,183172,Pierce Liam Sweeney,1994-09-11,31,Dublin,183,Ireland,Defender - Centre-Back,right,,01/07/2026,01/07/2026,-,,,€ 200 k
+pijus-otegbayo,1212264,Raphael-Pijus Otegbayo,2007-08-22,19,Cork,,Ireland | Nigeria,Defender - Centre-Back,,01/07/2025,01/07/2025,01/07/2025,-,,,€ 200 k
+promise-omochere,540876,Promise Osazee Omochere,2000-10-18,25,Dublin,188,Ireland | Nigeria,Attack - Centre-Forward,right,19/07/2024,19/07/2024,19/07/2024,30/06/2027,club option 1 year,19/07/2024,€ 275 k
+rabby-tabu-minzamba,1112747,Rabby Tabu Minzamba,2002-02-09,24,Dublin,185,Ireland | DR Congo,Midfield - Defensive Midfield,right,,01/01/2025,01/01/2025,30/06/2029,,30/04/2026,€ 50 k
+ramon-martos,1134224,Ramón David Martos Pugh,2008-05-20,18,Dublin,175,Ireland | Spain,Midfield - Attacking Midfield,,01/07/2025,01/07/2025,01/07/2025,30/06/2029,,20/05/2026,
+reece-staunton,550641,Reece Joseph Staunton,2001-12-10,24,Bradford,183,Ireland | England,Defender - Left-Back,left,,01/07/2025,01/07/2025,30/06/2029,,05/08/2026,€ 300 k
+rhys-bartley,948536,Rhys Bartley,2006-03-03,20,"Finglas, Dublin",,Ireland,Midfield - Central Midfield,,03/07/2026,03/07/2026,03/07/2026,-,,,
+ricardo-dinanga,719224,Ricardo Flisberto Dinanga,2001-12-06,24,Cork,175,Ireland | DR Congo,Attack - Centre-Forward,right,08/08/2026,08/08/2026,08/08/2026,-,,,
+rob-slevin,683665,Rob Slevin,1998-07-14,28,Cork,188,Ireland | England,Defender - Centre-Back,left,,03/08/2026,03/08/2026,31/05/2027,,,€ 150 k
+robbie-benson,181348,Robert Benson,1992-05-07,34,"Athlone, Westmeath",175,Ireland,Midfield - Attacking Midfield,left,01/01/2026,01/01/2026,01/01/2026,-,,,€ 50 k
+robbie-brady,128229,Robert Brady,1992-01-14,34,Dublin,175,Ireland,Midfield - Left Midfield,left,01/07/2026,01/07/2026,01/07/2026,-,,,€ 100 k
+robbie-mahon,724535,Robert Mahon,2003-06-06,23,Dublin,178,Ireland,Attack - Right Winger,left,,15/01/2026,15/01/2026,31/05/2027,,,€ 50 k
+robert-cornwall,261902,Robert Cornwall,1994-10-16,31,"Drumcondra, Dublin",183,Ireland,Defender - Centre-Back,right,13/01/2026,13/01/2026,13/01/2026,30/11/2026,,,€ 100 k
+rocco-vata,741229,Rocco Vata,2005-04-18,21,Glasgow,183,Ireland | Albania,Attack - Left Winger,right,05/07/2024,05/07/2024,05/07/2024,30/06/2028,Option for a further year,,€ 1.80 m
+roland-idowu,626334,Roland Idowu,2002-01-21,24,Dublin,183,Ireland | Nigeria,Midfield - Central Midfield,right,21/08/2026,21/08/2026,21/08/2026,31/05/2027,,,€ 150 k
+romeo-akachukwu,990836,Romeo Akachukwu,2006-07-28,20,,,Ireland | Nigeria,Midfield - Attacking Midfield,right,01/07/2026,01/07/2026,01/07/2026,-,,,€ 150 k
+ronan-boyce,718846,Ronan Boyce,2001-05-12,25,"Ramelton, Donegal",180,Ireland,Defender - Right-Back,right,01/01/2026,01/01/2026,01/01/2026,30/11/2027,,,€ 175 k
+ronan-coughlan,345282,Ronan Liam Coughlan,1996-10-02,29,Limerick,178,Ireland,Attack - Centre-Forward,right,,03/01/2024,03/01/2024,30/06/2028,,03/06/2026,€ 100 k
+ronan-curtis,363882,Ronan Curtis,1996-03-29,30,London,183,Ireland | England,Attack - Left Winger,right,10/01/2026,10/01/2026,10/01/2026,30/06/2028,,,€ 200 k
+ronan-doherty,342184,Ronan Doherty,1996-01-10,30,Carndonagh,185,Ireland,Midfield - Central Midfield,left,,21/01/2026,21/01/2026,-,,,€ 75 k
+ronan-maher,1039810,Ronan Arjun Maher,2004-12-30,21,Birmingham,170,Ireland | India,Midfield - Left Midfield,left,,01/07/2022,01/07/2022,30/06/2027,,20/06/2025,€ 75 k
+ronan-mansfield,1121566,Ronan Mansfield,2005-12-06,20,,190,Ireland,Defender - Centre-Back,left,06/07/2026,06/07/2026,06/07/2026,30/11/2026,,,€ 100 k
+ronan-teahan,1101078,Ronan Teahan,2004-08-31,21,Kerry,175,Ireland,Midfield - Attacking Midfield,left,01/01/2026,01/01/2026,01/01/2026,-,,,€ 125 k
+rory-finneran,1081165,Rory Finneran,2008-02-29,18,,178,Ireland,Midfield - Defensive Midfield,right,30/07/2024,30/07/2024,30/07/2024,-,,,
+rory-gaffney,184007,Rory Nicholas Gaffney,1989-10-23,36,"Tuam, Galway",183,Ireland,Attack - Centre-Forward,right,24/02/2020,24/02/2020,24/02/2020,30/11/2026,,19/12/2025,€ 75 k
+rory-hale,291115,Rory Danny Hale,1996-11-27,29,Belfast,175,Ireland | Northern Ireland,Midfield - Attacking Midfield,right,,01/01/2021,01/01/2021,31/05/2027,,23/12/2020,€ 250 k
+ross-taheny,341367,Ross Taheny,1997-05-20,29,Collooney,,Ireland,Defender - Centre-Back,left,,01/07/2026,01/07/2026,30/06/2027,,,
+ross-tierney,623740,Ross Tierney,2001-03-06,25,Dublin,175,Ireland,Midfield - Central Midfield,right,01/07/2024,01/07/2024,01/07/2024,30/11/2026,,,€ 325 k
+ruari-paton,482801,Ruari Paton,2000-08-09,26,Dublin,178,Ireland,Attack - Centre-Forward,right,01/07/2026,01/07/2026,01/07/2026,31/05/2028,,,€ 225 k
+ryan-brennan,137591,Ryan Brennan,1991-11-11,34,"Drogheda, Louth",180,Ireland,Midfield - Central Midfield,right,,01/01/2022,01/01/2022,30/11/2026,,18/11/2025,€ 50 k
+ryan-burke,434217,Ryan Darren Burke,2000-11-23,25,Dublin,178,Ireland,Defender - Left-Back,left,,12/01/2026,12/01/2026,31/12/2026,,,€ 125 k
+ryan-butler,1367137,Ryan Butler,2008-01-15,18,"Bunclody, Wexford",183,Ireland,Defender - Right-Back,right,,14/02/2025,14/02/2025,30/11/2026,,25/01/2026,
+ryan-delaney,316554,Ryan Liam Delaney,1996-09-06,29,Wexford,196,Ireland,Defender - Centre-Back,left,13/07/2026,13/07/2026,13/07/2026,30/06/2027,,13/07/2026,€ 100 k
+ryan-graydon,535785,Ryan Graydon,1999-04-11,27,Dublin,188,Ireland,Attack - Centre-Forward,right,09/01/2026,09/01/2026,09/01/2026,-,,,€ 300 k
+ryan-johansson,351071,Ryan Nils Johansson,2001-02-15,25,Luxemburg,185,Ireland | Luxembourg,Attack - Right Winger,right,01/07/2026,01/07/2026,01/07/2026,30/06/2029,,,€ 350 k
+ryan-manning,262300,Ryan Phelim Manning,1996-06-14,30,Galway,173,Ireland,Defender - Left-Back,left,11/07/2023,11/07/2023,11/07/2023,30/06/2027,,,€ 2.80 m
+ryan-markey,1303687,Ryan Markey,2006-02-23,20,Dublin,,Ireland,Attack - Centre-Forward,,,01/01/2026,01/01/2026,-,,,
+ryan-okane,693750,Ryan O'Kane,2003-08-16,23,"Dundalk, Louth",173,Ireland,Attack - Left Winger,right,01/01/2026,01/01/2026,01/01/2026,-,,,€ 125 k
+ryan-patrick-nolan,385396,Ryan Patrick Nolan,1999-02-17,27,Limerick,188,Ireland,Defender - Centre-Back,right,,01/07/2026,01/07/2026,31/05/2028,,,€ 100 k
+ryan-sheridan,1442224,Ryan Sheridan,2009-03-31,17,,,Ireland,Midfield - Central Midfield,,,05/02/2026,05/02/2026,-,,,
+ryan-swan,342412,Ryan Swan,1996-05-13,30,Dublin,190,Ireland,Attack - Right Winger,right,,01/07/2026,01/07/2026,30/06/2027,,,
+ryan-sweeney,347666,Ryan Joseph Sweeney,1997-04-15,29,London,193,Ireland | England,Defender - Centre-Back,left,01/07/2025,01/07/2025,01/07/2025,30/06/2027,,,€ 400 k
+sam-curtis,741267,Sam Curtis,2005-12-01,20,"Navan, Meath",185,Ireland,Defender - Right-Back,right,01/07/2025,01/07/2025,01/07/2025,30/06/2027,,,€ 200 k
+sam-foley,48226,Samuel Robert Foley,1986-10-17,39,Upton-on-Severn,183,Ireland | England,Midfield - Central Midfield,right,10/07/2026,10/07/2026,10/07/2026,30/06/2027,,,€ 25 k
+sam-rooney,1165138,Sam Rooney,2008-11-24,17,,,Ireland,Attack - Centre-Forward,left,05/02/2026,05/02/2026,05/02/2026,-,,,
+sam-steward,1134241,Sam Steward,2008-02-13,18,Dublin,190,Ireland | Slovakia,Defender - Centre-Back,both,,05/02/2026,05/02/2026,-,,,
+sam-todd,451942,Sam Todd,1998-04-28,28,Donegal,185,Ireland,Defender - Centre-Back,left,01/01/2026,01/01/2026,01/01/2026,30/11/2027,,,€ 175 k
+sammie-szmodics,292139,Samuel Joseph Szmodics,1995-09-24,30,Colchester,168,Ireland | Hungary,Midfield - Attacking Midfield,right,02/02/2026,02/02/2026,02/02/2026,30/06/2027,,01/08/2026,€ 3.50 m
+samuel-ogungbe,1260406,Samuel Ogungbe,2009-04-28,17,,173,Ireland,Attack - Right Winger,right,05/02/2026,05/02/2026,05/02/2026,-,,,
+samuel-safaei,1226570,Samuel Safaei,2005-03-09,21,Dublin,183,Ireland | Iran,Goalkeeper,right,,21/01/2024,21/01/2024,-,,,
+scott-brady,1231218,Scott Brady,2006-06-26,20,Dublin,183,Ireland,Midfield - Central Midfield,right,,31/07/2026,31/07/2026,30/11/2026,,,
+scott-davies,69763,Scott Myles Edward Davies,1988-03-10,38,Aylesbury,183,Ireland | England,Defender - Centre-Back,right,,01/07/2026,01/07/2026,-,,,
+scott-hogan,138783,Scott Andrew Hogan,1992-04-13,34,Salford,180,Ireland | England,Attack - Centre-Forward,right,01/07/2026,01/07/2026,01/07/2026,-,,,€ 150 k
+seamus-coleman,68390,Séamus Coleman,1988-10-11,37,Donegal,178,Ireland,Defender - Right-Back,right,,01/07/2026,01/07/2026,-,,,€ 200 k
+seamus-conneely,70019,Séamus Joseph Conneely,1988-07-09,38,London,175,Ireland | England,Midfield - Defensive Midfield,right,,01/01/2015,01/01/2015,30/06/2027,,29/06/2026,€ 25 k
+seamus-maughan,1558013,Seamus Maughan,2009-10-22,16,"Castlebar, Mayo",,Ireland,Midfield - Defensive Midfield,left,,12/06/2026,12/06/2026,-,,,
+sean-boyd,379347,Sean Boyd,1998-06-20,28,"Swords, Dublin",190,Ireland,Attack - Centre-Forward,right,,01/01/2022,01/01/2022,30/11/2027,,17/01/2025,€ 150 k
+sean-costelloe,1223124,Sean Costelloe,2007-08-21,19,Limerick,185,Ireland,Midfield - Attacking Midfield,right,,10/07/2026,10/07/2026,-,,,
+sean-gannon,184670,Seán Gannon,1991-07-11,35,"Ringsend, Dublin",183,Ireland,Defender - Right-Back,right,01/01/2024,01/01/2024,01/01/2024,30/11/2026,,22/11/2024,€ 75 k
+sean-grehan,875235,Seán Patrick Grehan,2004-01-08,22,Dublin,188,Ireland,Defender - Centre-Back,right,01/07/2025,01/07/2025,01/07/2025,30/06/2028,,,€ 200 k
+sean-hoare,249879,Seán Hoare,1994-03-15,32,Dublin,183,Ireland,Defender - Centre-Back,right,,02/01/2025,02/01/2025,30/11/2027,,02/01/2025,€ 150 k
+sean-keane,1246786,Sean Keane,2006-04-21,20,,185,Ireland,Defender - Centre-Back,right,,21/02/2025,21/02/2025,30/11/2026,,,
+sean-keogh,1226571,Sean Keogh,2006-04-15,20,"Skerries, Co. Dublin",178,Ireland,Defender - Left-Back,,,01/08/2025,01/08/2025,-,,,
+sean-long,228773,Sean Martin Long,1995-04-02,31,Dublin,178,Ireland,Defender - Right-Back,right,,08/08/2026,08/08/2026,-,,,
+sean-mcevoy,627778,Sean McEvoy,2002-06-18,24,Ballyjamesduff,,Ireland,Midfield - Defensive Midfield,,,30/07/2026,30/07/2026,30/06/2027,,,
+sean-mcginty,118244,Sean McGinty,1993-08-11,33,Maidstone,196,Ireland | England,Defender - Centre-Back,left,01/07/2026,01/07/2026,01/07/2026,-,,,€ 10 k
+sean-mcgrath,1371605,Sean McGrath,2008-12-22,17,,,Ireland,Midfield - Left Midfield,,04/05/2026,04/05/2026,04/05/2026,-,,,
+sean-mchale,983806,Martin Sean McHale,2005-03-26,21,Meath,188,Ireland,Defender - Centre-Back,left,01/02/2024,01/02/2024,01/02/2024,-,,,€ 125 k
+sean-mcloughlin,524210,Sean Desmond McLoughlin,1996-11-13,29,Cork,190,Ireland,Defender - Centre-Back,left,19/07/2025,19/07/2025,19/07/2025,30/06/2027,Option for a further year,,€ 750 k
+sean-molloy,941427,Sean Molloy,2004-08-02,22,,,Ireland,Goalkeeper,,,23/02/2025,23/02/2025,-,,,
+sean-moore,955724,Sean Moore,2005-08-13,21,Belfast,188,Ireland | Northern Ireland,Attack - Right Winger,left,27/07/2025,27/07/2025,27/07/2025,-,,,€ 125 k
+sean-murray,148907,Sean Michael Murray,1993-10-11,32,Watford,175,Ireland | England,Midfield - Central Midfield,right,02/01/2026,02/01/2026,02/01/2026,31/05/2027,,,€ 50 k
+sean-raggett,226219,Sean Aidan Raggett,1994-01-25,32,Gillingham,196,England | Ireland,Defender - Centre-Back,right,01/07/2026,01/07/2026,01/07/2026,-,,,€ 150 k
+sean-roughan,732748,Seán Patrick Roughan,2003-03-14,23,Dublin,185,Ireland,Defender - Left-Back,left,01/07/2025,01/07/2025,01/07/2025,30/06/2028,,,€ 1.00 m
+sean-spaight,1260391,Sean Spaight,2009-01-25,17,,168,Ireland,Defender,,,01/11/2024,01/11/2024,-,,,
+senan-mullen,983810,Senan Michael Mullen,2005-02-28,21,"Cootehill, Co. Cavan",190,Ireland,Defender - Centre-Back,left,,27/01/2026,27/01/2026,31/12/2026,,,€ 275 k
+shadrach-ogie,651955,Shadrach Nosa Ogie,2001-08-25,25,Limerick,185,Ireland | Nigeria,Defender - Centre-Back,left,25/07/2026,25/07/2026,25/07/2026,30/06/2028,,,€ 200 k
+shamir-fenelon,306947,Shamir Daniel Sanchez Fenelon,1994-08-03,32,Brighton,185,Ireland | England,Attack - Centre-Forward,right,,01/07/2026,01/07/2026,-,,,
+shane-blaney,532460,Shane Blaney,1999-01-20,27,"Letterkenny, Donegal",190,Ireland,Defender - Centre-Back,right,01/07/2025,01/07/2025,01/07/2025,31/05/2027,,,€ 275 k
+shane-byrne,148902,Shane William Byrne,1993-04-25,33,Castlebar,178,Ireland,Midfield - Central Midfield,,,04/07/2026,04/07/2026,-,,,
+shane-duffy,119269,Shane Patrick Michael Duffy,1992-01-01,34,Derry,193,Ireland | Northern Ireland,Defender - Centre-Back,right,01/07/2026,01/07/2026,01/07/2026,-,,,€ 350 k
+shane-farrell,567574,Shane Farrell,2000-06-26,26,"Finglas, Dublin",178,Ireland,Midfield - Central Midfield,right,01/07/2024,01/07/2024,01/07/2024,30/11/2026,,18/11/2025,€ 175 k
+shane-flynn,583258,Shane Aidan Conor Flynn,2001-10-14,24,Dublin,,Ireland,Defender - Left-Back,left,01/07/2026,01/07/2026,01/07/2026,-,,,
+shane-mcloughlin,376252,Shane Daniel McLoughlin,1997-03-01,29,"New York City, New York",175,Ireland | United States,Defender - Right-Back,right,28/07/2025,28/07/2025,28/07/2025,30/06/2027,,01/07/2026,€ 175 k
+shane-tracey,1018097,Shane Tracey,2006-04-04,20,Louth,,Ireland,Midfield - Central Midfield,,,13/02/2025,13/02/2025,30/11/2026,,03/12/2025,€ 100 k
+shaun-platt,1418987,Shaun Platt,2009-01-01,17,,178,Ireland,Attack - Centre-Forward,right,,20/06/2025,20/06/2025,-,,,
+shay-casey,1472546,Shay Casey,2008-01-27,18,"Dundalk, Louth",,Ireland,Midfield - Defensive Midfield,right,17/10/2025,17/10/2025,17/10/2025,-,,,
+simon-power,392860,Simon Power,1998-05-13,28,"Greystones, Wicklow",178,Ireland,Midfield - Right Midfield,right,01/01/2025,01/01/2025,01/01/2025,30/11/2026,,11/11/2024,€ 150 k
+sinclair-armstrong,724532,Sinclair Ntomuchukwu Armstrong,2003-06-22,23,Dublin,183,Ireland | Nigeria,Attack - Centre-Forward,right,01/07/2026,01/07/2026,01/07/2026,30/06/2030,Option for a further year,,€ 2.50 m
+sonny-perkins,670877,Sonny Tufail Perkins,2004-02-10,22,London,188,England | Ireland,Attack - Right Winger,left,01/07/2026,01/07/2026,01/07/2026,30/06/2028,,,€ 600 k
+stephen-kenny,217744,Stephen Kenny,1993-05-14,33,Cork,,Ireland,Attack - Centre-Forward,,,01/07/2022,01/07/2022,-,,,
+stephen-mallon,324493,Stephen Anthony Mallon,1999-02-07,27,Belfast,178,Ireland | Northern Ireland,Attack - Left Winger,left,03/07/2025,03/07/2025,03/07/2025,31/05/2027,,,€ 50 k
+stephen-mclaughlin,178067,Stephen Antony McLaughlin,1990-06-14,36,Donegal,178,Ireland,Defender - Left-Back,left,,11/09/2020,11/09/2020,30/06/2027,,19/05/2026,€ 50 k
+stephen-walsh,154260,Stephen Walsh,1990-08-29,35,Galway,183,Ireland,Attack - Centre-Forward,left,,26/02/2021,26/02/2021,30/11/2026,,28/11/2025,€ 50 k
+success-edogun,877211,Success Edogun,2001-04-28,25,Kilkenny,,Ireland | Nigeria,Attack - Centre-Forward,right,30/01/2025,30/01/2025,30/01/2025,31/05/2027,,08/01/2026,€ 200 k
+tadhg-prizeman,1260388,Tadhg Prizeman,2009-01-17,17,,,Ireland,Defender - Right-Back,right,,-,-,-,,,
+tayo-adaramola,724529,Omotayo Daniel Adaramola,2003-11-14,22,Dublin,178,Ireland | Nigeria,Defender - Left-Back,left,17/08/2026,17/08/2026,17/08/2026,30/06/2030,,,€ 800 k
+terence-doherty,1551670,Terence Aaron Doherty,2009-06-21,17,"Buncrana, Donegal",,Ireland,Attack - Centre-Forward,right,,25/05/2026,25/05/2026,-,,,
+theo-hennessy,1371606,Theo Hennessy,2007-07-12,19,,,Ireland,Goalkeeper,,,01/01/2025,01/01/2025,30/11/2026,,18/12/2024,
+thomas-oconnor,357661,Thomas James O'Connor,1999-04-21,27,Kilkenny,185,Ireland,Defender - Centre-Back,left,01/07/2026,01/07/2026,01/07/2026,30/06/2029,,,€ 500 k
+thomas-oluwa,677356,Thomas Oluwa,2001-02-08,25,,178,Ireland | Nigeria,Attack - Centre-Forward,left,01/01/2025,01/01/2025,01/01/2025,30/11/2026,,06/11/2025,€ 150 k
+tj-molloy,1260401,TJ Molloy-Murray,2009-04-04,17,,175,Ireland,Attack - Second Striker,right,31/07/2026,31/07/2026,31/07/2026,01/01/2027,,,
+todd-bazunu,1366903,Todd Bazunu,2007-10-04,18,,185,Ireland | Nigeria,Goalkeeper,right,,20/02/2025,20/02/2025,-,,,
+tom-cannon,669366,Thomas Christopher Cannon,2002-12-28,23,Aintree,180,Ireland | England,Attack - Centre-Forward,right,,23/01/2025,23/01/2025,30/06/2029,Option for a further year,,€ 7.00 m
+tom-field,433842,Thomas Field,1997-03-14,29,London,178,Ireland | England,Defender - Left-Back,left,12/01/2026,12/01/2026,12/01/2026,31/12/2026,club option 1 year,,€ 175 k
+tom-lonergan,700155,Thomas Lonergan,2004-01-02,22,"Dunboyne, Meath",183,Ireland,Attack - Centre-Forward,left,,18/07/2025,18/07/2025,30/11/2027,,,€ 225 k
+tom-mcgrath,1325173,Tom McGrath,2009-03-07,17,,,Ireland,Midfield - Central Midfield,,,24/02/2026,24/02/2026,-,,,
+tommy-lonergan,700155,Thomas Lonergan,2004-01-02,22,"Dunboyne, Meath",183,Ireland,Attack - Centre-Forward,left,,18/07/2025,18/07/2025,30/11/2027,,,€ 225 k
+tony-springett,570864,Tony Gary Springett,2002-09-22,23,London,175,Ireland | England,Attack - Right Winger,left,01/07/2026,01/07/2026,01/07/2026,30/06/2028,,,€ 800 k
+trent-kone-doherty,944140,Trent Toure Koné-Doherty,2006-06-30,20,Derry,175,Ireland | Northern Ireland,Attack - Left Winger,right,27/02/2026,27/02/2026,27/02/2026,31/12/2029,,,€ 600 k
+trevor-clarke,340920,Trevor Thomas Clarke,1998-03-26,28,Dublin,165,Ireland,Defender - Left-Back,left,,02/07/2026,02/07/2026,30/11/2027,,,€ 125 k
+troy-parrott,552655,Troy Daniel Parrott,2002-02-04,24,Dublin,185,Ireland,Attack - Centre-Forward,right,20/08/2026,20/08/2026,20/08/2026,30/06/2031,,,€ 25.00 m
+tunmise-sobowale,458633,Oluwatunmise Sobowale,1999-03-19,27,Waterford,180,Ireland | Nigeria,Defender - Right-Back,right,29/07/2026,29/07/2026,29/07/2026,-,,,€ 300 k
+tyler-doherty,1329535,Tyler Doherty,2005-07-26,21,,,Ireland,Attack - Centre-Forward,,,22/07/2026,22/07/2026,30/06/2027,,,
+tyler-goodrham,700441,Tyler Charlie Goodrham,2003-08-07,23,High Wycombe,170,Ireland | England,Attack - Right Winger,right,01/07/2022,01/07/2022,01/07/2022,30/06/2027,Option for a further year,11/01/2024,€ 1.50 m
+tyreik-wright,505657,Tyreik Samuel Wright,2001-09-22,24,Ovens,178,Ireland,Midfield - Left Midfield,right,04/07/2024,04/07/2024,04/07/2024,30/06/2027,,18/05/2026,€ 350 k
+tyreke-wilson,357671,Tyreke Wilson,1999-12-02,26,Dublin,173,Ireland,Defender - Left-Back,left,12/02/2026,12/02/2026,12/02/2026,-,,,€ 175 k
+uniss-kargbo,798363,Uniss Kargbo,2002-01-07,24,,170,Ireland | Sierra Leone,Midfield - Central Midfield,right,01/07/2025,01/07/2025,01/07/2025,31/05/2027,,,€ 50 k
+victor-ozhianvuna,1260393,Victor Ozhianvuna,2009-01-10,17,,173,Ireland | Russia,Midfield - Attacking Midfield,right,,13/02/2025,13/02/2025,-,,,€ 350 k
+vinnie-leonard,1231216,Vincent Leonard,2008-03-21,18,Navan,183,Ireland,Defender - Centre-Back,,01/07/2026,01/07/2026,01/07/2026,-,,,€ 175 k
+warren-davis,1110018,Warren Davis,2005-04-02,21,"Tallaght, Dublin",180,Ireland,Attack - Centre-Forward,right,03/02/2023,03/02/2023,03/02/2023,30/11/2027,,17/09/2025,€ 200 k
+warren-ohora,449020,Warren Patrick O'Hora,1999-04-19,27,"Cabra, Dublin",188,Ireland,Defender - Centre-Back,right,,01/07/2024,01/07/2024,31/05/2027,,,€ 550 k
+will-ferry,504856,William Ferry,2000-12-07,25,Bury,175,Ireland | England,Defender - Left-Back,left,01/07/2024,01/07/2024,01/07/2024,30/06/2027,,,€ 1.20 m
+will-fitzgerald,546159,Will Fitzgerald,1999-05-19,27,Limerick,188,Ireland,Attack - Left Winger,left,28/07/2026,28/07/2026,28/07/2026,30/11/2029,,,€ 225 k
+will-keane,118535,William David Keane,1993-01-11,33,Stockport,188,Ireland | England,Attack - Centre-Forward,right,01/07/2026,01/07/2026,01/07/2026,-,,,€ 300 k
+will-smallbone,444211,William Anthony Patrick Smallbone,2000-02-21,26,Basingstoke,183,Ireland | England,Midfield - Central Midfield,right,01/07/2026,01/07/2026,01/07/2026,-,,,€ 3.50 m
+wilson-waweru,596273,Wilson Waweru,2000-12-27,25,Galway,185,Ireland | Kenya,Attack - Centre-Forward,right,14/08/2026,14/08/2026,14/08/2026,-,,,
+zach-dunne,933918,Zach Dunne,2004-01-28,22,,,Ireland,Attack - Left Winger,,,01/08/2026,01/08/2026,-,,,
+zach-nolan,1138113,Zach Nolan,2005-08-27,21,,180,Ireland,Defender - Left-Back,left,01/07/2026,01/07/2026,01/07/2026,-,,,
+zack-elbouzedi,293779,Zachary Elbouzedi,1998-04-05,28,"Swords, Dublin",185,Ireland | Libya,Attack - Right Winger,right,17/07/2024,17/07/2024,17/07/2024,30/11/2027,,,€ 225 k
+zak-delaney,614828,Zak Delaney,2002-01-10,24,Dublin,,Ireland | England,Defender - Left-Back,left,01/07/2026,01/07/2026,01/07/2026,31/05/2028,,,€ 100 k
+zak-gilsenan,650883,Zak Thomas Gilsenan,2003-05-08,23,Perth,178,Ireland | Australia,Midfield - Attacking Midfield,right,06/07/2026,06/07/2026,06/07/2026,-,,,€ 75 k
+zak-osullivan,1276466,Zak O'Sullivan,2007-04-26,19,,,Ireland,Attack - Centre-Forward,,08/07/2026,08/07/2026,08/07/2026,30/11/2026,,,
+zak-reddy,1226933,Zak Reddy,2007-03-13,19,,178,Ireland,Midfield - Central Midfield,right,,28/07/2026,28/07/2026,-,,,
