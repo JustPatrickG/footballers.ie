@@ -1,0 +1,92 @@
+name: transfermarkt profiles (sharded)
+
+# Manual only. Transfermarkt may block datacentre IPs outright - if every
+# shard comes back with 0 rows, that's what happened, and this has to be
+# run from a home connection instead.
+on:
+  workflow_dispatch:
+    inputs:
+      shard_size:
+        description: players per shard
+        default: '20'
+      sleep:
+        description: seconds between players
+        default: '6'
+
+permissions:
+  contents: write
+
+jobs:
+  plan:
+    runs-on: ubuntu-latest
+    outputs:
+      matrix: ${{ steps.m.outputs.matrix }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - id: m
+        run: |
+          M=$(python3 scraper/tm_scraper.py shard-matrix \
+                --size ${{ inputs.shard_size }})
+          echo "matrix=$M" >> "$GITHUB_OUTPUT"
+          echo "$M"
+
+  fetch:
+    needs: plan
+    runs-on: ubuntu-latest
+    continue-on-error: true          # a blocked shard must not fail the run
+    strategy:
+      fail-fast: false
+      max-parallel: 8                # gentler on the source than 20 at once
+      matrix:
+        shard: ${{ fromJson(needs.plan.outputs.matrix) }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install requests
+      - name: fetch this shard
+        run: |
+          python3 scraper/tm_scraper.py profiles \
+            --skip ${{ matrix.shard.skip }} \
+            --limit ${{ matrix.shard.limit }} \
+            --sleep ${{ inputs.sleep }} \
+            --rebuild || true
+      - name: keep whatever it got
+        uses: actions/upload-artifact@v4
+        with:
+          name: tm-shard-${{ matrix.shard.skip }}
+          path: data/api/tm.csv
+          if-no-files-found: ignore
+          retention-days: 1
+
+  merge:
+    needs: fetch
+    if: always()
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/download-artifact@v4
+        with:
+          path: shards
+          pattern: tm-shard-*
+      - name: merge into data/api/tm.csv
+        run: python3 scraper/tm_scraper.py merge-shards shards
+      - name: commit if changed
+        run: |
+          git config user.name "scraper-bot"
+          git config user.email "actions@github.com"
+          git add data/api/tm.csv
+          if git diff --cached --quiet; then
+            echo "nothing new - shards were probably blocked"
+          else
+            git commit -m "transfermarkt profiles"
+            git pull --rebase --autostash
+            git push
+          fi

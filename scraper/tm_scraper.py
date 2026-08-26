@@ -109,9 +109,28 @@ def write_cache(cache):
 
 # ---------------------------------------------------------------- resolve
 
+NO_CLUB = ("unknown", "without club", "retired", "career break",
+           "ban", "no club")
+
+
+def _undouble(s):
+    """TM writes some titles twice over: 'Without ClubWithout Club'."""
+    if s and len(s) % 2 == 0:
+        half = len(s) // 2
+        if s[:half] == s[half:]:
+            return s[:half]
+    return s
+
+
 def _attr(tag, name):
     m = re.search(name + r'="([^"]*)"', tag)
-    return html.unescape(m.group(1)) if m else ""
+    return _undouble(html.unescape(m.group(1))) if m else ""
+
+
+def is_no_club(name):
+    n = norm(_undouble(name or ""))
+    return not n or any(n == b or n.startswith(b) for b in
+                        (norm(x) for x in NO_CLUB))
 
 
 def search(name, debug_name=None):
@@ -153,8 +172,7 @@ def search(name, debug_name=None):
         for cm in re.finditer(r'<a\b([^>]*/startseite/verein/\d+[^>]*)>',
                               row):
             t = _attr(cm.group(1), "title")
-            if t and norm(t) not in ("unknown", "unknownunknown",
-                                     "without club", "retired"):
+            if t and not is_no_club(t):
                 club = t
                 break
 
@@ -176,6 +194,16 @@ def resolve(args):
     if args.only:
         want = set(args.only.split(","))
         todo = [p for p in players if p["slug"] in want]
+    elif getattr(args, "no_fotmob_only", False):
+        fm = SCRAPER_DIR / "fotmob_ids.csv"
+        has_id = set()
+        if fm.exists():
+            with open(fm, newline="", encoding="utf-8") as f:
+                has_id = {r["slug"] for r in csv.DictReader(f)
+                          if r.get("fotmob_id")}
+        todo = [p for p in todo if p["slug"] not in has_id]
+        print(f"  (limited to {len(todo)} players with no match-data "
+              f"source)")
     print(f"resolving {len(todo)} of {len(players)} players")
 
     unresolved, unsure = [], []
@@ -290,8 +318,7 @@ def parse_items_rows(page):
         for cm in re.finditer(r'<a\b([^>]*/startseite/verein/\d+[^>]*)>',
                               row):
             t = _attr(cm.group(1), "title")
-            if t and norm(t) not in ("unknown", "unknownunknown",
-                                     "without club", "retired"):
+            if t and not is_no_club(t):
                 club = t
                 break
         nats = []
@@ -505,7 +532,7 @@ def pool_add(args):
                     return False
             except ValueError:
                 pass
-        if args.clubs_only and not r.get("club"):
+        if args.clubs_only and is_no_club(r.get("club", "")):
             return False
         return True
 
@@ -543,6 +570,35 @@ def pool_add(args):
     if added:
         print("\nthey have transfermarkt ids but no match data yet - run "
               "the other scraper's `resolve` then `scrape` for that.")
+
+
+def pool_undo(args):
+    """Remove sweep-added players who have no real club."""
+    players = read_player_list()
+    cache = read_cache()
+    drop = set()
+    for p in players:
+        note = cache.get(p["slug"], {}).get("note", "")
+        if note != "from sweep":
+            continue
+        if is_no_club(p.get("club", "")):
+            drop.add(p["slug"])
+    if not drop:
+        print("nothing to remove")
+        return
+    kept = [p for p in players if p["slug"] not in drop]
+    cols = ["slug", "name", "club", "league", "tier", "pos",
+            "ireland_level"]
+    with open(PLAYER_LIST, "w", newline="", encoding="utf-8") as f:
+        w = csv.DictWriter(f, fieldnames=cols, extrasaction="ignore")
+        w.writeheader()
+        w.writerows(kept)
+    for s in drop:
+        cache.pop(s, None)
+    write_cache(cache)
+    print(f"removed {len(drop)} clubless players added by the sweep:")
+    for s in sorted(drop):
+        print(f"  - {s}")
 
 
 # ---------------------------------------------------------------- profile
@@ -665,6 +721,7 @@ def profile(tid, debug_name=None):
 
 
 def profiles(args):
+    """One pass. Returns True when every targeted player is done."""
     cache = read_cache()
     if not cache:
         sys.exit("no tm_ids.csv - run `resolve` first.")
@@ -672,6 +729,16 @@ def profiles(args):
     if args.only:
         want = set(args.only.split(","))
         players = [p for p in players if p["slug"] in want]
+    elif args.no_fotmob_only:
+        fm = SCRAPER_DIR / "fotmob_ids.csv"
+        if not fm.exists():
+            sys.exit("fotmob_ids.csv not found")
+        with open(fm, newline="", encoding="utf-8") as f:
+            has_id = {r["slug"] for r in csv.DictReader(f)
+                      if r.get("fotmob_id")}
+        players = [p for p in players if p["slug"] not in has_id]
+        print(f"{len(players)} players with no match-data source - "
+              f"filling their bio from here instead")
 
     out_path = Path(args.out) / "data/api/tm.csv"
     existing = {}
@@ -680,7 +747,18 @@ def profiles(args):
             for row in csv.DictReader(f):
                 existing[row["slug"]] = row
 
-    done, failed, skipped = 0, [], 0
+    if args.skip:
+        players = players[args.skip:]
+    if args.limit:
+        players = players[:args.limit]
+    targeted = list(players)
+    if not args.rebuild:
+        players = [p for p in players if p["slug"] not in existing]
+        if len(players) != len(targeted):
+            print(f"{len(targeted) - len(players)} already done, "
+                  f"{len(players)} to go")
+
+    done, failed, skipped, blocked = 0, [], 0, False
     for i, p in enumerate(players):
         slug = p["slug"]
         tid = cache.get(slug, {}).get("tm_id")
@@ -692,11 +770,11 @@ def profiles(args):
         except Exception as e:
             print(f"  [{i+1}/{len(players)}] {slug}: FAILED ({e})")
             failed.append(slug)
-            if "403" in str(e):
-                print("  blocked - stopping; rerun later to continue "
-                      "(finished players are kept)")
+            if "403" in str(e) or "429" in str(e):
+                blocked = True
+                print("  blocked - stopping; finished players are kept")
                 break
-            time.sleep(SLEEP)
+            time.sleep(args.sleep)
             continue
         row = {"slug": slug, "tm_id": tid}
         row.update(data)
@@ -704,7 +782,7 @@ def profiles(args):
         done += 1
         print(f"  [{i+1}/{len(players)}] {slug}: {data['tm_club'] or '?'} "
               f"/ {data['contract_expires'] or 'no contract date'}")
-        time.sleep(SLEEP)
+        time.sleep(args.sleep)
 
     rows = [[existing[s].get(c, "") for c in COLUMNS]
             for s in sorted(existing)]
@@ -718,6 +796,81 @@ def profiles(args):
         print(f"{skipped} players have no transfermarkt id yet")
     if failed:
         print(f"{len(failed)} failed: {', '.join(failed[:20])}")
+    remaining = [p for p in targeted
+                 if cache.get(p["slug"], {}).get("tm_id")
+                 and p["slug"] not in existing]
+    print(f"{len(remaining)} still to do")
+    return (not blocked) and not remaining
+
+
+def profiles_loop(args):
+    """Keep going until everything's done, backing off when blocked.
+
+    Transfermarkt limits per IP, so running several of these at once on
+    one connection gets you blocked faster, not slower. Use --skip/--limit
+    to split the list across genuinely different networks instead.
+    """
+    wait = args.cooldown
+    round_no = 1
+    while True:
+        print(f"\n=== pass {round_no} "
+              f"(sleep {args.sleep}s between players) ===")
+        try:
+            finished = profiles(args)
+        except KeyboardInterrupt:
+            print("\nstopped by hand - progress is saved")
+            return
+        if finished:
+            print("\nall done.")
+            return
+        if round_no >= args.max_passes:
+            print(f"\nstopping after {round_no} passes - rerun when "
+                  f"you like, it continues where it left off")
+            return
+        mins = wait / 60
+        print(f"\ncooling off for {mins:.0f} min, then continuing "
+              f"(Ctrl+C to stop - nothing is lost)")
+        try:
+            time.sleep(wait)
+        except KeyboardInterrupt:
+            print("\nstopped by hand - progress is saved")
+            return
+        wait = min(wait * 1.5, args.max_cooldown)
+        round_no += 1
+
+
+def merge_shards(args):
+    """Merge shard CSVs (from parallel runs) into data/api/tm.csv."""
+    merged = {}
+    dest = Path(args.out) / "data/api/tm.csv"
+    if dest.exists():
+        with open(dest, newline="", encoding="utf-8") as f:
+            for row in csv.DictReader(f):
+                merged[row["slug"]] = row
+    found = 0
+    for path in sorted(Path(args.shards).rglob("*.csv")):
+        with open(path, newline="", encoding="utf-8") as f:
+            rows = list(csv.DictReader(f))
+        for row in rows:
+            if row.get("slug"):
+                merged[row["slug"]] = row      # newest wins
+        found += len(rows)
+        print(f"  {path.name}: {len(rows)} rows")
+    dest.parent.mkdir(parents=True, exist_ok=True)
+    with open(dest, "w", newline="", encoding="utf-8") as f:
+        w = csv.writer(f)
+        w.writerow(COLUMNS)
+        for slug in sorted(merged):
+            w.writerow([merged[slug].get(c, "") for c in COLUMNS])
+    print(f"merged {found} shard rows -> {dest} ({len(merged)} players)")
+
+
+def count_players(args):
+    """Print the shard matrix for the workflow to consume."""
+    n = len(read_player_list())
+    size = args.size
+    shards = [{"skip": i, "limit": size} for i in range(0, n, size)]
+    print(json.dumps(shards))
 
 
 def main():
@@ -727,6 +880,8 @@ def main():
     r = sub.add_parser("resolve", help="map slugs to transfermarkt ids")
     r.add_argument("--force", action="store_true")
     r.add_argument("--only", default="", help="comma-separated slugs")
+    r.add_argument("--no-fotmob-only", action="store_true",
+                   help="only players missing from the match-data source")
     r.add_argument("--debug", action="store_true",
                    help="dump search HTML to scraper/debug/")
 
@@ -750,17 +905,47 @@ def main():
     pa.add_argument("--clubs-only", action="store_true",
                     help="skip players with no current club")
 
+    mg = sub.add_parser("merge-shards",
+                        help="combine parallel-run CSVs into tm.csv")
+    mg.add_argument("shards", help="folder holding the shard CSVs")
+    mg.add_argument("--out", default=".")
+
+    ct = sub.add_parser("shard-matrix",
+                        help="print the shard list as JSON")
+    ct.add_argument("--size", type=int, default=20)
+
+    pu = sub.add_parser("pool-undo",
+                        help="remove sweep-added players with no club")
+
     p = sub.add_parser("profiles", help="write data/api/tm.csv")
     p.add_argument("--out", default=".")
     p.add_argument("--only", default="", help="comma-separated slugs")
+    p.add_argument("--no-fotmob-only", action="store_true",
+                   help="only players missing from the match-data source")
+    p.add_argument("--sleep", type=float, default=SLEEP,
+                   help=f"seconds between players (default {SLEEP})")
+    p.add_argument("--loop", action="store_true",
+                   help="keep retrying with a cooldown until finished")
+    p.add_argument("--cooldown", type=float, default=900,
+                   help="seconds to wait after a block (default 900)")
+    p.add_argument("--max-cooldown", type=float, default=3600)
+    p.add_argument("--max-passes", type=int, default=40)
+    p.add_argument("--skip", type=int, default=0,
+                   help="skip the first N players (to split the work)")
+    p.add_argument("--limit", type=int, default=0,
+                   help="only do N players (to split the work)")
     p.add_argument("--rebuild", action="store_true",
                    help="ignore the existing file instead of updating it")
     p.add_argument("--debug", action="store_true",
                    help="dump raw HTML to scraper/debug/")
 
     args = ap.parse_args()
+    if args.cmd == "profiles" and getattr(args, "loop", False):
+        return profiles_loop(args)
     {"resolve": resolve, "add": add_ids, "profiles": profiles,
-     "sweep": sweep, "pool-add": pool_add}[args.cmd](args)
+     "sweep": sweep, "pool-add": pool_add,
+     "pool-undo": pool_undo, "merge-shards": merge_shards,
+     "shard-matrix": count_players}[args.cmd](args)
 
 
 if __name__ == "__main__":
