@@ -499,7 +499,7 @@ def club_id(name):
 
 def club_badge(name, size="sm"):
     cid = club_id(name)
-    if not cid: return f'<span class="badge {size} generic" title="{esc(n)}"></span>'
+    if not cid: return f'<span class="badge {size} generic"></span>'
     return (f'<img class="badge {size}" src="https://images.fotmob.com/image_resources/logo/teamlogo/{cid}.png" '
             f'alt="" loading="lazy" onerror="this.outerHTML=\'<span class=&quot;badge {size} generic&quot;></span>\'">')
 
