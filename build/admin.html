@@ -125,7 +125,7 @@ function ownOnly(){ return !!role().ownOnly; }
 
 <script>
 const FILES = {
-  players:  {path:'manual/players.csv',  label:'Players'},
+  players:  {path:'manual/players.csv',  ensure:['exclude'], label:'Players'},
   matches:  {path:'api/matches.csv',     label:'Matches'},
   articles: {path:'manual/articles.csv', ensure:['expires','use_player_photo','partner','partner_url'], label:'News'},
   writers:  {path:'manual/writers.csv', cols:['slug','name','bio','photo','links'], label:'Writers'},
@@ -296,7 +296,7 @@ function tableView(){
     <div class="bar">
       <input type="search" id="q" placeholder="Search…">
       <button id="addrow">+ Add row</button>
-      ${active==='players'?'<button id="bulk">Bulk add</button>':''}
+      ${active==='players'?'<button id="bulk">Bulk add</button><button id="hidep">Hide a player</button>':''}
       <span class="count" id="count"></span>
     </div>
     <div id="bulkbox"></div>
@@ -315,11 +315,20 @@ function tableView(){
           const td=document.createElement('td');
           td.className=NUMS.includes(c)?'num':(WIDE.includes(c)?'wide':'');
           const inp=document.createElement('input');
-          inp.value=r[c]||'';
-          if(readOnly()) inp.readOnly=true;
-          inp.oninput=()=>{ r[c]=inp.value;
-            if(c==='name'&&'slug' in r&&!r.slug) r.slug=slugify(inp.value);
-            markDirty(); };
+          if(c==='exclude'){
+            /* "not a player" — managers and anyone the feed lists wrongly.
+               Ticked rows are dropped from the site entirely. */
+            inp.type='checkbox'; inp.title='Not a player — hide from the site';
+            inp.checked=/^(y|yes|true|1)$/i.test(r[c]||'');
+            if(readOnly()) inp.disabled=true;
+            inp.onchange=()=>{ r[c]=inp.checked?'yes':''; markDirty(); };
+          } else {
+            inp.value=r[c]||'';
+            if(readOnly()) inp.readOnly=true;
+            inp.oninput=()=>{ r[c]=inp.value;
+              if(c==='name'&&'slug' in r&&!r.slug) r.slug=slugify(inp.value);
+              markDirty(); };
+          }
           td.appendChild(inp); tr.appendChild(td);
         });
         const td=document.createElement('td');
@@ -333,6 +342,18 @@ function tableView(){
     q.oninput=draw;
     v.querySelector('#addrow').onclick=()=>{
       const o={}; d.cols.forEach(c=>o[c]=''); d.rows.unshift(o); markDirty(); draw();
+    };
+    const hidep=v.querySelector('#hidep');
+    if(hidep) hidep.onclick=()=>{
+      /* The scraper takes the whole squad page, which on FotMob includes the
+         manager. This writes a manual row that hides them everywhere. */
+      const n=prompt('Name of the person to hide (e.g. a manager listed as a player):');
+      if(!n) return;
+      const slug=slugify(n); if(!slug) return;
+      let row=d.rows.find(r=>r.slug===slug);
+      if(!row){ row={}; d.cols.forEach(c=>row[c]=''); row.slug=slug; row.name=n.trim(); d.rows.unshift(row); }
+      row.exclude='yes'; markDirty(); q.value=slug; draw();
+      alert(n.trim()+' will be hidden on the next build. Save to publish.');
     };
     const bulk=v.querySelector('#bulk');
     if(bulk) bulk.onclick=()=>{

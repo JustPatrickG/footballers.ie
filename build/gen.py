@@ -60,6 +60,9 @@ def _int(v, d=0):
     try: return int(str(v).strip())
     except: return d
 
+def _yes(v):
+    return str(v or "").strip().lower() in ("y","yes","true","1")
+
 def _merge_players():
     """Three layers, lowest first:
          scraper/players_list.csv  — the roster (name, club, position)
@@ -120,6 +123,63 @@ def _merge_rows(name, key_fields):
         keyed[tuple(r.get(k,"") for k in key_fields)] = r
     return list(keyed.values())
 
+def _first_last(slug):
+    """'will-fitzgerald' -> ('will', 'fitzgerald'). Surname is everything after
+       the first hyphen, so 'john-ross-wilson' keeps 'ross-wilson' as the surname."""
+    parts = slug.split("-", 1)
+    return (parts[0], parts[1]) if len(parts) == 2 else (slug, "")
+
+def _nickname_of(a, b):
+    """True when one first name is a short form of the other: will/william,
+       dan/danny, ed/edward, tom/tommy. Prefix match only — never jamie/tom."""
+    if a == b: return False
+    short, long_ = (a, b) if len(a) < len(b) else (b, a)
+    return len(short) >= 2 and long_.startswith(short)
+
+def _dedupe_players(players, manual_rows):
+    """The roster carries some players twice under a full name and a short one
+       (will-fitzgerald / william-fitzgerald). Same club, same surname, one first
+       name a short form of the other, and the same season numbers = one person.
+       Keep the better-sourced slug; return {dropped_slug: kept_slug} so match
+       squads can be remapped."""
+    by_key = {}
+    for p in players:
+        first, last = _first_last(p["slug"])
+        by_key.setdefault(((p.get("club") or "").strip().lower(), last), []).append((first, p))
+
+    def _score(p):
+        # a hand-edited row wins, then a Transfermarkt row, then more history
+        return (1 if p["slug"] in manual_rows else 0,
+                1 if p.get("tm") else 0,
+                len(p.get("results") or []),
+                len(p.get("fixtures") or []))
+
+    alias, dropped = {}, set()
+    for group in by_key.values():
+        if len(group) < 2: continue
+        for i in range(len(group)):
+            for j in range(i + 1, len(group)):
+                (fa, pa), (fb, pb) = group[i], group[j]
+                if pa["slug"] in dropped or pb["slug"] in dropped: continue
+                if not _nickname_of(fa, fb): continue
+                sa, sb = pa["season"], pb["season"]
+                same = (sa["mins"], sa["ap"], sa["g"]) == (sb["mins"], sb["ap"], sb["g"])
+                blank = not (sa["mins"] or sa["ap"]) or not (sb["mins"] or sb["ap"])
+                if not (same or blank): continue          # different people, same surname
+                keep, drop = (pa, pb) if _score(pa) >= _score(pb) else (pb, pa)
+                alias[drop["slug"]] = keep["slug"]
+                dropped.add(drop["slug"])
+                # the loser may hold history the winner is missing
+                for fld in ("results", "fixtures"):
+                    if len(drop.get(fld) or []) > len(keep.get(fld) or []):
+                        keep[fld] = drop[fld]
+                for fld in ("photo", "tm", "rating", "born", "foot"):
+                    if not keep.get(fld) and drop.get(fld): keep[fld] = drop[fld]
+    if dropped:
+        print(f"  merged {len(dropped)} duplicate player{'s' if len(dropped)!=1 else ''}: "
+              + ", ".join(f"{d}→{alias[d]}" for d in sorted(dropped)))
+    return [p for p in players if p["slug"] not in dropped], alias
+
 EVENTS = {}
 def load():
     tmdata = {r["slug"]: r for r in _rows("api/tm.csv") if r.get("slug")}
@@ -144,6 +204,9 @@ def load():
     for slug, r in _merge_players().items():
         if not (r.get("name") or "").strip():
             continue                              # a row with no name isn't a player yet
+        if _yes(r.get("exclude")):
+            continue                              # manual "not a player" flag: managers,
+                                                  # coaches, anyone the feed lists wrongly
         youth = []
         for chunk in filter(None, [c.strip() for c in (r.get("youth") or "").split(";")]):
             parts = chunk.split(":")
@@ -230,6 +293,7 @@ def load():
         if p.get("loan"):
             p["club"] = p["loan"]          # display the club they're actually at
     players.sort(key=lambda p: p["n"])
+    players, alias = _dedupe_players(players, manual_players)
 
     # The scraper writes: team,kickoff,competition,home,away,home_score,away_score,status
     # The older hand-kept format was: level,type,date,opponent,home_away,score,competition
@@ -272,9 +336,9 @@ def load():
     articles = [r for r in _rows("manual/articles.csv") if r.get("slug")]   # CSV order = display order (drag to reorder in the admin)
     accounts = _rows("manual/accounts.csv")
     clubgeo  = {r["club"]: r for r in _rows("manual/clubs.csv") if r.get("club")}
-    return players, ireland, news, matches, articles, accounts, clubgeo, tmdata
+    return players, ireland, news, matches, articles, accounts, clubgeo, tmdata, alias
 
-PLAYERS, IRELAND, NEWS, MATCHES, ARTICLES, ACCOUNTS, CLUBGEO, TM = load()
+PLAYERS, IRELAND, NEWS, MATCHES, ARTICLES, ACCOUNTS, CLUBGEO, TM, ALIAS = load()
 for _p in PLAYERS:
     if (_p.get("club") or "").strip().lower() in ("without club","no club","free agent",""):
         _p["club"] = "Unattached"
@@ -630,28 +694,66 @@ def week_activity():
     return out
 
 # ================= HOME =================
-LOI_COMPS = ("premier division","first division","league of ireland","fai cup","president's cup")
-def is_loi_match(m, involved):
+# Exact names only. Substring matching put "First Division B" (Belgium) and
+# "Northern/Southern/Isthmian Premier Division" (English non-league) in the
+# League of Ireland filter.
+LOI_EXACT = {"premier division","first division","fai cup",
+             "president's cup","presidents cup","fai president's cup"}
+LOI_PART  = ("league of ireland",)
+def is_loi_match(m, squad):
     """A League of Ireland game: nearly every player is Irish, so list them compactly."""
     comp=(m.get("competition") or "").strip().lower()
-    if any(c in comp for c in LOI_COMPS): return True
-    pmap={p["slug"]:p for p in PLAYERS}
-    tiers=[(pmap.get(x["slug"]) or {}).get("tier","") for x in involved]
+    if comp in LOI_EXACT or any(c in comp for c in LOI_PART): return True
+    tiers=[p.get("tier","") for p in squad]
     return bool(tiers) and sum(1 for t in tiers if t=="loi") > len(tiers)/2
+
+def _pmap():
+    return {p["slug"]: p for p in PLAYERS}
+
+SQUAD_LIST_AT = 8      # this many tracked players is a squad, not a teamsheet
+
+def match_squad(m, pmap=None):
+    """The tracked players attached to a match, resolved to player records.
+
+       The scraper attaches every tracked player at both clubs, not a teamsheet.
+       Abroad that's one or two names. At an Irish club it's the whole squad —
+       first team plus academy plus whoever else the feed lists — so a card
+       saying '31 Irish players' reads like a lineup when it isn't one. Past
+       SQUAD_LIST_AT we call it a squad list: drop anyone with no senior minutes
+       this season, and put the most-played first so the faces shown are the
+       ones actually likely to be involved.
+
+       Note this is separate from whether it's a League of Ireland fixture — a
+       Rovers game in Europe is a squad list too.
+       Returns (squad, is_loi, is_squad_list)."""
+    pmap = pmap or _pmap()
+    seen, squad = set(), []
+    for s in [x.strip() for x in (m.get("players") or "").split(";") if x.strip()]:
+        s = ALIAS.get(s, s)                       # merged duplicates point at one slug
+        if s in seen: continue
+        p = pmap.get(s)
+        if p:
+            seen.add(s); squad.append(p)
+    loi = is_loi_match(m, squad)
+    sq  = len(squad) >= SQUAD_LIST_AT
+    if sq:
+        played = [p for p in squad if (p["season"]["mins"] or 0) > 0]
+        if played:
+            squad = sorted(played, key=lambda p: -(p["season"]["mins"] or 0))
+        sq = len(squad) >= SQUAD_LIST_AT
+    return squad, loi, sq
 
 def match_payload():
     """Every match with at least one tracked player, for the client-side renderer."""
-    pmap = {p["slug"]: p for p in PLAYERS}
+    pmap = _pmap()
     mc = []
     for m in MATCHES:
         if not m.get("kickoff"): continue
-        involved = []
-        for s in [x.strip() for x in (m.get("players") or "").split(";") if x.strip()]:
-            p = pmap.get(s)
-            if p: involved.append(dict(slug=s, n=esc(p["n"]), club=esc(p["club"]),
-                                       ini=initials(p["n"]), pos=p["pos"],
-                                       img=(1 if (not p.get("photo") and s in HAVE_IMG) else 0),
-                                       photo=(p.get("photo") or "")))
+        squad, loi, sq = match_squad(m, pmap)
+        involved = [dict(slug=p["slug"], n=esc(p["n"]), club=esc(p["club"]),
+                         ini=initials(p["n"]), pos=p["pos"],
+                         img=(1 if (not p.get("photo") and p["slug"] in HAVE_IMG) else 0),
+                         photo=(p.get("photo") or "")) for p in squad]
         if not involved: continue
         mc.append(dict(id=match_id(m), kickoff=m["kickoff"], comp=esc(m.get("competition","")),
                        home=esc(m.get("home","")), away=esc(m.get("away","")),
@@ -659,7 +761,7 @@ def match_payload():
                        hs=m.get("home_score",""), as_=m.get("away_score",""),
                        status=(m.get("status") or "scheduled"), minute=m.get("minute",""),
                        hp=(m.get("home_pens") or ""), ap=(m.get("away_pens") or ""),
-                       loi=(1 if is_loi_match(m, involved) else 0),
+                       loi=(1 if loi else 0), sq=(1 if sq else 0),
                        players=involved))
     return mc
 
@@ -796,7 +898,7 @@ def build_index():
         except Exception: return None
     todays = [m for m in mc if _kd(m) == _today]
     live_n = sum(1 for m in todays if m["status"] == "live")
-    t_players = sum(len(m["players"]) for m in todays)
+    t_players = len({p["slug"] for m in todays for p in m["players"]})   # a player in two games is one player
     tot_g = sum(x["g"] for x in wk); tot_a = sum(x["a"] for x in wk)
     today_line = (f'<b>{live_n} live now</b> · ' if live_n else "") + \
                  (f'<b>{len(todays)} match{"es" if len(todays)!=1 else ""}</b> with <b>{t_players}</b> Irish players today' if todays else "No Irish players in action today")
@@ -1724,7 +1826,7 @@ def events_block(m, involved):
             f'<div class="timeline">{rows}</div>'
             f'<div class="rmnote">Irish players in <b class="ir">green</b>. Goals, cards and missed penalties only.</div>')
 
-def build_match(m, involved):
+def build_match(m, involved, squad_list=False):
     hs, as_ = m.get("home_score",""), m.get("away_score","")
     status = (m.get("status") or "scheduled")
     when = f'<span class="ko-local" data-ko="{esc(m.get("kickoff",""))}">{m.get("kickoff","")[11:16]} · {m.get("kickoff","")[:10]}</span>'
@@ -1755,7 +1857,7 @@ def build_match(m, involved):
     <script>window.FB_MATCHES=[{json.dumps(dict(id=match_id(m), kickoff=m.get("kickoff",""), comp=esc(m.get("competition","")), home=esc(m.get("home","")), away=esc(m.get("away","")), hs=hs, as_=as_, status=status, minute=m.get("minute",""), players=[], loi=0))}];</script>
     <div class="mactions"><button class="starbtn" data-favm="{match_id(m)}" aria-pressed="false">★ <span>Follow match</span></button>
       <span class="mhint">Email updates when the score changes</span></div>
-    <div class="sec"><h2>Irish players in this match</h2>
+    <div class="sec"><h2>{"Irish players in these squads" if squad_list else "Irish players in this match"}</h2>
       <span class="more" style="border:0">{len(involved)}</span></div>
     <div class="tiergroup">{rows}</div>
     '''
@@ -2175,12 +2277,12 @@ for p in PLAYERS:
     open(f"{OUT}/player/{p['slug']}.html","w").write(build_player(p))
 
 os.makedirs(f"{OUT}/match", exist_ok=True)
-_pmap = {p["slug"]: p for p in PLAYERS}
+_PM = _pmap()
 _nmatch = 0
 for m in MATCHES:
-    inv = [_pmap[s] for s in [x.strip() for x in (m.get("players") or "").split(";") if x.strip()] if s in _pmap]
+    inv, _loi, _sq = match_squad(m, _PM)
     if not inv: continue
-    open(f"{OUT}/match/{match_id(m)}.html","w").write(build_match(m, inv))
+    open(f"{OUT}/match/{match_id(m)}.html","w").write(build_match(m, inv, _sq))
     _nmatch += 1
 print(f"  + {_nmatch} match pages")
 

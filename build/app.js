@@ -265,10 +265,11 @@
   function pile(m, root, n) {
     var list = m.players.slice(0, n);
     return '<span class="pile">' + list.map(function (p) { return avatarHtml(p, root); }).join('') + '</span>' +
-           '<span class="pilen">' + m.players.length + ' Irish players</span>';
+           '<span class="pilen">' + m.players.length + ' Irish players in these squads</span>';
   }
   function playersHtml(m, root, limit) {
-    if (m.loi) return pile(m, root, 6);
+    /* A squad-sized list gets faces + a count instead of 40 name chips. */
+    if (m.sq) return pile(m, root, 6);
     var list = limit ? m.players.slice(0, limit) : m.players;
     var h = list.map(function (p) { return chip(p, root); }).join('');
     if (limit && m.players.length > limit) h += '<span class="mcmore">+' + (m.players.length - limit) + ' more</span>';
@@ -281,7 +282,7 @@
   }
   function card(m, now, limit, root) {
     root = root || '';
-    return '<div class="mccard" data-href="' + root + 'match/' + m.id + '.html" role="link" tabindex="0">' +
+    return '<div class="mccard' + (m.loi || m.sq ? ' loi' : '') + '" data-href="' + root + 'match/' + m.id + '.html" role="link" tabindex="0">' +
            '<div class="mcrow">' +
              '<span class="mccomp">' + m.comp + '</span>' + statusChip(m, now) +
            '</div>' +
@@ -368,7 +369,7 @@
     ms.forEach(function (m) { if (!byComp[m.comp]) { byComp[m.comp] = []; comps.push(m.comp); } byComp[m.comp].push(m); });
     box.innerHTML = comps.map(function (c) {
       var rows = byComp[c].map(function (m) {
-        return '<div class="fxmatch" data-href="match/' + m.id + '.html" role="link" tabindex="0">' +
+        return '<div class="fxmatch' + (m.loi || m.sq ? ' loi' : '') + '" data-href="match/' + m.id + '.html" role="link" tabindex="0">' +
                '<div class="fxt"><div class="h">' + m.home + bdg(m.hb, 'sm') + '</div>' + midRow(m, now) + '<div class="a">' + bdg(m.ab, 'sm') + m.away + '</div></div>' +
                '<div class="fxp">' + playersHtml(m, '', 0) + '</div></div>';
       }).join('');
@@ -414,7 +415,7 @@
     if (more) {
       if (all.length > shown.length) {
         more.style.display = '';
-        more.textContent = 'See all ' + all.length + ' →';
+        more.textContent = 'See all →';
       } else {
         more.style.display = 'none';
       }
