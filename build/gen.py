@@ -185,6 +185,7 @@ EVENTS = {}
 LINEUPS = {}
 ALIAS = {}
 TRANSFERS = {}
+FMIDS = {}
 
 def _load_transfers():
     """data/api/transfers.csv — every club move, oldest first per player.
@@ -899,6 +900,36 @@ def is_loi_match(m, squad):
 def _pmap():
     return {p["slug"]: p for p in PLAYERS}
 
+def _load_fmids():
+    """match -> fotmob id, read from scraper/match_index.json. Every entry's
+       url carries the id of the exact leg in its fragment. The id is what
+       /api/live asks the source about, so no slug matching is ever involved
+       in patching a live score."""
+    path = os.path.join(HERE, "..", "scraper", "match_index.json")
+    out = {}
+    if not os.path.exists(path):
+        return out
+    try:
+        idx = json.load(open(path, encoding="utf-8"))
+    except Exception:
+        return out
+    for e in idx:
+        url = e.get("url") or ""
+        frag = url.rsplit("#", 1)
+        if len(frag) != 2 or not frag[1].isdigit():
+            continue
+        k = ((e.get("kickoff") or "")[:16],
+             _club_key(e.get("home")), _club_key(e.get("away")))
+        out[k] = frag[1]
+        out[((e.get("kickoff") or "")[:10],) + k[1:]] = frag[1]
+    return out
+
+def fotmob_id(m):
+    if not FMIDS:
+        FMIDS.update(_load_fmids() or {"": ""})   # sentinel so a missing file loads once
+    k = ((m.get("kickoff") or "")[:16], _club_key(m.get("home")), _club_key(m.get("away")))
+    return FMIDS.get(k) or FMIDS.get(((m.get("kickoff") or "")[:10],) + k[1:], "")
+
 # How much a competition is worth when picking which two matches lead the
 # homepage. Matched longest-name-first, so "Champions League Qualification"
 # doesn't get scored as "Champions League".
@@ -1040,7 +1071,7 @@ def match_payload():
                        status=(m.get("status") or "scheduled"), minute=m.get("minute",""),
                        hp=(m.get("home_pens") or ""), ap=(m.get("away_pens") or ""),
                        loi=(1 if loi else 0), sq=(1 if sq else 0),
-                       pull=match_pull(m, squad),
+                       pull=match_pull(m, squad), fmid=fotmob_id(m),
                        players=involved))
     return mc
 
@@ -2414,7 +2445,7 @@ def build_match(m, involved, squad_list=False):
       </div>
     </div>
     {events_block(m, involved)}
-    <script>window.FB_MATCHES=[{json.dumps(dict(id=match_id(m), kickoff=m.get("kickoff",""), comp=esc(m.get("competition","")), home=esc(m.get("home","")), away=esc(m.get("away","")), hs=hs, as_=as_, status=status, minute=m.get("minute",""), players=[], loi=0))}];</script>
+    <script>window.FB_MATCHES=[{json.dumps(dict(id=match_id(m), kickoff=m.get("kickoff",""), comp=esc(m.get("competition","")), home=esc(m.get("home","")), away=esc(m.get("away","")), hs=hs, as_=as_, status=status, minute=m.get("minute",""), players=[], loi=0, fmid=fotmob_id(m)))}];</script>
     <div class="mactions"><button class="starbtn" data-favm="{match_id(m)}" aria-pressed="false">★ <span>Follow match</span></button>
       <span class="mhint">Email updates when the score changes</span></div>
     {lineups}

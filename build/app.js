@@ -455,34 +455,76 @@
     }
   }
 
-  /* The scraper publishes /live.json every few minutes. Pull it in so scores
-     move without waiting for a rebuild; fall back to the built-in data. */
+  /* Live scores. First choice: /api/live, which asks the source directly
+     the moment a browser polls, edge-cached ~25s — genuinely live. Fallback:
+     the old live.json file the scraper commits, for when the function is
+     down. The old path alone is why scores froze for hours: it depends on
+     GitHub running a schedule it frequently just doesn't run. */
+  function liveWindow(m, now) {
+    if (m.status === 'ft') return false;          // final is final
+    if (m.status === 'live') return true;
+    // "scheduled" long past kick-off means the built page is stale — keep
+    // asking for up to five hours so a late visitor still gets the result
+    return now >= ko(m) - 20 * 60 * 1000 && now - ko(m) <= 5 * 3600 * 1000;
+  }
+
+  async function refreshApi(now) {
+    var want = (window.FB_MATCHES || []).filter(function (m) {
+      return m.fmid && liveWindow(m, now);
+    });
+    if (!want.length) return true;            // nothing on — nothing to ask
+    var ids = [];
+    want.forEach(function (m) { if (ids.indexOf(m.fmid) < 0) ids.push(m.fmid); });
+    var res = await fetch('/api/live?ids=' + ids.slice(0, 20).join(','), { cache: 'no-store' });
+    if (!res.ok) return false;
+    var data = await res.json();
+    if (!data || !data.matches) return false;
+    var stamp = data.updated ? Date.parse(data.updated) : Date.now();
+    want.forEach(function (m) {
+      var l = data.matches[m.fmid];
+      if (!l) return;
+      m.status = l.status || m.status;
+      if (l.minute !== undefined) { m.minute = l.minute; m._stamp = stamp; }
+      if (l.hs !== null && l.hs !== undefined) m.hs = l.hs;
+      if (l.as !== null && l.as !== undefined) m.as_ = l.as;
+    });
+    render();
+    var el = document.querySelector('.updated');
+    if (el && data.updated) el.setAttribute('data-stamp', data.updated);
+    return true;
+  }
+
+  async function refreshLegacy() {
+    var res = await fetch('/live.json?t=' + Date.now(), { cache: 'no-store' });
+    if (!res.ok) return;
+    var data = await res.json();
+    var list = Array.isArray(data) ? data : (data.matches || []);
+    if (!list.length) return;
+
+    if (data.updated) { var st = Date.parse(data.updated); if (!isNaN(st)) LIVE_STAMP = st; }
+    var byId = {};
+    (window.FB_MATCHES || []).forEach(function (m) { byId[m.id] = m; });
+
+    list.forEach(function (l) {
+      var m = byId[l.id];
+      if (!m) return;                       // only update what the site knows about
+      if (l.status) m.status = l.status;
+      if (l.minute !== undefined) m.minute = l.minute;
+      if (l.hs !== undefined && l.hs !== null) m.hs = l.hs;
+      if (l.as_ !== undefined && l.as_ !== null) m.as_ = l.as_;
+      if (l.home_score !== undefined && l.home_score !== null) m.hs = l.home_score;
+      if (l.away_score !== undefined && l.away_score !== null) m.as_ = l.away_score;
+    });
+    render();
+    var stamp = document.querySelector('.updated');
+    if (stamp && data.updated) stamp.setAttribute('data-stamp', data.updated);
+  }
+
   async function refresh() {
     try {
-      var res = await fetch('/live.json?t=' + Date.now(), { cache: 'no-store' });
-      if (!res.ok) return;
-      var data = await res.json();
-      var list = Array.isArray(data) ? data : (data.matches || []);
-      if (!list.length) return;
-
-      if (data.updated) { var st = Date.parse(data.updated); if (!isNaN(st)) LIVE_STAMP = st; }
-      var byId = {};
-      (window.FB_MATCHES || []).forEach(function (m) { byId[m.id] = m; });
-
-      list.forEach(function (l) {
-        var m = byId[l.id];
-        if (!m) return;                       // only update what the site knows about
-        if (l.status) m.status = l.status;
-        if (l.minute !== undefined) m.minute = l.minute;
-        if (l.hs !== undefined && l.hs !== null) m.hs = l.hs;
-        if (l.as_ !== undefined && l.as_ !== null) m.as_ = l.as_;
-        if (l.home_score !== undefined && l.home_score !== null) m.hs = l.home_score;
-        if (l.away_score !== undefined && l.away_score !== null) m.as_ = l.away_score;
-      });
-      render();
-      var stamp = document.querySelector('.updated');
-      if (stamp && data.updated) stamp.setAttribute('data-stamp', data.updated);
-    } catch (e) { /* offline or no live feed — the built page still stands */ }
+      if (await refreshApi(Date.now())) return;
+    } catch (e) { /* fall through to the file */ }
+    try { await refreshLegacy(); } catch (e) { /* offline — the page still stands */ }
   }
 
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', render);
@@ -490,7 +532,7 @@
   setInterval(render, 30000);
 
   refresh();
-  setInterval(refresh, 60000);
+  setInterval(refresh, 30000);
 })();
 
 /* ---------- FOLLOW PROMPT ----------
