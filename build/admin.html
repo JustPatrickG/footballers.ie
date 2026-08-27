@@ -1004,10 +1004,21 @@ function articleView(){
       el.oninput=el.onchange=()=>{
         const row=d.rows[selectedArticle]; if(!row) return;
         row[f]=el.value;
-        if(f==='headline' && !row.slug) row.slug=slugify(el.value);
+        if(f==='headline' && !row.slug){
+          row.slug=slugify(el.value);
+          const sl=v.querySelector('#f_slug'); if(sl) sl.value=row.slug;
+        }
         markDirty();
       };
     });
+    /* the slug is the url - tidy it when you leave the box, so what's in
+       there is exactly what the page ends up being called */
+    const slugEl=v.querySelector('#f_slug');
+    if(slugEl) slugEl.onblur=()=>{
+      const row=d.rows[selectedArticle]; if(!row) return;
+      const clean=slugify(slugEl.value||row.headline||'');
+      if(clean!==slugEl.value){ slugEl.value=clean; row.slug=clean; markDirty(); }
+    };
   },0);
   return v;
 }

@@ -547,6 +547,14 @@ img,svg,iframe{max-width:100%}
 .artrule{border:0;border-top:1px solid var(--line);margin:30px 0}
 [data-theme="pitch"] .artfig img{border-radius:16px}
 @media(max-width:700px){
+  /* one milestone at a time, swipe sideways for the rest */
+  .msgrid{display:flex;grid-template-columns:none;overflow-x:auto;gap:1px;
+    scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+  .msgrid::-webkit-scrollbar{display:none}
+  .msgrid .mscard{flex:0 0 100%;scroll-snap-align:start;scroll-snap-stop:always}
+  /* the three biggest countries, and nothing else */
+  .exgrid .exc{display:none}
+  .exgrid .exc.top3{display:flex}
   .artfig{margin:20px 0}
   .artfig figcaption{font-size:12.5px}
   .artcontent blockquote{padding-left:14px;margin:20px 0}
@@ -920,9 +928,9 @@ a.intlblock.lnk:hover{border-color:var(--teal)}
 .fxmatch .fxt .mid.sc{color:var(--white);font-weight:700;font-size:16px}
 .fxmatch .fxt .mid.lv{color:var(--red)}
 .fxmatch .fxp{display:flex;align-items:center;gap:6px;flex-wrap:wrap;margin-top:8px}
-/* League of Ireland games: the player list is a squad, not a teamsheet, so the
-   card is marked with a green edge to say "this one reads differently". */
-.mccard.loi,.fxmatch.loi{box-shadow:inset 3px 0 0 #00B36B}
+/* League of Ireland games: no border, just the competition label picking up
+   the green. The label already says what it is — this only tints it. */
+.mccard.loi .mccomp{color:#00B36B}
 
 /* ---- lineups ------------------------------------------------------------
    Two halves of a pitch, away at the top, home at the bottom. Rows come from

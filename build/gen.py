@@ -852,6 +852,25 @@ def _pmap():
 
 SQUAD_LIST_AT = 8      # this many tracked players is a squad, not a teamsheet
 
+def _lineup_players(m, pmap):
+    """The tracked players actually named for this match, starters first then
+       bench, in the order they appear on the teamsheet. Empty when there's no
+       lineup for it yet."""
+    lu = _match_lineup(m)
+    if not lu: return []
+    out, seen = [], set()
+    for role in ("start", "bench"):
+        for side in ("home", "away"):
+            sd = lu.get(side)
+            if not sd: continue
+            for pl in sd[role]:
+                slug = ALIAS.get(pl["slug"], pl["slug"])
+                if not slug or slug in seen: continue
+                p = pmap.get(slug)
+                if p:
+                    seen.add(slug); out.append(p)
+    return out
+
 def match_squad(m, pmap=None):
     """The tracked players attached to a match, resolved to player records.
 
@@ -875,6 +894,13 @@ def match_squad(m, pmap=None):
         if p:
             seen.add(s); squad.append(p)
     loi = is_loi_match(m, squad)
+
+    # If there's a teamsheet, that IS the answer. The players column is every
+    # tracked player at both clubs, which for an Irish club is the whole roster
+    # - thirty-odd names on a card for a game eleven of them will start.
+    named = _lineup_players(m, pmap)
+    if named:
+        return named, loi, len(named) >= SQUAD_LIST_AT
     sq  = len(squad) >= SQUAD_LIST_AT
     if sq:
         played = [p for p in squad if (p["season"]["mins"] or 0) > 0]
@@ -943,7 +969,7 @@ def build_index():
 
     pool = [a for a in ARTICLES if _unexpired(a)]
     pool.sort(key=lambda a: (0 if _is_now(a) else 1))     # stable: NOW first, then newest
-    HEAD = [(a.get("tag",""), a.get("headline",""), a.get("standfirst",""), a["slug"], _is_now(a), partner_of(a))
+    HEAD = [(a.get("tag",""), a.get("headline",""), a.get("standfirst",""), art_slug(a), _is_now(a), partner_of(a))
             for a in pool[:5]] or [(t,h,s,sl,False,None) for (t,h,s,sl) in NEWS]
     HEAD_IS_ARTICLE = bool(pool)
     slides = "".join(
@@ -1063,8 +1089,19 @@ def build_index():
     except Exception: pass
     by_c = {}
     for p in PLAYERS: by_c.setdefault(country_of(p["league"]), []).append(p)
-    ex = "".join(f'<a class="exc" href="country/{country_slug(c)}.html"><b>{esc(c)}</b><span>{len(by_c[c])}</span></a>'
-                 for c in sorted(by_c, key=lambda c: (-len(by_c[c]), c))[:12])
+    # "Other" is a bucket, not a country — it sorts last and is the first thing
+    # dropped on a narrow screen, where only the top three are shown.
+    _order = sorted(by_c, key=lambda c: (c == "Other", -len(by_c[c]), c))[:12]
+    _rank = 0
+    _tiles = []
+    for c in _order:
+        cls = "exc"
+        if c != "Other":
+            _rank += 1
+            if _rank <= 3: cls += " top3"
+        _tiles.append(f'<a class="{cls}" href="country/{country_slug(c)}.html">'
+                      f'<b>{esc(c)}</b><span>{len(by_c[c])}</span></a>')
+    ex = "".join(_tiles)
     explore = (f'<div class="sec"><h2>Where are the Irish?</h2><a class="more" href="clubs.html">Every country →</a></div>'
                f'<div class="exgrid">{ex}</div>')
     moments = (f'<div class="sec"><h2>Milestones coming up</h2></div><div class="msgrid">{msh}</div>') if msh else ""
@@ -1167,7 +1204,13 @@ def build_index():
                  "", "index.html", body, canonical="")
 
 
-def art_link(a, root=""): return f'{root}news/{a["slug"]}.html'
+def art_slug(a):
+    """The article's filename. Whatever gets typed into the slug box — capitals,
+       spaces, a stray full stop — becomes a clean url, and because the page,
+       the links and the sitemap all come through here they can't disagree."""
+    return club_slug((a.get("slug") or "").strip() or a.get("headline") or "article")
+
+def art_link(a, root=""): return f'{root}news/{art_slug(a)}.html'
 
 def art_img(a, root="", cls="artthumb"):
     """No image? Render nothing at all — no placeholder block."""
@@ -1308,7 +1351,7 @@ def build_news():
                  "", "news.html", body, canonical="news.html")
 
 def build_author(w):
-    cards = '<div class="artgrid">' + "".join(art_card(a) for a in w["arts"]) + '</div>'
+    cards = '<div class="artgrid">' + "".join(art_card(a, "../") for a in w["arts"]) + '</div>'
     body = f'''
     <a class="crumb" data-back href="../news.html">← News</a>
     <div class="pagehead authhead">{writer_avatar(w, "../", "lg")}
@@ -1451,7 +1494,7 @@ def build_article(a):
     '''
     return shell(f'{a.get("headline","")} — footballers.ie',
                  a.get("standfirst",""), "../", "news.html", body,
-                 canonical=f'news/{a["slug"]}.html')
+                 canonical=f'news/{art_slug(a)}.html')
 
 
 LEAGUE_COUNTRY = {
@@ -2633,7 +2676,7 @@ def build_sitemap():
             "ireland.html", "fixtures.html", "milestones.html", "compare.html", "newsletter.html", "alerts.html"]
     urls += [f"club/{club_slug(c)}.html" for c in sorted(set(p["club"] for p in PLAYERS))]
     urls += [f"player/{p['slug']}.html" for p in PLAYERS]
-    urls += [f"news/{a['slug']}.html" for a in ARTICLES]
+    urls += [f"news/{art_slug(a)}.html" for a in ARTICLES]
     urls += [f"author/{w['slug']}.html" for w in authors()]
     items = "".join(f"  <url><loc>{SITE_URL}/{u}</loc></url>\n" for u in urls)
     return f'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n{items}</urlset>\n'
@@ -2676,7 +2719,7 @@ os.makedirs(f"{OUT}/author", exist_ok=True)
 for _w in authors():
     open(f"{OUT}/author/{_w['slug']}.html","w").write(build_author(_w))
 for _a in ARTICLES:
-    open(f"{OUT}/news/{_a['slug']}.html","w").write(build_article(_a))
+    open(f"{OUT}/news/{art_slug(_a)}.html","w").write(build_article(_a))
 open(f"{OUT}/ireland.html","w").write(build_ireland())
 open(f"{OUT}/fixtures.html","w").write(build_fixtures())
 open(f"{OUT}/milestones.html","w").write(build_milestones())
