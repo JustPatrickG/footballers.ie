@@ -702,8 +702,7 @@ def shell(title, desc, root, active, body, extra_head="", canonical="", body_att
   </div>
   Every Irish player at a professional club — abroad, senior international and League of Ireland
   <div class="footlinks">
-    <a href="{root}faq.html">Where does this data come from?</a>
-    <a href="{root}about.html">About &amp; methodology</a>
+    <a href="{root}faq.html">FAQ</a>
     <a href="{root}where-are-the-irish.html">Where are the Irish?</a>
     <a href="{root}alerts.html">Alerts</a>
   </div>
@@ -1236,7 +1235,7 @@ def build_index():
 
     {explore}
 
-    <div class="sec" style="margin-top:26px"><h2>Form guide</h2><span class="more" style="border:0">FotMob ratings averaged over this season · <a href="about.html#ratings">how it works</a></span></div>
+    <div class="sec" style="margin-top:26px"><h2>Form guide</h2><span class="more" style="border:0">FotMob ratings averaged over this season · <a href="faq.html#what-does-a-rating-of-8-52-actually-mean">how it works</a></span></div>
     {block("Abroad", abroad, "abroad.html")}
     {block("League of Ireland", loi, "league-of-ireland.html")}
 
@@ -1696,60 +1695,55 @@ def date_key(d):
 
 FAQ = [
   ("Where does this data come from?",
-   "match data is scraped from certain live score football apps, more in depth stuff like nationalit(ies), height, weight, transfer value is from another site that starts with transfer and ends with market."),
+   "Fotmob, sofascore, transfermarket, \u2018allegedly\u2019."),
   ("Who calculates the ratings?",
-   "the ratings is from said football live score app."),
+   "Same answer, Fotmob, sofascore, transfermarket, \u2018allegedly\u2019."),
   ("What does a rating of 8.52 actually mean?",
-   "idk ask fotmob."),
+   "What do you think it means, stupid fucking questions."),
   ("Can I compare ratings between leagues?",
-   "i mean not really obhiously premier league is harder than the third divison of israeli football."),
+   "Yep premier league and the israeli 10th division are completely comparable."),
   ("Which matches are included?",
-   "any match that an irish professional footballer is playing in should be included, if it\u2019s not then report an issue and we\u2019ll get it added."),
+   "This is a decent question, so the goal is to have every single professional footballer who is eligible for ireland on the site, and all their matches included. At the time of writing we have nearly 700 players on the site and 98% have all of their matches displayed on the site."),
   ("How often is it updated?",
-   "there are several different scrapers that run automatically at different times, but there\u2019s at least one every hour pulling in fresh data, and if there\u2019s a match live then the score is updated every minute."),
+   "There are loads of automated scrapes of data, for make sure that every player\u2019s club is correct once a day, but we update every live match score every 30 seconds."),
   ("How is a player classified as Irish?",
-   "if you\u2019re irish eligible and not locked into another country or better.."),
+   "As long as they\u2019re eligible to play for ireland they should be here."),
   ("What about Northern Ireland?",
-   "you mean the north of ireland?? mate idk ask fotmob ffs."),
+   "You mean the North of Ireland?? Na obviously if they\u2019re not eligible to play for the republic of ireland then they\u2019re not on the site."),
+  ("Are the lineups official?",
+   "well when a match has started yes they are the correct line up\u2019s but before a match there will either be a predicted line up displayed or the line up from each team\u2019s last match displayed."),
+  ("How do I get in touch?",
+   "If there\u2019s an issue with the site, you can submit a report, the button\u2019s in the bottom right of every screen. If it\u2019s urgent or you just want to get in touch with us specifically then support@matchweek.ie is your best bet."),
+  ("What do you collect about me when I use the site?",
+   "visits and actions on the site are measured with an analytics tool (PostHog, stored in the EU); if you give an email \u2014 newsletter, alerts, following a player then your activity is linked to it."),
+  ("What do you do with my email?",
+   "depends on what you checked when you gave us your email, one or more of these things: we\u2019ll send you newsletter\u2019s, we\u2019ll send you a wide range of player alerts on player\u2019s you follow, again you choose all this when giving us your email and if you want to change your preferences you can submit a report or email privacy@matchweek.ie."),
+  ("How do I get my data deleted?",
+   "you can submit a report in the report box, or you can email datadeletion@matchweek.ie"),
+  ("Do you use cookies?",
+   "The analytics tool keeps an identifier in your browser so it can tell a returning visitor from a new one \u2014 that is the only tracking here. No ads, no ad networks, nothing follows you to other sites. The site also saves your followed players and settings in your own browser, not on our servers."),
 ]
 
 def build_about():
-    body = f'''
-    <div class="pagehead"><h1>About footballers.ie</h1><p>Straight answers, in the founder's own words.</p></div>
-
-    <div class="sec"><h2 id="who">Who counts as Irish?</h2></div>
-    <div class="abox"><p>if you're irish eligible and not locked into another country or better..</p>
-      <p>Northern Ireland? you mean the north of ireland?? mate idk ask fotmob ffs.</p>
-      <p>Right now that's <b>{len(PLAYERS)}</b> players. Think someone's missing or shouldn't be here? Use the Report button on any page.</p></div>
-
-    <div class="sec"><h2 id="ratings">How do the ratings work?</h2></div>
-    <div class="abox"><p>the ratings is from said football live score app. idk ask fotmob.</p>
-      <p>Can you compare them between leagues? i mean not really obhiously premier league is harder than the third divison of israeli football.</p>
-      <p>Everywhere except a match row, the number is the average of a player's match ratings this season.</p></div>
-
-    <div class="sec"><h2 id="data">Where does the data come from?</h2></div>
-    <div class="abox"><p>match data is scraped from certain live score football apps, more in depth stuff like nationalit(ies), height, weight, transfer value is from another site that starts with transfer and ends with market.</p>
-      <p>there are several different scrapers that run automatically at different times, but there's at least one every hour pulling in fresh data, and if there's a match live then the score is updated every minute.</p>
-      <p>The footer of every page shows when the data last updated.</p></div>
-
-    <div class="sec"><h2 id="team">Contact</h2></div>
-    <div class="abox"><p>Contact: contact@footballers.ie should work but to be safe id submit your question or whatever in the submit a report box.</p></div>
-
-    <div class="sec"><h2 id="privacy">Your data</h2></div>
-    <div class="abox"><p>If you follow players or subscribe: it's saved securely and added to our email list. We don't sell it, and every email has an unsubscribe link.</p></div>
-    '''
-    return shell("About — footballers.ie", "What footballers.ie is, who counts as Irish, and how the ratings work.", "", "about.html", body, canonical="about.html")
+    """The About page merged into the FAQ — this stub keeps old links alive."""
+    return ('<!doctype html><meta charset="utf-8">'
+            '<meta http-equiv="refresh" content="0; url=/faq.html">'
+            '<link rel="canonical" href="https://footballers.ie/faq.html">'
+            '<meta name="robots" content="noindex"><title>Moved</title>'
+            '<p>This page moved to <a href="/faq.html">the FAQ</a>.</p>')
 
 def build_faq():
+    def _faq_id(q):
+        return club_slug(q)[:40].strip("-") or "q"
     items = "".join(
-        f'<details class="faq"><summary>{esc(q)}</summary><p>{esc(a)}</p></details>'
+        f'<details class="faq" id="{_faq_id(q)}"><summary>{esc(q)}</summary><p>{esc(a)}</p></details>'
         for q, a in FAQ)
-    body = (f'<div class="pagehead"><h1>Where does this data come from?</h1>'
-            f'<p>How the numbers on this site are collected, what they mean, and what they don\'t.</p></div>'
+    body = (f'<div class="pagehead"><h1>FAQ</h1>'
+            f'<p>Straight answers, in the founder\'s own words.</p></div>'
             f'{items}'
             f'<div class="faqfoot">Still not answered? Hit <b>Report</b> in the corner of any page.</div>')
-    return shell("Where the data comes from — footballers.ie",
-                 "How footballers.ie collects and calculates its data.",
+    return shell("FAQ — footballers.ie",
+                 "How footballers.ie collects its data, who counts as Irish, and what the site keeps about you.",
                  "", "faq.html", body, canonical="faq.html")
 
 
@@ -2794,7 +2788,7 @@ def build_404():
     return shell("Page not found — footballers.ie", "That page doesn't exist on Footballers.", "/", "", body)
 
 def build_sitemap():
-    urls = ["", "news.html", "faq.html", "about.html", "where-are-the-irish.html", "players.html", "abroad.html", "league-of-ireland.html", "clubs.html",
+    urls = ["", "news.html", "faq.html", "where-are-the-irish.html", "players.html", "abroad.html", "league-of-ireland.html", "clubs.html",
             "ireland.html", "fixtures.html", "milestones.html", "compare.html", "newsletter.html", "alerts.html"]
     urls += [f"club/{club_slug(c)}.html" for c in sorted(set(p["club"] for p in PLAYERS))]
     urls += [f"player/{p['slug']}.html" for p in PLAYERS]
