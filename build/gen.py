@@ -181,10 +181,65 @@ def _dedupe_players(players, manual_rows):
     return [p for p in players if p["slug"] not in dropped], alias
 
 EVENTS = {}
+LINEUPS = {}
+
+LINE_POS = {"gk":"GK","g":"GK","goalkeeper":"GK",
+            "def":"DEF","d":"DEF","defender":"DEF","cb":"DEF","lb":"DEF","rb":"DEF","wb":"DEF",
+            "mid":"MID","m":"MID","midfielder":"MID","dm":"MID","cm":"MID","am":"MID",
+            "att":"ATT","a":"ATT","f":"ATT","fw":"ATT","forward":"ATT","attacker":"ATT",
+            "st":"ATT","cf":"ATT","lw":"ATT","rw":"ATT","w":"ATT"}
+
+def _line_of(pos):
+    p = (pos or "").strip().lower()
+    if p in LINE_POS: return LINE_POS[p]
+    for word, line in (("goal","GK"),("keep","GK"),("defen","DEF"),("back","DEF"),
+                       ("midfield","MID"),("wing","ATT"),("attack","ATT"),("forward","ATT"),("strik","ATT")):
+        if word in p: return line
+    return "MID"
+
+def _load_lineups():
+    """data/api/lineups.csv — FotMob's teamsheet for a match, one row per player.
+
+         match_id,side,team,formation,status,updated,role,number,name,slug,pos,x,y
+
+       side    home|away
+       status  confirmed | predicted | last   (per side, repeated on every row)
+       role    start|bench
+       slug    our player slug when it's someone we track, blank otherwise —
+               the XI needs all eleven names, not just the Irish ones
+       x,y     FotMob's pitch coordinates 0-100 if it gives them; optional,
+               the formation string is enough to lay out the lines
+
+       Everything past match_id/side/role/name is optional. No file, or no rows
+       for a match, and the match page falls back to the squad list."""
+    out = {}
+    for r in _rows("api/lineups.csv"):
+        mid  = (r.get("match_id") or "").strip()
+        side = (r.get("side") or "").strip().lower()
+        name = (r.get("name") or "").strip()
+        if not (mid and side in ("home","away") and name): continue
+        sd = out.setdefault(mid, {}).setdefault(side, dict(
+            team=(r.get("team") or "").strip(),
+            formation=(r.get("formation") or "").strip(),
+            status=(r.get("status") or "").strip().lower() or "predicted",
+            updated=(r.get("updated") or "").strip(),
+            start=[], bench=[]))
+        row = dict(name=name, slug=(r.get("slug") or "").strip(),
+                   num=(r.get("number") or "").strip(),
+                   pos=(r.get("pos") or "").strip(), line=_line_of(r.get("pos")),
+                   x=_num(r.get("x")), y=_num(r.get("y")))
+        (sd["bench"] if (r.get("role") or "").strip().lower().startswith("b") else sd["start"]).append(row)
+    return out
+
+def _num(v):
+    try: return float(str(v).strip())
+    except (TypeError, ValueError): return None
+
 def load():
     tmdata = {r["slug"]: r for r in _rows("api/tm.csv") if r.get("slug")}
-    global EVENTS
+    global EVENTS, LINEUPS
     EVENTS = {}
+    LINEUPS = _load_lineups()
     for r in _rows("api/match_events.csv"):
         if r.get("match_id") and r.get("type"):
             EVENTS.setdefault(r["match_id"], []).append(r)
@@ -738,10 +793,21 @@ def match_squad(m, pmap=None):
     sq  = len(squad) >= SQUAD_LIST_AT
     if sq:
         played = [p for p in squad if (p["season"]["mins"] or 0) > 0]
-        if played:
-            squad = sorted(played, key=lambda p: -(p["season"]["mins"] or 0))
+        if played: squad = played
+        squad.sort(key=_squad_rank)
         sq = len(squad) >= SQUAD_LIST_AT
     return squad, loi, sq
+
+REGULAR_MINS = 450        # five full games — enough for an average to mean something
+
+def _squad_rank(p):
+    """Order a squad list so the names shown first are the ones worth showing:
+       regulars by rating, then everyone else by minutes. A 7.3 off two
+       substitute appearances shouldn't outrank the captain."""
+    try: rating = float(p.get("rating") or 0)
+    except ValueError: rating = 0.0
+    mins = p["season"]["mins"] or 0
+    return (0 if mins >= REGULAR_MINS else 1, -rating, -mins, p["n"])
 
 def match_payload():
     """Every match with at least one tracked player, for the client-side renderer."""
@@ -1826,6 +1892,143 @@ def events_block(m, involved):
             f'<div class="timeline">{rows}</div>'
             f'<div class="rmnote">Irish players in <b class="ir">green</b>. Goals, cards and missed penalties only.</div>')
 
+STATUS_LABEL = {"confirmed":"Confirmed lineup",
+                "predicted":"Predicted lineup",
+                "last":"Last lineup"}
+STATUS_NOTE = {"confirmed":"As announced before kick-off.",
+               "predicted":"FotMob's predicted eleven — not confirmed.",
+               "last":"The last eleven this side started. Not a prediction."}
+
+def _lines(side):
+    """Split a starting eleven into pitch rows. The formation string is the
+       best guide — FotMob lists the players in formation order. Without one,
+       fall back to grouping by position."""
+    st = side["start"]
+    if not st: return []
+    nums = [int(n) for n in re.findall(r"\d+", side.get("formation") or "")]
+    if nums and sum(nums) == len(st) - 1:        # formation excludes the keeper
+        rows, i = [[st[0]]], 1
+        for n in nums:
+            rows.append(st[i:i+n]); i += n
+        return rows
+    if nums and sum(nums) == len(st):            # or includes it
+        rows, i = [], 0
+        for n in nums:
+            rows.append(st[i:i+n]); i += n
+        return rows
+    order = {"GK":0,"DEF":1,"MID":2,"ATT":3}
+    rows = [[] for _ in range(4)]
+    for pl in st: rows[order.get(pl["line"], 2)].append(pl)
+    for r in rows:
+        if any(pl["x"] is not None for pl in r):
+            r.sort(key=lambda pl: (pl["x"] is None, pl["x"] or 0))
+    return [r for r in rows if r]
+
+def _short_names(lu):
+    """Surname only, unless two men on the pitch share one — then M. McClean."""
+    names = [pl["name"] for side in lu.values() for pl in side["start"] + side["bench"]]
+    surnames = {}
+    for n in names:
+        surnames[n.split()[-1]] = surnames.get(n.split()[-1], 0) + 1
+    out = {}
+    for n in names:
+        parts = n.split()
+        last = parts[-1]
+        out[n] = f"{parts[0][0]}. {last}" if (surnames[last] > 1 and len(parts) > 1) else last
+    return out
+
+def _pitch_player(pl, pmap, short_names, root="../"):
+    p = pmap.get(pl["slug"]) if pl["slug"] else None
+    face = (avatar(p, root, "sm") if p else
+            f'<span class="lunum">{esc(pl["num"] or "")}</span>')
+    short = short_names.get(pl["name"], pl["name"])
+    inner = (f'{face}<span class="lun">{esc(short)}</span>')
+    if p:
+        return f'<a class="lup ir" href="{root}player/{p["slug"]}.html" title="{esc(pl["name"])}">{inner}</a>'
+    return f'<span class="lup" title="{esc(pl["name"])}">{inner}</span>'
+
+def _bench_name(pl, pmap, root="../"):
+    p = pmap.get(pl["slug"]) if pl["slug"] else None
+    num = f'<span class="bn">{esc(pl["num"])}</span>' if pl["num"] else ""
+    if p:
+        return f'<a class="bp ir" href="{root}player/{p["slug"]}.html">{num}{esc(pl["name"])}</a>'
+    return f'<span class="bp">{num}{esc(pl["name"])}</span>'
+
+def lineup_block(m, involved):
+    """The teamsheet, when the scraper has one. Returns (html, players_left_over)
+       so the page can list the rest of the tracked squad underneath."""
+    lu = LINEUPS.get(match_id(m))
+    if not lu: return "", involved
+    pmap = {p["slug"]: p for p in PLAYERS}
+    short_names = _short_names(lu)
+    named = set()
+    halves = []
+    for side_key, cls in (("away","top"), ("home","bot")):
+        side = lu.get(side_key)
+        if not side: continue
+        rows = _lines(side)
+        for pl in side["start"] + side["bench"]:
+            if pl["slug"]: named.add(pl["slug"])
+        if cls == "bot": rows = list(reversed(rows))   # home attacks up the page
+        halves.append(
+            f'<div class="luhalf {cls}">' +
+            "".join('<div class="lurow">' + "".join(_pitch_player(pl, pmap, short_names) for pl in r) + '</div>'
+                    for r in rows) + '</div>')
+    if not halves: return "", involved
+
+    def head(side_key):
+        side = lu.get(side_key)
+        if not side: return '<div class="luteam"></div>'
+        st = STATUS_LABEL.get(side["status"], "Lineup")
+        return (f'<div class="luteam">{club_badge(side["team"] or m.get(side_key,""),"sm")}'
+                f'<b>{esc(side["team"] or m.get(side_key,""))}</b>'
+                f'<span class="luform">{esc(side["formation"])}</span>'
+                f'<span class="lustat {esc(lu[side_key]["status"])}">{st}</span></div>')
+
+    unconfirmed = [v for v in lu.values() if v.get("status") != "confirmed"]
+    note = ("Neither team is confirmed — a predicted eleven is FotMob's guess, a last lineup is the "
+            "eleven that side started last time." if len(unconfirmed) == 2 else
+            "One side isn't confirmed yet — see the label on each team."
+            if unconfirmed else "")
+
+    bench = ""
+    rows = []
+    for side_key in ("home","away"):
+        side = lu.get(side_key)
+        if side and side["bench"]:
+            rows.append(f'<div class="benchcol"><h4>{esc(side["team"] or m.get(side_key,""))}</h4>' +
+                        "".join(_bench_name(pl, pmap) for pl in side["bench"]) + '</div>')
+    if rows:
+        bench = (f'<div class="sec"><h2>Bench</h2></div><div class="benchgrid">{"".join(rows)}</div>')
+
+    left = [p for p in involved if p["slug"] not in named]
+    html = (f'<div class="sec"><h2>Lineups</h2></div>'
+            f'<div class="lucard">{head("away")}'
+            f'<div class="pitch">{"".join(halves)}</div>'
+            f'{head("home")}</div>'
+            + f'<div class="rmnote">{esc(note)} Irish players in <b class="ir">green</b>.</div>' 
+            + bench)
+    return html, left
+
+def squad_groups(players, heading, root="../"):
+    """Tracked players split by club, so a League of Ireland match reads as two
+       squads instead of one long list."""
+    if not players: return ""
+    by = {}
+    for p in players: by.setdefault(p["club"], []).append(p)
+    order = sorted(by, key=lambda c: (-len(by[c]), c))
+    out = f'<div class="sec"><h2>{heading}</h2><span class="more" style="border:0">{len(players)}</span></div>'
+    for c in order:
+        out += (f'<div class="sqhead">{club_badge(c,"sm")}<b>{esc(c)}</b>'
+                f'<span>{len(by[c])}</span></div><div class="tiergroup">'
+                + "".join(
+                    f'<a class="plrow" href="{root}player/{p["slug"]}.html">{avatar(p,root,"sm")}'
+                    f'<div class="nm">{esc(p["n"])}</div>'
+                    f'<div class="ev">{p["pos"]}</div><div class="mn">{rating_chip(p, True)}</div>{star(p)}</a>'
+                    for p in by[c])
+                + '</div>')
+    return out
+
 def build_match(m, involved, squad_list=False):
     hs, as_ = m.get("home_score",""), m.get("away_score","")
     status = (m.get("status") or "scheduled")
@@ -1839,10 +2042,13 @@ def build_match(m, involved, squad_list=False):
                  if status != "scheduled" and str(hs) != "" else
                  f'<div class="mscore ko"><span class="ko-time" data-ko="{esc(m.get("kickoff",""))}">'
                  f'{esc(m.get("kickoff","")[11:16])}</span></div>')
-    rows = "".join(
-        f'<a class="plrow" href="../player/{p["slug"]}.html">{avatar(p,"../","sm")}'
-        f'<div class="nm">{esc(p["n"])} <span class="cl">{esc(p["club"])}</span></div>'
-        f'<div class="ev">{p["pos"]}</div><div class="mn"></div>{star(p)}</a>' for p in involved)
+    lineups, rest = lineup_block(m, involved)
+    if lineups:
+        squads = squad_groups(rest, "Rest of the squad")
+    else:
+        squads = squad_groups(involved,
+                              "Irish players in these squads" if squad_list
+                              else "Irish players in this match")
     body = f'''
     <a class="crumb" data-back href="../fixtures.html">← Back</a>
     <div class="matchhead" id="mhead" data-mid="{match_id(m)}">
@@ -1857,9 +2063,8 @@ def build_match(m, involved, squad_list=False):
     <script>window.FB_MATCHES=[{json.dumps(dict(id=match_id(m), kickoff=m.get("kickoff",""), comp=esc(m.get("competition","")), home=esc(m.get("home","")), away=esc(m.get("away","")), hs=hs, as_=as_, status=status, minute=m.get("minute",""), players=[], loi=0))}];</script>
     <div class="mactions"><button class="starbtn" data-favm="{match_id(m)}" aria-pressed="false">★ <span>Follow match</span></button>
       <span class="mhint">Email updates when the score changes</span></div>
-    <div class="sec"><h2>{"Irish players in these squads" if squad_list else "Irish players in this match"}</h2>
-      <span class="more" style="border:0">{len(involved)}</span></div>
-    <div class="tiergroup">{rows}</div>
+    {lineups}
+    {squads}
     '''
     title = f'{m.get("home","")} v {m.get("away","")} — Irish players'
     return shell(f"{title} — footballers.ie",

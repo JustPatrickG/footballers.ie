@@ -261,15 +261,10 @@
     return '<a class="mcp" href="' + root + 'player/' + p.slug + '.html" title="' + p.n + '">' +
            avatarHtml(p, root) + '<span class="mcpn">' + p.n + '</span></a>';
   }
-  /* Overlapping faces + count — for LOI games where nearly everyone is Irish. */
-  function pile(m, root, n) {
-    var list = m.players.slice(0, n);
-    return '<span class="pile">' + list.map(function (p) { return avatarHtml(p, root); }).join('') + '</span>' +
-           '<span class="pilen">' + m.players.length + ' Irish players in these squads</span>';
-  }
   function playersHtml(m, root, limit) {
-    /* A squad-sized list gets faces + a count instead of 40 name chips. */
-    if (m.sq) return pile(m, root, 6);
+    /* Squad lists are already ordered best-first by the generator, so showing
+       three names and a count beats forty chips or a wall of faces. */
+    if (m.sq) limit = 3;
     var list = limit ? m.players.slice(0, limit) : m.players;
     var h = list.map(function (p) { return chip(p, root); }).join('');
     if (limit && m.players.length > limit) h += '<span class="mcmore">+' + (m.players.length - limit) + ' more</span>';

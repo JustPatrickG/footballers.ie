@@ -900,6 +900,52 @@ a.intlblock.lnk:hover{border-color:var(--teal)}
 /* League of Ireland games: the player list is a squad, not a teamsheet, so the
    card is marked with a green edge to say "this one reads differently". */
 .mccard.loi,.fxmatch.loi{box-shadow:inset 3px 0 0 #00B36B}
+
+/* ---- lineups ------------------------------------------------------------
+   Two halves of a pitch, away at the top, home at the bottom. Rows come from
+   the formation string, so a 4-2-3-1 draws as four lines. Tracked players get
+   a face and a green ring; everyone else is a shirt number. */
+.lucard{border:1px solid var(--line);border-radius:8px;background:var(--panel);overflow:hidden}
+.luteam{display:flex;align-items:center;gap:8px;padding:10px 14px;background:var(--panel2);
+  border-bottom:1px solid var(--line);flex-wrap:wrap}
+.luteam:last-child{border-bottom:0;border-top:1px solid var(--line)}
+.luteam b{font-size:14px;font-weight:600}
+.luform{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--mute);letter-spacing:.08em}
+.lustat{margin-left:auto;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--mute);border:1px solid var(--line);border-radius:20px;padding:2px 9px}
+.lustat.confirmed{color:#00B36B;border-color:#1d4f39}
+.pitch{
+  background:
+    linear-gradient(to bottom,transparent calc(50% - 1px),#ffffff14 50%,transparent calc(50% + 1px)),
+    radial-gradient(circle at 50% 50%,transparent 52px,#ffffff14 52px,#ffffff14 53px,transparent 53px),
+    repeating-linear-gradient(to bottom,#12331f 0 46px,#0f2c1b 46px 92px);
+  padding:14px 8px;display:flex;flex-direction:column;gap:2px;
+}
+.luhalf{display:flex;flex-direction:column;gap:10px;padding:8px 0;flex:1}
+.lurow{display:flex;justify-content:space-evenly;align-items:flex-start;gap:4px}
+.lup{display:flex;flex-direction:column;align-items:center;gap:3px;width:72px;min-width:0;text-align:center}
+.lup .pavatar.sm{width:30px;height:30px;border:2px solid transparent}
+.lup.ir .pavatar.sm{border-color:#00B36B}
+.lunum{width:30px;height:30px;border-radius:50%;background:#0c0c0c;border:2px solid #ffffff2e;
+  display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:600;color:#e8e8e8}
+.lun{font-size:10.5px;line-height:1.15;color:#dfe6e1;text-shadow:0 1px 2px #000;overflow-wrap:break-word}
+.lup.ir .lun{color:#fff;font-weight:600}
+.benchgrid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.benchcol{border:1px solid var(--line);border-radius:8px;background:var(--panel);padding:10px 12px}
+.benchcol h4{font-size:12px;font-weight:600;color:var(--mute);margin-bottom:6px}
+.bp{display:block;padding:4px 0;font-size:13px;color:var(--mute);border-bottom:1px solid #1B2122}
+.bp:last-child{border-bottom:0}
+.bp.ir{color:var(--white);font-weight:600}
+.bn{display:inline-block;min-width:20px;font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--mute)}
+.sqhead{display:flex;align-items:center;gap:8px;padding:8px 2px 6px;font-size:13px}
+.sqhead span{margin-left:auto;font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--mute)}
+.sqhead + .tiergroup{margin-bottom:14px}
+@media(max-width:640px){
+  .lup{width:62px}
+  .lun{font-size:9.5px}
+  .benchgrid{grid-template-columns:1fr}
+}
+[data-theme="pitch"] .lucard,[data-theme="pitch"] .benchcol{border-radius:16px}
 .pile{display:flex;align-items:center}
 .pile .pavatar.sm{width:22px;height:22px;margin-right:-7px;border:2px solid var(--panel);box-sizing:content-box}
 .pile .pavatar.sm span{font-size:8px}
