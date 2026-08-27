@@ -25,7 +25,6 @@
    "david-hurley",
    "donnacha-sammon",
    "dylan-connolly",
-   "ed-mccarthy",
    "edward-mccarthy",
    "eoin-doyle",
    "evan-caffrey",
@@ -82,7 +81,6 @@
    "david-hurley",
    "donnacha-sammon",
    "dylan-connolly",
-   "ed-mccarthy",
    "edward-mccarthy",
    "edwin-agbaje",
    "eoin-doyle",
@@ -140,8 +138,7 @@
    "luke-pearce",
    "padraig-amond",
    "ryan-okane",
-   "tom-lonergan",
-   "tommy-lonergan"
+   "tom-lonergan"
   ]
  },
  {
@@ -205,7 +202,6 @@
    "simon-power",
    "stephen-kenny",
    "tom-lonergan",
-   "tommy-lonergan",
    "zack-elbouzedi"
   ]
  },
@@ -256,8 +252,7 @@
    "seamus-maughan",
    "sean-keane",
    "sean-mchale",
-   "tom-lonergan",
-   "tommy-lonergan"
+   "tom-lonergan"
   ]
  },
  {
@@ -425,52 +420,7 @@
    "luke-oregan",
    "matthew-healy",
    "michael-noonan",
-   "stephen-bradley",
    "tunmise-sobowale",
-   "will-fitzgerald",
-   "william-fitzgerald"
-  ]
- },
- {
-  "fotmob_id": "5988076",
-  "url": "/matches/kups-vs-shamrock-rovers/a3ngj#5988076",
-  "kickoff": "2026-08-27T15:00:00Z",
-  "comp": "Conference League Qualification",
-  "home": "KuPS",
-  "away": "Shamrock Rovers",
-  "home_id": "1693",
-  "away_id": "4131",
-  "slugs": [
-   "aaron-greene",
-   "adam-brennan",
-   "alex-noonan",
-   "ben-mahon",
-   "cory-osullivan",
-   "daniel-cleary",
-   "daniel-grant",
-   "daniel-mandroiu",
-   "dylan-watts",
-   "edward-mcginty",
-   "enda-stevens",
-   "gary-oneil",
-   "graham-burke",
-   "jack-byrne",
-   "jake-mulraney",
-   "john-osullivan",
-   "jonathan-afolabi",
-   "lee-grace",
-   "lee-steacy",
-   "luke-oregan",
-   "matthew-healy",
-   "max-kovalevskis",
-   "michael-noonan",
-   "naj-razi",
-   "rory-gaffney",
-   "stephen-bradley",
-   "todd-bazunu",
-   "tunmise-sobowale",
-   "victor-ozhianvuna",
-   "will-fitzgerald",
    "william-fitzgerald"
   ]
  },
@@ -527,12 +477,10 @@
    "oisin-obrien",
    "patrick-mcclean",
    "rory-gaffney",
-   "stephen-bradley",
    "terence-doherty",
    "todd-bazunu",
    "tunmise-sobowale",
    "victor-ozhianvuna",
-   "will-fitzgerald",
    "william-fitzgerald"
   ]
  },
@@ -589,11 +537,9 @@
    "sean-boyd",
    "sean-gannon",
    "sean-moore",
-   "stephen-bradley",
    "todd-bazunu",
    "tunmise-sobowale",
    "victor-ozhianvuna",
-   "will-fitzgerald",
    "william-fitzgerald"
   ]
  },
@@ -651,11 +597,9 @@
    "ryan-burke",
    "sam-todd",
    "senan-mullen",
-   "stephen-bradley",
    "todd-bazunu",
    "tunmise-sobowale",
    "victor-ozhianvuna",
-   "will-fitzgerald",
    "william-fitzgerald"
   ]
  },
@@ -678,7 +622,6 @@
    "daryl-horgan",
    "david-hurley",
    "dylan-connolly",
-   "ed-mccarthy",
    "edward-mccarthy",
    "egor-vassenin",
    "enda-minogue",
@@ -1012,8 +955,7 @@
   "home_id": "4449",
   "away_id": "162162",
   "slugs": [
-   "aaron-okpolokpo",
-   "josh-okpolokpo"
+   "aaron-okpolokpo"
   ]
  },
  {
@@ -1848,7 +1790,6 @@
    "andrew-moran",
    "conor-coventry",
    "dan-mcnamara",
-   "danny-mcnamara",
    "millenic-alli"
   ]
  },
@@ -2604,7 +2545,6 @@
    "bosun-lawal",
    "conor-coventry",
    "dan-mcnamara",
-   "danny-mcnamara",
    "millenic-alli"
   ]
  },
@@ -2646,6 +2586,19 @@
   "away": "Hong Linh Ha Tinh",
   "home_id": "614354",
   "away_id": "1123220",
+  "slugs": [
+   "brandon-ly"
+  ]
+ },
+ {
+  "fotmob_id": "6095731",
+  "url": "/matches/cong-ha-noi-vs-viettel/br8n1y6u#6095731",
+  "kickoff": "2026-09-10T12:15:00Z",
+  "comp": "V-League",
+  "home": "Viettel",
+  "away": "C\u00f4ng An H\u00e0 N\u1ed9i",
+  "home_id": "743070",
+  "away_id": "614354",
   "slugs": [
    "brandon-ly"
   ]
@@ -3839,7 +3792,6 @@
   "slugs": [
    "conor-coventry",
    "dan-mcnamara",
-   "danny-mcnamara",
    "millenic-alli"
   ]
  },
@@ -3855,7 +3807,6 @@
   "slugs": [
    "conor-coventry",
    "dan-mcnamara",
-   "danny-mcnamara",
    "millenic-alli"
   ]
  },
@@ -3871,7 +3822,6 @@
   "slugs": [
    "conor-coventry",
    "dan-mcnamara",
-   "danny-mcnamara",
    "jayson-molumby",
    "max-oleary",
    "mikey-johnston",
@@ -3890,7 +3840,6 @@
   "slugs": [
    "conor-coventry",
    "dan-mcnamara",
-   "danny-mcnamara",
    "millenic-alli"
   ]
  },
@@ -4957,7 +4906,6 @@
   "home_id": "6456",
   "away_id": "6099",
   "slugs": [
-   "ed-mcjannet",
    "ed-mcjannett"
   ]
  },
@@ -4971,7 +4919,6 @@
   "home_id": "8530",
   "away_id": "6456",
   "slugs": [
-   "ed-mcjannet",
    "ed-mcjannett"
   ]
  },
@@ -6647,21 +6594,6 @@
   "away_id": "8298",
   "slugs": [
    "jordan-adeyemo"
-  ]
- },
- {
-  "fotmob_id": "5988055",
-  "url": "/matches/larne-vs-lincoln-red-imps-fc/1ws65jrz#5988055",
-  "kickoff": "2026-08-20T16:00:00Z",
-  "comp": "Conference League Qualification",
-  "home": "Lincoln Red Imps FC",
-  "away": "Larne",
-  "home_id": "545012",
-  "away_id": "2206",
-  "slugs": [
-   "jordan-mceneff",
-   "josh-ukek",
-   "ronan-doherty"
   ]
  },
  {
@@ -8486,6 +8418,19 @@
   ]
  },
  {
+  "fotmob_id": "6106239",
+  "url": "/matches/real-betis-vs-bayern-munchen/2t2xda#6106239",
+  "kickoff": "2026-09-08T19:00:00Z",
+  "comp": "Champions League",
+  "home": "Bayern M\u00fcnchen",
+  "away": "Real Betis",
+  "home_id": "9823",
+  "away_id": "8603",
+  "slugs": [
+   "troy-parrott"
+  ]
+ },
+ {
   "fotmob_id": "5749644",
   "url": "/matches/napoli-vs-genoa/3cdjj5#5749644",
   "kickoff": "2026-08-22T18:45:00Z",
@@ -8522,6 +8467,32 @@
   "away_id": "9875",
   "slugs": [
    "vinnie-leonard"
+  ]
+ },
+ {
+  "fotmob_id": "6106256",
+  "url": "/matches/manchester-city-vs-napoli/2s1i6l#6106256",
+  "kickoff": "2026-09-08T19:00:00Z",
+  "comp": "Champions League",
+  "home": "Man City",
+  "away": "Napoli",
+  "home_id": "8456",
+  "away_id": "9875",
+  "slugs": [
+   "vinnie-leonard"
+  ]
+ },
+ {
+  "fotmob_id": "5988076",
+  "url": "/matches/kups-vs-shamrock-rovers/a3ngj#5988076",
+  "kickoff": "2026-08-27T15:00:00Z",
+  "comp": "Conference League Qualification",
+  "home": "KuPS",
+  "away": "Shamrock Rovers",
+  "home_id": "1693",
+  "away_id": "4131",
+  "slugs": [
+   "william-fitzgerald"
   ]
  },
  {
