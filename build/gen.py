@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 import os, sys, re, html as H, json, csv
+import unicodedata
 HERE = os.path.dirname(os.path.abspath(__file__))
 DATA = os.path.join(HERE, "..", "data")
 EMPTY_MS = '<div class="emptystate" style="display:block">Nothing close right now.</div>'
@@ -182,6 +183,7 @@ def _dedupe_players(players, manual_rows):
 
 EVENTS = {}
 LINEUPS = {}
+ALIAS = {}
 
 LINE_POS = {"gk":"GK","g":"GK","goalkeeper":"GK",
             "def":"DEF","d":"DEF","defender":"DEF","cb":"DEF","lb":"DEF","rb":"DEF","wb":"DEF",
@@ -197,39 +199,100 @@ def _line_of(pos):
         if word in p: return line
     return "MID"
 
-def _load_lineups():
-    """data/api/lineups.csv — FotMob's teamsheet for a match, one row per player.
+def _fotmob_slugs(live):
+    """scraper/fotmob_ids.csv maps our slug to the FotMob player id, which is how
+       a lineup row gets matched to a player page. Optional file.
 
-         match_id,side,team,formation,status,updated,role,number,name,slug,pos,x,y
-
-       side    home|away
-       status  confirmed | predicted | last   (per side, repeated on every row)
-       role    start|bench
-       slug    our player slug when it's someone we track, blank otherwise —
-               the XI needs all eleven names, not just the Irish ones
-       x,y     FotMob's pitch coordinates 0-100 if it gives them; optional,
-               the formation string is enough to lay out the lines
-
-       Everything past match_id/side/role/name is optional. No file, or no rows
-       for a match, and the match page falls back to the squad list."""
+       Two roster rows can carry the same FotMob id — that's exactly what a
+       duplicate player looks like — so only map ids onto slugs that survived
+       the merge, otherwise the lineup points at a page that doesn't exist."""
     out = {}
-    for r in _rows("api/lineups.csv"):
-        mid  = (r.get("match_id") or "").strip()
-        side = (r.get("side") or "").strip().lower()
-        name = (r.get("name") or "").strip()
-        if not (mid and side in ("home","away") and name): continue
-        sd = out.setdefault(mid, {}).setdefault(side, dict(
-            team=(r.get("team") or "").strip(),
-            formation=(r.get("formation") or "").strip(),
-            status=(r.get("status") or "").strip().lower() or "predicted",
-            updated=(r.get("updated") or "").strip(),
-            start=[], bench=[]))
-        row = dict(name=name, slug=(r.get("slug") or "").strip(),
-                   num=(r.get("number") or "").strip(),
-                   pos=(r.get("pos") or "").strip(), line=_line_of(r.get("pos")),
-                   x=_num(r.get("x")), y=_num(r.get("y")))
-        (sd["bench"] if (r.get("role") or "").strip().lower().startswith("b") else sd["start"]).append(row)
+    path = os.path.join(HERE, "..", "scraper", "fotmob_ids.csv")
+    if os.path.exists(path):
+        with open(path, newline="", encoding="utf-8") as f:
+            for r in csv.DictReader(f):
+                fid = str(r.get("fotmob_id") or "").strip()
+                slug = ALIAS.get(r.get("slug",""), r.get("slug",""))
+                if fid and slug in live and fid not in out:
+                    out[fid] = slug
     return out
+
+def _name_key(n):
+    n = unicodedata.normalize("NFKD", str(n or "")).encode("ascii","ignore").decode()
+    return re.sub(r"[^a-z]", "", n.lower())
+
+def _load_lineups(players):
+    """The scraper writes data/api/match_lineups.csv:
+
+         match_id,team,player,player_id,role,shirt,position
+
+       role is start|bench, team is the club name, player_id is the FotMob id.
+       Three optional columns light up extra detail when the scraper adds them:
+       formation ("4-2-3-1"), status (confirmed|predicted|last) and slug.
+
+       No file, or no rows for a match, and the match page falls back to the
+       squad list — nothing breaks."""
+    rows = _rows("api/match_lineups.csv") or _rows("api/lineups.csv")
+    if not rows: return {}
+    live = {p["slug"] for p in players}
+    by_id = _fotmob_slugs(live)
+    by_name = {}
+    for p in players:
+        by_name.setdefault(_name_key(p["n"]), p["slug"])
+        if p.get("tm") and p["tm"].get("full_name"):
+            by_name.setdefault(_name_key(p["tm"]["full_name"]), p["slug"])
+    out, seen = {}, set()
+    for r in rows:
+        mid  = (r.get("match_id") or "").strip()
+        name = (r.get("player") or r.get("name") or "").strip()
+        team = (r.get("team") or "").strip()
+        if not (mid and name): continue
+        slug = ((r.get("slug") or "").strip()
+                or by_id.get(str(r.get("player_id") or "").strip())
+                or by_name.get(_name_key(name), ""))
+        slug = ALIAS.get(slug, slug)
+        if slug not in live: slug = ""
+        role = "bench" if (r.get("role") or "").strip().lower().startswith("b") else "start"
+        # one man, one place on the teamsheet, whatever the feed sent twice
+        key = (mid, team, role, slug or _name_key(name),
+               str(r.get("player_id") or "").strip() or _name_key(name))
+        if key in seen: continue
+        seen.add(key)
+        sd = out.setdefault(mid, {}).setdefault(team, dict(
+            team=team,
+            formation=(r.get("formation") or "").strip(),
+            status=(r.get("status") or "").strip().lower(),
+            start=[], bench=[]))
+        if not sd["formation"] and (r.get("formation") or "").strip():
+            sd["formation"] = r["formation"].strip()
+        if not sd["status"] and (r.get("status") or "").strip():
+            sd["status"] = r["status"].strip().lower()
+        pos = (r.get("position") or r.get("pos") or "").strip()
+        row = dict(name=name, slug=slug,
+                   num=(r.get("shirt") or r.get("number") or "").strip(),
+                   pos=pos, line=_line_of(pos),
+                   x=_num(r.get("x")), y=_num(r.get("y")))
+        sd[role].append(row)
+    return out
+
+def _match_lineup(m):
+    """Pick the two sides out of a match's lineup rows and label them home/away.
+       The scraper keys on club name, so match it the same forgiving way
+       _extend_matches does."""
+    raw = LINEUPS.get(match_id(m))
+    if not raw: return None
+    def key(n): return re.sub(r"[^a-z0-9]", "", (n or "").lower())
+    out = {}
+    for side in ("home","away"):
+        want = key(m.get(side, ""))
+        for team, sd in raw.items():
+            k = key(team)
+            if k and want and (k == want or k in want or want in k):
+                out[side] = sd; break
+    if len(out) < 2 and len(raw) == 2:            # names differ, order them anyway
+        left, right = list(raw.values())
+        out = {"home": left, "away": right}
+    return out or None
 
 def _num(v):
     try: return float(str(v).strip())
@@ -239,7 +302,6 @@ def load():
     tmdata = {r["slug"]: r for r in _rows("api/tm.csv") if r.get("slug")}
     global EVENTS, LINEUPS
     EVENTS = {}
-    LINEUPS = _load_lineups()
     for r in _rows("api/match_events.csv"):
         if r.get("match_id") and r.get("type"):
             EVENTS.setdefault(r["match_id"], []).append(r)
@@ -349,6 +411,9 @@ def load():
             p["club"] = p["loan"]          # display the club they're actually at
     players.sort(key=lambda p: p["n"])
     players, alias = _dedupe_players(players, manual_players)
+    global LINEUPS, ALIAS
+    ALIAS = alias
+    LINEUPS = _load_lineups(players)
 
     # The scraper writes: team,kickoff,competition,home,away,home_score,away_score,status
     # The older hand-kept format was: level,type,date,opponent,home_away,score,competition
@@ -1894,10 +1959,8 @@ def events_block(m, involved):
 
 STATUS_LABEL = {"confirmed":"Confirmed lineup",
                 "predicted":"Predicted lineup",
-                "last":"Last lineup"}
-STATUS_NOTE = {"confirmed":"As announced before kick-off.",
-               "predicted":"FotMob's predicted eleven — not confirmed.",
-               "last":"The last eleven this side started. Not a prediction."}
+                "last":"Last lineup",
+                "":"Lineup"}
 
 def _lines(side):
     """Split a starting eleven into pitch rows. The formation string is the
@@ -1957,7 +2020,7 @@ def _bench_name(pl, pmap, root="../"):
 def lineup_block(m, involved):
     """The teamsheet, when the scraper has one. Returns (html, players_left_over)
        so the page can list the rest of the tracked squad underneath."""
-    lu = LINEUPS.get(match_id(m))
+    lu = _match_lineup(m)
     if not lu: return "", involved
     pmap = {p["slug"]: p for p in PLAYERS}
     short_names = _short_names(lu)
@@ -1985,11 +2048,13 @@ def lineup_block(m, involved):
                 f'<span class="luform">{esc(side["formation"])}</span>'
                 f'<span class="lustat {esc(lu[side_key]["status"])}">{st}</span></div>')
 
-    unconfirmed = [v for v in lu.values() if v.get("status") != "confirmed"]
-    note = ("Neither team is confirmed — a predicted eleven is FotMob's guess, a last lineup is the "
-            "eleven that side started last time." if len(unconfirmed) == 2 else
-            "One side isn't confirmed yet — see the label on each team."
-            if unconfirmed else "")
+    kinds = {v.get("status","") for v in lu.values()}
+    if kinds == {"confirmed"}:
+        note = ""
+    elif "" in kinds:
+        note = "This may be a predicted or last-known eleven rather than a confirmed team."
+    else:
+        note = "Not a confirmed team — see the label on each side."
 
     bench = ""
     rows = []
