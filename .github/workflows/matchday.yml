@@ -24,11 +24,13 @@ jobs:
         run: python3 scraper/irish_scraper.py scrape --active
       - name: predicted / confirmed lineups
         run: python3 scraper/irish_scraper.py lineups
+      - name: events and teamsheets for matches that just finished
+        run: python3 scraper/irish_scraper.py events --days 3
       - name: commit if changed
         run: |
           git config user.name "scraper-bot"
           git config user.email "actions@github.com"
-          git add data img scraper/fotmob_ids.csv scraper/last_xi.json
+          git add data img scraper/fotmob_ids.csv scraper/last_xi.json scraper/match_index.json
           if git diff --cached --quiet; then
             echo "no change"
           else
