@@ -284,6 +284,11 @@ def _extend_matches():
     """The scraper only writes matches.csv for a 2-week window. Every player fixture
        beyond that still deserves a match page, so build the rest from fixtures.csv."""
     have = {match_id(m) for m in MATCHES}
+    def _key(n): return re.sub(r"\s+(fc|afc|u\d{2})$","",club_slug(n).replace("-fc","").replace("-afc",""))
+    daykeys = set()
+    for m in MATCHES:
+        d = (m.get("kickoff") or "")[:10]
+        for side in ("home","away"): daykeys.add((d, _key(m.get(side,""))))
     synth = {}
     for p in PLAYERS:
         club = p.get("club") or ""
@@ -295,6 +300,7 @@ def _extend_matches():
                      status="scheduled", minute="", players=p["slug"])
             k = match_id(m)
             if k in have: continue
+            if (d[:10], _key(o)) in daykeys or (d[:10], _key(club)) in daykeys: continue   # already covered under another spelling
             if k in synth: synth[k]["players"] += ";" + p["slug"]
             else: synth[k] = m
     MATCHES.extend(synth.values())
@@ -493,9 +499,9 @@ def club_id(name):
 
 def club_badge(name, size="sm"):
     cid = club_id(name)
-    if not cid: return f'<span class="badge {size} none"></span>'
+    if not cid: return f'<span class="badge {size} generic" title="{esc(n)}"></span>'
     return (f'<img class="badge {size}" src="https://images.fotmob.com/image_resources/logo/teamlogo/{cid}.png" '
-            f'alt="" loading="lazy" onerror="this.classList.add(\'none\')">')
+            f'alt="" loading="lazy" onerror="this.outerHTML=\'<span class=&quot;badge {size} generic&quot;></span>\'">')
 
 def ev_str(p):
     r = p["results"][0] if p["results"] else None
@@ -652,6 +658,7 @@ def match_payload():
                        hb=club_id(m.get("home","")), ab=club_id(m.get("away","")),
                        hs=m.get("home_score",""), as_=m.get("away_score",""),
                        status=(m.get("status") or "scheduled"), minute=m.get("minute",""),
+                       hp=(m.get("home_pens") or ""), ap=(m.get("away_pens") or ""),
                        loi=(1 if is_loi_match(m, involved) else 0),
                        players=involved))
     return mc
@@ -824,6 +831,7 @@ def build_index():
       <div class="tiergroup" id="myplayers"></div>
     </div>
     <div class="followsell" id="myplayers-empty" style="display:none">
+      <button class="fsx" id="fsx" aria-label="Hide for now">×</button>
       <div><b>Follow your players</b><p>Tap ★ beside any name. They'll show up here with their next match, and you can get an email when they play, score or get subbed on.</p></div>
       <a class="btn" href="players.html">Pick your players →</a>
     </div>
@@ -924,14 +932,35 @@ def pretty_date(d):
         return d
 
 def author_slug(name): return club_slug(name or "staff")
+WRITERS = {}
+def _load_writers():
+    for r in _rows("manual/writers.csv"):
+        n=(r.get("name") or "").strip()
+        if not n: continue
+        WRITERS[n.lower()] = dict(name=n, slug=(r.get("slug") or "").strip() or author_slug(n),
+                                  bio=(r.get("bio") or "").strip(), photo=(r.get("photo") or "").strip(),
+                                  links=[tuple(x.split("|",1)) if "|" in x else (x,x) for x in (r.get("links") or "").split(";") if x.strip()])
+_load_writers()
+
+def writer_avatar(w, root="", size="sm"):
+    ph = w.get("photo") or ""
+    if ph:
+        u = ph if ph.startswith("http") else f"{root}{ph}"
+        return f'<div class="pavatar {size}"><img src="{esc(u)}" alt="" loading="lazy" onerror="this.parentNode.innerHTML=\'<span>{initials(w["name"])}</span>\'"></div>'
+    return f'<div class="pavatar {size}"><span>{initials(w["name"])}</span></div>'
+
 def authors():
-    """Everyone with a byline, newest article first."""
+    """Every writer profile, plus anyone with a byline but no profile yet."""
     out = {}
+    for w in WRITERS.values():
+        out[w["slug"]] = dict(w, arts=[])
     for a in ARTICLES:
         n=(a.get("author") or "").strip()
         if not n: continue
-        out.setdefault(author_slug(n), dict(name=n, slug=author_slug(n), arts=[]))["arts"].append(a)
-    return list(out.values())
+        w = WRITERS.get(n.lower())
+        slug = w["slug"] if w else author_slug(n)
+        out.setdefault(slug, dict(name=n, slug=slug, bio="", photo="", links=[], arts=[]))["arts"].append(a)
+    return sorted(out.values(), key=lambda w: -len(w["arts"]))
 
 PARTNERS = {
     "touchline": dict(name="Touchline Studios", url="https://jamescallan3.substack.com", cta="Read more on Substack",
@@ -964,7 +993,8 @@ def art_visual(a, root="", cls="artthumb"):
 
 def byline(a, root=""):
     n=(a.get("author") or "").strip()
-    return (f'<span class="artby">By <span class="au" data-href="{root}author/{author_slug(n)}.html">{esc(n)}</span>'
+    ws = (WRITERS.get(n.lower()) or {}).get("slug") or author_slug(n)
+    return (f'<span class="artby">By <span class="au" data-href="{root}author/{ws}.html">{esc(n)}</span>'
             f' · {esc(pretty_date(a.get("date","")))}</span>') if n else f'<span class="artby">{esc(pretty_date(a.get("date","")))}</span>'
 
 def art_card(a, root="", kind="card"):
@@ -985,9 +1015,9 @@ def writers_block(root=""):
     aus = authors()
     if not aus: return ""
     return ('<div class="sbbox"><div class="sbh">Writers</div>' +
-            "".join(f'<a class="writer" href="{root}author/{w["slug"]}.html"><div class="pavatar sm"><span>{initials(w["name"])}</span></div>'
+            "".join(f'<a class="writer" href="{root}author/{w["slug"]}.html">{writer_avatar(w, root)}'
                     f'<div><b>{esc(w["name"])}</b><small>{len(w["arts"])} article{"s" if len(w["arts"])!=1 else ""}</small></div></a>' for w in aus) +
-            f'<a class="sbcta" href="mailto:business@matchweek.ie?subject=Writing%20for%20footballers.ie">Want to write for us? →</a></div>')
+            f'<a class="sbcta" href="#" onclick="window.FB_REPORT&&FB_REPORT();return false">Want to write for us? →</a></div>')
 
 def build_news():
     tags = sorted({(a.get("tag") or "").strip().upper() for a in ARTICLES if a.get("tag")})
@@ -1028,8 +1058,10 @@ def build_author(w):
     cards = '<div class="artgrid">' + "".join(art_card(a) for a in w["arts"]) + '</div>'
     body = f'''
     <a class="crumb" data-back href="../news.html">← News</a>
-    <div class="pagehead authhead"><div class="pavatar lg"><span>{initials(w["name"])}</span></div>
+    <div class="pagehead authhead">{writer_avatar(w, "../", "lg")}
       <div><h1>{esc(w["name"])}</h1><p>{len(w["arts"])} article{"s" if len(w["arts"])!=1 else ""} for footballers.ie</p></div></div>
+    {f'<div class="abox wbio">' + "".join(f"<p>{esc(x.strip())}</p>" for x in w["bio"].replace(chr(92)+"n",chr(10)).split(chr(10)) if x.strip()) + '</div>' if w.get("bio") else ""}
+    {f'<div class="wlinks">' + "".join(f'<a href="{esc(u.strip())}" target="_blank" rel="noopener">{esc(l.strip())} →</a>' for l,u in w["links"]) + '</div>' if w.get("links") else ""}
     {cards}
     <script>document.addEventListener('click',function(e){{var au=e.target.closest('.au');if(au){{e.preventDefault();location.href=au.getAttribute('data-href');}}}});</script>
     '''
@@ -1063,7 +1095,7 @@ def build_article(a):
       <div class="arttag">{esc(a.get("tag",""))} · {esc(pretty_date(a.get("date","")))}</div>
       <h1>{esc(a.get("headline",""))}</h1>
       <p class="standfirst">{esc(a.get("standfirst",""))}</p>
-      <div class="artmeta">By <a class="lnk" href="../author/{author_slug(a.get("author"))}.html">{esc(a.get("author","") or "footballers.ie")}</a>{f' · <a class="lnk" href="{esc(pt["url"])}" target="_blank" rel="noopener">{esc(pt["name"])}</a>' if pt and pt["url"] else ""}</div>
+      <div class="artmeta">By <a class="lnk" href="../author/{(WRITERS.get((a.get("author") or "").strip().lower()) or {}).get("slug") or author_slug(a.get("author"))}.html">{esc(a.get("author","") or "footballers.ie")}</a>{f' · <a class="lnk" href="{esc(pt["url"])}" target="_blank" rel="noopener">{esc(pt["name"])}</a>' if pt and pt["url"] else ""}</div>
       {hero}
       <div class="artcontent">{paras}</div>
     </article>
@@ -1077,6 +1109,7 @@ def build_article(a):
 
 
 LEAGUE_COUNTRY = {
+  "Major League Soccer":"United States", "MLS":"United States", "First Professional League":"Bulgaria", "LaLiga":"Spain", "La Liga":"Spain", "Leagues Cup":"United States",
     "premier division":"Ireland", "league of ireland":"Ireland", "first division":"Ireland",
     "premier league":"England", "championship":"England", "league one":"England",
     "league two":"England", "national league":"England", "premier league 2":"England",
@@ -1170,112 +1203,48 @@ def date_key(d):
 
 
 FAQ = [
- ("Where does this data come from?",
-  "Match results, appearances, minutes, goals, assists, cards and ratings are collected "
-  "automatically from public football data sites and refreshed on a schedule. International "
-  "caps and career totals come from the same sources. Anything we correct by hand — a transfer "
-  "the feed hasn't caught, a loan, a missing player — is stored separately and overrides the "
-  "automated data."),
-
- ("Who calculates the ratings?",
-  "We don't. Ratings are produced by the statistics providers we collect from, using their own "
-  "models of what a player did in a match. We store the number and average it — we don't adjust, "
-  "weight or recalculate it."),
-
- ("What does a rating of 8.52 actually mean?",
-  "It's an average across every match this season where a rating was published, weighted by "
-  "appearances. Roughly: below 6.5 is a difficult afternoon, 6.5–7.3 is solid, 7.3+ is strong, "
-  "8+ is one of the best performances on the pitch. A goalkeeper and a striker are scored on very "
-  "different things, so compare like with like."),
-
- ("Can I compare ratings between leagues?",
-  "Not reliably. A 7.2 in the Premier League and a 7.2 in the First Division are not the same "
-  "achievement — the models are scaled within each competition. That's why sorting by rating warns "
-  "you when no league filter is applied. Treat it as a guide to form, not a ranking of ability."),
-
- ("Which matches are included?",
-  "Every senior competitive match the provider covers for that player's club — league, domestic "
-  "cups and European ties — plus international appearances. Academy and U21 fixtures appear where "
-  "the player featured in them. Friendlies are included in match lists but don't always carry a "
-  "rating."),
-
- ("How often is it updated?",
-  "The data refreshes on a schedule and the site rebuilds when it does. The footer on every page "
-  "shows exactly when the current data landed, so you never have to guess whether you're looking "
-  "at something stale."),
-
- ("How is a player classified as Irish?",
-  "A player is tracked if they've represented the Republic of Ireland at any level — senior, U21, "
-  "U19, U17 — or are eligible and playing professionally. Eligibility is shown honestly on each "
-  "profile: cap-tied, played underage but can still switch, or eligible and never played. Youth "
-  "caps and friendlies don't tie a player to a country under FIFA rules; a competitive senior "
-  "appearance does."),
-
- ("What counts as a professional club?",
-  "Any club in a fully professional or semi-professional senior league that the data covers — the "
-  "League of Ireland, the English pyramid down to the National League, the Scottish and Northern "
-  "Irish leagues, and the major European divisions. Academy and U21 teams are included where the "
-  "player is contracted to the senior club."),
-
- ("When was a player's club last verified?",
-  "Clubs come from the automated feed and are refreshed every time it runs — see the timestamp in "
-  "the footer. Transfers can take a day or two to appear, and loan moves sometimes show the parent "
-  "club first. If you spot one that's wrong, hit Report on the player's page and we'll fix it."),
-
- ("Something's wrong or someone's missing.",
-  "Use the Report button in the bottom corner of any page. It knows which player or match you were "
-  "looking at, so you only have to describe the problem. Every report is read."),
+  ("Where does this data come from?",
+   "match data is scraped from certain live score football apps, more in depth stuff like nationalit(ies), height, weight, transfer value is from another site that starts with transfer and ends with market."),
+  ("Who calculates the ratings?",
+   "the ratings is from said football live score app."),
+  ("What does a rating of 8.52 actually mean?",
+   "idk ask fotmob."),
+  ("Can I compare ratings between leagues?",
+   "i mean not really obhiously premier league is harder than the third divison of israeli football."),
+  ("Which matches are included?",
+   "any match that an irish professional footballer is playing in should be included, if it\u2019s not then report an issue and we\u2019ll get it added."),
+  ("How often is it updated?",
+   "there are several different scrapers that run automatically at different times, but there\u2019s at least one every hour pulling in fresh data, and if there\u2019s a match live then the score is updated every minute."),
+  ("How is a player classified as Irish?",
+   "if you\u2019re irish eligible and not locked into another country or better.."),
+  ("What about Northern Ireland?",
+   "you mean the north of ireland?? mate idk ask fotmob ffs."),
 ]
 
 def build_about():
-    n_ab = sum(1 for p in PLAYERS if p["tier"].startswith("abroad")); n_loi = sum(1 for p in PLAYERS if p["tier"]=="loi")
     body = f'''
-    <div class="pagehead"><h1>About footballers.ie</h1><p>Every Irish professional footballer, tracked. Here's exactly what that means and where the numbers come from.</p></div>
+    <div class="pagehead"><h1>About footballers.ie</h1><p>Straight answers, in the founder's own words.</p></div>
 
     <div class="sec"><h2 id="who">Who counts as Irish?</h2></div>
-    <div class="abox">
-      <p>A player is on the site if <b>any</b> of these are true:</p>
-      <ul>
-        <li>They've played for the Republic of Ireland at any level, senior or underage</li>
-        <li>They're at a League of Ireland club (Premier or First Division) on a professional contract</li>
-        <li>They're Irish-eligible and at a professional club abroad, including academy and U21 sides</li>
-      </ul>
-      <p>So yes: dual nationals, youth internationals who may yet switch, and academy players all count. Northern Ireland internationals are included only if they're also eligible for the Republic. Each player's page shows their nationalities and whether they're cap-tied.</p>
-      <p>Right now that's <b>{len(PLAYERS)}</b> players — {n_ab} abroad and {n_loi} in the League of Ireland. Think someone's missing or shouldn't be here? Use the Report button on any page.</p>
-    </div>
+    <div class="abox"><p>if you're irish eligible and not locked into another country or better..</p>
+      <p>Northern Ireland? you mean the north of ireland?? mate idk ask fotmob ffs.</p>
+      <p>Right now that's <b>{len(PLAYERS)}</b> players. Think someone's missing or shouldn't be here? Use the Report button on any page.</p></div>
 
-    <div class="sec"><h2 id="ratings">How ratings work</h2></div>
-    <div class="abox">
-      <p>Every rating on the site is a <b>FotMob match rating</b>. We don't calculate our own.</p>
-      <ul>
-        <li>On a match row: the player's FotMob rating for that game</li>
-        <li>Everywhere else (lists, homepage, profile): the <b>average of their match ratings this season</b>, only counting games they were on the pitch for</li>
-        <li>A dash means no rating yet: not enough games, or FotMob doesn't rate that competition</li>
-      </ul>
-      <p>Ratings are scaled within each competition, so a 7.8 in League Two and a 7.8 in the Premier League aren't the same thing. That's why a "by rating" list can put a lower-league player above a Premier League one. Treat it as a form guide, not a ranking.</p>
-    </div>
+    <div class="sec"><h2 id="ratings">How do the ratings work?</h2></div>
+    <div class="abox"><p>the ratings is from said football live score app. idk ask fotmob.</p>
+      <p>Can you compare them between leagues? i mean not really obhiously premier league is harder than the third divison of israeli football.</p>
+      <p>Everywhere except a match row, the number is the average of a player's match ratings this season.</p></div>
 
-    <div class="sec"><h2 id="data">Where the data comes from</h2></div>
-    <div class="abox">
-      <ul>
-        <li><b>Stats, fixtures, results, live scores:</b> FotMob. Refreshed hourly; players with a match today every 10 minutes; live scores every 5.</li>
-        <li><b>Bio, contract and market value:</b> Transfermarkt, refreshed roughly monthly</li>
-        <li><b>Roster:</b> maintained by us, checked weekly against Wikidata</li>
-        <li><b>News:</b> written by people. Every article has a named byline.</li>
-      </ul>
-      <p>The footer of every page shows when the data last updated.</p>
-    </div>
+    <div class="sec"><h2 id="data">Where does the data come from?</h2></div>
+    <div class="abox"><p>match data is scraped from certain live score football apps, more in depth stuff like nationalit(ies), height, weight, transfer value is from another site that starts with transfer and ends with market.</p>
+      <p>there are several different scrapers that run automatically at different times, but there's at least one every hour pulling in fresh data, and if there's a match live then the score is updated every minute.</p>
+      <p>The footer of every page shows when the data last updated.</p></div>
 
-    <div class="sec"><h2 id="team">Who's behind it</h2></div>
-    <div class="abox">
-      <p>footballers.ie is built in Kildare by <a href="https://matchweek.ie">Matchweek</a>. Independent — no club, agency or bookmaker involvement.</p>
-      <p>Writers, tips, corrections, partnerships: <a href="mailto:business@matchweek.ie">business@matchweek.ie</a></p>
-    </div>
+    <div class="sec"><h2 id="team">Contact</h2></div>
+    <div class="abox"><p>Contact: contact@footballers.ie should work but to be safe id submit your question or whatever in the submit a report box.</p></div>
 
     <div class="sec"><h2 id="privacy">Your data</h2></div>
-    <div class="abox">
-      <p>If you follow players or subscribe, we store your email and what you follow so we can send you updates. Nothing else. We don't sell it, and every email has an unsubscribe link.</p>
-    </div>
+    <div class="abox"><p>If you follow players or subscribe: it's saved securely and added to our email list. We don't sell it, and every email has an unsubscribe link.</p></div>
     '''
     return shell("About — footballers.ie", "What footballers.ie is, who counts as Irish, and how the ratings work.", "", "about.html", body, canonical="about.html")
 
@@ -1354,8 +1323,8 @@ def build_map():
         return;
       }}
       var map = L.map('themap', {{ scrollWheelZoom:false, attributionControl:true }}).setView([50,2], 4);
-      L.tileLayer('https://{{s}}.basemaps.cartocdn.com/dark_all/{{z}}/{{x}}/{{y}}{{r}}.png', {{
-        attribution:'&copy; OpenStreetMap &copy; CARTO', subdomains:'abcd', maxZoom:12
+      L.tileLayer('https://tile.openstreetmap.org/{{z}}/{{x}}/{{y}}.png', {{
+        attribution:'&copy; OpenStreetMap contributors', subdomains:'abcd', maxZoom:12
       }}).addTo(map);
 
       function radius(n){{ return Math.max(9, Math.min(34, 7 + Math.sqrt(n)*3.2)); }}
@@ -1655,12 +1624,7 @@ def milestone_items():
             if 0 < mark - c <= 8:
                 out.append(dict(p=p, tag="Club appearances", text=f'{mark-c} away from {mark} career appearances'))
                 break
-        if p["intl_senior"] and p["intl_senior"]["caps"] is not None:
-            caps = p["intl_senior"]["caps"]
-            for mark in (10,25,50,75,100):
-                if 0 < mark - caps <= 4:
-                    out.append(dict(p=p, tag="Caps", text=f'{mark-caps} cap{"s" if mark-caps!=1 else ""} from {mark} for Ireland'))
-                    break
+        if False:
             g = p["intl_senior"]["goals"] or 0
             for mark in (5,10,20,30):
                 if 0 < mark - g <= 2:
@@ -1767,7 +1731,9 @@ def build_match(m, involved):
     chip = (f'<span class="mcstat live"><i></i>{esc(m.get("minute",""))}\'</span>' if status=="live"
             else '<span class="mcstat ft">Full time</span>' if status=="ft"
             else f'<span class="mcstat soon">{when}</span>')
-    scoreline = (f'<div class="mscore">{esc(hs)}<span>–</span>{esc(as_)}</div>'
+    pens = (f'<div class="mpens">{esc(m.get("home_pens",""))}–{esc(m.get("away_pens",""))} on penalties</div>'
+            if (m.get("home_pens") or "").strip() and (m.get("away_pens") or "").strip() else "")
+    scoreline = (f'<div class="mscore">{esc(hs)}<span>–</span>{esc(as_)}</div>{pens}'
                  if status != "scheduled" and str(hs) != "" else
                  f'<div class="mscore ko"><span class="ko-time" data-ko="{esc(m.get("kickoff",""))}">'
                  f'{esc(m.get("kickoff","")[11:16])}</span></div>')
@@ -1958,8 +1924,10 @@ def build_player(p):
                        f'<span class="go">View squad →</span></div></a>')
         intl = f'<div class="sec"><h2>International</h2><a class="more" href="../ireland.html">Ireland hub →</a></div>{blocks}'
 
-    # eligibility
+    # eligibility: what the roster says, plus every nationality Transfermarkt lists
     elig = ""
+    shown = set()
+    tied_to = next((c for c, st in p["eligible"] if st == "tied"), None)
     for country, status in p["eligible"]:
         if status == "blocked":
             cls, note = "elig blocked", "No longer available"
@@ -1969,7 +1937,16 @@ def build_player(p):
             cls, note = "elig youth", "Played underage · can still switch"
         else:
             cls, note = "elig open", "Eligible · never played"
+        shown.add(country.lower()); shown.add(country.lower().replace("republic of ",""))
         elig += f'<div class="{cls}"><span class="ec">{esc(country)}</span><span class="en">{note}</span></div>'
+    for nat in (p.get("tm") or {}).get("nations", []) or []:
+        n = nat.strip()
+        if not n or n.lower() in shown or n.lower() in ("ireland","republic of ireland") and "republic of ireland" in shown: continue
+        shown.add(n.lower())
+        if tied_to:
+            elig += f'<div class="elig off"><span class="ec">{esc(n)}</span><span class="en">Closed · cap-tied elsewhere</span></div>'
+        else:
+            elig += f'<div class="elig open"><span class="ec">{esc(n)}</span><span class="en">Also eligible</span></div>'
     tie_note = ("Cap-tied to Ireland — a competitive senior appearance means the other associations below are closed off."
                 if p["cap_status"]=="senior_comp" else
                 "Youth caps and senior friendlies don't cap-tie a player, so a switch is still possible under FIFA rules."

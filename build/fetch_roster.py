@@ -25,7 +25,7 @@ import csv, json, os, sys, time, urllib.parse, urllib.request, datetime, unicode
 HERE = os.path.dirname(os.path.abspath(__file__))
 DATA = os.path.join(HERE, "..", "data")
 ENDPOINT = "https://query.wikidata.org/sparql"
-UA = "footballers.ie roster sync (contact: business@matchweek.ie)"
+UA = "footballers.ie roster sync"
 
 # Irish men's association footballers who are currently on a club's roster.
 QUERY = """

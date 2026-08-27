@@ -105,7 +105,14 @@
 
     if (!favs.length) {
       wrap.innerHTML = '';
-      if (empty) empty.style.display = 'flex';
+      if (empty) {
+        var hid = 0; try { hid = +localStorage.getItem('fb_fs_hide') || 0; } catch (e) {}
+        empty.style.display = (Date.now() - hid < 86400000) ? 'none' : 'flex';
+        var x = document.getElementById('fsx');
+        if (x && !x._wired) { x._wired = true; x.addEventListener('click', function () {
+          try { localStorage.setItem('fb_fs_hide', String(Date.now())); } catch (e) {}
+          empty.style.display = 'none'; }); }
+      }
       var sec = document.getElementById('myplayers-sec');
       if (sec) sec.style.display = 'none';
       return;
@@ -269,8 +276,8 @@
   }
 
   function bdg(id, cls) {
-    if (!id) return '<span class="badge ' + cls + ' none"></span>';
-    return '<img class="badge ' + cls + '" src="https://images.fotmob.com/image_resources/logo/teamlogo/' + id + '.png" alt="" loading="lazy" onerror="this.classList.add(\'none\')">';
+    if (!id) return '<span class="badge ' + cls + ' generic"></span>';
+    return '<img class="badge ' + cls + '" src="https://images.fotmob.com/image_resources/logo/teamlogo/' + id + '.png" alt="" loading="lazy" onerror="this.outerHTML=\'<span class=&quot;badge ' + cls + ' generic&quot;></span>\'">';
   }
   function card(m, now, limit, root) {
     root = root || '';
