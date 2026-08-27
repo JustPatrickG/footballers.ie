@@ -498,6 +498,40 @@
   /* Match pages: the api can send the goals and cards along with the score,
      and this redraws the Timeline section from them, so events show up while
      the game is still on instead of after the next site build. */
+  /* While a game is live, mark the subs on the rendered teamsheet: red down
+     arrow on whoever went off (pitch), green up arrow on whoever came on
+     (bench). The teamsheet is the truth about who started, so if the pair
+     reads backwards, flip it. */
+  function applyLiveSubs(subs) {
+    if (!subs.length) return;
+    function norm(t) {
+      return String(t || '').normalize('NFKD').replace(/[\u0300-\u036f]/g, '')
+        .replace(/[^a-z ]/gi, '').toLowerCase().trim();
+    }
+    var pitch = {}, bench = {};
+    Array.prototype.forEach.call(document.querySelectorAll('.pitch .lup'), function (el) {
+      pitch[norm(el.getAttribute('title') || el.textContent)] = el;
+    });
+    Array.prototype.forEach.call(document.querySelectorAll('.benchcol .bp'), function (el) {
+      bench[norm(el.textContent)] = el;
+    });
+    function mark(el, cls, min) {
+      if (!el || el.querySelector('.' + cls)) return;
+      var i = document.createElement('span');
+      i.className = cls;
+      i.textContent = (cls === 'soff' ? '\u25bc ' : '\u25b2 ') + min + '\u2032';
+      el.appendChild(i);
+    }
+    subs.forEach(function (e) {
+      var off = norm(e.player), on = norm(e.sin);
+      if (bench[off] || pitch[on]) {          // pair arrived backwards
+        var t = off; off = on; on = t;
+      }
+      mark(pitch[off], 'soff', e.min);
+      mark(bench[on], 'son', e.min);
+    });
+  }
+
   function paintTimeline(evs) {
     var box = document.getElementById('mtl');
     if (!box) return;
@@ -523,9 +557,11 @@
     }
     var LAB = { own_goal: 'own goal', missed_penalty: 'penalty missed', penalty: 'penalty',
                 second_yellow: 'second yellow', red: 'red card', yellow: 'yellow card' };
+    applyLiveSubs(evs.filter(function (e) { return e.type === 'sub'; }));
     var rows = '', hgoals = [], agoals = [];
     evs.forEach(function (e) {
       var t = e.type;
+      if (t === 'sub') return;
       var side = e.home ? 'h' : 'a';
       var who = esc(e.player);
       if (isIrish(e.player)) who = '<b class="ir">' + who + '</b>';
@@ -1270,7 +1306,8 @@
   var STATS = window.FB_MSTATS;
   if (!STATS) return;
 
-  var EVN = { goal: '⚽ Goal', own_goal: '⚽ Own goal', penalty: '⚽ Penalty',
+  var EVN = { sub_on: '▲ Came on', sub_off: '▼ Subbed off',
+              goal: '⚽ Goal', own_goal: '⚽ Own goal', penalty: '⚽ Penalty',
               missed_penalty: '✕ Penalty missed', yellow: 'Yellow card',
               red: 'Red card', second_yellow: 'Second yellow' };
 
@@ -1280,7 +1317,7 @@
   function close() { if (wrap) { wrap.remove(); wrap = null; } }
 
   function face(d) {
-    var src = d.photo ? d.photo : (d.img ? '../img/players/' + d._slug + '.png' : '');
+    var src = d.u ? '' : (d.photo ? d.photo : (d.img ? '../img/players/' + d._slug + '.png' : ''));
     return src
       ? '<div class="pavatar sm"><img src="' + src + '" alt="" onerror="this.parentNode.innerHTML=\'<span>' + d.ini + '</span>\'"></div>'
       : '<div class="pavatar sm"><span>' + d.ini + '</span></div>';
@@ -1294,7 +1331,14 @@
 
     var played = d.mins !== undefined && d.mins !== null && String(d.mins) !== '';
     var rows;
-    if (played) {
+    if (d.u) {
+      // not one of ours: name, shirt, minutes worked out from the sub times,
+      // and whatever they did in the game below
+      rows = played
+        ? '<div class="msnote">' + (d.son ? 'On as a sub — about ' : 'Played ')
+          + esc(d.mins) + ' minutes.</div>'
+        : (d.son || d.soff ? '' : '<div class="msnote">Unused this match.</div>');
+    } else if (played) {
       rows = '<div class="msgrid2">'
         + '<div><b>' + esc(d.mins) + "'" + '</b><span>played</span></div>'
         + '<div><b>' + (d.g || 0) + '</b><span>goals</span></div>'
@@ -1316,7 +1360,16 @@
         + '</div>';
     }
 
-    var evs = (d.evs || []).map(function (e) {
+    var list = (d.evs || []).slice();
+    var hasSub = list.some(function (e) { return e.type === 'sub_on' || e.type === 'sub_off'; });
+    if (!hasSub) {
+      if (d.son) list.push({ min: d.son, type: 'sub_on' });
+      if (d.soff) list.push({ min: d.soff, type: 'sub_off' });
+    }
+    list.sort(function (a, b) {
+      return (parseInt(a.min, 10) || 0) - (parseInt(b.min, 10) || 0);
+    });
+    var evs = list.map(function (e) {
       return '<div class="msev"><b>' + esc(e.min) + "'" + '</b>' + (EVN[e.type] || esc(e.type)) + '</div>';
     }).join('');
 
@@ -1325,12 +1378,16 @@
     wrap.innerHTML =
       '<div class="mssheet" role="dialog" aria-label="' + esc(d.n) + ' in this match">'
       + '<div class="mshead">' + face(d)
-      + '<div><a class="msname" href="../player/' + slug + '.html">' + esc(d.n) + ' →</a>'
-      + '<div class="msmeta">' + esc(d.club) + (d.pos && d.pos !== '—' ? ' · ' + esc(d.pos) : '') + '</div></div>'
+      + '<div>' + (d.u
+          ? '<span class="msname">' + esc(d.n) + '</span>'
+          : '<a class="msname" href="../player/' + slug + '.html">' + esc(d.n) + ' →</a>')
+      + '<div class="msmeta">' + esc(d.club)
+      + (d.num ? ' · #' + esc(d.num) : '')
+      + (d.pos && d.pos !== '—' ? ' · ' + esc(d.pos) : '') + '</div></div>'
       + '<button class="msx" aria-label="Close">×</button></div>'
       + rows
       + (evs ? '<div class="msevs">' + evs + '</div>' : '')
-      + '<div class="msfine">Tap the name for the full profile.</div>'
+      + (d.u ? '' : '<div class="msfine">Tap the name for the full profile.</div>')
       + '</div>';
     document.body.appendChild(wrap);
     wrap.addEventListener('click', function (e) { if (e.target === wrap || e.target.closest('.msx')) close(); });

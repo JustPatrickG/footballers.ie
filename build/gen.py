@@ -2314,30 +2314,80 @@ def _short_names(lu):
         out[n] = f"{parts[0][0]}. {last}" if (surnames[last] > 1 and len(parts) > 1) else last
     return out
 
-def _pitch_player(pl, pmap, short_names, root="../"):
+def _pitch_player(pl, pmap, short_names, root="../", subs=None):
     p = pmap.get(pl["slug"]) if pl["slug"] else None
     face = (avatar(p, root, "sm") if p else
             f'<span class="lunum">{esc(pl["num"] or "")}</span>')
     short = short_names.get(pl["name"], pl["name"])
-    inner = (f'{face}<span class="lun">{esc(short)}</span>')
+    arr = ""
+    if subs:
+        om = subs["off"].get(_name_key(pl["name"]))
+        if om: arr = f'<span class="soff">\u25bc {esc(om)}\u2032</span>'
+    inner = (f'{face}<span class="lun">{esc(short)}</span>{arr}')
     if p:
         return (f'<a class="lup ir" href="{root}player/{p["slug"]}.html" '
                 f'data-mstat="{p["slug"]}" title="{esc(pl["name"])}">{inner}</a>')
-    return f'<span class="lup" title="{esc(pl["name"])}">{inner}</span>'
+    return (f'<span class="lup" data-mstat="{_ukey(pl["name"])}" '
+            f'title="{esc(pl["name"])}">{inner}</span>')
 
-def _bench_name(pl, pmap, root="../"):
+def _bench_name(pl, pmap, root="../", subs=None):
     p = pmap.get(pl["slug"]) if pl["slug"] else None
     num = f'<span class="bn">{esc(pl["num"])}</span>' if pl["num"] else ""
+    arr = ""
+    if subs:
+        k = _name_key(pl["name"])
+        if subs["on"].get(k):  arr += f'<span class="son">\u25b2 {esc(subs["on"][k])}\u2032</span>'
+        if subs["off"].get(k): arr += f'<span class="soff">\u25bc {esc(subs["off"][k])}\u2032</span>'
     if p:
         return (f'<a class="bp ir" href="{root}player/{p["slug"]}.html" '
-                f'data-mstat="{p["slug"]}">{num}{esc(pl["name"])}</a>')
-    return f'<span class="bp">{num}{esc(pl["name"])}</span>'
+                f'data-mstat="{p["slug"]}">{num}{esc(pl["name"])}{arr}</a>')
+    return (f'<span class="bp" data-mstat="{_ukey(pl["name"])}">'
+            f'{num}{esc(pl["name"])}{arr}</span>')
+
+def _sub_key_min(v):
+    try: return int(str(v).split("+")[0])
+    except (ValueError, TypeError): return 0
+
+def match_subs(m, lu=None):
+    """{'on': {namekey: minute}, 'off': {namekey: minute}} for this match.
+       The scraper writes sub_on/sub_off rows in fotmob's swap order (coming
+       on first); the teamsheet is the ground truth, so anyone listed as a
+       starter can only go OFF and anyone on the bench can only come ON -
+       flip any row that disagrees. A bench player with two rows did both."""
+    evs = EVENTS.get(match_id(m), [])
+    raw = [e for e in evs if e.get("type") in ("sub_on", "sub_off") and e.get("player")]
+    if not raw: return {"on": {}, "off": {}}
+    starters, bench = set(), set()
+    if lu is None: lu = _match_lineup(m)
+    for sd in (lu or {}).values():
+        starters |= {_name_key(pl["name"]) for pl in sd["start"]}
+        bench    |= {_name_key(pl["name"]) for pl in sd["bench"]}
+    by_name = {}
+    for e in raw:
+        by_name.setdefault(_name_key(e["player"]), []).append(e)
+    on, off = {}, {}
+    for k, lst in by_name.items():
+        lst.sort(key=lambda e: _sub_key_min(e.get("minute")))
+        if k in starters:
+            off[k] = lst[0].get("minute", "")
+        elif k in bench:
+            on[k] = lst[0].get("minute", "")
+            if len(lst) > 1: off[k] = lst[-1].get("minute", "")
+        else:                                    # not on the sheet - trust the label
+            for e in lst:
+                (on if e["type"] == "sub_on" else off)[k] = e.get("minute", "")
+    return {"on": on, "off": off}
+
+def _ukey(name):
+    import re as _re
+    return "u-" + _re.sub(r"[^a-z0-9]+", "-", _name_key(name)).strip("-")
 
 def lineup_block(m, involved):
     """The teamsheet, when the scraper has one. Returns (html, players_left_over)
        so the page can list the rest of the tracked squad underneath."""
     lu = _match_lineup(m)
     if not lu: return "", involved
+    subs = match_subs(m, lu)
     pmap = {p["slug"]: p for p in PLAYERS}
     short_names = _short_names(lu)
     named = set()
@@ -2360,7 +2410,7 @@ def lineup_block(m, involved):
             if cls == "bot": rows = list(reversed(rows))   # home attacks up the page
             halves.append(
                 f'<div class="luhalf {cls}">' +
-                "".join('<div class="lurow">' + "".join(_pitch_player(pl, pmap, short_names) for pl in r) + '</div>'
+                "".join('<div class="lurow">' + "".join(_pitch_player(pl, pmap, short_names, subs=subs) for pl in r) + '</div>'
                         for r in rows) + '</div>')
 
     played = (m.get("status") or "") in ("ft","live")
@@ -2390,7 +2440,7 @@ def lineup_block(m, involved):
                 cols.append(f'<div class="benchcol"><h4>{esc(side["team"] or m.get(side_key,""))}'
                             + (f' <span class="luform">{esc(side["formation"])}</span>' if side["formation"] else "")
                             + '</h4>'
-                            + "".join(_bench_name(pl, pmap) for pl in side[which]) + '</div>')
+                            + "".join(_bench_name(pl, pmap, subs=subs) for pl in side[which]) + '</div>')
         if not cols: return ""
         return f'<div class="sec"><h2>{heading}</h2></div><div class="benchgrid">{"".join(cols)}</div>'
 
@@ -2436,6 +2486,8 @@ def match_player_stats(m, involved):
     date = (m.get("kickoff") or "")[:10]
     home_k, away_k = _club_key(m.get("home")), _club_key(m.get("away"))
     evs = EVENTS.get(mid, [])
+    lu = _match_lineup(m)
+    subs = match_subs(m, lu)
     out = {}
     for p in involved:
         row = None
@@ -2461,7 +2513,38 @@ def match_player_stats(m, involved):
         if row:
             d.update(mins=row[4], g=row[5], a=row[6],
                      rating=(row[7] if len(row) > 7 else ""))
+        nk = _name_key(p["n"])
+        if subs["on"].get(nk):  d["son"]  = subs["on"][nk]
+        if subs["off"].get(nk): d["soff"] = subs["off"][nk]
         out[p["slug"]] = d
+
+    # everyone else on the teamsheet gets a lighter card: name, shirt, what
+    # they did in this game (goals, cards, sub on/off) and minutes worked out
+    # from the sub times, so tapping any player answers something
+    tracked_keys = {_name_key(p["n"]) for p in involved}
+    done = (m.get("status") or "") == "ft"
+    for side_key, sd in (lu or {}).items():
+        team = sd["team"] or m.get(side_key, "")
+        for role, pls in (("start", sd["start"]), ("bench", sd["bench"])):
+            for pl in pls:
+                nk = _name_key(pl["name"])
+                if not nk or nk in tracked_keys: continue
+                on_m, off_m = subs["on"].get(nk), subs["off"].get(nk)
+                pevs = [dict(min=e.get("minute",""), type=e.get("type",""))
+                        for e in evs
+                        if e.get("type") not in ("sub_on","sub_off")
+                        and _name_key(e.get("player")) == nk]
+                d = dict(n=pl["name"], club=team, pos=(pl.get("pos") or ""),
+                         ini=initials(pl["name"]), u=1, num=(pl.get("num") or ""),
+                         evs=pevs)
+                if on_m:  d["son"]  = on_m
+                if off_m: d["soff"] = off_m
+                if done:
+                    if role == "start":
+                        d["mins"] = _sub_key_min(off_m) if off_m else 90
+                    elif on_m:
+                        d["mins"] = max(0, 90 - _sub_key_min(on_m))
+                out[_ukey(pl["name"])] = d
     return out
 
 def build_match(m, involved, squad_list=False):

@@ -1830,6 +1830,35 @@ def parse_match_events(data, home, away):
         etype = type_map.get(key)
         if not etype:
             return
+        if etype == "sub":
+            # A substitution names TWO players (fotmob's `swap` pair: the one
+            # coming on first, the one going off second). Emit one row each so
+            # the CSV shape stays one-player-per-row.
+            swap = ev.get("swap")
+            if not (isinstance(swap, list) and len(swap) == 2):
+                return
+            def _nm(x):
+                if isinstance(x, dict):
+                    return str(x.get("name") or x.get("nameStr") or "").strip()
+                return str(x or "").strip()
+            on_name, off_name = _nm(swap[0]), _nm(swap[1])
+            minute = ev.get("time") or ev.get("minute") or ev.get("timeStr") or ""
+            if isinstance(minute, dict):
+                minute = minute.get("value") or minute.get("short") or ""
+            minute = re.sub(r"[^0-9+]", "", str(minute))
+            side = ev.get("isHome")
+            team = (home if side is True else away if side is False
+                    else str(ev.get("teamName") or ""))
+            for nm, st in ((on_name, "sub_on"), (off_name, "sub_off")):
+                if not nm:
+                    continue
+                sig = (minute, st, norm(nm), norm(team))
+                if sig in seen:
+                    continue
+                seen.add(sig)
+                events.append({"minute": minute, "type": st,
+                               "player": nm, "team": team})
+            return
         if etype == "goal":
             if ev.get("isPenaltyShootoutEvent"):
                 return

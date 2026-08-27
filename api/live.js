@@ -84,6 +84,21 @@ function parseEvents(data) {
       type = c === 'Red' ? 'red' : (c === 'YellowRed' ? 'second_yellow' : 'yellow');
     } else if (e.type === 'MissedPenalty') {
       type = 'missed_penalty';
+    } else if (e.type === 'Substitution') {
+      // fotmob's swap pair: coming on first, going off second
+      const sw = Array.isArray(e.swap) ? e.swap : [];
+      const nm = x => (x && (x.name || x.nameStr)) ? String(x.name || x.nameStr) : '';
+      if (sw.length === 2 && (nm(sw[0]) || nm(sw[1]))) {
+        out.push({
+          min: String(e.timeStr == null ? '' : e.timeStr),
+          type: 'sub',
+          player: nm(sw[1]),           // off
+          sin: nm(sw[0]),              // on
+          home: e.isHome ? 1 : 0,
+          assist: ''
+        });
+      }
+      continue;
     }
     if (!type) continue;
     const name = (e.player && (e.player.name || e.player.profileUrl)) || e.nameStr || '';
