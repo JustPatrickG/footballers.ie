@@ -850,10 +850,68 @@ match_id,minute,type,player,team,venue
 2026-08-26-tottenham-hotspur-v-charlton-athletic,82,goal,Sávio,Tottenham Hotspur,Tottenham Hotspur Stadium
 2026-08-26-tottenham-hotspur-v-charlton-athletic,85,goal,Ben Davies,Tottenham Hotspur,Tottenham Hotspur Stadium
 2026-08-26-tottenham-hotspur-v-charlton-athletic,87,goal,Lloyd Jones,Charlton Athletic,Tottenham Hotspur Stadium
+2026-08-27-boreham-wood-v-boston-united,26,goal,Tom Cursons,Boston United,Mangata Developments Stadium Meadow Park
+2026-08-27-boreham-wood-v-boston-united,40,yellow,Lewis Shipley,Boston United,Mangata Developments Stadium Meadow Park
+2026-08-27-boreham-wood-v-boston-united,52,yellow,Gavan Holohan,Boston United,Mangata Developments Stadium Meadow Park
+2026-08-27-boreham-wood-v-boston-united,53,yellow,Oliver Bainbridge,Boreham Wood,Mangata Developments Stadium Meadow Park
+2026-08-27-boreham-wood-v-boston-united,54,yellow,Lennon Wheeldon,Boston United,Mangata Developments Stadium Meadow Park
+2026-08-27-boreham-wood-v-boston-united,85,goal,Matt Rush,Boreham Wood,Mangata Developments Stadium Meadow Park
+2026-08-27-boreham-wood-v-boston-united,88,goal,Matt Rush,Boreham Wood,Mangata Developments Stadium Meadow Park
+2026-08-27-boreham-wood-v-boston-united,90,yellow,Lenell John-Lewis,Boston United,Mangata Developments Stadium Meadow Park
+2026-08-27-brighton-hove-albion-v-troms,22,goal,Charalampos Kostoulas,Brighton & Hove Albion,American Express Stadium
+2026-08-27-brighton-hove-albion-v-troms,33,goal,Maxim De Cuyper,Brighton & Hove Albion,American Express Stadium
+2026-08-27-brighton-hove-albion-v-troms,38,goal,Mats Wieffer,Brighton & Hove Albion,American Express Stadium
+2026-08-27-brighton-hove-albion-v-troms,45,yellow,Alexander Warneryd,Tromsø,American Express Stadium
+2026-08-27-brighton-hove-albion-v-troms,86,goal,Olivier Boscagli,Brighton & Hove Albion,American Express Stadium
 2026-08-27-cf-america-v-columbus-crew,11,goal,Raphael Veiga,CF América,Dignity Health Sports Park
 2026-08-27-cf-america-v-columbus-crew,39,missed_penalty,Brais Méndez,Columbus Crew,Dignity Health Sports Park
 2026-08-27-cf-america-v-columbus-crew,45,goal,Brian Rodríguez,CF América,Dignity Health Sports Park
 2026-08-27-cf-america-v-columbus-crew,86,yellow,Óscar Perea,CF América,Dignity Health Sports Park
+2026-08-27-chelsea-v-luton-town,50,goal,Danny Welbeck,Chelsea,Stamford Bridge
+2026-08-27-chelsea-v-luton-town,56,yellow,Joseph Johnson,Luton Town,Stamford Bridge
+2026-08-27-chelsea-v-luton-town,79,own_goal,Hakeem Odoffin,Chelsea,Stamford Bridge
+2026-08-27-ferencvaros-v-trabzonspor,13,red,Ruslan Malinovsky,Trabzonspor,Groupama Aréna
+2026-08-27-ferencvaros-v-trabzonspor,14,yellow,Stefan Savic,Trabzonspor,Groupama Aréna
+2026-08-27-ferencvaros-v-trabzonspor,19,goal,Callum O'Dowda,Ferencváros,Groupama Aréna
+2026-08-27-ferencvaros-v-trabzonspor,32,yellow,Sidny Lopes Cabral,Trabzonspor,Groupama Aréna
+2026-08-27-ferencvaros-v-trabzonspor,54,goal,Márius Corbu,Ferencváros,Groupama Aréna
+2026-08-27-ferencvaros-v-trabzonspor,57,second_yellow,Sidny Lopes Cabral,Trabzonspor,Groupama Aréna
+2026-08-27-ferencvaros-v-trabzonspor,58,yellow,André Onana,Trabzonspor,Groupama Aréna
+2026-08-27-ferencvaros-v-trabzonspor,59,goal,Bamidele Yusuf,Ferencváros,Groupama Aréna
+2026-08-27-ferencvaros-v-trabzonspor,86,goal,Krisztián Lisztes,Ferencváros,Groupama Aréna
+2026-08-27-ferencvaros-v-trabzonspor,88,yellow,Krisztián Lisztes,Ferencváros,Groupama Aréna
+2026-08-27-freiburg-v-motherwell,5,goal,Derry Scherhant,Freiburg,Europa-Park Stadion
+2026-08-27-freiburg-v-motherwell,22,goal,Emmanuel Longelo,Motherwell,Europa-Park Stadion
+2026-08-27-freiburg-v-motherwell,55,yellow,Jamie Knight-Lebel,Motherwell,Europa-Park Stadion
+2026-08-27-freiburg-v-motherwell,57,red,Jake Girdwood-Reich,Motherwell,Europa-Park Stadion
+2026-08-27-freiburg-v-motherwell,60,goal,Igor Matanovic,Freiburg,Europa-Park Stadion
+2026-08-27-freiburg-v-motherwell,63,goal,Cyriaque Irié,Freiburg,Europa-Park Stadion
+2026-08-27-freiburg-v-motherwell,85,goal,Keisuke Goto,Freiburg,Europa-Park Stadion
+2026-08-27-hibernian-v-gent,32,yellow,Christian Burgess,Gent,Easter Road Stadium
+2026-08-27-hibernian-v-gent,39,goal,Josué Vergara,Gent,Easter Road Stadium
+2026-08-27-hibernian-v-gent,44,yellow,Tibe De Vlieger,Gent,Easter Road Stadium
+2026-08-27-hibernian-v-gent,56,goal,Jason Kerr,Hibernian,Easter Road Stadium
+2026-08-27-hibernian-v-gent,60,yellow,Miguel Chaiwa,Hibernian,Easter Road Stadium
+2026-08-27-hibernian-v-gent,77,goal,Felix Passlack,Hibernian,Easter Road Stadium
+2026-08-27-hibernian-v-gent,84,goal,Christian Burgess,Gent,Easter Road Stadium
+2026-08-27-hibernian-v-gent,90,own_goal,Jordan Obita,Gent,Easter Road Stadium
+2026-08-27-hibernian-v-gent,90,second_yellow,Miguel Chaiwa,Hibernian,Easter Road Stadium
+2026-08-27-kups-v-shamrock-rovers,29,yellow,John O'Sullivan,Shamrock Rovers,Väre Areena
+2026-08-27-kups-v-shamrock-rovers,65,yellow,Matthew Healy,Shamrock Rovers,Väre Areena
+2026-08-27-kups-v-shamrock-rovers,73,yellow,Roberto Lopes,Shamrock Rovers,Väre Areena
+2026-08-27-kups-v-shamrock-rovers,75,own_goal,Roberto Lopes,KuPS,Väre Areena
+2026-08-27-kups-v-shamrock-rovers,87,yellow,Brahima Magassa,KuPS,Väre Areena
+2026-08-27-kups-v-shamrock-rovers,90,yellow,Edward McGinty,Shamrock Rovers,Väre Areena
+2026-08-27-larne-v-lincoln-red-imps-fc,71,yellow,Montel Gibson,Larne,Inver Park
+2026-08-27-larne-v-lincoln-red-imps-fc,73,yellow,Matthew Lusty,Larne,Inver Park
+2026-08-27-larne-v-lincoln-red-imps-fc,80,yellow,Bernardo Lopes,Lincoln Red Imps FC,Inver Park
+2026-08-27-larne-v-lincoln-red-imps-fc,82,goal,Kike Gomez,Lincoln Red Imps FC,Inver Park
+2026-08-27-larne-v-lincoln-red-imps-fc,85,goal,Manu Toledano,Lincoln Red Imps FC,Inver Park
+2026-08-27-larne-v-lincoln-red-imps-fc,87,second_yellow,Montel Gibson,Larne,Inver Park
+2026-08-27-larne-v-lincoln-red-imps-fc,90,yellow,Christopher Gallagher,Larne,Inver Park
+2026-08-27-larne-v-lincoln-red-imps-fc,90,yellow,Nico Pinto,Lincoln Red Imps FC,Inver Park
+2026-08-27-larne-v-lincoln-red-imps-fc,119,yellow,Jaylan Hankins,Lincoln Red Imps FC,Inver Park
+2026-08-27-larne-v-lincoln-red-imps-fc,120,goal,Manu Toledano,Lincoln Red Imps FC,Inver Park
 2026-08-27-new-mexico-united-v-lexington-sc,10,yellow,Oliver Semmle,Lexington SC,Rio Grande Credit Union Field at Isotopes Park
 2026-08-27-new-mexico-united-v-lexington-sc,29,yellow,Greg Hurst,New Mexico United,Rio Grande Credit Union Field at Isotopes Park
 2026-08-27-new-mexico-united-v-lexington-sc,51,goal,Marqes Muir,Lexington SC,Rio Grande Credit Union Field at Isotopes Park
