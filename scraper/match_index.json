@@ -6,6 +6,8 @@
   "comp": "Premier Division",
   "home": "Galway United FC",
   "away": "Shelbourne",
+  "home_id": "520517",
+  "away_id": "5751",
   "slugs": [
    "aaron-bolger",
    "adam-ohalloran",
@@ -58,6 +60,8 @@
   "comp": "FAI Cup",
   "home": "Drogheda United",
   "away": "Galway United FC",
+  "home_id": "8339",
+  "away_id": "520517",
   "slugs": [
    "aaron-bolger",
    "adam-ohalloran",
@@ -113,6 +117,8 @@
   "comp": "Premier Division",
   "home": "Sligo Rovers",
   "away": "Waterford FC",
+  "home_id": "6361",
+  "away_id": "6042",
   "slugs": [
    "aaron-brennan",
    "alex-nolan",
@@ -145,6 +151,8 @@
   "comp": "Premier Division",
   "home": "St. Patrick's Athletic",
   "away": "Waterford FC",
+  "home_id": "1854",
+  "away_id": "6042",
   "slugs": [
    "aaron-brennan",
    "adam-banim",
@@ -208,6 +216,8 @@
   "comp": "FAI Cup",
   "home": "Waterford FC",
   "away": "Sligo Rovers",
+  "home_id": "6042",
+  "away_id": "6361",
   "slugs": [
    "aaron-brennan",
    "aidan-gabbidon",
@@ -257,6 +267,8 @@
   "comp": "League One",
   "home": "Leyton Orient",
   "away": "Barnsley",
+  "home_id": "8351",
+  "away_id": "8283",
   "slugs": [
    "aaron-connolly",
    "corey-okeeffe",
@@ -274,6 +286,8 @@
   "comp": "League One",
   "home": "Bromley",
   "away": "Leyton Orient",
+  "home_id": "45729",
+  "away_id": "8351",
   "slugs": [
    "aaron-connolly",
    "jaze-kabia",
@@ -290,6 +304,8 @@
   "comp": "League One",
   "home": "Luton",
   "away": "Leyton Orient",
+  "home_id": "8346",
+  "away_id": "8351",
   "slugs": [
    "aaron-connolly",
    "callum-marshall",
@@ -301,12 +317,32 @@
   ]
  },
  {
+  "fotmob_id": "6099339",
+  "url": "/matches/leyton-orient-vs-bradford-city/2cdo3u#6099339",
+  "kickoff": "2026-09-08T18:45:00Z",
+  "comp": "EFL Cup",
+  "home": "Leyton Orient",
+  "away": "Bradford",
+  "home_id": "8351",
+  "away_id": "8484",
+  "slugs": [
+   "aaron-connolly",
+   "jaze-kabia",
+   "killian-cahill",
+   "ollie-oneill",
+   "tony-springett",
+   "tyreik-wright"
+  ]
+ },
+ {
   "fotmob_id": "5837881",
   "url": "/matches/cheltenham-town-vs-swindon-town/2tmayd#5837881",
   "kickoff": "2026-08-22T14:00:00Z",
   "comp": "League Two",
   "home": "Swindon Town",
   "away": "Cheltenham Town",
+  "home_id": "9795",
+  "away_id": "8680",
   "slugs": [
    "aaron-drinan",
    "jordan-shipley",
@@ -320,6 +356,8 @@
   "comp": "League Two",
   "home": "Oldham Athletic",
   "away": "Swindon Town",
+  "home_id": "9785",
+  "away_id": "9795",
   "slugs": [
    "aaron-drinan",
    "calum-kavanagh",
@@ -336,6 +374,8 @@
   "comp": "League Two",
   "home": "Swindon",
   "away": "Port Vale",
+  "home_id": "9795",
+  "away_id": "9799",
   "slugs": [
    "aaron-drinan",
    "gavin-kilkenny"
@@ -348,6 +388,8 @@
   "comp": "League Two",
   "home": "Swindon",
   "away": "Colchester",
+  "home_id": "9795",
+  "away_id": "8416",
   "slugs": [
    "aaron-drinan",
    "gavin-kilkenny",
@@ -361,6 +403,8 @@
   "comp": "Conference League Qualification",
   "home": "Shamrock Rovers",
   "away": "KuPS",
+  "home_id": "4131",
+  "away_id": "1693",
   "slugs": [
    "aaron-greene",
    "adam-brennan",
@@ -394,6 +438,8 @@
   "comp": "Conference League Qualification",
   "home": "KuPS",
   "away": "Shamrock Rovers",
+  "home_id": "1693",
+  "away_id": "4131",
   "slugs": [
    "aaron-greene",
    "adam-brennan",
@@ -435,6 +481,8 @@
   "comp": "Premier Division",
   "home": "Derry City",
   "away": "Shamrock Rovers",
+  "home_id": "8338",
+  "away_id": "4131",
   "slugs": [
    "aaron-greene",
    "adam-brennan",
@@ -495,6 +543,8 @@
   "comp": "Premier Division",
   "home": "Shamrock Rovers",
   "away": "Shelbourne",
+  "home_id": "4131",
+  "away_id": "5751",
   "slugs": [
    "aaron-greene",
    "adam-brennan",
@@ -554,6 +604,8 @@
   "comp": "Premier Division",
   "home": "Shamrock Rovers",
   "away": "Bohemian FC",
+  "home_id": "4131",
+  "away_id": "4594",
   "slugs": [
    "aaron-greene",
    "adam-brennan",
@@ -614,6 +666,8 @@
   "comp": "Premier Division",
   "home": "Dundalk",
   "away": "Galway United FC",
+  "home_id": "1853",
+  "away_id": "520517",
   "slugs": [
    "aaron-keogh",
    "anthony-oconnor",
@@ -652,6 +706,8 @@
   "comp": "Premier Division",
   "home": "Drogheda United",
   "away": "Dundalk",
+  "home_id": "8339",
+  "away_id": "1853",
   "slugs": [
    "aaron-keogh",
    "andrew-quinn",
@@ -713,6 +769,8 @@
   "comp": "FAI Cup",
   "home": "Derry City",
   "away": "Dundalk",
+  "home_id": "8338",
+  "away_id": "1853",
   "slugs": [
    "aaron-keogh",
    "adam-oreilly",
@@ -772,6 +830,8 @@
   "comp": "Premier League 2",
   "home": "Tottenham Hotspur U21",
   "away": "Birmingham U21",
+  "home_id": "860802",
+  "away_id": "1796111",
   "slugs": [
    "aaron-maguire",
    "finn-mcgreevy"
@@ -784,6 +844,8 @@
   "comp": "EFL Trophy Southern Grp. A",
   "home": "Exeter",
   "away": "Tottenham Hotspur U21",
+  "home_id": "9833",
+  "away_id": "860802",
   "slugs": [
    "aaron-maguire",
    "charlie-cummins",
@@ -797,6 +859,8 @@
   "comp": "Premiership",
   "home": "Portadown",
   "away": "Coleraine",
+  "home_id": "7984",
+  "away_id": "2202",
   "slugs": [
    "aaron-mccarey",
    "ahu-obhakhan",
@@ -814,6 +878,8 @@
   "comp": "Premiership",
   "home": "Cliftonville",
   "away": "Portadown",
+  "home_id": "1703",
+  "away_id": "7984",
   "slugs": [
    "aaron-mccarey",
    "ahu-obhakhan",
@@ -830,6 +896,8 @@
   "comp": "Premiership",
   "home": "Glentoran",
   "away": "Crusaders",
+  "home_id": "2203",
+  "away_id": "1937",
   "slugs": [
    "aaron-mceneff",
    "ciaran-coll",
@@ -843,6 +911,8 @@
   "comp": "Premiership",
   "home": "Larne",
   "away": "Glentoran",
+  "home_id": "2206",
+  "away_id": "2203",
   "slugs": [
    "aaron-mceneff",
    "ciaran-coll",
@@ -859,6 +929,8 @@
   "comp": "USL Championship",
   "home": "New Mexico United",
   "away": "Lexington SC",
+  "home_id": "1003208",
+  "away_id": "1430405",
   "slugs": [
    "aaron-molloy"
   ]
@@ -870,6 +942,8 @@
   "comp": "USL Championship",
   "home": "Lexington SC",
   "away": "Las Vegas Lights FC",
+  "home_id": "1430405",
+  "away_id": "915809",
   "slugs": [
    "aaron-molloy"
   ]
@@ -881,6 +955,8 @@
   "comp": "USL Championship",
   "home": "Lexington SC",
   "away": "Colorado Springs Switchbacks FC",
+  "home_id": "1430405",
+  "away_id": "614321",
   "slugs": [
    "aaron-molloy"
   ]
@@ -892,6 +968,8 @@
   "comp": "USL Championship",
   "home": "Sporting JAX",
   "away": "Lexington SC",
+  "home_id": "1737991",
+  "away_id": "1430405",
   "slugs": [
    "aaron-molloy",
    "harvey-neville",
@@ -905,6 +983,8 @@
   "comp": "LaLiga",
   "home": "Real Madrid",
   "away": "M\u00e1laga",
+  "home_id": "8633",
+  "away_id": "9864",
   "slugs": [
    "aaron-ochoa"
   ]
@@ -916,6 +996,8 @@
   "comp": "LaLiga",
   "home": "M\u00e1laga",
   "away": "Levante",
+  "home_id": "9864",
+  "away_id": "8581",
   "slugs": [
    "aaron-ochoa"
   ]
@@ -927,6 +1009,8 @@
   "comp": "Veikkausliiga",
   "home": "AC Oulu",
   "away": "SJK",
+  "home_id": "4449",
+  "away_id": "162162",
   "slugs": [
    "aaron-okpolokpo",
    "josh-okpolokpo"
@@ -939,6 +1023,8 @@
   "comp": "Premier League U18",
   "home": "Aston Villa U18",
   "away": "Crystal Palace U18",
+  "home_id": "1113564",
+  "away_id": "1183385",
   "slugs": [
    "aaron-oreilly",
    "alfie-mulvenna"
@@ -951,6 +1037,8 @@
   "comp": "Premier League U18",
   "home": "Brentford U18",
   "away": "Aston Villa U18",
+  "home_id": "2137381",
+  "away_id": "1113564",
   "slugs": [
    "aaron-oreilly"
   ]
@@ -962,6 +1050,8 @@
   "comp": "FAI Cup",
   "home": "St. Patrick's Athletic",
   "away": "Bohemian FC",
+  "home_id": "1854",
+  "away_id": "4594",
   "slugs": [
    "adam-banim",
    "adam-deans",
@@ -1026,6 +1116,8 @@
   "comp": "Championship",
   "home": "Swansea City",
   "away": "Sheffield United",
+  "home_id": "10003",
+  "away_id": "8657",
   "slugs": [
    "adam-idah",
    "mark-mcguinness",
@@ -1040,6 +1132,8 @@
   "comp": "Championship",
   "home": "Derby County",
   "away": "Swansea City",
+  "home_id": "10170",
+  "away_id": "10003",
   "slugs": [
    "adam-idah",
    "sammie-szmodics"
@@ -1052,6 +1146,8 @@
   "comp": "Championship",
   "home": "Swansea",
   "away": "Watford",
+  "home_id": "10003",
+  "away_id": "9817",
   "slugs": [
    "adam-idah",
    "rocco-vata"
@@ -1064,6 +1160,8 @@
   "comp": "Championship",
   "home": "Swansea",
   "away": "Wrexham",
+  "home_id": "10003",
+  "away_id": "9841",
   "slugs": [
    "adam-idah"
   ]
@@ -1075,6 +1173,8 @@
   "comp": "Championship",
   "home": "Southampton",
   "away": "Swansea",
+  "home_id": "8466",
+  "away_id": "10003",
   "slugs": [
    "adam-idah",
    "finn-azaz",
@@ -1090,6 +1190,8 @@
   "comp": "Premier Division",
   "home": "Bohemian FC",
   "away": "Derry City",
+  "home_id": "4594",
+  "away_id": "8338",
   "slugs": [
    "adam-mcdonnell",
    "adam-oreilly",
@@ -1123,6 +1225,8 @@
   "comp": "Premier Division",
   "home": "Bohemian FC",
   "away": "Sligo Rovers",
+  "home_id": "4594",
+  "away_id": "6361",
   "slugs": [
    "adam-mcdonnell",
    "aidan-gabbidon",
@@ -1173,6 +1277,8 @@
   "comp": "EFL Cup",
   "home": "Fleetwood Town",
   "away": "Shrewsbury Town",
+  "home_id": "45723",
+  "away_id": "9896",
   "slugs": [
    "adam-murphy",
    "jesse-dempsey",
@@ -1187,6 +1293,8 @@
   "comp": "League Two",
   "home": "Fleetwood Town",
   "away": "Gillingham",
+  "home_id": "45723",
+  "away_id": "10173",
   "slugs": [
    "adam-murphy",
    "conor-mcmanus",
@@ -1201,6 +1309,8 @@
   "comp": "League Two",
   "home": "Grimsby Town",
   "away": "Fleetwood Town",
+  "home_id": "10005",
+  "away_id": "45723",
   "slugs": [
    "adam-murphy",
    "cian-doyle",
@@ -1217,6 +1327,8 @@
   "comp": "League Two",
   "home": "Fleetwood",
   "away": "Oldham",
+  "home_id": "45723",
+  "away_id": "9785",
   "slugs": [
    "adam-murphy",
    "calum-kavanagh",
@@ -1235,9 +1347,27 @@
   "comp": "League Two",
   "home": "Fleetwood",
   "away": "Shrewsbury",
+  "home_id": "45723",
+  "away_id": "9896",
   "slugs": [
    "adam-murphy",
    "anthony-scully",
+   "jesse-dempsey",
+   "ronan-coughlan",
+   "sean-costelloe"
+  ]
+ },
+ {
+  "fotmob_id": "6099337",
+  "url": "/matches/sheffield-united-vs-fleetwood-town/ogc4pb#6099337",
+  "kickoff": "2026-09-08T18:45:00Z",
+  "comp": "EFL Cup",
+  "home": "Fleetwood",
+  "away": "Sheff Utd",
+  "home_id": "45723",
+  "away_id": "8657",
+  "slugs": [
+   "adam-murphy",
    "jesse-dempsey",
    "ronan-coughlan",
    "sean-costelloe"
@@ -1250,6 +1380,8 @@
   "comp": "National League North",
   "home": "Hebburn Town",
   "away": "King's Lynn Town",
+  "home_id": "292923",
+  "away_id": "45731",
   "slugs": [
    "adam-rooney",
    "jesse-nwabueze"
@@ -1262,6 +1394,8 @@
   "comp": "National League North",
   "home": "King's Lynn Town",
   "away": "Scarborough Athletic",
+  "home_id": "45731",
+  "away_id": "580382",
   "slugs": [
    "adam-rooney",
    "jesse-nwabueze"
@@ -1274,8 +1408,11 @@
   "comp": "National League North",
   "home": "Darlington",
   "away": "King's Lynn Town",
+  "home_id": "8598",
+  "away_id": "45731",
   "slugs": [
    "adam-rooney",
+   "bobby-jones",
    "jesse-nwabueze"
   ]
  },
@@ -1286,6 +1423,8 @@
   "comp": "National League North",
   "home": "King's Lynn Town",
   "away": "Hednesford",
+  "home_id": "45731",
+  "away_id": "9923",
   "slugs": [
    "adam-rooney",
    "jesse-nwabueze",
@@ -1299,6 +1438,8 @@
   "comp": "Premier League 2",
   "home": "AFC Bournemouth Academy",
   "away": "Chelsea U21",
+  "home_id": "2128213",
+  "away_id": "773652",
   "slugs": [
    "ade-solanke",
    "justin-osagie"
@@ -1311,6 +1452,8 @@
   "comp": "Premier League 2",
   "home": "AFC Bournemouth Academy",
   "away": "Middlesbrough U21",
+  "home_id": "2128213",
+  "away_id": "773660",
   "slugs": [
    "ade-solanke"
   ]
@@ -1322,6 +1465,8 @@
   "comp": "EFL Cup",
   "home": "Barnsley",
   "away": "Crewe Alexandra",
+  "home_id": "8283",
+  "away_id": "9784",
   "slugs": [
    "adrien-thibaut",
    "charlie-mcneill",
@@ -1335,6 +1480,8 @@
   "comp": "League Two",
   "home": "Crewe Alexandra",
   "away": "Northampton Town",
+  "home_id": "9784",
+  "away_id": "8651",
   "slugs": [
    "adrien-thibaut",
    "charlie-mcneill",
@@ -1348,6 +1495,8 @@
   "comp": "League Two",
   "home": "Port Vale",
   "away": "Crewe Alexandra",
+  "home_id": "9799",
+  "away_id": "9784",
   "slugs": [
    "adrien-thibaut",
    "charlie-mcneill",
@@ -1361,6 +1510,8 @@
   "comp": "League Two",
   "home": "Crewe",
   "away": "Walsall",
+  "home_id": "9784",
+  "away_id": "10006",
   "slugs": [
    "adrien-thibaut",
    "charlie-mcneill",
@@ -1376,6 +1527,8 @@
   "comp": "League Two",
   "home": "Crewe",
   "away": "York City",
+  "home_id": "9784",
+  "away_id": "9916",
   "slugs": [
    "adrien-thibaut",
    "charlie-mcneill",
@@ -1389,6 +1542,8 @@
   "comp": "Premier Division",
   "home": "Drogheda United",
   "away": "St. Patrick's Athletic",
+  "home_id": "8339",
+  "away_id": "1854",
   "slugs": [
    "aidan-keena",
    "andrew-quinn",
@@ -1430,6 +1585,8 @@
   "comp": "League One",
   "home": "Stevenage",
   "away": "Oxford United",
+  "home_id": "10253",
+  "away_id": "8653",
   "slugs": [
    "aidomo-emakhu",
    "tyler-goodrham"
@@ -1442,6 +1599,8 @@
   "comp": "League One",
   "home": "Huddersfield Town",
   "away": "Oxford United",
+  "home_id": "9796",
+  "away_id": "8653",
   "slugs": [
    "aidomo-emakhu",
    "james-golding",
@@ -1457,6 +1616,8 @@
   "comp": "First Division",
   "home": "Cork City",
   "away": "Wexford FC",
+  "home_id": "2201",
+  "away_id": "62337",
   "slugs": [
    "ajibola-oluwabiyi",
    "brody-lee",
@@ -1476,6 +1637,8 @@
   "comp": "First Division",
   "home": "Treaty United",
   "away": "Wexford FC",
+  "home_id": "1233534",
+  "away_id": "62337",
   "slugs": [
    "ajibola-oluwabiyi",
    "billy-regan",
@@ -1493,6 +1656,8 @@
   "comp": "Premier League",
   "home": "Sunderland",
   "away": "Fulham",
+  "home_id": "8472",
+  "away_id": "9879",
   "slugs": [
    "alan-browne"
   ]
@@ -1504,10 +1669,26 @@
   "comp": "Premier League",
   "home": "Brentford",
   "away": "Sunderland",
+  "home_id": "9937",
+  "away_id": "8472",
   "slugs": [
    "alan-browne",
    "caoimhin-kelleher",
    "nathan-collins"
+  ]
+ },
+ {
+  "fotmob_id": "6099331",
+  "url": "/matches/sunderland-vs-hull-city/2fgcyx#6099331",
+  "kickoff": "2026-09-08T18:45:00Z",
+  "comp": "EFL Cup",
+  "home": "Sunderland",
+  "away": "Hull",
+  "home_id": "8472",
+  "away_id": "8667",
+  "slugs": [
+   "alan-browne",
+   "john-egan"
   ]
  },
  {
@@ -1517,6 +1698,8 @@
   "comp": "First Division",
   "home": "Cobh Ramblers",
   "away": "Longford Town",
+  "home_id": "2383",
+  "away_id": "4569",
   "slugs": [
    "alan-zborowski",
    "callum-honohan",
@@ -1534,6 +1717,8 @@
   "comp": "First Division",
   "home": "Cobh Ramblers",
   "away": "UCD",
+  "home_id": "2383",
+  "away_id": "1578",
   "slugs": [
    "alan-zborowski",
    "callum-honohan",
@@ -1550,6 +1735,8 @@
   "comp": "DFB Pokal",
   "home": "Waldhof Mannheim",
   "away": "Kaiserslautern",
+  "home_id": "9743",
+  "away_id": "8350",
   "slugs": [
    "alex-murphy"
   ]
@@ -1561,6 +1748,8 @@
   "comp": "2. Bundesliga",
   "home": "St. Pauli",
   "away": "Kaiserslautern",
+  "home_id": "8152",
+  "away_id": "8350",
   "slugs": [
    "alex-murphy"
   ]
@@ -1572,6 +1761,8 @@
   "comp": "2. Bundesliga",
   "home": "Kaiserslautern",
   "away": "Darmstadt",
+  "home_id": "8350",
+  "away_id": "8262",
   "slugs": [
    "alex-murphy"
   ]
@@ -1583,6 +1774,8 @@
   "comp": "Premier League U18",
   "home": "Crystal Palace U18",
   "away": "Tottenham U18",
+  "home_id": "1183385",
+  "away_id": "1113562",
   "slugs": [
    "alfie-mulvenna"
   ]
@@ -1594,6 +1787,8 @@
   "comp": "Prva Liga",
   "home": "Nafta",
   "away": "Maribor",
+  "home_id": "2420",
+  "away_id": "8340",
   "slugs": [
    "ali-reghba"
   ]
@@ -1605,6 +1800,8 @@
   "comp": "Prva Liga",
   "home": "Maribor",
   "away": "Mura",
+  "home_id": "8340",
+  "away_id": "2172",
   "slugs": [
    "ali-reghba"
   ]
@@ -1616,6 +1813,8 @@
   "comp": "EFL Cup",
   "home": "Preston North End",
   "away": "Everton",
+  "home_id": "8411",
+  "away_id": "8668",
   "slugs": [
    "andrew-moran",
    "desmond-armstrong",
@@ -1630,6 +1829,8 @@
   "comp": "Championship",
   "home": "Preston North End",
   "away": "Wolverhampton Wanderers",
+  "home_id": "8411",
+  "away_id": "8602",
   "slugs": [
    "andrew-moran"
   ]
@@ -1641,6 +1842,8 @@
   "comp": "Championship",
   "home": "Charlton Athletic",
   "away": "Preston North End",
+  "home_id": "8451",
+  "away_id": "8411",
   "slugs": [
    "andrew-moran",
    "conor-coventry",
@@ -1656,6 +1859,8 @@
   "comp": "Championship",
   "home": "Preston",
   "away": "Bristol City",
+  "home_id": "8411",
+  "away_id": "8427",
   "slugs": [
    "andrew-moran",
    "jason-knight",
@@ -1669,6 +1874,8 @@
   "comp": "Championship",
   "home": "Preston",
   "away": "Blackburn",
+  "home_id": "8411",
+  "away_id": "8655",
   "slugs": [
    "andrew-moran",
    "connor-oriordan",
@@ -1683,6 +1890,8 @@
   "comp": "Championship",
   "home": "Watford",
   "away": "Preston",
+  "home_id": "9817",
+  "away_id": "8411",
   "slugs": [
    "andrew-moran",
    "rocco-vata"
@@ -1695,6 +1904,8 @@
   "comp": "Ligue 1",
   "home": "Marseille",
   "away": "Strasbourg",
+  "home_id": "8592",
+  "away_id": "9848",
   "slugs": [
    "andrew-omobamidele"
   ]
@@ -1706,6 +1917,8 @@
   "comp": "Ligue 1",
   "home": "Strasbourg",
   "away": "Lens",
+  "home_id": "9848",
+  "away_id": "8588",
   "slugs": [
    "andrew-omobamidele"
   ]
@@ -1717,6 +1930,8 @@
   "comp": "Ligue 1",
   "home": "Troyes",
   "away": "Strasbourg",
+  "home_id": "10242",
+  "away_id": "9848",
   "slugs": [
    "andrew-omobamidele"
   ]
@@ -1728,6 +1943,8 @@
   "comp": "League One",
   "home": "Stockport County",
   "away": "Wycombe Wanderers",
+  "home_id": "10007",
+  "away_id": "8676",
   "slugs": [
    "andrew-wogan",
    "dan-casey",
@@ -1742,6 +1959,8 @@
   "comp": "League One",
   "home": "Luton",
   "away": "Stockport County",
+  "home_id": "8346",
+  "away_id": "10007",
   "slugs": [
    "andrew-wogan",
    "callum-marshall",
@@ -1756,6 +1975,8 @@
   "comp": "League One",
   "home": "Wigan",
   "away": "Stockport County",
+  "home_id": "8528",
+  "away_id": "10007",
   "slugs": [
    "andrew-wogan",
    "dara-costelloe",
@@ -1770,6 +1991,8 @@
   "comp": "EFL Cup",
   "home": "Blackpool",
   "away": "Lincoln City",
+  "home_id": "8483",
+  "away_id": "8430",
   "slugs": [
    "andy-lyons",
    "cj-hamilton",
@@ -1784,6 +2007,8 @@
   "comp": "League One",
   "home": "Stockport County",
   "away": "Blackpool",
+  "home_id": "10007",
+  "away_id": "8483",
   "slugs": [
    "andy-lyons",
    "cj-hamilton",
@@ -1797,6 +2022,8 @@
   "comp": "League One",
   "home": "Blackpool",
   "away": "Peterborough United",
+  "home_id": "8483",
+  "away_id": "8677",
   "slugs": [
    "andy-lyons",
    "cj-hamilton",
@@ -1813,6 +2040,8 @@
   "comp": "League One",
   "home": "Barnsley",
   "away": "Blackpool",
+  "home_id": "8283",
+  "away_id": "8483",
   "slugs": [
    "andy-lyons",
    "cj-hamilton",
@@ -1827,6 +2056,8 @@
   "comp": "League One",
   "home": "Reading",
   "away": "Blackpool",
+  "home_id": "9798",
+  "away_id": "8483",
   "slugs": [
    "andy-lyons",
    "cj-hamilton",
@@ -1841,6 +2072,8 @@
   "comp": "DFB Pokal",
   "home": "Bahlinger SC",
   "away": "Magdeburg",
+  "home_id": "2393",
+  "away_id": "8188",
   "slugs": [
    "anselmo-garcia-macnulty"
   ]
@@ -1852,6 +2085,8 @@
   "comp": "2. Bundesliga",
   "home": "Magdeburg",
   "away": "Holstein Kiel",
+  "home_id": "8188",
+  "away_id": "8150",
   "slugs": [
    "anselmo-garcia-macnulty"
   ]
@@ -1863,6 +2098,8 @@
   "comp": "2. Bundesliga",
   "home": "Hertha BSC",
   "away": "Magdeburg",
+  "home_id": "8177",
+  "away_id": "8188",
   "slugs": [
    "anselmo-garcia-macnulty"
   ]
@@ -1874,6 +2111,8 @@
   "comp": "League Two",
   "home": "Shrewsbury Town",
   "away": "Salford City",
+  "home_id": "9896",
+  "away_id": "282326",
   "slugs": [
    "anthony-scully",
    "ryan-graydon"
@@ -1886,6 +2125,8 @@
   "comp": "League Two",
   "home": "Rochdale",
   "away": "Shrewsbury",
+  "home_id": "8493",
+  "away_id": "9896",
   "slugs": [
    "anthony-scully",
    "baba-adeeko",
@@ -1900,6 +2141,8 @@
   "comp": "Premiership",
   "home": "Celtic",
   "away": "Falkirk",
+  "home_id": "9925",
+  "away_id": "8596",
   "slugs": [
    "aodhan-doherty",
    "joe-gardner",
@@ -1915,6 +2158,8 @@
   "comp": "Premiership",
   "home": "Falkirk",
   "away": "Rangers",
+  "home_id": "8596",
+  "away_id": "8548",
   "slugs": [
    "aodhan-doherty",
    "joe-gardner",
@@ -1928,6 +2173,8 @@
   "comp": "Premiership",
   "home": "Dundee United",
   "away": "Falkirk",
+  "home_id": "9938",
+  "away_id": "8596",
   "slugs": [
    "aodhan-doherty",
    "joe-gardner",
@@ -1943,6 +2190,8 @@
   "comp": "Champions League Qualification",
   "home": "AEK Athens",
   "away": "Levski Sofia",
+  "home_id": "8563",
+  "away_id": "8632",
   "slugs": [
    "armstrong-oko-flex"
   ]
@@ -1954,6 +2203,8 @@
   "comp": "First Professional League",
   "home": "Levski Sofia",
   "away": "Spartak Varna",
+  "home_id": "8632",
+  "away_id": "10145",
   "slugs": [
    "armstrong-oko-flex"
   ]
@@ -1965,6 +2216,8 @@
   "comp": "First Professional League",
   "home": "Botev Plovdiv",
   "away": "Levski Sofia",
+  "home_id": "10131",
+  "away_id": "8632",
   "slugs": [
    "armstrong-oko-flex"
   ]
@@ -1976,6 +2229,8 @@
   "comp": "First Professional League",
   "home": "Slavia Sofia",
   "away": "Levski Sofia",
+  "home_id": "10134",
+  "away_id": "8632",
   "slugs": [
    "armstrong-oko-flex"
   ]
@@ -1987,6 +2242,8 @@
   "comp": "First Professional League",
   "home": "Levski Sofia",
   "away": "CSKA 1948",
+  "home_id": "8632",
+  "away_id": "944215",
   "slugs": [
    "armstrong-oko-flex"
   ]
@@ -1998,6 +2255,8 @@
   "comp": "Super Cup",
   "home": "Levski Sofia",
   "away": "CSKA Sofia",
+  "home_id": "8632",
+  "away_id": "10144",
   "slugs": [
    "armstrong-oko-flex"
   ]
@@ -2009,6 +2268,8 @@
   "comp": "League Two",
   "home": "Rochdale",
   "away": "Crawley Town",
+  "home_id": "8493",
+  "away_id": "8647",
   "slugs": [
    "baba-adeeko",
    "jonny-smith",
@@ -2023,6 +2284,8 @@
   "comp": "League Two",
   "home": "Colchester United",
   "away": "Rochdale",
+  "home_id": "8416",
+  "away_id": "8493",
   "slugs": [
    "baba-adeeko",
    "cian-hayes",
@@ -2037,6 +2300,8 @@
   "comp": "League Two",
   "home": "Rochdale",
   "away": "Gillingham",
+  "home_id": "8493",
+  "away_id": "10173",
   "slugs": [
    "baba-adeeko",
    "cian-hayes",
@@ -2051,6 +2316,8 @@
   "comp": "USL Championship",
   "home": "Hartford Athletic",
   "away": "Birmingham Legion FC",
+  "home_id": "1003206",
+  "away_id": "1003207",
   "slugs": [
    "barry-coffey"
   ]
@@ -2062,6 +2329,8 @@
   "comp": "USL Championship",
   "home": "Charleston Battery",
   "away": "Hartford Athletic",
+  "home_id": "162183",
+  "away_id": "1003206",
   "slugs": [
    "barry-coffey"
   ]
@@ -2073,6 +2342,8 @@
   "comp": "USL Championship",
   "home": "Detroit City FC",
   "away": "Hartford Athletic",
+  "home_id": "540855",
+  "away_id": "1003206",
   "slugs": [
    "barry-coffey"
   ]
@@ -2084,6 +2355,8 @@
   "comp": "USL Cup",
   "home": "Hartford Athletic",
   "away": "Colorado Springs Switchbacks FC",
+  "home_id": "1003206",
+  "away_id": "614321",
   "slugs": [
    "barry-coffey"
   ]
@@ -2095,6 +2368,8 @@
   "comp": "First Division",
   "home": "Athlone Town",
   "away": "Bray Wanderers",
+  "home_id": "2378",
+  "away_id": "1629",
   "slugs": [
    "ben-mccormack",
    "billy-oneill",
@@ -2114,6 +2389,8 @@
   "comp": "First Division",
   "home": "Bray Wanderers",
   "away": "Cork City",
+  "home_id": "1629",
+  "away_id": "2201",
   "slugs": [
    "ben-mccormack",
    "billy-oneill",
@@ -2135,11 +2412,12 @@
   "comp": "Premiership",
   "home": "Cliftonville",
   "away": "Dungannon Swifts",
+  "home_id": "1703",
+  "away_id": "4615",
   "slugs": [
    "ben-quinn",
    "kealan-dillon",
    "paul-doyle",
-   "peter-maguire",
    "rory-hale"
   ]
  },
@@ -2150,6 +2428,8 @@
   "comp": "First Division",
   "home": "Kerry FC",
   "away": "Treaty United",
+  "home_id": "1426348",
+  "away_id": "1233534",
   "slugs": [
    "billy-regan",
    "dare-kareem"
@@ -2162,6 +2442,47 @@
   "comp": "National League North",
   "home": "Harborough Town FC",
   "away": "Darlington",
+  "home_id": "1382661",
+  "away_id": "8598",
+  "slugs": [
+   "bobby-jones"
+  ]
+ },
+ {
+  "fotmob_id": "5907016",
+  "url": "/matches/darlington-vs-macclesfield-fc/2g1p9e#5907016",
+  "kickoff": "2026-08-29T14:00:00Z",
+  "comp": "National League North",
+  "home": "Darlington",
+  "away": "Macclesfield FC",
+  "home_id": "8598",
+  "away_id": "8599",
+  "slugs": [
+   "bobby-jones"
+  ]
+ },
+ {
+  "fotmob_id": "5907033",
+  "url": "/matches/darlington-vs-radcliffe/jg6gbec#5907033",
+  "kickoff": "2026-08-31T14:00:00Z",
+  "comp": "National League North",
+  "home": "Radcliffe",
+  "away": "Darlington",
+  "home_id": "282390",
+  "away_id": "8598",
+  "slugs": [
+   "bobby-jones"
+  ]
+ },
+ {
+  "fotmob_id": "5907053",
+  "url": "/matches/darlington-vs-chorley/if6r6k9#5907053",
+  "kickoff": "2026-09-08T18:45:00Z",
+  "comp": "National League North",
+  "home": "Chorley",
+  "away": "Darlington",
+  "home_id": "274599",
+  "away_id": "8598",
   "slugs": [
    "bobby-jones"
   ]
@@ -2173,6 +2494,8 @@
   "comp": "Premiership",
   "home": "Dundee United",
   "away": "Dundee FC",
+  "home_id": "9938",
+  "away_id": "8284",
   "slugs": [
    "bobby-wales",
    "kieran-ohara",
@@ -2187,13 +2510,14 @@
   "comp": "Premiership",
   "home": "Dundee FC",
   "away": "Hibernian",
+  "home_id": "8284",
+  "away_id": "10251",
   "slugs": [
    "bobby-wales",
    "jacob-devaney",
    "jamie-mcgrath",
    "kieran-ohara",
    "owen-elding",
-   "tom-mcgrath",
    "warren-ohora"
   ]
  },
@@ -2204,6 +2528,8 @@
   "comp": "Premiership",
   "home": "Dundee FC",
   "away": "St. Johnstone",
+  "home_id": "8284",
+  "away_id": "8467",
   "slugs": [
    "bobby-wales",
    "kieran-ohara",
@@ -2217,6 +2543,8 @@
   "comp": "Premiership",
   "home": "Hearts",
   "away": "Dundee FC",
+  "home_id": "9860",
+  "away_id": "8284",
   "slugs": [
    "bobby-wales",
    "kieran-ohara"
@@ -2229,6 +2557,8 @@
   "comp": "EFL Cup",
   "home": "Stoke City",
   "away": "Hull City",
+  "home_id": "10194",
+  "away_id": "8667",
   "slugs": [
    "bosun-lawal",
    "gabriel-kelly",
@@ -2242,6 +2572,8 @@
   "comp": "Championship",
   "home": "Wolverhampton Wanderers",
   "away": "Stoke City",
+  "home_id": "8602",
+  "away_id": "10194",
   "slugs": [
    "bosun-lawal"
   ]
@@ -2253,6 +2585,8 @@
   "comp": "Championship",
   "home": "Stoke",
   "away": "Norwich",
+  "home_id": "10194",
+  "away_id": "9850",
   "slugs": [
    "bosun-lawal"
   ]
@@ -2264,6 +2598,8 @@
   "comp": "Championship",
   "home": "Stoke",
   "away": "Charlton",
+  "home_id": "10194",
+  "away_id": "8451",
   "slugs": [
    "bosun-lawal",
    "conor-coventry",
@@ -2279,6 +2615,8 @@
   "comp": "Championship",
   "home": "Cardiff",
   "away": "Stoke",
+  "home_id": "8344",
+  "away_id": "10194",
   "slugs": [
    "bosun-lawal",
    "callum-robinson",
@@ -2289,10 +2627,12 @@
  {
   "fotmob_id": "6002078",
   "url": "/matches/cong-ho-chi-minh-city-vs-cong-ha-noi/40nnpnjf#6002078",
-  "kickoff": "2026-08-30T12:00:00Z",
+  "kickoff": "2026-08-30T11:00:00Z",
   "comp": "Super Cup",
   "home": "C\u00f4ng An H\u00e0 N\u1ed9i",
   "away": "Cong An Ho Ch\u00ed Minh City",
+  "home_id": "614354",
+  "away_id": "179228",
   "slugs": [
    "brandon-ly"
   ]
@@ -2304,6 +2644,8 @@
   "comp": "V-League",
   "home": "C\u00f4ng An H\u00e0 N\u1ed9i",
   "away": "Hong Linh Ha Tinh",
+  "home_id": "614354",
+  "away_id": "1123220",
   "slugs": [
    "brandon-ly"
   ]
@@ -2315,6 +2657,8 @@
   "comp": "First Division",
   "home": "UCD",
   "away": "Finn Harps",
+  "home_id": "1578",
+  "away_id": "1627",
   "slugs": [
    "bridel-bosakani",
    "charles-akinrintoyo",
@@ -2331,6 +2675,8 @@
   "comp": "First Division",
   "home": "Finn Harps",
   "away": "Athlone Town",
+  "home_id": "1627",
+  "away_id": "2378",
   "slugs": [
    "bridel-bosakani",
    "cillian-tollett",
@@ -2341,12 +2687,27 @@
   ]
  },
  {
+  "fotmob_id": "6028327",
+  "url": "/matches/columbus-crew-vs-cf-america/1b3gip#6028327",
+  "kickoff": "2026-08-27T02:45:00Z",
+  "comp": "Leagues Cup",
+  "home": "CF Am\u00e9rica",
+  "away": "Columbus Crew",
+  "home_id": "6576",
+  "away_id": "6001",
+  "slugs": [
+   "brooks-lennon"
+  ]
+ },
+ {
   "fotmob_id": "5071299",
   "url": "/matches/columbus-crew-vs-nashville-sc/5f6igu2v#5071299",
   "kickoff": "2026-08-23T00:30:00Z",
   "comp": "Major League Soccer",
   "home": "Nashville SC",
   "away": "Columbus Crew",
+  "home_id": "915807",
+  "away_id": "6001",
   "slugs": [
    "brooks-lennon"
   ]
@@ -2354,10 +2715,12 @@
  {
   "fotmob_id": "5071307",
   "url": "/matches/columbus-crew-vs-new-england-revolution/1b4jcj#5071307",
-  "kickoff": "2026-08-29T23:30:00Z",
+  "kickoff": "2026-08-30T20:30:00Z",
   "comp": "Major League Soccer",
   "home": "Columbus Crew",
   "away": "New England Revolution",
+  "home_id": "6001",
+  "away_id": "6580",
   "slugs": [
    "brooks-lennon"
   ]
@@ -2369,6 +2732,8 @@
   "comp": "Major League Soccer",
   "home": "Columbus",
   "away": "Colorado",
+  "home_id": "6001",
+  "away_id": "8314",
   "slugs": [
    "brooks-lennon"
   ]
@@ -2380,6 +2745,8 @@
   "comp": "Major League Soccer",
   "home": "DC United",
   "away": "Columbus",
+  "home_id": "6602",
+  "away_id": "6001",
   "slugs": [
    "brooks-lennon"
   ]
@@ -2391,6 +2758,8 @@
   "comp": "League One",
   "home": "Luton Town",
   "away": "Notts County",
+  "home_id": "8346",
+  "away_id": "9819",
   "slugs": [
    "callum-marshall",
    "conor-grant",
@@ -2405,6 +2774,8 @@
   "comp": "EFL Cup",
   "home": "Chelsea",
   "away": "Luton Town",
+  "home_id": "8455",
+  "away_id": "8346",
   "slugs": [
    "callum-marshall",
    "josh-keeley"
@@ -2417,6 +2788,8 @@
   "comp": "League One",
   "home": "Mansfield",
   "away": "Luton",
+  "home_id": "9818",
+  "away_id": "8346",
   "slugs": [
    "callum-marshall",
    "david-mcgoldrick",
@@ -2432,6 +2805,8 @@
   "comp": "Europa League Qualification",
   "home": "Trabzonspor",
   "away": "Ferencv\u00e1ros",
+  "home_id": "9752",
+  "away_id": "8222",
   "slugs": [
    "callum-odowda"
   ]
@@ -2443,6 +2818,8 @@
   "comp": "Europa League Qualification",
   "home": "Ferencv\u00e1ros",
   "away": "Trabzonspor",
+  "home_id": "8222",
+  "away_id": "9752",
   "slugs": [
    "callum-odowda"
   ]
@@ -2454,6 +2831,8 @@
   "comp": "NB I",
   "home": "Pusk\u00e1s FC Academy",
   "away": "Ferencv\u00e1ros",
+  "home_id": "355346",
+  "away_id": "8222",
   "slugs": [
    "callum-odowda"
   ]
@@ -2465,6 +2844,8 @@
   "comp": "NB I",
   "home": "Gy\u00f6ri ETO",
   "away": "Ferencv\u00e1ros",
+  "home_id": "5755",
+  "away_id": "8222",
   "slugs": [
    "callum-odowda"
   ]
@@ -2476,6 +2857,8 @@
   "comp": "NB I",
   "home": "Ferencv\u00e1ros",
   "away": "\u00dajpest",
+  "home_id": "8222",
+  "away_id": "8043",
   "slugs": [
    "callum-odowda"
   ]
@@ -2487,6 +2870,8 @@
   "comp": "EFL Cup",
   "home": "Cardiff City",
   "away": "Norwich City",
+  "home_id": "8344",
+  "away_id": "9850",
   "slugs": [
    "callum-robinson",
    "jack-moylan",
@@ -2500,6 +2885,8 @@
   "comp": "Championship",
   "home": "Derby County",
   "away": "Cardiff City",
+  "home_id": "10170",
+  "away_id": "8344",
   "slugs": [
    "callum-robinson",
    "jack-moylan",
@@ -2513,6 +2900,8 @@
   "comp": "Championship",
   "home": "Cardiff City",
   "away": "Sheffield United",
+  "home_id": "8344",
+  "away_id": "8657",
   "slugs": [
    "callum-robinson",
    "jack-moylan",
@@ -2530,6 +2919,8 @@
   "comp": "Championship",
   "home": "QPR",
   "away": "Cardiff",
+  "home_id": "10172",
+  "away_id": "8344",
   "slugs": [
    "callum-robinson",
    "jack-moylan",
@@ -2543,6 +2934,8 @@
   "comp": "Championship",
   "home": "Portsmouth",
   "away": "Cardiff",
+  "home_id": "8462",
+  "away_id": "8344",
   "slugs": [
    "callum-robinson",
    "conor-shaughnessy",
@@ -2559,6 +2952,8 @@
   "comp": "League Two",
   "home": "Colchester United",
   "away": "Oldham Athletic",
+  "home_id": "8416",
+  "away_id": "9785",
   "slugs": [
    "calum-kavanagh",
    "lewis-temple",
@@ -2573,6 +2968,8 @@
   "comp": "League Two",
   "home": "Tranmere",
   "away": "Oldham",
+  "home_id": "8313",
+  "away_id": "9785",
   "slugs": [
    "calum-kavanagh",
    "frankie-mcmahon-brown",
@@ -2589,6 +2986,8 @@
   "comp": "Championship",
   "home": "Queens Park Rangers",
   "away": "Bolton Wanderers",
+  "home_id": "10172",
+  "away_id": "8559",
   "slugs": [
    "calum-ward",
    "cyrus-christie",
@@ -2604,6 +3003,8 @@
   "comp": "Championship",
   "home": "Blackburn Rovers",
   "away": "Queens Park Rangers",
+  "home_id": "8655",
+  "away_id": "10172",
   "slugs": [
    "calum-ward",
    "connor-oriordan",
@@ -2620,6 +3021,8 @@
   "comp": "Highland / Lowland",
   "home": "Turriff United",
   "away": "Strathspey Thistle",
+  "home_id": "351621",
+  "away_id": "575415",
   "slugs": [
    "cameron-reid"
   ]
@@ -2631,6 +3034,8 @@
   "comp": "Highland League",
   "home": "Brora Rangers",
   "away": "Turriff United",
+  "home_id": "97904",
+  "away_id": "351621",
   "slugs": [
    "cameron-reid"
   ]
@@ -2642,6 +3047,8 @@
   "comp": "Highland / Lowland",
   "home": "Turriff United",
   "away": "Inverurie Loco Works",
+  "home_id": "351621",
+  "away_id": "1908",
   "slugs": [
    "cameron-reid"
   ]
@@ -2653,6 +3060,8 @@
   "comp": "EFL Cup",
   "home": "Birmingham City",
   "away": "Brentford",
+  "home_id": "8658",
+  "away_id": "9937",
   "slugs": [
    "caoimhin-kelleher",
    "nathan-collins"
@@ -2665,6 +3074,8 @@
   "comp": "Premier League",
   "home": "Brentford",
   "away": "Tottenham Hotspur",
+  "home_id": "9937",
+  "away_id": "8586",
   "slugs": [
    "caoimhin-kelleher",
    "nathan-collins"
@@ -2677,9 +3088,27 @@
   "comp": "Premier League",
   "home": "Leeds United",
   "away": "Brentford",
+  "home_id": "8463",
+  "away_id": "9937",
   "slugs": [
    "caoimhin-kelleher",
    "nathan-collins"
+  ]
+ },
+ {
+  "fotmob_id": "6099340",
+  "url": "/matches/reading-vs-brentford/37y9ut#6099340",
+  "kickoff": "2026-09-08T18:45:00Z",
+  "comp": "EFL Cup",
+  "home": "Reading",
+  "away": "Brentford",
+  "home_id": "9798",
+  "away_id": "9937",
+  "slugs": [
+   "caoimhin-kelleher",
+   "conor-masterson",
+   "nathan-collins",
+   "paudie-oconnor"
   ]
  },
  {
@@ -2689,6 +3118,8 @@
   "comp": "National League",
   "home": "Harrogate Town",
   "away": "Barrow",
+  "home_id": "7946",
+  "away_id": "6350",
   "slugs": [
    "cathal-heffernan"
   ]
@@ -2700,6 +3131,8 @@
   "comp": "National League",
   "home": "Aldershot Town",
   "away": "Harrogate Town",
+  "home_id": "8465",
+  "away_id": "7946",
   "slugs": [
    "cathal-heffernan",
    "scott-davies"
@@ -2712,6 +3145,8 @@
   "comp": "National League",
   "home": "Harrogate Town",
   "away": "Gateshead FC",
+  "home_id": "7946",
+  "away_id": "6189",
   "slugs": [
    "cathal-heffernan",
    "david-eguaibor"
@@ -2724,6 +3159,8 @@
   "comp": "National League",
   "home": "Scunthorpe",
   "away": "Harrogate Town",
+  "home_id": "8412",
+  "away_id": "7946",
   "slugs": [
    "cathal-heffernan",
    "hugh-parker"
@@ -2736,6 +3173,8 @@
   "comp": "Premiership",
   "home": "Kilmarnock",
   "away": "Dundee United",
+  "home_id": "8597",
+  "away_id": "9938",
   "slugs": [
    "cathal-mccarthy",
    "neil-farrugia",
@@ -2749,6 +3188,8 @@
   "comp": "Premiership",
   "home": "Kilmarnock",
   "away": "St. Mirren",
+  "home_id": "8597",
+  "away_id": "9800",
   "slugs": [
    "cathal-mccarthy",
    "killian-phillips"
@@ -2761,6 +3202,8 @@
   "comp": "Premiership",
   "home": "Aberdeen",
   "away": "Kilmarnock",
+  "home_id": "8485",
+  "away_id": "8597",
   "slugs": [
    "cathal-mccarthy",
    "connor-ronan",
@@ -2774,6 +3217,8 @@
   "comp": "Premiership",
   "home": "Coleraine",
   "away": "Crusaders",
+  "home_id": "2202",
+  "away_id": "1937",
   "slugs": [
    "charles-dunne",
    "mark-coyle",
@@ -2787,6 +3232,8 @@
   "comp": "League Two",
   "home": "Exeter City",
   "away": "Accrington Stanley",
+  "home_id": "9833",
+  "away_id": "8671",
   "slugs": [
    "charlie-cummins",
    "connor-obrien",
@@ -2801,6 +3248,8 @@
   "comp": "League Two",
   "home": "York City",
   "away": "Exeter City",
+  "home_id": "9916",
+  "away_id": "9833",
   "slugs": [
    "charlie-cummins",
    "jake-doyle-hayes"
@@ -2813,6 +3262,8 @@
   "comp": "League Two",
   "home": "Exeter",
   "away": "Barnet",
+  "home_id": "9833",
+  "away_id": "8175",
   "slugs": [
    "charlie-cummins",
    "jake-doyle-hayes",
@@ -2826,6 +3277,8 @@
   "comp": "League Two",
   "home": "Exeter",
   "away": "Walsall",
+  "home_id": "9833",
+  "away_id": "10006",
   "slugs": [
    "charlie-cummins",
    "jake-doyle-hayes",
@@ -2840,6 +3293,8 @@
   "comp": "EFL Cup",
   "home": "Ipswich Town",
   "away": "Leicester City",
+  "home_id": "9902",
+  "away_id": "8197",
   "slugs": [
    "chiedozie-ogbene",
    "dara-oshea",
@@ -2853,6 +3308,8 @@
   "comp": "Premier League",
   "home": "Manchester United",
   "away": "Ipswich Town",
+  "home_id": "10260",
+  "away_id": "9902",
   "slugs": [
    "chiedozie-ogbene",
    "dara-oshea",
@@ -2867,6 +3324,24 @@
   "comp": "Premier League",
   "home": "Ipswich",
   "away": "Liverpool",
+  "home_id": "9902",
+  "away_id": "8650",
+  "slugs": [
+   "chiedozie-ogbene",
+   "dara-oshea",
+   "jack-taylor",
+   "kasey-mcateer"
+  ]
+ },
+ {
+  "fotmob_id": "6099332",
+  "url": "/matches/arsenal-vs-ipswich-town/37uw12#6099332",
+  "kickoff": "2026-09-08T18:45:00Z",
+  "comp": "EFL Cup",
+  "home": "Ipswich",
+  "away": "Arsenal",
+  "home_id": "9902",
+  "away_id": "9825",
   "slugs": [
    "chiedozie-ogbene",
    "dara-oshea",
@@ -2881,6 +3356,8 @@
   "comp": "Premier League U18",
   "home": "Ipswich Town U18",
   "away": "AFC Bournemouth U18",
+  "home_id": "1791531",
+  "away_id": "2137380",
   "slugs": [
    "chris-atherton"
   ]
@@ -2892,6 +3369,8 @@
   "comp": "Premiership",
   "home": "Limavady",
   "away": "Linfield",
+  "home_id": "2205",
+  "away_id": "7971",
   "slugs": [
    "chris-shields",
    "darragh-leahy",
@@ -2905,6 +3384,8 @@
   "comp": "Premiership",
   "home": "Linfield",
   "away": "Carrick Rangers",
+  "home_id": "7971",
+  "away_id": "187969",
   "slugs": [
    "chris-shields",
    "cian-omalley",
@@ -2921,6 +3402,8 @@
   "comp": "Southern Premier Division Central",
   "home": "Stamford AFC",
   "away": "Rushall Olympic",
+  "home_id": "282333",
+  "away_id": "274600",
   "slugs": [
    "christopher-atherton"
   ]
@@ -2932,6 +3415,8 @@
   "comp": "Southern Premier Division Central",
   "home": "Rushall Olympic",
   "away": "Alvechurch",
+  "home_id": "274600",
+  "away_id": "865168",
   "slugs": [
    "christopher-atherton"
   ]
@@ -2943,6 +3428,8 @@
   "comp": "League Two",
   "home": "Walsall",
   "away": "Grimsby Town",
+  "home_id": "10006",
+  "away_id": "10005",
   "slugs": [
    "cian-doyle"
   ]
@@ -2954,6 +3441,8 @@
   "comp": "League Two",
   "home": "Accrington",
   "away": "Grimsby",
+  "home_id": "8671",
+  "away_id": "10005",
   "slugs": [
    "cian-doyle",
    "connor-obrien",
@@ -2968,6 +3457,8 @@
   "comp": "League Two",
   "home": "Cheltenham",
   "away": "Grimsby",
+  "home_id": "8680",
+  "away_id": "10005",
   "slugs": [
    "cian-doyle",
    "jordan-shipley",
@@ -2982,6 +3473,8 @@
   "comp": "Premiership",
   "home": "Bangor",
   "away": "Carrick Rangers",
+  "home_id": "77755",
+  "away_id": "187969",
   "slugs": [
    "cian-omalley",
    "daire-oconnor",
@@ -2995,6 +3488,8 @@
   "comp": "League Two",
   "home": "Bristol Rovers",
   "away": "Newport County",
+  "home_id": "10104",
+  "away_id": "10262",
   "slugs": [
    "ciaran-brennan",
    "ciaran-kelly",
@@ -3008,6 +3503,8 @@
   "comp": "League Two",
   "home": "Newport County",
   "away": "Tranmere Rovers",
+  "home_id": "10262",
+  "away_id": "8313",
   "slugs": [
    "ciaran-brennan",
    "jacob-slater",
@@ -3021,6 +3518,8 @@
   "comp": "League Two",
   "home": "Salford",
   "away": "Newport",
+  "home_id": "282326",
+  "away_id": "10262",
   "slugs": [
    "ciaran-brennan",
    "ryan-graydon"
@@ -3033,6 +3532,8 @@
   "comp": "League Two",
   "home": "Northampton",
   "away": "Newport",
+  "home_id": "8651",
+  "away_id": "10262",
   "slugs": [
    "ciaran-brennan",
    "conor-mccarthy",
@@ -3046,6 +3547,8 @@
   "comp": "League One",
   "home": "Notts County",
   "away": "Burton Albion",
+  "home_id": "9819",
+  "away_id": "9792",
   "slugs": [
    "ciaran-gilligan",
    "conor-grant",
@@ -3061,6 +3564,8 @@
   "comp": "League One",
   "home": "Burton",
   "away": "Wimbledon",
+  "home_id": "9792",
+  "away_id": "158319",
   "slugs": [
    "ciaran-gilligan",
    "gbemi-arubi"
@@ -3073,6 +3578,8 @@
   "comp": "League One",
   "home": "Burton",
   "away": "Cambridge",
+  "home_id": "9792",
+  "away_id": "9834",
   "slugs": [
    "ciaran-gilligan",
    "gbemi-arubi",
@@ -3087,6 +3594,8 @@
   "comp": "EFL Trophy Southern Grp. C",
   "home": "Bristol Rovers",
   "away": "Chelsea U21",
+  "home_id": "10104",
+  "away_id": "773652",
   "slugs": [
    "ciaran-kelly",
    "joe-quigley",
@@ -3100,6 +3609,8 @@
   "comp": "League Two",
   "home": "Crawley Town",
   "away": "Bristol Rovers",
+  "home_id": "8647",
+  "away_id": "10104",
   "slugs": [
    "ciaran-kelly",
    "joe-quigley",
@@ -3116,6 +3627,8 @@
   "comp": "League Two",
   "home": "Bristol Rovers",
   "away": "Colchester",
+  "home_id": "10104",
+  "away_id": "8416",
   "slugs": [
    "ciaran-kelly",
    "joe-quigley",
@@ -3130,6 +3643,8 @@
   "comp": "League Two",
   "home": "Bristol Rovers",
   "away": "Rotherham",
+  "home_id": "10104",
+  "away_id": "8119",
   "slugs": [
    "ciaran-kelly",
    "emmanuel-adegboyega",
@@ -3146,6 +3661,8 @@
   "comp": "League Two",
   "home": "Walsall",
   "away": "Accrington Stanley",
+  "home_id": "10006",
+  "away_id": "8671",
   "slugs": [
    "connor-obrien",
    "james-furlong",
@@ -3160,6 +3677,8 @@
   "comp": "League Two",
   "home": "Accrington",
   "away": "Crawley",
+  "home_id": "8671",
+  "away_id": "8647",
   "slugs": [
    "connor-obrien",
    "justin-ferizaj",
@@ -3175,6 +3694,8 @@
   "comp": "Championship",
   "home": "Lincoln",
   "away": "Blackburn",
+  "home_id": "8430",
+  "away_id": "8655",
   "slugs": [
    "connor-oriordan",
    "issa-kargbo",
@@ -3191,6 +3712,8 @@
   "comp": "Championship",
   "home": "Blackburn",
   "away": "Sheff Utd",
+  "home_id": "8655",
+  "away_id": "8657",
   "slugs": [
    "connor-oriordan",
    "issa-kargbo",
@@ -3204,6 +3727,8 @@
   "comp": "Premiership",
   "home": "Aberdeen",
   "away": "Rangers",
+  "home_id": "8485",
+  "away_id": "8548",
   "slugs": [
    "connor-ronan",
    "gavin-molloy"
@@ -3216,6 +3741,8 @@
   "comp": "Premiership",
   "home": "Celtic",
   "away": "Aberdeen",
+  "home_id": "9925",
+  "away_id": "8485",
   "slugs": [
    "connor-ronan",
    "gavin-molloy",
@@ -3230,6 +3757,8 @@
   "comp": "National League",
   "home": "FC Halifax Town",
   "away": "Tamworth",
+  "home_id": "10195",
+  "away_id": "10254",
   "slugs": [
    "conor-carty",
    "max-bardell",
@@ -3243,6 +3772,8 @@
   "comp": "National League",
   "home": "Altrincham",
   "away": "FC Halifax Town",
+  "home_id": "9915",
+  "away_id": "10195",
   "slugs": [
    "conor-carty",
    "max-bardell",
@@ -3256,6 +3787,8 @@
   "comp": "National League",
   "home": "FC Halifax Town",
   "away": "Hartlepool United",
+  "home_id": "10195",
+  "away_id": "8488",
   "slugs": [
    "conor-carty",
    "max-bardell",
@@ -3269,6 +3802,8 @@
   "comp": "National League",
   "home": "Aldershot Town",
   "away": "FC Halifax Town",
+  "home_id": "8465",
+  "away_id": "10195",
   "slugs": [
    "conor-carty",
    "max-bardell",
@@ -3283,6 +3818,8 @@
   "comp": "National League Cup Group A",
   "home": "FC Halifax Town",
   "away": "Wolverhampton Wanderers U21",
+  "home_id": "10195",
+  "away_id": "773683",
   "slugs": [
    "conor-carty",
    "max-bardell",
@@ -3297,6 +3834,8 @@
   "comp": "EFL Cup",
   "home": "Tottenham Hotspur",
   "away": "Charlton Athletic",
+  "home_id": "8586",
+  "away_id": "8451",
   "slugs": [
    "conor-coventry",
    "dan-mcnamara",
@@ -3311,6 +3850,8 @@
   "comp": "Championship",
   "home": "West Ham United",
   "away": "Charlton Athletic",
+  "home_id": "8654",
+  "away_id": "8451",
   "slugs": [
    "conor-coventry",
    "dan-mcnamara",
@@ -3325,6 +3866,8 @@
   "comp": "Championship",
   "home": "West Brom",
   "away": "Charlton",
+  "home_id": "8659",
+  "away_id": "8451",
   "slugs": [
    "conor-coventry",
    "dan-mcnamara",
@@ -3342,6 +3885,8 @@
   "comp": "Championship",
   "home": "Charlton",
   "away": "QPR",
+  "home_id": "8451",
+  "away_id": "10172",
   "slugs": [
    "conor-coventry",
    "dan-mcnamara",
@@ -3356,6 +3901,8 @@
   "comp": "League One",
   "home": "Doncaster",
   "away": "Notts County",
+  "home_id": "9903",
+  "away_id": "9819",
   "slugs": [
    "conor-grant",
    "darius-lipsiuc",
@@ -3373,6 +3920,8 @@
   "comp": "League One",
   "home": "Huddersfield",
   "away": "Notts County",
+  "home_id": "9796",
+  "away_id": "9819",
   "slugs": [
    "conor-grant",
    "darius-lipsiuc",
@@ -3388,6 +3937,8 @@
   "comp": "EFL Cup",
   "home": "Stevenage",
   "away": "Reading",
+  "home_id": "10253",
+  "away_id": "9798",
   "slugs": [
    "conor-masterson"
   ]
@@ -3399,6 +3950,8 @@
   "comp": "League One",
   "home": "Reading",
   "away": "Mansfield Town",
+  "home_id": "9798",
+  "away_id": "9818",
   "slugs": [
    "conor-masterson",
    "david-mcgoldrick",
@@ -3414,6 +3967,8 @@
   "comp": "League One",
   "home": "Oxford Utd",
   "away": "Reading",
+  "home_id": "8653",
+  "away_id": "9798",
   "slugs": [
    "conor-masterson",
    "paudie-oconnor"
@@ -3426,6 +3981,8 @@
   "comp": "League Two",
   "home": "Gillingham",
   "away": "Northampton Town",
+  "home_id": "10173",
+  "away_id": "8651",
   "slugs": [
    "conor-mccarthy",
    "conor-mcmanus",
@@ -3439,6 +3996,8 @@
   "comp": "League Two",
   "home": "Northampton",
   "away": "Crawley",
+  "home_id": "8651",
+  "away_id": "8647",
   "slugs": [
    "conor-mccarthy",
    "joe-obrien-whitmarsh",
@@ -3454,6 +4013,8 @@
   "comp": "League Two",
   "home": "Chesterfield",
   "away": "Gillingham",
+  "home_id": "9786",
+  "away_id": "10173",
   "slugs": [
    "conor-mcmanus",
    "dylan-duffy"
@@ -3466,6 +4027,8 @@
   "comp": "Championship",
   "home": "Lincoln City",
   "away": "Portsmouth",
+  "home_id": "8430",
+  "away_id": "8462",
   "slugs": [
    "conor-shaughnessy",
    "mason-melia"
@@ -3478,6 +4041,8 @@
   "comp": "Championship",
   "home": "Bristol City",
   "away": "Portsmouth",
+  "home_id": "8427",
+  "away_id": "8462",
   "slugs": [
    "conor-shaughnessy",
    "eoin-kenny",
@@ -3493,6 +4058,8 @@
   "comp": "Championship",
   "home": "Portsmouth",
   "away": "Derby",
+  "home_id": "8462",
+  "away_id": "10170",
   "slugs": [
    "conor-shaughnessy",
    "eoin-kenny",
@@ -3507,6 +4074,8 @@
   "comp": "Championship",
   "home": "Wolves",
   "away": "Portsmouth",
+  "home_id": "8602",
+  "away_id": "8462",
   "slugs": [
    "conor-shaughnessy",
    "eoin-kenny",
@@ -3520,6 +4089,8 @@
   "comp": "League One",
   "home": "Doncaster Rovers",
   "away": "Barnsley",
+  "home_id": "9903",
+  "away_id": "8283",
   "slugs": [
    "corey-okeeffe",
    "jay-mcgrath",
@@ -3536,9 +4107,29 @@
   "comp": "League One",
   "home": "Barnsley",
   "away": "Stevenage",
+  "home_id": "8283",
+  "away_id": "10253",
   "slugs": [
    "corey-okeeffe",
    "luca-connell"
+  ]
+ },
+ {
+  "fotmob_id": "6099341",
+  "url": "/matches/barnsley-vs-peterborough-united/2dmy2t#6099341",
+  "kickoff": "2026-09-08T18:45:00Z",
+  "comp": "EFL Cup",
+  "home": "Peterborough",
+  "away": "Barnsley",
+  "home_id": "8677",
+  "away_id": "8283",
+  "slugs": [
+   "corey-okeeffe",
+   "david-okagbue",
+   "evan-weir",
+   "liam-kelly",
+   "luca-connell",
+   "thomas-oconnor"
   ]
  },
  {
@@ -3548,6 +4139,8 @@
   "comp": "Serie A",
   "home": "Venezia",
   "away": "Lecce",
+  "home_id": "7881",
+  "away_id": "9888",
   "slugs": [
    "corrie-ndaba"
   ]
@@ -3559,6 +4152,8 @@
   "comp": "Serie A",
   "home": "Lecce",
   "away": "Roma",
+  "home_id": "9888",
+  "away_id": "8686",
   "slugs": [
    "corrie-ndaba"
   ]
@@ -3570,6 +4165,8 @@
   "comp": "Serie A",
   "home": "Cagliari",
   "away": "Lecce",
+  "home_id": "8529",
+  "away_id": "9888",
   "slugs": [
    "corrie-ndaba"
   ]
@@ -3581,6 +4178,8 @@
   "comp": "Championship",
   "home": "Bolton Wanderers",
   "away": "Lincoln City",
+  "home_id": "8559",
+  "away_id": "8430",
   "slugs": [
    "cyrus-christie",
    "jack-bonham",
@@ -3596,6 +4195,8 @@
   "comp": "Championship",
   "home": "Sheff Utd",
   "away": "Bolton",
+  "home_id": "8657",
+  "away_id": "8559",
   "slugs": [
    "cyrus-christie",
    "jack-bonham"
@@ -3608,6 +4209,8 @@
   "comp": "Championship",
   "home": "Millwall",
   "away": "Bolton",
+  "home_id": "10004",
+  "away_id": "8559",
   "slugs": [
    "cyrus-christie",
    "jack-bonham",
@@ -3621,6 +4224,8 @@
   "comp": "Championship",
   "home": "Bolton",
   "away": "West Ham",
+  "home_id": "8559",
+  "away_id": "8654",
   "slugs": [
    "cyrus-christie",
    "jack-bonham"
@@ -3633,6 +4238,8 @@
   "comp": "League One",
   "home": "Wycombe Wanderers",
   "away": "Plymouth Argyle",
+  "home_id": "8676",
+  "away_id": "8401",
   "slugs": [
    "dan-casey",
    "james-storer",
@@ -3647,6 +4254,8 @@
   "comp": "League One",
   "home": "Wycombe",
   "away": "Sheff Wed",
+  "home_id": "8676",
+  "away_id": "10163",
   "slugs": [
    "dan-casey",
    "jamie-mullins"
@@ -3659,6 +4268,8 @@
   "comp": "League One",
   "home": "Wycombe",
   "away": "MK Dons",
+  "home_id": "8676",
+  "away_id": "8645",
   "slugs": [
    "dan-casey",
    "jamie-mullins"
@@ -3671,6 +4282,8 @@
   "comp": "Southern Premier Division Central",
   "home": "Hitchin Town",
   "away": "Kettering Town FC",
+  "home_id": "161838",
+  "away_id": "6647",
   "slugs": [
    "daniel-idiakhoa"
   ]
@@ -3682,6 +4295,8 @@
   "comp": "Southern Premier Division Central",
   "home": "Bishop's Stortford",
   "away": "Hitchin Town",
+  "home_id": "4046",
+  "away_id": "161838",
   "slugs": [
    "daniel-idiakhoa"
   ]
@@ -3693,6 +4308,8 @@
   "comp": "Championship",
   "home": "Inverness Caledonian Thistle",
   "away": "Partick Thistle",
+  "home_id": "8066",
+  "away_id": "8426",
   "slugs": [
    "daniel-oreilly"
   ]
@@ -3704,6 +4321,8 @@
   "comp": "Championship",
   "home": "Partick Thistle",
   "away": "Queen's Park",
+  "home_id": "8426",
+  "away_id": "8235",
   "slugs": [
    "daniel-oreilly"
   ]
@@ -3715,6 +4334,8 @@
   "comp": "Championship",
   "home": "Partick Thistle",
   "away": "Ayr United",
+  "home_id": "8426",
+  "away_id": "9913",
   "slugs": [
    "daniel-oreilly"
   ]
@@ -3726,6 +4347,8 @@
   "comp": "National League South",
   "home": "Braintree Town",
   "away": "Horsham",
+  "home_id": "5763",
+  "away_id": "105554",
   "slugs": [
    "danny-burke"
   ]
@@ -3737,6 +4360,8 @@
   "comp": "National League South",
   "home": "Horsham",
   "away": "Farnham Town",
+  "home_id": "105554",
+  "away_id": "674293",
   "slugs": [
    "danny-burke"
   ]
@@ -3748,6 +4373,8 @@
   "comp": "National League South",
   "home": "Ebbsfleet United",
   "away": "Horsham",
+  "home_id": "9794",
+  "away_id": "105554",
   "slugs": [
    "danny-burke"
   ]
@@ -3759,6 +4386,8 @@
   "comp": "National League South",
   "home": "Horsham",
   "away": "Dagenham & Redbridge",
+  "home_id": "105554",
+  "away_id": "8009",
   "slugs": [
    "danny-burke"
   ]
@@ -3770,6 +4399,8 @@
   "comp": "National League South",
   "home": "Folkestone Invicta",
   "away": "Horsham",
+  "home_id": "6206",
+  "away_id": "105554",
   "slugs": [
    "danny-burke"
   ]
@@ -3781,6 +4412,8 @@
   "comp": "League One",
   "home": "Wigan Athletic",
   "away": "Leyton Orient",
+  "home_id": "8528",
+  "away_id": "8351",
   "slugs": [
    "dara-costelloe",
    "jaze-kabia",
@@ -3795,6 +4428,8 @@
   "comp": "League One",
   "home": "AFC Wimbledon",
   "away": "Wigan Athletic",
+  "home_id": "158319",
+  "away_id": "8528",
   "slugs": [
    "dara-costelloe",
    "sonny-perkins"
@@ -3807,6 +4442,8 @@
   "comp": "League One",
   "home": "Wigan",
   "away": "MK Dons",
+  "home_id": "8528",
+  "away_id": "8645",
   "slugs": [
    "dara-costelloe",
    "sonny-perkins"
@@ -3819,6 +4456,8 @@
   "comp": "Premier League",
   "home": "Ipswich Town",
   "away": "Sunderland",
+  "home_id": "9902",
+  "away_id": "8472",
   "slugs": [
    "dara-oshea",
    "kasey-mcateer"
@@ -3831,6 +4470,8 @@
   "comp": "League One",
   "home": "Montrose",
   "away": "East Kilbride",
+  "home_id": "8257",
+  "away_id": "575419",
   "slugs": [
    "darragh-oconnor",
    "sean-mcginty"
@@ -3843,6 +4484,8 @@
   "comp": "League One",
   "home": "Ross County",
   "away": "East Kilbride",
+  "home_id": "8649",
+  "away_id": "575419",
   "slugs": [
    "darragh-oconnor",
    "len-osullivan"
@@ -3855,6 +4498,8 @@
   "comp": "League One",
   "home": "East Kilbride",
   "away": "Hamilton Academical",
+  "home_id": "575419",
+  "away_id": "8429",
   "slugs": [
    "darragh-oconnor"
   ]
@@ -3866,19 +4511,10 @@
   "comp": "Challenge Cup",
   "home": "East Kilbride",
   "away": "Bonnyrigg Rose",
+  "home_id": "575419",
+  "away_id": "183953",
   "slugs": [
    "darragh-oconnor"
-  ]
- },
- {
-  "fotmob_id": "5906392",
-  "url": "/matches/gateshead-fc-vs-yeovil-town/27y437#5906392",
-  "kickoff": "2026-08-22T11:30:00Z",
-  "comp": "National League",
-  "home": "Yeovil Town",
-  "away": "Gateshead FC",
-  "slugs": [
-   "david-eguaibor"
   ]
  },
  {
@@ -3888,6 +4524,8 @@
   "comp": "National League",
   "home": "Gateshead FC",
   "away": "Sutton United",
+  "home_id": "6189",
+  "away_id": "158316",
   "slugs": [
    "david-eguaibor",
    "emmanuel-osadebe"
@@ -3900,6 +4538,8 @@
   "comp": "National League",
   "home": "Gateshead FC",
   "away": "Solihull Moors",
+  "home_id": "6189",
+  "away_id": "161801",
   "slugs": [
    "david-eguaibor",
    "jevon-mills"
@@ -3912,6 +4552,8 @@
   "comp": "National League Cup Group A",
   "home": "Gateshead FC",
   "away": "Derby County U21",
+  "home_id": "6189",
+  "away_id": "773680",
   "slugs": [
    "david-eguaibor"
   ]
@@ -3923,6 +4565,8 @@
   "comp": "Veikkausliiga",
   "home": "Ilves",
   "away": "HJK",
+  "home_id": "162146",
+  "away_id": "9861",
   "slugs": [
    "david-ezeh"
   ]
@@ -3934,6 +4578,8 @@
   "comp": "Cup",
   "home": "FC Inter Turku",
   "away": "HJK",
+  "home_id": "6550",
+  "away_id": "9861",
   "slugs": [
    "david-ezeh"
   ]
@@ -3945,6 +4591,8 @@
   "comp": "League One",
   "home": "Bradford",
   "away": "Mansfield",
+  "home_id": "8484",
+  "away_id": "9818",
   "slugs": [
    "david-mcgoldrick",
    "ryan-sweeney",
@@ -3959,6 +4607,8 @@
   "comp": "EFL Cup",
   "home": "Watford",
   "away": "Peterborough United",
+  "home_id": "9817",
+  "away_id": "8677",
   "slugs": [
    "david-okagbue",
    "evan-weir",
@@ -3973,6 +4623,8 @@
   "comp": "League One",
   "home": "Peterborough",
   "away": "Stevenage",
+  "home_id": "8677",
+  "away_id": "10253",
   "slugs": [
    "david-okagbue",
    "evan-weir",
@@ -3987,6 +4639,8 @@
   "comp": "League One",
   "home": "Peterborough",
   "away": "Sheff Wed",
+  "home_id": "8677",
+  "away_id": "10163",
   "slugs": [
    "david-okagbue",
    "evan-weir",
@@ -4001,6 +4655,8 @@
   "comp": "Premiership",
   "home": "Ballymena United",
   "away": "Larne",
+  "home_id": "4063",
+  "away_id": "2206",
   "slugs": [
    "david-toure",
    "jack-oreilly",
@@ -4018,6 +4674,8 @@
   "comp": "Premiership",
   "home": "Bangor",
   "away": "Ballymena United",
+  "home_id": "77755",
+  "away_id": "4063",
   "slugs": [
    "david-toure",
    "jack-oreilly",
@@ -4032,6 +4690,8 @@
   "comp": "Premier League",
   "home": "Everton",
   "away": "Crystal Palace",
+  "home_id": "8668",
+  "away_id": "9826",
   "slugs": [
    "desmond-armstrong",
    "jake-obrien",
@@ -4045,6 +4705,8 @@
   "comp": "Premier League",
   "home": "AFC Bournemouth",
   "away": "Everton",
+  "home_id": "8678",
+  "away_id": "8668",
   "slugs": [
    "desmond-armstrong",
    "jake-obrien",
@@ -4058,6 +4720,23 @@
   "comp": "Premier League",
   "home": "Everton",
   "away": "Man United",
+  "home_id": "8668",
+  "away_id": "10260",
+  "slugs": [
+   "desmond-armstrong",
+   "jake-obrien",
+   "mark-travers"
+  ]
+ },
+ {
+  "fotmob_id": "6099338",
+  "url": "/matches/wolverhampton-wanderers-vs-everton/2gso21#6099338",
+  "kickoff": "2026-09-08T18:45:00Z",
+  "comp": "EFL Cup",
+  "home": "Everton",
+  "away": "Wolves",
+  "home_id": "8668",
+  "away_id": "8602",
   "slugs": [
    "desmond-armstrong",
    "jake-obrien",
@@ -4071,6 +4750,8 @@
   "comp": "National League South",
   "home": "Dagenham & Redbridge",
   "away": "Torquay United",
+  "home_id": "8009",
+  "away_id": "10193",
   "slugs": [
    "dominic-bernard"
   ]
@@ -4082,8 +4763,11 @@
   "comp": "National League South",
   "home": "Hemel Hempstead",
   "away": "Weston Super Mare",
+  "home_id": "161831",
+  "away_id": "6314",
   "slugs": [
-   "dominic-bernard"
+   "dominic-bernard",
+   "sean-long"
   ]
  },
  {
@@ -4093,8 +4777,11 @@
   "comp": "National League South",
   "home": "Weston Super Mare",
   "away": "Chelmsford",
+  "home_id": "6314",
+  "away_id": "45724",
   "slugs": [
-   "dominic-bernard"
+   "dominic-bernard",
+   "sean-long"
   ]
  },
  {
@@ -4104,8 +4791,11 @@
   "comp": "National League South",
   "home": "Maidstone United",
   "away": "Weston Super Mare",
+  "home_id": "8131",
+  "away_id": "6314",
   "slugs": [
-   "dominic-bernard"
+   "dominic-bernard",
+   "sean-long"
   ]
  },
  {
@@ -4115,8 +4805,11 @@
   "comp": "National League South",
   "home": "Weston Super Mare",
   "away": "AFC Totton",
+  "home_id": "6314",
+  "away_id": "275027",
   "slugs": [
-   "dominic-bernard"
+   "dominic-bernard",
+   "sean-long"
   ]
  },
  {
@@ -4126,6 +4819,8 @@
   "comp": "Premier League 2",
   "home": "Stoke City U21",
   "away": "Brentford Academy",
+  "home_id": "773650",
+  "away_id": "2054260",
   "slugs": [
    "donal-oconnor",
    "gabriel-kelly"
@@ -4138,6 +4833,8 @@
   "comp": "Premier League 2",
   "home": "Brentford Academy",
   "away": "Sunderland U21",
+  "home_id": "2054260",
+  "away_id": "773657",
   "slugs": [
    "donal-oconnor"
   ]
@@ -4149,6 +4846,8 @@
   "comp": "League Two",
   "home": "Rotherham United",
   "away": "Chesterfield",
+  "home_id": "8119",
+  "away_id": "9786",
   "slugs": [
    "dylan-duffy",
    "emmanuel-adegboyega",
@@ -4163,6 +4862,8 @@
   "comp": "League Two",
   "home": "Chesterfield",
   "away": "Barnet",
+  "home_id": "9786",
+  "away_id": "8175",
   "slugs": [
    "dylan-duffy",
    "oisin-gallagher"
@@ -4175,6 +4876,8 @@
   "comp": "Premier League 2",
   "home": "Middlesbrough U21",
   "away": "Norwich City U21",
+  "home_id": "773660",
+  "away_id": "773658",
   "slugs": [
    "eamonn-tohill"
   ]
@@ -4186,6 +4889,8 @@
   "comp": "Premier League U18",
   "home": "Middlesbrough U18",
   "away": "Derby County U18",
+  "home_id": "1113557",
+  "away_id": "1113549",
   "slugs": [
    "eamonn-tohill"
   ]
@@ -4197,6 +4902,8 @@
   "comp": "Premier League U18",
   "home": "Man United U18",
   "away": "Middlesbrough U18",
+  "home_id": "1113551",
+  "away_id": "1113557",
   "slugs": [
    "eamonn-tohill"
   ]
@@ -4208,6 +4915,8 @@
   "comp": "Eerste Divisie",
   "home": "VVV-Venlo",
   "away": "De Graafschap",
+  "home_id": "9839",
+  "away_id": "8526",
   "slugs": [
    "eanna-clancy"
   ]
@@ -4219,6 +4928,8 @@
   "comp": "Eerste Divisie",
   "home": "VVV-Venlo",
   "away": "FC Emmen",
+  "home_id": "9839",
+  "away_id": "6660",
   "slugs": [
    "eanna-clancy"
   ]
@@ -4230,6 +4941,8 @@
   "comp": "Eerste Divisie",
   "home": "Helmond Sport",
   "away": "VVV-Venlo",
+  "home_id": "6417",
+  "away_id": "9839",
   "slugs": [
    "eanna-clancy"
   ]
@@ -4241,6 +4954,8 @@
   "comp": "Serie C",
   "home": "Cosenza",
   "away": "Potenza",
+  "home_id": "6456",
+  "away_id": "6099",
   "slugs": [
    "ed-mcjannet",
    "ed-mcjannett"
@@ -4253,6 +4968,8 @@
   "comp": "Serie C Grp. C",
   "home": "Catania",
   "away": "Cosenza",
+  "home_id": "8530",
+  "away_id": "6456",
   "slugs": [
    "ed-mcjannet",
    "ed-mcjannett"
@@ -4265,6 +4982,8 @@
   "comp": "Conference League Qualification",
   "home": "Brighton & Hove Albion",
   "away": "Troms\u00f8",
+  "home_id": "10204",
+  "away_id": "8608",
   "slugs": [
    "eiran-cashin",
    "evan-ferguson"
@@ -4277,6 +4996,8 @@
   "comp": "Premier League",
   "home": "Chelsea",
   "away": "Brighton",
+  "home_id": "8455",
+  "away_id": "10204",
   "slugs": [
    "eiran-cashin",
    "evan-ferguson"
@@ -4289,6 +5010,22 @@
   "comp": "Premier League",
   "home": "Brighton",
   "away": "Leeds",
+  "home_id": "10204",
+  "away_id": "8463",
+  "slugs": [
+   "eiran-cashin",
+   "evan-ferguson"
+  ]
+ },
+ {
+  "fotmob_id": "6099329",
+  "url": "/matches/brighton-hove-albion-vs-manchester-united/3goccs#6099329",
+  "kickoff": "2026-09-08T18:45:00Z",
+  "comp": "EFL Cup",
+  "home": "Man United",
+  "away": "Brighton",
+  "home_id": "10260",
+  "away_id": "10204",
   "slugs": [
    "eiran-cashin",
    "evan-ferguson"
@@ -4301,6 +5038,8 @@
   "comp": "League Two",
   "home": "Tranmere",
   "away": "Rotherham",
+  "home_id": "8313",
+  "away_id": "8119",
   "slugs": [
    "emmanuel-adegboyega",
    "jacob-slater",
@@ -4316,6 +5055,8 @@
   "comp": "National League",
   "home": "Sutton United",
   "away": "Hartlepool United",
+  "home_id": "158316",
+  "away_id": "8488",
   "slugs": [
    "emmanuel-osadebe"
   ]
@@ -4327,6 +5068,8 @@
   "comp": "National League",
   "home": "Sutton United",
   "away": "Wealdstone",
+  "home_id": "158316",
+  "away_id": "161812",
   "slugs": [
    "emmanuel-osadebe",
    "wilson-waweru"
@@ -4339,6 +5082,8 @@
   "comp": "National League",
   "home": "Barrow",
   "away": "Sutton United",
+  "home_id": "6350",
+  "away_id": "158316",
   "slugs": [
    "emmanuel-osadebe"
   ]
@@ -4350,6 +5095,8 @@
   "comp": "National League Cup Group D",
   "home": "Sutton United",
   "away": "Birmingham U21",
+  "home_id": "158316",
+  "away_id": "1796111",
   "slugs": [
    "emmanuel-osadebe",
    "finn-mcgreevy"
@@ -4362,6 +5109,8 @@
   "comp": "First Division",
   "home": "Longford Town",
   "away": "Kerry FC",
+  "home_id": "4569",
+  "away_id": "1426348",
   "slugs": [
    "emre-topcu",
    "james-bailey",
@@ -4375,6 +5124,8 @@
   "comp": "Premier League",
   "home": "The New Saints",
   "away": "Colwyn Bay",
+  "home_id": "7852",
+  "away_id": "207869",
   "slugs": [
    "eoin-farrell",
    "zach-nolan"
@@ -4383,10 +5134,12 @@
  {
   "fotmob_id": "5882067",
   "url": "/matches/caernarfon-vs-new-saints/u2oy7#5882067",
-  "kickoff": "2026-08-31T13:30:00Z",
+  "kickoff": "2026-08-31T14:00:00Z",
   "comp": "Premier League",
   "home": "Caernarfon",
   "away": "The New Saints",
+  "home_id": "2198",
+  "away_id": "7852",
   "slugs": [
    "eoin-farrell",
    "zach-nolan"
@@ -4399,6 +5152,8 @@
   "comp": "Premier League",
   "home": "The New Saints",
   "away": "Barry Town",
+  "home_id": "7852",
+  "away_id": "1603",
   "slugs": [
    "eoin-farrell",
    "zach-nolan"
@@ -4411,6 +5166,8 @@
   "comp": "Southern Premier Division Central",
   "home": "Leamington",
   "away": "Worcester",
+  "home_id": "5764",
+  "away_id": "6292",
   "slugs": [
    "eric-yahaya"
   ]
@@ -4418,10 +5175,12 @@
  {
   "fotmob_id": "5953401",
   "url": "/matches/leamington-vs-stourbridge/6g9t98d#5953401",
-  "kickoff": "2026-08-31T14:00:00Z",
+  "kickoff": "2026-09-01T18:45:00Z",
   "comp": "Southern Premier Division Central",
   "home": "Stourbridge",
   "away": "Leamington",
+  "home_id": "161834",
+  "away_id": "5764",
   "slugs": [
    "eric-yahaya"
   ]
@@ -4433,6 +5192,8 @@
   "comp": "League One",
   "home": "Peterborough United",
   "away": "Mansfield Town",
+  "home_id": "8677",
+  "away_id": "9818",
   "slugs": [
    "evan-weir",
    "liam-kelly",
@@ -4448,6 +5209,8 @@
   "comp": "Super Lig",
   "home": "Erzurumspor FK",
   "away": "Galatasaray",
+  "home_id": "281467",
+  "away_id": "8637",
   "slugs": [
    "festy-ebosele"
   ]
@@ -4459,6 +5222,8 @@
   "comp": "Super Lig",
   "home": "Gen\u00e7lerbirli\u011fi",
   "away": "Erzurumspor FK",
+  "home_id": "7800",
+  "away_id": "281467",
   "slugs": [
    "festy-ebosele"
   ]
@@ -4470,6 +5235,8 @@
   "comp": "Super Lig",
   "home": "Erzurumspor FK",
   "away": "Konyaspor",
+  "home_id": "281467",
+  "away_id": "8622",
   "slugs": [
    "festy-ebosele"
   ]
@@ -4481,6 +5248,8 @@
   "comp": "EFL Cup",
   "home": "Southampton",
   "away": "West Ham United",
+  "home_id": "8466",
+  "away_id": "8654",
   "slugs": [
    "finn-azaz",
    "romeo-akachukwu",
@@ -4494,6 +5263,8 @@
   "comp": "Championship",
   "home": "Southampton",
   "away": "Stoke City",
+  "home_id": "8466",
+  "away_id": "10194",
   "slugs": [
    "finn-azaz",
    "romeo-akachukwu",
@@ -4507,6 +5278,8 @@
   "comp": "Championship",
   "home": "Southampton",
   "away": "Millwall",
+  "home_id": "8466",
+  "away_id": "10004",
   "slugs": [
    "finn-azaz",
    "gavin-bazunu",
@@ -4522,6 +5295,8 @@
   "comp": "Championship",
   "home": "Birmingham",
   "away": "Southampton",
+  "home_id": "8658",
+  "away_id": "8466",
   "slugs": [
    "finn-azaz",
    "gavin-bazunu",
@@ -4536,6 +5311,8 @@
   "comp": "Championship",
   "home": "Lincoln",
   "away": "Southampton",
+  "home_id": "8430",
+  "away_id": "8466",
   "slugs": [
    "finn-azaz",
    "gavin-bazunu",
@@ -4553,6 +5330,8 @@
   "comp": "Championship",
   "home": "Dunfermline Athletic",
   "away": "Raith Rovers",
+  "home_id": "8457",
+  "away_id": "10250",
   "slugs": [
    "freddie-turley",
    "kian-corbally",
@@ -4566,6 +5345,8 @@
   "comp": "Championship",
   "home": "Arbroath",
   "away": "Dunfermline Athletic",
+  "home_id": "8280",
+  "away_id": "8457",
   "slugs": [
    "freddie-turley",
    "kian-corbally"
@@ -4578,6 +5359,8 @@
   "comp": "Premier League 2",
   "home": "Norwich City U21",
   "away": "Stoke City U21",
+  "home_id": "773658",
+  "away_id": "773650",
   "slugs": [
    "gabriel-kelly",
    "pijus-otegbayo"
@@ -4590,6 +5373,8 @@
   "comp": "National League Cup Group A",
   "home": "Wealdstone",
   "away": "Stoke City U21",
+  "home_id": "161812",
+  "away_id": "773650",
   "slugs": [
    "gabriel-kelly",
    "pijus-otegbayo",
@@ -4603,6 +5388,8 @@
   "comp": "EFL Cup",
   "home": "Sheffield Wednesday",
   "away": "Wolverhampton Wanderers",
+  "home_id": "10163",
+  "away_id": "8602",
   "slugs": [
    "gabriel-otegbayo",
    "kieran-morrison",
@@ -4616,6 +5403,8 @@
   "comp": "League One",
   "home": "Sheffield Wednesday",
   "away": "Bradford City",
+  "home_id": "10163",
+  "away_id": "8484",
   "slugs": [
    "gabriel-otegbayo",
    "kieran-morrison",
@@ -4629,6 +5418,8 @@
   "comp": "League One",
   "home": "Sheffield Wednesday",
   "away": "Bromley",
+  "home_id": "10163",
+  "away_id": "45729",
   "slugs": [
    "gabriel-otegbayo",
    "kieran-morrison",
@@ -4643,6 +5434,8 @@
   "comp": "National League",
   "home": "Boston United",
   "away": "Altrincham",
+  "home_id": "8646",
+  "away_id": "9915",
   "slugs": [
    "gavan-holohan",
    "niall-canavan"
@@ -4655,6 +5448,8 @@
   "comp": "National League",
   "home": "Boreham Wood",
   "away": "Boston United",
+  "home_id": "2488",
+  "away_id": "8646",
   "slugs": [
    "gavan-holohan",
    "niall-canavan"
@@ -4667,6 +5462,8 @@
   "comp": "National League",
   "home": "Boston United",
   "away": "Hornchurch",
+  "home_id": "8646",
+  "away_id": "4047",
   "slugs": [
    "gavan-holohan",
    "niall-canavan"
@@ -4679,6 +5476,8 @@
   "comp": "National League",
   "home": "Tamworth",
   "away": "Boston United",
+  "home_id": "10254",
+  "away_id": "8646",
   "slugs": [
    "gavan-holohan",
    "niall-canavan"
@@ -4691,6 +5490,8 @@
   "comp": "National League Cup Group D",
   "home": "Boston United",
   "away": "West Bromwich Albion U21",
+  "home_id": "8646",
+  "away_id": "773656",
   "slugs": [
    "gavan-holohan",
    "niall-canavan"
@@ -4703,6 +5504,8 @@
   "comp": "Premier League U18",
   "home": "Southampton U18",
   "away": "Norwich City U18",
+  "home_id": "1113567",
+  "away_id": "1113570",
   "slugs": [
    "george-moloney"
   ]
@@ -4714,6 +5517,8 @@
   "comp": "Premier League U18",
   "home": "Arsenal U18",
   "away": "Southampton U18",
+  "home_id": "1113566",
+  "away_id": "1113567",
   "slugs": [
    "george-moloney"
   ]
@@ -4725,6 +5530,8 @@
   "comp": "EFL Cup",
   "home": "Cambridge United",
   "away": "Millwall",
+  "home_id": "9834",
+  "away_id": "10004",
   "slugs": [
    "glenn-mcconnell",
    "mark-sykes"
@@ -4737,6 +5544,8 @@
   "comp": "League One",
   "home": "Bromley",
   "away": "Cambridge United",
+  "home_id": "45729",
+  "away_id": "9834",
   "slugs": [
    "glenn-mcconnell",
    "owen-mason",
@@ -4750,6 +5559,8 @@
   "comp": "League One",
   "home": "Cambridge United",
   "away": "Huddersfield Town",
+  "home_id": "9834",
+  "away_id": "9796",
   "slugs": [
    "glenn-mcconnell",
    "marcus-harness",
@@ -4764,6 +5575,8 @@
   "comp": "League One",
   "home": "Bradford",
   "away": "Cambridge",
+  "home_id": "8484",
+  "away_id": "9834",
   "slugs": [
    "glenn-mcconnell",
    "shane-mcloughlin",
@@ -4777,6 +5590,8 @@
   "comp": "Premier League 2",
   "home": "Sunderland U21",
   "away": "Nottingham Forest U21",
+  "home_id": "773657",
+  "away_id": "1389162",
   "slugs": [
    "grady-mcdonnell"
   ]
@@ -4788,6 +5603,8 @@
   "comp": "Premier League 2",
   "home": "Nottingham Forest U21",
   "away": "Manchester City U21",
+  "home_id": "1389162",
+  "away_id": "860800",
   "slugs": [
    "grady-mcdonnell"
   ]
@@ -4799,6 +5616,8 @@
   "comp": "National League Cup Group A",
   "home": "Scunthorpe",
   "away": "Nottingham Forest U21",
+  "home_id": "8412",
+  "away_id": "1389162",
   "slugs": [
    "grady-mcdonnell",
    "hugh-parker"
@@ -4811,6 +5630,8 @@
   "comp": "Championship",
   "home": "Livingston",
   "away": "Dunfermline Athletic",
+  "home_id": "8282",
+  "away_id": "8457",
   "slugs": [
    "graham-carey",
    "jordan-doherty"
@@ -4823,6 +5644,8 @@
   "comp": "Championship",
   "home": "Arbroath",
   "away": "Livingston",
+  "home_id": "8280",
+  "away_id": "8282",
   "slugs": [
    "graham-carey",
    "jordan-doherty",
@@ -4836,6 +5659,8 @@
   "comp": "Championship",
   "home": "Livingston",
   "away": "Stenhousemuir",
+  "home_id": "8282",
+  "away_id": "8143",
   "slugs": [
    "graham-carey",
    "jordan-doherty",
@@ -4849,6 +5674,8 @@
   "comp": "National League",
   "home": "Tamworth",
   "away": "Worthing",
+  "home_id": "10254",
+  "away_id": "282351",
   "slugs": [
    "harvey-boddy"
   ]
@@ -4860,6 +5687,8 @@
   "comp": "National League",
   "home": "Worthing",
   "away": "Boreham Wood",
+  "home_id": "282351",
+  "away_id": "2488",
   "slugs": [
    "harvey-boddy"
   ]
@@ -4871,6 +5700,8 @@
   "comp": "National League",
   "home": "AFC Fylde",
   "away": "Worthing",
+  "home_id": "282396",
+  "away_id": "282351",
   "slugs": [
    "harvey-boddy"
   ]
@@ -4882,6 +5713,8 @@
   "comp": "National League Cup Group B",
   "home": "Worthing",
   "away": "Norwich City U21",
+  "home_id": "282351",
+  "away_id": "773658",
   "slugs": [
    "harvey-boddy"
   ]
@@ -4893,6 +5726,8 @@
   "comp": "USL Championship",
   "home": "Birmingham Legion FC",
   "away": "Sporting JAX",
+  "home_id": "1003207",
+  "away_id": "1737991",
   "slugs": [
    "harvey-neville",
    "kieran-sadlier"
@@ -4905,6 +5740,8 @@
   "comp": "USL Championship",
   "home": "Brooklyn",
   "away": "Sporting JAX",
+  "home_id": "1877733",
+  "away_id": "1737991",
   "slugs": [
    "harvey-neville",
    "kieran-sadlier"
@@ -4917,6 +5754,8 @@
   "comp": "National League",
   "home": "Eastleigh",
   "away": "Scunthorpe United",
+  "home_id": "161803",
+  "away_id": "8412",
   "slugs": [
    "hugh-parker"
   ]
@@ -4928,6 +5767,8 @@
   "comp": "National League",
   "home": "Scunthorpe United",
   "away": "Solihull Moors",
+  "home_id": "8412",
+  "away_id": "161801",
   "slugs": [
    "hugh-parker",
    "jevon-mills"
@@ -4940,6 +5781,8 @@
   "comp": "National League",
   "home": "Carlisle",
   "away": "Scunthorpe",
+  "home_id": "10196",
+  "away_id": "8412",
   "slugs": [
    "hugh-parker"
   ]
@@ -4951,6 +5794,8 @@
   "comp": "Ligue 2",
   "home": "Red Star",
   "away": "Reims",
+  "home_id": "6390",
+  "away_id": "9837",
   "slugs": [
    "ike-orazi",
    "john-patrick"
@@ -4963,6 +5808,8 @@
   "comp": "Ligue 2",
   "home": "Reims",
   "away": "Guingamp",
+  "home_id": "9837",
+  "away_id": "9747",
   "slugs": [
    "ike-orazi",
    "john-patrick"
@@ -4975,6 +5822,8 @@
   "comp": "Northern Premier Division",
   "home": "Bamber Bridge",
   "away": "Hyde United",
+  "home_id": "282395",
+  "away_id": "161802",
   "slugs": [
    "isaac-abankwah"
   ]
@@ -4986,6 +5835,8 @@
   "comp": "Northern Premier Division",
   "home": "Warrington Rylands",
   "away": "Bamber Bridge",
+  "home_id": "1186092",
+  "away_id": "282395",
   "slugs": [
    "isaac-abankwah"
   ]
@@ -4997,6 +5848,8 @@
   "comp": "Premier League 2",
   "home": "Manchester United U21",
   "away": "Leicester City U21",
+  "home_id": "1070257",
+  "away_id": "773642",
   "slugs": [
    "jack-moorhouse"
   ]
@@ -5008,11 +5861,12 @@
   "comp": "Conference League Qualification",
   "home": "Hibernian",
   "away": "Gent",
+  "home_id": "10251",
+  "away_id": "9991",
   "slugs": [
    "jacob-devaney",
    "jamie-mcgrath",
    "owen-elding",
-   "tom-mcgrath",
    "warren-ohora"
   ]
  },
@@ -5023,11 +5877,12 @@
   "comp": "Premiership",
   "home": "Hibernian",
   "away": "Hearts",
+  "home_id": "10251",
+  "away_id": "9860",
   "slugs": [
    "jacob-devaney",
    "jamie-mcgrath",
    "owen-elding",
-   "tom-mcgrath",
    "warren-ohora"
   ]
  },
@@ -5038,12 +5893,13 @@
   "comp": "Premiership",
   "home": "St. Johnstone",
   "away": "Hibernian",
+  "home_id": "8467",
+  "away_id": "10251",
   "slugs": [
    "jacob-devaney",
    "jamie-mcgrath",
    "owen-elding",
    "ruari-paton",
-   "tom-mcgrath",
    "warren-ohora"
   ]
  },
@@ -5054,6 +5910,8 @@
   "comp": "League Two",
   "home": "Port Vale",
   "away": "Tranmere Rovers",
+  "home_id": "9799",
+  "away_id": "8313",
   "slugs": [
    "jacob-slater",
    "lee-oconnor"
@@ -5066,6 +5924,8 @@
   "comp": "National League North",
   "home": "Chester FC",
   "away": "Spalding United",
+  "home_id": "9797",
+  "away_id": "580400",
   "slugs": [
    "jake-griffin",
    "michael-kelly",
@@ -5079,6 +5939,8 @@
   "comp": "National League North",
   "home": "Hereford",
   "away": "Chester FC",
+  "home_id": "799249",
+  "away_id": "9797",
   "slugs": [
    "jake-griffin",
    "sam-foley"
@@ -5091,6 +5953,8 @@
   "comp": "National League North",
   "home": "Chester FC",
   "away": "Morecambe",
+  "home_id": "9797",
+  "away_id": "8489",
   "slugs": [
    "jake-griffin",
    "sam-foley"
@@ -5103,6 +5967,8 @@
   "comp": "National League North",
   "home": "Hebburn Town",
   "away": "Chester FC",
+  "home_id": "292923",
+  "away_id": "9797",
   "slugs": [
    "jake-griffin",
    "sam-foley"
@@ -5115,6 +5981,8 @@
   "comp": "National League North",
   "home": "Chester FC",
   "away": "Merthyr Town",
+  "home_id": "9797",
+  "away_id": "5762",
   "slugs": [
    "jake-griffin",
    "matthew-harris",
@@ -5128,6 +5996,8 @@
   "comp": "Serie A",
   "home": "Udinese",
   "away": "Como",
+  "home_id": "8600",
+  "away_id": "10171",
   "slugs": [
    "james-abankwah"
   ]
@@ -5139,6 +6009,8 @@
   "comp": "Serie A",
   "home": "Monza",
   "away": "Udinese",
+  "home_id": "6504",
+  "away_id": "8600",
   "slugs": [
    "james-abankwah"
   ]
@@ -5150,6 +6022,8 @@
   "comp": "Coppa Italia",
   "home": "Udinese",
   "away": "Venezia",
+  "home_id": "8600",
+  "away_id": "7881",
   "slugs": [
    "james-abankwah"
   ]
@@ -5161,6 +6035,8 @@
   "comp": "Serie A",
   "home": "Udinese",
   "away": "Lazio",
+  "home_id": "8600",
+  "away_id": "8543",
   "slugs": [
    "james-abankwah"
   ]
@@ -5172,11 +6048,28 @@
   "comp": "Championship",
   "home": "Bristol City",
   "away": "Lincoln",
+  "home_id": "8427",
+  "away_id": "8430",
   "slugs": [
    "james-collins",
    "jason-knight",
    "josh-honohan",
    "luke-mcnally",
+   "mason-melia"
+  ]
+ },
+ {
+  "fotmob_id": "6099334",
+  "url": "/matches/lincoln-city-vs-afc-bournemouth/2f4zdk#6099334",
+  "kickoff": "2026-09-08T18:45:00Z",
+  "comp": "EFL Cup",
+  "home": "Bournemouth",
+  "away": "Lincoln",
+  "home_id": "8678",
+  "away_id": "8430",
+  "slugs": [
+   "james-collins",
+   "josh-honohan",
    "mason-melia"
   ]
  },
@@ -5187,6 +6080,8 @@
   "comp": "EFL Cup",
   "home": "Walsall",
   "away": "Leyton Orient",
+  "home_id": "10006",
+  "away_id": "8351",
   "slugs": [
    "james-furlong",
    "jaze-kabia",
@@ -5201,6 +6096,8 @@
   "comp": "EFL Cup",
   "home": "Plymouth Argyle",
   "away": "Coventry City",
+  "home_id": "8401",
+  "away_id": "8669",
   "slugs": [
    "james-storer",
    "ronan-curtis"
@@ -5213,6 +6110,8 @@
   "comp": "League One",
   "home": "Plymouth Argyle",
   "away": "Bradford City",
+  "home_id": "8401",
+  "away_id": "8484",
   "slugs": [
    "james-storer",
    "ronan-curtis",
@@ -5226,6 +6125,8 @@
   "comp": "League One",
   "home": "Leicester",
   "away": "Plymouth",
+  "home_id": "8197",
+  "away_id": "8401",
   "slugs": [
    "james-storer",
    "ronan-curtis"
@@ -5238,6 +6139,8 @@
   "comp": "League One",
   "home": "Doncaster",
   "away": "Plymouth",
+  "home_id": "9903",
+  "away_id": "8401",
   "slugs": [
    "james-storer",
    "jay-mcgrath",
@@ -5254,10 +6157,11 @@
   "comp": "Conference League Qualification",
   "home": "Gent",
   "away": "Hibernian",
+  "home_id": "9991",
+  "away_id": "10251",
   "slugs": [
    "jamie-mcgrath",
    "owen-elding",
-   "tom-mcgrath",
    "warren-ohora"
   ]
  },
@@ -5268,6 +6172,8 @@
   "comp": "Championship",
   "home": "Birmingham City",
   "away": "Bristol City",
+  "home_id": "8658",
+  "away_id": "8427",
   "slugs": [
    "jason-knight"
   ]
@@ -5279,6 +6185,8 @@
   "comp": "Championship",
   "home": "Burnley",
   "away": "Bristol City",
+  "home_id": "8191",
+  "away_id": "8427",
   "slugs": [
    "jason-knight",
    "luke-mcnally",
@@ -5292,6 +6200,8 @@
   "comp": "EFL Cup",
   "home": "Doncaster Rovers",
   "away": "Middlesbrough",
+  "home_id": "9903",
+  "away_id": "8549",
   "slugs": [
    "jay-mcgrath",
    "leon-ayinde",
@@ -5306,6 +6216,8 @@
   "comp": "League One",
   "home": "Stevenage",
   "away": "Doncaster Rovers",
+  "home_id": "10253",
+  "away_id": "9903",
   "slugs": [
    "jay-mcgrath",
    "leon-ayinde",
@@ -5320,6 +6232,8 @@
   "comp": "EFL Trophy Northern Grp. H",
   "home": "Doncaster",
   "away": "Huddersfield",
+  "home_id": "9903",
+  "away_id": "9796",
   "slugs": [
    "jay-mcgrath",
    "leon-ayinde",
@@ -5336,6 +6250,8 @@
   "comp": "EFL Cup",
   "home": "Newcastle United",
   "away": "West Bromwich Albion",
+  "home_id": "10261",
+  "away_id": "8659",
   "slugs": [
    "jayson-molumby",
    "max-oleary"
@@ -5348,6 +6264,8 @@
   "comp": "Championship",
   "home": "West Bromwich Albion",
   "away": "Burnley",
+  "home_id": "8659",
+  "away_id": "8191",
   "slugs": [
    "jayson-molumby",
    "max-oleary"
@@ -5360,6 +6278,8 @@
   "comp": "Championship",
   "home": "Middlesbrough",
   "away": "West Bromwich Albion",
+  "home_id": "8549",
+  "away_id": "8659",
   "slugs": [
    "jayson-molumby",
    "max-oleary",
@@ -5373,6 +6293,8 @@
   "comp": "Championship",
   "home": "West Brom",
   "away": "Watford",
+  "home_id": "8659",
+  "away_id": "9817",
   "slugs": [
    "jayson-molumby",
    "max-oleary",
@@ -5387,6 +6309,8 @@
   "comp": "Championship",
   "home": "Derby",
   "away": "West Brom",
+  "home_id": "10170",
+  "away_id": "8659",
   "slugs": [
    "jayson-molumby",
    "max-oleary",
@@ -5401,6 +6325,8 @@
   "comp": "National League",
   "home": "Solihull Moors",
   "away": "Southend United",
+  "home_id": "161801",
+  "away_id": "8652",
   "slugs": [
    "jevon-mills"
   ]
@@ -5412,6 +6338,8 @@
   "comp": "National League",
   "home": "Solihull Moors",
   "away": "AFC Fylde",
+  "home_id": "161801",
+  "away_id": "282396",
   "slugs": [
    "jevon-mills"
   ]
@@ -5423,6 +6351,8 @@
   "comp": "National League Cup Group C",
   "home": "Solihull Moors",
   "away": "Leeds United U21",
+  "home_id": "161801",
+  "away_id": "1177187",
   "slugs": [
    "jevon-mills"
   ]
@@ -5434,6 +6364,8 @@
   "comp": "Major League Soccer",
   "home": "Charlotte FC",
   "away": "DC United",
+  "home_id": "1323940",
+  "away_id": "6602",
   "slugs": [
    "joe-byrne"
   ]
@@ -5445,6 +6377,8 @@
   "comp": "Major League Soccer",
   "home": "Atlanta United",
   "away": "Charlotte FC",
+  "home_id": "773958",
+  "away_id": "1323940",
   "slugs": [
    "joe-byrne"
   ]
@@ -5456,6 +6390,8 @@
   "comp": "Major League Soccer",
   "home": "Charlotte FC",
   "away": "Houston",
+  "home_id": "1323940",
+  "away_id": "8259",
   "slugs": [
    "joe-byrne"
   ]
@@ -5467,6 +6403,8 @@
   "comp": "Major League Soccer",
   "home": "Montreal",
   "away": "Charlotte FC",
+  "home_id": "161195",
+  "away_id": "1323940",
   "slugs": [
    "joe-byrne"
   ]
@@ -5478,6 +6416,8 @@
   "comp": "Conference League Qualification",
   "home": "Motherwell",
   "away": "Freiburg",
+  "home_id": "9927",
+  "away_id": "8358",
   "slugs": [
    "joe-hodge"
   ]
@@ -5489,6 +6429,8 @@
   "comp": "Conference League Qualification",
   "home": "Freiburg",
   "away": "Motherwell",
+  "home_id": "8358",
+  "away_id": "9927",
   "slugs": [
    "joe-hodge"
   ]
@@ -5500,6 +6442,8 @@
   "comp": "Premiership",
   "home": "St. Mirren",
   "away": "Motherwell",
+  "home_id": "9800",
+  "away_id": "9927",
   "slugs": [
    "joe-hodge",
    "killian-phillips"
@@ -5512,6 +6456,8 @@
   "comp": "Premiership",
   "home": "Motherwell",
   "away": "Dundee United",
+  "home_id": "9927",
+  "away_id": "9938",
   "slugs": [
    "joe-hodge",
    "neil-farrugia",
@@ -5525,6 +6471,8 @@
   "comp": "Premiership",
   "home": "Rangers",
   "away": "Motherwell",
+  "home_id": "8548",
+  "away_id": "9927",
   "slugs": [
    "joe-hodge"
   ]
@@ -5536,6 +6484,8 @@
   "comp": "League Two",
   "home": "Rotherham United",
   "away": "York City",
+  "home_id": "8119",
+  "away_id": "9916",
   "slugs": [
    "joe-rafferty"
   ]
@@ -5547,6 +6497,8 @@
   "comp": "Premier League",
   "home": "Hull City",
   "away": "Manchester United",
+  "home_id": "8667",
+  "away_id": "10260",
   "slugs": [
    "john-egan"
   ]
@@ -5558,6 +6510,8 @@
   "comp": "Premier League",
   "home": "Coventry City",
   "away": "Hull City",
+  "home_id": "8669",
+  "away_id": "8667",
   "slugs": [
    "john-egan"
   ]
@@ -5569,6 +6523,8 @@
   "comp": "Premier League",
   "home": "Hull",
   "away": "Aston Villa",
+  "home_id": "8667",
+  "away_id": "10252",
   "slugs": [
    "john-egan"
   ]
@@ -5580,6 +6536,8 @@
   "comp": "Champions League Qualification",
   "home": "LASK",
   "away": "Celtic",
+  "home_id": "9977",
+  "away_id": "9925",
   "slugs": [
    "johnny-kenny",
    "liam-scales"
@@ -5592,6 +6550,8 @@
   "comp": "Premiership",
   "home": "St. Mirren",
   "away": "Celtic",
+  "home_id": "9800",
+  "away_id": "9925",
   "slugs": [
    "johnny-kenny",
    "killian-phillips",
@@ -5605,6 +6565,8 @@
   "comp": "Leagues Cup",
   "home": "Toluca",
   "away": "Austin FC",
+  "home_id": "6618",
+  "away_id": "1218886",
   "slugs": [
    "jon-gallagher"
   ]
@@ -5616,6 +6578,8 @@
   "comp": "Major League Soccer",
   "home": "Austin FC",
   "away": "Philadelphia Union",
+  "home_id": "1218886",
+  "away_id": "191716",
   "slugs": [
    "jon-gallagher"
   ]
@@ -5627,6 +6591,8 @@
   "comp": "Major League Soccer",
   "home": "Portland Timbers",
   "away": "Austin FC",
+  "home_id": "307690",
+  "away_id": "1218886",
   "slugs": [
    "jon-gallagher"
   ]
@@ -5638,6 +6604,8 @@
   "comp": "Major League Soccer",
   "home": "Austin FC",
   "away": "San Jose",
+  "home_id": "1218886",
+  "away_id": "6603",
   "slugs": [
    "jon-gallagher"
   ]
@@ -5649,6 +6617,8 @@
   "comp": "Major League Soccer",
   "home": "Austin FC",
   "away": "Colorado",
+  "home_id": "1218886",
+  "away_id": "8314",
   "slugs": [
    "jon-gallagher"
   ]
@@ -5660,6 +6630,8 @@
   "comp": "1. Deild",
   "home": "Thr\u00f3ttur Reykjav\u00edk",
   "away": "\u00c6gir",
+  "home_id": "4661",
+  "away_id": "559291",
   "slugs": [
    "jordan-adeyemo"
   ]
@@ -5671,6 +6643,8 @@
   "comp": "1. Deild",
   "home": "\u00c6gir",
   "away": "Grindavik",
+  "home_id": "559291",
+  "away_id": "8298",
   "slugs": [
    "jordan-adeyemo"
   ]
@@ -5682,6 +6656,8 @@
   "comp": "Conference League Qualification",
   "home": "Lincoln Red Imps FC",
   "away": "Larne",
+  "home_id": "545012",
+  "away_id": "2206",
   "slugs": [
    "jordan-mceneff",
    "josh-ukek",
@@ -5695,6 +6671,8 @@
   "comp": "Conference League Qualification",
   "home": "Larne",
   "away": "Lincoln Red Imps FC",
+  "home_id": "2206",
+  "away_id": "545012",
   "slugs": [
    "jordan-mceneff",
    "josh-ukek",
@@ -5708,6 +6686,8 @@
   "comp": "Premiership",
   "home": "Larne",
   "away": "Bangor",
+  "home_id": "2206",
+  "away_id": "77755",
   "slugs": [
    "jordan-mceneff",
    "josh-ukek",
@@ -5721,6 +6701,8 @@
   "comp": "League Two",
   "home": "Barnet",
   "away": "Cheltenham Town",
+  "home_id": "8175",
+  "away_id": "8680",
   "slugs": [
    "jordan-shipley",
    "oisin-gallagher",
@@ -5734,6 +6716,8 @@
   "comp": "League Two",
   "home": "Cheltenham",
   "away": "York City",
+  "home_id": "8680",
+  "away_id": "9916",
   "slugs": [
    "jordan-shipley",
    "pierce-sweeney"
@@ -5746,6 +6730,8 @@
   "comp": "National League South",
   "home": "Dorking Wanderers",
   "away": "Maidstone United",
+  "home_id": "580438",
+  "away_id": "8131",
   "slugs": [
    "josh-barrett"
   ]
@@ -5757,6 +6743,8 @@
   "comp": "National League South",
   "home": "Walton and Hersham",
   "away": "Dorking Wanderers",
+  "home_id": "6093",
+  "away_id": "580438",
   "slugs": [
    "josh-barrett"
   ]
@@ -5768,6 +6756,8 @@
   "comp": "National League South",
   "home": "Dorking Wanderers",
   "away": "Truro City",
+  "home_id": "580438",
+  "away_id": "177067",
   "slugs": [
    "josh-barrett"
   ]
@@ -5779,6 +6769,8 @@
   "comp": "National League South",
   "home": "Billericay",
   "away": "Dorking Wanderers",
+  "home_id": "2261",
+  "away_id": "580438",
   "slugs": [
    "josh-barrett"
   ]
@@ -5790,6 +6782,8 @@
   "comp": "National League South",
   "home": "Dorking Wanderers",
   "away": "Chelmsford",
+  "home_id": "580438",
+  "away_id": "45724",
   "slugs": [
    "josh-barrett"
   ]
@@ -5801,6 +6795,8 @@
   "comp": "USL Championship",
   "home": "Indy Eleven",
   "away": "Louisville City FC",
+  "home_id": "514649",
+  "away_id": "614316",
   "slugs": [
    "josh-obrien"
   ]
@@ -5812,6 +6808,8 @@
   "comp": "USL Championship",
   "home": "Phoenix Rising FC",
   "away": "Indy Eleven",
+  "home_id": "424268",
+  "away_id": "514649",
   "slugs": [
    "josh-obrien"
   ]
@@ -5823,6 +6821,8 @@
   "comp": "USL Championship",
   "home": "Indy Eleven",
   "away": "Birmingham Legion FC",
+  "home_id": "514649",
+  "away_id": "1003207",
   "slugs": [
    "josh-obrien"
   ]
@@ -5834,6 +6834,8 @@
   "comp": "2. Liga",
   "home": "Voitsberg",
   "away": "FC Liefering",
+  "home_id": "4015",
+  "away_id": "1915",
   "slugs": [
    "josh-odwyer"
   ]
@@ -5845,6 +6847,8 @@
   "comp": "National League North",
   "home": "Radcliffe",
   "away": "Morecambe",
+  "home_id": "282390",
+  "away_id": "8489",
   "slugs": [
    "josh-seary"
   ]
@@ -5856,6 +6860,8 @@
   "comp": "Northern Premier Division",
   "home": "Redcar Athletic",
   "away": "FC United of Manchester",
+  "home_id": "1804164",
+  "away_id": "161822",
   "slugs": [
    "josh-seary"
   ]
@@ -5867,6 +6873,8 @@
   "comp": "Northern Premier Division",
   "home": "FC United of Manchester",
   "away": "Avro",
+  "home_id": "161822",
+  "away_id": "1290988",
   "slugs": [
    "josh-seary"
   ]
@@ -5878,6 +6886,8 @@
   "comp": "National League South",
   "home": "Maidstone United",
   "away": "Salisbury",
+  "home_id": "8131",
+  "away_id": "1114695",
   "slugs": [
    "joshua-keeya"
   ]
@@ -5889,6 +6899,8 @@
   "comp": "National League South",
   "home": "Salisbury",
   "away": "Billericay",
+  "home_id": "1114695",
+  "away_id": "2261",
   "slugs": [
    "joshua-keeya"
   ]
@@ -5900,6 +6912,8 @@
   "comp": "National League South",
   "home": "Chelmsford",
   "away": "Salisbury",
+  "home_id": "45724",
+  "away_id": "1114695",
   "slugs": [
    "joshua-keeya"
   ]
@@ -5911,6 +6925,8 @@
   "comp": "National League South",
   "home": "Salisbury",
   "away": "Slough Town",
+  "home_id": "1114695",
+  "away_id": "6432",
   "slugs": [
    "joshua-keeya"
   ]
@@ -5922,6 +6938,8 @@
   "comp": "Premier League 2",
   "home": "Chelsea U21",
   "away": "West Ham United U21",
+  "home_id": "773652",
+  "away_id": "773649",
   "slugs": [
    "justin-osagie",
    "shaun-wade"
@@ -5934,10 +6952,11 @@
   "comp": "Premiership",
   "home": "Limavady",
   "away": "Dungannon Swifts",
+  "home_id": "2205",
+  "away_id": "4615",
   "slugs": [
    "kealan-dillon",
-   "paul-doyle",
-   "peter-maguire"
+   "paul-doyle"
   ]
  },
  {
@@ -5947,6 +6966,8 @@
   "comp": "Major League Soccer",
   "home": "New England Revolution",
   "away": "New York City FC",
+  "home_id": "6580",
+  "away_id": "546238",
   "slugs": [
    "kevin-otoole"
   ]
@@ -5958,6 +6979,8 @@
   "comp": "Major League Soccer",
   "home": "Toronto FC",
   "away": "New York City FC",
+  "home_id": "56453",
+  "away_id": "546238",
   "slugs": [
    "kevin-otoole"
   ]
@@ -5969,6 +6992,8 @@
   "comp": "Segunda Federaci\u00f3n",
   "home": "Deportiva Minera",
   "away": "Pe\u00f1a Dep. Santa Eulalia",
+  "home_id": "278805",
+  "away_id": "8210",
   "slugs": [
    "kevin-toner"
   ]
@@ -5980,6 +7005,8 @@
   "comp": "Premier League 2",
   "home": "Fulham U21",
   "away": "Burnley U21",
+  "home_id": "860801",
+  "away_id": "1796112",
   "slugs": [
    "kian-mcmahon-brown"
   ]
@@ -5991,6 +7018,8 @@
   "comp": "Premier League 2",
   "home": "Burnley U21",
   "away": "Reading U21",
+  "home_id": "1796112",
+  "away_id": "773686",
   "slugs": [
    "kian-mcmahon-brown"
   ]
@@ -6002,6 +7031,8 @@
   "comp": "Regionalliga Bayern",
   "home": "VfB Eichst\u00e4tt",
   "away": "TSV Aubstadt",
+  "home_id": "340732",
+  "away_id": "340719",
   "slugs": [
    "kyle-degelman"
   ]
@@ -6013,6 +7044,8 @@
   "comp": "Regionalliga Bayern",
   "home": "TSV Aubstadt",
   "away": "Ansbach",
+  "home_id": "340719",
+  "away_id": "1711",
   "slugs": [
    "kyle-degelman"
   ]
@@ -6024,6 +7057,8 @@
   "comp": "USL Championship",
   "home": "Sacramento Republic FC",
   "away": "Phoenix Rising FC",
+  "home_id": "521004",
+  "away_id": "424268",
   "slugs": [
    "lee-desmond"
   ]
@@ -6035,6 +7070,8 @@
   "comp": "USL Championship",
   "home": "Monterey Bay FC",
   "away": "Sacramento Republic FC",
+  "home_id": "915808",
+  "away_id": "521004",
   "slugs": [
    "lee-desmond"
   ]
@@ -6046,6 +7083,8 @@
   "comp": "USL Championship",
   "home": "Orange County SC",
   "away": "Sacramento Republic FC",
+  "home_id": "267813",
+  "away_id": "521004",
   "slugs": [
    "lee-desmond"
   ]
@@ -6057,6 +7096,8 @@
   "comp": "League One",
   "home": "East Fife",
   "away": "Ross County",
+  "home_id": "9758",
+  "away_id": "8649",
   "slugs": [
    "len-osullivan"
   ]
@@ -6068,6 +7109,8 @@
   "comp": "Challenge Cup",
   "home": "Ross County",
   "away": "Aberdeen B",
+  "home_id": "8649",
+  "away_id": "1273052",
   "slugs": [
    "len-osullivan"
   ]
@@ -6079,6 +7122,8 @@
   "comp": "Eredivisie",
   "home": "Cambuur",
   "away": "Feyenoord",
+  "home_id": "7788",
+  "away_id": "10235",
   "slugs": [
    "liam-bossin"
   ]
@@ -6090,6 +7135,8 @@
   "comp": "Eredivisie",
   "home": "Feyenoord",
   "away": "ADO Den Haag",
+  "home_id": "10235",
+  "away_id": "10217",
   "slugs": [
    "liam-bossin"
   ]
@@ -6101,6 +7148,8 @@
   "comp": "Eredivisie",
   "home": "NEC Nijmegen",
   "away": "Feyenoord",
+  "home_id": "8464",
+  "away_id": "10235",
   "slugs": [
    "liam-bossin"
   ]
@@ -6112,6 +7161,8 @@
   "comp": "National League North",
   "home": "AFC Telford United",
   "away": "Hednesford",
+  "home_id": "6315",
+  "away_id": "9923",
   "slugs": [
    "liam-kinsella"
   ]
@@ -6123,6 +7174,8 @@
   "comp": "National League North",
   "home": "Hednesford",
   "away": "Harborough Town FC",
+  "home_id": "9923",
+  "away_id": "1382661",
   "slugs": [
    "liam-kinsella"
   ]
@@ -6134,6 +7187,8 @@
   "comp": "National League North",
   "home": "Spennymoor Town FC",
   "away": "Hednesford",
+  "home_id": "557101",
+  "away_id": "9923",
   "slugs": [
    "liam-kinsella"
   ]
@@ -6145,6 +7200,8 @@
   "comp": "National League North",
   "home": "Hednesford",
   "away": "South Shields",
+  "home_id": "9923",
+  "away_id": "865163",
   "slugs": [
    "liam-kinsella"
   ]
@@ -6156,6 +7213,8 @@
   "comp": "National League South",
   "home": "Folkestone Invicta",
   "away": "Chelmsford",
+  "home_id": "6206",
+  "away_id": "45724",
   "slugs": [
    "louis-dunne"
   ]
@@ -6167,6 +7226,8 @@
   "comp": "Isthmian Premier Division",
   "home": "Maldon & Tiptree",
   "away": "Cray Wanderers",
+  "home_id": "282501",
+  "away_id": "177064",
   "slugs": [
    "louis-dunne"
   ]
@@ -6178,6 +7239,8 @@
   "comp": "Isthmian Premier Division",
   "home": "Brentwood Town",
   "away": "Maldon & Tiptree",
+  "home_id": "282343",
+  "away_id": "282501",
   "slugs": [
    "louis-dunne"
   ]
@@ -6189,6 +7252,8 @@
   "comp": "League One",
   "home": "Milton Keynes Dons",
   "away": "Huddersfield Town",
+  "home_id": "8645",
+  "away_id": "9796",
   "slugs": [
    "marcus-harness"
   ]
@@ -6200,6 +7265,8 @@
   "comp": "EFL Cup",
   "home": "Blackburn Rovers",
   "away": "Sheffield United",
+  "home_id": "8655",
+  "away_id": "8657",
   "slugs": [
    "mark-mcguinness",
    "matt-doherty",
@@ -6214,6 +7281,8 @@
   "comp": "Premier League 2",
   "home": "Brighton & Hove Albion U21",
   "away": "Arsenal U21",
+  "home_id": "773678",
+  "away_id": "950214",
   "slugs": [
    "mark-omahony",
    "sean-keogh"
@@ -6226,6 +7295,8 @@
   "comp": "Championship",
   "home": "Millwall",
   "away": "Norwich City",
+  "home_id": "10004",
+  "away_id": "9850",
   "slugs": [
    "mark-sykes"
   ]
@@ -6237,6 +7308,8 @@
   "comp": "Championship",
   "home": "Millwall",
   "away": "Wrexham",
+  "home_id": "10004",
+  "away_id": "9841",
   "slugs": [
    "mark-sykes"
   ]
@@ -6248,6 +7321,21 @@
   "comp": "Championship",
   "home": "Middlesbrough",
   "away": "Millwall",
+  "home_id": "8549",
+  "away_id": "10004",
+  "slugs": [
+   "mark-sykes"
+  ]
+ },
+ {
+  "fotmob_id": "6099336",
+  "url": "/matches/millwall-vs-newcastle-united/3e9hbm#6099336",
+  "kickoff": "2026-09-08T18:45:00Z",
+  "comp": "EFL Cup",
+  "home": "Millwall",
+  "away": "Newcastle",
+  "home_id": "10004",
+  "away_id": "10261",
   "slugs": [
    "mark-sykes"
   ]
@@ -6259,6 +7347,8 @@
   "comp": "Serie B",
   "home": "Empoli",
   "away": "Cremonese",
+  "home_id": "8534",
+  "away_id": "7801",
   "slugs": [
    "matteo-egan"
   ]
@@ -6270,6 +7360,8 @@
   "comp": "Serie B",
   "home": "Mantova",
   "away": "Empoli",
+  "home_id": "9889",
+  "away_id": "8534",
   "slugs": [
    "matteo-egan"
   ]
@@ -6281,6 +7373,8 @@
   "comp": "Serie B",
   "home": "Carrarese",
   "away": "Empoli",
+  "home_id": "6488",
+  "away_id": "8534",
   "slugs": [
    "matteo-egan"
   ]
@@ -6292,6 +7386,8 @@
   "comp": "National League North",
   "home": "South Shields",
   "away": "Merthyr Town",
+  "home_id": "865163",
+  "away_id": "5762",
   "slugs": [
    "matthew-harris"
   ]
@@ -6303,6 +7399,8 @@
   "comp": "National League North",
   "home": "Merthyr Town",
   "away": "Chorley",
+  "home_id": "5762",
+  "away_id": "274599",
   "slugs": [
    "matthew-harris"
   ]
@@ -6314,6 +7412,8 @@
   "comp": "National League North",
   "home": "Buxton",
   "away": "Merthyr Town",
+  "home_id": "161824",
+  "away_id": "5762",
   "slugs": [
    "matthew-harris"
   ]
@@ -6325,6 +7425,8 @@
   "comp": "National League North",
   "home": "Merthyr Town",
   "away": "Macclesfield",
+  "home_id": "5762",
+  "away_id": "8599",
   "slugs": [
    "matthew-harris"
   ]
@@ -6336,6 +7438,8 @@
   "comp": "3. Liga",
   "home": "Hoffenheim II",
   "away": "Jahn Regensburg",
+  "home_id": "94940",
+  "away_id": "7789",
   "slugs": [
    "matthew-moore"
   ]
@@ -6347,8 +7451,62 @@
   "comp": "3. Liga",
   "home": "Sonnenhof Gro\u00dfaspach",
   "away": "Hoffenheim II",
+  "home_id": "94941",
+  "away_id": "94940",
   "slugs": [
    "matthew-moore"
+  ]
+ },
+ {
+  "fotmob_id": "5907025",
+  "url": "/matches/worksop-town-vs-spalding-united/281ccutf#5907025",
+  "kickoff": "2026-08-29T14:00:00Z",
+  "comp": "National League North",
+  "home": "Spalding United",
+  "away": "Worksop Town",
+  "home_id": "580400",
+  "away_id": "9894",
+  "slugs": [
+   "michael-kelly"
+  ]
+ },
+ {
+  "fotmob_id": "5907035",
+  "url": "/matches/spalding-united-vs-south-shields/dbzjhfsl#5907035",
+  "kickoff": "2026-08-31T14:00:00Z",
+  "comp": "National League North",
+  "home": "South Shields",
+  "away": "Spalding United",
+  "home_id": "865163",
+  "away_id": "580400",
+  "slugs": [
+   "michael-kelly"
+  ]
+ },
+ {
+  "fotmob_id": "5907049",
+  "url": "/matches/southport-vs-spalding-united/284b7n3z#5907049",
+  "kickoff": "2026-09-05T14:00:00Z",
+  "comp": "National League North",
+  "home": "Spalding United",
+  "away": "Southport",
+  "home_id": "580400",
+  "away_id": "10197",
+  "slugs": [
+   "michael-kelly"
+  ]
+ },
+ {
+  "fotmob_id": "5907060",
+  "url": "/matches/spennymoor-town-fc-vs-spalding-united/897gjqgz#5907060",
+  "kickoff": "2026-09-08T18:45:00Z",
+  "comp": "National League North",
+  "home": "Spennymoor Town FC",
+  "away": "Spalding United",
+  "home_id": "557101",
+  "away_id": "580400",
+  "slugs": [
+   "michael-kelly"
   ]
  },
  {
@@ -6358,6 +7516,8 @@
   "comp": "Championship",
   "home": "Norwich City",
   "away": "Burnley",
+  "home_id": "9850",
+  "away_id": "8191",
   "slugs": [
    "michael-obafemi"
   ]
@@ -6369,6 +7529,8 @@
   "comp": "Championship",
   "home": "Burnley",
   "away": "Middlesbrough",
+  "home_id": "8191",
+  "away_id": "8549",
   "slugs": [
    "michael-obafemi"
   ]
@@ -6380,6 +7542,8 @@
   "comp": "Championship",
   "home": "Wrexham",
   "away": "Burnley",
+  "home_id": "9841",
+  "away_id": "8191",
   "slugs": [
    "michael-obafemi"
   ]
@@ -6391,6 +7555,8 @@
   "comp": "Premier League 2",
   "home": "Manchester City U21",
   "away": "Wolverhampton Wanderers U21",
+  "home_id": "860800",
+  "away_id": "773683",
   "slugs": [
    "nathan-fraser"
   ]
@@ -6402,6 +7568,8 @@
   "comp": "First Division B",
   "home": "Francs Borains",
   "away": "Sporting Hasselt",
+  "home_id": "96953",
+  "away_id": "2263",
   "slugs": [
    "noah-jauny"
   ]
@@ -6413,6 +7581,8 @@
   "comp": "First Division B",
   "home": "Virton",
   "away": "Francs Borains",
+  "home_id": "8174",
+  "away_id": "96953",
   "slugs": [
    "noah-jauny"
   ]
@@ -6424,6 +7594,8 @@
   "comp": "First Division B",
   "home": "Francs Borains",
   "away": "KSC Lokeren",
+  "home_id": "96953",
+  "away_id": "213307",
   "slugs": [
    "noah-jauny"
   ]
@@ -6435,6 +7607,8 @@
   "comp": "League Two",
   "home": "Shrewsbury Town",
   "away": "Barnet",
+  "home_id": "9896",
+  "away_id": "8175",
   "slugs": [
    "oisin-gallagher"
   ]
@@ -6446,6 +7620,8 @@
   "comp": "Northern Premier Division",
   "home": "Alfreton Town",
   "away": "Warrington Rylands",
+  "home_id": "6258",
+  "away_id": "1186092",
   "slugs": [
    "oisin-mcdonagh"
   ]
@@ -6457,6 +7633,8 @@
   "comp": "Northern Premier Division",
   "home": "Whitby",
   "away": "Alfreton Town",
+  "home_id": "6195",
+  "away_id": "6258",
   "slugs": [
    "oisin-mcdonagh"
   ]
@@ -6468,6 +7646,8 @@
   "comp": "Conference League Qualification",
   "home": "Rapid Wien",
   "away": "Heart of Midlothian",
+  "home_id": "10015",
+  "away_id": "9860",
   "slugs": [
    "oisin-mcentee"
   ]
@@ -6479,6 +7659,8 @@
   "comp": "Conference League Qualification",
   "home": "Heart of Midlothian",
   "away": "Rapid Wien",
+  "home_id": "9860",
+  "away_id": "10015",
   "slugs": [
    "oisin-mcentee"
   ]
@@ -6490,6 +7672,8 @@
   "comp": "Premiership",
   "home": "Heart of Midlothian",
   "away": "St. Johnstone",
+  "home_id": "9860",
+  "away_id": "8467",
   "slugs": [
    "oisin-mcentee",
    "ruari-paton"
@@ -6502,6 +7686,8 @@
   "comp": "League One",
   "home": "Bromley",
   "away": "Wimbledon",
+  "home_id": "45729",
+  "away_id": "158319",
   "slugs": [
    "owen-mason"
   ]
@@ -6513,6 +7699,8 @@
   "comp": "League One",
   "home": "AFC Wimbledon",
   "away": "Reading",
+  "home_id": "158319",
+  "away_id": "9798",
   "slugs": [
    "paudie-oconnor"
   ]
@@ -6524,6 +7712,8 @@
   "comp": "Southern Premier Division South",
   "home": "Taunton Town",
   "away": "Basingstoke",
+  "home_id": "282502",
+  "away_id": "45807",
   "slugs": [
    "rabby-tabu-minzamba"
   ]
@@ -6535,6 +7725,8 @@
   "comp": "Southern Premier Division South",
   "home": "Yate Town",
   "away": "Taunton Town",
+  "home_id": "161839",
+  "away_id": "282502",
   "slugs": [
    "rabby-tabu-minzamba"
   ]
@@ -6546,6 +7738,8 @@
   "comp": "League Two",
   "home": "Spartans FC",
   "away": "Elgin City",
+  "home_id": "6661",
+  "away_id": "9914",
   "slugs": [
    "ricardo-dinanga"
   ]
@@ -6557,6 +7751,8 @@
   "comp": "League Two",
   "home": "Spartans FC",
   "away": "Clyde",
+  "home_id": "6661",
+  "away_id": "8409",
   "slugs": [
    "ricardo-dinanga"
   ]
@@ -6568,6 +7764,8 @@
   "comp": "League Two",
   "home": "Stirling Albion",
   "away": "Spartans FC",
+  "home_id": "8141",
+  "away_id": "6661",
   "slugs": [
    "ricardo-dinanga"
   ]
@@ -6579,6 +7777,8 @@
   "comp": "Challenge Cup",
   "home": "Spartans FC",
   "away": "Hamilton Academical",
+  "home_id": "6661",
+  "away_id": "8429",
   "slugs": [
    "ricardo-dinanga"
   ]
@@ -6590,6 +7790,8 @@
   "comp": "League One",
   "home": "Airdrieonians",
   "away": "Ross County",
+  "home_id": "8176",
+  "away_id": "8649",
   "slugs": [
    "robbie-mahon"
   ]
@@ -6601,6 +7803,8 @@
   "comp": "League One",
   "home": "Airdrieonians",
   "away": "East Fife",
+  "home_id": "8176",
+  "away_id": "9758",
   "slugs": [
    "robbie-mahon"
   ]
@@ -6612,6 +7816,8 @@
   "comp": "League One",
   "home": "Queen of the South",
   "away": "Airdrieonians",
+  "home_id": "9924",
+  "away_id": "8176",
   "slugs": [
    "robbie-mahon"
   ]
@@ -6623,6 +7829,8 @@
   "comp": "Challenge Cup",
   "home": "Airdrieonians",
   "away": "St. Mirren B",
+  "home_id": "8176",
+  "away_id": "1273057",
   "slugs": [
    "robbie-mahon"
   ]
@@ -6634,6 +7842,8 @@
   "comp": "Championship",
   "home": "Wrexham",
   "away": "Watford",
+  "home_id": "9841",
+  "away_id": "9817",
   "slugs": [
    "rocco-vata"
   ]
@@ -6645,6 +7855,8 @@
   "comp": "Championship",
   "home": "Watford",
   "away": "West Ham United",
+  "home_id": "9817",
+  "away_id": "8654",
   "slugs": [
    "rocco-vata"
   ]
@@ -6656,6 +7868,8 @@
   "comp": "Superliga",
   "home": "FCV Farul Constan\u021ba",
   "away": "Boto\u0219ani",
+  "home_id": "210132",
+  "away_id": "188191",
   "slugs": [
    "roland-idowu"
   ]
@@ -6667,6 +7881,8 @@
   "comp": "Cup Grp. A",
   "home": "Boto\u0219ani",
   "away": "Corvinul Hunedoara",
+  "home_id": "188191",
+  "away_id": "1515102",
   "slugs": [
    "roland-idowu"
   ]
@@ -6678,6 +7894,8 @@
   "comp": "Superliga",
   "home": "Boto\u0219ani",
   "away": "Sepsi OSK",
+  "home_id": "188191",
+  "away_id": "583706",
   "slugs": [
    "roland-idowu"
   ]
@@ -6689,6 +7907,8 @@
   "comp": "Premier League 2",
   "home": "Newcastle United U21",
   "away": "Tottenham Hotspur U21",
+  "home_id": "860798",
+  "away_id": "860802",
   "slugs": [
    "rory-finneran"
   ]
@@ -6700,6 +7920,8 @@
   "comp": "Premier League 2",
   "home": "Newcastle United U21",
   "away": "Fulham U21",
+  "home_id": "860798",
+  "away_id": "860801",
   "slugs": [
    "rory-finneran"
   ]
@@ -6711,6 +7933,8 @@
   "comp": "National League Cup Group C",
   "home": "Boreham Wood",
   "away": "Newcastle United U21",
+  "home_id": "2488",
+  "away_id": "860798",
   "slugs": [
    "rory-finneran"
   ]
@@ -6722,6 +7946,8 @@
   "comp": "League Two",
   "home": "Salford",
   "away": "Port Vale",
+  "home_id": "282326",
+  "away_id": "9799",
   "slugs": [
    "ryan-graydon"
   ]
@@ -6733,6 +7959,8 @@
   "comp": "DFB Pokal",
   "home": "Preussen M\u00fcnster",
   "away": "Karlsruher SC",
+  "home_id": "8171",
+  "away_id": "8295",
   "slugs": [
    "ryan-johansson"
   ]
@@ -6744,6 +7972,8 @@
   "comp": "3. Liga",
   "home": "Viktoria K\u00f6ln 1904",
   "away": "Preussen M\u00fcnster",
+  "home_id": "276267",
+  "away_id": "8171",
   "slugs": [
    "ryan-johansson"
   ]
@@ -6755,6 +7985,8 @@
   "comp": "3. Liga",
   "home": "Preussen M\u00fcnster",
   "away": "TSV Havelse",
+  "home_id": "8171",
+  "away_id": "89338",
   "slugs": [
    "ryan-johansson"
   ]
@@ -6766,19 +7998,10 @@
   "comp": "Championship",
   "home": "West Ham",
   "away": "Derby",
+  "home_id": "8654",
+  "away_id": "10170",
   "slugs": [
    "sammie-szmodics"
-  ]
- },
- {
-  "fotmob_id": "5906387",
-  "url": "/matches/aldershot-town-vs-kidderminster-harriers/2wnkz8#5906387",
-  "kickoff": "2026-08-22T11:30:00Z",
-  "comp": "National League",
-  "home": "Kidderminster Harriers",
-  "away": "Aldershot Town",
-  "slugs": [
-   "scott-davies"
   ]
  },
  {
@@ -6788,6 +8011,8 @@
   "comp": "National League",
   "home": "Eastleigh",
   "away": "Aldershot Town",
+  "home_id": "161803",
+  "away_id": "8465",
   "slugs": [
    "scott-davies"
   ]
@@ -6799,6 +8024,8 @@
   "comp": "National League Cup Group B",
   "home": "Aldershot Town",
   "away": "West Ham United U21",
+  "home_id": "8465",
+  "away_id": "773649",
   "slugs": [
    "scott-davies"
   ]
@@ -6810,6 +8037,8 @@
   "comp": "Premier League 2",
   "home": "Aston Villa U21",
   "away": "Brighton & Hove Albion U21",
+  "home_id": "1070261",
+  "away_id": "773678",
   "slugs": [
    "sean-keogh"
   ]
@@ -6821,6 +8050,8 @@
   "comp": "National League South",
   "home": "Weston Super Mare",
   "away": "Dover",
+  "home_id": "6314",
+  "away_id": "4454",
   "slugs": [
    "sean-long"
   ]
@@ -6832,6 +8063,8 @@
   "comp": "League One",
   "home": "Montrose",
   "away": "Queen of the South",
+  "home_id": "8257",
+  "away_id": "9924",
   "slugs": [
    "sean-mcginty"
   ]
@@ -6843,6 +8076,8 @@
   "comp": "League One",
   "home": "Peterhead",
   "away": "Montrose",
+  "home_id": "8158",
+  "away_id": "8257",
   "slugs": [
    "sean-mcginty"
   ]
@@ -6854,6 +8089,8 @@
   "comp": "Challenge Cup",
   "home": "Montrose",
   "away": "Dundee FC B",
+  "home_id": "8257",
+  "away_id": "1273049",
   "slugs": [
    "sean-mcginty"
   ]
@@ -6865,6 +8102,8 @@
   "comp": "Championship",
   "home": "Blackburn Rovers",
   "away": "Middlesbrough",
+  "home_id": "8655",
+  "away_id": "8549",
   "slugs": [
    "sean-mcloughlin"
   ]
@@ -6876,6 +8115,8 @@
   "comp": "National League",
   "home": "Woking",
   "away": "AFC Fylde",
+  "home_id": "8345",
+  "away_id": "282396",
   "slugs": [
    "shadrach-ogie"
   ]
@@ -6887,6 +8128,8 @@
   "comp": "National League",
   "home": "Hornchurch",
   "away": "Woking",
+  "home_id": "4047",
+  "away_id": "8345",
   "slugs": [
    "shadrach-ogie"
   ]
@@ -6898,6 +8141,8 @@
   "comp": "National League",
   "home": "Woking",
   "away": "Southend",
+  "home_id": "8345",
+  "away_id": "8652",
   "slugs": [
    "shadrach-ogie"
   ]
@@ -6909,6 +8154,8 @@
   "comp": "National League",
   "home": "Hartlepool United",
   "away": "Woking",
+  "home_id": "8488",
+  "away_id": "8345",
   "slugs": [
    "shadrach-ogie"
   ]
@@ -6920,6 +8167,8 @@
   "comp": "National League Cup Group D",
   "home": "Woking",
   "away": "Southampton U21",
+  "home_id": "8345",
+  "away_id": "773645",
   "slugs": [
    "shadrach-ogie"
   ]
@@ -6931,6 +8180,8 @@
   "comp": "Isthmian Premier Division",
   "home": "Burgess Hill Town",
   "away": "Dartford",
+  "home_id": "282340",
+  "away_id": "161813",
   "slugs": [
    "shamir-fenelon"
   ]
@@ -6942,6 +8193,8 @@
   "comp": "Isthmian Premier Division",
   "home": "Whitehawk",
   "away": "Burgess Hill Town",
+  "home_id": "282373",
+  "away_id": "282340",
   "slugs": [
    "shamir-fenelon"
   ]
@@ -6953,6 +8206,8 @@
   "comp": "National League North",
   "home": "Brackley Town",
   "away": "South Shields",
+  "home_id": "158321",
+  "away_id": "865163",
   "slugs": [
    "shane-byrne"
   ]
@@ -6964,6 +8219,8 @@
   "comp": "National League North",
   "home": "Chorley",
   "away": "Brackley Town",
+  "home_id": "274599",
+  "away_id": "158321",
   "slugs": [
    "shane-byrne"
   ]
@@ -6975,6 +8232,8 @@
   "comp": "National League North",
   "home": "Brackley Town",
   "away": "Harborough Town FC",
+  "home_id": "158321",
+  "away_id": "1382661",
   "slugs": [
    "shane-byrne"
   ]
@@ -6986,6 +8245,8 @@
   "comp": "National League North",
   "home": "Buxton",
   "away": "Brackley Town",
+  "home_id": "161824",
+  "away_id": "158321",
   "slugs": [
    "shane-byrne"
   ]
@@ -6997,6 +8258,8 @@
   "comp": "Premier League",
   "home": "Connah's Quay Nomads",
   "away": "Cambrian United",
+  "home_id": "2193",
+  "away_id": "316361",
   "slugs": [
    "shane-flynn"
   ]
@@ -7008,6 +8271,8 @@
   "comp": "Premier League",
   "home": "Flint Town United",
   "away": "Connah's Quay Nomads",
+  "home_id": "316297",
+  "away_id": "2193",
   "slugs": [
    "shane-flynn"
   ]
@@ -7019,6 +8284,8 @@
   "comp": "Premier League",
   "home": "Connah's Quay Nomads",
   "away": "Haverfordwest",
+  "home_id": "2193",
+  "away_id": "2194",
   "slugs": [
    "shane-flynn"
   ]
@@ -7030,6 +8297,8 @@
   "comp": "Super Lig",
   "home": "G\u00f6ztepe",
   "away": "Gen\u00e7lerbirli\u011fi",
+  "home_id": "1925",
+  "away_id": "7800",
   "slugs": [
    "sinclair-armstrong"
   ]
@@ -7041,6 +8310,8 @@
   "comp": "Super Lig",
   "home": "Galatasaray",
   "away": "G\u00f6ztepe",
+  "home_id": "8637",
+  "away_id": "1925",
   "slugs": [
    "sinclair-armstrong"
   ]
@@ -7052,6 +8323,8 @@
   "comp": "Super Lig",
   "home": "G\u00f6ztepe",
   "away": "Gaziantep FK",
+  "home_id": "1925",
+  "away_id": "4081",
   "slugs": [
    "sinclair-armstrong"
   ]
@@ -7063,6 +8336,8 @@
   "comp": "Belgian Pro League",
   "home": "Club Brugge",
   "away": "Cercle Brugge",
+  "home_id": "8342",
+  "away_id": "9984",
   "slugs": [
    "tayo-adaramola"
   ]
@@ -7074,6 +8349,8 @@
   "comp": "Belgian Pro League",
   "home": "Cercle Brugge",
   "away": "Lommel",
+  "home_id": "9984",
+  "away_id": "6702",
   "slugs": [
    "tayo-adaramola"
   ]
@@ -7085,6 +8362,8 @@
   "comp": "Belgian Pro League",
   "home": "Cercle Brugge",
   "away": "Gent",
+  "home_id": "9984",
+  "away_id": "9991",
   "slugs": [
    "tayo-adaramola"
   ]
@@ -7096,6 +8375,8 @@
   "comp": "Premier League",
   "home": "HFX Wanderers FC",
   "away": "Vancouver FC",
+  "home_id": "1022948",
+  "away_id": "1436202",
   "slugs": [
    "tom-field"
   ]
@@ -7107,6 +8388,8 @@
   "comp": "Premier League",
   "home": "Cavalry FC",
   "away": "Vancouver FC",
+  "home_id": "1022952",
+  "away_id": "1436202",
   "slugs": [
    "tom-field"
   ]
@@ -7118,6 +8401,8 @@
   "comp": "Premier League",
   "home": "Vancouver FC",
   "away": "Supra du Qu\u00e9bec",
+  "home_id": "1436202",
+  "away_id": "1899648",
   "slugs": [
    "tom-field"
   ]
@@ -7129,6 +8414,8 @@
   "comp": "Cup",
   "home": "Midsund",
   "away": "Molde",
+  "home_id": "4353",
+  "away_id": "9917",
   "slugs": [
    "trent-kone-doherty"
   ]
@@ -7140,6 +8427,8 @@
   "comp": "Eliteserien",
   "home": "V\u00e5lerenga",
   "away": "Molde",
+  "home_id": "8007",
+  "away_id": "9917",
   "slugs": [
    "trent-kone-doherty"
   ]
@@ -7151,6 +8440,8 @@
   "comp": "Eliteserien",
   "home": "Molde",
   "away": "KFUM",
+  "home_id": "9917",
+  "away_id": "2305",
   "slugs": [
    "trent-kone-doherty"
   ]
@@ -7162,6 +8453,8 @@
   "comp": "LaLiga",
   "home": "Valencia",
   "away": "Real Betis",
+  "home_id": "10267",
+  "away_id": "8603",
   "slugs": [
    "troy-parrott"
   ]
@@ -7173,6 +8466,8 @@
   "comp": "LaLiga",
   "home": "Levante",
   "away": "Real Betis",
+  "home_id": "8581",
+  "away_id": "8603",
   "slugs": [
    "troy-parrott"
   ]
@@ -7184,6 +8479,8 @@
   "comp": "LaLiga",
   "home": "Real Betis",
   "away": "Real Madrid",
+  "home_id": "8603",
+  "away_id": "8633",
   "slugs": [
    "troy-parrott"
   ]
@@ -7195,6 +8492,8 @@
   "comp": "Serie A",
   "home": "Genoa",
   "away": "Napoli",
+  "home_id": "10233",
+  "away_id": "9875",
   "slugs": [
    "vinnie-leonard"
   ]
@@ -7206,6 +8505,8 @@
   "comp": "Serie A",
   "home": "Napoli",
   "away": "Como",
+  "home_id": "9875",
+  "away_id": "10171",
   "slugs": [
    "vinnie-leonard"
   ]
@@ -7217,6 +8518,8 @@
   "comp": "Serie A",
   "home": "Inter",
   "away": "Napoli",
+  "home_id": "8636",
+  "away_id": "9875",
   "slugs": [
    "vinnie-leonard"
   ]
@@ -7228,6 +8531,8 @@
   "comp": "National League",
   "home": "Worthing",
   "away": "Wealdstone",
+  "home_id": "282351",
+  "away_id": "161812",
   "slugs": [
    "wilson-waweru"
   ]
@@ -7239,6 +8544,8 @@
   "comp": "National League",
   "home": "Wealdstone",
   "away": "Carlisle United",
+  "home_id": "161812",
+  "away_id": "10196",
   "slugs": [
    "wilson-waweru"
   ]
@@ -7250,6 +8557,8 @@
   "comp": "National League",
   "home": "Wealdstone",
   "away": "Kidderminster Harriers",
+  "home_id": "161812",
+  "away_id": "10284",
   "slugs": [
    "wilson-waweru"
   ]
@@ -7261,6 +8570,8 @@
   "comp": "Championship",
   "home": "Raith Rovers",
   "away": "Ayr United",
+  "home_id": "10250",
+  "away_id": "9913",
   "slugs": [
    "zak-delaney"
   ]
@@ -7272,6 +8583,8 @@
   "comp": "Championship",
   "home": "Inverness",
   "away": "Raith Rovers",
+  "home_id": "8066",
+  "away_id": "10250",
   "slugs": [
    "zak-delaney"
   ]

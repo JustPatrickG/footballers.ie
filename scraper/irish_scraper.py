@@ -268,12 +268,22 @@ def resolve(args):
                     or (nsurname and nsurname in nc.split()):
                 name_hits.append((oid, cname, cteam))
 
+        surname_only = (used_name != name
+                        and len(used_name.split()) < len(name.split()))
         best = None
         pool = name_hits or cands
-        if len(pool) == 1:
+        if len(pool) == 1 and not surname_only:
             # only one option -> obviously them
             oid, cname, cteam = pool[0]
             best = (2, oid, cname, cteam)
+        elif surname_only:
+            # a surname alone is not enough - the club must agree, or we
+            # end up copying one McGrath's season onto another
+            for oid, cname, cteam in pool:
+                if nclub and norm(cteam) and (nclub in norm(cteam)
+                                              or norm(cteam) in nclub):
+                    best = (2, oid, cname, cteam)
+                    break
         else:
             for oid, cname, cteam in name_hits:
                 club_match = (nclub and norm(cteam) and
@@ -365,6 +375,18 @@ def league_teams(lid, debug=False):
     return teams
 
 
+STAFF_WORDS = ("coach", "manager", "staff", "assistant", "physio",
+               "analyst", "director", "keeper coach", "head coach")
+
+
+def looks_like_staff(*labels):
+    for lab in labels:
+        n = norm(str(lab or ""))
+        if any(w in n for w in STAFF_WORDS):
+            return True
+    return False
+
+
 def team_irish_players(tid, tname="", debug=False):
     url = TEAM_URL.format(tid=tid, tslug=slugify(tname or "team"))
     try:
@@ -387,6 +409,9 @@ def team_irish_players(tid, tname="", debug=False):
             if isinstance(r, dict):
                 r = r.get("fallback") or r.get("key") or ""
             oid, name = obj.get("id"), obj.get("name")
+            if looks_like_staff(r, obj.get("role"), obj.get("title"),
+                                obj.get("positionLabel")):
+                oid = None                     # managers aren't players
             if oid and name and is_irish(obj):
                 pos = ""
                 for k, v in role_map.items():
@@ -720,6 +745,69 @@ def set_id(args):
     print("\nrun `scrape` to pull their data.")
 
 
+def clear_id(args):
+    """Blank a wrong source id so it can be resolved again."""
+    cache = read_id_cache()
+    for slug in args.slugs:
+        if slug in cache:
+            cache[slug] = {"fotmob_id": "", "note": "cleared by hand"}
+            print(f"  cleared {slug}")
+        else:
+            print(f"  {slug} not in the cache")
+    write_id_cache(cache)
+
+
+def dedupe(args):
+    """Drop roster entries that share a source id with another entry."""
+    players = read_player_list()
+    cache = read_id_cache()
+    by_id = {}
+    for p in players:
+        pid = cache.get(p["slug"], {}).get("fotmob_id")
+        if pid:
+            by_id.setdefault(pid, []).append(p)
+
+    drop = []
+    for pid, group in by_id.items():
+        if len(group) < 2:
+            continue
+        fm_name = cache[group[0]["slug"]].get("fotmob_name", "")
+        want = slugify(fm_name) if fm_name else ""
+        # keep the slug matching the source's own spelling, else the
+        # longest name (the fuller form), else the first
+        keep = next((p for p in group if p["slug"] == want), None)
+        if not keep:
+            keep = max(group, key=lambda p: len(p.get("name", "")))
+        for p in group:
+            if p["slug"] != keep["slug"]:
+                drop.append((p["slug"], keep["slug"], pid))
+
+    if not drop:
+        print("no duplicates")
+        return
+    print(f"{len(drop)} duplicate roster entries:")
+    for slug, keep, pid in drop:
+        print(f"  - {slug}  (same player as {keep}, id {pid})")
+    if args.dry_run:
+        print("\ndry run - nothing changed. Drop --dry-run to apply.")
+        return
+
+    gone = {d[0] for d in drop}
+    kept = [p for p in players if p["slug"] not in gone]
+    cols = ["slug", "name", "club", "league", "tier", "pos",
+            "ireland_level"]
+    with open(PLAYER_LIST, "w", newline="", encoding="utf-8") as f:
+        w = csv.DictWriter(f, fieldnames=cols, extrasaction="ignore")
+        w.writeheader()
+        w.writerows(kept)
+    for slug in gone:
+        cache.pop(slug, None)
+    write_id_cache(cache)
+    print(f"\nremoved {len(gone)}; {len(kept)} players left")
+    print("the site may still have pages for the old slugs - worth a "
+          "redirect or a rebuild.")
+
+
 IRELAND_TEAMS = [("Ireland", "Republic of Ireland"),
                  ("Ireland U21", "Republic of Ireland U21"),
                  ("Ireland U20", "Republic of Ireland U20"),
@@ -828,6 +916,8 @@ def parse_team_matches(data):
             "home": home.get("name", ""), "away": away.get("name", ""),
             "hs": scores[0] if scores[0] is not None else "",
             "as": scores[1] if scores[1] is not None else "",
+            "home_id": str(home.get("id") or ""),
+            "away_id": str(away.get("id") or ""),
             "finished": bool(st.get("finished")),
             "started": bool(st.get("started")),
             "url": m.get("pageUrl", "") or "",
@@ -1037,6 +1127,8 @@ def extract_matches(blob):
         rating = (m.get("ratingProps") or {}).get("rating") or ""
         if rating in (0, "0"):
             rating = ""
+        tid = str(m.get("teamId") or "")
+        oid = str(m.get("opponentTeamId") or "")
         out.append({
             "id": str(m.get("id") or utc),
             "team": team,
@@ -1045,6 +1137,8 @@ def extract_matches(blob):
             "comp": m.get("leagueName", "") or "",
             "home": team if is_home else opp,
             "away": opp if is_home else team,
+            "home_id": tid if is_home else oid,
+            "away_id": oid if is_home else tid,
             "hscore": m.get("homeScore", ""),
             "ascore": m.get("awayScore", ""),
             "finished": True,
@@ -1078,6 +1172,8 @@ def extract_matches(blob):
                 "utc": utc,
                 "comp": nm.get("leagueName", "") or "",
                 "home": home, "away": away,
+                "home_id": str(nm.get("homeId") or ""),
+                "away_id": str(nm.get("awayId") or ""),
                 "hscore": "", "ascore": "",
                 "finished": bool(st.get("finished")),
                 "ongoing": ongoing,
@@ -1326,8 +1422,9 @@ def merge_rows(path, new_rows, touched):
 
 def merge_matches(path, matches_by_id, status_of):
     """Upsert match rows by id, keeping matches for untouched players."""
-    header = ["kickoff", "competition", "home", "away", "home_score",
-              "away_score", "status", "minute", "players"]
+    header = ["kickoff", "competition", "home", "away", "home_id",
+              "away_id", "home_score", "away_score", "status", "minute",
+              "players"]
     existing = {}
     if path.exists():
         with open(path, newline="", encoding="utf-8") as f:
@@ -1344,6 +1441,8 @@ def merge_matches(path, matches_by_id, status_of):
         existing[key] = {
             "kickoff": key[0], "competition": m["comp"],
             "home": m["home"], "away": m["away"],
+            "home_id": m.get("home_id", ""),
+            "away_id": m.get("away_id", ""),
             "home_score": m["hscore"] if st != "scheduled" else "",
             "away_score": m["ascore"] if st != "scheduled" else "",
             "status": st, "minute": m["minute"] if st == "live" else "",
@@ -1505,6 +1604,8 @@ def scrape(args):
                         matches_by_id[key] = ({
                             "id": key, "utc": fm["utc"], "comp": fm["comp"],
                             "home": fm["home"], "away": fm["away"],
+                            "home_id": fm.get("home_id", ""),
+                            "away_id": fm.get("away_id", ""),
                             "hscore": "", "ascore": "", "finished": False,
                             "ongoing": False, "minute": "",
                             "url": fm["url"],
@@ -1542,6 +1643,7 @@ def scrape(args):
         st = status_of(m)
         match_rows.append([
             iso_z(m["utc"]), m["comp"], m["home"], m["away"],
+            m.get("home_id", ""), m.get("away_id", ""),
             m["hscore"] if st != "scheduled" else "",
             m["ascore"] if st != "scheduled" else "",
             st,
@@ -1553,8 +1655,9 @@ def scrape(args):
     fixtures_rows.sort(key=lambda r: (r[0], r[-1]))
 
     write_csv(out_root / "data/api/matches.csv",
-              ["kickoff", "competition", "home", "away", "home_score",
-               "away_score", "status", "minute", "players"],
+              ["kickoff", "competition", "home", "away", "home_id",
+               "away_id", "home_score", "away_score", "status", "minute",
+               "players"],
               match_rows)
     write_csv(out_root / "data/manual/results.csv",
               ["slug", "date", "opponent", "score", "competition",
@@ -1598,6 +1701,8 @@ def scrape(args):
             "fotmob_id": m["id"], "url": m["url"],
             "kickoff": iso_z(m["utc"]), "comp": m["comp"],
             "home": m["home"], "away": m["away"],
+            "home_id": m.get("home_id", ""),
+            "away_id": m.get("away_id", ""),
             "slugs": sorted(slugs),
         })
     (SCRAPER_DIR / "match_index.json").write_text(
@@ -1614,6 +1719,67 @@ def scrape(args):
 # ---------------------------------------------------------------- events
 
 EVENT_COLUMNS = ["match_id", "minute", "type", "player", "team", "venue"]
+LINEUP_COLUMNS = ["match_id", "team", "player", "player_id", "role",
+                  "shirt", "position"]
+
+
+def parse_lineups(data, home, away):
+    """[{team, player, player_id, role, shirt, position}] for a match.
+    role is 'start' or 'bench'. Empty when the source has no lineup yet."""
+    out, seen = [], set()
+
+    def add(p, team, role):
+        if not isinstance(p, dict):
+            return
+        name = p.get("name") or p.get("nameStr") or p.get("fullName")
+        if isinstance(name, dict):
+            name = name.get("fullName") or name.get("firstName", "")
+        pid = str(p.get("id") or p.get("playerId") or "")
+        if not name:
+            return
+        if looks_like_staff(p.get("role"), p.get("title"),
+                            p.get("positionStringShort")):
+            return
+        key = (team, norm(str(name)), role)
+        if key in seen:
+            return
+        seen.add(key)
+        out.append({
+            "team": team, "player": str(name).strip(), "player_id": pid,
+            "role": role,
+            "shirt": str(p.get("shirt") or p.get("shirtNumber") or ""),
+            "position": str(p.get("positionStringShort")
+                            or p.get("position") or ""),
+        })
+
+    def side_players(block, team):
+        if not isinstance(block, dict):
+            return
+        for key, role in (("starters", "start"), ("startingLineup", "start"),
+                          ("players", "start"), ("bench", "bench"),
+                          ("subs", "bench"), ("substitutes", "bench")):
+            val = block.get(key)
+            if isinstance(val, list):
+                for item in val:
+                    if isinstance(item, list):      # rows of a formation
+                        for p in item:
+                            add(p, team, role)
+                    else:
+                        add(item, team, role)
+
+    for lu in find_all(data, "lineup"):
+        blocks = lu if isinstance(lu, list) else [lu]
+        for b in blocks:
+            if not isinstance(b, dict):
+                continue
+            for side, team in (("homeTeam", home), ("awayTeam", away),
+                               ("home", home), ("away", away)):
+                if isinstance(b.get(side), dict):
+                    side_players(b[side], team)
+            name = b.get("teamName") or b.get("name")
+            if name:
+                side_players(b, str(name))
+    return out
 
 
 def match_id_for(utc, home, away):
@@ -1712,8 +1878,13 @@ def events_cmd(args):
     since = now - dt.timedelta(days=args.days)
 
     out_path = Path(args.out) / "data/api/match_events.csv"
+    lineup_path = Path(args.out) / "data/api/match_lineups.csv"
     have = set()
-    rows = []
+    rows, lineup_rows = [], []
+    if lineup_path.exists() and not args.rebuild:
+        with open(lineup_path, newline="", encoding="utf-8") as f:
+            for row in csv.DictReader(f):
+                lineup_rows.append([row.get(c, "") for c in LINEUP_COLUMNS])
     if out_path.exists() and not args.rebuild:
         with open(out_path, newline="", encoding="utf-8") as f:
             for row in csv.DictReader(f):
@@ -1738,6 +1909,7 @@ def events_cmd(args):
                 "https://www.fotmob.com" + m["url"].split("#")[0],
                 debug_name=f"match_{mid}" if args.debug else None)
             evs, venue = parse_match_events(data, m["home"], m["away"])
+            lus = parse_lineups(data, m["home"], m["away"])
         except Exception as e:
             print(f"  [{i+1}/{len(todo)}] {mid}: failed ({e})")
             time.sleep(SLEEP)
@@ -1747,14 +1919,23 @@ def events_cmd(args):
                          e["team"], venue])
         if not evs:
             rows.append([mid, "", "", "", "", venue])
+        for l in lus:
+            lineup_rows.append([mid, l["team"], l["player"], l["player_id"],
+                                l["role"], l["shirt"], l["position"]])
         done += 1
-        print(f"  [{i+1}/{len(todo)}] {mid}: {len(evs)} events"
+        print(f"  [{i+1}/{len(todo)}] {mid}: {len(evs)} events, "
+              f"{len(lus)} in lineups"
               + (f", {venue}" if venue else ""))
         time.sleep(SLEEP)
 
     rows.sort(key=lambda r: (r[0], int(re.sub(r"\D", "", r[1]) or 0)))
     write_csv(out_path, EVENT_COLUMNS, rows)
+    lineup_rows.sort(key=lambda r: (r[0], r[1], r[4], r[2]))
+    write_csv(lineup_path, LINEUP_COLUMNS, lineup_rows)
     print(f"{done} matches read this run")
+    if done and not any(r[2] for r in lineup_rows):
+        print("no lineups found - rerun with --debug and send a file "
+              "from scraper/debug/ if you want these")
 
 
 # ---------------------------------------------------------------- live
@@ -1934,6 +2115,15 @@ def main():
     al.add_argument("--stub-only", action="store_true",
                     help="add every name as a stub, match nothing")
 
+    dd = sub.add_parser("dedupe",
+                        help="remove roster entries sharing a source id")
+    dd.add_argument("--dry-run", action="store_true",
+                    help="just list them")
+
+    ci = sub.add_parser("clear-id",
+                        help="blank a wrong source id so it re-resolves")
+    ci.add_argument("slugs", nargs="+")
+
     si = sub.add_parser("set-id",
                         help="fill a source id on an existing player "
                              "(when the source spells the name differently)")
@@ -1978,6 +2168,10 @@ def main():
         add_list(args)
     elif args.cmd == "set-id":
         set_id(args)
+    elif args.cmd == "dedupe":
+        dedupe(args)
+    elif args.cmd == "clear-id":
+        clear_id(args)
     elif args.cmd == "discover-ireland":
         discover_ireland(args)
     elif args.cmd == "events":

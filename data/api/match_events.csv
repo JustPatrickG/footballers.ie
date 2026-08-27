@@ -678,6 +678,12 @@ match_id,minute,type,player,team,venue
 2026-08-24-manchester-city-u21-v-wolverhampton-wanderers-u21,40,goal,Floyd Samba,Manchester City U21,City Football Academy
 2026-08-24-manchester-city-u21-v-wolverhampton-wanderers-u21,45,yellow,Harrison Miles,Manchester City U21,City Football Academy
 2026-08-24-manchester-city-u21-v-wolverhampton-wanderers-u21,54,goal,Xavier Parker,Manchester City U21,City Football Academy
+2026-08-24-newcastle-united-u21-v-tottenham-hotspur-u21,8,goal,Vakhtang Salia,Newcastle United U21,Whitley Park
+2026-08-24-newcastle-united-u21-v-tottenham-hotspur-u21,36,goal,Reiss Elliot-Parris,Tottenham Hotspur U21,Whitley Park
+2026-08-24-newcastle-united-u21-v-tottenham-hotspur-u21,45,yellow,Sean Neave,Newcastle United U21,Whitley Park
+2026-08-24-newcastle-united-u21-v-tottenham-hotspur-u21,67,goal,Alfie Dorrington,Tottenham Hotspur U21,Whitley Park
+2026-08-24-newcastle-united-u21-v-tottenham-hotspur-u21,71,goal,Tyrese Hall,Tottenham Hotspur U21,Whitley Park
+2026-08-24-newcastle-united-u21-v-tottenham-hotspur-u21,90,yellow,Scott Bailey,Newcastle United U21,Whitley Park
 2026-08-24-sunderland-u21-v-nottingham-forest-u21,4,goal,Trey Samuel-Ogunsuyi,Sunderland U21,Eppleton Colliery Football Ground
 2026-08-24-sunderland-u21-v-nottingham-forest-u21,14,yellow,Chinaza Nwosu,Nottingham Forest U21,Eppleton Colliery Football Ground
 2026-08-24-sunderland-u21-v-nottingham-forest-u21,51,goal,Trey Samuel-Ogunsuyi,Sunderland U21,Eppleton Colliery Football Ground
@@ -816,3 +822,70 @@ match_id,minute,type,player,team,venue
 2026-08-25-watford-v-peterborough-united,64,goal,Harrison Jones,Peterborough United,Vicarage Road
 2026-08-25-watford-v-peterborough-united,73,goal,Mamadou Doumbia,Watford,Vicarage Road
 2026-08-25-watford-v-peterborough-united,83,yellow,George Nevett,Peterborough United,Vicarage Road
+2026-08-26-aek-athens-v-levski-sofia,7,goal,Luka Jovic,AEK Athens,ALLWYN Arena
+2026-08-26-aek-athens-v-levski-sofia,12,goal,Barnabás Varga,AEK Athens,ALLWYN Arena
+2026-08-26-aek-athens-v-levski-sofia,29,goal,Barnabás Varga,AEK Athens,ALLWYN Arena
+2026-08-26-aek-athens-v-levski-sofia,51,yellow,Razvan Marin,AEK Athens,ALLWYN Arena
+2026-08-26-aek-athens-v-levski-sofia,55,goal,Razvan Marin,AEK Athens,ALLWYN Arena
+2026-08-26-aek-athens-v-levski-sofia,74,yellow,Stavros Pilios,AEK Athens,ALLWYN Arena
+2026-08-26-aek-athens-v-levski-sofia,89,yellow,Zine,AEK Athens,ALLWYN Arena
+2026-08-26-newcastle-united-v-west-bromwich-albion,18,yellow,Sean Steur,Newcastle United,St. James' Park
+2026-08-26-newcastle-united-v-west-bromwich-albion,19,goal,Isaac Price,West Bromwich Albion,St. James' Park
+2026-08-26-newcastle-united-v-west-bromwich-albion,38,goal,Bazoumana Touré,Newcastle United,St. James' Park
+2026-08-26-newcastle-united-v-west-bromwich-albion,48,goal,Harvey Barnes,Newcastle United,St. James' Park
+2026-08-26-newcastle-united-v-west-bromwich-albion,52,yellow,Rabby Nzingoula,West Bromwich Albion,St. James' Park
+2026-08-26-newcastle-united-v-west-bromwich-albion,55,yellow,Ousmane Diakité,West Bromwich Albion,St. James' Park
+2026-08-26-newcastle-united-v-west-bromwich-albion,62,yellow,Barney Stewart,West Bromwich Albion,St. James' Park
+2026-08-26-newcastle-united-v-west-bromwich-albion,77,goal,Isaac Price,West Bromwich Albion,St. James' Park
+2026-08-26-newcastle-united-v-west-bromwich-albion,77,yellow,Ewen Jaouen,Newcastle United,St. James' Park
+2026-08-26-newcastle-united-v-west-bromwich-albion,81,goal,Harvey Barnes,Newcastle United,St. James' Park
+2026-08-26-newcastle-united-v-west-bromwich-albion,89,yellow,Jacob Ramsey,Newcastle United,St. James' Park
+2026-08-26-preston-north-end-v-everton,25,goal,Thierno Barry,Everton,Deepdale
+2026-08-26-preston-north-end-v-everton,59,goal,Thierno Barry,Everton,Deepdale
+2026-08-26-preston-north-end-v-everton,71,goal,Thierno Barry,Everton,Deepdale
+2026-08-26-preston-north-end-v-everton,72,goal,Brennan Johnson,Everton,Deepdale
+2026-08-26-rapid-wien-v-heart-of-midlothian,18,yellow,Oisin McEntee,Heart of Midlothian,Allianz Stadion
+2026-08-26-rapid-wien-v-heart-of-midlothian,35,goal,Ercan Kara,Rapid Wien,Allianz Stadion
+2026-08-26-rapid-wien-v-heart-of-midlothian,41,yellow,Tómas Magnússon,Heart of Midlothian,Allianz Stadion
+2026-08-26-rapid-wien-v-heart-of-midlothian,59,yellow,Cláudio Braga,Heart of Midlothian,Allianz Stadion
+2026-08-26-rapid-wien-v-heart-of-midlothian,74,yellow,Matthias Seidl,Rapid Wien,Allianz Stadion
+2026-08-26-rapid-wien-v-heart-of-midlothian,76,second_yellow,Tómas Magnússon,Heart of Midlothian,Allianz Stadion
+2026-08-26-rapid-wien-v-heart-of-midlothian,79,goal,Pierre Landry Kaboré,Heart of Midlothian,Allianz Stadion
+2026-08-26-rapid-wien-v-heart-of-midlothian,86,yellow,Pierre Landry Kaboré,Heart of Midlothian,Allianz Stadion
+2026-08-26-rapid-wien-v-heart-of-midlothian,90,yellow,Bendegúz Bolla,Rapid Wien,Allianz Stadion
+2026-08-26-rapid-wien-v-heart-of-midlothian,101,goal,Calvin Miller,Heart of Midlothian,Allianz Stadion
+2026-08-26-rapid-wien-v-heart-of-midlothian,115,yellow,Ange Ahoussou,Rapid Wien,Allianz Stadion
+2026-08-26-rapid-wien-v-heart-of-midlothian,119,goal,Nenad Cvetkovic,Rapid Wien,Allianz Stadion
+2026-08-26-rapid-wien-v-heart-of-midlothian,121,missed_penalty,Moulaye Haïdara,Rapid Wien,Allianz Stadion
+2026-08-26-rapid-wien-v-heart-of-midlothian,121,missed_penalty,Oisin McEntee,Heart of Midlothian,Allianz Stadion
+2026-08-26-rapid-wien-v-heart-of-midlothian,121,missed_penalty,Marco Tilio,Rapid Wien,Allianz Stadion
+2026-08-26-tottenham-hotspur-v-charlton-athletic,24,yellow,Lucas Bergvall,Tottenham Hotspur,Tottenham Hotspur Stadium
+2026-08-26-tottenham-hotspur-v-charlton-athletic,41,goal,Mikey Moore,Tottenham Hotspur,Tottenham Hotspur Stadium
+2026-08-26-tottenham-hotspur-v-charlton-athletic,45,goal,Dominic Solanke,Tottenham Hotspur,Tottenham Hotspur Stadium
+2026-08-26-tottenham-hotspur-v-charlton-athletic,45,yellow,Rob Apter,Charlton Athletic,Tottenham Hotspur Stadium
+2026-08-26-tottenham-hotspur-v-charlton-athletic,67,goal,Kevin Danso,Tottenham Hotspur,Tottenham Hotspur Stadium
+2026-08-26-tottenham-hotspur-v-charlton-athletic,82,goal,Sávio,Tottenham Hotspur,Tottenham Hotspur Stadium
+2026-08-26-tottenham-hotspur-v-charlton-athletic,85,goal,Ben Davies,Tottenham Hotspur,Tottenham Hotspur Stadium
+2026-08-26-tottenham-hotspur-v-charlton-athletic,87,goal,Lloyd Jones,Charlton Athletic,Tottenham Hotspur Stadium
+2026-08-27-cf-america-v-columbus-crew,11,goal,Raphael Veiga,CF América,Dignity Health Sports Park
+2026-08-27-cf-america-v-columbus-crew,39,missed_penalty,Brais Méndez,Columbus Crew,Dignity Health Sports Park
+2026-08-27-cf-america-v-columbus-crew,45,goal,Brian Rodríguez,CF América,Dignity Health Sports Park
+2026-08-27-cf-america-v-columbus-crew,86,yellow,Óscar Perea,CF América,Dignity Health Sports Park
+2026-08-27-new-mexico-united-v-lexington-sc,10,yellow,Oliver Semmle,Lexington SC,Rio Grande Credit Union Field at Isotopes Park
+2026-08-27-new-mexico-united-v-lexington-sc,29,yellow,Greg Hurst,New Mexico United,Rio Grande Credit Union Field at Isotopes Park
+2026-08-27-new-mexico-united-v-lexington-sc,51,goal,Marqes Muir,Lexington SC,Rio Grande Credit Union Field at Isotopes Park
+2026-08-27-new-mexico-united-v-lexington-sc,63,yellow,Zico Bailey,New Mexico United,Rio Grande Credit Union Field at Isotopes Park
+2026-08-27-new-mexico-united-v-lexington-sc,68,yellow,Tyler Blackett,New Mexico United,Rio Grande Credit Union Field at Isotopes Park
+2026-08-27-new-mexico-united-v-lexington-sc,73,goal,Kipp Keller,New Mexico United,Rio Grande Credit Union Field at Isotopes Park
+2026-08-27-new-mexico-united-v-lexington-sc,78,goal,Niall Reid-Stephen,New Mexico United,Rio Grande Credit Union Field at Isotopes Park
+2026-08-27-new-mexico-united-v-lexington-sc,82,yellow,Patrick Seagrist,Lexington SC,Rio Grande Credit Union Field at Isotopes Park
+2026-08-27-new-mexico-united-v-lexington-sc,90,yellow,Cullen Wilkerson,New Mexico United,Rio Grande Credit Union Field at Isotopes Park
+2026-08-27-toluca-v-austin-fc,29,yellow,Besard Sabovic,Austin FC,Sports Illustrated Stadium
+2026-08-27-toluca-v-austin-fc,40,red,Joseph Rosales,Austin FC,Sports Illustrated Stadium
+2026-08-27-toluca-v-austin-fc,50,yellow,Oleksandr Svatok,Austin FC,Sports Illustrated Stadium
+2026-08-27-toluca-v-austin-fc,53,goal,Helinho,Toluca,Sports Illustrated Stadium
+2026-08-27-toluca-v-austin-fc,66,yellow,Nicolás Castro,Toluca,Sports Illustrated Stadium
+2026-08-27-toluca-v-austin-fc,69,yellow,Federico Pereira,Toluca,Sports Illustrated Stadium
+2026-08-27-toluca-v-austin-fc,74,second_yellow,Ilie Sánchez,Austin FC,Sports Illustrated Stadium
+2026-08-27-toluca-v-austin-fc,84,yellow,Brian García,Toluca,Sports Illustrated Stadium
+2026-08-27-toluca-v-austin-fc,90,goal,Jorge Díaz,Toluca,Sports Illustrated Stadium
