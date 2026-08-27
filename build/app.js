@@ -226,28 +226,45 @@
   }
 
   /* Decide which matches deserve the two slots. */
+  var NEARLY = 15 * 60 * 1000;   // a match counts as "on" from 15 minutes
+                                 // before kick-off to 15 minutes after it ends
+
+  function isOn(m, now) {
+    if (m.status === 'live' && ended(m) > now) return true;
+    return now >= ko(m) - NEARLY && now <= ended(m) + NEARLY;
+  }
+
+  /* Which two matches lead the page.
+     Anything with a player you follow wins outright — that's the whole point
+     of following someone. Then whatever is actually on. Then the generator's
+     score, which weighs the competition, the biggest name in it, and how many
+     of ours are involved. */
+  function rank(all, now) {
+    var favs = [];
+    try { favs = JSON.parse(localStorage.getItem('fb_favs_v1')) || []; } catch (e) {}
+    var mine = {};
+    favs.forEach(function (s) { mine[s] = 1; });
+
+    return all.map(function (m) {
+      var yours = m.players.some(function (p) { return mine[p.slug]; });
+      var on = isOn(m, now);
+      var done = m.status === 'ft' || ended(m) <= now;
+      var score = (m.pull || 0)
+                + (yours ? 10000 : 0)
+                + (on ? 5000 : 0)
+                + (done ? 0 : 200);          // a game to come beats one gone by
+      // among equals, soonest upcoming and most recent finished come first
+      score -= Math.abs(now - ko(m)) / 36e5 * 0.4;
+      return { m: m, score: score, on: on };
+    }).sort(function (a, b) { return b.score - a.score; });
+  }
+
   function choose(all, now) {
-    var live = [], past = [], future = [];
-    all.forEach(function (m) {
-      if (m.status === 'live' && ended(m) > now) live.push(m);
-      else if (m.status === 'ft' || ended(m) <= now) past.push(m);
-      else future.push(m);
-    });
-    past.sort(function (a, b) { return ko(b) - ko(a); });     // most recent first
-    future.sort(function (a, b) { return ko(a) - ko(b); });   // soonest first
-
-    if (live.length) return live.concat(future).slice(0, 2);
-
-    var lastM = past[0], nextM = future[0];
-
-    if (lastM && nextM) {
-      var midpoint = ended(lastM) + (ko(nextM) - ended(lastM)) / 2;
-      // before halfway: the result still leads. after: the next game leads.
-      return (now < midpoint) ? [lastM, nextM] : [nextM, lastM];
-    }
-    if (nextM) return future.slice(0, 2);
-    if (lastM) return past.slice(0, 2);
-    return [];
+    var ranked = rank(all, now);
+    if (!ranked.length) return [];
+    var on = ranked.filter(function (r) { return r.on; });
+    if (on.length >= 2) return [on[0].m, on[1].m];      // two live ones, show them
+    return ranked.slice(0, 2).map(function (r) { return r.m; });
   }
 
   function avatarHtml(p, root) {

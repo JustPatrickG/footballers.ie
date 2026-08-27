@@ -932,9 +932,9 @@ a.intlblock.lnk:hover{border-color:var(--teal)}
 .fxmatch .fxt .mid.sc{color:var(--white);font-weight:700;font-size:16px}
 .fxmatch .fxt .mid.lv{color:var(--red)}
 .fxmatch .fxp{display:flex;align-items:center;gap:6px;flex-wrap:wrap;margin-top:8px}
-/* League of Ireland games: no border, just the competition label picking up
-   the green. The label already says what it is — this only tints it. */
-.mccard.loi .mccomp{color:#00B36B}
+/* League of Ireland games carry no marker of their own for now — the
+   competition label already names them, and a league badge is coming here
+   once the scraper has the league ids. */
 
 /* ---- lineups ------------------------------------------------------------
    Two halves of a pitch, away at the top, home at the bottom. Rows come from

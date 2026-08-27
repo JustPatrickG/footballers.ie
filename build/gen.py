@@ -879,6 +879,58 @@ def is_loi_match(m, squad):
 def _pmap():
     return {p["slug"]: p for p in PLAYERS}
 
+# How much a competition is worth when picking which two matches lead the
+# homepage. Matched longest-name-first, so "Champions League Qualification"
+# doesn't get scored as "Champions League".
+COMP_TIER = {
+    "champions league": 100, "premier league 2": 40, "premier league": 96,
+    "laliga": 92, "la liga": 92, "serie a": 92, "bundesliga": 92, "ligue 1": 92,
+    "europa league": 86,
+    "eredivisie": 72, "liga portugal": 72, "super lig": 70, "süper lig": 70,
+    "premiership": 68, "championship": 68,
+    "conference league": 76,
+    "major league soccer": 58, "jupiler pro league": 62, "serie b": 56,
+    "premier division": 62, "fai cup": 60,
+    "league one": 48, "efl cup": 54, "fa cup": 54,
+    "first division": 50, "nb i": 44, "first professional league": 42,
+    "2. liga": 44, "ligue 2": 46,
+    "league two": 40, "usl championship": 40,
+    "national league": 32,
+    "1. deild": 30, "isthmian": 30, "national league cup": 30,
+}
+COMP_DEFAULT = 35
+
+def comp_score(name):
+    n = (name or "").strip().lower()
+    for key in sorted(COMP_TIER, key=len, reverse=True):
+        if key in n:
+            v = COMP_TIER[key]
+            # a qualifying round is a rung below the competition proper
+            return int(v * 0.82) if "qualification" in n or "qualifying" in n else v
+    return COMP_DEFAULT
+
+def player_pull(p):
+    """Roughly how much of a draw one player is. Caps are the clearest signal
+       of a name people know; form and playing in a top division top it up."""
+    caps = 0
+    if p.get("intl_senior") and p["intl_senior"].get("caps"):
+        caps = min(int(p["intl_senior"]["caps"]), 60)
+    try: rating = float(p.get("rating") or 0)
+    except ValueError: rating = 0.0
+    return (caps * 1.2
+            + (max(0.0, rating - 6.5) * 20)
+            + (12 if p.get("tier") == "abroad-top" else 0))
+
+def match_pull(m, squad):
+    """What makes a match worth leading with: the competition, the biggest name
+       in it, and how many of ours are involved — the last with heavily
+       diminishing returns, so twenty League of Ireland players don't bury a
+       Champions League tie, but do beat one man in the Bulgarian second tier."""
+    import math
+    best = max((player_pull(p) for p in squad), default=0.0)
+    return round(comp_score(m.get("competition")) + best * 1.5
+                 + 7 * math.log2(1 + len(squad)), 1)
+
 SQUAD_LIST_AT = 8      # this many tracked players is a squad, not a teamsheet
 
 def _lineup_players(m, pmap):
@@ -968,6 +1020,7 @@ def match_payload():
                        status=(m.get("status") or "scheduled"), minute=m.get("minute",""),
                        hp=(m.get("home_pens") or ""), ap=(m.get("away_pens") or ""),
                        loi=(1 if loi else 0), sq=(1 if sq else 0),
+                       pull=match_pull(m, squad),
                        players=involved))
     return mc
 
