@@ -222,17 +222,24 @@ def _name_key(n):
     return re.sub(r"[^a-z]", "", n.lower())
 
 def _load_lineups(players):
-    """The scraper writes data/api/match_lineups.csv:
+    """Two files, both optional, both read:
 
+       data/api/lineups.csv        upcoming and current matches — the good one.
+         match_id,side,team,formation,status,updated,role,number,name,slug,pos,x,y
+         Carries the formation, a confirmed/predicted/last status, and FotMob's
+         pitch coordinates (x = distance up the pitch, y = across, both 0-1).
+
+       data/api/match_lineups.csv  finished matches, written by the events pass.
          match_id,team,player,player_id,role,shirt,position
+         No side, no formation, no status — team name and position only.
 
-       role is start|bench, team is the club name, player_id is the FotMob id.
-       Three optional columns light up extra detail when the scraper adds them:
-       formation ("4-2-3-1"), status (confirmed|predicted|last) and slug.
-
-       No file, or no rows for a match, and the match page falls back to the
-       squad list — nothing breaks."""
-    rows = _rows("api/match_lineups.csv") or _rows("api/lineups.csv")
+       They cover different matches, so read both; where they overlap the
+       richer file wins. No file, or no rows for a match, and the match page
+       falls back to the squad list — nothing breaks."""
+    rich = _rows("api/lineups.csv")
+    plain = [r for r in _rows("api/match_lineups.csv")
+             if r.get("match_id") not in {x.get("match_id") for x in rich}]
+    rows = rich + plain
     if not rows: return {}
     live = {p["slug"] for p in players}
     by_id = _fotmob_slugs(live)
@@ -253,13 +260,19 @@ def _load_lineups(players):
         slug = ALIAS.get(slug, slug)
         if slug not in live: slug = ""
         role = "bench" if (r.get("role") or "").strip().lower().startswith("b") else "start"
+        side = (r.get("side") or "").strip().lower()
+        if side not in ("home","away"): side = ""
+        # side is resolved later, at page-build time, when club_slug exists;
+        # until then group on whichever of side/team the row actually carries
+        group = side or _club_key(team)
+        if not group: continue
         # one man, one place on the teamsheet, whatever the feed sent twice
-        key = (mid, team, role, slug or _name_key(name),
+        key = (mid, group, role, slug or _name_key(name),
                str(r.get("player_id") or "").strip() or _name_key(name))
         if key in seen: continue
         seen.add(key)
-        sd = out.setdefault(mid, {}).setdefault(team, dict(
-            team=team,
+        sd = out.setdefault(mid, {}).setdefault(group, dict(
+            team=team, side=side,
             formation=(r.get("formation") or "").strip(),
             status=(r.get("status") or "").strip().lower(),
             start=[], bench=[]))
@@ -275,24 +288,31 @@ def _load_lineups(players):
         sd[role].append(row)
     return out
 
+def _club_key(n):
+    return re.sub(r"[^a-z0-9]", "", (n or "").lower())
+
 def _match_lineup(m):
-    """Pick the two sides out of a match's lineup rows and label them home/away.
-       The scraper keys on club name, so match it the same forgiving way
-       _extend_matches does."""
+    """Put each side of the stored lineup on the right half of the pitch.
+       lineups.csv says home/away outright; match_lineups.csv only names the
+       club, so fall back to matching that against the fixture."""
     raw = LINEUPS.get(match_id(m))
     if not raw: return None
-    def key(n): return re.sub(r"[^a-z0-9]", "", (n or "").lower())
-    out = {}
-    for side in ("home","away"):
-        want = key(m.get(side, ""))
-        for team, sd in raw.items():
-            k = key(team)
-            if k and want and (k == want or k in want or want in k):
+    out, spare = {}, []
+    for sd in raw.values():
+        if sd.get("side") in ("home","away") and sd["side"] not in out:
+            out[sd["side"]] = sd
+        else:
+            spare.append(sd)
+    for sd in spare:
+        k = _club_key(sd["team"])
+        for side in ("home","away"):
+            want = _club_key(m.get(side, ""))
+            if side not in out and k and want and (k == want or k in want or want in k):
                 out[side] = sd; break
-    if len(out) < 2 and len(raw) == 2:            # names differ, order them anyway
-        left, right = list(raw.values())
-        out = {"home": left, "away": right}
-    return out or None
+    if len(out) < 2 and len(spare) == 2 and not out:   # names differ, order them anyway
+        out = {"home": spare[0], "away": spare[1]}
+    if not any(len(sd["start"]) >= 7 for sd in out.values()): return None
+    return out
 
 def _num(v):
     try: return float(str(v).strip())
@@ -411,7 +431,7 @@ def load():
             p["club"] = p["loan"]          # display the club they're actually at
     players.sort(key=lambda p: p["n"])
     players, alias = _dedupe_players(players, manual_players)
-    global LINEUPS, ALIAS
+    global ALIAS, LINEUPS
     ALIAS = alias
     LINEUPS = _load_lineups(players)
 
@@ -1962,30 +1982,49 @@ STATUS_LABEL = {"confirmed":"Confirmed lineup",
                 "last":"Last lineup",
                 "":"Lineup"}
 
-def _lines(side):
-    """Split a starting eleven into pitch rows. The formation string is the
-       best guide — FotMob lists the players in formation order. Without one,
-       fall back to grouping by position."""
+def _lines(side, mirror=False):
+    """Split a starting eleven into pitch rows, best source first.
+
+       1. FotMob's coordinates. x is distance up the pitch, y across, both 0-1,
+          and every player on a given line shares an x exactly — a 4-3-3 comes
+          back as 0.1 / 0.357 / 0.613 / 0.87. That beats any guess.
+       2. The formation string, taking the starters in the order they're listed.
+       3. Position grouping — GK, defence, midfield, attack.
+
+       `mirror` flips each row left-to-right. The two teams attack in opposite
+       directions, so without it one side's right-back ends up above the other's
+       right-back instead of facing it."""
     st = side["start"]
     if not st: return []
+
+    def order(rows):
+        for r in rows:
+            if any(pl["y"] is not None for pl in r):
+                r.sort(key=lambda pl: -(pl["y"] if pl["y"] is not None else 0))
+            if mirror: r.reverse()
+        return [r for r in rows if r]
+
+    if all(pl["x"] is not None for pl in st):
+        bands = {}
+        for pl in st: bands.setdefault(round(pl["x"], 3), []).append(pl)
+        if 2 <= len(bands) <= 6:
+            return order([bands[k] for k in sorted(bands)])
+
     nums = [int(n) for n in re.findall(r"\d+", side.get("formation") or "")]
-    if nums and sum(nums) == len(st) - 1:        # formation excludes the keeper
-        rows, i = [[st[0]]], 1
+    if nums and sum(nums) in (len(st) - 1, len(st)):
+        rows, i = ([[st[0]]], 1) if sum(nums) == len(st) - 1 else ([], 0)
         for n in nums:
             rows.append(st[i:i+n]); i += n
-        return rows
-    if nums and sum(nums) == len(st):            # or includes it
-        rows, i = [], 0
-        for n in nums:
-            rows.append(st[i:i+n]); i += n
-        return rows
-    order = {"GK":0,"DEF":1,"MID":2,"ATT":3}
+        return order(rows)
+
+    idx = {"GK":0,"DEF":1,"MID":2,"ATT":3}
     rows = [[] for _ in range(4)]
-    for pl in st: rows[order.get(pl["line"], 2)].append(pl)
-    for r in rows:
-        if any(pl["x"] is not None for pl in r):
-            r.sort(key=lambda pl: (pl["x"] is None, pl["x"] or 0))
-    return [r for r in rows if r]
+    for pl in st:
+        if not (pl.get("pos") or "").strip(): return []   # no positions either
+        rows[idx.get(pl["line"], 2)].append(pl)
+    rows = [r for r in rows if r]
+    if len(rows) < 2: return []          # one undifferentiated row is not a pitch
+    return order(rows)
 
 def _short_names(lu):
     """Surname only, unless two men on the pitch share one — then M. McClean."""
@@ -2025,55 +2064,72 @@ def lineup_block(m, involved):
     pmap = {p["slug"]: p for p in PLAYERS}
     short_names = _short_names(lu)
     named = set()
-    halves = []
-    for side_key, cls in (("away","top"), ("home","bot")):
-        side = lu.get(side_key)
-        if not side: continue
-        rows = _lines(side)
+    for side in lu.values():
         for pl in side["start"] + side["bench"]:
             if pl["slug"]: named.add(pl["slug"])
-        if cls == "bot": rows = list(reversed(rows))   # home attacks up the page
-        halves.append(
-            f'<div class="luhalf {cls}">' +
-            "".join('<div class="lurow">' + "".join(_pitch_player(pl, pmap, short_names) for pl in r) + '</div>'
-                    for r in rows) + '</div>')
-    if not halves: return "", involved
+
+    # A pitch needs to know where people stood. The upcoming-match file carries
+    # coordinates and a formation; the finished-match one carries neither, and
+    # its position column is empty, so eleven names would draw as one flat line
+    # across the pitch. Fall back to listing the eleven instead — still useful,
+    # and it doesn't pretend to a shape it hasn't got.
+    drawn = {k: _lines(sd, mirror=(k == "home")) for k, sd in lu.items()}
+    halves = []
+    if all(drawn.get(k) for k in lu):
+        for side_key, cls in (("away","top"), ("home","bot")):
+            side = lu.get(side_key)
+            if not side: continue
+            rows = drawn[side_key]
+            if cls == "bot": rows = list(reversed(rows))   # home attacks up the page
+            halves.append(
+                f'<div class="luhalf {cls}">' +
+                "".join('<div class="lurow">' + "".join(_pitch_player(pl, pmap, short_names) for pl in r) + '</div>'
+                        for r in rows) + '</div>')
+
+    played = (m.get("status") or "") in ("ft","live")
 
     def head(side_key):
         side = lu.get(side_key)
         if not side: return '<div class="luteam"></div>'
-        st = STATUS_LABEL.get(side["status"], "Lineup")
+        st = STATUS_LABEL.get(side["status"] or ("confirmed" if played else ""), "Lineup")
         return (f'<div class="luteam">{club_badge(side["team"] or m.get(side_key,""),"sm")}'
                 f'<b>{esc(side["team"] or m.get(side_key,""))}</b>'
                 f'<span class="luform">{esc(side["formation"])}</span>'
                 f'<span class="lustat {esc(lu[side_key]["status"])}">{st}</span></div>')
 
     kinds = {v.get("status","") for v in lu.values()}
-    if kinds == {"confirmed"}:
-        note = ""
+    if kinds == {"confirmed"} or (played and kinds == {""}):
+        note = ""                       # the game happened; this was the team
     elif "" in kinds:
         note = "This may be a predicted or last-known eleven rather than a confirmed team."
     else:
         note = "Not a confirmed team — see the label on each side."
 
-    bench = ""
-    rows = []
-    for side_key in ("home","away"):
-        side = lu.get(side_key)
-        if side and side["bench"]:
-            rows.append(f'<div class="benchcol"><h4>{esc(side["team"] or m.get(side_key,""))}</h4>' +
-                        "".join(_bench_name(pl, pmap) for pl in side["bench"]) + '</div>')
-    if rows:
-        bench = (f'<div class="sec"><h2>Bench</h2></div><div class="benchgrid">{"".join(rows)}</div>')
+    def columns(which, heading):
+        cols = []
+        for side_key in ("home","away"):
+            side = lu.get(side_key)
+            if side and side[which]:
+                cols.append(f'<div class="benchcol"><h4>{esc(side["team"] or m.get(side_key,""))}'
+                            + (f' <span class="luform">{esc(side["formation"])}</span>' if side["formation"] else "")
+                            + '</h4>'
+                            + "".join(_bench_name(pl, pmap) for pl in side[which]) + '</div>')
+        if not cols: return ""
+        return f'<div class="sec"><h2>{heading}</h2></div><div class="benchgrid">{"".join(cols)}</div>'
+
+    if halves:
+        block = (f'<div class="sec"><h2>Lineups</h2></div>'
+                 f'<div class="lucard">{head("away")}'
+                 f'<div class="pitch">{"".join(halves)}</div>'
+                 f'{head("home")}</div>'
+                 + f'<div class="rmnote">{esc(note)} Irish players in <b class="ir">green</b>.</div>')
+    else:
+        xi = columns("start", "Starting eleven")
+        if not xi: return "", involved
+        block = xi + f'<div class="rmnote">{esc(note)} Irish players in <b class="ir">white</b>.</div>'
 
     left = [p for p in involved if p["slug"] not in named]
-    html = (f'<div class="sec"><h2>Lineups</h2></div>'
-            f'<div class="lucard">{head("away")}'
-            f'<div class="pitch">{"".join(halves)}</div>'
-            f'{head("home")}</div>'
-            + f'<div class="rmnote">{esc(note)} Irish players in <b class="ir">green</b>.</div>' 
-            + bench)
-    return html, left
+    return block + columns("bench", "Bench"), left
 
 def squad_groups(players, heading, root="../"):
     """Tracked players split by club, so a League of Ireland match reads as two
@@ -2545,6 +2601,37 @@ for cname, ps in clubs.items():
     open(f"{OUT}/club/{club_slug(cname)}.html","w").write(build_club(cname, ps))
 for p in PLAYERS:
     open(f"{OUT}/player/{p['slug']}.html","w").write(build_player(p))
+
+# ---- old URLs ----------------------------------------------------------
+# When a duplicate roster entry is merged away its page stops being built and
+# every link to it — search results, a shared post, the newsletter — starts
+# 404ing. Leave a redirect behind instead. data/manual/redirects.csv (from,to)
+# is read too, so a future removal needs a CSV row rather than a code change.
+RETIRED = {
+    "will-fitzgerald":   "william-fitzgerald",
+    "tommy-lonergan":    "tom-lonergan",
+    "danny-mcnamara":    "dan-mcnamara",
+    "ed-mccarthy":       "edward-mccarthy",
+    "josh-okpolokpo":    "aaron-okpolokpo",
+}
+for _r in _rows("manual/redirects.csv"):
+    if (_r.get("from") or "").strip() and (_r.get("to") or "").strip():
+        RETIRED[_r["from"].strip()] = _r["to"].strip()
+RETIRED.update({k: ALIAS[k] for k in ALIAS})       # anything this build merged
+
+_live = {p["slug"] for p in PLAYERS}
+_redir = 0
+for _from, _to in RETIRED.items():
+    if _from in _live or _to not in _live: continue
+    open(f"{OUT}/player/{_from}.html","w").write(
+        f'<!doctype html><meta charset="utf-8">'
+        f'<meta http-equiv="refresh" content="0; url=/player/{_to}.html">'
+        f'<link rel="canonical" href="https://footballers.ie/player/{_to}.html">'
+        f'<meta name="robots" content="noindex">'
+        f'<title>Moved</title>'
+        f'<p>This page has moved to <a href="/player/{_to}.html">/player/{_to}.html</a>.</p>')
+    _redir += 1
+if _redir: print(f"  + {_redir} redirect{'s' if _redir!=1 else ''} for merged slugs")
 
 os.makedirs(f"{OUT}/match", exist_ok=True)
 _PM = _pmap()
