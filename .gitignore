@@ -3,3 +3,9 @@ scraper/venv/
 build/site/
 site/
 scraper/debug/
+/club/
+/country/
+/league/
+/match/
+/news/
+/player/
