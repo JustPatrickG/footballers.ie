@@ -873,6 +873,116 @@ def count_players(args):
     print(json.dumps(shards))
 
 
+TRANSFER_COLUMNS = ["slug", "date", "season", "from_club", "to_club",
+                    "fee", "market_value", "kind"]
+
+TRANSFER_API = "https://www.transfermarkt.co.uk/ceapi/transferHistory/list/{tid}"
+
+
+def transfer_kind(fee):
+    """loan / loan end / free / fee / unknown, from the fee cell."""
+    f = norm(fee or "").lower()
+    if "end of loan" in f:
+        return "loan end"
+    if "loan" in f:
+        return "loan"
+    if "free" in f:
+        return "free"
+    if f in ("", "-", "?"):
+        return ""
+    return "fee"
+
+
+def transfer_rows(tid, slug, debug_name=None):
+    """One player's transfer history, newest first, as csv rows.
+
+    This is a json endpoint rather than the profile page - the history is
+    lazily loaded on the site, so it isn't in the profile html to be scraped.
+    """
+    r = SESSION.get(TRANSFER_API.format(tid=tid), timeout=25)
+    r.raise_for_status()
+    if debug_name:
+        DEBUG_DIR.mkdir(exist_ok=True)
+        (DEBUG_DIR / f"{debug_name}.json").write_text(r.text[:1_500_000])
+    data = r.json()
+    out = []
+    for t in (data.get("transfers") or []):
+        if t.get("upcoming") or t.get("futureTransfer"):
+            continue                       # a move that hasn't happened yet
+        frm = (t.get("from") or {}).get("clubName") or ""
+        to = (t.get("to") or {}).get("clubName") or ""
+        if not to:
+            continue
+        out.append([slug,
+                    (t.get("dateUnformatted") or "").strip(),
+                    (t.get("season") or "").strip(),
+                    frm.strip(), to.strip(),
+                    (t.get("fee") or "").strip(),
+                    (t.get("marketValue") or "").strip(),
+                    transfer_kind(t.get("fee"))])
+    return out
+
+
+def transfers(args):
+    """data/api/transfers.csv - every club move we can see, per player."""
+    cache = read_cache()
+    if not cache:
+        sys.exit("no tm_ids.csv - run `resolve` first.")
+    players = read_player_list()
+    if args.only:
+        want = set(args.only.split(","))
+        players = [p for p in players if p["slug"] in want]
+
+    out_path = Path(args.out) / "data/api/transfers.csv"
+    have = {}
+    if out_path.exists() and not args.rebuild:
+        with open(out_path, newline="", encoding="utf-8") as f:
+            for row in csv.DictReader(f):
+                have.setdefault(row["slug"], []).append(
+                    [row.get(c, "") for c in TRANSFER_COLUMNS])
+
+    todo = [p for p in players
+            if cache.get(p["slug"], {}).get("tm_id")
+            and (args.rebuild or p["slug"] not in have)]
+    if args.limit:
+        todo = todo[:args.limit]
+    print(f"{len(todo)} players to read "
+          f"({len(have)} already have a history)")
+
+    blocked = 0
+    for i, p in enumerate(todo):
+        slug = p["slug"]
+        tid = cache[slug]["tm_id"]
+        try:
+            rows = transfer_rows(tid, slug,
+                                 f"tm_transfers_{tid}" if args.debug else None)
+        except Exception as e:
+            blocked += 1
+            print(f"  [{i+1}/{len(todo)}] {slug}: failed ({e})")
+            if blocked >= 5:
+                print("  five failures in a row - stopping so we don't get "
+                      "blocked harder. Run it again in a while; it picks up "
+                      "where it left off.")
+                break
+            time.sleep(args.sleep * 4)
+            continue
+        blocked = 0
+        have[slug] = rows
+        print(f"  [{i+1}/{len(todo)}] {slug}: {len(rows)} moves"
+              + (f", now at {rows[0][4]}" if rows else ""))
+        time.sleep(args.sleep)
+
+    flat = []
+    for slug in sorted(have):
+        flat.extend(have[slug])
+    out_path.parent.mkdir(parents=True, exist_ok=True)
+    with open(out_path, "w", newline="", encoding="utf-8") as f:
+        w = csv.writer(f)
+        w.writerow(TRANSFER_COLUMNS)
+        w.writerows(flat)
+    print(f"wrote {out_path} ({len(flat)} rows, {len(have)} players)")
+
+
 def main():
     ap = argparse.ArgumentParser()
     sub = ap.add_subparsers(dest="cmd", required=True)
@@ -917,6 +1027,18 @@ def main():
     pu = sub.add_parser("pool-undo",
                         help="remove sweep-added players with no club")
 
+    tf = sub.add_parser("transfers", help="write data/api/transfers.csv")
+    tf.add_argument("--out", default=".")
+    tf.add_argument("--only", default="", help="comma-separated slugs")
+    tf.add_argument("--sleep", type=float, default=SLEEP,
+                    help=f"seconds between players (default {SLEEP})")
+    tf.add_argument("--limit", type=int, default=0,
+                    help="only do N players (to split the work)")
+    tf.add_argument("--rebuild", action="store_true",
+                    help="ignore the existing file instead of updating it")
+    tf.add_argument("--debug", action="store_true",
+                    help="dump the raw json to scraper/debug/")
+
     p = sub.add_parser("profiles", help="write data/api/tm.csv")
     p.add_argument("--out", default=".")
     p.add_argument("--only", default="", help="comma-separated slugs")
@@ -943,6 +1065,7 @@ def main():
     if args.cmd == "profiles" and getattr(args, "loop", False):
         return profiles_loop(args)
     {"resolve": resolve, "add": add_ids, "profiles": profiles,
+     "transfers": transfers,
      "sweep": sweep, "pool-add": pool_add,
      "pool-undo": pool_undo, "merge-shards": merge_shards,
      "shard-matrix": count_players}[args.cmd](args)

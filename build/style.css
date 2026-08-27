@@ -134,6 +134,10 @@ a.fxrow.lnk:hover{background:var(--panel2)}
 .trow:last-child{border-bottom:0}
 .ty{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--mute)}
 .tfee{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--teal)}
+.trow.loan .tfee{color:var(--mute)}
+.trow .ty{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--mute)}
+/* the club a player was at for a given match, when it isn't their club now */
+.atclub{display:block;font-size:11px;color:var(--mute);margin-top:2px}
 .msgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:6px;overflow:hidden}
 .mscard{background:var(--panel);padding:15px;display:block;transition:background .12s}
 .mscard:hover{background:var(--panel2)}

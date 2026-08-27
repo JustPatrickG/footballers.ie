@@ -184,6 +184,32 @@ def _dedupe_players(players, manual_rows):
 EVENTS = {}
 LINEUPS = {}
 ALIAS = {}
+TRANSFERS = {}
+
+def _load_transfers():
+    """data/api/transfers.csv — every club move, oldest first per player.
+       Optional file; without it the career block and the club-per-match
+       label simply don't render."""
+    out = {}
+    for r in _rows("api/transfers.csv"):
+        if r.get("slug") and (r.get("to_club") or "").strip():
+            out.setdefault(r["slug"], []).append(r)
+    for rows in out.values():
+        rows.sort(key=lambda r: r.get("date") or "")
+    return out
+
+def club_at(slug, date):
+    """Which club a player was at on a given date — the destination of their
+       last move on or before it. Loans work out on their own: a loan move puts
+       them at the loan club, the end-of-loan move puts them back."""
+    club = ""
+    for r in TRANSFERS.get(slug, []):
+        d = (r.get("date") or "").strip()
+        if d and d[:10] <= (date or "")[:10]:
+            club = (r.get("to_club") or "").strip()
+        else:
+            break
+    return "" if club.lower() in ("without club", "retired", "") else club
 
 LINE_POS = {"gk":"GK","g":"GK","goalkeeper":"GK",
             "def":"DEF","d":"DEF","defender":"DEF","cb":"DEF","lb":"DEF","rb":"DEF","wb":"DEF",
@@ -431,9 +457,12 @@ def load():
             p["club"] = p["loan"]          # display the club they're actually at
     players.sort(key=lambda p: p["n"])
     players, alias = _dedupe_players(players, manual_players)
-    global ALIAS, LINEUPS
+    global ALIAS, LINEUPS, TRANSFERS
     ALIAS = alias
     LINEUPS = _load_lineups(players)
+    TRANSFERS = _load_transfers()
+    for p in players:
+        p["transfers"] = list(reversed(TRANSFERS.get(p["slug"], [])))
 
     # The scraper writes: team,kickoff,competition,home,away,home_score,away_score,status
     # The older hand-kept format was: level,type,date,opponent,home_away,score,competition
@@ -2439,9 +2468,11 @@ def build_player(p):
     def _fxrow(d,o,h,cp):
         mid = match_page_for(p, d, o)
         tag, href = ("a", f' href="../match/{mid}.html"') if mid else ("div", "")
+        at = club_at(p["slug"], d) or p["club"]
+        where = f'<span class="atclub">{esc(at)}</span>' if at else ""
         return (f'<{tag} class="fxrow when{" lnk" if mid else ""}"{href} data-when="{esc(d)}" data-opp="{esc(o)}" data-ha="{h}">'
                 f'<div class="fxwhen">{esc(day_label(d))}</div>'
-                f'<div class="fxc">{esc(cp)}</div></{tag}>')
+                f'<div class="fxc">{esc(cp)}{where}</div></{tag}>')
     fxr = "".join(_fxrow(d,o,h,cp) for d,o,h,cp in upcoming)
     rsr = ""
     recent_results = list(reversed(p["results"]))[:10]   # feed is oldest-first
@@ -2454,8 +2485,10 @@ def build_player(p):
         mid = match_page_for(p, d, o)
         tag = "a" if mid else "div"
         href = f' href="../match/{mid}.html"' if mid else ""
+        at = club_at(p["slug"], d) or p["club"]
+        where = f' · {esc(at)}' if at else ""
         rsr += (f'<{tag} class="rmrow{" lnk" if mid else ""}"{href}><div class="rmd">{esc(day_label(d))}</div>'
-                f'<div class="rmo">{esc(o)}<span class="cl">{esc(cp)}</span></div>'
+                f'<div class="rmo">{esc(o)}<span class="cl">{esc(cp)}{where}</span></div>'
                 f'<div class="rms {res}">{esc(sc)}</div>'
                 f'<div class="rmm">{mins}\'</div>'
                 f'<div class="rme">{ev}</div>'
@@ -2517,8 +2550,23 @@ def build_player(p):
                 if p["cap_status"] in ("youth","senior_friendly") or p["intl_youth"] else
                 "Uncapped at any level — free to commit to any association they qualify for.")
 
-    trans = "".join(f'<div class="trow"><div class="ty">{esc(y)}</div><div class="tf">{esc(f)} → <b>{esc(t)}</b></div>'
-                    f'<div class="tfee">{esc(fee)}</div></div>' for y,f,t,fee in p["transfers"])
+    # newest first; loans are marked rather than dressed up as permanent moves
+    _trows = []
+    for _t in p["transfers"]:
+        _kind = (_t.get("kind") or "").strip()
+        _fee = (_t.get("fee") or "").strip()
+        _label = {"loan": "On loan", "loan end": "Loan ended",
+                  "free": "Free", "": ""}.get(_kind, _fee)
+        if _kind == "fee": _label = _fee
+        _from = (_t.get("from_club") or "").strip()
+        _to = (_t.get("to_club") or "").strip()
+        _when = (_t.get("season") or "").strip() or (_t.get("date") or "")[:4]
+        _trows.append(
+            f'<div class="trow{" loan" if _kind.startswith("loan") else ""}">'
+            f'<div class="ty">{esc(_when)}</div>'
+            f'<div class="tf">{esc(_from) if _from else "—"} → <b>{esc(_to)}</b></div>'
+            f'<div class="tfee">{esc(_label)}</div></div>')
+    trans = "".join(_trows)
 
     body = f'''
     <a class="crumb" data-back href="../players.html">← Back</a>
@@ -2567,7 +2615,7 @@ def build_player(p):
     <div class="eliglist">{elig}</div>
     <p class="eligNote">{tie_note}</p>
 
-    {f'<div class="sec"><h2>Transfers</h2></div><div class="tlist">{trans}</div>' if trans else ''}
+    {f'<div class="sec"><h2>Career</h2><span class="more" style="border:0">{len(p["transfers"])} moves</span></div><div class="tlist">{trans}</div>' if trans else ''}
     '''
     return shell(f"{p['n']} — footballers.ie",
                  f"{p['n']} ({p['club']}, {p['league']}) — season stats, fixtures, results and international record.",
