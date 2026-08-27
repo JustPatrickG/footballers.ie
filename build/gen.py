@@ -1320,8 +1320,101 @@ def build_author(w):
     '''
     return shell(f'{w["name"]} — footballers.ie', f'Articles by {w["name"]}.', "../", "news.html", body, canonical=f'author/{w["slug"]}.html')
 
+def safe_url(u, root=""):
+    """http(s), site-absolute, or a plain relative path. No javascript:, no
+       data:, no climbing out of the site with ../"""
+    u = (u or "").strip()
+    if ".." in u or not u:
+        return ""
+    if u.startswith(("http://", "https://", "/")):
+        return u
+    if re.match(r"^[\w][\w./-]*$", u):
+        return root + u
+    return ""
+
+def _inline(t, root=""):
+    """Bold, italic and links inside a line. The text is escaped first, so the
+       only markup that survives is the markup we put back."""
+    t = esc(t)
+
+    def link(m):
+        u = safe_url(m.group(2), root)
+        if not u:
+            return m.group(0)
+        tgt = ' target="_blank"' if u.startswith("http") else ""
+        return f'<a href="{esc(u)}" rel="noopener"{tgt}>{m.group(1)}</a>'
+
+    t = re.sub(r"\[([^\]]+)\]\(([^)\s]+)\)", link, t)
+    t = re.sub(r"\*\*([^*]+)\*\*", r"<b>\1</b>", t)
+    t = re.sub(r"(?<!\*)\*([^*]+)\*(?!\*)", r"<i>\1</i>", t)
+    return t
+
+def article_body(raw, root="../"):
+    """A small markdown subset, written by the admin editor or imported from a
+       .docx. Deliberately small: headings, images, quotes, rules, and bold /
+       italic / links inline. Everything is escaped before any of it is applied,
+       so a writer can't put raw HTML on the site by accident or otherwise.
+
+         ## Heading            h2
+         ### Heading           h3
+         ![caption](path)      figure, caption optional
+         > line                pull quote
+         - item                list
+         ---                   divider
+         blank line            new paragraph
+    """
+    out, para, items = [], [], []
+
+    def flush_list():
+        if items:
+            out.append("<ul>" + "".join(f"<li>{_inline(x, root)}</li>" for x in items) + "</ul>")
+            items.clear()
+
+    def flush():
+        flush_list()
+        if para:
+            out.append("<p>" + "<br>".join(_inline(x, root) for x in para) + "</p>")
+            para.clear()
+
+    for line in (raw or "").replace("\\n", "\n").split("\n"):
+        line = line.rstrip()
+        t = line.strip()
+        if not t:
+            flush(); continue
+        m = re.match(r"^(#{2,3})\s+(.*)$", t)
+        if m:
+            flush()
+            tag = "h2" if len(m.group(1)) == 2 else "h3"
+            out.append(f"<{tag}>{_inline(m.group(2), root)}</{tag}>")
+            continue
+        m = re.match(r"^!\[([^\]]*)\]\(([^)\s]+)\)$", t)
+        if m:
+            src = safe_url(m.group(2), root)
+            if src:
+                flush()
+                cap = (f'<figcaption>{_inline(m.group(1), root)}</figcaption>'
+                       if m.group(1).strip() else "")
+                out.append(f'<figure class="artfig"><img src="{esc(src)}" alt="{esc(m.group(1))}"'
+                           f' loading="lazy">{cap}</figure>')
+                continue
+        if t.startswith(">"):
+            flush()
+            out.append(f'<blockquote>{_inline(t.lstrip("> ").strip(), root)}</blockquote>')
+            continue
+        if re.fullmatch(r"-{3,}|\*{3,}", t):
+            flush(); out.append('<hr class="artrule">'); continue
+        m = re.match(r"^[-*]\s+(.*)$", t)
+        if m:
+            if para: flush()
+            items.append(m.group(1)); continue
+        flush_list()
+        para.append(t)
+    flush()
+    return "".join(out)
+
+
 def build_article(a):
-    paras = "".join(f'<p>{esc(x.strip())}</p>' for x in (a.get("body") or "").replace("\\n","\n").split("\n") if x.strip())
+    paras = article_body(a.get("body"), "../")
     p = next((x for x in PLAYERS if x["slug"] == a.get("player_slug")), None)
     related = ""
     if p:

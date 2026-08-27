@@ -34,6 +34,42 @@ input,select,textarea{background:var(--panel);border:1px solid var(--line);color
   padding:9px 11px;border-radius:7px;font-family:inherit;font-size:13px}
 input[type=search]{flex:1;min-width:180px}
 textarea{width:100%;min-height:150px;font-family:'IBM Plex Mono',monospace;line-height:1.6}
+/* ---- article body editor ---- */
+.edbar{display:flex;gap:6px;align-items:center;flex-wrap:wrap;margin-bottom:2px}
+.edbar button{background:var(--panel);border:1px solid var(--line);color:var(--white);
+  border-radius:6px;padding:5px 10px;font-size:12px;cursor:pointer;font-family:inherit}
+.edbar button:hover{border-color:var(--mute)}
+.edbar button.pri{background:var(--yellow);color:#0C0F10;border-color:var(--yellow);font-weight:600}
+.edsp{flex:1}
+.edstatus{font-size:12px;color:var(--mute);max-width:44ch}
+.edstatus.ok{color:#00B36B}
+.edstatus.warn{color:#FF5470}
+.edsplit{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:stretch}
+.edsplit textarea{min-height:460px;margin:0}
+.edprev{border:1px solid var(--line);border-radius:8px;background:var(--panel);
+  padding:16px 18px;min-height:460px;max-height:70vh;overflow:auto}
+.edprev .artcontent{margin:0}
+.edprev .artcontent p{font-size:15px;line-height:1.62;margin-bottom:15px;color:#DCE3E0}
+.edprev .artcontent h2,.edprev .artcontent h3{
+  font-family:'Space Grotesk',sans-serif;text-transform:none;letter-spacing:-.01em;
+  color:var(--white);border:0;padding:0}
+.edprev .artcontent h2{font-size:20px;font-weight:700;margin:22px 0 9px;line-height:1.25}
+.edprev .artcontent h3{font-size:17px;font-weight:600;margin:18px 0 8px;color:#EDF2EF}
+.edprev .artcontent h2:first-child,.edprev .artcontent h3:first-child{margin-top:0}
+.edprev .artfig{margin:18px 0}
+.edprev .artfig img{width:100%;display:block;border-radius:8px;border:1px solid var(--line)}
+.edprev .artfig figcaption{margin-top:7px;font-size:12.5px;color:var(--mute);line-height:1.45}
+.edprev blockquote{margin:18px 0;padding-left:14px;border-left:3px solid var(--teal);
+  font-size:17px;line-height:1.45;font-weight:600}
+.edprev .artrule{border:0;border-top:1px solid var(--line);margin:20px 0}
+.edprev ul{margin:0 0 15px 18px}
+.edprev li{font-size:15px;line-height:1.6;margin-bottom:6px;color:#DCE3E0}
+.edprev a{color:var(--teal)}
+@media(max-width:900px){
+  .edsplit{grid-template-columns:1fr}
+  .edsplit textarea{min-height:300px}
+  .edprev{min-height:0}
+}
 .hint{color:var(--mute);font-size:12.5px;line-height:1.6;margin-bottom:12px}
 .hint code{background:var(--panel);padding:2px 6px;border-radius:3px;color:var(--teal);font-family:'IBM Plex Mono',monospace}
 .tblwrap{max-height:65vh;overflow:auto;border:1px solid var(--line);border-radius:8px}
@@ -426,6 +462,317 @@ function writersView(){
   }
   return wrap;
 }
+/* =====================================================================
+   Article body: a small markdown subset, mirrored exactly by
+   article_body() in build/gen.py. Keep the two in step.
+     ## / ###   headings        ![caption](path)  picture
+     > line     pull quote      ---               divider
+     - item     list            **bold** *italic* [text](url)
+   ===================================================================== */
+
+function mdEsc(s){
+  return String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+}
+function mdUrl(u, root){
+  u=(u||'').trim();
+  if(!u || u.indexOf('..')>-1) return '';
+  if(/^(https?:\/\/|\/)/.test(u)) return u;
+  if(/^[\w][\w./-]*$/.test(u)) return (root||'')+u;
+  return '';
+}
+function mdInline(t, root){
+  t=mdEsc(t);
+  t=t.replace(/\[([^\]]+)\]\(([^)\s]+)\)/g,function(all,txt,u){
+    const safe=mdUrl(u,root); if(!safe) return all;
+    return '<a href="'+safe+'" rel="noopener"'+(/^https?:/.test(safe)?' target="_blank"':'')+'>'+txt+'</a>';
+  });
+  t=t.replace(/\*\*([^*]+)\*\*/g,'<b>$1</b>');
+  t=t.replace(/(^|[^*])\*([^*]+)\*(?!\*)/g,'$1<i>$2</i>');
+  return t;
+}
+/* root '../' matches how a page under /news/ sees /img/, and how
+   /build/admin.html sees it too - so the preview shows the real images. */
+function mdToHtml(md, root){
+  root = root===undefined ? '../' : root;
+  const out=[]; let para=[], list=[];
+  function flushList(){ if(list.length){ out.push('<ul>'+list.map(function(x){return '<li>'+mdInline(x,root)+'</li>';}).join('')+'</ul>'); list=[]; } }
+  function flush(){ flushList(); if(para.length){ out.push('<p>'+para.map(function(x){return mdInline(x,root);}).join('<br>')+'</p>'); para=[]; } }
+  String(md||'').split('\n').forEach(function(line){
+    const t=line.trim();
+    if(!t){ flush(); return; }
+    let m=t.match(/^(#{2,3})\s+(.*)$/);
+    if(m){ flush(); const tag=m[1].length===2?'h2':'h3'; out.push('<'+tag+'>'+mdInline(m[2],root)+'</'+tag+'>'); return; }
+    m=t.match(/^!\[([^\]]*)\]\(([^)\s]+)\)$/);
+    if(m){ const src=mdUrl(m[2],root);
+      if(src){ flush();
+        out.push('<figure class="artfig"><img src="'+src+'" alt="'+mdEsc(m[1])+'" loading="lazy">'
+          +(m[1].trim()?'<figcaption>'+mdInline(m[1],root)+'</figcaption>':'')+'</figure>');
+        return; } }
+    if(t.charAt(0)==='>'){ flush(); out.push('<blockquote>'+mdInline(t.replace(/^>\s*/,''),root)+'</blockquote>'); return; }
+    if(/^(-{3,}|\*{3,})$/.test(t)){ flush(); out.push('<hr class="artrule">'); return; }
+    m=t.match(/^[-*]\s+(.*)$/);
+    if(m){ if(para.length) flush(); list.push(m[1]); return; }
+    flushList(); para.push(t);
+  });
+  flush();
+  return out.join('');
+}
+
+/* ---- pasted rich text (Google Docs, Word, anywhere) ---------------- */
+function htmlToMd(html){
+  const doc=new DOMParser().parseFromString(html,'text/html');
+  doc.querySelectorAll('style,script,meta,head').forEach(function(n){ n.remove(); });
+  const lines=[];
+  function bold(el){
+    const w=(el.style&&el.style.fontWeight)||'';
+    return /^(b|strong)$/i.test(el.tagName) || w==='bold' || (parseInt(w,10)>=600);
+  }
+  function italic(el){
+    return /^(i|em)$/i.test(el.tagName) || (el.style&&el.style.fontStyle==='italic');
+  }
+  function inline(node){
+    if(node.nodeType===3) return node.nodeValue.replace(/\s+/g,' ');
+    if(node.nodeType!==1) return '';
+    let inner=Array.prototype.map.call(node.childNodes, inline).join('');
+    if(!inner.trim()) return inner;
+    if(/^a$/i.test(node.tagName)){
+      let href=node.getAttribute('href')||'';
+      const q=href.match(/[?&]q=([^&]+)/);        /* docs wraps links in a redirect */
+      if(q && /google\.com\/url/.test(href)) href=decodeURIComponent(q[1]);
+      if(href) return '['+inner.trim()+']('+href+')';
+    }
+    if(bold(node))   inner='**'+inner.trim()+'** ';
+    if(italic(node)) inner='*'+inner.trim()+'* ';
+    return inner;
+  }
+  function walk(el){
+    Array.prototype.forEach.call(el.children, function(node){
+      const tag=node.tagName.toLowerCase();
+      if(tag==='h1'||tag==='h2'){ lines.push('## '+inline(node).trim(), ''); return; }
+      if(tag==='h3'||tag==='h4'||tag==='h5'||tag==='h6'){ lines.push('### '+inline(node).trim(), ''); return; }
+      if(tag==='blockquote'){ lines.push('> '+inline(node).trim(), ''); return; }
+      if(tag==='hr'){ lines.push('---',''); return; }
+      if(tag==='ul'||tag==='ol'){
+        Array.prototype.forEach.call(node.children,function(li){
+          const t=inline(li).trim(); if(t) lines.push('- '+t);
+        });
+        lines.push(''); return;
+      }
+      if(tag==='p'||tag==='div'){
+        if(node.children.length && !node.textContent.trim()){ walk(node); return; }
+        const t=inline(node).trim().replace(/\s+/g,' ');
+        if(t) lines.push(t,'');
+        else walk(node);
+        return;
+      }
+      if(tag==='br'){ return; }
+      const t=inline(node).trim();
+      if(t) lines.push(t,'');
+      else walk(node);
+    });
+  }
+  walk(doc.body);
+  return lines.join('\n').replace(/\n{3,}/g,'\n\n').replace(/\s+\*\*/g,' **').trim();
+}
+
+/* ---- pictures: committed to the repo like everything else ---------- */
+function bytesToB64(bytes){
+  let out=''; const CHUNK=0x8000;
+  for(let i=0;i<bytes.length;i+=CHUNK) out+=String.fromCharCode.apply(null,bytes.subarray(i,i+CHUNK));
+  return btoa(out);
+}
+/* content hash, sampled - the same picture twice gets the same name instead
+   of two copies, and two different files called photo.jpg don't collide */
+function shortHash(bytes){
+  let h=0x811c9dc5; const step=Math.max(1,Math.floor(bytes.length/4096));
+  for(let i=0;i<bytes.length;i+=step){ h^=bytes[i]; h=Math.imul(h,0x01000193)>>>0; }
+  return ('0000000'+(h>>>0).toString(16)).slice(-6);
+}
+function imgFilename(name, bytes){
+  const dot=String(name||'').lastIndexOf('.');
+  let ext=(dot>-1?String(name).slice(dot+1):'jpg').toLowerCase().replace(/[^a-z0-9]/g,'')||'jpg';
+  if(ext==='jpeg') ext='jpg';
+  const base=slugify(dot>-1?String(name).slice(0,dot):String(name)).slice(0,40)||'image';
+  return base+'-'+shortHash(bytes)+'.'+ext;
+}
+async function ghPutBytes(path, bytes){
+  let sha=null;
+  try{ const ex=await ghGet(path); if(ex&&ex.sha) sha=ex.sha; }catch(e){}
+  const body={message:'Add '+path+' via admin', branch:REPO.branch, content:bytesToB64(bytes)};
+  if(sha) body.sha=sha;
+  const r=await fetch(`https://api.github.com/repos/${REPO.owner}/${REPO.repo}/contents/${path}`,
+    {method:'PUT', headers:{Authorization:'token '+token(), Accept:'application/vnd.github+json',
+     'Content-Type':'application/json'}, body:JSON.stringify(body)});
+  if(!r.ok) throw new Error('Image upload failed ('+r.status+') - is the token still good?');
+  return path;
+}
+async function uploadPicture(bytes, name, slug){
+  if(bytes.length>9*1024*1024) throw new Error('That image is over 9MB - shrink it first.');
+  return await ghPutBytes('img/articles/'+(slugify(slug)||'misc')+'/'+imgFilename(name,bytes), bytes);
+}
+function pickFile(accept){
+  return new Promise(function(res){
+    const i=document.createElement('input');
+    i.type='file'; i.accept=accept||'image/*';
+    i.onchange=function(){ res(i.files&&i.files[0]||null); };
+    i.click();
+  });
+}
+
+/* ---- .docx ---------------------------------------------------------
+   A .docx is a zip. Read its central directory and inflate the parts we
+   want with the browser's own DecompressionStream - no library and no CDN,
+   which matters because this page has to stay one self-contained file. */
+async function unzip(buf){
+  const dv=new DataView(buf), u8=new Uint8Array(buf);
+  let eocd=-1;
+  for(let i=u8.length-22;i>=Math.max(0,u8.length-66000);i--){
+    if(dv.getUint32(i,true)===0x06054b50){ eocd=i; break; }
+  }
+  if(eocd<0) throw new Error("That doesn't look like a .docx.");
+  const count=dv.getUint16(eocd+10,true);
+  let p=dv.getUint32(eocd+16,true);
+  const dec=new TextDecoder(), out={};
+  for(let n=0;n<count;n++){
+    if(dv.getUint32(p,true)!==0x02014b50) break;
+    const method=dv.getUint16(p+10,true);
+    const csize=dv.getUint32(p+20,true);
+    const nameLen=dv.getUint16(p+28,true), extraLen=dv.getUint16(p+30,true), cmtLen=dv.getUint16(p+32,true);
+    const lho=dv.getUint32(p+42,true);
+    const name=dec.decode(u8.subarray(p+46,p+46+nameLen));
+    const lnLen=dv.getUint16(lho+26,true), leLen=dv.getUint16(lho+28,true);
+    const start=lho+30+lnLen+leLen;
+    out[name]={method:method, bytes:u8.subarray(start,start+csize)};
+    p+=46+nameLen+extraLen+cmtLen;
+  }
+  return out;
+}
+async function inflate(entry){
+  if(!entry) return null;
+  if(entry.method===0) return entry.bytes;
+  if(typeof DecompressionStream!=='function')
+    throw new Error("This browser can't open .docx files. Use Chrome, or Safari 16.4 and up.");
+  const stream=new Blob([entry.bytes]).stream().pipeThrough(new DecompressionStream('deflate-raw'));
+  return new Uint8Array(await new Response(stream).arrayBuffer());
+}
+function kids(el, name){
+  return Array.prototype.filter.call(el.children, function(c){ return c.localName===name; });
+}
+function firstKid(el, name){ return kids(el,name)[0]||null; }
+
+const IMG_TOKEN_A = ' [[docximg:';
+const IMG_TOKEN_B = ']] ';
+
+/* {headline, body, images:[{zipPath,name}]} - pictures are uploaded after,
+   once we know which article slug they belong to. */
+function readDocx(xml, rels){
+  const doc=new DOMParser().parseFromString(xml,'application/xml');
+  const all=doc.getElementsByTagName('*');
+  let root=null;
+  for(let i=0;i<all.length;i++) if(all[i].localName==='body'){ root=all[i]; break; }
+  if(!root) throw new Error("Couldn't read that document.");
+  const lines=[], images=[]; let headline='', lastImg=-1;
+
+  Array.prototype.forEach.call(root.children, function(node){
+    if(node.localName!=='p') return;
+    const pPr=firstKid(node,'pPr');
+    const styleEl=pPr?firstKid(pPr,'pStyle'):null;
+    const style=(styleEl?(styleEl.getAttribute('w:val')||styleEl.getAttribute('val')||''):'').toLowerCase();
+    const numbered=!!(pPr&&firstKid(pPr,'numPr'));
+
+    let text=''; const pics=[];
+    function run(r){
+      const rPr=firstKid(r,'rPr');
+      let b=false,i=false;
+      if(rPr){
+        const on=function(e){ if(!e) return false;
+          const v=e.getAttribute('w:val')||e.getAttribute('val');
+          return v!=='0'&&v!=='false'; };
+        b=on(firstKid(rPr,'b')); i=on(firstKid(rPr,'i'));
+      }
+      let t='';
+      Array.prototype.forEach.call(r.getElementsByTagName('*'), function(el){
+        if(el.localName==='t') t+=el.textContent;
+        else if(el.localName==='tab'||el.localName==='br') t+=' ';
+        else if(el.localName==='blip'){
+          const id=el.getAttribute('r:embed')||el.getAttribute('embed');
+          if(id&&rels[id]) pics.push(rels[id]);
+        }
+      });
+      if(!t) return '';
+      if(b) t='**'+t+'**';
+      if(i) t='*'+t+'*';
+      return t;
+    }
+    Array.prototype.forEach.call(node.children, function(child){
+      if(child.localName==='r') text+=run(child);
+      else if(child.localName==='hyperlink'){
+        const id=child.getAttribute('r:id')||child.getAttribute('id');
+        let inner='';
+        kids(child,'r').forEach(function(r){ inner+=run(r); });
+        const href=(id&&rels[id])?rels[id]:'';
+        text += (href && inner.trim()) ? '['+inner.trim()+']('+href+')' : inner;
+      }
+    });
+
+    pics.forEach(function(target){
+      const zipPath = target.indexOf('media/')===0 ? 'word/'+target : 'word/'+target.replace(/^\/+/,'');
+      images.push({zipPath:zipPath, name:zipPath.split('/').pop()});
+      lastImg=lines.length;
+      lines.push('!['+']('+IMG_TOKEN_A+zipPath+IMG_TOKEN_B+')', '');
+    });
+
+    text=text.replace(/\s+/g,' ').trim();
+    if(!text) return;
+    /* a caption paragraph belongs to the picture just above it */
+    if(style.indexOf('caption')>-1 && lastImg>-1 && lastImg>=lines.length-2){
+      lines[lastImg]=lines[lastImg].replace('![]','!['+text.replace(/[\[\]]/g,'')+']');
+      lastImg=-1; return;
+    }
+    lastImg=-1;
+    if((style==='title'||style==='heading1') && !headline && lines.length===0){
+      headline=text.replace(/\*/g,''); return;
+    }
+    if(style==='title'||style==='heading1'||style==='heading2'){ lines.push('## '+text,''); return; }
+    if(style.indexOf('heading')===0){ lines.push('### '+text,''); return; }
+    if(style.indexOf('quote')>-1){ lines.push('> '+text,''); return; }
+    if(numbered||style.indexOf('list')===0){ lines.push('- '+text); return; }
+    lines.push(text,'');
+  });
+
+  return {headline:headline, body:lines.join('\n').replace(/\n{3,}/g,'\n\n').trim(), images:images};
+}
+function readRels(xml){
+  const doc=new DOMParser().parseFromString(xml,'application/xml');
+  const map={};
+  Array.prototype.forEach.call(doc.getElementsByTagName('*'), function(el){
+    if(el.localName==='Relationship') map[el.getAttribute('Id')]=el.getAttribute('Target')||'';
+  });
+  return map;
+}
+async function importDocx(file, slug, onStep){
+  const zip=await unzip(await file.arrayBuffer());
+  const docXml=await inflate(zip['word/document.xml']);
+  if(!docXml) throw new Error("No document.xml in there - is it really a .docx?");
+  const relsRaw=await inflate(zip['word/_rels/document.xml.rels']);
+  const rels=relsRaw?readRels(new TextDecoder().decode(relsRaw)):{};
+  const parsed=readDocx(new TextDecoder().decode(docXml), rels);
+
+  let body=parsed.body;
+  const done={};
+  for(let n=0;n<parsed.images.length;n++){
+    const im=parsed.images[n];
+    if(done[im.zipPath]===undefined){
+      if(onStep) onStep('Uploading '+im.name+' ('+(n+1)+' of '+parsed.images.length+')…');
+      const bytes=await inflate(zip[im.zipPath]);
+      done[im.zipPath] = bytes ? await uploadPicture(bytes, im.name, slug) : '';
+    }
+    body=body.split(IMG_TOKEN_A+im.zipPath+IMG_TOKEN_B).join(done[im.zipPath]);
+  }
+  body=body.split('![]()').join('');
+  return {headline:parsed.headline, body:body.replace(/\n{3,}/g,'\n\n').trim()};
+}
+
 function articleView(){
   const d=data.articles;
   if(!d.cols.length) return `<div class="panel"><h2>News</h2><div class="hint">No articles.csv found.</div></div>`;
@@ -456,19 +803,180 @@ function articleView(){
         <div><label>Tip</label><div class="hint" style="padding-top:9px">Tag an article <b>NOW</b>, <b>LIVE</b> or <b>BREAKING</b> and it pins first in the carousel with a red "Happening now" treatment. Set it to expire when the moment's over.</div></div></div>
       <div class="artrow">
         <div><label>Slug (URL)</label><input id="f_slug" value="${esc(a.slug)}"></div>
-        <div><label>Image path (optional)</label><input id="f_image" value="${esc(a.image)}" placeholder="images/file.jpg or https://…"></div></div>
+        <div><label>Cover image (optional)</label>
+          <div style="display:flex;gap:6px"><input id="f_image" value="${esc(a.image)}" placeholder="img/articles/… or https://…" style="flex:1">
+          <button type="button" class="btn sm" id="f_image_up" title="Upload a cover image">Upload</button></div></div></div>
       <div class="artrow">
         <div><label>Use player's photo as the image</label><select id="f_use_player_photo"><option value="">No (default — plain card)</option><option value="yes" ${a.use_player_photo==='yes'?'selected':''}>Yes — needs a player slug</option></select></div>
         <div><label>Also published at (optional — e.g. "Touchline Studios", "The 42")</label><input id="f_partner" value="${esc(a.partner||'')}" placeholder="Publication or newsletter name"></div></div>
       <div class="artrow">
         <div><label>Link to the original (optional)</label><input id="f_partner_url" value="${esc(a.partner_url||'')}" placeholder="https://…"></div>
         <div><label>Tip</label><div class="hint" style="padding-top:9px">If you fill these in, the article ends with an "Also published at …" box linking out, instead of "More news". Works for any writer.</div></div></div>
-      <div class="artfull"><label>Body — blank line between paragraphs</label>
-        <textarea id="f_body"></textarea></div>
+      <div class="artfull"><label>Body</label>
+        <div class="edbar">
+          <button type="button" data-md="h2">H2</button>
+          <button type="button" data-md="h3">H3</button>
+          <button type="button" data-md="b"><b>B</b></button>
+          <button type="button" data-md="i"><i>I</i></button>
+          <button type="button" data-md="link">Link</button>
+          <button type="button" data-md="quote">Quote</button>
+          <button type="button" data-md="rule">Divider</button>
+          <button type="button" id="ed_img">+ Picture</button>
+          <span class="edsp"></span>
+          <button type="button" id="ed_docx" class="pri">Import .docx</button>
+          <span class="edstatus" id="ed_status"></span>
+        </div>
+        <div class="hint" style="margin:6px 0 8px">
+          Write in Google Docs, then <b>File → Download → Microsoft Word (.docx)</b> and import it —
+          headings, links and pictures all come across. Or paste straight from Docs.
+          <code>## Heading</code>, <code>### Smaller heading</code>, <code>&gt; quote</code>,
+          <code>- list</code>, <code>**bold**</code>, blank line between paragraphs.
+        </div>
+        <div class="edsplit">
+          <textarea id="f_body" spellcheck="true"></textarea>
+          <div class="edprev"><div class="artcontent" id="ed_preview"></div></div>
+        </div>
+      </div>
     </div>`;
   setTimeout(()=>{
+    /* ---- body editor: toolbar, live preview, imports ---------------- */
     const ta=v.querySelector('#f_body');
-    if(ta) ta.value=String(a.body||'').split('\\n').join('\n');
+    const prev=v.querySelector('#ed_preview');
+    const stat=v.querySelector('#ed_status');
+    function say(msg, kind){
+      if(!stat) return;
+      stat.textContent=msg||'';
+      stat.className='edstatus'+(kind?' '+kind:'');
+    }
+    function drawPreview(){ if(prev) prev.innerHTML=mdToHtml(ta?ta.value:''); }
+    function commitBody(){
+      const row=d.rows[selectedArticle]; if(!row||!ta) return;
+      row.body=ta.value.split('\n').join('\\n');
+      markDirty();
+    }
+    function setBody(text){
+      if(!ta) return;
+      ta.value=text; commitBody(); drawPreview();
+    }
+    /* wrap or prefix at the cursor, the way any editor does */
+    function apply(kind){
+      if(!ta) return;
+      const s0=ta.selectionStart, s1=ta.selectionEnd;
+      const before=ta.value.slice(0,s0), sel=ta.value.slice(s0,s1), after=ta.value.slice(s1);
+      let out=sel, caret=null;
+      if(kind==='b') out='**'+(sel||'bold')+'**';
+      else if(kind==='i') out='*'+(sel||'italic')+'*';
+      else if(kind==='link'){
+        const u=prompt('Link to:','https://');
+        if(!u) return;
+        out='['+(sel||'link text')+']('+u+')';
+      }
+      else if(kind==='rule') out=(before&&!before.endsWith('\n\n')?'\n\n':'')+'---\n\n';
+      else {
+        const mark=kind==='h2'?'## ':kind==='h3'?'### ':'> ';
+        const lineStart=before.lastIndexOf('\n')+1;
+        const head=ta.value.slice(0,lineStart);
+        const line=ta.value.slice(lineStart,s1)||'';
+        const rest=ta.value.slice(s1);
+        const stripped=line.replace(/^(#{2,3}\s+|>\s*)/,'');
+        ta.value=head+mark+stripped+rest;
+        caret=head.length+mark.length+stripped.length;
+        ta.focus(); ta.setSelectionRange(caret,caret);
+        commitBody(); drawPreview(); return;
+      }
+      ta.value=before+out+after;
+      caret=before.length+out.length;
+      ta.focus(); ta.setSelectionRange(caret,caret);
+      commitBody(); drawPreview();
+    }
+    function insertAtCursor(text){
+      if(!ta) return;
+      const s0=ta.selectionStart;
+      const before=ta.value.slice(0,s0), after=ta.value.slice(ta.selectionEnd);
+      const pad=(before && !before.endsWith('\n\n')) ? '\n\n' : '';
+      ta.value=before+pad+text+'\n\n'+after;
+      const caret=before.length+pad.length+text.length+2;
+      ta.focus(); ta.setSelectionRange(caret,caret);
+      commitBody(); drawPreview();
+    }
+    function currentSlug(){
+      const row=d.rows[selectedArticle]||{};
+      return row.slug || slugify(row.headline||'') || 'misc';
+    }
+
+    if(ta){
+      ta.value=String(a.body||'').split('\\n').join('\n');
+      drawPreview();
+      ta.addEventListener('input', function(){ commitBody(); drawPreview(); });
+      /* paste from Google Docs / Word keeps headings, bold, links */
+      ta.addEventListener('paste', function(e){
+        const html=e.clipboardData && e.clipboardData.getData('text/html');
+        if(!html) return;
+        const md=htmlToMd(html);
+        if(!md) return;
+        e.preventDefault();
+        const s0=ta.selectionStart;
+        ta.value=ta.value.slice(0,s0)+md+ta.value.slice(ta.selectionEnd);
+        const caret=s0+md.length;
+        ta.setSelectionRange(caret,caret);
+        commitBody(); drawPreview();
+        say('Pasted and formatted. Pictures need adding with + Picture.','ok');
+      });
+    }
+    v.querySelectorAll('[data-md]').forEach(function(b){
+      b.onclick=function(){ apply(b.dataset.md); };
+    });
+
+    const imgBtn=v.querySelector('#ed_img');
+    if(imgBtn) imgBtn.onclick=async function(){
+      if(!token()) { say('Sign in with a GitHub token first.','warn'); return; }
+      const f=await pickFile('image/*'); if(!f) return;
+      try{
+        say('Uploading '+f.name+'…');
+        const bytes=new Uint8Array(await f.arrayBuffer());
+        const path=await uploadPicture(bytes, f.name, currentSlug());
+        insertAtCursor('!['+']('+path+')');
+        say('Added. Put a caption in the square brackets if you want one.','ok');
+      }catch(err){ say(err.message,'warn'); }
+    };
+
+    const coverBtn=v.querySelector('#f_image_up');
+    if(coverBtn) coverBtn.onclick=async function(){
+      if(!token()) { say('Sign in with a GitHub token first.','warn'); return; }
+      const f=await pickFile('image/*'); if(!f) return;
+      try{
+        say('Uploading cover…');
+        const bytes=new Uint8Array(await f.arrayBuffer());
+        const path=await uploadPicture(bytes, f.name, currentSlug());
+        const el=v.querySelector('#f_image');
+        el.value=path;
+        const row=d.rows[selectedArticle]; if(row){ row.image=path; markDirty(); }
+        say('Cover image set.','ok');
+      }catch(err){ say(err.message,'warn'); }
+    };
+
+    const docxBtn=v.querySelector('#ed_docx');
+    if(docxBtn) docxBtn.onclick=async function(){
+      if(!token()) { say('Sign in with a GitHub token first — pictures are uploaded to the repo.','warn'); return; }
+      const f=await pickFile('.docx,application/vnd.openxmlformats-officedocument.wordprocessingml.document');
+      if(!f) return;
+      if(ta && ta.value.trim() && !confirm('Replace the body with the contents of '+f.name+'?')) return;
+      try{
+        say('Reading '+f.name+'…');
+        const res=await importDocx(f, currentSlug(), say);
+        const row=d.rows[selectedArticle];
+        if(res.headline && row && !row.headline){
+          row.headline=res.headline;
+          const hl=v.querySelector('#f_headline'); if(hl) hl.value=res.headline;
+          if(!row.slug){ row.slug=slugify(res.headline);
+            const sl=v.querySelector('#f_slug'); if(sl) sl.value=row.slug; }
+        }
+        setBody(res.body);
+        const n=(res.body.match(/^!\[/gm)||[]).length;
+        say('Imported'+(n?' with '+n+' picture'+(n===1?'':'s'):'')+'. Check it over, then Save.','ok');
+      }catch(err){ say(err.message,'warn'); }
+    };
+
     v.querySelectorAll('.artitem').forEach(el=>{
       el.onclick=e=>{ if(e.target.dataset.del!==undefined) return;
         selectedArticle=+el.dataset.i; render(); };
@@ -491,11 +999,11 @@ function articleView(){
       o.date=new Date().toISOString().slice(0,10); o.author=SESSION.name||'footballers.ie Staff';
       d.rows.unshift(o); selectedArticle=0; markDirty(); render();
     };
-    ['headline','standfirst','date','tag','author','player_slug','slug','image','body','expires','use_player_photo','partner','partner_url'].forEach(f=>{
+    ['headline','standfirst','date','tag','author','player_slug','slug','image','expires','use_player_photo','partner','partner_url'].forEach(f=>{
       const el=v.querySelector('#f_'+f); if(!el) return;
       el.oninput=el.onchange=()=>{
         const row=d.rows[selectedArticle]; if(!row) return;
-        row[f] = f==='body' ? el.value.split('\n').join('\\n') : el.value;
+        row[f]=el.value;
         if(f==='headline' && !row.slug) row.slug=slugify(el.value);
         markDirty();
       };
