@@ -17,13 +17,14 @@ nav{display:flex;justify-content:space-between;align-items:center;padding:18px 0
 .navlinks a.on{color:var(--yellow);border-color:var(--yellow)}
 .navmeta{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.1em;color:var(--mute)}
 .navmeta b{color:var(--teal);font-weight:500}
-/* one button that flips the whole site between night and day */
-.modebtn{width:36px;height:36px;border:1px solid var(--line);border-radius:8px;
-  font-size:15px;line-height:1;color:var(--mute);flex:none;transition:color .12s,border-color .12s}
-.modebtn:hover{color:var(--white);border-color:var(--mute)}
+/* search lives behind one icon in the nav, desktop and phone alike */
+.searchbtn{width:36px;height:36px;border:1px solid var(--line);border-radius:8px;
+  display:flex;align-items:center;justify-content:center;
+  color:var(--mute);flex:none;transition:color .12s,border-color .12s}
+.searchbtn:hover{color:var(--white);border-color:var(--mute)}
 /* DOM puts the buttons next to the logo for the phone layout; on desktop the
-   flex order tucks the toggle in beside the meta text instead */
-.mark{order:1}.navlinks{order:2}.navmeta{order:3}.modebtn{order:4}.burger{order:5}
+   flex order tucks the icon in beside the meta text instead */
+.mark{order:1}.navlinks{order:2}.navmeta{order:3}.searchbtn{order:4}.burger{order:5}
 /* the menu footer only exists inside the phone drawer */
 .navfoot{display:none}
 .sec{margin:36px 0 14px;display:flex;justify-content:space-between;align-items:baseline;gap:10px;flex-wrap:wrap}
@@ -1295,42 +1296,3 @@ a.intlblock.lnk:hover{border-color:var(--teal)}
 .msev{font-size:14px;display:flex;gap:10px;align-items:baseline}
 .msev b{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--mute);min-width:32px}
 .msfine{margin-top:14px;font-size:12px;color:var(--mute)}
-
-/* ============ LIGHT MODE ============
-   The site's home look is the dark one; this flips the palette when the
-   toggle in the nav has set data-mode="light" on <html>. */
-:root{color-scheme:dark}
-[data-mode="light"]{
-  color-scheme:light;
-  --bg:#F2F4F3; --panel:#FFFFFF; --panel2:#EAEEEC; --line:#D9DFDD;
-  --white:#151B19; --mute:#5E6965; --yellow:#8F6B00; --teal:#0E8A78; --red:#C63325;
-}
-/* buttons that paint the accent as a background want the bright yellow back */
-[data-mode="light"] .tab.on,[data-mode="light"] .starbtn.on,[data-mode="light"] .cnt,
-[data-mode="light"] .nlform button,[data-mode="light"] .fbg-form button,
-[data-mode="light"] .repform button,[data-mode="light"] .card.yel{
-  background:#F5C518;color:#0C0F10}
-[data-mode="light"] .tab.on,[data-mode="light"] .starbtn.on{border-color:#F5C518}
-/* hairlines that were hard-coded to the dark palette */
-[data-mode="light"] .plrow,[data-mode="light"] .mcplayers,[data-mode="light"] .biorow,
-[data-mode="light"] .fxmatch,[data-mode="light"] .bp,[data-mode="light"] .nrow,
-[data-mode="light"] .tl{border-color:var(--line)}
-/* article body text */
-[data-mode="light"] .artcontent p,[data-mode="light"] .artcontent li{color:#2A3330}
-[data-mode="light"] .artlead{color:#151B19}
-[data-mode="light"] .rate.none{color:#A9B2AF}
-[data-mode="light"] .rate.md{background:rgba(94,105,101,.14);color:#2A3330}
-[data-mode="light"] #themap,[data-mode="light"] .leaflet-container{background:#DDE3E1}
-/* softer shadows so panels don't look like they're floating at night */
-[data-mode="light"] .navlinks.open{box-shadow:0 18px 44px rgba(20,30,26,.18)}
-[data-mode="light"] .mssheetwrap{background:rgba(20,30,26,.35)}
-/* the pitch theme paints these dark by hand; day versions of each */
-[data-mode="light"] .slide{background:linear-gradient(165deg,#FFFFFF,#EEF2F0)}
-[data-mode="light"] .slide.now{border-color:rgba(198,51,37,.45);
-  background:linear-gradient(160deg,#FBEBE8,#FFFFFF)}
-[data-mode="light"] .rate.lo{background:#E4E8E6;color:#4A5450}
-[data-mode="light"] .navlinks a.on{color:#007A4A;border-color:#007A4A}
-[data-mode="light"] .mark i{color:#007A4A}
-[data-mode="light"] .sinput:focus{border-color:#007A4A}
-[data-mode="light"] .cexp.soon{background:rgba(0,143,86,.12);color:#0B6E45}
-[data-mode="light"] .mapcta{background:linear-gradient(135deg,rgba(245,197,24,.14),rgba(255,255,255,.6))}

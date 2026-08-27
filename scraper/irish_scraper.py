@@ -1713,25 +1713,31 @@ def scrape(args):
     results_rows.sort(key=lambda r: (r[0], r[-1]))
     fixtures_rows.sort(key=lambda r: (r[0], r[-1]))
 
-    write_csv(out_root / "data/api/matches.csv",
-              ["kickoff", "competition", "home", "away", "home_id",
-               "away_id", "home_score", "away_score", "status", "minute",
-               "players"],
-              match_rows)
-    write_csv(out_root / "data/manual/results.csv",
-              ["slug", "date", "opponent", "score", "competition",
-               "minutes", "goals", "assists", "rating"],
-              [r[:-1] for r in results_rows])
-    write_csv(out_root / "data/manual/fixtures.csv",
-              ["slug", "date", "opponent", "home_away", "competition"],
-              [r[:-1] for r in fixtures_rows])
-    write_csv(out_root / "data/api/players.csv",
-              ["slug", "league", "club", "club_id", "age", "born", "foot", "senior_caps",
-               "senior_goals", "senior_debut", "youth", "season",
-               "s_apps", "s_starts",
-               "s_goals", "s_assists", "s_mins", "s_yellow", "s_red",
-               "c_apps", "c_goals", "c_assists", "avg_rating", "source"],
-              players_rows)
+    # THE WIPE BUG: an --active run only scrapes a handful of players, but
+    # these full-file writes ran unconditionally first, clobbering everyone
+    # else's rows before merge_rows "merged" into the gutted file. Every
+    # matchday run was deleting ~60% of results/fixtures/players until the
+    # next full refresh put them back. Partial runs must ONLY merge.
+    if not getattr(args, "active", False):
+        write_csv(out_root / "data/api/matches.csv",
+                  ["kickoff", "competition", "home", "away", "home_id",
+                   "away_id", "home_score", "away_score", "status", "minute",
+                   "players"],
+                  match_rows)
+        write_csv(out_root / "data/manual/results.csv",
+                  ["slug", "date", "opponent", "score", "competition",
+                   "minutes", "goals", "assists", "rating"],
+                  [r[:-1] for r in results_rows])
+        write_csv(out_root / "data/manual/fixtures.csv",
+                  ["slug", "date", "opponent", "home_away", "competition"],
+                  [r[:-1] for r in fixtures_rows])
+        write_csv(out_root / "data/api/players.csv",
+                  ["slug", "league", "club", "club_id", "age", "born", "foot", "senior_caps",
+                   "senior_goals", "senior_debut", "youth", "season",
+                   "s_apps", "s_starts",
+                   "s_goals", "s_assists", "s_mins", "s_yellow", "s_red",
+                   "c_apps", "c_goals", "c_assists", "avg_rating", "source"],
+                  players_rows)
 
     if cache_dirty:
         write_id_cache(cache)

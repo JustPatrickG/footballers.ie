@@ -550,7 +550,7 @@ APPJS = open(os.path.join(HERE, "app.js")).read()
 
 NAV = [("News","news.html"),("Players","players.html"),
        ("Clubs","clubs.html"),("Ireland","ireland.html"),("Fixtures","fixtures.html"),
-       ("Search","search.html"),("Alerts","alerts.html")]
+       ("Alerts","alerts.html")]
 
 
 def matchweek_label():
@@ -655,8 +655,7 @@ def shell(title, desc, root, active, body, extra_head="", canonical="", body_att
 <title>{esc(title)}</title>
 <meta name="description" content="{esc(desc)}">
 <link rel="canonical" href="{can}">
-<meta name="theme-color" content="#0C0F10" id="themecolor">
-<script>try{{if(localStorage.getItem('fb_mode')==='light'){{document.documentElement.setAttribute('data-mode','light');}}}}catch(e){{}}</script>
+<meta name="theme-color" content="#0C0F10">
 <meta property="og:site_name" content="Footballers">
 <meta property="og:type" content="website">
 <meta property="og:title" content="{esc(title)}">
@@ -681,7 +680,9 @@ def shell(title, desc, root, active, body, extra_head="", canonical="", body_att
 {loader_js}<div class="wrap">
 <nav>
   <a class="mark" href="{root}index.html">footballers<i>.ie</i></a>
-  <button class="modebtn" id="modebtn" aria-label="Switch between dark and light mode">☾</button>
+  <a class="searchbtn" href="{root}search.html" aria-label="Search">
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.6-4.6"/></svg>
+  </a>
   <button class="burger" id="burger" aria-label="Menu" aria-expanded="false" aria-controls="navlinks">
     <span></span><span></span><span></span>
   </button>
@@ -696,23 +697,6 @@ def shell(title, desc, root, active, body, extra_head="", canonical="", body_att
     b.setAttribute('aria-expanded',open?'true':'false');
     b.classList.toggle('x',open);
   }});
-  var mb=document.getElementById('modebtn');
-  function paintMode(){{
-    var light=document.documentElement.getAttribute('data-mode')==='light';
-    mb.textContent=light?'☀':'☾';
-    var tc=document.getElementById('themecolor');
-    if(tc) tc.setAttribute('content', light?'#F4F6F5':'#0C0F10');
-  }}
-  if(mb){{
-    paintMode();
-    mb.addEventListener('click',function(){{
-      var light=document.documentElement.getAttribute('data-mode')==='light';
-      if(light) document.documentElement.removeAttribute('data-mode');
-      else document.documentElement.setAttribute('data-mode','light');
-      try{{localStorage.setItem('fb_mode', light?'dark':'light');}}catch(e){{}}
-      paintMode();
-    }});
-  }}
 }})();
 </script>
 {body}

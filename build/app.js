@@ -1302,7 +1302,11 @@
         + '<div><b>' + (d.rating ? esc(d.rating) : '—') + '</b><span>rating</span></div>'
         + '</div>';
     } else {
-      rows = '<div class="msnote">No minutes recorded for this match'
+      var m0 = (window.FB_MATCHES || [])[0];
+      var done = m0 && (m0.status === 'ft' || (Date.parse(m0.kickoff) && Date.now() - Date.parse(m0.kickoff) > 2 * 36e5));
+      rows = '<div class="msnote">' + (done
+          ? 'Full-time stats for this game are still syncing'
+          : 'No minutes recorded for this match')
         + (d.srating ? ' — season so far:' : '.') + '</div>'
         + '<div class="msgrid2">'
         + '<div><b>' + (d.sap || 0) + '</b><span>apps</span></div>'

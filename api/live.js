@@ -104,15 +104,21 @@ function parseEvents(data) {
 // probability-gated so fotmob traffic stays what it was.
 function kickWorkflow() {
   const token = process.env.GITHUB_TOKEN, repo = process.env.GITHUB_REPO;
-  if (!token || !repo || Math.random() > 0.12) return Promise.resolve();
+  if (!token || !repo) return Promise.resolve();
+  const roll = Math.random();
+  // usually the quick matchday pass; now and then the full refresh, because
+  // GitHub's own cron for both has proven it can sleep for hours
+  const wf = roll < 0.12 ? 'matchday.yml' : (roll < 0.15 ? 'refresh.yml' : null);
+  if (!wf) return Promise.resolve();
   return fetch(
-    'https://api.github.com/repos/' + repo + '/actions/workflows/matchday.yml/dispatches',
+    'https://api.github.com/repos/' + repo + '/actions/workflows/' + wf + '/dispatches',
     { method: 'POST',
       headers: { Authorization: 'Bearer ' + token,
                  Accept: 'application/vnd.github+json',
                  'User-Agent': 'footballers-ie-live' },
       body: JSON.stringify({ ref: 'main' }) }
-  ).catch(() => {});
+  ).then(r => console.log('kick ' + wf + ':', r.status))
+   .catch(e => console.log('kick ' + wf + ' failed:', String(e)));
 }
 
 export default async function handler(req, res) {
