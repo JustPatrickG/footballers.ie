@@ -1719,69 +1719,6 @@ def scrape(args):
 # ---------------------------------------------------------------- events
 
 EVENT_COLUMNS = ["match_id", "minute", "type", "player", "team", "venue"]
-LINEUP_COLUMNS = ["match_id", "team", "player", "player_id", "role",
-                  "shirt", "position"]
-
-
-def parse_lineups(data, home, away):
-    """[{team, player, player_id, role, shirt, position}] for a match.
-    role is 'start' or 'bench'. Empty when the source has no lineup yet."""
-    out, seen = [], set()
-
-    def add(p, team, role):
-        if not isinstance(p, dict):
-            return
-        name = p.get("name") or p.get("nameStr") or p.get("fullName")
-        if isinstance(name, dict):
-            name = name.get("fullName") or name.get("firstName", "")
-        pid = str(p.get("id") or p.get("playerId") or "")
-        if not name:
-            return
-        if looks_like_staff(p.get("role"), p.get("title"),
-                            p.get("positionStringShort")):
-            return
-        key = (team, norm(str(name)), role)
-        if key in seen:
-            return
-        seen.add(key)
-        out.append({
-            "team": team, "player": str(name).strip(), "player_id": pid,
-            "role": role,
-            "shirt": str(p.get("shirt") or p.get("shirtNumber") or ""),
-            "position": str(p.get("positionStringShort")
-                            or p.get("position") or ""),
-        })
-
-    def side_players(block, team):
-        if not isinstance(block, dict):
-            return
-        for key, role in (("starters", "start"), ("startingLineup", "start"),
-                          ("players", "start"), ("bench", "bench"),
-                          ("subs", "bench"), ("substitutes", "bench")):
-            val = block.get(key)
-            if isinstance(val, list):
-                for item in val:
-                    if isinstance(item, list):      # rows of a formation
-                        for p in item:
-                            add(p, team, role)
-                    else:
-                        add(item, team, role)
-
-    for lu in find_all(data, "lineup"):
-        blocks = lu if isinstance(lu, list) else [lu]
-        for b in blocks:
-            if not isinstance(b, dict):
-                continue
-            for side, team in (("homeTeam", home), ("awayTeam", away),
-                               ("home", home), ("away", away)):
-                if isinstance(b.get(side), dict):
-                    side_players(b[side], team)
-            name = b.get("teamName") or b.get("name")
-            if name:
-                side_players(b, str(name))
-    return out
-
-
 def match_id_for(utc, home, away):
     return f"{utc.strftime('%Y-%m-%d')}-{slugify(home)}-v-{slugify(away)}"
 
@@ -1869,6 +1806,25 @@ def parse_match_events(data, home, away):
     return events, str(venue or "")
 
 
+# Finished matches and upcoming ones now share a shape: data/api/lineups.csv is
+# a rolling window rewritten every run, data/api/match_lineups.csv is the
+# durable archive of games already played. Same columns, same parser.
+LINEUP_CSV_COLUMNS = ["match_id", "side", "team", "formation", "status",
+                      "updated", "role", "number", "name", "slug", "pos",
+                      "x", "y"]
+
+
+def migrate_lineup_row(row):
+    """Read a match_lineups.csv row in either shape. The old one was
+    match_id,team,player,player_id,role,shirt,position - no side, no formation,
+    no coordinates, and an empty position column on every row it ever wrote."""
+    if "name" in row or "side" in row:
+        return [row.get(c, "") for c in LINEUP_CSV_COLUMNS]
+    return [row.get("match_id", ""), "", row.get("team", ""), "", "", "",
+            row.get("role", ""), row.get("shirt", ""), row.get("player", ""),
+            "", row.get("position", ""), "", ""]
+
+
 def events_cmd(args):
     idx_path = SCRAPER_DIR / "match_index.json"
     if not idx_path.exists():
@@ -1876,6 +1832,8 @@ def events_cmd(args):
     index = json.loads(idx_path.read_text())
     now = dt.datetime.now(dt.timezone.utc)
     since = now - dt.timedelta(days=args.days)
+    stamp = iso_z(now)
+    by_id, by_name = slug_lookup()
 
     out_path = Path(args.out) / "data/api/match_events.csv"
     lineup_path = Path(args.out) / "data/api/match_lineups.csv"
@@ -1884,7 +1842,7 @@ def events_cmd(args):
     if lineup_path.exists() and not args.rebuild:
         with open(lineup_path, newline="", encoding="utf-8") as f:
             for row in csv.DictReader(f):
-                lineup_rows.append([row.get(c, "") for c in LINEUP_COLUMNS])
+                lineup_rows.append(migrate_lineup_row(row))
     if out_path.exists() and not args.rebuild:
         with open(out_path, newline="", encoding="utf-8") as f:
             for row in csv.DictReader(f):
@@ -1909,7 +1867,7 @@ def events_cmd(args):
                 "https://www.fotmob.com" + m["url"].split("#")[0],
                 debug_name=f"match_{mid}" if args.debug else None)
             evs, venue = parse_match_events(data, m["home"], m["away"])
-            lus = parse_lineups(data, m["home"], m["away"])
+            sides = parse_match_lineup(data, m["home"], m["away"])
         except Exception as e:
             print(f"  [{i+1}/{len(todo)}] {mid}: failed ({e})")
             time.sleep(SLEEP)
@@ -1919,9 +1877,9 @@ def events_cmd(args):
                          e["team"], venue])
         if not evs:
             rows.append([mid, "", "", "", "", venue])
-        for l in lus:
-            lineup_rows.append([mid, l["team"], l["player"], l["player_id"],
-                                l["role"], l["shirt"], l["position"]])
+        lus = lineup_rows_for(mid, sides, by_id, by_name,
+                              m["home"], m["away"], stamp)
+        lineup_rows.extend(lus)
         done += 1
         print(f"  [{i+1}/{len(todo)}] {mid}: {len(evs)} events, "
               f"{len(lus)} in lineups"
@@ -1930,19 +1888,15 @@ def events_cmd(args):
 
     rows.sort(key=lambda r: (r[0], int(re.sub(r"\D", "", r[1]) or 0)))
     write_csv(out_path, EVENT_COLUMNS, rows)
-    lineup_rows.sort(key=lambda r: (r[0], r[1], r[4], r[2]))
-    write_csv(lineup_path, LINEUP_COLUMNS, lineup_rows)
+    lineup_rows.sort(key=lambda r: (r[0], r[1], r[6], r[8]))
+    write_csv(lineup_path, LINEUP_CSV_COLUMNS, lineup_rows)
     print(f"{done} matches read this run")
-    if done and not any(r[2] for r in lineup_rows):
+    if done and not any(r[8] for r in lineup_rows):
         print("no lineups found - rerun with --debug and send a file "
               "from scraper/debug/ if you want these")
 
 
 # ---------------------------------------------------------------- lineups
-
-LINEUP_CSV_COLUMNS = ["match_id", "side", "team", "formation", "status",
-                      "updated", "role", "number", "name", "slug", "pos",
-                      "x", "y"]
 LAST_XI_FILE = SCRAPER_DIR / "last_xi.json"
 
 
@@ -2060,6 +2014,34 @@ def load_last_xi():
     return {}
 
 
+def slug_lookup():
+    """(by_source_id, by_name) so a lineup row can be tied to a player page.
+    Id first - names on the source don't always match the roster."""
+    by_id, by_name = {}, {}
+    for p in read_player_list():
+        by_name[norm(p["name"])] = p["slug"]
+    for slug, e in read_id_cache().items():
+        if e.get("fotmob_id"):
+            by_id[str(e["fotmob_id"])] = slug
+    return by_id, by_name
+
+
+def lineup_rows_for(mid, sides, by_id, by_name, home, away, stamp):
+    """Flatten parse_match_lineup output into LINEUP_CSV_COLUMNS rows."""
+    out = []
+    for side, team_name in (("home", home), ("away", away)):
+        got = sides.get(side)
+        if not got:
+            continue
+        formation, players, status = got
+        for p in players:
+            slug = by_id.get(p["id"]) or by_name.get(norm(p["name"]), "")
+            out.append([mid, side, team_name, formation, status, stamp,
+                        p["role"], p["number"], p["name"], slug,
+                        p["pos"], p["x"], p["y"]])
+    return out
+
+
 def lineups_cmd(args):
     idx_path = SCRAPER_DIR / "match_index.json"
     if not idx_path.exists():
@@ -2069,14 +2051,7 @@ def lineups_cmd(args):
     start = now - dt.timedelta(hours=args.past_hours)
     end = now + dt.timedelta(hours=args.ahead_hours)
 
-    # slug lookup: by source player id first, then by name
-    by_id, by_name = {}, {}
-    for p in read_player_list():
-        by_name[norm(p["name"])] = p["slug"]
-    for slug, e in read_id_cache().items():
-        if e.get("fotmob_id"):
-            by_id[str(e["fotmob_id"])] = slug
-
+    by_id, by_name = slug_lookup()
     last_xi = load_last_xi()
     rows, seen_matches = [], 0
     stamp = iso_z(now)
