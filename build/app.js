@@ -27,6 +27,20 @@
   function mhas(id) { return mread().indexOf(id) > -1; }
   function mtoggle(id) { var l = mread(), i = l.indexOf(id); if (i > -1) l.splice(i, 1); else l.push(id); mwrite(l); return l.indexOf(id) > -1; }
 
+  /* analytics: no-ops when tracking is off or the script hasn't loaded */
+  function track(ev, props) {
+    try { if (window.posthog && posthog.capture) posthog.capture(ev, props || {}); } catch (e) {}
+  }
+  function identify(email) {
+    try {
+      if (!email || !window.posthog || !posthog.identify) return;
+      var em = String(email).trim().toLowerCase();
+      posthog.identify(em, { email: em });
+    } catch (e) {}
+  }
+  window.FB_TRACK = track;
+  window.FB_IDENTIFY = identify;
+
   window.FB = { read: read, write: write, has: has, toggle: toggle, mread: mread, mhas: mhas, mtoggle: mtoggle };
 
   /* keep the account (email + follows) in sync server-side. no password: nothing here is secret. */
@@ -59,6 +73,7 @@
           e.preventDefault(); e.stopPropagation();
           var slug = btn.dataset.fav;
           function apply() {
+            track(has(slug) ? 'player_unfollowed' : 'player_followed', { player: slug });
             toggle(slug);
             var all = document.querySelectorAll('[data-fav="' + slug + '"]');
             for (var j = 0; j < all.length; j++) paint(all[j]);
@@ -78,7 +93,10 @@
         btn.addEventListener('click', function (e) {
           e.preventDefault(); e.stopPropagation();
           var id = btn.dataset.favm;
-          function apply() { mtoggle(id); mpaint(); }
+          function apply() {
+            track(mhas(id) ? 'match_unfollowed' : 'match_followed', { match: id });
+            mtoggle(id); mpaint();
+          }
           if (mhas(id) || !window.FB_GATE) { apply(); return; }
           FB_GATE(id, apply);
         });
@@ -152,6 +170,7 @@
           e.preventDefault(); e.stopPropagation();
           var slug = btn.dataset.fav;
           function apply() {
+            track(has(slug) ? 'player_unfollowed' : 'player_followed', { player: slug });
             toggle(slug); renderMine(); updateCount();
             var all = document.querySelectorAll('[data-fav="' + slug + '"]');
             for (var j = 0; j < all.length; j++) paint(all[j]);
@@ -362,7 +381,9 @@
       var f = document.getElementById('fxfilt');
       if (f) f.addEventListener('click', function (e) { var b = e.target.closest('button'); if (!b) return;
         [].forEach.call(f.children, function (x) { x.classList.toggle('on', x === b); });
-        fxFilter = b.getAttribute('data-f'); renderAll(); });
+        fxFilter = b.getAttribute('data-f');
+        if (window.FB_TRACK) FB_TRACK('fixtures_filter', { filter: fxFilter });
+        renderAll(); });
     }
 
 
@@ -535,6 +556,8 @@
   window.FB_EMAIL = saved;
 
   function send(email, slug) {
+    if (window.FB_IDENTIFY) FB_IDENTIFY(email);
+    if (window.FB_TRACK) FB_TRACK('email_saved', { source: 'follow', player: slug || '' });
     try { localStorage.setItem(EKEY, email); } catch (e) {}
     // save it where we can see it
     try {
@@ -863,6 +886,7 @@
       var btn = wrap.querySelector('.repform button');
       btn.disabled = true; btn.textContent = 'Sending…';
       try {
+        if (window.FB_TRACK) FB_TRACK('report_sent', { type: wrap.querySelector('#rt').value, page: location.pathname });
         var res = await fetch('/api/report', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
@@ -1046,6 +1070,8 @@
           });
           var out = await res.json().catch(function () { return {}; });
           if (!res.ok) throw new Error(out.error || 'Could not save that.');
+          if (window.FB_IDENTIFY) FB_IDENTIFY(email);
+          if (window.FB_TRACK) FB_TRACK('newsletter_subscribed', { source: f.classList.contains('alertform') ? 'alerts' : 'newsletter' });
           f.innerHTML = '<div class="nlok">You\'re on the list. Thanks.</div>';
         } catch (ex) {
           if (btn) { btn.disabled = false; btn.textContent = label; }

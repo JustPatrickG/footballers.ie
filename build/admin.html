@@ -130,6 +130,9 @@ label{display:block;font-family:'IBM Plex Mono',monospace;font-size:9px;letter-s
 <script>
 /* gate: must have signed in via the site */
 var SESSION=null;
+/* whoever opens the admin is staff - their visits stay out of the analytics.
+   To be counted again: localStorage.removeItem('fb_no_track') in the console. */
+try{ localStorage.setItem('fb_no_track','1'); }catch(e){}
 (function(){
   try{ SESSION=JSON.parse(localStorage.getItem('fb_session_v1')||'null'); }catch(e){}
   if(!SESSION){

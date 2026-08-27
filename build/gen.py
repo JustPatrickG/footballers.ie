@@ -618,6 +618,27 @@ LOADER_JS = """<script>
 })();
 </script>"""
 
+# ---- analytics --------------------------------------------------------------
+# PostHog, EU region. The key is a public write-only key, safe in the repo.
+# Anyone who has ever opened the admin gets fb_no_track set and is never
+# counted; visiting any page with ?notrack in the url does the same by hand
+# (localStorage.removeItem('fb_no_track') in the console undoes it).
+ANALYTICS_JS = """<script>
+(function(){
+  try{
+    if(location.search.indexOf('notrack')>-1) localStorage.setItem('fb_no_track','1');
+    if(localStorage.getItem('fb_no_track')) return;
+  }catch(e){}
+  !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="init capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled onFeatureFlags getFeatureFlag getFeatureFlagPayload reloadFeatureFlags group updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures getActiveMatchingSurveys getSurveys onSessionId debug".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+  posthog.init('phc_xtwt9agRRaGnB85uiQHmNrGEQ97cm3iCKULiQx5VBcVJ',{
+    api_host:'https://eu.i.posthog.com',
+    defaults:'2025-05-24',
+    person_profiles:'identified_only'
+  });
+})();
+</script>"""
+
+
 def shell(title, desc, root, active, body, extra_head="", canonical="", body_attr=""):
     is_home = (root == "" and active in ("index.html", ""))
     loader    = LOADER_HTML if is_home else ""
@@ -650,7 +671,7 @@ def shell(title, desc, root, active, body, extra_head="", canonical="", body_att
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-<style>{CSS}</style>{extra_head}
+<style>{CSS}</style>{ANALYTICS_JS}{extra_head}
 </head>
 <body{body_attr}>
 {loader}
