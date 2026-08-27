@@ -278,12 +278,39 @@
     }).sort(function (a, b) { return b.score - a.score; });
   }
 
+  /* Which two lead the page:
+       1. Anything live (or about to be / just finished) always wins.
+       2. Otherwise the last result holds its spot until halfway to the next
+          game, then the next game takes over — with the score picking WHICH
+          result and WHICH next game, decayed by distance in time so a big
+          match tomorrow beats a small one tonight, but not one next week. */
+  function decayed(r, now) {
+    var m = r.m;
+    var hrs = Math.abs(now - (m.status === 'ft' || ended(m) <= now ? ended(m) : ko(m))) / 36e5;
+    return r.score - hrs * 1.5;
+  }
   function choose(all, now) {
     var ranked = rank(all, now);
     if (!ranked.length) return [];
     var on = ranked.filter(function (r) { return r.on; });
-    if (on.length >= 2) return [on[0].m, on[1].m];      // two live ones, show them
-    return ranked.slice(0, 2).map(function (r) { return r.m; });
+    if (on.length) {
+      var rest = ranked.filter(function (r) { return !r.on; });
+      return on.slice(0, 2).concat(rest).slice(0, 2).map(function (r) { return r.m; });
+    }
+    var past = [], future = [];
+    ranked.forEach(function (r) {
+      (r.m.status === 'ft' || ended(r.m) <= now ? past : future).push(r);
+    });
+    past.sort(function (a, b) { return decayed(b, now) - decayed(a, now); });
+    future.sort(function (a, b) { return decayed(b, now) - decayed(a, now); });
+    var lastM = past[0] && past[0].m, nextM = future[0] && future[0].m;
+    if (lastM && nextM) {
+      var mid = ended(lastM) + (ko(nextM) - ended(lastM)) / 2;
+      return now < mid ? [lastM, nextM] : [nextM, (future[1] && future[1].m) || lastM];
+    }
+    if (nextM) return future.slice(0, 2).map(function (r) { return r.m; });
+    if (lastM) return past.slice(0, 2).map(function (r) { return r.m; });
+    return [];
   }
 
   function avatarHtml(p, root) {
@@ -300,7 +327,7 @@
   function playersHtml(m, root, limit) {
     /* Squad lists are already ordered best-first by the generator, so showing
        three names and a count beats forty chips or a wall of faces. */
-    if (m.sq) limit = 3;
+    if (m.sq) limit = (window.innerWidth <= 640 ? 2 : 3);
     var list = limit ? m.players.slice(0, limit) : m.players;
     var h = list.map(function (p) { return chip(p, root); }).join('');
     if (limit && m.players.length > limit) h += '<span class="mcmore">+' + (m.players.length - limit) + ' more</span>';
@@ -468,6 +495,60 @@
     return now >= ko(m) - 20 * 60 * 1000 && now - ko(m) <= 5 * 3600 * 1000;
   }
 
+  /* Match pages: the api can send the goals and cards along with the score,
+     and this redraws the Timeline section from them, so events show up while
+     the game is still on instead of after the next site build. */
+  function paintTimeline(evs) {
+    var box = document.getElementById('mtl');
+    if (!box) return;
+    function esc(t) { return String(t == null ? '' : t).replace(/&/g, '&amp;').replace(/</g, '&lt;'); }
+    function norm(t) {
+      return String(t || '').normalize('NFKD').replace(/[\u0300-\u036f]/g, '')
+        .replace(/[^a-z ]/gi, '').toLowerCase().trim();
+    }
+    var irish = [];
+    var ST = window.FB_MSTATS || {};
+    for (var k in ST) irish.push(norm(ST[k].n));
+    function isIrish(name) {
+      var n = norm(name);
+      if (!n) return false;
+      for (var i = 0; i < irish.length; i++) {
+        var f = irish[i];
+        if (f === n) return true;
+        var a = f.split(' '), b = n.split(' ');
+        if (a.length > 1 && b.length > 1 &&
+            a[a.length - 1] === b[b.length - 1] && a[0].charAt(0) === b[0].charAt(0)) return true;
+      }
+      return false;
+    }
+    var LAB = { own_goal: 'own goal', missed_penalty: 'penalty missed', penalty: 'penalty',
+                second_yellow: 'second yellow', red: 'red card', yellow: 'yellow card' };
+    var rows = '', hgoals = [], agoals = [];
+    evs.forEach(function (e) {
+      var t = e.type;
+      var side = e.home ? 'h' : 'a';
+      var who = esc(e.player);
+      if (isIrish(e.player)) who = '<b class="ir">' + who + '</b>';
+      var ic = { yellow: '<i class="cd y"></i>', red: '<i class="cd r"></i>',
+                 second_yellow: '<i class="cd y2"></i>', missed_penalty: '\u2715' }[t] || '\u26bd';
+      var lab = LAB[t] && t !== 'goal' ? ' <small>' + LAB[t] + '</small>' : '';
+      var cell = '<span class="evwho">' + who + '</span>' + lab;
+      rows += '<div class="tl ' + side + ' ' + t + '"><div class="tlh">' + (side === 'h' ? cell : '') + '</div>'
+        + '<div class="tlm">' + esc(e.min) + "'" + '<span class="tli">' + ic + '</span></div>'
+        + '<div class="tla">' + (side === 'a' ? cell : '') + '</div></div>';
+      if (t === 'goal' || t === 'own_goal' || t === 'penalty') {
+        (e.home ? hgoals : agoals).push(esc(e.player) + ' ' + esc(e.min) + "'" + (t === 'own_goal' ? ' (og)' : ''));
+      }
+    });
+    if (!rows) return;
+    var summ = (hgoals.length || agoals.length)
+      ? '<div class="mscorers"><div>' + (hgoals.join(', ') || '\u2014') + '</div>'
+        + '<div class="r">' + (agoals.join(', ') || '\u2014') + '</div></div>'
+      : '';
+    box.innerHTML = '<div class="sec"><h2>Timeline</h2></div>'
+      + '<div class="timeline">' + rows + '</div>' + summ;
+  }
+
   async function refreshApi(now) {
     var want = (window.FB_MATCHES || []).filter(function (m) {
       return m.fmid && liveWindow(m, now);
@@ -475,7 +556,8 @@
     if (!want.length) return true;            // nothing on — nothing to ask
     var ids = [];
     want.forEach(function (m) { if (ids.indexOf(m.fmid) < 0) ids.push(m.fmid); });
-    var res = await fetch('/api/live?ids=' + ids.slice(0, 20).join(','), { cache: 'no-store' });
+    var wantEv = !!document.getElementById('mtl');
+    var res = await fetch('/api/live?ids=' + ids.slice(0, 20).join(',') + (wantEv ? '&full=1' : ''), { cache: 'no-store' });
     if (!res.ok) return false;
     var data = await res.json();
     if (!data || !data.matches) return false;
@@ -487,6 +569,7 @@
       if (l.minute !== undefined) { m.minute = l.minute; m._stamp = stamp; }
       if (l.hs !== null && l.hs !== undefined) m.hs = l.hs;
       if (l.as !== null && l.as !== undefined) m.as_ = l.as;
+      if (l.ev && l.ev.length) paintTimeline(l.ev);
     });
     render();
     var el = document.querySelector('.updated');
@@ -1059,6 +1142,29 @@
     return 'in ' + Math.round(days / 30) + (Math.round(days / 30) === 1 ? ' month' : ' months');
   };
 
+  /* homepage milestones: out of the pool the page ships, show the first four
+     that are either a player you follow or a name people actually know. */
+  (function () {
+    var cards = document.querySelectorAll('.msgrid .mscard[data-slug]');
+    if (!cards.length) return;
+    var favs = {};
+    try { (JSON.parse(localStorage.getItem('fb_favs_v1')) || []).forEach(function (s) { favs[s] = 1; }); } catch (e) {}
+    var shown = 0;
+    for (var i = 0; i < cards.length; i++) {
+      var c = cards[i];
+      var keep = favs[c.getAttribute('data-slug')] || c.getAttribute('data-fam') === '1';
+      if (keep && shown < 4) { c.style.display = ''; shown++; }
+    }
+    if (!shown) {
+      var sec = document.querySelector('.msgrid');
+      if (sec) {
+        var head = sec.previousElementSibling;
+        sec.style.display = 'none';
+        if (head && head.classList.contains('sec')) head.style.display = 'none';
+      }
+    }
+  })();
+
   // player pages: "Playing Watford (A) tomorrow at 19:45"
   function paintFixtures() {
     var rows = document.querySelectorAll('.fxrow.when');
@@ -1072,6 +1178,10 @@
       cell.innerHTML = '<b>' + opp + '</b>' +
         (ha ? ' <span class="ha">' + ha + '</span>' : '') +
         '<span class="wsub">' + when + '</span>';
+      // the data hasn't caught up yet: the game kicked off hours ago, so it
+      // belongs in Recent matches, not here — hide it rather than lie
+      var t = Date.parse(r.getAttribute('data-when'));
+      if (!isNaN(t) && Date.now() - t > 150 * 60 * 1000) r.style.display = 'none';
     }
   }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', paintFixtures);

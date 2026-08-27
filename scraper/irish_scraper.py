@@ -2064,9 +2064,12 @@ def parse_match_lineup(data, home, away):
                         out[side] = (f, ps)
     if not out:
         return {}
+    # An unknown flag must NOT be labelled confirmed: pre-match scrapes were
+    # getting stamped CONFIRMED and then shown as gospel. Only say confirmed
+    # when the page says so; otherwise admit it's just a lineup.
     status = ("confirmed" if confirmed_flag
               else "predicted" if (predicted_flag or confirmed_flag is False)
-              else "confirmed")
+              else "")
     return {side: (f, ps, status) for side, (f, ps) in out.items()}
 
 

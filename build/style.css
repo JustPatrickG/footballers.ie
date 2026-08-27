@@ -17,6 +17,15 @@ nav{display:flex;justify-content:space-between;align-items:center;padding:18px 0
 .navlinks a.on{color:var(--yellow);border-color:var(--yellow)}
 .navmeta{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.1em;color:var(--mute)}
 .navmeta b{color:var(--teal);font-weight:500}
+/* one button that flips the whole site between night and day */
+.modebtn{width:36px;height:36px;border:1px solid var(--line);border-radius:8px;
+  font-size:15px;line-height:1;color:var(--mute);flex:none;transition:color .12s,border-color .12s}
+.modebtn:hover{color:var(--white);border-color:var(--mute)}
+/* DOM puts the buttons next to the logo for the phone layout; on desktop the
+   flex order tucks the toggle in beside the meta text instead */
+.mark{order:1}.navlinks{order:2}.navmeta{order:3}.modebtn{order:4}.burger{order:5}
+/* the menu footer only exists inside the phone drawer */
+.navfoot{display:none}
 .sec{margin:36px 0 14px;display:flex;justify-content:space-between;align-items:baseline;gap:10px;flex-wrap:wrap}
 .sec h2{font-size:13px;font-family:'IBM Plex Mono',monospace;letter-spacing:.18em;text-transform:uppercase;color:var(--yellow)}
 .sec .more{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--mute);border-bottom:1px solid var(--line);padding-bottom:2px}
@@ -188,23 +197,31 @@ img,svg,iframe{max-width:100%}
   .wrap{padding:0 14px}
 
   /* nav becomes a drawer */
-  nav{padding:14px 0;flex-wrap:nowrap;gap:10px}
+  nav{padding:14px 0;flex-wrap:nowrap;gap:10px;position:relative}
   .mark{font-size:17px;flex:1}
   .burger{display:block}
   .navmeta{display:none}
   .navlinks{
-    display:none;position:absolute;left:0;right:0;top:100%;z-index:60;
-    flex-direction:column;gap:0;background:var(--panel);
-    border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+    display:none;position:absolute;left:0;right:0;top:calc(100% + 8px);z-index:60;
+    flex-direction:column;gap:2px;background:var(--panel);
+    border:1px solid var(--line);border-radius:14px;padding:8px;
+    box-shadow:0 24px 60px rgba(0,0,0,.45);
   }
-  nav{position:relative}
-  .navlinks.open{display:flex}
+  .navlinks.open{display:flex;animation:menuin .16s ease}
+  @keyframes menuin{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
   .navlinks a{
-    padding:15px 16px;border-bottom:1px solid var(--line);border-left:2px solid transparent;
-    font-size:12px;letter-spacing:.12em;
+    display:flex;justify-content:space-between;align-items:center;
+    padding:14px;border-radius:9px;border-bottom:0;
+    font-size:12px;letter-spacing:.14em;
   }
-  .navlinks a:last-child{border-bottom:0}
-  .navlinks a.on{border-left-color:var(--yellow);border-bottom-color:var(--line);background:var(--panel2)}
+  .navlinks a::after{content:'\2192';font-family:'IBM Plex Mono',monospace;color:var(--mute)}
+  .navlinks a:active{background:var(--panel2)}
+  .navlinks a.on{background:var(--panel2);color:var(--yellow);border:0}
+  .navlinks a.on::after{content:'\25CF';color:var(--yellow);font-size:8px}
+  .navfoot{display:block;margin-top:6px;padding:12px 14px 6px;border-top:1px solid var(--line);
+    font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.12em;
+    text-transform:uppercase;color:var(--mute)}
+  .navfoot b{color:var(--teal);font-weight:500}
 
   /* headings */
   .pagehead{padding:24px 0 4px}
@@ -559,6 +576,7 @@ img,svg,iframe{max-width:100%}
   /* the three biggest countries, and nothing else */
   .exgrid .exc{display:none}
   .exgrid .exc.top3{display:flex}
+  #exmore{display:none}
   .artfig{margin:20px 0}
   .artfig figcaption{font-size:12.5px}
   .artcontent blockquote{padding-left:14px;margin:20px 0}
@@ -819,14 +837,6 @@ a.intlblock.lnk:hover{border-color:var(--teal)}
 .fxwhen .wsub{display:block;font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--yellow);margin-top:3px;letter-spacing:.06em}
 #myplayers .plrow .cl{display:block;margin-top:3px;font-size:12px}
 
-/* mobile menu needs to sit on top of the page, not blend into it */
-@media(max-width:820px){
-  .navlinks{background:#10171A;border:1px solid var(--line);border-radius:12px;
-    box-shadow:0 22px 50px rgba(0,0,0,.6);padding:8px;backdrop-filter:blur(14px)}
-  .navlinks a{padding:13px 14px;border-radius:8px;font-size:15px}
-  .navlinks a:not(:last-child){border-bottom:1px solid #1B2122}
-  .navlinks a:active{background:var(--panel2)}
-}
 .nodata{border:1px solid var(--line);border-radius:10px;background:var(--panel);padding:16px 18px;
   color:var(--mute);font-size:14px;line-height:1.6}
 .nlok{color:var(--teal);font-family:'IBM Plex Mono',monospace;font-size:13px;padding:12px 0;letter-spacing:.04em}
@@ -1181,6 +1191,8 @@ a.intlblock.lnk:hover{border-color:var(--teal)}
 .exgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px}
 .exc{display:flex;justify-content:space-between;align-items:center;background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:11px 13px;font-size:14px;transition:border-color .12s}
 .exc:hover{border-color:var(--teal)}
+.exc.seeall{display:none}
+.exc.seeall b{color:var(--teal)}
 .exc span{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--mute)}
 /* about */
 .abox{border:1px solid var(--line);border-radius:12px;background:var(--panel);padding:18px 20px;margin-bottom:8px;font-size:15px;line-height:1.6}
@@ -1283,3 +1295,42 @@ a.intlblock.lnk:hover{border-color:var(--teal)}
 .msev{font-size:14px;display:flex;gap:10px;align-items:baseline}
 .msev b{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--mute);min-width:32px}
 .msfine{margin-top:14px;font-size:12px;color:var(--mute)}
+
+/* ============ LIGHT MODE ============
+   The site's home look is the dark one; this flips the palette when the
+   toggle in the nav has set data-mode="light" on <html>. */
+:root{color-scheme:dark}
+[data-mode="light"]{
+  color-scheme:light;
+  --bg:#F2F4F3; --panel:#FFFFFF; --panel2:#EAEEEC; --line:#D9DFDD;
+  --white:#151B19; --mute:#5E6965; --yellow:#8F6B00; --teal:#0E8A78; --red:#C63325;
+}
+/* buttons that paint the accent as a background want the bright yellow back */
+[data-mode="light"] .tab.on,[data-mode="light"] .starbtn.on,[data-mode="light"] .cnt,
+[data-mode="light"] .nlform button,[data-mode="light"] .fbg-form button,
+[data-mode="light"] .repform button,[data-mode="light"] .card.yel{
+  background:#F5C518;color:#0C0F10}
+[data-mode="light"] .tab.on,[data-mode="light"] .starbtn.on{border-color:#F5C518}
+/* hairlines that were hard-coded to the dark palette */
+[data-mode="light"] .plrow,[data-mode="light"] .mcplayers,[data-mode="light"] .biorow,
+[data-mode="light"] .fxmatch,[data-mode="light"] .bp,[data-mode="light"] .nrow,
+[data-mode="light"] .tl{border-color:var(--line)}
+/* article body text */
+[data-mode="light"] .artcontent p,[data-mode="light"] .artcontent li{color:#2A3330}
+[data-mode="light"] .artlead{color:#151B19}
+[data-mode="light"] .rate.none{color:#A9B2AF}
+[data-mode="light"] .rate.md{background:rgba(94,105,101,.14);color:#2A3330}
+[data-mode="light"] #themap,[data-mode="light"] .leaflet-container{background:#DDE3E1}
+/* softer shadows so panels don't look like they're floating at night */
+[data-mode="light"] .navlinks.open{box-shadow:0 18px 44px rgba(20,30,26,.18)}
+[data-mode="light"] .mssheetwrap{background:rgba(20,30,26,.35)}
+/* the pitch theme paints these dark by hand; day versions of each */
+[data-mode="light"] .slide{background:linear-gradient(165deg,#FFFFFF,#EEF2F0)}
+[data-mode="light"] .slide.now{border-color:rgba(198,51,37,.45);
+  background:linear-gradient(160deg,#FBEBE8,#FFFFFF)}
+[data-mode="light"] .rate.lo{background:#E4E8E6;color:#4A5450}
+[data-mode="light"] .navlinks a.on{color:#007A4A;border-color:#007A4A}
+[data-mode="light"] .mark i{color:#007A4A}
+[data-mode="light"] .sinput:focus{border-color:#007A4A}
+[data-mode="light"] .cexp.soon{background:rgba(0,143,86,.12);color:#0B6E45}
+[data-mode="light"] .mapcta{background:linear-gradient(135deg,rgba(245,197,24,.14),rgba(255,255,255,.6))}

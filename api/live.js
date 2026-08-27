@@ -11,6 +11,10 @@
 // -> { updated, matches: { "5988076": { hs, as, status, minute } } }
 //
 // status is "scheduled" | "live" | "ft". minute is "67" or "45+2", live only.
+//
+// GET /api/live?ids=5988076&full=1  additionally returns ev: a timeline of
+// goals and cards for each match, so match pages can paint events live. Only
+// match pages ask for it (one id), so the extra weight stays off the homepage.
 
 const UA =
   'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 ' +
@@ -52,6 +56,65 @@ function parseMatch(data) {
            status: st, minute };
 }
 
+function parseEvents(data) {
+  // Find the matchFacts events list: an array whose items look like
+  // {type, timeStr, isHome, player:{name}} - same shape the scraper reads.
+  let list = null;
+  (function hunt(obj) {
+    if (list || !obj || typeof obj !== 'object') return;
+    if (Array.isArray(obj)) { for (const it of obj) hunt(it); return; }
+    const ev = obj.events;
+    if (Array.isArray(ev) && ev.length &&
+        ev.some(e => e && typeof e === 'object' && 'timeStr' in e && 'type' in e)) {
+      list = ev; return;
+    }
+    for (const k in obj) hunt(obj[k]);
+  })(data);
+  if (!list) return [];
+
+  const out = [];
+  for (const e of list) {
+    if (!e || typeof e !== 'object') continue;
+    let type = null;
+    if (e.type === 'Goal') {
+      type = e.ownGoal ? 'own_goal'
+        : (/pen/i.test(String(e.goalDescriptionKey || e.goalDescription || '')) ? 'penalty' : 'goal');
+    } else if (e.type === 'Card') {
+      const c = String(e.card || '');
+      type = c === 'Red' ? 'red' : (c === 'YellowRed' ? 'second_yellow' : 'yellow');
+    } else if (e.type === 'MissedPenalty') {
+      type = 'missed_penalty';
+    }
+    if (!type) continue;
+    const name = (e.player && (e.player.name || e.player.profileUrl)) || e.nameStr || '';
+    out.push({
+      min: String(e.timeStr == null ? '' : e.timeStr),
+      type,
+      player: typeof name === 'string' ? name : '',
+      home: e.isHome ? 1 : 0,
+      assist: e.assistStr ? String(e.assistStr).replace(/^assist by /i, '') : ''
+    });
+  }
+  return out;
+}
+
+// While people are watching a live match, this function is getting hit every
+// ~30s anyway - so occasionally use one of those hits to poke the GitHub
+// matchday workflow, whose own cron is the unreliable part. Fire-and-forget,
+// probability-gated so fotmob traffic stays what it was.
+function kickWorkflow() {
+  const token = process.env.GITHUB_TOKEN, repo = process.env.GITHUB_REPO;
+  if (!token || !repo || Math.random() > 0.12) return Promise.resolve();
+  return fetch(
+    'https://api.github.com/repos/' + repo + '/actions/workflows/matchday.yml/dispatches',
+    { method: 'POST',
+      headers: { Authorization: 'Bearer ' + token,
+                 Accept: 'application/vnd.github+json',
+                 'User-Agent': 'footballers-ie-live' },
+      body: JSON.stringify({ ref: 'main' }) }
+  ).catch(() => {});
+}
+
 export default async function handler(req, res) {
   const raw = String(req.query.ids || '');
   const ids = [...new Set(raw.split(',').map(s => s.trim())
@@ -62,6 +125,7 @@ export default async function handler(req, res) {
     return res.status(400).json({ error: 'ids required' });
   }
 
+  const full = String(req.query.full || '') === '1';
   const out = {};
   await Promise.all(ids.map(async id => {
     try {
@@ -73,10 +137,19 @@ export default async function handler(req, res) {
           signal: ctrl.signal });
       clearTimeout(t);
       if (!r.ok) return;
-      const parsed = parseMatch(await r.json());
-      if (parsed) out[id] = parsed;
+      const data = await r.json();
+      const parsed = parseMatch(data);
+      if (parsed) {
+        if (full) parsed.ev = parseEvents(data);
+        out[id] = parsed;
+      }
     } catch (e) { /* one bad match never breaks the rest */ }
   }));
+
+  // a live (or just-finished) match means the site's CSVs want refreshing too
+  if (Object.values(out).some(m => m.status !== 'scheduled')) {
+    try { await kickWorkflow(); } catch (e) {}
+  }
 
   // the edge serves everyone from this for 25s; stale for 30 more while
   // the next one is fetched, so nobody ever waits on fotmob directly

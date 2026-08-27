@@ -655,7 +655,8 @@ def shell(title, desc, root, active, body, extra_head="", canonical="", body_att
 <title>{esc(title)}</title>
 <meta name="description" content="{esc(desc)}">
 <link rel="canonical" href="{can}">
-<meta name="theme-color" content="#0C0F10">
+<meta name="theme-color" content="#0C0F10" id="themecolor">
+<script>try{{if(localStorage.getItem('fb_mode')==='light'){{document.documentElement.setAttribute('data-mode','light');}}}}catch(e){{}}</script>
 <meta property="og:site_name" content="Footballers">
 <meta property="og:type" content="website">
 <meta property="og:title" content="{esc(title)}">
@@ -680,10 +681,11 @@ def shell(title, desc, root, active, body, extra_head="", canonical="", body_att
 {loader_js}<div class="wrap">
 <nav>
   <a class="mark" href="{root}index.html">footballers<i>.ie</i></a>
+  <button class="modebtn" id="modebtn" aria-label="Switch between dark and light mode">☾</button>
   <button class="burger" id="burger" aria-label="Menu" aria-expanded="false" aria-controls="navlinks">
     <span></span><span></span><span></span>
   </button>
-  <div class="navlinks" id="navlinks">{links}</div>
+  <div class="navlinks" id="navlinks">{links}<div class="navfoot">{esc(matchweek_label())} · <b>{len(PLAYERS)}</b> tracked</div></div>
   <div class="navmeta"><span id="navdate">{esc(matchweek_label())}</span> · <b>{len(PLAYERS)}</b> TRACKED</div>
 </nav>
 <script>
@@ -694,6 +696,23 @@ def shell(title, desc, root, active, body, extra_head="", canonical="", body_att
     b.setAttribute('aria-expanded',open?'true':'false');
     b.classList.toggle('x',open);
   }});
+  var mb=document.getElementById('modebtn');
+  function paintMode(){{
+    var light=document.documentElement.getAttribute('data-mode')==='light';
+    mb.textContent=light?'☀':'☾';
+    var tc=document.getElementById('themecolor');
+    if(tc) tc.setAttribute('content', light?'#F4F6F5':'#0C0F10');
+  }}
+  if(mb){{
+    paintMode();
+    mb.addEventListener('click',function(){{
+      var light=document.documentElement.getAttribute('data-mode')==='light';
+      if(light) document.documentElement.removeAttribute('data-mode');
+      else document.documentElement.setAttribute('data-mode','light');
+      try{{localStorage.setItem('fb_mode', light?'dark':'light');}}catch(e){{}}
+      paintMode();
+    }});
+  }}
 }})();
 </script>
 {body}
@@ -1130,9 +1149,15 @@ def build_index():
         roundup += (f'<div class="tiergroup"><h4><span>{esc(label)}</span><span>{tag}</span></h4>'
                     + "".join(player_row(p) for p in grp) + '</div>')
 
-    # milestones
-    ms = milestone_items()[:4]
-    msh = "".join(f'<a class="mscard" href="{plink(m["p"])}"><div class="mstag">{esc(m["tag"])}</div>'
+    # milestones: render a wide pool with who-they-are attributes; the client
+    # keeps the first four that are either followed or a name people know
+    def _fam(p):
+        return 1 if (p.get("intl_senior") or p.get("tier") == "abroad-top") else 0
+    # famous names first so they always make the pool; the rest ride along so
+    # a followed player's milestone can surface whoever they are
+    ms = sorted(milestone_items(), key=lambda m: -_fam(m["p"]))[:40]
+    msh = "".join(f'<a class="mscard" href="{plink(m["p"])}" data-slug="{m["p"]["slug"]}" data-fam="{_fam(m["p"])}" style="display:none">'
+                  f'<div class="mstag">{esc(m["tag"])}</div>'
                   f'<div class="msn">{esc(m["p"]["n"])}</div><div class="msd">{esc(m["text"])}</div></a>' for m in ms)
 
     mc = match_payload()
@@ -1236,7 +1261,8 @@ def build_index():
         _tiles.append(f'<a class="{cls}" href="country/{country_slug(c)}.html">'
                       f'<b>{esc(c)}</b><span>{len(by_c[c])}</span></a>')
     ex = "".join(_tiles)
-    explore = (f'<div class="sec"><h2>Where are the Irish?</h2><a class="more" href="clubs.html">Every country →</a></div>'
+    ex += '<a class="exc seeall top3" href="clubs.html"><b>See all</b><span>→</span></a>'
+    explore = (f'<div class="sec"><h2>Where are the Irish?</h2><a class="more" id="exmore" href="clubs.html">Every country →</a></div>'
                f'<div class="exgrid">{ex}</div>')
     moments = (f'<div class="sec"><h2>Milestones coming up</h2></div><div class="msgrid">{msh}</div>') if msh else ""
 
@@ -1267,7 +1293,7 @@ def build_index():
 
     {explore}
 
-    <div class="sec" style="margin-top:26px"><h2>Form guide</h2><span class="more" style="border:0">FotMob ratings averaged over this season · <a href="faq.html#what-does-a-rating-of-8-52-actually-mean">how it works</a></span></div>
+    <div class="sec" style="margin-top:26px"><h2>Form guide</h2><span class="more" style="border:0">FotMob ratings averaged over this season · <a href="faq.html">how it works</a></span></div>
     {block("Abroad", abroad, "abroad.html")}
     {block("League of Ireland", loi, "league-of-ireland.html")}
 
@@ -1727,11 +1753,11 @@ def date_key(d):
 
 FAQ = [
   ("Where does this data come from?",
-   "Fotmob, sofascore, transfermarket, \u2018allegedly\u2019."),
+   "Fotmob, sofascore, transfermarket."),
   ("Who calculates the ratings?",
-   "Same answer, Fotmob, sofascore, transfermarket, \u2018allegedly\u2019."),
+   "Same answer, Fotmob, sofascore, transfermarket."),
   ("What does a rating of 8.52 actually mean?",
-   "What do you think it means, stupid fucking questions."),
+   "to be honest i dont know like we're just taking fotmob's rating."),
   ("Can I compare ratings between leagues?",
    "Yep premier league and the israeli 10th division are completely comparable."),
   ("Which matches are included?",
@@ -2484,7 +2510,7 @@ def build_match(m, involved, squad_list=False):
         <div class="mteam right"><span>{esc(m.get("away",""))}</span>{club_badge(m.get("away",""),"md")}</div>
       </div>
     </div>
-    {events_block(m, involved)}
+    <div id="mtl">{events_block(m, involved)}</div>
     <script>window.FB_MATCHES=[{json.dumps(dict(id=match_id(m), kickoff=m.get("kickoff",""), comp=esc(m.get("competition","")), home=esc(m.get("home","")), away=esc(m.get("away","")), hs=hs, as_=as_, status=status, minute=m.get("minute",""), players=[], loi=0, fmid=fotmob_id(m)))}];
     window.FB_MSTATS={json.dumps(match_player_stats(m, involved))};</script>
     <div class="mactions"><button class="starbtn" data-favm="{match_id(m)}" aria-pressed="false">★ <span>Follow match</span></button>
