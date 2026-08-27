@@ -549,7 +549,8 @@ CSS = open(os.path.join(HERE, "style.css")).read()
 APPJS = open(os.path.join(HERE, "app.js")).read()
 
 NAV = [("News","news.html"),("Players","players.html"),
-       ("Clubs","clubs.html"),("Ireland","ireland.html"),("Fixtures","fixtures.html"),("Alerts","alerts.html")]
+       ("Clubs","clubs.html"),("Ireland","ireland.html"),("Fixtures","fixtures.html"),
+       ("Search","search.html"),("Alerts","alerts.html")]
 
 
 def matchweek_label():
@@ -2310,14 +2311,16 @@ def _pitch_player(pl, pmap, short_names, root="../"):
     short = short_names.get(pl["name"], pl["name"])
     inner = (f'{face}<span class="lun">{esc(short)}</span>')
     if p:
-        return f'<a class="lup ir" href="{root}player/{p["slug"]}.html" title="{esc(pl["name"])}">{inner}</a>'
+        return (f'<a class="lup ir" href="{root}player/{p["slug"]}.html" '
+                f'data-mstat="{p["slug"]}" title="{esc(pl["name"])}">{inner}</a>')
     return f'<span class="lup" title="{esc(pl["name"])}">{inner}</span>'
 
 def _bench_name(pl, pmap, root="../"):
     p = pmap.get(pl["slug"]) if pl["slug"] else None
     num = f'<span class="bn">{esc(pl["num"])}</span>' if pl["num"] else ""
     if p:
-        return f'<a class="bp ir" href="{root}player/{p["slug"]}.html">{num}{esc(pl["name"])}</a>'
+        return (f'<a class="bp ir" href="{root}player/{p["slug"]}.html" '
+                f'data-mstat="{p["slug"]}">{num}{esc(pl["name"])}</a>')
     return f'<span class="bp">{num}{esc(pl["name"])}</span>'
 
 def lineup_block(m, involved):
@@ -2407,11 +2410,48 @@ def squad_groups(players, heading, root="../"):
         out += (f'<div class="sqhead">{club_badge(c,"sm")}<b>{esc(c)}</b>'
                 f'<span>{len(by[c])}</span></div><div class="tiergroup">'
                 + "".join(
-                    f'<a class="plrow" href="{root}player/{p["slug"]}.html">{avatar(p,root,"sm")}'
+                    f'<a class="plrow" href="{root}player/{p["slug"]}.html" data-mstat="{p["slug"]}">{avatar(p,root,"sm")}'
                     f'<div class="nm">{esc(p["n"])}</div>'
                     f'<div class="ev">{p["pos"]}</div><div class="mn">{rating_chip(p, True)}</div>{star(p)}</a>'
                     for p in by[c])
                 + '</div>')
+    return out
+
+def match_player_stats(m, involved):
+    """What each tracked player did in THIS match, for the tap-a-player panel.
+       A played match gets the results.csv row (minutes, goals, assists,
+       rating) plus their timeline events; an unplayed one gets season context
+       so the panel still says something worth reading."""
+    mid = match_id(m)
+    date = (m.get("kickoff") or "")[:10]
+    home_k, away_k = _club_key(m.get("home")), _club_key(m.get("away"))
+    evs = EVENTS.get(mid, [])
+    out = {}
+    for p in involved:
+        row = None
+        for r in p["results"]:
+            if (r[0] or "")[:10] != date: continue
+            opp_k = _club_key(r[1])
+            if opp_k and (opp_k in (home_k, away_k)
+                          or home_k.find(opp_k) >= 0 or away_k.find(opp_k) >= 0):
+                row = r; break
+            if row is None: row = r          # same day, name variant — take it
+        my_evs = [dict(min=e.get("minute",""), type=e.get("type",""))
+                  for e in evs
+                  if e.get("type") and _name_key(e.get("player")) in
+                     {_name_key(p["n"]),
+                      _name_key((p.get("tm") or {}).get("full_name") or "")}]
+        d = dict(n=p["n"], club=p["club"], pos=p["pos"],
+                 ini=initials(p["n"]),
+                 img=(1 if (not p.get("photo") and p["slug"] in HAVE_IMG) else 0),
+                 photo=(p.get("photo") or ""),
+                 srating=(p.get("rating") or ""),
+                 sap=p["season"]["ap"], sg=p["season"]["g"], sa=p["season"]["a"],
+                 evs=my_evs)
+        if row:
+            d.update(mins=row[4], g=row[5], a=row[6],
+                     rating=(row[7] if len(row) > 7 else ""))
+        out[p["slug"]] = d
     return out
 
 def build_match(m, involved, squad_list=False):
@@ -2445,7 +2485,8 @@ def build_match(m, involved, squad_list=False):
       </div>
     </div>
     {events_block(m, involved)}
-    <script>window.FB_MATCHES=[{json.dumps(dict(id=match_id(m), kickoff=m.get("kickoff",""), comp=esc(m.get("competition","")), home=esc(m.get("home","")), away=esc(m.get("away","")), hs=hs, as_=as_, status=status, minute=m.get("minute",""), players=[], loi=0, fmid=fotmob_id(m)))}];</script>
+    <script>window.FB_MATCHES=[{json.dumps(dict(id=match_id(m), kickoff=m.get("kickoff",""), comp=esc(m.get("competition","")), home=esc(m.get("home","")), away=esc(m.get("away","")), hs=hs, as_=as_, status=status, minute=m.get("minute",""), players=[], loi=0, fmid=fotmob_id(m)))}];
+    window.FB_MSTATS={json.dumps(match_player_stats(m, involved))};</script>
     <div class="mactions"><button class="starbtn" data-favm="{match_id(m)}" aria-pressed="false">★ <span>Follow match</span></button>
       <span class="mhint">Email updates when the score changes</span></div>
     {lineups}
@@ -2804,6 +2845,125 @@ def build_alerts():
                  "", "alerts.html", body, canonical="alerts.html")
 
 # ================= 404 / SITEMAP / ROBOTS =================
+def build_search_index():
+    """Everything on the site, one row each, for the search page. Written as
+       its own file so only the search page pays for it."""
+    rows = []
+    for p in PLAYERS:
+        rows.append(dict(t="Player", n=p["n"], u=f"player/{p['slug']}.html",
+                         x=" · ".join(filter(None, [p["pos"] if p["pos"] not in ("","—") else "",
+                                                    p["club"] if p["club"] != "Unattached" else "Unattached"]))))
+    clubs = {}
+    for p in PLAYERS: clubs.setdefault(p["club"], []).append(p)
+    for c, ps in clubs.items():
+        if c == "Unattached": continue
+        rows.append(dict(t="Club", n=c, u=f"club/{club_slug(c)}.html",
+                         x=f"{len(ps)} Irish player{'s' if len(ps)!=1 else ''}"))
+    leagues, countries = {}, {}
+    for p in PLAYERS:
+        if p["league"] not in ("", "—"): leagues.setdefault(p["league"], 0)
+        countries.setdefault(country_of(p["league"]), 0)
+        leagues[p["league"]] = leagues.get(p["league"], 0) + 1
+        countries[country_of(p["league"])] += 1
+    for l, n in leagues.items():
+        rows.append(dict(t="League", n=l, u=f"league/{club_slug(l)}.html", x=f"{n} players"))
+    for c, n in countries.items():
+        if c == "Other": continue
+        rows.append(dict(t="Country", n=c, u=f"country/{country_slug(c)}.html", x=f"{n} players"))
+    for a in ARTICLES:
+        rows.append(dict(t="Article", n=a.get("headline",""), u=f"news/{art_slug(a)}.html",
+                         x=" · ".join(filter(None, [a.get("author",""), pretty_date(a.get("date",""))]))))
+    for w in authors():
+        rows.append(dict(t="Writer", n=w["name"], u=f"author/{w['slug']}.html",
+                         x=f"{len(w['arts'])} article{'s' if len(w['arts'])!=1 else ''}"))
+    seen_m = set()
+    for m in MATCHES:
+        mid = match_id(m)
+        if mid in seen_m or not m.get("kickoff"): continue
+        seen_m.add(mid)
+        rows.append(dict(t="Match", n=f"{m.get('home','')} v {m.get('away','')}",
+                         u=f"match/{mid}.html",
+                         x=" · ".join(filter(None, [pretty_date(m.get("kickoff","")[:10]),
+                                                    m.get("competition","")]))))
+    return rows
+
+SEARCH_JS = r"""
+(function(){
+  var box=document.getElementById('sq'), out=document.getElementById('sres');
+  var DATA=null, ORDER=['Player','Club','Article','Writer','League','Country','Match'];
+  var HINT='Players, clubs, matches, articles, leagues, countries, writers — anything on the site.';
+  function norm(t){
+    return String(t||'').normalize('NFKD').replace(/[\u0300-\u036f]/g,'')
+      .replace(/['\u2019]/g,'').toLowerCase();
+  }
+  function esc(t){ return String(t).replace(/&/g,'&amp;').replace(/</g,'&lt;'); }
+  function score(hay, q, words){
+    var h=norm(hay);
+    if(h===q) return 100;
+    if(h.indexOf(q)===0) return 80;
+    var s=0;
+    for(var i=0;i<words.length;i++){
+      var w=words[i]; if(!w) continue;
+      var at=h.indexOf(w);
+      if(at<0) return -1;
+      s += (at===0 || h.charAt(at-1)===' ') ? 30 : 12;
+    }
+    return s;
+  }
+  function run(){
+    var q=norm(box.value.trim());
+    if(q.length<2){ out.innerHTML='<div class="shint">'+HINT+'</div>'; return; }
+    var words=q.split(/\s+/);
+    var hits=[];
+    for(var i=0;i<DATA.length;i++){
+      var r=DATA[i];
+      var sc=score(r.n,q,words);
+      if(sc<0 && r.x){ sc=score(r.x,q,words); if(sc>0) sc-=10; }
+      if(sc>=0) hits.push([sc,r]);
+    }
+    hits.sort(function(a,b){
+      if(b[0]!==a[0]) return b[0]-a[0];
+      return ORDER.indexOf(a[1].t)-ORDER.indexOf(b[1].t);
+    });
+    var groups={}, order=[];
+    hits.slice(0,80).forEach(function(h){
+      if(!groups[h[1].t]){ groups[h[1].t]=[]; order.push(h[1].t); }
+      if(groups[h[1].t].length<8) groups[h[1].t].push(h[1]);
+    });
+    if(!order.length){ out.innerHTML='<div class="shint">Nothing matched “'+esc(box.value.trim())+'”. Player missing? Hit Report.</div>'; return; }
+    out.innerHTML=order.map(function(t){
+      var label={'Match':'Matches','Country':'Countries'}[t]||t+'s';
+      return '<div class="sgroup"><h3>'+(groups[t].length>1?label:t)+'</h3>'+
+        groups[t].map(function(r){
+          return '<a class="srow" href="'+r.u+'"><b>'+esc(r.n)+'</b>'+(r.x?'<span>'+esc(r.x)+'</span>':'')+'</a>';
+        }).join('')+'</div>';
+    }).join('');
+  }
+  var t;
+  box.addEventListener('input', function(){ clearTimeout(t); t=setTimeout(run,120); });
+  box.addEventListener('keydown', function(e){
+    if(e.key==='Enter'){ var f=out.querySelector('.srow'); if(f) location.href=f.getAttribute('href'); }
+  });
+  fetch('search.json').then(function(r){return r.json();}).then(function(d){
+    DATA=d;
+    var q=new URLSearchParams(location.search).get('q');
+    if(q){ box.value=q; }
+    run(); box.focus();
+  });
+})();
+"""
+
+def build_search():
+    body = f'''
+    <div class="pagehead"><h1>Search</h1></div>
+    <input id="sq" class="sinput" type="search" placeholder="A player, a club, a match, anything\u2026" autocomplete="off" autofocus>
+    <div id="sres"><div class="shint">Players, clubs, matches, articles, leagues, countries, writers \u2014 anything on the site.</div></div>
+    <script>{SEARCH_JS}</script>
+    '''
+    return shell("Search — footballers.ie",
+                 "Search every player, club, match and article on footballers.ie.",
+                 "", "search.html", body, canonical="search.html")
+
 def build_404():
     body = """
     <div class="pagehead" style="padding-top:60px">
@@ -2811,6 +2971,7 @@ def build_404():
       <p>The link may be out of date, or the player may not be tracked here. Try a search instead.</p>
     </div>
     <div class="filterbar" style="max-width:520px">
+      <a class="tab" href="/search.html">Search</a>
       <a class="tab" href="/players.html">All players</a>
       <a class="tab" href="/abroad.html">Abroad</a>
       <a class="tab" href="/league-of-ireland.html">League of Ireland</a>
@@ -2819,7 +2980,7 @@ def build_404():
     return shell("Page not found — footballers.ie", "That page doesn't exist on Footballers.", "/", "", body)
 
 def build_sitemap():
-    urls = ["", "news.html", "faq.html", "where-are-the-irish.html", "players.html", "abroad.html", "league-of-ireland.html", "clubs.html",
+    urls = ["", "news.html", "faq.html", "search.html", "where-are-the-irish.html", "players.html", "abroad.html", "league-of-ireland.html", "clubs.html",
             "ireland.html", "fixtures.html", "milestones.html", "compare.html", "newsletter.html", "alerts.html"]
     urls += [f"club/{club_slug(c)}.html" for c in sorted(set(p["club"] for p in PLAYERS))]
     urls += [f"player/{p['slug']}.html" for p in PLAYERS]
@@ -2848,6 +3009,8 @@ open(f"{OUT}/abroad.html","w").write(build_list("abroad.html","Abroad","Irish pl
 open(f"{OUT}/league-of-ireland.html","w").write(build_list("league-of-ireland.html","League of Ireland","Every Irish pro playing their football at home.",[p for p in PLAYERS if p["tier"]=="loi"]))
 open(f"{OUT}/clubs.html","w").write(build_clubs_index())
 open(f"{OUT}/faq.html","w").write(build_faq())
+open(f"{OUT}/search.html","w").write(build_search())
+json.dump(build_search_index(), open(f"{OUT}/search.json","w"), separators=(",",":"))
 open(f"{OUT}/about.html","w").write(build_about())
 open(f"{OUT}/where-are-the-irish.html","w").write(build_map())
 os.makedirs(f"{OUT}/country", exist_ok=True)

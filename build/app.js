@@ -1154,3 +1154,79 @@
   });
   paint();
 })();
+
+/* ---- tap a player on a match page -> their numbers for THIS match ------- */
+(function () {
+  var STATS = window.FB_MSTATS;
+  if (!STATS) return;
+
+  var EVN = { goal: '⚽ Goal', own_goal: '⚽ Own goal', penalty: '⚽ Penalty',
+              missed_penalty: '✕ Penalty missed', yellow: 'Yellow card',
+              red: 'Red card', second_yellow: 'Second yellow' };
+
+  function esc(t) { return String(t == null ? '' : t).replace(/&/g, '&amp;').replace(/</g, '&lt;'); }
+
+  var wrap = null;
+  function close() { if (wrap) { wrap.remove(); wrap = null; } }
+
+  function face(d) {
+    var src = d.photo ? d.photo : (d.img ? '../img/players/' + d._slug + '.png' : '');
+    return src
+      ? '<div class="pavatar sm"><img src="' + src + '" alt="" onerror="this.parentNode.innerHTML=\'<span>' + d.ini + '</span>\'"></div>'
+      : '<div class="pavatar sm"><span>' + d.ini + '</span></div>';
+  }
+
+  function open(slug) {
+    var d = STATS[slug];
+    if (!d) return;
+    d._slug = slug;
+    close();
+
+    var played = d.mins !== undefined && d.mins !== null && String(d.mins) !== '';
+    var rows;
+    if (played) {
+      rows = '<div class="msgrid2">'
+        + '<div><b>' + esc(d.mins) + "'" + '</b><span>played</span></div>'
+        + '<div><b>' + (d.g || 0) + '</b><span>goals</span></div>'
+        + '<div><b>' + (d.a || 0) + '</b><span>assists</span></div>'
+        + '<div><b>' + (d.rating ? esc(d.rating) : '—') + '</b><span>rating</span></div>'
+        + '</div>';
+    } else {
+      rows = '<div class="msnote">No minutes recorded for this match'
+        + (d.srating ? ' — season so far:' : '.') + '</div>'
+        + '<div class="msgrid2">'
+        + '<div><b>' + (d.sap || 0) + '</b><span>apps</span></div>'
+        + '<div><b>' + (d.sg || 0) + '</b><span>goals</span></div>'
+        + '<div><b>' + (d.sa || 0) + '</b><span>assists</span></div>'
+        + '<div><b>' + (d.srating ? esc(d.srating) : '—') + '</b><span>avg rating</span></div>'
+        + '</div>';
+    }
+
+    var evs = (d.evs || []).map(function (e) {
+      return '<div class="msev"><b>' + esc(e.min) + "'" + '</b>' + (EVN[e.type] || esc(e.type)) + '</div>';
+    }).join('');
+
+    wrap = document.createElement('div');
+    wrap.className = 'mssheetwrap';
+    wrap.innerHTML =
+      '<div class="mssheet" role="dialog" aria-label="' + esc(d.n) + ' in this match">'
+      + '<div class="mshead">' + face(d)
+      + '<div><a class="msname" href="../player/' + slug + '.html">' + esc(d.n) + ' →</a>'
+      + '<div class="msmeta">' + esc(d.club) + (d.pos && d.pos !== '—' ? ' · ' + esc(d.pos) : '') + '</div></div>'
+      + '<button class="msx" aria-label="Close">×</button></div>'
+      + rows
+      + (evs ? '<div class="msevs">' + evs + '</div>' : '')
+      + '<div class="msfine">Tap the name for the full profile.</div>'
+      + '</div>';
+    document.body.appendChild(wrap);
+    wrap.addEventListener('click', function (e) { if (e.target === wrap || e.target.closest('.msx')) close(); });
+  }
+
+  document.addEventListener('click', function (e) {
+    var el = e.target.closest && e.target.closest('[data-mstat]');
+    if (!el) return;
+    e.preventDefault();
+    open(el.getAttribute('data-mstat'));
+  });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') close(); });
+})();
