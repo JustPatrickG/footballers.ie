@@ -1,27 +1,51 @@
 match_id,minute,type,player,team,venue
-2026-08-20-gent-v-hibernian,,,,,Easter Road Stadium
-2026-08-20-heart-of-midlothian-v-rapid-wien,18,yellow,Oisin McEntee,Rapid Wien,Allianz Stadion
-2026-08-20-heart-of-midlothian-v-rapid-wien,35,goal,Ercan Kara,Heart of Midlothian,Allianz Stadion
-2026-08-20-heart-of-midlothian-v-rapid-wien,41,yellow,Tómas Magnússon,Rapid Wien,Allianz Stadion
-2026-08-20-heart-of-midlothian-v-rapid-wien,59,yellow,Cláudio Braga,Rapid Wien,Allianz Stadion
-2026-08-20-heart-of-midlothian-v-rapid-wien,74,yellow,Matthias Seidl,Heart of Midlothian,Allianz Stadion
-2026-08-20-heart-of-midlothian-v-rapid-wien,76,second_yellow,Tómas Magnússon,Rapid Wien,Allianz Stadion
-2026-08-20-heart-of-midlothian-v-rapid-wien,79,goal,Pierre Landry Kaboré,Rapid Wien,Allianz Stadion
-2026-08-20-heart-of-midlothian-v-rapid-wien,86,yellow,Pierre Landry Kaboré,Rapid Wien,Allianz Stadion
-2026-08-20-heart-of-midlothian-v-rapid-wien,90,yellow,Bendegúz Bolla,Heart of Midlothian,Allianz Stadion
-2026-08-20-heart-of-midlothian-v-rapid-wien,101,goal,Calvin Miller,Rapid Wien,Allianz Stadion
-2026-08-20-heart-of-midlothian-v-rapid-wien,115,yellow,Ange Ahoussou,Heart of Midlothian,Allianz Stadion
-2026-08-20-heart-of-midlothian-v-rapid-wien,119,goal,Nenad Cvetkovic,Heart of Midlothian,Allianz Stadion
-2026-08-20-heart-of-midlothian-v-rapid-wien,121,missed_penalty,Moulaye Haïdara,Heart of Midlothian,Allianz Stadion
-2026-08-20-heart-of-midlothian-v-rapid-wien,121,missed_penalty,Oisin McEntee,Rapid Wien,Allianz Stadion
-2026-08-20-heart-of-midlothian-v-rapid-wien,121,missed_penalty,Marco Tilio,Heart of Midlothian,Allianz Stadion
-2026-08-20-lincoln-red-imps-fc-v-larne,,,,,Inver Park
-2026-08-20-motherwell-v-freiburg,,,,,Europa-Park Stadion
-2026-08-20-shamrock-rovers-v-kups,,,,,Väre Areena
+2026-08-20-gent-v-hibernian,15,missed_penalty,Owen Elding,Hibernian,Planet Group Arena
+2026-08-20-gent-v-hibernian,60,yellow,Josh Campbell,Hibernian,Planet Group Arena
+2026-08-20-gent-v-hibernian,80,yellow,Jordan Obita,Hibernian,Planet Group Arena
+2026-08-20-gent-v-hibernian,81,yellow,Jamie McGrath,Hibernian,Planet Group Arena
+2026-08-20-gent-v-hibernian,83,yellow,Tiago Araújo,Gent,Planet Group Arena
+2026-08-20-gent-v-hibernian,89,yellow,Adam Mayor,Hibernian,Planet Group Arena
+2026-08-20-gent-v-hibernian,90,yellow,Martin Boyle,Hibernian,Planet Group Arena
+2026-08-20-heart-of-midlothian-v-rapid-wien,30,goal,Serge Raux Yao,Rapid Wien,Tynecastle Park
+2026-08-20-heart-of-midlothian-v-rapid-wien,51,yellow,Pierre Landry Kaboré,Heart of Midlothian,Tynecastle Park
+2026-08-20-heart-of-midlothian-v-rapid-wien,56,own_goal,Serge Raux Yao,Heart of Midlothian,Tynecastle Park
+2026-08-20-heart-of-midlothian-v-rapid-wien,62,goal,James Wilson,Heart of Midlothian,Tynecastle Park
+2026-08-20-heart-of-midlothian-v-rapid-wien,66,yellow,Petter Nosakhare Dahl,Rapid Wien,Tynecastle Park
+2026-08-20-heart-of-midlothian-v-rapid-wien,79,goal,Nikolaus Wurmbrand,Rapid Wien,Tynecastle Park
+2026-08-20-heart-of-midlothian-v-rapid-wien,87,yellow,Romeo Amané,Rapid Wien,Tynecastle Park
+2026-08-20-heart-of-midlothian-v-rapid-wien,90,yellow,Nicolas Bajlicz,Rapid Wien,Tynecastle Park
+2026-08-20-lincoln-red-imps-fc-v-larne,20,yellow,Manu Toledano,Lincoln Red Imps FC,Europa Point Stadium
+2026-08-20-lincoln-red-imps-fc-v-larne,27,red,Yussef Flalhi Idrissi,Lincoln Red Imps FC,Europa Point Stadium
+2026-08-20-lincoln-red-imps-fc-v-larne,27,yellow,Sean Graham,Larne,Europa Point Stadium
+2026-08-20-lincoln-red-imps-fc-v-larne,43,yellow,Matthew Lusty,Larne,Europa Point Stadium
+2026-08-20-lincoln-red-imps-fc-v-larne,57,yellow,Montel Gibson,Larne,Europa Point Stadium
+2026-08-20-lincoln-red-imps-fc-v-larne,72,yellow,Graeme Torrilla,Lincoln Red Imps FC,Europa Point Stadium
+2026-08-20-lincoln-red-imps-fc-v-larne,73,yellow,Jordan McEneff,Larne,Europa Point Stadium
+2026-08-20-lincoln-red-imps-fc-v-larne,85,goal,Paul O'Neill,Larne,Europa Point Stadium
+2026-08-20-lincoln-red-imps-fc-v-larne,90,goal,Kevin O'Hara,Larne,Europa Point Stadium
+2026-08-20-motherwell-v-freiburg,2,goal,Regan Charles-Cook,Motherwell,Fir Park
+2026-08-20-motherwell-v-freiburg,21,yellow,Joe Hodge,Motherwell,Fir Park
+2026-08-20-motherwell-v-freiburg,28,goal,Matthias Ginter,Freiburg,Fir Park
+2026-08-20-motherwell-v-freiburg,39,yellow,Lukas Fadinger,Motherwell,Fir Park
+2026-08-20-motherwell-v-freiburg,59,yellow,Jan-Niklas Beste,Freiburg,Fir Park
+2026-08-20-motherwell-v-freiburg,65,goal,Matthias Ginter,Freiburg,Fir Park
+2026-08-20-motherwell-v-freiburg,65,red,Martin Moormann,Motherwell,Fir Park
+2026-08-20-motherwell-v-freiburg,68,yellow,Alex Lowry,Motherwell,Fir Park
+2026-08-20-motherwell-v-freiburg,90,goal,Keisuke Goto,Freiburg,Fir Park
+2026-08-20-shamrock-rovers-v-kups,50,goal,Enda Stevens,Shamrock Rovers,Tallaght Stadium
+2026-08-20-shamrock-rovers-v-kups,69,yellow,Saikou Touray,KuPS,Tallaght Stadium
+2026-08-20-shamrock-rovers-v-kups,85,goal,Piotr Parzyszek,KuPS,Tallaght Stadium
+2026-08-20-shamrock-rovers-v-kups,90,yellow,Tommi Jyry,KuPS,Tallaght Stadium
 2026-08-20-sheffield-wednesday-v-bradford-city,47,goal,Aden Baldwin,Bradford City,Hillsborough
 2026-08-20-sheffield-wednesday-v-bradford-city,61,yellow,Billy Mitchell,Sheffield Wednesday,Hillsborough
 2026-08-20-sheffield-wednesday-v-bradford-city,77,yellow,Matthew Pennington,Bradford City,Hillsborough
-2026-08-20-trabzonspor-v-ferencvaros,,,,,Groupama Aréna
+2026-08-20-trabzonspor-v-ferencvaros,17,goal,Kristoffer Zachariassen,Ferencváros,Papara Park
+2026-08-20-trabzonspor-v-ferencvaros,29,yellow,Bamidele Yusuf,Ferencváros,Papara Park
+2026-08-20-trabzonspor-v-ferencvaros,43,yellow,Kristoffer Zachariassen,Ferencváros,Papara Park
+2026-08-20-trabzonspor-v-ferencvaros,50,yellow,Olivér Nagy,Ferencváros,Papara Park
+2026-08-20-trabzonspor-v-ferencvaros,90,red,Chibuike Nwaiwu,Trabzonspor,Papara Park
+2026-08-20-trabzonspor-v-ferencvaros,90,yellow,Attila Osváth,Ferencváros,Papara Park
+2026-08-20-trabzonspor-v-ferencvaros,90,yellow,Gabi Kanichowsky,Ferencváros,Papara Park
 2026-08-21-afc-bournemouth-academy-v-chelsea-u21,38,goal,Reggie Watson,Chelsea U21,The Wyatt Homes Stadium
 2026-08-21-afc-bournemouth-academy-v-chelsea-u21,42,yellow,Ameer Ali,AFC Bournemouth Academy,The Wyatt Homes Stadium
 2026-08-21-afc-bournemouth-academy-v-chelsea-u21,45,goal,Jonny Day,AFC Bournemouth Academy,The Wyatt Homes Stadium

@@ -85,6 +85,65 @@ def get_json(url, debug_name=None):
     return data
 
 
+MATCH_API = "https://www.fotmob.com/api/data/matchDetails?matchId={mid}"
+MATCH_BY_ID = "https://www.fotmob.com/match/{mid}"
+
+
+def leg_id(url):
+    """The match id fotmob puts in the url fragment, if there is one."""
+    frag = (url or "").rsplit("#", 1)
+    return frag[1] if len(frag) == 2 and frag[1].isdigit() else ""
+
+
+def match_page(url, debug_name=None):
+    """__NEXT_DATA__ for one specific match.
+
+    Every match_index url carries the id in its fragment:
+        /matches/kups-vs-shamrock-rovers/a3ngj#5988052
+    The path on its own identifies the *tie*, not the leg. For an ordinary
+    fixture that's the same thing, but on a two-legged European tie fotmob
+    serves whichever leg is current - so a first leg comes back either with no
+    events at all (the return leg hasn't kicked off) or carrying the return
+    leg's goals. Both were happening.
+
+    So: fetch the page, check the id we actually got, and re-ask by id if it's
+    the wrong leg. /api/data/matchDetails answers per match rather than per tie
+    (and is ~40KB against ~630KB for the page); /match/<id> is the same thing
+    as a page, kept as a second string. Returns None rather than the wrong
+    match - a timeline carrying the other leg's goals is worse than none."""
+    want = leg_id(url)
+    data = get_next_data("https://www.fotmob.com" + url.split("#")[0],
+                         debug_name)
+    if not want or page_match_id(data) in ("", want):
+        return data
+    got = page_match_id(data)
+
+    try:
+        api = get_json(MATCH_API.format(mid=want), debug_name)
+        if isinstance(api, dict) and (api.get("general") or api.get("content")):
+            return {"props": {"pageProps": api}}
+    except Exception as e:
+        print(f"    api by id failed for {want}: {e}")
+
+    try:
+        page = get_next_data(MATCH_BY_ID.format(mid=want), debug_name)
+        if page_match_id(page) == want:
+            return page
+    except Exception as e:
+        print(f"    /match/{want} failed: {e}")
+
+    print(f"    wrong leg: page gave {got}, wanted {want} - skipping")
+    return None
+
+
+def page_match_id(data):
+    """The match a __NEXT_DATA__ blob is actually about."""
+    if not isinstance(data, dict):
+        return ""
+    gen = (data.get("props", {}).get("pageProps", {}) or {}).get("general") or {}
+    return str(gen.get("matchId") or "")
+
+
 def get_next_data(url, debug_name=None):
     """Fetch a fotmob page and return the embedded __NEXT_DATA__ JSON."""
     r = SESSION.get(url, timeout=25)
@@ -1863,9 +1922,12 @@ def events_cmd(args):
     done = 0
     for i, (mid, m) in enumerate(todo):
         try:
-            data = get_next_data(
-                "https://www.fotmob.com" + m["url"].split("#")[0],
-                debug_name=f"match_{mid}" if args.debug else None)
+            data = match_page(
+                m["url"], debug_name=f"match_{mid}" if args.debug else None)
+            if data is None:
+                print(f"  [{i+1}/{len(todo)}] {mid}: skipped, wrong leg")
+                time.sleep(SLEEP)
+                continue
             evs, venue = parse_match_events(data, m["home"], m["away"])
             sides = parse_match_lineup(data, m["home"], m["away"])
         except Exception as e:
@@ -2063,9 +2125,12 @@ def lineups_cmd(args):
         seen_matches += 1
         mid = match_id_for(ko, m["home"], m["away"])
         try:
-            data = get_next_data(
-                "https://www.fotmob.com" + m["url"].split("#")[0],
-                debug_name=f"lineup_{mid}" if args.debug else None)
+            data = match_page(
+                m["url"], debug_name=f"lineup_{mid}" if args.debug else None)
+            if data is None:
+                print(f"  {mid}: skipped, wrong leg")
+                time.sleep(SLEEP)
+                continue
             sides = parse_match_lineup(data, m["home"], m["away"])
         except Exception as e:
             print(f"  {mid}: failed ({e})")
@@ -2182,9 +2247,8 @@ def live(args):
         st, minute = "scheduled", ""
         if m.get("url"):
             try:
-                page = get_next_data(
-                    "https://www.fotmob.com" + m["url"].split("#")[0])
-                parsed = parse_match_page(page)
+                page = match_page(m["url"])
+                parsed = parse_match_page(page) if page else None
                 if parsed:
                     hs, as_, st, minute = parsed
             except Exception as e:
