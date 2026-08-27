@@ -853,23 +853,23 @@
   ]
  },
  {
-  "fotmob_id": "5109903",
-  "url": "/matches/las-vegas-lights-fc-vs-lexington-sc/z4f1d3c6#5109903",
-  "kickoff": "2026-08-22T23:00:00Z",
-  "comp": "USL Championship",
-  "home": "Lexington SC",
-  "away": "Las Vegas Lights FC",
-  "slugs": [
-   "aaron-molloy"
-  ]
- },
- {
   "fotmob_id": "5109910",
   "url": "/matches/new-mexico-united-vs-lexington-sc/11sdh3ps0#5109910",
   "kickoff": "2026-08-27T01:30:00Z",
   "comp": "USL Championship",
   "home": "New Mexico United",
   "away": "Lexington SC",
+  "slugs": [
+   "aaron-molloy"
+  ]
+ },
+ {
+  "fotmob_id": "5109903",
+  "url": "/matches/las-vegas-lights-fc-vs-lexington-sc/z4f1d3c6#5109903",
+  "kickoff": "2026-08-22T23:00:00Z",
+  "comp": "USL Championship",
+  "home": "Lexington SC",
+  "away": "Las Vegas Lights FC",
   "slugs": [
    "aaron-molloy"
   ]
@@ -2352,34 +2352,12 @@
   ]
  },
  {
-  "fotmob_id": "5071277",
-  "url": "/matches/columbus-crew-vs-cf-montreal/6f5qx6v#5071277",
-  "kickoff": "2026-08-19T23:30:00Z",
-  "comp": "Major League Soccer",
-  "home": "Columbus Crew",
-  "away": "CF Montr\u00e9al",
-  "slugs": [
-   "brooks-lennon"
-  ]
- },
- {
-  "fotmob_id": "6028327",
-  "url": "/matches/columbus-crew-vs-cf-america/1b3gip#6028327",
-  "kickoff": "2026-08-27T02:45:00Z",
-  "comp": "Leagues Cup",
-  "home": "CF Am\u00e9rica",
-  "away": "Columbus Crew",
-  "slugs": [
-   "brooks-lennon"
-  ]
- },
- {
   "fotmob_id": "5071307",
   "url": "/matches/columbus-crew-vs-new-england-revolution/1b4jcj#5071307",
   "kickoff": "2026-08-29T23:30:00Z",
   "comp": "Major League Soccer",
-  "home": "Columbus",
-  "away": "New England",
+  "home": "Columbus Crew",
+  "away": "New England Revolution",
   "slugs": [
    "brooks-lennon"
   ]
@@ -2391,6 +2369,17 @@
   "comp": "Major League Soccer",
   "home": "Columbus",
   "away": "Colorado",
+  "slugs": [
+   "brooks-lennon"
+  ]
+ },
+ {
+  "fotmob_id": "5071337",
+  "url": "/matches/columbus-crew-vs-dc-united/1bah4k#5071337",
+  "kickoff": "2026-09-09T23:30:00Z",
+  "comp": "Major League Soccer",
+  "home": "DC United",
+  "away": "Columbus",
   "slugs": [
    "brooks-lennon"
   ]
@@ -5450,17 +5439,6 @@
   ]
  },
  {
-  "fotmob_id": "5071282",
-  "url": "/matches/toronto-fc-vs-charlotte-fc/c5omoi5e#5071282",
-  "kickoff": "2026-08-19T23:30:00Z",
-  "comp": "Major League Soccer",
-  "home": "Toronto FC",
-  "away": "Charlotte FC",
-  "slugs": [
-   "joe-byrne"
-  ]
- },
- {
   "fotmob_id": "5071306",
   "url": "/matches/atlanta-united-vs-charlotte-fc/s2xqd9kd#5071306",
   "kickoff": "2026-08-29T23:30:00Z",
@@ -5478,6 +5456,17 @@
   "comp": "Major League Soccer",
   "home": "Charlotte FC",
   "away": "Houston",
+  "slugs": [
+   "joe-byrne"
+  ]
+ },
+ {
+  "fotmob_id": "5071338",
+  "url": "/matches/cf-montreal-vs-charlotte-fc/e2miwxvn#5071338",
+  "kickoff": "2026-09-09T23:30:00Z",
+  "comp": "Major League Soccer",
+  "home": "Montreal",
+  "away": "Charlotte FC",
   "slugs": [
    "joe-byrne"
   ]
@@ -5610,17 +5599,6 @@
   ]
  },
  {
-  "fotmob_id": "5071297",
-  "url": "/matches/philadelphia-union-vs-austin-fc/cp1tpmjv#5071297",
-  "kickoff": "2026-08-23T01:00:00Z",
-  "comp": "Major League Soccer",
-  "home": "Austin FC",
-  "away": "Philadelphia Union",
-  "slugs": [
-   "jon-gallagher"
-  ]
- },
- {
   "fotmob_id": "6028325",
   "url": "/matches/toluca-vs-austin-fc/9kz0pv1m#6028325",
   "kickoff": "2026-08-27T00:30:00Z",
@@ -5632,11 +5610,22 @@
   ]
  },
  {
+  "fotmob_id": "5071297",
+  "url": "/matches/philadelphia-union-vs-austin-fc/cp1tpmjv#5071297",
+  "kickoff": "2026-08-23T01:00:00Z",
+  "comp": "Major League Soccer",
+  "home": "Austin FC",
+  "away": "Philadelphia Union",
+  "slugs": [
+   "jon-gallagher"
+  ]
+ },
+ {
   "fotmob_id": "5071318",
   "url": "/matches/portland-timbers-vs-austin-fc/evaku77m#5071318",
   "kickoff": "2026-08-30T02:30:00Z",
   "comp": "Major League Soccer",
-  "home": "Portland",
+  "home": "Portland Timbers",
   "away": "Austin FC",
   "slugs": [
    "jon-gallagher"
@@ -5649,6 +5638,17 @@
   "comp": "Major League Soccer",
   "home": "Austin FC",
   "away": "San Jose",
+  "slugs": [
+   "jon-gallagher"
+  ]
+ },
+ {
+  "fotmob_id": "5071342",
+  "url": "/matches/colorado-rapids-vs-austin-fc/9lxf18pm#5071342",
+  "kickoff": "2026-09-10T00:30:00Z",
+  "comp": "Major League Soccer",
+  "home": "Austin FC",
+  "away": "Colorado",
   "slugs": [
    "jon-gallagher"
   ]
@@ -5946,17 +5946,6 @@
   "kickoff": "2026-08-23T20:30:00Z",
   "comp": "Major League Soccer",
   "home": "New England Revolution",
-  "away": "New York City FC",
-  "slugs": [
-   "kevin-otoole"
-  ]
- },
- {
-  "fotmob_id": "5071276",
-  "url": "/matches/new-york-city-fc-vs-fc-cincinnati/a9lt2a5p#5071276",
-  "kickoff": "2026-08-19T23:30:00Z",
-  "comp": "Major League Soccer",
-  "home": "FC Cincinnati",
   "away": "New York City FC",
   "slugs": [
    "kevin-otoole"
@@ -7106,17 +7095,6 @@
   "kickoff": "2026-08-22T18:00:00Z",
   "comp": "Premier League",
   "home": "HFX Wanderers FC",
-  "away": "Vancouver FC",
-  "slugs": [
-   "tom-field"
-  ]
- },
- {
-  "fotmob_id": "1000008690",
-  "url": "/matches/atletico-ottawa-vs-vancouver-fc/167gsxncj#1000008690",
-  "kickoff": "2026-08-19T23:00:00Z",
-  "comp": "Premier League",
-  "home": "Atl\u00e9tico Ottawa",
   "away": "Vancouver FC",
   "slugs": [
    "tom-field"
