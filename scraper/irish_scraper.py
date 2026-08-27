@@ -1938,6 +1938,203 @@ def events_cmd(args):
               "from scraper/debug/ if you want these")
 
 
+# ---------------------------------------------------------------- lineups
+
+LINEUP_CSV_COLUMNS = ["match_id", "side", "team", "formation", "status",
+                      "updated", "role", "number", "name", "slug", "pos",
+                      "x", "y"]
+LAST_XI_FILE = SCRAPER_DIR / "last_xi.json"
+
+
+def _player_entry(p, role):
+    if not isinstance(p, dict):
+        return None
+    name = p.get("name") or p.get("nameStr") or p.get("fullName")
+    if isinstance(name, dict):
+        name = (name.get("fullName") or
+                " ".join(x for x in (name.get("firstName"),
+                                     name.get("lastName")) if x))
+    if not name:
+        return None
+    if looks_like_staff(p.get("role"), p.get("title"),
+                        p.get("positionStringShort")):
+        return None
+    pos = (p.get("positionStringShort") or p.get("position")
+           or p.get("role") or "")
+    if isinstance(pos, dict):
+        pos = pos.get("key") or pos.get("label") or ""
+    x = y = ""
+    for key in ("horizontalLayout", "verticalLayout", "pitchPosition",
+                "position"):
+        v = p.get(key)
+        if isinstance(v, dict) and ("x" in v or "y" in v):
+            x, y = v.get("x", ""), v.get("y", "")
+            break
+    if x == "" and isinstance(p.get("x"), (int, float)):
+        x, y = p.get("x", ""), p.get("y", "")
+    return {
+        "name": str(name).strip(),
+        "id": str(p.get("id") or p.get("playerId") or ""),
+        "number": str(p.get("shirt") or p.get("shirtNumber") or ""),
+        "pos": str(pos), "x": str(x), "y": str(y), "role": role,
+    }
+
+
+def _side_block(block):
+    """(formation, [players]) for one side, starters in formation order."""
+    if not isinstance(block, dict):
+        return "", []
+    formation = str(block.get("formation") or block.get("lineupFormation")
+                    or "")
+    players = []
+    for key in ("starters", "startingLineup", "players", "lineup"):
+        val = block.get(key)
+        if not isinstance(val, list):
+            continue
+        for item in val:
+            if isinstance(item, list):        # rows: keeper first
+                for p in item:
+                    e = _player_entry(p, "start")
+                    if e:
+                        players.append(e)
+            else:
+                e = _player_entry(item, "start")
+                if e:
+                    players.append(e)
+        if players:
+            break
+    for key in ("bench", "subs", "substitutes"):
+        val = block.get(key)
+        if isinstance(val, list):
+            for p in val:
+                e = _player_entry(p, "bench")
+                if e:
+                    players.append(e)
+    return formation, players
+
+
+def parse_match_lineup(data, home, away):
+    """{'home': (formation, players, confirmed), 'away': (...)} or {}."""
+    out = {}
+    confirmed_flag = None
+    for key in ("isLineupConfirmed", "lineupConfirmed", "confirmed"):
+        v = first(find_all(data, key))
+        if isinstance(v, bool):
+            confirmed_flag = v
+            break
+    predicted_flag = bool(first(find_all(data, "isPredictedLineup")) or
+                          first(find_all(data, "predictedLineup")))
+
+    for lu in find_all(data, "lineup"):
+        blocks = lu if isinstance(lu, list) else [lu]
+        for b in blocks:
+            if not isinstance(b, dict):
+                continue
+            for side_key, side in (("homeTeam", "home"), ("home", "home"),
+                                   ("awayTeam", "away"), ("away", "away")):
+                blk = b.get(side_key)
+                if isinstance(blk, dict):
+                    f, ps = _side_block(blk)
+                    if ps and side not in out:
+                        out[side] = (f, ps)
+            name = b.get("teamName") or b.get("name")
+            if name:
+                f, ps = _side_block(b)
+                if ps:
+                    side = ("home" if norm(str(name)) == norm(home)
+                            else "away" if norm(str(name)) == norm(away)
+                            else None)
+                    if side and side not in out:
+                        out[side] = (f, ps)
+    if not out:
+        return {}
+    status = ("confirmed" if confirmed_flag
+              else "predicted" if (predicted_flag or confirmed_flag is False)
+              else "confirmed")
+    return {side: (f, ps, status) for side, (f, ps) in out.items()}
+
+
+def load_last_xi():
+    if LAST_XI_FILE.exists():
+        return json.loads(LAST_XI_FILE.read_text())
+    return {}
+
+
+def lineups_cmd(args):
+    idx_path = SCRAPER_DIR / "match_index.json"
+    if not idx_path.exists():
+        sys.exit("no match_index.json - run `scrape` first.")
+    index = json.loads(idx_path.read_text())
+    now = dt.datetime.now(dt.timezone.utc)
+    start = now - dt.timedelta(hours=args.past_hours)
+    end = now + dt.timedelta(hours=args.ahead_hours)
+
+    # slug lookup: by source player id first, then by name
+    by_id, by_name = {}, {}
+    for p in read_player_list():
+        by_name[norm(p["name"])] = p["slug"]
+    for slug, e in read_id_cache().items():
+        if e.get("fotmob_id"):
+            by_id[str(e["fotmob_id"])] = slug
+
+    last_xi = load_last_xi()
+    rows, seen_matches = [], 0
+    stamp = iso_z(now)
+
+    for m in sorted(index, key=lambda x: x["kickoff"]):
+        ko = parse_iso(m["kickoff"])
+        if not ko or not (start <= ko <= end) or not m.get("url"):
+            continue
+        seen_matches += 1
+        mid = match_id_for(ko, m["home"], m["away"])
+        try:
+            data = get_next_data(
+                "https://www.fotmob.com" + m["url"].split("#")[0],
+                debug_name=f"lineup_{mid}" if args.debug else None)
+            sides = parse_match_lineup(data, m["home"], m["away"])
+        except Exception as e:
+            print(f"  {mid}: failed ({e})")
+            time.sleep(SLEEP)
+            continue
+
+        for side, team_name, team_id in (("home", m["home"],
+                                          m.get("home_id", "")),
+                                         ("away", m["away"],
+                                          m.get("away_id", ""))):
+            key = team_id or norm(team_name)
+            got = sides.get(side)
+            if got:
+                formation, players, status = got
+                if status == "confirmed":
+                    last_xi[key] = {"formation": formation,
+                                    "players": players, "when": stamp}
+            elif key in last_xi:            # fall back to their last XI
+                prev = last_xi[key]
+                formation = prev.get("formation", "")
+                players, status = prev["players"], "last"
+            else:
+                continue
+            for p in players:
+                slug = by_id.get(p["id"]) or by_name.get(norm(p["name"]), "")
+                rows.append([mid, side, team_name, formation, status, stamp,
+                             p["role"], p["number"], p["name"], slug,
+                             p["pos"], p["x"], p["y"]])
+            print(f"  {mid} {side}: {status} {formation or '(no formation)'}"
+                  f" - {sum(1 for p in players if p['role'] == 'start')}"
+                  f" starters, {sum(1 for p in players if p['role'] == 'bench')}"
+                  f" bench")
+        time.sleep(SLEEP)
+
+    LAST_XI_FILE.write_text(json.dumps(last_xi))
+    write_csv(Path(args.out) / "data/api/lineups.csv",
+              LINEUP_CSV_COLUMNS, rows)
+    print(f"{seen_matches} matches in the window "
+          f"(-{args.past_hours}h to +{args.ahead_hours}h)")
+    if seen_matches and not rows:
+        print("no lineups found at all - rerun with --debug and send a "
+              "file from scraper/debug/ so the parser can be fixed")
+
+
 # ---------------------------------------------------------------- live
 
 LIVE_WINDOW_H = 3
@@ -2143,6 +2340,16 @@ def main():
     ev.add_argument("--rebuild", action="store_true")
     ev.add_argument("--debug", action="store_true")
 
+    ln = sub.add_parser("lineups",
+                        help="write data/api/lineups.csv for upcoming "
+                             "and in-progress matches")
+    ln.add_argument("--out", default=".")
+    ln.add_argument("--ahead-hours", type=float, default=36,
+                    help="how far ahead to look (default 36)")
+    ln.add_argument("--past-hours", type=float, default=6,
+                    help="how far back to look (default 6)")
+    ln.add_argument("--debug", action="store_true")
+
     lv = sub.add_parser("live", help="write live.json for matches "
                                      "within +-3h")
     lv.add_argument("--out", default=".")
@@ -2176,6 +2383,8 @@ def main():
         discover_ireland(args)
     elif args.cmd == "events":
         events_cmd(args)
+    elif args.cmd == "lineups":
+        lineups_cmd(args)
     elif args.cmd == "clubs":
         clubs_file(args)
     elif args.cmd == "ireland":

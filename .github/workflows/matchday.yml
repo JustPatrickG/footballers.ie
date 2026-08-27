@@ -22,15 +22,17 @@ jobs:
       - run: pip install requests
       - name: scrape players with a match in the last/next 36h
         run: python3 scraper/irish_scraper.py scrape --active
+      - name: predicted / confirmed lineups
+        run: python3 scraper/irish_scraper.py lineups
       - name: commit if changed
         run: |
           git config user.name "scraper-bot"
           git config user.email "actions@github.com"
-          git add data img scraper/fotmob_ids.csv
+          git add data img scraper/fotmob_ids.csv scraper/last_xi.json
           if git diff --cached --quiet; then
             echo "no change"
           else
             git commit -m "matchday refresh"
-            git pull --rebase --autostash -X theirs || (git rebase --abort; git reset --hard origin/main; echo "lost the race, next run will catch up")
+            git pull --rebase --autostash
             git push
           fi
