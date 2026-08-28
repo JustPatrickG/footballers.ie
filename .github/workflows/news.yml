@@ -22,9 +22,11 @@ permissions:
   contents: write
 
 concurrency:
-  group: data-write          # shares the lane with the hourly data refresh
+  # Its own lane. Sharing "data-write" with the hourly refresh meant a queued
+  # refresh would cancel a waiting news run — which is what happened on run #1.
+  # Racing with the refresh is handled by the pull --rebase in the commit step.
+  group: news-write
   cancel-in-progress: false
-
 jobs:
   publish:
     runs-on: ubuntu-latest
