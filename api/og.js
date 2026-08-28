@@ -158,16 +158,22 @@ module.exports = async function handler(req, res) {
     await ready();
 
     const svg = await satori(buildCard(kind, data), { width: 1200, height: 630, fonts: FONTS });
-    const png = new Resvg(svg, { fitTo: { mode: 'width', value: 1200 } }).render().asPng();
+    // asPng() hands back a Uint8Array; res.send() would JSON-encode that into
+    // {"0":137,"1":80,...} and every scraper would see a broken image. Buffer
+    // it and write the bytes out directly.
+    const png = Buffer.from(new Resvg(svg, { fitTo: { mode: 'width', value: 1200 } })
+      .render().asPng());
 
     // a live match is worth re-drawing every minute; nothing else changes
     // without the page changing the URL it asks for
     const live = one(q, 't') === 'match' && one(q, 'fm', 12);
     res.setHeader('Content-Type', 'image/png');
+    res.setHeader('Content-Length', String(png.length));
     res.setHeader('Cache-Control', live
       ? 'public, s-maxage=60, stale-while-revalidate=120'
       : 'public, s-maxage=86400, stale-while-revalidate=604800');
-    return res.status(200).send(png);
+    res.statusCode = 200;
+    return res.end(png);
   } catch (e) {
     // never hand back a broken image: fall back to the one static card, but
     // say why in the logs so a silent fallback is never a mystery
