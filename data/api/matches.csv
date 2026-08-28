@@ -131,7 +131,7 @@ kickoff,competition,home,away,home_id,away_id,home_score,away_score,status,minut
 2026-08-27T18:45:00Z,National League,Boreham Wood,Boston United,2488,8646,2,1,ft,,gavan-holohan;niall-canavan
 2026-08-27T19:00:00Z,Conference League Qualification,Hibernian,Gent,10251,9991,2,3,ft,,jamie-mcgrath;warren-ohora
 2026-08-27T19:00:00Z,Conference League Qualification,Larne,Lincoln Red Imps FC,2206,545012,0,3,ft,,jordan-mceneff;josh-ukek;ronan-doherty
-2026-08-28T16:30:00Z,2. Liga,Voitsberg,FC Liefering,4015,1915,,,scheduled,,josh-odwyer
+2026-08-28T16:30:00Z,2. Liga,Voitsberg,FC Liefering,4015,1915,,,live,,josh-odwyer
 2026-08-28T18:00:00Z,Premier League 2,Norwich City U21,Stoke City U21,773658,773650,,,scheduled,,gabriel-kelly;pijus-otegbayo;vinnie-leonard
 2026-08-28T18:00:00Z,Premier League 2,Nottingham Forest U21,Manchester City U21,1389162,860800,,,scheduled,,grady-mcdonnell
 2026-08-28T18:00:00Z,Premier League 2,Burnley U21,Reading U21,1796112,773686,,,scheduled,,kian-mcmahon-brown
@@ -333,6 +333,7 @@ kickoff,competition,home,away,home_id,away_id,home_score,away_score,status,minut
 2026-09-01T18:45:00Z,Championship,Lincoln,Blackburn,8430,8655,,,scheduled,,issa-kargbo;james-collins;josh-honohan;mason-melia;sean-mcloughlin
 2026-09-01T18:45:00Z,League One,Leicester,Plymouth,8197,8401,,,scheduled,,james-storer;ronan-curtis
 2026-09-01T18:45:00Z,League Two,Cheltenham,York City,8680,9916,,,scheduled,,jordan-shipley;pierce-sweeney
+2026-09-01T18:45:00Z,League One,Huddersfield,Oxford Utd,9796,8653,,,scheduled,,marcus-harness;sean-roughan
 2026-09-01T19:00:00Z,Championship,Stoke,Norwich,10194,9850,,,scheduled,,bosun-lawal
 2026-09-01T19:00:00Z,Championship,Birmingham,Southampton,8658,8466,,,scheduled,,finn-azaz;gavin-bazunu;romeo-akachukwu;ryan-manning
 2026-09-02T13:00:00Z,Cup Grp. A,Botoșani,Corvinul Hunedoara,188191,1515102,,,scheduled,,roland-idowu
