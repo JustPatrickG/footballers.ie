@@ -47,9 +47,14 @@ jobs:
 
       - name: run the pipeline
         env:
-          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          NEWS_LLM_KEY: ${{ secrets.NEWS_LLM_KEY }}
           NEWS_SALT: ${{ secrets.NEWS_SALT }}
-          NEWS_BYLINE: ${{ vars.NEWS_BYLINE }}   # optional - defaults to the journalist byline
+          # All optional. Unset means Groq, which is free and needs no card.
+          # To move provider, set these three — no code change.
+          NEWS_LLM_BASE: ${{ vars.NEWS_LLM_BASE }}
+          NEWS_LLM_MODEL: ${{ vars.NEWS_LLM_MODEL }}
+          NEWS_LLM_KIND: ${{ vars.NEWS_LLM_KIND }}
+          NEWS_BYLINE: ${{ vars.NEWS_BYLINE }}
           # DRY_RUN stays 'true' in repo variables until the drafts read well.
           DRY: ${{ inputs.dry || vars.NEWS_DRY_RUN || 'true' }}
         run: |

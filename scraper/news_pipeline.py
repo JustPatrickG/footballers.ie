@@ -52,10 +52,18 @@ ARTICLE_COLUMNS = ["slug", "date", "tag", "headline", "standfirst", "body",
 # author page rather than a generated stub.
 BYLINE = os.environ.get("NEWS_BYLINE", "Jack Deane")
 SALT = os.environ.get("NEWS_SALT", "")
-GEMINI_KEY = os.environ.get("GEMINI_API_KEY", "")
-GEMINI_MODEL = os.environ.get("GEMINI_MODEL", "gemini-2.0-flash")
-GEMINI_URL = ("https://generativelanguage.googleapis.com/v1beta/models/"
-              "{model}:generateContent")
+# The model provider is configuration, not code. Free tiers appear and vanish,
+# and one of them wanting an ID scan shouldn't mean editing this file. Anything
+# that speaks the OpenAI chat-completions shape works — Groq, Mistral,
+# OpenRouter, Cerebras, OpenAI itself — and Anthropic is handled as the one
+# exception because its API is shaped differently.
+#
+# Defaults are Groq: free, no card, no identity check, and far more requests a
+# day than this will ever use.
+LLM_KEY = os.environ.get("NEWS_LLM_KEY", "")
+LLM_BASE = os.environ.get("NEWS_LLM_BASE", "https://api.groq.com/openai/v1")
+LLM_MODEL = os.environ.get("NEWS_LLM_MODEL", "openai/gpt-oss-120b")
+LLM_KIND = os.environ.get("NEWS_LLM_KIND", "openai").strip().lower()
 
 # A plain browser string. Never anything that names the site's people.
 UA = ("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 "
@@ -200,25 +208,44 @@ SCHEMA = {
 
 def extract(text):
     """One call. JSON mode, so there is never prose to parse. Returns None if
-       the model gives us something we can't trust — the caller skips."""
-    if not GEMINI_KEY:
-        sys.exit("GEMINI_API_KEY is not set.")
-    body = {
-        "systemInstruction": {"parts": [{"text": SYSTEM}]},
-        "contents": [{"role": "user", "parts": [{"text": text}]}],
-        "generationConfig": {
-            "temperature": 0,
-            "responseMimeType": "application/json",
-            "responseSchema": SCHEMA,
-        },
-    }
-    url = GEMINI_URL.format(model=GEMINI_MODEL)
+       the model gives us something we can't trust — the caller skips, and the
+       post is deliberately left unseen so the next run tries again."""
+    if not LLM_KEY:
+        sys.exit("NEWS_LLM_KEY is not set.")
+
+    if LLM_KIND == "anthropic":
+        url = f"{LLM_BASE.rstrip('/')}/v1/messages"
+        headers = {"x-api-key": LLM_KEY, "anthropic-version": "2023-06-01",
+                   "content-type": "application/json", "User-Agent": UA}
+        payload = {"model": LLM_MODEL, "max_tokens": 1200, "temperature": 0,
+                   "system": SYSTEM,
+                   "messages": [{"role": "user", "content": text}]}
+        def unwrap(j):
+            return j["content"][0]["text"]
+    else:
+        url = f"{LLM_BASE.rstrip('/')}/chat/completions"
+        headers = {"Authorization": f"Bearer {LLM_KEY}",
+                   "content-type": "application/json", "User-Agent": UA}
+        payload = {"model": LLM_MODEL, "temperature": 0,
+                   "response_format": {"type": "json_object"},
+                   "messages": [{"role": "system", "content": SYSTEM},
+                                {"role": "user", "content": text}]}
+        def unwrap(j):
+            return j["choices"][0]["message"]["content"]
+
     for attempt in (1, 2):
         try:
-            r = requests.post(url, params={"key": GEMINI_KEY}, json=body,
-                              timeout=45, headers={"User-Agent": UA})
+            r = requests.post(url, headers=headers, json=payload, timeout=60)
+            if r.status_code == 429:
+                # rate limited: wait once, then give up and leave it unseen
+                print("    rate limited, waiting")
+                time.sleep(20)
+                continue
             r.raise_for_status()
-            raw = (r.json()["candidates"][0]["content"]["parts"][0]["text"])
+            raw = unwrap(r.json())
+            # some models still fence the block despite JSON mode
+            raw = re.sub(r"^```(?:json)?|```$", "", raw.strip(),
+                         flags=re.M).strip()
             return json.loads(raw)
         except Exception as e:
             print(f"    model call failed ({e})")
