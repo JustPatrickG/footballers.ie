@@ -179,37 +179,83 @@ def pre_gate(p):
 # ------------------------------------------------------------------- the model
 SYSTEM = """You convert a social media post into a factual news item for a football website.
 
-Rules:
-- Use ONLY information present in the post. Never add context, background, or
-  detail from your own knowledge.
+Return a JSON object with EXACTLY these keys and no others:
+  is_news      boolean
+  skip_reason  string - why it is not news; empty string when it is
+  headline     string
+  standfirst   string
+  facts        array of strings
+  body         string - the article itself, in prose
+  tag          string - one of: transfer, injury, callup, contract, result, other
+  confidence   number between 0 and 1
+
+You are licensed to use the FACTS in the post. You are NOT licensed to use its
+words. Reusing its phrasing is plagiarism and breaks the agreement the facts
+come under, so it is the single most serious mistake you can make here.
+- Report the facts as if you had learned them independently and never saw this
+  wording. Change the sentence structures, the order and the phrasing.
+- No run of more than six consecutive words may match the post. Names of people,
+  clubs and competitions are the only unavoidable exception.
+- Do not simply reorder the post's sentences or swap in synonyms. Rebuild it.
+
+Sourcing:
+- Use ONLY information present in the post. Never add context, background or
+  statistics from your own knowledge.
+- Never add a descriptor the post does not contain. If the post does not state
+  a player's position, age, nationality, club or role, do not supply one.
+  "Ireland U21 international" is not licence to write "striker".
 - Remove all opinion, praise, criticism, emoji, hashtags and hype.
-- Preserve hedging exactly. If the post says "understood to be close to a move",
-  the fact must stay hedged. Never convert a rumour into a completed event.
-- Order facts most newsworthy first, then supporting detail.
-- The headline is factual, under 70 characters, no clickbait, no colon-stacking.
-- The standfirst is one sentence, 15-30 words, and must not repeat the headline.
-- If the post is not football news, set is_news to false and leave other
-  fields empty.
+- No predictions and no consequences. What a move "could" or "should" lead to,
+  what it means for someone's chances, how it might affect selection - all of
+  that is opinion even when the post says it. Report what happened, not what
+  might follow.
+- Preserve hedging exactly. If the post says a move is close, expected or being
+  pursued, it must stay that way. Never turn a rumour into a completed deal.
 - Never name, quote, link or otherwise identify where the post came from.
+
+headline: factual, under 70 characters, no clickbait, no colon-stacking.
+
+standfirst: ONE sentence, 8 to 16 words. It must NOT restate the headline or
+repeat any fact already in it. Pick the single most interesting OTHER detail in
+the post - a number, a piece of background, a bit of context - and state it
+plainly. Shape to aim for:
+  headline:   Como Sign 17 Year Old Josh Harpur
+  standfirst: The Bohemians striker has played just 30 minutes of senior football.
+  headline:   Gavin Bazunu Nearing Permanent Exit to Bolton Wanderers
+  standfirst: Bazunu played only 6 times last season while on loan at Stoke City.
+Those two show the SHAPE only. Never invent a statistic that is not in the post -
+if the post holds no second fact, use the nearest supporting detail it does hold.
+
+facts: the bare factual claims from the post, most newsworthy first.
+
+body: ONE flowing paragraph, two to four sentences, 40 to 90 words, built from
+those facts and nothing else. Never use line breaks, newlines, bullet points or
+the characters backslash-n. Do not repeat the standfirst or open by restating
+the headline.
+Combine related facts into single sentences. One sentence per fact reads like a
+list and is wrong. Leave out background the reader already has: a player's
+nationality or position is never a sentence of its own.
+
+Wrong - a list with the facts spread one per sentence, including filler:
+  "Gavin Bazunu has completed a permanent move to Bolton Wanderers. He signed a
+  three-year deal with Bolton Wanderers. He is an Ireland international
+  goalkeeper. His recent years were disrupted by injury."
+Right - the same facts, folded, with the filler carried inside a sentence that
+does other work:
+  "Gavin Bazunu has completed a permanent move to Bolton Wanderers, signing a
+  three-year deal. The Ireland goalkeeper arrives after a difficult couple of
+  years disrupted by injury and a lack of consistent football."
+
+If the post is not football news - a podcast or video promo, a plug, banter, a
+poll, a birthday - set is_news false and leave the other fields empty.
 
 Return JSON only."""
 
-SCHEMA = {
-    "type": "object",
-    "properties": {
-        "is_news": {"type": "boolean"},
-        "skip_reason": {"type": "string"},
-        "headline": {"type": "string"},
-        "standfirst": {"type": "string"},
-        "facts": {"type": "array", "items": {"type": "string"}},
-        "tag": {"type": "string"},
-        "confidence": {"type": "number"},
-    },
-    "required": ["is_news", "headline", "standfirst", "facts", "confidence"],
-}
+# The output contract lives in SYSTEM above. It is prose because it has to
+# survive a provider swap - not every backend accepts a json_schema block.
 
 
-def extract(text):
+def extract(text, retry_note="", temperature=0):
     """One call. JSON mode, so there is never prose to parse. Returns None if
        the model gives us something we can't trust — the caller skips, and the
        post is deliberately left unseen so the next run tries again."""
@@ -220,8 +266,9 @@ def extract(text):
         url = f"{LLM_BASE.rstrip('/')}/v1/messages"
         headers = {"x-api-key": LLM_KEY, "anthropic-version": "2023-06-01",
                    "content-type": "application/json", "User-Agent": UA}
-        payload = {"model": LLM_MODEL, "max_tokens": 1200, "temperature": 0,
-                   "system": SYSTEM,
+        payload = {"model": LLM_MODEL, "max_tokens": 1200,
+                   "temperature": temperature,
+                   "system": SYSTEM + retry_note,
                    "messages": [{"role": "user", "content": text}]}
         def unwrap(j):
             return j["content"][0]["text"]
@@ -229,9 +276,9 @@ def extract(text):
         url = f"{LLM_BASE.rstrip('/')}/chat/completions"
         headers = {"Authorization": f"Bearer {LLM_KEY}",
                    "content-type": "application/json", "User-Agent": UA}
-        payload = {"model": LLM_MODEL, "temperature": 0,
+        payload = {"model": LLM_MODEL, "temperature": temperature,
                    "response_format": {"type": "json_object"},
-                   "messages": [{"role": "system", "content": SYSTEM},
+                   "messages": [{"role": "system", "content": SYSTEM + retry_note},
                                 {"role": "user", "content": text}]}
         def unwrap(j):
             return j["choices"][0]["message"]["content"]
@@ -257,29 +304,125 @@ def extract(text):
     return None
 
 
-def gate(d):
+def _words(t):
+    return re.findall(r"[a-z0-9]+", (t or "").lower())
+
+
+def longest_shared_run(out, src):
+    """Longest run of consecutive words appearing in both. This is the check
+       that matters: the licence covers the facts, not the copy, so lifting a
+       sentence is a contract breach, not a style problem."""
+    a, b = _words(out), _words(src)
+    if not a or not b:
+        return 0, ""
+    index = {}
+    for i, w in enumerate(b):
+        index.setdefault(w, []).append(i)
+    best, best_txt = 0, ""
+    for i in range(len(a)):
+        for j in index.get(a[i], ()):
+            n = 0
+            while i + n < len(a) and j + n < len(b) and a[i + n] == b[j + n]:
+                n += 1
+            if n > best:
+                best, best_txt = n, " ".join(a[i:i + n])
+    return best, best_txt
+
+
+MAX_SHARED_RUN = 7
+
+# Defects that mean "written badly", not "not a story". These get one more
+# attempt: binning a real transfer because the model added a position it was
+# never given is a worse outcome than spending a second call on it.
+RETRYABLE = ("copies ", "invented a position", "standfirst restates",
+             "standfirst too long", "body too long", "body too thin",
+             "no body written", "model ignored the key contract")
+
+RETRY_NOTE = ("\n\nYOUR PREVIOUS ATTEMPT WAS REJECTED: {why}. "
+              "Write it again from scratch. Keep every fact and keep the hedging. "
+              "Change the phrasing and sentence structure and do not follow the "
+              "post's order. No run of more than six consecutive words may match "
+              "the post. Add nothing the post does not state - no position, no "
+              "age, no nationality, no prediction.")
+
+
+def _flatten(text):
+    """One paragraph, whatever the model did. Some models emit the two
+       characters backslash-n instead of a real newline, which then renders
+       as visible junk in the article."""
+    t = (text or "").replace("\\n", " ").replace("\\r", " ")
+    return " ".join(t.split())
+
+
+POSITIONS = ("striker", "winger", "midfielder", "defender", "goalkeeper",
+             "keeper", "forward", "fullback", "full-back", "centre-back",
+             "centre back", "attacker", "playmaker", "wing-back")
+
+
+def gate(d, source_text=""):
     """What the prompt can't be trusted to decide for itself. The model is
-       steady at rewriting; where it slips is category — banter read as fact,
-       a rumour flattened into a done deal, a birthday post made into news."""
+       steady at rewriting; where it slips is category - banter read as fact, a
+       rumour flattened into a done deal - and, worse, reusing the source's
+       actual words. Every field is read up front so the checks below can be
+       reordered without tripping over a name that isn't bound yet."""
     if not isinstance(d, dict):
         return "model returned no object"
     if not d.get("is_news"):
         return f"not news ({(d.get('skip_reason') or 'no reason given')[:60]})"
+
     facts = [f.strip() for f in (d.get("facts") or []) if str(f).strip()]
+    head = (d.get("headline") or "").strip()
+    sf = (d.get("standfirst") or "").strip()
+    prose = _flatten(d.get("body"))
+
+    # --- substance
     if not facts:
         return "no facts extracted"
     if len(facts) == 1 and len(facts[0]) < 60:
         return "one trivial fact"
+    if "confidence" not in d:
+        return "model ignored the key contract (no confidence field)"
     try:
         conf = float(d.get("confidence") or 0)
     except (TypeError, ValueError):
         conf = 0.0
     if conf < MIN_CONFIDENCE:
         return f"confidence {conf:.2f} below {MIN_CONFIDENCE}"
-    if not (d.get("headline") or "").strip():
+
+    # --- shape
+    if not head:
         return "no headline"
-    if not (d.get("standfirst") or "").strip():
+    if not sf:
         return "no standfirst"
+    if not prose:
+        return "no body written"
+    sfw, bw = len(sf.split()), len(prose.split())
+    if sfw > 24:
+        return f"standfirst too long ({sfw} words, house style is 8-16)"
+    if bw < 25:
+        return f"body too thin ({bw} words)"
+    if bw > 120:
+        return f"body too long ({bw} words)"
+
+    # --- a standfirst that just replays the headline
+    big = lambda t: set(re.findall(r"[a-z]{5,}", t.lower()))
+    overlap = big(sf) & big(head)
+    if len(overlap) >= 4:
+        return f"standfirst restates the headline (shares {sorted(overlap)})"
+
+    if source_text:
+        # Inventing a position is the likeliest embarrassing hallucination: the
+        # post says "Ireland U21 international", the model writes "striker".
+        src = source_text.lower()
+        written = " ".join([head.lower(), sf.lower(), prose.lower()])
+        for pos in POSITIONS:
+            if pos in written and pos.split("-")[0].split()[0] not in src:
+                return f"invented a position not in the post ({pos!r})"
+        # The licence covers the facts, not the copy. Lifting a sentence is a
+        # contract breach, so this is the last and hardest check.
+        run, phrase = longest_shared_run(" ".join([head, sf, prose]), source_text)
+        if run > MAX_SHARED_RUN:
+            return f"copies {run} consecutive words from the source ({phrase!r})"
     return ""
 
 
@@ -336,8 +479,8 @@ def build_row(d, post, slug):
     image = fetch_image(post["media"], slug)
     body = ""
     if image:
-        body += f"![]({image})\\n\\n"
-    body += "\\n\\n".join(facts)
+        body += f"![]({image})\n\n"
+    body += _flatten(d.get("body")) or "\n\n".join(facts)
     date = (post["created"] or "")[:10]
     if not re.match(r"^\d{4}-\d{2}-\d{2}$", date):
         date = dt.date.today().isoformat()
@@ -424,7 +567,18 @@ def main():
         if d is None:
             log_skip(k, "model gave no usable answer — will retry next run")
             continue                       # deliberately NOT marked seen
-        why = gate(d)
+        why = gate(d, p["text"])
+        if why.startswith(RETRYABLE):
+            # Not a bad story - badly written. Worth one more attempt, with the
+            # temperature lifted because a retry at 0 returns the same words.
+            print(f"    {why} - rewriting")
+            d2 = extract(p["text"], RETRY_NOTE.format(why=why), temperature=0.6)
+            if d2:
+                why2 = gate(d2, p["text"])
+                if not why2:
+                    d, why = d2, ""
+                else:
+                    why = f"{why2} (after a rewrite for copying)"
         if why:
             log_skip(k, why)
             fresh.append(k)

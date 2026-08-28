@@ -5,3 +5,5 @@ site/
 scraper/debug/
 scraper/news_since.json
 __pycache__/
+data/api/news_drafts.json
+data/api/news_skipped.log
