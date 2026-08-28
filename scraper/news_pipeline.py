@@ -426,7 +426,11 @@ def main():
             continue                       # deliberately NOT marked seen
         why = gate(d)
         if why:
-            log_skip(k, why)
+            # During the dry run, record a snippet of what was judged. Without
+            # it a gated post is a hash and a verdict with no way to tell a
+            # correct rejection from a misfire. Drop the snippet before going
+            # live - the log is for tuning, not for keeping copy in.
+            log_skip(k, f'{why} | text: {p["text"][:110]!r}')
             fresh.append(k)
             continue
 
