@@ -2076,6 +2076,39 @@ def team_candidates(term, debug_name=None):
     return out
 
 
+NON_CLUBS = {"without club", "retired", "career break", "unknown",
+             "no club", "free agent", "---", "-", "?", ""}
+
+# Transfermarkt truncates club names to fit its column - "Cambridge Utd.",
+# "Sheff Wed", "Huddersf. U21", "Weston-super-M.". Fotmob search does far
+# better on the long form, so every miss gets a second go with this.
+_TM_ABBR = {"utd": "United", "utd.": "United", "ath.": "Athletic",
+            "ath": "Athletic", "wed": "Wednesday", "wed.": "Wednesday",
+            "nott'm": "Nottingham", "sheff": "Sheffield", "sheff.": "Sheffield",
+            "huddersf.": "Huddersfield", "southampt.": "Southampton",
+            "rgrs": "Rangers", "rvrs": "Rovers", "acad": "Academy",
+            "twn": "Town", "cty": "City", "rov.": "Rovers", "utd..": "United"}
+
+
+def expand_club(name):
+    """The long form of an abbreviated club name, or "" if nothing changed.
+       A bare initial ("C. Budejovice", "Abu Dhabi Wolf.") is dropped rather
+       than guessed at - the rest of the name is usually enough to search."""
+    out = []
+    for w in str(name or "").split():
+        k = w.lower()
+        if k in _TM_ABBR:
+            out.append(_TM_ABBR[k])
+        elif len(w) <= 2 and w.endswith("."):
+            continue                       # "C.", "A." - initials, not words
+        elif w.endswith(".") and len(w) > 2:
+            out.append(w[:-1])             # "Wolf." -> "Wolf", "Rich." -> "Rich"
+        else:
+            out.append(w)
+    s = " ".join(out).strip()
+    return s if s and s.lower() != str(name or "").strip().lower() else ""
+
+
 def badges_cmd(args):
     """Keep data/api/club_ids.csv - a durable club name -> fotmob id map, so
     every club the site ever shows has a badge. Names are harvested for free
@@ -2161,6 +2194,20 @@ def badges_cmd(args):
                 if str(now.date()) <= d <= str(week.date()):
                     soon.add(n)
 
+    # every club a tracked player has ever moved to or from - the transfers
+    # page shows all of them, so all of them want a crest
+    f = out_root / "data/api/transfers.csv"
+    if f.exists():
+        with open(f, newline="", encoding="utf-8") as fh:
+            for r in csv.DictReader(fh):
+                for k in ("from_club", "to_club"):
+                    n = (r.get(k) or "").strip()
+                    if n and n.lower() not in NON_CLUBS:
+                        everyone.add(n)
+
+    everyone = {n for n in everyone if n.lower() not in NON_CLUBS}
+    soon = {n for n in soon if n.lower() not in NON_CLUBS}
+
     def wants_lookup(name):
         if resolved(name):
             return False
@@ -2183,32 +2230,43 @@ def badges_cmd(args):
                 "bk", "sv", "club", "de", "cfc"}
         return " ".join(w for w in norm(n).split() if w not in drop)
 
+    def pick(cands, want):
+        """One id, or "" - never a guess. An exact name match wins; failing
+        that, one candidate that reduces to the same words as what we asked
+        for. Two plausible teams means we do not know which, so no badge."""
+        if not want:
+            return ""
+        exact = [c for c in cands if norm(c[1]) == norm(want)]
+        if exact:
+            return exact[0][0]
+        key = simplify(want)
+        loose = [c for c in cands if key and simplify(c[1]) == key]
+        return loose[0][0] if len(loose) == 1 else ""
+
     found = 0
     for i, name in enumerate(todo):
-        try:
-            cands = team_candidates(
-                name, debug_name=f"badge_{norm(name)[:30].replace(' ', '_')}"
-                if args.debug else None)
-        except Exception as e:
-            print(f"  [{i+1}/{len(todo)}] {name}: search failed ({e})")
+        hit, tried = "", []
+        for term in [name] + ([expand_club(name)] if expand_club(name) else []):
+            tried.append(term)
+            try:
+                cands = team_candidates(
+                    term, debug_name=f"badge_{norm(term)[:30].replace(' ', '_')}"
+                    if args.debug else None)
+            except Exception as e:
+                print(f"  [{i+1}/{len(todo)}] {name}: search failed ({e})")
+                time.sleep(SLEEP)
+                continue
+            hit = pick(cands, name) or pick(cands, term)
             time.sleep(SLEEP)
-            continue
-        hit = ""
-        exact = [c for c in cands if norm(c[1]) == norm(name)]
-        if len(exact) >= 1:
-            hit = exact[0][0]
-        else:
-            loose = [c for c in cands if simplify(c[1]) == simplify(name)
-                     and simplify(name)]
-            if len(loose) == 1:                  # one plausible match or nothing
-                hit = loose[0][0]
+            if hit:
+                break
         put(name, hit, "search")
         if hit:
             found += 1
             print(f"  [{i+1}/{len(todo)}] {name} -> {hit}")
         else:
-            print(f"  [{i+1}/{len(todo)}] {name}: no confident match")
-        time.sleep(SLEEP)
+            extra = f" (also tried '{tried[-1]}')" if len(tried) > 1 else ""
+            print(f"  [{i+1}/{len(todo)}] {name}: no confident match{extra}")
 
     write_csv(out_path, COLS, sorted(known.values(), key=lambda r: r[0]))
     have_ids = sum(1 for r in known.values() if r[1])

@@ -670,7 +670,7 @@ OUT = os.path.join(HERE, "..", "site")   # always repo-root/site, whatever the C
 CSS = open(os.path.join(HERE, "style.css")).read()
 APPJS = open(os.path.join(HERE, "app.js")).read()
 
-NAV = [("News","news.html"),("Players","players.html"),
+NAV = [("News","news.html"),("Players","players.html"),("Transfers","transfers.html"),
        ("Clubs","clubs.html"),("Ireland","ireland.html"),("Fixtures","fixtures.html"),
        ("Alerts","alerts.html")]
 
@@ -870,7 +870,63 @@ def plink(p, root=""): return f'{root}player/{p["slug"]}.html'
 def clink(c, root=""): return f'{root}club/{club_slug(c)}.html'
 
 CLUB_IDS = {}
+CLUB_NORM = {}          # reduced club name -> id, for feeds that abbreviate
 ACADEMY_RE = re.compile(r"\s+(u\d{2}|academy|reserves?|ii|b)$", re.I)
+# Transfermarkt writes club names its own way — "St. Pat's", "Man Utd U21",
+# "Cambridge Utd.", "Aberdeen FC" — while the badge map is keyed on FotMob's
+# names. This is the bridge: a normaliser that strips the punctuation, the
+# youth suffix and the FC/AFC noise, plus a short table for the ones that are
+# simply different words. Anything still unmatched keeps the grey crest; a
+# wrong badge is worse than no badge.
+NON_CLUBS = {"without club", "retired", "career break", "unknown", "no club",
+             "free agent", "---", "-", "?"}
+
+CLUB_ALIASES = {
+    # League of Ireland, as Transfermarkt shortens them
+    "pats": "St. Patrick's Athletic", "st pats": "St. Patrick's Athletic",
+    "bohemians": "Bohemian FC", "bohs": "Bohemian FC",
+    "shels": "Shelbourne", "drogs": "Drogheda United",
+    "wfc": "Waterford FC", "waterford united": "Waterford FC",
+    "rovers": "Shamrock Rovers", "hoops": "Shamrock Rovers",
+    "sligo": "Sligo Rovers", "cork": "Cork City",
+    "galway": "Galway United FC", "galway united": "Galway United FC",
+    "bray": "Bray Wanderers", "derry": "Derry City",
+    "cobh": "Cobh Ramblers", "athlone": "Athlone Town",
+    "longford": "Longford Town", "wexford": "Wexford FC",
+    "harps": "Finn Harps", "treaty": "Treaty United",
+    # British clubs whose short form the id map doesn't carry
+    "man united": "Manchester United", "man utd": "Manchester United",
+    "man city": "Manchester City", "palace": "Crystal Palace",
+    "nottm forest": "Nottingham Forest", "nottingham": "Nottingham Forest",
+    "spurs": "Tottenham Hotspur", "wolves": "Wolverhampton Wanderers",
+    "west brom": "West Bromwich Albion", "wba": "West Bromwich Albion",
+    "sheff united": "Sheffield United", "sheff wed": "Sheffield Wednesday",
+    "huddersf": "Huddersfield Town", "southampt": "Southampton",
+    "brighton": "Brighton & Hove Albion", "newcastle": "Newcastle United",
+    "leeds": "Leeds United", "west ham": "West Ham United",
+    "qpr": "Queens Park Rangers", "mk dons": "Milton Keynes Dons",
+}
+
+_CLUB_DROP = {"fc", "afc", "cf", "sc", "ac", "if", "fk", "sk", "bk", "sv",
+              "club", "de", "cfc", "calcio", "cd", "ud", "ss", "as", "us",
+              "ssc", "rc", "nk", "hk", "ik", "bc", "sd", "ca", "the"}
+_CLUB_ABBR = {"utd": "united", "utd.": "united", "rgrs": "rangers",
+              "rvrs": "rovers", "ath": "athletic", "atl": "atletico",
+              "st": "st", "acad": "academy", "res": "", "yth": "youth"}
+
+def _club_norm(n):
+    """A club name reduced to the words that identify it."""
+    s = (n or "").lower().strip()
+    s = re.sub(r"[’']", "", s)                  # o'brien, pat's
+    s = re.sub(r"\s+(u\d{2}|academy|acad|reserves?|res|youth|ii|b)$", "", s)
+    s = re.sub(r"^\d+\s*\.?\s*(fc|fsv|tsv|vfl|vfb)\s+", "", s)   # 1.FC Köln
+    s = unicodedata.normalize("NFKD", s)
+    s = "".join(ch for ch in s if not unicodedata.combining(ch))
+    s = re.sub(r"[^a-z0-9]+", " ", s).strip()
+    words = [_CLUB_ABBR.get(w, w) for w in s.split()]
+    words = [w for w in words if w and w not in _CLUB_DROP]
+    return " ".join(words)
+
 def _register_club_ids():
     """club name -> FotMob team id: the scraper-maintained club_ids.csv first,
        then players.csv, clubs.csv, and both sides of every match in
@@ -889,14 +945,31 @@ def _register_club_ids():
         for nk, ik in (("home", "home_id"), ("away", "away_id")):
             if (r.get(nk) or "").strip() and (r.get(ik) or "").strip():
                 CLUB_IDS.setdefault(r[nk].strip(), r[ik].strip())
+    # a second index keyed on the reduced name, so a club we know as
+    # "St. Patrick's Athletic" is still found when a feed calls it "St. Pat's"
+    for name, cid in CLUB_IDS.items():
+        k = _club_norm(name)
+        if k and k not in CLUB_NORM:
+            CLUB_NORM[k] = cid
 _register_club_ids()
 
 def club_id(name):
+    """The badge id for a club, however the source spelled it. Exact name
+       first, then the senior club behind an academy side, then the reduced
+       name, then the alias table. No guessing beyond that."""
     n = (name or "").strip()
-    if not n: return ""
+    if not n or n.lower() in NON_CLUBS: return ""
+    k = _club_norm(n)
+    # a name we have declared by hand outranks anything a search wrote:
+    # "Bohemians" in an Irish feed is Dublin, whatever fotmob offers first
+    alias = CLUB_ALIASES.get(k)
+    if alias:
+        cid = CLUB_IDS.get(alias) or CLUB_NORM.get(_club_norm(alias), "")
+        if cid: return cid
+    if n in CLUB_IDS: return CLUB_IDS[n]
     parent = ACADEMY_RE.sub("", n)
     if parent != n and parent in CLUB_IDS: return CLUB_IDS[parent]
-    return CLUB_IDS.get(n, "")
+    return CLUB_NORM.get(k, "") if k else ""
 
 def club_badge(name, size="sm"):
     cid = club_id(name)
@@ -3441,6 +3514,195 @@ def build_player(p):
 
 
 
+# ================= TRANSFERS =================
+# data/api/transfers.csv is every club move Transfermarkt has for a tracked
+# player — 4,000-odd rows going back to the eighties. The page is one feed,
+# newest first, cut by window / kind / search. Rendering all of it as HTML
+# would be ~8,000 badge images, so the feed ships as a compact payload and
+# the browser draws sixty at a time; the newest few are baked into the HTML
+# so the page says something before any script runs.
+
+def transfer_window(date):
+    """('2026S', 'Summer 2026') — which window a move belongs to. Two a year:
+       the summer rebuild (May onward, where loans expire and squads turn
+       over) and the winter one. Rough at the edges, but it is how people
+       actually talk about transfers."""
+    d = (date or "").strip()[:10]
+    if len(d) != 10 or not d[:4].isdigit():
+        return ("", "Undated")
+    y = d[:4]
+    try: m = int(d[5:7])
+    except ValueError: return ("", "Undated")
+    return (f"{y}S", f"Summer {y}") if m >= 5 else (f"{y}W", f"Winter {y}")
+
+_FEE_RE = re.compile(r"€\s*([\d.,]+)\s*([mk])?", re.I)
+
+def fee_value(fee):
+    """The euro figure in a fee cell as a number. Free, loan and unknown all
+       come back 0 — the chip says which of those it was."""
+    m = _FEE_RE.search(str(fee or ""))
+    if not m: return 0.0
+    try: n = float(m.group(1).replace(",", ""))
+    except ValueError: return 0.0
+    return n * {"m": 1_000_000, "k": 1_000}.get((m.group(2) or "").lower(), 1)
+
+def money(v):
+    if v >= 1_000_000: return "€" + f"{v/1_000_000:.2f}".rstrip("0").rstrip(".") + "m"
+    if v >= 1_000:     return f"€{round(v/1_000):g}k"
+    return f"€{round(v):g}" if v else ""
+
+def transfer_label(t):
+    """(chip text, css class). Money when there was any, the shape of the
+       deal when there wasn't."""
+    k, fee = t["kind"], t["fee"]
+    if k == "fee":      return (money(fee_value(fee)) or "Fee", "fee")
+    if k == "free":     return ("Free", "free")
+    if k == "loan":     return ("Loan", "loan")
+    if k == "loan end": return ("Loan ended", "end")
+    return (("Undisclosed" if fee in ("?", "") else "Signed"), "move")
+
+def transfer_feed():
+    """Every move we can attach to a tracked player, newest first."""
+    pmap = {p["slug"]: p for p in PLAYERS}
+    out = []
+    for slug, rows in TRANSFERS.items():
+        p = pmap.get(slug)
+        if not p: continue
+        for r in rows:
+            d = (r.get("date") or "").strip()[:10]
+            to = (r.get("to_club") or "").strip()
+            if len(d) != 10 or not to: continue
+            out.append(dict(p=p, date=d, frm=(r.get("from_club") or "").strip(),
+                            to=to, fee=(r.get("fee") or "").strip(),
+                            kind=(r.get("kind") or "").strip()))
+    out.sort(key=lambda t: (t["date"], t["p"]["n"]), reverse=True)
+    return out
+
+_TMONTHS = ("January", "February", "March", "April", "May", "June", "July",
+            "August", "September", "October", "November", "December")
+
+def transfer_day(d):
+    """Heading for a day of moves. Recent days get named, older ones get the
+       date — 'Wednesday the 3rd' means nothing about a signing in 2019."""
+    import datetime as _dt
+    try: day = _dt.date.fromisoformat(d)
+    except ValueError: return d
+    today = _dt.date.today()
+    gap = (today - day).days
+    if gap == 0: return "Today"
+    if gap == 1: return "Yesterday"
+    if 0 < gap < 7: return day.strftime("%A")
+    base = f"{day.day} {_TMONTHS[day.month - 1]}"
+    return base if day.year == today.year else f"{base} {day.year}"
+
+def club_label(n):
+    """What to print for a club cell. Transfermarkt uses 'Without Club' for a
+       free agent and 'Retired'/'Career break' for the end of one."""
+    s = (n or "").strip()
+    return "No club" if s.lower() in ("without club", "unknown", "") else s
+
+def transfer_row(t, root=""):
+    p = t["p"]
+    lab, cls = transfer_label(t)
+    frm = club_label(t["frm"])
+    pos = p["pos"] if p["pos"] not in ("", "—") else ""
+    posbit = f'<span class="trp">{esc(pos)}</span>' if pos else ""
+    frmbadge = club_badge(t["frm"], "xs") if club_id(t["frm"]) else ""
+    return (f'<a class="trrow" href="{plink(p, root)}">'
+            f'{avatar(p, root, "sm")}'
+            f'<div class="trm">'
+            f'<div class="trn">{esc(p["n"])}{posbit}</div>'
+            f'<div class="trmv">{frmbadge}<span>{esc(frm)}</span><i class="tra">→</i>'
+            f'{club_badge(t["to"], "xs") if club_id(t["to"]) else ""}<b>{esc(club_label(t["to"]))}</b></div></div>'
+            f'<div class="trr"><span class="tchip {cls}">{esc(lab)}</span></div></a>')
+
+def build_transfers():
+    feed = transfer_feed()
+    live = [t for t in feed if t["kind"] != "loan end"]  # loan returns off by default
+
+    # the headline numbers come from the newest window, which is the one
+    # people mean when they say "this window"
+    cur_key, cur_label = (transfer_window(feed[0]["date"]) if feed else ("", "—"))
+    cur = [t for t in live if transfer_window(t["date"])[0] == cur_key]
+    fees = sorted(cur, key=lambda t: fee_value(t["fee"]), reverse=True)
+    top = fees[0] if fees and fee_value(fees[0]["fee"]) else None
+    tiles = [(str(len(cur)), f"moves · {cur_label}"),
+             (str(sum(1 for t in cur if t["kind"] in ("fee", "free", ""))), "permanent"),
+             (str(sum(1 for t in cur if t["kind"] == "loan")), "loans"),
+             (money(fee_value(top["fee"])) if top else "—",
+              f'biggest fee · {top["p"]["n"]}' if top else "no fee disclosed")]
+    tilehtml = "".join(f'<div class="ttile"><div class="n">{esc(a)}</div>'
+                       f'<div class="l">{esc(b)}</div></div>' for a, b in tiles)
+
+    wins, seen = [], set()
+    for t in feed:
+        k, l = transfer_window(t["date"])
+        if k and k not in seen:
+            seen.add(k); wins.append((k, l))
+    wopts = "".join(f'<option value="{esc(k)}">{esc(l)}</option>' for k, l in wins)
+
+    # ---- the payload the browser draws from ------------------------------
+    clubs, cidx = [], {}
+    for t in feed:
+        for c in (t["frm"], t["to"]):
+            if c and c not in cidx:
+                cidx[c] = len(clubs); clubs.append(c)
+    plist, pidx = [], {}
+    for t in feed:
+        p = t["p"]
+        if p["slug"] not in pidx:
+            pidx[p["slug"]] = len(plist)
+            plist.append([p["slug"], p["n"],
+                          p["pos"] if p["pos"] not in ("", "—") else "",
+                          initials(p["n"]),
+                          (p.get("photo") or "") if p.get("photo")
+                          else ("*" if p["slug"] in HAVE_IMG else "")])
+    trows = [[pidx[t["p"]["slug"]], t["date"], cidx.get(t["frm"], -1),
+              cidx[t["to"]], transfer_label(t)[1], transfer_label(t)[0]]
+             for t in feed]
+    payload = {"c": [club_label(c) for c in clubs],
+               "b": [club_id(c) for c in clubs],
+               "p": plist, "t": trows}
+
+    seed, day = "", None
+    for t in live[:40]:
+        if t["date"] != day:
+            day = t["date"]
+            seed += f'<h4 class="tday">{esc(transfer_day(day))}</h4>'
+        seed += transfer_row(t)
+
+    sub = ("Every move by a tracked Irish player — window by window, "
+           "back through the archive.")
+    body = ('<div class="pagehead"><h1>Transfers</h1><p>' + esc(sub) + '</p></div>'
+            '<div class="tsum">' + tilehtml + '</div>'
+            '<div class="filterbar tfbar">'
+            '<input type="search" id="tq" placeholder="Search player or club">'
+            '<select id="twin"><option value="">All windows</option>' + wopts + '</select>'
+            '<select id="tkind"><option value="">Every kind</option>'
+            '<option value="fee">Fees</option><option value="free">Free transfers</option>'
+            '<option value="loan">Loans</option><option value="move">Undisclosed</option>'
+            '</select>'
+            '<label class="tends"><input type="checkbox" id="tendsx"> Loan returns</label>'
+            '</div>'
+            '<div class="tcount" id="tcount">' + f"{len(live)} moves" + '</div>'
+            '<div id="tfeed">' + seed + '</div>'
+            '<button class="tmore" id="tmore" style="display:none">Load more</button>'
+            '<div class="emptystate" id="tempty">No moves match that. Clear the search '
+            'or pick another window.</div>'
+            '<p class="tnote">Fees and dates from Transfermarkt. A move appears here once '
+            'it is done — nothing on this page is a rumour.</p>'
+            '<script>window.FB_TF=' + json.dumps(payload, separators=(",", ":")) + ';</script>'
+            '<script>' + TRANSFERS_JS + '</script>')
+    return shell("Transfers — footballers.ie", sub, "", "transfers.html", body,
+                 canonical="transfers.html",
+                 og=og_card(n="Transfers", big="1",
+                            l=f"{len(cur)} Irish moves · {cur_label}",
+                            f="footballers.ie", fr="TRANSFERS"))
+
+
+TRANSFERS_JS = '\n(function(){\n  var D=window.FB_TF; if(!D||!D.t) return;\n  var feed=document.getElementById(\'tfeed\'), more=document.getElementById(\'tmore\'),\n      cnt=document.getElementById(\'tcount\'), empty=document.getElementById(\'tempty\'),\n      q=document.getElementById(\'tq\'), wf=document.getElementById(\'twin\'),\n      kf=document.getElementById(\'tkind\'), ends=document.getElementById(\'tendsx\');\n  if(!feed||!more) return;\n  var PAGE=60, view=[], shown=0, lastDay=\'\';\n  var M=[\'January\',\'February\',\'March\',\'April\',\'May\',\'June\',\'July\',\'August\',\n         \'September\',\'October\',\'November\',\'December\'];\n  var DAYS=[\'Sunday\',\'Monday\',\'Tuesday\',\'Wednesday\',\'Thursday\',\'Friday\',\'Saturday\'];\n  var today=new Date(); today.setHours(0,0,0,0);\n\n  function esc(t){return String(t==null?\'\':t).replace(/[&<>"]/g,function(c){\n    return {\'&\':\'&amp;\',\'<\':\'&lt;\',\'>\':\'&gt;\',\'"\':\'&quot;\'}[c];});}\n  function win(d){return d.slice(0,4)+(+d.slice(5,7)>=5?\'S\':\'W\');}\n  function heading(d){\n    var p=d.split(\'-\'), dt=new Date(+p[0],+p[1]-1,+p[2]);\n    var gap=Math.round((today-dt)/86400000);\n    if(gap===0) return \'Today\';\n    if(gap===1) return \'Yesterday\';\n    if(gap>0&&gap<7) return DAYS[dt.getDay()];\n    var base=(+p[2])+\' \'+M[+p[1]-1];\n    return dt.getFullYear()===today.getFullYear()?base:base+\' \'+p[0];\n  }\n  function badge(i){\n    if(i<0) return \'\';\n    var id=D.b[i], nm=D.c[i];\n    // a state, not a club - nothing to put a crest on\n    if(nm===\'No club\'||nm===\'Retired\'||nm===\'Career break\') return \'\';\n    if(!id) return \'<span class="badge xs generic"></span>\';\n    return \'<img class="badge xs" loading="lazy" alt="" src="https://images.fotmob.com/\'+\n      \'image_resources/logo/teamlogo/\'+id+\'.png" onerror="this.outerHTML=&#39;<span \'+\n      \'class=&quot;badge xs generic&quot;></span>&#39;">\';\n  }\n  function face(p){\n    var src = p[4]===\'*\' ? \'img/players/\'+p[0]+\'.png\' : p[4];\n    if(!src) return \'<div class="pavatar sm"><span>\'+esc(p[3])+\'</span></div>\';\n    return \'<div class="pavatar sm"><img loading="lazy" alt="\'+esc(p[1])+\'" src="\'+\n      esc(src)+\'" onerror="this.parentNode.innerHTML=&#39;<span>\'+esc(p[3])+\n      \'</span>&#39;"></div>\';\n  }\n  function row(r){\n    var p=D.p[r[0]], from=r[2]<0?\'No club\':D.c[r[2]], to=D.c[r[3]];\n    return \'<a class="trrow" href="player/\'+esc(p[0])+\'.html">\'+face(p)+\n      \'<div class="trm"><div class="trn">\'+esc(p[1])+\n      (p[2]?\'<span class="trp">\'+esc(p[2])+\'</span>\':\'\')+\'</div>\'+\n      \'<div class="trmv">\'+badge(r[2])+\'<span>\'+esc(from)+\'</span>\'+\n      \'<i class="tra">→</i>\'+badge(r[3])+\'<b>\'+esc(to)+\'</b></div></div>\'+\n      \'<div class="trr"><span class="tchip \'+r[4]+\'">\'+esc(r[5])+\'</span></div></a>\';\n  }\n\n  function build(){\n    var t=q.value.trim().toLowerCase(), w=wf.value, k=kf.value, le=ends.checked;\n    view=D.t.filter(function(r){\n      if(!le && r[4]===\'end\') return false;\n      if(k && r[4]!==k) return false;\n      if(w && win(r[1])!==w) return false;\n      if(t){\n        var p=D.p[r[0]];\n        var hay=(p[1]+\' \'+(r[2]<0?\'\':D.c[r[2]])+\' \'+D.c[r[3]]).toLowerCase();\n        if(hay.indexOf(t)<0) return false;\n      }\n      return true;\n    });\n    feed.innerHTML=\'\'; shown=0; lastDay=\'\';\n    cnt.textContent=view.length+\' move\'+(view.length===1?\'\':\'s\');\n    empty.style.display=view.length?\'none\':\'block\';\n    draw();\n  }\n  function draw(){\n    var end=Math.min(shown+PAGE, view.length), html=\'\';\n    for(var i=shown;i<end;i++){\n      var r=view[i];\n      if(r[1]!==lastDay){ lastDay=r[1]; html+=\'<h4 class="tday">\'+esc(heading(r[1]))+\'</h4>\'; }\n      html+=row(r);\n    }\n    feed.insertAdjacentHTML(\'beforeend\', html);\n    shown=end;\n    more.style.display = shown<view.length ? \'\' : \'none\';\n    more.textContent=\'Load more · \'+(view.length-shown)+\' left\';\n  }\n  more.onclick=draw;\n  q.oninput=build; wf.onchange=build; kf.onchange=build; ends.onchange=build;\n  // the tail of the list loads itself once the reader gets near it\n  window.addEventListener(\'scroll\', function(){\n    if(more.style.display===\'none\') return;\n    if(more.getBoundingClientRect().top < window.innerHeight + 400) draw();\n  }, {passive:true});\n  build();\n})();\n'
+
+
 def build_newsletter():
     body = f'''
     <div class="pagehead"><h1>The <i>newsletter</i></h1>
@@ -3634,6 +3896,9 @@ def build_search_index():
         if c == "Unattached": continue
         rows.append(dict(t="Club", n=c, u=f"club/{club_slug(c)}.html",
                          x=f"{len(ps)} Irish player{'s' if len(ps)!=1 else ''}"))
+    for _n, _u, _x in (("Transfers", "transfers.html",
+                        "Every move by a tracked Irish player"),):
+        rows.append(dict(t="Page", n=_n, u=_u, x=_x))
     leagues, countries = {}, {}
     for p in PLAYERS:
         if p["league"] not in ("", "—"): leagues.setdefault(p["league"], 0)
@@ -3759,7 +4024,7 @@ def build_404():
                             f="404"))
 
 def build_sitemap():
-    urls = ["", "news.html", "faq.html", "search.html", "where-are-the-irish.html", "players.html", "abroad.html", "league-of-ireland.html", "clubs.html",
+    urls = ["", "news.html", "faq.html", "search.html", "where-are-the-irish.html", "players.html", "abroad.html", "league-of-ireland.html", "clubs.html", "transfers.html",
             "ireland.html", "fixtures.html", "milestones.html", "compare.html", "newsletter.html", "alerts.html"]
     urls += [f"club/{club_slug(c)}.html" for c in sorted(set(p["club"] for p in PLAYERS))]
     urls += [f"player/{p['slug']}.html" for p in PLAYERS]
@@ -3813,6 +4078,7 @@ open(f"{OUT}/ireland.html","w").write(build_ireland())
 open(f"{OUT}/fixtures.html","w").write(build_fixtures())
 open(f"{OUT}/milestones.html","w").write(build_milestones())
 open(f"{OUT}/compare.html","w").write(build_compare())
+open(f"{OUT}/transfers.html","w").write(build_transfers())
 open(f"{OUT}/newsletter.html","w").write(build_newsletter())
 open(f"{OUT}/alerts.html","w").write(build_alerts())
 open(f"{OUT}/404.html","w").write(build_404())
