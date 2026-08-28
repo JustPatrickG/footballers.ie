@@ -50,7 +50,10 @@ ARTICLE_COLUMNS = ["slug", "date", "tag", "headline", "standfirst", "body",
 # site in this one capacity and no other - no credits, no about text, no
 # contact. writers.csv already carries it, so the byline links to a real
 # author page rather than a generated stub.
-BYLINE = os.environ.get("NEWS_BYLINE", "Jack Deane")
+# `or`, not a get() default: an unset repo variable arrives as an empty
+# string rather than absent, so the default never fires and everything
+# downstream ends up blank - which is how the base URL became "".
+BYLINE = os.environ.get("NEWS_BYLINE") or "Jack Deane"
 SALT = os.environ.get("NEWS_SALT", "")
 # The model provider is configuration, not code. Free tiers appear and vanish,
 # and one of them wanting an ID scan shouldn't mean editing this file. Anything
@@ -61,9 +64,9 @@ SALT = os.environ.get("NEWS_SALT", "")
 # Defaults are Groq: free, no card, no identity check, and far more requests a
 # day than this will ever use.
 LLM_KEY = os.environ.get("NEWS_LLM_KEY", "")
-LLM_BASE = os.environ.get("NEWS_LLM_BASE", "https://api.groq.com/openai/v1")
-LLM_MODEL = os.environ.get("NEWS_LLM_MODEL", "openai/gpt-oss-120b")
-LLM_KIND = os.environ.get("NEWS_LLM_KIND", "openai").strip().lower()
+LLM_BASE = os.environ.get("NEWS_LLM_BASE") or "https://api.groq.com/openai/v1"
+LLM_MODEL = os.environ.get("NEWS_LLM_MODEL") or "openai/gpt-oss-120b"
+LLM_KIND = (os.environ.get("NEWS_LLM_KIND") or "openai").strip().lower()
 
 # A plain browser string. Never anything that names the site's people.
 UA = ("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 "
