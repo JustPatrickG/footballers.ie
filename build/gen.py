@@ -81,6 +81,64 @@ def _int(v, d=0):
 def _yes(v):
     return str(v or "").strip().lower() in ("y","yes","true","1")
 
+MISMATCHED = {}          # slug -> the name the stats feed had for them
+_NICK = {"mikey": ["michael"], "mike": ["michael"], "robbie": ["robert"],
+         "tom": ["thomas"], "tommy": ["thomas"], "danny": ["daniel"],
+         "dan": ["daniel"], "joe": ["joseph"], "jimmy": ["james"],
+         "jamie": ["james"], "jim": ["james"], "will": ["william"],
+         "billy": ["william"], "willie": ["william"], "harry": ["harold", "henry"],
+         "paddy": ["patrick"], "pat": ["patrick"], "ollie": ["oliver"],
+         "chris": ["christopher"], "tayo": ["omotayo"], "vinnie": ["vincent"],
+         "nicky": ["nicholas"], "stevie": ["stephen", "steven"],
+         "andy": ["andrew"], "matty": ["matthew"], "ben": ["benjamin"],
+         "sam": ["samuel"], "alex": ["alexander"], "charlie": ["charles"],
+         "freddie": ["frederick"], "ted": ["edward"], "eddie": ["edward"]}
+
+def _same_person(a, b):
+    """Is the stats feed's name the same footballer as ours? Spelling and
+       short names vary a lot - Mikey/Michael, Tayo/Omotayo, Umeh/Umeh-Chibueze -
+       so this is deliberately generous. What it will not accept is a
+       different first name on the same surname: that is how Desmond Armstrong
+       ended up with Harrison Armstrong's face, club and season."""
+    def words(n):
+        n = unicodedata.normalize("NFKD", str(n or "")).encode("ascii", "ignore").decode()
+        return [w for w in re.sub(r"[^a-z\- ]", " ", n.lower()).split() if w]
+    A, B = words(a), words(b)
+    if not A or not B: return True               # nothing to check against
+    if A == B: return True
+
+    # surnames: every word after the first, so a double-barrel still matches
+    def parts(ws): return {p for w in ws for p in w.split("-") if p}
+    sa = parts(A[1:]) or parts([A[-1]])
+    sb = parts(B[1:]) or parts([B[-1]])
+    if not (sa & sb or any(x in y or y in x for x in sa for y in sb)):
+        return False                             # different surname
+
+    fa, fb = A[0], B[0]
+    if fa == fb: return True
+    if fa.startswith(fb) or fb.startswith(fa): return True
+    if fb in _NICK.get(fa, []) or fa in _NICK.get(fb, []): return True
+    fap, fbp = parts([fa]), parts([fb])
+    if fap & fbp: return True                            # Raphael-Pijus / Pijus
+    if fa in parts(B) or fb in parts(A): return True     # middle name used first
+    return False
+
+def _fotmob_names():
+    """slug -> the name FotMob has for that id, from the scraper's id cache.
+       An id set by hand has already been checked by a person, so it is left
+       alone: put 'id set by hand' in the note column to override this."""
+    out = {}
+    path = os.path.join(HERE, "..", "scraper", "fotmob_ids.csv")
+    if not os.path.exists(path): return out
+    with open(path, newline="", encoding="utf-8") as f:
+        for r in csv.DictReader(f):
+            if not (r.get("slug") and (r.get("fotmob_id") or "").strip()):
+                continue
+            if "by hand" in (r.get("note") or "").lower():
+                continue
+            out[r["slug"]] = (r.get("fotmob_name") or "").strip()
+    return out
+
 def _merge_players():
     """Three layers, lowest first:
          scraper/players_list.csv  — the roster (name, club, position)
@@ -98,9 +156,20 @@ def _merge_players():
     # roster, because clubs and leagues change and the roster goes stale.
     SCRAPED_WINS = ("club", "league", "age", "foot", "avg_rating")
 
+    # Before trusting a scraped row, check it belongs to this player. A wrong
+    # id means somebody else's photo, club and season on the page, which is
+    # worse than having no stats at all - so a failed check drops the row and
+    # the player falls back to the roster and Transfermarkt.
+    fm_names = _fotmob_names()
+
     api = {}
     for r in _rows("api/players.csv"):
         if not r.get("slug"): continue
+        ours = (roster.get(r["slug"], {}) or {}).get("name", "")
+        theirs = fm_names.get(r["slug"], "")
+        if ours and theirs and not _same_person(theirs, ours):
+            MISMATCHED[r["slug"]] = theirs
+            continue
         base = dict(roster.get(r["slug"], {}))          # name/pos from the roster
         for k, v in r.items():
             if (v or "").strip():
@@ -284,6 +353,11 @@ def _load_lineups(players):
     plain = [r for r in _rows("api/match_lineups.csv")
              if r.get("match_id") not in {x.get("match_id") for x in rich}]
     rows = rich + plain
+    # a teamsheet slug that came from a wrong id points at the wrong player:
+    # keep the name on the sheet, drop the link to one of ours
+    for r in rows:
+        if (r.get("slug") or "").strip() in MISMATCHED:
+            r["slug"] = ""
     if not rows: return {}
     live = {p["slug"] for p in players}
     by_id = _fotmob_slugs(live)
@@ -429,7 +503,8 @@ def load():
                     if not (r.get(k) or "").strip()},
             photo=(r.get("photo") or "").strip(),
             photo_credit=(r.get("photo_credit") or "").strip(),
-            fixtures=fixtures.get(slug, []), results=results.get(slug, [])))
+            fixtures=([] if slug in MISMATCHED else fixtures.get(slug, [])),
+            results=([] if slug in MISMATCHED else results.get(slug, []))))
     # ---- Transfermarkt bio/contract ----
     for p in players:
         t = tmdata.get(p["slug"])
@@ -525,6 +600,18 @@ def load():
         lv["results"] = lv["results"][:6]
     news = [(r["tag"], r["headline"], r["standfirst"], r["player_slug"]) for r in _rows("manual/news.csv")]
     matches = _merge_rows("matches.csv", ("kickoff","home","away"))
+    # A wrong id also put these players into somebody else's squads. Strip them
+    # here, once, so nothing downstream can put them on a match they never
+    # played in - and drop any match that was only there because of them.
+    if MISMATCHED:
+        kept = []
+        for m in matches:
+            names = [x.strip() for x in (m.get("players") or "").split(";") if x.strip()]
+            clean = [x for x in names if x not in MISMATCHED]
+            if names and not clean: continue      # nobody real was in this game
+            m["players"] = ";".join(clean)
+            kept.append(m)
+        matches = kept
     articles = [r for r in _rows("manual/articles.csv") if r.get("slug")]   # CSV order = display order (drag to reorder in the admin)
     accounts = _rows("manual/accounts.csv")
     clubgeo  = {r["club"]: r for r in _rows("manual/clubs.csv") if r.get("club")}
@@ -845,6 +932,9 @@ IMG_DIR = os.path.join(HERE, "..", "img", "players")
 HAVE_IMG = set()
 if os.path.isdir(IMG_DIR):
     HAVE_IMG = {f.rsplit(".",1)[0] for f in os.listdir(IMG_DIR) if f.lower().endswith((".png",".jpg",".jpeg",".webp"))}
+# an image downloaded against a wrong id is a photo of somebody else - initials
+# are the honest fallback until the id is fixed and the picture re-pulled
+HAVE_IMG -= set(MISMATCHED)
 
 def avatar(p, root="", size="lg"):
     cls = "pavatar" + (" sm" if size == "sm" else "")
@@ -1054,7 +1144,8 @@ def match_squad(m, pmap=None):
        Returns (squad, is_loi, is_squad_list)."""
     pmap = pmap or _pmap()
     seen, squad = set(), []
-    for s in [x.strip() for x in (m.get("players") or "").split(";") if x.strip()]:
+    for s in [x.strip() for x in (m.get("players") or "").split(";")
+              if x.strip() and x.strip() not in MISMATCHED]:
         s = ALIAS.get(s, s)                       # merged duplicates point at one slug
         if s in seen: continue
         p = pmap.get(s)
@@ -3016,6 +3107,13 @@ def build_player(p):
       <div class="pds"><div class="n">{stat(p,"c_apps",c["ap"])}</div><div class="l">Career apps</div></div>
       <div class="pds"><div class="n">{stat(p,"c_goals",c["g"])}</div><div class="l">Career goals</div></div>
     </div>'''
+    elif p["slug"] in MISMATCHED:
+        statsblock = (
+            '<div class="sec"><h2>Season data</h2></div>'
+            '<div class="nodata">We haven\'t matched this player to a record on our stats '
+            'source yet — the closest one belongs to a different player, so we\'re showing '
+            'nothing rather than someone else\'s numbers. '
+            'Know where to find them? <a href="#" onclick="window.FB_REPORT&&FB_REPORT();return false">Tell us</a>.</div>')
     else:
         statsblock = (
             '<div class="sec"><h2>Season data</h2></div>'
@@ -3604,6 +3702,11 @@ for m in MATCHES:
     _nmatch += 1
 print(f"  + {_nmatch} match pages")
 
+if MISMATCHED:
+    print(f"  ! {len(MISMATCHED)} players whose stats record belongs to someone else "
+          f"- stats and photo withheld:")
+    for _s, _n in sorted(MISMATCHED.items()):
+        print(f"      {_s} -> feed had '{_n}'")
 print(f"Built {9 + len(clubs) + len(PLAYERS)} pages ({len(clubs)} clubs, {len(PLAYERS)} players)")
 
 # ---- assets: make build/site a complete, servable site ----

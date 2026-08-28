@@ -286,6 +286,34 @@ def name_variants(name):
     return out
 
 
+def same_person(feed_name, our_name):
+    """Is the search hit the same footballer as ours? Short names and spelling
+    vary a lot (Mikey/Michael, Tayo/Omotayo, Umeh/Umeh-Chibueze), so this is
+    generous - but it will not accept a different first name on a shared
+    surname. That is how Desmond Armstrong ended up holding Harrison
+    Armstrong's id, and with it his photo, his club and his season."""
+    def words(n):
+        return [w for w in norm(str(n or "").replace("-", " ")).split() if w]
+    A, B = words(feed_name), words(our_name)
+    if not A or not B:
+        return False
+    if A == B:
+        return True
+    # surnames: every word after the first, so a double-barrel still matches
+    sa, sb = set(A[1:]) or {A[-1]}, set(B[1:]) or {B[-1]}
+    if not (sa & sb or any(x in y or y in x for x in sa for y in sb)):
+        return False
+    fa, fb = A[0], B[0]
+    if fa == fb or fa.startswith(fb) or fb.startswith(fa):
+        return True
+    for short, longs in NICKNAMES.items():
+        if (fa == short and fb in longs) or (fb == short and fa in longs):
+            return True
+    if fa in B or fb in A:
+        return True
+    return False
+
+
 def resolve(args):
     players = read_player_list()
     cache = read_id_cache()
@@ -326,11 +354,13 @@ def resolve(args):
             if nc in (nname, roster_name) or nname in nc or nc in nname \
                     or (nsurname and nsurname in nc.split()):
                 name_hits.append((oid, cname, cteam))
+        # a shared surname is a lead, not a match
+        sure_hits = [h for h in name_hits if same_person(h[1], name)]
 
         surname_only = (used_name != name
                         and len(used_name.split()) < len(name.split()))
         best = None
-        pool = name_hits or cands
+        pool = sure_hits or name_hits or cands
         if len(pool) == 1 and not surname_only:
             # only one option -> obviously them
             oid, cname, cteam = pool[0]
@@ -351,7 +381,18 @@ def resolve(args):
                 if best is None or score > best[0]:
                     best = (score, oid, cname, cteam)
 
-        if best:
+        if best and not same_person(best[2], name):
+            # the only candidate is somebody else. Record who, so it is easy to
+            # see what happened, but leave the id blank: no stats beats another
+            # player's stats.
+            _, oid, cname, cteam = best
+            cache[slug] = {"fotmob_id": "", "fotmob_name": cname,
+                           "fotmob_team": cteam,
+                           "note": f"name mismatch ({cname}) - not used"}
+            unresolved.append(slug)
+            print(f"  [{i+1}/{len(todo)}] {name}: closest is {cname} "
+                  f"({cteam or 'team unknown'}) - different player, skipped")
+        elif best:
             score, oid, cname, cteam = best
             note = "" if score == 2 else "club mismatch - CHECK"
             cache[slug] = {"fotmob_id": oid, "fotmob_name": cname,
