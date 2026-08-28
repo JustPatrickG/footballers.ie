@@ -1326,6 +1326,9 @@ a.intlblock.lnk:hover{border-color:var(--teal)}
 .msev b{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--mute);min-width:32px}
 .msfine{margin-top:14px;font-size:12px;color:var(--mute)}
 
+.squadnote{margin:12px 4px 0;font-family:'IBM Plex Mono',monospace;font-size:11px;
+  line-height:1.6;color:var(--mute)}
+
 /* ============ TRANSFERS ============
    One feed of every move on file. The rows are drawn by script sixty at a
    time, so everything here has to hold up on a list that keeps growing. */

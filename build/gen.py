@@ -1260,7 +1260,18 @@ def _lineup_players(m, pmap):
                     seen.add(slug); out.append(p)
     return out
 
-def match_squad(m, pmap=None):
+def lineup_settles(m):
+    """True when we hold a real teamsheet for BOTH sides.
+
+       One sheet is not enough. If we have Voitsberg's eleven but not
+       Liefering's, a Liefering player being absent from what we hold tells us
+       nothing — he simply isn't on the sheet we happen to have. Both sides
+       out, and an absence is a real absence."""
+    lu = _match_lineup(m) or {}
+    return sum(1 for sd in lu.values()
+               if len(sd.get("start") or []) >= 7) >= 2
+
+def match_squad(m, pmap=None, settled=True):
     """The tracked players attached to a match, resolved to player records.
 
        The scraper attaches every tracked player at both clubs, not a teamsheet.
@@ -1288,8 +1299,13 @@ def match_squad(m, pmap=None):
     # If there's a teamsheet, that IS the answer. The players column is every
     # tracked player at both clubs, which for an Irish club is the whole roster
     # - thirty-odd names on a card for a game eleven of them will start.
+    #
+    # And when both sheets are out, an EMPTY answer is still the answer: none
+    # of ours made the squad, so the game isn't one of ours either. Callers
+    # that just need the page built (rather than the fixture listed) pass
+    # settled=False and keep the old club-roster fallback.
     named = _lineup_players(m, pmap)
-    if named:
+    if named or (settled and lineup_settles(m)):
         return named, loi, len(named) >= SQUAD_LIST_AT
     sq  = len(squad) >= SQUAD_LIST_AT
     if sq:
@@ -3220,7 +3236,15 @@ def build_match(m, involved, squad_list=False):
                  f'<div class="mscore ko"><span class="ko-time" data-ko="{esc(m.get("kickoff",""))}">'
                  f'{esc(m.get("kickoff","")[11:16])}</span></div>')
     lineups, rest = lineup_block(m, involved)
-    if lineups:
+    if lineups and rest and lineup_settles(m):
+        # both sheets are out and these players are on neither of them —
+        # calling that "rest of the squad" says something the teamsheet
+        # contradicts
+        squads = (squad_groups(rest, "Not in the matchday squad")
+                  + '<p class="squadnote">Named in neither the starting eleven '
+                    'nor the bench. This game is on their profile because their '
+                    'club played it, not because they were involved.</p>')
+    elif lineups:
         squads = squad_groups(rest, "Rest of the squad")
     else:
         squads = squad_groups(involved,
@@ -4173,7 +4197,10 @@ os.makedirs(f"{OUT}/match", exist_ok=True)
 _PM = _pmap()
 _nmatch = 0
 for m in MATCHES:
-    inv, _loi, _sq = match_squad(m, _PM)
+    # settled=False on purpose: the page is still wanted for a game a tracked
+    # player's club played and he sat out, because his own page links to it.
+    # It's the fixture list he comes off, not the record of the match.
+    inv, _loi, _sq = match_squad(m, _PM, settled=False)
     if not inv: continue
     open(f"{OUT}/match/{match_id(m)}.html","w").write(build_match(m, inv, _sq))
     _nmatch += 1
