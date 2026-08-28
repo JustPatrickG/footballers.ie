@@ -226,7 +226,7 @@ function plainCard(d) {
   ], d.glow || 'teal');
 }
 
-export const CARDS = {
+const CARDS = {
   article: articleCard,
   player: playerCard,
   match: matchCard,
@@ -234,6 +234,8 @@ export const CARDS = {
   plain: plainCard,
 };
 
-export function buildCard(kind, data) {
+function buildCard(kind, data) {
   return (CARDS[kind] || plainCard)(data || {});
 }
+
+module.exports = { CARDS, buildCard };

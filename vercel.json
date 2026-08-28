@@ -19,5 +19,11 @@
         }
       ]
     }
-  ]
+  ],
+  "functions": {
+    "api/og.js": {
+      "includeFiles": "node_modules/{harfbuzzjs,@resvg}/**",
+      "maxDuration": 15
+    }
+  }
 }

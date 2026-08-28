@@ -8,14 +8,14 @@
 // Match cards carry a FotMob id and look the score up as they are drawn, which
 // is why they are cached for a minute and everything else for a day.
 
-import satori from 'satori';
-import { Resvg, initWasm } from '@resvg/resvg-wasm';
-import { readFileSync } from 'fs';
-import { createRequire } from 'module';
-import { FONTS } from './_fonts.js';
-import { buildCard } from './_cards.js';
+// CommonJS on purpose: satori's text shaper locates its WebAssembly through
+// __dirname, which an ES module does not have.
+const satori = require('satori').default || require('satori');
+const { Resvg, initWasm } = require('@resvg/resvg-wasm');
+const { readFileSync } = require('fs');
+const { FONTS } = require('./_fonts.js');
+const { buildCard } = require('./_cards.js');
 
-const require = createRequire(import.meta.url);
 let wasmReady = null;
 function ready() {
   if (!wasmReady) {
@@ -151,7 +151,7 @@ async function assemble(q) {
   }];
 }
 
-export default async function handler(req, res) {
+module.exports = async function handler(req, res) {
   try {
     const q = req.query || {};
     const [kind, data] = await assemble(q);
@@ -169,8 +169,10 @@ export default async function handler(req, res) {
       : 'public, s-maxage=86400, stale-while-revalidate=604800');
     return res.status(200).send(png);
   } catch (e) {
-    // never hand back a broken image: fall back to the one static card
+    // never hand back a broken image: fall back to the one static card, but
+    // say why in the logs so a silent fallback is never a mystery
+    console.error('og card failed:', (e && e.stack) || String(e));
     res.setHeader('Cache-Control', 'public, s-maxage=60');
     return res.redirect(302, `${SITE}/og-image.png`);
   }
-}
+};
