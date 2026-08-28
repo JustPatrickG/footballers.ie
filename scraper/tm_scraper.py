@@ -14,6 +14,7 @@ it. A full pass over ~490 players takes roughly 40 minutes.
 """
 
 import argparse
+import datetime as dt
 import csv
 import html
 import json
@@ -923,6 +924,18 @@ def transfer_rows(tid, slug, debug_name=None):
     return out
 
 
+TRANSFER_STATE = SCRAPER_DIR / "tm_transfers_state.json"
+
+
+def _transfer_state():
+    """slug -> the day we last read their history. Kept beside the scraper
+       rather than in the csv so the file's shape never changes."""
+    try:
+        return json.loads(TRANSFER_STATE.read_text())
+    except Exception:
+        return {}
+
+
 def transfers(args):
     """data/api/transfers.csv - every club move we can see, per player."""
     cache = read_cache()
@@ -941,13 +954,32 @@ def transfers(args):
                 have.setdefault(row["slug"], []).append(
                     [row.get(c, "") for c in TRANSFER_COLUMNS])
 
+    # A player already in the file used to be settled forever, so a move
+    # made after their first read could never appear. --age re-reads anyone
+    # whose history has not been checked in that many days, oldest first,
+    # which is what keeps a transfer window honest.
+    state = _transfer_state()
+    stale = set()
+    if args.age:
+        cut = (dt.date.today() - dt.timedelta(days=args.age)).isoformat()
+        for p in players:
+            if state.get(p["slug"], "") < cut:
+                stale.add(p["slug"])
+
+    def rank(p):
+        return (state.get(p["slug"], ""), p["slug"])
+
     todo = [p for p in players
             if cache.get(p["slug"], {}).get("tm_id")
-            and (args.rebuild or p["slug"] not in have)]
+            and (args.rebuild or p["slug"] not in have
+                 or p["slug"] in stale)]
+    todo.sort(key=rank)                      # least recently checked first
     if args.limit:
         todo = todo[:args.limit]
-    print(f"{len(todo)} players to read "
-          f"({len(have)} already have a history)")
+    fresh = sum(1 for p in todo if p["slug"] not in have)
+    print(f"{len(todo)} players to read ({fresh} new, "
+          f"{len(todo) - fresh} being refreshed; "
+          f"{len(have)} already have a history)")
 
     blocked = 0
     for i, p in enumerate(todo):
@@ -968,6 +1000,7 @@ def transfers(args):
             continue
         blocked = 0
         have[slug] = rows
+        state[slug] = dt.date.today().isoformat()
         print(f"  [{i+1}/{len(todo)}] {slug}: {len(rows)} moves"
               + (f", now at {rows[0][4]}" if rows else ""))
         time.sleep(args.sleep)
@@ -980,6 +1013,7 @@ def transfers(args):
         w = csv.writer(f)
         w.writerow(TRANSFER_COLUMNS)
         w.writerows(flat)
+    TRANSFER_STATE.write_text(json.dumps(state, indent=0, sort_keys=True))
     print(f"wrote {out_path} ({len(flat)} rows, {len(have)} players)")
 
 
@@ -1034,6 +1068,9 @@ def main():
                     help=f"seconds between players (default {SLEEP})")
     tf.add_argument("--limit", type=int, default=0,
                     help="only do N players (to split the work)")
+    tf.add_argument("--age", type=int, default=0,
+                    help="also re-read anyone whose history has not been "
+                         "checked in this many days (0 = only new players)")
     tf.add_argument("--rebuild", action="store_true",
                     help="ignore the existing file instead of updating it")
     tf.add_argument("--debug", action="store_true",

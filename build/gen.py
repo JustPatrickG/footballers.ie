@@ -285,16 +285,105 @@ ALIAS = {}
 TRANSFERS = {}
 FMIDS = {}
 
+# Transfermarkt writes club names its own way — "St. Pat's", "Man Utd U21",
+# "Cambridge Utd.", "Aberdeen FC" — while the badge map is keyed on FotMob's
+# names. This is the bridge: a normaliser that strips the punctuation, the
+# youth suffix and the FC/AFC noise, plus a short table for the ones that are
+# simply different words. Anything still unmatched keeps the grey crest; a
+# wrong badge is worse than no badge.
+NON_CLUBS = {"without club", "retired", "career break", "unknown", "no club",
+             "free agent", "---", "-", "?"}
+
+CLUB_ALIASES = {
+    # League of Ireland, as Transfermarkt shortens them
+    "pats": "St. Patrick's Athletic", "st pats": "St. Patrick's Athletic",
+    "bohemians": "Bohemian FC", "bohs": "Bohemian FC",
+    "shels": "Shelbourne", "drogs": "Drogheda United",
+    "wfc": "Waterford FC", "waterford united": "Waterford FC",
+    "rovers": "Shamrock Rovers", "hoops": "Shamrock Rovers",
+    "sligo": "Sligo Rovers", "cork": "Cork City",
+    "galway": "Galway United FC", "galway united": "Galway United FC",
+    "bray": "Bray Wanderers", "derry": "Derry City",
+    "cobh": "Cobh Ramblers", "athlone": "Athlone Town",
+    "longford": "Longford Town", "wexford": "Wexford FC",
+    "harps": "Finn Harps", "treaty": "Treaty United",
+    # British clubs whose short form the id map doesn't carry
+    "man united": "Manchester United", "man utd": "Manchester United",
+    "man city": "Manchester City", "palace": "Crystal Palace",
+    "nottm forest": "Nottingham Forest", "nottingham": "Nottingham Forest",
+    "spurs": "Tottenham Hotspur", "wolves": "Wolverhampton Wanderers",
+    "west brom": "West Bromwich Albion", "wba": "West Bromwich Albion",
+    "sheff united": "Sheffield United", "sheff wed": "Sheffield Wednesday",
+    "huddersf": "Huddersfield Town", "southampt": "Southampton",
+    "brighton": "Brighton & Hove Albion", "newcastle": "Newcastle United",
+    "leeds": "Leeds United", "west ham": "West Ham United",
+    "qpr": "Queens Park Rangers", "mk dons": "Milton Keynes Dons",
+}
+
+_CLUB_DROP = {"fc", "afc", "cf", "sc", "ac", "if", "fk", "sk", "bk", "sv",
+              "club", "de", "cfc", "calcio", "cd", "ud", "ss", "as", "us",
+              "ssc", "rc", "nk", "hk", "ik", "bc", "sd", "ca", "the"}
+_CLUB_ABBR = {"utd": "united", "utd.": "united", "rgrs": "rangers",
+              "rvrs": "rovers", "ath": "athletic", "atl": "atletico",
+              "st": "st", "acad": "academy", "res": "", "yth": "youth"}
+
+def _club_norm(n):
+    """A club name reduced to the words that identify it."""
+    s = (n or "").lower().strip()
+    s = re.sub(r"[’']", "", s)                  # o'brien, pat's
+    s = re.sub(r"\s+(u\d{2}|academy|acad|reserves?|res|youth|ii|b)$", "", s)
+    s = re.sub(r"^\d+\s*\.?\s*(fc|fsv|tsv|vfl|vfb)\s+", "", s)   # 1.FC Köln
+    s = unicodedata.normalize("NFKD", s)
+    s = "".join(ch for ch in s if not unicodedata.combining(ch))
+    s = re.sub(r"[^a-z0-9]+", " ", s).strip()
+    words = [_CLUB_ABBR.get(w, w) for w in s.split()]
+    words = [w for w in words if w and w not in _CLUB_DROP]
+    return " ".join(words)
+
 def _load_transfers():
-    """data/api/transfers.csv — every club move, oldest first per player.
-       Optional file; without it the career block and the club-per-match
-       label simply don't render."""
+    """data/api/transfers.csv — every club move, oldest first per player —
+       with data/manual/transfers.csv laid over the top.
+
+       The manual file exists because Transfermarkt has no record of a whole
+       class of real moves: a sixteen-year-old signing for an academy abroad,
+       a schoolboy club to a League of Ireland side, anyone going to American
+       college football, the lower reaches of the non-league. Those are still
+       transfers and people still want to read about them.
+
+       A manual row drops itself the moment the scrape catches up with the
+       same move, so the file never has to be tidied by hand. Both files are
+       optional; without either, the career block simply doesn't render."""
     out = {}
     for r in _rows("api/transfers.csv"):
         if r.get("slug") and (r.get("to_club") or "").strip():
             out.setdefault(r["slug"], []).append(r)
+
+    for r in _rows("manual/transfers.csv"):
+        slug = (r.get("slug") or "").strip()
+        to = (r.get("to_club") or "").strip()
+        if not slug or not to:
+            continue
+        d = (r.get("date") or "").strip()[:10]
+        # "has the scrape got this one yet?" — same destination, same season
+        # or later. Undated rows are read as belonging to the current season.
+        year = d[:4] if len(d) == 10 else SEASON[:4]
+        key = _club_norm(to)
+        if any(_club_norm(x.get("to_club")) == key
+               and (x.get("date") or "") >= f"{year}-01-01"
+               for x in out.get(slug, [])):
+            continue
+        out.setdefault(slug, []).append({
+            "slug": slug, "date": d,
+            "season": (r.get("season") or "").strip(),
+            "from_club": (r.get("from_club") or "").strip(), "to_club": to,
+            "fee": (r.get("fee") or "").strip(),
+            "market_value": (r.get("market_value") or "").strip(),
+            "kind": (r.get("kind") or "").strip(), "manual": "1"})
+
+    # an undated row is the most recent thing we know about that player, so
+    # it sorts last here (the career block reverses this) and first in the feed
     for rows in out.values():
-        rows.sort(key=lambda r: r.get("date") or "")
+        rows.sort(key=lambda r: (r.get("date") or "9999-99-99"))
     return out
 
 def club_at(slug, date):
@@ -872,61 +961,6 @@ def clink(c, root=""): return f'{root}club/{club_slug(c)}.html'
 CLUB_IDS = {}
 CLUB_NORM = {}          # reduced club name -> id, for feeds that abbreviate
 ACADEMY_RE = re.compile(r"\s+(u\d{2}|academy|reserves?|ii|b)$", re.I)
-# Transfermarkt writes club names its own way — "St. Pat's", "Man Utd U21",
-# "Cambridge Utd.", "Aberdeen FC" — while the badge map is keyed on FotMob's
-# names. This is the bridge: a normaliser that strips the punctuation, the
-# youth suffix and the FC/AFC noise, plus a short table for the ones that are
-# simply different words. Anything still unmatched keeps the grey crest; a
-# wrong badge is worse than no badge.
-NON_CLUBS = {"without club", "retired", "career break", "unknown", "no club",
-             "free agent", "---", "-", "?"}
-
-CLUB_ALIASES = {
-    # League of Ireland, as Transfermarkt shortens them
-    "pats": "St. Patrick's Athletic", "st pats": "St. Patrick's Athletic",
-    "bohemians": "Bohemian FC", "bohs": "Bohemian FC",
-    "shels": "Shelbourne", "drogs": "Drogheda United",
-    "wfc": "Waterford FC", "waterford united": "Waterford FC",
-    "rovers": "Shamrock Rovers", "hoops": "Shamrock Rovers",
-    "sligo": "Sligo Rovers", "cork": "Cork City",
-    "galway": "Galway United FC", "galway united": "Galway United FC",
-    "bray": "Bray Wanderers", "derry": "Derry City",
-    "cobh": "Cobh Ramblers", "athlone": "Athlone Town",
-    "longford": "Longford Town", "wexford": "Wexford FC",
-    "harps": "Finn Harps", "treaty": "Treaty United",
-    # British clubs whose short form the id map doesn't carry
-    "man united": "Manchester United", "man utd": "Manchester United",
-    "man city": "Manchester City", "palace": "Crystal Palace",
-    "nottm forest": "Nottingham Forest", "nottingham": "Nottingham Forest",
-    "spurs": "Tottenham Hotspur", "wolves": "Wolverhampton Wanderers",
-    "west brom": "West Bromwich Albion", "wba": "West Bromwich Albion",
-    "sheff united": "Sheffield United", "sheff wed": "Sheffield Wednesday",
-    "huddersf": "Huddersfield Town", "southampt": "Southampton",
-    "brighton": "Brighton & Hove Albion", "newcastle": "Newcastle United",
-    "leeds": "Leeds United", "west ham": "West Ham United",
-    "qpr": "Queens Park Rangers", "mk dons": "Milton Keynes Dons",
-}
-
-_CLUB_DROP = {"fc", "afc", "cf", "sc", "ac", "if", "fk", "sk", "bk", "sv",
-              "club", "de", "cfc", "calcio", "cd", "ud", "ss", "as", "us",
-              "ssc", "rc", "nk", "hk", "ik", "bc", "sd", "ca", "the"}
-_CLUB_ABBR = {"utd": "united", "utd.": "united", "rgrs": "rangers",
-              "rvrs": "rovers", "ath": "athletic", "atl": "atletico",
-              "st": "st", "acad": "academy", "res": "", "yth": "youth"}
-
-def _club_norm(n):
-    """A club name reduced to the words that identify it."""
-    s = (n or "").lower().strip()
-    s = re.sub(r"[’']", "", s)                  # o'brien, pat's
-    s = re.sub(r"\s+(u\d{2}|academy|acad|reserves?|res|youth|ii|b)$", "", s)
-    s = re.sub(r"^\d+\s*\.?\s*(fc|fsv|tsv|vfl|vfb)\s+", "", s)   # 1.FC Köln
-    s = unicodedata.normalize("NFKD", s)
-    s = "".join(ch for ch in s if not unicodedata.combining(ch))
-    s = re.sub(r"[^a-z0-9]+", " ", s).strip()
-    words = [_CLUB_ABBR.get(w, w) for w in s.split()]
-    words = [w for w in words if w and w not in _CLUB_DROP]
-    return " ".join(words)
-
 def _register_club_ids():
     """club name -> FotMob team id: the scraper-maintained club_ids.csv first,
        then players.csv, clubs.csv, and both sides of every match in
@@ -3529,7 +3563,9 @@ def transfer_window(date):
        actually talk about transfers."""
     d = (date or "").strip()[:10]
     if len(d) != 10 or not d[:4].isdigit():
-        return ("", "Undated")
+        # a reported move with no date on it belongs to the window we are in
+        y = SEASON[:4]
+        return (f"{y}S", f"Summer {y}")
     y = d[:4]
     try: m = int(d[5:7])
     except ValueError: return ("", "Undated")
@@ -3553,12 +3589,14 @@ def money(v):
 
 def transfer_label(t):
     """(chip text, css class). Money when there was any, the shape of the
-       deal when there wasn't."""
+       deal when there wasn't. A hand-entered move never claims a fee was
+       undisclosed - we simply weren't told one."""
     k, fee = t["kind"], t["fee"]
     if k == "fee":      return (money(fee_value(fee)) or "Fee", "fee")
     if k == "free":     return ("Free", "free")
     if k == "loan":     return ("Loan", "loan")
     if k == "loan end": return ("Loan ended", "end")
+    if t.get("manual"): return ("Signed", "move")
     return (("Undisclosed" if fee in ("?", "") else "Signed"), "move")
 
 def transfer_feed():
@@ -3571,11 +3609,14 @@ def transfer_feed():
         for r in rows:
             d = (r.get("date") or "").strip()[:10]
             to = (r.get("to_club") or "").strip()
-            if len(d) != 10 or not to: continue
+            manual = bool(r.get("manual"))
+            if not to or (len(d) != 10 and not manual): continue
+            if len(d) != 10: d = ""
             out.append(dict(p=p, date=d, frm=(r.get("from_club") or "").strip(),
                             to=to, fee=(r.get("fee") or "").strip(),
-                            kind=(r.get("kind") or "").strip()))
-    out.sort(key=lambda t: (t["date"], t["p"]["n"]), reverse=True)
+                            kind=(r.get("kind") or "").strip(), manual=manual))
+    # undated rows are reported-but-unconfirmed, and belong at the top
+    out.sort(key=lambda t: (t["date"] or "9999", t["p"]["n"]), reverse=True)
     return out
 
 _TMONTHS = ("January", "February", "March", "April", "May", "June", "July",
@@ -3585,6 +3626,8 @@ def transfer_day(d):
     """Heading for a day of moves. Recent days get named, older ones get the
        date — 'Wednesday the 3rd' means nothing about a signing in 2019."""
     import datetime as _dt
+    if not (d or "").strip():
+        return "Reported · date not confirmed"
     try: day = _dt.date.fromisoformat(d)
     except ValueError: return d
     today = _dt.date.today()
@@ -3660,7 +3703,8 @@ def build_transfers():
     trows = [[pidx[t["p"]["slug"]], t["date"], cidx.get(t["frm"], -1),
               cidx[t["to"]], transfer_label(t)[1], transfer_label(t)[0]]
              for t in feed]
-    payload = {"c": [club_label(c) for c in clubs],
+    payload = {"w": transfer_window("")[0],
+               "c": [club_label(c) for c in clubs],
                "b": [club_id(c) for c in clubs],
                "p": plist, "t": trows}
 
@@ -3668,7 +3712,8 @@ def build_transfers():
     for t in live[:40]:
         if t["date"] != day:
             day = t["date"]
-            seed += f'<h4 class="tday">{esc(transfer_day(day))}</h4>'
+            seed += (f'<h4 class="tday{"" if day else " soft"}">'
+                     f'{esc(transfer_day(day))}</h4>')
         seed += transfer_row(t)
 
     sub = ("Every move by a tracked Irish player — window by window, "
@@ -3700,7 +3745,7 @@ def build_transfers():
                             f="footballers.ie", fr="TRANSFERS"))
 
 
-TRANSFERS_JS = '\n(function(){\n  var D=window.FB_TF; if(!D||!D.t) return;\n  var feed=document.getElementById(\'tfeed\'), more=document.getElementById(\'tmore\'),\n      cnt=document.getElementById(\'tcount\'), empty=document.getElementById(\'tempty\'),\n      q=document.getElementById(\'tq\'), wf=document.getElementById(\'twin\'),\n      kf=document.getElementById(\'tkind\'), ends=document.getElementById(\'tendsx\');\n  if(!feed||!more) return;\n  var PAGE=60, view=[], shown=0, lastDay=\'\';\n  var M=[\'January\',\'February\',\'March\',\'April\',\'May\',\'June\',\'July\',\'August\',\n         \'September\',\'October\',\'November\',\'December\'];\n  var DAYS=[\'Sunday\',\'Monday\',\'Tuesday\',\'Wednesday\',\'Thursday\',\'Friday\',\'Saturday\'];\n  var today=new Date(); today.setHours(0,0,0,0);\n\n  function esc(t){return String(t==null?\'\':t).replace(/[&<>"]/g,function(c){\n    return {\'&\':\'&amp;\',\'<\':\'&lt;\',\'>\':\'&gt;\',\'"\':\'&quot;\'}[c];});}\n  function win(d){return d.slice(0,4)+(+d.slice(5,7)>=5?\'S\':\'W\');}\n  function heading(d){\n    var p=d.split(\'-\'), dt=new Date(+p[0],+p[1]-1,+p[2]);\n    var gap=Math.round((today-dt)/86400000);\n    if(gap===0) return \'Today\';\n    if(gap===1) return \'Yesterday\';\n    if(gap>0&&gap<7) return DAYS[dt.getDay()];\n    var base=(+p[2])+\' \'+M[+p[1]-1];\n    return dt.getFullYear()===today.getFullYear()?base:base+\' \'+p[0];\n  }\n  function badge(i){\n    if(i<0) return \'\';\n    var id=D.b[i], nm=D.c[i];\n    // a state, not a club - nothing to put a crest on\n    if(nm===\'No club\'||nm===\'Retired\'||nm===\'Career break\') return \'\';\n    if(!id) return \'<span class="badge xs generic"></span>\';\n    return \'<img class="badge xs" loading="lazy" alt="" src="https://images.fotmob.com/\'+\n      \'image_resources/logo/teamlogo/\'+id+\'.png" onerror="this.outerHTML=&#39;<span \'+\n      \'class=&quot;badge xs generic&quot;></span>&#39;">\';\n  }\n  function face(p){\n    var src = p[4]===\'*\' ? \'img/players/\'+p[0]+\'.png\' : p[4];\n    if(!src) return \'<div class="pavatar sm"><span>\'+esc(p[3])+\'</span></div>\';\n    return \'<div class="pavatar sm"><img loading="lazy" alt="\'+esc(p[1])+\'" src="\'+\n      esc(src)+\'" onerror="this.parentNode.innerHTML=&#39;<span>\'+esc(p[3])+\n      \'</span>&#39;"></div>\';\n  }\n  function row(r){\n    var p=D.p[r[0]], from=r[2]<0?\'No club\':D.c[r[2]], to=D.c[r[3]];\n    return \'<a class="trrow" href="player/\'+esc(p[0])+\'.html">\'+face(p)+\n      \'<div class="trm"><div class="trn">\'+esc(p[1])+\n      (p[2]?\'<span class="trp">\'+esc(p[2])+\'</span>\':\'\')+\'</div>\'+\n      \'<div class="trmv">\'+badge(r[2])+\'<span>\'+esc(from)+\'</span>\'+\n      \'<i class="tra">→</i>\'+badge(r[3])+\'<b>\'+esc(to)+\'</b></div></div>\'+\n      \'<div class="trr"><span class="tchip \'+r[4]+\'">\'+esc(r[5])+\'</span></div></a>\';\n  }\n\n  function build(){\n    var t=q.value.trim().toLowerCase(), w=wf.value, k=kf.value, le=ends.checked;\n    view=D.t.filter(function(r){\n      if(!le && r[4]===\'end\') return false;\n      if(k && r[4]!==k) return false;\n      if(w && win(r[1])!==w) return false;\n      if(t){\n        var p=D.p[r[0]];\n        var hay=(p[1]+\' \'+(r[2]<0?\'\':D.c[r[2]])+\' \'+D.c[r[3]]).toLowerCase();\n        if(hay.indexOf(t)<0) return false;\n      }\n      return true;\n    });\n    feed.innerHTML=\'\'; shown=0; lastDay=\'\';\n    cnt.textContent=view.length+\' move\'+(view.length===1?\'\':\'s\');\n    empty.style.display=view.length?\'none\':\'block\';\n    draw();\n  }\n  function draw(){\n    var end=Math.min(shown+PAGE, view.length), html=\'\';\n    for(var i=shown;i<end;i++){\n      var r=view[i];\n      if(r[1]!==lastDay){ lastDay=r[1]; html+=\'<h4 class="tday">\'+esc(heading(r[1]))+\'</h4>\'; }\n      html+=row(r);\n    }\n    feed.insertAdjacentHTML(\'beforeend\', html);\n    shown=end;\n    more.style.display = shown<view.length ? \'\' : \'none\';\n    more.textContent=\'Load more · \'+(view.length-shown)+\' left\';\n  }\n  more.onclick=draw;\n  q.oninput=build; wf.onchange=build; kf.onchange=build; ends.onchange=build;\n  // the tail of the list loads itself once the reader gets near it\n  window.addEventListener(\'scroll\', function(){\n    if(more.style.display===\'none\') return;\n    if(more.getBoundingClientRect().top < window.innerHeight + 400) draw();\n  }, {passive:true});\n  build();\n})();\n'
+TRANSFERS_JS = '\n(function(){\n  var D=window.FB_TF; if(!D||!D.t) return;\n  var feed=document.getElementById(\'tfeed\'), more=document.getElementById(\'tmore\'),\n      cnt=document.getElementById(\'tcount\'), empty=document.getElementById(\'tempty\'),\n      q=document.getElementById(\'tq\'), wf=document.getElementById(\'twin\'),\n      kf=document.getElementById(\'tkind\'), ends=document.getElementById(\'tendsx\');\n  if(!feed||!more) return;\n  // null, not \'\': an undated row\'s date IS the empty string, and\n  // starting lastDay at \'\' would swallow its heading\n  var PAGE=60, view=[], shown=0, lastDay=null;\n  var M=[\'January\',\'February\',\'March\',\'April\',\'May\',\'June\',\'July\',\'August\',\n         \'September\',\'October\',\'November\',\'December\'];\n  var DAYS=[\'Sunday\',\'Monday\',\'Tuesday\',\'Wednesday\',\'Thursday\',\'Friday\',\'Saturday\'];\n  var today=new Date(); today.setHours(0,0,0,0);\n\n  function esc(t){return String(t==null?\'\':t).replace(/[&<>"]/g,function(c){\n    return {\'&\':\'&amp;\',\'<\':\'&lt;\',\'>\':\'&gt;\',\'"\':\'&quot;\'}[c];});}\n  // an undated row is a reported move in the window we are in\n  function win(d){return d?d.slice(0,4)+(+d.slice(5,7)>=5?\'S\':\'W\'):(D.w||\'\');}\n  function heading(d){\n    if(!d) return \'Reported · date not confirmed\';\n    var p=d.split(\'-\'), dt=new Date(+p[0],+p[1]-1,+p[2]);\n    var gap=Math.round((today-dt)/86400000);\n    if(gap===0) return \'Today\';\n    if(gap===1) return \'Yesterday\';\n    if(gap>0&&gap<7) return DAYS[dt.getDay()];\n    var base=(+p[2])+\' \'+M[+p[1]-1];\n    return dt.getFullYear()===today.getFullYear()?base:base+\' \'+p[0];\n  }\n  function badge(i){\n    if(i<0) return \'\';\n    var id=D.b[i], nm=D.c[i];\n    // a state, not a club - nothing to put a crest on\n    if(nm===\'No club\'||nm===\'Retired\'||nm===\'Career break\') return \'\';\n    if(!id) return \'<span class="badge xs generic"></span>\';\n    return \'<img class="badge xs" loading="lazy" alt="" src="https://images.fotmob.com/\'+\n      \'image_resources/logo/teamlogo/\'+id+\'.png" onerror="this.outerHTML=&#39;<span \'+\n      \'class=&quot;badge xs generic&quot;></span>&#39;">\';\n  }\n  function face(p){\n    var src = p[4]===\'*\' ? \'img/players/\'+p[0]+\'.png\' : p[4];\n    if(!src) return \'<div class="pavatar sm"><span>\'+esc(p[3])+\'</span></div>\';\n    return \'<div class="pavatar sm"><img loading="lazy" alt="\'+esc(p[1])+\'" src="\'+\n      esc(src)+\'" onerror="this.parentNode.innerHTML=&#39;<span>\'+esc(p[3])+\n      \'</span>&#39;"></div>\';\n  }\n  function row(r){\n    var p=D.p[r[0]], from=r[2]<0?\'No club\':D.c[r[2]], to=D.c[r[3]];\n    return \'<a class="trrow" href="player/\'+esc(p[0])+\'.html">\'+face(p)+\n      \'<div class="trm"><div class="trn">\'+esc(p[1])+\n      (p[2]?\'<span class="trp">\'+esc(p[2])+\'</span>\':\'\')+\'</div>\'+\n      \'<div class="trmv">\'+badge(r[2])+\'<span>\'+esc(from)+\'</span>\'+\n      \'<i class="tra">→</i>\'+badge(r[3])+\'<b>\'+esc(to)+\'</b></div></div>\'+\n      \'<div class="trr"><span class="tchip \'+r[4]+\'">\'+esc(r[5])+\'</span></div></a>\';\n  }\n\n  function build(){\n    var t=q.value.trim().toLowerCase(), w=wf.value, k=kf.value, le=ends.checked;\n    view=D.t.filter(function(r){\n      if(!le && r[4]===\'end\') return false;\n      if(k && r[4]!==k) return false;\n      if(w && win(r[1])!==w) return false;\n      if(t){\n        var p=D.p[r[0]];\n        var hay=(p[1]+\' \'+(r[2]<0?\'\':D.c[r[2]])+\' \'+D.c[r[3]]).toLowerCase();\n        if(hay.indexOf(t)<0) return false;\n      }\n      return true;\n    });\n    feed.innerHTML=\'\'; shown=0; lastDay=null;\n    cnt.textContent=view.length+\' move\'+(view.length===1?\'\':\'s\');\n    empty.style.display=view.length?\'none\':\'block\';\n    draw();\n  }\n  function draw(){\n    var end=Math.min(shown+PAGE, view.length), html=\'\';\n    for(var i=shown;i<end;i++){\n      var r=view[i];\n      if(r[1]!==lastDay){ lastDay=r[1];\n        html+=\'<h4 class="tday\'+(r[1]?\'\':\' soft\')+\'">\'+esc(heading(r[1]))+\'</h4>\'; }\n      html+=row(r);\n    }\n    feed.insertAdjacentHTML(\'beforeend\', html);\n    shown=end;\n    more.style.display = shown<view.length ? \'\' : \'none\';\n    more.textContent=\'Load more · \'+(view.length-shown)+\' left\';\n  }\n  more.onclick=draw;\n  q.oninput=build; wf.onchange=build; kf.onchange=build; ends.onchange=build;\n  // the tail of the list loads itself once the reader gets near it\n  window.addEventListener(\'scroll\', function(){\n    if(more.style.display===\'none\') return;\n    if(more.getBoundingClientRect().top < window.innerHeight + 400) draw();\n  }, {passive:true});\n  build();\n})();\n'
 
 
 def build_newsletter():

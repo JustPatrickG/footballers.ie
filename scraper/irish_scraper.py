@@ -646,10 +646,15 @@ def append_players(new_players, cache, note="added"):
     fotmob_id) to players_list.csv and the ID cache. Skips known."""
     players = read_player_list()
     known_slugs = {p["slug"] for p in players}
-    known_ids = {v.get("fotmob_id") for v in cache.values()}
+    # a blank id is "we could not find them", not "we have them" - counting
+    # blanks here made every stub look like a duplicate and silently dropped
+    # the non-league and academy players the source has no page for
+    known_ids = {v.get("fotmob_id") for v in cache.values()
+                 if (v.get("fotmob_id") or "").strip()}
     added = []
     for np in new_players:
-        if np["slug"] in known_slugs or np["fotmob_id"] in known_ids:
+        nid = (np.get("fotmob_id") or "").strip()
+        if np["slug"] in known_slugs or (nid and nid in known_ids):
             continue
         players.append({"slug": np["slug"], "name": np["name"],
                         "club": np.get("club", ""),

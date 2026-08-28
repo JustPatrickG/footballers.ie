@@ -122,6 +122,9 @@ adam-banim,2020-07-01,20/21,Belvedere FC,Bohs Academy,free transfer,-,free
 adam-banim,2016-07-01,16/17,Lucan United,Belvedere FC,free transfer,-,free
 adam-brennan,2026-01-30,25/26,UCD,Shamrock Rovers,free transfer,-,free
 adam-brennan,2024-04-26,23/24,UCD Academy,UCD,-,-,
+adam-brogan,2026-08-21,26/27,Southampton U18,Bournemouth U18,free transfer,-,free
+adam-brogan,2026-07-01,26/27,Southampton Aca,Southampton U18,-,-,
+adam-byrne,2026-07-17,26/27,Rovers Academy,Longford Town,free transfer,-,free
 adam-deans,2026-07-01,26/27,St. Francis,Lucan United,free transfer,-,free
 adam-deans,2026-01-01,25/26,St. Pat's,St. Francis,free transfer,-,free
 adam-deans,2024-04-05,23/24,Pat's Academy,St. Pat's,-,-,
@@ -150,6 +153,7 @@ adam-murphy,2025-09-01,25/26,Bristol U21,Swindon Town,loan transfer,-,loan
 adam-murphy,2024-01-03,23/24,St. Pat's,Bristol U21,€250k,€100k,fee
 adam-murphy,2021-07-02,21/22,Pat's Academy,St. Pat's,-,-,
 adam-murphy,2020-01-01,19/20,Belvedere FC,Pat's Academy,free transfer,-,free
+adam-nelson,2026-07-01,26/27,Glentoran U18,Sunderland U18,?,-,
 adam-ohalloran,2026-01-01,25/26,Galway United,Mervue United,free transfer,-,free
 adam-ohalloran,2025-01-01,24/25,Treaty United,Galway United,free transfer,-,free
 adam-ohalloran,2024-01-18,23/24,Galway United,Treaty United,free transfer,-,free
@@ -325,6 +329,14 @@ andrew-wogan,2023-04-15,22/23,Drogs Academy,Drogheda United,-,-,
 andy-lyons,2023-01-01,22/23,Shamrock Rovers,Blackpool,€350k,€175k,fee
 andy-lyons,2022-01-24,21/22,Bohemians,Shamrock Rovers,€35k,€100k,fee
 andy-lyons,2018-07-01,18/19,Bohs Academy,Bohemians,-,-,
+andy-spain,2026-07-01,26/27,Wayside Celtic,Armagh City,free transfer,-,free
+andy-spain,2026-01-01,25/26,Longford Town,Wayside Celtic,free transfer,-,free
+andy-spain,2025-01-24,24/25,Kerry FC,Longford Town,free transfer,-,free
+andy-spain,2024-01-01,23/24,Treaty United,Kerry FC,free transfer,-,free
+andy-spain,2023-01-09,22/23,Athlone Town,Treaty United,free transfer,-,free
+andy-spain,2022-02-06,21/22,Cherry Orchard FC,Athlone Town,free transfer,-,free
+andy-spain,2021-01-01,20/21,Pat's Academy,Cherry Orchard FC,free transfer,-,free
+andy-spain,2020-08-01,20/21,Rovers Academy,Pat's Academy,free transfer,-,free
 anselmo-garcia-macnulty,2026-07-01,26/27,PEC Zwolle,1.FC Magdeburg,free transfer,€1.50m,free
 anselmo-garcia-macnulty,2023-07-26,23/24,Wolfsburg,PEC Zwolle,free transfer,€450k,free
 anselmo-garcia-macnulty,2023-06-30,22/23,NAC Breda,Wolfsburg,End of loan,€400k,loan end
@@ -370,6 +382,7 @@ aran-fitzpatrick,2024-09-10,24/25,Carlisle United,Workington AFC,loan transfer,-
 aran-fitzpatrick,2024-04-19,23/24,Carlisle U18,Carlisle United,-,-,
 aran-fitzpatrick,2024-04-18,23/24,Workington AFC,Carlisle U18,End of loan,-,loan end
 aran-fitzpatrick,2024-02-05,23/24,Carlisle U18,Workington AFC,loan transfer,-,loan
+archie-quinn,2026-08-23,26/27,Rovers Academy,Shels Academy,free transfer,-,free
 arlo-doherty,2026-01-01,25/26,Derry City,Waterford FC,free transfer,-,free
 arlo-doherty,2025-01-01,24/25,Without Club,Derry City,-,-,
 arlo-doherty,2024-07-01,24/25,Leicester U21,Without Club,-,-,
@@ -425,10 +438,16 @@ ben-quinn,2025-07-01,25/26,Mansfield Town,Without Club,-,€50k,
 ben-quinn,2024-08-02,24/25,Celtic B,Mansfield Town,free transfer,-,free
 ben-quinn,2022-07-01,22/23,Celtic U18,Celtic B,-,-,
 ben-quinn,2020-01-01,19/20,Pat's Academy,Celtic U18,?,-,
+ben-wilson,2026-08-17,26/27,Glenavon,Brentford B,?,-,
+ben-wilson,2024-11-26,24/25,Glenavon U18,Glenavon,-,-,
 billy-canny,2025-03-03,24/25,Pat's Academy,St. Pat's,-,-,
 billy-hayes,2025-05-30,24/25,Pat's Academy,St. Pat's,-,-,
+billy-oneill,2026-07-01,26/27,Bray Wanderers,Bristol U21,?,-,
+billy-oneill,2023-10-20,23/24,Bray Academy,Bray Wanderers,-,-,
 billy-regan,2026-07-16,26/27,Galway United,Treaty United,free transfer,-,free
 billy-regan,2024-11-01,24/25,Galway Academy,Galway United,-,-,
+bobby-amadasun,2026-07-01,26/27,Kerry FC,Treaty United,free transfer,-,free
+bobby-amadasun,2024-02-01,23/24,LFC Academy,Kerry FC,free transfer,-,free
 bobby-jones,2026-07-01,26/27,Chester,Darlington,free transfer,-,free
 bobby-jones,2026-02-27,25/26,Boston Utd,Chester,free transfer,-,free
 bobby-jones,2026-02-26,25/26,Chester,Boston Utd,End of loan,-,loan end
@@ -652,9 +671,6 @@ chiedozie-ogbene,2018-08-31,18/19,Brentford,Exeter City,loan transfer,€100k,lo
 chiedozie-ogbene,2018-01-30,17/18,Limerick FC,Brentford,?,-,
 chiedozie-ogbene,2017-01-19,16/17,Cork City,Limerick FC,free transfer,-,free
 chiedozie-ogbene,2016-01-01,15/16,Cork Academy,Cork City,-,-,
-chris-atherton,2026-07-17,26/27,Chelsea U18,Ipswich U18,?,€100k,
-chris-atherton,2025-07-04,25/26,Glenavon,Chelsea U18,?,€125k,
-chris-atherton,2024-07-01,24/25,Glenavon U18,Glenavon,-,-,
 chris-forrester,2019-01-23,18/19,Aberdeen FC,St. Pat's,free transfer,€200k,free
 chris-forrester,2018-07-01,18/19,Peterborough,Aberdeen FC,€230k,€200k,fee
 chris-forrester,2015-08-30,15/16,St. Pat's,Peterborough,€23k,-,fee
@@ -663,6 +679,9 @@ chris-forrester,2011-01-01,10/11,Bohs Academy,Bohemians,-,-,
 chris-shields,2021-07-01,21/22,Dundalk FC,Linfield,?,€50k,
 chris-shields,2012-01-01,11/12,Bray Wanderers,Dundalk FC,free transfer,€50k,free
 chris-shields,2008-11-07,08/09,Bray Academy,Bray Wanderers,-,-,
+christopher-atherton,2026-07-17,26/27,Chelsea U18,Ipswich U18,?,€100k,
+christopher-atherton,2025-07-04,25/26,Glenavon,Chelsea U18,?,€125k,
+christopher-atherton,2024-07-01,24/25,Glenavon U18,Glenavon,-,-,
 christopher-atherton,2026-07-17,26/27,Chelsea U18,Ipswich U18,?,€100k,
 christopher-atherton,2025-07-04,25/26,Glenavon,Chelsea U18,?,€125k,
 christopher-atherton,2024-07-01,24/25,Glenavon U18,Glenavon,-,-,
@@ -698,6 +717,19 @@ cian-bolger,2013-01-31,12/13,Leicester U21,Bolton,?,€50k,
 cian-bolger,2013-01-02,12/13,Bristol Rovers,Leicester U21,End of loan,€50k,loan end
 cian-bolger,2011-01-17,10/11,Leicester Res.,Bristol Rovers,loan transfer,-,loan
 cian-bolger,2010-07-01,10/11,Leicester U18,Leicester Res.,-,-,
+cian-byrne,2025-06-30,24/25,Galway United,Bohemians,End of loan,€100k,loan end
+cian-byrne,2025-02-18,24/25,Bohemians,Galway United,loan transfer,€75k,loan
+cian-byrne,2023-07-02,23/24,Longford Town,Bohemians,End of loan,€25k,loan end
+cian-byrne,2023-02-24,22/23,Bohemians,Longford Town,loan transfer,€25k,loan
+cian-byrne,2022-03-18,21/22,Bohs Academy,Bohemians,-,-,
+cian-byrne,2018-02-01,17/18,St. Kevins Boys,Bohs Academy,free transfer,-,free
+cian-coleman,2026-08-21,26/27,Buxton,HKFC,free transfer,-,free
+cian-coleman,2025-07-01,25/26,Leeds U21,Buxton,free transfer,-,free
+cian-coleman,2025-05-31,24/25,Buxton,Leeds U21,End of loan,-,loan end
+cian-coleman,2025-02-10,24/25,Leeds U21,Buxton,loan transfer,-,loan
+cian-coleman,2025-01-02,24/25,Buxton,Leeds U21,End of loan,-,loan end
+cian-coleman,2024-10-18,24/25,Leeds U21,Buxton,loan transfer,-,loan
+cian-coleman,2023-07-01,23/24,Leeds U18,Leeds U21,-,-,
 cian-dillon,2026-07-21,26/27,QPR U21,Dundalk FC,?,-,
 cian-dillon,2026-01-31,25/26,Enfield Town,QPR U21,End of loan,-,loan end
 cian-dillon,2025-11-05,25/26,QPR U21,Enfield Town,loan transfer,-,loan
@@ -730,6 +762,7 @@ cian-oconnor,2026-03-07,25/26,Drogs Academy,Drogheda United,-,-,
 cian-omalley,2025-01-01,24/25,Wexford FC,Carrick Rangers,free transfer,-,free
 cian-omalley,2023-07-06,23/24,Pat's Academy,Wexford FC,free transfer,-,free
 cian-spaight,2025-05-09,24/25,Dundalk Academy,Dundalk FC,-,-,
+cian-wilson,2026-07-25,26/27,Drogs Academy,Armagh City,free transfer,-,free
 ciaran-brennan,2024-07-01,24/25,Sheff Wed,Newport County,free transfer,€150k,free
 ciaran-brennan,2024-01-01,23/24,Hartlepool,Sheff Wed,End of loan,€150k,loan end
 ciaran-brennan,2023-12-04,23/24,Sheff Wed,Hartlepool,loan transfer,€150k,loan
@@ -794,12 +827,19 @@ colm-horgan,2020-01-21,19/20,Cork City,Derry City,free transfer,-,free
 colm-horgan,2018-01-01,17/18,Galway United,Cork City,free transfer,-,free
 colm-horgan,2014-01-17,13/14,Salthill Devon,Galway United,free transfer,-,free
 colm-horgan,2011-01-01,10/11,SD Academy,Salthill Devon,-,-,
+colm-whelan,2026-07-02,26/27,Maree Oranmore,Treaty United,free transfer,-,free
+colm-whelan,2023-01-01,22/23,Galway Academy,Maree Oranmore,free transfer,-,free
+colm-whelan,2019-07-01,19/20,Maree Oranmore,Galway Academy,free transfer,-,free
 conal-mcdermott,2026-08-06,26/27,Portsmouth U18,Derry City,free transfer,-,free
 conal-mcdermott,2026-03-09,25/26,Moneyfields FC,Portsmouth U18,End of loan,-,loan end
 conal-mcdermott,2026-01-09,25/26,Portsmouth U18,Moneyfields FC,loan transfer,-,loan
 conal-mcdermott,2026-01-08,25/26,Bashley FC,Portsmouth U18,End of loan,-,loan end
 conal-mcdermott,2025-12-11,25/26,Portsmouth U18,Bashley FC,loan transfer,-,loan
 conal-mcdermott,2024-09-01,24/25,Derry Academy,Portsmouth U18,?,-,
+conal-ocaheny,2026-08-04,26/27,Longford Town,Wexford FC,free transfer,-,free
+conal-ocaheny,2026-01-01,25/26,Without Club,Longford Town,-,-,
+conal-ocaheny,2025-01-01,24/25,Sligo Academy,Without Club,-,-,
+conal-ocaheny,2024-01-01,23/24,LTFC Academy,Sligo Academy,free transfer,-,free
 conall-alfred,2025-09-05,25/26,Dundalk Academy,Dundalk FC,-,-,
 conan-noonan,2026-01-01,25/26,Shamrock Rovers,Waterford FC,€50k,€200k,fee
 conan-noonan,2025-11-30,25/26,Waterford FC,Shamrock Rovers,End of loan,€125k,loan end
@@ -1025,6 +1065,18 @@ dan-casey,2019-01-01,18/19,Bohemians,Cork City,?,-,
 dan-casey,2017-07-11,17/18,Sunderland U23,Bohemians,free transfer,-,free
 dan-casey,2016-07-01,16/17,Sunderland U18,Sunderland U23,-,-,
 dan-casey,2013-07-01,13/14,St. Josephs Boys,Sunderland U18,?,-,
+dan-oconnor,2026-07-01,26/27,Totton,Cliftonville,free transfer,-,free
+dan-oconnor,2025-12-10,25/26,Kerry FC,Totton,free transfer,-,free
+dan-oconnor,2025-09-03,25/26,Without Club,Kerry FC,-,-,
+dan-oconnor,2025-07-01,25/26,Ipswich U21,Without Club,-,-,
+dan-oconnor,2025-05-31,24/25,Farnborough,Ipswich U21,End of loan,-,loan end
+dan-oconnor,2025-01-21,24/25,Ipswich U21,Farnborough,loan transfer,-,loan
+dan-oconnor,2023-01-31,22/23,Galway Academy,Ipswich U21,?,-,
+dan-rose,2026-08-01,26/27,UK Wildcats,Liberty Flames,free transfer,-,free
+dan-rose,2026-01-01,25/26,Thundering Herd,UK Wildcats,free transfer,-,free
+dan-rose,2023-01-01,22/23,Schalke 04 II,Thundering Herd,free transfer,€10k,free
+dan-rose,2022-07-01,22/23,Schalke 04 U19,Schalke 04 II,-,-,
+dan-rose,2020-07-01,20/21,Everton Youth,Schalke 04 U19,€120k,-,fee
 daniel-chukwu,2026-07-01,26/27,St. Pat's,Lucan United,free transfer,-,free
 daniel-chukwu,2026-05-31,25/26,Oxford SFC,St. Pat's,End of loan,-,loan end
 daniel-chukwu,2026-01-17,25/26,St. Pat's,Oxford SFC,loan transfer,-,loan
@@ -1067,6 +1119,7 @@ daniel-mandroiu,2017-07-01,17/18,Brighton U18,Brighton U23,-,-,
 daniel-mandroiu,2014-07-01,14/15,St. Kevins Boys,Brighton U18,?,-,
 daniel-mare,2026-01-01,26/27,Shels Academy,Drogheda United,free transfer,-,free
 daniel-mare,2025-01-20,24/25,Rovers Academy,Shels Academy,free transfer,-,free
+daniel-mccarron,2026-07-01,26/27,Dungannon U18,Arsenal U18,?,-,
 daniel-mcgrath,2025-07-07,25/26,Lommel SK,Without Club,-,€150k,
 daniel-mcgrath,2023-09-06,23/24,Bohemians,Lommel SK,?,-,
 daniel-mcgrath,2023-01-03,22/23,Bohs Academy,Bohemians,-,-,
@@ -1326,6 +1379,14 @@ dylan-watts,2015-01-01,14/15,UCD Academy,UCD,-,-,
 eanna-clancy,2026-07-23,26/27,UCD,VVV-Venlo,?,-,
 eanna-clancy,2023-07-05,23/24,Sligo Rovers,UCD,free transfer,€50k,free
 eanna-clancy,2022-06-17,21/22,Sligo Academy,Sligo Rovers,-,-,
+ed-mcjannett,2026-07-28,26/27,Lecce,Cosenza,loan transfer,€150k,loan
+ed-mcjannett,2026-06-30,25/26,Ternana,Lecce,End of loan,€150k,loan end
+ed-mcjannett,2025-07-23,25/26,Lecce,Ternana,loan transfer,€150k,loan
+ed-mcjannett,2025-06-30,24/25,Cerignola,Lecce,End of loan,€150k,loan end
+ed-mcjannett,2025-01-28,24/25,Lecce,Cerignola,loan transfer,€150k,loan
+ed-mcjannett,2024-07-01,24/25,Lecce U20,Lecce,-,€150k,
+ed-mcjannett,2023-01-31,22/23,Luton U18,Lecce U19,?,-,
+ed-mcjannett,2020-07-01,20/21,Luton Academy,Luton U18,-,-,
 edward-mcginty,2025-01-09,24/25,Oxford United,Shamrock Rovers,?,€150k,
 edward-mcginty,2024-11-30,24/25,Sligo Rovers,Oxford United,End of loan,€150k,loan end
 edward-mcginty,2024-01-24,23/24,Oxford United,Sligo Rovers,loan transfer,€150k,loan
@@ -1374,6 +1435,13 @@ emmanuel-osadebe,2018-01-18,17/18,Cambridge Utd.,Newport County,loan transfer,�
 emmanuel-osadebe,2017-07-01,17/18,Gillingham,Cambridge Utd.,free transfer,€75k,free
 emmanuel-osadebe,2015-07-01,15/16,Spurs U18,Gillingham,free transfer,-,free
 emmanuel-osadebe,2014-07-01,14/15,Dundalk Academy,Spurs U18,?,-,
+emre-topcu,2026-01-21,25/26,Longford Town,Iskenderunspor,free transfer,-,free
+emre-topcu,2025-01-17,24/25,Drogheda United,Longford Town,free transfer,-,free
+emre-topcu,2024-11-30,24/25,Longford Town,Drogheda United,End of loan,€25k,loan end
+emre-topcu,2024-07-04,24/25,Drogheda United,Longford Town,loan transfer,€25k,loan
+emre-topcu,2022-07-08,22/23,Drogs Academy,Drogheda United,-,-,
+emre-topcu,2020-01-01,19/20,Belvedere FC,Drogs Academy,free transfer,-,free
+emre-topcu,2019-01-01,18/19,St. Kevins Boys,Belvedere FC,free transfer,-,free
 enda-minogue,2025-01-01,24/25,Athlone Town,Dundalk FC,free transfer,-,free
 enda-minogue,2022-07-28,22/23,Bohemians,Athlone Town,free transfer,€25k,free
 enda-minogue,2021-01-23,20/21,Bray Wanderers,Bohemians,free transfer,-,free
@@ -1693,6 +1761,15 @@ graham-kelly,2016-09-30,16/17,Stalybridge,Sheff Utd,End of loan,-,loan end
 graham-kelly,2016-08-10,16/17,Sheff Utd,Stalybridge,loan transfer,-,loan
 graham-kelly,2016-07-01,16/17,Sheff Utd U18,Sheff Utd,-,-,
 graham-kelly,2014-07-01,14/15,St. Josephs Boys,Sheff Utd U18,free transfer,-,free
+greg-sloggett,2026-07-02,26/27,Boston Utd,Glentoran,free transfer,-,free
+greg-sloggett,2025-07-08,25/26,Hartlepool,Boston Utd,free transfer,-,free
+greg-sloggett,2025-05-08,24/25,Boston Utd,Hartlepool,End of loan,-,loan end
+greg-sloggett,2025-03-25,24/25,Hartlepool,Boston Utd,loan transfer,-,loan
+greg-sloggett,2024-07-15,24/25,Cheltenham,Hartlepool,free transfer,€100k,free
+greg-sloggett,2024-02-01,23/24,Dundalk FC,Cheltenham,free transfer,€125k,free
+greg-sloggett,2020-01-01,19/20,Derry City,Dundalk FC,free transfer,-,free
+greg-sloggett,2019-01-01,18/19,UCD,Derry City,free transfer,-,free
+greg-sloggett,2016-01-01,15/16,UCD Academy,UCD,-,-,
 guilherme-rego-priosti,2026-07-24,26/27,Sligo Rovers,Finn Harps,loan transfer,-,loan
 guilherme-rego-priosti,2025-12-01,26/27,Ballinamallard,Sligo Rovers,End of loan,-,loan end
 guilherme-rego-priosti,2025-07-01,25/26,Sligo Rovers,Ballinamallard,loan transfer,-,loan
@@ -1776,6 +1853,12 @@ isaac-abankwah,2023-03-10,22/23,Macclesfield,Stockport Town,loan transfer,-,loan
 isaac-abankwah,2023-03-09,22/23,FC Squires Gate,Macclesfield,End of loan,-,loan end
 isaac-abankwah,2022-12-31,22/23,Macclesfield,FC Squires Gate,loan transfer,-,loan
 isaac-abankwah,2022-12-31,22/23,LTFC Academy,Macclesfield,free transfer,-,free
+isaac-akinsete,2026-07-11,26/27,Croatia Berlin,H. Zehlendorf,free transfer,-,free
+isaac-akinsete,2025-08-18,25/26,Berlin Türkspor,Croatia Berlin,free transfer,-,free
+isaac-akinsete,2024-07-01,24/25,Optik Rathenow,Berlin Türkspor,free transfer,-,free
+isaac-akinsete,2023-01-01,22/23,Germania Leer,Optik Rathenow,free transfer,-,free
+isaac-akinsete,2022-07-01,22/23,UCD,Germania Leer,free transfer,-,free
+isaac-akinsete,2019-07-01,19/20,UCD Academy,UCD,-,-,
 issa-kargbo,2025-07-01,25/26,Bala,Colwyn Bay,free transfer,€25k,free
 issa-kargbo,2025-02-03,24/25,Ringmahon,Bala,free transfer,-,free
 issa-kargbo,2024-01-01,23/24,Cobh Ramblers,Ringmahon,free transfer,-,free
@@ -1814,6 +1897,17 @@ jack-byrne,2016-07-01,16/17,Man City U23,Blackburn,loan transfer,€1.00m,loan
 jack-byrne,2016-06-30,15/16,SC Cambuur,Man City U21,End of loan,€1.00m,loan end
 jack-byrne,2015-07-01,15/16,Man City U21,SC Cambuur,loan transfer,€250k,loan
 jack-byrne,2014-07-01,14/15,Man City U18,Man City U21,-,-,
+jack-clarke,2026-07-01,26/27,Kidderminster,Gloucester,free transfer,-,free
+jack-clarke,2025-07-01,25/26,Eastbourne,Kidderminster,free transfer,-,free
+jack-clarke,2023-07-01,23/24,Chesterfield,Eastbourne,free transfer,-,free
+jack-clarke,2023-05-31,22/23,Yeovil Town,Chesterfield,End of loan,-,loan end
+jack-clarke,2023-01-17,22/23,Chesterfield,Yeovil Town,loan transfer,-,loan
+jack-clarke,2021-07-01,21/22,Aston Villa U23,Chesterfield,free transfer,-,free
+jack-clarke,2021-06-06,20/21,Chesterfield,Aston Villa U23,End of loan,-,loan end
+jack-clarke,2021-01-04,20/21,Aston Villa U23,Chesterfield,loan transfer,-,loan
+jack-clarke,2020-12-31,20/21,Yeovil Town,Aston Villa U23,End of loan,-,loan end
+jack-clarke,2020-08-24,20/21,Aston Villa U23,Yeovil Town,loan transfer,-,loan
+jack-clarke,2017-07-01,17/18,Aston Villa U18,Aston Villa U23,-,-,
 jack-henry-francis,2025-07-18,25/26,Arsenal U21,Shelbourne,free transfer,€200k,free
 jack-henry-francis,2024-11-30,24/25,Sligo Rovers,Arsenal U21,End of loan,€175k,loan end
 jack-henry-francis,2024-07-17,24/25,Arsenal U21,Sligo Rovers,loan transfer,-,loan
@@ -1844,6 +1938,7 @@ jacob-devaney,2026-05-31,25/26,St. Mirren,Man Utd U21,End of loan,€250k,loan e
 jacob-devaney,2026-02-02,25/26,Man Utd U21,St. Mirren,loan transfer,-,loan
 jacob-devaney,2025-07-01,25/26,Man Utd U18,Man Utd U21,-,-,
 jacob-devaney,2023-07-01,23/24,Man Utd Youth,Man Utd U18,-,-,
+jacob-keleghan,2026-06-29,26/27,Tamaraws,Fight. Maroons,free transfer,-,free
 jacob-slater,2026-07-01,26/27,Brighton U21,Tranmere,free transfer,€150k,free
 jacob-slater,2026-05-31,25/26,Harrogate Town,Brighton U21,End of loan,€150k,loan end
 jacob-slater,2025-09-01,25/26,Brighton U21,Harrogate Town,loan transfer,€200k,loan
@@ -2003,6 +2098,14 @@ james-storer,2025-01-01,24/25,Darlaston,Wolves U21,End of loan,-,loan end
 james-storer,2024-08-03,24/25,Wolves U21,Darlaston,loan transfer,-,loan
 james-storer,2023-07-01,23/24,Wolves U18,Wolves U21,-,-,
 james-storer,2021-07-01,21/22,Wolves Yth.,Wolves U18,-,-,
+jamie-barry,2026-08-07,26/27,Des Moines,Portadown,free transfer,-,free
+jamie-barry,2026-01-01,25/26,Crusaders,Des Moines,free transfer,-,free
+jamie-barry,2025-08-01,25/26,Flint City,Crusaders,End of loan,-,loan end
+jamie-barry,2025-05-01,24/25,Crusaders,Flint City,loan transfer,-,loan
+jamie-barry,2025-01-30,24/25,Niagara,Crusaders,free transfer,-,free
+jamie-barry,2023-08-01,23/24,FC Buffalo,Niagara,End of loan,-,loan end
+jamie-barry,2023-05-01,22/23,Niagara,FC Buffalo,loan transfer,-,loan
+jamie-barry,2022-08-01,22/23,Dundalk Academy,Niagara,free transfer,-,free
 jamie-brennan,2026-01-01,25/26,Belvedere FC,Drogheda United,free transfer,-,free
 jamie-lennon,2018-01-01,17/18,Pat's Academy,St. Pat's,-,-,
 jamie-lennon,2016-01-01,15/16,Shels Academy,Pat's Academy,free transfer,-,free
@@ -2098,6 +2201,20 @@ jevon-mills,2022-09-01,22/23,Hull U21,Gateshead,loan transfer,-,loan
 jevon-mills,2022-07-01,22/23,Hull U18,Hull U21,-,-,
 jevon-mills,2022-05-02,21/22,Falkirk,Hull U18,End of loan,-,loan end
 jevon-mills,2022-01-27,21/22,Hull U18,Falkirk,loan transfer,-,loan
+jimmy-dunne,2021-07-13,21/22,Burnley,QPR,free transfer,€600k,free
+jimmy-dunne,2020-07-01,20/21,FC Burnley U23,Burnley,-,€300k,
+jimmy-dunne,2020-01-01,19/20,Fleetwood,FC Burnley U23,End of loan,€300k,loan end
+jimmy-dunne,2019-09-02,19/20,FC Burnley U23,Fleetwood,loan transfer,€300k,loan
+jimmy-dunne,2019-05-31,19/20,Sunderland,FC Burnley U23,End of loan,€300k,loan end
+jimmy-dunne,2019-01-09,18/19,FC Burnley U23,Sunderland,loan transfer,€300k,loan
+jimmy-dunne,2019-01-06,18/19,Heart of Midl.,FC Burnley U23,End of loan,€300k,loan end
+jimmy-dunne,2018-08-21,18/19,FC Burnley U23,Heart of Midl.,loan transfer,-,loan
+jimmy-dunne,2018-05-31,17/18,Accrington,FC Burnley U23,End of loan,-,loan end
+jimmy-dunne,2018-01-04,17/18,FC Burnley U23,Accrington,loan transfer,-,loan
+jimmy-dunne,2018-01-01,17/18,Barrow,FC Burnley U23,End of loan,-,loan end
+jimmy-dunne,2017-07-05,17/18,FC Burnley U23,Barrow,loan transfer,-,loan
+jimmy-dunne,2016-07-13,16/17,Man Utd U18,FC Burnley U23,free transfer,-,free
+jimmy-dunne,2014-07-01,14/15,Man Utd Youth,Man Utd U18,-,-,
 jimmy-keohane,2024-07-01,24/25,Rochdale,Galway United,free transfer,-,free
 jimmy-keohane,2019-02-01,18/19,Cork City,Rochdale,free transfer,€100k,free
 jimmy-keohane,2017-01-01,16/17,Sligo Rovers,Cork City,free transfer,€100k,free
@@ -2130,6 +2247,27 @@ joe-gardner,2025-07-14,25/26,Nottingham U21,Mansfield Town,loan transfer,€200k
 joe-gardner,2025-06-30,24/25,Lincoln City,Nottingham U21,End of loan,€200k,loan end
 joe-gardner,2025-01-31,24/25,Nottingham U21,Lincoln City,loan transfer,€150k,loan
 joe-gardner,2023-07-01,23/24,Nottingham U18,Nottingham U21,-,-,
+joe-gorman,2026-07-01,26/27,Newington,Armagh City,free transfer,-,free
+joe-gorman,2025-07-01,25/26,Bluebell United,Newington,free transfer,-,free
+joe-gorman,2025-01-09,24/25,Finn Harps,Bluebell United,free transfer,-,free
+joe-gorman,2025-01-01,24/25,Bluebell United,Finn Harps,free transfer,-,free
+joe-gorman,2024-07-01,24/25,Warrenpoint,Bluebell United,free transfer,-,free
+joe-gorman,2023-07-11,23/24,Lucan United,Warrenpoint,free transfer,-,free
+joe-gorman,2023-01-01,22/23,Bray Wanderers,Lucan United,free transfer,-,free
+joe-gorman,2022-07-15,22/23,Treaty United,Bray Wanderers,free transfer,-,free
+joe-gorman,2022-01-31,21/22,Galway United,Treaty United,free transfer,-,free
+joe-gorman,2021-07-02,21/22,Longford Town,Galway United,free transfer,-,free
+joe-gorman,2020-01-22,19/20,Cliftonville,Longford Town,free transfer,-,free
+joe-gorman,2018-12-24,18/19,Clyde FC,Cliftonville,free transfer,-,free
+joe-gorman,2018-07-01,18/19,Blyth Spartans,Clyde FC,free transfer,€25k,free
+joe-gorman,2018-02-16,17/18,Biggleswade,Blyth Spartans,free transfer,€25k,free
+joe-gorman,2017-08-30,17/18,Airdrieonians,Biggleswade,free transfer,€25k,free
+joe-gorman,2016-07-01,16/17,Without Club,Airdrieonians,-,€25k,
+joe-gorman,2016-02-29,15/16,Maidenhead Utd.,Without Club,-,€25k,
+joe-gorman,2016-01-11,15/16,Drogheda United,Maidenhead Utd.,free transfer,€25k,free
+joe-gorman,2015-01-15,14/15,Bray Wanderers,Drogheda United,free transfer,€25k,free
+joe-gorman,2014-07-01,14/15,Inverness CT,Bray Wanderers,free transfer,€25k,free
+joe-gorman,2013-07-01,13/14,Crewe U18,Inverness CT,free transfer,-,free
 joe-hodge,2026-08-12,26/27,Tondela,Motherwell FC,?,€700k,
 joe-hodge,2025-07-18,25/26,Wolves,Tondela,free transfer,€1.00m,free
 joe-hodge,2025-05-31,24/25,Huddersfield,Wolves,End of loan,€1.20m,loan end
@@ -2203,6 +2341,22 @@ joel-bagan,2020-08-03,19/20,Notts County,Cardiff U18,End of loan,-,loan end
 joel-bagan,2020-02-14,19/20,Cardiff U18,Notts County,loan transfer,-,loan
 joel-bagan,2018-07-01,18/19,Southampton Aca,Cardiff U18,free transfer,-,free
 joey-wuna,2026-02-05,25/26,Shels Academy,Shelbourne,-,-,
+john-egan,2025-02-03,24/25,Burnley,Hull City,?,€1.80m,
+john-egan,2024-09-10,24/25,Without Club,Burnley,-,€4.00m,
+john-egan,2024-07-01,24/25,Sheff Utd,Without Club,-,€4.00m,
+john-egan,2018-07-19,18/19,Brentford,Sheff Utd,€4.50m,€1.50m,fee
+john-egan,2016-07-01,16/17,Gillingham,Brentford,free transfer,€400k,free
+john-egan,2014-07-03,14/15,Sunderland,Gillingham,free transfer,-,free
+john-egan,2014-05-31,13/14,Southend United,Sunderland,End of loan,-,loan end
+john-egan,2014-02-27,13/14,Sunderland,Southend United,loan transfer,-,loan
+john-egan,2012-11-21,12/13,Bradford,Sunderland,End of loan,-,loan end
+john-egan,2012-11-03,12/13,Sunderland,Bradford,loan transfer,-,loan
+john-egan,2012-04-06,11/12,Sheff Utd,Sunderland,End of loan,-,loan end
+john-egan,2012-03-06,11/12,Sunderland,Sheff Utd,loan transfer,-,loan
+john-egan,2012-02-06,11/12,Crystal Palace,Sunderland,End of loan,-,loan end
+john-egan,2012-01-06,11/12,Sunderland,Crystal Palace,loan transfer,-,loan
+john-egan,2011-07-01,11/12,Sunderland U18,Sunderland,-,-,
+john-egan,2009-07-01,09/10,Greenwood,Sunderland U18,?,-,
 john-mahon,2026-01-01,25/26,Sligo Rovers,Waterford FC,free transfer,€100k,free
 john-mahon,2023-01-13,22/23,St. Johnstone,Sligo Rovers,free transfer,€125k,free
 john-mahon,2022-01-23,21/22,Sligo Rovers,St. Johnstone,€125k,€125k,fee
@@ -2243,6 +2397,14 @@ john-russell,2014-01-01,13/14,St. Pat's,Sligo Rovers,free transfer,€50k,free
 john-russell,2012-01-01,11/12,Sligo Rovers,St. Pat's,free transfer,€50k,free
 john-russell,2010-01-01,09/10,Galway United,Sligo Rovers,free transfer,-,free
 john-russell,2004-07-01,04/05,SD Academy,Galway United,free transfer,-,free
+johnny-kenny,2026-06-30,25/26,Bolton,Celtic,End of loan,€1.20m,loan end
+johnny-kenny,2026-02-02,25/26,Celtic,Bolton,loan transfer,€600k,loan
+johnny-kenny,2024-12-31,24/25,Shamrock Rovers,Celtic,End of loan,€225k,loan end
+johnny-kenny,2023-01-01,22/23,Celtic,Shamrock Rovers,loan transfer,€150k,loan
+johnny-kenny,2022-12-31,22/23,Queen's Park,Celtic,End of loan,€150k,loan end
+johnny-kenny,2022-08-20,22/23,Celtic,Queen's Park,loan transfer,€175k,loan
+johnny-kenny,2022-01-08,21/22,Sligo Rovers,Celtic,€150k,€175k,fee
+johnny-kenny,2021-01-23,20/21,Sligo Academy,Sligo Rovers,-,-,
 jon-gallagher,2020-12-13,20/21,Atlanta,Austin,€205k,€500k,fee
 jon-gallagher,2020-05-31,19/20,Aberdeen FC,Atlanta,End of loan,€300k,loan end
 jon-gallagher,2019-07-01,19/20,Atlanta,Aberdeen FC,loan transfer,€200k,loan
@@ -2349,6 +2511,26 @@ josh-keeley,2024-05-31,23/24,Barnet,Tottenham U21,End of loan,€200k,loan end
 josh-keeley,2024-01-04,23/24,Tottenham U21,Barnet,loan transfer,€200k,loan
 josh-keeley,2022-07-01,22/23,St. Pat's,Tottenham U21,free transfer,€25k,free
 josh-keeley,2020-11-09,20/21,Pat's Academy,St. Pat's,-,-,
+josh-mcpake,2026-07-01,26/27,St. Johnstone,Heart of Midl.,free transfer,€500k,free
+josh-mcpake,2024-07-01,24/25,Stirling Albion,St. Johnstone,free transfer,-,free
+josh-mcpake,2024-02-23,23/24,Without Club,Stirling Albion,-,€125k,
+josh-mcpake,2023-09-01,23/24,Rangers,Without Club,-,€125k,
+josh-mcpake,2023-05-31,22/23,Queen's Park,Rangers,End of loan,€125k,loan end
+josh-mcpake,2022-07-23,22/23,Rangers,Queen's Park,loan transfer,€75k,loan
+josh-mcpake,2022-07-01,22/23,Rangers B,Rangers,-,€75k,
+josh-mcpake,2022-05-31,21/22,Tranmere,Rangers B,End of loan,€75k,loan end
+josh-mcpake,2022-01-05,21/22,Rangers B,Tranmere,loan transfer,€75k,loan
+josh-mcpake,2022-01-04,21/22,Morecambe FC,Rangers B,End of loan,€75k,loan end
+josh-mcpake,2021-07-01,21/22,Rangers B,Morecambe FC,loan transfer,€75k,loan
+josh-mcpake,2021-05-31,20/21,Harrogate Town,Rangers B,End of loan,€75k,loan end
+josh-mcpake,2021-01-08,20/21,Rangers B,Harrogate Town,loan transfer,€75k,loan
+josh-mcpake,2020-12-28,20/21,Morton,Rangers B,End of loan,€75k,loan end
+josh-mcpake,2020-09-25,20/21,Rangers B,Morton,loan transfer,€75k,loan
+josh-mcpake,2020-01-13,19/20,Dundee FC,Rangers B,End of loan,€75k,loan end
+josh-mcpake,2019-08-20,19/20,Rangers B,Dundee FC,loan transfer,-,loan
+josh-mcpake,2019-07-01,19/20,Rangers FC U18,Rangers B,-,-,
+josh-mcpake,2017-07-01,17/18,Rangers Youth,Rangers FC U18,-,-,
+josh-mcpake,2013-07-01,13/14,Hibernian Yth.,Rangers Youth,free transfer,-,free
 josh-obrien,2024-02-01,23/24,Hamilton Acad.,Indy Eleven,?,-,
 josh-obrien,2023-08-07,23/24,Salford B,Hamilton Acad.,free transfer,-,free
 josh-obrien,2023-03-14,22/23,Telford Utd,Salford B,End of loan,-,loan end
@@ -2358,6 +2540,18 @@ josh-obrien,2021-08-04,21/22,De Anza Force,Watford U23,free transfer,-,free
 josh-obrien,2019-07-01,19/20,Seattle Academy,De Anza Force,free transfer,-,free
 josh-oconnor,2026-02-05,25/26,Pat's Academy,St. Pat's,-,-,
 josh-odwyer,2026-07-01,26/27,Rovers Academy,FC Liefering,free transfer,-,free
+josh-okpolokpo,2026-07-15,26/27,Džiugas,Without Club,-,€150k,
+josh-okpolokpo,2026-01-13,25/26,SJK Seinäjoki,Džiugas,free transfer,€50k,free
+josh-okpolokpo,2025-07-18,25/26,Concordia,SJK Seinäjoki,free transfer,€50k,free
+josh-okpolokpo,2024-09-11,24/25,NK Triglav,Concordia,?,€25k,
+josh-okpolokpo,2024-02-01,23/24,Dulwich Hamlet,NK Triglav,?,-,
+josh-okpolokpo,2023-11-01,23/24,Sudbury,Dulwich Hamlet,free transfer,-,free
+josh-okpolokpo,2023-08-09,23/24,Leiston,Sudbury,free transfer,-,free
+josh-okpolokpo,2023-05-31,22/23,Gorleston,Leiston,End of loan,-,loan end
+josh-okpolokpo,2022-10-13,22/23,Leiston,Gorleston,loan transfer,-,loan
+josh-okpolokpo,2022-09-20,22/23,Without Club,Leiston,-,-,
+josh-okpolokpo,2020-07-01,20/21,Huddersf. U17,Huddersf. U19,-,-,
+josh-okpolokpo,2019-07-01,19/20,Ipswich Town Yo,Huddersf. U17,?,-,
 josh-seary,2026-07-26,26/27,Prescot Cables,Radcliffe,free transfer,-,free
 josh-seary,2026-02-27,25/26,FC United,Prescot Cables,free transfer,-,free
 josh-seary,2026-01-22,25/26,Preston,FC United,free transfer,€100k,free
@@ -2400,6 +2594,14 @@ justin-ferizaj,2026-01-26,25/26,Bray Wanderers,Crawley Town,free transfer,-,free
 justin-ferizaj,2025-07-31,25/26,Frosinone U19,Bray Wanderers,free transfer,€50k,free
 justin-ferizaj,2023-08-22,23/24,Shamrock Rovers,Frosinone U19,?,€100k,
 justin-ferizaj,2022-05-27,21/22,Rovers Academy,Shamrock Rovers,-,-,
+justin-osagie,2025-10-13,25/26,Without Club,Chelsea U21,-,-,
+justin-osagie,2025-07-01,25/26,Peterboro U21,Without Club,-,-,
+justin-osagie,2025-03-24,24/25,Peterb Sports,Peterboro U21,End of loan,-,loan end
+justin-osagie,2025-02-24,24/25,Peterboro U21,Peterb Sports,loan transfer,-,loan
+justin-osagie,2024-10-29,24/25,Without Club,Peterboro U21,free transfer,-,free
+justin-osagie,2024-07-01,24/25,Celtic B,Without Club,-,-,
+justin-osagie,2022-09-16,22/23,West Ham U18,Celtic B,?,-,
+justin-osagie,2020-09-01,20/21,Southend Yth.,West Ham U18,?,-,
 kameron-ledwidge,2021-07-30,21/22,Southampt. U23,Shelbourne,free transfer,-,free
 kameron-ledwidge,2019-07-01,19/20,Southampton U18,Southampt. U23,-,-,
 kameron-ledwidge,2017-07-01,17/18,St. Kevins Boys,Southampton U18,?,-,
@@ -2436,6 +2638,11 @@ keith-ward,2013-01-01,12/13,Bohemians,Dundalk FC,free transfer,€50k,free
 keith-ward,2012-01-01,11/12,Dundalk FC,Bohemians,free transfer,€50k,free
 keith-ward,2011-01-01,10/11,UCD,Dundalk FC,free transfer,€50k,free
 keith-ward,2008-07-01,08/09,Bohs Academy,UCD,free transfer,-,free
+keleb-nwubani,2026-07-01,26/27,Rot Weiss Ahlen,E. Ettelbrück,free transfer,-,free
+keleb-nwubani,2026-01-02,25/26,VfL Bochum II,Rot Weiss Ahlen,free transfer,-,free
+keleb-nwubani,2024-07-01,24/25,Pr. Münster II,VfL Bochum II,free transfer,-,free
+keleb-nwubani,2022-07-01,22/23,TuS Erndtebrück,Pr. Münster II,free transfer,-,free
+keleb-nwubani,2020-07-01,20/21,Brentford U18,TuS Erndtebrück,free transfer,-,free
 kevin-doherty,2010-01-01,09/10,Shelbourne,Retired,-,-,
 kevin-doherty,2009-01-01,08/09,Bray Wanderers,Shelbourne,free transfer,-,free
 kevin-doherty,2008-01-01,07/08,Longford Town,Bray Wanderers,free transfer,-,free
@@ -2498,6 +2705,8 @@ kevin-zefi,2022-07-01,22/23,Inter U17,Inter U18,-,-,
 kevin-zefi,2021-08-31,21/22,Shamrock Rovers,Inter U17,?,-,
 kevin-zefi,2021-01-01,20/21,Rovers Academy,Shamrock Rovers,-,-,
 kevin-zefi,2019-07-01,19/20,St. Kevins Boys,Rovers Academy,free transfer,-,free
+kian-brunton,2026-07-31,26/27,Athlone Town,Longford Town,free transfer,-,free
+kian-brunton,2026-07-10,26/27,Athlone Academy,Athlone Town,-,-,
 kian-corbally,2026-07-01,26/27,Ballymena Utd,Dunfermline A.,?,€200k,
 kian-corbally,2025-01-14,24/25,Wexford FC,Ballymena Utd,free transfer,-,free
 kian-corbally,2023-02-20,22/23,St. Pat's,Wexford FC,free transfer,€50k,free
@@ -2703,6 +2912,17 @@ liam-bossin,2019-07-01,19/20,Nott'm Forest,Without Club,-,€100k,
 liam-bossin,2017-07-12,17/18,RSC Anderlecht,Nott'm Forest,free transfer,€100k,free
 liam-bossin,2015-07-01,15/16,Anderlecht U21,RSC Anderlecht,-,-,
 liam-bossin,2013-07-01,13/14,White Star,Anderlecht U21,?,-,
+liam-delap,2026-08-27,26/27,Chelsea,Nott'm Forest,€52.50m,€28.00m,fee
+liam-delap,2025-06-04,25/26,Ipswich,Chelsea,€35.50m,€40.00m,fee
+liam-delap,2024-07-13,24/25,Man City U21,Ipswich,€17.85m,€8.00m,fee
+liam-delap,2024-05-31,23/24,Hull City,Man City U21,End of loan,€8.00m,loan end
+liam-delap,2023-07-02,23/24,Man City U21,Hull City,loan transfer,€5.00m,loan
+liam-delap,2023-05-31,22/23,Preston,Man City U21,End of loan,€7.00m,loan end
+liam-delap,2023-01-12,22/23,Man City U21,Preston,loan transfer,€7.00m,loan
+liam-delap,2023-01-11,22/23,Stoke City,Man City U21,End of loan,€7.00m,loan end
+liam-delap,2022-08-18,22/23,Man City U21,Stoke City,loan transfer,€1.50m,loan
+liam-delap,2020-07-01,20/21,Man City U18,Man City U23,-,-,
+liam-delap,2019-07-01,19/20,Derby Youth,Man City U18,€1.30m,-,fee
 liam-kelly,2026-08-13,26/27,MK Dons,Peterborough,?,€300k,
 liam-kelly,2024-07-04,24/25,Crawley Town,MK Dons,?,€300k,
 liam-kelly,2023-07-01,23/24,Rochdale,Crawley Town,free transfer,€200k,free
@@ -2727,12 +2947,22 @@ liam-kinsella,2026-01-22,25/26,Cheltenham,Hednesford,free transfer,€150k,free
 liam-kinsella,2024-01-24,23/24,Swindon Town,Cheltenham,?,€150k,
 liam-kinsella,2023-07-28,23/24,Walsall,Swindon Town,free transfer,€150k,free
 liam-kinsella,2014-07-01,14/15,Walsall U18,Walsall,-,-,
+liam-mullan,2026-07-01,26/27,HW Welders,Institute,free transfer,-,free
+liam-mullan,2025-07-01,25/26,Derry City,HW Welders,?,-,
+liam-mullan,2025-06-30,24/25,HW Welders,Derry City,End of loan,-,loan end
+liam-mullan,2025-02-03,24/25,Derry City,HW Welders,loan transfer,-,loan
+liam-mullan,2025-01-02,24/25,Portadown,Derry City,End of loan,€50k,loan end
+liam-mullan,2024-07-19,24/25,Derry City,Portadown,loan transfer,-,loan
+liam-mullan,2024-06-30,23/24,Institute,Derry City,End of loan,-,loan end
+liam-mullan,2023-07-23,23/24,Derry City,Institute,loan transfer,-,loan
+liam-mullan,2022-02-01,21/22,Derry Academy,Derry City,-,-,
 liam-scales,2023-05-31,22/23,Aberdeen FC,Celtic,End of loan,€600k,loan end
 liam-scales,2022-07-01,22/23,Celtic,Aberdeen FC,loan transfer,€600k,loan
 liam-scales,2021-08-27,21/22,Shamrock Rovers,Celtic,€600k,€100k,fee
 liam-scales,2020-01-01,19/20,UCD,Shamrock Rovers,free transfer,-,free
 liam-scales,2016-07-01,16/17,UCD Academy,UCD,-,-,
 liam-scales,2015-07-01,15/16,Arklow Town,UCD Academy,free transfer,-,free
+liam-woodcock,2026-07-01,26/27,Skerries Town,Longford Town,free transfer,-,free
 louie-barry,2026-07-09,26/27,Aston Villa U21,Sheff Wed,?,€2.50m,
 louie-barry,2026-06-30,25/26,Stockport,Aston Villa U21,End of loan,€2.50m,loan end
 louie-barry,2026-02-02,25/26,Aston Villa U21,Stockport,loan transfer,€2.50m,loan
@@ -2790,6 +3020,7 @@ luke-browne,2023-07-06,23/24,Shelbourne,Wexford FC,loan transfer,-,loan
 luke-browne,2022-10-21,22/23,Shels Academy,Shelbourne,-,-,
 luke-browne,2021-07-01,21/22,Bohs Academy,Shels Academy,free transfer,-,free
 luke-cullen,2026-02-05,25/26,Pat's Academy,St. Pat's,-,-,
+luke-fitzsimons,2026-07-31,26/27,Pat's Academy,Torino U17,?,-,
 luke-heeney,2026-01-01,25/26,Drogheda United,Waterford FC,free transfer,€125k,free
 luke-heeney,2019-02-01,18/19,Pat's Academy,Drogheda United,free transfer,-,free
 luke-kehir,2025-11-30,25/26,Wexford FC,St. Pat's,End of loan,-,loan end
@@ -2962,6 +3193,11 @@ max-bardell,2024-10-30,24/25,Derby U21,Fylde,loan transfer,€100k,loan
 max-bardell,2021-07-01,21/22,Derby U18,Derby U23,-,€100k,
 max-bardell,2019-07-01,19/20,Man City Youth,Derby U18,free transfer,-,free
 max-ferguson,2026-01-01,25/26,Shels Academy,Dundalk FC,free transfer,-,free
+max-johnston,2026-07-01,26/27,Finn Harps,Institute,free transfer,-,free
+max-johnston,2023-04-14,22/23,Harps Academy,Finn Harps,-,-,
+max-johnston,2022-01-01,21/22,Letterkenny,Harps Academy,free transfer,-,free
+max-johnston,2021-01-01,20/21,Harps Academy,Letterkenny,free transfer,-,free
+max-johnston,2020-01-01,19/20,Letterkenny,Harps Academy,free transfer,-,free
 max-kovalevskis,2024-04-26,23/24,Rovers Academy,Shamrock Rovers,-,-,
 max-oleary,2026-01-22,25/26,Bristol City,West Brom,?,€2.50m,
 max-oleary,2020-05-31,19/20,Shrewsbury,Bristol City,End of loan,€600k,loan end
@@ -3120,6 +3356,9 @@ odhran-casey,2026-01-14,25/26,Cliftonville,Shelbourne,€115k,€175k,fee
 odhran-casey,2022-05-31,21/22,Newry City,Cliftonville,End of loan,€25k,loan end
 odhran-casey,2022-01-31,21/22,Cliftonville,Newry City,loan transfer,€25k,loan
 odhran-casey,2020-08-11,20/21,Cliftonv. U18,Cliftonville,-,-,
+oisin-duffy,2026-07-01,26/27,Strabane AFC,Limavady United,free transfer,-,free
+oisin-duffy,2025-07-01,25/26,Institute,Strabane AFC,free transfer,-,free
+oisin-duffy,2024-07-01,24/25,Derry Academy,Institute,free transfer,-,free
 oisin-gallagher,2026-07-21,26/27,Lincoln City,Barnet,loan transfer,-,loan
 oisin-gallagher,2026-05-31,25/26,Boston Utd,Lincoln City,End of loan,-,loan end
 oisin-gallagher,2025-11-15,25/26,Lincoln City,Boston Utd,loan transfer,-,loan
@@ -3290,6 +3529,9 @@ peter-maguire,2023-07-01,23/24,Sligo Rovers,Ballinamallard,?,€50k,
 peter-maguire,2023-05-31,22/23,Ballinamallard,Sligo Rovers,End of loan,€50k,loan end
 peter-maguire,2022-08-05,22/23,Sligo Rovers,Ballinamallard,loan transfer,€50k,loan
 peter-maguire,2021-04-10,20/21,Sligo Academy,Sligo Rovers,-,-,
+philip-sanyaolu,2026-08-24,26/27,QPR U21,Bristol Rovers,loan transfer,-,loan
+philip-sanyaolu,2026-07-01,26/27,QPR U18,QPR U21,-,-,
+philip-sanyaolu,2024-07-01,24/25,QPR Academy,QPR U18,-,-,
 pierce-sweeney,2026-07-01,26/27,Exeter City,Cheltenham,free transfer,€200k,free
 pierce-sweeney,2021-07-08,21/22,Swindon Town,Exeter City,free transfer,-,free
 pierce-sweeney,2021-07-01,21/22,Exeter City,Swindon Town,free transfer,-,free
@@ -3416,6 +3658,8 @@ ronan-curtis,2024-01-19,23/24,Without Club,AFC Wimbledon,-,€300k,
 ronan-curtis,2023-07-01,23/24,Portsmouth,Without Club,-,€400k,
 ronan-curtis,2018-07-01,18/19,Derry City,Portsmouth,€110k,-,fee
 ronan-curtis,2015-07-01,15/16,Derry Academy,Derry City,-,-,
+ronan-dawson,2026-07-01,26/27,Rovers Academy,Longford Town,free transfer,-,free
+ronan-dawson,2025-01-01,24/25,Bray Academy,Rovers Academy,free transfer,-,free
 ronan-doherty,2026-01-21,25/26,Coleraine,Larne FC,?,€100k,
 ronan-doherty,2025-01-10,24/25,Cliftonville,Coleraine,?,€225k,
 ronan-doherty,2019-07-01,19/20,Institute,Cliftonville,free transfer,-,free
@@ -3610,6 +3854,10 @@ sam-foley,2012-07-01,12/13,Newport County,Yeovil Town,free transfer,-,free
 sam-foley,2009-07-01,09/10,Kidderminster,Newport County,free transfer,-,free
 sam-foley,2008-07-01,08/09,Cheltenham,Kidderminster,free transfer,-,free
 sam-foley,2005-07-01,05/06,Cheltenham U18,Cheltenham,-,-,
+sam-kierans,2026-08-07,26/27,Shels Academy,Newry City,free transfer,-,free
+sam-kierans,2024-01-01,23/24,Dundalk Academy,Shels Academy,free transfer,-,free
+sam-kierans,2023-01-01,22/23,Pat's Academy,Dundalk Academy,free transfer,-,free
+sam-kierans,2022-01-01,21/22,Bohs Academy,Pat's Academy,free transfer,-,free
 sam-rooney,2026-02-05,25/26,Pat's Academy,St. Pat's,-,-,
 sam-steward,2026-02-05,25/26,Pat's Academy,St. Pat's,-,-,
 sam-todd,2026-01-01,25/26,Derry City,Bohemians,free transfer,€150k,free
@@ -3709,6 +3957,17 @@ sean-boyd,2019-06-30,18/19,Finn Harps,Shamrock Rovers,End of loan,-,loan end
 sean-boyd,2019-02-20,18/19,Shamrock Rovers,Finn Harps,loan transfer,-,loan
 sean-boyd,2015-06-26,14/15,Rovers Academy,Shamrock Rovers,-,-,
 sean-boyd,2014-07-01,14/15,Malahide United,Rovers Academy,free transfer,-,free
+sean-brennan,2026-07-28,26/27,Bray Wanderers,Athlone Town,loan transfer,-,loan
+sean-brennan,2025-07-16,25/26,UCD,Bray Wanderers,free transfer,-,free
+sean-brennan,2023-07-06,23/24,Drogheda United,UCD,free transfer,€50k,free
+sean-brennan,2023-01-01,22/23,UCD,Drogheda United,free transfer,€75k,free
+sean-brennan,2021-02-20,20/21,Southampt. U23,UCD,free transfer,-,free
+sean-brennan,2021-01-01,20/21,Shamrock II,Southampt. U23,End of loan,-,loan end
+sean-brennan,2020-02-01,19/20,Southampt. U23,Shamrock II,loan transfer,-,loan
+sean-brennan,2019-07-01,19/20,Southampton U18,Southampt. U23,-,-,
+sean-brennan,2019-05-01,18/19,Longford Town,Southampton U18,End of loan,-,loan end
+sean-brennan,2019-02-01,18/19,Southampton U18,Longford Town,loan transfer,-,loan
+sean-brennan,2017-07-01,17/18,Belvedere FC,Southampton U18,?,-,
 sean-costelloe,2026-07-10,26/27,WFC Academy,Fleetwood,free transfer,-,free
 sean-costelloe,2025-01-01,24/25,Treaty United,WFC Academy,free transfer,-,free
 sean-costelloe,2024-01-01,23/24,Treaty Academy,Treaty United,-,-,
@@ -3814,6 +4073,8 @@ sean-murray,2016-08-31,16/17,Watford,Swindon Town,free transfer,€750k,free
 sean-murray,2016-01-16,15/16,Wigan,Watford,End of loan,€750k,loan end
 sean-murray,2015-08-05,15/16,Watford,Wigan,loan transfer,€750k,loan
 sean-murray,2012-01-01,11/12,Watford U18,Watford,-,€75k,
+sean-omahoney,2026-07-01,26/27,St. Francis,Portadown,free transfer,-,free
+sean-omahoney,2020-07-01,20/21,SFFC Academy,St. Francis,-,-,
 sean-raggett,2026-07-01,26/27,Rotherham,Colchester Utd.,free transfer,€150k,free
 sean-raggett,2026-05-31,25/26,Cambridge Utd.,Rotherham,End of loan,€150k,loan end
 sean-raggett,2026-02-02,25/26,Rotherham,Cambridge Utd.,loan transfer,€175k,loan
@@ -3943,7 +4204,13 @@ shane-mcloughlin,2013-07-01,13/14,St. Brendan,Ipswich U18,free transfer,-,free
 shane-tracey,2025-02-13,24/25,Bohs Academy,Dundalk FC,free transfer,-,free
 shane-tracey,2025-01-01,24/25,Shels Academy,Bohs Academy,free transfer,-,free
 shaun-platt,2025-06-20,24/25,Dundalk Academy,Dundalk FC,-,-,
+shaun-wade,2026-05-31,25/26,Derby U21,Chelsea U21,End of loan,-,loan end
+shaun-wade,2026-02-02,25/26,Chelsea U21,Derby U21,loan transfer,-,loan
+shaun-wade,2024-07-01,24/25,Chelsea U18,Chelsea U21,-,-,
+shaun-wade,2023-07-01,23/24,Chelsea Youth,Chelsea U18,-,-,
+shaun-wade,2021-09-03,21/22,Bristol C. Aca.,Chelsea Youth,?,-,
 shay-casey,2025-10-17,25/26,Dundalk Academy,Dundalk FC,-,-,
+shea-mcgarry,2026-07-01,26/27,Cliftonv. U18,Celtic U18,?,-,
 simon-power,2025-01-01,24/25,Sligo Rovers,St. Pat's,free transfer,€125k,free
 simon-power,2024-01-01,23/24,Shamrock Rovers,Sligo Rovers,free transfer,€100k,free
 simon-power,2022-07-27,22/23,Harrogate Town,Shamrock Rovers,free transfer,€150k,free
@@ -4064,6 +4331,10 @@ thomas-oluwa,2021-01-01,20/21,Shamrock Rovers,Bohemians,free transfer,-,free
 thomas-oluwa,2019-03-22,18/19,Rovers Academy,Shamrock Rovers,-,-,
 tj-molloy,2026-07-31,26/27,Dundalk FC,Armagh City,loan transfer,-,loan
 tj-molloy,2024-11-01,24/25,Dundalk Academy,Dundalk FC,-,-,
+tobi-jinadu,2026-08-05,26/27,Annagh United,Warrenpoint,free transfer,-,free
+tobi-jinadu,2025-07-01,25/26,Kilbarrack Utd,Annagh United,free transfer,-,free
+tobi-jinadu,2024-01-01,23/24,Bohs Academy,Kilbarrack Utd,free transfer,-,free
+tobi-jinadu,2023-01-01,22/23,UCD Academy,Bohs Academy,free transfer,-,free
 todd-bazunu,2025-02-20,24/25,Rovers Academy,Shamrock Rovers,-,-,
 tom-cannon,2025-01-23,24/25,Leicester,Sheff Utd,€11.85m,€6.00m,fee
 tom-cannon,2025-01-15,24/25,Stoke City,Leicester,End of loan,€6.00m,loan end
@@ -4086,6 +4357,10 @@ tom-field,2018-08-31,18/19,Brentford,Cheltenham,loan transfer,€150k,loan
 tom-field,2018-01-01,17/18,Bradford,Brentford,End of loan,€150k,loan end
 tom-field,2017-08-07,17/18,Brentford,Bradford,loan transfer,€150k,loan
 tom-field,2016-07-01,16/17,Brentford U18,Brentford,-,-,
+tom-hill,2026-08-04,26/27,Harrogate Town,Oldham Athletic,free transfer,€100k,free
+tom-hill,2025-01-22,24/25,Liverpool U21,Harrogate Town,?,€200k,
+tom-hill,2021-07-01,21/22,Liverpool U18,Liverpool U23,-,-,
+tom-hill,2019-07-01,19/20,Liverpool Youth,Liverpool U18,-,-,
 tom-lonergan,2025-07-18,25/26,Fleetwood,Waterford FC,free transfer,€125k,free
 tom-lonergan,2025-07-17,25/26,Waterford FC,Fleetwood,End of loan,€125k,loan end
 tom-lonergan,2025-01-06,24/25,Fleetwood,Waterford FC,loan transfer,€125k,loan
@@ -4169,6 +4444,7 @@ tyreke-wilson,2020-01-31,19/20,Man City U23,Waterford FC,free transfer,-,free
 tyreke-wilson,2017-07-01,17/18,Man City U18,Man City U23,-,-,
 tyreke-wilson,2016-07-01,16/17,Man City Youth,Man City U18,-,-,
 tyreke-wilson,2016-03-01,15/16,Cherry Orchard FC,Man City Youth,?,-,
+ultan-mclaughlin,2026-07-25,26/27,Drogs Academy,Armagh City,free transfer,-,free
 uniss-kargbo,2025-07-01,25/26,Bala,Colwyn Bay,free transfer,€50k,free
 uniss-kargbo,2024-07-01,24/25,Dianella WE,Bala,free transfer,€50k,free
 uniss-kargbo,2023-07-01,23/24,Gwelup,Dianella WE,free transfer,-,free
@@ -4218,6 +4494,12 @@ will-smallbone,2022-07-23,22/23,Southampton,Stoke City,loan transfer,€2.00m,lo
 will-smallbone,2020-01-01,19/20,Southampt. U23,Southampton,-,-,
 will-smallbone,2018-07-01,18/19,Southampton U18,Southampt. U23,-,-,
 will-smallbone,2016-07-01,16/17,Southampton Aca,Southampton U18,-,-,
+william-fitzgerald,2026-07-28,26/27,Sligo Rovers,Shamrock Rovers,€75k,€225k,fee
+william-fitzgerald,2022-01-01,21/22,Derry City,Sligo Rovers,free transfer,€50k,free
+william-fitzgerald,2021-02-22,20/21,Waterford FC,Derry City,free transfer,-,free
+william-fitzgerald,2019-07-05,19/20,Limerick FC,Waterford FC,free transfer,-,free
+william-fitzgerald,2018-01-01,17/18,LFC Academy,Limerick FC,-,-,
+william-fitzgerald,2016-01-01,15/16,Mervue Academy,LFC Academy,free transfer,-,free
 wilson-waweru,2026-08-14,26/27,Cobh Ramblers,Wealdstone,?,-,
 wilson-waweru,2026-01-01,25/26,Sligo Rovers,Cobh Ramblers,free transfer,€75k,free
 wilson-waweru,2024-01-01,23/24,Galway United,Sligo Rovers,free transfer,€75k,free
@@ -4264,6 +4546,7 @@ zak-gilsenan,2019-07-01,19/20,Blackburn Acad.,Blackburn U18,-,-,
 zak-gilsenan,2018-07-01,18/19,Liverpool Youth,Blackburn Acad.,free transfer,-,free
 zak-gilsenan,2015-01-01,14/15,Barça Youth,Liverpool Youth,free transfer,-,free
 zak-gilsenan,2012-07-01,12/13,Sorrento FC,Barça Youth,free transfer,-,free
+zak-magowan,2026-07-01,26/27,Glentoran U18,West Ham U18,free transfer,-,free
 zak-osullivan,2026-07-08,26/27,Waterford FC,Wexford FC,loan transfer,-,loan
 zak-osullivan,2026-06-30,25/26,Fleetwood U21,Waterford FC,End of loan,-,loan end
 zak-osullivan,2025-07-02,25/26,Waterford FC,Fleetwood U21,loan transfer,-,loan

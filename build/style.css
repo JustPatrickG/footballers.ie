@@ -1349,6 +1349,8 @@ a.intlblock.lnk:hover{border-color:var(--teal)}
   text-transform:uppercase;color:var(--teal);font-weight:500;
   padding:22px 0 8px;border-bottom:1px solid var(--line)}
 .tday:first-child{padding-top:6px}
+/* moves we have on good authority but no date for yet */
+.tday.soft{color:var(--mute)}
 .trrow{display:flex;align-items:center;gap:12px;padding:11px 6px;
   border-bottom:1px solid var(--line);transition:background .12s}
 .trrow:hover{background:var(--panel)}
