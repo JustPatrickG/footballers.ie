@@ -71,8 +71,7 @@ jobs:
           rm -f posts.json
           git config user.name "news-bot"
           git config user.email "actions@github.com"
-          git add data/api/articles.csv data/api/news_seen.json \
-                  data/api/news_drafts.json data/api/news_skipped.log img/articles 2>/dev/null || true
+                    git add -A data/api img/articles
           if git diff --cached --quiet; then
             echo "nothing new"
           else
