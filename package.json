@@ -1,0 +1,9 @@
+{
+  "name": "footballers-ie",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "satori": "0.33.3",
+    "@resvg/resvg-wasm": "2.4.1"
+  }
+}
