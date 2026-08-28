@@ -6973,179 +6973,180 @@ match_id,side,team,formation,status,updated,role,number,name,slug,pos,x,y
 2026-08-27-toluca-v-austin-fc,home,Toluca,4-2-3-1,confirmed,2026-08-27T13:50:34Z,start,20,Jesús Gallardo,,,0.292,0.125
 2026-08-27-toluca-v-austin-fc,home,Toluca,4-2-3-1,,2026-08-28T17:36:36Z,start,20,Jesús Gallardo,,,0.292,0.125
 2026-08-27-toluca-v-austin-fc,home,Toluca,4-2-3-1,confirmed,2026-08-27T13:50:34Z,start,8,Nicolás Castro,,,0.485,0.3
-2026-08-27-toluca-v-austin-fc,home,Toluca,4-2-3-1,,2026-08-28T17:36:36Z,start,8,Nicolás Castro,,,0.485,0.3
-2026-08-28-burnley-u21-v-reading-u21,away,Reading U21,4-2-3-1,,2026-08-28T18:00:02Z,bench,14,Callum Cliff,,,,
-2026-08-28-burnley-u21-v-reading-u21,away,Reading U21,4-2-3-1,,2026-08-28T18:00:02Z,bench,13,Josh Welland,,,,
-2026-08-28-burnley-u21-v-reading-u21,away,Reading U21,4-2-3-1,,2026-08-28T18:00:02Z,bench,17,Kiyan Smith,,,,
-2026-08-28-burnley-u21-v-reading-u21,away,Reading U21,4-2-3-1,,2026-08-28T18:00:02Z,bench,16,Matthias Ojo,,,,
-2026-08-28-burnley-u21-v-reading-u21,away,Reading U21,4-2-3-1,,2026-08-28T18:00:02Z,bench,12,Ryan Beacroft,,,,
-2026-08-28-burnley-u21-v-reading-u21,away,Reading U21,4-2-3-1,,2026-08-28T18:00:02Z,bench,15,Schofield Lonmeni,,,,
-2026-08-28-burnley-u21-v-reading-u21,away,Reading U21,4-2-3-1,,2026-08-28T18:00:02Z,start,3,Calum Logan,,,0.292,0.125
-2026-08-28-burnley-u21-v-reading-u21,away,Reading U21,4-2-3-1,,2026-08-28T18:00:02Z,start,7,Jerae Jones,,,0.678,0.163
-2026-08-28-burnley-u21-v-reading-u21,away,Reading U21,4-2-3-1,,2026-08-28T18:00:02Z,start,2,Kelvin Abrefa,,,0.292,0.875
-2026-08-28-burnley-u21-v-reading-u21,away,Reading U21,4-2-3-1,,2026-08-28T18:00:02Z,start,4,Kevin Mfuamba,,,0.485,0.3
-2026-08-28-burnley-u21-v-reading-u21,away,Reading U21,4-2-3-1,,2026-08-28T18:00:02Z,start,8,Luke Howard,,,0.485,0.7
-2026-08-28-burnley-u21-v-reading-u21,away,Reading U21,4-2-3-1,,2026-08-28T18:00:02Z,start,10,Matteo Dashi,,,0.678,0.5
-2026-08-28-burnley-u21-v-reading-u21,away,Reading U21,4-2-3-1,,2026-08-28T18:00:02Z,start,5,Phillip Duah,,,0.292,0.375
-2026-08-28-burnley-u21-v-reading-u21,away,Reading U21,4-2-3-1,,2026-08-28T18:00:02Z,start,6,Sam Harrison,,,0.292,0.625
-2026-08-28-burnley-u21-v-reading-u21,away,Reading U21,4-2-3-1,,2026-08-28T18:00:02Z,start,1,Toby Borgnis,,,0.1,0.5
-2026-08-28-burnley-u21-v-reading-u21,away,Reading U21,4-2-3-1,,2026-08-28T18:00:02Z,start,9,Torin Ntege,,,0.87,0.5
-2026-08-28-burnley-u21-v-reading-u21,away,Reading U21,4-2-3-1,,2026-08-28T18:00:02Z,start,11,T’Shay Saint-Louis,,,0.678,0.837
-2026-08-28-burnley-u21-v-reading-u21,home,Burnley U21,4-2-3-1,,2026-08-28T18:00:02Z,bench,16,Archie Lorimer,,,,
-2026-08-28-burnley-u21-v-reading-u21,home,Burnley U21,4-2-3-1,,2026-08-28T18:00:02Z,bench,17,Blayz Borgesson,,,,
-2026-08-28-burnley-u21-v-reading-u21,home,Burnley U21,4-2-3-1,,2026-08-28T18:00:02Z,bench,14,Corey King,,,,
-2026-08-28-burnley-u21-v-reading-u21,home,Burnley U21,4-2-3-1,,2026-08-28T18:00:02Z,bench,27,Harry Grimshaw,,,,
-2026-08-28-burnley-u21-v-reading-u21,home,Burnley U21,4-2-3-1,,2026-08-28T18:00:02Z,bench,15,Vishon Masara,,,,
-2026-08-28-burnley-u21-v-reading-u21,home,Burnley U21,4-2-3-1,,2026-08-28T18:00:02Z,start,11,Brandon Pouani,,,0.678,0.837
-2026-08-28-burnley-u21-v-reading-u21,home,Burnley U21,4-2-3-1,,2026-08-28T18:00:02Z,start,3,Cameron Scott,,,0.292,0.125
-2026-08-28-burnley-u21-v-reading-u21,home,Burnley U21,4-2-3-1,,2026-08-28T18:00:02Z,start,12,Connor Edwards,,,0.1,0.5
-2026-08-28-burnley-u21-v-reading-u21,home,Burnley U21,4-2-3-1,,2026-08-28T18:00:02Z,start,8,Ellis Clark,,,0.485,0.3
-2026-08-28-burnley-u21-v-reading-u21,home,Burnley U21,4-2-3-1,,2026-08-28T18:00:02Z,start,5,Emmanuel Airoboma,,,0.292,0.375
-2026-08-28-burnley-u21-v-reading-u21,home,Burnley U21,4-2-3-1,,2026-08-28T18:00:02Z,start,9,Kian McMahon-Brown,kian-mcmahon-brown,,0.87,0.5
-2026-08-28-burnley-u21-v-reading-u21,home,Burnley U21,4-2-3-1,,2026-08-28T18:00:02Z,start,2,Michael Stanley,,,0.292,0.875
-2026-08-28-burnley-u21-v-reading-u21,home,Burnley U21,4-2-3-1,,2026-08-28T18:00:02Z,start,4,Murray Campbell,,,0.292,0.625
-2026-08-28-burnley-u21-v-reading-u21,home,Burnley U21,4-2-3-1,,2026-08-28T18:00:02Z,start,6,Troy Savage,,,0.485,0.7
-2026-08-28-burnley-u21-v-reading-u21,home,Burnley U21,4-2-3-1,,2026-08-28T18:00:02Z,start,7,Zach Johnson,,,0.678,0.163
-2026-08-28-burnley-u21-v-reading-u21,home,Burnley U21,4-2-3-1,,2026-08-28T18:00:02Z,start,10,Zhang Jiaming,,,0.678,0.5
-2026-08-28-norwich-city-u21-v-stoke-city-u21,away,Stoke City U21,4-3-3,,2026-08-28T18:00:02Z,bench,14,Adriel Walker,,,,
-2026-08-28-norwich-city-u21-v-stoke-city-u21,away,Stoke City U21,4-3-3,,2026-08-28T18:00:02Z,bench,12,Fletcher Poole,,,,
-2026-08-28-norwich-city-u21-v-stoke-city-u21,away,Stoke City U21,4-3-3,,2026-08-28T18:00:02Z,bench,13,Lucas Knight,,,,
-2026-08-28-norwich-city-u21-v-stoke-city-u21,away,Stoke City U21,4-3-3,,2026-08-28T18:00:02Z,bench,16,Ryan Liu,,,,
-2026-08-28-norwich-city-u21-v-stoke-city-u21,away,Stoke City U21,4-3-3,,2026-08-28T18:00:02Z,bench,15,Sanchez Phillips,,,,
-2026-08-28-norwich-city-u21-v-stoke-city-u21,away,Stoke City U21,4-3-3,,2026-08-28T18:00:02Z,start,2,Anas Dauda,,,0.357,0.875
-2026-08-28-norwich-city-u21-v-stoke-city-u21,away,Stoke City U21,4-3-3,,2026-08-28T18:00:02Z,start,7,Elliot Fearn,,,0.87,0.79
-2026-08-28-norwich-city-u21-v-stoke-city-u21,away,Stoke City U21,4-3-3,,2026-08-28T18:00:02Z,start,6,Gabriel Kelly,gabriel-kelly,,0.613,0.5
-2026-08-28-norwich-city-u21-v-stoke-city-u21,away,Stoke City U21,4-3-3,,2026-08-28T18:00:02Z,start,8,George Morrison,,,0.613,0.21
-2026-08-28-norwich-city-u21-v-stoke-city-u21,away,Stoke City U21,4-3-3,,2026-08-28T18:00:02Z,start,4,Harry Collins,,,0.357,0.625
-2026-08-28-norwich-city-u21-v-stoke-city-u21,away,Stoke City U21,4-3-3,,2026-08-28T18:00:02Z,start,1,Noah Cooper,,,0.1,0.5
-2026-08-28-norwich-city-u21-v-stoke-city-u21,away,Stoke City U21,4-3-3,,2026-08-28T18:00:02Z,start,9,Paul Makavore,,,0.87,0.5
-2026-08-28-norwich-city-u21-v-stoke-city-u21,away,Stoke City U21,4-3-3,,2026-08-28T18:00:02Z,start,3,Pedro Nzau,,,0.357,0.125
-2026-08-28-norwich-city-u21-v-stoke-city-u21,away,Stoke City U21,4-3-3,,2026-08-28T18:00:02Z,start,10,Tristan Achu,,,0.613,0.79
-2026-08-28-norwich-city-u21-v-stoke-city-u21,away,Stoke City U21,4-3-3,,2026-08-28T18:00:02Z,start,11,Tyler Martin,,,0.87,0.21
-2026-08-28-norwich-city-u21-v-stoke-city-u21,away,Stoke City U21,4-3-3,,2026-08-28T18:00:02Z,start,5,Will Thompson,,,0.357,0.375
-2026-08-28-norwich-city-u21-v-stoke-city-u21,home,Norwich City U21,4-4-2,,2026-08-28T18:00:02Z,bench,15,Finlay Corke,,,,
-2026-08-28-norwich-city-u21-v-stoke-city-u21,home,Norwich City U21,4-4-2,,2026-08-28T18:00:02Z,bench,19,Finlay Oligbo,,,,
-2026-08-28-norwich-city-u21-v-stoke-city-u21,home,Norwich City U21,4-4-2,,2026-08-28T18:00:02Z,bench,16,Luke Chukwu,,,,
-2026-08-28-norwich-city-u21-v-stoke-city-u21,home,Norwich City U21,4-4-2,,2026-08-28T18:00:02Z,bench,17,Reuben Cooper,,,,
-2026-08-28-norwich-city-u21-v-stoke-city-u21,home,Norwich City U21,4-4-2,,2026-08-28T18:00:02Z,bench,18,Takudzwa Gwanzura,,,,
-2026-08-28-norwich-city-u21-v-stoke-city-u21,home,Norwich City U21,4-4-2,,2026-08-28T18:00:02Z,bench,14,Toby Chilvers,,,,
-2026-08-28-norwich-city-u21-v-stoke-city-u21,home,Norwich City U21,4-4-2,,2026-08-28T18:00:02Z,bench,12,Tyler Williams,,,,
-2026-08-28-norwich-city-u21-v-stoke-city-u21,home,Norwich City U21,4-4-2,,2026-08-28T18:00:02Z,start,6,Alan Domeracki,,,0.613,0.625
-2026-08-28-norwich-city-u21-v-stoke-city-u21,home,Norwich City U21,4-4-2,,2026-08-28T18:00:02Z,start,7,Botan Ameen,,,0.613,0.875
-2026-08-28-norwich-city-u21-v-stoke-city-u21,home,Norwich City U21,4-4-2,,2026-08-28T18:00:02Z,start,9,Dylan Jones,,,0.87,0.7
-2026-08-28-norwich-city-u21-v-stoke-city-u21,home,Norwich City U21,4-4-2,,2026-08-28T18:00:02Z,start,11,Elliot Myles,,,0.613,0.125
-2026-08-28-norwich-city-u21-v-stoke-city-u21,home,Norwich City U21,4-4-2,,2026-08-28T18:00:02Z,start,10,Luke Towler,,,0.87,0.3
-2026-08-28-norwich-city-u21-v-stoke-city-u21,home,Norwich City U21,4-4-2,,2026-08-28T18:00:02Z,start,8,Miles Bracking,,,0.613,0.375
-2026-08-28-norwich-city-u21-v-stoke-city-u21,home,Norwich City U21,4-4-2,,2026-08-28T18:00:02Z,start,2,Rio Mundle,,,0.357,0.875
-2026-08-28-norwich-city-u21-v-stoke-city-u21,home,Norwich City U21,4-4-2,,2026-08-28T18:00:02Z,start,5,Sonny Rowland,,,0.357,0.375
-2026-08-28-norwich-city-u21-v-stoke-city-u21,home,Norwich City U21,4-4-2,,2026-08-28T18:00:02Z,start,4,Theodore Adelusi,,,0.357,0.625
-2026-08-28-norwich-city-u21-v-stoke-city-u21,home,Norwich City U21,4-4-2,,2026-08-28T18:00:02Z,start,3,Vatan Özcan,,,0.357,0.125
-2026-08-28-norwich-city-u21-v-stoke-city-u21,home,Norwich City U21,4-4-2,,2026-08-28T18:00:02Z,start,1,Vicente Reyes,,,0.1,0.5
-2026-08-28-nottingham-forest-u21-v-manchester-city-u21,away,Manchester City U21,4-1-4-1,,2026-08-28T18:00:02Z,bench,14,Brooklyn Nfonkeu,,,,
-2026-08-28-nottingham-forest-u21-v-manchester-city-u21,away,Manchester City U21,4-1-4-1,,2026-08-28T18:00:02Z,bench,12,Charlie Courtman,,,,
-2026-08-28-nottingham-forest-u21-v-manchester-city-u21,away,Manchester City U21,4-1-4-1,,2026-08-28T18:00:02Z,bench,16,Femi Fapetu,,,,
-2026-08-28-nottingham-forest-u21-v-manchester-city-u21,away,Manchester City U21,4-1-4-1,,2026-08-28T18:00:02Z,bench,17,Finlay Gorman,,,,
-2026-08-28-nottingham-forest-u21-v-manchester-city-u21,away,Manchester City U21,4-1-4-1,,2026-08-28T18:00:02Z,bench,18,Jake Wain,,,,
-2026-08-28-nottingham-forest-u21-v-manchester-city-u21,away,Manchester City U21,4-1-4-1,,2026-08-28T18:00:02Z,bench,13,Max Hudson,,,,
-2026-08-28-nottingham-forest-u21-v-manchester-city-u21,away,Manchester City U21,4-1-4-1,,2026-08-28T18:00:02Z,bench,15,Oliver Tevenan,,,,
-2026-08-28-nottingham-forest-u21-v-manchester-city-u21,away,Manchester City U21,4-1-4-1,,2026-08-28T18:00:02Z,start,7,Christian Dunbar-McDonald,,,0.678,0.875
-2026-08-28-nottingham-forest-u21-v-manchester-city-u21,away,Manchester City U21,4-1-4-1,,2026-08-28T18:00:02Z,start,8,Floyd Samba,,,0.678,0.625
-2026-08-28-nottingham-forest-u21-v-manchester-city-u21,away,Manchester City U21,4-1-4-1,,2026-08-28T18:00:02Z,start,6,Harrison Miles,,,0.485,0.5
-2026-08-28-nottingham-forest-u21-v-manchester-city-u21,away,Manchester City U21,4-1-4-1,,2026-08-28T18:00:02Z,start,5,Kaden Braithwaite,,,0.292,0.125
-2026-08-28-nottingham-forest-u21-v-manchester-city-u21,away,Manchester City U21,4-1-4-1,,2026-08-28T18:00:02Z,start,3,Kian Noble,,,0.292,0.625
-2026-08-28-nottingham-forest-u21-v-manchester-city-u21,away,Manchester City U21,4-1-4-1,,2026-08-28T18:00:02Z,start,9,Kylan Midwood,,,0.89,0.5
-2026-08-28-nottingham-forest-u21-v-manchester-city-u21,away,Manchester City U21,4-1-4-1,,2026-08-28T18:00:02Z,start,4,Leke Drake,,,0.292,0.375
-2026-08-28-nottingham-forest-u21-v-manchester-city-u21,away,Manchester City U21,4-1-4-1,,2026-08-28T18:00:02Z,start,2,Matty Henderson-Hall,,,0.292,0.875
-2026-08-28-nottingham-forest-u21-v-manchester-city-u21,away,Manchester City U21,4-1-4-1,,2026-08-28T18:00:02Z,start,1,Max-Edgar Chabot,,,0.1,0.5
-2026-08-28-nottingham-forest-u21-v-manchester-city-u21,away,Manchester City U21,4-1-4-1,,2026-08-28T18:00:02Z,start,11,Tyrone Samba,,,0.678,0.125
-2026-08-28-nottingham-forest-u21-v-manchester-city-u21,away,Manchester City U21,4-1-4-1,,2026-08-28T18:00:02Z,start,10,Xavier Parker,,,0.678,0.375
-2026-08-28-nottingham-forest-u21-v-manchester-city-u21,home,Nottingham Forest U21,3-5-2,,2026-08-28T18:00:02Z,bench,16,Blaine McClure,,,,
-2026-08-28-nottingham-forest-u21-v-manchester-city-u21,home,Nottingham Forest U21,3-5-2,,2026-08-28T18:00:02Z,bench,18,Bubbacar Sanneh,,,,
-2026-08-28-nottingham-forest-u21-v-manchester-city-u21,home,Nottingham Forest U21,3-5-2,,2026-08-28T18:00:02Z,bench,19,Cherif Yaya,,,,
-2026-08-28-nottingham-forest-u21-v-manchester-city-u21,home,Nottingham Forest U21,3-5-2,,2026-08-28T18:00:02Z,bench,15,Josh Powell,,,,
-2026-08-28-nottingham-forest-u21-v-manchester-city-u21,home,Nottingham Forest U21,3-5-2,,2026-08-28T18:00:02Z,bench,12,Keehan Willows,,,,
-2026-08-28-nottingham-forest-u21-v-manchester-city-u21,home,Nottingham Forest U21,3-5-2,,2026-08-28T18:00:02Z,bench,14,Kristian Clarke,,,,
-2026-08-28-nottingham-forest-u21-v-manchester-city-u21,home,Nottingham Forest U21,3-5-2,,2026-08-28T18:00:02Z,bench,17,Zyan Blake,,,,
-2026-08-28-nottingham-forest-u21-v-manchester-city-u21,home,Nottingham Forest U21,3-5-2,,2026-08-28T18:00:02Z,start,1,Aaron Bott,,,0.1,0.5
-2026-08-28-nottingham-forest-u21-v-manchester-city-u21,home,Nottingham Forest U21,3-5-2,,2026-08-28T18:00:02Z,start,8,Archie Whitehall,,,0.613,0.305
-2026-08-28-nottingham-forest-u21-v-manchester-city-u21,home,Nottingham Forest U21,3-5-2,,2026-08-28T18:00:02Z,start,6,Chinaza Nwosu,,,0.613,0.5
-2026-08-28-nottingham-forest-u21-v-manchester-city-u21,home,Nottingham Forest U21,3-5-2,,2026-08-28T18:00:02Z,start,3,David Modupe,,,0.357,0.79
-2026-08-28-nottingham-forest-u21-v-manchester-city-u21,home,Nottingham Forest U21,3-5-2,,2026-08-28T18:00:02Z,start,7,Fuad Smith,,,0.613,0.695
-2026-08-28-nottingham-forest-u21-v-manchester-city-u21,home,Nottingham Forest U21,3-5-2,,2026-08-28T18:00:02Z,start,10,Grady McDonnell,grady-mcdonnell,,0.87,0.7
-2026-08-28-nottingham-forest-u21-v-manchester-city-u21,home,Nottingham Forest U21,3-5-2,,2026-08-28T18:00:02Z,start,5,Jamie Newton,,,0.357,0.21
-2026-08-28-nottingham-forest-u21-v-manchester-city-u21,home,Nottingham Forest U21,3-5-2,,2026-08-28T18:00:02Z,start,2,Jimmy Sinclair,,,0.613,0.89
-2026-08-28-nottingham-forest-u21-v-manchester-city-u21,home,Nottingham Forest U21,3-5-2,,2026-08-28T18:00:02Z,start,11,Kalum Thompson,,,0.613,0.11
-2026-08-28-nottingham-forest-u21-v-manchester-city-u21,home,Nottingham Forest U21,3-5-2,,2026-08-28T18:00:02Z,start,9,Lamin Sillah,,,0.87,0.3
-2026-08-28-nottingham-forest-u21-v-manchester-city-u21,home,Nottingham Forest U21,3-5-2,,2026-08-28T18:00:02Z,start,4,Matthew Orr,,,0.357,0.5
-2026-08-28-voitsberg-v-fc-liefering,away,FC Liefering,4-1-3-2,,2026-08-28T17:36:36Z,bench,1,Benjamin Ozegovic,,,,
-2026-08-28-voitsberg-v-fc-liefering,away,FC Liefering,4-1-3-2,,2026-08-28T18:00:02Z,bench,1,Benjamin Ozegovic,,,,
-2026-08-28-voitsberg-v-fc-liefering,away,FC Liefering,4-1-3-2,,2026-08-28T17:36:36Z,bench,6,Dovas Grudzinkas,,,,
-2026-08-28-voitsberg-v-fc-liefering,away,FC Liefering,4-1-3-2,,2026-08-28T18:00:02Z,bench,6,Dovas Grudzinkas,,,,
-2026-08-28-voitsberg-v-fc-liefering,away,FC Liefering,4-1-3-2,,2026-08-28T17:36:36Z,bench,27,Emil Ganser,,,,
-2026-08-28-voitsberg-v-fc-liefering,away,FC Liefering,4-1-3-2,,2026-08-28T18:00:02Z,bench,27,Emil Ganser,,,,
-2026-08-28-voitsberg-v-fc-liefering,away,FC Liefering,4-1-3-2,,2026-08-28T17:36:36Z,bench,20,Filip Aleksic,,,,
-2026-08-28-voitsberg-v-fc-liefering,away,FC Liefering,4-1-3-2,,2026-08-28T18:00:02Z,bench,20,Filip Aleksic,,,,
-2026-08-28-voitsberg-v-fc-liefering,away,FC Liefering,4-1-3-2,,2026-08-28T17:36:36Z,bench,42,Jakob Werner,,,,
-2026-08-28-voitsberg-v-fc-liefering,away,FC Liefering,4-1-3-2,,2026-08-28T18:00:02Z,bench,42,Jakob Werner,,,,
-2026-08-28-voitsberg-v-fc-liefering,away,FC Liefering,4-1-3-2,,2026-08-28T17:36:36Z,bench,24,Jakob Zangerl,,,,
-2026-08-28-voitsberg-v-fc-liefering,away,FC Liefering,4-1-3-2,,2026-08-28T18:00:02Z,bench,24,Jakob Zangerl,,,,
-2026-08-28-voitsberg-v-fc-liefering,away,FC Liefering,4-1-3-2,,2026-08-28T17:36:36Z,bench,9,Said Nisic,,,,
-2026-08-28-voitsberg-v-fc-liefering,away,FC Liefering,4-1-3-2,,2026-08-28T18:00:02Z,bench,9,Said Nisic,,,,
-2026-08-28-voitsberg-v-fc-liefering,away,FC Liefering,4-1-3-2,,2026-08-28T17:36:36Z,start,40,Filip Matijasevic,,,0.87,0.3
-2026-08-28-voitsberg-v-fc-liefering,away,FC Liefering,4-1-3-2,,2026-08-28T18:00:02Z,start,40,Filip Matijasevic,,,0.87,0.3
-2026-08-28-voitsberg-v-fc-liefering,away,FC Liefering,4-1-3-2,,2026-08-28T17:36:36Z,start,16,Ilia Ivanschitz,,,0.678,0.5
-2026-08-28-voitsberg-v-fc-liefering,away,FC Liefering,4-1-3-2,,2026-08-28T18:00:02Z,start,16,Ilia Ivanschitz,,,0.678,0.5
-2026-08-28-voitsberg-v-fc-liefering,away,FC Liefering,4-1-3-2,,2026-08-28T17:36:36Z,start,13,Jakob Pokorny,,,0.292,0.375
-2026-08-28-voitsberg-v-fc-liefering,away,FC Liefering,4-1-3-2,,2026-08-28T18:00:02Z,start,13,Jakob Pokorny,,,0.292,0.375
-2026-08-28-voitsberg-v-fc-liefering,away,FC Liefering,4-1-3-2,,2026-08-28T17:36:36Z,start,47,Julian Hussauf,,,0.292,0.875
-2026-08-28-voitsberg-v-fc-liefering,away,FC Liefering,4-1-3-2,,2026-08-28T18:00:02Z,start,47,Julian Hussauf,,,0.292,0.875
-2026-08-28-voitsberg-v-fc-liefering,away,FC Liefering,4-1-3-2,,2026-08-28T17:36:36Z,start,28,Lassina Traoré,,,0.292,0.125
-2026-08-28-voitsberg-v-fc-liefering,away,FC Liefering,4-1-3-2,,2026-08-28T18:00:02Z,start,28,Lassina Traoré,,,0.292,0.125
-2026-08-28-voitsberg-v-fc-liefering,away,FC Liefering,4-1-3-2,,2026-08-28T17:36:36Z,start,22,Miha Matjasec,,,0.678,0.79
-2026-08-28-voitsberg-v-fc-liefering,away,FC Liefering,4-1-3-2,,2026-08-28T18:00:02Z,start,22,Miha Matjasec,,,0.678,0.79
-2026-08-28-voitsberg-v-fc-liefering,away,FC Liefering,4-1-3-2,,2026-08-28T17:36:36Z,start,45,Nico Masching,,,0.292,0.625
-2026-08-28-voitsberg-v-fc-liefering,away,FC Liefering,4-1-3-2,,2026-08-28T18:00:02Z,start,45,Nico Masching,,,0.292,0.625
-2026-08-28-voitsberg-v-fc-liefering,away,FC Liefering,4-1-3-2,,2026-08-28T17:36:36Z,start,11,Oghenetejiri Adejenughure,,,0.87,0.7
-2026-08-28-voitsberg-v-fc-liefering,away,FC Liefering,4-1-3-2,,2026-08-28T18:00:02Z,start,11,Oghenetejiri Adejenughure,,,0.87,0.7
-2026-08-28-voitsberg-v-fc-liefering,away,FC Liefering,4-1-3-2,,2026-08-28T17:36:36Z,start,25,Riquelme,,,0.485,0.5
-2026-08-28-voitsberg-v-fc-liefering,away,FC Liefering,4-1-3-2,,2026-08-28T18:00:02Z,start,25,Riquelme,,,0.485,0.5
-2026-08-28-voitsberg-v-fc-liefering,away,FC Liefering,4-1-3-2,,2026-08-28T17:36:36Z,start,30,Tom Hupfauf,,,0.1,0.5
-2026-08-28-voitsberg-v-fc-liefering,away,FC Liefering,4-1-3-2,,2026-08-28T18:00:02Z,start,30,Tom Hupfauf,,,0.1,0.5
-2026-08-28-voitsberg-v-fc-liefering,away,FC Liefering,4-1-3-2,,2026-08-28T17:36:36Z,start,37,Yuri Leles,,,0.678,0.21
-2026-08-28-voitsberg-v-fc-liefering,away,FC Liefering,4-1-3-2,,2026-08-28T18:00:02Z,start,37,Yuri Leles,,,0.678,0.21
-2026-08-28-voitsberg-v-fc-liefering,home,Voitsberg,4-2-3-1,,2026-08-28T17:36:36Z,bench,10,Christopher Woelbl,,,,
-2026-08-28-voitsberg-v-fc-liefering,home,Voitsberg,4-2-3-1,,2026-08-28T18:00:02Z,bench,10,Christopher Woelbl,,,,
-2026-08-28-voitsberg-v-fc-liefering,home,Voitsberg,4-2-3-1,,2026-08-28T17:36:36Z,bench,39,Elias Neubauer,,,,
-2026-08-28-voitsberg-v-fc-liefering,home,Voitsberg,4-2-3-1,,2026-08-28T18:00:02Z,bench,39,Elias Neubauer,,,,
-2026-08-28-voitsberg-v-fc-liefering,home,Voitsberg,4-2-3-1,,2026-08-28T17:36:36Z,bench,40,Jakob Knollmüller,,,,
-2026-08-28-voitsberg-v-fc-liefering,home,Voitsberg,4-2-3-1,,2026-08-28T18:00:02Z,bench,40,Jakob Knollmüller,,,,
-2026-08-28-voitsberg-v-fc-liefering,home,Voitsberg,4-2-3-1,,2026-08-28T17:36:36Z,bench,28,Johannes Schriebl,,,,
-2026-08-28-voitsberg-v-fc-liefering,home,Voitsberg,4-2-3-1,,2026-08-28T18:00:02Z,bench,28,Johannes Schriebl,,,,
-2026-08-28-voitsberg-v-fc-liefering,home,Voitsberg,4-2-3-1,,2026-08-28T17:36:36Z,bench,11,Marcel Tanzmayr,,,,
-2026-08-28-voitsberg-v-fc-liefering,home,Voitsberg,4-2-3-1,,2026-08-28T18:00:02Z,bench,11,Marcel Tanzmayr,,,,
-2026-08-28-voitsberg-v-fc-liefering,home,Voitsberg,4-2-3-1,,2026-08-28T17:36:36Z,bench,13,Sebastian Pirker,,,,
-2026-08-28-voitsberg-v-fc-liefering,home,Voitsberg,4-2-3-1,,2026-08-28T18:00:02Z,bench,13,Sebastian Pirker,,,,
-2026-08-28-voitsberg-v-fc-liefering,home,Voitsberg,4-2-3-1,,2026-08-28T17:36:36Z,bench,1,Tomaz Stopajnik,,,,
-2026-08-28-voitsberg-v-fc-liefering,home,Voitsberg,4-2-3-1,,2026-08-28T18:00:02Z,bench,1,Tomaz Stopajnik,,,,
-2026-08-28-voitsberg-v-fc-liefering,home,Voitsberg,4-2-3-1,,2026-08-28T17:36:36Z,start,80,Andreas Radics,,,0.678,0.163
-2026-08-28-voitsberg-v-fc-liefering,home,Voitsberg,4-2-3-1,,2026-08-28T18:00:02Z,start,80,Andreas Radics,,,0.678,0.163
-2026-08-28-voitsberg-v-fc-liefering,home,Voitsberg,4-2-3-1,,2026-08-28T17:36:36Z,start,44,Andrej Stevanovic,,,0.678,0.5
-2026-08-28-voitsberg-v-fc-liefering,home,Voitsberg,4-2-3-1,,2026-08-28T18:00:02Z,start,44,Andrej Stevanovic,,,0.678,0.5
-2026-08-28-voitsberg-v-fc-liefering,home,Voitsberg,4-2-3-1,,2026-08-28T17:36:36Z,start,30,Daniel Goriupp,,,0.485,0.7
-2026-08-28-voitsberg-v-fc-liefering,home,Voitsberg,4-2-3-1,,2026-08-28T18:00:02Z,start,30,Daniel Goriupp,,,0.485,0.7
-2026-08-28-voitsberg-v-fc-liefering,home,Voitsberg,4-2-3-1,,2026-08-28T17:36:36Z,start,9,Fabian Schubert,,,0.87,0.5
-2026-08-28-voitsberg-v-fc-liefering,home,Voitsberg,4-2-3-1,,2026-08-28T18:00:02Z,start,9,Fabian Schubert,,,0.87,0.5
-2026-08-28-voitsberg-v-fc-liefering,home,Voitsberg,4-2-3-1,,2026-08-28T17:36:36Z,start,36,Filip Dmitrovic,,,0.1,0.5
-2026-08-28-voitsberg-v-fc-liefering,home,Voitsberg,4-2-3-1,,2026-08-28T18:00:02Z,start,36,Filip Dmitrovic,,,0.1,0.5
-2026-08-28-voitsberg-v-fc-liefering,home,Voitsberg,4-2-3-1,,2026-08-28T17:36:36Z,start,23,Luka Zivanovic,,,0.292,0.125
-2026-08-28-voitsberg-v-fc-liefering,home,Voitsberg,4-2-3-1,,2026-08-28T18:00:02Z,start,23,Luka Zivanovic,,,0.292,0.125
-2026-08-28-voitsberg-v-fc-liefering,home,Voitsberg,4-2-3-1,,2026-08-28T17:36:36Z,start,46,Manuel Polster,,,0.292,0.875
-2026-08-28-voitsberg-v-fc-liefering,home,Voitsberg,4-2-3-1,,2026-08-28T18:00:02Z,start,46,Manuel Polster,,,0.292,0.875
-2026-08-28-voitsberg-v-fc-liefering,home,Voitsberg,4-2-3-1,,2026-08-28T17:36:36Z,start,3,Nikolaos Vakouftsis,,,0.292,0.625
-2026-08-28-voitsberg-v-fc-liefering,home,Voitsberg,4-2-3-1,,2026-08-28T18:00:02Z,start,3,Nikolaos Vakouftsis,,,0.292,0.625
-2026-08-28-voitsberg-v-fc-liefering,home,Voitsberg,4-2-3-1,,2026-08-28T17:36:36Z,start,7,Paolo Jager,,,0.678,0.837
-2026-08-28-voitsberg-v-fc-liefering,home,Voitsberg,4-2-3-1,,2026-08-28T18:00:02Z,start,7,Paolo Jager,,,0.678,0.837
-2026-08-28-voitsberg-v-fc-liefering,home,Voitsberg,4-2-3-1,,2026-08-28T17:36:36Z,start,8,Philipp Scheucher,,,0.485,0.3
-2026-08-28-voitsberg-v-fc-liefering,home,Voitsberg,4-2-3-1,,2026-08-28T18:00:02Z,start,8,Philipp Scheucher,,,0.485,0.3
-2026-08-28-voitsberg-v-fc-liefering,home,Voitsberg,4-2-3-1,,2026-08-28T17:36:36Z,start,77,Tristan Bruekk,,,0.292,0.375
-2026-08-28-voitsberg-v-fc-liefering,home,Voitsberg,4-2-3-1,,2026-08-28T18:00:02Z,start,77,Tristan Bruekk,,,0.292,0.375
+2026-08-27-toluca-v-austin-fc,home,Toluca,4-2-3-1,,2026-08-28T17:01:36Z,start,8,Nicolás Castro,,,0.485,0.3
+2026-08-28-burnley-u21-v-reading-u21,away,Reading U21,4-2-3-1,,2026-08-28T18:27:40Z,bench,14,Callum Cliff,,,,
+2026-08-28-burnley-u21-v-reading-u21,away,Reading U21,4-2-3-1,,2026-08-28T18:27:40Z,bench,16,Carter Bowdery,,,,
+2026-08-28-burnley-u21-v-reading-u21,away,Reading U21,4-2-3-1,,2026-08-28T18:27:40Z,bench,13,Kacper Kowalczyk,,,,
+2026-08-28-burnley-u21-v-reading-u21,away,Reading U21,4-2-3-1,,2026-08-28T18:27:40Z,bench,18,Kiyan Smith,,,,
+2026-08-28-burnley-u21-v-reading-u21,away,Reading U21,4-2-3-1,,2026-08-28T18:27:40Z,bench,17,Matteo Dashi,,,,
+2026-08-28-burnley-u21-v-reading-u21,away,Reading U21,4-2-3-1,,2026-08-28T18:27:40Z,bench,12,Sam Harrison,,,,
+2026-08-28-burnley-u21-v-reading-u21,away,Reading U21,4-2-3-1,,2026-08-28T18:27:40Z,bench,15,Schofield Lonmeni,,,,
+2026-08-28-burnley-u21-v-reading-u21,away,Reading U21,4-2-3-1,,2026-08-28T18:27:40Z,start,6,Boyd Beacroft,,,0.292,0.375
+2026-08-28-burnley-u21-v-reading-u21,away,Reading U21,4-2-3-1,,2026-08-28T18:27:40Z,start,3,Calum Logan,,,0.292,0.125
+2026-08-28-burnley-u21-v-reading-u21,away,Reading U21,4-2-3-1,,2026-08-28T18:27:40Z,start,11,Emmanuel Osho,,,0.678,0.163
+2026-08-28-burnley-u21-v-reading-u21,away,Reading U21,4-2-3-1,,2026-08-28T18:27:40Z,start,7,Jerae Jones,,,0.678,0.837
+2026-08-28-burnley-u21-v-reading-u21,away,Reading U21,4-2-3-1,,2026-08-28T18:27:40Z,start,4,Kevin Mfuamba,,,0.485,0.3
+2026-08-28-burnley-u21-v-reading-u21,away,Reading U21,4-2-3-1,,2026-08-28T18:27:40Z,start,8,Luke Howard,,,0.485,0.7
+2026-08-28-burnley-u21-v-reading-u21,away,Reading U21,4-2-3-1,,2026-08-28T18:27:40Z,start,5,Phillip Duah,,,0.292,0.625
+2026-08-28-burnley-u21-v-reading-u21,away,Reading U21,4-2-3-1,,2026-08-28T18:27:40Z,start,1,Toby Borgnis,,,0.1,0.5
+2026-08-28-burnley-u21-v-reading-u21,away,Reading U21,4-2-3-1,,2026-08-28T18:27:40Z,start,9,Torin Ntege,,,0.87,0.5
+2026-08-28-burnley-u21-v-reading-u21,away,Reading U21,4-2-3-1,,2026-08-28T18:27:40Z,start,10,Tyler Sackey,,,0.678,0.5
+2026-08-28-burnley-u21-v-reading-u21,away,Reading U21,4-2-3-1,,2026-08-28T18:27:40Z,start,2,T’Shay Saint-Louis,,,0.292,0.875
+2026-08-28-burnley-u21-v-reading-u21,home,Burnley U21,4-2-3-1,,2026-08-28T18:27:40Z,bench,17,Blayz Borgesson,,,,
+2026-08-28-burnley-u21-v-reading-u21,home,Burnley U21,4-2-3-1,,2026-08-28T18:27:40Z,bench,14,Corey King,,,,
+2026-08-28-burnley-u21-v-reading-u21,home,Burnley U21,4-2-3-1,,2026-08-28T18:27:40Z,bench,18,Destiny Okonkwo,,,,
+2026-08-28-burnley-u21-v-reading-u21,home,Burnley U21,4-2-3-1,,2026-08-28T18:27:40Z,bench,15,Diandro Fletchman,,,,
+2026-08-28-burnley-u21-v-reading-u21,home,Burnley U21,4-2-3-1,,2026-08-28T18:27:40Z,bench,16,Dylan Morison,,,,
+2026-08-28-burnley-u21-v-reading-u21,home,Burnley U21,4-2-3-1,,2026-08-28T18:27:40Z,bench,12,Jack Robinson,,,,
+2026-08-28-burnley-u21-v-reading-u21,home,Burnley U21,4-2-3-1,,2026-08-28T18:27:40Z,start,11,Brandon Pouani,,,0.678,0.163
+2026-08-28-burnley-u21-v-reading-u21,home,Burnley U21,4-2-3-1,,2026-08-28T18:27:40Z,start,1,Callum Feeney,,,0.1,0.5
+2026-08-28-burnley-u21-v-reading-u21,home,Burnley U21,4-2-3-1,,2026-08-28T18:27:40Z,start,3,Cameron Scott,,,0.292,0.125
+2026-08-28-burnley-u21-v-reading-u21,home,Burnley U21,4-2-3-1,,2026-08-28T18:27:40Z,start,8,Ellis Clark,,,0.485,0.7
+2026-08-28-burnley-u21-v-reading-u21,home,Burnley U21,4-2-3-1,,2026-08-28T18:27:40Z,start,5,Emmanuel Airoboma,,,0.292,0.625
+2026-08-28-burnley-u21-v-reading-u21,home,Burnley U21,4-2-3-1,,2026-08-28T18:27:40Z,start,10,Lluc Castell,,,0.678,0.5
+2026-08-28-burnley-u21-v-reading-u21,home,Burnley U21,4-2-3-1,,2026-08-28T18:27:40Z,start,2,Michael Stanley,,,0.292,0.875
+2026-08-28-burnley-u21-v-reading-u21,home,Burnley U21,4-2-3-1,,2026-08-28T18:27:40Z,start,4,Murray Campbell,,,0.292,0.375
+2026-08-28-burnley-u21-v-reading-u21,home,Burnley U21,4-2-3-1,,2026-08-28T18:27:40Z,start,6,Troy Savage,,,0.485,0.3
+2026-08-28-burnley-u21-v-reading-u21,home,Burnley U21,4-2-3-1,,2026-08-28T18:27:40Z,start,7,Zach Johnson,,,0.678,0.837
+2026-08-28-burnley-u21-v-reading-u21,home,Burnley U21,4-2-3-1,,2026-08-28T18:27:40Z,start,9,Zhang Jiaming,,,0.87,0.5
+2026-08-28-norwich-city-u21-v-stoke-city-u21,away,Stoke City U21,4-3-3,,2026-08-28T18:27:40Z,bench,13,Caleb Clothier,,,,
+2026-08-28-norwich-city-u21-v-stoke-city-u21,away,Stoke City U21,4-3-3,,2026-08-28T18:27:40Z,bench,14,Fletcher Poole,,,,
+2026-08-28-norwich-city-u21-v-stoke-city-u21,away,Stoke City U21,4-3-3,,2026-08-28T18:27:40Z,bench,7,Pedro Nzau,,,,
+2026-08-28-norwich-city-u21-v-stoke-city-u21,away,Stoke City U21,4-3-3,,2026-08-28T18:27:40Z,bench,12,Ryan Liu,,,,
+2026-08-28-norwich-city-u21-v-stoke-city-u21,away,Stoke City U21,4-3-3,,2026-08-28T18:27:40Z,bench,15,Sanchez Phillips,,,,
+2026-08-28-norwich-city-u21-v-stoke-city-u21,away,Stoke City U21,4-3-3,,2026-08-28T18:27:40Z,start,9,Adriel Walker,,,0.613,0.21
+2026-08-28-norwich-city-u21-v-stoke-city-u21,away,Stoke City U21,4-3-3,,2026-08-28T18:27:40Z,start,3,Anas Dauda,,,0.357,0.125
+2026-08-28-norwich-city-u21-v-stoke-city-u21,away,Stoke City U21,4-3-3,,2026-08-28T18:27:40Z,start,11,Elliot Fearn,,,0.87,0.79
+2026-08-28-norwich-city-u21-v-stoke-city-u21,away,Stoke City U21,4-3-3,,2026-08-28T18:27:40Z,start,6,Gabriel Kelly,gabriel-kelly,,0.357,0.375
+2026-08-28-norwich-city-u21-v-stoke-city-u21,away,Stoke City U21,4-3-3,,2026-08-28T18:27:40Z,start,8,George Morrison,,,0.613,0.79
+2026-08-28-norwich-city-u21-v-stoke-city-u21,away,Stoke City U21,4-3-3,,2026-08-28T18:27:40Z,start,2,Jaden Mears,,,0.357,0.875
+2026-08-28-norwich-city-u21-v-stoke-city-u21,away,Stoke City U21,4-3-3,,2026-08-28T18:27:40Z,start,4,Josh McWilliams,,,0.613,0.5
+2026-08-28-norwich-city-u21-v-stoke-city-u21,away,Stoke City U21,4-3-3,,2026-08-28T18:27:40Z,start,1,Noah Cooper,,,0.1,0.5
+2026-08-28-norwich-city-u21-v-stoke-city-u21,away,Stoke City U21,4-3-3,,2026-08-28T18:27:40Z,start,21,Thomas Midwood,,,0.87,0.21
+2026-08-28-norwich-city-u21-v-stoke-city-u21,away,Stoke City U21,4-3-3,,2026-08-28T18:27:40Z,start,10,Tristan Achu,,,0.87,0.5
+2026-08-28-norwich-city-u21-v-stoke-city-u21,away,Stoke City U21,4-3-3,,2026-08-28T18:27:40Z,start,5,Will Thompson,,,0.357,0.625
+2026-08-28-norwich-city-u21-v-stoke-city-u21,home,Norwich City U21,4-2-3-1,,2026-08-28T18:27:40Z,bench,13,Blake Craig Wolsoncroft,,,,
+2026-08-28-norwich-city-u21-v-stoke-city-u21,home,Norwich City U21,4-2-3-1,,2026-08-28T18:27:40Z,bench,15,Botan Ameen,,,,
+2026-08-28-norwich-city-u21-v-stoke-city-u21,home,Norwich City U21,4-2-3-1,,2026-08-28T18:27:40Z,bench,18,Luke Chukwu,,,,
+2026-08-28-norwich-city-u21-v-stoke-city-u21,home,Norwich City U21,4-2-3-1,,2026-08-28T18:27:40Z,bench,16,Reuben Cooper,,,,
+2026-08-28-norwich-city-u21-v-stoke-city-u21,home,Norwich City U21,4-2-3-1,,2026-08-28T18:27:40Z,bench,17,Takudzwa Gwanzura,,,,
+2026-08-28-norwich-city-u21-v-stoke-city-u21,home,Norwich City U21,4-2-3-1,,2026-08-28T18:27:40Z,bench,14,Toby Chilvers,,,,
+2026-08-28-norwich-city-u21-v-stoke-city-u21,home,Norwich City U21,4-2-3-1,,2026-08-28T18:27:40Z,bench,12,Tyler Williams,,,,
+2026-08-28-norwich-city-u21-v-stoke-city-u21,home,Norwich City U21,4-2-3-1,,2026-08-28T18:27:40Z,start,6,Alan Domeracki,,,0.485,0.7
+2026-08-28-norwich-city-u21-v-stoke-city-u21,home,Norwich City U21,4-2-3-1,,2026-08-28T18:27:40Z,start,1,Caleb Ansen,,,0.1,0.5
+2026-08-28-norwich-city-u21-v-stoke-city-u21,home,Norwich City U21,4-2-3-1,,2026-08-28T18:27:40Z,start,7,Elliot Myles,,,0.485,0.3
+2026-08-28-norwich-city-u21-v-stoke-city-u21,home,Norwich City U21,4-2-3-1,,2026-08-28T18:27:40Z,start,11,Errol Mundle-Smith,,,0.87,0.5
+2026-08-28-norwich-city-u21-v-stoke-city-u21,home,Norwich City U21,4-2-3-1,,2026-08-28T18:27:40Z,start,9,Finlay Corke,,,0.678,0.163
+2026-08-28-norwich-city-u21-v-stoke-city-u21,home,Norwich City U21,4-2-3-1,,2026-08-28T18:27:40Z,start,10,Gabriel Forsyth,,,0.678,0.5
+2026-08-28-norwich-city-u21-v-stoke-city-u21,home,Norwich City U21,4-2-3-1,,2026-08-28T18:27:40Z,start,8,Luke Towler,,,0.678,0.837
+2026-08-28-norwich-city-u21-v-stoke-city-u21,home,Norwich City U21,4-2-3-1,,2026-08-28T18:27:40Z,start,2,Rio Mundle,,,0.292,0.875
+2026-08-28-norwich-city-u21-v-stoke-city-u21,home,Norwich City U21,4-2-3-1,,2026-08-28T18:27:40Z,start,5,Sonny Rowland,,,0.292,0.375
+2026-08-28-norwich-city-u21-v-stoke-city-u21,home,Norwich City U21,4-2-3-1,,2026-08-28T18:27:40Z,start,4,Theodore Adelusi,,,0.292,0.625
+2026-08-28-norwich-city-u21-v-stoke-city-u21,home,Norwich City U21,4-2-3-1,,2026-08-28T18:27:40Z,start,3,Vatan Özcan,,,0.292,0.125
+2026-08-28-nottingham-forest-u21-v-manchester-city-u21,away,Manchester City U21,4-2-3-1,,2026-08-28T18:27:40Z,bench,16,Finlay Gorman,,,,
+2026-08-28-nottingham-forest-u21-v-manchester-city-u21,away,Manchester City U21,4-2-3-1,,2026-08-28T18:27:40Z,bench,15,Harrison Miles,,,,
+2026-08-28-nottingham-forest-u21-v-manchester-city-u21,away,Manchester City U21,4-2-3-1,,2026-08-28T18:27:40Z,bench,14,Marlow Barrett,,,,
+2026-08-28-nottingham-forest-u21-v-manchester-city-u21,away,Manchester City U21,4-2-3-1,,2026-08-28T18:27:40Z,bench,13,Max Hudson,,,,
+2026-08-28-nottingham-forest-u21-v-manchester-city-u21,away,Manchester City U21,4-2-3-1,,2026-08-28T18:27:40Z,bench,12,Oliver Tevenan,,,,
+2026-08-28-nottingham-forest-u21-v-manchester-city-u21,away,Manchester City U21,4-2-3-1,,2026-08-28T18:27:40Z,bench,17,Xavier Parker,,,,
+2026-08-28-nottingham-forest-u21-v-manchester-city-u21,away,Manchester City U21,4-2-3-1,,2026-08-28T18:27:40Z,start,7,Brooklyn Nfonkeu,,,0.678,0.837
+2026-08-28-nottingham-forest-u21-v-manchester-city-u21,away,Manchester City U21,4-2-3-1,,2026-08-28T18:27:40Z,start,3,Charlie Courtman,,,0.292,0.625
+2026-08-28-nottingham-forest-u21-v-manchester-city-u21,away,Manchester City U21,4-2-3-1,,2026-08-28T18:27:40Z,start,11,Christian Dunbar-McDonald,,,0.678,0.163
+2026-08-28-nottingham-forest-u21-v-manchester-city-u21,away,Manchester City U21,4-2-3-1,,2026-08-28T18:27:40Z,start,6,Femi Fapetu,,,0.485,0.7
+2026-08-28-nottingham-forest-u21-v-manchester-city-u21,away,Manchester City U21,4-2-3-1,,2026-08-28T18:27:40Z,start,8,Floyd Samba,,,0.485,0.3
+2026-08-28-nottingham-forest-u21-v-manchester-city-u21,away,Manchester City U21,4-2-3-1,,2026-08-28T18:27:40Z,start,5,Kian Noble,,,0.292,0.125
+2026-08-28-nottingham-forest-u21-v-manchester-city-u21,away,Manchester City U21,4-2-3-1,,2026-08-28T18:27:40Z,start,9,Kylan Midwood,,,0.87,0.5
+2026-08-28-nottingham-forest-u21-v-manchester-city-u21,away,Manchester City U21,4-2-3-1,,2026-08-28T18:27:40Z,start,4,Leke Drake,,,0.292,0.375
+2026-08-28-nottingham-forest-u21-v-manchester-city-u21,away,Manchester City U21,4-2-3-1,,2026-08-28T18:27:40Z,start,2,Matty Henderson-Hall,,,0.292,0.875
+2026-08-28-nottingham-forest-u21-v-manchester-city-u21,away,Manchester City U21,4-2-3-1,,2026-08-28T18:27:40Z,start,1,Max-Edgar Chabot,,,0.1,0.5
+2026-08-28-nottingham-forest-u21-v-manchester-city-u21,away,Manchester City U21,4-2-3-1,,2026-08-28T18:27:40Z,start,10,Tyrone Samba,,,0.678,0.5
+2026-08-28-nottingham-forest-u21-v-manchester-city-u21,home,Nottingham Forest U21,5-4-1,,2026-08-28T18:27:40Z,bench,18,Cherif Yaya,,,,
+2026-08-28-nottingham-forest-u21-v-manchester-city-u21,home,Nottingham Forest U21,5-4-1,,2026-08-28T18:27:40Z,bench,16,Chinaza Nwosu,,,,
+2026-08-28-nottingham-forest-u21-v-manchester-city-u21,home,Nottingham Forest U21,5-4-1,,2026-08-28T18:27:40Z,bench,19,Frank Djamna,,,,
+2026-08-28-nottingham-forest-u21-v-manchester-city-u21,home,Nottingham Forest U21,5-4-1,,2026-08-28T18:27:40Z,bench,14,Fuad Smith,,,,
+2026-08-28-nottingham-forest-u21-v-manchester-city-u21,home,Nottingham Forest U21,5-4-1,,2026-08-28T18:27:40Z,bench,12,George Murray-Jones,,,,
+2026-08-28-nottingham-forest-u21-v-manchester-city-u21,home,Nottingham Forest U21,5-4-1,,2026-08-28T18:27:40Z,bench,17,Jayden Powell,,,,
+2026-08-28-nottingham-forest-u21-v-manchester-city-u21,home,Nottingham Forest U21,5-4-1,,2026-08-28T18:27:40Z,bench,15,Jonathan Whiteley,,,,
+2026-08-28-nottingham-forest-u21-v-manchester-city-u21,home,Nottingham Forest U21,5-4-1,,2026-08-28T18:27:40Z,start,8,Archie Whitehall,,,0.613,0.375
+2026-08-28-nottingham-forest-u21-v-manchester-city-u21,home,Nottingham Forest U21,5-4-1,,2026-08-28T18:27:40Z,start,6,Blaine McClure,,,0.613,0.625
+2026-08-28-nottingham-forest-u21-v-manchester-city-u21,home,Nottingham Forest U21,5-4-1,,2026-08-28T18:27:40Z,start,3,Bubbacar Sanneh,,,0.357,0.695
+2026-08-28-nottingham-forest-u21-v-manchester-city-u21,home,Nottingham Forest U21,5-4-1,,2026-08-28T18:27:40Z,start,4,David Modupe,,,0.357,0.5
+2026-08-28-nottingham-forest-u21-v-manchester-city-u21,home,Nottingham Forest U21,5-4-1,,2026-08-28T18:27:40Z,start,10,Grady McDonnell,grady-mcdonnell,,0.613,0.125
+2026-08-28-nottingham-forest-u21-v-manchester-city-u21,home,Nottingham Forest U21,5-4-1,,2026-08-28T18:27:40Z,start,11,Jamie Newton,,,0.371,0.11
+2026-08-28-nottingham-forest-u21-v-manchester-city-u21,home,Nottingham Forest U21,5-4-1,,2026-08-28T18:27:40Z,start,2,Jimmy Sinclair,,,0.371,0.89
+2026-08-28-nottingham-forest-u21-v-manchester-city-u21,home,Nottingham Forest U21,5-4-1,,2026-08-28T18:27:40Z,start,5,Josh Powell,,,0.357,0.305
+2026-08-28-nottingham-forest-u21-v-manchester-city-u21,home,Nottingham Forest U21,5-4-1,,2026-08-28T18:27:40Z,start,9,Kalum Thompson,,,0.87,0.5
+2026-08-28-nottingham-forest-u21-v-manchester-city-u21,home,Nottingham Forest U21,5-4-1,,2026-08-28T18:27:40Z,start,1,Keehan Willows,,,0.1,0.5
+2026-08-28-nottingham-forest-u21-v-manchester-city-u21,home,Nottingham Forest U21,5-4-1,,2026-08-28T18:27:40Z,start,7,Kristian Clarke,,,0.613,0.875
+2026-08-28-voitsberg-v-fc-liefering,away,FC Liefering,4-1-3-2,,2026-08-28T17:01:36Z,bench,1,Benjamin Ozegovic,,,,
+2026-08-28-voitsberg-v-fc-liefering,away,FC Liefering,4-1-3-2,,2026-08-28T17:48:55Z,bench,1,Benjamin Ozegovic,,,,
+2026-08-28-voitsberg-v-fc-liefering,away,FC Liefering,4-1-3-2,,2026-08-28T17:01:36Z,bench,6,Dovas Grudzinkas,,,,
+2026-08-28-voitsberg-v-fc-liefering,away,FC Liefering,4-1-3-2,,2026-08-28T17:48:55Z,bench,6,Dovas Grudzinkas,,,,
+2026-08-28-voitsberg-v-fc-liefering,away,FC Liefering,4-1-3-2,,2026-08-28T17:01:36Z,bench,27,Emil Ganser,,,,
+2026-08-28-voitsberg-v-fc-liefering,away,FC Liefering,4-1-3-2,,2026-08-28T17:48:55Z,bench,27,Emil Ganser,,,,
+2026-08-28-voitsberg-v-fc-liefering,away,FC Liefering,4-1-3-2,,2026-08-28T17:01:36Z,bench,20,Filip Aleksic,,,,
+2026-08-28-voitsberg-v-fc-liefering,away,FC Liefering,4-1-3-2,,2026-08-28T17:48:55Z,bench,20,Filip Aleksic,,,,
+2026-08-28-voitsberg-v-fc-liefering,away,FC Liefering,4-1-3-2,,2026-08-28T17:01:36Z,bench,42,Jakob Werner,,,,
+2026-08-28-voitsberg-v-fc-liefering,away,FC Liefering,4-1-3-2,,2026-08-28T17:48:55Z,bench,42,Jakob Werner,,,,
+2026-08-28-voitsberg-v-fc-liefering,away,FC Liefering,4-1-3-2,,2026-08-28T17:01:36Z,bench,24,Jakob Zangerl,,,,
+2026-08-28-voitsberg-v-fc-liefering,away,FC Liefering,4-1-3-2,,2026-08-28T17:48:55Z,bench,24,Jakob Zangerl,,,,
+2026-08-28-voitsberg-v-fc-liefering,away,FC Liefering,4-1-3-2,,2026-08-28T17:01:36Z,bench,9,Said Nisic,,,,
+2026-08-28-voitsberg-v-fc-liefering,away,FC Liefering,4-1-3-2,,2026-08-28T17:48:55Z,bench,9,Said Nisic,,,,
+2026-08-28-voitsberg-v-fc-liefering,away,FC Liefering,4-1-3-2,,2026-08-28T17:01:36Z,start,40,Filip Matijasevic,,,0.87,0.3
+2026-08-28-voitsberg-v-fc-liefering,away,FC Liefering,4-1-3-2,,2026-08-28T17:48:55Z,start,40,Filip Matijasevic,,,0.87,0.3
+2026-08-28-voitsberg-v-fc-liefering,away,FC Liefering,4-1-3-2,,2026-08-28T17:01:36Z,start,16,Ilia Ivanschitz,,,0.678,0.5
+2026-08-28-voitsberg-v-fc-liefering,away,FC Liefering,4-1-3-2,,2026-08-28T17:48:55Z,start,16,Ilia Ivanschitz,,,0.678,0.5
+2026-08-28-voitsberg-v-fc-liefering,away,FC Liefering,4-1-3-2,,2026-08-28T17:01:36Z,start,13,Jakob Pokorny,,,0.292,0.375
+2026-08-28-voitsberg-v-fc-liefering,away,FC Liefering,4-1-3-2,,2026-08-28T17:48:55Z,start,13,Jakob Pokorny,,,0.292,0.375
+2026-08-28-voitsberg-v-fc-liefering,away,FC Liefering,4-1-3-2,,2026-08-28T17:01:36Z,start,47,Julian Hussauf,,,0.292,0.875
+2026-08-28-voitsberg-v-fc-liefering,away,FC Liefering,4-1-3-2,,2026-08-28T17:48:55Z,start,47,Julian Hussauf,,,0.292,0.875
+2026-08-28-voitsberg-v-fc-liefering,away,FC Liefering,4-1-3-2,,2026-08-28T17:01:36Z,start,28,Lassina Traoré,,,0.292,0.125
+2026-08-28-voitsberg-v-fc-liefering,away,FC Liefering,4-1-3-2,,2026-08-28T17:48:55Z,start,28,Lassina Traoré,,,0.292,0.125
+2026-08-28-voitsberg-v-fc-liefering,away,FC Liefering,4-1-3-2,,2026-08-28T17:01:36Z,start,22,Miha Matjasec,,,0.678,0.79
+2026-08-28-voitsberg-v-fc-liefering,away,FC Liefering,4-1-3-2,,2026-08-28T17:48:55Z,start,22,Miha Matjasec,,,0.678,0.79
+2026-08-28-voitsberg-v-fc-liefering,away,FC Liefering,4-1-3-2,,2026-08-28T17:01:36Z,start,45,Nico Masching,,,0.292,0.625
+2026-08-28-voitsberg-v-fc-liefering,away,FC Liefering,4-1-3-2,,2026-08-28T17:48:55Z,start,45,Nico Masching,,,0.292,0.625
+2026-08-28-voitsberg-v-fc-liefering,away,FC Liefering,4-1-3-2,,2026-08-28T17:01:36Z,start,11,Oghenetejiri Adejenughure,,,0.87,0.7
+2026-08-28-voitsberg-v-fc-liefering,away,FC Liefering,4-1-3-2,,2026-08-28T17:48:55Z,start,11,Oghenetejiri Adejenughure,,,0.87,0.7
+2026-08-28-voitsberg-v-fc-liefering,away,FC Liefering,4-1-3-2,,2026-08-28T17:01:36Z,start,25,Riquelme,,,0.485,0.5
+2026-08-28-voitsberg-v-fc-liefering,away,FC Liefering,4-1-3-2,,2026-08-28T17:48:55Z,start,25,Riquelme,,,0.485,0.5
+2026-08-28-voitsberg-v-fc-liefering,away,FC Liefering,4-1-3-2,,2026-08-28T17:01:36Z,start,30,Tom Hupfauf,,,0.1,0.5
+2026-08-28-voitsberg-v-fc-liefering,away,FC Liefering,4-1-3-2,,2026-08-28T17:48:55Z,start,30,Tom Hupfauf,,,0.1,0.5
+2026-08-28-voitsberg-v-fc-liefering,away,FC Liefering,4-1-3-2,,2026-08-28T17:01:36Z,start,37,Yuri Leles,,,0.678,0.21
+2026-08-28-voitsberg-v-fc-liefering,away,FC Liefering,4-1-3-2,,2026-08-28T17:48:55Z,start,37,Yuri Leles,,,0.678,0.21
+2026-08-28-voitsberg-v-fc-liefering,home,Voitsberg,4-2-3-1,,2026-08-28T17:01:36Z,bench,10,Christopher Woelbl,,,,
+2026-08-28-voitsberg-v-fc-liefering,home,Voitsberg,4-2-3-1,,2026-08-28T17:48:55Z,bench,10,Christopher Woelbl,,,,
+2026-08-28-voitsberg-v-fc-liefering,home,Voitsberg,4-2-3-1,,2026-08-28T17:01:36Z,bench,39,Elias Neubauer,,,,
+2026-08-28-voitsberg-v-fc-liefering,home,Voitsberg,4-2-3-1,,2026-08-28T17:48:55Z,bench,39,Elias Neubauer,,,,
+2026-08-28-voitsberg-v-fc-liefering,home,Voitsberg,4-2-3-1,,2026-08-28T17:01:36Z,bench,40,Jakob Knollmüller,,,,
+2026-08-28-voitsberg-v-fc-liefering,home,Voitsberg,4-2-3-1,,2026-08-28T17:48:55Z,bench,40,Jakob Knollmüller,,,,
+2026-08-28-voitsberg-v-fc-liefering,home,Voitsberg,4-2-3-1,,2026-08-28T17:01:36Z,bench,28,Johannes Schriebl,,,,
+2026-08-28-voitsberg-v-fc-liefering,home,Voitsberg,4-2-3-1,,2026-08-28T17:48:55Z,bench,28,Johannes Schriebl,,,,
+2026-08-28-voitsberg-v-fc-liefering,home,Voitsberg,4-2-3-1,,2026-08-28T17:01:36Z,bench,11,Marcel Tanzmayr,,,,
+2026-08-28-voitsberg-v-fc-liefering,home,Voitsberg,4-2-3-1,,2026-08-28T17:48:55Z,bench,11,Marcel Tanzmayr,,,,
+2026-08-28-voitsberg-v-fc-liefering,home,Voitsberg,4-2-3-1,,2026-08-28T17:01:36Z,bench,13,Sebastian Pirker,,,,
+2026-08-28-voitsberg-v-fc-liefering,home,Voitsberg,4-2-3-1,,2026-08-28T17:48:55Z,bench,13,Sebastian Pirker,,,,
+2026-08-28-voitsberg-v-fc-liefering,home,Voitsberg,4-2-3-1,,2026-08-28T17:01:36Z,bench,1,Tomaz Stopajnik,,,,
+2026-08-28-voitsberg-v-fc-liefering,home,Voitsberg,4-2-3-1,,2026-08-28T17:48:55Z,bench,1,Tomaz Stopajnik,,,,
+2026-08-28-voitsberg-v-fc-liefering,home,Voitsberg,4-2-3-1,,2026-08-28T17:01:36Z,start,80,Andreas Radics,,,0.678,0.163
+2026-08-28-voitsberg-v-fc-liefering,home,Voitsberg,4-2-3-1,,2026-08-28T17:48:55Z,start,80,Andreas Radics,,,0.678,0.163
+2026-08-28-voitsberg-v-fc-liefering,home,Voitsberg,4-2-3-1,,2026-08-28T17:01:36Z,start,44,Andrej Stevanovic,,,0.678,0.5
+2026-08-28-voitsberg-v-fc-liefering,home,Voitsberg,4-2-3-1,,2026-08-28T17:48:55Z,start,44,Andrej Stevanovic,,,0.678,0.5
+2026-08-28-voitsberg-v-fc-liefering,home,Voitsberg,4-2-3-1,,2026-08-28T17:01:36Z,start,30,Daniel Goriupp,,,0.485,0.7
+2026-08-28-voitsberg-v-fc-liefering,home,Voitsberg,4-2-3-1,,2026-08-28T17:48:55Z,start,30,Daniel Goriupp,,,0.485,0.7
+2026-08-28-voitsberg-v-fc-liefering,home,Voitsberg,4-2-3-1,,2026-08-28T17:01:36Z,start,9,Fabian Schubert,,,0.87,0.5
+2026-08-28-voitsberg-v-fc-liefering,home,Voitsberg,4-2-3-1,,2026-08-28T17:48:55Z,start,9,Fabian Schubert,,,0.87,0.5
+2026-08-28-voitsberg-v-fc-liefering,home,Voitsberg,4-2-3-1,,2026-08-28T17:01:36Z,start,36,Filip Dmitrovic,,,0.1,0.5
+2026-08-28-voitsberg-v-fc-liefering,home,Voitsberg,4-2-3-1,,2026-08-28T17:48:55Z,start,36,Filip Dmitrovic,,,0.1,0.5
+2026-08-28-voitsberg-v-fc-liefering,home,Voitsberg,4-2-3-1,,2026-08-28T17:01:36Z,start,23,Luka Zivanovic,,,0.292,0.125
+2026-08-28-voitsberg-v-fc-liefering,home,Voitsberg,4-2-3-1,,2026-08-28T17:48:55Z,start,23,Luka Zivanovic,,,0.292,0.125
+2026-08-28-voitsberg-v-fc-liefering,home,Voitsberg,4-2-3-1,,2026-08-28T17:01:36Z,start,46,Manuel Polster,,,0.292,0.875
+2026-08-28-voitsberg-v-fc-liefering,home,Voitsberg,4-2-3-1,,2026-08-28T17:48:55Z,start,46,Manuel Polster,,,0.292,0.875
+2026-08-28-voitsberg-v-fc-liefering,home,Voitsberg,4-2-3-1,,2026-08-28T17:01:36Z,start,3,Nikolaos Vakouftsis,,,0.292,0.625
+2026-08-28-voitsberg-v-fc-liefering,home,Voitsberg,4-2-3-1,,2026-08-28T17:48:55Z,start,3,Nikolaos Vakouftsis,,,0.292,0.625
+2026-08-28-voitsberg-v-fc-liefering,home,Voitsberg,4-2-3-1,,2026-08-28T17:01:36Z,start,7,Paolo Jager,,,0.678,0.837
+2026-08-28-voitsberg-v-fc-liefering,home,Voitsberg,4-2-3-1,,2026-08-28T17:48:55Z,start,7,Paolo Jager,,,0.678,0.837
+2026-08-28-voitsberg-v-fc-liefering,home,Voitsberg,4-2-3-1,,2026-08-28T17:01:36Z,start,8,Philipp Scheucher,,,0.485,0.3
+2026-08-28-voitsberg-v-fc-liefering,home,Voitsberg,4-2-3-1,,2026-08-28T17:48:55Z,start,8,Philipp Scheucher,,,0.485,0.3
+2026-08-28-voitsberg-v-fc-liefering,home,Voitsberg,4-2-3-1,,2026-08-28T17:01:36Z,start,77,Tristan Bruekk,,,0.292,0.375
+2026-08-28-voitsberg-v-fc-liefering,home,Voitsberg,4-2-3-1,,2026-08-28T17:48:55Z,start,77,Tristan Bruekk,,,0.292,0.375
