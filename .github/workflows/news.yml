@@ -1,64 +1,86 @@
 name: news pipeline
 
-# Fired by the fetcher, which runs somewhere with a residential IP because the
-# source blocks datacentre ranges. It sends the posts as the dispatch payload;
-# everything after that happens here, where the code can be read and reviewed.
+# Polls the source account every 30 minutes through the official X API and
+# publishes anything that clears the gate.
 #
-# workflow_dispatch is for testing with a pasted payload. There is no schedule
-# on purpose: this job must never run without posts to work on.
+# The cadence is free: billing is per post returned, and news_fetch.py passes
+# since_id, so a poll with nothing new returns nothing and costs nothing.
+#
+# The cursor holds the account id and last post id, both of which identify the
+# source. It is therefore kept in the Actions cache and NEVER committed - the
+# repo must not carry it in a file or in history. Losing the cache costs one
+# cent to re-resolve, which is the right trade.
+#
+# workflow_dispatch with a pasted payload skips the fetch entirely, for testing.
 on:
-  repository_dispatch:
-    types: [news-posts]
+  schedule:
+    - cron: '*/30 * * * *'
   workflow_dispatch:
     inputs:
       posts:
-        description: JSON array of posts (testing)
-        required: true
+        description: JSON array of posts (testing; leave empty to fetch live)
+        required: false
       dry:
-        description: 'dry run — write drafts, publish nothing'
-        default: 'true'
+        description: 'dry run - write drafts, publish nothing'
+        default: 'false'
 
 permissions:
   contents: write
 
 concurrency:
   # Its own lane. Sharing "data-write" with the hourly refresh meant a queued
-  # refresh would cancel a waiting news run — which is what happened on run #1.
+  # refresh would cancel a waiting news run - which is what happened on run #1.
   # Racing with the refresh is handled by the pull --rebase in the commit step.
   group: news-write
   cancel-in-progress: false
+
 jobs:
   publish:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
+
+      - name: restore the cursor
+        uses: actions/cache/restore@v4
+        with:
+          path: scraper/news_since.json
+          key: news-cursor-${{ github.run_id }}
+          restore-keys: news-cursor-
+
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
       - run: pip install requests
 
-      - name: stage the payload
+      - name: fetch new posts
+        id: fetch
         env:
-          PAYLOAD: ${{ toJSON(github.event.client_payload.posts) }}
+          X_BEARER_TOKEN: ${{ secrets.X_BEARER_TOKEN }}
+          NEWS_SOURCE_HANDLE: ${{ secrets.NEWS_SOURCE_HANDLE }}
           MANUAL: ${{ inputs.posts }}
         run: |
-          if [ -n "$MANUAL" ]; then printf '%s' "$MANUAL" > posts.json
-          else printf '%s' "$PAYLOAD" > posts.json; fi
-          python3 -c "import json,sys; d=json.load(open('posts.json')); print(f'{len(d) if isinstance(d,list) else 0} posts staged')"
+          if [ -n "$MANUAL" ]; then
+            printf '%s' "$MANUAL" > posts.json
+            echo "count=$(python3 -c "import json;print(len(json.load(open('posts.json'))))")" >> "$GITHUB_OUTPUT"
+            echo "using pasted payload, no API call made"
+          else
+            python3 scraper/news_fetch.py
+          fi
 
       - name: run the pipeline
+        if: steps.fetch.outputs.count != '0'
         env:
           NEWS_LLM_KEY: ${{ secrets.NEWS_LLM_KEY }}
           NEWS_SALT: ${{ secrets.NEWS_SALT }}
           # All optional. Unset means Groq, which is free and needs no card.
-          # To move provider, set these three — no code change.
+          # To move provider, set these three - no code change.
           NEWS_LLM_BASE: ${{ vars.NEWS_LLM_BASE }}
           NEWS_LLM_MODEL: ${{ vars.NEWS_LLM_MODEL }}
           NEWS_LLM_KIND: ${{ vars.NEWS_LLM_KIND }}
           NEWS_BYLINE: ${{ vars.NEWS_BYLINE }}
-          # DRY_RUN stays 'true' in repo variables until the drafts read well.
-          DRY: ${{ inputs.dry || vars.NEWS_DRY_RUN || 'true' }}
+          # Set NEWS_DRY_RUN=true in repo variables to go back to drafts only.
+          DRY: ${{ inputs.dry || vars.NEWS_DRY_RUN || 'false' }}
         run: |
           if [ "$DRY" = "true" ]; then
             python3 scraper/news_pipeline.py --posts posts.json --dry
@@ -66,12 +88,20 @@ jobs:
             python3 scraper/news_pipeline.py --posts posts.json
           fi
 
+      - name: save the cursor
+        if: always()
+        uses: actions/cache/save@v4
+        with:
+          path: scraper/news_since.json
+          key: news-cursor-${{ github.run_id }}
+
       - name: commit if anything changed
         run: |
           rm -f posts.json
           git config user.name "news-bot"
           git config user.email "actions@github.com"
-                    git add -A data/api img/articles
+          rm -f scraper/news_since.json      # never commit the cursor
+          git add -A data/api img/articles
           if git diff --cached --quiet; then
             echo "nothing new"
           else

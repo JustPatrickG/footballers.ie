@@ -3,3 +3,5 @@ scraper/venv/
 build/site/
 site/
 scraper/debug/
+scraper/news_since.json
+__pycache__/
