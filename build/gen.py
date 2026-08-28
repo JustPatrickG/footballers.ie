@@ -1604,6 +1604,35 @@ def byline(a, root=""):
     return (f'<span class="artby">By <span class="au" data-href="{root}author/{ws}.html">{esc(n)}</span>'
             f' · {esc(pretty_date(a.get("date","")))}</span>') if n else f'<span class="artby">{esc(pretty_date(a.get("date","")))}</span>'
 
+def _ord(n):
+    return f'{n}{"th" if 11 <= n % 100 <= 13 else {1:"st",2:"nd",3:"rd"}.get(n % 10, "th")}'
+
+def day_heading(d):
+    """'Today', 'Yesterday', else 'Sunday the 24th' - and the full date to sit
+       beside it. Anything unparseable keeps whatever the article had."""
+    import datetime as _dt
+    try:
+        day = _dt.date.fromisoformat((d or "").strip()[:10])
+    except ValueError:
+        return (d or "Undated"), ""
+    gap = (_dt.date.today() - day).days
+    if gap == 0:   label = "Today"
+    elif gap == 1: label = "Yesterday"
+    else:          label = f'{day.strftime("%A")} the {_ord(day.day)}'
+    return label, pretty_date(day.isoformat())
+
+def by_day(arts):
+    """[(date, [articles])] newest day first, keeping the running order the
+       admin set inside each day."""
+    days, order = {}, []
+    for a in arts:
+        k = (a.get("date") or "").strip()[:10]
+        if k not in days:
+            days[k] = []; order.append(k)
+        days[k].append(a)
+    order.sort(key=lambda k: (k == "", k), reverse=True)
+    return [(k, days[k]) for k in order]
+
 def art_card(a, root="", kind="card"):
     t=esc(a.get("tag","")); h=esc(a.get("headline","")); sf=esc(a.get("standfirst",""))
     pt = partner_of(a); pc = ""; pb = ""
@@ -1633,11 +1662,30 @@ def build_news():
     if not ARTICLES:
         main = '<div class="emptybox">No articles yet.</div>'
     else:
-        lead, top, rest = ARTICLES[0], ARTICLES[1:4], ARTICLES[4:]
-        main = art_card(lead, kind="lead")
-        if top: main += '<div class="artgrid ntop">' + "".join(art_card(a) for a in top) + '</div>'
-        if rest: main += ('<div class="sec"><h2>Latest</h2></div><div class="nlist">' +
-                          "".join(art_card(a, kind="row") for a in rest) + '</div>')
+        # One heading per day, newest first, so scrolling down is going back in
+        # time. The newest day keeps the big treatment: lead, then a row of
+        # three, then anything else that ran that day.
+        main = ""
+        for i, (date, arts) in enumerate(by_day(ARTICLES)):
+            label, full = day_heading(date)
+            main += (f'<div class="sec dayhead" data-day="{esc(date)}"><h2>{esc(label)}</h2>'
+                     + (f'<span class="more" style="border:0">{esc(full)}</span>' if full else "")
+                     + '</div>')
+            block, rest = "", arts
+            if i == 0:
+                block = art_card(arts[0], kind="lead")
+                # a lone card stranded in a three-up grid looks like a mistake;
+                # below two it reads better as a row
+                if len(arts) > 2:
+                    block += ('<div class="artgrid ntop">'
+                              + "".join(art_card(a) for a in arts[1:4]) + '</div>')
+                    rest = arts[4:]
+                else:
+                    rest = arts[1:]
+            if rest:
+                block += ('<div class="nlist">'
+                          + "".join(art_card(a, kind="row") for a in rest) + '</div>')
+            main += f'<div class="daygroup">{block}</div>'
         main += '<div class="emptybox" id="tagempty" style="display:none">Nothing under that tag yet.</div>'
     side = (f'<aside class="nside">{writers_block()}'
             f'<div class="sbbox"><div class="sbh">Newsletter</div><p class="sbp">Every Irish pro, in your inbox twice a week. Monday round-up, Friday preview.</p>{signup(compact=True)}</div>'
@@ -1654,6 +1702,13 @@ def build_news():
         [].forEach.call(bar.children,function(x){{x.classList.toggle('on',x===b)}});
         var t=b.getAttribute('data-t'),n=0;
         document.querySelectorAll('.nmain [data-tag]').forEach(function(c){{var ok=!t||c.getAttribute('data-tag').toUpperCase()===t;c.style.display=ok?'':'none';if(ok)n++}});
+        // a day with nothing left in it loses its heading too
+        document.querySelectorAll('.nmain .daygroup').forEach(function(g){{
+          var live=g.querySelectorAll('[data-tag]:not([style*="none"])').length;
+          g.style.display=live?'':'none';
+          var head=g.previousElementSibling;
+          if(head&&head.classList.contains('dayhead')) head.style.display=live?'':'none';
+        }});
         document.getElementById('tagempty').style.display=n?'none':'';}});
     }})();
     </script>

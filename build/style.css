@@ -997,6 +997,12 @@ a.intlblock.lnk:hover{border-color:var(--teal)}
 .lup.ir .lun{color:#fff;font-weight:600}
 .benchgrid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
 .benchcol{border:1px solid var(--line);border-radius:8px;background:var(--panel);padding:10px 12px}
+/* news: a heading per day, then that day's articles under it */
+.dayhead{margin-top:34px}
+.dayhead:first-of-type{margin-top:18px}
+.daygroup{display:flex;flex-direction:column;gap:12px}
+.daygroup + .dayhead{margin-top:38px}
+
 /* where the game is */
 .mvenue{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--mute);
   letter-spacing:.06em;margin-top:6px}
