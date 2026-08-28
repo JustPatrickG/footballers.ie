@@ -586,12 +586,13 @@
       }
     });
     if (!rows) return;
-    var summ = (hgoals.length || agoals.length)
-      ? '<div class="mscorers"><div>' + (hgoals.join(', ') || '\u2014') + '</div>'
-        + '<div class="r">' + (agoals.join(', ') || '\u2014') + '</div></div>'
-      : '';
+    // Every goal is already a row above with its minute, so a scorer summary
+    // underneath is the same information twice. The legend is kept because the
+    // server rendered one and this replaces the whole box.
     box.innerHTML = '<div class="sec"><h2>Timeline</h2></div>'
-      + '<div class="timeline">' + rows + '</div>' + summ;
+      + '<div class="timeline">' + rows + '</div>'
+      + '<div class="rmnote">Irish players in <b class="ir">green</b>.'
+      + ' Goals, cards and missed penalties only.</div>';
   }
 
   async function refreshApi(now) {

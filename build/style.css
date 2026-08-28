@@ -1279,8 +1279,11 @@ a.intlblock.lnk:hover{border-color:var(--teal)}
 .pbl{color:var(--mute)}
 .partnerbox .btn{background:var(--teal);color:var(--bg)}
 
-.followsell{position:relative}
-.fsx{position:absolute;top:6px;right:10px;background:none;border:0;color:var(--mute);font-size:20px;line-height:1;cursor:pointer;padding:4px 6px}
+/* the close button is absolute, so the row needs room on the right or the
+   "Pick your players" button slides under it */
+.followsell{position:relative;padding-right:40px}
+@media(max-width:560px){.followsell{padding-right:34px}}
+.fsx{position:absolute;top:8px;right:8px;background:none;border:0;color:var(--mute);font-size:20px;line-height:1;cursor:pointer;padding:4px 6px}
 .fsx:hover{color:var(--white)}
 .elig.off{opacity:.45}
 .elig.off .en{color:var(--mute)}

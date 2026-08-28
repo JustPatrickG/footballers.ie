@@ -2926,12 +2926,6 @@ def events_block(m, involved):
                  f'<div class="tlm">{esc(e.get("minute",""))}\'<span class="tli">{ic}</span></div>'
                  f'<div class="tla">{cell if side=="a" else ""}</div></div>')
     if not rows: return ""
-    scorers = [e for e in evs if (e.get("type") in ("goal","own_goal"))]
-    summ = ""
-    if scorers:
-        hs = ", ".join(f'{esc(e.get("player",""))} {esc(e.get("minute",""))}\'' + (" (og)" if e.get("type")=="own_goal" else "") for e in sorted(scorers,key=_min) if (e.get("team","") or "").strip()==home.strip())
-        as_ = ", ".join(f'{esc(e.get("player",""))} {esc(e.get("minute",""))}\'' + (" (og)" if e.get("type")=="own_goal" else "") for e in sorted(scorers,key=_min) if (e.get("team","") or "").strip()!=home.strip())
-        summ = f'<div class="mscorers"><div>{hs or "—"}</div><div class="r">{as_ or "—"}</div></div>'
     return (f'<div class="sec"><h2>Timeline</h2>{f"<span class=\"more\" style=\"border:0\">{esc(venue)}</span>" if venue else ""}</div>'
             f'<div class="timeline">{rows}</div>'
             f'<div class="rmnote">Irish players in <b class="ir">green</b>. Goals, cards and missed penalties only.</div>')
