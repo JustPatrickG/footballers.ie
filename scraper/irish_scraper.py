@@ -1051,13 +1051,32 @@ def team_venue(tid, tname, debug=False, _cache={}):
 
 
 def clubs_file(args):
-    """Write data/manual/clubs.csv from the clubs in players.csv."""
+    """Keep data/manual/clubs.csv - club, fotmob id, and the ground's
+    coordinates, which is how the site knows what country a club is in.
+    Rows already carrying coordinates are kept as they are: a club resolved
+    once should never go missing again, and --missing-only skips straight to
+    the clubs that still have none."""
     ppath = Path(args.out) / "data/api/players.csv"
     if not ppath.exists():
         sys.exit("data/api/players.csv not found - run `scrape` first.")
     with open(ppath, newline="", encoding="utf-8") as f:
         club_names = sorted({r["club"] for r in csv.DictReader(f)
                              if r.get("club")})
+    out_path = Path(args.out) / "data/manual/clubs.csv"
+    kept = {}
+    if out_path.exists():
+        with open(out_path, newline="", encoding="utf-8") as f:
+            for r in csv.DictReader(f):
+                if (r.get("club") or "").strip():
+                    kept[r["club"].strip()] = [r.get("club", ""), r.get("club_id", ""),
+                                               r.get("lat", ""), r.get("lon", ""),
+                                               r.get("town", "")]
+    club_names = sorted(set(club_names) | set(kept))
+    settled = {n for n, r in kept.items() if r[2] and r[3]}
+    if getattr(args, "missing_only", False):
+        club_names = [n for n in club_names if n not in settled]
+        print(f"clubs: {len(settled)} already located, "
+              f"{len(club_names)} to look up")
     cache = read_id_cache()
     team_ids = {}
     for slug, e in cache.items():
@@ -1074,12 +1093,21 @@ def clubs_file(args):
         return s.strip()
 
     rows, missing, resolved = [], [], {}
+    for name, r in kept.items():
+        if r[2] and r[3]:
+            resolved.setdefault(name, (r[2], r[3], r[4]))
     for name in club_names:
-        tid = team_ids.get(name) or find_team_id(name)
-        time.sleep(SLEEP)
-        lat = lon = town = ""
-        if tid:
-            lat, lon, town = team_venue(tid, name, debug=args.debug)
+        if name in settled and getattr(args, "missing_only", False):
+            continue
+        try:
+            tid = team_ids.get(name) or find_team_id(name)
+            time.sleep(SLEEP)
+            lat = lon = town = ""
+            if tid:
+                lat, lon, town = team_venue(tid, name, debug=args.debug)
+        except Exception as e:                 # one bad club never sinks the run
+            print(f"  {name}: lookup failed ({e})")
+            tid = lat = lon = town = ""
         note = ""
         if not (lat and lon):
             parent = senior_name(name)
@@ -1087,12 +1115,15 @@ def clubs_file(args):
                 if parent in resolved:
                     lat, lon, town = resolved[parent]
                 else:
-                    ptid = team_ids.get(parent) or find_team_id(parent)
-                    time.sleep(SLEEP)
-                    if ptid:
-                        lat, lon, town = team_venue(ptid, parent,
-                                                    debug=args.debug)
-                        resolved[parent] = (lat, lon, town)
+                    try:
+                        ptid = team_ids.get(parent) or find_team_id(parent)
+                        time.sleep(SLEEP)
+                        if ptid:
+                            lat, lon, town = team_venue(ptid, parent,
+                                                        debug=args.debug)
+                            resolved[parent] = (lat, lon, town)
+                    except Exception as e:
+                        print(f"  {parent}: lookup failed ({e})")
                 if lat and lon:
                     note = f"  (from {parent})"
         rows.append([name, tid or "", lat, lon, town])
@@ -1102,8 +1133,14 @@ def clubs_file(args):
             missing.append(name)
         print(f"  {name}: {lat or '?'},{lon or '?'} {town}{note}")
 
-    write_csv(Path(args.out) / "data/manual/clubs.csv",
-              ["club", "club_id", "lat", "lon", "town"], rows)
+    # merge over what was already there; a row never loses coordinates it had
+    for row in rows:
+        prev = kept.get(row[0])
+        if prev and prev[2] and prev[3] and not (row[2] and row[3]):
+            row[2], row[3], row[4] = prev[2], prev[3], prev[4] or row[4]
+        kept[row[0]] = row
+    write_csv(out_path, ["club", "club_id", "lat", "lon", "town"],
+              [kept[k] for k in sorted(kept)])
     if missing:
         print(f"\n{len(missing)} clubs with no coordinates from the source "
               f"- fill by hand:")
@@ -2546,6 +2583,8 @@ def main():
 
     cl = sub.add_parser("clubs", help="write data/manual/clubs.csv")
     cl.add_argument("--out", default=".")
+    cl.add_argument("--missing-only", action="store_true",
+                    help="only look up clubs that still have no coordinates")
     cl.add_argument("--debug", action="store_true")
 
     ie = sub.add_parser("ireland",

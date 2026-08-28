@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-import os, sys, re, html as H, json, csv
+import os, sys, re, html as H, json, csv, math
 import unicodedata
 HERE = os.path.dirname(os.path.abspath(__file__))
 DATA = os.path.join(HERE, "..", "data")
@@ -1272,15 +1272,15 @@ def build_index():
             nxt_irl = f'Ireland v <b>{esc(o)}</b> · {esc(day_label(d))} · {esc(cp)}'
     except Exception: pass
     by_c = {}
-    for p in PLAYERS: by_c.setdefault(country_of(p["league"]), []).append(p)
+    for p in PLAYERS: by_c.setdefault(player_country(p), []).append(p)
     # "Other" is a bucket, not a country — it sorts last and is the first thing
     # dropped on a narrow screen, where only the top three are shown.
-    _order = sorted(by_c, key=lambda c: (c == "Other", -len(by_c[c]), c))[:12]
+    _order = sorted(by_c, key=lambda c: (c in ("Other", NO_CLUB), -len(by_c[c]), c))[:12]
     _rank = 0
     _tiles = []
     for c in _order:
         cls = "exc"
-        if c != "Other":
+        if c not in ("Other", NO_CLUB):
             _rank += 1
             if _rank <= 3: cls += " top3"
         _tiles.append(f'<a class="{cls}" href="country/{country_slug(c)}.html">'
@@ -1682,27 +1682,286 @@ def build_article(a):
                  canonical=f'news/{art_slug(a)}.html')
 
 
+# --- where a player actually plays -----------------------------------------
+# A club's country is really the country of the league it plays in, so the
+# league name decides it whenever the name means one country. Plenty of names
+# don't ("Premiership" is Scotland AND Northern Ireland; half of Europe has a
+# "2. Liga"), and plenty of players have no league recorded at all - those are
+# settled by where the club's ground is, which we already store in clubs.csv.
 LEAGUE_COUNTRY = {
-  "Major League Soccer":"United States", "MLS":"United States", "First Professional League":"Bulgaria", "LaLiga":"Spain", "La Liga":"Spain", "Leagues Cup":"United States",
-    "premier division":"Ireland", "league of ireland":"Ireland", "first division":"Ireland",
-    "premier league":"England", "championship":"England", "league one":"England",
-    "league two":"England", "national league":"England", "premier league 2":"England",
-    "national league cup group a":"England", "efl cup":"England", "fa cup":"England",
-    "premiership":"Scotland", "scottish premiership":"Scotland",
-    "nifl premiership":"Northern Ireland",
-    "serie a":"Italy", "serie b":"Italy",
-    "ligue 1":"France", "ligue 2":"France",
-    "eredivisie":"Netherlands", "first division b":"Belgium", "jupiler pro league":"Belgium",
-    "liga portugal":"Portugal", "super lig":"Turkey", "süper lig":"Turkey",
-    "nb i":"Hungary", "bundesliga":"Germany", "la liga":"Spain",
+    # Ireland
+    "premier division": "Ireland", "first division": "Ireland",
+    "league of ireland": "Ireland", "loi": "Ireland",
+    "premier division relegation": "Ireland",
+    # Northern Ireland
+    "nifl premiership": "Northern Ireland", "irish premiership": "Northern Ireland",
+    "nifl championship": "Northern Ireland", "irish cup": "Northern Ireland",
+    # England
+    "premier league": "England", "championship": "England",
+    "league one": "England", "league two": "England",
+    "national league": "England", "national league north": "England",
+    "national league south": "England", "national league cup": "England",
+    "premier league 2": "England", "premier league u18": "England",
+    "u18 premier league": "England", "professional development league": "England",
+    "efl cup": "England", "carabao cup": "England", "fa cup": "England",
+    "efl trophy": "England", "fa trophy": "England", "community shield": "England",
+    "isthmian premier division": "England", "isthmian league": "England",
+    "northern premier division": "England", "northern premier league": "England",
+    "southern premier division central": "England",
+    "southern premier division south": "England", "southern league": "England",
+    # Scotland
+    "scottish premiership": "Scotland", "scottish championship": "Scotland",
+    "scottish league one": "Scotland", "scottish league two": "Scotland",
+    "highland / lowland": "Scotland", "highland league": "Scotland",
+    "lowland league": "Scotland", "scottish cup": "Scotland",
+    "scottish league cup": "Scotland",
+    # Wales
+    "cymru premier": "Wales", "welsh premier league": "Wales",
+    # rest of Europe
+    "bundesliga": "Germany", "2. bundesliga": "Germany", "3. liga": "Germany",
+    "regionalliga": "Germany", "regionalliga bayern": "Germany",
+    "regionalliga west": "Germany", "regionalliga nord": "Germany",
+    "dfb pokal": "Germany",
+    "laliga": "Spain", "la liga": "Spain", "laliga2": "Spain",
+    "segunda division": "Spain", "primera federacion": "Spain",
+    "segunda federacion": "Spain", "copa del rey": "Spain",
+    "serie a": "Italy", "serie b": "Italy", "serie c": "Italy",
+    "serie d": "Italy", "coppa italia": "Italy",
+    "ligue 1": "France", "ligue 2": "France", "national": "France",
+    "championnat national": "France", "coupe de france": "France",
+    "eredivisie": "Netherlands", "eerste divisie": "Netherlands",
+    "keuken kampioen divisie": "Netherlands", "knvb beker": "Netherlands",
+    "jupiler pro league": "Belgium", "belgian pro league": "Belgium",
+    "first division b": "Belgium", "challenger pro league": "Belgium",
+    "liga portugal": "Portugal", "liga portugal 2": "Portugal",
+    "primeira liga": "Portugal", "liga revelacao u23": "Portugal",
+    "super lig": "Turkey", "s\u00fcper lig": "Turkey", "1. lig": "Turkey",
+    "nb i": "Hungary", "nb ii": "Hungary",
+    "veikkausliiga": "Finland", "ykk\u00f6nen": "Finland",
+    "eliteserien": "Norway", "obos-ligaen": "Norway",
+    "allsvenskan": "Sweden", "superettan": "Sweden",
+    "danish superliga": "Denmark", "1st division": "Denmark",
+    "besta deild": "Iceland", "besta deild karla": "Iceland",
+    "ekstraklasa": "Poland", "i liga": "Poland",
+    "fortuna liga": "Czechia", "fnl": "Czechia", "chance liga": "Czechia",
+    "nike liga": "Slovakia",
+    "admiral bundesliga": "Austria", "austrian bundesliga": "Austria",
+    "first professional league": "Bulgaria", "parva liga": "Bulgaria",
+    "liga i": "Romania", "superliga romania": "Romania",
+    "super league greece": "Greece", "super league": "Greece",
+    "swiss super league": "Switzerland", "challenge league": "Switzerland",
+    "hnl": "Croatia", "super league 1": "Greece",
+    "premier liga": "Russia", "ukrainian premier league": "Ukraine",
+    "a lyga": "Lithuania", "virsliga": "Latvia", "meistriliiga": "Estonia",
+    "cypriot first division": "Cyprus", "maltese premier league": "Malta",
+    # further afield
+    "major league soccer": "United States", "mls": "United States",
+    "usl championship": "United States", "usl league one": "United States",
+    "leagues cup": "United States", "us open cup": "United States",
+    "mls next pro": "United States", "canadian premier league": "Canada",
+    "liga mx": "Mexico", "a-league": "Australia", "a-league men": "Australia",
+    "isuzu ute a-league": "Australia", "j1 league": "Japan", "j2 league": "Japan",
+    "k league 1": "South Korea", "chinese super league": "China",
+    "indian super league": "India", "thai league 1": "Thailand",
+    "saudi pro league": "Saudi Arabia", "uae pro league": "United Arab Emirates",
+    "qatar stars league": "Qatar", "premier soccer league": "South Africa",
+    "betway premiership": "South Africa", "npfl": "Nigeria",
+    "brasileirao": "Brazil", "serie a betano": "Brazil",
+    "liga profesional": "Argentina",
 }
+# Names that mean different countries in different places: let the ground decide.
+AMBIGUOUS_LEAGUES = {
+    "premiership", "league cup", "premier league relegation group",
+    "premier league relegation", "1. liga", "2. liga", "2. deild", "1. deild",
+    "superliga", "prva liga", "v-league", "first league", "super liga",
+    "cup", "league", "division 1", "division 2", "reserve league",
+}
+# Qualifiers a competition name picks up in the feed but that don't change the
+# country: "Championship Qualification", "Serie C Grp. C", "... Group 3".
+_LEAGUE_TRIM = re.compile(
+    r"\s*(?:-\s*)?(?:group [a-z0-9]+|grp\.? *[a-z0-9]+|qualification|qualifying"
+    r"|play[- ]?offs?|promotion round|championship round|round \d+)\s*$", re.I)
+
+def _league_key(league):
+    l = (league or "").strip().lower()
+    for _ in range(3):
+        n = _LEAGUE_TRIM.sub("", l).strip(" -\u2013")
+        if n == l: break
+        l = n
+    return l
+
 def country_of(league):
-    l=(league or "").strip().lower()
-    if not l: return "Other"
-    if l in LEAGUE_COUNTRY: return LEAGUE_COUNTRY[l]
-    for k,v in LEAGUE_COUNTRY.items():
-        if k in l or l in k: return v
-    return "Other"
+    """Country from the league name alone, "" when the name doesn't settle it."""
+    l = _league_key(league)
+    if not l or l in AMBIGUOUS_LEAGUES: return ""
+    return LEAGUE_COUNTRY.get(l, "")
+
+COUNTRY_REF = [
+ # Ireland — spread wide so the border is decided by distance, not a box
+ ("Ireland",53.35,-6.26),("Ireland",53.34,-6.38),("Ireland",51.90,-8.47),("Ireland",53.27,-9.05),
+ ("Ireland",52.66,-8.62),("Ireland",52.26,-7.11),("Ireland",53.72,-6.35),("Ireland",53.28,-6.13),
+ ("Ireland",54.27,-8.47),("Ireland",54.65,-8.11),("Ireland",53.52,-7.34),("Ireland",52.84,-6.94),
+ ("Ireland",53.85,-9.30),("Ireland",52.14,-10.27),("Ireland",54.00,-7.33),("Ireland",53.03,-7.30),
+ ("Ireland",54.00,-6.40),("Ireland",53.98,-6.55),("Ireland",54.25,-6.97),("Ireland",53.99,-7.36),
+ ("Ireland",54.95,-7.73),("Ireland",55.14,-7.45),("Ireland",54.11,-7.72),("Ireland",53.60,-6.19),
+ # Northern Ireland
+ ("Northern Ireland",54.60,-5.93),("Northern Ireland",54.62,-5.95),("Northern Ireland",55.00,-7.32),
+ ("Northern Ireland",54.42,-6.46),("Northern Ireland",54.45,-6.34),("Northern Ireland",54.87,-6.27),
+ ("Northern Ireland",55.13,-6.66),("Northern Ireland",54.85,-5.83),("Northern Ireland",54.72,-5.80),
+ ("Northern Ireland",54.49,-6.75),("Northern Ireland",54.35,-7.63),("Northern Ireland",54.35,-6.65),
+ ("Northern Ireland",54.18,-6.34),("Northern Ireland",54.51,-8.13),("Northern Ireland",54.99,-6.05),
+ # Scotland
+ ("Scotland",55.86,-4.25),("Scotland",55.95,-3.19),("Scotland",57.15,-2.09),("Scotland",56.46,-2.97),
+ ("Scotland",56.40,-3.44),("Scotland",55.60,-4.50),("Scotland",56.00,-3.78),("Scotland",57.48,-4.22),
+ ("Scotland",55.78,-3.99),("Scotland",56.12,-3.94),("Scotland",57.54,-2.47),("Scotland",55.07,-3.60),
+ ("Scotland",58.59,-3.52),("Scotland",56.82,-5.11),
+ # England
+ ("England",51.51,-0.13),("England",53.48,-2.24),("England",53.41,-2.98),("England",52.49,-1.89),
+ ("England",53.80,-1.55),("England",54.97,-1.61),("England",52.63,-1.13),("England",50.72,-3.53),
+ ("England",50.83,-0.14),("England",51.45,-2.59),("England",53.38,-1.47),("England",52.20,0.12),
+ ("England",54.90,-2.93),("England",50.37,-4.14),("England",53.96,-1.08),("England",51.75,-1.26),
+ ("England",52.63,1.30),("England",50.90,-1.40),("England",53.55,-2.43),("England",54.57,-1.23),
+ ("England",51.28,1.08),("England",52.58,-2.13),("England",53.23,-0.54),("England",51.38,-2.36),
+ # Wales
+ ("Wales",51.48,-3.18),("Wales",51.62,-3.94),("Wales",53.22,-4.13),("Wales",52.41,-4.08),
+ ("Wales",53.05,-2.99),("Wales",51.66,-3.02),
+ # rest of Europe
+ ("France",48.86,2.35),("France",43.30,5.37),("France",45.76,4.84),("France",43.70,7.27),
+ ("France",44.84,-0.58),("France",47.22,-1.55),("France",48.58,7.75),("France",50.63,3.06),
+ ("France",43.60,1.44),("France",49.49,0.11),("France",45.19,5.72),
+ ("Spain",40.42,-3.70),("Spain",41.39,2.17),("Spain",37.39,-5.99),("Spain",39.47,-0.38),
+ ("Spain",43.26,-2.93),("Spain",37.63,-0.84),("Spain",36.72,-4.42),("Spain",42.88,-8.54),
+ ("Portugal",38.72,-9.14),("Portugal",41.15,-8.61),("Portugal",37.02,-7.93),("Portugal",40.21,-8.43),
+ ("Italy",41.90,12.50),("Italy",45.46,9.19),("Italy",45.07,7.69),("Italy",40.85,14.27),
+ ("Italy",44.49,11.34),("Italy",43.77,11.26),("Italy",45.44,12.32),("Italy",38.12,13.36),
+ ("Italy",42.56,12.64),("Italy",39.31,16.25),("Italy",40.63,17.94),
+ ("Germany",52.52,13.40),("Germany",48.14,11.58),("Germany",50.94,6.96),("Germany",50.11,8.68),
+ ("Germany",53.55,9.99),("Germany",51.34,12.37),("Germany",51.51,7.47),("Germany",48.78,9.18),
+ ("Germany",49.45,11.08),("Germany",51.93,7.63),("Germany",49.28,8.84),("Germany",50.33,10.43),
+ ("Germany",54.32,10.14),("Germany",47.99,7.85),
+ ("Netherlands",52.37,4.90),("Netherlands",51.92,4.48),("Netherlands",51.44,5.48),
+ ("Netherlands",52.09,5.12),("Netherlands",51.35,6.18),("Netherlands",53.22,6.57),
+ ("Belgium",50.85,4.35),("Belgium",51.22,4.40),("Belgium",51.05,3.72),("Belgium",50.63,5.57),
+ ("Belgium",51.19,3.18),("Belgium",50.46,4.87),
+ ("Switzerland",47.38,8.54),("Switzerland",46.20,6.14),("Switzerland",46.95,7.45),("Switzerland",47.56,7.59),
+ ("Austria",48.21,16.37),("Austria",47.07,15.44),("Austria",47.80,13.04),("Austria",47.82,13.00),
+ ("Austria",47.27,11.39),("Austria",48.31,14.29),
+ ("Denmark",55.68,12.57),("Denmark",56.16,10.20),("Denmark",55.40,10.39),("Denmark",57.05,9.92),
+ ("Norway",59.91,10.75),("Norway",60.39,5.32),("Norway",63.43,10.40),("Norway",58.97,5.73),
+ ("Norway",62.73,7.15),("Norway",69.65,18.96),
+ ("Sweden",59.33,18.07),("Sweden",57.71,11.97),("Sweden",55.60,13.00),("Sweden",63.83,20.26),
+ ("Finland",60.17,24.94),("Finland",61.50,23.79),("Finland",60.45,22.27),("Finland",62.24,25.75),
+ ("Finland",62.79,22.84),("Finland",65.01,25.47),
+ ("Iceland",64.15,-21.94),("Iceland",65.68,-18.09),("Iceland",63.44,-19.00),
+ ("Faroe Islands",62.01,-6.77),
+ ("Poland",52.23,21.01),("Poland",50.06,19.94),("Poland",51.11,17.04),("Poland",54.35,18.65),
+ ("Czechia",50.08,14.44),("Czechia",49.20,16.61),("Czechia",49.83,18.28),("Czechia",48.97,14.47),
+ ("Slovakia",48.15,17.11),("Slovakia",48.72,21.26),
+ ("Hungary",47.50,19.04),("Hungary",47.53,21.63),("Hungary",46.25,20.15),
+ ("Slovenia",46.06,14.51),("Slovenia",46.56,15.64),
+ ("Croatia",45.81,15.98),("Croatia",43.51,16.44),("Croatia",45.33,18.41),
+ ("Serbia",44.79,20.45),("Serbia",45.25,19.83),
+ ("Bosnia and Herzegovina",43.86,18.41),("Bosnia and Herzegovina",44.77,17.19),
+ ("Romania",44.43,26.10),("Romania",46.77,23.60),("Romania",47.75,26.65),("Romania",45.75,21.23),
+ ("Bulgaria",42.70,23.32),("Bulgaria",42.14,24.75),("Bulgaria",43.21,27.91),
+ ("Greece",37.98,23.73),("Greece",40.64,22.94),("Greece",38.25,21.73),
+ ("Turkey",41.01,28.98),("Turkey",39.93,32.86),("Turkey","38.42",27.13),("Turkey",36.90,30.69),
+ ("Turkey",37.00,35.32),("Turkey",40.99,39.72),("Turkey",36.55,32.00),("Turkey",39.75,37.02),
+ ("Cyprus",35.17,33.36),("Malta",35.90,14.51),("Luxembourg",49.61,6.13),("Monaco",43.73,7.42),
+ ("Gibraltar",36.14,-5.35),("Andorra",42.51,1.52),("San Marino",43.94,12.45),
+ ("Albania",41.33,19.82),("North Macedonia",41.99,21.43),("Montenegro",42.44,19.26),
+ ("Kosovo",42.66,21.16),("Moldova",47.01,28.86),("Ukraine",50.45,30.52),("Ukraine",49.99,36.23),
+ ("Belarus",53.90,27.57),("Lithuania",54.69,25.28),("Latvia",56.95,24.11),("Estonia",59.44,24.75),
+ ("Russia",55.76,37.62),("Russia",59.93,30.34),("Georgia",41.72,44.78),("Armenia",40.18,44.51),
+ ("Azerbaijan",40.41,49.87),("Kazakhstan",51.13,71.43),("Israel",32.08,34.78),
+ # further afield
+ ("United States",40.71,-74.01),("United States",34.05,-118.24),("United States",41.88,-87.63),
+ ("United States",29.76,-95.37),("United States",47.61,-122.33),("United States",39.74,-104.99),
+ ("United States",33.75,-84.39),("United States",42.36,-71.06),("United States",38.90,-77.04),
+ ("United States",35.23,-80.84),("United States",44.98,-93.27),("United States",32.78,-96.80),
+ ("United States",35.08,-106.65),("United States",36.17,-115.14),("United States",30.27,-97.74),
+ ("Canada",43.65,-79.38),("Canada",45.50,-73.57),("Canada",49.28,-123.12),
+ ("Mexico",19.43,-99.13),("Mexico",20.67,-103.35),("Mexico",25.69,-100.32),
+ ("Australia",-33.87,151.21),("Australia",-37.81,144.96),("Australia",-27.47,153.03),
+ ("Australia",-31.95,115.86),("Australia",-34.93,138.60),("Australia",-32.93,151.78),
+ ("Australia",-28.00,153.43),("Australia",-35.28,149.13),
+ ("New Zealand",-36.85,174.76),("New Zealand",-43.53,172.64),("New Zealand",-41.29,174.78),
+ ("Japan",35.68,139.69),("Japan",34.69,135.50),("South Korea",37.57,126.98),("China",39.90,116.41),
+ ("China",31.23,121.47),("India",28.61,77.21),("Thailand",13.76,100.50),("Vietnam",21.03,105.83),
+ ("Vietnam",10.82,106.63),("Singapore",1.35,103.82),("Malaysia",3.14,101.69),
+ ("Indonesia",-6.21,106.85),("Philippines",14.60,120.98),
+ ("Saudi Arabia",24.71,46.68),("United Arab Emirates",25.20,55.27),("Qatar",25.29,51.53),
+ ("Kuwait",29.38,47.99),("Bahrain",26.23,50.59),("Oman",23.59,58.41),("Iran",35.69,51.39),
+ ("Egypt",30.04,31.24),("Egypt",31.20,29.92),("Morocco",33.57,-7.59),("Tunisia",36.81,10.18),
+ ("Algeria",36.75,3.06),("South Africa",-26.20,28.05),("South Africa",-33.92,18.42),
+ ("South Africa",-29.86,31.02),("Nigeria",6.52,3.38),("Ghana",5.60,-0.19),("Kenya",-1.29,36.82),
+ ("Brazil",-23.55,-46.63),("Brazil",-22.91,-43.17),("Argentina",-34.60,-58.38),
+ ("Chile",-33.45,-70.67),("Uruguay",-34.90,-56.16),("Colombia",4.71,-74.07),("Peru",-12.05,-77.04),
+]
+
+def _country_at(lat, lon):
+    """Nearest reference point wins. Enough points near the border that
+       Ireland and Northern Ireland come out on the right side of it."""
+    try: lat, lon = float(lat), float(lon)
+    except (TypeError, ValueError): return ""
+    best, bd = "", 1e9
+    for name, rlat, rlon in COUNTRY_REF:
+        dlat = lat - float(rlat)
+        dlon = (lon - float(rlon)) * math.cos(math.radians((lat + float(rlat)) / 2))
+        d = dlat * dlat + dlon * dlon
+        if d < bd: bd, best = d, name
+    return best if bd < 25 else ""
+
+CLUB_PLACE, CLUB_LEAGUE_COUNTRY = {}, {}
+_CLUB_NOISE = re.compile(r"\b(fc|afc|cf|sc|ac|f\.c\.|a\.f\.c\.)\b|[^a-z0-9 ]", re.I)
+def _cname(n):
+    """'Ballymena United FC' and 'Ballymena United' are the same club."""
+    n = unicodedata.normalize("NFKD", str(n or "").lower()).encode("ascii","ignore").decode()
+    return " ".join(_CLUB_NOISE.sub(" ", n).split())
+
+def _register_places():
+    for r in _rows("manual/clubs.csv"):
+        c = (r.get("club") or "").strip()
+        if c and (r.get("lat") or "").strip() and (r.get("lon") or "").strip():
+            where = _country_at(r["lat"], r["lon"])
+            if where:
+                CLUB_PLACE[c] = where
+                CLUB_PLACE.setdefault(_cname(c), where)
+    # clubs whose country we know because a team-mate's league says so
+    for p in PLAYERS:
+        c = (p.get("club") or "").strip()
+        k = country_of(p.get("league"))
+        if c and k:
+            CLUB_LEAGUE_COUNTRY.setdefault(c, k)
+            CLUB_LEAGUE_COUNTRY.setdefault(_cname(c), k)
+
+# AS Monaco sit in France's league despite the postcode; anything else
+# geography reads wrong goes here too.
+CLUB_COUNTRY_FIX = {"Monaco": "France", "AS Monaco": "France"}
+
+NO_CLUB = "No club"
+def player_country(p):
+    """Where this player plays, best evidence first: the league when its name
+       means one country, then where the club's ground is, then the senior club
+       for an academy side, then the last domestic league they appeared in."""
+    if not CLUB_PLACE: _register_places()
+    club = (p.get("club") or "").strip()
+    if club.lower().startswith("without club"): club = ""
+    parent = ACADEMY_RE.sub("", club).strip()
+
+    for name in (club, parent):
+        if name in CLUB_COUNTRY_FIX: return CLUB_COUNTRY_FIX[name]
+
+    c = country_of(p.get("league"))
+    if c: return c
+    for name in (club, parent, _cname(club), _cname(parent)):
+        if name and CLUB_PLACE.get(name): return CLUB_PLACE[name]
+    for name in (club, parent, _cname(club), _cname(parent)):
+        if name and CLUB_LEAGUE_COUNTRY.get(name): return CLUB_LEAGUE_COUNTRY[name]
+    for r in reversed(p.get("results") or []):
+        c = country_of(r[3] if len(r) > 3 else "")
+        if c: return c
+    return NO_CLUB if not club else "Other"
 
 def country_slug(c): return club_slug(c)
 
@@ -1846,10 +2105,11 @@ def build_map():
     """Where are the Irish? — a map you can click into."""
     by_country = {}
     for p in PLAYERS:
-        by_country.setdefault(country_of(p["league"]), []).append(p)
+        by_country.setdefault(player_country(p), []).append(p)
 
     points = []
     for c, ps in sorted(by_country.items(), key=lambda kv: -len(kv[1])):
+        if c == NO_CLUB: continue          # nothing to put on a map
         lat, lon, zoom = COUNTRY_POINT.get(c, COUNTRY_POINT["Other"])
         clubs = {}
         for p in ps:
@@ -1868,13 +2128,18 @@ def build_map():
         ))
 
     total = sum(p["n"] for p in points)
+    # players between clubs belong on the page but not on the map
+    spare = len(by_country.get(NO_CLUB, []))
+    extra = (f'<a class="cbtn" href="country/{country_slug(NO_CLUB)}.html">'
+             f'<span class="cn">{NO_CLUB}</span><span class="cnum">{spare}</span></a>'
+             if spare else "")
     legend = "".join(
         f'<button class="cbtn" data-i="{i}"><span class="cn">{esc(p["name"])}</span>'
-        f'<span class="cnum">{p["n"]}</span></button>' for i, p in enumerate(points))
+        f'<span class="cnum">{p["n"]}</span></button>' for i, p in enumerate(points)) + extra
 
     body = f'''
     <div class="pagehead"><h1>Where are the Irish?</h1>
-      <p>{total} tracked players across {len(points)} countries. Tap a marker or a country to zoom in.</p></div>
+      <p>{total + spare} tracked players across {len(points)} countries. Tap a marker or a country to zoom in.</p></div>
     <div id="mapwrap">
       <div id="themap"></div>
       <button id="resetmap" title="Back to the full map">Reset</button>
@@ -2034,7 +2299,7 @@ def build_clubs_index():
     """Top level: pick a country."""
     by_country = {}
     for p in PLAYERS:
-        by_country.setdefault(country_of(p["league"]), []).append(p)
+        by_country.setdefault(player_country(p), []).append(p)
     order = sorted(by_country, key=lambda c: (-len(by_country[c]), c))
     cards = ""
     for c in order:
@@ -3090,13 +3355,13 @@ def build_search_index():
     leagues, countries = {}, {}
     for p in PLAYERS:
         if p["league"] not in ("", "—"): leagues.setdefault(p["league"], 0)
-        countries.setdefault(country_of(p["league"]), 0)
+        countries.setdefault(player_country(p), 0)
         leagues[p["league"]] = leagues.get(p["league"], 0) + 1
-        countries[country_of(p["league"])] += 1
+        countries[player_country(p)] += 1
     for l, n in leagues.items():
         rows.append(dict(t="League", n=l, u=f"league/{club_slug(l)}.html", x=f"{n} players"))
     for c, n in countries.items():
-        if c == "Other": continue
+        if c in ("Other", NO_CLUB): continue
         rows.append(dict(t="Country", n=c, u=f"country/{country_slug(c)}.html", x=f"{n} players"))
     for a in ARTICLES:
         rows.append(dict(t="Article", n=a.get("headline",""), u=f"news/{art_slug(a)}.html",
@@ -3244,7 +3509,7 @@ open(f"{OUT}/where-are-the-irish.html","w").write(build_map())
 os.makedirs(f"{OUT}/country", exist_ok=True)
 os.makedirs(f"{OUT}/league", exist_ok=True)
 _by_country = {}
-for _p in PLAYERS: _by_country.setdefault(country_of(_p["league"]), []).append(_p)
+for _p in PLAYERS: _by_country.setdefault(player_country(_p), []).append(_p)
 for _c, _ps in _by_country.items():
     open(f"{OUT}/country/{country_slug(_c)}.html","w").write(build_country(_c, _ps))
     _by_league = {}
