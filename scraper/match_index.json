@@ -200,7 +200,6 @@
    "sean-keane",
    "sean-molloy",
    "simon-power",
-   "stephen-kenny",
    "tom-lonergan",
    "zack-elbouzedi"
   ]
@@ -266,6 +265,7 @@
   "away_id": "8283",
   "slugs": [
    "aaron-connolly",
+   "connor-oriordan",
    "corey-okeeffe",
    "jaze-kabia",
    "killian-cahill",
@@ -1046,7 +1046,6 @@
    "sean-molloy",
    "senan-mullen",
    "simon-power",
-   "stephen-kenny",
    "zack-elbouzedi"
   ]
  },
@@ -1513,7 +1512,6 @@
    "sean-hoare",
    "sean-mchale",
    "shane-farrell",
-   "stephen-kenny",
    "thomas-oluwa",
    "warren-davis",
    "zack-elbouzedi"
@@ -1818,7 +1816,6 @@
   "away_id": "8655",
   "slugs": [
    "andrew-moran",
-   "connor-oriordan",
    "issa-kargbo",
    "sean-mcloughlin"
   ]
@@ -1985,6 +1982,7 @@
   "slugs": [
    "andy-lyons",
    "cj-hamilton",
+   "connor-oriordan",
    "corey-okeeffe",
    "luca-connell"
   ]
@@ -2085,7 +2083,6 @@
   "away_id": "8596",
   "slugs": [
    "aodhan-doherty",
-   "joe-gardner",
    "johnny-kenny",
    "liam-scales",
    "paul-mcgovern"
@@ -2102,7 +2099,6 @@
   "away_id": "8548",
   "slugs": [
    "aodhan-doherty",
-   "joe-gardner",
    "paul-mcgovern"
   ]
  },
@@ -2117,7 +2113,6 @@
   "away_id": "8596",
   "slugs": [
    "aodhan-doherty",
-   "joe-gardner",
    "neil-farrugia",
    "paul-mcgovern",
    "will-ferry"
@@ -2313,7 +2308,6 @@
   "slugs": [
    "ben-mccormack",
    "billy-oneill",
-   "cillian-tollett",
    "flynn-ryan",
    "graham-kelly",
    "killian-cantwell",
@@ -2631,7 +2625,6 @@
   "away_id": "2378",
   "slugs": [
    "bridel-bosakani",
-   "cillian-tollett",
    "gavin-mcateer",
    "guilherme-rego-priosti",
    "josh-cullen",
@@ -2960,7 +2953,6 @@
   "away_id": "10172",
   "slugs": [
    "calum-ward",
-   "connor-oriordan",
    "harvey-vale",
    "issa-kargbo",
    "jimmy-dunne",
@@ -3312,7 +3304,8 @@
   "home_id": "1791531",
   "away_id": "2137380",
   "slugs": [
-   "chris-atherton"
+   "chris-atherton",
+   "christopher-atherton"
   ]
  },
  {
@@ -3346,32 +3339,6 @@
    "darragh-leahy",
    "mikey-place",
    "ryan-patrick-nolan"
-  ]
- },
- {
-  "fotmob_id": "5953390",
-  "url": "/matches/rushall-olympic-vs-stamford-afc/1z8v8l64#5953390",
-  "kickoff": "2026-08-29T14:00:00Z",
-  "comp": "Southern Premier Division Central",
-  "home": "Stamford AFC",
-  "away": "Rushall Olympic",
-  "home_id": "282333",
-  "away_id": "274600",
-  "slugs": [
-   "christopher-atherton"
-  ]
- },
- {
-  "fotmob_id": "5953400",
-  "url": "/matches/rushall-olympic-vs-alvechurch/8ae5jqvg#5953400",
-  "kickoff": "2026-08-31T14:00:00Z",
-  "comp": "Southern Premier Division Central",
-  "home": "Rushall Olympic",
-  "away": "Alvechurch",
-  "home_id": "274600",
-  "away_id": "865168",
-  "slugs": [
-   "christopher-atherton"
   ]
  },
  {
@@ -3641,36 +3608,37 @@
   ]
  },
  {
-  "fotmob_id": "5836791",
-  "url": "/matches/lincoln-city-vs-blackburn-rovers/2ewjxu#5836791",
-  "kickoff": "2026-09-01T18:45:00Z",
-  "comp": "Championship",
-  "home": "Lincoln",
-  "away": "Blackburn",
-  "home_id": "8430",
-  "away_id": "8655",
+  "fotmob_id": "5837135",
+  "url": "/matches/barnsley-vs-stevenage/2uagtr#5837135",
+  "kickoff": "2026-09-05T14:00:00Z",
+  "comp": "League One",
+  "home": "Barnsley",
+  "away": "Stevenage",
+  "home_id": "8283",
+  "away_id": "10253",
   "slugs": [
    "connor-oriordan",
-   "issa-kargbo",
-   "james-collins",
-   "josh-honohan",
-   "mason-melia",
-   "sean-mcloughlin"
+   "corey-okeeffe",
+   "luca-connell"
   ]
  },
  {
-  "fotmob_id": "5836814",
-  "url": "/matches/blackburn-rovers-vs-sheffield-united/2h88f5#5836814",
+  "fotmob_id": "6099341",
+  "url": "/matches/barnsley-vs-peterborough-united/2dmy2t#6099341",
   "kickoff": "2026-09-08T18:45:00Z",
-  "comp": "Championship",
-  "home": "Blackburn",
-  "away": "Sheff Utd",
-  "home_id": "8655",
-  "away_id": "8657",
+  "comp": "EFL Cup",
+  "home": "Peterborough",
+  "away": "Barnsley",
+  "home_id": "8677",
+  "away_id": "8283",
   "slugs": [
    "connor-oriordan",
-   "issa-kargbo",
-   "sean-mcloughlin"
+   "corey-okeeffe",
+   "david-okagbue",
+   "evan-weir",
+   "liam-kelly",
+   "luca-connell",
+   "thomas-oconnor"
   ]
  },
  {
@@ -4047,38 +4015,6 @@
    "luca-connell",
    "neill-byrne",
    "sean-grehan"
-  ]
- },
- {
-  "fotmob_id": "5837135",
-  "url": "/matches/barnsley-vs-stevenage/2uagtr#5837135",
-  "kickoff": "2026-09-05T14:00:00Z",
-  "comp": "League One",
-  "home": "Barnsley",
-  "away": "Stevenage",
-  "home_id": "8283",
-  "away_id": "10253",
-  "slugs": [
-   "corey-okeeffe",
-   "luca-connell"
-  ]
- },
- {
-  "fotmob_id": "6099341",
-  "url": "/matches/barnsley-vs-peterborough-united/2dmy2t#6099341",
-  "kickoff": "2026-09-08T18:45:00Z",
-  "comp": "EFL Cup",
-  "home": "Peterborough",
-  "away": "Barnsley",
-  "home_id": "8677",
-  "away_id": "8283",
-  "slugs": [
-   "corey-okeeffe",
-   "david-okagbue",
-   "evan-weir",
-   "liam-kelly",
-   "luca-connell",
-   "thomas-oconnor"
   ]
  },
  {
@@ -5296,7 +5232,8 @@
   "away_id": "773650",
   "slugs": [
    "gabriel-kelly",
-   "pijus-otegbayo"
+   "pijus-otegbayo",
+   "vinnie-leonard"
   ]
  },
  {
@@ -5634,7 +5571,8 @@
   "home_id": "282351",
   "away_id": "773658",
   "slugs": [
-   "harvey-boddy"
+   "harvey-boddy",
+   "vinnie-leonard"
   ]
  },
  {
@@ -5757,6 +5695,37 @@
   "away_id": "282395",
   "slugs": [
    "isaac-abankwah"
+  ]
+ },
+ {
+  "fotmob_id": "5836791",
+  "url": "/matches/lincoln-city-vs-blackburn-rovers/2ewjxu#5836791",
+  "kickoff": "2026-09-01T18:45:00Z",
+  "comp": "Championship",
+  "home": "Lincoln",
+  "away": "Blackburn",
+  "home_id": "8430",
+  "away_id": "8655",
+  "slugs": [
+   "issa-kargbo",
+   "james-collins",
+   "josh-honohan",
+   "mason-melia",
+   "sean-mcloughlin"
+  ]
+ },
+ {
+  "fotmob_id": "5836814",
+  "url": "/matches/blackburn-rovers-vs-sheffield-united/2h88f5#5836814",
+  "kickoff": "2026-09-08T18:45:00Z",
+  "comp": "Championship",
+  "home": "Blackburn",
+  "away": "Sheff Utd",
+  "home_id": "8655",
+  "away_id": "8657",
+  "slugs": [
+   "issa-kargbo",
+   "sean-mcloughlin"
   ]
  },
  {
@@ -5887,7 +5856,6 @@
   "away_id": "5762",
   "slugs": [
    "jake-griffin",
-   "matthew-harris",
    "sam-foley"
   ]
  },
@@ -7358,58 +7326,6 @@
   ]
  },
  {
-  "fotmob_id": "5907011",
-  "url": "/matches/merthyr-town-vs-south-shields/4u87ijmu#5907011",
-  "kickoff": "2026-08-22T14:00:00Z",
-  "comp": "National League North",
-  "home": "South Shields",
-  "away": "Merthyr Town",
-  "home_id": "865163",
-  "away_id": "5762",
-  "slugs": [
-   "matthew-harris"
-  ]
- },
- {
-  "fotmob_id": "5907021",
-  "url": "/matches/merthyr-town-vs-chorley/i1yz2an#5907021",
-  "kickoff": "2026-08-29T14:00:00Z",
-  "comp": "National League North",
-  "home": "Merthyr Town",
-  "away": "Chorley",
-  "home_id": "5762",
-  "away_id": "274599",
-  "slugs": [
-   "matthew-harris"
-  ]
- },
- {
-  "fotmob_id": "5907027",
-  "url": "/matches/merthyr-town-vs-buxton/6g8m5g5#5907027",
-  "kickoff": "2026-08-31T14:00:00Z",
-  "comp": "National League North",
-  "home": "Buxton",
-  "away": "Merthyr Town",
-  "home_id": "161824",
-  "away_id": "5762",
-  "slugs": [
-   "matthew-harris"
-  ]
- },
- {
-  "fotmob_id": "5907045",
-  "url": "/matches/merthyr-town-vs-macclesfield-fc/1pejfg#5907045",
-  "kickoff": "2026-09-05T14:00:00Z",
-  "comp": "National League North",
-  "home": "Merthyr Town",
-  "away": "Macclesfield",
-  "home_id": "5762",
-  "away_id": "8599",
-  "slugs": [
-   "matthew-harris"
-  ]
- },
- {
   "fotmob_id": "5905872",
   "url": "/matches/jahn-regensburg-vs-hoffenheim-ii/2f9nht5#5905872",
   "kickoff": "2026-08-29T14:30:00Z",
@@ -8388,7 +8304,7 @@
  {
   "fotmob_id": "5104992",
   "url": "/matches/valerenga-vs-molde/2nnd8n#5104992",
-  "kickoff": "2026-08-29T14:00:00Z",
+  "kickoff": "2026-08-30T15:00:00Z",
   "comp": "Eliteserien",
   "home": "V\u00e5lerenga",
   "away": "Molde",
@@ -8539,149 +8455,6 @@
   "away_id": "8603",
   "slugs": [
    "troy-parrott"
-  ]
- },
- {
-  "fotmob_id": "5749644",
-  "url": "/matches/napoli-vs-genoa/3cdjj5#5749644",
-  "kickoff": "2026-08-22T18:45:00Z",
-  "comp": "Serie A",
-  "home": "Genoa",
-  "away": "Napoli",
-  "home_id": "10233",
-  "away_id": "9875",
-  "slugs": [
-   "vinnie-leonard"
-  ]
- },
- {
-  "fotmob_id": "5749658",
-  "url": "/matches/napoli-vs-como/3bmv18#5749658",
-  "kickoff": "2026-08-30T16:30:00Z",
-  "comp": "Serie A",
-  "home": "Napoli",
-  "away": "Como",
-  "home_id": "9875",
-  "away_id": "10171",
-  "slugs": [
-   "vinnie-leonard"
-  ]
- },
- {
-  "fotmob_id": "5749666",
-  "url": "/matches/inter-vs-napoli/2u0kq3#5749666",
-  "kickoff": "2026-09-05T16:00:00Z",
-  "comp": "Serie A",
-  "home": "Inter",
-  "away": "Napoli",
-  "home_id": "8636",
-  "away_id": "9875",
-  "slugs": [
-   "vinnie-leonard"
-  ]
- },
- {
-  "fotmob_id": "6106288",
-  "url": "/matches/fc-porto-vs-napoli/36xjw3#6106288",
-  "kickoff": "2026-09-08T19:00:00Z",
-  "comp": "Champions League",
-  "home": "FC Porto",
-  "away": "Napoli",
-  "home_id": "9773",
-  "away_id": "9875",
-  "slugs": [
-   "vinnie-leonard"
-  ]
- },
- {
-  "fotmob_id": "6106256",
-  "url": "/matches/manchester-city-vs-napoli/2s1i6l#6106256",
-  "kickoff": "2026-09-08T19:00:00Z",
-  "comp": "Champions League",
-  "home": "Man City",
-  "away": "Napoli",
-  "home_id": "8456",
-  "away_id": "9875",
-  "slugs": [
-   "vinnie-leonard"
-  ]
- },
- {
-  "fotmob_id": "6106423",
-  "url": "/matches/napoli-vs-sabah-fk/5wgw5tt3#6106423",
-  "kickoff": "2026-09-08T19:00:00Z",
-  "comp": "Champions League",
-  "home": "Sabah FK",
-  "away": "Napoli",
-  "home_id": "951893",
-  "away_id": "9875",
-  "slugs": [
-   "vinnie-leonard"
-  ]
- },
- {
-  "fotmob_id": "6106318",
-  "url": "/matches/arsenal-vs-napoli/37jhat#6106318",
-  "kickoff": "2026-09-08T19:00:00Z",
-  "comp": "Champions League",
-  "home": "Napoli",
-  "away": "Arsenal",
-  "home_id": "9875",
-  "away_id": "9825",
-  "slugs": [
-   "vinnie-leonard"
-  ]
- },
- {
-  "fotmob_id": "6106319",
-  "url": "/matches/club-brugge-vs-napoli/2qsupc#6106319",
-  "kickoff": "2026-09-08T19:00:00Z",
-  "comp": "Champions League",
-  "home": "Napoli",
-  "away": "Club Brugge",
-  "home_id": "9875",
-  "away_id": "8342",
-  "slugs": [
-   "vinnie-leonard"
-  ]
- },
- {
-  "fotmob_id": "6106320",
-  "url": "/matches/bodoglimt-vs-napoli/2rgbhu#6106320",
-  "kickoff": "2026-09-08T19:00:00Z",
-  "comp": "Champions League",
-  "home": "Napoli",
-  "away": "Bod\u00f8/Glimt",
-  "home_id": "9875",
-  "away_id": "8402",
-  "slugs": [
-   "vinnie-leonard"
-  ]
- },
- {
-  "fotmob_id": "6106321",
-  "url": "/matches/viking-vs-napoli/2sa5jw#6106321",
-  "kickoff": "2026-09-08T19:00:00Z",
-  "comp": "Champions League",
-  "home": "Napoli",
-  "away": "Viking",
-  "home_id": "9875",
-  "away_id": "8478",
-  "slugs": [
-   "vinnie-leonard"
-  ]
- },
- {
-  "fotmob_id": "6106328",
-  "url": "/matches/napoli-vs-villarreal/3c1he3#6106328",
-  "kickoff": "2026-09-08T19:00:00Z",
-  "comp": "Champions League",
-  "home": "Villarreal",
-  "away": "Napoli",
-  "home_id": "10205",
-  "away_id": "9875",
-  "slugs": [
-   "vinnie-leonard"
   ]
  },
  {
