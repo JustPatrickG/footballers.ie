@@ -714,7 +714,16 @@ def load():
             m["players"] = ";".join(clean)
             kept.append(m)
         matches = kept
-    articles = [r for r in _rows("manual/articles.csv") if r.get("slug")]   # CSV order = display order (drag to reorder in the admin)
+    # Two layers. manual/articles.csv is yours — its CSV order is the display
+    # order you drag in the admin, so it stays exactly as written and comes
+    # first. api/articles.csv is machine-written; a slug that exists in both is
+    # yours, which is how you overrule anything the pipeline got wrong: publish
+    # that slug in the admin and the generated one stops rendering.
+    articles = [r for r in _rows("manual/articles.csv") if r.get("slug")]
+    _mine = {(r.get("slug") or "").strip().lower() for r in articles}
+    articles += [r for r in _rows("api/articles.csv")
+                 if r.get("slug")
+                 and (r["slug"] or "").strip().lower() not in _mine]
     accounts = _rows("manual/accounts.csv")
     clubgeo  = {r["club"]: r for r in _rows("manual/clubs.csv") if r.get("club")}
     return players, ireland, news, matches, articles, accounts, clubgeo, tmdata, alias
@@ -4231,12 +4240,20 @@ print(f"Built {9 + len(clubs) + len(PLAYERS)} pages ({len(clubs)} clubs, {len(PL
 
 # ---- assets: make build/site a complete, servable site ----
 import shutil
+# The news pipeline keeps its bookkeeping in data/api/ so it survives between
+# runs on a throwaway runner. None of it belongs on the live domain: drafts are
+# copy nobody has read yet, and the rest is internal. Everything else in data/
+# is the site's own source and stays.
+NOT_FOR_DEPLOY = {"news_drafts.json", "news_seen.json", "news_skipped.log"}
+def _skip_internal(_dir, names):
+    return [n for n in names if n in NOT_FOR_DEPLOY]
+
 for _d in ("img", "images", "photos", "data"):
     _src = os.path.join(HERE, "..", _d)
     if os.path.isdir(_src):
         _dst = os.path.join(OUT, _d)
         if os.path.isdir(_dst): shutil.rmtree(_dst)
-        shutil.copytree(_src, _dst)
+        shutil.copytree(_src, _dst, ignore=_skip_internal)
 
 # the admin lives under /build/ on the live site
 os.makedirs(os.path.join(OUT, "build"), exist_ok=True)

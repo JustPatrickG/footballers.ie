@@ -3,12 +3,6 @@
   "outputDirectory": "site",
   "installCommand": "npm install --no-audit --no-fund",
   "framework": null,
-  "rewrites": [
-    {
-      "source": "/live.json",
-      "destination": "https://raw.githubusercontent.com/JustPatrickG/footballers.ie/main/live.json"
-    }
-  ],
   "headers": [
     {
       "source": "/live.json",

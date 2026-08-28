@@ -1,0 +1,75 @@
+name: news pipeline
+
+# Fired by the fetcher, which runs somewhere with a residential IP because the
+# source blocks datacentre ranges. It sends the posts as the dispatch payload;
+# everything after that happens here, where the code can be read and reviewed.
+#
+# workflow_dispatch is for testing with a pasted payload. There is no schedule
+# on purpose: this job must never run without posts to work on.
+on:
+  repository_dispatch:
+    types: [news-posts]
+  workflow_dispatch:
+    inputs:
+      posts:
+        description: JSON array of posts (testing)
+        required: true
+      dry:
+        description: 'dry run — write drafts, publish nothing'
+        default: 'true'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: data-write          # shares the lane with the hourly data refresh
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install requests
+
+      - name: stage the payload
+        env:
+          PAYLOAD: ${{ toJSON(github.event.client_payload.posts) }}
+          MANUAL: ${{ inputs.posts }}
+        run: |
+          if [ -n "$MANUAL" ]; then printf '%s' "$MANUAL" > posts.json
+          else printf '%s' "$PAYLOAD" > posts.json; fi
+          python3 -c "import json,sys; d=json.load(open('posts.json')); print(f'{len(d) if isinstance(d,list) else 0} posts staged')"
+
+      - name: run the pipeline
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          NEWS_SALT: ${{ secrets.NEWS_SALT }}
+          NEWS_BYLINE: ${{ vars.NEWS_BYLINE }}   # optional - defaults to the journalist byline
+          # DRY_RUN stays 'true' in repo variables until the drafts read well.
+          DRY: ${{ inputs.dry || vars.NEWS_DRY_RUN || 'true' }}
+        run: |
+          if [ "$DRY" = "true" ]; then
+            python3 scraper/news_pipeline.py --posts posts.json --dry
+          else
+            python3 scraper/news_pipeline.py --posts posts.json
+          fi
+
+      - name: commit if anything changed
+        run: |
+          rm -f posts.json
+          git config user.name "news-bot"
+          git config user.email "actions@github.com"
+          git add data/api/articles.csv data/api/news_seen.json \
+                  data/api/news_drafts.json data/api/news_skipped.log img/articles 2>/dev/null || true
+          if git diff --cached --quiet; then
+            echo "nothing new"
+          else
+            git commit -m "news refresh"
+            git pull --rebase --autostash -X theirs || (git rebase --abort; git reset --hard origin/main; echo "lost the race, next run catches up")
+            git push
+          fi
