@@ -40,6 +40,23 @@ def _tm_text(v):
     if not v or re.fullmatch(r"[\d\s./:€£$k-]+", v, re.I): return ""
     return v
 
+def _age_from_dob(dob):
+    """A date of birth is checkable; an age scraped off a page is not."""
+    import datetime
+    try:
+        b = datetime.datetime.strptime((dob or "").strip(), "%Y-%m-%d").date()
+    except (ValueError, TypeError):
+        return 0
+    t = datetime.date.today()
+    a = t.year - b.year - ((t.month, t.day) < (b.month, b.day))
+    return a if 5 <= a <= 70 else 0
+
+def _sane_age(age):
+    """The feed's age field sometimes carries a year (2025) or plain nonsense.
+       A professional footballer is not 54 and definitely not 2025."""
+    a = _int(age)
+    return a if 14 <= a <= 50 else 0
+
 def _tm_height(cm):
     cm = (cm or "").strip()
     if not cm.replace(".", "").isdigit(): return ""
@@ -418,6 +435,7 @@ def load():
         t = tmdata.get(p["slug"])
         if not t:
             p["tm"] = None
+            p["age"] = _sane_age(p["age"])
             continue
         iso_exp, exp_label = _tm_date(t.get("contract_expires"))
         _, joined_label    = _tm_date(t.get("joined"))
@@ -437,6 +455,10 @@ def load():
             option      = (t.get("contract_option") or "").strip(),
             value       = (t.get("market_value") or "").strip(),
         )
+        # A date of birth beats a scraped age: the feed had teenagers listed as
+        # 2025 years old, and a few others out by a decade.
+        p["age"] = _age_from_dob(p["tm"]["dob"]) or _sane_age(p["age"])
+
         # birthplace is the only source we have for "born"
         if not p.get("born") and p["tm"]["birthplace"]:
             p["born"] = p["tm"]["birthplace"]

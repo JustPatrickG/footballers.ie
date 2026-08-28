@@ -1438,8 +1438,25 @@ def season_from_matches(mlist, league, now):
 
 
 def extract_personal(blob):
-    """age, born(blank - fotmob lacks town), foot."""
+    """age, born(blank - fotmob lacks town), foot.
+
+    The date of birth comes first, because it is checkable. The page's own
+    "Age" field is only a fallback and has to be a believable age: matching
+    any title *containing* "age" used to catch "Average rating" and a season
+    field, which is how teenagers ended up recorded as 2025 years old."""
     age = foot = ""
+
+    bd = first(find_all(blob, "birthDate"))
+    if isinstance(bd, dict):
+        bd = bd.get("utcTime")
+    d = parse_iso(bd) if isinstance(bd, str) else None
+    if d:
+        today = dt.datetime.now(dt.timezone.utc)
+        years = today.year - d.year - ((today.month, today.day)
+                                       < (d.month, d.day))
+        if 5 <= years <= 70:
+            age = str(years)
+
     for pi in find_all(blob, "playerInformation"):
         items = pi if isinstance(pi, list) else [pi]
         for it in items:
@@ -1450,20 +1467,12 @@ def extract_personal(blob):
             val = it.get("value")
             if isinstance(val, dict):
                 val = val.get("numberValue") or val.get("fallback") or ""
-            if "age" in title and age == "" and val:
+            if title == "age" and age == "" and val:
                 m = re.search(r"\d+", str(val))
-                age = m.group(0) if m else ""
+                if m and 14 <= int(m.group(0)) <= 50:
+                    age = m.group(0)
             if "foot" in title and foot == "" and val:
                 foot = str(val).strip().capitalize()
-    if not age:
-        bd = first(find_all(blob, "birthDate"))
-        if isinstance(bd, dict):
-            bd = bd.get("utcTime")
-        d = parse_iso(bd) if isinstance(bd, str) else None
-        if d:
-            today = dt.datetime.now(dt.timezone.utc)
-            age = str(today.year - d.year -
-                      ((today.month, today.day) < (d.month, d.day)))
     return age, "", foot
 
 
