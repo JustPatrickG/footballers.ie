@@ -82,6 +82,7 @@ def _yes(v):
     return str(v or "").strip().lower() in ("y","yes","true","1")
 
 MISMATCHED = {}          # slug -> the name the stats feed had for them
+SUSPECT_PHOTOS = set()   # ids that were wrong once: the saved photo is theirs
 _NICK = {"mikey": ["michael"], "mike": ["michael"], "robbie": ["robert"],
          "tom": ["thomas"], "tommy": ["thomas"], "danny": ["daniel"],
          "dan": ["daniel"], "joe": ["joseph"], "jimmy": ["james"],
@@ -132,11 +133,22 @@ def _fotmob_names():
     if not os.path.exists(path): return out
     with open(path, newline="", encoding="utf-8") as f:
         for r in csv.DictReader(f):
-            if not (r.get("slug") and (r.get("fotmob_id") or "").strip()):
+            if not r.get("slug"):
                 continue
-            if "by hand" in (r.get("note") or "").lower():
+            note = (r.get("note") or "").lower()
+            if "wrong person" in note or "not used" in note or "by hand" in note:
+                SUSPECT_PHOTOS.add(r["slug"])   # whatever is on disk was pulled
+                                                # with the id that was wrong
+            if "by hand" in note:
+                continue                     # a person has already checked this
+            if "wrong person" in note or "not used" in note:
+                # id was cleared because it belonged to someone else; the old
+                # scraped row may still be sitting in players.csv, so make sure
+                # the check fires on it
+                out[r["slug"]] = "-- a different player --"
                 continue
-            out[r["slug"]] = (r.get("fotmob_name") or "").strip()
+            if (r.get("fotmob_id") or "").strip():
+                out[r["slug"]] = (r.get("fotmob_name") or "").strip()
     return out
 
 def _merge_players():
@@ -532,6 +544,7 @@ def load():
         )
         # A date of birth beats a scraped age: the feed had teenagers listed as
         # 2025 years old, and a few others out by a decade.
+        p["raw_age"] = p["age"]
         p["age"] = _age_from_dob(p["tm"]["dob"]) or _sane_age(p["age"])
 
         # birthplace is the only source we have for "born"
@@ -933,8 +946,8 @@ HAVE_IMG = set()
 if os.path.isdir(IMG_DIR):
     HAVE_IMG = {f.rsplit(".",1)[0] for f in os.listdir(IMG_DIR) if f.lower().endswith((".png",".jpg",".jpeg",".webp"))}
 # an image downloaded against a wrong id is a photo of somebody else - initials
-# are the honest fallback until the id is fixed and the picture re-pulled
-HAVE_IMG -= set(MISMATCHED)
+# are the honest fallback until the picture is pulled again under the right id
+HAVE_IMG -= set(MISMATCHED) | set(SUSPECT_PHOTOS)
 
 def avatar(p, root="", size="lg"):
     cls = "pavatar" + (" sm" if size == "sm" else "")
@@ -3707,6 +3720,22 @@ if MISMATCHED:
           f"- stats and photo withheld:")
     for _s, _n in sorted(MISMATCHED.items()):
         print(f"      {_s} -> feed had '{_n}'")
+
+# Same name, but the two sources disagree about when they were born. One of
+# them has the wrong player - or the wrong birthday. Worth a human look, so
+# list them rather than guessing which source to believe.
+_dobclash = []
+for _p in PLAYERS:
+    _t = _p.get("tm") or {}
+    _a = _sane_age((_p.get("raw_age") or ""))
+    _b = _age_from_dob(_t.get("dob", ""))
+    if _a and _b and abs(_a - _b) >= 4:
+        _dobclash.append((_p["slug"], _a, _b, _t.get("dob", "")))
+if _dobclash:
+    print(f"  ? {len(_dobclash)} players where the stats feed's age and the "
+          f"date of birth disagree - check these are the same person:")
+    for _s, _a, _b, _d in sorted(_dobclash):
+        print(f"      {_s}: feed says {_a}, born {_d} makes them {_b}")
 print(f"Built {9 + len(clubs) + len(PLAYERS)} pages ({len(clubs)} clubs, {len(PLAYERS)} players)")
 
 # ---- assets: make build/site a complete, servable site ----

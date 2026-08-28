@@ -94,7 +94,7 @@ carl-mchugh,275470,Carl McHugh,Sligo Rovers,discovered
 cathal-heffernan,1578910,Cathal Heffernan,Harrogate Town,
 cathal-mccarthy,1683723,Cathal McCarthy,Kilmarnock,from transfer list
 cathal-osullivan,1613299,Cathal O'Sullivan,Preston North End U23,
-charles-akinrintoyo,1719306,Charles Akinrintayo,UCD,
+charles-akinrintoyo,1719306,Charles Akinrintayo,UCD,"id set by hand - same club, spelling variant"
 charles-dunne,309516,Charles Dunne,Coleraine,
 charlie-cummins,1665584,Charlie Cummins,Exeter City,
 charlie-mcgarvey,2008021,Charlie McGarvey,Sligo Rovers,discovered
@@ -103,7 +103,7 @@ chiedozie-ogbene,674009,Chiedozie Ogbene,Ipswich Town,club mismatch - CHECK
 chris-atherton,1725484,Chris Atherton,Ipswich Town U18,from transfer list
 chris-forrester,253253,Chris Forrester,St. Patrick's Athletic,discovered
 chris-shields,159785,Chris Shields,Linfield,
-christopher-atherton,1398707,John Atherton,Rushall Olympic,club mismatch - CHECK
+christopher-atherton,1725484,Chris Atherton,Ipswich Town U18,id set by hand - dob 2008-10-19 confirmed
 christopher-conlan,1692058,Christopher Conlan,Bohemian FC,discovered
 christy-grogan,1342934,Christy Grogan,Derry City,from transfer list
 cian-barrett,1536437,Cian Barrett,Waterford FC,discovered
@@ -337,7 +337,7 @@ jimmy-keohane,187637,Jimmy Keohane,Galway United FC,discovered
 jimmy-mwanga,1656768,Jimmy Mwanga,,
 joe-byrne,212705,Nathan Byrne,Charlotte FC,club mismatch - CHECK
 joe-carroll-byrne,1901110,Joe Carroll-Byrne,St. Patrick's Athletic,discovered
-joe-gardner,600835,Joe Gardner,Falkirk,from transfer list
+joe-gardner,,Joe Gardner,Falkirk,"wrong person (Joe Gardner) - was an English player b. 1990, ours is b. 2005"
 joe-hodge,1070794,Joe Hodge,Motherwell,club mismatch - CHECK
 joe-obrien-whitmarsh,1437326,Joe O'Brien Whitmarsh,Northampton Town,
 joe-quigley,664534,Joe Quigley,Bristol Rovers,
@@ -450,7 +450,7 @@ mason-melia,1463084,Mason Melia,Lincoln City,club mismatch - CHECK
 mason-murphy,2075514,Mason Murphy,Waterford FC,discovered
 matt-doherty,239920,Matt Doherty,Sheffield United,club mismatch - CHECK
 matteo-egan,2155260,Matteo Egan,Empoli,
-matthew-harris,409405,Matthew Harris,Merthyr Town,from transfer list
+matthew-harris,,Matthew Harris,Merthyr Town,"wrong person (Matthew Harris) - was an English player b. 1994, ours is b. 1988"
 matthew-healy,1206281,Matthew Healy,Shamrock Rovers,discovered
 matthew-moore,2025051,Matthew Moore,Hoffenheim II,
 matthew-murray,1711576,Matthew Murray,Cork City,
@@ -599,7 +599,7 @@ simon-power,732900,Simon Power,St. Patrick's Athletic,discovered
 sinclair-armstrong,1307663,Sinclair Armstrong,Göztepe,added by id
 sonny-perkins,1199868,Sonny Perkins,Wigan Athletic,from transfer list
 stephen-bradley,,,,cleared by hand
-stephen-kenny,191537,Stephen Kenny,St. Patrick's Athletic,discovered
+stephen-kenny,,Stephen Kenny,St. Patrick's Athletic,"wrong person (Stephen Kenny) - was the manager's record (b. 1971), not the player"
 stephen-mallon,1020759,Stephen Mallon,Glenavon,
 stephen-mclaughlin,187427,Stephen McLaughlin,Mansfield Town,
 stephen-walsh,205933,Stephen Walsh,Galway United FC,discovered
@@ -627,7 +627,7 @@ tyreik-wright,1089611,Tyreik Samuel Wright,Bradford City,
 tyreke-wilson,863820,Tyreke Wilson,Dundalk,discovered
 uniss-kargbo,1173121,Uniss Kargbo,Bala Town,
 victor-ozhianvuna,1716409,Victor Ozhianvuna,Shamrock Rovers,
-vinnie-leonard,215242,Leonardo Spinazzola,Napoli,club mismatch - CHECK
+vinnie-leonard,1648654,Vincent Leonard,Norwich City U21,id set by hand - dob 2008-03-21 confirmed
 warren-davis,1441589,Warren Davis,Drogheda United,discovered
 warren-ohora,769358,Warren O'Hora,Hibernian,
 will-ferry,843138,Will Ferry,Dundee United,

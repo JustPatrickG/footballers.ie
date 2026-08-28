@@ -220,6 +220,9 @@ def search_candidates(term, debug_name=None):
             t = str(obj.get("type", "")).lower()
             oid = obj.get("id") or obj.get("playerId")
             name = obj.get("name") or obj.get("text", "")
+            if obj.get("isCoach"):
+                return                       # Stephen Kenny the manager is not
+                                             # Stephen Kenny the forward
             if oid and name and ("player" in t or "teamName" in obj
                                  or "teamId" in obj):
                 team = obj.get("teamName") or obj.get("team", "")
@@ -233,6 +236,8 @@ def search_candidates(term, debug_name=None):
                 payload = obj.get("payload") or {}
                 team = ""
                 if isinstance(payload, dict):
+                    if payload.get("isCoach"):
+                        nm = None            # a manager, not a player
                     team = payload.get("teamName", "") or ""
                     if str(payload.get("type", "")).lower() not in (
                             "", "player"):
@@ -274,16 +279,43 @@ NICKNAMES = {
 }
 
 
-def name_variants(name):
+def tm_full_names():
+    """slug -> the full name Transfermarkt has. FotMob often files a player
+    under it when our roster uses the short version: 'Vinnie Leonard' finds
+    nothing, 'Vincent Leonard' finds him."""
+    out = {}
+    for rel in ("data/api/tm.csv",):
+        path = Path(rel)
+        if not path.exists():
+            continue
+        with open(path, newline="", encoding="utf-8") as f:
+            for r in csv.DictReader(f):
+                nm = (r.get("tm_name") or "").strip()
+                if r.get("slug") and nm:
+                    out[r["slug"]] = re.sub(r'"[^"]*"', " ", nm).strip()
+    return out
+
+
+def name_variants(name, full_name=""):
     """'Robbie Brady' -> ['Robbie Brady', 'Robert Brady', 'Brady']."""
     out = [name]
+    if full_name and norm(full_name) != norm(name):
+        out.append(full_name)
+        fp = full_name.split()
+        if len(fp) > 2:                     # 'Ramon David Martos Pugh'
+            out.append(" ".join([fp[0], fp[-1]]))
     parts = name.split()
     if len(parts) >= 2:
         first = norm(parts[0])
         for alt in NICKNAMES.get(first, []):
             out.append(" ".join([alt.capitalize()] + parts[1:]))
         out.append(" ".join(parts[1:]))     # surname only, last resort
-    return out
+    seen, uniq = set(), []
+    for v in out:
+        k = norm(v)
+        if k and k not in seen:
+            seen.add(k); uniq.append(v)
+    return uniq
 
 
 def same_person(feed_name, our_name):
@@ -323,11 +355,12 @@ def resolve(args):
           f"({len(players) - len(todo)} already cached)")
 
     unresolved = []
+    full_names = tm_full_names()
     for i, p in enumerate(todo):
         slug, name, club = p["slug"], p["name"], p["club"]
         try:
             cands, used_name = [], name
-            for variant in name_variants(name):
+            for variant in name_variants(name, full_names.get(slug, "")):
                 cands = search_candidates(
                     variant,
                     debug_name=f"search_{slug}" if args.debug else None)
