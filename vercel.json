@@ -1,7 +1,7 @@
 {
   "buildCommand": "python3 build/gen.py",
   "outputDirectory": "site",
-  "installCommand": "echo skip",
+  "installCommand": "npm install --no-audit --no-fund",
   "framework": null,
   "rewrites": [
     {
@@ -19,5 +19,11 @@
         }
       ]
     }
-  ]
+  ],
+  "functions": {
+    "api/og.js": {
+      "includeFiles": "node_modules/{harfbuzzjs,@resvg}/**",
+      "maxDuration": 15
+    }
+  }
 }

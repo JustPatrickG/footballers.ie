@@ -763,7 +763,19 @@ ANALYTICS_JS = """<script>
 </script>"""
 
 
-def shell(title, desc, root, active, body, extra_head="", canonical="", body_attr=""):
+def og_card(**fields):
+    """The share card for a page: /api/og with the handful of fields that card
+       needs. Blank fields are left out so the URL stays short, and a page that
+       asks for nothing falls back to the one static image."""
+    from urllib.parse import urlencode
+    q = {k: str(v) for k, v in fields.items() if str(v or "").strip() != ""}
+    if not q:
+        return f"{SITE_URL}/og-image.png"
+    return f"{SITE_URL}/api/og?" + urlencode(q)
+
+def shell(title, desc, root, active, body, extra_head="", canonical="",
+          body_attr="", og=""):
+    og = og or f"{SITE_URL}/og-image.png"
     is_home = (root == "" and active in ("index.html", ""))
     loader    = LOADER_HTML if is_home else ""
     loader_js = LOADER_JS   if is_home else ""
@@ -783,13 +795,13 @@ def shell(title, desc, root, active, body, extra_head="", canonical="", body_att
 <meta property="og:title" content="{esc(title)}">
 <meta property="og:description" content="{esc(desc)}">
 <meta property="og:url" content="{can}">
-<meta property="og:image" content="{SITE_URL}/og-image.png">
+<meta property="og:image" content="{esc(og)}">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="{esc(title)}">
 <meta name="twitter:description" content="{esc(desc)}">
-<meta name="twitter:image" content="{SITE_URL}/og-image.png">
+<meta name="twitter:image" content="{esc(og)}">
 <link rel="icon" href="{root}favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="{root}apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -1512,7 +1524,10 @@ def build_index():
 '''
     return shell("footballers.ie — every Irish professional, tracked",
                  "News, goal involvements and the full weekend round-up for every Irish professional footballer.",
-                 "", "index.html", body, canonical="")
+                 "", "index.html", body, canonical="",
+                 og=og_card(n="Every Irish footballer,\nin one place.", big=1,
+                            l=f"{len(PLAYERS)} players tracked · live scores, ratings, fixtures and lineups",
+                            f="footballers.ie", fr="Updated daily"))
 
 
 def art_slug(a):
@@ -1714,7 +1729,9 @@ def build_news():
     </script>
     '''
     return shell("News — footballers.ie", "Latest news on Irish professional footballers.",
-                 "", "news.html", body, canonical="news.html")
+                 "", "news.html", body, canonical="news.html",
+                 og=og_card(n="News", l="Reporting on Irish players at home and abroad.",
+                            f=f'{len(ARTICLES)} article{"s" if len(ARTICLES) != 1 else ""}'))
 
 def build_author(w):
     cards = '<div class="artgrid">' + "".join(art_card(a, "../") for a in w["arts"]) + '</div>'
@@ -1727,7 +1744,11 @@ def build_author(w):
     {cards}
     <script>document.addEventListener('click',function(e){{var au=e.target.closest('.au');if(au){{e.preventDefault();location.href=au.getAttribute('data-href');}}}});</script>
     '''
-    return shell(f'{w["name"]} — footballers.ie', f'Articles by {w["name"]}.', "../", "news.html", body, canonical=f'author/{w["slug"]}.html')
+    return shell(f'{w["name"]} — footballers.ie', f'Articles by {w["name"]}.', "../", "news.html", body,
+                 canonical=f'author/{w["slug"]}.html',
+                 og=og_card(n=w["name"], gw="gold",
+                            l=f'{len(w["arts"])} article{"s" if len(w["arts"]) != 1 else ""} for footballers.ie',
+                            f="Writer"))
 
 def safe_url(u, root=""):
     """http(s), site-absolute, or a plain relative path. No javascript:, no
@@ -1858,9 +1879,14 @@ def build_article(a):
     {more}
     {signup("../", compact=True)}
     '''
+    ap = _pmap().get((a.get("player_slug") or "").strip())
     return shell(f'{a.get("headline","")} — footballers.ie',
                  a.get("standfirst",""), "../", "news.html", body,
-                 canonical=f'news/{art_slug(a)}.html')
+                 canonical=f'news/{art_slug(a)}.html',
+                 og=og_card(t="article", g=a.get("tag",""), h=a.get("headline",""),
+                            s=a.get("standfirst",""), b=a.get("author",""),
+                            p=(ap["slug"] if ap and ap["slug"] in HAVE_IMG else ""),
+                            pn=(ap["n"] if ap else "")))
 
 
 # --- where a player actually plays -----------------------------------------
@@ -2267,7 +2293,10 @@ def build_faq():
             f'<div class="faqfoot">Still not answered? Hit <b>Report</b> in the corner of any page.</div>')
     return shell("FAQ — footballers.ie",
                  "How footballers.ie collects its data, who counts as Irish, and what the site keeps about you.",
-                 "", "faq.html", body, canonical="faq.html")
+                 "", "faq.html", body, canonical="faq.html",
+                 og=og_card(n="How it works", gw="gold",
+                            l="Where the data comes from, who counts as Irish, and what the site keeps about you.",
+                            f="FAQ"))
 
 
 # rough centre of each country we track, for the map
@@ -2419,7 +2448,10 @@ def build_map():
     '''
     return shell("Where are the Irish? — footballers.ie",
                  "A map of every country where tracked Irish players are playing.",
-                 "", "clubs.html", body, canonical="where-are-the-irish.html")
+                 "", "clubs.html", body, canonical="where-are-the-irish.html",
+                 og=og_card(n="Where are the Irish?", gw="gold",
+                            l=f"{len(PLAYERS)} tracked players, mapped by the country they play in",
+                            f="Map"))
 
 # ================= LIST PAGES =================
 def build_list(fname, title, sub, data):
@@ -2473,7 +2505,8 @@ def build_list(fname, title, sub, data):
     sortf.onchange=function(){{sortRows();draw();}};
     q.oninput=draw;posf.onchange=draw;lgf.onchange=function(){{sortRows();draw();}};
     </script>'''
-    return shell(f"{title} — footballers.ie", sub, "", fname, body, canonical=fname)
+    return shell(f"{title} — footballers.ie", sub, "", fname, body, canonical=fname,
+                 og=og_card(n=title, l=sub, f="Players"))
 
 # ================= CLUBS =================
 def build_clubs_index():
@@ -2496,7 +2529,10 @@ def build_clubs_index():
             f'<div><b>Where are the Irish?</b><span>See every country on a map</span></div>'
             f'<span class="go">Open map →</span></a>'
             f'<div class="clubgrid">{cards}</div>')
-    return shell("Clubs — footballers.ie","Irish players by country, league and club.","", "clubs.html", body, canonical="clubs.html")
+    return shell("Clubs — footballers.ie","Irish players by country, league and club.","", "clubs.html", body,
+                 canonical="clubs.html",
+                 og=og_card(n="Clubs", l="Every club with a tracked Irish player, by country and league.",
+                            f="Clubs"))
 
 def build_country(cname, ps):
     """Second level: leagues within a country."""
@@ -2518,7 +2554,10 @@ def build_country(cname, ps):
             f'<div class="clubgrid">{cards}</div>')
     return shell(f"{cname} — Irish players — footballers.ie",
                  f"Irish players in {cname}, by league.", "../", "clubs.html", body,
-                 canonical=f"country/{country_slug(cname)}.html")
+                 canonical=f"country/{country_slug(cname)}.html",
+                 og=og_card(n=cname, gw="gold",
+                            l=f'{len(ps)} Irish player{"s" if len(ps) != 1 else ""} tracked',
+                            f="Where are the Irish?"))
 
 def build_league(cname, lname, ps):
     """Third level: clubs within a league."""
@@ -2539,7 +2578,11 @@ def build_league(cname, lname, ps):
             f'<div class="clubgrid">{cards}</div>')
     return shell(f"{lname} — Irish players — footballers.ie",
                  f"Irish players in the {lname}.", "../", "clubs.html", body,
-                 canonical=f"league/{club_slug(cname)}-{club_slug(lname)}.html")
+                 canonical=f"league/{club_slug(cname)}-{club_slug(lname)}.html",
+                 og=og_card(n=lname, l=" · ".join(x for x in (
+                                f'{len(ps)} Irish player{"s" if len(ps) != 1 else ""} tracked',
+                                cname) if x),
+                            f="League"))
 
 def build_club(cname, ps):
     rows = "".join(player_row(p, "../") for p in ps)
@@ -2555,9 +2598,17 @@ def build_club(cname, ps):
     <div class="sec"><h2>Upcoming fixtures</h2></div>
     <div class="fxlist">{fxr or '<div class="emptystate" style="display:block">No fixtures listed.</div>'}</div>
     '''
+    faces = [p["slug"] for p in ps if p["slug"] in HAVE_IMG][:4]
+    league = ps[0]["league"] if ps[0]["league"] not in ("", "—") else ""
     return shell(f"{cname} — Irish players — footballers.ie",
                  f"Irish professionals at {cname}, plus upcoming fixtures.", "../", "clubs.html", body,
-                 canonical=f"club/{club_slug(cname)}.html")
+                 canonical=f"club/{club_slug(cname)}.html",
+                 og=og_card(t="club", n=cname, cb=club_id(cname),
+                            l=" · ".join(x for x in (
+                                f'{len(ps)} Irish player{"s" if len(ps) != 1 else ""} tracked',
+                                league) if x),
+                            p=",".join(faces),
+                            m=(len(ps) - len(faces) if faces and len(ps) > len(faces) else "")))
 
 # ================= IRELAND =================
 def build_ireland():
@@ -2618,7 +2669,11 @@ def build_ireland():
     if(want) openTab(want);
     </script>'''
     return shell("Republic of Ireland — footballers.ie",
-                 "Ireland fixtures, results and capped players at every level.","", "ireland.html", body, canonical="ireland.html")
+                 "Ireland fixtures, results and capped players at every level.","", "ireland.html", body,
+                 canonical="ireland.html",
+                 og=og_card(n="Republic of Ireland", gw="gold",
+                            l="Fixtures, results and every tracked player capped at each level.",
+                            f="Ireland"))
 
 def build_fixtures():
     mc = match_payload()
@@ -2628,7 +2683,10 @@ def build_fixtures():
             f'<button data-f="loi">League of Ireland</button><button data-f="all">All</button></div></div>'
             f'<div id="fxall"></div>'
             f'<script>window.FB_MATCHES={json.dumps(mc)};</script>')
-    return shell("Fixtures — footballers.ie","Every game a tracked Irish player is involved in.","", "fixtures.html", body, canonical="fixtures.html")
+    return shell("Fixtures — footballers.ie","Every game a tracked Irish player is involved in.","", "fixtures.html", body,
+                 canonical="fixtures.html",
+                 og=og_card(n="Fixtures", l="Every game a tracked Irish player is involved in.",
+                            f="Fixtures"))
 
 # ================= MILESTONES =================
 def milestone_items():
@@ -2659,7 +2717,11 @@ def build_milestones():
                     f'<div class="msc">{esc(m["p"]["club"])}</div></a>' for m in items)
     body = (f'<div class="pagehead"><h1>Approaching milestones</h1><p>Players closing in on a round number — caps, goals or appearances.</p></div>'
             f'<div class="msgrid">{cards or EMPTY_MS}</div>')
-    return shell("Milestones — footballers.ie","Irish players approaching career and international milestones.","", "milestones.html", body, canonical="milestones.html")
+    return shell("Milestones — footballers.ie","Irish players approaching career and international milestones.","", "milestones.html", body,
+                 canonical="milestones.html",
+                 og=og_card(n="Approaching milestones", gw="gold",
+                            l="Players closing in on a round number of caps, goals or appearances.",
+                            f="Milestones"))
 
 # ================= COMPARE =================
 def build_compare():
@@ -2698,7 +2760,10 @@ def build_compare():
     }}
     a.onchange=draw;b.onchange=draw;draw();
     </script>'''
-    return shell("Compare players — footballers.ie","Compare any two Irish professionals side by side.","", "compare.html", body, canonical="compare.html")
+    return shell("Compare players — footballers.ie","Compare any two Irish professionals side by side.","", "compare.html", body,
+                 canonical="compare.html",
+                 og=og_card(n="Compare players", l="Any two Irish professionals, side by side.",
+                            f="Compare"))
 
 
 def match_id(m):
@@ -3074,9 +3139,24 @@ def build_match(m, involved, squad_list=False):
     {squads}
     '''
     title = f'{m.get("home","")} v {m.get("away","")} — Irish players'
+    n_irish = len(involved)
+    ko_txt = ""
+    if status == "scheduled" and m.get("kickoff"):
+        try:
+            import datetime as _d
+            _k = _d.datetime.fromisoformat(m["kickoff"].replace("Z", "+00:00"))
+            ko_txt = _k.strftime("%a %H:%M")
+        except Exception:
+            ko_txt = m.get("kickoff", "")[11:16]
     return shell(f"{title} — footballers.ie",
                  f"Irish players involved in {m.get('home','')} v {m.get('away','')}.",
-                 "../", "fixtures.html", body, canonical=f"match/{match_id(m)}.html")
+                 "../", "fixtures.html", body, canonical=f"match/{match_id(m)}.html",
+                 og=og_card(t="match", h=m.get("home",""), a=m.get("away",""),
+                            hb=club_id(m.get("home","")), ab=club_id(m.get("away","")),
+                            c=m.get("competition",""), fm=fotmob_id(m),
+                            st=status, hs=hs, **{"as": as_},
+                            k=ko_txt, v=match_venue(m),
+                            f=f'{n_irish} Irish player{"s" if n_irish != 1 else ""}'))
 
 # ================= PLAYER =================
 
@@ -3348,7 +3428,16 @@ def build_player(p):
     return shell(f"{p['n']} — footballers.ie",
                  f"{p['n']} ({p['club']}, {p['league']}) — season stats, fixtures, results and international record.",
                  "../", "", body, canonical=f"player/{p['slug']}.html",
-                 body_attr=f' data-player="{p["slug"]}"')
+                 body_attr=f' data-player="{p["slug"]}"',
+                 og=og_card(t="player", n=p["n"], c=(p["club"] if p["club"] != "Unattached" else ""),
+                            l=(p["league"] if p["league"] != "—" else ""),
+                            x=" · ".join(x for x in (p["pos"] if p["pos"] != "—" else "",
+                                                     str(p["age"]) if p["age"] else "") if x),
+                            p=(p["slug"] if p["slug"] in HAVE_IMG else ""),
+                            cb=club_id(p["club"]),
+                            ap=p["season"]["ap"] or "", gl=p["season"]["g"] or "",
+                            **{"as": p["season"]["a"] or ""},
+                            rt=(p.get("rating") or ""), f=f"Season {SEASON}"))
 
 
 
@@ -3370,7 +3459,10 @@ def build_newsletter():
     </div>'''
     return shell("Newsletter — footballers.ie",
                  "Two emails a week on every Irish professional footballer — Monday round-up and Friday preview.",
-                 "", "newsletter.html", body, canonical="newsletter.html")
+                 "", "newsletter.html", body, canonical="newsletter.html",
+                 og=og_card(n="The newsletter", gw="gold",
+                            l="Two emails a week: Monday round-up, Friday preview.",
+                            f="Newsletter"))
 
 
 def build_alerts():
@@ -3523,7 +3615,9 @@ def build_alerts():
     </script>'''
     return shell("Alerts & account — footballers.ie",
                  "Follow Irish players, choose your alerts, and manage or delete your account.",
-                 "", "alerts.html", body, canonical="alerts.html")
+                 "", "alerts.html", body, canonical="alerts.html",
+                 og=og_card(n="Player alerts", l="Follow any Irish player and get an email when they play, score or assist.",
+                            f="Alerts"))
 
 # ================= 404 / SITEMAP / ROBOTS =================
 def build_search_index():
@@ -3643,7 +3737,9 @@ def build_search():
     '''
     return shell("Search — footballers.ie",
                  "Search every player, club, match and article on footballers.ie.",
-                 "", "search.html", body, canonical="search.html")
+                 "", "search.html", body, canonical="search.html",
+                 og=og_card(n="Search", l="Every player, club, match and article on the site.",
+                            f="Search"))
 
 def build_404():
     body = """
@@ -3658,7 +3754,9 @@ def build_404():
       <a class="tab" href="/league-of-ireland.html">League of Ireland</a>
       <a class="tab" href="/index.html">Home</a>
     </div>"""
-    return shell("Page not found — footballers.ie", "That page doesn't exist on Footballers.", "/", "", body)
+    return shell("Page not found — footballers.ie", "That page doesn't exist on Footballers.", "/", "", body,
+                 og=og_card(n="Page not found", l="That link is out of date — try a search instead.",
+                            f="404"))
 
 def build_sitemap():
     urls = ["", "news.html", "faq.html", "search.html", "where-are-the-irish.html", "players.html", "abroad.html", "league-of-ireland.html", "clubs.html",
