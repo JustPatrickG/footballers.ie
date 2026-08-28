@@ -1568,9 +1568,35 @@ match_id,minute,type,player,team,venue
 2026-08-27-toluca-v-austin-fc,86,sub_off,Helinho,Toluca,Sports Illustrated Stadium
 2026-08-27-toluca-v-austin-fc,86,sub_on,Pável Pérez,Toluca,Sports Illustrated Stadium
 2026-08-27-toluca-v-austin-fc,90,goal,Jorge Díaz,Toluca,Sports Illustrated Stadium
-2026-08-28-burnley-u21-v-reading-u21,,,,,Lancashire FA County Ground
+2026-08-28-aldershot-town-v-harrogate-town,,,,,The EBB Stadium at The Recreation Ground
+2026-08-28-altrincham-v-fc-halifax-town,,,,,The J. Davidson Stadium
+2026-08-28-athlone-town-v-bray-wanderers,,,,,Stadium
+2026-08-28-bohemian-fc-v-sligo-rovers,8,goal,Dawson Devoy,Bohemian FC,Dalymount Park
+2026-08-28-burgess-hill-town-v-dartford,,,,,Leylands Park
+2026-08-28-burnley-u21-v-reading-u21,28,yellow,Michael Stanley,Burnley U21,Lancashire FA County Ground
+2026-08-28-burnley-u21-v-reading-u21,35,goal,Torin Ntege,Reading U21,Lancashire FA County Ground
+2026-08-28-burnley-u21-v-reading-u21,42,goal,Brandon Pouani,Burnley U21,Lancashire FA County Ground
+2026-08-28-cobh-ramblers-v-longford-town,,,,,Stadium
+2026-08-28-connahs-quay-nomads-v-cambrian-united,2,goal,Callum West,Connah's Quay Nomads,Deeside Stadium
+2026-08-28-cork-city-v-wexford-fc,,,,,Stadium
+2026-08-28-drogheda-united-v-dundalk,,,,,Sullivan & Lambe Park
+2026-08-28-dunfermline-athletic-v-raith-rovers,14,sub_off,Callum Fordyce,Raith Rovers,KDM Group East End Park
+2026-08-28-dunfermline-athletic-v-raith-rovers,14,sub_on,Jack Baird,Raith Rovers,KDM Group East End Park
+2026-08-28-galway-united-fc-v-shelbourne,,,,,Eamonn Deacy Park
+2026-08-28-gateshead-fc-v-sutton-united,,,,,Gateshead International Stadium
+2026-08-28-genclerbirligi-v-erzurumspor-fk,,,,,Eryaman Stadyumu
+2026-08-28-hednesford-v-harborough-town-fc,,,,,Keys Park
+2026-08-28-hornchurch-v-woking,,,,,Hornchurch Stadium
+2026-08-28-kerry-fc-v-treaty-united,,,,,Stadium
 2026-08-28-norwich-city-u21-v-stoke-city-u21,,,,,Avant Training Centre
 2026-08-28-nottingham-forest-u21-v-manchester-city-u21,22,yellow,Blaine McClure,Nottingham Forest U21,Loughborough University Football Stadium
+2026-08-28-nottingham-forest-u21-v-manchester-city-u21,29,goal,Kristian Clarke,Nottingham Forest U21,Loughborough University Football Stadium
+2026-08-28-portadown-v-coleraine,8,goal,Matthew Shevlin,Coleraine,Shamrock Park
+2026-08-28-scunthorpe-united-v-solihull-moors,,,,,Attis Arena
+2026-08-28-st-patricks-athletic-v-waterford-fc,,,,,Richmond Park
+2026-08-28-tamworth-v-worthing,,,,,The Lamb Ground
+2026-08-28-the-new-saints-v-colwyn-bay,,,,,Park Hall Stadium
+2026-08-28-ucd-v-finn-harps,,,,,Stadium
 2026-08-28-voitsberg-v-fc-liefering,9,goal,Fabian Schubert,Voitsberg,Munzer Bioindustrie Sportpark
 2026-08-28-voitsberg-v-fc-liefering,24,goal,Ilia Ivanschitz,FC Liefering,Munzer Bioindustrie Sportpark
 2026-08-28-voitsberg-v-fc-liefering,31,yellow,Fabian Schubert,Voitsberg,Munzer Bioindustrie Sportpark
@@ -1590,3 +1616,4 @@ match_id,minute,type,player,team,venue
 2026-08-28-voitsberg-v-fc-liefering,66,sub_off,Nico Masching,FC Liefering,Munzer Bioindustrie Sportpark
 2026-08-28-voitsberg-v-fc-liefering,66,sub_on,Dovas Grudzinkas,FC Liefering,Munzer Bioindustrie Sportpark
 2026-08-28-voitsberg-v-fc-liefering,66,sub_on,Emil Ganser,FC Liefering,Munzer Bioindustrie Sportpark
+2026-08-28-wealdstone-v-carlisle-united,,,,,Grosvenor Vale
