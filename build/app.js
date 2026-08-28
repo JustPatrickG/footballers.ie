@@ -302,7 +302,15 @@
       (r.m.status === 'ft' || ended(r.m) <= now ? past : future).push(r);
     });
     past.sort(function (a, b) { return decayed(b, now) - decayed(a, now); });
-    future.sort(function (a, b) { return decayed(b, now) - decayed(a, now); });
+    // any game kicking off TODAY outranks any game on a later day, whatever
+    // the fixture quality - nobody wants tomorrow's match while today has one
+    function dayOf(t) { var d = new Date(t); return d.getFullYear() * 400 + d.getMonth() * 32 + d.getDate(); }
+    var todayKey = dayOf(now);
+    function bucket(r) { return dayOf(ko(r.m)) === todayKey ? 0 : 1; }
+    future.sort(function (a, b) {
+      if (bucket(a) !== bucket(b)) return bucket(a) - bucket(b);
+      return decayed(b, now) - decayed(a, now);
+    });
     var lastM = past[0] && past[0].m, nextM = future[0] && future[0].m;
     if (lastM && nextM) {
       var mid = ended(lastM) + (ko(nextM) - ended(lastM)) / 2;
@@ -431,6 +439,7 @@
       var rows = byComp[c].map(function (m) {
         return '<div class="fxmatch' + (m.loi || m.sq ? ' loi' : '') + '" data-href="match/' + m.id + '.html" role="link" tabindex="0">' +
                '<div class="fxt"><div class="h">' + m.home + bdg(m.hb, 'sm') + '</div>' + midRow(m, now) + '<div class="a">' + bdg(m.ab, 'sm') + m.away + '</div></div>' +
+               (m.ven ? '<div class="fxven">' + m.ven + '</div>' : '') +
                '<div class="fxp">' + playersHtml(m, '', 0) + '</div></div>';
       }).join('');
       return '<div class="fxcomp"><h4><span>' + c + '</span><small>' + byComp[c].length + (byComp[c].length === 1 ? ' match' : ' matches') + '</small></h4>' + rows + '</div>';
@@ -1253,7 +1262,9 @@
             body: JSON.stringify({
               email: email,
               source: f.classList.contains('alertform') ? 'alerts' : 'newsletter',
-              players: players
+              players: players,
+              prefs: [].map.call(document.querySelectorAll('#signup .alertopt input:checked'),
+                function (c) { return c.name.replace('alert_', ''); }).join(';') || undefined
             })
           });
           var out = await res.json().catch(function () { return {}; });

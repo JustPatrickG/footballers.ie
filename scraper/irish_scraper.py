@@ -1919,6 +1919,182 @@ def migrate_lineup_row(row):
             "", row.get("position", ""), "", ""]
 
 
+CLUB_IDS_CSV = "data/api/club_ids.csv"
+_PARENT_RE = re.compile(r"\s+(u\d{2}|academy|reserves?|ii|b)$", re.I)
+
+
+def team_candidates(term, debug_name=None):
+    """[(id, name)] team suggestions from fotmob search."""
+    data = get_json(SEARCH_URL.format(term=requests.utils.quote(term)),
+                    debug_name=debug_name)
+    out, seen = [], set()
+
+    def walk(obj):
+        if isinstance(obj, dict):
+            t = str(obj.get("type", "")).lower()
+            oid = obj.get("id") or obj.get("teamId")
+            name = obj.get("name") or ""
+            if oid and name and "team" in t:
+                if str(oid) not in seen:
+                    seen.add(str(oid))
+                    out.append((str(oid), str(name)))
+            text = str(obj.get("text", ""))
+            payload = obj.get("payload") or {}
+            if "|" in text and isinstance(payload, dict) \
+                    and str(payload.get("type", "")).lower() == "team":
+                nm, _, oid2 = text.rpartition("|")
+                if oid2.isdigit() and oid2 not in seen:
+                    seen.add(oid2)
+                    out.append((oid2, nm))
+            for v in obj.values():
+                walk(v)
+        elif isinstance(obj, list):
+            for item in obj:
+                walk(item)
+
+    walk(data)
+    return out
+
+
+def badges_cmd(args):
+    """Keep data/api/club_ids.csv - a durable club name -> fotmob id map, so
+    every club the site ever shows has a badge. Names are harvested for free
+    wherever a name and an id already travel together; whatever is left is
+    looked up once on fotmob search, clubs playing in the next week first.
+    A name resolved once is never looked up again."""
+    out_root = Path(args.out)
+    out_path = out_root / CLUB_IDS_CSV
+    COLS = ["club", "club_id", "source", "checked"]
+    known = {}
+    if out_path.exists():
+        with open(out_path, newline="", encoding="utf-8") as f:
+            for r in csv.DictReader(f):
+                if (r.get("club") or "").strip():
+                    known[r["club"].strip()] = [r.get(c, "") or "" for c in COLS]
+    stamp = iso_z(dt.datetime.now(dt.timezone.utc))
+
+    def put(name, cid, source):
+        name = (name or "").strip()
+        if not name:
+            return
+        cur = known.get(name)
+        if cur and cur[1]:                       # resolved once = kept forever
+            return
+        known[name] = [name, str(cid or "").strip(), source, stamp]
+
+    # 1. free harvest
+    for rel, pairs in (("data/api/matches.csv",
+                        (("home", "home_id"), ("away", "away_id"))),
+                       ("data/api/players.csv", (("club", "club_id"),)),
+                       ("data/manual/clubs.csv", (("club", "club_id"),))):
+        f = out_root / rel
+        if not f.exists():
+            continue
+        with open(f, newline="", encoding="utf-8") as fh:
+            for r in csv.DictReader(fh):
+                for nk, ik in pairs:
+                    if (r.get(nk) or "").strip() and (r.get(ik) or "").strip():
+                        put(r[nk], r[ik], "harvest")
+    idx_path = SCRAPER_DIR / "match_index.json"
+    if idx_path.exists():
+        for m in json.loads(idx_path.read_text()):
+            for nk, ik in (("home", "home_id"), ("away", "away_id")):
+                if m.get(nk) and m.get(ik):
+                    put(m[nk], m[ik], "harvest")
+
+    def resolved(name):
+        row = known.get(name)
+        if row and row[1]:
+            return True
+        parent = _PARENT_RE.sub("", name)
+        row = known.get(parent)
+        return bool(row and row[1])
+
+    # 2. who still needs one - and who is playing this coming week
+    now = dt.datetime.now(dt.timezone.utc)
+    week = now + dt.timedelta(days=7)
+    soon, everyone = set(), set()
+    f = out_root / "data/api/matches.csv"
+    if f.exists():
+        with open(f, newline="", encoding="utf-8") as fh:
+            for r in csv.DictReader(fh):
+                ko = parse_iso(r.get("kickoff") or "")
+                for k in ("home", "away"):
+                    n = (r.get(k) or "").strip()
+                    if not n:
+                        continue
+                    everyone.add(n)
+                    if ko and now <= ko <= week:
+                        soon.add(n)
+    for rel, datecol in (("data/manual/results.csv", "date"),
+                         ("data/manual/fixtures.csv", "date")):
+        f = out_root / rel
+        if not f.exists():
+            continue
+        with open(f, newline="", encoding="utf-8") as fh:
+            for r in csv.DictReader(fh):
+                n = (r.get("opponent") or "").strip()
+                if not n:
+                    continue
+                everyone.add(n)
+                d = (r.get(datecol) or "")[:10]
+                if str(now.date()) <= d <= str(week.date()):
+                    soon.add(n)
+
+    def wants_lookup(name):
+        if resolved(name):
+            return False
+        row = known.get(name)
+        if row is not None and not row[1]:       # tried before and missed
+            return name in soon                  # only nag for imminent games
+        return True
+
+    todo = ([n for n in sorted(soon) if wants_lookup(n)]
+            + [n for n in sorted(everyone - soon) if wants_lookup(n)])
+    limit = getattr(args, "limit", 150)
+    if limit and len(todo) > limit:
+        print(f"badges: {len(todo)} clubs to look up, doing {limit} this run")
+        todo = todo[:limit]
+    else:
+        print(f"badges: {len(todo)} clubs to look up")
+
+    def simplify(n):
+        drop = {"fc", "cf", "afc", "cd", "sc", "ac", "if", "fk", "sk",
+                "bk", "sv", "club", "de", "cfc"}
+        return " ".join(w for w in norm(n).split() if w not in drop)
+
+    found = 0
+    for i, name in enumerate(todo):
+        try:
+            cands = team_candidates(
+                name, debug_name=f"badge_{norm(name)[:30].replace(' ', '_')}"
+                if args.debug else None)
+        except Exception as e:
+            print(f"  [{i+1}/{len(todo)}] {name}: search failed ({e})")
+            time.sleep(SLEEP)
+            continue
+        hit = ""
+        exact = [c for c in cands if norm(c[1]) == norm(name)]
+        if len(exact) >= 1:
+            hit = exact[0][0]
+        else:
+            loose = [c for c in cands if simplify(c[1]) == simplify(name)
+                     and simplify(name)]
+            if len(loose) == 1:                  # one plausible match or nothing
+                hit = loose[0][0]
+        put(name, hit, "search")
+        if hit:
+            found += 1
+            print(f"  [{i+1}/{len(todo)}] {name} -> {hit}")
+        else:
+            print(f"  [{i+1}/{len(todo)}] {name}: no confident match")
+        time.sleep(SLEEP)
+
+    write_csv(out_path, COLS, sorted(known.values(), key=lambda r: r[0]))
+    have_ids = sum(1 for r in known.values() if r[1])
+    print(f"badges: {found} new this run, {have_ids}/{len(known)} names mapped")
+
+
 def events_cmd(args):
     idx_path = SCRAPER_DIR / "match_index.json"
     if not idx_path.exists():
@@ -1937,11 +2113,14 @@ def events_cmd(args):
         with open(lineup_path, newline="", encoding="utf-8") as f:
             for row in csv.DictReader(f):
                 lineup_rows.append(migrate_lineup_row(row))
+    have_subs = set()
     if out_path.exists() and not args.rebuild:
         with open(out_path, newline="", encoding="utf-8") as f:
             for row in csv.DictReader(f):
                 rows.append([row.get(c, "") for c in EVENT_COLUMNS])
                 have.add(row["match_id"])
+                if str(row.get("type", "")).startswith("sub_"):
+                    have_subs.add(row["match_id"])
 
     todo = []
     for m in index:
@@ -1949,9 +2128,16 @@ def events_cmd(args):
         if not ko or not (since <= ko <= now):
             continue
         mid = match_id_for(ko, m["home"], m["away"])
-        if mid in have or not m.get("url"):
+        if not m.get("url"):
+            continue
+        # a match scraped before substitutions existed here has events but no
+        # sub rows - rescrape it (it is inside the days window anyway) so the
+        # subs get backfilled; matches that already have them are settled
+        if mid in have and mid in have_subs:
             continue
         todo.append((mid, m))
+    redo = {mid for mid, _ in todo}
+    rows = [r for r in rows if r[0] not in redo]
     print(f"{len(todo)} finished matches to read")
 
     done = 0
@@ -2408,6 +2594,14 @@ def main():
                              "U19/U17 squads")
     di.add_argument("--debug", action="store_true")
 
+    bd = sub.add_parser("badges",
+                        help="maintain data/api/club_ids.csv so every club "
+                             "shown on the site has a badge")
+    bd.add_argument("--out", default=".")
+    bd.add_argument("--limit", type=int, default=150,
+                    help="max search lookups per run (default 150)")
+    bd.add_argument("--debug", action="store_true")
+
     ev = sub.add_parser("events",
                         help="write data/api/match_events.csv "
                              "(scorers, cards, venue)")
@@ -2458,6 +2652,8 @@ def main():
         clear_id(args)
     elif args.cmd == "discover-ireland":
         discover_ireland(args)
+    elif args.cmd == "badges":
+        badges_cmd(args)
     elif args.cmd == "events":
         events_cmd(args)
     elif args.cmd == "lineups":

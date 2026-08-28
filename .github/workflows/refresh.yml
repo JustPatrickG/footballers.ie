@@ -24,6 +24,8 @@ jobs:
       - run: python3 scraper/irish_scraper.py scrape
       - name: refresh Ireland fixtures (senior + U21)
         run: python3 scraper/irish_scraper.py ireland
+      - name: club badges (harvest + resolve missing)
+        run: python3 scraper/irish_scraper.py badges || true
       - name: commit if changed
         run: |
           git config user.name "scraper-bot"

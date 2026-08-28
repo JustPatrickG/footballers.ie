@@ -34,6 +34,7 @@ export default async function handler(req, res) {
   const email = String(body.email || '').trim().toLowerCase().slice(0, 200);
   const source = String(body.source || 'site').slice(0, 40);
   const players = String(body.players || '').slice(0, 2000);
+  const action = String(body.action || 'save');   // save | get | delete
 
   if (!email || !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) {
     return res.status(400).json({ error: 'That email doesn\'t look right.' });
@@ -53,10 +54,45 @@ export default async function handler(req, res) {
     // one row per email. a repeat signup / follow-sync updates the row in place
     // (this is the whole "account": email + what they follow. no password — nothing here is secret)
     let lines = text.split('\n').filter(l => l.length);
-    if (!lines[0].startsWith('email,')) lines.unshift('email,signed_up,source,players,matches,updated');
-    if (lines[0] === 'email,signed_up,source,players') lines[0] = 'email,signed_up,source,players,matches,updated';
+    if (!lines[0].startsWith('email,')) lines.unshift('email,signed_up,source,players,matches,updated,prefs');
+    if (lines[0] === 'email,signed_up,source,players') lines[0] = 'email,signed_up,source,players,matches,updated,prefs';
+    if (lines[0] === 'email,signed_up,source,players,matches,updated') lines[0] += ',prefs';
     const idx = lines.findIndex((l, i) => i > 0 && l.split(',')[0].trim().toLowerCase() === email);
-    const row = [email, idx > -1 ? (lines[idx].split(',')[1] || nowIso) : nowIso, source, esc(players), esc(matches), nowIso].join(',');
+    const cells = idx > -1 ? lines[idx].split(',') : [];
+
+    if (action === 'get') {
+      if (idx === -1) return res.status(404).json({ error: 'No account under that address.' });
+      return res.status(200).json({
+        ok: true, email,
+        signed_up: cells[1] || '',
+        players: (cells[3] || '').replace(/^"|"$/g, ''),
+        matches: (cells[4] || '').replace(/^"|"$/g, ''),
+        prefs:   (cells[6] || '').replace(/^"|"$/g, '')
+      });
+    }
+
+    if (action === 'delete') {
+      if (idx === -1) return res.status(200).json({ ok: true, gone: true });
+      lines.splice(idx, 1);
+      const textOut = lines.join('\n') + '\n';
+      const del = await fetch(`https://api.github.com/repos/${repo}/contents/${PATH}`, {
+        method: 'PUT',
+        headers: { Authorization: `token ${token}`, Accept: 'application/vnd.github+json',
+                   'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          message: 'Account deleted (user request)',
+          content: Buffer.from(textOut, 'utf8').toString('base64'),
+          ...(cur ? { sha: cur.sha } : {})
+        })
+      });
+      if (!del.ok) throw new Error('delete failed ' + del.status);
+      return res.status(200).json({ ok: true, gone: true });
+    }
+
+    const prefs = String(body.prefs === undefined ? (cells[6] || '').replace(/^"|"$/g, '') : body.prefs).slice(0, 200);
+    const keepPlayers = body.players === undefined && idx > -1 ? (cells[3] || '').replace(/^"|"$/g, '') : players;
+    const keepMatches = body.matches === undefined && idx > -1 ? (cells[4] || '').replace(/^"|"$/g, '') : matches;
+    const row = [email, idx > -1 ? (cells[1] || nowIso) : nowIso, source, esc(keepPlayers), esc(keepMatches), nowIso, esc(prefs)].join(',');
     if (idx > -1) lines[idx] = row; else lines.push(row);
     text = lines.join('\n') + '\n';
 

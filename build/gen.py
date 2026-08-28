@@ -738,14 +738,23 @@ def clink(c, root=""): return f'{root}club/{club_slug(c)}.html'
 CLUB_IDS = {}
 ACADEMY_RE = re.compile(r"\s+(u\d{2}|academy|reserves?|ii|b)$", re.I)
 def _register_club_ids():
-    """club name -> FotMob team id, from players.csv and clubs.csv.
-       Academy sides (U21/U18/Academy) borrow the senior club's badge when we have one."""
+    """club name -> FotMob team id: the scraper-maintained club_ids.csv first,
+       then players.csv, clubs.csv, and both sides of every match in
+       matches.csv - so any club that ever appears with an id keeps its badge.
+       Academy sides (U21/U18/Academy) borrow the senior club's badge."""
+    for r in _rows("api/club_ids.csv"):
+        if (r.get("club") or "").strip() and (r.get("club_id") or "").strip():
+            CLUB_IDS.setdefault(r["club"].strip(), r["club_id"].strip())
     for r in _rows("api/players.csv"):
         if (r.get("club") or "").strip() and (r.get("club_id") or "").strip():
             CLUB_IDS.setdefault(r["club"].strip(), r["club_id"].strip())
     for r in _rows("manual/clubs.csv"):
         if (r.get("club") or "").strip() and (r.get("club_id") or "").strip():
             CLUB_IDS.setdefault(r["club"].strip(), r["club_id"].strip())
+    for r in _rows("api/matches.csv"):
+        for nk, ik in (("home", "home_id"), ("away", "away_id")):
+            if (r.get(nk) or "").strip() and (r.get(ik) or "").strip():
+                CLUB_IDS.setdefault(r[nk].strip(), r[ik].strip())
 _register_club_ids()
 
 def club_id(name):
@@ -1056,6 +1065,37 @@ def _squad_rank(p):
     mins = p["season"]["mins"] or 0
     return (0 if mins >= REGULAR_MINS else 1, -rating, -mins, p["n"])
 
+VENUES, HOME_GROUND = {}, {}
+def _register_venues():
+    """The events scraper stores the stadium with every finished match. That
+       gives (a) the venue for any played match and (b) each club's home
+       ground - the place their home games keep happening - which is the best
+       available answer for an upcoming fixture."""
+    counts = {}
+    dated = []
+    for mid, evs in EVENTS.items():
+        v = next((e.get("venue","") for e in evs if e.get("venue")), "").strip()
+        if not v: continue
+        VENUES[mid] = v
+        # match_id is date-home-v-away
+        try:
+            rest = mid[11:]
+            home = rest.split("-v-")[0]
+        except Exception:
+            continue
+        if home:
+            counts.setdefault(home, {}).setdefault(v, 0)
+            counts[home][v] += 1
+    for home, vc in counts.items():
+        HOME_GROUND[home] = max(vc.items(), key=lambda kv: kv[1])[0]
+
+def match_venue(m):
+    """Known venue for a played match; the home side's usual ground otherwise."""
+    if not VENUES and EVENTS: _register_venues()
+    v = VENUES.get(match_id(m))
+    if v: return v
+    return HOME_GROUND.get(club_slug(m.get("home","")), "")
+
 def match_payload():
     """Every match with at least one tracked player, for the client-side renderer."""
     pmap = _pmap()
@@ -1075,6 +1115,7 @@ def match_payload():
                        status=(m.get("status") or "scheduled"), minute=m.get("minute",""),
                        hp=(m.get("home_pens") or ""), ap=(m.get("away_pens") or ""),
                        loi=(1 if loi else 0), sq=(1 if sq else 0),
+                       ven=esc(match_venue(m)),
                        pull=match_pull(m, squad), fmid=fotmob_id(m),
                        players=involved))
     return mc
@@ -2571,6 +2612,7 @@ def build_match(m, involved, squad_list=False):
     <a class="crumb" data-back href="../fixtures.html">← Back</a>
     <div class="matchhead" id="mhead" data-mid="{match_id(m)}">
       <div class="mcrow"><span class="mccomp">{esc(m.get("competition",""))}</span><span id="mchip">{chip}</span></div>
+      {f'<div class="mvenue">{esc(match_venue(m))}</div>' if match_venue(m) else ''}
       <div class="mteams">
         <div class="mteam">{club_badge(m.get("home",""),"md")}<span>{esc(m.get("home",""))}</span></div>
         <div id="mscorewrap">{scoreline}</div>
@@ -2879,25 +2921,39 @@ def build_newsletter():
 
 
 def build_alerts():
+    opts = lambda checked: "".join(
+        f'<label class="alertopt"><input type="checkbox" name="alert_{k}"{" checked" if k in checked else ""}> '
+        f'<span><b>{t}</b>{d}</span></label>'
+        for k, t, d in (
+            ("lineup", "About to play", "An hour before kick-off when one of your players is named in the squad."),
+            ("goal", "Goal or assist", "The moment they\'re involved."),
+            ("rating", "Full-time rating", "Their match rating and minutes once the game\'s done."),
+            ("news", "Transfers &amp; injuries", "Moves, call-ups and fitness news.")))
     form_open = f'<form class="alertform" action="{NEWSLETTER_ACTION}" method="post" target="_blank">' if NEWSLETTER_ACTION \
-                else '<form class="nlform" onsubmit="event.preventDefault();document.getElementById(\'alertnote\').style.display=\'block\';">'
+                else '<form class="alertform" onsubmit="event.preventDefault();">'
     body = f'''
-    <div class="pagehead"><h1>Player <i>alerts</i></h1>
-      <p>Follow players with the ★ anywhere on the site, then get an email when they're involved.</p></div>
+    <div class="pagehead"><h1>Alerts &amp; <i>account</i></h1>
+      <p>Follow players with the ★ anywhere on the site, then get an email when they\'re involved.</p></div>
 
-    <div class="nlbox">
+    <div class="nlbox" id="acct" style="display:none">
+      <div class="nltag">Your account</div>
+      <h3 class="nlh" id="acctmail"></h3>
+      <div class="alertgrid" id="acctprefs">{opts(())}</div>
+      <div class="alertwho" id="acctfollow"></div>
+      <div class="acctbtns">
+        <button class="acctbtn save" id="acctsave">Save changes</button>
+        <button class="acctbtn" id="acctout">Sign out on this device</button>
+        <button class="acctbtn danger" id="acctdel">Delete my account</button>
+      </div>
+      <div class="nlnote" id="acctnote" style="display:none"></div>
+      <div class="nlfine">Deleting removes your email and everything tied to it from our records.
+        You can also email datadeletion@matchweek.ie.</div>
+    </div>
+
+    <div class="nlbox" id="signup">
       <div class="nltag">Alerts</div>
       <h3 class="nlh">Your players, straight to your inbox</h3>
-      <div class="alertgrid">
-        <label class="alertopt"><input type="checkbox" name="alert_lineup" checked> <span><b>About to play</b>
-          An hour before kick-off when one of your players is named in the squad.</span></label>
-        <label class="alertopt"><input type="checkbox" name="alert_goal" checked> <span><b>Goal or assist</b>
-          The moment they're involved.</span></label>
-        <label class="alertopt"><input type="checkbox" name="alert_rating"> <span><b>Full-time rating</b>
-          Their match rating and minutes once the game's done.</span></label>
-        <label class="alertopt"><input type="checkbox" name="alert_news"> <span><b>Transfers &amp; injuries</b>
-          Moves, call-ups and fitness news.</span></label>
-      </div>
+      <div class="alertgrid">{opts(("lineup", "goal"))}</div>
       <div class="alertwho">Following <b data-fav-count>0</b> player<span data-fav-plural></span>.
         <span id="alertnames"></span></div>
       {form_open}
@@ -2905,7 +2961,7 @@ def build_alerts():
         <input type="hidden" name="players" id="alertplayers">
         <button type="submit">Turn on alerts</button>
       </form>
-      <div class="nlnote" id="alertnote" style="display:none">Alerts aren't switched on yet — the list opens shortly.</div>
+      <div class="nlnote" id="alertnote" style="display:none"></div>
       <div class="nlfine">Coming to the app as push notifications.</div>
     </div>
 
@@ -2931,10 +2987,89 @@ def build_alerts():
       }}
       document.addEventListener('favschange', upd);
       if (document.readyState==='loading') document.addEventListener('DOMContentLoaded', upd); else upd();
+
+      /* ---- the account view: shown once this browser has an email saved ---- */
+      function email(){{ try {{ return localStorage.getItem('fb_email_v1') || ''; }} catch(e) {{ return ''; }} }}
+      function favs(){{ try {{ return JSON.parse(localStorage.getItem('fb_favs_v1')) || []; }} catch(e) {{ return []; }} }}
+      function mfavs(){{ try {{ return JSON.parse(localStorage.getItem('fb_favm_v1')) || []; }} catch(e) {{ return []; }} }}
+      function pretty(slug){{
+        return slug.split('-').map(function(w){{ return w.charAt(0).toUpperCase() + w.slice(1); }}).join(' ');
+      }}
+      function note(t, ok){{
+        var n = document.getElementById('acctnote');
+        n.style.display = 'block'; n.textContent = t;
+        n.style.color = ok ? '' : 'var(--red)';
+      }}
+      function prefStr(){{
+        return [].map.call(document.querySelectorAll('#acctprefs input:checked'),
+          function(c){{ return c.name.replace('alert_',''); }}).join(';');
+      }}
+      async function api(payload){{
+        var r = await fetch('/api/subscribe', {{ method:'POST',
+          headers: {{'Content-Type':'application/json'}}, body: JSON.stringify(payload) }});
+        var out = await r.json().catch(function(){{ return {{}}; }});
+        if (!r.ok) throw new Error(out.error || 'That didn\\'t work. Try again shortly.');
+        return out;
+      }}
+      async function boot(){{
+        var em = email();
+        if (!em) return;
+        document.getElementById('acct').style.display = '';
+        document.getElementById('signup').style.display = 'none';
+        document.getElementById('acctmail').textContent = em;
+        var flw = document.getElementById('acctfollow');
+        var f = favs();
+        flw.innerHTML = 'Following <b>' + f.length + '</b> player' + (f.length===1?'':'s')
+          + (f.length ? ': ' + f.slice(0,12).map(pretty).join(', ') + (f.length>12?'…':'') : '')
+          + (mfavs().length ? ' · <b>' + mfavs().length + '</b> match' + (mfavs().length===1?'':'es') : '');
+        try {{
+          var acc = await api({{ action:'get', email: em }});
+          var set = (acc.prefs || 'lineup;goal').split(';');
+          [].forEach.call(document.querySelectorAll('#acctprefs input'), function(c){{
+            c.checked = set.indexOf(c.name.replace('alert_','')) > -1;
+          }});
+        }} catch(e) {{
+          ['lineup','goal'].forEach(function(k){{
+            var c = document.querySelector('#acctprefs input[name=alert_'+k+']');
+            if (c) c.checked = true;
+          }});
+        }}
+      }}
+      document.getElementById('acctsave').addEventListener('click', async function(){{
+        var b = this; b.disabled = true; b.textContent = 'Saving…';
+        try {{
+          await api({{ action:'save', email: email(), source:'account',
+                      prefs: prefStr(), players: favs().join(';'), matches: mfavs().join(';') }});
+          note('Saved.', true);
+          if (window.FB_TRACK) FB_TRACK('account_prefs_saved', {{}});
+        }} catch(e) {{ note(e.message); }}
+        b.disabled = false; b.textContent = 'Save changes';
+      }});
+      document.getElementById('acctout').addEventListener('click', function(){{
+        try {{ localStorage.removeItem('fb_email_v1'); }} catch(e) {{}}
+        location.reload();
+      }});
+      document.getElementById('acctdel').addEventListener('click', async function(){{
+        var b = this;
+        if (!b.dataset.armed) {{
+          b.dataset.armed = '1'; b.textContent = 'Tap again to confirm — this is permanent';
+          setTimeout(function(){{ delete b.dataset.armed; b.textContent = 'Delete my account'; }}, 6000);
+          return;
+        }}
+        b.disabled = true; b.textContent = 'Deleting…';
+        try {{
+          await api({{ action:'delete', email: email() }});
+          try {{ localStorage.removeItem('fb_email_v1'); }} catch(e) {{}}
+          if (window.FB_TRACK) FB_TRACK('account_deleted', {{}});
+          note('Your account is gone. Your ★ follows stay on this device unless you clear them.', true);
+          setTimeout(function(){{ location.reload(); }}, 2500);
+        }} catch(e) {{ note(e.message); b.disabled = false; b.textContent = 'Delete my account'; }}
+      }});
+      if (document.readyState==='loading') document.addEventListener('DOMContentLoaded', boot); else boot();
     }})();
     </script>'''
-    return shell("Player alerts — footballers.ie",
-                 "Follow Irish players and get an email when they play, score or assist.",
+    return shell("Alerts & account — footballers.ie",
+                 "Follow Irish players, choose your alerts, and manage or delete your account.",
                  "", "alerts.html", body, canonical="alerts.html")
 
 # ================= 404 / SITEMAP / ROBOTS =================

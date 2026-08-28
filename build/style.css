@@ -997,6 +997,22 @@ a.intlblock.lnk:hover{border-color:var(--teal)}
 .lup.ir .lun{color:#fff;font-weight:600}
 .benchgrid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
 .benchcol{border:1px solid var(--line);border-radius:8px;background:var(--panel);padding:10px 12px}
+/* where the game is */
+.mvenue{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--mute);
+  letter-spacing:.06em;margin-top:6px}
+.fxven{font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:var(--mute);
+  letter-spacing:.05em;margin-top:4px}
+
+/* account page buttons */
+.acctbtns{display:flex;gap:9px;flex-wrap:wrap;margin-top:16px}
+.acctbtn{border:1px solid var(--line);border-radius:9px;padding:11px 16px;font-size:13px;
+  color:var(--white);transition:border-color .12s}
+.acctbtn:hover{border-color:var(--mute)}
+.acctbtn.save{background:var(--yellow);color:#0C0F10;border-color:var(--yellow);font-weight:700}
+.acctbtn.danger{color:var(--red);border-color:rgba(255,90,72,.4)}
+.acctbtn.danger:hover{border-color:var(--red)}
+.acctbtn:disabled{opacity:.6}
+
 /* substitution arrows: red down = went off, green up = came on */
 .son,.soff{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0;white-space:nowrap}
 .son{color:#2BD68F}
