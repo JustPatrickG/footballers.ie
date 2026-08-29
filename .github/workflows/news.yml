@@ -60,6 +60,13 @@ jobs:
           NEWS_SOURCE_HANDLE: ${{ secrets.NEWS_SOURCE_HANDLE }}
           MANUAL: ${{ inputs.posts }}
         run: |
+          if [ -z "$X_BEARER_TOKEN" ] && [ -z "$MANUAL" ]; then
+            # Scheduled, but not configured yet. Idle quietly rather than
+            # failing every half hour and burning a run to say so.
+            echo "count=0" >> "$GITHUB_OUTPUT"
+            echo "X_BEARER_TOKEN not set - nothing to fetch yet"
+            exit 0
+          fi
           if [ -n "$MANUAL" ]; then
             printf '%s' "$MANUAL" > posts.json
             echo "count=$(python3 -c "import json;print(len(json.load(open('posts.json'))))")" >> "$GITHUB_OUTPUT"
