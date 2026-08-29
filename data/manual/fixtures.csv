@@ -194,6 +194,11 @@ alex-noonan,2026-10-09T19:00:00Z,Drogheda United,H,Premier Division
 alfie-mulvenna,2026-09-05T10:00:00Z,Tottenham U18,H,Premier League U18
 alfie-mulvenna,2026-09-12T10:00:00Z,Arsenal U18,A,Premier League U18
 alfie-mulvenna,2026-09-19T10:00:00Z,Fulham U18,H,Premier League U18
+ali-reghba,2026-08-30T18:15:00Z,Nafta,A,Prva Liga
+ali-reghba,2026-09-06T15:30:00Z,Mura,H,Prva Liga
+ali-reghba,2026-09-13T18:15:00Z,Radomlje,A,Prva Liga
+ali-reghba,2026-09-19T16:00:00Z,Aluminij,H,Prva Liga
+ali-reghba,2026-10-10T16:00:00Z,Nk Brinje Grosuplje,A,Prva Liga
 andrew-moran,2026-09-01T18:45:00Z,Bristol City,H,Championship
 andrew-moran,2026-09-05T11:30:00Z,Blackburn,H,Championship
 andrew-moran,2026-09-08T18:45:00Z,Watford,A,Championship
@@ -1274,6 +1279,9 @@ evan-weir,2026-09-26T14:00:00Z,Stockport County,A,League One
 evan-weir,2026-10-03T14:00:00Z,Notts County,H,League One
 evan-weir,2026-10-06T18:00:00Z,Ipswich Town U21,H,EFL Trophy Southern Grp. D
 evan-weir,2026-10-10T14:00:00Z,Leicester,A,League One
+festy-ebosele,2026-09-05T14:00:00Z,Konyaspor,H,Super Lig
+festy-ebosele,2026-09-13T17:00:00Z,Beşiktaş,A,Super Lig
+festy-ebosele,2026-09-20T17:00:00Z,Samsunspor,H,Super Lig
 finn-azaz,2026-09-01T19:00:00Z,Birmingham,A,Championship
 finn-azaz,2026-09-05T11:30:00Z,Lincoln,A,Championship
 finn-azaz,2026-09-08T18:45:00Z,Swansea,H,Championship
@@ -1512,10 +1520,6 @@ ian-lawlor,2026-09-26T14:00:00Z,Rotherham,A,League Two
 ian-lawlor,2026-10-03T14:00:00Z,Bristol Rovers,H,League Two
 ian-lawlor,2026-10-06T18:00:00Z,Blackpool,A,EFL Trophy Northern Grp. B
 ian-lawlor,2026-10-10T11:30:00Z,Swindon,A,League Two
-ike-orazi,2026-09-05T12:00:00Z,Guingamp,H,Ligue 2
-ike-orazi,2026-09-11T18:00:00Z,Nancy,A,Ligue 2
-ike-orazi,2026-09-18T18:00:00Z,Montpellier,H,Ligue 2
-ike-orazi,2026-10-10T12:00:00Z,Nantes,A,Ligue 2
 isaac-abankwah,2026-08-31T14:00:00Z,Warrington Rylands,A,Northern Premier Division
 isaac-abankwah,2026-09-12T14:00:00Z,Alfreton Town,H,Northern Premier Division
 isaac-abankwah,2026-09-19T14:00:00Z,Stockton Town,A,Northern Premier Division
@@ -1843,10 +1847,6 @@ john-osullivan,2026-09-04T19:00:00Z,Bohemian FC,H,Premier Division
 john-osullivan,2026-09-11T19:00:00Z,St. Patrick's Athletic,A,Premier Division
 john-osullivan,2026-09-18T19:00:00Z,Waterford FC,H,Premier Division
 john-osullivan,2026-10-09T19:00:00Z,Drogheda United,H,Premier Division
-john-patrick,2026-09-05T12:00:00Z,Guingamp,H,Ligue 2
-john-patrick,2026-09-11T18:00:00Z,Nancy,A,Ligue 2
-john-patrick,2026-09-18T18:00:00Z,Montpellier,H,Ligue 2
-john-patrick,2026-10-10T12:00:00Z,Nantes,A,Ligue 2
 john-ross-wilson,2026-09-06T15:00:00Z,Derry City,A,FAI Cup
 john-ross-wilson,2026-09-11T18:45:00Z,Waterford FC,A,Premier Division
 john-ross-wilson,2026-09-14T18:45:00Z,St. Patrick's Athletic,H,Premier Division
@@ -2714,12 +2714,6 @@ rocco-vata,2026-09-08T18:45:00Z,Preston,H,Championship
 rocco-vata,2026-09-12T14:00:00Z,Stoke,H,Championship
 rocco-vata,2026-09-18T19:00:00Z,Bristol City,A,Championship
 rocco-vata,2026-10-10T14:00:00Z,Burnley,H,Championship
-roland-idowu,2026-08-30T13:00:00Z,FCV Farul Constanța,A,Superliga
-roland-idowu,2026-09-02T13:00:00Z,Corvinul Hunedoara,H,Cup Grp. A
-roland-idowu,2026-09-05T12:00:00Z,Sepsi OSK,H,Superliga
-roland-idowu,2026-09-12T16:00:00Z,FC Argeș Pitesti,A,Superliga
-roland-idowu,2026-09-19T16:00:00Z,CFR Cluj,A,Superliga
-roland-idowu,2026-10-10T16:00:00Z,UTA Arad,H,Superliga
 romeo-akachukwu,2026-09-01T19:00:00Z,Birmingham,A,Championship
 romeo-akachukwu,2026-09-05T11:30:00Z,Lincoln,A,Championship
 romeo-akachukwu,2026-09-08T18:45:00Z,Swansea,H,Championship

@@ -1743,6 +1743,19 @@
   ]
  },
  {
+  "fotmob_id": "5833569",
+  "url": "/matches/mura-vs-maribor/wwiho#5833569",
+  "kickoff": "2026-09-06T15:30:00Z",
+  "comp": "Prva Liga",
+  "home": "Maribor",
+  "away": "Mura",
+  "home_id": "8340",
+  "away_id": "2172",
+  "slugs": [
+   "ali-reghba"
+  ]
+ },
+ {
   "fotmob_id": "5836782",
   "url": "/matches/preston-north-end-vs-charlton-athletic/2cnf3o#5836782",
   "kickoff": "2026-08-29T14:00:00Z",
@@ -4349,24 +4362,6 @@
   ]
  },
  {
-  "fotmob_id": "5847412",
-  "url": "/matches/larne-vs-ballymena-united/bpbqa#5847412",
-  "kickoff": "2026-08-29T17:00:00Z",
-  "comp": "Premiership",
-  "home": "Ballymena United",
-  "away": "Larne",
-  "home_id": "4063",
-  "away_id": "2206",
-  "slugs": [
-   "david-toure",
-   "jack-oreilly",
-   "jordan-mceneff",
-   "josh-ukek",
-   "ronan-doherty",
-   "sean-murray"
-  ]
- },
- {
   "fotmob_id": "5847418",
   "url": "/matches/ballymena-united-vs-bangor/1jcucpm#5847418",
   "kickoff": "2026-09-05T14:00:00Z",
@@ -5375,20 +5370,6 @@
   "away": "Guingamp",
   "home_id": "9837",
   "away_id": "9747",
-  "slugs": [
-   "ike-orazi",
-   "john-patrick"
-  ]
- },
- {
-  "fotmob_id": "5803259",
-  "url": "/matches/nancy-vs-reims/2rwec6#5803259",
-  "kickoff": "2026-09-11T18:00:00Z",
-  "comp": "Ligue 2",
-  "home": "Nancy",
-  "away": "Reims",
-  "home_id": "8481",
-  "away_id": "9837",
   "slugs": [
    "ike-orazi",
    "john-patrick"
@@ -7179,42 +7160,18 @@
   ]
  },
  {
-  "fotmob_id": "6093725",
-  "url": "/matches/botosani-vs-corvinul-hunedoara/iieci3c2#6093725",
-  "kickoff": "2026-09-02T13:00:00Z",
-  "comp": "Cup Grp. A",
-  "home": "Boto\u0219ani",
-  "away": "Corvinul Hunedoara",
-  "home_id": "188191",
-  "away_id": "1515102",
+  "fotmob_id": "5847412",
+  "url": "/matches/larne-vs-ballymena-united/bpbqa#5847412",
+  "kickoff": "2026-08-29T17:00:00Z",
+  "comp": "Premiership",
+  "home": "Ballymena United",
+  "away": "Larne",
+  "home_id": "4063",
+  "away_id": "2206",
   "slugs": [
-   "roland-idowu"
-  ]
- },
- {
-  "fotmob_id": "5853490",
-  "url": "/matches/botosani-vs-sepsi-osk/3suxzc3z#5853490",
-  "kickoff": "2026-09-05T12:00:00Z",
-  "comp": "Superliga",
-  "home": "Boto\u0219ani",
-  "away": "Sepsi OSK",
-  "home_id": "188191",
-  "away_id": "583706",
-  "slugs": [
-   "roland-idowu"
-  ]
- },
- {
-  "fotmob_id": "5853499",
-  "url": "/matches/fc-arges-pitesti-vs-botosani/8zxii9m#5853499",
-  "kickoff": "2026-09-12T16:00:00Z",
-  "comp": "Superliga",
-  "home": "FC Arge\u0219 Pitesti",
-  "away": "Boto\u0219ani",
-  "home_id": "9732",
-  "away_id": "188191",
-  "slugs": [
-   "roland-idowu"
+   "ronan-doherty",
+   "sean-murray",
+   "success-edogun"
   ]
  },
  {
