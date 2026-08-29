@@ -2491,6 +2491,7 @@ match_id,minute,type,player,team,venue
 2026-08-29-bristol-city-v-portsmouth,85,sub_off,George Tanner,Bristol City,Ashton Gate Stadium
 2026-08-29-bristol-city-v-portsmouth,85,sub_on,Noah Eile,Bristol City,Ashton Gate Stadium
 2026-08-29-bristol-city-v-portsmouth,90,goal,Marezi,Portsmouth,Ashton Gate Stadium
+2026-08-29-brooklyn-v-sporting-jax,,,,,Maimonides Park
 2026-08-29-brora-rangers-v-turriff-united,10,goal,Connor Bunce,Brora Rangers,Dudgeon Park
 2026-08-29-brora-rangers-v-turriff-united,24,goal,Ben Barron,Brora Rangers,Dudgeon Park
 2026-08-29-brora-rangers-v-turriff-united,26,goal,Mackenzie Taylor,Turriff United,Dudgeon Park
@@ -2583,6 +2584,12 @@ match_id,minute,type,player,team,venue
 2026-08-29-cavalry-fc-v-vancouver-fc,75,sub_off,Morey Doner,Vancouver FC,ATCO Field
 2026-08-29-cavalry-fc-v-vancouver-fc,75,sub_on,Nicolás Mezquida,Vancouver FC,ATCO Field
 2026-08-29-cavalry-fc-v-vancouver-fc,75,sub_on,Aboubacar Traore,Vancouver FC,ATCO Field
+2026-08-29-cavalry-fc-v-vancouver-fc,85,sub_off,Damiano Pecile,Vancouver FC,ATCO Field
+2026-08-29-cavalry-fc-v-vancouver-fc,85,sub_off,Adam Pearlman,Cavalry FC,ATCO Field
+2026-08-29-cavalry-fc-v-vancouver-fc,85,sub_off,Ali Musse,Cavalry FC,ATCO Field
+2026-08-29-cavalry-fc-v-vancouver-fc,85,sub_on,Benjamin Lee,Vancouver FC,ATCO Field
+2026-08-29-cavalry-fc-v-vancouver-fc,85,sub_on,Levi Laing,Cavalry FC,ATCO Field
+2026-08-29-cavalry-fc-v-vancouver-fc,85,sub_on,Owen Antoniuk,Cavalry FC,ATCO Field
 2026-08-29-celtic-v-falkirk,4,goal,Camilo Durán,Celtic,Celtic Park
 2026-08-29-celtic-v-falkirk,29,goal,Camilo Durán,Celtic,Celtic Park
 2026-08-29-celtic-v-falkirk,35,yellow,Lewis Neilson,Falkirk,Celtic Park
@@ -2811,6 +2818,7 @@ match_id,minute,type,player,team,venue
 2026-08-29-grimsby-town-v-fleetwood-town,83,sub_on,Jamie Walker,Grimsby Town,Blundell Park
 2026-08-29-grimsby-town-v-fleetwood-town,85,sub_off,Raffaele Cirino,Fleetwood Town,Blundell Park
 2026-08-29-grimsby-town-v-fleetwood-town,85,sub_on,Danny Andrew,Fleetwood Town,Blundell Park
+2026-08-29-hartford-athletic-v-birmingham-legion-fc,,,,,Trinity Health Stadium
 2026-08-29-heart-of-midlothian-v-st-johnstone,9,goal,James Wilson,Heart of Midlothian,Tynecastle Park
 2026-08-29-heart-of-midlothian-v-st-johnstone,39,own_goal,Enes Alic,Heart of Midlothian,Tynecastle Park
 2026-08-29-heart-of-midlothian-v-st-johnstone,48,goal,Ruari Paton,St. Johnstone,Tynecastle Park
@@ -2931,6 +2939,7 @@ match_id,minute,type,player,team,venue
 2026-08-29-levante-v-real-betis,84,sub_on,Paco Cortés,Levante,Estadio Ciudad de Valencia
 2026-08-29-levante-v-real-betis,86,yellow,Jeremy Toljan,Levante,Estadio Ciudad de Valencia
 2026-08-29-levante-v-real-betis,90,goal,Jon Olasagasti,Levante,Estadio Ciudad de Valencia
+2026-08-29-lexington-sc-v-colorado-springs-switchbacks-fc,,,,,Lexington SC Stadium
 2026-08-29-leyton-orient-v-barnsley,15,goal,Makenzie Kirk,Barnsley,BetWright Stadium
 2026-08-29-leyton-orient-v-barnsley,28,yellow,Jonathan Bland,Barnsley,BetWright Stadium
 2026-08-29-leyton-orient-v-barnsley,29,yellow,Isaac Hayden,Leyton Orient,BetWright Stadium
