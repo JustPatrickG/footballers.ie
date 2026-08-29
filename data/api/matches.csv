@@ -1,6 +1,4 @@
 kickoff,competition,home,away,home_id,away_id,home_score,away_score,status,minute,players
-2026-08-22T18:15:00Z,First Professional League,Levski Sofia,Spartak Varna,8632,10145,6,0,ft,,armstrong-oko-flex
-2026-08-22T19:00:00Z,Serie B,Empoli,Cremonese,8534,7801,1,0,ft,,matteo-egan
 2026-08-22T23:00:00Z,USL Championship,Lexington SC,Las Vegas Lights FC,1430405,915809,2,0,ft,,aaron-molloy
 2026-08-22T23:00:00Z,USL Championship,Indy Eleven,Louisville City FC,514649,614316,2,1,ft,,josh-obrien
 2026-08-22T23:30:00Z,Major League Soccer,Charlotte FC,DC United,1323940,6602,3,1,ft,,joe-byrne
@@ -440,6 +438,7 @@ kickoff,competition,home,away,home_id,away_id,home_score,away_score,status,minut
 2026-09-10T00:30:00Z,Major League Soccer,Austin FC,Colorado,1218886,8314,,,scheduled,,jon-gallagher
 2026-09-10T12:15:00Z,V-League,Viettel,Công An Hà Nội,743070,614354,,,scheduled,,brandon-ly
 2026-09-10T19:00:00Z,League One,Stevenage,Luton,10253,8346,,,scheduled,,callum-marshall;josh-keeley
+2026-09-11T17:00:00Z,Regionalliga Bayern,TSV Aubstadt,Unterhaching,340719,8486,,,scheduled,,kyle-degelman
 2026-09-11T18:00:00Z,Premier League 2,Derby County U21,Tottenham Hotspur U21,773680,860802,,,scheduled,,aaron-maguire
 2026-09-11T18:00:00Z,Eerste Divisie,VVV-Venlo,TOP Oss,9839,7781,,,scheduled,,eanna-clancy
 2026-09-11T18:00:00Z,Premier League 2,Norwich City U21,Birmingham U21,773658,1796111,,,scheduled,,finn-mcgreevy;vinnie-leonard
@@ -549,3 +548,7 @@ kickoff,competition,home,away,home_id,away_id,home_score,away_score,status,minut
 2026-09-12T16:30:00Z,Premier League,Tottenham,Everton,8586,8668,,,scheduled,,desmond-armstrong;jake-obrien;mark-travers
 2026-09-12T16:45:00Z,League Cup,Kilmarnock,Aberdeen,8597,8485,,,scheduled,,cathal-mccarthy;connor-ronan;gavin-molloy
 2026-09-12T17:00:00Z,Premiership,Dungannon Swifts,Linfield,4615,7971,,,scheduled,,chris-shields;darragh-leahy;kealan-dillon;paul-doyle;ryan-patrick-nolan
+2026-09-12T18:00:00Z,Premier League 2,Manchester City U21,Manchester United U21,860800,1070257,,,scheduled,,jack-moorhouse
+2026-09-12T18:30:00Z,First Division,Longford Town,Treaty United,4569,1233534,,,scheduled,,billy-regan;dare-kareem;emre-topcu;james-bailey;scott-brady
+2026-08-29T17:00:00Z,Premiership,Ballymena United,Larne,4063,2206,,,scheduled,,david-toure;jack-oreilly;jordan-mceneff;josh-ukek;ronan-doherty;sean-murray
+2026-08-29T18:30:00Z,Super Lig,Galatasaray,Göztepe,8637,1925,,,scheduled,,sinclair-armstrong

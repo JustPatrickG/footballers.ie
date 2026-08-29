@@ -1743,19 +1743,6 @@
   ]
  },
  {
-  "fotmob_id": "5833569",
-  "url": "/matches/mura-vs-maribor/wwiho#5833569",
-  "kickoff": "2026-09-06T15:30:00Z",
-  "comp": "Prva Liga",
-  "home": "Maribor",
-  "away": "Mura",
-  "home_id": "8340",
-  "away_id": "2172",
-  "slugs": [
-   "ali-reghba"
-  ]
- },
- {
   "fotmob_id": "5836782",
   "url": "/matches/preston-north-end-vs-charlton-athletic/2cnf3o#5836782",
   "kickoff": "2026-08-29T14:00:00Z",
@@ -2143,19 +2130,6 @@
   ]
  },
  {
-  "fotmob_id": "5760470",
-  "url": "/matches/levski-sofia-vs-spartak-varna/2wyuhp#5760470",
-  "kickoff": "2026-08-22T18:15:00Z",
-  "comp": "First Professional League",
-  "home": "Levski Sofia",
-  "away": "Spartak Varna",
-  "home_id": "8632",
-  "away_id": "10145",
-  "slugs": [
-   "armstrong-oko-flex"
-  ]
- },
- {
   "fotmob_id": "5760476",
   "url": "/matches/levski-sofia-vs-botev-plovdiv/2wt7q2#5760476",
   "kickoff": "2026-08-30T16:00:00Z",
@@ -2377,6 +2351,23 @@
    "daire-oconnor",
    "mikey-place",
    "rory-hale"
+  ]
+ },
+ {
+  "fotmob_id": "5101278",
+  "url": "/matches/longford-town-vs-treaty-united/9s3omj7x#5101278",
+  "kickoff": "2026-09-12T18:30:00Z",
+  "comp": "First Division",
+  "home": "Longford Town",
+  "away": "Treaty United",
+  "home_id": "4569",
+  "away_id": "1233534",
+  "slugs": [
+   "billy-regan",
+   "dare-kareem",
+   "emre-topcu",
+   "james-bailey",
+   "scott-brady"
   ]
  },
  {
@@ -7066,19 +7057,6 @@
   "away_id": "10261",
   "slugs": [
    "mark-sykes"
-  ]
- },
- {
-  "fotmob_id": "5967043",
-  "url": "/matches/cremonese-vs-empoli/27fxf2#5967043",
-  "kickoff": "2026-08-22T19:00:00Z",
-  "comp": "Serie B",
-  "home": "Empoli",
-  "away": "Cremonese",
-  "home_id": "8534",
-  "away_id": "7801",
-  "slugs": [
-   "matteo-egan"
   ]
  },
  {
