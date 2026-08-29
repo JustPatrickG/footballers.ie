@@ -2014,6 +2014,7 @@ match_id,minute,type,player,team,venue
 2026-08-29-arbroath-v-livingston,80,yellow,Scott Constable,Arbroath,Gayfield Park
 2026-08-29-arbroath-v-livingston,86,red,Scott Constable,Arbroath,Gayfield Park
 2026-08-29-aston-villa-u18-v-crystal-palace-u18,45,goal,Joshua Blake,Aston Villa U18,Stadium
+2026-08-29-ballymena-united-v-larne,,,,,Ballymena Showgrounds
 2026-08-29-bamber-bridge-v-hyde-united,16,goal,Jack Redshaw,Hyde United,Irongate Stadium
 2026-08-29-bamber-bridge-v-hyde-united,26,goal,Max McCarthy,Hyde United,Irongate Stadium
 2026-08-29-bamber-bridge-v-hyde-united,28,goal,Tom Barkhuizen,Bamber Bridge,Irongate Stadium
@@ -2325,10 +2326,7 @@ match_id,minute,type,player,team,venue
 2026-08-29-kilmarnock-v-dundee-united,90,yellow,Bailey Rice,Kilmarnock,The BBSP Stadium Rugby Park
 2026-08-29-leamington-v-worcester,11,goal,Kyle Finn,Leamington,New Windmill Ground
 2026-08-29-leamington-v-worcester,69,goal,Brandon Smalley,Worcester,New Windmill Ground
-2026-08-29-levante-v-real-betis,24,goal,Adrián De La Fuente,Levante,Estadio Ciudad de Valencia
-2026-08-29-levante-v-real-betis,34,goal,Marc Bartra,Real Betis,Estadio Ciudad de Valencia
-2026-08-29-levante-v-real-betis,45,goal,Rodrigo Riquelme,Real Betis,Estadio Ciudad de Valencia
-2026-08-29-levante-v-real-betis,45,goal,Enzo Bardeli,Levante,Estadio Ciudad de Valencia
+2026-08-29-levante-v-real-betis,,,,,Stadium
 2026-08-29-leyton-orient-v-barnsley,15,goal,Makenzie Kirk,Barnsley,BetWright Stadium
 2026-08-29-leyton-orient-v-barnsley,28,yellow,Jonathan Bland,Barnsley,BetWright Stadium
 2026-08-29-leyton-orient-v-barnsley,29,yellow,Isaac Hayden,Leyton Orient,BetWright Stadium
@@ -2445,7 +2443,7 @@ match_id,minute,type,player,team,venue
 2026-08-29-montrose-v-queen-of-the-south,86,sub_on,Billy Gray,Queen of the South,Links Park
 2026-08-29-montrose-v-queen-of-the-south,90,yellow,Zander MacKenzie,Queen of the South,Links Park
 2026-08-29-montrose-v-queen-of-the-south,90,yellow,Flynn Duffy,Montrose,Links Park
-2026-08-29-monza-v-udinese,,,,,U-Power Stadium
+2026-08-29-monza-v-udinese,32,goal,Jakub Piotrowski,Udinese,U-Power Stadium
 2026-08-29-newport-county-v-tranmere-rovers,11,goal,Shaquille Gwengwe,Newport County,Rodney Parade
 2026-08-29-newport-county-v-tranmere-rovers,15,yellow,Jacob Slater,Tranmere Rovers,Rodney Parade
 2026-08-29-newport-county-v-tranmere-rovers,43,yellow,Christian Doidge,Newport County,Rodney Parade
@@ -2647,7 +2645,9 @@ match_id,minute,type,player,team,venue
 2026-08-29-redcar-athletic-v-fc-united-of-manchester,74,goal,Andrei Ardelean,Redcar Athletic,Green Lane
 2026-08-29-redcar-athletic-v-fc-united-of-manchester,78,goal,Adam Le Fondre,FC United of Manchester,Green Lane
 2026-08-29-redcar-athletic-v-fc-united-of-manchester,88,goal,Adam Boyes,Redcar Athletic,Green Lane
-2026-08-29-ross-county-v-east-kilbride,,,,,Global Energy Stadium
+2026-08-29-ross-county-v-east-kilbride,10,yellow,Connor Randall,Ross County,Global Energy Stadium
+2026-08-29-ross-county-v-east-kilbride,20,sub_off,Jamie Hamilton,East Kilbride,Global Energy Stadium
+2026-08-29-ross-county-v-east-kilbride,20,sub_on,Aaron Steele,East Kilbride,Global Energy Stadium
 2026-08-29-rotherham-united-v-chesterfield,12,goal,Fábio Tavares,Rotherham United,AESSEAL New York Stadium
 2026-08-29-rotherham-united-v-chesterfield,17,yellow,Brandon Cover,Rotherham United,AESSEAL New York Stadium
 2026-08-29-rotherham-united-v-chesterfield,18,yellow,Lee Bonis,Chesterfield,AESSEAL New York Stadium
@@ -2739,6 +2739,30 @@ match_id,minute,type,player,team,venue
 2026-08-29-strasbourg-v-lens,36,yellow,Jeyland Mitchell,Strasbourg,Stade de la Meinau
 2026-08-29-strasbourg-v-lens,38,goal,Florian Thauvin,Lens,Stade de la Meinau
 2026-08-29-strasbourg-v-lens,48,goal,Gessime Yassine,Strasbourg,Stade de la Meinau
+2026-08-29-strasbourg-v-lens,62,sub_off,Maik Nawrocki,Lens,Stade de la Meinau
+2026-08-29-strasbourg-v-lens,62,sub_on,Ruben Aguilar,Lens,Stade de la Meinau
+2026-08-29-strasbourg-v-lens,69,yellow,Franjo Ivanovic,Lens,Stade de la Meinau
+2026-08-29-strasbourg-v-lens,72,sub_off,Michaël Cuisance,Lens,Stade de la Meinau
+2026-08-29-strasbourg-v-lens,72,sub_off,Franjo Ivanovic,Lens,Stade de la Meinau
+2026-08-29-strasbourg-v-lens,72,sub_on,Andrija Bulatovic,Lens,Stade de la Meinau
+2026-08-29-strasbourg-v-lens,72,sub_on,Thorgan Hazard,Lens,Stade de la Meinau
+2026-08-29-strasbourg-v-lens,76,sub_off,Giovanni Reyna,Strasbourg,Stade de la Meinau
+2026-08-29-strasbourg-v-lens,76,sub_on,Samuel Amo-Ameyaw,Strasbourg,Stade de la Meinau
+2026-08-29-strasbourg-v-lens,80,yellow,Ruben Aguilar,Lens,Stade de la Meinau
+2026-08-29-strasbourg-v-lens,83,sub_off,Jacobo Ortega,Strasbourg,Stade de la Meinau
+2026-08-29-strasbourg-v-lens,83,sub_off,Lucas Høgsberg,Strasbourg,Stade de la Meinau
+2026-08-29-strasbourg-v-lens,83,sub_on,Sékou Mara,Strasbourg,Stade de la Meinau
+2026-08-29-strasbourg-v-lens,83,sub_on,Karim Coulibaly,Strasbourg,Stade de la Meinau
+2026-08-29-strasbourg-v-lens,84,yellow,Gessime Yassine,Strasbourg,Stade de la Meinau
+2026-08-29-strasbourg-v-lens,85,goal,Gessime Yassine,Strasbourg,Stade de la Meinau
+2026-08-29-strasbourg-v-lens,89,sub_off,Michal Skóras,Lens,Stade de la Meinau
+2026-08-29-strasbourg-v-lens,89,sub_off,Abdallah Sima,Lens,Stade de la Meinau
+2026-08-29-strasbourg-v-lens,89,sub_on,Mezian Soares,Lens,Stade de la Meinau
+2026-08-29-strasbourg-v-lens,89,sub_on,Florian Sotoca,Lens,Stade de la Meinau
+2026-08-29-strasbourg-v-lens,90,sub_off,Sebastian Nanasi,Strasbourg,Stade de la Meinau
+2026-08-29-strasbourg-v-lens,90,sub_off,Gessime Yassine,Strasbourg,Stade de la Meinau
+2026-08-29-strasbourg-v-lens,90,sub_on,Mateo Del Blanco,Strasbourg,Stade de la Meinau
+2026-08-29-strasbourg-v-lens,90,sub_on,Fabio Baldé,Strasbourg,Stade de la Meinau
 2026-08-29-taunton-town-v-basingstoke,5,goal,Alfie Moulden,Taunton Town,Wordsworth Drive
 2026-08-29-taunton-town-v-basingstoke,17,goal,Jack Rice,Taunton Town,Wordsworth Drive
 2026-08-29-taunton-town-v-basingstoke,19,goal,Jay Murray,Taunton Town,Wordsworth Drive
