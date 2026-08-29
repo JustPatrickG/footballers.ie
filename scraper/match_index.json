@@ -948,19 +948,6 @@
   ]
  },
  {
-  "fotmob_id": "5109903",
-  "url": "/matches/las-vegas-lights-fc-vs-lexington-sc/z4f1d3c6#5109903",
-  "kickoff": "2026-08-22T23:00:00Z",
-  "comp": "USL Championship",
-  "home": "Lexington SC",
-  "away": "Las Vegas Lights FC",
-  "home_id": "1430405",
-  "away_id": "915809",
-  "slugs": [
-   "aaron-molloy"
-  ]
- },
- {
   "fotmob_id": "5109916",
   "url": "/matches/colorado-springs-switchbacks-fc-vs-lexington-sc/qoca8tfi#5109916",
   "kickoff": "2026-08-29T23:00:00Z",
@@ -2403,6 +2390,19 @@
   "away": "Colorado Springs Switchbacks FC",
   "home_id": "1003206",
   "away_id": "614321",
+  "slugs": [
+   "barry-coffey"
+  ]
+ },
+ {
+  "fotmob_id": "5109937",
+  "url": "/matches/tampa-bay-rowdies-vs-hartford-athletic/9723hhfx#5109937",
+  "kickoff": "2026-09-12T23:00:00Z",
+  "comp": "USL Championship",
+  "home": "Hartford Athletic",
+  "away": "Tampa Bay Rowdies",
+  "home_id": "1003206",
+  "away_id": "197328",
   "slugs": [
    "barry-coffey"
   ]
@@ -5626,14 +5626,14 @@
   ]
  },
  {
-  "fotmob_id": "5109911",
-  "url": "/matches/sporting-jax-vs-brooklyn/2bexmh50j#5109911",
-  "kickoff": "2026-08-29T23:00:00Z",
+  "fotmob_id": "5109944",
+  "url": "/matches/rhode-island-fc-vs-sporting-jax/1yyxwxw9t#5109944",
+  "kickoff": "2026-09-12T23:00:00Z",
   "comp": "USL Championship",
-  "home": "Brooklyn",
-  "away": "Sporting JAX",
-  "home_id": "1877733",
-  "away_id": "1737991",
+  "home": "Sporting JAX",
+  "away": "Rhode Island FC",
+  "home_id": "1737991",
+  "away_id": "1597140",
   "slugs": [
    "harvey-neville",
    "kieran-sadlier"
@@ -6661,19 +6661,6 @@
   "away_id": "580438",
   "slugs": [
    "josh-barrett"
-  ]
- },
- {
-  "fotmob_id": "5109902",
-  "url": "/matches/indy-eleven-vs-louisville-city-fc/84rhch4r#5109902",
-  "kickoff": "2026-08-22T23:00:00Z",
-  "comp": "USL Championship",
-  "home": "Indy Eleven",
-  "away": "Louisville City FC",
-  "home_id": "514649",
-  "away_id": "614316",
-  "slugs": [
-   "josh-obrien"
   ]
  },
  {
@@ -8119,6 +8106,19 @@
   ]
  },
  {
+  "fotmob_id": "1000008695",
+  "url": "/matches/cavalry-fc-vs-vancouver-fc/12l2txdxx#1000008695",
+  "kickoff": "2026-08-29T21:00:00Z",
+  "comp": "Premier League",
+  "home": "Cavalry FC",
+  "away": "Vancouver FC",
+  "home_id": "1022952",
+  "away_id": "1436202",
+  "slugs": [
+   "tom-field"
+  ]
+ },
+ {
   "fotmob_id": "5175960",
   "url": "/matches/vancouver-fc-vs-supra-du-quebec/1z01kvhvr#5175960",
   "kickoff": "2026-09-06T22:00:00Z",
@@ -8262,6 +8262,20 @@
   ]
  },
  {
+  "fotmob_id": "5109911",
+  "url": "/matches/sporting-jax-vs-brooklyn/2bexmh50j#5109911",
+  "kickoff": "2026-08-29T23:00:00Z",
+  "comp": "USL Championship",
+  "home": "Brooklyn",
+  "away": "Sporting JAX",
+  "home_id": "1877733",
+  "away_id": "1737991",
+  "slugs": [
+   "harvey-neville",
+   "kieran-sadlier"
+  ]
+ },
+ {
   "fotmob_id": "5991401",
   "url": "/matches/potenza-vs-cosenza/1axj3u#5991401",
   "kickoff": "2026-08-29T19:00:00Z",
@@ -8285,19 +8299,6 @@
   "away_id": "6702",
   "slugs": [
    "tayo-adaramola"
-  ]
- },
- {
-  "fotmob_id": "1000008695",
-  "url": "/matches/cavalry-fc-vs-vancouver-fc/12l2txdxx#1000008695",
-  "kickoff": "2026-08-29T21:00:00Z",
-  "comp": "Premier League",
-  "home": "Cavalry FC",
-  "away": "Vancouver FC",
-  "home_id": "1022952",
-  "away_id": "1436202",
-  "slugs": [
-   "tom-field"
   ]
  },
  {
