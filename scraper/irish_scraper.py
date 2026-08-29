@@ -75,14 +75,23 @@ def first(iterable, default=None):
 
 
 def get_json(url, debug_name=None):
-    r = SESSION.get(url, timeout=25)
-    r.raise_for_status()
-    data = r.json()
-    if debug_name:
-        DEBUG_DIR.mkdir(exist_ok=True)
-        (DEBUG_DIR / f"{debug_name}.json").write_text(
-            json.dumps(data, indent=1)[:2_000_000])
-    return data
+    last = None
+    for _attempt in range(5):
+        try:
+            r = SESSION.get(url, timeout=25)
+        except requests.RequestException as e:
+            last = e; time.sleep(2 * (_attempt + 1)); continue
+        if r.status_code >= 500:
+            last = RuntimeError(f"{r.status_code} server error at {url}")
+            time.sleep(2 * (_attempt + 1)); continue
+        r.raise_for_status()
+        data = r.json()
+        if debug_name:
+            DEBUG_DIR.mkdir(exist_ok=True)
+            (DEBUG_DIR / f"{debug_name}.json").write_text(
+                json.dumps(data, indent=1)[:2_000_000])
+        return data
+    raise last if last else RuntimeError(f"failed to fetch {url}")
 
 
 MATCH_API = "https://www.fotmob.com/api/data/matchDetails?matchId={mid}"
@@ -146,18 +155,27 @@ def page_match_id(data):
 
 def get_next_data(url, debug_name=None):
     """Fetch a fotmob page and return the embedded __NEXT_DATA__ JSON."""
-    r = SESSION.get(url, timeout=25)
-    r.raise_for_status()
-    m = re.search(
-        r'<script id="__NEXT_DATA__"[^>]*>(.*?)</script>', r.text, re.S)
-    if not m:
-        raise RuntimeError(f"no __NEXT_DATA__ found at {url}")
-    data = json.loads(m.group(1))
-    if debug_name:
-        DEBUG_DIR.mkdir(exist_ok=True)
-        (DEBUG_DIR / f"{debug_name}.json").write_text(
-            json.dumps(data, indent=1)[:5_000_000])
-    return data
+    last = None
+    for _attempt in range(5):
+        try:
+            r = SESSION.get(url, timeout=25)
+        except requests.RequestException as e:
+            last = e; time.sleep(2 * (_attempt + 1)); continue
+        if r.status_code >= 500:
+            last = RuntimeError(f"{r.status_code} server error at {url}")
+            time.sleep(2 * (_attempt + 1)); continue
+        r.raise_for_status()
+        m = re.search(
+            r'<script id="__NEXT_DATA__"[^>]*>(.*?)</script>', r.text, re.S)
+        if not m:
+            raise RuntimeError(f"no __NEXT_DATA__ found at {url}")
+        data = json.loads(m.group(1))
+        if debug_name:
+            DEBUG_DIR.mkdir(exist_ok=True)
+            (DEBUG_DIR / f"{debug_name}.json").write_text(
+                json.dumps(data, indent=1)[:5_000_000])
+        return data
+    raise last if last else RuntimeError(f"failed to fetch {url}")
 
 
 def read_player_list():
@@ -524,9 +542,19 @@ def team_irish_players(tid, tname="", debug=False):
     url = TEAM_URL.format(tid=tid, tslug=slugify(tname or "team"))
     try:
         data = get_next_data(url, debug_name=f"team_{tid}" if debug else None)
-    except Exception:
-        time.sleep(2)  # one retry - fotmob 500s are often transient
-        data = get_next_data(url, debug_name=f"team_{tid}" if debug else None)
+    except Exception as _e:
+        # some club squad pages keep 500ing - fall back to the JSON API, which
+        # the shape-agnostic walk below reads just the same
+        data = None
+        for _api in (f"https://www.fotmob.com/api/teams?id={tid}",
+                     f"https://www.fotmob.com/api/data/teams?id={tid}"):
+            try:
+                data = get_json(_api, debug_name=f"teamapi_{tid}" if debug else None)
+                break
+            except Exception:
+                data = None
+        if data is None:
+            raise _e
     role_map = {"keeper": "GK", "goalkeeper": "GK", "defender": "DEF",
                 "midfielder": "MID", "attacker": "FWD", "forward": "FWD"}
     players = {}
