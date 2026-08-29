@@ -211,6 +211,55 @@ def _merge_players():
         merged["slug"] = slug
         merged["_source"] = "manual" if slug in man and slug not in api else ("api+manual" if slug in man else "api")
         out[slug] = merged
+
+    # --- League of Ireland: one canonical club name + division -----------
+    # The feeds disagree on both league ("Premier Division"/"First Division"/
+    # "League of Ireland"/blank) and club spelling ("Bohemians" vs "Bohemian
+    # FC", "Wexford" vs "Wexford FC"), which split one league into five and one
+    # club into two. The club decides the division; one spelling per club.
+    PREM = "League of Ireland Premier Division"
+    FIRST = "League of Ireland First Division"
+    _CANON_CLUBS = {
+        PREM: {
+            "Shamrock Rovers": [], "Dundalk": [], "Shelbourne": ["Shels"],
+            "Derry City": [], "Sligo Rovers": [], "Drogheda United": ["Drogheda"],
+            "St. Patrick's Athletic": ["St Patrick's Athletic",
+                                       "Saint Patrick's Athletic", "St Pats"],
+            "Bohemian FC": ["Bohemians", "Bohs"],
+            "Galway United FC": ["Galway United"],
+            "Waterford FC": ["Waterford"],
+        },
+        FIRST: {
+            "Cork City": [], "UCD": ["UCD AFC"], "Bray Wanderers": [],
+            "Longford Town": ["Longford"], "Cobh Ramblers": ["Cobh"],
+            "Kerry FC": ["Kerry"], "Athlone Town": ["Athlone"],
+            "Wexford FC": ["Wexford"], "Treaty United": ["Treaty"],
+            "Finn Harps": ["Finn Harps FC"],
+        },
+    }
+    def _lk(s):
+        s = re.sub(r"[^a-z]", "", (s or "").lower())
+        return re.sub(r"(afc|fc)$", "", s)
+    _LOI = {}   # club key -> (division, canonical club name)
+    for _div, _clubs in _CANON_CLUBS.items():
+        for _canon, _variants in _clubs.items():
+            for _name in (_canon, *_variants):
+                _LOI[_lk(_name)] = (_div, _canon)
+    for _p in out.values():
+        _hit = _LOI.get(_lk(_p.get("club", "")))
+        if _hit:
+            _p["league"], _p["club"] = _hit[0], _hit[1]
+            _p["tier"] = "loi"
+        else:
+            if (_p.get("league") or "").strip().lower() == "league of ireland":
+                # generic "League of Ireland" on a club we don't recognise as
+                # LOI (youth sides, foreign academies) is stale — don't trust
+                # it to place the player in Ireland.
+                _p["league"] = ""
+            if (_p.get("tier") or "").strip() == "loi":
+                # tagged League of Ireland but not at an LOI club (they moved
+                # abroad) — they belong with the players abroad, not the LOI.
+                _p["tier"] = "abroad-lower"
     return out
 
 def _merge_rows(name, key_fields):
@@ -2031,6 +2080,8 @@ LEAGUE_COUNTRY = {
     # Ireland
     "premier division": "Ireland", "first division": "Ireland",
     "league of ireland": "Ireland", "loi": "Ireland",
+    "league of ireland premier division": "Ireland",
+    "league of ireland first division": "Ireland",
     "premier division relegation": "Ireland",
     # Northern Ireland
     "nifl premiership": "Northern Ireland", "irish premiership": "Northern Ireland",
@@ -2440,7 +2491,12 @@ COUNTRY_POINT = {
  "Portugal":(39.6,-8.0,7), "Turkey":(39.0,35.2,6), "Hungary":(47.2,19.5,7),
  "Denmark":(56.0,10.0,7), "Sweden":(60.0,15.0,5), "Norway":(61.0,9.0,5),
  "Poland":(52.1,19.4,6), "Switzerland":(46.8,8.2,7), "Austria":(47.6,14.1,7),
- "Greece":(39.0,22.0,6), "USA":(39.8,-98.5,4), "Other":(48.0,10.0,4),
+ "Greece":(39.0,22.0,6), "USA":(39.8,-98.5,4),
+ "United States":(39.8,-98.5,4), "Australia":(-25.3,133.8,4),
+ "Bulgaria":(42.7,25.5,7), "Czechia":(49.8,15.5,7), "Finland":(61.9,25.7,4),
+ "Romania":(45.9,25.0,6), "Slovenia":(46.1,14.8,8), "Vietnam":(16.0,107.8,5),
+ "Croatia":(45.1,15.5,7), "Cyprus":(35.1,33.2,9), "Japan":(36.2,138.3,5),
+ "Other":(48.0,10.0,4),
 }
 
 def build_map():
@@ -2451,8 +2507,9 @@ def build_map():
 
     points = []
     for c, ps in sorted(by_country.items(), key=lambda kv: -len(kv[1])):
-        if c == NO_CLUB: continue          # nothing to put on a map
-        lat, lon, zoom = COUNTRY_POINT.get(c, COUNTRY_POINT["Other"])
+        if c in ("Other", NO_CLUB): continue   # no club, or country unknown — off the map
+        if c not in COUNTRY_POINT: continue    # only place a marker where we know the spot
+        lat, lon, zoom = COUNTRY_POINT[c]
         clubs = {}
         for p in ps:
             clubs.setdefault(p["club"], 0)
@@ -2470,18 +2527,15 @@ def build_map():
         ))
 
     total = sum(p["n"] for p in points)
-    # players between clubs belong on the page but not on the map
-    spare = len(by_country.get(NO_CLUB, []))
-    extra = (f'<a class="cbtn" href="country/{country_slug(NO_CLUB)}.html">'
-             f'<span class="cn">{NO_CLUB}</span><span class="cnum">{spare}</span></a>'
-             if spare else "")
+    # players with no club are found by name search only — not shown here
+    extra = ""
     legend = "".join(
         f'<button class="cbtn" data-i="{i}"><span class="cn">{esc(p["name"])}</span>'
         f'<span class="cnum">{p["n"]}</span></button>' for i, p in enumerate(points)) + extra
 
     body = f'''
     <div class="pagehead"><h1>Where are the Irish?</h1>
-      <p>{total + spare} tracked players across {len(points)} countries. Tap a marker or a country to zoom in.</p></div>
+      <p>{total} tracked players across {len(points)} countries. Tap a marker or a country to zoom in.</p></div>
     <div id="mapwrap">
       <div id="themap"></div>
       <button id="resetmap" title="Back to the full map">Reset</button>
@@ -2649,8 +2703,10 @@ def build_clubs_index():
     order = sorted(by_country, key=lambda c: (-len(by_country[c]), c))
     cards = ""
     for c in order:
-        ps = by_country[c]
-        leagues = len({p["league"] for p in ps if p["league"] not in ("","—")})
+        if c in ("Other", NO_CLUB): continue   # no "Other" country tile; clubless -> search
+        ps = [p for p in by_country[c] if (p.get("club") or "").strip()]
+        if not ps: continue
+        leagues = len({p["league"] for p in ps if p["league"] not in ("","—","Other")})
         cards += (f'<a class="clubcard" href="country/{country_slug(c)}.html">'
                   f'<div class="cn">{esc(c)}</div>'
                   f'<div class="cl2">{leagues} league{"s" if leagues!=1 else ""}</div>'
@@ -2670,8 +2726,14 @@ def build_country(cname, ps):
     """Second level: leagues within a country."""
     by_league = {}
     for p in ps:
-        by_league.setdefault(p["league"] or "Other", []).append(p)
+        if not (p.get("club") or "").strip():
+            continue                       # clubless: search only, never listed
+        lg = (p.get("league") or "").strip()
+        if not lg or lg in ("Other", "—"):
+            continue                       # no bogus "Other" league bucket
+        by_league.setdefault(lg, []).append(p)
     order = sorted(by_league, key=lambda l: (-len(by_league[l]), l))
+    shown = sum(len(v) for v in by_league.values())
     cards = ""
     for l in order:
         lp = by_league[l]
@@ -2682,7 +2744,7 @@ def build_country(cname, ps):
                   f'<div class="cc">{len(lp)} Irish player{"s" if len(lp)!=1 else ""}</div></a>')
     body = (f'<a class="crumb" data-back href="../clubs.html">← Back</a>'
             f'<div class="pagehead"><h1>{esc(cname)}</h1>'
-            f'<p>{len(ps)} Irish player{"s" if len(ps)!=1 else ""} across {len(order)} league{"s" if len(order)!=1 else ""}.</p></div>'
+            f'<p>{shown} Irish player{"s" if shown!=1 else ""} across {len(order)} league{"s" if len(order)!=1 else ""}.</p></div>'
             f'<div class="clubgrid">{cards}</div>')
     return shell(f"{cname} — Irish players — footballers.ie",
                  f"Irish players in {cname}, by league.", "../", "clubs.html", body,
@@ -4390,9 +4452,15 @@ os.makedirs(f"{OUT}/league", exist_ok=True)
 _by_country = {}
 for _p in PLAYERS: _by_country.setdefault(player_country(_p), []).append(_p)
 for _c, _ps in _by_country.items():
+    if _c in ("Other", NO_CLUB): continue          # no Other/No-club country pages
+    _ps = [_p for _p in _ps if (_p.get("club") or "").strip()]
+    if not _ps: continue
     open(f"{OUT}/country/{country_slug(_c)}.html","w").write(build_country(_c, _ps))
     _by_league = {}
-    for _p in _ps: _by_league.setdefault(_p["league"] or "Other", []).append(_p)
+    for _p in _ps:
+        _lg = (_p.get("league") or "").strip()
+        if not _lg or _lg in ("Other", "—"): continue
+        _by_league.setdefault(_lg, []).append(_p)
     for _l, _lp in _by_league.items():
         open(f"{OUT}/league/{club_slug(_c)}-{club_slug(_l)}.html","w").write(build_league(_c, _l, _lp))
 open(f"{OUT}/news.html","w").write(build_news())
