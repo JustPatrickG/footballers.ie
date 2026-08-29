@@ -2644,8 +2644,16 @@ def parse_match_page(data):
     minute = ""
     lt = status.get("liveTime") or {}
     if isinstance(lt, dict):
-        minute = re.sub(r"[^0-9+]", "",
-                        str(lt.get("short") or lt.get("long") or ""))
+        raw = str(lt.get("short") or lt.get("long") or "")
+        # FotMob shows "HT" (and sometimes "Half Time") at the break. Keep it as
+        # a real value rather than stripping it to an empty string, so the site
+        # can say "HT" instead of a blank live badge.
+        if "ht" in raw.lower() or "half" in raw.lower():
+            minute = "HT"
+        else:
+            minute = re.sub(r"[^0-9+]", "", raw)
+    # FotMob keeps started=true through the interval, so an "HT" minute is still
+    # a live match — don't blank it out.
     if st != "live":
         minute = ""
     if st == "scheduled":

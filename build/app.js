@@ -203,6 +203,7 @@
 
   var LIVE_STAMP = 0;   // when live.json was written (ms). 0 = unknown
   function liveMin(m) {
+    if (/ht/i.test(String(m.minute))) return 'HT';   // half-time is a label, not a number
     var base = parseInt(m.minute, 10);
     if (isNaN(base)) return m.minute || '';
     var extra = (m._stamp || LIVE_STAMP) ? Math.floor((Date.now() - (m._stamp || LIVE_STAMP)) / 60000) : 0;
@@ -213,8 +214,10 @@
     return String(mm) + (String(m.minute).indexOf('+') > -1 ? String(m.minute).slice(String(m.minute).indexOf('+')) : '');
   }
   function statusChip(m, now) {
-    if (m.status === 'live') {
-      return '<span class="mcstat live"><i></i>' + (m.minute ? liveMin(m) + "'" : 'LIVE') + '</span>';
+    if (m.status === 'live' || m.status === 'ht') {
+      var lm = m.status === 'ht' ? 'HT' : (m.minute ? liveMin(m) : '');
+      var show = !lm ? 'LIVE' : (lm === 'HT' ? 'HT' : lm + "'");
+      return '<span class="mcstat live"><i></i>' + show + '</span>';
     }
     if (m.status === 'ft' || ended(m) < now) {
       var ago = now - ended(m);
@@ -395,7 +398,7 @@
   function dayKey(d) { return d.getFullYear() + '-' + (d.getMonth() + 1) + '-' + d.getDate(); }
   function midRow(m, now) {
     var played = m.status === 'live' || m.status === 'ft' || ended(m) < now;
-    if (m.status === 'live') return '<div class="mid sc lv">' + m.hs + ' – ' + m.as_ + '<br><small>' + (m.minute ? liveMin(m) + "'" : 'LIVE') + '</small></div>';
+    if (m.status === 'live' || m.status === 'ht') { var _lm = m.status === 'ht' ? 'HT' : (m.minute ? liveMin(m) : ''); return '<div class="mid sc lv">' + m.hs + ' – ' + m.as_ + '<br><small>' + (!_lm ? 'LIVE' : (_lm === 'HT' ? 'HT' : _lm + "'")) + '</small></div>'; }
     if (played && m.hs !== '' && m.hs !== null && m.hs !== undefined) return '<div class="mid sc">' + m.hs + ' – ' + m.as_ + '</div>';
     if (played) return '<div class="mid">FT</div>';
     return '<div class="mid">' + new Date(m.kickoff).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', hour12: false }) + '</div>';
