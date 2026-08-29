@@ -140,8 +140,11 @@ function kickWorkflow() {
 
 export default async function handler(req, res) {
   const raw = String(req.query.ids || '');
+  // Match the client cap. The client sends its in-progress matches first, so
+  // the first 30 are the ones that actually need polling; a lower cap here
+  // silently dropped live games off the end on a busy Saturday.
   const ids = [...new Set(raw.split(',').map(s => s.trim())
-    .filter(s => /^[0-9]{4,12}$/.test(s)))].slice(0, 20);
+    .filter(s => /^[0-9]{4,12}$/.test(s)))].slice(0, 30);
 
   if (!ids.length) {
     res.setHeader('Cache-Control', 's-maxage=60');
