@@ -3527,7 +3527,49 @@ def build_player(p):
                 "Uncapped at any level — free to commit to any association they qualify for.")
 
     # ---------------- MATCHES tab ----------------
-    upcoming = p["fixtures"]
+    # p["fixtures"]/p["results"] come from the per-player feed, which misses two
+    # things: a match that's ON RIGHT NOW (not a finished result, not a future
+    # fixture) and, sometimes, upcoming games the feed didn't return. Fill both
+    # from the match centre (MATCHES), which is keyed on the players column.
+    import datetime as __dt
+    _now = __dt.datetime.now(__dt.timezone.utc)
+    def _ko(mm):
+        try: return __dt.datetime.fromisoformat((mm.get("kickoff") or "").replace("Z", "+00:00"))
+        except ValueError: return None
+    _resdays = {(r[0] or "")[:10] for r in p["results"]}
+    _fixkeys = {((d or "")[:10], _club_key(o)) for d,o,h,cp in p["fixtures"]}
+    ongoing_m, _extra_up = [], []
+    for _m in MATCHES:
+        if p["slug"] not in (_m.get("players") or "").split(";"):
+            continue
+        k = _ko(_m)
+        if not k:
+            continue
+        _date = (_m.get("kickoff") or "")[:10]
+        _myclub = club_at(p["slug"], _date) or p["club"]
+        if _club_key(_m.get("away")) == _club_key(_myclub):
+            _opp, _ha = _m.get("home",""), "A"
+        else:
+            _opp, _ha = _m.get("away",""), "H"
+        _cp = _m.get("competition","")
+        if k > _now:
+            if (_date, _club_key(_opp)) not in _fixkeys:
+                _extra_up.append((_date, _opp, _ha, _cp))
+        elif (_now - k).total_seconds() < 3.5 * 3600 and _date not in _resdays:
+            ongoing_m.append((_m, _opp, _ha, _cp))
+
+    upcoming = list(p["fixtures"]) + _extra_up
+    upcoming.sort(key=lambda x: x[0])
+
+    ongr = ""
+    for _m, _opp, _ha, _cp in ongoing_m:
+        mid = match_id(_m)
+        ongr += (f'<a class="mxrow lnk ongoing" href="../match/{mid}.html">'
+                 f'<div class="mxtop"><span class="livedot">\u25cf LIVE</span>'
+                 f'<span class="mxcomp">{esc(_cp)}</span></div>'
+                 f'<div class="mxmain">{club_badge(_opp)}<span class="mxopp">{esc(_opp)}</span>'
+                 f'<span class="mxr"><span class="mxmin">tap for live</span></span></div></a>')
+
     def _fxrow(d,o,h,cp):
         mid = match_page_for(p, d, o)
         tag, href = ("a", f' href="../match/{mid}.html"') if mid else ("div", "")
@@ -3676,6 +3718,7 @@ def build_player(p):
     <div class="ppane" id="pane-matches" hidden>
       <div class="sec"><h2>Upcoming</h2>{f'<span class="more" style="border:0">{len(upcoming)} listed</span>' if upcoming else ''}</div>
       <div class="fxlist">{fxr or '<div class="emptystate" style="display:block">No fixtures listed.</div>'}</div>
+      {f'<div class="sec"><h2>On now</h2></div><div class="mxlist">{ongr}</div>' if ongr else ''}
       <div class="sec"><h2>Recent matches</h2><span class="more" style="border:0">{len(p["results"])} on record</span></div>
       <div class="mxlist">{mxr or '<div class="emptystate" style="display:block">No appearances yet.</div>'}</div>
       <div class="rmnote">Only games they were on the pitch for. Unused subs and squad omissions aren\'t listed.

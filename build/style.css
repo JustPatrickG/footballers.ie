@@ -1467,3 +1467,5 @@ a.intlblock.lnk:hover{border-color:var(--teal)}
 .clubchip{display:inline-flex;align-items:center;gap:6px;background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:4px 12px 4px 6px;font-size:13.5px;color:var(--white)}
 @media(max-width:560px){.bigrid,.sumgrid{gap:14px 4px}.ptab{padding:10px 10px;font-size:14px}}
 .tlempty{padding:18px 16px;color:var(--mute);font-family:'IBM Plex Mono',monospace;font-size:13px;text-align:center}
+.mxrow.ongoing{border-color:rgba(255,84,112,.4)}
+.livedot{color:#FF5470;font-family:'IBM Plex Mono',monospace;font-size:10px;font-weight:700;letter-spacing:.06em}
