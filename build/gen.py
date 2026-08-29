@@ -3409,6 +3409,57 @@ def _pos_spot(p):
     return (fb, None) if fb else (None, None)
 
 
+PLIVE_JS = """<script>
+/* Live season-stat updates on a player profile. */
+(function(){
+  var L = window.FB_PLIVE; if (!L || !L.fmid) return;
+  function norm(t){ return String(t||'').normalize('NFKD').replace(/[\u0300-\u036f]/g,'')
+    .replace(/[^a-z ]/gi,'').toLowerCase().trim(); }
+  var me = norm(L.name), lastMin = null, lastStamp = 0,
+      involved = false, started = false, stillOn = false, onAt = 0;
+  function minutes(){
+    if (lastMin != null)
+      return stillOn ? lastMin + Math.min(25, Math.floor((Date.now()-lastStamp)/60000)) : lastMin;
+    var mm = Math.floor((Date.now() - Date.parse(L.ko)) / 60000);
+    return started ? Math.max(0, mm) : Math.max(0, mm - onAt);
+  }
+  function apply(){
+    if (!involved) return;
+    var mn = minutes();
+    document.querySelectorAll('[data-live]').forEach(function(el){
+      var base = parseInt(el.getAttribute('data-base'),10) || 0, k = el.getAttribute('data-live');
+      if (k === 'apps')   el.textContent = base + 1;
+      else if (k === 'starts') el.textContent = base + (started ? 1 : 0);
+      else if (k === 'mins')   el.textContent = base + Math.max(0, mn);
+    });
+  }
+  async function poll(){
+    try {
+      var r = await fetch('/api/live?ids=' + L.fmid + '&full=1', { cache:'no-store' });
+      if (!r.ok) return;
+      var d = await r.json(), m = d.matches && d.matches[L.fmid];
+      if (!m || m.status === 'scheduled') { involved = false; return; }
+      var offAt = null, on = null;
+      (m.ev || []).forEach(function(e){
+        if (e.type !== 'sub') return;
+        if (norm(e.player) === me) offAt = parseInt(e.min, 10);
+        if (norm(e.sin) === me)    on    = parseInt(e.min, 10);
+      });
+      var ps = m.pstats && m.pstats[me];
+      involved = !!ps || offAt != null || on != null;
+      if (!involved) return;
+      started = (on == null);
+      onAt = on || 0;
+      stillOn = (offAt == null) && m.status !== 'ft';
+      lastMin = (ps && ps.min != null) ? ps.min : null;
+      lastStamp = Date.now();
+      apply();
+    } catch (e) {}
+  }
+  poll(); setInterval(poll, 30000); setInterval(apply, 60000);
+})();
+</script>"""
+
 def build_player(p):
     s, c = p["season"], p["career"]
     t = p.get("tm") or {}
@@ -3423,7 +3474,10 @@ def build_player(p):
     cells = []
     def cell(big, small):
         if big: cells.append(f'<div class="bic"><div class="bib">{big}</div><div class="bis">{small}</div></div>')
-    cell(esc(t.get("height") or ""), "Height")
+    import re as _reh
+    _hraw = t.get("height") or ""
+    _hm = _reh.search(r"(\d+)ft (\d+)in", _hraw)
+    cell(esc(f'{_hm.group(1)}\'{_hm.group(2)}"' if _hm else _hraw), "Height")
     if p["age"]: cell(f'{p["age"]} yrs', esc(dob_disp) if dob_disp else "Age")
     nats = t.get("nations") or (["Ireland"] if p["eligible"] else [])
     if nats: cell(esc(nats[0]), "Country" if len(nats) == 1 else esc(" · ".join(nats[1:])))
@@ -3442,9 +3496,9 @@ def build_player(p):
         <div><b>{stat(p,"s_goals",s["g"])}</b><span>Goals</span></div>
         <div><b>{stat(p,"s_assists",s["a"])}</b><span>Assists</span></div>
         <div>{rating_chip(p)}<span>Rating</span></div>
-        <div><b>{stat(p,"s_apps",s["ap"])}</b><span>Matches</span></div>
-        <div><b>{stat(p,"s_starts",s["starts"])}</b><span>Started</span></div>
-        <div><b>{stat(p,"s_mins",s["mins"])}</b><span>Minutes played</span></div>
+        <div><b data-live="apps" data-base="{s["ap"] or 0}">{stat(p,"s_apps",s["ap"])}</b><span>Matches</span></div>
+        <div><b data-live="starts" data-base="{s["starts"] or 0}">{stat(p,"s_starts",s["starts"])}</b><span>Started</span></div>
+        <div><b data-live="mins" data-base="{s["mins"] or 0}">{stat(p,"s_mins",s["mins"])}</b><span>Minutes played</span></div>
       </div></div>'''
     elif p["slug"] in MISMATCHED:
         season_card = ('<div class="pcard nodata">We haven\'t matched this player to a record on our stats '
@@ -3569,6 +3623,13 @@ def build_player(p):
                  f'<span class="mxcomp">{esc(_cp)}</span></div>'
                  f'<div class="mxmain">{club_badge(_opp)}<span class="mxopp">{esc(_opp)}</span>'
                  f'<span class="mxr"><span class="mxmin">tap for live</span></span></div></a>')
+
+    plive = "null"
+    if ongoing_m:
+        _lm = ongoing_m[0][0]
+        _fid = fotmob_id(_lm)
+        if _fid:
+            plive = json.dumps({"fmid": _fid, "ko": _lm.get("kickoff", ""), "name": p["n"]})
 
     def _fxrow(d,o,h,cp):
         mid = match_page_for(p, d, o)
@@ -3752,6 +3813,8 @@ def build_player(p):
         document.getElementById('cv-club').hidden=b.dataset.view!=='club';}})}});
     }})();
     </script>
+    <script>window.FB_PLIVE={plive};</script>
+    {PLIVE_JS}
     '''
     return shell(f"{p['n']} — footballers.ie",
                  f"{p['n']} ({p['club']}, {p['league']}) — season stats, fixtures, results and international record.",
