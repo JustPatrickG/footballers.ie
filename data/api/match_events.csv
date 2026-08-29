@@ -2255,6 +2255,17 @@ match_id,minute,type,player,team,venue
 2026-08-29-cercle-brugge-v-lommel,27,yellow,Dries Wouters,Lommel,Jan Breydelstadion
 2026-08-29-cercle-brugge-v-lommel,32,yellow,Geoffrey Kondo,Cercle Brugge,Jan Breydelstadion
 2026-08-29-cercle-brugge-v-lommel,34,yellow,Shawn Adewoye,Lommel,Jan Breydelstadion
+2026-08-29-cercle-brugge-v-lommel,61,goal,Tom Reyners,Lommel,Jan Breydelstadion
+2026-08-29-cercle-brugge-v-lommel,62,sub_off,Lukas Mondele,Cercle Brugge,Jan Breydelstadion
+2026-08-29-cercle-brugge-v-lommel,62,sub_on,Lawrence Agyekum,Cercle Brugge,Jan Breydelstadion
+2026-08-29-cercle-brugge-v-lommel,69,sub_off,Stredair Appuah,Lommel,Jan Breydelstadion
+2026-08-29-cercle-brugge-v-lommel,69,sub_off,Don-Angelo Konadu,Lommel,Jan Breydelstadion
+2026-08-29-cercle-brugge-v-lommel,69,sub_on,Mohamed El Boukammiri,Lommel,Jan Breydelstadion
+2026-08-29-cercle-brugge-v-lommel,69,sub_on,Alexander Reumers,Lommel,Jan Breydelstadion
+2026-08-29-cercle-brugge-v-lommel,72,sub_off,Steve Ngoura,Cercle Brugge,Jan Breydelstadion
+2026-08-29-cercle-brugge-v-lommel,72,sub_on,Lucas Michal,Cercle Brugge,Jan Breydelstadion
+2026-08-29-cercle-brugge-v-lommel,77,sub_off,Shawn Adewoye,Lommel,Jan Breydelstadion
+2026-08-29-cercle-brugge-v-lommel,77,sub_on,Tristan Gooijer,Lommel,Jan Breydelstadion
 2026-08-29-charlton-athletic-v-preston-north-end,46,sub_off,Sonny Carey,Charlton Athletic,The Valley
 2026-08-29-charlton-athletic-v-preston-north-end,46,sub_on,Millenic Alli,Charlton Athletic,The Valley
 2026-08-29-charlton-athletic-v-preston-north-end,54,yellow,Léo Leroy,Preston North End,The Valley
@@ -2298,6 +2309,7 @@ match_id,minute,type,player,team,venue
 2026-08-29-colchester-united-v-rochdale,88,sub_off,Ryan East,Rochdale,JobServe Community Stadium
 2026-08-29-colchester-united-v-rochdale,88,sub_on,Emmanuel Dieseruvwe,Rochdale,JobServe Community Stadium
 2026-08-29-cosenza-v-potenza,1,goal,Augusto Bando,Potenza,Stadium
+2026-08-29-cosenza-v-potenza,49,goal,Paolo Dametto,Cosenza,Stadium
 2026-08-29-coventry-city-v-hull-city,10,yellow,Lewie Coyle,Hull City,Coventry Building Society Arena
 2026-08-29-coventry-city-v-hull-city,46,sub_off,Hidemasa Morita,Hull City,Coventry Building Society Arena
 2026-08-29-coventry-city-v-hull-city,46,sub_off,Lewie Coyle,Hull City,Coventry Building Society Arena
@@ -2384,12 +2396,20 @@ match_id,minute,type,player,team,venue
 2026-08-29-galatasaray-v-goztepe,55,goal,Gabriel Sara,Galatasaray,RAMS Park
 2026-08-29-galatasaray-v-goztepe,62,yellow,Richard Akonnor,Göztepe,RAMS Park
 2026-08-29-galatasaray-v-goztepe,63,goal,Victor Osimhen,Galatasaray,RAMS Park
+2026-08-29-galatasaray-v-goztepe,64,sub_off,Richard Akonnor,Göztepe,RAMS Park
+2026-08-29-galatasaray-v-goztepe,64,sub_off,Efkan Bekiroglu,Göztepe,RAMS Park
+2026-08-29-galatasaray-v-goztepe,64,sub_on,Ogün Bayrak,Göztepe,RAMS Park
+2026-08-29-galatasaray-v-goztepe,64,sub_on,Sinclair Armstrong,Göztepe,RAMS Park
+2026-08-29-galatasaray-v-goztepe,65,goal,Juan,Göztepe,RAMS Park
 2026-08-29-galatasaray-v-goztepe,65,sub_off,Janderson,Göztepe,RAMS Park
-2026-08-29-galatasaray-v-goztepe,65,sub_off,Richard Akonnor,Göztepe,RAMS Park
 2026-08-29-galatasaray-v-goztepe,65,sub_on,Juan,Göztepe,RAMS Park
-2026-08-29-galatasaray-v-goztepe,65,sub_on,Ogün Bayrak,Göztepe,RAMS Park
-2026-08-29-galatasaray-v-goztepe,66,goal,<TBD>,Göztepe,RAMS Park
-2026-08-29-galatasaray-v-goztepe,68,goal,<TBD>,Galatasaray,RAMS Park
+2026-08-29-galatasaray-v-goztepe,70,yellow,Baris Alper Yilmaz,Galatasaray,RAMS Park
+2026-08-29-galatasaray-v-goztepe,73,sub_off,Gabriel Sara,Galatasaray,RAMS Park
+2026-08-29-galatasaray-v-goztepe,73,sub_on,Wilfried Singo,Galatasaray,RAMS Park
+2026-08-29-galatasaray-v-goztepe,74,sub_off,Baris Alper Yilmaz,Galatasaray,RAMS Park
+2026-08-29-galatasaray-v-goztepe,74,sub_on,Leroy Sané,Galatasaray,RAMS Park
+2026-08-29-galatasaray-v-goztepe,79,sub_off,André,Göztepe,RAMS Park
+2026-08-29-galatasaray-v-goztepe,79,sub_on,Bekir Böke,Göztepe,RAMS Park
 2026-08-29-gillingham-v-northampton-town,4,yellow,Robbie McKenzie,Gillingham,Priestfield Stadium
 2026-08-29-gillingham-v-northampton-town,7,goal,Conor McManus,Gillingham,Priestfield Stadium
 2026-08-29-gillingham-v-northampton-town,14,yellow,Omar Beckles,Gillingham,Priestfield Stadium
