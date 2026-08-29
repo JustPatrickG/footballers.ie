@@ -224,6 +224,19 @@
       if (h >= 1) return '<span class="mcstat ft">FT · ' + h + 'h ago</span>';
       return '<span class="mcstat ft">Full time</span>';
     }
+    // Past kick-off but the live feed hasn't marked it live yet (its status is
+    // still "scheduled"). Don't sit on "Kick-off" for two hours — estimate the
+    // minute from the clock so an underway game reads as underway. The real
+    // feed overwrites this the moment it arrives.
+    if (now >= ko(m) && ended(m) >= now) {
+      var el = Math.floor((now - ko(m)) / 60000);
+      var lbl;
+      if (el <= 45) lbl = "~" + Math.max(1, el) + "'";
+      else if (el < 60) lbl = 'HT';
+      else if (el < 105) lbl = "~" + (el - 15) + "'";      // knock off a 15-min break
+      else lbl = "~90'";
+      return '<span class="mcstat live"><i></i>' + lbl + '</span>';
+    }
     var until = ko(m) - now;
     var days = Math.floor(until / 86400000);
     if (days >= 1) return '<span class="mcstat soon">in ' + days + (days === 1 ? ' day' : ' days') + '</span>';
