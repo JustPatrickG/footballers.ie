@@ -1,0 +1,48 @@
+name: match watcher
+
+# Starts often, exits in seconds when there is no football on, and stays up
+# through the matches that are - scraping each one within a couple of minutes
+# of full time.
+#
+# This exists because GitHub throttles scheduled workflows: a '*/10' cron
+# really fires every few hours, so polling for a finished match meant stats
+# could be three hours late. One long-lived job that waits is both more
+# accurate and, on a public repo where minutes are free, cheaper in practice
+# than a poll that mostly finds nothing.
+on:
+  schedule:
+    - cron: '20 * * * *'
+  workflow_dispatch:
+    inputs:
+      budget:
+        description: minutes to stay up
+        default: '300'
+
+permissions:
+  contents: write
+
+concurrency:
+  # One watcher at a time. A second would fight the first over the same push.
+  group: match-watch
+  cancel-in-progress: false
+
+jobs:
+  watch:
+    runs-on: ubuntu-latest
+    # Below the 6h job ceiling, and above the script's own budget so the
+    # script always gets to finish tidily rather than being killed mid-push.
+    timeout-minutes: 330
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install requests
+
+      - name: watch for full time, scrape as it happens
+        env:
+          WATCH_BUDGET: ${{ inputs.budget || '300' }}
+        run: |
+          git config user.name "match-watcher"
+          git config user.email "actions@github.com"
+          python3 scraper/match_watch.py
