@@ -2565,6 +2565,7 @@ match_id,minute,type,player,team,venue
 2026-08-29-cardiff-city-v-sheffield-united,85,sub_on,Isaak Davies,Cardiff City,Cardiff City Stadium
 2026-08-29-cardiff-city-v-sheffield-united,90,sub_off,Krystian Bielik,Cardiff City,Cardiff City Stadium
 2026-08-29-cardiff-city-v-sheffield-united,90,sub_on,Calum Scanlon,Cardiff City,Cardiff City Stadium
+2026-08-29-cavalry-fc-v-vancouver-fc,,,,,ATCO Field
 2026-08-29-celtic-v-falkirk,4,goal,Camilo Durán,Celtic,Celtic Park
 2026-08-29-celtic-v-falkirk,29,goal,Camilo Durán,Celtic,Celtic Park
 2026-08-29-celtic-v-falkirk,35,yellow,Lewis Neilson,Falkirk,Celtic Park
@@ -2597,6 +2598,24 @@ match_id,minute,type,player,team,venue
 2026-08-29-cercle-brugge-v-lommel,27,yellow,Dries Wouters,Lommel,Jan Breydelstadion
 2026-08-29-cercle-brugge-v-lommel,32,yellow,Geoffrey Kondo,Cercle Brugge,Jan Breydelstadion
 2026-08-29-cercle-brugge-v-lommel,34,yellow,Shawn Adewoye,Lommel,Jan Breydelstadion
+2026-08-29-cercle-brugge-v-lommel,61,goal,Tom Reyners,Lommel,Jan Breydelstadion
+2026-08-29-cercle-brugge-v-lommel,62,sub_off,Lukas Mondele,Cercle Brugge,Jan Breydelstadion
+2026-08-29-cercle-brugge-v-lommel,62,sub_on,Lawrence Agyekum,Cercle Brugge,Jan Breydelstadion
+2026-08-29-cercle-brugge-v-lommel,69,sub_off,Don-Angelo Konadu,Lommel,Jan Breydelstadion
+2026-08-29-cercle-brugge-v-lommel,69,sub_off,Stredair Appuah,Lommel,Jan Breydelstadion
+2026-08-29-cercle-brugge-v-lommel,69,sub_on,Alexander Reumers,Lommel,Jan Breydelstadion
+2026-08-29-cercle-brugge-v-lommel,69,sub_on,Mohamed El Boukammiri,Lommel,Jan Breydelstadion
+2026-08-29-cercle-brugge-v-lommel,72,sub_off,Steve Ngoura,Cercle Brugge,Jan Breydelstadion
+2026-08-29-cercle-brugge-v-lommel,72,sub_on,Lucas Michal,Cercle Brugge,Jan Breydelstadion
+2026-08-29-cercle-brugge-v-lommel,77,sub_off,Shawn Adewoye,Lommel,Jan Breydelstadion
+2026-08-29-cercle-brugge-v-lommel,77,sub_on,Tristan Gooijer,Lommel,Jan Breydelstadion
+2026-08-29-cercle-brugge-v-lommel,79,sub_off,Dante Vanzeir,Cercle Brugge,Jan Breydelstadion
+2026-08-29-cercle-brugge-v-lommel,79,sub_off,Ibrahima Diaby,Cercle Brugge,Jan Breydelstadion
+2026-08-29-cercle-brugge-v-lommel,79,sub_off,Viggo Martens,Cercle Brugge,Jan Breydelstadion
+2026-08-29-cercle-brugge-v-lommel,79,sub_on,Krys Kouassi,Cercle Brugge,Jan Breydelstadion
+2026-08-29-cercle-brugge-v-lommel,79,sub_on,Lazare Amani,Cercle Brugge,Jan Breydelstadion
+2026-08-29-cercle-brugge-v-lommel,79,sub_on,Erick Nunes,Cercle Brugge,Jan Breydelstadion
+2026-08-29-cercle-brugge-v-lommel,87,yellow,Krys Kouassi,Cercle Brugge,Jan Breydelstadion
 2026-08-29-charlton-athletic-v-preston-north-end,46,sub_off,Sonny Carey,Charlton Athletic,The Valley
 2026-08-29-charlton-athletic-v-preston-north-end,46,sub_on,Millenic Alli,Charlton Athletic,The Valley
 2026-08-29-charlton-athletic-v-preston-north-end,54,yellow,Léo Leroy,Preston North End,The Valley
@@ -2640,6 +2659,8 @@ match_id,minute,type,player,team,venue
 2026-08-29-colchester-united-v-rochdale,88,sub_off,Ryan East,Rochdale,JobServe Community Stadium
 2026-08-29-colchester-united-v-rochdale,88,sub_on,Emmanuel Dieseruvwe,Rochdale,JobServe Community Stadium
 2026-08-29-cosenza-v-potenza,1,goal,Augusto Bando,Potenza,Stadium
+2026-08-29-cosenza-v-potenza,49,goal,Paolo Dametto,Cosenza,Stadium
+2026-08-29-cosenza-v-potenza,90,goal,Raul Alessandro Bura,Potenza,Stadium
 2026-08-29-coventry-city-v-hull-city,10,yellow,Lewie Coyle,Hull City,Coventry Building Society Arena
 2026-08-29-coventry-city-v-hull-city,46,sub_off,Hidemasa Morita,Hull City,Coventry Building Society Arena
 2026-08-29-coventry-city-v-hull-city,46,sub_off,Lewie Coyle,Hull City,Coventry Building Society Arena
