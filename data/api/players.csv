@@ -2,13 +2,16 @@ slug,league,club,club_id,age,born,foot,senior_caps,senior_goals,senior_debut,you
 aaron-bolger,Premier Division,Galway United FC,520517,26,,Right,,,,U19:7:0:2017; U17:9:0:2016,2026,26,25,3,2,2151,4,0,216,6,5,7.06,auto
 aaron-brennan,Premier Division,Waterford FC,6042,,,,,,,,,,,,,,,,,,,,auto
 aaron-connolly,League One,Leyton Orient,8351,26,,Right,9,0,2019,U21:9:1:2019; U19:3:1:2018; U17:10:7:2016,2025/26,21,20,8,4,1724,4,0,165,31,6,7.06,auto
+aaron-doran,League of Ireland First Division,Longford Town,,,,,,,,,,,,,,,,,,,,none
 aaron-drinan,League Two,Swindon Town,9795,28,,Left,,,,U21:6:0:2019,2026/27,3,3,1,0,270,0,0,286,69,18,6.75,auto
 aaron-greene,Premier Division,Shamrock Rovers,4131,36,,Both,,,,U21:2:0:2011,2026,26,11,4,0,1030,3,0,572,126,6,6.45,auto
 aaron-heaney,,Newington FC,,22,,,,,,,,,,,,,,,7,1,0,,auto
 aaron-keogh,Premier Division,Dundalk,1853,18,,,,,,,2026,1,0,0,0,5,0,0,3,1,0,,auto
 aaron-maguire,Premier League 2,Tottenham Hotspur U21,860802,22,,,,,,U21:2:0:2025; U19:2:0:2022; U17:1:0:2020; U16:1:0:2019; U16:2:0:2019,2025/26,2,,,,180,0,0,4,0,0,6.68,auto
+aaron-maloney,League of Ireland First Division,Athlone Town,,,,,,,,,,,,,,,,,,,,none
 aaron-mccarey,Premiership,Portadown,7984,34,,Right,,,2013,U21:6:0:2011; U19:10:0:2010,,,,,,,,,301,0,0,,auto
 aaron-mceneff,Premiership,Glentoran,2203,31,,Right,,,2020,U21:::2014; U19:6:0:2012; U17:2:0:2011,2026/27,2,,0,0,180,,,303,65,3,,auto
+aaron-mclaughlin,League of Ireland First Division,Finn Harps,,,,,,,,,,,,,,,,,,,,none
 aaron-molloy,USL Championship,Lexington SC,1430405,29,,,,,,,2026,21,21,4,5,1890,4,0,227,27,40,7.61,auto
 aaron-ochoa,LaLiga,Málaga,9864,19,,Right,,,,U21:1:0:2026; U19:6:1:2024; U17:5:0:2023,2025/26,24,5,2,3,718,7,0,82,4,3,6.69,auto
 aaron-okpolokpo,Veikkausliiga,SJK,162162,23,,,,,,,,,,,,,,,35,1,0,,auto
@@ -18,13 +21,18 @@ adam-brennan,Premier Division,Shamrock Rovers,4131,19,,,1,0,2026,U21:::2026; U19
 adam-brogan,,Bournemouth,,,,,,,,,,,,,,,,,,,,none
 adam-byrne,,Longford,,,,,,,,,,,,,,,,,,,,none
 adam-deans,Premier Division,St. Patrick's Athletic,1854,20,,,,,,,,,,,,,,,1,0,0,,auto
+adam-dobbyn,League of Ireland First Division,Wexford FC,,,,,,,,,,,,,,,,,,,,none
 adam-idah,Championship,Swansea City,10003,25,,Right,40,6,2020,U21:12:5:2019; U19:3:2:2018; U18:1:1:2018; U17:20:14:2016,2026/27,3,2,1,0,151,0,0,223,53,8,6.79,auto
+adam-mcdaid,League of Ireland First Division,Finn Harps,,,,,,,,,,,,,,,,,,,,none
 adam-mcdonnell,Premier Division,Bohemian FC,4594,29,,Right,,,,U19:2:0:2014; U17:3:1:2014,2026,22,8,1,0,787,2,1,310,23,6,6.44,auto
 adam-murphy,League Two,Fleetwood Town,45723,21,,,,,,U21:6:0:2023; U19:::2023; U17:2:0:2022,2026/27,1,0,0,0,13,0,0,45,3,3,5.70,auto
 adam-nelson,,Sunderland,,,,,,,,,,,,,,,,,,,,none
+adam-nolan,League of Ireland First Division,Athlone Town,,,,,,,,,,,,,,,,,,,,none
 adam-ohalloran,Premier Division,Galway United FC,520517,19,,,,,,,,,,,,,,,,,,,auto
 adam-oreilly,Premier Division,Derry City,8338,25,,Right,,,,U21:::2022; U19:2:0:2019; U17:6:1:2017,2026,26,23,4,2,2026,6,1,200,13,5,7.02,auto
 adam-rooney,National League North,King's Lynn Town,45731,38,,Right,,,2015,U21:2:0:2010,,,,,,,,,645,223,14,,auto
+adam-verdon,League of Ireland First Division,Wexford FC,,,,,,,,,,,,,,,,,,,,none
+adam-wells,League of Ireland First Division,UCD,,,,,,,,,,,,,,,,,,,,none
 ade-solanke,Premier League 2,AFC Bournemouth Academy,2128213,18,,,,,,U18:2:0:2026; U17:9:0:2023,2026/27,1,1,0,0,90,0,0,3,0,0,7.39,auto
 ademipo-odubeko,Premier Division,Shelbourne,5751,23,,Right,,,,U21:4:1:2022,2026,7,3,1,1,313,1,0,124,20,6,6.64,auto
 adrien-thibaut,League Two,Crewe Alexandra,9784,22,,Right,,,,,2026/27,2,0,0,0,4,0,0,71,11,4,,auto
@@ -32,26 +40,40 @@ ahu-obhakhan,Premiership,Portadown,7984,29,,,,,,,,,,,,,,,,,,,auto
 aidan-gabbidon,Premier Division,Sligo Rovers,6361,17,,,,,,U17:3:1:2025,,,,,,,,,,,,,auto
 aidan-keena,Premier Division,St. Patrick's Athletic,1854,27,,Right,,,,U21:2:0:2019; U17:2:0:2015,2026,24,14,6,4,1111,0,0,271,77,13,6.89,auto
 aidomo-emakhu,League One,Oxford United,8653,22,,Right,1,0,2026,U21:10:2:2023; U19:3:0:2021,2026/27,2,2,0,0,180,0,0,153,9,6,6.48,auto
+aime-nyembe-azede,League of Ireland First Division,Bray Wanderers,,,,,,,,,,,,,,,,,,,,none
+aj-nash,League of Ireland First Division,Cork City,,,,,,,,,,,,,,,,,,,,none
 ajibola-oluwabiyi,First Division,Wexford FC,62337,,,,,,,,,,,,,,,,,,,,auto
+alain-kizenga,League of Ireland First Division,Bray Wanderers,,,,,,,,,,,,,,,,,,,,none
 alan-browne,Premier League,Sunderland,8472,31,,Right,39,5,2017,U21:7:1:2015; U19:6:1:2013,2025/26,38,26,4,3,2464,2,0,479,51,28,6.93,auto
 alan-reynolds,Premier Division,Bohemian FC,4594,52,,,,,,,2026/27,5,,0,0,450,,,,,,,auto
 alan-zborowski,First Division,Cobh Ramblers,2383,18,,,,,,,2026,5,5,0,0,385,0,0,6,0,0,6.58,auto
+alex-cioch,League of Ireland First Division,Longford Town,,,,,,,,,,,,,,,,,,,,none
 alex-flynn,,Shelbourne U19,612860,18,,,,,,,,,,,,,,,,,,,auto
+alex-forde,League of Ireland First Division,Bray Wanderers,,,,,,,,,,,,,,,,,,,,none
 alex-gilbert,,,,24,,Right,,,2026,U21:2:0:2021; U19:3:0:2019,2025/26,21,9,1,1,866,5,0,75,3,10,6.79,auto
+alex-moody,League of Ireland First Division,Wexford FC,,,,,,,,,,,,,,,,,,,,none
 alex-murphy,2. Bundesliga,Kaiserslautern,8350,22,,Left,,,2026,U21:6:0:2024; U19:7:0:2022,2026/27,1,,0,1,55,,,54,4,1,7.80,auto
 alex-nolan,Premier Division,Sligo Rovers,6361,23,,,,,,,2026,22,14,2,1,1292,2,0,147,12,3,6.29,auto
 alex-noonan,Premier Division,Shamrock Rovers,4131,18,,,,,,U18:3:0:2026; U17:10:0:2024,2026,2,,,,56,0,0,1,0,0,,auto
+alex-norval,League of Ireland First Division,Wexford FC,,,,,,,,,,,,,,,,,,,,none
+alex-obrien,League of Ireland First Division,Longford Town,,,,,,,,,,,,,,,,,,,,none
+alex-omahony,League of Ireland First Division,Cobh Ramblers,,,,,,,,,,,,,,,,,,,,none
+alex-sheerin,League of Ireland First Division,Athlone Town,,,,,,,,,,,,,,,,,,,,none
 alfie-mulvenna,Premier League U18,Crystal Palace U18,1183385,16,,,,,,U17:2:0:2025; U15:::2024,,,,,,,,,1,0,0,,auto
 alfie-pollock,,Glenavon,1956,16,,,,,,,,,,,,,,,,,,,auto
 ali-reghba,Prva Liga,Maribor,8340,26,,,,,,U19:10:1:2018,,,,,,,,,115,18,0,,auto
 ali-topcu,,Shelbourne U19,612860,18,,,,,,U17:::2024,,,,,,,,,,,,,auto
+ameer-ayinde,League of Ireland First Division,Athlone Town,,,,,,,,,,,,,,,,,,,,none
 andrew-moran,Championship,Preston North End,8411,22,,Right,4,0,2023,U21:11:3:2021; U19:5:1:2021; U17:2:0:2019,2026/27,2,,0,0,91,,,109,11,17,6.80,auto
 andrew-omobamidele,Ligue 1,Strasbourg,9848,24,,Right,10,0,2021,U19:4:1:2019; U17:3:1:2019,2026/27,2,2,0,0,180,0,0,124,4,0,6.67,auto
 andrew-quinn,Premier Division,Drogheda United,8339,24,,,,,,U21:::2021,2026,21,18,0,1,1561,0,0,167,7,5,6.62,auto
+andrew-trainor,League of Ireland First Division,Athlone Town,,,,,,,,,,,,,,,,,,,,none
 andrew-wogan,League One,Stockport County,10007,20,,,,,,U21:1:0:2024; U19:3:0:2023,2025/26,6,,,,540,1,0,60,0,1,,auto
 andy-lyons,League One,Blackpool,8483,26,,Right,,,,U21:4:0:2021; U19:9:0:2018,2026/27,2,0,0,0,29,0,0,197,19,6,6.34,auto
-andy-spain,,Armagh,,,,,,,,,,,,,,,,,,,,none
+andy-paraschiv,League of Ireland First Division,Longford Town,,,,,,,,,,,,,,,,,,,,none
+andy-spain,First Division,Athlone Town,2378,25,,,,,,,,,,,,,,,,,,,auto
 anselmo-garcia-macnulty,2. Bundesliga,Magdeburg,8188,23,,Left,,,,U21:9:0:2021; U19:5:1:2021; U17:6:2:2019,2026/27,2,2,0,0,180,0,0,145,5,2,5.94,auto
+anthony-adenopo,League of Ireland First Division,Cobh Ramblers,,,,,,,,,,,,,,,,,,,,none
 anthony-breslin,Premier Division,St. Patrick's Athletic,1854,29,,,,,,U19:::2015; U17:6:0:2013,2026,24,6,1,0,778,1,0,248,6,10,6.45,auto
 anthony-oconnor,Premier Division,Galway United FC,520517,33,,Right,,,,U21:5:0:2013; U19:7:2:2010,2026,2,2,0,1,180,1,0,597,33,16,7.34,auto
 anthony-scully,League Two,Shrewsbury Town,9896,27,,Right,,,,U21:2:0:2019; U19:1:0:2017; U17:6:0:2015,2025/26,31,23,3,2,1697,1,0,173,44,21,6.51,auto
@@ -61,82 +83,124 @@ aran-fitzpatrick,,,,20,,,,,,,,,,,,,,,3,0,0,,auto
 archie-quinn,,Shelbourne,,,,,,,,,,,,,,,,,,,,none
 arlo-doherty,Premier Division,Waterford FC,6042,22,,,,,,U19:2:0:2021,2026,7,,,,630,0,0,9,0,0,6.83,auto
 armstrong-oko-flex,First Professional League,Levski Sofia,8632,24,,Right,,,,U21:4:4:2021; U19:3:0:2019; U17:3:0:2018,2026/27,5,3,3,1,228,2,0,99,17,1,,auto
+arran-healy,League of Ireland First Division,Kerry FC,,,,,,,,,,,,,,,,,,,,none
+ashton-crossan,League of Ireland First Division,Finn Harps,,,,,,,,,,,,,,,,,,,,none
 baba-adeeko,League Two,Rochdale,8493,23,,,,,,U21:8:0:2023; U19:1:0:2022,2026/27,3,1,0,0,118,0,0,101,1,3,6.20,auto
+bailey-shelley,League of Ireland First Division,Bray Wanderers,,,,,,,,,,,,,,,,,,,,none
 barry-coffey,USL Championship,Hartford Athletic,1003206,25,,,,,,U19:7:1:2018; U18:1:0:2018; U17:10:1:2017,2026,15,14,4,1,1071,2,0,178,62,3,7.07,auto
 barry-cotter,Premier Division,Derry City,8338,27,,Right,,,,U21:::2019,2026,24,22,2,0,1790,6,0,177,9,8,7.20,auto
+ben-feeney,League of Ireland First Division,Treaty United,,,,,,,,,,,,,,,,,,,,none
+ben-lynch,League of Ireland First Division,Treaty United,,,,,,,,,,,,,,,,,,,,none
 ben-mahon,Premier Division,Shamrock Rovers,4131,17,,,,,,U17:4:3:2025,2026,2,0,0,0,24,0,0,6,0,0,5.74,auto
 ben-mccormack,First Division,Bray Wanderers,1629,23,,Right,,,,U17:3:2:2019,2025,12,2,0,0,227,1,0,153,17,9,6.47,auto
 ben-quinn,Premiership,Cliftonville,1703,21,,Right,,,,U16:1:1:2019,,,,,,,,,35,30,2,,auto
-ben-wilson,,Bentford,,,,,,,,,,,,,,,,,,,,none
+ben-wilson,Premier League,Coventry City,8669,34,,Right,,,,,,,,,,,,,178,1,0,,auto
+benjamin-fagbemi,League of Ireland First Division,Bray Wanderers,,,,,,,,,,,,,,,,,,,,none
+berkley-areey,League of Ireland First Division,Cobh Ramblers,,,,,,,,,,,,,,,,,,,,none
+bernardo-monteiro,League of Ireland First Division,Finn Harps,,,,,,,,,,,,,,,,,,,,none
 billy-canny,Premier Division,St. Patrick's Athletic,1854,18,,,,,,U17:6:1:2024,2026,1,0,0,0,5,0,0,1,0,0,,auto
 billy-hayes,Premier Division,St. Patrick's Athletic,1854,18,,,,,,U17:6:0:2024,,,,,,,,,1,0,0,,auto
 billy-oneill,First Division,Bray Wanderers,1629,18,,,,,,U18:::2026; U17:3:0:2024,,,,,,,,,57,12,0,,auto
 billy-regan,First Division,Treaty United,1233534,18,,,,,,,,,,,,,,,1,0,0,,auto
+billy-vance,League of Ireland First Division,Wexford FC,,,,,,,,,,,,,,,,,,,,none
 bobby-amadasun,,Treaty,,,,,,,,,,,,,,,,,,,,none
+bobby-brett,League of Ireland First Division,Athlone Town,,,,,,,,,,,,,,,,,,,,none
 bobby-jones,National League North,Darlington,8598,24,,Left,,,,,2026/27,4,,0,0,360,,,104,0,0,,auto
 bobby-keohan,Premier Division,Waterford FC,6042,,,,,,,,,,,,,,,,,,,,auto
 bobby-wales,Premiership,Dundee FC,8284,21,,,,,,U21:1:0:2024; U19:9:1:2022; U17:4:0:2021,2026/27,1,0,0,0,10,0,0,88,22,8,6.23,auto
 bosco-grau,,Leganés,,,,,,,,,,,,,,,,,,,,none
 bosun-lawal,Championship,Stoke City,10194,23,,Right,1,0,2024,U21:7:0:2023; U19:5:0:2021; U17:1:0:2019,2026/27,2,2,0,0,135,1,0,94,15,3,6.14,auto
+brandon-bermingham,League of Ireland First Division,Kerry FC,,,,,,,,,,,,,,,,,,,,none
 brandon-kavanagh,Premier Division,Drogheda United,8339,25,,,,,,U21:1:0:2019; U19:4:0:2019; U17:5:0:2016,2026,28,26,3,5,2124,4,0,265,38,32,7.03,auto
 brandon-ly,V-League,Công An Hà Nội,614354,20,,,,,,,2025/26,2,0,0,,8,0,0,3,0,0,,auto
+breandan-frahill,League of Ireland First Division,Cobh Ramblers,,,,,,,,,,,,,,,,,,,,none
+brendan-clarke,League of Ireland First Division,Athlone Town,,,,,,,,,,,,,,,,,,,,none
+brian-cunningham,League of Ireland First Division,Treaty United,,,,,,,,,,,,,,,,,,,,none
+brian-linehan,League of Ireland First Division,Cobh Ramblers,,,,,,,,,,,,,,,,,,,,none
 brian-maher,Premier Division,Derry City,8338,25,,,,,,U21:12:0:2020; U19:9:0:2017; U17:10:0:2016,2026,5,,,,450,0,0,226,0,1,6.43,auto
+brian-mcmanus,League of Ireland First Division,Athlone Town,,,,,,,,,,,,,,,,,,,,none
 bridel-bosakani,First Division,Finn Harps,1627,21,,,,,,,2025,5,0,0,0,38,1,0,28,5,0,5.96,auto
 brody-lee,First Division,Cork City,2201,18,,,,,,U18:2:0:2026; U17:8:2:2024,2025,6,1,0,0,122,1,0,8,0,0,6.02,auto
 brooklyn-lyons-foster,Premier Division,Derry City,8338,25,,,,,,U17:2:0:2016,2026,3,3,0,0,263,2,0,86,5,0,6.94,auto
 brooks-lennon,Major League Soccer,Columbus Crew,6001,28,,Right,1,0,2018,U23:3:2:2019; U20:11:6:2017,2026,3,1,0,1,125,0,0,296,14,44,6.30,auto
-callum-cokerill-mollett,,Leamington,,,,,,,,,,,,,,,,,,,,none
+c-healy,League of Ireland First Division,Kerry FC,,,,,,,,,,,,,,,,,,,,none
+callum-cleary,League of Ireland First Division,Athlone Town,,,,,,,,,,,,,,,,,,,,none
+callum-cokerill-mollett,,,,27,,Left,,,,,2025/26,8,7,0,,432,2,0,95,2,3,,auto
 callum-doherty,,Strabane Athletic,1591693,18,,,,,,,,,,,,,,,2,0,0,,auto
 callum-downey,Premier Division,Derry City,8338,18,,,,,,U18:::2026,2026,1,0,0,0,1,0,0,1,0,0,,auto
 callum-honohan,First Division,Cobh Ramblers,2383,20,,,,,,,,,,,,,,,18,1,0,,auto
 callum-lynch,Premier Division,Sligo Rovers,6361,18,,Left,,,,,2026,2,0,0,0,25,0,0,1,0,0,5.88,auto
 callum-marshall,League One,Luton Town,8346,21,,Left,16,0,2023,U21:2:0:2023; U19:5:4:2022,2026/27,2,0,1,0,48,0,0,75,14,5,6.78,auto
+callum-mccormack,League of Ireland First Division,Kerry FC,,,,,,,,,,,,,,,,,,,,none
 callum-odowda,NB I,Ferencváros,8222,31,,Left,32,1,2016,U21:8:3:2015,2026/27,2,1,0,0,118,1,0,417,32,33,,auto
 callum-robinson,Championship,Cardiff City,8344,31,,Right,38,9,2018,U19:3:1:2014; U17:6:1:2011; U22:5:1:2015,2026/27,2,0,0,0,15,0,0,419,91,44,6.27,auto
+callum-wynne,League of Ireland First Division,UCD,,,,,,,,,,,,,,,,,,,,none
 calum-costello,,Fleetwood Town Academy,1668753,20,,,,,,,,,,,,,,,,,,,auto
 calum-donnelly,Premier Division,Drogheda United,8339,19,,,,,,,,,,,,,,,,,,,auto
 calum-kavanagh,League Two,Oldham Athletic,9785,22,,Right,,,,U21:::2024; U17:2:0:2019,2026/27,3,3,3,2,217,1,0,118,27,11,7.91,auto
 calum-ward,Championship,Queens Park Rangers,10172,25,,Right,,,,,2025/26,37,,,,3330,1,0,184,0,1,7.22,auto
 cameron-reid,Highland / Lowland,Turriff United,351621,18,,,,,,,,,,,,,,,9,1,0,,auto
 caoimhin-kelleher,Premier League,Brentford,9937,27,,Right,32,0,2018,U21:10:0:2017; U19:5:0:2015; U17:7:0:2014,2026/27,1,,,,90,0,0,106,0,0,8.11,auto
+carl-lennox,League of Ireland First Division,UCD,,,,,,,,,,,,,,,,,,,,none
 carl-mchugh,Premier Division,Sligo Rovers,6361,33,,,,,,U21:::2013; U19:5:0:2010,2026,24,21,1,1,1655,5,1,403,24,17,6.74,auto
 cathal-heffernan,League One,Cambridge United,9834,21,,,,,,U17:6:0:2021,2026/27,1,1,0,0,90,0,0,26,2,0,6.55,auto
 cathal-mccarthy,Premiership,Kilmarnock,8597,19,,,,,,U21:3:0:2025; U19:2:0:2024,2026/27,1,1,0,0,90,1,0,28,0,0,6.33,auto
 cathal-osullivan,,Preston North End U23,584579,19,,,,,,U21:1:0:2025; U19:3:0:2024; U17:3:0:2024,2025,21,17,0,3,1519,4,0,52,7,3,6.60,auto
+charles-akimrintoyo,League of Ireland First Division,UCD,,,,,,,,,,,,,,,,,,,,none
 charles-akinrintoyo,First Division,UCD,1578,18,,,,,,U18:2:0:2026; U17:4:2:2025,,,,,,,,,21,5,0,,auto
 charles-dunne,Premiership,Coleraine,2202,33,,Left,,,,U21:1:0:2013,,,,,,,,,352,5,3,,auto
+charlie-bonner,League of Ireland First Division,Finn Harps,,,,,,,,,,,,,,,,,,,,none
+charlie-campbell,League of Ireland First Division,Kerry FC,,,,,,,,,,,,,,,,,,,,none
 charlie-cummins,League Two,Exeter City,9833,21,,Right,,,,,2026/27,3,3,0,0,270,1,0,41,2,0,6.98,auto
+charlie-hanover,League of Ireland First Division,Cork City,,,,,,,,,,,,,,,,,,,,none
+charlie-lyons,League of Ireland First Division,Cork City,,,,,,,,,,,,,,,,,,,,none
 charlie-mcgarvey,Premier Division,Sligo Rovers,6361,16,,,,,,,,,,,,,,,,,,,auto
 charlie-mcneill,League Two,Crewe Alexandra,9784,22,,Right,,,,U16:4:1:2019,2026/27,3,0,0,0,41,1,0,78,9,3,6.38,auto
+charlie-mullan,League of Ireland First Division,Wexford FC,,,,,,,,,,,,,,,,,,,,none
 chiedozie-ogbene,Premier League,Ipswich Town,9902,29,,Right,35,5,2021,,2025/26,15,10,1,1,867,0,0,268,31,22,6.70,auto
+chijimdum-odum,League of Ireland First Division,Longford Town,,,,,,,,,,,,,,,,,,,,none
+chris-amandala,League of Ireland First Division,Cobh Ramblers,,,,,,,,,,,,,,,,,,,,none
 chris-forrester,Premier Division,St. Patrick's Athletic,1854,33,,Left,,,,,2026,21,9,3,1,973,1,0,581,97,26,6.73,auto
 chris-shields,Premiership,Linfield,7971,35,,,,,,,2026/27,2,,0,0,180,,,611,42,3,,auto
 christopher-atherton,Premier League U18,Ipswich Town U18,1791531,17,,,,,,,,,,,,,,,,,,,auto
 christopher-conlan,Premier Division,Bohemian FC,4594,19,,,,,,,,,,,,,,,1,0,0,,auto
 christy-grogan,Premier Division,Derry City,8338,20,,,,,,,2026/27,2,,0,0,148,,,24,0,0,,auto
+cian-bargary,League of Ireland First Division,Kerry FC,,,,,,,,,,,,,,,,,,,,none
 cian-barrett,Premier Division,Waterford FC,6042,21,,,,,,,2026,12,5,0,0,385,2,0,66,1,0,6.40,auto
 cian-bolger,,,,34,,,,,,,,,,,,,,,448,21,5,,auto
+cian-brosnan,League of Ireland First Division,Kerry FC,,,,,,,,,,,,,,,,,,,,none
 cian-byrne,Premier Division,Bohemian FC,4594,23,,,,,,,2026,19,12,1,0,1138,1,0,118,3,1,6.95,auto
-cian-coleman,,Hong Kong FC,,,,,,,,,,,,,,,,,,,,none
+cian-coleman,National League North,Buxton,161824,21,,,,,,,,,,,,,,,74,20,0,,auto
+cian-curtis,League of Ireland First Division,Treaty United,,,,,,,,,,,,,,,,,,,,none
+cian-daly,League of Ireland First Division,Cork City,,,,,,,,,,,,,,,,,,,,none
 cian-dillon,Premier Division,Dundalk,1853,20,,,,,,U21:1:0:2025; U19:6:2:2024,2026,5,5,1,0,375,1,0,25,6,0,6.56,auto
 cian-doyle,League Two,Grimsby Town,10005,21,,,,,,,2026/27,3,3,1,0,231,0,0,64,7,0,7.29,auto
 cian-hayes,League Two,Rochdale,8493,23,,Left,,,,U19:4:1:2021,2026/27,1,,0,0,64,,,190,17,12,6.70,auto
 cian-kavanagh,Premier Division,Sligo Rovers,6361,23,,,,,,,2026,25,20,5,2,1739,2,0,155,27,6,6.66,auto
+cian-murphy,League of Ireland First Division,Kerry FC,,,,,,,,,,,,,,,,,,,,none
 cian-oconnor,Premier Division,Drogheda United,8339,18,,,,,,,2026,1,0,0,0,3,0,0,1,0,0,,auto
 cian-omalley,Premiership,Carrick Rangers,187969,23,,,,,,,,,,,,,,,,,,,auto
 cian-spaight,Premier Division,Dundalk,1853,19,,,,,,,,,,,,,,,,,,,auto
 cian-wilson,,Armagh,,,,,,,,,,,,,,,,,,,,none
+ciaran-behan,League of Ireland First Division,UCD,,,,,,,,,,,,,,,,,,,,none
 ciaran-brennan,League Two,Newport County,10262,26,,Right,,,,U19:1:0:2019,2026/27,3,3,0,0,258,1,0,113,0,0,7.13,auto
 ciaran-coll,Premiership,Glentoran,2203,35,,Left,,,,,,,,,,,,,419,7,1,,auto
+ciaran-galvin,League of Ireland First Division,Cobh Ramblers,,,,,,,,,,,,,,,,,,,,none
 ciaran-gilligan,League One,Burton Albion,9792,24,,Right,,,,,2025/26,1,0,0,0,32,0,0,84,2,2,6.23,auto
 ciaran-kelly,League Two,Bristol Rovers,10104,28,,Left,,,,,2026/27,1,,0,0,90,,,241,11,2,6.40,auto
 ciaran-kilduff,Premier Division,Dundalk,1853,37,,,,,,,2026/27,7,,0,0,630,,,332,120,1,,auto
 ciaran-mullan,Premier Division,Derry City,8338,19,,,,,,,,,,,,,,,,,,,auto
+ciaran-nolan,League of Ireland First Division,Athlone Town,,,,,,,,,,,,,,,,,,,,none
+ciaron-harkin,League of Ireland First Division,Finn Harps,,,,,,,,,,,,,,,,,,,,none
 cillian-campion,,Shelbourne U19,612860,18,,,,,,,,,,,,,,,,,,,auto
 cillian-murphy,First Division,Cork City,2201,17,,,,,,,,,,,,,,,,,,,auto
 cillian-ryan,,Shelbourne U19,612860,18,,,,,,,,,,,,,,,1,0,0,,auto
 cillian-tollett,,Bologna U20,648650,18,,Right,,,,U18:1:1:2026; U17:4:1:2024,2025,10,2,0,0,191,2,0,40,7,0,5.89,auto
 cj-hamilton,League One,Blackpool,8483,31,,Left,1,0,2022,,2026/27,3,3,0,0,235,0,0,455,52,47,6.99,auto
+cole-omorehiomwan,League of Ireland First Division,Longford Town,,,,,,,,,,,,,,,,,,,,none
+colin-bolton,League of Ireland First Division,UCD,,,,,,,,,,,,,,,,,,,,none
+colin-conroy,League of Ireland First Division,Treaty United,,,,,,,,,,,,,,,,,,,,none
+colm-doyle,League of Ireland First Division,Athlone Town,,,,,,,,,,,,,,,,,,,,none
 colm-horgan,Premier Division,Galway United FC,520517,32,,,,,,U19:::2012; U17:3:0:2010,2025,11,3,0,0,220,1,0,359,5,2,6.44,auto
 colm-whelan,Premier Division,Bohemian FC,4594,26,,,,,,U21:3:1:2021,2026,29,20,10,5,1867,0,0,156,68,6,6.77,auto
 conal-mcdermott,Premier Division,Derry City,8338,19,,,,,,,,,,,,,,,,,,,auto
@@ -148,26 +212,38 @@ connor-obrien,League Two,Accrington Stanley,8671,22,,Both,,,,U21:2:0:2024,2026/2
 connor-oriordan,League One,Barnsley,8283,22,,Right,,,,U21:4:0:2023,2026/27,1,1,0,0,90,0,0,139,9,2,7.25,auto
 connor-ronan,Premiership,Aberdeen,8485,28,,Right,,,2022,U21:14:1:2017; U19:6:1:2015; U17:6:0:2015,2026/27,1,1,0,0,73,0,0,262,14,24,6.63,auto
 connor-whittaker,Premier Division,Galway United FC,520517,,,,,,,,,,,,,,,,1,0,0,,auto
+conor-bracken,League of Ireland First Division,Athlone Town,,,,,,,,,,,,,,,,,,,,none
+conor-brann,League of Ireland First Division,Cork City,,,,,,,,,,,,,,,,,,,,none
 conor-cannon,Premier Division,Sligo Rovers,6361,20,,,,,,,2026,1,0,0,0,13,1,0,1,0,0,6.47,auto
 conor-carty,National League,FC Halifax Town,10195,24,,,,,,U21:2:0:2023; U17:2:0:2019,2026/27,4,4,1,,294,0,0,105,13,2,,auto
 conor-coventry,Championship,Charlton Athletic,8451,26,,Right,3,0,2021,U21:25:3:2019; U19:5:0:2018; U17:6:0:2016,2026/27,3,3,0,0,270,0,0,181,2,8,7.13,auto
+conor-donohue,League of Ireland First Division,Longford Town,,,,,,,,,,,,,,,,,,,,none
+conor-drinan,League of Ireland First Division,Cork City,,,,,,,,,,,,,,,,,,,,none
+conor-errity,League of Ireland First Division,Longford Town,,,,,,,,,,,,,,,,,,,,none
 conor-gleeson,Premier Division,Galway United FC,520517,33,,,,,,,,,,,,,,,77,0,0,,auto
 conor-grant,League One,Notts County,9819,25,,Right,,,,U19:4:0:2019; U18:1:0:2018; U17:::2018,2026/27,3,0,1,0,75,0,0,211,19,22,6.68,auto
 conor-james-mccormack,Premier Division,Galway United FC,520517,36,,Right,,,,,2026,13,7,0,0,486,2,0,456,8,3,6.28,auto
 conor-kane,Premier Division,Drogheda United,8339,27,,,,,,U19:1:0:2017,2026,29,28,0,1,2476,3,0,275,2,7,6.68,auto
 conor-kearns,Premier Division,Dundalk,1853,28,,,,,,U21:1:0:2019,2026,6,,,,535,0,0,231,0,1,6.58,auto
 conor-keeley,Premier Division,Drogheda United,8339,28,,,,,,,2026,27,27,2,1,2360,6,0,287,30,7,7.15,auto
+conor-knight,League of Ireland First Division,Bray Wanderers,,,,,,,,,,,,,,,,,,,,none
 conor-masterson,League One,Reading,9798,27,,Right,,,,U21:13:1:2019; U19:6:0:2016; U17:11:0:2014,2026/27,1,,0,0,90,,,172,13,3,7.40,auto
 conor-mccarthy,League Two,Northampton Town,8651,28,,Right,,,,U21:::2020,2026/27,1,,0,0,45,,,261,17,6,6.50,auto
+conor-mcgranaghan,League of Ireland First Division,Finn Harps,,,,,,,,,,,,,,,,,,,,none
 conor-mcmanus,League Two,Gillingham,10173,22,,,,,,U21:3:0:2025,2026/27,2,1,1,0,102,0,0,18,0,0,7.21,auto
 conor-okeeffe,Premier Division,Dundalk,1853,32,,,,,,,2026,6,5,0,1,424,1,0,200,2,1,7.13,auto
+conor-quinn,League of Ireland First Division,Athlone Town,,,,,,,,,,,,,,,,,,,,none
 conor-reynolds,Premier Division,Sligo Rovers,6361,20,,,,,,,2025,24,18,0,0,1400,6,1,31,0,0,6.83,auto
 conor-shaughnessy,Championship,Portsmouth,8462,30,,Right,,,,U21:3:0:2017,2026/27,3,3,0,0,270,0,0,214,12,13,6.91,auto
+conor-tourish,League of Ireland First Division,Finn Harps,,,,,,,,,,,,,,,,,,,,none
 conor-walsh,Premier Division,Shelbourne,5751,21,,,,,,U21:1:0:2025; U19:::2023; U17:4:0:2021,2025,7,,,,545,1,0,33,0,0,6.47,auto
 corey-okeeffe,League One,Barnsley,8283,28,,Right,,,,U21:::2017; U19:5:0:2016; U17:8:1:2014,2026/27,1,0,0,0,11,0,0,312,11,42,4.99,auto
+corey-sheridan,League of Ireland First Division,Finn Harps,,,,,,,,,,,,,,,,,,,,none
 corrie-ndaba,Serie A,Lecce,9888,26,,Left,2,0,2026,U21:::2019,2026/27,1,0,0,0,45,0,0,162,4,3,6.21,auto
 cory-osullivan,Premier Division,Shamrock Rovers,4131,20,,Left,,,,U21:2:0:2025; U19:6:0:2023; U17:10:0:2022,2026,16,14,0,2,1223,2,0,68,1,2,6.92,auto
+cristiano-bramley,League of Ireland First Division,Bray Wanderers,,,,,,,,,,,,,,,,,,,,none
 cyrus-christie,Championship,Bolton Wanderers,8559,33,,Right,30,2,2014,,2025/26,23,12,0,1,1170,3,0,509,14,30,6.98,auto
+d-kavanagh,League of Ireland First Division,Athlone Town,,,,,,,,,,,,,,,,,,,,none
 daire-oconnor,Premiership,Carrick Rangers,187969,29,,Right,,,,,,,,,,,,,299,44,7,,auto
 daire-patton,Premier Division,Sligo Rovers,6361,20,,,,,,U19:1:0:2024,2026,22,17,1,0,1432,1,1,40,1,1,6.46,auto
 daithi-folan,Premier Division,Dundalk,1853,21,,,,,,,,,,,,,,,,,,,auto
@@ -177,53 +253,74 @@ dan-oconnor,,Cliftonville,,,,,,,,,,,,,,,,,,,,none
 dan-rose,,Liberty Flames,,,,,,,,,,,,,,,,,,,,none
 daniel-chukwu,Premier Division,St. Patrick's Athletic,1854,21,,,,,,,,,,,,,,,,,,,auto
 daniel-cleary,Premier Division,Shamrock Rovers,4131,30,,Right,,,,U19:1:0:2013; U17:6:1:2012,2026,7,6,0,0,488,1,0,294,18,6,6.90,auto
+daniel-costello,League of Ireland First Division,UCD,,,,,,,,,,,,,,,,,,,,none
 daniel-grant,Premier Division,Shamrock Rovers,4131,26,,Right,,,,U21:3:0:2019,2026,13,9,2,1,895,2,0,202,27,9,6.93,auto
 daniel-idiakhoa,Southern Premier Division Central,Hitchin Town,161838,22,,,,,,,,,,,,,,,,,,,auto
 daniel-kelly,Premier Division,Shelbourne,5751,30,,,,,,,2026,24,16,5,2,1464,8,0,281,53,11,6.89,auto
+daniel-lakis,League of Ireland First Division,Cobh Ramblers,,,,,,,,,,,,,,,,,,,,none
 daniel-mandroiu,Premier Division,Shamrock Rovers,4131,27,,,,,2021,U21:7:0:2019; U19:2:0:2017; U17:::2015,2026/27,4,,0,0,67,,,224,60,20,,auto
 daniel-mare,Premier Division,Drogheda United,8339,19,,,,,,,2026,1,0,0,0,1,0,0,2,0,0,,auto
 daniel-mccarron,,Arsenal,,,,,,,,,,,,,,,,,,,,none
 daniel-mcgrath,,,,20,,Both,,,,U19:::2024; U17:10:0:2022,,,,,,,,,6,0,1,,auto
+daniel-mckenna,League of Ireland First Division,Longford Town,,,,,,,,,,,,,,,,,,,,none
+daniel-okwute,League of Ireland First Division,Kerry FC,,,,,,,,,,,,,,,,,,,,none
 daniel-oreilly,Championship,Partick Thistle,8426,31,,Left,,,,U17:1:0:2011,2026/27,4,4,0,0,360,1,0,342,26,9,,auto
 daniel-ring,Premier Division,Shelbourne,5751,19,,,,,,U17:::2024,2026,2,0,0,0,11,0,0,31,8,0,5.88,auto
 daniel-rogers,Premier Division,St. Patrick's Athletic,1854,32,,,,,2016,U21:8:0:2015; U19:::2012,2026,4,,,,360,0,0,236,0,0,7.46,auto
 danny-burke,National League South,Horsham,105554,27,,,,,,,2026/27,4,,0,0,360,,,91,2,0,,auto
 danny-kane,Championship,Cashmere Technical,613373,29,,Right,,,,U21:9:0:2017; U19:1:0:2015; U17:4:0:2013,,,,,,,,,91,3,0,,auto
 dara-costelloe,League One,Wigan Athletic,8528,23,,Both,,,,U21:::2022,2026/27,2,2,0,1,167,0,0,149,17,6,7.05,auto
+dara-kavanagh,League of Ireland First Division,UCD,,,,,,,,,,,,,,,,,,,,none
 dara-mccormick,First Division,Cobh Ramblers,2383,,,Right,,,,,,,,,,,,,6,2,0,,auto
 dara-mcguinness,Premier Division,Galway United FC,520517,22,,,,,,,2025,10,7,1,1,624,0,0,28,7,1,6.25,auto
 dara-oshea,Premier League,Ipswich Town,9902,27,,Right,45,0,2020,U21:10:0:2019; U19:7:0:2016; U17:5:0:2015,2026/27,1,1,0,0,90,0,0,269,13,8,8.03,auto
+daragh-murtagh,League of Ireland First Division,Longford Town,,,,,,,,,,,,,,,,,,,,none
 dare-kareem,First Division,Treaty United,1233534,20,,,,,,,2026,12,2,0,0,296,0,0,36,4,0,5.95,auto
 darius-lipsiuc,League One,Notts County,9819,20,,Right,,,,U21:6:0:2025; U19:2:0:2023; U17:4:0:2021,2026/27,3,3,0,0,242,0,0,43,10,4,6.67,auto
 darragh-brunton,Premier Division,St. Patrick's Athletic,1854,17,,,,,,,,,,,,,,,,,,,auto
 darragh-burns,Premier Division,Derry City,8338,24,,Left,,,,U21:::2022; U17:5:2:2018,2026,3,2,0,1,140,1,0,193,22,17,7.76,auto
+darragh-coyle,League of Ireland First Division,Finn Harps,,,,,,,,,,,,,,,,,,,,none
+darragh-crowley,League of Ireland First Division,Cork City,,,,,,,,,,,,,,,,,,,,none
+darragh-foley,League of Ireland First Division,Kerry FC,,,,,,,,,,,,,,,,,,,,none
+darragh-kinch,League of Ireland First Division,Wexford FC,,,,,,,,,,,,,,,,,,,,none
 darragh-leahy,Premiership,Linfield,7971,28,,Left,,,,U21:10:0:2019; U19:3:2:2016; U17:7:0:2014,2026/27,2,,0,0,180,,,259,12,7,,auto
 darragh-lenihan,,,,32,,Right,4,0,2018,U21:10:0:2014; U17:5:0:2010,2025/26,2,1,0,0,91,1,0,324,12,9,6.91,auto
 darragh-markey,Premier Division,Derry City,8338,29,,,,,,,2026,19,12,1,1,1063,5,0,292,16,15,6.66,auto
 darragh-nugent,Premier Division,St. Patrick's Athletic,1854,25,,,,,,,2026,27,13,1,0,1248,1,0,187,5,3,6.77,auto
 darragh-oconnor,League One,East Kilbride,575419,27,,Right,,,,,2026/27,5,5,1,0,450,2,0,156,8,5,,auto
 darragh-power,Premier Division,Bohemian FC,4594,25,,Right,,,,,2026,28,25,0,0,2269,1,0,204,6,1,6.78,auto
+darren-nwankwo,League of Ireland First Division,Treaty United,,,,,,,,,,,,,,,,,,,,none
 daryl-horgan,Premier Division,Dundalk,1853,34,,Both,17,1,2016,U19:3:0:2010,2026,28,28,10,10,2396,2,1,601,98,46,7.66,auto
 david-dunne,,Monaco U19,585094,17,,Right,,,,U17:8:0:2025,2025,3,0,0,0,36,0,0,4,0,0,6.32,auto
 david-eguaibor,National League,Gateshead FC,6189,22,,,,,,,2026/27,2,0,0,,77,0,0,,,,,auto
-david-eze,,Manchester United,,,,,,,,,,,,,,,,,,,,none
+david-eze,Veikkausliiga,HJK,9861,20,,Right,,,,U21:2:1:2025; U19:6:5:2023; U17:8:3:2022,2026,9,5,1,2,393,0,0,95,30,4,6.85,auto
 david-ezeh,Veikkausliiga,HJK,9861,20,,Right,,,,U21:2:1:2025; U19:6:5:2023; U17:8:3:2022,2026,9,5,1,2,393,0,0,95,30,4,6.85,auto
 david-hurley,Premier Division,Galway United FC,520517,27,,,,,,,2026,28,29,2,7,2407,6,0,282,50,12,7.41,auto
 david-jonathan,Premier Division,Sligo Rovers,6361,19,,,,,,,,,,,,,,,,,,,auto
 david-mcgoldrick,League One,Mansfield Town,9818,38,,Right,14,1,2014,,2026/27,1,,0,0,74,,,645,193,49,6.00,auto
+david-odumosu,League of Ireland First Division,Cork City,,,,,,,,,,,,,,,,,,,,none
 david-okagbue,League One,Peterborough United,8677,22,,Right,,,,U21:6:0:2025; U19:3:0:2021,2026/27,2,2,0,0,175,1,1,139,4,5,5.58,auto
 david-toure,Premiership,Ballymena United,4063,21,,,,,,,,,,,,,,,98,1,0,,auto
 dawson-devoy,Premier Division,Bohemian FC,4594,24,,,1,0,2026,U21:7:0:2021,2026,27,27,3,5,2422,10,0,246,28,27,7.78,auto
 dayle-rooney,Premier Division,Bohemian FC,4594,28,,,,,,,2026,21,17,3,4,1467,2,0,273,39,32,7.09,auto
+dean-george,League of Ireland First Division,Longford Town,,,,,,,,,,,,,,,,,,,,none
 dean-mcmenamy,Premier Division,Waterford FC,6042,24,,,,,,,2026,25,13,1,2,1252,3,0,160,10,5,6.78,auto
+dean-oshea,League of Ireland First Division,Bray Wanderers,,,,,,,,,,,,,,,,,,,,none
+dean-williams,League of Ireland First Division,Longford Town,,,,,,,,,,,,,,,,,,,,none
+declan-osagie,League of Ireland First Division,Bray Wanderers,,,,,,,,,,,,,,,,,,,,none
+denzell-obenge,League of Ireland First Division,Cork City,,,,,,,,,,,,,,,,,,,,none
+derin-adewale,League of Ireland First Division,Athlone Town,,,,,,,,,,,,,,,,,,,,none
 desmond-armstrong,Premier League,Everton,8668,19,,Right,,,,U19:8:2:2025; U18:7:0:2024,2026/27,2,2,0,1,176,0,0,56,2,5,7.28,auto
 divin-isamala,Premiership,Portadown,7984,23,,Right,,,,,,,,,,,,,53,4,0,,auto
 dominic-bernard,National League South,Weston Super Mare,6314,29,,Left,,,,,2026/27,4,,0,0,360,,,288,4,4,,auto
 donal-oconnor,Premier League 2,Brentford Academy,2054260,18,,,,,,,2026/27,1,1,0,0,61,0,0,8,0,0,6.95,auto
 donnacha-sammon,Premier Division,Galway United FC,520517,19,,,,,,,,,,,,,,,1,0,0,,auto
+dylan-ashman,League of Ireland First Division,Treaty United,,,,,,,,,,,,,,,,,,,,none
 dylan-connolly,Premier Division,Galway United FC,520517,31,,,,,,U21:6:1:2015; U19:3:0:2014,2026,4,1,0,0,91,0,0,399,44,11,6.02,auto
-dylan-connolly-athlone,League of Ireland,Athlone Town,,,,,,,,,,,,,,,,,,,,none
+dylan-connolly-athlone,Premier Division,Galway United FC,520517,31,,,,,,U21:6:1:2015; U19:3:0:2014,2026,4,1,0,0,91,0,0,399,44,11,6.02,auto
 dylan-duffy,League Two,Chesterfield,9786,23,,Left,,,,,2025/26,35,18,2,4,1579,1,0,167,13,11,6.59,auto
+dylan-hand,League of Ireland First Division,Wexford FC,,,,,,,,,,,,,,,,,,,,none
+dylan-mcglade,League of Ireland First Division,Cobh Ramblers,,,,,,,,,,,,,,,,,,,,none
 dylan-watts,Premier Division,Shamrock Rovers,4131,29,,,,,,U19:3:0:2015,2026,18,11,4,4,926,1,0,371,40,25,7.03,auto
 eamonn-tohill,Premier League U18,Middlesbrough U18,1113557,16,,,,,,U17:6:1:2025,2026/27,1,0,0,0,15,0,0,2,0,0,5.82,auto
 eanna-clancy,Eerste Divisie,VVV-Venlo,9839,22,,,,,,,2026/27,3,3,0,0,248,0,0,104,10,0,7.04,auto
@@ -238,33 +335,52 @@ emmanuel-osadebe,National League,Sutton United,158316,29,,Right,,,,,2026/27,4,4,
 emre-topcu,First Division,Longford Town,4569,21,,Right,,,,,,,,,,,,,71,2,2,,auto
 enda-minogue,Premier Division,Dundalk,1853,25,,,,,,,2026,23,,,,2070,0,0,111,0,0,6.95,auto
 enda-stevens,Premier Division,Shamrock Rovers,4131,36,,Left,26,0,2018,U21:1:0:2011,2026,15,12,1,1,1042,5,0,535,14,45,7.42,auto
+endri-mustali,League of Ireland First Division,Bray Wanderers,,,,,,,,,,,,,,,,,,,,none
+enzo-dietrich,League of Ireland First Division,Cobh Ramblers,,,,,,,,,,,,,,,,,,,,none
 eoghan-curran,Premier Division,Derry City,8338,16,,,,,,,,,,,,,,,,,,,auto
 eoghan-oconnell,League One,Stockport County,10007,31,,Right,,,,U21:2:0:2014,2026/27,3,3,0,0,270,0,0,366,12,12,7.42,auto
 eoin-doyle,Premier Division,Galway United FC,520517,18,,,,,,,,,,,,,,,,,,,auto
 eoin-farrell,Premier League,The New Saints,7852,23,,,,,,,2026/27,4,,0,0,260,,,65,1,0,,auto
 eoin-kenny,Championship,Portsmouth,8462,20,,Right,,,,U21:7:1:2025,2026,22,19,5,3,1559,1,0,95,19,4,7.25,auto
+eoin-sheeran,League of Ireland First Division,UCD,,,,,,,,,,,,,,,,,,,,none
 eric-yahaya,Southern Premier Division Central,Leamington,5764,28,,,,,,,,,,,,,,,,,,,auto
+eric-yoro,League of Ireland First Division,Treaty United,,,,,,,,,,,,,,,,,,,,none
 erskine-rennie,,,,16,,Right,,,,,,,,,,,,,4,1,0,,auto
+ethan-cheese,League of Ireland First Division,Bray Wanderers,,,,,,,,,,,,,,,,,,,,none
 ethan-hall,Premier Division,Dundalk,1853,20,,,,,,,,,,,,,,,,,,,auto
 ethan-obrien,Premier Division,Drogheda United,8339,25,,,,,,,2026,17,12,0,0,1050,2,0,64,3,3,6.69,auto
+ethan-odonovan,League of Ireland First Division,Cobh Ramblers,,,,,,,,,,,,,,,,,,,,none
 evan-caffrey,Premier Division,Shelbourne,5751,23,,,,,,U19:5:1:2021,2026,24,18,1,0,1565,4,0,204,14,17,6.94,auto
+evan-deasy,League of Ireland First Division,Cobh Ramblers,,,,,,,,,,,,,,,,,,,,none
 evan-ferguson,Premier League,Brighton & Hove Albion,10204,21,,Right,26,8,2022,U21:10:1:2021; U17:3:3:2019; U16:1:0:2019,2025/26,16,10,3,2,776,1,0,114,22,7,6.62,auto
 evan-mclaughlin,Premier Division,Waterford FC,6042,24,,,,,,,2026,16,11,0,2,943,4,0,143,18,4,6.91,auto
+evan-oconnor,League of Ireland First Division,Cobh Ramblers,,,,,,,,,,,,,,,,,,,,none
+evan-osam,League of Ireland First Division,Wexford FC,,,,,,,,,,,,,,,,,,,,none
 evan-weir,League One,Peterborough United,8677,24,,Left,,,,,2026/27,2,1,0,0,119,1,0,171,17,12,6.88,auto
+ewan-lee,League of Ireland First Division,Kerry FC,,,,,,,,,,,,,,,,,,,,none
+ewan-mccrohan,League of Ireland First Division,Kerry FC,,,,,,,,,,,,,,,,,,,,none
 festy-ebosele,Super Lig,Erzurumspor FK,281467,24,,Right,13,0,2022,U21:2:0:2021; U19:7:0:2019; U17:2:0:2019,2026/27,3,0,0,0,51,0,0,140,4,3,6.42,auto
+fiacre-kelleher,League of Ireland First Division,Cork City,,,,,,,,,,,,,,,,,,,,none
 finn-azaz,Championship,Southampton,8466,25,,Right,14,1,2024,U21:1:0:2022,2026/27,3,2,1,2,212,0,0,276,54,50,7.85,auto
+finn-barrett,League of Ireland First Division,Kerry FC,,,,,,,,,,,,,,,,,,,,none
+finn-dalton,League of Ireland First Division,Cork City,,,,,,,,,,,,,,,,,,,,none
 finn-flanagan,Premiership,Portadown,7984,21,,,,,,,2025/26,3,2,1,0,214,0,0,12,1,0,7.45,auto
 finn-mcdonnell,Premier Division,Bohemian FC,4594,18,,,,,,U18:2:0:2026; U17:6:0:2024,2026,1,,,,21,0,0,,,,,auto
 finn-mcgreevy,Premier League 2,Birmingham U21,1796111,18,,,,,,,,,,,,,,,,,,,auto
+finn-mckenlay,League of Ireland First Division,Finn Harps,,,,,,,,,,,,,,,,,,,,none
 finn-moylan,Premier Division,Shelbourne,5751,18,,,,,,,,,,,,,,,1,0,0,,auto
+finn-oleary,League of Ireland First Division,UCD,,,,,,,,,,,,,,,,,,,,none
 finn-sherlock,,Atherton Collieries,616935,,,,,,,,,,,,,,,,,,,,auto
 flynn-ryan,First Division,Bray Wanderers,1629,,,,,,,,,,,,,,,,,,,,auto
 francely-lomboto,Premier Division,Galway United FC,520517,26,,,,,,,2026,19,6,2,0,625,1,0,149,21,0,6.21,auto
+francis-campbell,League of Ireland First Division,Longford Town,,,,,,,,,,,,,,,,,,,,none
 franco-umeh,Championship,Portsmouth,8462,21,,Left,,,,U21:::2024; U19:6:2:2022; U17:6:2:2021,2025/26,1,0,0,0,1,0,0,4,0,0,,auto
 frankie-mcmahon-brown,League Two,Oldham Athletic,9785,19,,,,,,,2025/26,1,0,0,0,1,0,0,1,0,0,,auto
 freddie-turley,Championship,Dunfermline Athletic,8457,20,,Right,,,,U21:::2025; U19:9:0:2023; U17:9:0:2022,2025/26,9,6,0,0,482,2,0,32,0,0,,auto
 fuad-sule,,,,29,,,,,,,2025/26,5,5,0,0,424,0,0,,,,,auto
+fuhad-kareem,League of Ireland First Division,Treaty United,,,,,,,,,,,,,,,,,,,,none
 gabriel-adebambo,FNL,SK Dynamo České Budějovice,7840,24,,,,,,,,,,,,,,,4,0,0,,auto
+gabriel-frunza,League of Ireland First Division,Athlone Town,,,,,,,,,,,,,,,,,,,,none
 gabriel-kelly,Premier League 2,Stoke City U21,773650,19,,,,,,U21:1:0:2026; U17:::2022,2026/27,2,2,1,0,180,1,0,,,,7.74,auto
 gabriel-otegbayo,League One,Sheffield Wednesday,10163,21,,Right,,,,U21:1:0:2025,2026/27,3,2,1,0,216,1,0,58,2,0,6.56,auto
 garbhan-coughlan,,Limerick,2375,33,,,,,,,,,,,,,,,,,,,auto
@@ -272,55 +388,78 @@ gareth-mcelroy,Premier Division,Sligo Rovers,6361,21,,,,,,,2026,29,26,1,0,2406,4
 gary-oneil,Premier Division,Shamrock Rovers,4131,31,,,,,,U17:6:1:2011,2025,13,4,0,0,348,3,0,343,39,3,6.72,auto
 gavan-holohan,National League,Boston United,8646,34,,Right,,,,,2026/27,3,2,0,,213,1,0,411,61,12,,auto
 gavin-bazunu,Championship,Bolton Wanderers,8559,24,,Right,22,0,2021,U21:3:0:2019; U17:2:0:2019,2025/26,25,,,,2250,1,0,195,0,1,6.41,auto
+gavin-friel,League of Ireland First Division,Finn Harps,,,,,,,,,,,,,,,,,,,,none
 gavin-gilmore,,Glenavon,1956,23,,,,,,,,,,,,,,,,,,,auto
+gavin-hodgins,League of Ireland First Division,Wexford FC,,,,,,,,,,,,,,,,,,,,none
 gavin-kilkenny,League Two,Swindon Town,9795,26,,Right,,,,U21:16:0:2019; U17:5:0:2016,2025/26,39,37,1,1,3273,5,0,148,3,4,7.22,auto
 gavin-mcateer,First Division,Finn Harps,1627,18,,,,,,,,,,,,,,,,,,,auto
 gavin-molloy,Premiership,Aberdeen,8485,24,,,,,,,2026/27,1,0,0,0,7,0,0,126,5,2,,auto
 gbemi-arubi,League One,Burton Albion,9792,22,,Right,,,,U21:::2026,2026,23,19,7,3,1671,2,0,74,20,3,6.67,auto
+geordy-lavin,League of Ireland First Division,UCD,,,,,,,,,,,,,,,,,,,,none
 george-moloney,Premier League U18,Southampton U18,1113567,16,,,,,,U17:3:0:2025,2025/26,1,,,,90,0,0,,,,6.25,auto
 gideon-tetteh,First Division,Wexford FC,62337,21,,Right,,,,U17:1:0:2022,,,,,,,,,99,10,0,,auto
 glenn-ilunga,,Burnley Under 18 Academy,,16,,,,,,U17:1:0:2026,2025/26,2,1,0,0,122,0,0,,,,6.54,auto
 glenn-mcconnell,League One,Cambridge United,9834,21,,Right,,,,,2026/27,1,0,0,0,6,0,0,50,6,2,,auto
 glory-nzingo,Premier Division,St. Patrick's Athletic,1854,21,,Right,,,,U19:3:0:2022; U16:1:0:2019,2026,7,0,0,0,104,0,0,44,9,2,6.02,auto
 goodness-ogbonna,First Division,UCD,1578,18,,,,,,U18:1:0:2026; U17:5:1:2024,,,,,,,,,14,0,0,,auto
+gradi-lomboto,League of Ireland First Division,Athlone Town,,,,,,,,,,,,,,,,,,,,none
 grady-mcdonnell,Premier League 2,Nottingham Forest U21,1389162,18,,Both,,,,U18:3:0:2026; U17:12:1:2023,2026/27,2,2,0,0,170,0,0,22,0,2,7.00,auto
 graham-burke,Premier Division,Shamrock Rovers,4131,32,,Right,3,1,2018,U21:2:0:2013; U19:3:0:2011,2026,22,14,7,0,1280,3,0,386,115,20,6.90,auto
 graham-carey,Championship,Livingston,8282,37,,Left,,,,U21:1:0:2010,2026/27,2,2,0,0,112,0,0,624,92,77,,auto
 graham-coughlan,Premier Division,Waterford FC,6042,51,,,,,,,2026/27,7,,0,0,630,,,81,2,0,,auto
 graham-kelly,First Division,Bray Wanderers,1629,34,,,,,,,,,,,,,,,,,,,auto
-greg-sloggett,,Glentoran,,,,,,,,,,,,,,,,,,,,none
+greg-bolger,League of Ireland First Division,Cork City,,,,,,,,,,,,,,,,,,,,none
+greg-sloggett,Premiership,Glentoran,2203,30,,Right,,,,,2025/26,39,33,3,,2912,8,0,322,18,6,,auto
 guilherme-rego-priosti,First Division,Finn Harps,1627,20,,,,,,,2026,3,0,0,0,10,0,0,23,1,0,,auto
+guilherme-tavares,League of Ireland First Division,Finn Harps,,,,,,,,,,,,,,,,,,,,none
+hans-mpongo,League of Ireland First Division,Cork City,,,,,,,,,,,,,,,,,,,,none
+harry-curtis,League of Ireland First Division,UCD,,,,,,,,,,,,,,,,,,,,none
 harry-groome,Premier Division,Dundalk,1853,24,,,,,,,2026,27,10,1,1,1045,3,0,191,17,1,6.48,auto
+harry-halwax,League of Ireland First Division,Kerry FC,,,,,,,,,,,,,,,,,,,,none
+harry-nevin,League of Ireland First Division,Cork City,,,,,,,,,,,,,,,,,,,,none
 harry-vaughan,Premier Division,Bohemian FC,4594,22,,Right,,,,U21:3:0:2025; U19:5:0:2022,2026,23,16,3,4,1158,5,0,101,6,8,6.90,auto
+harry-whelan,League of Ireland First Division,UCD,,,,,,,,,,,,,,,,,,,,none
 harvey-boddy,National League,Worthing,282351,18,,,,,,,2026/27,1,0,0,0,45,0,0,1,0,0,6.90,auto
+harvey-mangan,League of Ireland First Division,Kerry FC,,,,,,,,,,,,,,,,,,,,none
 harvey-neville,USL Championship,Sporting JAX,1737991,24,,Right,,,,,2026,21,18,0,2,1676,6,0,146,1,14,6.20,auto
 harvey-vale,Championship,Queens Park Rangers,10172,22,,Left,2,0,2026,U20:8:1:2022; U19:16:1:2021; U18:1:0:2020; U17:3:1:2020,2026/27,2,2,0,1,180,0,0,92,7,13,7.71,auto
 harvey-warren,Premier Division,Dundalk,1853,22,,,,,,,2026,14,10,0,0,900,3,0,42,3,0,6.92,auto
 hugh-martin,Premier Division,Bohemian FC,4594,17,,,,,,U17:2:0:2026,2026,6,0,0,0,50,0,0,7,0,0,5.68,auto
 hugh-parker,National League,Scunthorpe United,8412,20,,,,,,,2026/27,3,1,0,,126,0,0,50,3,1,,auto
+hugh-smith,League of Ireland First Division,UCD,,,,,,,,,,,,,,,,,,,,none
 ian-lawlor,League Two,Crewe Alexandra,9784,31,,Right,,,2014,U21:2:0:2014; U19:6:0:2012; U17:::2011,2025/26,22,,,,1980,2,0,217,0,1,6.89,auto
+ifunanyachi-achara,League of Ireland First Division,Bray Wanderers,,,,,,,,,,,,,,,,,,,,none
 ike-orazi,Ligue 2,Reims,9837,19,,Right,,,,U19:6:0:2024; U17:12:2:2022,,,,,,,,,24,2,0,,auto
+ikechimka-manjor,League of Ireland First Division,Cork City,,,,,,,,,,,,,,,,,,,,none
 isaac-abankwah,Northern Premier Division,Bamber Bridge,282395,24,,,,,,,,,,,,,,,,,,,auto
 isaac-akinsete,,H. Zehlendorf,,,,,,,,,,,,,,,,,,,,none
 issa-kargbo,Championship,Blackburn Rovers,8655,27,,Right,18,5,2021,,2025/26,10,3,1,1,445,0,0,188,34,9,6.43,auto
 ivan-savshak,,Orvietana Calcio,,,,,,,,,,,,,,,,,,,,none
+ivan-voloshyn,League of Ireland First Division,Wexford FC,,,,,,,,,,,,,,,,,,,,none
 jack-bonham,Championship,Bolton Wanderers,8559,32,,Right,,,,,2026/27,3,,,,270,0,0,285,0,0,7.94,auto
+jack-brady,League of Ireland First Division,Treaty United,,,,,,,,,,,,,,,,,,,,none
 jack-byrne,Premier Division,Shamrock Rovers,4131,30,,,4,0,2019,U21:10:0:2014; U17:6:4:2012,2026,27,21,2,4,1814,5,0,310,44,51,7.19,auto
-jack-clarke,,Gloucester,,,,,,,,,,,,,,,,,,,,none
+jack-clarke,Premier League,Ipswich Town,9902,25,,Right,,,,U20:1:0:2019,2026/27,1,0,1,0,19,0,0,254,50,32,7.41,auto
 jack-henry-francis,Premier Division,Shelbourne,5751,22,,,,,,U19:6:0:2021,2026,19,16,2,1,1259,6,0,49,4,2,7.00,auto
+jack-larkin,League of Ireland First Division,Wexford FC,,,,,,,,,,,,,,,,,,,,none
+jack-lawless,League of Ireland First Division,Bray Wanderers,,,,,,,,,,,,,,,,,,,,none
 jack-moorhouse,Premier League 2,Manchester United U21,1070257,20,,Both,,,,U21:4:0:2025,2025/26,9,8,1,2,640,1,0,24,1,2,7.06,auto
 jack-moylan,Championship,Cardiff City,8344,24,,Right,2,3,2026,,2026/27,3,3,1,0,246,1,0,183,56,14,6.69,auto
 jack-oreilly,Premiership,Ballymena United,4063,22,,,,,,,,,,,,,,,37,2,0,,auto
 jack-taylor,Premier League,Ipswich Town,9902,28,,Right,11,0,2020,U21:7:0:2019,2025/26,39,24,2,1,2154,9,0,385,47,22,6.79,auto
 jacob-devaney,Premiership,Hibernian,10251,19,,,,,,U21:7:0:2025; U19:4:0:2024,2025/26,13,12,0,1,988,2,0,18,1,1,7.00,auto
+jacob-janik,League of Ireland First Division,Cobh Ramblers,,,,,,,,,,,,,,,,,,,,none
 jacob-keleghan,,Fighting Maroons,,,,,,,,,,,,,,,,,,,,none
 jacob-slater,League Two,Tranmere Rovers,8313,21,,Left,,,,U21:4:0:2025,2026/27,2,1,0,0,96,1,0,42,1,1,6.87,auto
 jad-hakiki,Premier Division,Sligo Rovers,6361,22,,,,,,U21:6:1:2025,2026,6,2,1,0,231,0,0,94,8,5,6.20,auto
 jaden-umeh,,Benfica U19,597674,18,,Right,2,0,2026,U21:2:0:2026; U17:16:6:2023,,,,,,,,,16,2,0,,auto
+jake-doyle,League of Ireland First Division,Wexford FC,,,,,,,,,,,,,,,,,,,,none
 jake-doyle-hayes,League Two,Exeter City,9833,27,,,,,,U21:::2018; U19:2:0:2016; U17:3:0:2014,2026/27,2,2,0,0,139,1,0,191,5,12,6.94,auto
 jake-griffin,National League North,Chester FC,9797,20,,,,,,U19:::2023,2026/27,4,,0,0,360,,,11,0,0,,auto
+jake-hough,League of Ireland First Division,Longford Town,,,,,,,,,,,,,,,,,,,,none
 jake-mulraney,Premier Division,Shamrock Rovers,4131,30,,Left,,,,U21:8:1:2016; U17:5:0:2012,2026,22,14,0,1,1153,1,0,349,28,27,6.68,auto
 jake-obrien,Premier League,Everton,8668,25,,Right,17,0,2024,U21:11:0:2021,2025/26,37,35,1,1,3124,6,1,158,11,7,6.72,auto
+jakub-zalewski,League of Ireland First Division,Athlone Town,,,,,,,,,,,,,,,,,,,,none
 james-abankwah,Serie A,Udinese,8600,22,,Right,4,0,2025,U21:11:0:2023; U19:10:1:2021; U16:1:0:2019,2026/27,2,2,0,0,180,1,0,92,1,0,6.46,auto
 james-bailey,First Division,Longford Town,4569,19,,Right,,,,,,,,,,,,,6,2,0,,auto
 james-bolger,Premier Division,Drogheda United,8339,25,,,,,,,2026,18,12,0,0,1151,3,0,67,2,0,6.39,auto
@@ -328,38 +467,52 @@ james-brown,Premier Division,St. Patrick's Athletic,1854,28,,Right,,,,,2026,27,2
 james-carroll,,Loughgall,2207,26,,,,,,,,,,,,,,,83,3,0,,auto
 james-clarke,Premier Division,Derry City,8338,25,,,,,,,2026,24,22,6,1,1683,4,1,214,32,10,6.85,auto
 james-collins,Championship,Lincoln City,8430,35,,Right,14,2,2019,U21:10:3:2009,2025/26,18,13,4,1,1043,2,0,713,230,29,6.71,auto
+james-crawford,League of Ireland First Division,Athlone Town,,,,,,,,,,,,,,,,,,,,none
 james-furlong,League Two,Walsall,10006,24,,Left,,,,U21:3:0:2023; U17:3:0:2018,2026/27,1,,0,0,60,,,50,0,5,6.80,auto
 james-golding,League One,Oxford United,8653,22,,,,,,U19:2:0:2023,2025/26,16,13,2,0,1117,3,0,92,8,2,,auto
+james-mcateer,League of Ireland First Division,Finn Harps,,,,,,,,,,,,,,,,,,,,none
 james-mcclean,Premier Division,Derry City,8338,37,,Left,103,11,2012,U21:3:0:2009,2026,17,12,0,3,1048,3,1,668,77,74,6.85,auto
 james-mcgrath,,Pike Rovers,264047,31,,,,,,,,,,,,,,,,,,,auto
 james-mcmanus,Premier Division,Sligo Rovers,6361,21,,,,,,U21:1:0:2025; U19:3:0:2023; U17:4:0:2021,2026,21,20,0,0,1658,4,0,102,4,2,6.92,auto
 james-morahan,Premier Division,Galway United FC,520517,,,,,,,,2026,1,0,0,0,1,0,0,2,0,0,,auto
+james-ohalloran,League of Ireland First Division,Cobh Ramblers,,,,,,,,,,,,,,,,,,,,none
 james-roche,Premier Division,Shelbourne,5751,18,,,,,,U19:3:0:2025; U17:5:0:2023,2026,3,1,0,0,93,1,0,10,0,0,6.05,auto
+james-rochford,League of Ireland First Division,Treaty United,,,,,,,,,,,,,,,,,,,,none
 james-storer,League One,Plymouth Argyle,8401,21,,,,,,,2026/27,1,,0,0,90,,,58,0,0,5.30,auto
+james-traynor,League of Ireland First Division,Cobh Ramblers,,,,,,,,,,,,,,,,,,,,none
 jamie-barry,,Portadown,,,,,,,,,,,,,,,,,,,,none
 jamie-brennan,Premier Division,Drogheda United,8339,18,,,,,,,2026,1,0,0,0,45,0,0,1,0,0,,auto
+jamie-duggan,League of Ireland First Division,Bray Wanderers,,,,,,,,,,,,,,,,,,,,none
+jamie-egan,League of Ireland First Division,Longford Town,,,,,,,,,,,,,,,,,,,,none
 jamie-lennon,Premier Division,St. Patrick's Athletic,1854,28,,,,,,U21:4:1:2019,2026,25,22,1,2,2000,6,0,270,6,8,7.43,auto
 jamie-mcgrath,Premiership,Hibernian,10251,29,,Both,15,0,2021,U21:3:0:2017; U19:5:0:2014,2026/27,1,0,0,0,33,0,0,423,76,21,6.53,auto
 jamie-mullins,League One,Wycombe Wanderers,8676,21,,,,,,U21:9:2:2025; U16:1:1:2019,2026/27,1,1,0,0,57,0,0,72,6,6,6.26,auto
+jamie-nduwuba,League of Ireland First Division,Cobh Ramblers,,,,,,,,,,,,,,,,,,,,none
 jamie-odonnell,Premier Division,Sligo Rovers,6361,16,,,,,,U15:1:1:2025,2026,1,0,0,0,12,0,0,1,0,0,5.96,auto
+jamie-ryan,League of Ireland First Division,Bray Wanderers,,,,,,,,,,,,,,,,,,,,none
+jamie-wynne,League of Ireland First Division,Wexford FC,,,,,,,,,,,,,,,,,,,,none
+jason-folarin-oyenuga,League of Ireland First Division,Treaty United,,,,,,,,,,,,,,,,,,,,none
 jason-healy,,Harland & Wolff Welders F.C.,206282,20,,,,,,U17:10:0:2022,,,,,,,,,1,0,0,,auto
 jason-knight,Championship,Bristol City,8427,25,,Right,43,1,2020,U21:7:0:2019; U19:5:1:2018; U18:1:0:2018; U17:10:0:2017,2026/27,3,3,1,0,270,1,0,310,26,18,7.25,auto
 jason-mcclelland,Premier Division,St. Patrick's Athletic,1854,29,,,,,,U19:2:0:2015,2026,21,13,0,2,1128,1,0,295,35,10,6.73,auto
 jason-spelman,,Engen Santos FC,102096,44,,,,,,,,,,,,,,,,,,,auto
 jay-mcgrath,League One,Doncaster Rovers,9903,23,,,,,,,2026/27,3,3,0,0,244,1,0,125,2,7,6.98,auto
 jay-oshea,A-League,Brisbane Roar FC,8118,38,,,,,,U21:5:0:2009,2025/26,21,19,2,2,1690,3,0,577,110,63,7.16,auto
+jayden-goad,League of Ireland First Division,UCD,,,,,,,,,,,,,,,,,,,,none
 jayson-molumby,Championship,West Bromwich Albion,8659,27,,Right,36,0,2020,U21:10:0:2019; U19:9:3:2016; U17:6:2:2015,2026/27,3,2,0,0,188,0,0,247,12,10,6.95,auto
 jaze-kabia,League One,Leyton Orient,8351,26,,Both,,,,,2026/27,3,3,0,2,230,1,0,248,68,13,6.92,auto
 jesse-dempsey,League Two,Fleetwood Town,45723,21,,,,,,,2026,4,3,0,0,315,0,0,44,1,1,6.45,auto
 jesse-nwabueze,National League North,King's Lynn Town,45731,22,,,,,,,,,,,,,,,,,,,auto
 jevon-mills,National League,Solihull Moors,161801,22,,,,,,,2026/27,1,0,0,,29,0,0,82,2,0,,auto
+jimmy-corcoran,League of Ireland First Division,Bray Wanderers,,,,,,,,,,,,,,,,,,,,none
 jimmy-dunne,Championship,Queens Park Rangers,10172,28,,Right,3,0,2018,U21:1:0:2018,2026/27,3,3,1,0,270,0,0,296,22,9,7.55,auto
 jimmy-keohane,Premier Division,Galway United FC,520517,35,,Right,,,,U19:5:1:2009,2026,24,23,3,3,1861,3,0,517,61,14,6.69,auto
 jimmy-mwanga,,,,27,,Right,,,,,2025/26,18,14,2,0,998,2,0,62,7,0,6.21,auto
+joe-aidoo,League of Ireland First Division,Cork City,,,,,,,,,,,,,,,,,,,,none
 joe-byrne,Major League Soccer,Charlotte FC,1323940,34,,Right,,,,,2026,18,17,0,0,1507,3,0,527,17,45,6.47,auto
 joe-carroll-byrne,Premier Division,St. Patrick's Athletic,1854,17,,Right,,,,U17:7:2:2025,,,,,,,,,,,,,auto
-joe-gardner,,Falkirk,,,,,,,,,,,,,,,,,,,,none
-joe-gorman,,Armagh,,,,,,,,,,,,,,,,,,,,none
+joe-gardner,Premiership,Falkirk,8596,35,,,,,,,,,,,,,,,135,10,0,,auto
+joe-gorman,,Newington FC,,31,,,,,,,,,,,,,,,172,6,0,,auto
 joe-hodge,Premiership,Motherwell,9927,23,,Right,1,0,2024,U21:7:1:2022; U19:4:1:2019; U17:3:0:2019; U17:4:0:2017,2026/27,3,,0,0,205,,,80,3,1,5.90,auto
 joe-obrien-whitmarsh,League Two,Northampton Town,8651,21,,Right,,,,U21:::2005; U19:2:0:2023,2026/27,2,1,0,0,114,0,0,42,7,1,6.06,auto
 joe-quigley,League Two,Bristol Rovers,10104,29,,,,,,U21:4:0:2017,2026/27,1,1,0,0,68,0,0,399,76,13,6.46,auto
@@ -367,7 +520,10 @@ joe-rafferty,League Two,Rotherham United,8119,32,,Right,,,,,2026/27,2,0,0,0,55,0
 joe-redmond,Premier Division,St. Patrick's Athletic,1854,26,,,,,,U21:2:0:2022; U17:1:0:2017,2026,29,29,1,2,2609,5,0,199,14,10,7.53,auto
 joe-shaughnessy,A-League,Newcastle Jets,6454,34,,Right,,,,U21:1:0:2013; U19:3:0:2011,2025/26,20,16,1,0,1458,1,0,475,28,11,6.95,auto
 joel-bagan,Championship,Cardiff City,8344,24,,Left,,,2026,U21:8:0:2021,2026/27,3,3,0,0,270,0,0,164,5,10,7.61,auto
+joel-bradley-walsh,League of Ireland First Division,Finn Harps,,,,,,,,,,,,,,,,,,,,none
 joey-wuna,,Shelbourne U19,612860,17,,,,,,U17:4:1:2025,2026,1,0,0,0,8,0,0,1,0,0,,auto
+john-bilili-sesay,League of Ireland First Division,Bray Wanderers,,,,,,,,,,,,,,,,,,,,none
+john-donohue,League of Ireland First Division,Longford Town,,,,,,,,,,,,,,,,,,,,none
 john-egan,Premier League,Hull City,8667,33,,Right,38,3,2017,U21:5:0:2012; U19:10:0:2009,2026/27,2,2,0,0,180,0,0,477,30,11,7.57,auto
 john-mahon,Premier Division,Waterford FC,6042,26,,Right,,,,,2026,27,27,5,1,2377,8,0,190,8,1,7.16,auto
 john-martin,Premier Division,Shelbourne,5751,27,,,,,,U19:1:0:2017,2026,16,14,6,1,1011,5,0,261,55,9,6.87,auto
@@ -378,9 +534,14 @@ john-ross-wilson,Premier Division,Dundalk,1853,27,,,,,,,2026,20,19,1,1,1718,3,1,
 john-russell,Premier Division,Shelbourne,5751,41,,,,,,,2026/27,5,,0,0,450,,,262,27,0,,auto
 johnny-kenny,Premiership,Celtic,9925,23,,Right,2,0,2025,U21:6:0:2023; U21:::2021; U19:5:4:2021,2025/26,15,8,4,2,688,0,0,167,54,10,6.78,auto
 jon-gallagher,Major League Soccer,Austin FC,1218886,30,,Right,,,,,2026,20,18,0,1,1582,1,0,288,27,20,6.45,auto
+jonas-hakkinen,League of Ireland First Division,Kerry FC,,,,,,,,,,,,,,,,,,,,none
+jonas-stjenberg,League of Ireland First Division,Cobh Ramblers,,,,,,,,,,,,,,,,,,,,none
+jonathan-adedeji,League of Ireland First Division,Longford Town,,,,,,,,,,,,,,,,,,,,none
 jonathan-afolabi,Premier Division,Shamrock Rovers,4131,26,,Left,,,2023,U21:3:0:2019; U19:13:6:2017,2026,2,1,1,0,105,0,0,140,37,8,7.34,auto
+jonathan-kehir,League of Ireland First Division,Athlone Town,,,,,,,,,,,,,,,,,,,,none
 jonathan-lunney,Premier Division,Shelbourne,5751,28,,,,,,U17:9:0:2014,2026,19,15,0,0,1359,5,0,301,10,6,6.76,auto
 jonny-smith,League Two,Rochdale,8493,29,,Left,,,,,2026/27,1,0,0,0,11,0,0,327,51,32,6.01,auto
+jordan-adeyemi,League of Ireland First Division,Cobh Ramblers,,,,,,,,,,,,,,,,,,,,none
 jordan-adeyemo,1. Deild,Ægir,559291,26,,,,,,,,,,,,,,,146,37,0,,auto
 jordan-doherty,Championship,Livingston,8282,26,,,,,,U19:4:0:2017; U17:7:1:2017,2026/27,4,3,0,0,291,0,0,242,6,10,,auto
 jordan-mceneff,Premiership,Larne,2206,25,,,,,,U17:2:0:2018,2026/27,8,,0,0,326,,,143,9,1,,auto
@@ -388,6 +549,7 @@ jordan-shipley,League Two,Cheltenham Town,8680,28,,Left,,,,U21:2:0:2018,2026/27,
 josh-adam,Premier Division,Bohemian FC,4594,22,,,,,,U19:3:1:2022; U16:1:0:2019,,,,,,,,,27,1,0,,auto
 josh-barrett,National League South,Dorking Wanderers,580438,28,,Right,,,,U21:3:0:2016; U19:3:1:2016; U17:8:3:2014,2026/27,3,,1,0,270,,,240,49,14,,auto
 josh-cullen,First Division,Finn Harps,1627,18,,,,,,,,,,,,,,,,,,,auto
+josh-fitzpatrick,League of Ireland First Division,Cork City,,,,,,,,,,,,,,,,,,,,none
 josh-harpur,Premier Division,Bohemian FC,4594,17,,Right,,,,U17:5:3:2025,2026,2,0,0,0,15,0,0,3,0,0,6.11,auto
 josh-honohan,Championship,Lincoln City,8430,25,,,,,2025,U21:::2021,2026/27,1,0,0,0,5,0,0,162,13,12,,auto
 josh-keeley,League One,Luton Town,8346,23,,Right,1,0,2025,U21:8:0:2023; U19:1:0:2022; U17:::2019,2026/27,2,,,,180,0,0,117,1,1,5.68,auto
@@ -395,41 +557,55 @@ josh-mcpake,,Hearts,,,,,,,,,,,,,,,,,,,,none
 josh-obrien,USL Championship,Indy Eleven,514649,23,,Right,,,,,2026,19,19,4,1,1710,0,0,108,8,1,6.97,auto
 josh-oconnor,Premier Division,St. Patrick's Athletic,1854,17,,,,,,U17:4:0:2025,,,,,,,,,,,,,auto
 josh-odwyer,2. Liga,FC Liefering,1915,16,,,,,2026,U17:5:0:2025; U15:1:0:2025,,,,,,,,,,,,,auto
-josh-okpolokpo,,,,,,,,,,,,,,,,,,,,,,none
+josh-okpolokpo,Veikkausliiga,SJK,162162,23,,,,,,,,,,,,,,,35,1,0,,auto
 josh-seary,Northern Premier Division,FC United of Manchester,161822,21,,,,,,U19:::2022,2026/27,3,,0,0,270,,,18,0,0,,auto
 josh-ukek,Premiership,Larne,2206,27,,Right,,,,,2026/27,3,,0,0,70,,,81,21,0,,auto
+joshua-farnham,League of Ireland First Division,Athlone Town,,,,,,,,,,,,,,,,,,,,none
 joshua-kayode,League Two,Rotherham United,8119,26,,,,,,U21:10:2:2020,2025/26,3,1,0,0,98,0,0,140,22,7,5.82,auto
 joshua-keeya,National League South,Salisbury,1114695,,,,,,,,,,,,,,,,,,,,auto
 junior-thiam,Premier Division,Galway United FC,520517,19,,Right,,,,,2026,3,0,0,0,5,0,0,14,0,0,,auto
 justin-ferizaj,League Two,Crawley Town,8647,21,,,,,,U19:5:1:2022; U17:5:2:2021,2025/26,3,2,0,0,180,0,0,38,2,1,6.28,auto
 justin-osagie,Premier League 2,Chelsea U21,773652,20,,Right,,,,,2026/27,1,1,0,0,90,0,0,3,0,0,7.03,auto
+kai-oneill,League of Ireland First Division,Cobh Ramblers,,,,,,,,,,,,,,,,,,,,none
 kameron-ledwidge,Premier Division,Shelbourne,5751,25,,,,,,U21:1:0:2019; U19:6:0:2019; U18:1:0:2018; U17:20:0:2016,2026,27,26,0,1,2287,3,0,191,1,4,6.88,auto
+karim-fonseca,League of Ireland First Division,Cork City,,,,,,,,,,,,,,,,,,,,none
+karl-andrade,League of Ireland First Division,UCD,,,,,,,,,,,,,,,,,,,,none
 kasey-mcateer,Premier League,Ipswich Town,9902,24,,Right,8,1,2024,,2026/27,1,0,0,0,24,0,0,115,12,2,6.24,auto
+kaylem-harnett,League of Ireland First Division,Wexford FC,,,,,,,,,,,,,,,,,,,,none
 kealan-dillon,Premiership,Dungannon Swifts,4615,32,,,,,,U19:3:0:2012; U17:4:0:2010,,,,,,,,,365,41,1,,auto
 keith-buckley,Premier Division,Dundalk,1853,34,,,,,,,2026,28,21,0,1,1768,8,0,407,19,3,6.76,auto
 keith-ward,Premier Division,Dundalk,1853,35,,Both,,,,,,,,,,,,,426,43,9,,auto
 keleb-nwubani,,E.Ettelbrück,,,,,,,,,,,,,,,,,,,,none
 kevin-doherty,Premier Division,Drogheda United,8339,46,,,,,,,2026/27,7,,0,0,630,,,13,1,0,,auto
+kevin-fitzpatrick,League of Ireland First Division,Treaty United,,,,,,,,,,,,,,,,,,,,none
 kevin-long,Premier Division,Waterford FC,6042,36,,Right,17,1,2017,U21:::2010,2026,19,18,2,1,1639,4,0,305,15,4,7.11,auto
 kevin-otoole,Major League Soccer,New York City FC,546238,27,,Left,,,2025,,2026,13,11,0,0,1027,0,0,153,3,4,6.57,auto
 kevin-toner,Segunda Federacion - Group 3,Deportiva Minera,278805,30,,Left,,,,U21:::2016; U19:5:0:2013,,,,,,,,,245,12,2,,auto
 kevin-zefi,Premier Division,Sligo Rovers,6361,21,,,,,,U19:9:1:2021; U17:6:1:2021,2026,3,0,0,0,58,0,0,14,2,0,6.32,auto
 kian-brunton,,Longford,,,,,,,,,,,,,,,,,,,,none
 kian-corbally,Championship,Dunfermline Athletic,8457,22,,,,,,U19:4:0:2021,2026/27,2,1,0,0,95,0,0,149,12,1,,auto
+kian-dignam,League of Ireland First Division,Wexford FC,,,,,,,,,,,,,,,,,,,,none
 kian-leavy,Premier Division,St. Patrick's Athletic,1854,24,,,1,0,2026,U21:1:0:2023,2026,25,25,6,3,2072,2,0,128,11,6,7.20,auto
 kian-mcmahon-brown,Premier League 2,Burnley U21,1796112,18,,,,,,U21:1:0:2026; U18:3:2:2026; U17:12:1:2024,2026/27,1,1,1,0,90,0,0,,,,8.46,auto
+kian-moore,League of Ireland First Division,Longford Town,,,,,,,,,,,,,,,,,,,,none
 kian-quigley,Premier Division,St. Patrick's Athletic,1854,17,,,,,,U17:8:0:2025; U15:1:0:2024,,,,,,,,,,,,,auto
+kieran-cooney,League of Ireland First Division,Kerry FC,,,,,,,,,,,,,,,,,,,,none
 kieran-cruise,Premier Division,Drogheda United,8339,22,,,,,,,2026,12,2,0,2,350,1,0,76,6,3,6.58,auto
 kieran-morrison,League One,Sheffield Wednesday,10163,19,,Left,1,0,2026,U21:3:0:2025; U19:4:0:2023; U17:3:1:2023,2026/27,2,0,0,1,50,0,0,5,0,1,6.88,auto
 kieran-ohara,Premiership,Dundee FC,8284,30,,Right,2,0,2018,U21:9:0:2016,2025/26,4,,,,294,1,0,185,0,0,,auto
 kieran-sadlier,USL Championship,Sporting JAX,1737991,31,,Right,,,,U21:1:0:2014; U19:6:1:2012; U17:2:0:2010,2026,20,14,8,1,1227,0,0,381,90,27,6.83,auto
 killian-brouder,Premier Division,Galway United FC,520517,28,,,,,,,2026,22,23,1,0,1904,1,0,250,17,0,6.86,auto
 killian-cahill,League One,Leyton Orient,8351,22,,Right,,,2026,U21:1:0:2023,2025/26,16,,,,1440,2,0,21,0,1,6.84,auto
+killian-cailloce,League of Ireland First Division,UCD,,,,,,,,,,,,,,,,,,,,none
 killian-cantwell,First Division,Bray Wanderers,1629,31,,,,,,,,,,,,,,,354,12,0,,auto
 killian-phillips,Premiership,St. Mirren,9800,24,,Right,4,0,2025,U21:5:1:2021,2026/27,2,2,3,0,180,1,0,189,24,5,8.52,auto
+kyal-byrne,League of Ireland First Division,Wexford FC,,,,,,,,,,,,,,,,,,,,none
 kyle-degelman,Regionalliga Bayern,TSV Aubstadt,340719,21,,,,,,,,,,,,,,,,,,,auto
+kyle-foley,League of Ireland First Division,Treaty United,,,,,,,,,,,,,,,,,,,,none
 kyle-mcdonagh,Premier Division,Sligo Rovers,6361,20,,,,,,,2026,12,2,0,0,327,0,0,35,0,0,6.08,auto
+kyle-oconnor,League of Ireland First Division,Athlone Town,,,,,,,,,,,,,,,,,,,,none
 kyle-robinson,First Division,Athlone Town,2378,23,,,,,,,,,,,,,,,129,26,2,,auto
+kyle-tucker,League of Ireland First Division,Bray Wanderers,,,,,,,,,,,,,,,,,,,,none
 lee-axworthy,,Without ClubWithout Club,,,,,,,,,,,,,,,,,,,,none
 lee-desmond,USL Championship,Sacramento Republic FC,521004,31,,Left,,,,U21:::2015,2026,20,20,1,0,1755,2,0,384,7,3,7.26,auto
 lee-devitt,Premier Division,Galway United FC,520517,26,,,,,,,2026,27,19,0,0,1822,4,0,239,38,0,6.71,auto
@@ -444,77 +620,112 @@ lewis-richards,League Two,Crawley Town,8647,24,,Left,,,,U19:3:1:2019,2026/27,2,0
 lewis-temple,League Two,Oldham Athletic,9785,21,,,,,,U19:3:0:2023,2026/27,1,0,0,0,45,0,0,56,1,0,5.19,auto
 liam-bossin,Eredivisie,Feyenoord,10235,30,,Right,,,,U21:2:0:2016; U19:4:0:2014,,,,,,,,,149,0,0,,auto
 liam-delap,Premier League,Nottingham Forest,10203,23,,Right,,,,U21:7:2:2023; U20:6:1:2022; U19:6:2:2020; U18:1:1:2021; U17:2:2:2019; U16:9:6:2019,2026/27,1,0,0,0,24,0,0,166,28,8,5.99,auto
+liam-doyle,League of Ireland First Division,Wexford FC,,,,,,,,,,,,,,,,,,,,none
 liam-kelly,League One,Peterborough United,8677,30,,Right,,,,U19:4:1:2013,2026/27,3,2,0,0,199,0,0,362,33,45,6.88,auto
 liam-kerrigan,,Ternana,6457,26,,Right,,,,U21:3:1:2021,,,,,,,,,170,31,5,,auto
 liam-kinsella,National League North,Hednesford,9923,30,,Right,,,,U21:5:0:2016,2026/27,4,,0,0,360,,,374,4,5,,auto
 liam-mullan,,Harland & Wolff Welders F.C.,206282,22,,,,,,,,,,,,,,,19,0,0,,auto
 liam-scales,Premiership,Celtic,9925,28,,Left,16,1,2021,U21:6:0:2019,2026/27,1,1,0,0,90,0,0,347,21,13,8.03,auto
 liam-woodcock,,Longford,,,,,,,,,,,,,,,,,,,,none
+lorenzo-piaia,League of Ireland First Division,Finn Harps,,,,,,,,,,,,,,,,,,,,none
 louie-barry,League One,Sheffield Wednesday,10163,23,,Right,,,,U18:2:0:2020; U17:7:4:2019; U16:5:4:2019,2026/27,3,2,2,1,193,0,0,150,41,11,7.49,auto
 louie-watson,League Two,Crawley Town,8647,25,,,,,,U21:1:0:2021,2026/27,3,3,1,0,270,2,0,90,3,5,6.94,auto
+louis-dignam,League of Ireland First Division,UCD,,,,,,,,,,,,,,,,,,,,none
 louis-dunne,Isthmian Premier Division,Maldon & Tiptree,282501,27,,Left,,,,,,,,,,,,,73,2,0,,auto
 luca-cailloce,Premier Division,Shelbourne,5751,18,,Right,,,,U19:3:0:2025; U17:6:0:2023,,,,,,,,,29,1,0,,auto
 luca-connell,League One,Barnsley,8283,25,,Left,,,,U21:::2020; U19:3:0:2019; U18:1:0:2018; U17:4:0:2018,2026/27,2,2,0,0,175,0,0,229,19,28,7.00,auto
+lucas-curtin,League of Ireland First Division,Cobh Ramblers,,,,,,,,,,,,,,,,,,,,none
+luiz-gustave-vieira,League of Ireland First Division,Athlone Town,,,,,,,,,,,,,,,,,,,,none
+luka-le-bervet-bardsley,League of Ireland First Division,Cobh Ramblers,,,,,,,,,,,,,,,,,,,,none
+lukas-doherty,League of Ireland First Division,Finn Harps,,,,,,,,,,,,,,,,,,,,none
 luke-browne,League One,Notts County,9819,20,,,,,,U19:3:0:2023; U17:3:0:2021,2026/27,1,,0,0,10,,,24,1,0,6.10,auto
 luke-cullen,Premier Division,St. Patrick's Athletic,1854,17,,,,,,,,,,,,,,,,,,,auto
+luke-doolan,League of Ireland First Division,Kerry FC,,,,,,,,,,,,,,,,,,,,none
+luke-downey,League of Ireland First Division,Cork City,,,,,,,,,,,,,,,,,,,,none
 luke-fitzsimons,,Torino,,,,,,,,,,,,,,,,,,,,none
 luke-heeney,Premier Division,Waterford FC,6042,27,,,,,,,2026,24,16,0,0,1375,6,0,217,4,4,6.50,auto
 luke-kehir,Premier Division,St. Patrick's Athletic,1854,20,,,,,,U17:::,,,,,,,,,,,,,auto
 luke-mcnally,Championship,Bristol City,8427,26,,Right,,,,,,,,,,,,,183,19,3,,auto
+luke-morrissey,League of Ireland First Division,Cobh Ramblers,,,,,,,,,,,,,,,,,,,,none
 luke-mulligan,Premier Division,Dundalk,1853,18,,,,,,U19:3:0:2025,,,,,,,,,22,2,0,,auto
+luke-obrien,League of Ireland First Division,Longford Town,,,,,,,,,,,,,,,,,,,,none
 luke-oregan,Premier Division,Shamrock Rovers,4131,21,,Right,,,,,2026,2,2,0,0,158,0,0,76,1,0,6.78,auto
+luke-palmer,League of Ireland First Division,Kerry FC,,,,,,,,,,,,,,,,,,,,none
 luke-pearce,Premier Division,Sligo Rovers,6361,22,,,,,,,2026,5,5,0,1,302,1,0,66,13,2,6.09,auto
 luke-turner,Premier Division,St. Patrick's Athletic,1854,24,,,,,,U21:::2021; U17:::2019,2026,28,28,2,3,2473,3,0,203,13,3,7.54,auto
 macdarragh-scanlon,Premier Division,Galway United FC,520517,19,,,,,,,,,,,,,,,,,,,auto
 marcus-harness,League One,Huddersfield Town,9796,30,,Right,,,,,2026/27,3,3,0,0,265,0,0,446,63,50,6.93,auto
 mark-byrne,,Glenavon,1956,25,,,,,,,,,,,,,,,48,0,0,,auto
+mark-canavan,League of Ireland First Division,Longford Town,,,,,,,,,,,,,,,,,,,,none
 mark-connolly,Premier Division,Derry City,8338,34,,Right,,,,U21:4:0:2011,2026/27,1,,0,0,90,,,474,22,7,,auto
 mark-coyle,Premiership,Coleraine,2202,29,,,,,,,2026/27,1,,0,0,53,,,258,11,4,,auto
 mark-doyle,Premier Division,Drogheda United,8339,27,,,,,,,2026,28,26,9,0,2079,5,0,291,83,8,6.69,auto
 mark-mcguinness,Championship,Sheffield United,8657,25,,Right,2,0,2024,U21:9:1:2020; U19:10:2:2019,2026/27,3,3,0,0,270,1,0,217,13,4,6.86,auto
+mark-murphy,League of Ireland First Division,Treaty United,,,,,,,,,,,,,,,,,,,,none
 mark-omahony,Premier League 2,Brighton & Hove Albion U21,773678,21,,Right,,,,U21:10:0:2024; U19:9:5:2022; U17:6:4:2021,2026/27,1,,1,0,90,,,50,6,1,7.70,auto
 mark-sykes,Championship,Millwall,10004,29,,Right,7,0,2019,U21:10:2:2016; U19:3:0:2016,2026/27,3,2,1,0,206,1,0,427,46,29,6.92,auto
 mark-travers,Premier League,Everton,8668,27,,Right,6,0,2019,U19:7:0:2016; U17:5:0:2015,,,,,,,,,123,0,0,,auto
+mark-walsh,League of Ireland First Division,Treaty United,,,,,,,,,,,,,,,,,,,,none
+martin-scally,League of Ireland First Division,Athlone Town,,,,,,,,,,,,,,,,,,,,none
 mason-ayre,,Nottingham Forest,,,,,,,,,,,,,,,,,,,,none
 mason-melia,Championship,Lincoln City,8430,18,,Right,2,0,2026,U21:5:2:2024; U19:2:0:2023; U17:16:10:2022,2026/27,1,0,0,0,15,0,0,99,23,5,5.61,auto
 mason-murphy,Premier Division,Waterford FC,6042,,,,,,,,,,,,,,,,,,,,auto
 matt-doherty,Championship,Sheffield United,8657,34,,Right,53,3,2016,U21:5:3:2012; U19:6:0:2011,2026/27,2,,0,0,73,,,503,41,37,6.70,auto
+matt-jones,League of Ireland First Division,Treaty United,,,,,,,,,,,,,,,,,,,,none
 matteo-egan,Serie B,Empoli,8534,18,,,,,,U19:1:0:2025,2026/27,1,1,0,0,90,0,0,2,0,0,7.05,auto
-matthew-harris,,Merthyr Town,,,,,,,,,,,,,,,,,,,,none
+matthew-alonge,League of Ireland First Division,UCD,,,,,,,,,,,,,,,,,,,,none
+matthew-britton,League of Ireland First Division,Kerry FC,,,,,,,,,,,,,,,,,,,,none
+matthew-connor,League of Ireland First Division,Kerry FC,,,,,,,,,,,,,,,,,,,,none
+matthew-harris,National League North,Merthyr Town,5762,32,,,,,,,2026/27,1,,0,0,90,,,62,4,0,,auto
 matthew-healy,Premier Division,Shamrock Rovers,4131,24,,,,,2026,U21:11:0:2023,2026,25,25,2,1,2156,7,0,169,16,9,7.47,auto
+matthew-kiernan,League of Ireland First Division,Cork City,,,,,,,,,,,,,,,,,,,,none
 matthew-moore,3. Liga,Hoffenheim II,94940,19,,Right,,,,U19:2:0:2025; U17:13:0:2023,2026/27,3,3,0,0,270,0,0,2,0,0,7.48,auto
 matthew-murray,First Division,Cork City,2201,18,,,,,,U19:1:0:2025; U17:11:0:2023,2025,7,3,1,0,243,0,0,33,2,0,6.47,auto
 matthew-ohara,Premier Division,St. Patrick's Athletic,1854,20,,,,,,,,,,,,,,,1,0,0,,auto
 max-bardell,National League,FC Halifax Town,10195,23,,,,,,,2026/27,4,4,0,,360,1,0,78,4,0,,auto
 max-ferguson,Premier Division,Dundalk,1853,18,,,,,,,,,,,,,,,1,0,0,,auto
-max-johnston,,Institute,,,,,,,,,,,,,,,,,,,,none
+max-hutchison,League of Ireland First Division,Finn Harps,,,,,,,,,,,,,,,,,,,,none
+max-johnston,Championship,Derby County,10170,22,,Right,4,0,2023,U21:6:0:2023; U19:2:0:2022,2026/27,3,2,0,0,139,1,0,155,7,17,5.90,auto
 max-kovalevskis,Premier Division,Shamrock Rovers,4131,18,,,,,,U17:2:1:2025,2026,4,1,0,0,89,1,0,14,1,0,6.26,auto
+max-murphy,League of Ireland First Division,Wexford FC,,,,,,,,,,,,,,,,,,,,none
 max-oleary,Championship,West Bromwich Albion,8659,29,,Right,2,0,2022,,2026/27,3,,,,270,0,0,301,0,1,7.64,auto
 maxim-afonin,,,,38,,Right,3,0,2012,,,,,,,,,,314,18,0,,auto
 mayowa-animasahun,Premier Division,Dundalk,1853,23,,Right,,,,,2026,19,16,0,0,1340,6,0,109,4,0,6.98,auto
+michael-carroll,League of Ireland First Division,Cobh Ramblers,,,,,,,,,,,,,,,,,,,,none
 michael-duffy,Premier Division,Derry City,8338,32,,,,,2016,U21:9:0:2013; U19:3:1:2012,2026,21,18,8,4,1649,1,0,480,120,33,7.25,auto
 michael-hulholland,,Liverpool,,,,,,,,,,,,,,,,,,,,none
 michael-kelly,National League North,Spalding United,580400,28,,Left,,,,U17:6:0:2013,2026/27,4,,0,0,360,,,226,5,3,,auto
 michael-mccolgan,Premier Division,Derry City,8338,,,,,,,,,,,,,,,,1,0,0,,auto
 michael-noonan,Premier Division,Shamrock Rovers,4131,18,,,,,,U21:5:1:2025; U19:3:0:2025; U17:12:6:2024,2026,25,14,6,0,1325,1,0,79,15,3,6.44,auto
 michael-obafemi,Championship,Burnley,8191,26,,Right,12,2,2018,U21:5:0:2019; U19:4:1:2017,2025/26,5,4,0,0,258,1,0,160,26,9,5.89,auto
+michael-raggett,League of Ireland First Division,UCD,,,,,,,,,,,,,,,,,,,,none
 mikey-johnston,Championship,West Bromwich Albion,8659,27,,Left,19,2,2023,U21:6:1:2017; U19:5:3:2017,2026/27,1,,0,0,25,,,223,28,29,6.10,auto
+mikey-mccullagh,League of Ireland First Division,UCD,,,,,,,,,,,,,,,,,,,,none
 mikey-place,Premiership,Carrick Rangers,187969,28,,,,,,,,,,,,,,,,,,,auto
+mikie-walsh-rowe,League of Ireland First Division,Wexford FC,,,,,,,,,,,,,,,,,,,,none
 millenic-alli,Championship,Charlton Athletic,8451,26,,Right,1,0,2026,,2026/27,2,0,0,1,76,0,0,204,45,6,6.69,auto
+muhammad-haris,League of Ireland First Division,UCD,,,,,,,,,,,,,,,,,,,,none
 muhammad-oladiti,,Fleetwood Town Academy,1668753,18,,,,,,U19:2:0:2025; U18:::2026; U17:2:0:2024,,,,,,,,,5,0,0,,auto
 naj-razi,Premier Division,Shamrock Rovers,4131,19,,Both,,,,U21:1:0:2026; U19:8:1:2023; U17:10:3:2022,2026,8,1,0,0,184,2,0,18,1,0,6.26,auto
 nathan-collins,Premier League,Brentford,9937,25,,Right,40,3,2021,U21:4:0:2019; U19:3:0:2018; U17:19:0:2016,2026/27,1,1,0,0,90,0,0,220,12,8,7.29,auto
 nathan-fraser,Premier League 2,Wolverhampton Wanderers U21,773683,21,,Right,,,,U19:2:1:2022,,,,,,,,,16,2,1,,auto
 neil-farrugia,Premiership,Dundee United,9938,27,,,,,,U21:1:1:2019; U19:2:1:2017,2026/27,3,0,0,0,63,0,0,218,16,12,6.02,auto
 neill-byrne,League One,Doncaster Rovers,9903,33,,,,,,U19:5:1:2011,2026/27,3,3,0,0,270,0,0,547,29,1,6.88,auto
+niall-brookwell,League of Ireland First Division,Kerry FC,,,,,,,,,,,,,,,,,,,,none
 niall-canavan,National League,Boston United,8646,35,,Right,,,,U21:4:0:2011,2026/27,4,4,0,,360,1,0,542,34,13,,auto
+niall-holohan,League of Ireland First Division,UCD,,,,,,,,,,,,,,,,,,,,none
 niall-morahan,Premier Division,Bohemian FC,4594,26,,,,,,U21:::2021; U19:2:0:2019,2026,18,7,0,0,575,0,0,245,4,4,6.44,auto
+niall-okeeffe,League of Ireland First Division,Cork City,,,,,,,,,,,,,,,,,,,,none
 niall-sullivan,Premier Division,St. Patrick's Athletic,1854,17,,,,,,,,,,,,,,,,,,,auto
+nikodem-kozlowski,League of Ireland First Division,Treaty United,,,,,,,,,,,,,,,,,,,,none
+noah-douglas,League of Ireland First Division,UCD,,,,,,,,,,,,,,,,,,,,none
 noah-jauny,First Division B,Francs Borains,96953,22,,Right,,,,U21:6:0:2025,,,,,,,,,29,0,0,,auto
 noah-obrien,Premier Division,Waterford FC,6042,18,,,,,,,,,,,,,,,,,,,auto
 odhran-casey,Premier Division,Shelbourne,5751,24,,,,,,U21:1:0:2024,2026,6,5,0,0,449,1,0,139,6,0,7.19,auto
+odhran-mchugh,League of Ireland First Division,Finn Harps,,,,,,,,,,,,,,,,,,,,none
 oisin-duffy,,Strabane Athletic,1591693,25,,,,,,,,,,,,,,,,,,,auto
 oisin-gallagher,League Two,Barnet,8175,21,,Right,,,,U21:2:1:2026; U19:6:0:2022,2026/27,3,3,1,0,263,1,0,105,5,2,7.55,auto
+oisin-hand,League of Ireland First Division,Athlone Town,,,,,,,,,,,,,,,,,,,,none
 oisin-kelly,Premier Division,Sligo Rovers,6361,19,,,,,,,,,,,,,,,,,,,auto
 oisin-mcdonagh,Northern Premier Division,Alfreton Town,6258,28,,Right,,,,U17:3:0:2014,,,,,,,,,220,24,0,,auto
 oisin-mcentee,Premiership,Heart of Midlothian,9860,25,,Right,,,,U21:4:0:2021; U19:10:1:2019; U18:1:0:2018; U17:9:0:2017,2026/27,3,3,1,0,270,0,0,148,11,10,7.82,auto
@@ -522,34 +733,58 @@ oisin-obrien,Premier Division,Derry City,8338,16,,,,,,,,,,,,,,,,,,,auto
 olamide-ibrahim,Premier League Relegation Group,Bala Town,175654,22,,,,,,,,,,,,,,,52,3,0,,auto
 ollie-oneill,League One,Leyton Orient,8351,23,,,,,,U21:9:1:2021; U19:1:0:2022; U17:3:1:2019,2025/26,33,27,4,8,2391,5,0,108,13,14,6.81,auto
 onesime-tembe,,,,21,,,,,,,,,,,,,,,,,,,auto
+oran-brogan,League of Ireland First Division,Finn Harps,,,,,,,,,,,,,,,,,,,,none
+oran-crowe,League of Ireland First Division,Cobh Ramblers,,,,,,,,,,,,,,,,,,,,none
+oran-horgan,League of Ireland First Division,Kerry FC,,,,,,,,,,,,,,,,,,,,none
 orion-cala,Premier Division,Waterford FC,6042,16,,,,,,,,,,,,,,,,,,,auto
+osaze-irhue,League of Ireland First Division,Longford Town,,,,,,,,,,,,,,,,,,,,none
 owen-elding,Premiership,Hibernian,10251,20,,,,,,,2026/27,2,1,0,0,91,0,0,88,22,5,7.20,auto
 owen-mason,League One,Bromley,45729,22,,,,,,U21:::2023; U19:2:0:2022,2026/27,1,,0,0,90,,,107,0,0,7.80,auto
+pa-doyle,League of Ireland First Division,Wexford FC,,,,,,,,,,,,,,,,,,,,none
 paddy-madden,Premier Division,Bohemian FC,4594,36,,Right,1,0,2013,U21:::2010,2025/26,33,23,6,1,2116,5,0,724,235,53,6.38,auto
 padraig-amond,Premier Division,Waterford FC,6042,38,,,,,,,2026,29,28,9,1,2456,1,0,747,233,28,6.77,auto
 pat-hoban,Premiership,Glentoran,2203,35,,Right,,,,,2026/27,2,,0,0,180,,,525,225,17,,auto
 patrick-barrett,Premier Division,Shelbourne,5751,33,,,,,,,2026,17,16,2,0,1366,7,0,325,20,5,6.85,auto
+patrick-ferry,League of Ireland First Division,Athlone Town,,,,,,,,,,,,,,,,,,,,none
 patrick-mcclean,Premier Division,Derry City,8338,29,,,,,,,2026,22,20,1,1,1868,7,0,315,22,2,7.21,auto
 paudie-oconnor,League One,Reading,9798,29,,Right,,,,,2026/27,2,2,0,0,180,2,0,375,25,10,6.46,auto
 paul-doyle,Premiership,Dungannon Swifts,4615,28,,Left,,,,,2025,8,2,1,0,181,0,0,211,11,5,6.57,auto
+paul-martin,League of Ireland First Division,Wexford FC,,,,,,,,,,,,,,,,,,,,none
 paul-mcgovern,Premiership,Falkirk,8596,18,,,,,,U19:7:0:2024; U17:5:3:2024,2026/27,2,0,0,0,33,0,0,85,13,0,6.02,auto
 pearse-obrien,,,,21,,,,,,,2024,2,1,0,0,113,0,0,4,0,0,6.66,auto
+peter-grogan,League of Ireland First Division,Athlone Town,,,,,,,,,,,,,,,,,,,,none
 peter-maguire,,Glenavon,1956,,,,,,,,,,,,,,,,26,0,0,,auto
+pharrell-manuel,League of Ireland First Division,Longford Town,,,,,,,,,,,,,,,,,,,,none
+philip-cooney,League of Ireland First Division,Bray Wanderers,,,,,,,,,,,,,,,,,,,,none
 philip-sanyaolu,,Bristol Rovers,,,,,,,,,,,,,,,,,,,,none
 phoenix-blayney,,Larne U19,1808602,15,,,,,,U17:5:0:2025; U15:1:0:2024,,,,,,,,,,,,,auto
 pierce-sweeney,League Two,Cheltenham Town,8680,31,,Right,,,,U21:1:0:2014; U19:6:0:2012; U17:2:0:2010,2026/27,2,2,0,1,180,1,0,452,24,20,6.92,auto
 pijus-otegbayo,Premier League 2,Stoke City U21,773650,19,,,,,,U19:3:0:2025,2026/27,1,,0,0,76,,,3,0,0,,auto
+promise-akinyemi,League of Ireland First Division,Bray Wanderers,,,,,,,,,,,,,,,,,,,,none
 promise-omochere,League Two,Bristol Rovers,10104,25,,Right,,,,,2025/26,15,12,2,0,916,3,0,164,30,9,6.63,auto
 rabby-tabu-minzamba,Southern Premier Division South,Taunton Town,282502,24,,,,,,,,,,,,,,,,,,,auto
 ramon-martos,Liga Revelacao U23 Relegation Group,Estoril U23,1510636,20,,Left,,,,,,,,,,,,,,,,,auto
+raphael-ohin,League of Ireland First Division,Treaty United,,,,,,,,,,,,,,,,,,,,none
 reece-staunton,League Two,Grimsby Town,10005,24,,Left,,,,U18:1:0:2018,2025/26,38,23,0,7,2270,3,0,210,5,12,7.35,auto
+reece-webb,League of Ireland First Division,Athlone Town,,,,,,,,,,,,,,,,,,,,none
 rhys-bartley,First Division,Wexford FC,62337,20,,,,,,U17:::2022,2026,2,0,0,0,7,0,0,42,1,0,,auto
+rhys-gourdie,League of Ireland First Division,Cobh Ramblers,,,,,,,,,,,,,,,,,,,,none
+rhys-kelly-noonan,League of Ireland First Division,Cobh Ramblers,,,,,,,,,,,,,,,,,,,,none
+rhys-knight,League of Ireland First Division,Bray Wanderers,,,,,,,,,,,,,,,,,,,,none
+rian-hogan,League of Ireland First Division,Bray Wanderers,,,,,,,,,,,,,,,,,,,,none
 ricardo-dinanga,League Two,Spartans FC,6661,24,,,,,,,2026/27,4,0,2,0,85,0,0,56,7,0,,auto
+richard-guevera,League of Ireland First Division,Treaty United,,,,,,,,,,,,,,,,,,,,none
+richie-ferizaj,League of Ireland First Division,Bray Wanderers,,,,,,,,,,,,,,,,,,,,none
+richkov-boevi,League of Ireland First Division,Treaty United,,,,,,,,,,,,,,,,,,,,none
 rob-slevin,Premiership,Coleraine,2202,28,,,,,,,2026,8,5,1,0,441,1,0,173,9,3,7.14,auto
 robbie-benson,,,,34,,,,,,,2025,28,9,1,2,1093,3,1,449,79,6,6.57,auto
 robbie-brady,,,,34,,Left,73,10,2012,U21:9:4:2010; U19:5:2:2009,2025/26,5,0,0,0,90,0,0,386,29,34,6.32,auto
+robbie-lynch,League of Ireland First Division,Treaty United,,,,,,,,,,,,,,,,,,,,none
+robbie-lyons,League of Ireland First Division,Athlone Town,,,,,,,,,,,,,,,,,,,,none
 robbie-mahon,League One,Airdrieonians,8176,23,,Left,,,,U17:3:1:2019,2026/27,4,1,0,0,154,0,0,127,22,15,,auto
 robert-cornwall,Premier Division,Dundalk,1853,31,,Right,,,,,2026,19,16,1,0,1402,5,1,314,12,3,6.85,auto
+robert-keane,League of Ireland First Division,Kerry FC,,,,,,,,,,,,,,,,,,,,none
+robert-mccourt,League of Ireland First Division,Wexford FC,,,,,,,,,,,,,,,,,,,,none
 rocco-vata,Championship,Watford,9817,21,,Right,1,0,2025,U21:8:5:2023; U19:8:0:2022; U17:6:3:2021,2026/27,3,0,0,0,53,0,0,65,37,6,6.18,auto
 roland-idowu,Superliga,Botoșani,188191,24,,Right,,,,U17:1:0:2019,2026/27,2,0,0,1,21,0,0,167,24,6,6.59,auto
 romeo-akachukwu,Championship,Southampton,8466,20,,Right,,,,U21:2:0:2025; U19:9:0:2023; U17:10:3:2022,2026/27,1,0,0,0,1,0,0,50,5,1,,auto
@@ -558,14 +793,21 @@ ronan-coughlan,League Two,Fleetwood Town,45723,29,,Right,,,,,2026/27,1,0,0,1,30,
 ronan-curtis,League One,Plymouth Argyle,8401,30,,Right,7,0,2018,U21:8:1:2017,2026/27,3,3,0,0,269,0,0,443,99,61,6.86,auto
 ronan-dawson,,Longford,,,,,,,,,,,,,,,,,,,,none
 ronan-doherty,Premiership,Larne,2206,30,,,,,,,2026/27,8,,0,1,609,,,322,14,1,,auto
+ronan-ferns,League of Ireland First Division,Finn Harps,,,,,,,,,,,,,,,,,,,,none
 ronan-maher,League Two,Walsall,10006,21,,Left,,,,U21:::2025; U19:2:0:2022,2025/26,17,12,2,,1113,3,0,98,12,6,,auto
+ronan-manning,League of Ireland First Division,Treaty United,,,,,,,,,,,,,,,,,,,,none
 ronan-mansfield,First Division,Cobh Ramblers,2383,20,,,,,,,2026,7,5,0,0,496,3,0,20,0,0,5.87,auto
 ronan-teahan,Premier Division,Dundalk,1853,21,,,,,,,2026,23,16,3,1,1511,3,0,125,7,1,6.80,auto
+rory-feely,League of Ireland First Division,Cork City,,,,,,,,,,,,,,,,,,,,none
 rory-finneran,League One,Notts County,9819,18,,Right,1,0,2026,U21:::2026; U18:3:1:2026; U17:18:0:2023,2026/27,1,1,0,0,90,1,0,2,0,0,7.76,auto
 rory-gaffney,Premier Division,Shamrock Rovers,4131,36,,Right,,,,,2025,27,13,9,0,1177,2,0,528,130,32,6.61,auto
 rory-hale,Premiership,Cliftonville,1703,29,,Right,,,,U21:::2017; U19:2:0:2013,,,,,,,,,319,42,2,,auto
+rory-moloney,League of Ireland First Division,Cobh Ramblers,,,,,,,,,,,,,,,,,,,,none
+ross-oherlihy,League of Ireland First Division,Cobh Ramblers,,,,,,,,,,,,,,,,,,,,none
 ross-taheny,,Ballinamallard United,187970,29,,,,,,,,,,,,,,,,,,,auto
 ross-tierney,Premier Division,Bohemian FC,4594,25,,Right,,,,U21:8:1:2021; U19:2:1:2019,2026,29,25,8,3,2305,5,0,228,41,10,7.34,auto
+roy-lawlor,League of Ireland First Division,Treaty United,,,,,,,,,,,,,,,,,,,,none
+ruairi-keating,League of Ireland First Division,Cork City,,,,,,,,,,,,,,,,,,,,none
 ruari-paton,Premiership,St. Johnstone,8467,26,,Right,,,,,2026/27,3,3,1,0,224,0,0,252,84,27,6.88,auto
 ryan-brennan,Premier Division,Drogheda United,8339,34,,,,,,,2026,23,16,2,1,1490,9,0,517,81,6,6.64,auto
 ryan-burke,Premier Division,Bohemian FC,4594,25,,Left,,,,,2026,3,0,0,0,64,0,0,138,6,3,6.20,auto
@@ -573,30 +815,40 @@ ryan-butler,First Division,Wexford FC,62337,,,,,,,,,,,,,,,,,,,,auto
 ryan-delaney,League Two,Oldham Athletic,9785,29,,Left,,,,U21:4:0:2017; U17:::2022,2026/27,3,3,0,0,270,0,0,348,20,10,7.09,auto
 ryan-graydon,League Two,Salford City,282326,27,,Right,,,,,2026/27,1,0,0,0,29,0,0,253,42,21,6.23,auto
 ryan-johansson,3. Liga,Preussen Münster,8171,25,,Both,,,,U21:2:0:2021; U21:2:0:2018; U19:3:0:2018; U17:6:0:2016,2026/27,2,2,1,0,179,0,0,141,9,7,6.92,auto
+ryan-kelliher,League of Ireland First Division,Kerry FC,,,,,,,,,,,,,,,,,,,,none
+ryan-kelly,League of Ireland First Division,Bray Wanderers,,,,,,,,,,,,,,,,,,,,none
 ryan-manning,Championship,Southampton,8466,30,,Right,23,0,2020,U21:8:2:2017; U19:6:1:2014,2026/27,3,3,1,1,270,2,0,401,44,40,7.56,auto
 ryan-markey,Premier Division,Drogheda United,8339,20,,,,,,,2026,1,0,0,0,14,0,0,15,0,0,6.03,auto
+ryan-mcbrearty,League of Ireland First Division,UCD,,,,,,,,,,,,,,,,,,,,none
+ryan-mcconnell,League of Ireland First Division,Finn Harps,,,,,,,,,,,,,,,,,,,,none
 ryan-okane,Premier Division,Sligo Rovers,6361,23,,Right,,,,,2026,18,14,1,1,1215,1,0,146,12,3,6.47,auto
 ryan-patrick-nolan,Premiership,Linfield,7971,27,,Right,,,,,2026/27,2,,0,0,180,,,136,3,0,,auto
+ryan-perez,League of Ireland First Division,Kerry FC,,,,,,,,,,,,,,,,,,,,none
+ryan-ritchie,League of Ireland First Division,Wexford FC,,,,,,,,,,,,,,,,,,,,none
 ryan-sheridan,Premier Division,St. Patrick's Athletic,1854,17,,,,,,U17:8:3:2025,2026,5,0,0,1,77,1,0,6,0,1,6.33,auto
 ryan-swan,,Annagh United,652310,30,,,,,,,,,,,,,,,,,,,auto
 ryan-sweeney,League One,Mansfield Town,9818,29,,Left,,,,U21:9:0:2017; U19:3:0:2015,2026/27,2,2,0,0,180,1,0,400,26,14,7.16,auto
 sam-curtis,Championship,Sheffield United,8657,20,,Right,,,,U21:13:1:2023; U19:6:0:2021; U17:6:2:2021,2025/26,22,21,2,1,1736,3,0,123,5,5,7.21,auto
 sam-foley,National League North,Chester FC,9797,39,,Right,,,,,2025/26,7,2,0,0,255,0,0,593,70,31,,auto
 sam-kierans,,Newry,,,,,,,,,,,,,,,,,,,,none
+sam-norval,League of Ireland First Division,UCD,,,,,,,,,,,,,,,,,,,,none
 sam-rooney,Premier Division,St. Patrick's Athletic,1854,17,,Left,,,,,2026,7,0,0,1,63,0,0,8,1,1,6.07,auto
 sam-steward,Premier Division,St. Patrick's Athletic,1854,18,,,,,,,,,,,,,,,,,,,auto
 sam-todd,Premier Division,Bohemian FC,4594,28,,,,,,,2026,25,24,1,0,2155,3,0,257,11,2,7.11,auto
 sammie-szmodics,Championship,Derby County,10170,30,,Right,12,0,2021,,2026/27,2,1,1,0,99,0,0,410,120,32,6.70,auto
+samuel-aladesanusi,League of Ireland First Division,Kerry FC,,,,,,,,,,,,,,,,,,,,none
 samuel-ogungbe,Premier Division,St. Patrick's Athletic,1854,17,,,,,,,,,,,,,,,,,,,auto
 samuel-safaei,Premier Division,Dundalk,1853,21,,,,,,,,,,,,,,,4,0,0,,auto
 scott-brady,First Division,Longford Town,4569,20,,,,,,,2025,2,0,0,0,49,1,0,4,0,0,6.19,auto
 scott-davies,National League,Aldershot Town,8465,38,,Right,,,,U21:::2010,2026/27,1,,0,0,90,,,494,39,0,,auto
 scott-hogan,,,,34,,Right,12,0,2017,,2025/26,20,2,1,1,512,1,0,390,103,14,6.15,auto
+scott-hyde,League of Ireland First Division,Cobh Ramblers,,,,,,,,,,,,,,,,,,,,none
+scott-murphy,League of Ireland First Division,Treaty United,,,,,,,,,,,,,,,,,,,,none
 seamus-coleman,,,,37,,Right,81,1,2011,U21:7:1:2009,2025/26,5,1,0,0,20,0,0,447,29,30,6.29,auto
 seamus-conneely,League Two,Accrington Stanley,8671,38,,Right,,,,U21:1:0:2010,2026/27,3,3,0,0,213,1,0,576,20,13,6.90,auto
 seamus-maughan,Premier Division,Sligo Rovers,6361,16,,,,,,,,,,,,,,,,,,,auto
 sean-boyd,Premier Division,Shelbourne,5751,28,,Right,,,,,2026,19,7,2,0,743,3,1,230,55,8,6.38,auto
-sean-brennan,,Athlone,,,,,,,,,,,,,,,,,,,,none
+sean-brennan,Highland / Lowland,Berwick Rangers,8368,29,,,,,,,,,,,,,,,,,,,auto
 sean-costelloe,League Two,Fleetwood Town,45723,19,,Right,,,,,,,,,,,,,8,0,0,,auto
 sean-gannon,Premier Division,Shelbourne,5751,35,,,,,,,2026,20,10,0,1,1043,6,0,487,13,6,6.73,auto
 sean-grehan,League One,Doncaster Rovers,9903,22,,Right,,,,U21:10:0:2023; U19:7:0:2022; U16:::2019,2026/27,2,1,0,0,105,1,0,48,3,0,6.66,auto
@@ -604,6 +856,8 @@ sean-hoare,Premier Division,St. Patrick's Athletic,1854,32,,,,,,U21:2:0:2015,202
 sean-keane,Premier Division,Waterford FC,6042,19,,,,,,,2025,1,0,0,0,11,0,0,1,0,0,6.16,auto
 sean-keogh,Premier League 2,Brighton & Hove Albion U21,773678,20,,,,,,U21:1:0:2026; U19:4:0:2024,2026/27,1,1,0,0,90,0,0,34,2,0,6.89,auto
 sean-long,National League South,Weston Super Mare,6314,31,,Right,,,,U21:6:0:2014; U19:8:0:2013; U17:5:0:2011,2026/27,4,,0,0,360,,,345,8,19,,auto
+sean-mackey,League of Ireland First Division,UCD,,,,,,,,,,,,,,,,,,,,none
+sean-maguire,League of Ireland First Division,Cork City,,,,,,,,,,,,,,,,,,,,none
 sean-mcdonald,League Cup,Cabinteely,614052,28,,,,,,,,,,,,,,,,,,,auto
 sean-mcevoy,,Ballinamallard United,187970,24,,,,,,U17:3:0:2019,,,,,,,,,22,5,0,,auto
 sean-mcginty,League One,Montrose,8257,33,,Left,,,,U21:7:0:2013; U19:6:2:2009,2026/27,5,5,0,0,450,1,0,469,22,9,,auto
@@ -614,6 +868,7 @@ sean-molloy,Premier Division,St. Patrick's Athletic,1854,22,,,,,,,,,,,,,,,2,0,0,
 sean-moore,Premier Division,Shelbourne,5751,21,,,,,,U19:3:0:2023,2026,8,0,0,0,174,1,0,57,9,1,6.18,auto
 sean-murphy,,,,,,,,,,,,,,,,,,,,,,,auto
 sean-murray,Premiership,Ballymena United,4063,32,,Both,,,,U21:8:1:2012; U19:11:1:2011,2025,31,23,1,0,1978,3,0,388,41,11,6.54,auto
+sean-oconnell,League of Ireland First Division,Kerry FC,,,,,,,,,,,,,,,,,,,,none
 sean-omahoney,,Portadown,,,,,,,,,,,,,,,,,,,,none
 sean-raggett,League Two,Colchester United,8416,32,,Right,,,,,2026/27,3,3,0,0,270,0,0,494,42,11,7.29,auto
 sean-roughan,League One,Huddersfield Town,9796,23,,Left,,,,U21:9:2:2022; U19:4:1:2021,2026/27,1,,0,0,84,,,204,5,14,7.70,auto
@@ -627,27 +882,43 @@ shane-byrne,National League North,Brackley Town,158321,33,,,,,,,2026/27,4,,0,0,3
 shane-duffy,,,,34,,Right,61,7,2012,U21:13:1:2011; U21:2:0:2009; U19:3:0:2009,2025/26,4,3,0,0,259,2,0,412,27,9,6.53,auto
 shane-farrell,Premier Division,Drogheda United,8339,26,,Right,,,,,2026,27,21,5,0,1812,10,0,244,22,16,6.78,auto
 shane-flynn,Premier League,Connah's Quay Nomads,2193,24,,,,,,U18:1:0:2018,2026/27,2,,0,0,180,,,18,0,0,,auto
+shane-griffin,League of Ireland First Division,Cobh Ramblers,,,,,,,,,,,,,,,,,,,,none
 shane-mcloughlin,League One,Cambridge United,9834,29,,Right,,,,,2026/27,2,2,0,0,134,0,0,268,16,17,6.86,auto
 shane-tracey,Premier Division,Dundalk,1853,20,,,,,,,2026,18,5,1,0,562,3,0,42,2,0,6.60,auto
 shaun-platt,Premier Division,Dundalk,1853,,,,,,,,,,,,,,,,,,,,auto
 shaun-wade,Premier League 2,Chelsea U21,773652,19,,Right,,,,U17:2:1:2022,2025/26,4,2,0,0,139,0,0,,,,6.43,auto
+shaunie-bradley,League of Ireland First Division,Finn Harps,,,,,,,,,,,,,,,,,,,,none
 shay-casey,Premier Division,Dundalk,1853,18,,,,,,,,,,,,,,,2,0,0,,auto
+shayne-stack,League of Ireland First Division,Kerry FC,,,,,,,,,,,,,,,,,,,,none
 shea-mcgarry,,Celtic,,,,,,,,,,,,,,,,,,,,none
 sheikhan-aljabir,,Benfica,,,,,,,,,,,,,,,,,,,,none
+simon-luchinger,League of Ireland First Division,Kerry FC,,,,,,,,,,,,,,,,,,,,none
 simon-power,Premier Division,St. Patrick's Athletic,1854,28,,Right,,,,U21:4:0:2019,2026,1,0,0,0,14,0,0,159,18,6,6.23,auto
 sinclair-armstrong,Super Lig,Göztepe,1925,23,,Right,1,0,2023,U21:9:4:2022; U19:4:2:2021; U17:3:1:2019,2026/27,3,2,1,0,132,1,0,167,16,3,6.56,auto
 sonny-perkins,League One,Wigan Athletic,8528,22,,,,,,U19:6:5:2022; U18:8:3:2021; U17:2:1:2020; U16:3:3:2020,2026/27,2,2,1,0,155,0,0,79,9,6,6.72,auto
-stephen-kenny,League of Ireland,St. Patrick's Athletic,,,,,,,,,,,,,,,,,,,,none
+stefan-ugbesia,League of Ireland First Division,Longford Town,,,,,,,,,,,,,,,,,,,,none
+stephen-kenny,First Division,Athlone Town,2378,33,,,,,,,,,,,,,,,,,,,auto
 stephen-mallon,,Glenavon,1956,27,,,,,,U21:2:0:2019; U19:1:0:2017; U17:5:1:2015,2025,14,2,0,0,364,0,0,116,7,1,6.25,auto
+stephen-mcguinness,League of Ireland First Division,Bray Wanderers,,,,,,,,,,,,,,,,,,,,none
 stephen-mclaughlin,League One,Mansfield Town,9818,36,,Left,,,,,2026/27,2,2,0,0,132,0,0,577,70,54,6.82,auto
+stephen-mohan,League of Ireland First Division,UCD,,,,,,,,,,,,,,,,,,,,none
 stephen-walsh,Premier Division,Galway United FC,520517,36,,Left,,,,,2026,27,24,4,3,1880,5,0,461,76,8,6.55,auto
+steven-healy,League of Ireland First Division,Treaty United,,,,,,,,,,,,,,,,,,,,none
 success-edogun,Premiership,Ballymena United,4063,25,,,,,,,,,,,,,,,,,,,auto
+sultan-adenekan,League of Ireland First Division,Longford Town,,,,,,,,,,,,,,,,,,,,none
+tadhg-mcelligott,League of Ireland First Division,Treaty United,,,,,,,,,,,,,,,,,,,,none
 tadhg-prizeman,League of Ireland,Shamrock Rovers,,,,,,,,,,,,,,,,,,,,none
+taylor-mccarthy,League of Ireland First Division,Longford Town,,,,,,,,,,,,,,,,,,,,none
 tayo-adaramola,Belgian Pro League,Cercle Brugge,9984,22,,Left,1,0,2026,U21:5:0:2022; U19:4:0:2021; U17:3:0:2019,2026/27,1,0,0,0,26,0,0,79,0,5,6.31,auto
 terence-doherty,Premier Division,Derry City,8338,17,,,,,,,2026,2,0,0,0,30,0,0,2,0,0,5.88,auto
 theo-hennessy,Premier Division,Drogheda United,8339,,,Right,,,,,,,,,,,,,,,,,auto
+thomas-considine,League of Ireland First Division,Athlone Town,,,,,,,,,,,,,,,,,,,,none
+thomas-morley,League of Ireland First Division,UCD,,,,,,,,,,,,,,,,,,,,none
 thomas-oconnor,League One,Peterborough United,8677,27,,Left,,,,U21:4:0:2019; U19:5:0:2017; U17:2:0:2016,2026/27,3,3,0,0,241,0,0,226,14,10,6.21,auto
 thomas-oluwa,Premier Division,Drogheda United,8339,25,,,,,,,2026,29,23,4,1,2031,2,0,205,44,2,6.46,auto
+tiarnan-callahan-mcelwaine,League of Ireland First Division,Finn Harps,,,,,,,,,,,,,,,,,,,,none
+tim-hegarty,League of Ireland First Division,Cobh Ramblers,,,,,,,,,,,,,,,,,,,,none
+timothy-martin,League of Ireland First Division,Cobh Ramblers,,,,,,,,,,,,,,,,,,,,none
 tj-molloy,,Armagh,4618,17,,,,,,U17:5:1:2025,,,,,,,,,5,0,0,,auto
 tobi-jinadu,,Warrenpoint,,,,,,,,,,,,,,,,,,,,none
 todd-bazunu,Premier Division,Shamrock Rovers,4131,18,,,,,,,,,,,,,,,,,,,auto
@@ -656,18 +927,22 @@ tom-field,Premier League,Vancouver FC,1436202,29,,Left,,,,,2026,18,18,0,0,1567,4
 tom-hill,,Oldham,,,,,,,,,,,,,,,,,,,,none
 tom-lonergan,Premier Division,Waterford FC,6042,22,,,,,,U21:4:0:2025; U19:5:3:2022; U16:1:1:2019,2026,27,23,14,4,2029,6,0,143,45,9,7.35,auto
 tom-mcgrath,League of Ireland,Cork City,,,,,,,,,,,,,,,,,,,,none
+tony-mcnamee,League of Ireland First Division,Finn Harps,,,,,,,,,,,,,,,,,,,,none
 tony-springett,League One,Leyton Orient,8351,23,,Left,,,,U21:5:0:2023,2026/27,3,2,1,0,187,1,0,63,3,1,7.00,auto
 trent-kone-doherty,Eliteserien,Molde,9917,20,,Right,,,,U21:6:0:2025; U19:8:0:2023; U17:3:0:2021,2026,13,5,2,1,429,0,0,17,5,1,6.51,auto
 trevor-clarke,Premier Division,Dundalk,1853,28,,Left,,,,U21:::2019; U19:6:0:2016; U17:8:4:2014,2026,8,6,1,0,479,1,0,212,17,8,6.63,auto
 troy-parrott,LaLiga,Real Betis,8603,24,,Right,37,11,2019,U21:5:4:2019; U19:3:4:2018; U17:9:4:2017,2026/27,2,1,0,0,76,0,0,248,84,25,6.43,auto
+troy-preston-holder,League of Ireland First Division,Finn Harps,,,,,,,,,,,,,,,,,,,,none
 tunmise-sobowale,Premier Division,Shamrock Rovers,4131,27,,Right,,,,,2026,25,24,1,3,2087,4,0,222,6,6,7.15,auto
 tyler-doherty,,St Mochta's,532490,,,,,,,,,,,,,,,,,,,,auto
 tyler-goodrham,League One,Oxford United,8653,23,,,,,,U21:::2023,2026/27,2,1,0,0,92,0,0,178,24,14,7.19,auto
+tyreik-sammy,League of Ireland First Division,Bray Wanderers,,,,,,,,,,,,,,,,,,,,none
 tyreik-wright,League One,Bradford City,8484,24,,Right,,,,U21:11:3:2021; U19:9:5:2019; U18:1:0:2018; U17:11:2:2017,2026/27,1,,0,0,80,,,168,13,11,7.00,auto
 tyreke-wilson,Premier Division,Dundalk,1853,26,,,,,,U21:1:0:2019; U19:9:0:2017; U17:6:0:2015,2026,25,21,4,2,1834,2,1,191,11,10,7.07,auto
 ultan-mclaughlin,,Armagh,,,,,,,,,,,,,,,,,,,,none
 uniss-kargbo,Premier League Relegation Group,Bala Town,175654,,,,,,,,,,,,,,,,62,0,0,,auto
 victor-ozhianvuna,Premier Division,Shamrock Rovers,4131,17,,Right,,,,U17:9:0:2025,2026,18,14,0,2,1174,2,0,36,1,2,6.92,auto
+vincent-borden,League of Ireland First Division,Kerry FC,,,,,,,,,,,,,,,,,,,,none
 vinnie-leonard,Premier League 2,Norwich City U21,773658,18,,,,,,U17:10:1:2024,2026,3,2,0,0,212,1,1,39,3,0,6.58,auto
 warren-davis,Premier Division,Drogheda United,8339,21,,,,,,U21:1:0:2025,2026,19,10,3,0,982,0,0,109,13,3,6.51,auto
 warren-ohora,Premiership,Hibernian,10251,27,,Right,,,,U19:1:0:2017,2026/27,2,2,0,0,180,0,0,273,13,2,7.00,auto
@@ -675,8 +950,10 @@ will-ferry,Premiership,Dundee United,9938,25,,Left,1,0,2025,U21:5:0:2020; U19:4:
 will-keane,,,,33,,Right,5,0,2021,U21:8:2:2011; U19:3:2:2012,2025/26,14,5,2,0,495,0,0,335,85,21,6.22,auto
 will-smallbone,,,,26,,Right,15,0,2022,U21:8:3:2020; U19:3:2:2019,2025/26,10,4,0,0,333,0,0,146,12,11,6.53,auto
 william-fitzgerald,Premier Division,Shamrock Rovers,4131,27,,,,,,,2026,26,26,5,3,2318,3,0,264,11,23,7.01,auto
+william-smith,League of Ireland First Division,Athlone Town,,,,,,,,,,,,,,,,,,,,none
 wilson-waweru,National League,Wealdstone,161812,25,,,,,,,2026/27,2,0,0,,29,0,0,192,47,1,,auto
 zach-dunne,First Division,Cork City,2201,22,,,,,,,,,,,,,,,3,0,0,,auto
+zach-lawless,League of Ireland First Division,Athlone Town,,,,,,,,,,,,,,,,,,,,none
 zach-nolan,Premier League,The New Saints,7852,21,,,,,,,2026/27,2,,0,0,22,,,44,0,0,,auto
 zack-elbouzedi,Premier Division,St. Patrick's Athletic,1854,28,,Right,,,,U21:13:3:2019; U19:6:0:2016; U17:8:1:2014,2026,16,13,4,3,1028,0,0,207,22,14,7.07,auto
 zak-delaney,Championship,Raith Rovers,10250,24,,Left,,,,,2026/27,4,4,0,1,338,0,0,181,2,7,,auto
@@ -684,3 +961,4 @@ zak-gilsenan,National League,FC Halifax Town,10195,23,,,,,,U21:4:1:2023,2026/27,
 zak-magowan,,West Ham,,,,,,,,,,,,,,,,,,,,none
 zak-osullivan,First Division,Wexford FC,62337,19,,,,,,U19:3:0:2025,,,,,,,,,8,2,0,,auto
 zak-reddy,First Division,Bray Wanderers,1629,19,,,,,,,,,,,,,,,,,,,auto
+zayd-abada,League of Ireland First Division,Wexford FC,,,,,,,,,,,,,,,,,,,,none
