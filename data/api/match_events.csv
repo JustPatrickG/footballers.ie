@@ -2123,7 +2123,32 @@ match_id,minute,type,player,team,venue
 2026-08-29-bolton-wanderers-v-lincoln-city,85,sub_on,Joshua Honohan,Lincoln City,Toughsheet Community Stadium
 2026-08-29-bolton-wanderers-v-lincoln-city,90,yellow,Conor McGrandles,Lincoln City,Toughsheet Community Stadium
 2026-08-29-brackley-town-v-south-shields,,,,,St. James Park
-2026-08-29-bristol-city-v-portsmouth,,,,,Ashton Gate Stadium
+2026-08-29-bristol-city-v-portsmouth,31,goal,Lorent Tolaj,Bristol City,Ashton Gate Stadium
+2026-08-29-bristol-city-v-portsmouth,46,sub_off,Rocco Shein,Portsmouth,Ashton Gate Stadium
+2026-08-29-bristol-city-v-portsmouth,46,sub_on,Ebou Adams,Portsmouth,Ashton Gate Stadium
+2026-08-29-bristol-city-v-portsmouth,49,yellow,Rio Cardines,Bristol City,Ashton Gate Stadium
+2026-08-29-bristol-city-v-portsmouth,57,goal,Jason Knight,Bristol City,Ashton Gate Stadium
+2026-08-29-bristol-city-v-portsmouth,63,sub_off,Colby Bishop,Portsmouth,Ashton Gate Stadium
+2026-08-29-bristol-city-v-portsmouth,63,sub_off,Ryan Kavuma-McQueen,Portsmouth,Ashton Gate Stadium
+2026-08-29-bristol-city-v-portsmouth,63,sub_on,Harvey Blair,Portsmouth,Ashton Gate Stadium
+2026-08-29-bristol-city-v-portsmouth,63,sub_on,Marezi,Portsmouth,Ashton Gate Stadium
+2026-08-29-bristol-city-v-portsmouth,67,yellow,Jason Knight,Bristol City,Ashton Gate Stadium
+2026-08-29-bristol-city-v-portsmouth,68,sub_off,Scott Twine,Bristol City,Ashton Gate Stadium
+2026-08-29-bristol-city-v-portsmouth,68,sub_off,Jed Wallace,Bristol City,Ashton Gate Stadium
+2026-08-29-bristol-city-v-portsmouth,68,sub_on,Sam Greenwood,Bristol City,Ashton Gate Stadium
+2026-08-29-bristol-city-v-portsmouth,68,sub_on,Tomi Horvat,Bristol City,Ashton Gate Stadium
+2026-08-29-bristol-city-v-portsmouth,69,sub_off,Benjamin Arthur,Portsmouth,Ashton Gate Stadium
+2026-08-29-bristol-city-v-portsmouth,69,sub_on,Madiodio Dia,Portsmouth,Ashton Gate Stadium
+2026-08-29-bristol-city-v-portsmouth,74,sub_off,Lorent Tolaj,Bristol City,Ashton Gate Stadium
+2026-08-29-bristol-city-v-portsmouth,74,sub_off,Yu Hirakawa,Bristol City,Ashton Gate Stadium
+2026-08-29-bristol-city-v-portsmouth,74,sub_off,Marlon Pack,Portsmouth,Ashton Gate Stadium
+2026-08-29-bristol-city-v-portsmouth,74,sub_on,Dominic Ballard,Bristol City,Ashton Gate Stadium
+2026-08-29-bristol-city-v-portsmouth,74,sub_on,Cameron Pring,Bristol City,Ashton Gate Stadium
+2026-08-29-bristol-city-v-portsmouth,74,sub_on,John Swift,Portsmouth,Ashton Gate Stadium
+2026-08-29-bristol-city-v-portsmouth,77,yellow,Rob Dickie,Bristol City,Ashton Gate Stadium
+2026-08-29-bristol-city-v-portsmouth,85,sub_off,George Tanner,Bristol City,Ashton Gate Stadium
+2026-08-29-bristol-city-v-portsmouth,85,sub_on,Noah Eile,Bristol City,Ashton Gate Stadium
+2026-08-29-bristol-city-v-portsmouth,90,goal,Marezi,Portsmouth,Ashton Gate Stadium
 2026-08-29-brora-rangers-v-turriff-united,10,goal,Connor Bunce,Brora Rangers,Dudgeon Park
 2026-08-29-brora-rangers-v-turriff-united,24,goal,Ben Barron,Brora Rangers,Dudgeon Park
 2026-08-29-brora-rangers-v-turriff-united,26,goal,Mackenzie Taylor,Turriff United,Dudgeon Park
@@ -2149,14 +2174,174 @@ match_id,minute,type,player,team,venue
 2026-08-29-brora-rangers-v-turriff-united,85,sub_on,Archie Kerr,Brora Rangers,Dudgeon Park
 2026-08-29-brora-rangers-v-turriff-united,86,sub_off,Alisdair Sutherland,Brora Rangers,Dudgeon Park
 2026-08-29-brora-rangers-v-turriff-united,86,sub_on,Jake Rodgers,Brora Rangers,Dudgeon Park
-2026-08-29-cambridge-united-v-huddersfield-town,,,,,Cledara Abbey Stadium
-2026-08-29-cardiff-city-v-sheffield-united,,,,,Cardiff City Stadium
-2026-08-29-celtic-v-falkirk,,,,,Celtic Park
-2026-08-29-charlton-athletic-v-preston-north-end,,,,,The Valley
+2026-08-29-cambridge-united-v-huddersfield-town,54,yellow,Zak Bradshaw,Cambridge United,Cledara Abbey Stadium
+2026-08-29-cambridge-united-v-huddersfield-town,59,sub_off,Louis Appéré,Cambridge United,Cledara Abbey Stadium
+2026-08-29-cambridge-united-v-huddersfield-town,59,sub_off,Isaac Heath,Cambridge United,Cledara Abbey Stadium
+2026-08-29-cambridge-united-v-huddersfield-town,59,sub_on,Gassan Ahadme,Cambridge United,Cledara Abbey Stadium
+2026-08-29-cambridge-united-v-huddersfield-town,59,sub_on,Sullay Kaikai,Cambridge United,Cledara Abbey Stadium
+2026-08-29-cambridge-united-v-huddersfield-town,66,sub_off,Jay Smith-Sway,Huddersfield Town,Cledara Abbey Stadium
+2026-08-29-cambridge-united-v-huddersfield-town,66,sub_off,Ashley Fletcher,Huddersfield Town,Cledara Abbey Stadium
+2026-08-29-cambridge-united-v-huddersfield-town,66,sub_on,Archie Collins,Huddersfield Town,Cledara Abbey Stadium
+2026-08-29-cambridge-united-v-huddersfield-town,66,sub_on,Bojan Radulovic,Huddersfield Town,Cledara Abbey Stadium
+2026-08-29-cambridge-united-v-huddersfield-town,74,sub_off,Pelly-Ruddock Mpanzu,Cambridge United,Cledara Abbey Stadium
+2026-08-29-cambridge-united-v-huddersfield-town,74,sub_off,Ben Knight,Cambridge United,Cledara Abbey Stadium
+2026-08-29-cambridge-united-v-huddersfield-town,74,sub_on,Owen Moxon,Cambridge United,Cledara Abbey Stadium
+2026-08-29-cambridge-united-v-huddersfield-town,74,sub_on,Raees Bangura-Williams,Cambridge United,Cledara Abbey Stadium
+2026-08-29-cambridge-united-v-huddersfield-town,80,goal,Zak Bradshaw,Cambridge United,Cledara Abbey Stadium
+2026-08-29-cambridge-united-v-huddersfield-town,82,goal,Joe Taylor,Huddersfield Town,Cledara Abbey Stadium
+2026-08-29-cambridge-united-v-huddersfield-town,88,yellow,Liam Bennett,Cambridge United,Cledara Abbey Stadium
+2026-08-29-cambridge-united-v-huddersfield-town,89,goal,Joe Taylor,Huddersfield Town,Cledara Abbey Stadium
+2026-08-29-cambridge-united-v-huddersfield-town,90,sub_off,Callum Perry,Cambridge United,Cledara Abbey Stadium
+2026-08-29-cambridge-united-v-huddersfield-town,90,sub_off,Derensili Sanches Fernandes,Huddersfield Town,Cledara Abbey Stadium
+2026-08-29-cambridge-united-v-huddersfield-town,90,sub_on,Shayne Lavery,Cambridge United,Cledara Abbey Stadium
+2026-08-29-cambridge-united-v-huddersfield-town,90,sub_on,Joseph Low,Huddersfield Town,Cledara Abbey Stadium
+2026-08-29-cardiff-city-v-sheffield-united,2,goal,Jack Moylan,Cardiff City,Cardiff City Stadium
+2026-08-29-cardiff-city-v-sheffield-united,4,yellow,Alex Robertson,Cardiff City,Cardiff City Stadium
+2026-08-29-cardiff-city-v-sheffield-united,5,goal,Thomas Cannon,Sheffield United,Cardiff City Stadium
+2026-08-29-cardiff-city-v-sheffield-united,8,goal,Callum O'Hare,Sheffield United,Cardiff City Stadium
+2026-08-29-cardiff-city-v-sheffield-united,10,yellow,Mark McGuinness,Sheffield United,Cardiff City Stadium
+2026-08-29-cardiff-city-v-sheffield-united,33,yellow,Jack Moylan,Cardiff City,Cardiff City Stadium
+2026-08-29-cardiff-city-v-sheffield-united,38,goal,Cian Ashford,Cardiff City,Cardiff City Stadium
+2026-08-29-cardiff-city-v-sheffield-united,46,sub_off,Patrick Bamford,Sheffield United,Cardiff City Stadium
+2026-08-29-cardiff-city-v-sheffield-united,46,sub_off,Romelle Donovan,Sheffield United,Cardiff City Stadium
+2026-08-29-cardiff-city-v-sheffield-united,46,sub_on,Kalvin Phillips,Sheffield United,Cardiff City Stadium
+2026-08-29-cardiff-city-v-sheffield-united,46,sub_on,Jamie Shackleton,Sheffield United,Cardiff City Stadium
+2026-08-29-cardiff-city-v-sheffield-united,58,sub_off,Jamal Baptiste,Sheffield United,Cardiff City Stadium
+2026-08-29-cardiff-city-v-sheffield-united,58,sub_on,Rhys Norrington-Davies,Sheffield United,Cardiff City Stadium
+2026-08-29-cardiff-city-v-sheffield-united,65,sub_off,Joe Rothwell,Sheffield United,Cardiff City Stadium
+2026-08-29-cardiff-city-v-sheffield-united,65,sub_on,Jairo Riedewald,Sheffield United,Cardiff City Stadium
+2026-08-29-cardiff-city-v-sheffield-united,72,sub_off,Ollie Tanner,Cardiff City,Cardiff City Stadium
+2026-08-29-cardiff-city-v-sheffield-united,72,sub_on,Chris Willock,Cardiff City,Cardiff City Stadium
+2026-08-29-cardiff-city-v-sheffield-united,75,yellow,Sydie Peck,Sheffield United,Cardiff City Stadium
+2026-08-29-cardiff-city-v-sheffield-united,84,sub_off,Thomas Cannon,Sheffield United,Cardiff City Stadium
+2026-08-29-cardiff-city-v-sheffield-united,84,sub_on,Ben Brereton,Sheffield United,Cardiff City Stadium
+2026-08-29-cardiff-city-v-sheffield-united,85,sub_off,Jack Moylan,Cardiff City,Cardiff City Stadium
+2026-08-29-cardiff-city-v-sheffield-united,85,sub_off,Yousef Salech,Cardiff City,Cardiff City Stadium
+2026-08-29-cardiff-city-v-sheffield-united,85,sub_off,Cian Ashford,Cardiff City,Cardiff City Stadium
+2026-08-29-cardiff-city-v-sheffield-united,85,sub_on,Joel Colwill,Cardiff City,Cardiff City Stadium
+2026-08-29-cardiff-city-v-sheffield-united,85,sub_on,Callum Robinson,Cardiff City,Cardiff City Stadium
+2026-08-29-cardiff-city-v-sheffield-united,85,sub_on,Isaak Davies,Cardiff City,Cardiff City Stadium
+2026-08-29-cardiff-city-v-sheffield-united,90,sub_off,Krystian Bielik,Cardiff City,Cardiff City Stadium
+2026-08-29-cardiff-city-v-sheffield-united,90,sub_on,Calum Scanlon,Cardiff City,Cardiff City Stadium
+2026-08-29-celtic-v-falkirk,4,goal,Camilo Durán,Celtic,Celtic Park
+2026-08-29-celtic-v-falkirk,29,goal,Camilo Durán,Celtic,Celtic Park
+2026-08-29-celtic-v-falkirk,35,yellow,Lewis Neilson,Falkirk,Celtic Park
+2026-08-29-celtic-v-falkirk,44,yellow,Leon McCann,Falkirk,Celtic Park
+2026-08-29-celtic-v-falkirk,45,yellow,Colby Donovan,Celtic,Celtic Park
+2026-08-29-celtic-v-falkirk,60,sub_off,Ben Parkinson,Falkirk,Celtic Park
+2026-08-29-celtic-v-falkirk,60,sub_on,Jacob Murrell,Falkirk,Celtic Park
+2026-08-29-celtic-v-falkirk,63,sub_off,Haissem Hassan,Celtic,Celtic Park
+2026-08-29-celtic-v-falkirk,63,sub_on,James Forrest,Celtic,Celtic Park
+2026-08-29-celtic-v-falkirk,69,sub_off,Ethan Ross,Falkirk,Celtic Park
+2026-08-29-celtic-v-falkirk,69,sub_off,CJ Fodrey,Falkirk,Celtic Park
+2026-08-29-celtic-v-falkirk,69,sub_off,Leon McCann,Falkirk,Celtic Park
+2026-08-29-celtic-v-falkirk,69,sub_on,Conor McLeod,Falkirk,Celtic Park
+2026-08-29-celtic-v-falkirk,69,sub_on,Aodhan Doherty,Falkirk,Celtic Park
+2026-08-29-celtic-v-falkirk,69,sub_on,Scott Tanser,Falkirk,Celtic Park
+2026-08-29-celtic-v-falkirk,70,sub_off,Kieran Tierney,Celtic,Celtic Park
+2026-08-29-celtic-v-falkirk,70,sub_off,Camilo Durán,Celtic,Celtic Park
+2026-08-29-celtic-v-falkirk,70,sub_on,Auston Trusty,Celtic,Celtic Park
+2026-08-29-celtic-v-falkirk,70,sub_on,Callum Osmand,Celtic,Celtic Park
+2026-08-29-celtic-v-falkirk,72,own_goal,Colby Donovan,Falkirk,Celtic Park
+2026-08-29-celtic-v-falkirk,77,yellow,Conor McLeod,Falkirk,Celtic Park
+2026-08-29-celtic-v-falkirk,78,sub_off,Alex Oxlade-Chamberlain,Celtic,Celtic Park
+2026-08-29-celtic-v-falkirk,78,sub_off,Ben Krauhaus,Falkirk,Celtic Park
+2026-08-29-celtic-v-falkirk,78,sub_off,Hyun-Jun Yang,Celtic,Celtic Park
+2026-08-29-celtic-v-falkirk,78,sub_on,Luke McCowan,Celtic,Celtic Park
+2026-08-29-celtic-v-falkirk,78,sub_on,Deniss Melniks,Falkirk,Celtic Park
+2026-08-29-celtic-v-falkirk,78,sub_on,Sebastian Tounekti,Celtic,Celtic Park
+2026-08-29-celtic-v-falkirk,82,yellow,Aodhan Doherty,Falkirk,Celtic Park
+2026-08-29-charlton-athletic-v-preston-north-end,46,sub_off,Sonny Carey,Charlton Athletic,The Valley
+2026-08-29-charlton-athletic-v-preston-north-end,46,sub_on,Millenic Alli,Charlton Athletic,The Valley
+2026-08-29-charlton-athletic-v-preston-north-end,54,yellow,Léo Leroy,Preston North End,The Valley
+2026-08-29-charlton-athletic-v-preston-north-end,56,goal,Karlan Grant,Charlton Athletic,The Valley
+2026-08-29-charlton-athletic-v-preston-north-end,63,sub_off,Nathaniel Chalobah,Charlton Athletic,The Valley
+2026-08-29-charlton-athletic-v-preston-north-end,63,sub_on,Alan Mwamba,Charlton Athletic,The Valley
+2026-08-29-charlton-athletic-v-preston-north-end,70,sub_off,Callum Lang,Preston North End,The Valley
+2026-08-29-charlton-athletic-v-preston-north-end,70,sub_off,Odel Offiah,Preston North End,The Valley
+2026-08-29-charlton-athletic-v-preston-north-end,70,sub_on,Stanley Mills,Preston North End,The Valley
+2026-08-29-charlton-athletic-v-preston-north-end,70,sub_on,Jusef Erabi,Preston North End,The Valley
+2026-08-29-charlton-athletic-v-preston-north-end,77,sub_off,Jordan Thompson,Preston North End,The Valley
+2026-08-29-charlton-athletic-v-preston-north-end,77,sub_on,Thierry Small,Preston North End,The Valley
+2026-08-29-charlton-athletic-v-preston-north-end,88,sub_off,Miles Leaburn,Charlton Athletic,The Valley
+2026-08-29-charlton-athletic-v-preston-north-end,88,sub_off,Andrija Vukcevic,Preston North End,The Valley
+2026-08-29-charlton-athletic-v-preston-north-end,88,sub_on,Micah Mbick,Charlton Athletic,The Valley
+2026-08-29-charlton-athletic-v-preston-north-end,88,sub_on,Caleb Wiley,Preston North End,The Valley
+2026-08-29-charlton-athletic-v-preston-north-end,90,sub_off,Karlan Grant,Charlton Athletic,The Valley
+2026-08-29-charlton-athletic-v-preston-north-end,90,sub_off,Tyreece Campbell,Charlton Athletic,The Valley
+2026-08-29-charlton-athletic-v-preston-north-end,90,sub_on,Nathan Asiimwe,Charlton Athletic,The Valley
+2026-08-29-charlton-athletic-v-preston-north-end,90,sub_on,Joe Rankin-Costello,Charlton Athletic,The Valley
+2026-08-29-charlton-athletic-v-preston-north-end,90,yellow,Joe Rankin-Costello,Charlton Athletic,The Valley
 2026-08-29-cliftonville-v-dungannon-swifts,,,,,Solitude
-2026-08-29-colchester-united-v-rochdale,,,,,JobServe Community Stadium
-2026-08-29-coventry-city-v-hull-city,,,,,Coventry Building Society Arena
-2026-08-29-crawley-town-v-bristol-rovers,,,,,Broadfield Stadium
+2026-08-29-colchester-united-v-rochdale,37,yellow,Rob Hunt,Colchester United,JobServe Community Stadium
+2026-08-29-colchester-united-v-rochdale,40,yellow,Harvey Gilmour,Rochdale,JobServe Community Stadium
+2026-08-29-colchester-united-v-rochdale,57,sub_off,Bradley Ihionvien,Colchester United,JobServe Community Stadium
+2026-08-29-colchester-united-v-rochdale,57,sub_off,Oscar Thorn,Colchester United,JobServe Community Stadium
+2026-08-29-colchester-united-v-rochdale,57,sub_on,Leon Chiwome,Colchester United,JobServe Community Stadium
+2026-08-29-colchester-united-v-rochdale,57,sub_on,Jaden Williams,Colchester United,JobServe Community Stadium
+2026-08-29-colchester-united-v-rochdale,69,sub_off,Zain Silcott-Duberry,Rochdale,JobServe Community Stadium
+2026-08-29-colchester-united-v-rochdale,69,sub_on,Luke Hannant,Rochdale,JobServe Community Stadium
+2026-08-29-colchester-united-v-rochdale,74,sub_off,Moses Sesay,Colchester United,JobServe Community Stadium
+2026-08-29-colchester-united-v-rochdale,74,sub_on,Frankie Terry,Colchester United,JobServe Community Stadium
+2026-08-29-colchester-united-v-rochdale,79,sub_off,Harvey Gilmour,Rochdale,JobServe Community Stadium
+2026-08-29-colchester-united-v-rochdale,79,sub_off,Kane Taylor,Rochdale,JobServe Community Stadium
+2026-08-29-colchester-united-v-rochdale,79,sub_on,Edward Francis,Rochdale,JobServe Community Stadium
+2026-08-29-colchester-united-v-rochdale,79,sub_on,Jonny Smith,Rochdale,JobServe Community Stadium
+2026-08-29-colchester-united-v-rochdale,80,yellow,Dan Moss,Rochdale,JobServe Community Stadium
+2026-08-29-colchester-united-v-rochdale,85,sub_off,Rob Hunt,Colchester United,JobServe Community Stadium
+2026-08-29-colchester-united-v-rochdale,85,sub_on,Kien Connolly,Colchester United,JobServe Community Stadium
+2026-08-29-colchester-united-v-rochdale,87,goal,Jaden Williams,Colchester United,JobServe Community Stadium
+2026-08-29-colchester-united-v-rochdale,88,sub_off,Ryan East,Rochdale,JobServe Community Stadium
+2026-08-29-colchester-united-v-rochdale,88,sub_on,Emmanuel Dieseruvwe,Rochdale,JobServe Community Stadium
+2026-08-29-coventry-city-v-hull-city,10,yellow,Lewie Coyle,Hull City,Coventry Building Society Arena
+2026-08-29-coventry-city-v-hull-city,46,sub_off,Hidemasa Morita,Hull City,Coventry Building Society Arena
+2026-08-29-coventry-city-v-hull-city,46,sub_off,Lewie Coyle,Hull City,Coventry Building Society Arena
+2026-08-29-coventry-city-v-hull-city,46,sub_on,Lucas Gourna-Douath,Hull City,Coventry Building Society Arena
+2026-08-29-coventry-city-v-hull-city,46,sub_on,Cody Drameh,Hull City,Coventry Building Society Arena
+2026-08-29-coventry-city-v-hull-city,51,yellow,Regan Slater,Hull City,Coventry Building Society Arena
+2026-08-29-coventry-city-v-hull-city,54,yellow,Elliot Stroud,Hull City,Coventry Building Society Arena
+2026-08-29-coventry-city-v-hull-city,58,sub_off,Ephron Mason-Clark,Coventry City,Coventry Building Society Arena
+2026-08-29-coventry-city-v-hull-city,58,sub_on,Brandon Thomas-Asante,Coventry City,Coventry Building Society Arena
+2026-08-29-coventry-city-v-hull-city,59,sub_off,Loum Tchaouna,Coventry City,Coventry Building Society Arena
+2026-08-29-coventry-city-v-hull-city,59,sub_off,Elliot Stroud,Hull City,Coventry Building Society Arena
+2026-08-29-coventry-city-v-hull-city,59,sub_off,Nobel Mendy,Hull City,Coventry Building Society Arena
+2026-08-29-coventry-city-v-hull-city,59,sub_on,Tatsuhiro Sakamoto,Coventry City,Coventry Building Society Arena
+2026-08-29-coventry-city-v-hull-city,59,sub_on,Liam Millar,Hull City,Coventry Building Society Arena
+2026-08-29-coventry-city-v-hull-city,59,sub_on,Lucas Herrington,Hull City,Coventry Building Society Arena
+2026-08-29-coventry-city-v-hull-city,68,yellow,Oli McBurnie,Hull City,Coventry Building Society Arena
+2026-08-29-coventry-city-v-hull-city,71,sub_off,Caleb Yirenkyi,Coventry City,Coventry Building Society Arena
+2026-08-29-coventry-city-v-hull-city,71,sub_off,Jack Rudoni,Coventry City,Coventry Building Society Arena
+2026-08-29-coventry-city-v-hull-city,71,sub_on,Victor Torp,Coventry City,Coventry Building Society Arena
+2026-08-29-coventry-city-v-hull-city,71,sub_on,Gustavo Hamer,Coventry City,Coventry Building Society Arena
+2026-08-29-coventry-city-v-hull-city,78,sub_off,Bobby Thomas,Coventry City,Coventry Building Society Arena
+2026-08-29-coventry-city-v-hull-city,78,sub_on,Ethan Pinnock,Coventry City,Coventry Building Society Arena
+2026-08-29-coventry-city-v-hull-city,82,goal,Liam Millar,Hull City,Coventry Building Society Arena
+2026-08-29-coventry-city-v-hull-city,83,sub_off,Mohamed Belloumi,Hull City,Coventry Building Society Arena
+2026-08-29-coventry-city-v-hull-city,83,sub_on,Mohamed-Ali Cho,Hull City,Coventry Building Society Arena
+2026-08-29-coventry-city-v-hull-city,84,yellow,Aurèle Amenda,Coventry City,Coventry Building Society Arena
+2026-08-29-crawley-town-v-bristol-rovers,23,goal,Tom James,Bristol Rovers,Broadfield Stadium
+2026-08-29-crawley-town-v-bristol-rovers,29,yellow,Tommy Leigh,Bristol Rovers,Broadfield Stadium
+2026-08-29-crawley-town-v-bristol-rovers,31,yellow,Louie Watson,Crawley Town,Broadfield Stadium
+2026-08-29-crawley-town-v-bristol-rovers,42,goal,Bobby Kamwa,Bristol Rovers,Broadfield Stadium
+2026-08-29-crawley-town-v-bristol-rovers,43,yellow,Kofi Balmer,Bristol Rovers,Broadfield Stadium
+2026-08-29-crawley-town-v-bristol-rovers,46,sub_off,Akinwale Joseph Odimayo,Crawley Town,Broadfield Stadium
+2026-08-29-crawley-town-v-bristol-rovers,46,sub_on,Dylan Morgan,Crawley Town,Broadfield Stadium
+2026-08-29-crawley-town-v-bristol-rovers,48,yellow,Klaudio Krasniqi,Crawley Town,Broadfield Stadium
+2026-08-29-crawley-town-v-bristol-rovers,57,sub_off,Klaudio Krasniqi,Crawley Town,Broadfield Stadium
+2026-08-29-crawley-town-v-bristol-rovers,57,sub_off,Ade Adeyemo,Crawley Town,Broadfield Stadium
+2026-08-29-crawley-town-v-bristol-rovers,57,sub_on,Danilo Orsi,Crawley Town,Broadfield Stadium
+2026-08-29-crawley-town-v-bristol-rovers,57,sub_on,Ty Ewens-Findlay,Crawley Town,Broadfield Stadium
+2026-08-29-crawley-town-v-bristol-rovers,68,yellow,Tom James,Bristol Rovers,Broadfield Stadium
+2026-08-29-crawley-town-v-bristol-rovers,80,sub_off,Osman Kamara,Crawley Town,Broadfield Stadium
+2026-08-29-crawley-town-v-bristol-rovers,80,sub_off,Jonny Russell,Crawley Town,Broadfield Stadium
+2026-08-29-crawley-town-v-bristol-rovers,80,sub_on,Lewis Richards,Crawley Town,Broadfield Stadium
+2026-08-29-crawley-town-v-bristol-rovers,80,sub_on,Gianmarco Di Biase,Crawley Town,Broadfield Stadium
+2026-08-29-crawley-town-v-bristol-rovers,81,yellow,Riley Harbottle,Bristol Rovers,Broadfield Stadium
+2026-08-29-crawley-town-v-bristol-rovers,89,yellow,Dylan Morgan,Crawley Town,Broadfield Stadium
+2026-08-29-crawley-town-v-bristol-rovers,90,sub_off,Fabrizio Cavegn,Bristol Rovers,Broadfield Stadium
+2026-08-29-crawley-town-v-bristol-rovers,90,sub_off,Tommy Leigh,Bristol Rovers,Broadfield Stadium
+2026-08-29-crawley-town-v-bristol-rovers,90,sub_on,Ellis Harrison,Bristol Rovers,Broadfield Stadium
+2026-08-29-crawley-town-v-bristol-rovers,90,sub_on,Jack Aitchison,Bristol Rovers,Broadfield Stadium
 2026-08-29-darlington-v-macclesfield-fc,,,,,Blackwell Meadows
 2026-08-29-derby-county-v-swansea-city,2,goal,Joseph Opoku,Swansea City,Pride Park Stadium
 2026-08-29-derby-county-v-swansea-city,24,sub_off,Joseph Opoku,Swansea City,Pride Park Stadium
@@ -2731,11 +2916,112 @@ match_id,minute,type,player,team,venue
 2026-08-29-southampton-u18-v-norwich-city-u18,51,goal,Luke Hawe,Southampton U18,Stadium
 2026-08-29-southampton-u18-v-norwich-city-u18,53,goal,Tyler Lemon,Southampton U18,Stadium
 2026-08-29-southampton-u18-v-norwich-city-u18,90,goal,Oldfield,Norwich City U18,Stadium
-2026-08-29-southampton-v-millwall,,,,,St. Mary's Stadium
+2026-08-29-southampton-v-millwall,4,yellow,Ryan Manning,Southampton,St. Mary's Stadium
+2026-08-29-southampton-v-millwall,10,yellow,Mark Sykes,Millwall,St. Mary's Stadium
+2026-08-29-southampton-v-millwall,15,goal,Mark Sykes,Millwall,St. Mary's Stadium
+2026-08-29-southampton-v-millwall,25,goal,Cyle Larin,Southampton,St. Mary's Stadium
+2026-08-29-southampton-v-millwall,38,goal,Finn Azaz,Southampton,St. Mary's Stadium
+2026-08-29-southampton-v-millwall,46,sub_off,Flynn Downes,Southampton,St. Mary's Stadium
+2026-08-29-southampton-v-millwall,46,sub_on,James Ward-Prowse,Southampton,St. Mary's Stadium
+2026-08-29-southampton-v-millwall,55,goal,Léo Scienza,Southampton,St. Mary's Stadium
+2026-08-29-southampton-v-millwall,61,sub_off,Kyrell Lisbie,Millwall,St. Mary's Stadium
+2026-08-29-southampton-v-millwall,61,sub_on,Luke Cundle,Millwall,St. Mary's Stadium
+2026-08-29-southampton-v-millwall,62,goal,Cyle Larin,Southampton,St. Mary's Stadium
+2026-08-29-southampton-v-millwall,70,sub_off,Cyle Larin,Southampton,St. Mary's Stadium
+2026-08-29-southampton-v-millwall,70,sub_on,Divin Mubama,Southampton,St. Mary's Stadium
+2026-08-29-southampton-v-millwall,71,sub_off,Léo Scienza,Southampton,St. Mary's Stadium
+2026-08-29-southampton-v-millwall,71,sub_off,Taïryk Arconte,Millwall,St. Mary's Stadium
+2026-08-29-southampton-v-millwall,71,sub_off,Zak Sturge,Millwall,St. Mary's Stadium
+2026-08-29-southampton-v-millwall,71,sub_on,Tom Fellows,Southampton,St. Mary's Stadium
+2026-08-29-southampton-v-millwall,71,sub_on,Daniel Kelly,Millwall,St. Mary's Stadium
+2026-08-29-southampton-v-millwall,71,sub_on,Elkan Baggott,Millwall,St. Mary's Stadium
+2026-08-29-southampton-v-millwall,79,sub_off,Jenson Metcalfe,Millwall,St. Mary's Stadium
+2026-08-29-southampton-v-millwall,79,sub_on,Zak Lovelace,Millwall,St. Mary's Stadium
+2026-08-29-southampton-v-millwall,80,sub_off,Kuryu Matsuki,Southampton,St. Mary's Stadium
+2026-08-29-southampton-v-millwall,80,sub_off,Josh Coburn,Millwall,St. Mary's Stadium
+2026-08-29-southampton-v-millwall,80,sub_on,Lewis Dobbin,Southampton,St. Mary's Stadium
+2026-08-29-southampton-v-millwall,80,sub_on,Lyndon Dykes,Millwall,St. Mary's Stadium
+2026-08-29-southampton-v-millwall,86,goal,Tom Fellows,Southampton,St. Mary's Stadium
+2026-08-29-southampton-v-millwall,87,sub_off,Keven Schlotterbeck,Southampton,St. Mary's Stadium
+2026-08-29-southampton-v-millwall,87,sub_on,Jack Stephens,Southampton,St. Mary's Stadium
+2026-08-29-southampton-v-millwall,87,yellow,Tom Fellows,Southampton,St. Mary's Stadium
 2026-08-29-spalding-united-v-worksop-town,,,,,Sir Halley Stewart Field
-2026-08-29-spartans-fc-v-clyde,,,,,The Vanloq Community Stadium
-2026-08-29-stevenage-v-doncaster-rovers,,,,,SPORTA Arena
-2026-08-29-stockport-county-v-wycombe-wanderers,,,,,Edgeley Park
+2026-08-29-spartans-fc-v-clyde,29,goal,Scott Williamson,Clyde,The Vanloq Community Stadium
+2026-08-29-spartans-fc-v-clyde,42,yellow,Kyle Fleming,Clyde,The Vanloq Community Stadium
+2026-08-29-spartans-fc-v-clyde,56,goal,Scott Williamson,Clyde,The Vanloq Community Stadium
+2026-08-29-spartans-fc-v-clyde,58,goal,Kyle Connell,Clyde,The Vanloq Community Stadium
+2026-08-29-spartans-fc-v-clyde,60,red,Logan Dunachie,Clyde,The Vanloq Community Stadium
+2026-08-29-spartans-fc-v-clyde,61,sub_off,Kyle Connell,Clyde,The Vanloq Community Stadium
+2026-08-29-spartans-fc-v-clyde,61,sub_on,Sam Campbell,Clyde,The Vanloq Community Stadium
+2026-08-29-spartans-fc-v-clyde,67,sub_off,Timam Scott,Clyde,The Vanloq Community Stadium
+2026-08-29-spartans-fc-v-clyde,67,sub_off,Brogan Walls,Spartans FC,The Vanloq Community Stadium
+2026-08-29-spartans-fc-v-clyde,67,sub_off,Jamie Dishington,Spartans FC,The Vanloq Community Stadium
+2026-08-29-spartans-fc-v-clyde,67,sub_off,Ethan Drysdale,Spartans FC,The Vanloq Community Stadium
+2026-08-29-spartans-fc-v-clyde,67,sub_on,Barry Cuddihy,Clyde,The Vanloq Community Stadium
+2026-08-29-spartans-fc-v-clyde,67,sub_on,Ricardo Dinanga,Spartans FC,The Vanloq Community Stadium
+2026-08-29-spartans-fc-v-clyde,67,sub_on,Matthew Mudie,Spartans FC,The Vanloq Community Stadium
+2026-08-29-spartans-fc-v-clyde,67,sub_on,Benjamin Heal,Spartans FC,The Vanloq Community Stadium
+2026-08-29-spartans-fc-v-clyde,69,goal,Ricardo Dinanga,Spartans FC,The Vanloq Community Stadium
+2026-08-29-spartans-fc-v-clyde,76,sub_off,James Hilton,Clyde,The Vanloq Community Stadium
+2026-08-29-spartans-fc-v-clyde,76,sub_off,Scott Williamson,Clyde,The Vanloq Community Stadium
+2026-08-29-spartans-fc-v-clyde,76,sub_on,Thomas Cruden,Clyde,The Vanloq Community Stadium
+2026-08-29-spartans-fc-v-clyde,76,sub_on,Keir Gilligan,Clyde,The Vanloq Community Stadium
+2026-08-29-spartans-fc-v-clyde,78,yellow,Lewis Lovering,Clyde,The Vanloq Community Stadium
+2026-08-29-spartans-fc-v-clyde,79,goal,Matthew Mudie,Spartans FC,The Vanloq Community Stadium
+2026-08-29-spartans-fc-v-clyde,81,yellow,Keir Gilligan,Clyde,The Vanloq Community Stadium
+2026-08-29-spartans-fc-v-clyde,88,goal,Ayrton Sonkur,Spartans FC,The Vanloq Community Stadium
+2026-08-29-spartans-fc-v-clyde,90,yellow,Thomas Cruden,Clyde,The Vanloq Community Stadium
+2026-08-29-stevenage-v-doncaster-rovers,40,yellow,Isaac Hutchinson,Doncaster Rovers,SPORTA Arena
+2026-08-29-stevenage-v-doncaster-rovers,46,sub_off,Hakeeb Adelakun,Doncaster Rovers,SPORTA Arena
+2026-08-29-stevenage-v-doncaster-rovers,46,sub_on,Bayley McCann,Doncaster Rovers,SPORTA Arena
+2026-08-29-stevenage-v-doncaster-rovers,56,yellow,Jay McGrath,Doncaster Rovers,SPORTA Arena
+2026-08-29-stevenage-v-doncaster-rovers,57,goal,Josh Magennis,Stevenage,SPORTA Arena
+2026-08-29-stevenage-v-doncaster-rovers,63,sub_off,Darren Robinson,Doncaster Rovers,SPORTA Arena
+2026-08-29-stevenage-v-doncaster-rovers,63,sub_on,George Broadbent,Doncaster Rovers,SPORTA Arena
+2026-08-29-stevenage-v-doncaster-rovers,64,sub_off,Tommi O'Reilly,Doncaster Rovers,SPORTA Arena
+2026-08-29-stevenage-v-doncaster-rovers,64,sub_off,Jay McGrath,Doncaster Rovers,SPORTA Arena
+2026-08-29-stevenage-v-doncaster-rovers,64,sub_off,Isaac Hutchinson,Doncaster Rovers,SPORTA Arena
+2026-08-29-stevenage-v-doncaster-rovers,64,sub_on,Leon Ayinde,Doncaster Rovers,SPORTA Arena
+2026-08-29-stevenage-v-doncaster-rovers,64,sub_on,Seán Grehan,Doncaster Rovers,SPORTA Arena
+2026-08-29-stevenage-v-doncaster-rovers,64,sub_on,Brandon Hanlan,Doncaster Rovers,SPORTA Arena
+2026-08-29-stevenage-v-doncaster-rovers,70,goal,Jack Senior,Doncaster Rovers,SPORTA Arena
+2026-08-29-stevenage-v-doncaster-rovers,71,sub_off,Josh Magennis,Stevenage,SPORTA Arena
+2026-08-29-stevenage-v-doncaster-rovers,71,sub_off,Louis Thompson,Stevenage,SPORTA Arena
+2026-08-29-stevenage-v-doncaster-rovers,71,sub_off,Jordan Roberts,Stevenage,SPORTA Arena
+2026-08-29-stevenage-v-doncaster-rovers,71,sub_on,Oliver Sanderson,Stevenage,SPORTA Arena
+2026-08-29-stevenage-v-doncaster-rovers,71,sub_on,Terry Taylor,Stevenage,SPORTA Arena
+2026-08-29-stevenage-v-doncaster-rovers,71,sub_on,Michael Mellon,Stevenage,SPORTA Arena
+2026-08-29-stevenage-v-doncaster-rovers,76,yellow,Jack Senior,Doncaster Rovers,SPORTA Arena
+2026-08-29-stevenage-v-doncaster-rovers,80,goal,Owen Bailey,Doncaster Rovers,SPORTA Arena
+2026-08-29-stevenage-v-doncaster-rovers,82,goal,Oliver Sanderson,Stevenage,SPORTA Arena
+2026-08-29-stevenage-v-doncaster-rovers,90,sub_off,Phoenix Patterson,Stevenage,SPORTA Arena
+2026-08-29-stevenage-v-doncaster-rovers,90,sub_on,Saxon Earley,Stevenage,SPORTA Arena
+2026-08-29-stockport-county-v-wycombe-wanderers,16,goal,Harry Wood,Stockport County,Edgeley Park
+2026-08-29-stockport-county-v-wycombe-wanderers,23,goal,Harry Wood,Stockport County,Edgeley Park
+2026-08-29-stockport-county-v-wycombe-wanderers,43,goal,Cauley Woodrow,Wycombe Wanderers,Edgeley Park
+2026-08-29-stockport-county-v-wycombe-wanderers,46,sub_off,Aaron Morley,Wycombe Wanderers,Edgeley Park
+2026-08-29-stockport-county-v-wycombe-wanderers,46,sub_on,Caolan Boyd-Munce,Wycombe Wanderers,Edgeley Park
+2026-08-29-stockport-county-v-wycombe-wanderers,56,goal,Kyle Wootton,Stockport County,Edgeley Park
+2026-08-29-stockport-county-v-wycombe-wanderers,61,goal,Jack Diamond,Stockport County,Edgeley Park
+2026-08-29-stockport-county-v-wycombe-wanderers,64,sub_off,Harry Wood,Stockport County,Edgeley Park
+2026-08-29-stockport-county-v-wycombe-wanderers,64,sub_on,Jason Adigun,Stockport County,Edgeley Park
+2026-08-29-stockport-county-v-wycombe-wanderers,70,sub_off,Cauley Woodrow,Wycombe Wanderers,Edgeley Park
+2026-08-29-stockport-county-v-wycombe-wanderers,70,sub_on,Emre Tezgel,Wycombe Wanderers,Edgeley Park
+2026-08-29-stockport-county-v-wycombe-wanderers,71,sub_off,Silko Thomas,Wycombe Wanderers,Edgeley Park
+2026-08-29-stockport-county-v-wycombe-wanderers,71,sub_on,Junior Quitirna,Wycombe Wanderers,Edgeley Park
+2026-08-29-stockport-county-v-wycombe-wanderers,72,sub_off,Ryan Glover,Stockport County,Edgeley Park
+2026-08-29-stockport-county-v-wycombe-wanderers,72,sub_off,Jack Diamond,Stockport County,Edgeley Park
+2026-08-29-stockport-county-v-wycombe-wanderers,72,sub_on,Tayo Edun,Stockport County,Edgeley Park
+2026-08-29-stockport-county-v-wycombe-wanderers,72,sub_on,Mikaël Mandron,Stockport County,Edgeley Park
+2026-08-29-stockport-county-v-wycombe-wanderers,76,sub_off,Steve Cook,Wycombe Wanderers,Edgeley Park
+2026-08-29-stockport-county-v-wycombe-wanderers,76,sub_on,Dan Casey,Wycombe Wanderers,Edgeley Park
+2026-08-29-stockport-county-v-wycombe-wanderers,77,sub_off,Jack Grimmer,Wycombe Wanderers,Edgeley Park
+2026-08-29-stockport-county-v-wycombe-wanderers,77,sub_on,Sam Parker,Wycombe Wanderers,Edgeley Park
+2026-08-29-stockport-county-v-wycombe-wanderers,81,sub_off,Oliver Norwood,Stockport County,Edgeley Park
+2026-08-29-stockport-county-v-wycombe-wanderers,81,sub_on,Lewis Fiorini,Stockport County,Edgeley Park
+2026-08-29-stockport-county-v-wycombe-wanderers,82,sub_off,Kyle Wootton,Stockport County,Edgeley Park
+2026-08-29-stockport-county-v-wycombe-wanderers,82,sub_on,Benony Andrésson,Stockport County,Edgeley Park
+2026-08-29-stockport-county-v-wycombe-wanderers,90,goal,Mikaël Mandron,Stockport County,Edgeley Park
 2026-08-29-strasbourg-v-lens,36,yellow,Jeyland Mitchell,Strasbourg,Stade de la Meinau
 2026-08-29-strasbourg-v-lens,38,goal,Florian Thauvin,Lens,Stade de la Meinau
 2026-08-29-strasbourg-v-lens,48,goal,Gessime Yassine,Strasbourg,Stade de la Meinau
