@@ -1862,11 +1862,27 @@ def scrape(args):
     # matchday run was deleting ~60% of results/fixtures/players until the
     # next full refresh put them back. Partial runs must ONLY merge.
     if not getattr(args, "active", False):
-        write_csv(out_root / "data/api/matches.csv",
-                  ["kickoff", "competition", "home", "away", "home_id",
-                   "away_id", "home_score", "away_score", "status", "minute",
-                   "players"],
-                  match_rows)
+        # Same guard as the match index: don't let a transient scrape miss
+        # delete a live/recent match. Keep existing rows within +/-36h that
+        # this run didn't produce.
+        import csv as _csv
+        _mcols = ["kickoff", "competition", "home", "away", "home_id",
+                  "away_id", "home_score", "away_score", "status", "minute",
+                  "players"]
+        _mlo = now - dt.timedelta(hours=36)
+        _mhi = now + dt.timedelta(hours=36)
+        _newk = {(r[0][:16], r[2], r[3]) for r in match_rows}
+        _mpath = out_root / "data/api/matches.csv"
+        if _mpath.exists():
+            with _mpath.open(encoding="utf-8") as _fh:
+                for _r in _csv.DictReader(_fh):
+                    _k = ((_r.get("kickoff") or "")[:16], _r.get("home") or "", _r.get("away") or "")
+                    if _k in _newk:
+                        continue
+                    _ko = parse_iso(_r.get("kickoff"))
+                    if _ko and _mlo <= _ko <= _mhi:
+                        match_rows.append([_r.get(c, "") for c in _mcols])
+        write_csv(_mpath, _mcols, match_rows)
         write_csv(out_root / "data/manual/results.csv",
                   ["slug", "date", "opponent", "score", "competition",
                    "minutes", "goals", "assists", "rating"],
@@ -1913,6 +1929,28 @@ def scrape(args):
             "away_id": m.get("away_id", ""),
             "slugs": sorted(slugs),
         })
+    # A live/recent match exists only because some tracked player's scrape
+    # returned it. FotMob occasionally omits an in-progress game from a
+    # player's fixture list for one request, and a full write would then
+    # DELETE that match from the site mid-game. So keep any existing entry
+    # within +/-36h that this run didn't produce - a transient miss must not
+    # wipe a live match.
+    _keep_lo = now - dt.timedelta(hours=36)
+    _keep_hi = now + dt.timedelta(hours=36)
+    _new_ids = {e["fotmob_id"] for e in index}
+    try:
+        _prev = json.loads((SCRAPER_DIR / "match_index.json").read_text())
+    except Exception:
+        _prev = []
+    _kept = 0
+    for e in _prev:
+        if e.get("fotmob_id") in _new_ids:
+            continue
+        ko = parse_iso(e.get("kickoff"))
+        if ko and _keep_lo <= ko <= _keep_hi:
+            index.append(e); _kept += 1
+    if _kept:
+        print(f"  kept {_kept} recent match(es) this scrape did not return")
     (SCRAPER_DIR / "match_index.json").write_text(
         json.dumps(index, indent=1))
     print(f"  wrote {SCRAPER_DIR / 'match_index.json'}  "
