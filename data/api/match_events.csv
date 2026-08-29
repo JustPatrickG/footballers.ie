@@ -2445,6 +2445,7 @@ match_id,minute,type,player,team,venue
 2026-08-29-montrose-v-queen-of-the-south,86,sub_on,Billy Gray,Queen of the South,Links Park
 2026-08-29-montrose-v-queen-of-the-south,90,yellow,Zander MacKenzie,Queen of the South,Links Park
 2026-08-29-montrose-v-queen-of-the-south,90,yellow,Flynn Duffy,Montrose,Links Park
+2026-08-29-monza-v-udinese,,,,,U-Power Stadium
 2026-08-29-newport-county-v-tranmere-rovers,11,goal,Shaquille Gwengwe,Newport County,Rodney Parade
 2026-08-29-newport-county-v-tranmere-rovers,15,yellow,Jacob Slater,Tranmere Rovers,Rodney Parade
 2026-08-29-newport-county-v-tranmere-rovers,43,yellow,Christian Doidge,Newport County,Rodney Parade
@@ -2646,6 +2647,7 @@ match_id,minute,type,player,team,venue
 2026-08-29-redcar-athletic-v-fc-united-of-manchester,74,goal,Andrei Ardelean,Redcar Athletic,Green Lane
 2026-08-29-redcar-athletic-v-fc-united-of-manchester,78,goal,Adam Le Fondre,FC United of Manchester,Green Lane
 2026-08-29-redcar-athletic-v-fc-united-of-manchester,88,goal,Adam Boyes,Redcar Athletic,Green Lane
+2026-08-29-ross-county-v-east-kilbride,,,,,Global Energy Stadium
 2026-08-29-rotherham-united-v-chesterfield,12,goal,Fábio Tavares,Rotherham United,AESSEAL New York Stadium
 2026-08-29-rotherham-united-v-chesterfield,17,yellow,Brandon Cover,Rotherham United,AESSEAL New York Stadium
 2026-08-29-rotherham-united-v-chesterfield,18,yellow,Lee Bonis,Chesterfield,AESSEAL New York Stadium
@@ -2736,7 +2738,16 @@ match_id,minute,type,player,team,venue
 2026-08-29-stockport-county-v-wycombe-wanderers,,,,,Edgeley Park
 2026-08-29-strasbourg-v-lens,36,yellow,Jeyland Mitchell,Strasbourg,Stade de la Meinau
 2026-08-29-strasbourg-v-lens,38,goal,Florian Thauvin,Lens,Stade de la Meinau
-2026-08-29-taunton-town-v-basingstoke,,,,,Wordsworth Drive
+2026-08-29-strasbourg-v-lens,48,goal,Gessime Yassine,Strasbourg,Stade de la Meinau
+2026-08-29-taunton-town-v-basingstoke,5,goal,Alfie Moulden,Taunton Town,Wordsworth Drive
+2026-08-29-taunton-town-v-basingstoke,17,goal,Jack Rice,Taunton Town,Wordsworth Drive
+2026-08-29-taunton-town-v-basingstoke,19,goal,Jay Murray,Taunton Town,Wordsworth Drive
+2026-08-29-taunton-town-v-basingstoke,22,goal,Thomas Blake,Basingstoke,Wordsworth Drive
+2026-08-29-taunton-town-v-basingstoke,41,red,S. Nimaga,Basingstoke,Wordsworth Drive
+2026-08-29-taunton-town-v-basingstoke,62,goal,Jay Murray,Taunton Town,Wordsworth Drive
+2026-08-29-taunton-town-v-basingstoke,74,goal,Miles Obodo,Basingstoke,Wordsworth Drive
+2026-08-29-taunton-town-v-basingstoke,78,goal,Tom Blake,Basingstoke,Wordsworth Drive
+2026-08-29-taunton-town-v-basingstoke,83,red,Lloyd Irish,Taunton Town,Wordsworth Drive
 2026-08-29-vfb-eichstatt-v-tsv-aubstadt,27,goal,Jonathan Grimm,VfB Eichstätt,HIRSCH-Sportpark
 2026-08-29-vfb-eichstatt-v-tsv-aubstadt,72,goal,Leon Peric,VfB Eichstätt,HIRSCH-Sportpark
 2026-08-29-vfb-eichstatt-v-tsv-aubstadt,81,own_goal,Tim Hüttl,VfB Eichstätt,HIRSCH-Sportpark
