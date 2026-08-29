@@ -474,8 +474,12 @@ img,svg,iframe{max-width:100%}
 
 /* ============ MATCH PAGE ============ */
 .matchhead{border:1px solid var(--line);border-radius:10px;background:var(--panel);padding:16px;margin-top:14px}
-.mteams{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:14px;margin-top:14px}
-.mteam{font-size:clamp(16px,3vw,22px);font-weight:700}
+/* 1fr means minmax(auto,1fr), and the auto floor will not shrink below the
+   longest word - so "Middlesbrough" plus a 34px badge pushed the column
+   into the score and the two drew on top of each other. */
+.mteams{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);align-items:center;gap:14px;margin-top:14px}
+.mteam{font-size:clamp(16px,3vw,22px);font-weight:700;min-width:0;overflow-wrap:anywhere}
+@media(max-width:560px){.mteams{gap:8px}.badge.md{margin:0 6px}}
 .mteam.right{text-align:right}
 .mscore{font-family:'IBM Plex Mono',monospace;font-size:clamp(26px,6vw,38px);font-weight:600;white-space:nowrap}
 .mscore span{color:var(--mute);margin:0 8px;font-size:.6em}

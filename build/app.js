@@ -530,6 +530,11 @@
       i.className = cls;
       i.textContent = (cls === 'soff' ? '\u25bc ' : '\u25b2 ') + min + '\u2032';
       el.appendChild(i);
+      // Keep the tap-sheet in step. Without this the pitch shows the player
+      // coming off while his own panel still reports no minutes for the match.
+      var key = el.getAttribute('data-mstat');
+      var st = key && window.FB_MSTATS && window.FB_MSTATS[key];
+      if (st) st[cls] = min;
     }
     subs.forEach(function (e) {
       var off = norm(e.player), on = norm(e.sin);
@@ -1360,9 +1365,17 @@
     } else {
       var m0 = (window.FB_MATCHES || [])[0];
       var done = m0 && (m0.status === 'ft' || (Date.parse(m0.kickoff) && Date.now() - Date.parse(m0.kickoff) > 2 * 36e5));
-      rows = '<div class="msnote">' + (done
-          ? 'Full-time stats for this game are still syncing'
-          : 'No minutes recorded for this match')
+      // The teamsheet knows more than the stats feed does mid-match: whether he
+      // started, and when he went off. Say that rather than claiming nothing.
+      var started = !!document.querySelector('.pitch [data-mstat="' + slug + '"]');
+      var note;
+      if (d.son && d.soff)  note = 'On ' + esc(d.son) + "', off " + esc(d.soff) + "'";
+      else if (d.soff)      note = 'Started, off on ' + esc(d.soff) + "'";
+      else if (d.son)       note = 'Came on on ' + esc(d.son) + "'";
+      else if (started && !done) note = 'Started — still on';
+      else note = done ? 'Full-time stats for this game are still syncing'
+                       : 'No minutes recorded for this match';
+      rows = '<div class="msnote">' + note
         + (d.srating ? ' — season so far:' : '.') + '</div>'
         + '<div class="msgrid2">'
         + '<div><b>' + (d.sap || 0) + '</b><span>apps</span></div>'
