@@ -3368,45 +3368,159 @@ def match_page_for(p, date, opponent):
                 _MATCH_LOOKUP.setdefault((k, club_slug(m.get(side,""))), match_id(m))
     return _MATCH_LOOKUP.get(((date or "")[:10], club_slug(opponent)))
 
+def _season_of(date):
+    """'2026-08-29' -> '2026/27'. Football seasons turn over in July."""
+    d = (date or "").strip()
+    if len(d) < 7 or not d[:4].isdigit(): return ""
+    y = int(d[:4])
+    try: m = int(d[5:7])
+    except ValueError: m = 1
+    start = y if m >= 7 else y - 1
+    return f"{start}/{str(start + 1)[2:]}"
+
+
+# Where a Transfermarkt position sits on a vertical pitch, attacking upward.
+# (short label, left %, top %)
+_POS_SPOT = {
+    "centre-forward": ("ST", 50, 14), "second striker": ("SS", 50, 24),
+    "left winger": ("LW", 16, 22), "right winger": ("RW", 84, 22),
+    "attacking midfield": ("AM", 50, 34), "central midfield": ("CM", 50, 48),
+    "defensive midfield": ("DM", 50, 60), "left midfield": ("LM", 16, 44),
+    "right midfield": ("RM", 84, 44), "left-back": ("LB", 16, 74),
+    "right-back": ("RB", 84, 74), "centre-back": ("CB", 50, 78),
+    "goalkeeper": ("GK", 50, 92), "sweeper": ("SW", 50, 84),
+}
+_POS_FALLBACK = {"GK": ("GK", 50, 92), "DEF": ("CB", 50, 78),
+                 "MID": ("CM", 50, 48), "FWD": ("ST", 50, 14)}
+
+def _pos_spot(p):
+    t = (p.get("tm") or {}).get("position") or ""
+    detail = t.split("-", 1)[-1].strip().lower() if "-" in t else t.strip().lower()
+    for key, spot in _POS_SPOT.items():
+        if key in detail: return spot, (t.split("-", 1)[-1].strip() or None)
+    fb = _POS_FALLBACK.get(p.get("pos") or "")
+    return (fb, None) if fb else (None, None)
+
+
 def build_player(p):
     s, c = p["season"], p["career"]
+    t = p.get("tm") or {}
     badge = "League of Ireland" if p["tier"]=="loi" else ("Abroad · top flight" if p["tier"]=="abroad-top" else "Abroad")
 
-    if has_data(p):
-        statsblock = f'''
-    <div class="sec"><h2>Season {esc(p.get("season_label") or SEASON)}</h2>
-      {'<span class="more stale" style="border:0">Last season · no appearances yet this season</span>'
-       if not season_is_current(p.get("season_label")) else ''}</div>
-    <div class="pdstats">
-      <div class="pds"><div class="n">{stat(p,"s_apps",s["ap"])}</div><div class="l">Apps</div></div>
-      <div class="pds"><div class="n">{stat(p,"s_starts",s["starts"])}</div><div class="l">Starts</div></div>
-      <div class="pds"><div class="n">{stat(p,"s_goals",s["g"])}</div><div class="l">Goals</div></div>
-      <div class="pds"><div class="n">{stat(p,"s_assists",s["a"])}</div><div class="l">Assists</div></div>
-      <div class="pds"><div class="n">{stat(p,"s_mins",s["mins"])}</div><div class="l">Minutes</div></div>
-      <div class="pds"><div class="n"><span class="card yel">{stat(p,"s_yellow",s["yellow"])}</span></div><div class="l">Yellow cards</div></div>
-      <div class="pds"><div class="n"><span class="card red">{stat(p,"s_red",s["red"])}</span></div><div class="l">Red cards</div></div>
-      <div class="pds"><div class="n">{rating_chip(p)}</div><div class="l">Avg rating · FotMob</div></div>
-      <div class="pds"><div class="n">{stat(p,"c_apps",c["ap"])}</div><div class="l">Career apps</div></div>
-      <div class="pds"><div class="n">{stat(p,"c_goals",c["g"])}</div><div class="l">Career goals</div></div>
-    </div>'''
-    elif p["slug"] in MISMATCHED:
-        statsblock = (
-            '<div class="sec"><h2>Season data</h2></div>'
-            '<div class="nodata">We haven\'t matched this player to a record on our stats '
-            'source yet — the closest one belongs to a different player, so we\'re showing '
-            'nothing rather than someone else\'s numbers. '
-            'Know where to find them? <a href="#" onclick="window.FB_REPORT&&FB_REPORT();return false">Tell us</a>.</div>')
-    else:
-        statsblock = (
-            '<div class="sec"><h2>Season data</h2></div>'
-            '<div class="nodata">We track this player, but our data source doesn\'t cover their '
-            'club yet — so there are no appearances, ratings or match records to show. '
-            'Their profile will fill in as soon as it does. '
-            'Think that\'s wrong? <a href="#" onclick="window.FB_REPORT&&FB_REPORT();return false">Report it</a>.</div>')
+    # ---------------- PROFILE: bio card ----------------
+    import datetime as _dt
+    dob_disp = ""
+    if t.get("dob"):
+        try: dob_disp = _dt.datetime.strptime(t["dob"], "%Y-%m-%d").strftime("%-d %b %Y")
+        except (ValueError, TypeError): dob_disp = t["dob"]
+    cells = []
+    def cell(big, small):
+        if big: cells.append(f'<div class="bic"><div class="bib">{big}</div><div class="bis">{small}</div></div>')
+    cell(esc(t.get("height") or ""), "Height")
+    if p["age"]: cell(f'{p["age"]} yrs', esc(dob_disp) if dob_disp else "Age")
+    nats = t.get("nations") or (["Ireland"] if p["eligible"] else [])
+    if nats: cell(esc(nats[0]), "Country" if len(nats) == 1 else esc(" · ".join(nats[1:])))
+    spot, pos_label = _pos_spot(p)
+    if spot: cell(esc(spot[0]), "Position")
+    if t.get("foot") or p["foot"]: cell(esc((t.get("foot") or p["foot"]).title()), "Preferred foot")
+    if t.get("value"): cell(esc(t["value"]), "Transfer value")
+    bio_card = f'<div class="pcard biocard"><div class="bigrid">{"".join(cells)}</div></div>' if cells else ""
 
+    # ---------------- PROFILE: season summary card ----------------
+    if has_data(p):
+        stale = "" if season_is_current(p.get("season_label")) else '<span class="stale">last season</span>'
+        season_card = f'''<div class="pcard">
+      <div class="pchead">{club_badge(p["club"])}<b>{esc(p["league"])} {esc(p.get("season_label") or SEASON)}</b>{stale}</div>
+      <div class="sumgrid">
+        <div><b>{stat(p,"s_goals",s["g"])}</b><span>Goals</span></div>
+        <div><b>{stat(p,"s_assists",s["a"])}</b><span>Assists</span></div>
+        <div>{rating_chip(p)}<span>Rating</span></div>
+        <div><b>{stat(p,"s_apps",s["ap"])}</b><span>Matches</span></div>
+        <div><b>{stat(p,"s_starts",s["starts"])}</b><span>Started</span></div>
+        <div><b>{stat(p,"s_mins",s["mins"])}</b><span>Minutes played</span></div>
+      </div></div>'''
+    elif p["slug"] in MISMATCHED:
+        season_card = ('<div class="pcard nodata">We haven\'t matched this player to a record on our stats '
+            'source yet — the closest one belongs to a different player, so we\'re showing nothing rather '
+            'than someone else\'s numbers. Know where to find them? '
+            '<a href="#" onclick="window.FB_REPORT&&FB_REPORT();return false">Tell us</a>.</div>')
+    else:
+        season_card = ('<div class="pcard nodata">We track this player, but our data source doesn\'t cover '
+            'their club yet — their profile will fill in as soon as it does. Think that\'s wrong? '
+            '<a href="#" onclick="window.FB_REPORT&&FB_REPORT();return false">Report it</a>.</div>')
+
+    # ---------------- PROFILE: position card ----------------
+    position_card = ""
+    if spot:
+        sh, sx, sy = spot
+        position_card = f'''<div class="pcard"><div class="pct">Position</div>
+      <div class="poswrap"><div class="poslbl"><span class="bis">Primary</span><br><b>{esc(pos_label or sh)}</b></div>
+      <div class="minipitch"><i></i><i class="mp2"></i><span class="posdot" style="left:{sx}%;top:{sy}%">{esc(sh)}</span></div></div></div>'''
+
+    # ---------------- PROFILE: contract card ----------------
+    contract_card = ""
+    if t.get("expires"):
+        bar = ""
+        try:
+            j = _dt.datetime.strptime(t.get("joined") or "", "%d/%m/%Y")
+            e = _dt.datetime.strptime(t.get("expires_iso") or "", "%Y-%m-%d")
+            total = (e - j).days
+            done = (_dt.datetime.now() - j).days
+            if total > 0:
+                pct = max(2, min(100, round(done * 100 / total)))
+                bar = f'<div class="cbar"><i style="width:{pct}%"></i></div>'
+        except (ValueError, TypeError):
+            pass
+        soon = ""
+        if t.get("expires_iso"):
+            try:
+                left = (_dt.datetime.strptime(t["expires_iso"], "%Y-%m-%d") - _dt.datetime.now()).days
+                if left < 0: soon = ' <span class="cexp out">expired</span>'
+                elif left < 190: soon = ' <span class="cexp soon">under 6 months</span>'
+            except ValueError: pass
+        contract_card = f'''<div class="pcard"><div class="pct">Contract · {esc(p["club"])}</div>
+      <div class="cdates"><span><b>Joined</b> {esc(t.get("joined") or "—")}</span><span><b>Ends</b> {esc(t["expires"])}{soon}</span></div>{bar}</div>'''
+
+    # ---------------- eligibility + international (site-specific, kept) ----------------
+    intl = ""
+    if p["intl_senior"] or p["intl_youth"]:
+        blocks = ""
+        if p["intl_senior"]:
+            i = p["intl_senior"]
+            blocks += (f'<a class="intlblock lnk" href="../ireland.html?level=Senior">'
+                       f'<div class="ilvl">Senior <span>{i["caps"]} caps · {i["goals"]} goals · debut {i["debut"]}</span>'
+                       f'<span class="go">View squad →</span></div></a>')
+        for lvl, caps, goals, since in p["intl_youth"]:
+            txt = f'{caps} caps · {goals} goals · from {since}' if caps is not None else "Called up at this level"
+            blocks += (f'<a class="intlblock lnk" href="../ireland.html?level={esc(lvl)}">'
+                       f'<div class="ilvl">{esc(lvl)} <span>{txt}</span><span class="go">View squad →</span></div></a>')
+        intl = f'<div class="sec"><h2>International</h2><a class="more" href="../ireland.html">Ireland hub →</a></div>{blocks}'
+
+    elig = ""
+    shown = set()
+    tied_to = next((cn for cn, st in p["eligible"] if st == "tied"), None)
+    for country, status in p["eligible"]:
+        if status == "blocked": cls, note = "elig blocked", "No longer available"
+        elif status == "tied":  cls, note = "elig tied", "Cap-tied · committed"
+        elif p["intl_youth"] and country == "Republic of Ireland":
+            cls, note = "elig youth", "Played underage · can still switch"
+        else: cls, note = "elig open", "Eligible · never played"
+        shown.add(country.lower()); shown.add(country.lower().replace("republic of ",""))
+        elig += f'<div class="{cls}"><span class="ec">{esc(country)}</span><span class="en">{note}</span></div>'
+    for nat in t.get("nations", []) or []:
+        n = nat.strip()
+        if not n or n.lower() in shown or n.lower() in ("ireland","republic of ireland") and "republic of ireland" in shown: continue
+        shown.add(n.lower())
+        if tied_to: elig += f'<div class="elig off"><span class="ec">{esc(n)}</span><span class="en">Closed · cap-tied elsewhere</span></div>'
+        else: elig += f'<div class="elig open"><span class="ec">{esc(n)}</span><span class="en">Also eligible</span></div>'
+    tie_note = ("Cap-tied to Ireland — a competitive senior appearance means the other associations below are closed off."
+                if p["cap_status"]=="senior_comp" else
+                "Youth caps and senior friendlies don't cap-tie a player, so a switch is still possible under FIFA rules."
+                if p["cap_status"] in ("youth","senior_friendly") or p["intl_youth"] else
+                "Uncapped at any level — free to commit to any association they qualify for.")
+
+    # ---------------- MATCHES tab ----------------
     upcoming = p["fixtures"]
-    n_fx = len(p["fixtures"])
-    fx_more = f'<span class="more" style="border:0">{n_fx} upcoming</span>' if n_fx else ""
     def _fxrow(d,o,h,cp):
         mid = match_page_for(p, d, o)
         tag, href = ("a", f' href="../match/{mid}.html"') if mid else ("div", "")
@@ -3416,100 +3530,105 @@ def build_player(p):
                 f'<div class="fxwhen">{esc(day_label(d))}</div>'
                 f'<div class="fxc">{esc(cp)}{where}</div></{tag}>')
     fxr = "".join(_fxrow(d,o,h,cp) for d,o,h,cp in upcoming)
-    rsr = ""
-    recent_results = list(reversed(p["results"]))[:10]   # feed is oldest-first
-    for row in recent_results:
+
+    mxr, cur_block = "", None
+    for row in reversed(p["results"]):          # newest first
         d,o,sc,cp,mins,g,a = row[:7]
         rt = row[7] if len(row) > 7 else ""
-        ev = "".join(f'<span class="evi g" title="Goal">⚽</span>' for _ in range(g or 0)) + \
-             "".join(f'<span class="evi a" title="Assist">A</span>' for _ in range(a or 0))
+        at = club_at(p["slug"], d) or p["club"]
+        if at != cur_block:
+            mxr += f'<div class="mxclub">{club_badge(at)}<b>{esc(at)}</b></div>'
+            cur_block = at
+        ev = "".join('<span class="evi g" title="Goal">⚽</span>' for _ in range(g or 0)) + \
+             "".join('<span class="evi a" title="Assist">A</span>' for _ in range(a or 0))
         res = result_class(sc)
         mid = match_page_for(p, d, o)
-        tag = "a" if mid else "div"
-        href = f' href="../match/{mid}.html"' if mid else ""
-        at = club_at(p["slug"], d) or p["club"]
-        where = f' · {esc(at)}' if at else ""
-        rsr += (f'<{tag} class="rmrow{" lnk" if mid else ""}"{href}><div class="rmd">{esc(day_label(d))}</div>'
-                f'<div class="rmo">{esc(o)}<span class="cl">{esc(cp)}{where}</span></div>'
-                f'<div class="rms {res}">{esc(sc)}</div>'
-                f'<div class="rmm">{mins}\'</div>'
-                f'<div class="rme">{ev}</div>'
-                f'<div class="rmr">{rating_pill(rt)}</div></{tag}>')
-    if rsr:
-        rsr = ('<div class="rmhead"><div>Date</div><div>Opponent</div><div>Score</div><div>Mins</div><div>G/A</div><div>Rating</div></div>' + rsr)
+        tag, href = ("a", f' href="../match/{mid}.html"') if mid else ("div", "")
+        mxr += (f'<{tag} class="mxrow{" lnk" if mid else ""}"{href}>'
+                f'<div class="mxtop"><span>{esc(day_label(d))}</span><span class="mxcomp">{esc(cp)}</span></div>'
+                f'<div class="mxmain">{club_badge(o)}<span class="mxopp">{esc(o)}</span>'
+                f'<span class="wdl {res}">{ {"w":"W","d":"D","l":"L"}.get(res,"·") }</span><span class="mxsc">{esc(sc)}</span>'
+                f'<span class="mxr">{ev}<span class="mxmin">{mins}\'</span>{rating_pill(rt)}</span></div></{tag}>')
 
-    # international
-    intl = ""
-    if p["intl_senior"] or p["intl_youth"]:
-        blocks = ""
-        if p["intl_senior"]:
-            i = p["intl_senior"]
-            lv = IRELAND["Senior"]
-            fx = "".join(f'<div class="fxrow"><div class="fxd">{esc(day_label(d))}</div><div class="fxo">{esc(o)} '
-                         f'<span class="ha">{h}</span></div><div class="fxc">{esc(cp)}</div></div>'
-                         for d,o,h,cp in lv["fixtures"])
-            rs = "".join(f'<div class="fxrow"><div class="fxd">{esc(day_label(d))}</div><div class="fxo">{esc(o)}</div>'
-                         f'<div class="fxs">{esc(sc)}</div><div class="fxc">{esc(cp)}</div></div>'
-                         for d,o,sc,cp in lv["results"])
-            blocks += (f'<a class="intlblock lnk" href="../ireland.html?level=Senior">'
-                       f'<div class="ilvl">Senior <span>{i["caps"]} caps · {i["goals"]} goals · debut {i["debut"]}</span>'
-                       f'<span class="go">View squad →</span></div>'
-                       f'<div class="isub">Upcoming</div><div class="fxlist">{fx}</div>'
-                       f'<div class="isub">Recent results</div><div class="fxlist">{rs}</div></a>')
-        for lvl, caps, goals, since in p["intl_youth"]:
-            txt = f'{caps} caps · {goals} goals · from {since}' if caps is not None else "Called up at this level"
-            blocks += (f'<a class="intlblock lnk" href="../ireland.html?level={esc(lvl)}">'
-                       f'<div class="ilvl">{esc(lvl)} <span>{txt}</span>'
-                       f'<span class="go">View squad →</span></div></a>')
-        intl = f'<div class="sec"><h2>International</h2><a class="more" href="../ireland.html">Ireland hub →</a></div>{blocks}'
+    # ---------------- STATS tab ----------------
+    comp_rows, comp_agg = "", {}
+    season_start = f'{SEASON[:4]}-07-01'
+    for row in p["results"]:
+        d,o,sc,cp,mins,g,a = row[:7]
+        rt = row[7] if len(row) > 7 else ""
+        if (d or "") < season_start: continue
+        agg = comp_agg.setdefault(cp or "—", [0,0,0,0,[]])
+        agg[0]+=1; agg[1]+=g or 0; agg[2]+=a or 0; agg[3]+=int(mins or 0)
+        if rt:
+            try: agg[4].append(float(rt))
+            except ValueError: pass
+    for cp, (ap_,g_,a_,m_,rts) in sorted(comp_agg.items(), key=lambda kv:-kv[1][0]):
+        avg = f"{sum(rts)/len(rts):.2f}" if rts else "—"
+        comp_rows += (f'<div class="strow"><div class="stc">{esc(cp)}</div><div>{ap_}</div>'
+                      f'<div>{g_}</div><div>{a_}</div><div>{m_}</div><div>{rating_pill(avg if rts else "")}</div></div>')
+    stats_pane = f'''{season_card}
+      {f'<div class="pcard"><div class="pct">By competition · {esc(SEASON)}</div><div class="sttbl"><div class="strow sthead"><div class="stc">Competition</div><div>Apps</div><div>G</div><div>A</div><div>Mins</div><div>Rating</div></div>{comp_rows}</div></div>' if comp_rows else ''}
+      {f'<div class="pcard"><div class="pct">Discipline</div><div class="sumgrid three"><div><b><span class="card yel">{stat(p,"s_yellow",s["yellow"])}</span></b><span>Yellow</span></div><div><b><span class="card red">{stat(p,"s_red",s["red"])}</span></b><span>Red</span></div><div><b>{stat(p,"s_starts",s["starts"])}</b><span>Starts</span></div></div></div>' if has_data(p) else ''}
+      {f'<div class="pcard"><div class="pct">Career</div><div class="sumgrid three"><div><b>{stat(p,"c_apps",c["ap"])}</b><span>Apps</span></div><div><b>{stat(p,"c_goals",c["g"])}</b><span>Goals</span></div><div><b>{stat(p,"c_assists",c["a"])}</b><span>Assists</span></div></div></div>' if has_data(p) else ''}'''
 
-    # eligibility: what the roster says, plus every nationality Transfermarkt lists
-    elig = ""
-    shown = set()
-    tied_to = next((c for c, st in p["eligible"] if st == "tied"), None)
-    for country, status in p["eligible"]:
-        if status == "blocked":
-            cls, note = "elig blocked", "No longer available"
-        elif status == "tied":
-            cls, note = "elig tied", "Cap-tied · committed"
-        elif p["intl_youth"] and country == "Republic of Ireland":
-            cls, note = "elig youth", "Played underage · can still switch"
-        else:
-            cls, note = "elig open", "Eligible · never played"
-        shown.add(country.lower()); shown.add(country.lower().replace("republic of ",""))
-        elig += f'<div class="{cls}"><span class="ec">{esc(country)}</span><span class="en">{note}</span></div>'
-    for nat in (p.get("tm") or {}).get("nations", []) or []:
-        n = nat.strip()
-        if not n or n.lower() in shown or n.lower() in ("ireland","republic of ireland") and "republic of ireland" in shown: continue
-        shown.add(n.lower())
-        if tied_to:
-            elig += f'<div class="elig off"><span class="ec">{esc(n)}</span><span class="en">Closed · cap-tied elsewhere</span></div>'
-        else:
-            elig += f'<div class="elig open"><span class="ec">{esc(n)}</span><span class="en">Also eligible</span></div>'
-    tie_note = ("Cap-tied to Ireland — a competitive senior appearance means the other associations below are closed off."
-                if p["cap_status"]=="senior_comp" else
-                "Youth caps and senior friendlies don't cap-tie a player, so a switch is still possible under FIFA rules."
-                if p["cap_status"] in ("youth","senior_friendly") or p["intl_youth"] else
-                "Uncapped at any level — free to commit to any association they qualify for.")
+    # ---------------- CAREER tab ----------------
+    seas_agg = {}
+    for row in p["results"]:
+        d,o,sc,cp,mins,g,a = row[:7]
+        rt = row[7] if len(row) > 7 else ""
+        sn = _season_of(d)
+        if not sn: continue
+        club = club_at(p["slug"], d) or p["club"]
+        agg = seas_agg.setdefault((sn, club), [0,0,0,[]])
+        agg[0]+=1; agg[1]+=g or 0; agg[2]+=a or 0
+        if rt:
+            try: agg[3].append(float(rt))
+            except ValueError: pass
+    seas_rows = ""
+    for (sn, club), (ap_,g_,a_,rts) in sorted(seas_agg.items(), key=lambda kv: kv[0][0], reverse=True):
+        avg = f"{sum(rts)/len(rts):.1f}" if rts else ""
+        seas_rows += (f'<div class="crow">{club_badge(club)}<div class="crn"><b>{esc(club)}</b><span>{esc(sn)}</span></div>'
+                      f'<div class="crs"><span>{ap_}</span><span>{g_}</span><span>{a_}</span>{rating_pill(avg)}</div></div>')
+    seasons_view = (f'<div class="pcard"><div class="pct">Senior career <span class="crk">apps · goals · assists · rating</span></div>{seas_rows}</div>'
+                    if seas_rows else '<div class="pcard nodata">Season-by-season data builds up from here — we hold match records from 2025/26 on.</div>')
 
-    # newest first; loans are marked rather than dressed up as permanent moves
-    _trows = []
-    for _t in p["transfers"]:
-        _kind = (_t.get("kind") or "").strip()
-        _fee = (_t.get("fee") or "").strip()
-        _label = {"loan": "On loan", "loan end": "Loan ended",
-                  "free": "Free", "": ""}.get(_kind, _fee)
-        if _kind == "fee": _label = _fee
-        _from = (_t.get("from_club") or "").strip()
-        _to = (_t.get("to_club") or "").strip()
-        _when = (_t.get("season") or "").strip() or (_t.get("date") or "")[:4]
-        _trows.append(
-            f'<div class="trow{" loan" if _kind.startswith("loan") else ""}">'
-            f'<div class="ty">{esc(_when)}</div>'
-            f'<div class="tf">{esc(_from) if _from else "—"} → <b>{esc(_to)}</b></div>'
-            f'<div class="tfee">{esc(_label)}</div></div>')
-    trans = "".join(_trows)
+    moves = sorted((tr for tr in p["transfers"] if (tr.get("date") or "").strip()),
+                   key=lambda tr: tr["date"])
+    spells, today = [], _dt.date.today().isoformat()
+    for i, tr in enumerate(moves):
+        club_ = (tr.get("to_club") or "").strip()
+        if not club_ or club_.lower() in ("without club", "retired", "career break"): continue
+        start = tr["date"][:10]
+        end = moves[i+1]["date"][:10] if i+1 < len(moves) else ""
+        kind = (tr.get("kind") or "").strip()
+        note = " (on loan)" if kind == "loan" else (" (back from loan)" if kind == "loan end" else "")
+        ap_ = g_ = 0; seen = False
+        for row in p["results"]:
+            d = row[0][:10]
+            if start <= d and (not end or d < end):
+                seen = True; ap_ += 1; g_ += row[5] or 0
+        def _my(dstr):
+            try: return _dt.datetime.strptime(dstr, "%Y-%m-%d").strftime("%b %Y")
+            except ValueError: return dstr[:7]
+        span = f'{_my(start)} – {_my(end) if end else "now"}'
+        spells.append(f'<div class="crow">{club_badge(club_)}<div class="crn"><b>{esc(club_)}{note}</b><span>{span}</span></div>'
+                      f'<div class="crs two"><span>{ap_ if seen else "—"}</span><span>{g_ if seen else "—"}</span></div></div>')
+    club_view = (f'<div class="pcard"><div class="pct">Senior career <span class="crk">apps · goals (from 2025/26 on)</span></div>{"".join(reversed(spells))}</div>'
+                 if spells else "")
 
+    nat_rows = ""
+    if p["intl_senior"]:
+        i = p["intl_senior"]
+        nat_rows += (f'<div class="crow"><span class="natflag"></span><div class="crn"><b>Ireland</b>'
+                     f'<span>debut {esc(str(i["debut"] or ""))}</span></div>'
+                     f'<div class="crs two"><span>{i["caps"]}</span><span>{i["goals"]}</span></div></div>')
+    for lvl, caps, goals, since in p["intl_youth"]:
+        nat_rows += (f'<div class="crow"><span class="natflag"></span><div class="crn"><b>Ireland {esc(lvl)}</b>'
+                     f'<span>from {esc(str(since or ""))}</span></div>'
+                     f'<div class="crs two"><span>{caps if caps is not None else "—"}</span><span>{goals if goals is not None else "—"}</span></div></div>')
+    nat_card = f'<div class="pcard"><div class="pct">National team <span class="crk">caps · goals</span></div>{nat_rows}</div>' if nat_rows else ""
+
+    # ---------------- assemble ----------------
     body = f'''
     <a class="crumb" data-back href="../players.html">← Back</a>
     <div class="pdhead">
@@ -3517,18 +3636,9 @@ def build_player(p):
         {avatar(p, "../")}
         <div>
         <div class="pdname">{esc(p["n"])}</div>
-        <div class="pdmeta">{" · ".join(filter(None,[
-            f'<a href="{clink(p["club"],"../")}">{club_badge(p["club"])}{esc(p["club"])}</a>',
-            esc(p["league"]) if p["league"] not in ("","—") else "",
-            p["pos"] if p["pos"] not in ("","—") else "",
-            str(p["age"]) if p["age"] else "",
-            (f'<span class="loanfrom">on loan from {esc(p["parent_club"])}</span>'
-             if p.get("loan") and p.get("parent_club") and p["parent_club"] != p["club"] else ""),
-            (f'<b>{p["intl_senior"]["caps"]} caps</b>' if p["intl_senior"]["caps"] is not None
-             else '<b>Senior international</b>') if p["intl_senior"] else ""]))}</div>
-        {f'<div class="pdfull">{esc(p["tm"]["full_name"])}</div>'
-          if p.get("tm") and p["tm"]["full_name"] and p["tm"]["full_name"] != p["n"] else ""}
-        {f'<div class="pdborn">Born {esc(p["born"])}' + (" · " + esc(p["foot"]) + " footed" if p["foot"] else "") + "</div>" if p["born"] else ""}
+        <div class="pdmeta"><a class="clubchip" href="{clink(p["club"],"../")}">{club_badge(p["club"])}{esc(p["club"])}</a>
+          {f'<span class="loanfrom">on loan from {esc(p["parent_club"])}</span>' if p.get("loan") and p.get("parent_club") and p["parent_club"] != p["club"] else ""}</div>
+        {f'<div class="pdfull">{esc(p["tm"]["full_name"])}</div>' if t.get("full_name") and t["full_name"] != p["n"] else ""}
         {f'<div class="pcredit">Photo: {esc(p["photo_credit"])}</div>' if p.get("photo_credit") else ""}
         </div>
       </div>
@@ -3538,26 +3648,60 @@ def build_player(p):
       </div>
     </div>
 
-    {statsblock}
-    {bio_block(p)}
+    <div class="ptabs" role="tablist">
+      <button class="ptab on" data-pane="profile">Profile</button>
+      <button class="ptab" data-pane="matches">Matches</button>
+      <button class="ptab" data-pane="pstats">Stats</button>
+      <button class="ptab" data-pane="career">Career</button>
+    </div>
 
-    <div class="sec"><h2>Upcoming fixtures</h2>{fx_more}</div>
-    <div class="fxlist">{fxr or '<div class="emptystate" style="display:block">No fixtures listed.</div>'}</div>
+    <div class="ppane" id="pane-profile">
+      {bio_card}
+      {season_card}
+      {position_card}
+      {contract_card}
+      {intl}
+      <div class="sec"><h2>Eligibility</h2></div>
+      <div class="eliglist">{elig}</div>
+      <p class="eligNote">{tie_note}</p>
+    </div>
 
-    <div class="sec"><h2>Recent matches</h2>
-      <span class="more" style="border:0">last {len(recent_results)} of {len(p["results"])}</span></div>
-    <div class="fxlist rmlist">{rsr or '<div class="emptystate" style="display:block">No appearances yet.</div>'}</div>
-    <div class="rmnote">Only games they were on the pitch for. Unused subs and squad omissions aren\'t listed.
-      {'Match ratings aren\'t available for this player yet.' if not any(len(r)>7 and r[7] for r in p["results"]) else ''}
-      Something wrong? <a href="#" onclick="window.FB_REPORT&&FB_REPORT();return false">Report it</a>.</div>
+    <div class="ppane" id="pane-matches" hidden>
+      <div class="sec"><h2>Upcoming</h2>{f'<span class="more" style="border:0">{len(upcoming)} listed</span>' if upcoming else ''}</div>
+      <div class="fxlist">{fxr or '<div class="emptystate" style="display:block">No fixtures listed.</div>'}</div>
+      <div class="sec"><h2>Recent matches</h2><span class="more" style="border:0">{len(p["results"])} on record</span></div>
+      <div class="mxlist">{mxr or '<div class="emptystate" style="display:block">No appearances yet.</div>'}</div>
+      <div class="rmnote">Only games they were on the pitch for. Unused subs and squad omissions aren\'t listed.
+        Something wrong? <a href="#" onclick="window.FB_REPORT&&FB_REPORT();return false">Report it</a>.</div>
+    </div>
 
-    {intl}
+    <div class="ppane" id="pane-pstats" hidden>
+      {stats_pane}
+    </div>
 
-    <div class="sec"><h2>Eligibility</h2></div>
-    <div class="eliglist">{elig}</div>
-    <p class="eligNote">{tie_note}</p>
+    <div class="ppane" id="pane-career" hidden>
+      <div class="segtoggle"><button class="seg on" data-view="seasons">Seasons</button><button class="seg" data-view="club">Club</button></div>
+      <div id="cv-seasons">{seasons_view}</div>
+      <div id="cv-club" hidden>{club_view or '<div class="pcard nodata">No transfer history on record.</div>'}</div>
+      {nat_card}
+    </div>
 
-    {f'<div class="sec"><h2>Career</h2><span class="more" style="border:0">{len(p["transfers"])} moves</span></div><div class="tlist">{trans}</div>' if trans else ''}
+    <script>
+    (function(){{
+      var tabs=document.querySelectorAll('.ptab'),panes=document.querySelectorAll('.ppane');
+      function show(k){{tabs.forEach(function(b){{b.classList.toggle('on',b.dataset.pane===k)}});
+        panes.forEach(function(pn){{pn.hidden=(pn.id!=='pane-'+k)}});
+        if(history.replaceState)history.replaceState(null,'','#'+k);}}
+      tabs.forEach(function(b){{b.addEventListener('click',function(){{show(b.dataset.pane)}})}});
+      var h=(location.hash||'').slice(1);
+      if(['matches','pstats','career'].indexOf(h)>=0)show(h);
+      var segs=document.querySelectorAll('.seg');
+      segs.forEach(function(b){{b.addEventListener('click',function(){{
+        segs.forEach(function(x){{x.classList.toggle('on',x===b)}});
+        document.getElementById('cv-seasons').hidden=b.dataset.view!=='seasons';
+        document.getElementById('cv-club').hidden=b.dataset.view!=='club';}})}});
+    }})();
+    </script>
     '''
     return shell(f"{p['n']} — footballers.ie",
                  f"{p['n']} ({p['club']}, {p['league']}) — season stats, fixtures, results and international record.",
@@ -3572,7 +3716,6 @@ def build_player(p):
                             ap=p["season"]["ap"] or "", gl=p["season"]["g"] or "",
                             **{"as": p["season"]["a"] or ""},
                             rt=(p.get("rating") or ""), f=f"Season {SEASON}"))
-
 
 
 # ================= TRANSFERS =================
