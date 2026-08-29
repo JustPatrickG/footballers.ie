@@ -2356,6 +2356,7 @@ match_id,minute,type,player,team,venue
 2026-08-29-arbroath-v-livingston,80,yellow,Scott Constable,Arbroath,Gayfield Park
 2026-08-29-arbroath-v-livingston,86,red,Scott Constable,Arbroath,Gayfield Park
 2026-08-29-aston-villa-u18-v-crystal-palace-u18,45,goal,Joshua Blake,Aston Villa U18,Stadium
+2026-08-29-atlanta-united-v-charlotte-fc,,,,,Mercedes-Benz Stadium
 2026-08-29-ballymena-united-v-larne,,,,,Ballymena Showgrounds
 2026-08-29-bamber-bridge-v-hyde-united,16,goal,Jack Redshaw,Hyde United,Irongate Stadium
 2026-08-29-bamber-bridge-v-hyde-united,26,goal,Max McCarthy,Hyde United,Irongate Stadium
@@ -2491,7 +2492,9 @@ match_id,minute,type,player,team,venue
 2026-08-29-bristol-city-v-portsmouth,85,sub_off,George Tanner,Bristol City,Ashton Gate Stadium
 2026-08-29-bristol-city-v-portsmouth,85,sub_on,Noah Eile,Bristol City,Ashton Gate Stadium
 2026-08-29-bristol-city-v-portsmouth,90,goal,Marezi,Portsmouth,Ashton Gate Stadium
-2026-08-29-brooklyn-v-sporting-jax,,,,,Maimonides Park
+2026-08-29-brooklyn-v-sporting-jax,9,goal,Peter Mangione,Brooklyn,Maimonides Park
+2026-08-29-brooklyn-v-sporting-jax,27,goal,Peter Mangione,Brooklyn,Maimonides Park
+2026-08-29-brooklyn-v-sporting-jax,35,goal,Markus Anderson,Brooklyn,Maimonides Park
 2026-08-29-brora-rangers-v-turriff-united,10,goal,Connor Bunce,Brora Rangers,Dudgeon Park
 2026-08-29-brora-rangers-v-turriff-united,24,goal,Ben Barron,Brora Rangers,Dudgeon Park
 2026-08-29-brora-rangers-v-turriff-united,26,goal,Mackenzie Taylor,Turriff United,Dudgeon Park
@@ -2818,7 +2821,12 @@ match_id,minute,type,player,team,venue
 2026-08-29-grimsby-town-v-fleetwood-town,83,sub_on,Jamie Walker,Grimsby Town,Blundell Park
 2026-08-29-grimsby-town-v-fleetwood-town,85,sub_off,Raffaele Cirino,Fleetwood Town,Blundell Park
 2026-08-29-grimsby-town-v-fleetwood-town,85,sub_on,Danny Andrew,Fleetwood Town,Blundell Park
-2026-08-29-hartford-athletic-v-birmingham-legion-fc,,,,,Trinity Health Stadium
+2026-08-29-hartford-athletic-v-birmingham-legion-fc,21,goal,Romario Williams,Birmingham Legion FC,Trinity Health Stadium
+2026-08-29-hartford-athletic-v-birmingham-legion-fc,26,yellow,Sebastian Anderson,Hartford Athletic,Trinity Health Stadium
+2026-08-29-hartford-athletic-v-birmingham-legion-fc,34,yellow,Sebastian Tregarthen,Birmingham Legion FC,Trinity Health Stadium
+2026-08-29-hartford-athletic-v-birmingham-legion-fc,39,goal,Romario Williams,Birmingham Legion FC,Trinity Health Stadium
+2026-08-29-hartford-athletic-v-birmingham-legion-fc,42,goal,Barry Coffey,Hartford Athletic,Trinity Health Stadium
+2026-08-29-hartford-athletic-v-birmingham-legion-fc,45,goal,<TBD>,Hartford Athletic,Trinity Health Stadium
 2026-08-29-heart-of-midlothian-v-st-johnstone,9,goal,James Wilson,Heart of Midlothian,Tynecastle Park
 2026-08-29-heart-of-midlothian-v-st-johnstone,39,own_goal,Enes Alic,Heart of Midlothian,Tynecastle Park
 2026-08-29-heart-of-midlothian-v-st-johnstone,48,goal,Ruari Paton,St. Johnstone,Tynecastle Park
@@ -3511,6 +3519,7 @@ match_id,minute,type,player,team,venue
 2026-08-29-taunton-town-v-basingstoke,74,goal,Miles Obodo,Basingstoke,Wordsworth Drive
 2026-08-29-taunton-town-v-basingstoke,78,goal,Tom Blake,Basingstoke,Wordsworth Drive
 2026-08-29-taunton-town-v-basingstoke,83,red,Lloyd Irish,Taunton Town,Wordsworth Drive
+2026-08-29-toronto-fc-v-new-york-city-fc,,,,,BMO Field
 2026-08-29-vfb-eichstatt-v-tsv-aubstadt,27,goal,Jonathan Grimm,VfB Eichstätt,HIRSCH-Sportpark
 2026-08-29-vfb-eichstatt-v-tsv-aubstadt,72,goal,Leon Peric,VfB Eichstätt,HIRSCH-Sportpark
 2026-08-29-vfb-eichstatt-v-tsv-aubstadt,81,own_goal,Tim Hüttl,VfB Eichstätt,HIRSCH-Sportpark
