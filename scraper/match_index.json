@@ -3922,21 +3922,6 @@
   ]
  },
  {
-  "fotmob_id": "5836821",
-  "url": "/matches/portsmouth-vs-wolverhampton-wanderers/2eov7y#5836821",
-  "kickoff": "2026-09-09T18:45:00Z",
-  "comp": "Championship",
-  "home": "Wolves",
-  "away": "Portsmouth",
-  "home_id": "8602",
-  "away_id": "8462",
-  "slugs": [
-   "conor-shaughnessy",
-   "eoin-kenny",
-   "franco-umeh"
-  ]
- },
- {
   "fotmob_id": "5837101",
   "url": "/matches/barnsley-vs-doncaster-rovers/2qgrc6#5837101",
   "kickoff": "2026-08-22T11:30:00Z",
@@ -3983,7 +3968,7 @@
  {
   "fotmob_id": "5749662",
   "url": "/matches/cagliari-vs-lecce/2szdhl#5749662",
-  "kickoff": "2026-09-07T16:00:00Z",
+  "kickoff": "2026-09-07T16:30:00Z",
   "comp": "Serie A",
   "home": "Cagliari",
   "away": "Lecce",
@@ -5290,7 +5275,7 @@
  {
   "fotmob_id": "6022234",
   "url": "/matches/arsenal-u18-vs-southampton-u18/vnbpfloi#6022234",
-  "kickoff": "2026-09-05T11:00:00Z",
+  "kickoff": "2026-09-05T12:00:00Z",
   "comp": "Premier League U18",
   "home": "Arsenal U18",
   "away": "Southampton U18",
@@ -5850,23 +5835,6 @@
   ]
  },
  {
-  "fotmob_id": "5836816",
-  "url": "/matches/bristol-city-vs-lincoln-city/2clm1f#5836816",
-  "kickoff": "2026-09-08T18:45:00Z",
-  "comp": "Championship",
-  "home": "Bristol City",
-  "away": "Lincoln",
-  "home_id": "8427",
-  "away_id": "8430",
-  "slugs": [
-   "james-collins",
-   "jason-knight",
-   "josh-honohan",
-   "luke-mcnally",
-   "mason-melia"
-  ]
- },
- {
   "fotmob_id": "6099334",
   "url": "/matches/lincoln-city-vs-afc-bournemouth/2f4zdk#6099334",
   "kickoff": "2026-09-08T18:45:00Z",
@@ -6353,6 +6321,21 @@
   ]
  },
  {
+  "fotmob_id": "5793915",
+  "url": "/matches/st-johnstone-vs-celtic/2spihd#5793915",
+  "kickoff": "2026-09-09T19:00:00Z",
+  "comp": "Premiership",
+  "home": "St. Johnstone",
+  "away": "Celtic",
+  "home_id": "8467",
+  "away_id": "9925",
+  "slugs": [
+   "johnny-kenny",
+   "liam-scales",
+   "ruari-paton"
+  ]
+ },
+ {
   "fotmob_id": "6028325",
   "url": "/matches/toluca-vs-austin-fc/9kz0pv1m#6028325",
   "kickoff": "2026-08-27T00:30:00Z",
@@ -6594,6 +6577,19 @@
   ]
  },
  {
+  "fotmob_id": "5109946",
+  "url": "/matches/indy-eleven-vs-new-mexico-united/ep73143u#5109946",
+  "kickoff": "2026-09-12T01:30:00Z",
+  "comp": "USL Championship",
+  "home": "New Mexico United",
+  "away": "Indy Eleven",
+  "home_id": "1003208",
+  "away_id": "514649",
+  "slugs": [
+   "josh-obrien"
+  ]
+ },
+ {
   "fotmob_id": "5907009",
   "url": "/matches/morecambe-vs-radcliffe/jfnkmbt#5907009",
   "kickoff": "2026-08-22T14:00:00Z",
@@ -6763,6 +6759,19 @@
   "slugs": [
    "kian-corbally",
    "zak-delaney"
+  ]
+ },
+ {
+  "fotmob_id": "5793914",
+  "url": "/matches/rangers-vs-st-mirren/2s86p2#5793914",
+  "kickoff": "2026-09-09T18:45:00Z",
+  "comp": "Premiership",
+  "home": "Rangers",
+  "away": "St. Mirren",
+  "home_id": "8548",
+  "away_id": "9800",
+  "slugs": [
+   "killian-phillips"
   ]
  },
  {
@@ -8101,7 +8110,7 @@
  {
   "fotmob_id": "5904735",
   "url": "/matches/goztepe-vs-gaziantep-fk/aqq5a#5904735",
-  "kickoff": "2026-09-06T17:00:00Z",
+  "kickoff": "2026-09-07T17:00:00Z",
   "comp": "Super Lig",
   "home": "G\u00f6ztepe",
   "away": "Gaziantep FK",
@@ -8172,6 +8181,19 @@
   "away": "Vancouver FC",
   "home_id": "1022952",
   "away_id": "1436202",
+  "slugs": [
+   "tom-field"
+  ]
+ },
+ {
+  "fotmob_id": "5175960",
+  "url": "/matches/vancouver-fc-vs-supra-du-quebec/1z01kvhvr#5175960",
+  "kickoff": "2026-09-06T22:00:00Z",
+  "comp": "Premier League",
+  "home": "Vancouver FC",
+  "away": "Supra du Qu\u00e9bec",
+  "home_id": "1436202",
+  "away_id": "1899648",
   "slugs": [
    "tom-field"
   ]
