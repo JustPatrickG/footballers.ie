@@ -3893,13 +3893,13 @@ def transfer_feed():
             d = (r.get("date") or "").strip()[:10]
             to = (r.get("to_club") or "").strip()
             manual = bool(r.get("manual"))
-            if not to or (len(d) != 10 and not manual): continue
-            if len(d) != 10: d = ""
+            # a move with no confirmed date is hidden from the feed - undated
+            # rows used to pile at the very top and bury everything dated.
+            if not to or len(d) != 10: continue
             out.append(dict(p=p, date=d, frm=(r.get("from_club") or "").strip(),
                             to=to, fee=(r.get("fee") or "").strip(),
                             kind=(r.get("kind") or "").strip(), manual=manual))
-    # undated rows are reported-but-unconfirmed, and belong at the top
-    out.sort(key=lambda t: (t["date"] or "9999", t["p"]["n"]), reverse=True)
+    out.sort(key=lambda t: (t["date"], t["p"]["n"]), reverse=True)
     return out
 
 _TMONTHS = ("January", "February", "March", "April", "May", "June", "July",
