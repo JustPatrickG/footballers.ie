@@ -49,7 +49,9 @@ function parseMatch(data) {
   let minute = '';
   const lt = status.liveTime;
   if (st === 'live' && lt && typeof lt === 'object') {
-    minute = String(lt.short || lt.long || '').replace(/[^0-9+]/g, '');
+    const raw = String(lt.short || lt.long || '');
+    // keep half-time as a label rather than stripping it to an empty string
+    minute = /ht|half/i.test(raw) ? 'HT' : raw.replace(/[^0-9+]/g, '');
   }
   if (st === 'scheduled') { hs = null; as = null; }
   return { hs: hs == null ? null : +hs, as: as == null ? null : +as,

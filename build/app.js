@@ -621,10 +621,19 @@
       return m.fmid && liveWindow(m, now);
     });
     if (!want.length) return true;            // nothing on — nothing to ask
+    // The poll is capped to keep upstream requests down, so on a busy Saturday
+    // (many games in the window) the cap must not be spent on games that
+    // haven't kicked off yet. Rank the ones already under way first — most
+    // recently started first — so live matches are always polled.
+    want.sort(function (a, b) {
+      var la = now >= ko(a), lb = now >= ko(b);
+      if (la !== lb) return la ? -1 : 1;        // in-progress before not-yet-started
+      return la ? ko(b) - ko(a) : ko(a) - ko(b);
+    });
     var ids = [];
     want.forEach(function (m) { if (ids.indexOf(m.fmid) < 0) ids.push(m.fmid); });
     var wantEv = !!document.getElementById('mtl');
-    var res = await fetch('/api/live?ids=' + ids.slice(0, 20).join(',') + (wantEv ? '&full=1' : ''), { cache: 'no-store' });
+    var res = await fetch('/api/live?ids=' + ids.slice(0, 30).join(',') + (wantEv ? '&full=1' : ''), { cache: 'no-store' });
     if (!res.ok) return false;
     var data = await res.json();
     if (!data || !data.matches) return false;
