@@ -198,10 +198,28 @@ match_id,minute,type,player,team,venue
 2026-08-22-charlotte-fc-v-dc-united,44,yellow,Silvan Hefti,DC United,Bank of America Stadium
 2026-08-22-charlotte-fc-v-dc-united,55,goal,Louis Munteanu,DC United,Bank of America Stadium
 2026-08-22-charlotte-fc-v-dc-united,64,goal,David Schnegg,Charlotte FC,Bank of America Stadium
+2026-08-22-charlotte-fc-v-dc-united,65,sub_off,Rodolfo Aloko,Charlotte FC,Bank of America Stadium
+2026-08-22-charlotte-fc-v-dc-united,65,sub_off,Ashley Westwood,Charlotte FC,Bank of America Stadium
+2026-08-22-charlotte-fc-v-dc-united,65,sub_off,Luca de la Torre,Charlotte FC,Bank of America Stadium
+2026-08-22-charlotte-fc-v-dc-united,65,sub_on,Liel Abada,Charlotte FC,Bank of America Stadium
+2026-08-22-charlotte-fc-v-dc-united,65,sub_on,Djibril Diani,Charlotte FC,Bank of America Stadium
+2026-08-22-charlotte-fc-v-dc-united,65,sub_on,Brandt Bronico,Charlotte FC,Bank of America Stadium
 2026-08-22-charlotte-fc-v-dc-united,66,goal,Will Cleary,Charlotte FC,Bank of America Stadium
 2026-08-22-charlotte-fc-v-dc-united,68,yellow,Peglow,DC United,Bank of America Stadium
+2026-08-22-charlotte-fc-v-dc-united,75,sub_off,Idan Toklomati,Charlotte FC,Bank of America Stadium
+2026-08-22-charlotte-fc-v-dc-united,75,sub_off,Kimito Nono,DC United,Bank of America Stadium
+2026-08-22-charlotte-fc-v-dc-united,75,sub_off,Jackson Hopkins,DC United,Bank of America Stadium
+2026-08-22-charlotte-fc-v-dc-united,75,sub_off,Brandon Servania,DC United,Bank of America Stadium
+2026-08-22-charlotte-fc-v-dc-united,75,sub_on,Archie Goodwin,Charlotte FC,Bank of America Stadium
+2026-08-22-charlotte-fc-v-dc-united,75,sub_on,Hosei Kijima,DC United,Bank of America Stadium
+2026-08-22-charlotte-fc-v-dc-united,75,sub_on,Nathan Ordaz,DC United,Bank of America Stadium
+2026-08-22-charlotte-fc-v-dc-united,75,sub_on,Nikola Markovic,DC United,Bank of America Stadium
 2026-08-22-charlotte-fc-v-dc-united,77,goal,Pep Biel,Charlotte FC,Bank of America Stadium
+2026-08-22-charlotte-fc-v-dc-united,83,sub_off,Allan Saint-Maximin,Charlotte FC,Bank of America Stadium
+2026-08-22-charlotte-fc-v-dc-united,83,sub_on,Tyger Smalls,Charlotte FC,Bank of America Stadium
 2026-08-22-charlotte-fc-v-dc-united,85,yellow,Tyger Smalls,Charlotte FC,Bank of America Stadium
+2026-08-22-charlotte-fc-v-dc-united,86,sub_off,Peglow,DC United,Bank of America Stadium
+2026-08-22-charlotte-fc-v-dc-united,86,sub_on,Jared Stroud,DC United,Bank of America Stadium
 2026-08-22-charlotte-fc-v-dc-united,90,yellow,Pep Biel,Charlotte FC,Bank of America Stadium
 2026-08-22-chester-fc-v-spalding-united,90,goal,Dan Ward,Chester FC,Deva Stadium
 2026-08-22-colchester-united-v-oldham-athletic,20,goal,Keenan Appiah-Forson,Oldham Athletic,JobServe Community Stadium
@@ -314,9 +332,27 @@ match_id,minute,type,player,team,venue
 2026-08-22-hull-city-v-manchester-united,42,yellow,Matt Crooks,Hull City,MKM Stadium
 2026-08-22-hull-city-v-manchester-united,90,yellow,Liam Millar,Hull City,MKM Stadium
 2026-08-22-indy-eleven-v-louisville-city-fc,32,goal,Bruno Rendón,Indy Eleven,Michael A. Carroll Stadium
+2026-08-22-indy-eleven-v-louisville-city-fc,46,sub_off,Brandon Dayes,Louisville City FC,Michael A. Carroll Stadium
+2026-08-22-indy-eleven-v-louisville-city-fc,46,sub_on,Manny Perez,Louisville City FC,Michael A. Carroll Stadium
 2026-08-22-indy-eleven-v-louisville-city-fc,59,goal,Kyle Adams,Louisville City FC,Michael A. Carroll Stadium
 2026-08-22-indy-eleven-v-louisville-city-fc,61,goal,Jack Blake,Indy Eleven,Michael A. Carroll Stadium
+2026-08-22-indy-eleven-v-louisville-city-fc,63,sub_off,Ray Serrano,Louisville City FC,Michael A. Carroll Stadium
+2026-08-22-indy-eleven-v-louisville-city-fc,63,sub_on,Tola Showunmi,Louisville City FC,Michael A. Carroll Stadium
+2026-08-22-indy-eleven-v-louisville-city-fc,68,sub_off,Joe Hafferty,Indy Eleven,Michael A. Carroll Stadium
+2026-08-22-indy-eleven-v-louisville-city-fc,68,sub_off,Edward Kizza,Indy Eleven,Michael A. Carroll Stadium
+2026-08-22-indy-eleven-v-louisville-city-fc,68,sub_on,Makel Rasheed,Indy Eleven,Michael A. Carroll Stadium
+2026-08-22-indy-eleven-v-louisville-city-fc,68,sub_on,Loïc Mesanvi,Indy Eleven,Michael A. Carroll Stadium
 2026-08-22-indy-eleven-v-louisville-city-fc,69,yellow,Kyle Adams,Louisville City FC,Michael A. Carroll Stadium
+2026-08-22-indy-eleven-v-louisville-city-fc,73,sub_off,Jake Morris,Louisville City FC,Michael A. Carroll Stadium
+2026-08-22-indy-eleven-v-louisville-city-fc,73,sub_on,Jansen Wilson,Louisville City FC,Michael A. Carroll Stadium
+2026-08-22-indy-eleven-v-louisville-city-fc,80,sub_off,Bruno Rendón,Indy Eleven,Michael A. Carroll Stadium
+2026-08-22-indy-eleven-v-louisville-city-fc,80,sub_on,Malik Henry-Scott,Indy Eleven,Michael A. Carroll Stadium
+2026-08-22-indy-eleven-v-louisville-city-fc,83,sub_off,Quenzi Huerman,Louisville City FC,Michael A. Carroll Stadium
+2026-08-22-indy-eleven-v-louisville-city-fc,83,sub_off,Zachary Duncan,Louisville City FC,Michael A. Carroll Stadium
+2026-08-22-indy-eleven-v-louisville-city-fc,83,sub_on,Mukwelle Akale,Louisville City FC,Michael A. Carroll Stadium
+2026-08-22-indy-eleven-v-louisville-city-fc,83,sub_on,Evan Davila,Louisville City FC,Michael A. Carroll Stadium
+2026-08-22-indy-eleven-v-louisville-city-fc,90,sub_off,Jack Blake,Indy Eleven,Michael A. Carroll Stadium
+2026-08-22-indy-eleven-v-louisville-city-fc,90,sub_on,Hesron Barry,Indy Eleven,Michael A. Carroll Stadium
 2026-08-22-ipswich-town-v-sunderland,24,goal,Emersonn,Ipswich Town,Portman Road
 2026-08-22-ipswich-town-v-sunderland,36,yellow,Daniel Ballard,Sunderland,Portman Road
 2026-08-22-ipswich-town-v-sunderland,39,goal,Nilson Angulo,Sunderland,Portman Road
@@ -335,10 +371,26 @@ match_id,minute,type,player,team,venue
 2026-08-22-lexington-sc-v-las-vegas-lights-fc,37,yellow,Benjamin Ofeimu,Las Vegas Lights FC,Lexington SC Stadium
 2026-08-22-lexington-sc-v-las-vegas-lights-fc,51,goal,Nicolas Firmino,Lexington SC,Lexington SC Stadium
 2026-08-22-lexington-sc-v-las-vegas-lights-fc,54,goal,Marcus Epps,Lexington SC,Lexington SC Stadium
+2026-08-22-lexington-sc-v-las-vegas-lights-fc,57,sub_off,Benjamin Ofeimu,Las Vegas Lights FC,Lexington SC Stadium
+2026-08-22-lexington-sc-v-las-vegas-lights-fc,57,sub_off,Carson Locker,Las Vegas Lights FC,Lexington SC Stadium
+2026-08-22-lexington-sc-v-las-vegas-lights-fc,57,sub_on,Nate Jones,Las Vegas Lights FC,Lexington SC Stadium
+2026-08-22-lexington-sc-v-las-vegas-lights-fc,57,sub_on,Patrick Leal,Las Vegas Lights FC,Lexington SC Stadium
+2026-08-22-lexington-sc-v-las-vegas-lights-fc,67,sub_off,Christian Pinzón,Las Vegas Lights FC,Lexington SC Stadium
+2026-08-22-lexington-sc-v-las-vegas-lights-fc,67,sub_off,Marc Ybarra,Las Vegas Lights FC,Lexington SC Stadium
+2026-08-22-lexington-sc-v-las-vegas-lights-fc,67,sub_on,Manuel Arteaga,Las Vegas Lights FC,Lexington SC Stadium
+2026-08-22-lexington-sc-v-las-vegas-lights-fc,67,sub_on,Abraham Okyere,Las Vegas Lights FC,Lexington SC Stadium
+2026-08-22-lexington-sc-v-las-vegas-lights-fc,76,sub_off,Nicolas Firmino,Lexington SC,Lexington SC Stadium
+2026-08-22-lexington-sc-v-las-vegas-lights-fc,76,sub_on,Malcolm Fry,Lexington SC,Lexington SC Stadium
 2026-08-22-lexington-sc-v-las-vegas-lights-fc,78,yellow,Johnny Rodriguez,Las Vegas Lights FC,Lexington SC Stadium
 2026-08-22-lexington-sc-v-las-vegas-lights-fc,83,yellow,Oliver Semmle,Lexington SC,Lexington SC Stadium
+2026-08-22-lexington-sc-v-las-vegas-lights-fc,85,sub_off,Themi Antonoglou,Las Vegas Lights FC,Lexington SC Stadium
+2026-08-22-lexington-sc-v-las-vegas-lights-fc,85,sub_on,Blake Pope,Las Vegas Lights FC,Lexington SC Stadium
 2026-08-22-lexington-sc-v-las-vegas-lights-fc,87,yellow,Malcolm Fry,Lexington SC,Lexington SC Stadium
 2026-08-22-lexington-sc-v-las-vegas-lights-fc,88,yellow,Javain Brown,Lexington SC,Lexington SC Stadium
+2026-08-22-lexington-sc-v-las-vegas-lights-fc,90,sub_off,Phillip Goodrum,Lexington SC,Lexington SC Stadium
+2026-08-22-lexington-sc-v-las-vegas-lights-fc,90,sub_off,Marcus Epps,Lexington SC,Lexington SC Stadium
+2026-08-22-lexington-sc-v-las-vegas-lights-fc,90,sub_on,Andrew Caborn,Lexington SC,Lexington SC Stadium
+2026-08-22-lexington-sc-v-las-vegas-lights-fc,90,sub_on,Milo Yosef,Lexington SC,Lexington SC Stadium
 2026-08-22-lexington-sc-v-las-vegas-lights-fc,90,yellow,Nykolas Sessock,Las Vegas Lights FC,Lexington SC Stadium
 2026-08-22-lincoln-city-v-portsmouth,7,goal,Ryan Kavuma-McQueen,Portsmouth,LNER Stadium
 2026-08-22-lincoln-city-v-portsmouth,16,goal,Adrian Segecic,Portsmouth,LNER Stadium
@@ -579,15 +631,53 @@ match_id,minute,type,player,team,venue
 2026-08-23-austin-fc-v-philadelphia-union,22,goal,Brendan Hines-Ike,Austin FC,Q2 Stadium
 2026-08-23-austin-fc-v-philadelphia-union,38,yellow,Jesús Bueno,Philadelphia Union,Q2 Stadium
 2026-08-23-austin-fc-v-philadelphia-union,41,yellow,Neil Pierre,Philadelphia Union,Q2 Stadium
+2026-08-23-austin-fc-v-philadelphia-union,57,sub_off,Jesús Bueno,Philadelphia Union,Q2 Stadium
+2026-08-23-austin-fc-v-philadelphia-union,57,sub_off,Indiana Vassilev,Philadelphia Union,Q2 Stadium
+2026-08-23-austin-fc-v-philadelphia-union,57,sub_on,Jovan Lukic,Philadelphia Union,Q2 Stadium
+2026-08-23-austin-fc-v-philadelphia-union,57,sub_on,Quinn Sullivan,Philadelphia Union,Q2 Stadium
+2026-08-23-austin-fc-v-philadelphia-union,63,sub_off,Jorge Alastuey,Austin FC,Q2 Stadium
+2026-08-23-austin-fc-v-philadelphia-union,63,sub_off,Christian Ramirez,Austin FC,Q2 Stadium
+2026-08-23-austin-fc-v-philadelphia-union,63,sub_on,Facundo Torres,Austin FC,Q2 Stadium
+2026-08-23-austin-fc-v-philadelphia-union,63,sub_on,Brandon Vázquez,Austin FC,Q2 Stadium
+2026-08-23-austin-fc-v-philadelphia-union,72,sub_off,Joseph Rosales,Austin FC,Q2 Stadium
+2026-08-23-austin-fc-v-philadelphia-union,72,sub_on,Przemyslaw Placheta,Austin FC,Q2 Stadium
+2026-08-23-austin-fc-v-philadelphia-union,73,sub_off,Brendan Hines-Ike,Austin FC,Q2 Stadium
+2026-08-23-austin-fc-v-philadelphia-union,73,sub_on,Mikkel Desler,Austin FC,Q2 Stadium
+2026-08-23-austin-fc-v-philadelphia-union,74,sub_off,Bruno Damiani,Philadelphia Union,Q2 Stadium
+2026-08-23-austin-fc-v-philadelphia-union,74,sub_off,Cavan Sullivan,Philadelphia Union,Q2 Stadium
+2026-08-23-austin-fc-v-philadelphia-union,74,sub_on,Ezekiel Alladoh,Philadelphia Union,Q2 Stadium
+2026-08-23-austin-fc-v-philadelphia-union,74,sub_on,Agustín Anello,Philadelphia Union,Q2 Stadium
+2026-08-23-austin-fc-v-philadelphia-union,84,sub_off,Jon Gallagher,Austin FC,Q2 Stadium
+2026-08-23-austin-fc-v-philadelphia-union,84,sub_on,Zan Kolmanic,Austin FC,Q2 Stadium
+2026-08-23-austin-fc-v-philadelphia-union,90,sub_off,Milan Iloski,Philadelphia Union,Q2 Stadium
+2026-08-23-austin-fc-v-philadelphia-union,90,sub_on,Alejandro Bedoya,Philadelphia Union,Q2 Stadium
 2026-08-23-austin-fc-v-philadelphia-union,90,yellow,Ervin Torres,Austin FC,Q2 Stadium
 2026-08-23-bahlinger-sc-v-magdeburg,5,goal,Mateusz Zukowski,Magdeburg,Kaiserstuhlstadion
 2026-08-23-bahlinger-sc-v-magdeburg,31,goal,Falko Michel,Magdeburg,Kaiserstuhlstadion
 2026-08-23-bahlinger-sc-v-magdeburg,44,goal,Mateusz Zukowski,Magdeburg,Kaiserstuhlstadion
 2026-08-23-bahlinger-sc-v-magdeburg,77,goal,Falko Michel,Magdeburg,Kaiserstuhlstadion
+2026-08-23-birmingham-legion-fc-v-sporting-jax,46,sub_off,AJ Paterson,Birmingham Legion FC,Protective Stadium
+2026-08-23-birmingham-legion-fc-v-sporting-jax,46,sub_on,Phanuel Kavita,Birmingham Legion FC,Protective Stadium
+2026-08-23-birmingham-legion-fc-v-sporting-jax,54,sub_off,Marcus Godinho,Sporting JAX,Protective Stadium
+2026-08-23-birmingham-legion-fc-v-sporting-jax,54,sub_on,Wan Kuzain,Sporting JAX,Protective Stadium
 2026-08-23-birmingham-legion-fc-v-sporting-jax,56,goal,Ronaldo Damus,Birmingham Legion FC,Protective Stadium
 2026-08-23-birmingham-legion-fc-v-sporting-jax,58,goal,Emil Jääskeläinen,Sporting JAX,Protective Stadium
 2026-08-23-birmingham-legion-fc-v-sporting-jax,64,yellow,Wan Kuzain,Sporting JAX,Protective Stadium
+2026-08-23-birmingham-legion-fc-v-sporting-jax,68,sub_off,Amir Daley,Birmingham Legion FC,Protective Stadium
+2026-08-23-birmingham-legion-fc-v-sporting-jax,68,sub_off,Serge Ngoma,Birmingham Legion FC,Protective Stadium
+2026-08-23-birmingham-legion-fc-v-sporting-jax,68,sub_on,Samuel McIllhatton,Birmingham Legion FC,Protective Stadium
+2026-08-23-birmingham-legion-fc-v-sporting-jax,68,sub_on,Tyler Pasher,Birmingham Legion FC,Protective Stadium
+2026-08-23-birmingham-legion-fc-v-sporting-jax,74,sub_off,Kieran Sadlier,Sporting JAX,Protective Stadium
+2026-08-23-birmingham-legion-fc-v-sporting-jax,74,sub_on,Rafferty Pedder,Sporting JAX,Protective Stadium
 2026-08-23-birmingham-legion-fc-v-sporting-jax,76,goal,Wan Kuzain,Sporting JAX,Protective Stadium
+2026-08-23-birmingham-legion-fc-v-sporting-jax,80,sub_off,Ronaldo Damus,Birmingham Legion FC,Protective Stadium
+2026-08-23-birmingham-legion-fc-v-sporting-jax,80,sub_off,Gevork Diarbian,Birmingham Legion FC,Protective Stadium
+2026-08-23-birmingham-legion-fc-v-sporting-jax,80,sub_on,Romario Williams,Birmingham Legion FC,Protective Stadium
+2026-08-23-birmingham-legion-fc-v-sporting-jax,80,sub_on,Peter-Lee Vassell,Birmingham Legion FC,Protective Stadium
+2026-08-23-birmingham-legion-fc-v-sporting-jax,83,sub_off,Ventura Alvarado,Sporting JAX,Protective Stadium
+2026-08-23-birmingham-legion-fc-v-sporting-jax,83,sub_off,Jean Mota,Sporting JAX,Protective Stadium
+2026-08-23-birmingham-legion-fc-v-sporting-jax,83,sub_on,Antonio Gomez,Sporting JAX,Protective Stadium
+2026-08-23-birmingham-legion-fc-v-sporting-jax,83,sub_on,Danny Wilson,Sporting JAX,Protective Stadium
 2026-08-23-birmingham-legion-fc-v-sporting-jax,85,yellow,Seth Antwi,Birmingham Legion FC,Protective Stadium
 2026-08-23-birmingham-legion-fc-v-sporting-jax,90,goal,Romario Williams,Birmingham Legion FC,Protective Stadium
 2026-08-23-birmingham-legion-fc-v-sporting-jax,90,goal,Danny Wilson,Sporting JAX,Protective Stadium
@@ -595,84 +685,336 @@ match_id,minute,type,player,team,venue
 2026-08-23-cambuur-v-feyenoord,26,goal,Luciano Valente,Feyenoord,Kooi Stadion
 2026-08-23-cambuur-v-feyenoord,42,own_goal,Thijs Jansen,Feyenoord,Kooi Stadion
 2026-08-23-cambuur-v-feyenoord,45,goal,Ayase Ueda,Feyenoord,Kooi Stadion
+2026-08-23-cambuur-v-feyenoord,46,sub_off,Ilyès Hamache,Cambuur,Kooi Stadion
+2026-08-23-cambuur-v-feyenoord,46,sub_off,Skye Vink,Cambuur,Kooi Stadion
+2026-08-23-cambuur-v-feyenoord,46,sub_on,Ethan Apkakou,Cambuur,Kooi Stadion
+2026-08-23-cambuur-v-feyenoord,46,sub_on,Morgan Costarelli,Cambuur,Kooi Stadion
+2026-08-23-cambuur-v-feyenoord,62,sub_off,Sami Bouhoudane,Cambuur,Kooi Stadion
+2026-08-23-cambuur-v-feyenoord,62,sub_off,Lucas Jetten,Cambuur,Kooi Stadion
+2026-08-23-cambuur-v-feyenoord,62,sub_on,Nicolas Binder,Cambuur,Kooi Stadion
+2026-08-23-cambuur-v-feyenoord,62,sub_on,Fabian Kvam,Cambuur,Kooi Stadion
 2026-08-23-cambuur-v-feyenoord,66,yellow,Anis Hadj Moussa,Feyenoord,Kooi Stadion
+2026-08-23-cambuur-v-feyenoord,67,sub_off,Gaoussou Diarra,Feyenoord,Kooi Stadion
+2026-08-23-cambuur-v-feyenoord,67,sub_off,Tsuyoshi Watanabe,Feyenoord,Kooi Stadion
+2026-08-23-cambuur-v-feyenoord,67,sub_off,Ayase Ueda,Feyenoord,Kooi Stadion
+2026-08-23-cambuur-v-feyenoord,67,sub_on,Oussama Targhalline,Feyenoord,Kooi Stadion
+2026-08-23-cambuur-v-feyenoord,67,sub_on,Javi López,Feyenoord,Kooi Stadion
+2026-08-23-cambuur-v-feyenoord,67,sub_on,Nacho Ferri,Feyenoord,Kooi Stadion
 2026-08-23-cambuur-v-feyenoord,70,goal,Rafik El Arguioui,Cambuur,Kooi Stadion
 2026-08-23-cambuur-v-feyenoord,80,goal,Rafik El Arguioui,Cambuur,Kooi Stadion
+2026-08-23-cambuur-v-feyenoord,81,sub_off,Givairo Read,Feyenoord,Kooi Stadion
+2026-08-23-cambuur-v-feyenoord,81,sub_on,Jordan Lotomba,Feyenoord,Kooi Stadion
 2026-08-23-cambuur-v-feyenoord,83,goal,Gjivai Zechiël,Feyenoord,Kooi Stadion
+2026-08-23-cambuur-v-feyenoord,84,sub_off,Iwan Henstra,Cambuur,Kooi Stadion
+2026-08-23-cambuur-v-feyenoord,84,sub_off,Anis Hadj Moussa,Feyenoord,Kooi Stadion
+2026-08-23-cambuur-v-feyenoord,84,sub_on,Devid Eugene Bouah,Cambuur,Kooi Stadion
+2026-08-23-cambuur-v-feyenoord,84,sub_on,Shaqueel van Persie,Feyenoord,Kooi Stadion
 2026-08-23-club-brugge-v-cercle-brugge,38,goal,Nicolò Tresoldi,Club Brugge,Jan Breydelstadion
+2026-08-23-club-brugge-v-cercle-brugge,64,sub_off,Gary Magnée,Cercle Brugge,Jan Breydelstadion
+2026-08-23-club-brugge-v-cercle-brugge,64,sub_on,Omotayo Adaramola,Cercle Brugge,Jan Breydelstadion
+2026-08-23-club-brugge-v-cercle-brugge,70,sub_off,Hugo Vetlesen,Club Brugge,Jan Breydelstadion
+2026-08-23-club-brugge-v-cercle-brugge,70,sub_off,Mamadou Diakhon,Club Brugge,Jan Breydelstadion
+2026-08-23-club-brugge-v-cercle-brugge,70,sub_on,Jan Virgili,Club Brugge,Jan Breydelstadion
+2026-08-23-club-brugge-v-cercle-brugge,70,sub_on,Félix Lemaréchal,Club Brugge,Jan Breydelstadion
+2026-08-23-club-brugge-v-cercle-brugge,77,sub_off,Dante Vanzeir,Cercle Brugge,Jan Breydelstadion
+2026-08-23-club-brugge-v-cercle-brugge,77,sub_off,Steve Ngoura,Cercle Brugge,Jan Breydelstadion
+2026-08-23-club-brugge-v-cercle-brugge,77,sub_on,Krys Kouassi,Cercle Brugge,Jan Breydelstadion
+2026-08-23-club-brugge-v-cercle-brugge,77,sub_on,Lucas Michal,Cercle Brugge,Jan Breydelstadion
 2026-08-23-club-brugge-v-cercle-brugge,80,yellow,Ibrahima Diaby,Cercle Brugge,Jan Breydelstadion
+2026-08-23-club-brugge-v-cercle-brugge,87,sub_off,Lukas Mondele,Cercle Brugge,Jan Breydelstadion
+2026-08-23-club-brugge-v-cercle-brugge,87,sub_off,Valy Konaté,Cercle Brugge,Jan Breydelstadion
+2026-08-23-club-brugge-v-cercle-brugge,87,sub_on,Lawrence Agyekum,Cercle Brugge,Jan Breydelstadion
+2026-08-23-club-brugge-v-cercle-brugge,87,sub_on,Erick Nunes,Cercle Brugge,Jan Breydelstadion
+2026-08-23-club-brugge-v-cercle-brugge,89,sub_off,Nicolò Tresoldi,Club Brugge,Jan Breydelstadion
+2026-08-23-club-brugge-v-cercle-brugge,89,sub_on,Romeo Vermant,Club Brugge,Jan Breydelstadion
 2026-08-23-francs-borains-v-sporting-hasselt,19,yellow,Lucas Vankerkhoven,Sporting Hasselt,Stade Robert Urbain
 2026-08-23-francs-borains-v-sporting-hasselt,23,yellow,Loïc Masscho,Sporting Hasselt,Stade Robert Urbain
 2026-08-23-francs-borains-v-sporting-hasselt,55,goal,Livio Milts,Sporting Hasselt,Stade Robert Urbain
 2026-08-23-francs-borains-v-sporting-hasselt,58,yellow,Yannis Kari,Francs Borains,Stade Robert Urbain
+2026-08-23-francs-borains-v-sporting-hasselt,61,sub_off,Raymond Asante,Francs Borains,Stade Robert Urbain
+2026-08-23-francs-borains-v-sporting-hasselt,61,sub_off,Enguerran Faucon,Francs Borains,Stade Robert Urbain
+2026-08-23-francs-borains-v-sporting-hasselt,61,sub_on,Noah Diliberto,Francs Borains,Stade Robert Urbain
+2026-08-23-francs-borains-v-sporting-hasselt,61,sub_on,Philipp Wydra,Francs Borains,Stade Robert Urbain
+2026-08-23-francs-borains-v-sporting-hasselt,70,sub_off,Tuur Dierckx,Sporting Hasselt,Stade Robert Urbain
+2026-08-23-francs-borains-v-sporting-hasselt,70,sub_off,Livio Milts,Sporting Hasselt,Stade Robert Urbain
+2026-08-23-francs-borains-v-sporting-hasselt,70,sub_on,Javan Ngoyi,Sporting Hasselt,Stade Robert Urbain
+2026-08-23-francs-borains-v-sporting-hasselt,70,sub_on,Alain-Jerry Matoka,Sporting Hasselt,Stade Robert Urbain
+2026-08-23-francs-borains-v-sporting-hasselt,72,sub_off,Yannis Kari,Francs Borains,Stade Robert Urbain
+2026-08-23-francs-borains-v-sporting-hasselt,72,sub_off,Dieumerci Ndongala,Francs Borains,Stade Robert Urbain
+2026-08-23-francs-borains-v-sporting-hasselt,72,sub_on,Corenthyn Lavie,Francs Borains,Stade Robert Urbain
+2026-08-23-francs-borains-v-sporting-hasselt,72,sub_on,Rabby Mateta,Francs Borains,Stade Robert Urbain
+2026-08-23-francs-borains-v-sporting-hasselt,73,sub_off,Loïc Masscho,Sporting Hasselt,Stade Robert Urbain
+2026-08-23-francs-borains-v-sporting-hasselt,73,sub_on,Mathisse Dassen,Sporting Hasselt,Stade Robert Urbain
 2026-08-23-francs-borains-v-sporting-hasselt,83,yellow,Mathias Francotte,Francs Borains,Stade Robert Urbain
+2026-08-23-francs-borains-v-sporting-hasselt,85,sub_off,Roméo Monticelli,Francs Borains,Stade Robert Urbain
+2026-08-23-francs-borains-v-sporting-hasselt,85,sub_on,Hossni Ndime,Francs Borains,Stade Robert Urbain
 2026-08-23-francs-borains-v-sporting-hasselt,85,yellow,Javan Ngoyi,Sporting Hasselt,Stade Robert Urbain
+2026-08-23-francs-borains-v-sporting-hasselt,90,sub_off,Mehdi Bounou,Sporting Hasselt,Stade Robert Urbain
+2026-08-23-francs-borains-v-sporting-hasselt,90,sub_on,Ethan Butera,Sporting Hasselt,Stade Robert Urbain
 2026-08-23-goztepe-v-genclerbirligi,43,yellow,Alex Matos,Göztepe,ISONEM Park Gürsel Aksel Stadyumu
+2026-08-23-goztepe-v-genclerbirligi,45,sub_off,Allan Godói,Göztepe,ISONEM Park Gürsel Aksel Stadyumu
+2026-08-23-goztepe-v-genclerbirligi,45,sub_on,Ege Yildirim,Göztepe,ISONEM Park Gürsel Aksel Stadyumu
+2026-08-23-goztepe-v-genclerbirligi,46,sub_off,Alex Matos,Göztepe,ISONEM Park Gürsel Aksel Stadyumu
+2026-08-23-goztepe-v-genclerbirligi,46,sub_off,Efkan Bekiroglu,Göztepe,ISONEM Park Gürsel Aksel Stadyumu
+2026-08-23-goztepe-v-genclerbirligi,46,sub_off,Sinclair Armstrong,Göztepe,ISONEM Park Gürsel Aksel Stadyumu
+2026-08-23-goztepe-v-genclerbirligi,46,sub_on,Rhaldney,Göztepe,ISONEM Park Gürsel Aksel Stadyumu
+2026-08-23-goztepe-v-genclerbirligi,46,sub_on,Janderson,Göztepe,ISONEM Park Gürsel Aksel Stadyumu
+2026-08-23-goztepe-v-genclerbirligi,46,sub_on,Juan,Göztepe,ISONEM Park Gürsel Aksel Stadyumu
 2026-08-23-goztepe-v-genclerbirligi,48,yellow,Dimitrios Goutas,Gençlerbirliği,ISONEM Park Gürsel Aksel Stadyumu
 2026-08-23-goztepe-v-genclerbirligi,50,missed_penalty,Malcom Bokélé,Göztepe,ISONEM Park Gürsel Aksel Stadyumu
 2026-08-23-goztepe-v-genclerbirligi,51,goal,Sékou Koita,Gençlerbirliği,ISONEM Park Gürsel Aksel Stadyumu
+2026-08-23-goztepe-v-genclerbirligi,61,sub_off,Tiago Gouveia,Gençlerbirliği,ISONEM Park Gürsel Aksel Stadyumu
+2026-08-23-goztepe-v-genclerbirligi,61,sub_on,Cheikh Niasse,Gençlerbirliği,ISONEM Park Gürsel Aksel Stadyumu
+2026-08-23-goztepe-v-genclerbirligi,64,sub_off,Ogün Bayrak,Göztepe,ISONEM Park Gürsel Aksel Stadyumu
+2026-08-23-goztepe-v-genclerbirligi,64,sub_on,Richard Akonnor,Göztepe,ISONEM Park Gürsel Aksel Stadyumu
+2026-08-23-goztepe-v-genclerbirligi,72,sub_off,Ogulcan Ülgün,Gençlerbirliği,ISONEM Park Gürsel Aksel Stadyumu
+2026-08-23-goztepe-v-genclerbirligi,72,sub_off,Abdurrahim Dursun,Gençlerbirliği,ISONEM Park Gürsel Aksel Stadyumu
+2026-08-23-goztepe-v-genclerbirligi,72,sub_on,Salih Uçan,Gençlerbirliği,ISONEM Park Gürsel Aksel Stadyumu
+2026-08-23-goztepe-v-genclerbirligi,72,sub_on,Firatcan Üzüm,Gençlerbirliği,ISONEM Park Gürsel Aksel Stadyumu
 2026-08-23-goztepe-v-genclerbirligi,79,yellow,Cheikh Niasse,Gençlerbirliği,ISONEM Park Gürsel Aksel Stadyumu
+2026-08-23-goztepe-v-genclerbirligi,85,sub_off,Sékou Koita,Gençlerbirliği,ISONEM Park Gürsel Aksel Stadyumu
+2026-08-23-goztepe-v-genclerbirligi,85,sub_on,Metehan Baltaci,Gençlerbirliği,ISONEM Park Gürsel Aksel Stadyumu
 2026-08-23-middlesbrough-u21-v-norwich-city-u21,14,goal,Alan Domeracki,Norwich City U21,Heritage Park
 2026-08-23-middlesbrough-u21-v-norwich-city-u21,21,yellow,Cruz Ibeh,Middlesbrough U21,Heritage Park
 2026-08-23-middlesbrough-u21-v-norwich-city-u21,32,yellow,James Wilson,Middlesbrough U21,Heritage Park
 2026-08-23-middlesbrough-u21-v-norwich-city-u21,45,yellow,Botan Ameen,Norwich City U21,Heritage Park
 2026-08-23-middlesbrough-u21-v-norwich-city-u21,51,yellow,Miles Bracking,Norwich City U21,Heritage Park
 2026-08-23-middlesbrough-u21-v-norwich-city-u21,59,yellow,Dylan Jones,Norwich City U21,Heritage Park
+2026-08-23-middlesbrough-u21-v-norwich-city-u21,63,sub_off,Cruz Ibeh,Middlesbrough U21,Heritage Park
+2026-08-23-middlesbrough-u21-v-norwich-city-u21,63,sub_on,Listowell Hinneh,Middlesbrough U21,Heritage Park
+2026-08-23-middlesbrough-u21-v-norwich-city-u21,64,sub_off,Botan Ameen,Norwich City U21,Heritage Park
+2026-08-23-middlesbrough-u21-v-norwich-city-u21,64,sub_on,Luke Chukwu,Norwich City U21,Heritage Park
+2026-08-23-middlesbrough-u21-v-norwich-city-u21,74,sub_off,Alan Domeracki,Norwich City U21,Heritage Park
+2026-08-23-middlesbrough-u21-v-norwich-city-u21,74,sub_on,Toby Chilvers,Norwich City U21,Heritage Park
+2026-08-23-middlesbrough-u21-v-norwich-city-u21,76,sub_off,James Wilson,Middlesbrough U21,Heritage Park
+2026-08-23-middlesbrough-u21-v-norwich-city-u21,76,sub_off,Isaac Greenup,Middlesbrough U21,Heritage Park
+2026-08-23-middlesbrough-u21-v-norwich-city-u21,76,sub_on,Daniel James,Middlesbrough U21,Heritage Park
+2026-08-23-middlesbrough-u21-v-norwich-city-u21,76,sub_on,Lucas Harrison,Middlesbrough U21,Heritage Park
+2026-08-23-middlesbrough-u21-v-norwich-city-u21,81,sub_off,Dylan Jones,Norwich City U21,Heritage Park
+2026-08-23-middlesbrough-u21-v-norwich-city-u21,81,sub_off,Elliot Myles,Norwich City U21,Heritage Park
+2026-08-23-middlesbrough-u21-v-norwich-city-u21,81,sub_on,Finlay Corke,Norwich City U21,Heritage Park
+2026-08-23-middlesbrough-u21-v-norwich-city-u21,81,sub_on,Reuben Cooper,Norwich City U21,Heritage Park
+2026-08-23-middlesbrough-u21-v-norwich-city-u21,82,sub_off,Ezra Tika-Lemba,Middlesbrough U21,Heritage Park
+2026-08-23-middlesbrough-u21-v-norwich-city-u21,82,sub_on,Tyler Smith,Middlesbrough U21,Heritage Park
 2026-08-23-nashville-sc-v-columbus-crew,27,goal,Hany Mukhtar,Nashville SC,GEODIS Park
 2026-08-23-nashville-sc-v-columbus-crew,39,yellow,Daniel Lovitz,Nashville SC,GEODIS Park
 2026-08-23-nashville-sc-v-columbus-crew,49,yellow,Cesar Ruvalcaba,Columbus Crew,GEODIS Park
 2026-08-23-nashville-sc-v-columbus-crew,58,goal,Mohamed Farsi,Columbus Crew,GEODIS Park
+2026-08-23-nashville-sc-v-columbus-crew,59,sub_off,Chase Adams,Columbus Crew,GEODIS Park
+2026-08-23-nashville-sc-v-columbus-crew,59,sub_off,Mohamed Farsi,Columbus Crew,GEODIS Park
+2026-08-23-nashville-sc-v-columbus-crew,59,sub_on,Josef Martínez,Columbus Crew,GEODIS Park
+2026-08-23-nashville-sc-v-columbus-crew,59,sub_on,Brooks Lennon,Columbus Crew,GEODIS Park
+2026-08-23-nashville-sc-v-columbus-crew,62,sub_off,Patrick Yazbek,Nashville SC,GEODIS Park
+2026-08-23-nashville-sc-v-columbus-crew,62,sub_off,Daniel Lovitz,Nashville SC,GEODIS Park
+2026-08-23-nashville-sc-v-columbus-crew,62,sub_off,Alex Muyl,Nashville SC,GEODIS Park
+2026-08-23-nashville-sc-v-columbus-crew,62,sub_on,Edvard Tagseth,Nashville SC,GEODIS Park
+2026-08-23-nashville-sc-v-columbus-crew,62,sub_on,Reed Baker-Whiting,Nashville SC,GEODIS Park
+2026-08-23-nashville-sc-v-columbus-crew,62,sub_on,Elias Saad,Nashville SC,GEODIS Park
 2026-08-23-nashville-sc-v-columbus-crew,68,goal,André Gomes,Columbus Crew,GEODIS Park
+2026-08-23-nashville-sc-v-columbus-crew,77,sub_off,André Gomes,Columbus Crew,GEODIS Park
+2026-08-23-nashville-sc-v-columbus-crew,77,sub_on,Dylan Chambost,Columbus Crew,GEODIS Park
+2026-08-23-nashville-sc-v-columbus-crew,84,sub_off,Brais Méndez,Columbus Crew,GEODIS Park
+2026-08-23-nashville-sc-v-columbus-crew,84,sub_off,Taha Habroune,Columbus Crew,GEODIS Park
+2026-08-23-nashville-sc-v-columbus-crew,84,sub_on,Dániel Gazdag,Columbus Crew,GEODIS Park
+2026-08-23-nashville-sc-v-columbus-crew,84,sub_on,Lautaro Giaccone,Columbus Crew,GEODIS Park
+2026-08-23-nashville-sc-v-columbus-crew,88,sub_off,Matthew Corcoran,Nashville SC,GEODIS Park
+2026-08-23-nashville-sc-v-columbus-crew,88,sub_off,Cristian Espinoza,Nashville SC,GEODIS Park
+2026-08-23-nashville-sc-v-columbus-crew,88,sub_on,Bryan Acosta,Nashville SC,GEODIS Park
+2026-08-23-nashville-sc-v-columbus-crew,88,sub_on,Shak Mohammed,Nashville SC,GEODIS Park
 2026-08-23-nashville-sc-v-columbus-crew,90,goal,Reed Baker-Whiting,Nashville SC,GEODIS Park
 2026-08-23-nashville-sc-v-columbus-crew,90,goal,Andy Nájar,Nashville SC,GEODIS Park
 2026-08-23-new-england-revolution-v-new-york-city-fc,27,missed_penalty,Carles Gil,New England Revolution,Gillette Stadium
 2026-08-23-new-england-revolution-v-new-york-city-fc,36,goal,Dor Turgeman,New England Revolution,Gillette Stadium
+2026-08-23-new-england-revolution-v-new-york-city-fc,40,sub_off,Tayvon Gray,New York City FC,Gillette Stadium
+2026-08-23-new-england-revolution-v-new-york-city-fc,40,sub_off,Jonathan Shore,New York City FC,Gillette Stadium
+2026-08-23-new-england-revolution-v-new-york-city-fc,40,sub_on,Mitja Ilenic,New York City FC,Gillette Stadium
+2026-08-23-new-england-revolution-v-new-york-city-fc,40,sub_on,Keaton Parks,New York City FC,Gillette Stadium
 2026-08-23-new-england-revolution-v-new-york-city-fc,45,goal,James Sands,New York City FC,Gillette Stadium
+2026-08-23-new-england-revolution-v-new-york-city-fc,46,sub_off,Talles Magno,New York City FC,Gillette Stadium
+2026-08-23-new-england-revolution-v-new-york-city-fc,46,sub_on,Luighi,New York City FC,Gillette Stadium
 2026-08-23-new-england-revolution-v-new-york-city-fc,61,yellow,Keaton Parks,New York City FC,Gillette Stadium
+2026-08-23-new-england-revolution-v-new-york-city-fc,64,sub_off,Jackson Yueill,New England Revolution,Gillette Stadium
+2026-08-23-new-england-revolution-v-new-york-city-fc,64,sub_on,Judah Siqueira,New England Revolution,Gillette Stadium
+2026-08-23-new-england-revolution-v-new-york-city-fc,68,sub_off,Andrés Perea,New York City FC,Gillette Stadium
+2026-08-23-new-england-revolution-v-new-york-city-fc,68,sub_off,Bénie Traoré,New York City FC,Gillette Stadium
+2026-08-23-new-england-revolution-v-new-york-city-fc,68,sub_on,Raul,New York City FC,Gillette Stadium
+2026-08-23-new-england-revolution-v-new-york-city-fc,68,sub_on,Kevin O'Toole,New York City FC,Gillette Stadium
 2026-08-23-new-england-revolution-v-new-york-city-fc,69,yellow,Jack Harrison,New England Revolution,Gillette Stadium
+2026-08-23-new-england-revolution-v-new-york-city-fc,70,sub_off,Matt Polster,New England Revolution,Gillette Stadium
+2026-08-23-new-england-revolution-v-new-york-city-fc,70,sub_on,Cody Baker,New England Revolution,Gillette Stadium
+2026-08-23-new-england-revolution-v-new-york-city-fc,81,sub_off,Dor Turgeman,New England Revolution,Gillette Stadium
+2026-08-23-new-england-revolution-v-new-york-city-fc,81,sub_off,Jack Harrison,New England Revolution,Gillette Stadium
+2026-08-23-new-england-revolution-v-new-york-city-fc,81,sub_on,Wilson Harris,New England Revolution,Gillette Stadium
+2026-08-23-new-england-revolution-v-new-york-city-fc,81,sub_on,Diego Fagúndez,New England Revolution,Gillette Stadium
 2026-08-23-sacramento-republic-fc-v-phoenix-rising-fc,19,goal,Tyler Wolff,Sacramento Republic FC,Heart Health Park
 2026-08-23-sacramento-republic-fc-v-phoenix-rising-fc,26,goal,Memo Rodríguez,Sacramento Republic FC,Heart Health Park
 2026-08-23-sacramento-republic-fc-v-phoenix-rising-fc,45,goal,Ihsan Sacko,Phoenix Rising FC,Heart Health Park
+2026-08-23-sacramento-republic-fc-v-phoenix-rising-fc,46,sub_off,Charlie Dennis,Phoenix Rising FC,Heart Health Park
+2026-08-23-sacramento-republic-fc-v-phoenix-rising-fc,46,sub_on,Luke Biasi,Phoenix Rising FC,Heart Health Park
 2026-08-23-sacramento-republic-fc-v-phoenix-rising-fc,48,yellow,Daniel Crisostomo,Sacramento Republic FC,Heart Health Park
+2026-08-23-sacramento-republic-fc-v-phoenix-rising-fc,54,sub_off,Mayele Malango,Sacramento Republic FC,Heart Health Park
+2026-08-23-sacramento-republic-fc-v-phoenix-rising-fc,54,sub_on,Ryan Spaulding,Sacramento Republic FC,Heart Health Park
+2026-08-23-sacramento-republic-fc-v-phoenix-rising-fc,64,sub_off,Adrián Pelayo,Phoenix Rising FC,Heart Health Park
+2026-08-23-sacramento-republic-fc-v-phoenix-rising-fc,64,sub_off,Diego Gómez,Phoenix Rising FC,Heart Health Park
+2026-08-23-sacramento-republic-fc-v-phoenix-rising-fc,64,sub_on,Rafael Czichos,Phoenix Rising FC,Heart Health Park
+2026-08-23-sacramento-republic-fc-v-phoenix-rising-fc,64,sub_on,Tate Schmitt,Phoenix Rising FC,Heart Health Park
+2026-08-23-sacramento-republic-fc-v-phoenix-rising-fc,72,sub_off,Tyler Wolff,Sacramento Republic FC,Heart Health Park
+2026-08-23-sacramento-republic-fc-v-phoenix-rising-fc,72,sub_off,Daniel Crisostomo,Sacramento Republic FC,Heart Health Park
+2026-08-23-sacramento-republic-fc-v-phoenix-rising-fc,72,sub_on,Cal Jennings,Sacramento Republic FC,Heart Health Park
+2026-08-23-sacramento-republic-fc-v-phoenix-rising-fc,72,sub_on,Arturo Rodríguez,Sacramento Republic FC,Heart Health Park
+2026-08-23-sacramento-republic-fc-v-phoenix-rising-fc,76,sub_off,Collin Smith,Phoenix Rising FC,Heart Health Park
+2026-08-23-sacramento-republic-fc-v-phoenix-rising-fc,76,sub_on,Gunnar Studenhofft,Phoenix Rising FC,Heart Health Park
 2026-08-23-sacramento-republic-fc-v-phoenix-rising-fc,76,yellow,Collin Smith,Phoenix Rising FC,Heart Health Park
+2026-08-23-sacramento-republic-fc-v-phoenix-rising-fc,83,sub_off,Daniel Flores,Phoenix Rising FC,Heart Health Park
+2026-08-23-sacramento-republic-fc-v-phoenix-rising-fc,83,sub_on,Damián Rivera,Phoenix Rising FC,Heart Health Park
 2026-08-23-sacramento-republic-fc-v-phoenix-rising-fc,86,goal,Ihsan Sacko,Phoenix Rising FC,Heart Health Park
+2026-08-23-sacramento-republic-fc-v-phoenix-rising-fc,90,sub_off,Pep Casas,Sacramento Republic FC,Heart Health Park
+2026-08-23-sacramento-republic-fc-v-phoenix-rising-fc,90,sub_off,Memo Rodríguez,Sacramento Republic FC,Heart Health Park
+2026-08-23-sacramento-republic-fc-v-phoenix-rising-fc,90,sub_on,Aaron Essel,Sacramento Republic FC,Heart Health Park
+2026-08-23-sacramento-republic-fc-v-phoenix-rising-fc,90,sub_on,Kyle Edwards,Sacramento Republic FC,Heart Health Park
 2026-08-23-sacramento-republic-fc-v-phoenix-rising-fc,90,yellow,Luke Biasi,Phoenix Rising FC,Heart Health Park
 2026-08-23-venezia-v-lecce,3,yellow,Kialonda Gaspar,Lecce,Stadio Pier Luigi Penzo
 2026-08-23-venezia-v-lecce,46,goal,Olaf Gorter,Lecce,Stadio Pier Luigi Penzo
+2026-08-23-venezia-v-lecce,46,sub_off,Antonino Gallo,Lecce,Stadio Pier Luigi Penzo
+2026-08-23-venezia-v-lecce,46,sub_on,Corrie Ndaba,Lecce,Stadio Pier Luigi Penzo
 2026-08-23-venezia-v-lecce,59,yellow,Oumar Ngom,Lecce,Stadio Pier Luigi Penzo
+2026-08-23-venezia-v-lecce,61,sub_off,Olaf Gorter,Lecce,Stadio Pier Luigi Penzo
+2026-08-23-venezia-v-lecce,61,sub_on,Youssef Maleh,Lecce,Stadio Pier Luigi Penzo
+2026-08-23-venezia-v-lecce,64,sub_off,Thierry Correia,Venezia,Stadio Pier Luigi Penzo
+2026-08-23-venezia-v-lecce,64,sub_on,Ridgeciano Haps,Venezia,Stadio Pier Luigi Penzo
+2026-08-23-venezia-v-lecce,70,sub_off,Kike Pérez,Venezia,Stadio Pier Luigi Penzo
+2026-08-23-venezia-v-lecce,70,sub_on,Matteo Dagasso,Venezia,Stadio Pier Luigi Penzo
 2026-08-23-venezia-v-lecce,71,yellow,Danilo Veiga,Lecce,Stadio Pier Luigi Penzo
+2026-08-23-venezia-v-lecce,74,sub_off,Konan N’Dri,Lecce,Stadio Pier Luigi Penzo
+2026-08-23-venezia-v-lecce,74,sub_off,Willem Geubbels,Lecce,Stadio Pier Luigi Penzo
+2026-08-23-venezia-v-lecce,74,sub_on,Tiago Gabriel,Lecce,Stadio Pier Luigi Penzo
+2026-08-23-venezia-v-lecce,74,sub_on,Nikola Stulic,Lecce,Stadio Pier Luigi Penzo
 2026-08-23-venezia-v-lecce,78,yellow,Matteo Dagasso,Venezia,Stadio Pier Luigi Penzo
 2026-08-23-venezia-v-lecce,80,goal,Tiago Gabriel,Lecce,Stadio Pier Luigi Penzo
+2026-08-23-venezia-v-lecce,85,sub_off,Antoine Hainaut,Venezia,Stadio Pier Luigi Penzo
+2026-08-23-venezia-v-lecce,85,sub_off,Toma Basic,Venezia,Stadio Pier Luigi Penzo
+2026-08-23-venezia-v-lecce,85,sub_on,Richie Sagrado,Venezia,Stadio Pier Luigi Penzo
+2026-08-23-venezia-v-lecce,85,sub_on,Albion Rrahmani,Venezia,Stadio Pier Luigi Penzo
+2026-08-23-venezia-v-lecce,90,sub_off,Santiago Pierotti,Lecce,Stadio Pier Luigi Penzo
+2026-08-23-venezia-v-lecce,90,sub_on,Omri Gandelman,Lecce,Stadio Pier Luigi Penzo
 2026-08-23-vvv-venlo-v-de-graafschap,10,goal,Julian Kania,De Graafschap,Seacon Stadion – De Koel –
 2026-08-23-vvv-venlo-v-de-graafschap,11,yellow,Nart Ahmeti,De Graafschap,Seacon Stadion – De Koel –
 2026-08-23-vvv-venlo-v-de-graafschap,28,yellow,Luis Görlich,VVV-Venlo,Seacon Stadion – De Koel –
 2026-08-23-vvv-venlo-v-de-graafschap,42,goal,Nassim Ait Mouhou,VVV-Venlo,Seacon Stadion – De Koel –
 2026-08-23-vvv-venlo-v-de-graafschap,45,goal,Raf Vullers,VVV-Venlo,Seacon Stadion – De Koel –
 2026-08-23-vvv-venlo-v-de-graafschap,45,yellow,Kaya Symon,De Graafschap,Seacon Stadion – De Koel –
+2026-08-23-vvv-venlo-v-de-graafschap,46,sub_off,Denzel Eijken,De Graafschap,Seacon Stadion – De Koel –
+2026-08-23-vvv-venlo-v-de-graafschap,46,sub_on,Tygo Grotenhuis,De Graafschap,Seacon Stadion – De Koel –
+2026-08-23-vvv-venlo-v-de-graafschap,58,sub_off,Nart Ahmeti,De Graafschap,Seacon Stadion – De Koel –
+2026-08-23-vvv-venlo-v-de-graafschap,58,sub_on,Tim Braem,De Graafschap,Seacon Stadion – De Koel –
+2026-08-23-vvv-venlo-v-de-graafschap,59,sub_off,Bjorn van Zijl,De Graafschap,Seacon Stadion – De Koel –
+2026-08-23-vvv-venlo-v-de-graafschap,59,sub_on,Gabriele Finocchiaro,De Graafschap,Seacon Stadion – De Koel –
+2026-08-23-vvv-venlo-v-de-graafschap,62,sub_off,Nassim Ait Mouhou,VVV-Venlo,Seacon Stadion – De Koel –
+2026-08-23-vvv-venlo-v-de-graafschap,62,sub_on,Thomas Janssen,VVV-Venlo,Seacon Stadion – De Koel –
+2026-08-23-vvv-venlo-v-de-graafschap,75,sub_off,Mohammed Odriss,VVV-Venlo,Seacon Stadion – De Koel –
+2026-08-23-vvv-venlo-v-de-graafschap,75,sub_off,Éanna Clancy,VVV-Venlo,Seacon Stadion – De Koel –
+2026-08-23-vvv-venlo-v-de-graafschap,75,sub_on,Tijn Joosten,VVV-Venlo,Seacon Stadion – De Koel –
+2026-08-23-vvv-venlo-v-de-graafschap,75,sub_on,Devy Hendrix,VVV-Venlo,Seacon Stadion – De Koel –
+2026-08-23-vvv-venlo-v-de-graafschap,79,sub_off,Jason Meerstadt,De Graafschap,Seacon Stadion – De Koel –
+2026-08-23-vvv-venlo-v-de-graafschap,79,sub_on,Milan Smits,De Graafschap,Seacon Stadion – De Koel –
+2026-08-23-vvv-venlo-v-de-graafschap,85,sub_off,Edhy Zuliani,VVV-Venlo,Seacon Stadion – De Koel –
+2026-08-23-vvv-venlo-v-de-graafschap,85,sub_on,Yousri El Anbri,VVV-Venlo,Seacon Stadion – De Koel –
+2026-08-23-vvv-venlo-v-de-graafschap,86,sub_off,Kaya Symon,De Graafschap,Seacon Stadion – De Koel –
+2026-08-23-vvv-venlo-v-de-graafschap,86,sub_on,Gijs Bolk,De Graafschap,Seacon Stadion – De Koel –
 2026-08-23-west-bromwich-albion-v-burnley,8,own_goal,Callum Styles,Burnley,The Hawthorns
 2026-08-23-west-bromwich-albion-v-burnley,18,goal,Harry Whitwell,West Bromwich Albion,The Hawthorns
 2026-08-23-west-bromwich-albion-v-burnley,26,yellow,Oliver Sonne,Burnley,The Hawthorns
 2026-08-23-west-bromwich-albion-v-burnley,33,yellow,George Campbell,West Bromwich Albion,The Hawthorns
 2026-08-23-west-bromwich-albion-v-burnley,46,goal,Isaac Price,West Bromwich Albion,The Hawthorns
+2026-08-23-west-bromwich-albion-v-burnley,46,sub_off,Oliver Sonne,Burnley,The Hawthorns
+2026-08-23-west-bromwich-albion-v-burnley,46,sub_on,Connor Roberts,Burnley,The Hawthorns
+2026-08-23-west-bromwich-albion-v-burnley,57,sub_off,Armando Broja,Burnley,The Hawthorns
+2026-08-23-west-bromwich-albion-v-burnley,57,sub_off,Hannibal Mejbri,Burnley,The Hawthorns
+2026-08-23-west-bromwich-albion-v-burnley,57,sub_off,Josh Laurent,Burnley,The Hawthorns
+2026-08-23-west-bromwich-albion-v-burnley,57,sub_on,Zeki Amdouni,Burnley,The Hawthorns
+2026-08-23-west-bromwich-albion-v-burnley,57,sub_on,Ugo Raghouber,Burnley,The Hawthorns
+2026-08-23-west-bromwich-albion-v-burnley,57,sub_on,Dastan Satpaev,Burnley,The Hawthorns
 2026-08-23-west-bromwich-albion-v-burnley,65,goal,Isaac Price,West Bromwich Albion,The Hawthorns
 2026-08-23-west-bromwich-albion-v-burnley,70,yellow,Marcus Edwards,Burnley,The Hawthorns
+2026-08-23-west-bromwich-albion-v-burnley,78,sub_off,Jimmy-Jay Morgan,West Bromwich Albion,The Hawthorns
+2026-08-23-west-bromwich-albion-v-burnley,78,sub_off,Bashir Humphreys,Burnley,The Hawthorns
+2026-08-23-west-bromwich-albion-v-burnley,78,sub_on,Barney Stewart,West Bromwich Albion,The Hawthorns
+2026-08-23-west-bromwich-albion-v-burnley,78,sub_on,Lucas Pires,Burnley,The Hawthorns
+2026-08-23-west-bromwich-albion-v-burnley,81,sub_off,Harry Whitwell,West Bromwich Albion,The Hawthorns
+2026-08-23-west-bromwich-albion-v-burnley,81,sub_on,Rabby Nzingoula,West Bromwich Albion,The Hawthorns
+2026-08-23-west-bromwich-albion-v-burnley,90,sub_off,Jayson Molumby,West Bromwich Albion,The Hawthorns
+2026-08-23-west-bromwich-albion-v-burnley,90,sub_on,Chris Mepham,West Bromwich Albion,The Hawthorns
 2026-08-24-manchester-city-u21-v-wolverhampton-wanderers-u21,5,goal,Kylan Midwood,Manchester City U21,City Football Academy
 2026-08-24-manchester-city-u21-v-wolverhampton-wanderers-u21,18,goal,Tyrone Samba,Manchester City U21,City Football Academy
-2026-08-24-manchester-city-u21-v-wolverhampton-wanderers-u21,40,goal,Floyd Samba,Manchester City U21,City Football Academy
+2026-08-24-manchester-city-u21-v-wolverhampton-wanderers-u21,41,goal,Floyd Samba,Manchester City U21,City Football Academy
 2026-08-24-manchester-city-u21-v-wolverhampton-wanderers-u21,45,yellow,Harrison Miles,Manchester City U21,City Football Academy
+2026-08-24-manchester-city-u21-v-wolverhampton-wanderers-u21,46,sub_off,Kylan Midwood,Manchester City U21,City Football Academy
+2026-08-24-manchester-city-u21-v-wolverhampton-wanderers-u21,46,sub_on,Brooklyn Nfonkeu,Manchester City U21,City Football Academy
 2026-08-24-manchester-city-u21-v-wolverhampton-wanderers-u21,54,goal,Xavier Parker,Manchester City U21,City Football Academy
+2026-08-24-manchester-city-u21-v-wolverhampton-wanderers-u21,56,sub_off,Enso González,Wolverhampton Wanderers U21,City Football Academy
+2026-08-24-manchester-city-u21-v-wolverhampton-wanderers-u21,56,sub_on,Emilio Ballard-Matthews,Wolverhampton Wanderers U21,City Football Academy
+2026-08-24-manchester-city-u21-v-wolverhampton-wanderers-u21,64,sub_off,Harrison Miles,Manchester City U21,City Football Academy
+2026-08-24-manchester-city-u21-v-wolverhampton-wanderers-u21,64,sub_on,Femi Fapetu,Manchester City U21,City Football Academy
+2026-08-24-manchester-city-u21-v-wolverhampton-wanderers-u21,65,sub_off,Xu Bin,Wolverhampton Wanderers U21,City Football Academy
+2026-08-24-manchester-city-u21-v-wolverhampton-wanderers-u21,65,sub_off,Tom Edozie,Wolverhampton Wanderers U21,City Football Academy
+2026-08-24-manchester-city-u21-v-wolverhampton-wanderers-u21,65,sub_on,Finn Ashworth,Wolverhampton Wanderers U21,City Football Academy
+2026-08-24-manchester-city-u21-v-wolverhampton-wanderers-u21,65,sub_on,Dapo Anunlopo,Wolverhampton Wanderers U21,City Football Academy
+2026-08-24-manchester-city-u21-v-wolverhampton-wanderers-u21,75,sub_off,Matty Henderson-Hall,Manchester City U21,City Football Academy
+2026-08-24-manchester-city-u21-v-wolverhampton-wanderers-u21,75,sub_on,Charlie Courtman,Manchester City U21,City Football Academy
+2026-08-24-manchester-city-u21-v-wolverhampton-wanderers-u21,79,sub_off,Kaden Braithwaite,Manchester City U21,City Football Academy
+2026-08-24-manchester-city-u21-v-wolverhampton-wanderers-u21,79,sub_on,Oliver Tevenan,Manchester City U21,City Football Academy
+2026-08-24-manchester-city-u21-v-wolverhampton-wanderers-u21,80,sub_off,Floyd Samba,Manchester City U21,City Football Academy
+2026-08-24-manchester-city-u21-v-wolverhampton-wanderers-u21,80,sub_on,Finlay Gorman,Manchester City U21,City Football Academy
 2026-08-24-newcastle-united-u21-v-tottenham-hotspur-u21,8,goal,Vakhtang Salia,Newcastle United U21,Whitley Park
+2026-08-24-newcastle-united-u21-v-tottenham-hotspur-u21,24,sub_off,Trevan Sanusi,Newcastle United U21,Whitley Park
+2026-08-24-newcastle-united-u21-v-tottenham-hotspur-u21,24,sub_on,Park Seung-Soo,Newcastle United U21,Whitley Park
 2026-08-24-newcastle-united-u21-v-tottenham-hotspur-u21,36,goal,Reiss Elliot-Parris,Tottenham Hotspur U21,Whitley Park
 2026-08-24-newcastle-united-u21-v-tottenham-hotspur-u21,45,yellow,Sean Neave,Newcastle United U21,Whitley Park
+2026-08-24-newcastle-united-u21-v-tottenham-hotspur-u21,46,sub_off,Sean Neave,Newcastle United U21,Whitley Park
+2026-08-24-newcastle-united-u21-v-tottenham-hotspur-u21,46,sub_off,Miodrag Pivas,Newcastle United U21,Whitley Park
+2026-08-24-newcastle-united-u21-v-tottenham-hotspur-u21,46,sub_on,Michael Mills,Newcastle United U21,Whitley Park
+2026-08-24-newcastle-united-u21-v-tottenham-hotspur-u21,46,sub_on,Luke Craggs,Newcastle United U21,Whitley Park
 2026-08-24-newcastle-united-u21-v-tottenham-hotspur-u21,67,goal,Alfie Dorrington,Tottenham Hotspur U21,Whitley Park
+2026-08-24-newcastle-united-u21-v-tottenham-hotspur-u21,68,sub_off,Reiss Elliot-Parris,Tottenham Hotspur U21,Whitley Park
+2026-08-24-newcastle-united-u21-v-tottenham-hotspur-u21,68,sub_off,James Rowswell,Tottenham Hotspur U21,Whitley Park
+2026-08-24-newcastle-united-u21-v-tottenham-hotspur-u21,68,sub_off,Vakhtang Salia,Newcastle United U21,Whitley Park
+2026-08-24-newcastle-united-u21-v-tottenham-hotspur-u21,68,sub_on,Max McFadden,Tottenham Hotspur U21,Whitley Park
+2026-08-24-newcastle-united-u21-v-tottenham-hotspur-u21,68,sub_on,Luca Furnell-Gill,Tottenham Hotspur U21,Whitley Park
+2026-08-24-newcastle-united-u21-v-tottenham-hotspur-u21,68,sub_on,Afner Cá,Newcastle United U21,Whitley Park
 2026-08-24-newcastle-united-u21-v-tottenham-hotspur-u21,71,goal,Tyrese Hall,Tottenham Hotspur U21,Whitley Park
+2026-08-24-newcastle-united-u21-v-tottenham-hotspur-u21,81,sub_off,Ellis Lehane,Tottenham Hotspur U21,Whitley Park
+2026-08-24-newcastle-united-u21-v-tottenham-hotspur-u21,81,sub_on,Elisha Sowunmi,Tottenham Hotspur U21,Whitley Park
+2026-08-24-newcastle-united-u21-v-tottenham-hotspur-u21,85,sub_off,Rory Finneran,Newcastle United U21,Whitley Park
+2026-08-24-newcastle-united-u21-v-tottenham-hotspur-u21,85,sub_on,Fraser Harper,Newcastle United U21,Whitley Park
+2026-08-24-newcastle-united-u21-v-tottenham-hotspur-u21,87,sub_off,George Feeney,Tottenham Hotspur U21,Whitley Park
+2026-08-24-newcastle-united-u21-v-tottenham-hotspur-u21,87,sub_on,Ronny Moncur,Tottenham Hotspur U21,Whitley Park
 2026-08-24-newcastle-united-u21-v-tottenham-hotspur-u21,90,yellow,Scott Bailey,Newcastle United U21,Whitley Park
 2026-08-24-sunderland-u21-v-nottingham-forest-u21,4,goal,Trey Samuel-Ogunsuyi,Sunderland U21,Eppleton Colliery Football Ground
 2026-08-24-sunderland-u21-v-nottingham-forest-u21,14,yellow,Chinaza Nwosu,Nottingham Forest U21,Eppleton Colliery Football Ground
+2026-08-24-sunderland-u21-v-nottingham-forest-u21,46,sub_off,Jamie Newton,Nottingham Forest U21,Eppleton Colliery Football Ground
+2026-08-24-sunderland-u21-v-nottingham-forest-u21,46,sub_on,Josh Powell,Nottingham Forest U21,Eppleton Colliery Football Ground
 2026-08-24-sunderland-u21-v-nottingham-forest-u21,51,goal,Trey Samuel-Ogunsuyi,Sunderland U21,Eppleton Colliery Football Ground
 2026-08-24-sunderland-u21-v-nottingham-forest-u21,54,goal,Jack Whittaker,Sunderland U21,Eppleton Colliery Football Ground
+2026-08-24-sunderland-u21-v-nottingham-forest-u21,56,sub_off,Archie Whitehall,Nottingham Forest U21,Eppleton Colliery Football Ground
+2026-08-24-sunderland-u21-v-nottingham-forest-u21,56,sub_off,Fuad Smith,Nottingham Forest U21,Eppleton Colliery Football Ground
+2026-08-24-sunderland-u21-v-nottingham-forest-u21,56,sub_on,Blaine McClure,Nottingham Forest U21,Eppleton Colliery Football Ground
+2026-08-24-sunderland-u21-v-nottingham-forest-u21,56,sub_on,Zyan Blake,Nottingham Forest U21,Eppleton Colliery Football Ground
 2026-08-24-sunderland-u21-v-nottingham-forest-u21,58,goal,Trey Samuel-Ogunsuyi,Sunderland U21,Eppleton Colliery Football Ground
+2026-08-24-sunderland-u21-v-nottingham-forest-u21,60,sub_off,Jimmy Sinclair,Nottingham Forest U21,Eppleton Colliery Football Ground
+2026-08-24-sunderland-u21-v-nottingham-forest-u21,60,sub_on,Kristian Clarke,Nottingham Forest U21,Eppleton Colliery Football Ground
+2026-08-24-sunderland-u21-v-nottingham-forest-u21,68,sub_off,Kay Munyakazi,Sunderland U21,Eppleton Colliery Football Ground
+2026-08-24-sunderland-u21-v-nottingham-forest-u21,68,sub_off,Trey Samuel-Ogunsuyi,Sunderland U21,Eppleton Colliery Football Ground
+2026-08-24-sunderland-u21-v-nottingham-forest-u21,68,sub_on,Charlie Dinsdale,Sunderland U21,Eppleton Colliery Football Ground
+2026-08-24-sunderland-u21-v-nottingham-forest-u21,68,sub_on,Jaydon Jones,Sunderland U21,Eppleton Colliery Football Ground
 2026-08-24-sunderland-u21-v-nottingham-forest-u21,72,yellow,Kristian Clarke,Nottingham Forest U21,Eppleton Colliery Football Ground
+2026-08-24-sunderland-u21-v-nottingham-forest-u21,76,sub_off,Archie Lightfoot,Sunderland U21,Eppleton Colliery Football Ground
+2026-08-24-sunderland-u21-v-nottingham-forest-u21,76,sub_on,Bayley Hester,Sunderland U21,Eppleton Colliery Football Ground
+2026-08-24-sunderland-u21-v-nottingham-forest-u21,77,sub_off,Jack Whittaker,Sunderland U21,Eppleton Colliery Football Ground
+2026-08-24-sunderland-u21-v-nottingham-forest-u21,77,sub_off,Joe Neild,Sunderland U21,Eppleton Colliery Football Ground
+2026-08-24-sunderland-u21-v-nottingham-forest-u21,77,sub_off,David Modupe,Nottingham Forest U21,Eppleton Colliery Football Ground
+2026-08-24-sunderland-u21-v-nottingham-forest-u21,77,sub_on,Charlie Scorer,Sunderland U21,Eppleton Colliery Football Ground
+2026-08-24-sunderland-u21-v-nottingham-forest-u21,77,sub_on,Luke Bell,Sunderland U21,Eppleton Colliery Football Ground
+2026-08-24-sunderland-u21-v-nottingham-forest-u21,77,sub_on,Bubbacar Sanneh,Nottingham Forest U21,Eppleton Colliery Football Ground
 2026-08-24-sunderland-u21-v-nottingham-forest-u21,82,goal,Tymur Tutierov,Sunderland U21,Eppleton Colliery Football Ground
 2026-08-24-sunderland-u21-v-nottingham-forest-u21,85,yellow,Charlie Scorer,Sunderland U21,Eppleton Colliery Football Ground
 2026-08-24-sunderland-u21-v-nottingham-forest-u21,86,goal,Lamin Sillah,Nottingham Forest U21,Eppleton Colliery Football Ground
@@ -2251,6 +2593,10 @@ match_id,minute,type,player,team,venue
 2026-08-29-celtic-v-falkirk,78,sub_on,Deniss Melniks,Falkirk,Celtic Park
 2026-08-29-celtic-v-falkirk,78,sub_on,Sebastian Tounekti,Celtic,Celtic Park
 2026-08-29-celtic-v-falkirk,82,yellow,Aodhan Doherty,Falkirk,Celtic Park
+2026-08-29-cercle-brugge-v-lommel,13,yellow,Timothy Eyoma,Lommel,Jan Breydelstadion
+2026-08-29-cercle-brugge-v-lommel,27,yellow,Dries Wouters,Lommel,Jan Breydelstadion
+2026-08-29-cercle-brugge-v-lommel,32,yellow,Geoffrey Kondo,Cercle Brugge,Jan Breydelstadion
+2026-08-29-cercle-brugge-v-lommel,34,yellow,Shawn Adewoye,Lommel,Jan Breydelstadion
 2026-08-29-charlton-athletic-v-preston-north-end,46,sub_off,Sonny Carey,Charlton Athletic,The Valley
 2026-08-29-charlton-athletic-v-preston-north-end,46,sub_on,Millenic Alli,Charlton Athletic,The Valley
 2026-08-29-charlton-athletic-v-preston-north-end,54,yellow,Léo Leroy,Preston North End,The Valley
@@ -2293,6 +2639,7 @@ match_id,minute,type,player,team,venue
 2026-08-29-colchester-united-v-rochdale,87,goal,Jaden Williams,Colchester United,JobServe Community Stadium
 2026-08-29-colchester-united-v-rochdale,88,sub_off,Ryan East,Rochdale,JobServe Community Stadium
 2026-08-29-colchester-united-v-rochdale,88,sub_on,Emmanuel Dieseruvwe,Rochdale,JobServe Community Stadium
+2026-08-29-cosenza-v-potenza,1,goal,Augusto Bando,Potenza,Stadium
 2026-08-29-coventry-city-v-hull-city,10,yellow,Lewie Coyle,Hull City,Coventry Building Society Arena
 2026-08-29-coventry-city-v-hull-city,46,sub_off,Hidemasa Morita,Hull City,Coventry Building Society Arena
 2026-08-29-coventry-city-v-hull-city,46,sub_off,Lewie Coyle,Hull City,Coventry Building Society Arena
@@ -2371,6 +2718,12 @@ match_id,minute,type,player,team,venue
 2026-08-29-derby-county-v-swansea-city,85,sub_off,Ji-Sung Eom,Swansea City,Pride Park Stadium
 2026-08-29-derby-county-v-swansea-city,85,sub_on,Ronald Pereira,Swansea City,Pride Park Stadium
 2026-08-29-derby-county-v-swansea-city,90,goal,Ronald Pereira,Swansea City,Pride Park Stadium
+2026-08-29-galatasaray-v-goztepe,16,goal,Novatus Miroshi,Göztepe,RAMS Park
+2026-08-29-galatasaray-v-goztepe,33,goal,Davinson Sánchez,Galatasaray,RAMS Park
+2026-08-29-galatasaray-v-goztepe,36,yellow,André,Göztepe,RAMS Park
+2026-08-29-galatasaray-v-goztepe,46,sub_off,Abdülkerim Bardakci,Galatasaray,RAMS Park
+2026-08-29-galatasaray-v-goztepe,46,sub_on,Aleksey Batrakov,Galatasaray,RAMS Park
+2026-08-29-galatasaray-v-goztepe,55,goal,Gabriel Sara,Galatasaray,RAMS Park
 2026-08-29-gillingham-v-northampton-town,4,yellow,Robbie McKenzie,Gillingham,Priestfield Stadium
 2026-08-29-gillingham-v-northampton-town,7,goal,Conor McManus,Gillingham,Priestfield Stadium
 2026-08-29-gillingham-v-northampton-town,14,yellow,Omar Beckles,Gillingham,Priestfield Stadium
@@ -2511,7 +2864,35 @@ match_id,minute,type,player,team,venue
 2026-08-29-kilmarnock-v-dundee-united,90,yellow,Bailey Rice,Kilmarnock,The BBSP Stadium Rugby Park
 2026-08-29-leamington-v-worcester,11,goal,Kyle Finn,Leamington,New Windmill Ground
 2026-08-29-leamington-v-worcester,69,goal,Brandon Smalley,Worcester,New Windmill Ground
-2026-08-29-levante-v-real-betis,,,,,Stadium
+2026-08-29-levante-v-real-betis,24,goal,Adrián De La Fuente,Levante,Estadio Ciudad de Valencia
+2026-08-29-levante-v-real-betis,34,goal,Marc Bartra,Real Betis,Estadio Ciudad de Valencia
+2026-08-29-levante-v-real-betis,45,goal,Enzo Bardeli,Levante,Estadio Ciudad de Valencia
+2026-08-29-levante-v-real-betis,45,goal,Rodrigo Riquelme,Real Betis,Estadio Ciudad de Valencia
+2026-08-29-levante-v-real-betis,46,sub_off,Nacho Pérez,Levante,Estadio Ciudad de Valencia
+2026-08-29-levante-v-real-betis,46,sub_on,Jeremy Toljan,Levante,Estadio Ciudad de Valencia
+2026-08-29-levante-v-real-betis,56,goal,Roger Brugué,Levante,Estadio Ciudad de Valencia
+2026-08-29-levante-v-real-betis,57,sub_off,Isco,Real Betis,Estadio Ciudad de Valencia
+2026-08-29-levante-v-real-betis,57,sub_off,Troy Parrott,Real Betis,Estadio Ciudad de Valencia
+2026-08-29-levante-v-real-betis,57,sub_on,Pablo Fornals,Real Betis,Estadio Ciudad de Valencia
+2026-08-29-levante-v-real-betis,57,sub_on,Juan Hernández,Real Betis,Estadio Ciudad de Valencia
+2026-08-29-levante-v-real-betis,65,sub_off,Enzo Bardeli,Levante,Estadio Ciudad de Valencia
+2026-08-29-levante-v-real-betis,65,sub_on,Hugo Sotelo,Levante,Estadio Ciudad de Valencia
+2026-08-29-levante-v-real-betis,67,sub_off,Marc Roca,Real Betis,Estadio Ciudad de Valencia
+2026-08-29-levante-v-real-betis,67,sub_off,Rodrigo Riquelme,Real Betis,Estadio Ciudad de Valencia
+2026-08-29-levante-v-real-betis,67,sub_on,Pablo García,Real Betis,Estadio Ciudad de Valencia
+2026-08-29-levante-v-real-betis,67,sub_on,Nelson Deossa,Real Betis,Estadio Ciudad de Valencia
+2026-08-29-levante-v-real-betis,69,yellow,Pablo García,Real Betis,Estadio Ciudad de Valencia
+2026-08-29-levante-v-real-betis,70,goal,Roger Brugué,Levante,Estadio Ciudad de Valencia
+2026-08-29-levante-v-real-betis,72,sub_off,Thiago Fernández,Levante,Estadio Ciudad de Valencia
+2026-08-29-levante-v-real-betis,72,sub_off,Iván Romero,Levante,Estadio Ciudad de Valencia
+2026-08-29-levante-v-real-betis,72,sub_on,Etta Eyong,Levante,Estadio Ciudad de Valencia
+2026-08-29-levante-v-real-betis,72,sub_on,Víctor García,Levante,Estadio Ciudad de Valencia
+2026-08-29-levante-v-real-betis,74,sub_off,Facundo Bernal,Real Betis,Estadio Ciudad de Valencia
+2026-08-29-levante-v-real-betis,74,sub_on,Abdessamad Ezzalzouli,Real Betis,Estadio Ciudad de Valencia
+2026-08-29-levante-v-real-betis,84,sub_off,Roger Brugué,Levante,Estadio Ciudad de Valencia
+2026-08-29-levante-v-real-betis,84,sub_on,Paco Cortés,Levante,Estadio Ciudad de Valencia
+2026-08-29-levante-v-real-betis,86,yellow,Jeremy Toljan,Levante,Estadio Ciudad de Valencia
+2026-08-29-levante-v-real-betis,90,goal,Jon Olasagasti,Levante,Estadio Ciudad de Valencia
 2026-08-29-leyton-orient-v-barnsley,15,goal,Makenzie Kirk,Barnsley,BetWright Stadium
 2026-08-29-leyton-orient-v-barnsley,28,yellow,Jonathan Bland,Barnsley,BetWright Stadium
 2026-08-29-leyton-orient-v-barnsley,29,yellow,Isaac Hayden,Leyton Orient,BetWright Stadium
@@ -2629,6 +3010,31 @@ match_id,minute,type,player,team,venue
 2026-08-29-montrose-v-queen-of-the-south,90,yellow,Zander MacKenzie,Queen of the South,Links Park
 2026-08-29-montrose-v-queen-of-the-south,90,yellow,Flynn Duffy,Montrose,Links Park
 2026-08-29-monza-v-udinese,32,goal,Jakub Piotrowski,Udinese,U-Power Stadium
+2026-08-29-monza-v-udinese,37,goal,Andrea Colpani,Monza,U-Power Stadium
+2026-08-29-monza-v-udinese,45,goal,Hassane Kamara,Udinese,U-Power Stadium
+2026-08-29-monza-v-udinese,45,goal,Jurgen Ekkelenkamp,Udinese,U-Power Stadium
+2026-08-29-monza-v-udinese,46,yellow,Lorenzo Lucchesi,Monza,U-Power Stadium
+2026-08-29-monza-v-udinese,54,sub_off,Foe Ondoa,Monza,U-Power Stadium
+2026-08-29-monza-v-udinese,54,sub_off,Mathis Mout,Monza,U-Power Stadium
+2026-08-29-monza-v-udinese,54,sub_on,Michael Folorunsho,Monza,U-Power Stadium
+2026-08-29-monza-v-udinese,54,sub_on,Ebenezer Akinsanmiro,Monza,U-Power Stadium
+2026-08-29-monza-v-udinese,60,sub_off,Jakub Piotrowski,Udinese,U-Power Stadium
+2026-08-29-monza-v-udinese,60,sub_on,Lennon Miller,Udinese,U-Power Stadium
+2026-08-29-monza-v-udinese,61,sub_off,Unai Gómez,Udinese,U-Power Stadium
+2026-08-29-monza-v-udinese,61,sub_off,Lorenzo Lucchesi,Monza,U-Power Stadium
+2026-08-29-monza-v-udinese,61,sub_on,Oier Zarraga,Udinese,U-Power Stadium
+2026-08-29-monza-v-udinese,61,sub_on,Filippo Delli Carri,Monza,U-Power Stadium
+2026-08-29-monza-v-udinese,63,goal,Gustavo Varela,Monza,U-Power Stadium
+2026-08-29-monza-v-udinese,68,sub_off,Keinan Davis,Udinese,U-Power Stadium
+2026-08-29-monza-v-udinese,68,sub_off,Enzo Ebosse,Udinese,U-Power Stadium
+2026-08-29-monza-v-udinese,68,sub_on,Idrissa Gueye,Udinese,U-Power Stadium
+2026-08-29-monza-v-udinese,68,sub_on,Nicolò Bertola,Udinese,U-Power Stadium
+2026-08-29-monza-v-udinese,84,sub_off,Samuele Birindelli,Monza,U-Power Stadium
+2026-08-29-monza-v-udinese,84,sub_off,Andrea Colpani,Monza,U-Power Stadium
+2026-08-29-monza-v-udinese,84,sub_on,Omari Forson,Monza,U-Power Stadium
+2026-08-29-monza-v-udinese,84,sub_on,Dany Mota,Monza,U-Power Stadium
+2026-08-29-monza-v-udinese,85,sub_off,Mërgim Vojvoda,Udinese,U-Power Stadium
+2026-08-29-monza-v-udinese,85,sub_on,Juan Arizala,Udinese,U-Power Stadium
 2026-08-29-newport-county-v-tranmere-rovers,11,goal,Shaquille Gwengwe,Newport County,Rodney Parade
 2026-08-29-newport-county-v-tranmere-rovers,15,yellow,Jacob Slater,Tranmere Rovers,Rodney Parade
 2026-08-29-newport-county-v-tranmere-rovers,43,yellow,Christian Doidge,Newport County,Rodney Parade

@@ -1034,6 +1034,8 @@ def parse_team_matches(data):
             return
         home, away = m.get("home"), m.get("away")
         st = m.get("status") or {}
+        if not isinstance(st, dict):
+            st = {}
         utc = st.get("utcTime") or m.get("utcTime")
         if not (isinstance(home, dict) and isinstance(away, dict) and utc):
             return

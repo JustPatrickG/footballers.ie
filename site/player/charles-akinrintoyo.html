@@ -1,24 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="pitch">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Charles Akinrintoyo — FOOTBALLERS</title>
-<meta name="description" content="Charles Akinrintoyo (UCD, League of Ireland) — season stats, fixtures, results and international record.">
+<title>Charles Akinrintoyo — footballers.ie</title>
+<meta name="description" content="Charles Akinrintoyo (UCD, First Division) — season stats, fixtures, results and international record.">
 <link rel="canonical" href="https://footballers.ie/player/charles-akinrintoyo.html">
 <meta name="theme-color" content="#0C0F10">
 <meta property="og:site_name" content="Footballers">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Charles Akinrintoyo — FOOTBALLERS">
-<meta property="og:description" content="Charles Akinrintoyo (UCD, League of Ireland) — season stats, fixtures, results and international record.">
+<meta property="og:title" content="Charles Akinrintoyo — footballers.ie">
+<meta property="og:description" content="Charles Akinrintoyo (UCD, First Division) — season stats, fixtures, results and international record.">
 <meta property="og:url" content="https://footballers.ie/player/charles-akinrintoyo.html">
-<meta property="og:image" content="https://footballers.ie/og-image.png">
+<meta property="og:image" content="https://footballers.ie/api/og?t=player&amp;n=Charles+Akinrintoyo&amp;c=UCD&amp;l=First+Division&amp;x=FWD+%C2%B7+18&amp;cb=1578&amp;f=Season+2026%2F27">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Charles Akinrintoyo — FOOTBALLERS">
-<meta name="twitter:description" content="Charles Akinrintoyo (UCD, League of Ireland) — season stats, fixtures, results and international record.">
-<meta name="twitter:image" content="https://footballers.ie/og-image.png">
+<meta name="twitter:title" content="Charles Akinrintoyo — footballers.ie">
+<meta name="twitter:description" content="Charles Akinrintoyo (UCD, First Division) — season stats, fixtures, results and international record.">
+<meta name="twitter:image" content="https://footballers.ie/api/og?t=player&amp;n=Charles+Akinrintoyo&amp;c=UCD&amp;l=First+Division&amp;x=FWD+%C2%B7+18&amp;cb=1578&amp;f=Season+2026%2F27">
 <link rel="icon" href="../favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="../apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -43,6 +43,16 @@ nav{display:flex;justify-content:space-between;align-items:center;padding:18px 0
 .navlinks a.on{color:var(--yellow);border-color:var(--yellow)}
 .navmeta{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.1em;color:var(--mute)}
 .navmeta b{color:var(--teal);font-weight:500}
+/* search lives behind one icon in the nav, desktop and phone alike */
+.searchbtn{width:36px;height:36px;border:1px solid var(--line);border-radius:8px;
+  display:flex;align-items:center;justify-content:center;
+  color:var(--mute);flex:none;transition:color .12s,border-color .12s}
+.searchbtn:hover{color:var(--white);border-color:var(--mute)}
+/* DOM puts the buttons next to the logo for the phone layout; on desktop the
+   flex order tucks the icon in beside the meta text instead */
+.mark{order:1}.navlinks{order:2}.navmeta{order:3}.searchbtn{order:4}.burger{order:5}
+/* the menu footer only exists inside the phone drawer */
+.navfoot{display:none}
 .sec{margin:36px 0 14px;display:flex;justify-content:space-between;align-items:baseline;gap:10px;flex-wrap:wrap}
 .sec h2{font-size:13px;font-family:'IBM Plex Mono',monospace;letter-spacing:.18em;text-transform:uppercase;color:var(--yellow)}
 .sec .more{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--mute);border-bottom:1px solid var(--line);padding-bottom:2px}
@@ -68,9 +78,9 @@ nav{display:flex;justify-content:space-between;align-items:center;padding:18px 0
 .slide .tag{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--teal);margin-bottom:10px}
 .slide h3{font-size:clamp(20px,3vw,28px);font-weight:700;letter-spacing:-.01em;max-width:34ch;line-height:1.15}
 .slide p{color:var(--mute);margin-top:8px;font-size:14px;max-width:50ch}
-.dots{position:absolute;bottom:14px;right:18px;display:flex;gap:6px;z-index:2}
-.dots button{width:20px;height:3px;border-radius:2px;background:var(--line);padding:0;transition:background .2s,width .2s}
-.dots button[aria-current="true"]{background:var(--yellow);width:26px}
+.dots{position:absolute;bottom:14px;right:18px;display:flex;gap:8px;z-index:2}
+.dots button{width:26px;height:4px;border-radius:3px;background:var(--line);padding:0;cursor:pointer;transition:background .2s,width .2s}
+.dots button[aria-current="true"]{background:var(--yellow);width:34px}
 @media(max-width:700px){
   .slide{padding:20px 18px 42px;min-height:0}
   .slide h3{font-size:20px;line-height:1.2}
@@ -160,6 +170,10 @@ a.fxrow.lnk:hover{background:var(--panel2)}
 .trow:last-child{border-bottom:0}
 .ty{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--mute)}
 .tfee{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--teal)}
+.trow.loan .tfee{color:var(--mute)}
+.trow .ty{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--mute)}
+/* the club a player was at for a given match, when it isn't their club now */
+.atclub{display:block;font-size:11px;color:var(--mute);margin-top:2px}
 .msgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:6px;overflow:hidden}
 .mscard{background:var(--panel);padding:15px;display:block;transition:background .12s}
 .mscard:hover{background:var(--panel2)}
@@ -181,7 +195,7 @@ a.fxrow.lnk:hover{background:var(--panel2)}
 footer{margin-top:60px;border-top:1px solid var(--line);padding:20px 0 44px;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--mute);line-height:2}
 
 /* ============ RESPONSIVE ============ */
-html{-webkit-text-size-adjust:100%}
+html,body{-webkit-text-size-adjust:100%;text-size-adjust:100%}
 body{overflow-x:hidden}
 img,svg,iframe{max-width:100%}
 .burger{display:none;width:44px;height:44px;border:1px solid var(--line);border-radius:6px;padding:0;position:relative;flex:none}
@@ -210,23 +224,31 @@ img,svg,iframe{max-width:100%}
   .wrap{padding:0 14px}
 
   /* nav becomes a drawer */
-  nav{padding:14px 0;flex-wrap:nowrap;gap:10px}
+  nav{padding:14px 0;flex-wrap:nowrap;gap:10px;position:relative}
   .mark{font-size:17px;flex:1}
   .burger{display:block}
   .navmeta{display:none}
   .navlinks{
-    display:none;position:absolute;left:0;right:0;top:100%;z-index:60;
-    flex-direction:column;gap:0;background:var(--panel);
-    border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+    display:none;position:absolute;left:0;right:0;top:calc(100% + 8px);z-index:60;
+    flex-direction:column;gap:2px;background:var(--panel);
+    border:1px solid var(--line);border-radius:14px;padding:8px;
+    box-shadow:0 24px 60px rgba(0,0,0,.45);
   }
-  nav{position:relative}
-  .navlinks.open{display:flex}
+  .navlinks.open{display:flex;animation:menuin .16s ease}
+  @keyframes menuin{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
   .navlinks a{
-    padding:15px 16px;border-bottom:1px solid var(--line);border-left:2px solid transparent;
-    font-size:12px;letter-spacing:.12em;
+    display:flex;justify-content:space-between;align-items:center;
+    padding:14px;border-radius:9px;border-bottom:0;
+    font-size:12px;letter-spacing:.14em;
   }
-  .navlinks a:last-child{border-bottom:0}
-  .navlinks a.on{border-left-color:var(--yellow);border-bottom-color:var(--line);background:var(--panel2)}
+  .navlinks a::after{content:'\2192';font-family:'IBM Plex Mono',monospace;color:var(--mute)}
+  .navlinks a:active{background:var(--panel2)}
+  .navlinks a.on{background:var(--panel2);color:var(--yellow);border:0}
+  .navlinks a.on::after{content:'\25CF';color:var(--yellow);font-size:8px}
+  .navfoot{display:block;margin-top:6px;padding:12px 14px 6px;border-top:1px solid var(--line);
+    font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.12em;
+    text-transform:uppercase;color:var(--mute)}
+  .navfoot b{color:var(--teal);font-weight:500}
 
   /* headings */
   .pagehead{padding:24px 0 4px}
@@ -402,8 +424,11 @@ img,svg,iframe{max-width:100%}
 .alertwho{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--mute);margin-bottom:12px}
 .alertwho b{color:var(--yellow)}
 @media(max-width:700px){
+  /* keep the rating visible on phones — it's the whole point of the row.
+     the goals/assists icons are the ones that can go. */
   .plrow{grid-template-columns:34px 1fr auto auto}
-  .plrow .mn{display:none}
+  .plrow .ev{display:none}
+  .plrow .mn{display:block;min-width:auto}
   .pdactions{flex-direction:row;align-items:center}
 }
 
@@ -475,8 +500,12 @@ img,svg,iframe{max-width:100%}
 
 /* ============ MATCH PAGE ============ */
 .matchhead{border:1px solid var(--line);border-radius:10px;background:var(--panel);padding:16px;margin-top:14px}
-.mteams{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:14px;margin-top:14px}
-.mteam{font-size:clamp(16px,3vw,22px);font-weight:700}
+/* 1fr means minmax(auto,1fr), and the auto floor will not shrink below the
+   longest word - so "Middlesbrough" plus a 34px badge pushed the column
+   into the score and the two drew on top of each other. */
+.mteams{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);align-items:center;gap:14px;margin-top:14px}
+.mteam{font-size:clamp(16px,3vw,22px);font-weight:700;min-width:0;overflow-wrap:anywhere}
+@media(max-width:560px){.mteams{gap:8px}.badge.md{margin:0 6px}}
 .mteam.right{text-align:right}
 .mscore{font-family:'IBM Plex Mono',monospace;font-size:clamp(26px,6vw,38px);font-weight:600;white-space:nowrap}
 .mscore span{color:var(--mute);margin:0 8px;font-size:.6em}
@@ -551,6 +580,38 @@ img,svg,iframe{max-width:100%}
 .arthero img{width:100%;display:block}
 .artcontent{margin-top:20px}
 .artcontent p{font-size:17px;line-height:1.68;margin-bottom:19px;color:#DCE3E0}
+/* ---- article furniture: headings, pictures, quotes ---------------------- */
+.artcontent h2{font-size:clamp(20px,2.6vw,25px);font-weight:700;letter-spacing:-.01em;
+  margin:34px 0 12px;line-height:1.25}
+.artcontent h3{font-size:clamp(17px,2.1vw,20px);font-weight:600;letter-spacing:-.005em;
+  margin:28px 0 10px;line-height:1.3;color:#EDF2EF}
+.artcontent h2:first-child,.artcontent h3:first-child{margin-top:0}
+.artcontent a{color:var(--teal);border-bottom:1px solid rgba(0,179,107,.35)}
+.artcontent a:hover{border-bottom-color:var(--teal)}
+.artfig{margin:26px 0}
+.artfig img{width:100%;display:block;border-radius:10px;border:1px solid var(--line)}
+.artfig figcaption{margin-top:9px;font-size:13.5px;line-height:1.45;color:var(--mute)}
+.artcontent ul{margin:0 0 19px 0;padding-left:22px}
+.artcontent li{font-size:17px;line-height:1.68;margin-bottom:8px;color:#DCE3E0}
+.artcontent li::marker{color:var(--teal)}
+.artcontent blockquote{margin:26px 0;padding:2px 0 2px 20px;border-left:3px solid var(--teal);
+  font-size:clamp(18px,2.4vw,21px);line-height:1.45;font-weight:600;color:#EFF3F1}
+.artrule{border:0;border-top:1px solid var(--line);margin:30px 0}
+[data-theme="pitch"] .artfig img{border-radius:16px}
+@media(max-width:700px){
+  /* one milestone at a time, swipe sideways for the rest */
+  .msgrid{display:flex;grid-template-columns:none;overflow-x:auto;gap:1px;
+    scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+  .msgrid::-webkit-scrollbar{display:none}
+  .msgrid .mscard{flex:0 0 100%;scroll-snap-align:start;scroll-snap-stop:always}
+  /* the three biggest countries, and nothing else */
+  .exgrid .exc{display:none}
+  .exgrid .exc.top3{display:flex}
+  #exmore{display:none}
+  .artfig{margin:20px 0}
+  .artfig figcaption{font-size:12.5px}
+  .artcontent blockquote{padding-left:14px;margin:20px 0}
+}
 @media(max-width:700px){
   .leadbody{padding:15px 16px 17px}
   .artgrid{grid-template-columns:1fr}
@@ -699,18 +760,769 @@ a.intlblock.lnk:hover{border-color:var(--teal)}
 .repmiss:hover{border-color:var(--yellow)}
 @media(max-width:700px){ .repbtn{right:10px;bottom:10px;padding:8px 12px 8px 9px;font-size:10px} }
 .more.stale{color:var(--yellow);letter-spacing:.06em}
-</style>
+.card{display:inline-block;min-width:26px;padding:4px 8px;border-radius:4px;
+  font-family:'IBM Plex Mono',monospace;font-weight:600;font-size:17px;line-height:1.1;text-align:center}
+.card.yel{background:#F5C518;color:#0C0F10}
+.card.red{background:#E03A2B;color:#fff}
+
+/* footer */
+.foothead{display:flex;flex-wrap:wrap;gap:10px;align-items:baseline;margin-bottom:6px}
+.updated{color:var(--teal);letter-spacing:.06em}
+.footlinks{display:flex;flex-wrap:wrap;gap:16px;margin-top:12px;padding-top:12px;border-top:1px solid var(--line)}
+.footlinks a{color:var(--mute);text-decoration:underline;text-underline-offset:3px}
+.footlinks a:hover{color:var(--white)}
+
+/* ============ FAQ ============ */
+.faq{border:1px solid var(--line);border-radius:10px;background:var(--panel);margin-bottom:9px;overflow:hidden}
+.faq summary{cursor:pointer;padding:15px 17px;font-size:15.5px;font-weight:600;list-style:none;
+  display:flex;justify-content:space-between;gap:14px;align-items:center}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary:after{content:"+";color:var(--yellow);font-family:'IBM Plex Mono',monospace;font-size:18px;flex:none}
+.faq[open] summary:after{content:"–"}
+.faq[open] summary{border-bottom:1px solid var(--line)}
+.faq p{padding:15px 17px;color:var(--mute);font-size:14.5px;line-height:1.65}
+/* ---- search ---- */
+.sinput{width:100%;max-width:640px;font-size:18px;padding:14px 18px;margin:6px 0 22px;
+  background:var(--panel);border:1px solid var(--line);border-radius:12px;color:var(--white);
+  font-family:inherit}
+.sinput:focus{outline:none;border-color:#00B36B}
+.sgroup{margin-bottom:26px;max-width:640px}
+.sgroup h3{font-size:12px;font-family:'IBM Plex Mono',monospace;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--mute);margin-bottom:8px}
+.srow{display:flex;justify-content:space-between;align-items:baseline;gap:14px;
+  padding:11px 14px;background:var(--panel);border:1px solid var(--line);border-bottom:0;
+  transition:background .1s}
+.srow:first-of-type{border-radius:10px 10px 0 0}
+.srow:last-of-type{border-bottom:1px solid var(--line);border-radius:0 0 10px 10px}
+.srow:first-of-type:last-of-type{border-radius:10px}
+.srow:hover{background:var(--panel2)}
+.srow b{font-weight:600;font-size:15px}
+.srow span{color:var(--mute);font-size:12.5px;text-align:right;flex-shrink:0}
+.shint{color:var(--mute);font-size:14px;max-width:56ch;line-height:1.5}
+
+.faqfoot{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--mute);
+  margin-top:20px;padding-top:16px;border-top:1px solid var(--line)}
+.faqfoot b{color:var(--yellow)}
+
+/* ============ MAP ============ */
+#mapwrap{position:relative;border:1px solid var(--line);border-radius:12px;overflow:hidden;margin-bottom:14px}
+#themap{height:min(62vh,520px);width:100%;background:#0F1416}
+#resetmap{position:absolute;right:10px;top:10px;z-index:500;background:var(--panel);color:var(--white);
+  border:1px solid var(--line);border-radius:7px;padding:7px 12px;font-family:'IBM Plex Mono',monospace;
+  font-size:11px;letter-spacing:.08em;cursor:pointer}
+#resetmap:hover{border-color:var(--yellow);color:var(--yellow)}
+.mapfail{padding:26px;text-align:center;color:var(--mute);font-size:14px}
+.leaflet-container{background:#0F1416}
+.leaflet-tooltip{background:var(--panel);border:1px solid var(--line);color:var(--white);
+  font-family:'IBM Plex Mono',monospace;font-size:11px;box-shadow:none}
+.leaflet-tooltip:before{display:none}
+.clegend{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:18px}
+.cbtn{display:flex;align-items:center;gap:8px;background:var(--panel);border:1px solid var(--line);
+  border-radius:20px;padding:7px 13px;cursor:pointer;color:var(--white)}
+.cbtn:hover{border-color:var(--yellow)}
+.cn{font-size:13px}
+.cnum{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--yellow)}
+.cgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:8px}
+.crow{display:flex;justify-content:space-between;align-items:center;gap:10px;background:var(--panel);
+  border:1px solid var(--line);border-radius:8px;padding:11px 13px;font-size:14px}
+.crow:hover{border-color:var(--teal)}
+.crow b{font-family:'IBM Plex Mono',monospace;color:var(--yellow);font-size:12px}
+.cmore{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--mute);margin-top:10px}
+.mapcta{display:flex;justify-content:space-between;align-items:center;gap:14px;
+  border:1px solid rgba(245,197,24,.35);border-radius:12px;padding:15px 17px;margin-bottom:16px;
+  background:linear-gradient(135deg,rgba(245,197,24,.09),rgba(21,26,27,.6))}
+.mapcta b{display:block;font-size:16px}
+.mapcta span{display:block;font-size:13px;color:var(--mute);margin-top:3px}
+.mapcta .go{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--yellow);letter-spacing:.08em}
+@media(max-width:700px){ #themap{height:56vh} .cgrid{grid-template-columns:1fr} }
+
+
+/* iOS Safari inflates text per block based on content length, which made the
+   two news headlines render at different sizes. Pin them. */
+.slide h3, .slide p, .slide .tag,
+.leadbody h3, .artbody h4{
+  -webkit-text-size-adjust:100%;
+  text-size-adjust:100%;
+  max-height:none;
+}
+.slide h3{font-size:20px;line-height:1.2;text-wrap:balance}
+@media(min-width:701px){ .slide h3{font-size:26px;line-height:1.15} }
+.slide{min-height:172px}
+@media(max-width:700px){ .slide{min-height:150px} }
+
+
+/* bigger, easier carousel controls on desktop */
+@media(min-width:701px){
+  .dots{bottom:18px;right:22px;gap:10px}
+  .dots button{width:44px;height:6px;border-radius:4px;position:relative}
+  /* invisible padding so the whole area is clickable, not just the 6px bar */
+  .dots button:before{content:"";position:absolute;inset:-12px -4px}
+  .dots button:hover{background:var(--mute)}
+  .dots button[aria-current="true"]{width:56px}
+  .dots button[aria-current="true"]:hover{background:var(--yellow)}
+}
+
+/* fixture rows that read as sentences */
+.fxrow.when{grid-template-columns:1fr auto;gap:12px}
+.fxwhen b{font-size:15px;font-weight:600}
+.fxwhen .wsub{display:block;font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--yellow);margin-top:3px;letter-spacing:.06em}
+#myplayers .plrow .cl{display:block;margin-top:3px;font-size:12px}
+
+.nodata{border:1px solid var(--line);border-radius:10px;background:var(--panel);padding:16px 18px;
+  color:var(--mute);font-size:14px;line-height:1.6}
+.nlok{color:var(--teal);font-family:'IBM Plex Mono',monospace;font-size:13px;padding:12px 0;letter-spacing:.04em}
+
+/* ============ PLAYER BIO / CONTRACT ============ */
+.pdfull{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--mute);margin-top:5px;letter-spacing:.03em}
+.biogrid{border:1px solid var(--line);border-radius:12px;background:var(--panel);overflow:hidden}
+.biorow{display:grid;grid-template-columns:150px 1fr;gap:14px;padding:12px 16px;
+  border-bottom:1px solid #1B2122;font-size:14px;align-items:baseline}
+.biorow:last-child{border-bottom:0}
+.biol{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--mute);
+  letter-spacing:.08em;text-transform:uppercase}
+.biov{color:var(--white)}
+.nat{display:inline-block;background:var(--panel2);border:1px solid var(--line);
+  border-radius:20px;padding:3px 10px;font-size:12.5px;margin:0 5px 4px 0}
+.cexp{display:inline-block;font-family:'IBM Plex Mono',monospace;font-size:10.5px;
+  padding:2px 7px;border-radius:4px;margin-left:7px;letter-spacing:.05em}
+.cexp.soon{background:rgba(245,197,24,.16);color:var(--yellow)}
+.cexp.out{background:rgba(224,58,43,.18);color:#FF6B5E}
+.copt{display:block;font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--mute);margin-top:4px}
+@media(max-width:700px){
+  .biorow{grid-template-columns:1fr;gap:4px;padding:12px 14px}
+}
+
+/* ================================================================
+   THEME: PITCH — the second look. Near-black, one green, roomier
+   cards, sentence-case headings. Toggle in the nav; saved locally.
+   ================================================================ */
+[data-theme="pitch"]{
+  --bg:#0D0D0D; --panel:#191919; --panel2:#222222; --line:#2B2B2B;
+  --white:#F5F5F5; --mute:#8F8F8F; --yellow:#00B36B; --teal:#00B36B; --red:#FF5470;
+}
+[data-theme="pitch"] body,
+[data-theme="pitch"] button,
+[data-theme="pitch"] input,
+[data-theme="pitch"] select,
+[data-theme="pitch"] textarea{
+  font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
+}
+/* headings drop the mono/uppercase voice for a sentence-case one */
+[data-theme="pitch"] .sec h2{
+  font-family:inherit;text-transform:none;letter-spacing:-.01em;
+  font-size:16px;font-weight:700;color:var(--white);
+}
+[data-theme="pitch"] .navlinks{font-family:inherit;text-transform:none;letter-spacing:0;font-size:13px}
+[data-theme="pitch"] .navmeta,[data-theme="pitch"] .sec .more,
+[data-theme="pitch"] .updated,[data-theme="pitch"] .footlinks a{letter-spacing:.02em}
+/* roomier cards */
+[data-theme="pitch"] .slide,[data-theme="pitch"] .mccard,[data-theme="pitch"] .pdstats,
+[data-theme="pitch"] .biogrid,[data-theme="pitch"] .faq,[data-theme="pitch"] .nodata,
+[data-theme="pitch"] .clubcard,[data-theme="pitch"] .gicard,[data-theme="pitch"] .intlblock,
+[data-theme="pitch"] .mapcta,[data-theme="pitch"] .crow{border-radius:16px}
+[data-theme="pitch"] .slide{background:linear-gradient(165deg,#1E1E1E,#111)}
+[data-theme="pitch"] .chip{border-radius:8px}
+[data-theme="pitch"] .cbtn{border-radius:10px}
+/* ratings become solid blocks, the FotMob tell */
+[data-theme="pitch"] .rate{border-radius:6px;font-weight:700}
+[data-theme="pitch"] .rate.hi{background:#00B36B;color:#04140C}
+[data-theme="pitch"] .rate.md{background:#E8A400;color:#191100}
+[data-theme="pitch"] .rate.lo{background:#3A3A3A;color:#CFCFCF}
+[data-theme="pitch"] .rate.none{background:transparent;color:var(--mute)}
+[data-theme="pitch"] .card.yel{background:#E8A400;color:#191100}
+[data-theme="pitch"] .card.red{background:#FF5470;color:#1C0308}
+/* the follow star and dots pick up the green */
+[data-theme="pitch"] .dots button[aria-current="true"]{background:#00B36B}
+[data-theme="pitch"] .navlinks a.on{color:#00B36B;border-color:#00B36B}
+[data-theme="pitch"] .mark i{color:#00B36B}
+[data-theme="pitch"] :focus-visible{outline-color:#00B36B}
+/* buttons and pills */
+[data-theme="pitch"] .starbtn,[data-theme="pitch"] .tag2,
+[data-theme="pitch"] .cexp.soon{border-radius:10px}
+[data-theme="pitch"] .cexp.soon{background:rgba(0,179,107,.15);color:#2BD68F}
+/* the loading ball keeps its yellow — it's the one deliberate exception */
+
+/* theme toggle button */
+.themetog{display:inline-flex;align-items:center;gap:7px;border:1px solid var(--line);
+  border-radius:20px;padding:6px 12px;font-family:'IBM Plex Mono',monospace;font-size:10.5px;
+  letter-spacing:.08em;color:var(--mute);text-transform:uppercase}
+.themetog:hover{color:var(--white);border-color:var(--mute)}
+.themetog .sw2{width:22px;height:12px;border-radius:7px;background:var(--line);position:relative;flex:none}
+.themetog .sw2:after{content:"";position:absolute;top:2px;left:2px;width:8px;height:8px;border-radius:50%;
+  background:var(--mute);transition:left .18s}
+[data-theme="pitch"] .themetog .sw2:after{left:12px;background:#00B36B}
+[data-theme="pitch"] .themetog{font-family:inherit;text-transform:none;letter-spacing:0;font-size:12px}
+[data-theme="pitch"] .starbtn{box-shadow:0 0 0 6px rgba(0,179,107,.08);border-color:rgba(0,179,107,.4)}
+[data-theme="pitch"] .starbtn.on,[data-theme="pitch"] .star.on{color:#00B36B}
+[data-theme="pitch"] .followtip .ficon{background:rgba(0,179,107,.15);color:#00B36B}
+
+/* happening-now slide */
+.slide.now{border-color:rgba(255,90,72,.5);background:linear-gradient(160deg,#241517,var(--bg))}
+.slide.now .tag{color:var(--red);display:flex;align-items:center;gap:7px}
+.nowdot{width:8px;height:8px;border-radius:50%;background:var(--red);animation:nowpulse 1.3s infinite}
+@keyframes nowpulse{50%{box-shadow:0 0 0 6px rgba(255,90,72,.18)}}
+[data-theme="pitch"] .slide.now{border-color:rgba(255,84,112,.5);background:linear-gradient(160deg,#241417,#111)}
+
+/* fixtures page */
+.fxcards{display:grid;gap:10px;padding-top:10px}
+@media(min-width:760px){.fxcards{grid-template-columns:1fr 1fr}}
+.fxday.past .mccard{opacity:.78}
+.fxday.past .mccard:hover{opacity:1}
+
+/* fixtures — FotMob-style day strip */
+.fxbar{position:sticky;top:0;z-index:5;background:var(--bg);padding:8px 0 6px;margin-bottom:10px;border-bottom:1px solid var(--line)}
+.fxdays{display:flex;gap:4px;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch;padding-bottom:6px}
+.fxdays::-webkit-scrollbar{display:none}
+.fxdays button{flex:0 0 auto;background:none;border:0;color:var(--mute);font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:15px;padding:8px 12px;border-radius:8px;cursor:pointer;white-space:nowrap}
+.fxdays button.on{color:var(--white);background:var(--panel)}
+.fxdays button.has::after{content:"";display:inline-block;width:5px;height:5px;border-radius:50%;background:var(--teal);margin-left:6px;vertical-align:middle}
+.fxfilt{display:flex;gap:6px;margin-top:4px}
+.fxfilt button{background:var(--panel);border:1px solid var(--line);color:var(--mute);font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.06em;text-transform:uppercase;padding:6px 11px;border-radius:20px;cursor:pointer}
+.fxfilt button.on{color:var(--bg);background:var(--teal);border-color:var(--teal)}
+.fxcomp{border:1px solid var(--line);border-radius:12px;background:var(--panel);overflow:hidden;margin-bottom:12px}
+.fxcomp h4{margin:0;padding:12px 16px;font-size:14px;font-weight:700;color:var(--white);background:var(--panel2);border-bottom:1px solid var(--line);display:flex;justify-content:space-between}
+.fxcomp h4 small{font-family:'IBM Plex Mono',monospace;font-size:10px;color:var(--mute);letter-spacing:.08em;font-weight:400}
+.fxmatch{display:block;padding:12px 16px;border-bottom:1px solid #1B2122;cursor:pointer;transition:background .12s}
+.fxmatch:last-child{border-bottom:0}
+.fxmatch:hover{background:var(--bg)}
+.fxmatch .fxt{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:12px;font-size:15px}
+.fxmatch .fxt .h{text-align:right}
+.fxmatch .fxt .a{text-align:left}
+.fxmatch .fxt .mid{font-family:'IBM Plex Mono',monospace;font-size:13px;color:var(--mute);min-width:52px;text-align:center}
+.fxmatch .fxt .mid.sc{color:var(--white);font-weight:700;font-size:16px}
+.fxmatch .fxt .mid.lv{color:var(--red)}
+.fxmatch .fxp{display:flex;align-items:center;gap:6px;flex-wrap:wrap;margin-top:8px}
+/* League of Ireland games carry no marker of their own for now — the
+   competition label already names them, and a league badge is coming here
+   once the scraper has the league ids. */
+
+/* ---- lineups ------------------------------------------------------------
+   Two halves of a pitch, away at the top, home at the bottom. Rows come from
+   the formation string, so a 4-2-3-1 draws as four lines. Tracked players get
+   a face and a green ring; everyone else is a shirt number. */
+.lucard{border:1px solid var(--line);border-radius:8px;background:var(--panel);overflow:hidden}
+.luteam{display:flex;align-items:center;gap:8px;padding:10px 14px;background:var(--panel2);
+  border-bottom:1px solid var(--line);flex-wrap:wrap}
+.luteam:last-child{border-bottom:0;border-top:1px solid var(--line)}
+.luteam b{font-size:14px;font-weight:600}
+.luform{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--mute);letter-spacing:.08em}
+.lustat{margin-left:auto;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--mute);border:1px solid var(--line);border-radius:20px;padding:2px 9px}
+.lustat.confirmed{color:#00B36B;border-color:#1d4f39}
+.pitch{
+  background:
+    linear-gradient(to bottom,transparent calc(50% - 1px),#ffffff14 50%,transparent calc(50% + 1px)),
+    radial-gradient(circle at 50% 50%,transparent 52px,#ffffff14 52px,#ffffff14 53px,transparent 53px),
+    repeating-linear-gradient(to bottom,#12331f 0 46px,#0f2c1b 46px 92px);
+  padding:14px 8px;display:flex;flex-direction:column;gap:2px;
+}
+.luhalf{display:flex;flex-direction:column;gap:10px;padding:8px 0;flex:1}
+.lurow{display:flex;justify-content:space-evenly;align-items:flex-start;gap:4px}
+.lup{display:flex;flex-direction:column;align-items:center;gap:3px;width:72px;min-width:0;text-align:center}
+.lup .pavatar.sm{width:30px;height:30px;border:2px solid transparent}
+.lup.ir .pavatar.sm{border-color:#00B36B}
+.lunum{width:30px;height:30px;border-radius:50%;background:#0c0c0c;border:2px solid #ffffff2e;
+  display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:600;color:#e8e8e8}
+.lun{font-size:10.5px;line-height:1.15;color:#dfe6e1;text-shadow:0 1px 2px #000;overflow-wrap:break-word}
+.lup.ir .lun{color:#fff;font-weight:600}
+.benchgrid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.benchcol{border:1px solid var(--line);border-radius:8px;background:var(--panel);padding:10px 12px}
+/* news: a heading per day, then that day's articles under it */
+.dayhead{margin-top:34px}
+.dayhead:first-of-type{margin-top:18px}
+.daygroup{display:flex;flex-direction:column;gap:12px}
+.daygroup + .dayhead{margin-top:38px}
+
+/* where the game is */
+.mvenue{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--mute);
+  letter-spacing:.06em;margin-top:6px}
+.fxven{font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:var(--mute);
+  letter-spacing:.05em;margin-top:4px}
+
+/* account page buttons */
+.acctbtns{display:flex;gap:9px;flex-wrap:wrap;margin-top:16px}
+.acctbtn{border:1px solid var(--line);border-radius:9px;padding:11px 16px;font-size:13px;
+  color:var(--white);transition:border-color .12s}
+.acctbtn:hover{border-color:var(--mute)}
+.acctbtn.save{background:var(--yellow);color:#0C0F10;border-color:var(--yellow);font-weight:700}
+.acctbtn.danger{color:var(--red);border-color:rgba(255,90,72,.4)}
+.acctbtn.danger:hover{border-color:var(--red)}
+.acctbtn:disabled{opacity:.6}
+
+/* substitution arrows: red down = went off, green up = came on */
+.son,.soff{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0;white-space:nowrap}
+.son{color:#2BD68F}
+.soff{color:var(--red)}
+.lup .soff{display:block;margin-top:1px;font-size:9px;text-align:center}
+.bp .son,.bp .soff{margin-left:7px}
+.lup[data-mstat],.bp[data-mstat]{cursor:pointer}
+.benchcol h4{font-size:12px;font-weight:600;color:var(--mute);margin-bottom:6px}
+.bp{display:block;padding:4px 0;font-size:13px;color:var(--mute);border-bottom:1px solid #1B2122}
+.bp:last-child{border-bottom:0}
+.bp.ir{color:var(--white);font-weight:600}
+.bn{display:inline-block;min-width:20px;font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--mute)}
+.sqhead{display:flex;align-items:center;gap:8px;padding:8px 2px 6px;font-size:13px}
+.sqhead span{margin-left:auto;font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--mute)}
+.sqhead + .tiergroup{margin-bottom:14px}
+@media(max-width:640px){
+  .lup{width:62px}
+  .lun{font-size:9.5px}
+  .benchgrid{grid-template-columns:1fr}
+}
+[data-theme="pitch"] .lucard,[data-theme="pitch"] .benchcol{border-radius:16px}
+.pile{display:flex;align-items:center}
+.pile .pavatar.sm{width:22px;height:22px;margin-right:-7px;border:2px solid var(--panel);box-sizing:content-box}
+.pile .pavatar.sm span{font-size:8px}
+.pilen{font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:var(--mute);margin-left:12px;letter-spacing:.05em}
+.fxnone{padding:28px 0 8px;text-align:center;color:var(--mute);font-size:14px}
+.fxnext{display:inline-flex;align-items:center;gap:12px;margin:10px auto 0;background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:12px 18px;color:var(--white);font-size:14px;cursor:pointer}
+.fxnext small{display:block;font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--mute);letter-spacing:.06em;text-align:center}
+.fxnext b{font-weight:600}
+@media(max-width:560px){.fxmatch .fxt{font-size:14px}}
+
+/* news */
+.tagbar{display:flex;gap:6px;flex-wrap:wrap;margin:16px 0 18px}
+.tagbar button{background:var(--panel);border:1px solid var(--line);color:var(--mute);font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.06em;text-transform:uppercase;padding:6px 11px;border-radius:20px;cursor:pointer}
+.tagbar button.on{color:var(--bg);background:var(--yellow);border-color:var(--yellow)}
+.artby.lnk:hover{color:var(--white)}
+.writers{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:10px}
+.writer{display:flex;align-items:center;gap:12px;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:12px 14px;transition:border-color .12s}
+.writer:hover{border-color:var(--teal)}
+.writer b{display:block;font-size:14px}
+.writer small{font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:var(--mute);letter-spacing:.06em}
+.writecta{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;margin:30px 0 18px;padding:18px 20px;border:1px dashed var(--line);border-radius:12px}
+.writecta p{color:var(--mute);font-size:14px;margin-top:4px}
+.writecta .btn{background:var(--teal);color:var(--bg);font-weight:700;padding:10px 16px;border-radius:8px;white-space:nowrap}
+.authhead{display:flex;align-items:center;gap:16px}
+.authhead .pavatar.lg{width:56px;height:56px;flex:0 0 auto}
+
+/* ---- news, proper ---- */
+.nwrap{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:28px;align-items:start;margin-top:4px}
+@media(max-width:900px){.nwrap{grid-template-columns:1fr}}
+.nlead{display:grid;grid-template-columns:1.25fr 1fr;border:1px solid var(--line);border-radius:14px;overflow:hidden;background:var(--panel);margin-bottom:16px;transition:border-color .12s}
+.nlead:hover{border-color:var(--mute)}
+.nleadimg{aspect-ratio:16/10;background:var(--panel2);overflow:hidden;min-height:220px}
+.nleadimg img{width:100%;height:100%;object-fit:cover;display:block}
+.nleadbody{padding:26px 26px 24px;display:flex;flex-direction:column;justify-content:center}
+.nleadbody h2{font-size:clamp(22px,2.6vw,32px);font-weight:700;letter-spacing:-.015em;line-height:1.12;margin-top:10px}
+.nleadbody p{color:var(--mute);font-size:15px;margin-top:12px;line-height:1.5}
+.nleadbody .artby{margin-top:18px}
+@media(max-width:700px){.nlead{grid-template-columns:1fr}.nleadbody{padding:18px}}
+.ntop{grid-template-columns:repeat(3,minmax(0,1fr))}
+@media(max-width:700px){.ntop{grid-template-columns:1fr}}
+.artcard .artby{margin-top:12px;display:block}
+.nlist{display:flex;flex-direction:column;border:1px solid var(--line);border-radius:12px;overflow:hidden;background:var(--panel)}
+.nrow{display:grid;grid-template-columns:120px 1fr;gap:16px;padding:14px 16px;border-bottom:1px solid #1B2122;align-items:center;transition:background .12s}
+.nrow:last-child{border-bottom:0}
+.nrow:hover{background:var(--panel2)}
+.nrow h4{font-size:16px;font-weight:700;line-height:1.25;margin-top:5px}
+.nrow .artby{margin-top:8px;display:block}
+.nrowimg{aspect-ratio:16/10;border-radius:8px;overflow:hidden;background:var(--panel2)}
+.nrowimg img{width:100%;height:100%;object-fit:cover;display:block}
+.artby .au{color:var(--white);cursor:pointer}
+.artby .au:hover{text-decoration:underline}
+/* placeholder art */
+.ph{position:relative;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#132225 0%,#0C0F10 60%,#1a1f0c 100%)}
+.ph .phface{position:absolute;right:6%;bottom:0;height:96%;width:auto;object-fit:contain;object-position:bottom;opacity:.95}
+.ph .phword{font-size:clamp(18px,3vw,30px);font-weight:700;letter-spacing:-.02em;color:var(--white);opacity:.55}
+.ph .phword b{color:var(--teal);font-weight:700}
+.ph .phtag{position:absolute;left:12px;bottom:10px;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--bg);background:var(--teal);padding:3px 8px;border-radius:4px}
+.ph .phtag:empty{display:none}
+/* sidebar */
+.nside{display:flex;flex-direction:column;gap:14px;position:sticky;top:16px}
+.sbbox{border:1px solid var(--line);border-radius:12px;background:var(--panel);padding:16px}
+.sbh{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--mute);padding-bottom:10px;border-bottom:1px solid var(--line);margin-bottom:12px}
+.sbp{color:var(--mute);font-size:13.5px;line-height:1.5;margin-bottom:12px}
+.sbbox .writer{border:0;background:none;padding:8px 0;border-radius:0}
+.sbbox .writer:hover b{color:var(--teal)}
+.sbcta{display:block;margin-top:10px;padding-top:12px;border-top:1px solid var(--line);color:var(--teal);font-size:13.5px;font-weight:600}
+.sbbox .nlbar{flex-direction:column;align-items:stretch;padding:0;border:0;background:none;margin:0}
+.sbbox .nlbar .nltext{display:none}
+.sbbox .nlform{display:flex;gap:6px}
+.sbbox .nlform input{min-width:0;flex:1}
+.fxmatch .fxt .h,.fxmatch .fxt .a{font-family:'Space Grotesk',sans-serif;color:var(--white);font-weight:600}
+[data-theme="pitch"] .fxmatch .fxt .h,[data-theme="pitch"] .fxmatch .fxt .a{font-family:system-ui,sans-serif}
+
+/* hide the theme toggle for good — pitch is the only skin now */
+.themetog{display:none!important}
+/* recent matches table */
+.rmlist{border-radius:12px}
+.rmhead,.rmrow{display:grid;grid-template-columns:64px minmax(0,1fr) 58px 48px 74px 52px;gap:10px;align-items:center;padding:10px 14px}
+.rmhead{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--mute);background:var(--panel2);border-bottom:1px solid var(--line)}
+.rmhead div:nth-child(n+3){text-align:center}
+.rmrow{background:var(--panel);border-bottom:1px solid var(--line);font-size:14px;color:var(--white)}
+.rmrow:last-child{border-bottom:0}
+.rmrow.lnk:hover{background:var(--panel2)}
+.rmd{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--mute)}
+.rmo{min-width:0;font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.rmo .cl{display:block;font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:var(--mute);margin-top:2px;font-weight:400}
+.rms{font-family:'IBM Plex Mono',monospace;font-weight:700;font-size:13px;text-align:center;border-radius:6px;padding:4px 0}
+.rms.w{background:rgba(0,179,107,.18);color:#4CD991}.rms.l{background:rgba(255,84,112,.16);color:#FF7A93}.rms.d{background:rgba(255,255,255,.07);color:var(--mute)}
+.rmm{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--mute);text-align:center}
+.rme{display:flex;justify-content:center;gap:0}
+.rme:empty::before{content:"—";color:var(--line)}
+.evi{display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px;border-radius:50%;font-size:11px;margin-left:-6px;border:2px solid var(--panel);box-sizing:content-box}
+.evi:first-child{margin-left:0}
+.evi.g{background:#fff;color:#000;font-size:12px}
+.evi.a{background:var(--teal);color:#000;font-family:'IBM Plex Mono',monospace;font-weight:700}
+.rmr{text-align:center}
+.rt{display:inline-block;min-width:38px;font-family:'IBM Plex Mono',monospace;font-weight:700;font-size:12px;padding:3px 6px;border-radius:6px;text-align:center}
+.rt.hi{background:#00B36B;color:#041a0f}.rt.md{background:#E8A400;color:#1a1200}.rt.lo{background:#3A3A3A;color:#ddd}.rt.none{color:var(--line);font-weight:400}
+.rmnote{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--mute);margin:8px 2px 0;line-height:1.6}
+.rmnote a{color:var(--teal)}
+@media(max-width:600px){.rmhead,.rmrow{grid-template-columns:52px minmax(0,1fr) 52px 40px 60px 46px;gap:6px;padding:9px 10px}.rmo .cl{display:none}}
+
+/* match page actions */
+.mactions{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin:14px 0 24px}
+.mhint{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--mute);letter-spacing:.04em}
+.fxrow.when.lnk:hover{background:var(--panel2)}
+/* fixtures page — tighter */
+.fxcomp{margin-bottom:10px}
+.fxcomp h4{padding:9px 14px;font-size:13px}
+.fxmatch{padding:9px 14px}
+.fxmatch .fxt{font-size:14px;gap:10px}
+.fxmatch .fxt .h,.fxmatch .fxt .a{font-weight:500;line-height:1.2}
+.fxmatch .fxt .mid{font-size:12px;min-width:44px}
+.fxmatch .fxt .mid.sc{font-size:14px}
+.fxmatch .fxp{margin-top:6px;gap:4px}
+.fxmatch .mcp{padding:2px 8px 2px 3px}
+.fxmatch .mcpn{font-size:11.5px;font-weight:500}
+.fxmatch .mcp .pavatar.sm{width:18px;height:18px}
+.fxmatch .pilen{font-size:10px}
+@media(max-width:560px){.fxmatch .fxt{font-size:13px;gap:8px}.fxmatch .fxt .mid{min-width:40px;font-size:11px}}
+
+/* match timeline */
+.mscorers{display:grid;grid-template-columns:1fr 1fr;gap:12px;font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--mute);padding:0 4px 4px;line-height:1.6}
+.mscorers .r{text-align:right}
+.timeline{border:1px solid var(--line);border-radius:12px;background:var(--panel);overflow:hidden}
+.tl{display:grid;grid-template-columns:1fr 72px 1fr;align-items:center;gap:8px;padding:9px 14px;border-bottom:1px solid #1B2122;font-size:14px}
+.tl:last-child{border-bottom:0}
+.tlh{text-align:right}.tla{text-align:left}
+.tlm{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--mute);text-align:center;display:flex;align-items:center;justify-content:center;gap:6px}
+.tli{display:inline-flex;align-items:center;font-size:14px}
+.tl small{font-family:'IBM Plex Mono',monospace;font-size:10px;color:var(--mute);letter-spacing:.05em;margin:0 4px}
+.tl.goal .evwho,.tl.own_goal .evwho{font-weight:700}
+.tl .ir{color:var(--teal);font-weight:700}
+.rmnote .ir{color:var(--teal)}
+.cd{display:inline-block;width:9px;height:13px;border-radius:2px;vertical-align:middle}
+.cd.y{background:#E8A400}.cd.r{background:#FF5470}.cd.y2{background:linear-gradient(135deg,#E8A400 50%,#FF5470 50%)}
+@media(max-width:560px){.tl{grid-template-columns:1fr 60px 1fr;font-size:13px;padding:8px 10px}}
+
+/* international cards: keep "View squad" inside the box */
+.ilvl{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 8px}
+.ilvl>span:not(.go){margin-left:0}
+.ilvl .go{float:none;margin-left:auto;white-space:nowrap}
+@media(max-width:560px){.ilvl{flex-direction:column;align-items:flex-start}.ilvl .go{margin-left:0;margin-top:6px}}
+
+/* club badges */
+.badge{display:inline-block;vertical-align:middle;object-fit:contain;flex:0 0 auto}
+.badge.xs{width:14px;height:14px;margin-right:5px}
+.badge.sm{width:20px;height:20px;margin:0 7px}
+.badge.md{width:34px;height:34px;margin:0 10px}
+.badge.lg{width:44px;height:44px;margin-right:12px;vertical-align:-10px}
+.badge.none{display:none}
+.mteam{display:flex;align-items:center;gap:4px}
+.mteam.right{justify-content:flex-end}
+.mct{display:flex;align-items:center}
+.mct.right{justify-content:flex-end}
+.fxmatch .fxt .h{display:flex;align-items:center;justify-content:flex-end}
+.fxmatch .fxt .a{display:flex;align-items:center}
+.clubcard .cn{display:flex;align-items:center;gap:6px}
+
+/* homepage: hero + today bar */
+.hero{padding:6px 0 18px}
+.hero h1{font-size:clamp(28px,4.5vw,44px);letter-spacing:-.02em;line-height:1.05}
+.herosub{color:var(--mute);font-size:15px;margin-top:10px;max-width:640px;line-height:1.5}
+.herosub b{color:var(--white)}
+.herosub a{color:var(--teal);white-space:nowrap}
+.todaybar{display:grid;gap:8px;margin-top:18px}
+@media(min-width:760px){.todaybar{grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}}
+.tb{display:flex;align-items:center;gap:12px;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:12px 14px;font-size:14px}
+.tbl{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--teal);flex:0 0 auto}
+.tbv{flex:1;color:var(--mute);line-height:1.35}
+.tbv b{color:var(--white)}
+.tb a{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--teal);white-space:nowrap}
+/* follow sell */
+.followsell{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;border:1px solid var(--line);border-radius:12px;background:var(--panel);padding:18px 20px;margin-bottom:8px}
+.followsell b{font-size:16px}
+.followsell p{color:var(--mute);font-size:14px;margin-top:4px;line-height:1.5;max-width:560px}
+.followsell .btn{background:var(--teal);color:var(--bg);font-weight:700;padding:10px 16px;border-radius:8px;white-space:nowrap}
+/* explore */
+.exgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px}
+.exc{display:flex;justify-content:space-between;align-items:center;background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:11px 13px;font-size:14px;transition:border-color .12s}
+.exc:hover{border-color:var(--teal)}
+.exc.seeall{display:none}
+.exc.seeall b{color:var(--teal)}
+.exc span{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--mute)}
+/* about */
+.abox{border:1px solid var(--line);border-radius:12px;background:var(--panel);padding:18px 20px;margin-bottom:8px;font-size:15px;line-height:1.6}
+.abox p+p,.abox ul+p{margin-top:10px}
+.abox ul{margin:8px 0 0 18px}
+.abox li{margin-bottom:5px}
+.abox a{color:var(--teal)}
+.sec .more a{color:var(--teal)}
+
+.hero{padding:4px 0 16px}
+.strip{font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--mute)}
+.strip b{color:var(--white)}
+.strip a{color:var(--teal);text-transform:none;letter-spacing:0;font-family:'Space Grotesk',sans-serif;font-size:13px}
+.todaybar{margin-top:12px}
+
+/* partner content (Touchline etc.) */
+:root{--partner:#F5841F}
+.pbadge{display:inline-block;margin-left:8px;padding:2px 7px;border-radius:4px;background:var(--partner);color:#1a0d00;font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;vertical-align:middle}
+.artcard.partner,.nlead.partner,.nrow.partner,.slide.partner{border-color:var(--partner)!important;box-shadow:inset 0 0 0 1px rgba(245,132,31,.35)}
+.artcard.partner:hover,.nlead.partner:hover{border-color:#ffa04d!important}
+.ph.partner{background:linear-gradient(135deg,#2a1608 0%,#0C0F10 60%,#1a1005 100%)}
+.ph.partner .phword{color:var(--partner);opacity:.9;font-size:clamp(16px,2.4vw,24px)}
+.ph.partner .phtag{background:var(--partner)}
+.article.partner{border-left:3px solid var(--partner);padding-left:18px}
+.partnerbox{border:1px solid var(--partner);border-radius:12px;background:linear-gradient(135deg,rgba(245,132,31,.10),transparent 60%);padding:20px 22px;margin:26px 0 8px}
+.pbl{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--partner)}
+.pbn{font-size:22px;font-weight:700;margin-top:4px}
+.partnerbox p{color:var(--mute);font-size:14.5px;line-height:1.55;margin:10px 0 14px;max-width:640px}
+.partnerbox .btn{display:inline-block;background:var(--partner);color:#1a0d00;font-weight:700;padding:10px 16px;border-radius:8px}
+
+/* text-only news cards */
+.nlead.noimg{grid-template-columns:1fr}
+.nlead.noimg .nleadbody{padding:22px 24px}
+.nlead.noimg .nleadbody h2{font-size:clamp(20px,2.2vw,28px)}
+.artcard.noimg .artbody{padding-top:16px}
+.artcard.noimg h4{font-size:15px}
+.artcard.noimg p{display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.nrow.noimg{grid-template-columns:1fr}
+.nlist .nrow{grid-template-columns:1fr}
+.nlist .nrowimg{display:none}
+
+/* article: left-aligned on desktop */
+.article{margin-left:0;max-width:760px}
+.article h1{font-size:clamp(26px,3.4vw,40px)}
+/* follow-sell: compact, no overlap */
+.followsell{margin:14px 0 8px;padding:14px 16px;gap:12px}
+.followsell b{font-size:15px}
+.followsell p{font-size:13px;line-height:1.45}
+.followsell .btn{padding:8px 13px;font-size:14px}
+@media(max-width:560px){.followsell{padding:12px 14px}.followsell .btn{width:100%;text-align:center}}
+
+/* neutral "also published at" box — no partner colouring */
+.partnerbox{border:1px solid var(--line);background:var(--panel)}
+.pbl{color:var(--mute)}
+.partnerbox .btn{background:var(--teal);color:var(--bg)}
+
+/* the close button is absolute, so the row needs room on the right or the
+   "Pick your players" button slides under it */
+.followsell{position:relative;padding-right:40px}
+@media(max-width:560px){.followsell{padding-right:34px}}
+.fsx{position:absolute;top:8px;right:8px;background:none;border:0;color:var(--mute);font-size:20px;line-height:1;cursor:pointer;padding:4px 6px}
+.fsx:hover{color:var(--white)}
+.elig.off{opacity:.45}
+.elig.off .en{color:var(--mute)}
+.mpens{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--mute);text-align:center;margin-top:4px;letter-spacing:.06em}
+/* OSM tiles are light — darken them to match the site */
+.leaflet-tile-pane{filter:invert(1) hue-rotate(180deg) brightness(.75) contrast(.9) saturate(.4)}
+
+.authhead .pavatar.lg img{width:100%;height:100%;object-fit:cover;border-radius:50%}
+.wbio{margin-top:4px}
+.wlinks{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0 18px}
+.wlinks a{background:var(--panel);border:1px solid var(--line);border-radius:20px;padding:6px 12px;font-size:13px;color:var(--teal)}
+.wlinks a:hover{border-color:var(--teal)}
+
+/* generic shield when a club has no badge */
+.badge.generic{display:inline-block;border-radius:0;background:no-repeat center/contain url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 28'><path d='M12 1 L22 4.5 V13 C22 20 17.5 25 12 27 C6.5 25 2 20 2 13 V4.5 Z' fill='%232A2F30' stroke='%234A5253' stroke-width='1.2'/><path d='M12 5.5 L18.5 7.8 V13 C18.5 17.8 15.6 21.3 12 22.9 C8.4 21.3 5.5 17.8 5.5 13 V7.8 Z' fill='%231B2122'/></svg>");opacity:.9}
+
+/* ---- match-stats sheet: tap a player on a match page -------------------- */
+.mssheetwrap{position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:60;
+  display:flex;align-items:flex-end;justify-content:center}
+.mssheet{background:var(--panel);border:1px solid var(--line);border-radius:16px 16px 0 0;
+  width:100%;max-width:480px;padding:18px 20px 22px;animation:msup .18s ease-out}
+@keyframes msup{from{transform:translateY(24px);opacity:.4}to{transform:none;opacity:1}}
+@media(min-width:640px){
+  .mssheetwrap{align-items:center}
+  .mssheet{border-radius:16px}
+}
+.mshead{display:flex;align-items:center;gap:12px;margin-bottom:14px}
+.mshead .pavatar.sm{width:44px;height:44px}
+.msname{font-size:17px;font-weight:700;color:var(--white)}
+.msname:hover{color:#00B36B}
+.msmeta{font-size:12.5px;color:var(--mute);margin-top:2px}
+.msx{margin-left:auto;font-size:24px;color:var(--mute);padding:2px 8px}
+.msx:hover{color:var(--white)}
+.msgrid2{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);
+  border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.msgrid2 div{background:var(--panel2);padding:12px 6px;text-align:center}
+.msgrid2 b{display:block;font-size:19px;font-weight:700}
+.msgrid2 span{font-size:10.5px;font-family:'IBM Plex Mono',monospace;letter-spacing:.08em;
+  text-transform:uppercase;color:var(--mute)}
+.msnote{font-size:13px;color:var(--mute);margin-bottom:10px;line-height:1.45}
+.msevs{margin-top:12px;display:flex;flex-direction:column;gap:6px}
+.msev{font-size:14px;display:flex;gap:10px;align-items:baseline}
+.msev b{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--mute);min-width:32px}
+.msfine{margin-top:14px;font-size:12px;color:var(--mute)}
+
+.squadnote{margin:12px 4px 0;font-family:'IBM Plex Mono',monospace;font-size:11px;
+  line-height:1.6;color:var(--mute)}
+
+/* ============ TRANSFERS ============
+   One feed of every move on file. The rows are drawn by script sixty at a
+   time, so everything here has to hold up on a list that keeps growing. */
+.tsum{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:20px 0 4px}
+.ttile{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:15px 16px}
+.ttile .n{font-size:27px;font-weight:700;letter-spacing:-.025em;line-height:1.05}
+.ttile .l{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--mute);margin-top:6px;
+  overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.tfbar{margin-bottom:10px}
+.tends{display:flex;align-items:center;gap:9px;padding:0 14px;
+  background:var(--panel);border:1px solid var(--line);border-radius:6px;
+  font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--mute);
+  cursor:pointer;user-select:none;flex:0 0 auto;white-space:nowrap}
+.tends input{accent-color:var(--teal);flex:0 0 auto;
+  width:15px;height:15px;min-width:15px;margin:0;cursor:pointer}
+.tends:has(input:checked){color:var(--white);border-color:var(--teal)}
+.tcount{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--mute);padding-bottom:6px}
+.tday{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--teal);font-weight:500;
+  padding:22px 0 8px;border-bottom:1px solid var(--line)}
+.tday:first-child{padding-top:6px}
+/* moves we have on good authority but no date for yet */
+.tday.soft{color:var(--mute)}
+.trrow{display:flex;align-items:center;gap:12px;padding:11px 6px;
+  border-bottom:1px solid var(--line);transition:background .12s}
+.trrow:hover{background:var(--panel)}
+.trm{flex:1;min-width:0}
+.trn{display:flex;align-items:center;gap:8px;font-weight:600;font-size:15px}
+.trp{font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.1em;
+  color:var(--mute);border:1px solid var(--line);border-radius:4px;padding:2px 5px;flex:none}
+.trmv{display:flex;align-items:center;margin-top:4px;min-width:0;
+  font-size:13px;color:var(--mute)}
+.trmv span,.trmv b{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;min-width:0}
+/* when the row is tight it is the club they left that gives way first —
+   where they have gone is the point of the line */
+.trmv span{flex:0 3 auto}
+.trmv b{flex:0 1 auto;color:var(--white);font-weight:600}
+.tra{font-style:normal;color:var(--mute);flex:none;padding:0 8px;font-size:12px}
+.trr{flex:none}
+.tchip{display:inline-block;font-family:'IBM Plex Mono',monospace;font-size:10px;
+  letter-spacing:.06em;padding:5px 9px;border-radius:6px;white-space:nowrap;
+  border:1px solid var(--line);color:var(--mute)}
+.tchip.fee{background:var(--yellow);border-color:var(--yellow);color:#0C0F10;font-weight:600}
+.tchip.free{border-color:var(--teal);color:var(--teal)}
+.tchip.loan{background:var(--panel2);color:var(--white)}
+.tmore{display:block;width:100%;margin:20px 0 4px;padding:14px;
+  background:var(--panel);border:1px solid var(--line);border-radius:10px;
+  font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--mute);transition:color .12s,border-color .12s}
+.tmore:hover{color:var(--white);border-color:var(--mute)}
+.tnote{margin:26px 0 10px;font-family:'IBM Plex Mono',monospace;font-size:11px;
+  line-height:1.6;color:var(--mute)}
+@media(max-width:820px){
+  .tsum{grid-template-columns:1fr 1fr;gap:8px}
+  .ttile{padding:12px 13px}
+  .ttile .n{font-size:22px}
+  .tends{padding:12px 14px;flex:1 1 100%}
+  /* on a phone the chip moves up beside the name so the two club names
+     get the whole width of the row instead of fighting it for space */
+  .trrow{display:grid;grid-template-columns:auto minmax(0,1fr) auto;
+    grid-template-areas:"av name chip" "av move move";
+    column-gap:10px;row-gap:2px;padding:11px 2px}
+  .trrow>.pavatar{grid-area:av;align-self:center}
+  .trm{display:contents}
+  .trn{grid-area:name;font-size:14px}
+  .trmv{grid-area:move;font-size:12.5px;margin-top:2px}
+  .trr{grid-area:chip;align-self:center}
+  .tchip{font-size:9px;padding:4px 7px}
+}
+
+/* ---- player page, tabbed (FotMob-style structure, our skin) ---- */
+.ptabs{display:flex;gap:4px;margin:16px 0 14px;border-bottom:1px solid var(--line);position:sticky;top:0;background:var(--bg);z-index:20;padding-top:4px}
+.ptab{background:none;border:0;color:var(--mute);font:inherit;font-weight:600;font-size:15px;padding:10px 14px;cursor:pointer;border-bottom:2px solid transparent;margin-bottom:-1px}
+.ptab.on{color:var(--white);border-bottom-color:var(--teal)}
+.ptab:hover{color:var(--white)}
+.pcard{border:1px solid var(--line);border-radius:12px;background:var(--panel);padding:16px 18px;margin-bottom:10px}
+.pcard.nodata{color:var(--mute);font-size:14px;line-height:1.55}
+.pcard.nodata a{color:var(--teal)}
+.pct{font-weight:700;font-size:15px;margin-bottom:12px}
+.pct .crk{font-family:'IBM Plex Mono',monospace;font-size:10px;color:var(--mute);font-weight:400;float:right;margin-top:3px}
+.pchead{display:flex;align-items:center;gap:8px;font-size:15px;margin-bottom:14px}
+.pchead .stale{font-family:'IBM Plex Mono',monospace;font-size:10px;color:var(--mute);margin-left:auto}
+.bigrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px 8px;text-align:center}
+.bib{font-size:17px;font-weight:700}
+.bis{font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:var(--mute);margin-top:3px;letter-spacing:.03em}
+.sumgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px 8px;text-align:center}
+.sumgrid.three{grid-template-columns:repeat(3,1fr)}
+.sumgrid>div>b{font-size:20px;display:block}
+.sumgrid>div>span{font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:var(--mute);display:block;margin-top:3px}
+.sumgrid .rt{font-size:15px}
+.poswrap{display:flex;align-items:center;gap:18px}
+.poslbl b{font-size:17px}
+.minipitch{position:relative;flex:1;max-width:230px;aspect-ratio:3/4;border:1px solid var(--line);border-radius:8px;background:linear-gradient(180deg,#12211a,#0d1a14);margin-left:auto}
+.minipitch i{position:absolute;left:25%;right:25%;top:0;height:14%;border:1px solid #2a3b32;border-top:0}
+.minipitch i.mp2{top:auto;bottom:0;border-top:1px solid #2a3b32;border-bottom:0}
+.posdot{position:absolute;transform:translate(-50%,-50%);background:var(--white);color:#10231b;font-weight:700;font-size:12px;border-radius:14px;padding:4px 10px}
+.cdates{display:flex;justify-content:space-between;font-size:14px;color:var(--mute);gap:12px}
+.cdates b{color:var(--white);font-weight:600;margin-right:4px}
+.cbar{height:6px;border-radius:3px;background:#232B2C;margin-top:12px;overflow:hidden}
+.cbar i{display:block;height:100%;background:var(--white);border-radius:3px}
+.mxclub{display:flex;align-items:center;gap:8px;font-size:15px;margin:16px 2px 8px}
+.mxlist .mxrow{display:block;border:1px solid var(--line);border-radius:10px;background:var(--panel);padding:10px 14px;margin-bottom:8px;color:inherit}
+.mxrow.lnk:hover{border-color:var(--mute)}
+.mxtop{display:flex;justify-content:space-between;font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:var(--mute);margin-bottom:7px;letter-spacing:.04em}
+.mxmain{display:flex;align-items:center;gap:8px;font-size:14px}
+.mxopp{font-weight:600;flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.wdl{font-family:'IBM Plex Mono',monospace;font-size:10.5px;font-weight:700;border-radius:4px;padding:2px 5px}
+.wdl.w{background:#123B2A;color:#2BD68F}.wdl.l{background:#3B1220;color:#FF5470}.wdl.d{background:#232B2C;color:var(--mute)}
+.mxsc{font-family:'IBM Plex Mono',monospace;font-size:13px;font-weight:600}
+.mxr{display:flex;align-items:center;gap:7px;margin-left:auto}
+.mxmin{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--mute);border:1px solid var(--line);border-radius:6px;padding:2px 6px}
+.sttbl .strow{display:grid;grid-template-columns:1fr 44px 30px 30px 52px 52px;gap:4px;align-items:center;padding:8px 2px;border-bottom:1px solid #1B2122;font-size:13.5px}
+.sttbl .strow:last-child{border-bottom:0}
+.sttbl .sthead{font-family:'IBM Plex Mono',monospace;font-size:10px;color:var(--mute);letter-spacing:.05em;text-transform:uppercase}
+.sttbl .stc{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.segtoggle{display:flex;background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:4px;margin-bottom:12px}
+.seg{flex:1;background:none;border:0;border-radius:7px;color:var(--mute);font:inherit;font-weight:600;font-size:14px;padding:8px;cursor:pointer}
+.seg.on{background:#232B2C;color:var(--teal)}
+.crow{display:flex;align-items:center;gap:10px;padding:10px 2px;border-bottom:1px solid #1B2122}
+.crow:last-child{border-bottom:0}
+.crn{flex:1;min-width:0}
+.crn b{display:block;font-size:14.5px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.crn span{font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:var(--mute)}
+.crs{display:grid;grid-template-columns:repeat(3,34px) 46px;gap:4px;text-align:right;font-family:'IBM Plex Mono',monospace;font-size:13px;align-items:center}
+.crs.two{grid-template-columns:repeat(2,40px)}
+.natflag{width:20px;height:20px;border-radius:50%;flex:0 0 auto;background:linear-gradient(90deg,#169B62 33%,#fff 33% 66%,#FF883E 66%)}
+.clubchip{display:inline-flex;align-items:center;gap:6px;background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:4px 12px 4px 6px;font-size:13.5px;color:var(--white)}
+@media(max-width:560px){.bigrid,.sumgrid{gap:14px 4px}.ptab{padding:10px 10px;font-size:14px}}
+.tlempty{padding:18px 16px;color:var(--mute);font-family:'IBM Plex Mono',monospace;font-size:13px;text-align:center}
+.mxrow.ongoing{border-color:rgba(255,84,112,.4)}
+.livedot{color:#FF5470;font-family:'IBM Plex Mono',monospace;font-size:10px;font-weight:700;letter-spacing:.06em}
+</style><script>
+(function(){
+  try{
+    if(location.search.indexOf('notrack')>-1) localStorage.setItem('fb_no_track','1');
+    if(localStorage.getItem('fb_no_track')) return;
+  }catch(e){}
+  !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="init capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled onFeatureFlags getFeatureFlag getFeatureFlagPayload reloadFeatureFlags group updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures getActiveMatchingSurveys getSurveys onSessionId debug".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+  posthog.init('phc_xtwt9agRRaGnB85uiQHmNrGEQ97cm3iCKULiQx5VBcVJ',{
+    api_host:'https://eu.i.posthog.com',
+    defaults:'2025-05-24',
+    person_profiles:'identified_only'
+  });
+})();
+</script>
 </head>
 <body data-player="charles-akinrintoyo">
 
 <div class="wrap">
 <nav>
   <a class="mark" href="../index.html">footballers<i>.ie</i></a>
+  <a class="searchbtn" href="../search.html" aria-label="Search">
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.6-4.6"/></svg>
+  </a>
   <button class="burger" id="burger" aria-label="Menu" aria-expanded="false" aria-controls="navlinks">
     <span></span><span></span><span></span>
   </button>
-  <div class="navlinks" id="navlinks"><a class="" href="../news.html">News</a><a class="" href="../players.html">Players</a><a class="" href="../clubs.html">Clubs</a><a class="" href="../ireland.html">Ireland</a><a class="" href="../fixtures.html">Fixtures</a><a class="" href="../alerts.html">Alerts</a></div>
-  <div class="navmeta"><span id="navdate">21-27 AUG</span> · <b>339</b> TRACKED</div>
+  <div class="navlinks" id="navlinks"><a class="" href="../news.html">News</a><a class="" href="../players.html">Players</a><a class="" href="../transfers.html">Transfers</a><a class="" href="../clubs.html">Clubs</a><a class="" href="../ireland.html">Ireland</a><a class="" href="../fixtures.html">Fixtures</a><a class="" href="../alerts.html">Alerts</a><div class="navfoot">26 AUG-1 SEP · <b>686</b> tracked</div></div>
+  <div class="navmeta"><span id="navdate">26 AUG-1 SEP</span> · <b>686</b> TRACKED</div>
 </nav>
 <script>
 (function(){
@@ -729,7 +1541,8 @@ a.intlblock.lnk:hover{border-color:var(--teal)}
         <div class="pavatar"><span>CA</span></div>
         <div>
         <div class="pdname">Charles Akinrintoyo</div>
-        <div class="pdmeta"><a href="../club/ucd.html">UCD</a> · League of Ireland · FWD</div>
+        <div class="pdmeta"><a class="clubchip" href="../club/ucd.html"><img class="badge sm" src="https://images.fotmob.com/image_resources/logo/teamlogo/1578.png" alt="" loading="lazy" onerror="this.outerHTML='<span class=&quot;badge sm generic&quot;></span>'">UCD</a>
+          </div>
         
         
         </div>
@@ -740,38 +1553,147 @@ a.intlblock.lnk:hover{border-color:var(--teal)}
       </div>
     </div>
 
-    <div class="sec"><h2>Season 2026/27</h2>
-      </div>
-    <div class="pdstats">
-      <div class="pds"><div class="n">0</div><div class="l">Apps</div></div>
-      <div class="pds"><div class="n">0</div><div class="l">Starts</div></div>
-      <div class="pds"><div class="n">0</div><div class="l">Goals</div></div>
-      <div class="pds"><div class="n">0</div><div class="l">Assists</div></div>
-      <div class="pds"><div class="n">0</div><div class="l">Minutes</div></div>
-      <div class="pds"><div class="n">0/0</div><div class="l">Cards</div></div>
-      <div class="pds"><div class="n"><span class="rate none">—</span></div><div class="l">Avg rating</div></div>
-      <div class="pds"><div class="n">0</div><div class="l">Career apps</div></div>
-      <div class="pds"><div class="n">0</div><div class="l">Career goals</div></div>
+    <div class="ptabs" role="tablist">
+      <button class="ptab on" data-pane="profile">Profile</button>
+      <button class="ptab" data-pane="matches">Matches</button>
+      <button class="ptab" data-pane="pstats">Stats</button>
+      <button class="ptab" data-pane="career">Career</button>
     </div>
 
-    <div class="sec"><h2>Upcoming fixtures</h2><span class="more" style="border:0">UCD</span></div>
-    <div class="fxlist"><div class="emptystate" style="display:block">No fixtures listed.</div></div>
+    <div class="ppane" id="pane-profile">
+      <div class="pcard biocard"><div class="bigrid"><div class="bic"><div class="bib">18 yrs</div><div class="bis">Age</div></div><div class="bic"><div class="bib">Ireland</div><div class="bis">Country</div></div><div class="bic"><div class="bib">ST</div><div class="bis">Position</div></div></div></div>
+      <div class="pcard">
+      <div class="pchead"><img class="badge sm" src="https://images.fotmob.com/image_resources/logo/teamlogo/1578.png" alt="" loading="lazy" onerror="this.outerHTML='<span class=&quot;badge sm generic&quot;></span>'"><b>First Division 2026/27</b></div>
+      <div class="sumgrid">
+        <div><b>—</b><span>Goals</span></div>
+        <div><b>—</b><span>Assists</span></div>
+        <div><span class="rate none">—</span><span>Rating</span></div>
+        <div><b data-live="apps" data-base="0">—</b><span>Matches</span></div>
+        <div><b data-live="starts" data-base="0">—</b><span>Started</span></div>
+        <div><b data-live="mins" data-base="0">—</b><span>Minutes played</span></div>
+      </div></div>
+      <div class="pcard"><div class="pct">Position</div>
+      <div class="poswrap"><div class="poslbl"><span class="bis">Primary</span><br><b>ST</b></div>
+      <div class="minipitch"><i></i><i class="mp2"></i><span class="posdot" style="left:50%;top:14%">ST</span></div></div></div>
+      
+      <div class="sec"><h2>International</h2><a class="more" href="../ireland.html">Ireland hub →</a></div><a class="intlblock lnk" href="../ireland.html?level=U18"><div class="ilvl">U18 <span>2 caps · 0 goals · from 2026</span><span class="go">View squad →</span></div></a><a class="intlblock lnk" href="../ireland.html?level=U17"><div class="ilvl">U17 <span>4 caps · 2 goals · from 2025</span><span class="go">View squad →</span></div></a>
+      <div class="sec"><h2>Eligibility</h2></div>
+      <div class="eliglist"><div class="elig youth"><span class="ec">Republic of Ireland</span><span class="en">Played underage · can still switch</span></div></div>
+      <p class="eligNote">Youth caps and senior friendlies don't cap-tie a player, so a switch is still possible under FIFA rules.</p>
+    </div>
 
-    <div class="sec"><h2>Recent matches</h2>
-      <span class="more" style="border:0">last 0 of 0</span></div>
-    <div class="fxlist"><div class="emptystate" style="display:block">No appearances yet.</div></div>
+    <div class="ppane" id="pane-matches" hidden>
+      <div class="sec"><h2>Upcoming</h2><span class="more" style="border:0">6 listed</span></div>
+      <div class="fxlist"><a class="fxrow when lnk" href="../match/2026-09-04-cobh-ramblers-v-ucd.html" data-when="2026-09-04T18:45:00Z" data-opp="Cobh Ramblers" data-ha="A"><div class="fxwhen">04 Sep</div><div class="fxc">First Division<span class="atclub">UCD</span></div></a><a class="fxrow when lnk" href="../match/2026-09-11-ucd-v-athlone-town.html" data-when="2026-09-11T18:45:00Z" data-opp="Athlone Town" data-ha="H"><div class="fxwhen">11 Sep</div><div class="fxc">First Division<span class="atclub">UCD</span></div></a><a class="fxrow when lnk" href="../match/2026-09-18-cork-city-v-ucd.html" data-when="2026-09-18T18:45:00Z" data-opp="Cork City" data-ha="A"><div class="fxwhen">18 Sep</div><div class="fxc">First Division<span class="atclub">UCD</span></div></a><a class="fxrow when lnk" href="../match/2026-09-25-ucd-v-bray-wanderers.html" data-when="2026-09-25T18:45:00Z" data-opp="Bray Wanderers" data-ha="H"><div class="fxwhen">25 Sep</div><div class="fxc">First Division<span class="atclub">UCD</span></div></a><a class="fxrow when lnk" href="../match/2026-10-02-treaty-united-v-ucd.html" data-when="2026-10-02T18:45:00Z" data-opp="Treaty United" data-ha="A"><div class="fxwhen">02 Oct</div><div class="fxc">First Division<span class="atclub">UCD</span></div></a><a class="fxrow when lnk" href="../match/2026-10-09-ucd-v-longford-town.html" data-when="2026-10-09T18:45:00Z" data-opp="Longford Town" data-ha="H"><div class="fxwhen">09 Oct</div><div class="fxc">First Division<span class="atclub">UCD</span></div></a></div>
+      
+      <div class="sec"><h2>Recent matches</h2><span class="more" style="border:0">0 on record</span></div>
+      <div class="mxlist"><div class="emptystate" style="display:block">No appearances yet.</div></div>
+      <div class="rmnote">Only games they were on the pitch for. Unused subs and squad omissions aren't listed.
+        Something wrong? <a href="#" onclick="window.FB_REPORT&&FB_REPORT();return false">Report it</a>.</div>
+    </div>
 
-    <div class="sec"><h2>International</h2><a class="more" href="../ireland.html">Ireland hub →</a></div><a class="intlblock lnk" href="../ireland.html?level=U19"><div class="ilvl">U19 <span>Called up at this level</span><span class="go">View squad →</span></div></a>
+    <div class="ppane" id="pane-pstats" hidden>
+      <div class="pcard">
+      <div class="pchead"><img class="badge sm" src="https://images.fotmob.com/image_resources/logo/teamlogo/1578.png" alt="" loading="lazy" onerror="this.outerHTML='<span class=&quot;badge sm generic&quot;></span>'"><b>First Division 2026/27</b></div>
+      <div class="sumgrid">
+        <div><b>—</b><span>Goals</span></div>
+        <div><b>—</b><span>Assists</span></div>
+        <div><span class="rate none">—</span><span>Rating</span></div>
+        <div><b data-live="apps" data-base="0">—</b><span>Matches</span></div>
+        <div><b data-live="starts" data-base="0">—</b><span>Started</span></div>
+        <div><b data-live="mins" data-base="0">—</b><span>Minutes played</span></div>
+      </div></div>
+      
+      <div class="pcard"><div class="pct">Discipline</div><div class="sumgrid three"><div><b><span class="card yel">—</span></b><span>Yellow</span></div><div><b><span class="card red">—</span></b><span>Red</span></div><div><b>—</b><span>Starts</span></div></div></div>
+      <div class="pcard"><div class="pct">Career</div><div class="sumgrid three"><div><b>21</b><span>Apps</span></div><div><b>5</b><span>Goals</span></div><div><b>0</b><span>Assists</span></div></div></div>
+    </div>
 
-    <div class="sec"><h2>Eligibility</h2></div>
-    <div class="eliglist"><div class="elig youth"><span class="ec">Republic of Ireland</span><span class="en">Played underage · can still switch</span></div></div>
-    <p class="eligNote">Youth caps and senior friendlies don't cap-tie a player, so a switch is still possible under FIFA rules.</p>
+    <div class="ppane" id="pane-career" hidden>
+      <div class="segtoggle"><button class="seg on" data-view="seasons">Seasons</button><button class="seg" data-view="club">Club</button></div>
+      <div id="cv-seasons"><div class="pcard nodata">Season-by-season data builds up from here — we hold match records from 2025/26 on.</div></div>
+      <div id="cv-club" hidden><div class="pcard nodata">No transfer history on record.</div></div>
+      <div class="pcard"><div class="pct">National team <span class="crk">caps · goals</span></div><div class="crow"><span class="natflag"></span><div class="crn"><b>Ireland U18</b><span>from 2026</span></div><div class="crs two"><span>2</span><span>0</span></div></div><div class="crow"><span class="natflag"></span><div class="crn"><b>Ireland U17</b><span>from 2025</span></div><div class="crs two"><span>4</span><span>2</span></div></div></div>
+    </div>
 
-    
+    <script>
+    (function(){
+      var tabs=document.querySelectorAll('.ptab'),panes=document.querySelectorAll('.ppane');
+      function show(k){tabs.forEach(function(b){b.classList.toggle('on',b.dataset.pane===k)});
+        panes.forEach(function(pn){pn.hidden=(pn.id!=='pane-'+k)});
+        if(history.replaceState)history.replaceState(null,'','#'+k);}
+      tabs.forEach(function(b){b.addEventListener('click',function(){show(b.dataset.pane)})});
+      var h=(location.hash||'').slice(1);
+      if(['matches','pstats','career'].indexOf(h)>=0)show(h);
+      var segs=document.querySelectorAll('.seg');
+      segs.forEach(function(b){b.addEventListener('click',function(){
+        segs.forEach(function(x){x.classList.toggle('on',x===b)});
+        document.getElementById('cv-seasons').hidden=b.dataset.view!=='seasons';
+        document.getElementById('cv-club').hidden=b.dataset.view!=='club';})});
+    })();
+    </script>
+    <script>window.FB_PLIVE=null;</script>
+    <script>
+/* Live season-stat updates on a player profile. */
+(function(){
+  var L = window.FB_PLIVE; if (!L || !L.fmid) return;
+  function norm(t){ return String(t||'').normalize('NFKD').replace(/[̀-ͯ]/g,'')
+    .replace(/[^a-z ]/gi,'').toLowerCase().trim(); }
+  var me = norm(L.name), lastMin = null, lastStamp = 0,
+      involved = false, started = false, stillOn = false, onAt = 0;
+  function minutes(){
+    if (lastMin != null)
+      return stillOn ? lastMin + Math.min(25, Math.floor((Date.now()-lastStamp)/60000)) : lastMin;
+    var mm = Math.floor((Date.now() - Date.parse(L.ko)) / 60000);
+    return started ? Math.max(0, mm) : Math.max(0, mm - onAt);
+  }
+  function apply(){
+    if (!involved) return;
+    var mn = minutes();
+    document.querySelectorAll('[data-live]').forEach(function(el){
+      var base = parseInt(el.getAttribute('data-base'),10) || 0, k = el.getAttribute('data-live');
+      if (k === 'apps')   el.textContent = base + 1;
+      else if (k === 'starts') el.textContent = base + (started ? 1 : 0);
+      else if (k === 'mins')   el.textContent = base + Math.max(0, mn);
+    });
+  }
+  async function poll(){
+    try {
+      var r = await fetch('/api/live?ids=' + L.fmid + '&full=1', { cache:'no-store' });
+      if (!r.ok) return;
+      var d = await r.json(), m = d.matches && d.matches[L.fmid];
+      if (!m || m.status === 'scheduled') { involved = false; return; }
+      var offAt = null, on = null;
+      (m.ev || []).forEach(function(e){
+        if (e.type !== 'sub') return;
+        if (norm(e.player) === me) offAt = parseInt(e.min, 10);
+        if (norm(e.sin) === me)    on    = parseInt(e.min, 10);
+      });
+      var ps = m.pstats && m.pstats[me];
+      involved = !!ps || offAt != null || on != null;
+      if (!involved) return;
+      started = (on == null);
+      onAt = on || 0;
+      stillOn = (offAt == null) && m.status !== 'ft';
+      lastMin = (ps && ps.min != null) ? ps.min : null;
+      lastStamp = Date.now();
+      apply();
+    } catch (e) {}
+  }
+  poll(); setInterval(poll, 30000); setInterval(apply, 60000);
+})();
+</script>
     
 <footer>
-  Footballers<br>
+  <div class="foothead">
+    footballers.ie
+    <span class="updated" data-stamp="2026-08-29T19:00:10Z">checking for updates…</span>
+  </div>
   Every Irish player at a professional club — abroad, senior international and League of Ireland
+  <div class="footlinks">
+    <a href="../faq.html">FAQ</a>
+    <a href="../where-are-the-irish.html">Where are the Irish?</a>
+    <a href="../alerts.html">Alerts</a>
+  </div>
 </footer>
 </div>
 <script>window.FB_SUBSCRIBE_URL="";window.FB_ACCOUNTS=[{"email": "business@matchweek.ie", "name": "Owner", "role": "owner", "hash": "1b9f81291f1a6b0e6c1b135aa1ab58608e1f96e88ef490935ec97041b89b1450"}, {"email": "editor@footballers.ie", "name": "Editor", "role": "editor", "hash": "1d5c990ab4b660edea1b9a24484dffee52d12f9b68c369ddab8b02ec5d79a789"}, {"email": "writer@footballers.ie", "name": "Example Writer", "role": "journalist", "hash": "0f1f96b3f10518d3ab8cc7d4aa1aba02406779d55632fb6f9f3613d7d3f04e19"}, {"email": "betterkdul@gmail.com", "name": "Admin1", "role": "owner", "hash": "4dd6e75323b7efe6bde8fc32890797c1cbf47979feacc30a144efc7269edb218"}];</script>
@@ -797,7 +1719,42 @@ a.intlblock.lnk:hover{border-color:var(--teal)}
     return list.indexOf(slug) > -1;
   }
 
-  window.FB = { read: read, write: write, has: has, toggle: toggle };
+  /* followed matches, same shape */
+  var MKEY = 'fb_favm_v1';
+  function mread() { try { return JSON.parse(localStorage.getItem(MKEY)) || []; } catch (e) { return []; } }
+  function mwrite(list) { try { localStorage.setItem(MKEY, JSON.stringify(list)); } catch (e) {} document.dispatchEvent(new CustomEvent('favschange', { detail: list })); }
+  function mhas(id) { return mread().indexOf(id) > -1; }
+  function mtoggle(id) { var l = mread(), i = l.indexOf(id); if (i > -1) l.splice(i, 1); else l.push(id); mwrite(l); return l.indexOf(id) > -1; }
+
+  /* analytics: no-ops when tracking is off or the script hasn't loaded */
+  function track(ev, props) {
+    try { if (window.posthog && posthog.capture) posthog.capture(ev, props || {}); } catch (e) {}
+  }
+  function identify(email) {
+    try {
+      if (!email || !window.posthog || !posthog.identify) return;
+      var em = String(email).trim().toLowerCase();
+      posthog.identify(em, { email: em });
+    } catch (e) {}
+  }
+  window.FB_TRACK = track;
+  window.FB_IDENTIFY = identify;
+
+  window.FB = { read: read, write: write, has: has, toggle: toggle, mread: mread, mhas: mhas, mtoggle: mtoggle };
+
+  /* keep the account (email + follows) in sync server-side. no password: nothing here is secret. */
+  var syncT;
+  function sync() {
+    var email = window.FB_EMAIL && FB_EMAIL(); if (!email) return;
+    clearTimeout(syncT);
+    syncT = setTimeout(function () {
+      try {
+        fetch('/api/subscribe', { method: 'POST', headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email: email, source: 'sync', players: read().join(';'), matches: mread().join(';') }) });
+      } catch (e) {}
+    }, 800);
+  }
+  document.addEventListener('favschange', sync);
 
   /* ---- wire up every star on the page ---- */
   function paint(btn) {
@@ -815,6 +1772,7 @@ a.intlblock.lnk:hover{border-color:var(--teal)}
           e.preventDefault(); e.stopPropagation();
           var slug = btn.dataset.fav;
           function apply() {
+            track(has(slug) ? 'player_unfollowed' : 'player_followed', { player: slug });
             toggle(slug);
             var all = document.querySelectorAll('[data-fav="' + slug + '"]');
             for (var j = 0; j < all.length; j++) paint(all[j]);
@@ -824,6 +1782,24 @@ a.intlblock.lnk:hover{border-color:var(--teal)}
           FB_GATE(slug, apply);
         });
       })(stars[i]);
+    }
+    var mstars = document.querySelectorAll('[data-favm]');
+    for (var k = 0; k < mstars.length; k++) {
+      (function (btn) {
+        function mpaint() { var on = mhas(btn.dataset.favm); btn.classList.toggle('on', on); btn.setAttribute('aria-pressed', on ? 'true' : 'false');
+          var sp = btn.querySelector('span'); if (sp) sp.textContent = on ? 'Following match' : 'Follow match'; }
+        mpaint();
+        btn.addEventListener('click', function (e) {
+          e.preventDefault(); e.stopPropagation();
+          var id = btn.dataset.favm;
+          function apply() {
+            track(mhas(id) ? 'match_unfollowed' : 'match_followed', { match: id });
+            mtoggle(id); mpaint();
+          }
+          if (mhas(id) || !window.FB_GATE) { apply(); return; }
+          FB_GATE(id, apply);
+        });
+      })(mstars[k]);
     }
     renderMine();
     updateCount();
@@ -846,7 +1822,14 @@ a.intlblock.lnk:hover{border-color:var(--teal)}
 
     if (!favs.length) {
       wrap.innerHTML = '';
-      if (empty) empty.style.display = 'block';
+      if (empty) {
+        var hid = 0; try { hid = +localStorage.getItem('fb_fs_hide') || 0; } catch (e) {}
+        empty.style.display = (Date.now() - hid < 86400000) ? 'none' : 'flex';
+        var x = document.getElementById('fsx');
+        if (x && !x._wired) { x._wired = true; x.addEventListener('click', function () {
+          try { localStorage.setItem('fb_fs_hide', String(Date.now())); } catch (e) {}
+          empty.style.display = 'none'; }); }
+      }
       var sec = document.getElementById('myplayers-sec');
       if (sec) sec.style.display = 'none';
       return;
@@ -860,14 +1843,21 @@ a.intlblock.lnk:hover{border-color:var(--teal)}
       var p = window.FB_PLAYERS[slug];
       if (!p) return;
       var when = p.next ? p.next : 'No fixture listed';
+      var when = (window.FB_WHEN && p.nextdate) ? FB_WHEN(p.nextdate) : '';
+      var line = when
+        ? 'Playing ' + (p.nextopp || '') + (p.nextha ? ' (' + p.nextha + ')' : '') + ' ' + when
+        : (p.next || 'No fixture listed');
+      var rate = p.rating ? p.rating : '';
       var face2 = p.img ? 'img/players/' + slug + '.png' : '';
       var av2 = face2
         ? '<div class="pavatar sm"><img src="' + face2 + '" alt="" loading="lazy" ' +
           'onerror="this.parentNode.innerHTML=\'<span>' + p.ini + '</span>\'"></div>'
         : '<div class="pavatar sm"><span>' + p.ini + '</span></div>';
       rows += '<a class="plrow" href="player/' + slug + '.html">' + av2 +
-              '<div class="nm">' + p.n + ' <span class="cl">' + p.club + '</span></div>' +
-              '<div class="ev">' + when + '</div>' +
+              '<div class="nm">' + p.n + '<span class="cl">' + line + '</span></div>' +
+              '<div class="mn">' + (rate
+                 ? '<span class="rate ' + (parseFloat(rate) >= 7.3 ? 'hi' : parseFloat(rate) >= 6.5 ? 'md' : 'lo') + ' sm">' + rate + '</span>'
+                 : '<span class="rate none">—</span>') + '</div>' +
               '<button class="star on" data-fav="' + slug + '" aria-pressed="true">★</button></a>';
     });
     wrap.innerHTML = rows;
@@ -879,6 +1869,7 @@ a.intlblock.lnk:hover{border-color:var(--teal)}
           e.preventDefault(); e.stopPropagation();
           var slug = btn.dataset.fav;
           function apply() {
+            track(has(slug) ? 'player_unfollowed' : 'player_followed', { player: slug });
             toggle(slug); renderMine(); updateCount();
             var all = document.querySelectorAll('[data-fav="' + slug + '"]');
             for (var j = 0; j < all.length; j++) paint(all[j]);
@@ -909,9 +1900,23 @@ a.intlblock.lnk:hover{border-color:var(--teal)}
   function ko(m) { return new Date(m.kickoff).getTime(); }
   function ended(m) { return ko(m) + MATCH_LEN; }
 
+  var LIVE_STAMP = 0;   // when live.json was written (ms). 0 = unknown
+  function liveMin(m) {
+    if (/ht/i.test(String(m.minute))) return 'HT';   // half-time is a label, not a number
+    var base = parseInt(m.minute, 10);
+    if (isNaN(base)) return m.minute || '';
+    var extra = (m._stamp || LIVE_STAMP) ? Math.floor((Date.now() - (m._stamp || LIVE_STAMP)) / 60000) : 0;
+    if (extra < 0 || extra > 20) extra = 0;                      // stale feed: don't invent time
+    var mm = base + extra;
+    if (base <= 45 && mm > 45) mm = 45;                          // don't tick through half time
+    if (base <= 90 && mm > 90 && base > 45) mm = 90;
+    return String(mm) + (String(m.minute).indexOf('+') > -1 ? String(m.minute).slice(String(m.minute).indexOf('+')) : '');
+  }
   function statusChip(m, now) {
-    if (m.status === 'live') {
-      return '<span class="mcstat live"><i></i>' + (m.minute ? m.minute + "'" : 'LIVE') + '</span>';
+    if (m.status === 'live' || m.status === 'ht') {
+      var lm = m.status === 'ht' ? 'HT' : (m.minute ? liveMin(m) : '');
+      var show = !lm ? 'LIVE' : (lm === 'HT' ? 'HT' : lm + "'");
+      return '<span class="mcstat live"><i></i>' + show + '</span>';
     }
     if (m.status === 'ft' || ended(m) < now) {
       var ago = now - ended(m);
@@ -920,6 +1925,19 @@ a.intlblock.lnk:hover{border-color:var(--teal)}
       var h = Math.floor(ago / 3600000);
       if (h >= 1) return '<span class="mcstat ft">FT · ' + h + 'h ago</span>';
       return '<span class="mcstat ft">Full time</span>';
+    }
+    // Past kick-off but the live feed hasn't marked it live yet (its status is
+    // still "scheduled"). Don't sit on "Kick-off" for two hours — estimate the
+    // minute from the clock so an underway game reads as underway. The real
+    // feed overwrites this the moment it arrives.
+    if (now >= ko(m) && ended(m) >= now) {
+      var el = Math.floor((now - ko(m)) / 60000);
+      var lbl;
+      if (el <= 45) lbl = "~" + Math.max(1, el) + "'";
+      else if (el < 60) lbl = 'HT';
+      else if (el < 105) lbl = "~" + (el - 15) + "'";      // knock off a 15-min break
+      else lbl = "~90'";
+      return '<span class="mcstat live"><i></i>' + lbl + '</span>';
     }
     var until = ko(m) - now;
     var days = Math.floor(until / 86400000);
@@ -935,38 +1953,228 @@ a.intlblock.lnk:hover{border-color:var(--teal)}
     if (!played || m.hs === '' || m.hs === null || m.hs === undefined) {
       var d = new Date(m.kickoff);
       var day = d.toLocaleDateString([], { weekday: 'short' });
-      var time = d.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+      var time = d.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', hour12: false });
       return '<div class="mcko"><span class="mcday">' + day + '</span>' + time + '</div>';
     }
     return '<div class="mcscore">' + m.hs + '<span>–</span>' + m.as_ + '</div>';
   }
 
   /* Decide which matches deserve the two slots. */
+  var NEARLY = 15 * 60 * 1000;   // a match counts as "on" from 15 minutes
+                                 // before kick-off to 15 minutes after it ends
+
+  function isOn(m, now) {
+    if (m.status === 'live' && ended(m) > now) return true;
+    return now >= ko(m) - NEARLY && now <= ended(m) + NEARLY;
+  }
+
+  /* Which two matches lead the page.
+     Anything with a player you follow wins outright — that's the whole point
+     of following someone. Then whatever is actually on. Then the generator's
+     score, which weighs the competition, the biggest name in it, and how many
+     of ours are involved. */
+  function rank(all, now) {
+    var favs = [];
+    try { favs = JSON.parse(localStorage.getItem('fb_favs_v1')) || []; } catch (e) {}
+    var mine = {};
+    favs.forEach(function (s) { mine[s] = 1; });
+
+    return all.map(function (m) {
+      var yours = m.players.some(function (p) { return mine[p.slug]; });
+      var on = isOn(m, now);
+      var done = m.status === 'ft' || ended(m) <= now;
+      var score = (m.pull || 0)
+                + (yours ? 10000 : 0)
+                + (on ? 5000 : 0)
+                + (done ? 0 : 200);          // a game to come beats one gone by
+      // among equals, soonest upcoming and most recent finished come first
+      score -= Math.abs(now - ko(m)) / 36e5 * 0.4;
+      return { m: m, score: score, on: on };
+    }).sort(function (a, b) { return b.score - a.score; });
+  }
+
+  /* Which two lead the page:
+       1. Anything live (or about to be / just finished) always wins.
+       2. Otherwise the last result holds its spot until halfway to the next
+          game, then the next game takes over — with the score picking WHICH
+          result and WHICH next game, decayed by distance in time so a big
+          match tomorrow beats a small one tonight, but not one next week. */
+  function decayed(r, now) {
+    var m = r.m;
+    var hrs = Math.abs(now - (m.status === 'ft' || ended(m) <= now ? ended(m) : ko(m))) / 36e5;
+    return r.score - hrs * 1.5;
+  }
   function choose(all, now) {
-    var live = [], past = [], future = [];
-    all.forEach(function (m) {
-      if (m.status === 'live' && ended(m) > now) live.push(m);
-      else if (m.status === 'ft' || ended(m) <= now) past.push(m);
-      else future.push(m);
-    });
-    past.sort(function (a, b) { return ko(b) - ko(a); });     // most recent first
-    future.sort(function (a, b) { return ko(a) - ko(b); });   // soonest first
-
-    if (live.length) return live.concat(future).slice(0, 2);
-
-    var lastM = past[0], nextM = future[0];
-
-    if (lastM && nextM) {
-      var midpoint = ended(lastM) + (ko(nextM) - ended(lastM)) / 2;
-      // before halfway: the result still leads. after: the next game leads.
-      return (now < midpoint) ? [lastM, nextM] : [nextM, lastM];
+    var ranked = rank(all, now);
+    if (!ranked.length) return [];
+    var on = ranked.filter(function (r) { return r.on; });
+    if (on.length) {
+      var rest = ranked.filter(function (r) { return !r.on; });
+      return on.slice(0, 2).concat(rest).slice(0, 2).map(function (r) { return r.m; });
     }
-    if (nextM) return future.slice(0, 2);
-    if (lastM) return past.slice(0, 2);
+    var past = [], future = [];
+    ranked.forEach(function (r) {
+      (r.m.status === 'ft' || ended(r.m) <= now ? past : future).push(r);
+    });
+    past.sort(function (a, b) { return decayed(b, now) - decayed(a, now); });
+    // any game kicking off TODAY outranks any game on a later day, whatever
+    // the fixture quality - nobody wants tomorrow's match while today has one
+    function dayOf(t) { var d = new Date(t); return d.getFullYear() * 400 + d.getMonth() * 32 + d.getDate(); }
+    var todayKey = dayOf(now);
+    function bucket(r) { return dayOf(ko(r.m)) === todayKey ? 0 : 1; }
+    future.sort(function (a, b) {
+      if (bucket(a) !== bucket(b)) return bucket(a) - bucket(b);
+      return decayed(b, now) - decayed(a, now);
+    });
+    var lastM = past[0] && past[0].m, nextM = future[0] && future[0].m;
+    if (lastM && nextM) {
+      var mid = ended(lastM) + (ko(nextM) - ended(lastM)) / 2;
+      return now < mid ? [lastM, nextM] : [nextM, (future[1] && future[1].m) || lastM];
+    }
+    if (nextM) return future.slice(0, 2).map(function (r) { return r.m; });
+    if (lastM) return past.slice(0, 2).map(function (r) { return r.m; });
     return [];
   }
 
+  function avatarHtml(p, root) {
+    var face = p.photo ? p.photo : (p.img ? root + 'img/players/' + p.slug + '.png' : '');
+    return face
+      ? '<div class="pavatar sm"><img src="' + face + '" alt="" loading="lazy" ' +
+        'onerror="this.parentNode.innerHTML=\'<span>' + p.ini + '</span>\'"></div>'
+      : '<div class="pavatar sm"><span>' + p.ini + '</span></div>';
+  }
+  function chip(p, root) {
+    return '<a class="mcp" href="' + root + 'player/' + p.slug + '.html" title="' + p.n + '">' +
+           avatarHtml(p, root) + '<span class="mcpn">' + p.n + '</span></a>';
+  }
+  function playersHtml(m, root, limit) {
+    /* Squad lists are already ordered best-first by the generator, so showing
+       three names and a count beats forty chips or a wall of faces. */
+    if (m.sq) limit = (window.innerWidth <= 640 ? 2 : 3);
+    var list = limit ? m.players.slice(0, limit) : m.players;
+    var h = list.map(function (p) { return chip(p, root); }).join('');
+    if (limit && m.players.length > limit) h += '<span class="mcmore">+' + (m.players.length - limit) + ' more</span>';
+    return h;
+  }
+
+  function bdg(id, cls) {
+    if (!id) return '<span class="badge ' + cls + ' generic"></span>';
+    return '<img class="badge ' + cls + '" src="https://images.fotmob.com/image_resources/logo/teamlogo/' + id + '.png" alt="" loading="lazy" onerror="this.outerHTML=\'<span class=&quot;badge ' + cls + ' generic&quot;></span>\'">';
+  }
+  function card(m, now, limit, root) {
+    root = root || '';
+    return '<div class="mccard' + (m.loi || m.sq ? ' loi' : '') + '" data-href="' + root + 'match/' + m.id + '.html" role="link" tabindex="0">' +
+           '<div class="mcrow">' +
+             '<span class="mccomp">' + m.comp + '</span>' + statusChip(m, now) +
+           '</div>' +
+           '<div class="mcteams"><div class="mct">' + bdg(m.hb, 'sm') + m.home + '</div>' + score(m, now) +
+           '<div class="mct right">' + m.away + bdg(m.ab, 'sm') + '</div></div>' +
+           '<div class="mcplayers">' + playersHtml(m, root, limit) + '</div></div>';
+  }
+
+  function wireCards(box) {
+    var cards = box.querySelectorAll('.mccard,.fxmatch,.fxnext');
+    for (var c = 0; c < cards.length; c++) {
+      (function (card) {
+        function go(e) {
+          if (e.target.closest && e.target.closest('a')) return;
+          var h = card.getAttribute('data-href'), d = card.getAttribute('data-day');
+          if (d) { fxSel = d; renderAll(); return; }
+          if (h) location.href = h;
+        }
+        card.addEventListener('click', go);
+        card.addEventListener('keydown', function (e) {
+          if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); go(e); }
+        });
+      })(cards[c]);
+    }
+  }
+
+  /* ---------- Fixtures page (FotMob-style) ----------
+     One day at a time, a scrollable date strip on top, matches grouped by
+     competition. Abroad / LOI / All filter. Opens on today. */
+  var fxSel = null, fxFilter = 'abroad', fxStripBuilt = false;
+  function dayKey(d) { return d.getFullYear() + '-' + (d.getMonth() + 1) + '-' + d.getDate(); }
+  function midRow(m, now) {
+    var played = m.status === 'live' || m.status === 'ft' || ended(m) < now;
+    if (m.status === 'live' || m.status === 'ht') { var _lm = m.status === 'ht' ? 'HT' : (m.minute ? liveMin(m) : ''); return '<div class="mid sc lv">' + m.hs + ' – ' + m.as_ + '<br><small>' + (!_lm ? 'LIVE' : (_lm === 'HT' ? 'HT' : _lm + "'")) + '</small></div>'; }
+    if (played && m.hs !== '' && m.hs !== null && m.hs !== undefined) return '<div class="mid sc">' + m.hs + ' – ' + m.as_ + '</div>';
+    if (played) return '<div class="mid">FT</div>';
+    return '<div class="mid">' + new Date(m.kickoff).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', hour12: false }) + '</div>';
+  }
+  function renderAll() {
+    var box = document.getElementById('fxall'), strip = document.getElementById('fxdays');
+    if (!box || !strip || !window.FB_MATCHES) return;
+    var now = Date.now(), today = new Date(now), todayKey = dayKey(today);
+    var pass = function (m) { return fxFilter === 'all' || (fxFilter === 'loi' ? !!m.loi : !m.loi); };
+    var all = FB_MATCHES.filter(pass).sort(function (a, b) { return ko(a) - ko(b); });
+    var byDay = {};
+    all.forEach(function (m) { var k = dayKey(new Date(m.kickoff)); (byDay[k] = byDay[k] || []).push(m); });
+    if (!fxSel) fxSel = todayKey;
+
+    // date strip: 14 days back, 21 forward
+    var html = '';
+    for (var i = -14; i <= 21; i++) {
+      var d = new Date(today.getFullYear(), today.getMonth(), today.getDate() + i);
+      var k = dayKey(d), label;
+      if (i === 0) label = 'Today'; else if (i === -1) label = 'Yesterday'; else if (i === 1) label = 'Tomorrow';
+      else label = d.toLocaleDateString([], { weekday: 'short', day: 'numeric', month: 'short' });
+      html += '<button data-day="' + k + '" class="' + (k === fxSel ? 'on ' : '') + (byDay[k] ? 'has' : '') + '">' + label + '</button>';
+    }
+    strip.innerHTML = html;
+    var on = strip.querySelector('.on');
+    if (on && on.scrollIntoView) on.scrollIntoView({ inline: 'center', block: 'nearest' });
+
+    if (!fxStripBuilt) {
+      fxStripBuilt = true;
+      strip.addEventListener('click', function (e) { var b = e.target.closest('button'); if (b) { fxSel = b.getAttribute('data-day'); renderAll(); } });
+      var f = document.getElementById('fxfilt');
+      if (f) f.addEventListener('click', function (e) { var b = e.target.closest('button'); if (!b) return;
+        [].forEach.call(f.children, function (x) { x.classList.toggle('on', x === b); });
+        fxFilter = b.getAttribute('data-f');
+        if (window.FB_TRACK) FB_TRACK('fixtures_filter', { filter: fxFilter });
+        renderAll(); });
+    }
+
+
+    var ms = byDay[fxSel] || [];
+    if (!ms.length) {
+      var sp = fxSel.split('-'), dayEnd = new Date(+sp[0], sp[1] - 1, +sp[2] + 1).getTime();
+      var next = all.filter(function (m) { return ko(m) >= dayEnd; })[0];
+      box.innerHTML = '<div class="fxnone">No matches this day</div>' +
+        (next ? '<div style="text-align:center"><div class="fxnext" data-day="' + dayKey(new Date(next.kickoff)) + '" role="button" tabindex="0">' +
+                '<span>' + next.home + '</span><span><b>' + new Date(next.kickoff).toLocaleDateString([], { weekday: 'long' }) + '</b>' +
+                '<small>' + new Date(next.kickoff).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', hour12: false }) + '</small></span>' +
+                '<span>' + next.away + '</span></div></div>' : '');
+      wireCards(box); return;
+    }
+    var comps = [], byComp = {};
+    ms.forEach(function (m) { if (!byComp[m.comp]) { byComp[m.comp] = []; comps.push(m.comp); } byComp[m.comp].push(m); });
+    box.innerHTML = comps.map(function (c) {
+      var rows = byComp[c].map(function (m) {
+        return '<div class="fxmatch' + (m.loi || m.sq ? ' loi' : '') + '" data-href="match/' + m.id + '.html" role="link" tabindex="0">' +
+               '<div class="fxt"><div class="h">' + m.home + bdg(m.hb, 'sm') + '</div>' + midRow(m, now) + '<div class="a">' + bdg(m.ab, 'sm') + m.away + '</div></div>' +
+               (m.ven ? '<div class="fxven">' + m.ven + '</div>' : '') +
+               '<div class="fxp">' + playersHtml(m, '', 0) + '</div></div>';
+      }).join('');
+      return '<div class="fxcomp"><h4><span>' + c + '</span><small>' + byComp[c].length + (byComp[c].length === 1 ? ' match' : ' matches') + '</small></h4>' + rows + '</div>';
+    }).join('');
+    wireCards(box);
+
+  }
+
+  function renderHead() {
+    var head = document.getElementById('mhead');
+    if (!head || !window.FB_MATCHES || !FB_MATCHES.length) return;
+    var m = FB_MATCHES[0], now = Date.now();
+    var chip = document.getElementById('mchip'), sw = document.getElementById('mscorewrap');
+    if (chip) chip.innerHTML = statusChip(m, now);
+    if (sw) sw.innerHTML = (m.status !== 'scheduled' && m.hs !== '' && m.hs !== null && m.hs !== undefined)
+      ? '<div class="mscore">' + m.hs + '<span>–</span>' + m.as_ + '</div>'
+      : '<div class="mscore ko">' + new Date(m.kickoff).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', hour12: false }) + '</div>';
+  }
   function render() {
+    renderAll(); renderHead();
     var sec = document.getElementById('mc-sec'), box = document.getElementById('mc');
     if (!sec || !box || !window.FB_MATCHES) return;
     var now = Date.now();
@@ -983,56 +2191,210 @@ a.intlblock.lnk:hover{border-color:var(--teal)}
 
     var shown = choose(all, now);
 
-    box.innerHTML = shown.map(function (m) {
-      var players = m.players.slice(0, 2).map(function (p) {
-        var face = p.photo ? p.photo : (p.img ? 'img/players/' + p.slug + '.png' : '');
-        var av = face
-          ? '<div class="pavatar sm"><img src="' + face + '" alt="" loading="lazy" ' +
-            'onerror="this.parentNode.innerHTML=\'<span>' + p.ini + '</span>\'"></div>'
-          : '<div class="pavatar sm"><span>' + p.ini + '</span></div>';
-        return '<a class="mcp" href="player/' + p.slug + '.html" title="' + p.n + '">' +
-               av + '<span class="mcpn">' + p.n + '</span></a>';
-      }).join('');
-      if (m.players.length > 2) {
-        players += '<span class="mcmore">+' + (m.players.length - 2) + ' more</span>';
-      }
-      return '<div class="mccard" data-href="match/' + m.id + '.html" role="link" tabindex="0">' +
-             '<div class="mcrow">' +
-               '<span class="mccomp">' + m.comp + '</span>' + statusChip(m, now) +
-             '</div>' +
-             '<div class="mcteams"><div class="mct">' + m.home + '</div>' + score(m, now) +
-             '<div class="mct right">' + m.away + '</div></div>' +
-             '<div class="mcplayers">' + players + '</div></div>';
-    }).join('');
+    box.innerHTML = shown.map(function (m) { return card(m, now, 2, ''); }).join('');
 
-    var cards = box.querySelectorAll('.mccard');
-    for (var c = 0; c < cards.length; c++) {
-      (function (card) {
-        function go(e) {
-          if (e.target.closest && e.target.closest('a')) return;
-          location.href = card.getAttribute('data-href');
-        }
-        card.addEventListener('click', go);
-        card.addEventListener('keydown', function (e) {
-          if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); go(e); }
-        });
-      })(cards[c]);
-    }
+    wireCards(box);
 
     var more = document.getElementById('mc-more');
     if (more) {
       if (all.length > shown.length) {
         more.style.display = '';
-        more.textContent = 'See all ' + all.length + ' →';
+        more.textContent = 'See all →';
       } else {
         more.style.display = 'none';
       }
     }
   }
 
+  /* Live scores. First choice: /api/live, which asks the source directly
+     the moment a browser polls, edge-cached ~25s — genuinely live. Fallback:
+     the old live.json file the scraper commits, for when the function is
+     down. The old path alone is why scores froze for hours: it depends on
+     GitHub running a schedule it frequently just doesn't run. */
+  function liveWindow(m, now) {
+    if (m.status === 'ft') return false;          // final is final
+    if (m.status === 'live') return true;
+    // "scheduled" long past kick-off means the built page is stale — keep
+    // asking for up to five hours so a late visitor still gets the result
+    return now >= ko(m) - 20 * 60 * 1000 && now - ko(m) <= 5 * 3600 * 1000;
+  }
+
+  /* Match pages: the api can send the goals and cards along with the score,
+     and this redraws the Timeline section from them, so events show up while
+     the game is still on instead of after the next site build. */
+  /* While a game is live, mark the subs on the rendered teamsheet: red down
+     arrow on whoever went off (pitch), green up arrow on whoever came on
+     (bench). The teamsheet is the truth about who started, so if the pair
+     reads backwards, flip it. */
+  function applyLiveSubs(subs) {
+    if (!subs.length) return;
+    function norm(t) {
+      return String(t || '').normalize('NFKD').replace(/[\u0300-\u036f]/g, '')
+        .replace(/[^a-z ]/gi, '').toLowerCase().trim();
+    }
+    var pitch = {}, bench = {};
+    Array.prototype.forEach.call(document.querySelectorAll('.pitch .lup'), function (el) {
+      pitch[norm(el.getAttribute('title') || el.textContent)] = el;
+    });
+    Array.prototype.forEach.call(document.querySelectorAll('.benchcol .bp'), function (el) {
+      bench[norm(el.textContent)] = el;
+    });
+    function mark(el, cls, min) {
+      if (!el || el.querySelector('.' + cls)) return;
+      var i = document.createElement('span');
+      i.className = cls;
+      i.textContent = (cls === 'soff' ? '\u25bc ' : '\u25b2 ') + min + '\u2032';
+      el.appendChild(i);
+      // Keep the tap-sheet in step. Without this the pitch shows the player
+      // coming off while his own panel still reports no minutes for the match.
+      var key = el.getAttribute('data-mstat');
+      var st = key && window.FB_MSTATS && window.FB_MSTATS[key];
+      if (st) st[cls] = min;
+    }
+    subs.forEach(function (e) {
+      var off = norm(e.player), on = norm(e.sin);
+      if (bench[off] || pitch[on]) {          // pair arrived backwards
+        var t = off; off = on; on = t;
+      }
+      mark(pitch[off], 'soff', e.min);
+      mark(bench[on], 'son', e.min);
+    });
+  }
+
+  function paintTimeline(evs) {
+    var box = document.getElementById('mtl');
+    if (!box) return;
+    function esc(t) { return String(t == null ? '' : t).replace(/&/g, '&amp;').replace(/</g, '&lt;'); }
+    function norm(t) {
+      return String(t || '').normalize('NFKD').replace(/[\u0300-\u036f]/g, '')
+        .replace(/[^a-z ]/gi, '').toLowerCase().trim();
+    }
+    var irish = [];
+    var ST = window.FB_MSTATS || {};
+    for (var k in ST) irish.push(norm(ST[k].n));
+    function isIrish(name) {
+      var n = norm(name);
+      if (!n) return false;
+      for (var i = 0; i < irish.length; i++) {
+        var f = irish[i];
+        if (f === n) return true;
+        var a = f.split(' '), b = n.split(' ');
+        if (a.length > 1 && b.length > 1 &&
+            a[a.length - 1] === b[b.length - 1] && a[0].charAt(0) === b[0].charAt(0)) return true;
+      }
+      return false;
+    }
+    var LAB = { own_goal: 'own goal', missed_penalty: 'penalty missed', penalty: 'penalty',
+                second_yellow: 'second yellow', red: 'red card', yellow: 'yellow card' };
+    applyLiveSubs(evs.filter(function (e) { return e.type === 'sub'; }));
+    var rows = '', hgoals = [], agoals = [];
+    evs.forEach(function (e) {
+      var t = e.type;
+      if (t === 'sub') return;
+      var side = e.home ? 'h' : 'a';
+      var who = esc(e.player);
+      if (isIrish(e.player)) who = '<b class="ir">' + who + '</b>';
+      var ic = { yellow: '<i class="cd y"></i>', red: '<i class="cd r"></i>',
+                 second_yellow: '<i class="cd y2"></i>', missed_penalty: '\u2715' }[t] || '\u26bd';
+      var lab = LAB[t] && t !== 'goal' ? ' <small>' + LAB[t] + '</small>' : '';
+      var cell = '<span class="evwho">' + who + '</span>' + lab;
+      rows += '<div class="tl ' + side + ' ' + t + '"><div class="tlh">' + (side === 'h' ? cell : '') + '</div>'
+        + '<div class="tlm">' + esc(e.min) + "'" + '<span class="tli">' + ic + '</span></div>'
+        + '<div class="tla">' + (side === 'a' ? cell : '') + '</div></div>';
+      if (t === 'goal' || t === 'own_goal' || t === 'penalty') {
+        (e.home ? hgoals : agoals).push(esc(e.player) + ' ' + esc(e.min) + "'" + (t === 'own_goal' ? ' (og)' : ''));
+      }
+    });
+    // No goals or cards yet — show the empty state rather than leaving a blank
+    // (or letting a match that kicked off after the build have no Timeline).
+    var inner = rows
+      ? '<div class="timeline">' + rows + '</div>'
+      : '<div class="timeline"><div class="tlempty">No goals or cards yet.</div></div>';
+    box.innerHTML = '<div class="sec"><h2>Timeline</h2></div>' + inner
+      + '<div class="rmnote">Irish players in <b class="ir">green</b>.'
+      + ' Goals, cards and missed penalties only.</div>';
+  }
+
+  async function refreshApi(now) {
+    var want = (window.FB_MATCHES || []).filter(function (m) {
+      return m.fmid && liveWindow(m, now);
+    });
+    if (!want.length) return true;            // nothing on — nothing to ask
+    // The poll is capped to keep upstream requests down, so on a busy Saturday
+    // (many games in the window) the cap must not be spent on games that
+    // haven't kicked off yet. Rank the ones already under way first — most
+    // recently started first — so live matches are always polled.
+    want.sort(function (a, b) {
+      var la = now >= ko(a), lb = now >= ko(b);
+      if (la !== lb) return la ? -1 : 1;        // in-progress before not-yet-started
+      return la ? ko(b) - ko(a) : ko(a) - ko(b);
+    });
+    var ids = [];
+    want.forEach(function (m) { if (ids.indexOf(m.fmid) < 0) ids.push(m.fmid); });
+    var wantEv = !!document.getElementById('mtl');
+    var res = await fetch('/api/live?ids=' + ids.slice(0, 30).join(',') + (wantEv ? '&full=1' : ''), { cache: 'no-store' });
+    if (!res.ok) return false;
+    var data = await res.json();
+    if (!data || !data.matches) return false;
+    var stamp = data.updated ? Date.parse(data.updated) : Date.now();
+    want.forEach(function (m) {
+      var l = data.matches[m.fmid];
+      if (!l) return;
+      m.status = l.status || m.status;
+      if (l.minute !== undefined) { m.minute = l.minute; m._stamp = stamp; }
+      if (l.hs !== null && l.hs !== undefined) m.hs = l.hs;
+      if (l.as !== null && l.as !== undefined) m.as_ = l.as;
+      // paint the timeline when there are events, or show the empty state once a
+      // match has started (so a live 0-0 with no cards still gets a Timeline)
+      if (l.ev && (l.ev.length || m.status === 'live' || m.status === 'ht' || m.status === 'ft'))
+        paintTimeline(l.ev);
+      if (l.pstats) { window.FB_LPS = window.FB_LPS || {}; window.FB_LPS[m.fmid] = l.pstats; }
+    });
+    render();
+    var el = document.querySelector('.updated');
+    if (el && data.updated) el.setAttribute('data-stamp', data.updated);
+    return true;
+  }
+
+  async function refreshLegacy() {
+    var res = await fetch('/live.json?t=' + Date.now(), { cache: 'no-store' });
+    if (!res.ok) return;
+    var data = await res.json();
+    var list = Array.isArray(data) ? data : (data.matches || []);
+    if (!list.length) return;
+
+    if (data.updated) { var st = Date.parse(data.updated); if (!isNaN(st)) LIVE_STAMP = st; }
+    var byId = {};
+    (window.FB_MATCHES || []).forEach(function (m) { byId[m.id] = m; });
+
+    list.forEach(function (l) {
+      var m = byId[l.id];
+      if (!m) return;                       // only update what the site knows about
+      if (l.status) m.status = l.status;
+      if (l.minute !== undefined) m.minute = l.minute;
+      if (l.hs !== undefined && l.hs !== null) m.hs = l.hs;
+      if (l.as_ !== undefined && l.as_ !== null) m.as_ = l.as_;
+      if (l.home_score !== undefined && l.home_score !== null) m.hs = l.home_score;
+      if (l.away_score !== undefined && l.away_score !== null) m.as_ = l.away_score;
+    });
+    render();
+    var stamp = document.querySelector('.updated');
+    if (stamp && data.updated) stamp.setAttribute('data-stamp', data.updated);
+  }
+
+  async function refresh() {
+    try {
+      if (await refreshApi(Date.now())) return;
+    } catch (e) { /* fall through to the file */ }
+    try { await refreshLegacy(); } catch (e) { /* offline — the page still stands */ }
+  }
+
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', render);
   else render();
-  setInterval(render, 60000);
+  setInterval(render, 30000);
+
+  refresh();
+  setInterval(refresh, 30000);
 })();
 
 /* ---------- FOLLOW PROMPT ----------
@@ -1098,7 +2460,17 @@ a.intlblock.lnk:hover{border-color:var(--teal)}
   window.FB_EMAIL = saved;
 
   function send(email, slug) {
+    if (window.FB_IDENTIFY) FB_IDENTIFY(email);
+    if (window.FB_TRACK) FB_TRACK('email_saved', { source: 'follow', player: slug || '' });
     try { localStorage.setItem(EKEY, email); } catch (e) {}
+    // save it where we can see it
+    try {
+      fetch('/api/subscribe', {
+        method: 'POST', headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email: email, source: 'follow', players: slug || '' })
+      });
+    } catch (e) {}
+    // and to the newsletter provider, if one is set up
     var url = window.FB_SUBSCRIBE_URL;
     if (url) {
       try {
@@ -1331,7 +2703,7 @@ a.intlblock.lnk:hover{border-color:var(--teal)}
     (function (el) {
       var d = new Date(el.getAttribute('data-ko'));
       if (isNaN(d)) return;
-      var time = d.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+      var time = d.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', hour12: false });
       if (el.classList.contains('ko-time')) {
         el.textContent = time;
       } else {
@@ -1361,7 +2733,7 @@ a.intlblock.lnk:hover{border-color:var(--teal)}
       var c = document.querySelector('h1');
       return { kind: 'club', label: c ? c.textContent.trim() : 'this club' };
     }
-    return { kind: 'page', label: document.title.replace(' — FOOTBALLERS', '') };
+    return { kind: 'page', label: document.title.replace(' — footballers.ie', '') };
   }
 
   function open(preset) {
@@ -1418,6 +2790,7 @@ a.intlblock.lnk:hover{border-color:var(--teal)}
       var btn = wrap.querySelector('.repform button');
       btn.disabled = true; btn.textContent = 'Sending…';
       try {
+        if (window.FB_TRACK) FB_TRACK('report_sent', { type: wrap.querySelector('#rt').value, page: location.pathname });
         var res = await fetch('/api/report', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
@@ -1471,6 +2844,343 @@ a.intlblock.lnk:hover{border-color:var(--teal)}
     });
     obs.observe(empty, { attributes: true, attributeFilter: ['style'] });
   });
+})();
+
+/* ---------- LAST UPDATED ----------
+   The build stamps the newest data file; turn it into "updated 4 hours ago". */
+(function () {
+  var el = document.querySelector('.updated');
+  if (!el) return;
+  var stamp = el.getAttribute('data-stamp');
+  var d = new Date(stamp);
+  if (isNaN(d)) { el.textContent = ''; return; }
+
+  function render() {
+    var mins = Math.round((Date.now() - d.getTime()) / 60000);
+    var rel;
+    if (mins < 1)        rel = 'just now';
+    else if (mins < 60)  rel = mins + (mins === 1 ? ' minute ago' : ' minutes ago');
+    else if (mins < 1440) {
+      var h = Math.floor(mins / 60);
+      rel = h + (h === 1 ? ' hour ago' : ' hours ago');
+    } else {
+      var days = Math.floor(mins / 1440);
+      rel = days + (days === 1 ? ' day ago' : ' days ago');
+    }
+    var when = d.toLocaleString([], {
+      day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit'
+    });
+    el.textContent = 'Data updated ' + rel + ' · ' + when;
+  }
+  render();
+  setInterval(render, 30000);
+})();
+
+/* ---------- WHEN IS HE PLAYING ----------
+   Turn a fixture date into "today at 17:00", "tomorrow at 19:45", "in 3 days". */
+(function () {
+  function parseWhen(s) {
+    if (!s) return null;
+    s = String(s).trim();
+    var d = null;
+    if (/^\d{4}-\d{2}-\d{2}/.test(s)) d = new Date(s.length > 10 ? s : s + 'T00:00:00');
+    if (!d || isNaN(d)) {
+      // "26 Aug" style — assume the nearest such date from now
+      var m = s.match(/^(\d{1,2})\s+([A-Za-z]{3})/);
+      if (!m) return null;
+      var mons = ['jan','feb','mar','apr','may','jun','jul','aug','sep','oct','nov','dec'];
+      var mi = mons.indexOf(m[2].toLowerCase());
+      if (mi < 0) return null;
+      var now = new Date();
+      d = new Date(now.getFullYear(), mi, +m[1]);
+      if (d - now < -1000 * 60 * 60 * 24 * 200) d.setFullYear(now.getFullYear() + 1);
+    }
+    return d;
+  }
+
+  function hasTime(s) { return /T\d{2}:\d{2}/.test(String(s || '')); }
+
+  window.FB_WHEN = function (raw) {
+    var d = parseWhen(raw);
+    if (!d) return '';
+    var now = new Date();
+    var time = hasTime(raw)
+      ? d.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', hour12: false })
+      : '';
+
+    var startToday = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+    var startThat  = new Date(d.getFullYear(), d.getMonth(), d.getDate());
+    var days = Math.round((startThat - startToday) / 86400000);
+
+    if (days < 0)  return 'earlier';
+    if (days === 0) return time ? 'today at ' + time : 'today';
+    if (days === 1) return time ? 'tomorrow at ' + time : 'tomorrow';
+    if (days < 7)  return 'in ' + days + ' days';
+    if (days < 14) return 'in a week';
+    if (days < 31) return 'in ' + Math.round(days / 7) + ' weeks';
+    return 'in ' + Math.round(days / 30) + (Math.round(days / 30) === 1 ? ' month' : ' months');
+  };
+
+  /* homepage milestones: out of the pool the page ships, show the first four
+     that are either a player you follow or a name people actually know. */
+  (function () {
+    var cards = document.querySelectorAll('.msgrid .mscard[data-slug]');
+    if (!cards.length) return;
+    var favs = {};
+    try { (JSON.parse(localStorage.getItem('fb_favs_v1')) || []).forEach(function (s) { favs[s] = 1; }); } catch (e) {}
+    var shown = 0;
+    for (var i = 0; i < cards.length; i++) {
+      var c = cards[i];
+      var keep = favs[c.getAttribute('data-slug')] || c.getAttribute('data-fam') === '1';
+      if (keep && shown < 4) { c.style.display = ''; shown++; }
+    }
+    if (!shown) {
+      var sec = document.querySelector('.msgrid');
+      if (sec) {
+        var head = sec.previousElementSibling;
+        sec.style.display = 'none';
+        if (head && head.classList.contains('sec')) head.style.display = 'none';
+      }
+    }
+  })();
+
+  // player pages: "Playing Watford (A) tomorrow at 19:45"
+  function paintFixtures() {
+    var rows = document.querySelectorAll('.fxrow.when');
+    for (var i = 0; i < rows.length; i++) {
+      var r = rows[i];
+      var when = FB_WHEN(r.getAttribute('data-when'));
+      var opp = r.getAttribute('data-opp') || '';
+      var ha = r.getAttribute('data-ha') || '';
+      var cell = r.querySelector('.fxwhen');
+      if (!cell || !when) continue;
+      cell.innerHTML = '<b>' + opp + '</b>' +
+        (ha ? ' <span class="ha">' + ha + '</span>' : '') +
+        '<span class="wsub">' + when + '</span>';
+      // the data hasn't caught up yet: the game kicked off hours ago, so it
+      // belongs in Recent matches, not here — hide it rather than lie
+      var t = Date.parse(r.getAttribute('data-when'));
+      if (!isNaN(t) && Date.now() - t > 150 * 60 * 1000) r.style.display = 'none';
+    }
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', paintFixtures);
+  else paintFixtures();
+  setInterval(paintFixtures, 60000);
+})();
+
+
+/* ---------- SIGNUP FORMS ----------
+   Newsletter box and the alerts page post to /api/subscribe so the address
+   lands in the admin, whether or not a mail provider is connected. */
+(function () {
+  var forms = document.querySelectorAll('form.nlform, form.alertform');
+  for (var i = 0; i < forms.length; i++) {
+    (function (f) {
+      f.addEventListener('submit', async function (e) {
+        var input = f.querySelector('input[type=email]');
+        if (!input) return;
+        var email = input.value.trim();
+        if (!email || email.indexOf('@') === -1) return;
+        e.preventDefault();
+
+        var btn = f.querySelector('button[type=submit], button');
+        var label = btn ? btn.textContent : '';
+        if (btn) { btn.disabled = true; btn.textContent = 'Saving…'; }
+
+        var players = '';
+        try { players = (JSON.parse(localStorage.getItem('fb_favs_v1')) || []).join(';'); } catch (err) {}
+
+        try {
+          var res = await fetch('/api/subscribe', {
+            method: 'POST', headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              email: email,
+              source: f.classList.contains('alertform') ? 'alerts' : 'newsletter',
+              players: players,
+              prefs: [].map.call(document.querySelectorAll('#signup .alertopt input:checked'),
+                function (c) { return c.name.replace('alert_', ''); }).join(';') || undefined
+            })
+          });
+          var out = await res.json().catch(function () { return {}; });
+          if (!res.ok) throw new Error(out.error || 'Could not save that.');
+          if (window.FB_IDENTIFY) FB_IDENTIFY(email);
+          if (window.FB_TRACK) FB_TRACK('newsletter_subscribed', { source: f.classList.contains('alertform') ? 'alerts' : 'newsletter' });
+          f.innerHTML = '<div class="nlok">You\'re on the list. Thanks.</div>';
+        } catch (ex) {
+          if (btn) { btn.disabled = false; btn.textContent = label; }
+          var note = f.querySelector('.nlnote') || document.createElement('div');
+          note.className = 'nlnote'; note.style.display = 'block';
+          note.textContent = ex.message || 'Could not save that. Try again shortly.';
+          f.appendChild(note);
+        }
+      });
+    })(forms[i]);
+  }
+})();
+
+/* ---------- THEME TOGGLE ----------
+   Two looks: the original, and Pitch (near-black + green). Saved locally,
+   applied in <head> before paint so there's no flash. */
+(function () {
+  var btn = document.getElementById('themetog');
+  if (!btn) return;
+  var label = btn.querySelector('.tlabel');
+
+  function current() {
+    return document.documentElement.getAttribute('data-theme') === 'pitch' ? 'pitch' : 'original';
+  }
+  function paint() {
+    if (label) label.textContent = current() === 'pitch' ? 'Original' : 'Pitch';
+    btn.setAttribute('aria-pressed', current() === 'pitch' ? 'true' : 'false');
+  }
+  btn.addEventListener('click', function () {
+    var next = current() === 'pitch' ? '' : 'pitch';
+    if (next) document.documentElement.setAttribute('data-theme', next);
+    else document.documentElement.removeAttribute('data-theme');
+    try {
+      if (next) localStorage.setItem('fb_theme', next);
+      else localStorage.removeItem('fb_theme');
+    } catch (e) {}
+    paint();
+  });
+  paint();
+})();
+
+/* ---- tap a player on a match page -> their numbers for THIS match ------- */
+(function () {
+  var STATS = window.FB_MSTATS;
+  if (!STATS) return;
+
+  var EVN = { sub_on: '▲ Came on', sub_off: '▼ Subbed off',
+              goal: '⚽ Goal', own_goal: '⚽ Own goal', penalty: '⚽ Penalty',
+              missed_penalty: '✕ Penalty missed', yellow: 'Yellow card',
+              red: 'Red card', second_yellow: 'Second yellow' };
+
+  function esc(t) { return String(t == null ? '' : t).replace(/&/g, '&amp;').replace(/</g, '&lt;'); }
+
+  var wrap = null;
+  function close() { if (wrap) { wrap.remove(); wrap = null; } }
+
+  function face(d) {
+    var src = d.u ? '' : (d.photo ? d.photo : (d.img ? '../img/players/' + d._slug + '.png' : ''));
+    return src
+      ? '<div class="pavatar sm"><img src="' + src + '" alt="" onerror="this.parentNode.innerHTML=\'<span>' + d.ini + '</span>\'"></div>'
+      : '<div class="pavatar sm"><span>' + d.ini + '</span></div>';
+  }
+
+  function normN(t) {
+    return String(t || '').normalize('NFKD').replace(/[\u0300-\u036f]/g, '')
+      .replace(/[^a-z ]/gi, '').toLowerCase().trim();
+  }
+  function liveStat(d) {
+    try {
+      var mm = (window.FB_MATCHES || [])[0];
+      if (!mm || (mm.status !== 'live' && mm.status !== 'ht')) return null;
+      var tbl = window.FB_LPS && window.FB_LPS[mm.fmid];
+      if (!tbl) return null;
+      var s = tbl[normN(d.n)];
+      return (s && s.r != null) ? s : null;
+    } catch (e) { return null; }
+  }
+  function evCount(d, type) {
+    return (d.evs || []).filter(function (e) { return e.type === type; }).length;
+  }
+
+  function open(slug) {
+    var d = STATS[slug];
+    if (!d) return;
+    d._slug = slug;
+    close();
+
+    var played = d.mins !== undefined && d.mins !== null && String(d.mins) !== '';
+    var rows;
+    if (d.u) {
+      // not one of ours: name, shirt, minutes worked out from the sub times,
+      // and whatever they did in the game below
+      rows = played
+        ? '<div class="msnote">' + (d.son ? 'On as a sub — about ' : 'Played ')
+          + esc(d.mins) + ' minutes.</div>'
+        : (d.son || d.soff ? '' : '<div class="msnote">Unused this match.</div>');
+    } else if (played) {
+      rows = '<div class="msgrid2">'
+        + '<div><b>' + esc(d.mins) + "'" + '</b><span>played</span></div>'
+        + '<div><b>' + (d.g || 0) + '</b><span>goals</span></div>'
+        + '<div><b>' + (d.a || 0) + '</b><span>assists</span></div>'
+        + '<div><b>' + (d.rating ? esc(d.rating) : '—') + '</b><span>rating</span></div>'
+        + '</div>';
+    } else if (liveStat(d)) {
+      var ls = liveStat(d);
+      var lg = evCount(d, 'goal');
+      rows = '<div class="msnote">Live \u2014 updates as the match goes:</div>'
+        + '<div class="msgrid2">'
+        + '<div><b>' + (ls.min != null ? esc(ls.min) + "'" : (d.soff ? esc(d.soff) + "'" : (d.son ? 'on ' + esc(d.son) + "'" : '\u2014'))) + '</b><span>played</span></div>'
+        + '<div><b>' + lg + '</b><span>goals</span></div>'
+        + '<div><b>' + (d.a || 0) + '</b><span>assists</span></div>'
+        + '<div><b>' + esc(ls.r) + '</b><span>rating \u00b7 live</span></div>'
+        + '</div>';
+    } else {
+      var m0 = (window.FB_MATCHES || [])[0];
+      var done = m0 && (m0.status === 'ft' || (Date.parse(m0.kickoff) && Date.now() - Date.parse(m0.kickoff) > 2 * 36e5));
+      // The teamsheet knows more than the stats feed does mid-match: whether he
+      // started, and when he went off. Say that rather than claiming nothing.
+      var started = !!document.querySelector('.pitch [data-mstat="' + slug + '"]');
+      var note;
+      if (d.son && d.soff)  note = 'On ' + esc(d.son) + "', off " + esc(d.soff) + "'";
+      else if (d.soff)      note = 'Started, off on ' + esc(d.soff) + "'";
+      else if (d.son)       note = 'Came on on ' + esc(d.son) + "'";
+      else if (started && !done) note = 'Started — still on';
+      else note = done ? 'Full-time stats for this game are still syncing'
+                       : 'No minutes recorded for this match';
+      rows = '<div class="msnote">' + note
+        + (d.srating ? ' — season so far:' : '.') + '</div>'
+        + '<div class="msgrid2">'
+        + '<div><b>' + (d.sap || 0) + '</b><span>apps</span></div>'
+        + '<div><b>' + (d.sg || 0) + '</b><span>goals</span></div>'
+        + '<div><b>' + (d.sa || 0) + '</b><span>assists</span></div>'
+        + '<div><b>' + (d.srating ? esc(d.srating) : '—') + '</b><span>avg rating</span></div>'
+        + '</div>';
+    }
+
+    var list = (d.evs || []).slice();
+    var hasSub = list.some(function (e) { return e.type === 'sub_on' || e.type === 'sub_off'; });
+    if (!hasSub) {
+      if (d.son) list.push({ min: d.son, type: 'sub_on' });
+      if (d.soff) list.push({ min: d.soff, type: 'sub_off' });
+    }
+    list.sort(function (a, b) {
+      return (parseInt(a.min, 10) || 0) - (parseInt(b.min, 10) || 0);
+    });
+    var evs = list.map(function (e) {
+      return '<div class="msev"><b>' + esc(e.min) + "'" + '</b>' + (EVN[e.type] || esc(e.type)) + '</div>';
+    }).join('');
+
+    wrap = document.createElement('div');
+    wrap.className = 'mssheetwrap';
+    wrap.innerHTML =
+      '<div class="mssheet" role="dialog" aria-label="' + esc(d.n) + ' in this match">'
+      + '<div class="mshead">' + face(d)
+      + '<div>' + (d.u
+          ? '<span class="msname">' + esc(d.n) + '</span>'
+          : '<a class="msname" href="../player/' + slug + '.html">' + esc(d.n) + ' →</a>')
+      + '<div class="msmeta">' + esc(d.club)
+      + (d.num ? ' · #' + esc(d.num) : '')
+      + (d.pos && d.pos !== '—' ? ' · ' + esc(d.pos) : '') + '</div></div>'
+      + '<button class="msx" aria-label="Close">×</button></div>'
+      + rows
+      + (evs ? '<div class="msevs">' + evs + '</div>' : '')
+      + (d.u ? '' : '<div class="msfine">Tap the name for the full profile.</div>')
+      + '</div>';
+    document.body.appendChild(wrap);
+    wrap.addEventListener('click', function (e) { if (e.target === wrap || e.target.closest('.msx')) close(); });
+  }
+
+  document.addEventListener('click', function (e) {
+    var el = e.target.closest && e.target.closest('[data-mstat]');
+    if (!el) return;
+    e.preventDefault();
+    open(el.getAttribute('data-mstat'));
+  });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') close(); });
 })();
 </script>
 </body>
