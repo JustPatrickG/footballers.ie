@@ -2565,6 +2565,7 @@ match_id,minute,type,player,team,venue
 2026-08-29-cardiff-city-v-sheffield-united,85,sub_on,Isaak Davies,Cardiff City,Cardiff City Stadium
 2026-08-29-cardiff-city-v-sheffield-united,90,sub_off,Krystian Bielik,Cardiff City,Cardiff City Stadium
 2026-08-29-cardiff-city-v-sheffield-united,90,sub_on,Calum Scanlon,Cardiff City,Cardiff City Stadium
+2026-08-29-cavalry-fc-v-vancouver-fc,,,,,ATCO Field
 2026-08-29-celtic-v-falkirk,4,goal,Camilo Durán,Celtic,Celtic Park
 2026-08-29-celtic-v-falkirk,29,goal,Camilo Durán,Celtic,Celtic Park
 2026-08-29-celtic-v-falkirk,35,yellow,Lewis Neilson,Falkirk,Celtic Park
@@ -2640,6 +2641,8 @@ match_id,minute,type,player,team,venue
 2026-08-29-colchester-united-v-rochdale,88,sub_off,Ryan East,Rochdale,JobServe Community Stadium
 2026-08-29-colchester-united-v-rochdale,88,sub_on,Emmanuel Dieseruvwe,Rochdale,JobServe Community Stadium
 2026-08-29-cosenza-v-potenza,1,goal,Augusto Bando,Potenza,Stadium
+2026-08-29-cosenza-v-potenza,49,goal,Paolo Dametto,Cosenza,Stadium
+2026-08-29-cosenza-v-potenza,90,goal,<TBD>,Potenza,Stadium
 2026-08-29-coventry-city-v-hull-city,10,yellow,Lewie Coyle,Hull City,Coventry Building Society Arena
 2026-08-29-coventry-city-v-hull-city,46,sub_off,Hidemasa Morita,Hull City,Coventry Building Society Arena
 2026-08-29-coventry-city-v-hull-city,46,sub_off,Lewie Coyle,Hull City,Coventry Building Society Arena
