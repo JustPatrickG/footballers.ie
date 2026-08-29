@@ -1665,13 +1665,31 @@ def scrape(args):
             sys.exit("--active needs match_index.json - run a full scrape "
                      "first.")
         win = dt.timedelta(hours=36)
-        active = set()
+        active, active_clubs = set(), set()
         for m in json.loads(idx_path.read_text()):
             ko = parse_iso(m["kickoff"])
             if ko and abs(ko - now) <= win:
                 active.update(m["slugs"])
-        todo = [p for p in players if p["slug"] in active]
-        print(f"--active: {len(todo)} players with a match within 36h")
+                for cid in (m.get("home_id"), m.get("away_id")):
+                    if cid:
+                        active_clubs.add(str(cid).strip())
+        # A match's slug list is only as good as the last full scrape. If that
+        # run missed someone, an --active run can never recover him: he is not
+        # in the list that decides who gets scraped, so he is never scraped, so
+        # he is never added to the list. His CLUB is in the fixture either way,
+        # so take everyone whose club is playing and the loop closes.
+        club_of = {}
+        pcsv = Path(args.out) / "data/api/players.csv"
+        if pcsv.exists():
+            with pcsv.open(encoding="utf-8") as fh:
+                for r in csv.DictReader(fh):
+                    if r.get("club_id"):
+                        club_of[r["slug"]] = str(r["club_id"]).strip()
+        todo = [p for p in players
+                if p["slug"] in active
+                or club_of.get(p["slug"]) in active_clubs]
+        print(f"--active: {len(todo)} players with a match within 36h "
+              f"({len(active)} named in the index, rest by club)")
         if not todo:
             print("nothing to do")
             return
