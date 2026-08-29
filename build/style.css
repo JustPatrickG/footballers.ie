@@ -1466,3 +1466,4 @@ a.intlblock.lnk:hover{border-color:var(--teal)}
 .natflag{width:20px;height:20px;border-radius:50%;flex:0 0 auto;background:linear-gradient(90deg,#169B62 33%,#fff 33% 66%,#FF883E 66%)}
 .clubchip{display:inline-flex;align-items:center;gap:6px;background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:4px 12px 4px 6px;font-size:13.5px;color:var(--white)}
 @media(max-width:560px){.bigrid,.sumgrid{gap:14px 4px}.ptab{padding:10px 10px;font-size:14px}}
+.tlempty{padding:18px 16px;color:var(--mute);font-family:'IBM Plex Mono',monospace;font-size:13px;text-align:center}

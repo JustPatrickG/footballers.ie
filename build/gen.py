@@ -2905,7 +2905,13 @@ EV_ICON = {"goal":"⚽","own_goal":"⚽","yellow":"","red":"","second_yellow":""
 EV_LABEL = {"own_goal":"own goal","missed_penalty":"penalty missed","second_yellow":"second yellow","red":"red card","yellow":"yellow card"}
 def events_block(m, involved):
     evs = EVENTS.get(match_id(m), [])
-    if not evs: return ""
+    _started = (m.get("status") or "scheduled") in ("live", "ht", "ft")
+    _empty_tl = ('<div class="sec"><h2>Timeline</h2></div>'
+                 '<div class="timeline"><div class="tlempty">No goals or cards yet.</div></div>'
+                 '<div class="rmnote">Irish players in <b class="ir">green</b>. '
+                 'Goals, cards and missed penalties only.</div>')
+    if not evs:
+        return _empty_tl if _started else ""
     venue = next((e.get("venue","") for e in evs if e.get("venue")), "")
     home = m.get("home",""); away = m.get("away","")
     irish = {x["n"] for x in involved} | {p["n"] for p in PLAYERS}
@@ -2925,7 +2931,8 @@ def events_block(m, involved):
         rows += (f'<div class="tl {side} {t}"><div class="tlh">{cell if side=="h" else ""}</div>'
                  f'<div class="tlm">{esc(e.get("minute",""))}\'<span class="tli">{ic}</span></div>'
                  f'<div class="tla">{cell if side=="a" else ""}</div></div>')
-    if not rows: return ""
+    if not rows:
+        return _empty_tl if _started else ""
     return (f'<div class="sec"><h2>Timeline</h2>{f"<span class=\"more\" style=\"border:0\">{esc(venue)}</span>" if venue else ""}</div>'
             f'<div class="timeline">{rows}</div>'
             f'<div class="rmnote">Irish players in <b class="ir">green</b>. Goals, cards and missed penalties only.</div>')

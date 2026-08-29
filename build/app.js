@@ -606,12 +606,12 @@
         (e.home ? hgoals : agoals).push(esc(e.player) + ' ' + esc(e.min) + "'" + (t === 'own_goal' ? ' (og)' : ''));
       }
     });
-    if (!rows) return;
-    // Every goal is already a row above with its minute, so a scorer summary
-    // underneath is the same information twice. The legend is kept because the
-    // server rendered one and this replaces the whole box.
-    box.innerHTML = '<div class="sec"><h2>Timeline</h2></div>'
-      + '<div class="timeline">' + rows + '</div>'
+    // No goals or cards yet — show the empty state rather than leaving a blank
+    // (or letting a match that kicked off after the build have no Timeline).
+    var inner = rows
+      ? '<div class="timeline">' + rows + '</div>'
+      : '<div class="timeline"><div class="tlempty">No goals or cards yet.</div></div>';
+    box.innerHTML = '<div class="sec"><h2>Timeline</h2></div>' + inner
       + '<div class="rmnote">Irish players in <b class="ir">green</b>.'
       + ' Goals, cards and missed penalties only.</div>';
   }
@@ -645,7 +645,11 @@
       if (l.minute !== undefined) { m.minute = l.minute; m._stamp = stamp; }
       if (l.hs !== null && l.hs !== undefined) m.hs = l.hs;
       if (l.as !== null && l.as !== undefined) m.as_ = l.as;
-      if (l.ev && l.ev.length) paintTimeline(l.ev);
+      // paint the timeline when there are events, or show the empty state once a
+      // match has started (so a live 0-0 with no cards still gets a Timeline)
+      if (l.ev && (l.ev.length || m.status === 'live' || m.status === 'ht' || m.status === 'ft'))
+        paintTimeline(l.ev);
+      if (l.pstats) { window.FB_LPS = window.FB_LPS || {}; window.FB_LPS[m.fmid] = l.pstats; }
     });
     render();
     var el = document.querySelector('.updated');
@@ -1365,6 +1369,24 @@
       : '<div class="pavatar sm"><span>' + d.ini + '</span></div>';
   }
 
+  function normN(t) {
+    return String(t || '').normalize('NFKD').replace(/[\u0300-\u036f]/g, '')
+      .replace(/[^a-z ]/gi, '').toLowerCase().trim();
+  }
+  function liveStat(d) {
+    try {
+      var mm = (window.FB_MATCHES || [])[0];
+      if (!mm || (mm.status !== 'live' && mm.status !== 'ht')) return null;
+      var tbl = window.FB_LPS && window.FB_LPS[mm.fmid];
+      if (!tbl) return null;
+      var s = tbl[normN(d.n)];
+      return (s && s.r != null) ? s : null;
+    } catch (e) { return null; }
+  }
+  function evCount(d, type) {
+    return (d.evs || []).filter(function (e) { return e.type === type; }).length;
+  }
+
   function open(slug) {
     var d = STATS[slug];
     if (!d) return;
@@ -1386,6 +1408,16 @@
         + '<div><b>' + (d.g || 0) + '</b><span>goals</span></div>'
         + '<div><b>' + (d.a || 0) + '</b><span>assists</span></div>'
         + '<div><b>' + (d.rating ? esc(d.rating) : '—') + '</b><span>rating</span></div>'
+        + '</div>';
+    } else if (liveStat(d)) {
+      var ls = liveStat(d);
+      var lg = evCount(d, 'goal');
+      rows = '<div class="msnote">Live \u2014 updates as the match goes:</div>'
+        + '<div class="msgrid2">'
+        + '<div><b>' + (ls.min != null ? esc(ls.min) + "'" : (d.soff ? esc(d.soff) + "'" : (d.son ? 'on ' + esc(d.son) + "'" : '\u2014'))) + '</b><span>played</span></div>'
+        + '<div><b>' + lg + '</b><span>goals</span></div>'
+        + '<div><b>' + (d.a || 0) + '</b><span>assists</span></div>'
+        + '<div><b>' + esc(ls.r) + '</b><span>rating \u00b7 live</span></div>'
         + '</div>';
     } else {
       var m0 = (window.FB_MATCHES || [])[0];

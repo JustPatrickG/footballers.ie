@@ -138,6 +138,55 @@ function kickWorkflow() {
    .catch(e => console.log('kick ' + wf + ' failed:', String(e)));
 }
 
+// Live per-player stats (rating, minutes). FotMob's match JSON nests players in
+// several shapes and the fields drift, so rather than trust a fixed path we hunt
+// for anything that looks like a player carrying a plausible match rating.
+function pName(o) {
+  const n = o.name;
+  if (typeof n === 'string') return n;
+  if (n && typeof n === 'object')
+    return n.fullName || `${n.firstName || ''} ${n.lastName || ''}`.trim() || '';
+  return o.fullName || '';
+}
+function pRating(o) {
+  let r = o.rating;
+  if (r == null && o.performance) r = o.performance.rating;
+  if (r && typeof r === 'object') r = (r.num != null ? r.num : (r.value != null ? r.value : r.total));
+  const n = parseFloat(r);
+  return (isFinite(n) && n >= 1 && n <= 10) ? n : null;
+}
+function pMins(o) {
+  let m = o.minutesPlayed;
+  if (m == null && o.performance) m = o.performance.minutesPlayed;
+  const n = parseInt(m, 10);
+  return (isFinite(n) && n >= 0 && n <= 130) ? n : null;
+}
+function normName(t) {
+  return String(t || '').normalize('NFKD').replace(/[̀-ͯ]/g, '')
+    .replace(/[^a-z ]/gi, '').toLowerCase().trim();
+}
+function parsePlayerStats(data) {
+  const out = {};
+  const seen = new Set();
+  (function walk(o, depth) {
+    if (!o || typeof o !== 'object' || depth > 8) return;
+    if (Array.isArray(o)) { for (const it of o) walk(it, depth + 1); return; }
+    const name = pName(o), r = pRating(o);
+    if (name && r != null) {
+      const k = normName(name);
+      if (k && !seen.has(k)) {            // first (starters listed before subs) wins
+        seen.add(k);
+        const rec = { r };
+        const mn = pMins(o);
+        if (mn != null) rec.min = mn;
+        out[k] = rec;
+      }
+    }
+    for (const key in o) walk(o[key], depth + 1);
+  })(data, 0);
+  return out;
+}
+
 export default async function handler(req, res) {
   const raw = String(req.query.ids || '');
   // Match the client cap. The client sends its in-progress matches first, so
@@ -166,7 +215,10 @@ export default async function handler(req, res) {
       const data = await r.json();
       const parsed = parseMatch(data);
       if (parsed) {
-        if (full) parsed.ev = parseEvents(data);
+        if (full) {
+          parsed.ev = parseEvents(data);
+          parsed.pstats = parsePlayerStats(data);
+        }
         out[id] = parsed;
       }
     } catch (e) { /* one bad match never breaks the rest */ }
