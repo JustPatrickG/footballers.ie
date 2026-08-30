@@ -4808,19 +4808,6 @@
   ]
  },
  {
-  "fotmob_id": "1000019093",
-  "url": "/matches/norwich-city-u21-vs-middlesbrough-u21/f9xt9m95#1000019093",
-  "kickoff": "2026-08-23T11:00:00Z",
-  "comp": "Premier League 2",
-  "home": "Middlesbrough U21",
-  "away": "Norwich City U21",
-  "home_id": "773660",
-  "away_id": "773658",
-  "slugs": [
-   "eamonn-tohill"
-  ]
- },
- {
   "fotmob_id": "6022232",
   "url": "/matches/manchester-united-u18-vs-middlesbrough-u18/vnasa88f#6022232",
   "kickoff": "2026-09-05T11:00:00Z",
@@ -6180,20 +6167,6 @@
   ]
  },
  {
-  "fotmob_id": "5836775",
-  "url": "/matches/burnley-vs-west-bromwich-albion/2cj36m#5836775",
-  "kickoff": "2026-08-23T11:00:00Z",
-  "comp": "Championship",
-  "home": "West Bromwich Albion",
-  "away": "Burnley",
-  "home_id": "8659",
-  "away_id": "8191",
-  "slugs": [
-   "jayson-molumby",
-   "max-oleary"
-  ]
- },
- {
   "fotmob_id": "5836812",
   "url": "/matches/west-bromwich-albion-vs-watford/2tmp87#5836812",
   "kickoff": "2026-09-05T14:00:00Z",
@@ -6485,6 +6458,20 @@
   ]
  },
  {
+  "fotmob_id": "6030659",
+  "url": "/matches/rangers-vs-celtic/2tlijm#6030659",
+  "kickoff": "2026-09-13T11:00:00Z",
+  "comp": "League Cup",
+  "home": "Rangers",
+  "away": "Celtic",
+  "home_id": "8548",
+  "away_id": "9925",
+  "slugs": [
+   "johnny-kenny",
+   "liam-scales"
+  ]
+ },
+ {
   "fotmob_id": "5071318",
   "url": "/matches/portland-timbers-vs-austin-fc/evaku77m#5071318",
   "kickoff": "2026-08-30T02:30:00Z",
@@ -6713,6 +6700,19 @@
   "away_id": "514649",
   "slugs": [
    "josh-obrien"
+  ]
+ },
+ {
+  "fotmob_id": "5874970",
+  "url": "/matches/skn-st-polten-vs-fc-liefering/4cmms#5874970",
+  "kickoff": "2026-09-13T08:30:00Z",
+  "comp": "2. Liga",
+  "home": "FC Liefering",
+  "away": "SKN St. P\u00f6lten",
+  "home_id": "1915",
+  "away_id": "1907",
+  "slugs": [
+   "josh-odwyer"
   ]
  },
  {
@@ -7751,6 +7751,19 @@
   "away": "TSV Havelse",
   "home_id": "8171",
   "away_id": "89338",
+  "slugs": [
+   "ryan-johansson"
+  ]
+ },
+ {
+  "fotmob_id": "5905893",
+  "url": "/matches/preussen-munster-vs-vfb-stuttgart-ii/2absg1#5905893",
+  "kickoff": "2026-09-13T11:30:00Z",
+  "comp": "3. Liga",
+  "home": "VfB Stuttgart II",
+  "away": "Preussen M\u00fcnster",
+  "home_id": "8458",
+  "away_id": "8171",
   "slugs": [
    "ryan-johansson"
   ]
