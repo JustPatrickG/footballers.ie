@@ -948,19 +948,6 @@
   ]
  },
  {
-  "fotmob_id": "5109916",
-  "url": "/matches/colorado-springs-switchbacks-fc-vs-lexington-sc/qoca8tfi#5109916",
-  "kickoff": "2026-08-29T23:00:00Z",
-  "comp": "USL Championship",
-  "home": "Lexington SC",
-  "away": "Colorado Springs Switchbacks FC",
-  "home_id": "1430405",
-  "away_id": "614321",
-  "slugs": [
-   "aaron-molloy"
-  ]
- },
- {
   "fotmob_id": "5109933",
   "url": "/matches/lexington-sc-vs-sporting-jax/1s1v79bx1#5109933",
   "kickoff": "2026-09-05T23:00:00Z",
@@ -2343,19 +2330,6 @@
   ]
  },
  {
-  "fotmob_id": "5109914",
-  "url": "/matches/hartford-athletic-vs-birmingham-legion-fc/poou2gde#5109914",
-  "kickoff": "2026-08-29T23:00:00Z",
-  "comp": "USL Championship",
-  "home": "Hartford Athletic",
-  "away": "Birmingham Legion FC",
-  "home_id": "1003206",
-  "away_id": "1003207",
-  "slugs": [
-   "barry-coffey"
-  ]
- },
- {
   "fotmob_id": "5109923",
   "url": "/matches/charleston-battery-vs-hartford-athletic/8nyinx36#5109923",
   "kickoff": "2026-09-02T23:00:00Z",
@@ -2784,6 +2758,19 @@
   "away": "Columbus",
   "home_id": "6602",
   "away_id": "6001",
+  "slugs": [
+   "brooks-lennon"
+  ]
+ },
+ {
+  "fotmob_id": "5071352",
+  "url": "/matches/columbus-crew-vs-red-bull-new-york/1ams94#5071352",
+  "kickoff": "2026-09-12T23:30:00Z",
+  "comp": "Major League Soccer",
+  "home": "Columbus",
+  "away": "NY Red Bulls",
+  "home_id": "6001",
+  "away_id": "6514",
   "slugs": [
    "brooks-lennon"
   ]
@@ -6256,38 +6243,12 @@
   ]
  },
  {
-  "fotmob_id": "5071291",
-  "url": "/matches/dc-united-vs-charlotte-fc/ban4d2jn#5071291",
-  "kickoff": "2026-08-22T23:30:00Z",
-  "comp": "Major League Soccer",
-  "home": "Charlotte FC",
-  "away": "DC United",
-  "home_id": "1323940",
-  "away_id": "6602",
-  "slugs": [
-   "joe-byrne"
-  ]
- },
- {
-  "fotmob_id": "5071306",
-  "url": "/matches/atlanta-united-vs-charlotte-fc/s2xqd9kd#5071306",
-  "kickoff": "2026-08-29T23:30:00Z",
-  "comp": "Major League Soccer",
-  "home": "Atlanta United",
-  "away": "Charlotte FC",
-  "home_id": "773958",
-  "away_id": "1323940",
-  "slugs": [
-   "joe-byrne"
-  ]
- },
- {
   "fotmob_id": "5071322",
   "url": "/matches/houston-dynamo-fc-vs-charlotte-fc/bbnlt3e7#5071322",
   "kickoff": "2026-09-05T23:30:00Z",
   "comp": "Major League Soccer",
   "home": "Charlotte FC",
-  "away": "Houston",
+  "away": "Houston Dynamo FC",
   "home_id": "1323940",
   "away_id": "8259",
   "slugs": [
@@ -6302,6 +6263,19 @@
   "home": "Montreal",
   "away": "Charlotte FC",
   "home_id": "161195",
+  "away_id": "1323940",
+  "slugs": [
+   "joe-byrne"
+  ]
+ },
+ {
+  "fotmob_id": "5071351",
+  "url": "/matches/fc-cincinnati-vs-charlotte-fc/qpqbgm3g#5071351",
+  "kickoff": "2026-09-12T23:30:00Z",
+  "comp": "Major League Soccer",
+  "home": "Cincinnati",
+  "away": "Charlotte FC",
+  "home_id": "722265",
   "away_id": "1323940",
   "slugs": [
    "joe-byrne"
@@ -8259,6 +8233,45 @@
   "away_id": "8280",
   "slugs": [
    "zak-delaney"
+  ]
+ },
+ {
+  "fotmob_id": "5109916",
+  "url": "/matches/colorado-springs-switchbacks-fc-vs-lexington-sc/qoca8tfi#5109916",
+  "kickoff": "2026-08-29T23:00:00Z",
+  "comp": "USL Championship",
+  "home": "Lexington SC",
+  "away": "Colorado Springs Switchbacks FC",
+  "home_id": "1430405",
+  "away_id": "614321",
+  "slugs": [
+   "aaron-molloy"
+  ]
+ },
+ {
+  "fotmob_id": "5109914",
+  "url": "/matches/hartford-athletic-vs-birmingham-legion-fc/poou2gde#5109914",
+  "kickoff": "2026-08-29T23:00:00Z",
+  "comp": "USL Championship",
+  "home": "Hartford Athletic",
+  "away": "Birmingham Legion FC",
+  "home_id": "1003206",
+  "away_id": "1003207",
+  "slugs": [
+   "barry-coffey"
+  ]
+ },
+ {
+  "fotmob_id": "5071306",
+  "url": "/matches/atlanta-united-vs-charlotte-fc/s2xqd9kd#5071306",
+  "kickoff": "2026-08-29T23:30:00Z",
+  "comp": "Major League Soccer",
+  "home": "Atlanta United",
+  "away": "Charlotte FC",
+  "home_id": "773958",
+  "away_id": "1323940",
+  "slugs": [
+   "joe-byrne"
   ]
  },
  {
