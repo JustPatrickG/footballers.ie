@@ -3497,7 +3497,10 @@ match_id,minute,type,player,team,venue
 2026-08-29-southampton-v-millwall,87,sub_off,Keven Schlotterbeck,Southampton,St. Mary's Stadium
 2026-08-29-southampton-v-millwall,87,sub_on,Jack Stephens,Southampton,St. Mary's Stadium
 2026-08-29-southampton-v-millwall,87,yellow,Tom Fellows,Southampton,St. Mary's Stadium
-2026-08-29-spalding-united-v-worksop-town,,,,,Sir Halley Stewart Field
+2026-08-29-spalding-united-v-worksop-town,26,goal,Bartosz Cybulski,Spalding United,Sir Halley Stewart Field
+2026-08-29-spalding-united-v-worksop-town,37,goal,Bartosz Cybulski,Spalding United,Sir Halley Stewart Field
+2026-08-29-spalding-united-v-worksop-town,58,goal,Bartosz Cybulski,Spalding United,Sir Halley Stewart Field
+2026-08-29-spalding-united-v-worksop-town,66,goal,Vaughan Redford,Worksop Town,Sir Halley Stewart Field
 2026-08-29-spartans-fc-v-clyde,29,goal,Scott Williamson,Clyde,The Vanloq Community Stadium
 2026-08-29-spartans-fc-v-clyde,42,yellow,Kyle Fleming,Clyde,The Vanloq Community Stadium
 2026-08-29-spartans-fc-v-clyde,56,goal,Scott Williamson,Clyde,The Vanloq Community Stadium
@@ -3741,6 +3744,8 @@ match_id,minute,type,player,team,venue
 2026-08-29-york-city-v-exeter-city,90,goal,Jack Fitzwater,Exeter City,LNER Community Stadium
 2026-08-29-york-city-v-exeter-city,90,sub_off,Alex Newby,York City,LNER Community Stadium
 2026-08-29-york-city-v-exeter-city,90,sub_on,Zech Medley,York City,LNER Community Stadium
+2026-08-30-aberdeen-v-rangers,4,yellow,Daniel Happe,Aberdeen,Pittodrie Stadium
+2026-08-30-cong-an-ha-noi-v-cong-an-ho-chi-minh-city,,,,,Stadium
 2026-08-30-monterey-bay-fc-v-sacramento-republic-fc,44,goal,Omari Glasgow,Monterey Bay FC,Cardinale Stadium
 2026-08-30-monterey-bay-fc-v-sacramento-republic-fc,64,sub_off,Forster Ajago,Sacramento Republic FC,Cardinale Stadium
 2026-08-30-monterey-bay-fc-v-sacramento-republic-fc,64,sub_on,Cal Jennings,Sacramento Republic FC,Cardinale Stadium
