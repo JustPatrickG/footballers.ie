@@ -935,6 +935,19 @@
   ]
  },
  {
+  "fotmob_id": "5109916",
+  "url": "/matches/colorado-springs-switchbacks-fc-vs-lexington-sc/qoca8tfi#5109916",
+  "kickoff": "2026-08-29T23:00:00Z",
+  "comp": "USL Championship",
+  "home": "Lexington SC",
+  "away": "Colorado Springs Switchbacks FC",
+  "home_id": "1430405",
+  "away_id": "614321",
+  "slugs": [
+   "aaron-molloy"
+  ]
+ },
+ {
   "fotmob_id": "5109910",
   "url": "/matches/new-mexico-united-vs-lexington-sc/11sdh3ps0#5109910",
   "kickoff": "2026-08-27T01:30:00Z",
@@ -2330,6 +2343,19 @@
   ]
  },
  {
+  "fotmob_id": "5109914",
+  "url": "/matches/hartford-athletic-vs-birmingham-legion-fc/poou2gde#5109914",
+  "kickoff": "2026-08-29T23:00:00Z",
+  "comp": "USL Championship",
+  "home": "Hartford Athletic",
+  "away": "Birmingham Legion FC",
+  "home_id": "1003206",
+  "away_id": "1003207",
+  "slugs": [
+   "barry-coffey"
+  ]
+ },
+ {
   "fotmob_id": "5109923",
   "url": "/matches/charleston-battery-vs-hartford-athletic/8nyinx36#5109923",
   "kickoff": "2026-09-02T23:00:00Z",
@@ -2705,19 +2731,6 @@
   "home": "CF Am\u00e9rica",
   "away": "Columbus Crew",
   "home_id": "6576",
-  "away_id": "6001",
-  "slugs": [
-   "brooks-lennon"
-  ]
- },
- {
-  "fotmob_id": "5071299",
-  "url": "/matches/columbus-crew-vs-nashville-sc/5f6igu2v#5071299",
-  "kickoff": "2026-08-23T00:30:00Z",
-  "comp": "Major League Soccer",
-  "home": "Nashville SC",
-  "away": "Columbus Crew",
-  "home_id": "915807",
   "away_id": "6001",
   "slugs": [
    "brooks-lennon"
@@ -5599,13 +5612,13 @@
   ]
  },
  {
-  "fotmob_id": "5109897",
-  "url": "/matches/birmingham-legion-fc-vs-sporting-jax/1bxzc7e8g#5109897",
-  "kickoff": "2026-08-23T00:00:00Z",
+  "fotmob_id": "5109911",
+  "url": "/matches/sporting-jax-vs-brooklyn/2bexmh50j#5109911",
+  "kickoff": "2026-08-29T23:00:00Z",
   "comp": "USL Championship",
-  "home": "Birmingham Legion FC",
+  "home": "Brooklyn",
   "away": "Sporting JAX",
-  "home_id": "1003207",
+  "home_id": "1877733",
   "away_id": "1737991",
   "slugs": [
    "harvey-neville",
@@ -6446,19 +6459,6 @@
   ]
  },
  {
-  "fotmob_id": "5071297",
-  "url": "/matches/philadelphia-union-vs-austin-fc/cp1tpmjv#5071297",
-  "kickoff": "2026-08-23T01:00:00Z",
-  "comp": "Major League Soccer",
-  "home": "Austin FC",
-  "away": "Philadelphia Union",
-  "home_id": "1218886",
-  "away_id": "191716",
-  "slugs": [
-   "jon-gallagher"
-  ]
- },
- {
   "fotmob_id": "5071318",
   "url": "/matches/portland-timbers-vs-austin-fc/evaku77m#5071318",
   "kickoff": "2026-08-30T02:30:00Z",
@@ -6810,14 +6810,14 @@
   ]
  },
  {
-  "fotmob_id": "5071312",
-  "url": "/matches/toronto-fc-vs-new-york-city-fc/2bfn0g2z#5071312",
-  "kickoff": "2026-08-29T23:30:00Z",
+  "fotmob_id": "5071321",
+  "url": "/matches/new-york-city-fc-vs-nashville-sc/dmztmw7m#5071321",
+  "kickoff": "2026-09-04T23:30:00Z",
   "comp": "Major League Soccer",
-  "home": "Toronto FC",
-  "away": "New York City FC",
-  "home_id": "56453",
-  "away_id": "546238",
+  "home": "New York City FC",
+  "away": "Nashville SC",
+  "home_id": "546238",
+  "away_id": "915807",
   "slugs": [
    "kevin-otoole"
   ]
@@ -8236,29 +8236,16 @@
   ]
  },
  {
-  "fotmob_id": "5109916",
-  "url": "/matches/colorado-springs-switchbacks-fc-vs-lexington-sc/qoca8tfi#5109916",
-  "kickoff": "2026-08-29T23:00:00Z",
-  "comp": "USL Championship",
-  "home": "Lexington SC",
-  "away": "Colorado Springs Switchbacks FC",
-  "home_id": "1430405",
-  "away_id": "614321",
+  "fotmob_id": "5071312",
+  "url": "/matches/toronto-fc-vs-new-york-city-fc/2bfn0g2z#5071312",
+  "kickoff": "2026-08-29T23:30:00Z",
+  "comp": "Major League Soccer",
+  "home": "Toronto FC",
+  "away": "New York City FC",
+  "home_id": "56453",
+  "away_id": "546238",
   "slugs": [
-   "aaron-molloy"
-  ]
- },
- {
-  "fotmob_id": "5109914",
-  "url": "/matches/hartford-athletic-vs-birmingham-legion-fc/poou2gde#5109914",
-  "kickoff": "2026-08-29T23:00:00Z",
-  "comp": "USL Championship",
-  "home": "Hartford Athletic",
-  "away": "Birmingham Legion FC",
-  "home_id": "1003206",
-  "away_id": "1003207",
-  "slugs": [
-   "barry-coffey"
+   "kevin-otoole"
   ]
  },
  {
@@ -8272,20 +8259,6 @@
   "away_id": "1323940",
   "slugs": [
    "joe-byrne"
-  ]
- },
- {
-  "fotmob_id": "5109911",
-  "url": "/matches/sporting-jax-vs-brooklyn/2bexmh50j#5109911",
-  "kickoff": "2026-08-29T23:00:00Z",
-  "comp": "USL Championship",
-  "home": "Brooklyn",
-  "away": "Sporting JAX",
-  "home_id": "1877733",
-  "away_id": "1737991",
-  "slugs": [
-   "harvey-neville",
-   "kieran-sadlier"
   ]
  },
  {
