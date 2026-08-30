@@ -154,15 +154,15 @@ kickoff,competition,home,away,home_id,away_id,home_score,away_score,status,minut
 2026-08-30T14:00:00Z,League One,Mansfield Town,Luton Town,9818,8346,5,2,ft,,callum-marshall;david-mcgoldrick;josh-keeley;ryan-sweeney;stephen-mclaughlin
 2026-08-30T14:00:00Z,Premiership,St. Mirren,Motherwell,9800,9927,3,3,ft,,joe-hodge;killian-phillips
 2026-08-30T14:00:00Z,First Division B,Virton,Francs Borains,8174,96953,0,1,ft,,noah-jauny
-2026-08-30T14:45:00Z,Eerste Divisie,VVV-Venlo,FC Emmen,9839,6660,,,scheduled,,eanna-clancy
-2026-08-30T15:00:00Z,Premier Division,Derry City,Shamrock Rovers,8338,4131,,,scheduled,,aaron-greene;adam-brennan;adam-oreilly;alex-noonan;barry-cotter;ben-mahon;brian-maher;brooklyn-lyons-foster;callum-downey;christy-grogan;ciaran-mullan;conal-mcdermott;cory-osullivan;daniel-cleary;daniel-grant;daniel-mandroiu;darragh-burns;darragh-markey;dylan-watts;edward-mcginty;enda-stevens;eoghan-curran;gary-oneil;graham-burke;jack-byrne;jake-mulraney;james-clarke;james-mcclean;john-osullivan;jonathan-afolabi;lee-grace;lee-steacy;luke-oregan;mark-connolly;matthew-healy;max-kovalevskis;michael-duffy;michael-mccolgan;michael-noonan;naj-razi;oisin-obrien;patrick-mcclean;rory-gaffney;terence-doherty;todd-bazunu;tunmise-sobowale;victor-ozhianvuna;william-fitzgerald
+2026-08-30T14:45:00Z,Eerste Divisie,VVV-Venlo,FC Emmen,9839,6660,4,0,ft,,eanna-clancy
+2026-08-30T15:00:00Z,Premier Division,Derry City,Shamrock Rovers,8338,4131,3,3,ft,,aaron-greene;adam-brennan;adam-oreilly;alex-noonan;barry-cotter;ben-mahon;brian-maher;brooklyn-lyons-foster;callum-downey;christy-grogan;ciaran-mullan;conal-mcdermott;cory-osullivan;daniel-cleary;daniel-grant;daniel-mandroiu;darragh-burns;darragh-markey;dylan-watts;edward-mcginty;enda-stevens;eoghan-curran;gary-oneil;graham-burke;jack-byrne;jake-mulraney;james-clarke;james-mcclean;john-osullivan;jonathan-afolabi;lee-grace;lee-steacy;luke-oregan;mark-connolly;matthew-healy;max-kovalevskis;michael-duffy;michael-mccolgan;michael-noonan;naj-razi;oisin-obrien;patrick-mcclean;rory-gaffney;terence-doherty;todd-bazunu;tunmise-sobowale;victor-ozhianvuna;william-fitzgerald
 2026-08-30T15:00:00Z,LaLiga,Real Madrid,Málaga,8633,9864,,,scheduled,,aaron-ochoa
-2026-08-30T15:00:00Z,Eliteserien,Vålerenga,Molde,8007,9917,,,scheduled,,trent-kone-doherty
-2026-08-30T15:30:00Z,Premier League,Manchester United,Ipswich Town,10260,9902,,,scheduled,,chiedozie-ogbene;dara-oshea;jack-clarke;jack-taylor;kasey-mcateer
+2026-08-30T15:00:00Z,Eliteserien,Vålerenga,Molde,8007,9917,3,4,ft,,trent-kone-doherty
+2026-08-30T15:30:00Z,Premier League,Manchester United,Ipswich Town,10260,9902,5,2,ft,,chiedozie-ogbene;dara-oshea;jack-clarke;jack-taylor;kasey-mcateer
 2026-08-30T16:00:00Z,First Professional League,Botev Plovdiv,Levski Sofia,10131,8632,,,scheduled,,armstrong-oko-flex
-2026-08-30T17:00:00Z,NB I,Puskás FC Academy,Ferencváros,355346,8222,,,scheduled,,callum-odowda
+2026-08-30T17:00:00Z,NB I,Puskás FC Academy,Ferencváros,355346,8222,,,live,,callum-odowda
 2026-08-30T17:00:00Z,Serie B,Mantova,Empoli,9889,8534,,,scheduled,,matteo-egan
-2026-08-30T17:30:00Z,3. Liga,Viktoria Köln 1904,Preussen Münster,276267,8171,,,scheduled,,ryan-johansson
+2026-08-30T17:30:00Z,3. Liga,Viktoria Köln 1904,Preussen Münster,276267,8171,,,live,,ryan-johansson
 2026-08-30T18:15:00Z,Prva Liga,Nafta,Maribor,2420,8340,,,scheduled,,ali-reghba
 2026-08-30T20:30:00Z,Major League Soccer,Columbus Crew,New England Revolution,6001,6580,,,scheduled,,brooks-lennon
 2026-08-31T12:00:00Z,Premier League 2,AFC Bournemouth Academy,Middlesbrough U21,2128213,773660,,,scheduled,,ade-solanke
@@ -568,3 +568,4 @@ kickoff,competition,home,away,home_id,away_id,home_score,away_score,status,minut
 2026-09-13T13:00:00Z,LaLiga,Villarreal,Real Betis,10205,8603,,,scheduled,,troy-parrott
 2026-09-13T14:45:00Z,Eredivisie,PEC Zwolle,Feyenoord,6413,10235,,,scheduled,,liam-bossin
 2026-09-13T15:00:00Z,Eliteserien,HamKam,Molde,8448,9917,,,scheduled,,trent-kone-doherty
+2026-09-13T17:00:00Z,Super Lig,Alanyaspor,Göztepe,4678,1925,,,scheduled,,sinclair-armstrong
