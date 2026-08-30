@@ -3745,7 +3745,14 @@ match_id,minute,type,player,team,venue
 2026-08-29-york-city-v-exeter-city,90,sub_off,Alex Newby,York City,LNER Community Stadium
 2026-08-29-york-city-v-exeter-city,90,sub_on,Zech Medley,York City,LNER Community Stadium
 2026-08-30-aberdeen-v-rangers,4,yellow,Daniel Happe,Aberdeen,Pittodrie Stadium
-2026-08-30-cong-an-ha-noi-v-cong-an-ho-chi-minh-city,,,,,Stadium
+2026-08-30-aberdeen-v-rangers,36,yellow,Chris Cadden,Aberdeen,Pittodrie Stadium
+2026-08-30-aberdeen-v-rangers,37,yellow,Findlay Curtis,Rangers,Pittodrie Stadium
+2026-08-30-aberdeen-v-rangers,43,yellow,Connor Ronan,Aberdeen,Pittodrie Stadium
+2026-08-30-aberdeen-v-rangers,44,yellow,Afeez Aremu,Aberdeen,Pittodrie Stadium
+2026-08-30-cong-an-ha-noi-v-cong-an-ho-chi-minh-city,8,goal,Alan Grafite,Công An Hà Nội,Stadium
+2026-08-30-cong-an-ha-noi-v-cong-an-ho-chi-minh-city,11,yellow,Lee Williams,Cong An Ho Chí Minh City,Stadium
+2026-08-30-cong-an-ha-noi-v-cong-an-ho-chi-minh-city,27,goal,Alan Grafite,Công An Hà Nội,Stadium
+2026-08-30-magdeburg-v-holstein-kiel,6,yellow,Alexander Nollenberger,Magdeburg,Avnet Arena
 2026-08-30-monterey-bay-fc-v-sacramento-republic-fc,44,goal,Omari Glasgow,Monterey Bay FC,Cardinale Stadium
 2026-08-30-monterey-bay-fc-v-sacramento-republic-fc,64,sub_off,Forster Ajago,Sacramento Republic FC,Cardinale Stadium
 2026-08-30-monterey-bay-fc-v-sacramento-republic-fc,64,sub_on,Cal Jennings,Sacramento Republic FC,Cardinale Stadium
@@ -3823,3 +3830,4 @@ match_id,minute,type,player,team,venue
 2026-08-30-portland-timbers-v-austin-fc,89,goal,Antony,Portland Timbers,Providence Park
 2026-08-30-portland-timbers-v-austin-fc,90,goal,Oleksandr Svatok,Austin FC,Providence Park
 2026-08-30-portland-timbers-v-austin-fc,90,yellow,Joseph Rosales,Austin FC,Providence Park
+2026-08-30-st-pauli-v-kaiserslautern,,,,,Millerntor-Stadion
