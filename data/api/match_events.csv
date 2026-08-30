@@ -3773,12 +3773,12 @@ match_id,minute,type,player,team,venue
 2026-08-30-afc-wimbledon-v-wigan-athletic,21,yellow,Archie Harris,Wigan Athletic,The Cherry Red Records Stadium
 2026-08-30-afc-wimbledon-v-wigan-athletic,25,yellow,Jon Mellish,Wigan Athletic,The Cherry Red Records Stadium
 2026-08-30-botev-plovdiv-v-levski-sofia,5,yellow,Bryan Hein,Botev Plovdiv,"Hristo Botev, Plovdiv"
-2026-08-30-botev-plovdiv-v-levski-sofia,46,sub_off,Stivan Stoyanchov,Levski Sofia,"Hristo Botev, Plovdiv"
-2026-08-30-botev-plovdiv-v-levski-sofia,46,sub_off,Hevertton Santos,Levski Sofia,"Hristo Botev, Plovdiv"
 2026-08-30-botev-plovdiv-v-levski-sofia,46,sub_off,Samuil Tsonov,Botev Plovdiv,"Hristo Botev, Plovdiv"
-2026-08-30-botev-plovdiv-v-levski-sofia,46,sub_on,Reinaldo,Levski Sofia,"Hristo Botev, Plovdiv"
-2026-08-30-botev-plovdiv-v-levski-sofia,46,sub_on,Aldair,Levski Sofia,"Hristo Botev, Plovdiv"
+2026-08-30-botev-plovdiv-v-levski-sofia,46,sub_off,Hevertton Santos,Levski Sofia,"Hristo Botev, Plovdiv"
+2026-08-30-botev-plovdiv-v-levski-sofia,46,sub_off,Stivan Stoyanchov,Levski Sofia,"Hristo Botev, Plovdiv"
 2026-08-30-botev-plovdiv-v-levski-sofia,46,sub_on,Mascote,Botev Plovdiv,"Hristo Botev, Plovdiv"
+2026-08-30-botev-plovdiv-v-levski-sofia,46,sub_on,Aldair,Levski Sofia,"Hristo Botev, Plovdiv"
+2026-08-30-botev-plovdiv-v-levski-sofia,46,sub_on,Reinaldo,Levski Sofia,"Hristo Botev, Plovdiv"
 2026-08-30-botev-plovdiv-v-levski-sofia,51,goal,Marko Grujic,Levski Sofia,"Hristo Botev, Plovdiv"
 2026-08-30-botev-plovdiv-v-levski-sofia,54,yellow,Daniel Naumov,Botev Plovdiv,"Hristo Botev, Plovdiv"
 2026-08-30-botev-plovdiv-v-levski-sofia,59,goal,Aldair,Levski Sofia,"Hristo Botev, Plovdiv"
@@ -3786,13 +3786,21 @@ match_id,minute,type,player,team,venue
 2026-08-30-botev-plovdiv-v-levski-sofia,65,sub_off,Carlos Meotti,Botev Plovdiv,"Hristo Botev, Plovdiv"
 2026-08-30-botev-plovdiv-v-levski-sofia,65,sub_on,Georgi Milanov,Botev Plovdiv,"Hristo Botev, Plovdiv"
 2026-08-30-botev-plovdiv-v-levski-sofia,70,yellow,Mehdi Moubarik,Levski Sofia,"Hristo Botev, Plovdiv"
-2026-08-30-botev-plovdiv-v-levski-sofia,75,sub_off,Mauro Rodrigues,Botev Plovdiv,"Hristo Botev, Plovdiv"
-2026-08-30-botev-plovdiv-v-levski-sofia,75,sub_off,Marko Grujic,Levski Sofia,"Hristo Botev, Plovdiv"
 2026-08-30-botev-plovdiv-v-levski-sofia,75,sub_off,Mazire Soula,Levski Sofia,"Hristo Botev, Plovdiv"
-2026-08-30-botev-plovdiv-v-levski-sofia,75,sub_on,Williams Chimezie,Botev Plovdiv,"Hristo Botev, Plovdiv"
-2026-08-30-botev-plovdiv-v-levski-sofia,75,sub_on,Asen Mitkov,Levski Sofia,"Hristo Botev, Plovdiv"
+2026-08-30-botev-plovdiv-v-levski-sofia,75,sub_off,Marko Grujic,Levski Sofia,"Hristo Botev, Plovdiv"
+2026-08-30-botev-plovdiv-v-levski-sofia,75,sub_off,Mauro Rodrigues,Botev Plovdiv,"Hristo Botev, Plovdiv"
 2026-08-30-botev-plovdiv-v-levski-sofia,75,sub_on,Everton Bala,Levski Sofia,"Hristo Botev, Plovdiv"
+2026-08-30-botev-plovdiv-v-levski-sofia,75,sub_on,Asen Mitkov,Levski Sofia,"Hristo Botev, Plovdiv"
+2026-08-30-botev-plovdiv-v-levski-sofia,75,sub_on,Williams Chimezie,Botev Plovdiv,"Hristo Botev, Plovdiv"
 2026-08-30-botev-plovdiv-v-levski-sofia,84,missed_penalty,Asen Chandarov,Botev Plovdiv,"Hristo Botev, Plovdiv"
+2026-08-30-botev-plovdiv-v-levski-sofia,87,sub_off,Armstrong Oko-Flex,Levski Sofia,"Hristo Botev, Plovdiv"
+2026-08-30-botev-plovdiv-v-levski-sofia,87,sub_on,Gasper Trdin,Levski Sofia,"Hristo Botev, Plovdiv"
+2026-08-30-botev-plovdiv-v-levski-sofia,87,yellow,Lucas Araújo,Botev Plovdiv,"Hristo Botev, Plovdiv"
+2026-08-30-botev-plovdiv-v-levski-sofia,87,yellow,Armstrong Oko-Flex,Levski Sofia,"Hristo Botev, Plovdiv"
+2026-08-30-botev-plovdiv-v-levski-sofia,88,sub_off,Lucas Araújo,Botev Plovdiv,"Hristo Botev, Plovdiv"
+2026-08-30-botev-plovdiv-v-levski-sofia,88,sub_on,Okoh Chidera,Botev Plovdiv,"Hristo Botev, Plovdiv"
+2026-08-30-botev-plovdiv-v-levski-sofia,90,goal,Reinaldo,Levski Sofia,"Hristo Botev, Plovdiv"
+2026-08-30-botev-plovdiv-v-levski-sofia,90,yellow,Svetoslav Vutsov,Levski Sofia,"Hristo Botev, Plovdiv"
 2026-08-30-chelsea-v-brighton-hove-albion,4,goal,Roméo Lavia,Chelsea,Stamford Bridge
 2026-08-30-chelsea-v-brighton-hove-albion,14,goal,Pedro Neto,Chelsea,Stamford Bridge
 2026-08-30-chelsea-v-brighton-hove-albion,32,goal,João Pedro,Chelsea,Stamford Bridge
@@ -3977,6 +3985,7 @@ match_id,minute,type,player,team,venue
 2026-08-30-mansfield-town-v-luton-town,90,goal,Nahki Wells,Luton Town,One Call Stadium
 2026-08-30-mansfield-town-v-luton-town,90,yellow,Regan Hendry,Mansfield Town,One Call Stadium
 2026-08-30-mantova-v-empoli,23,yellow,Gerard Yepes,Empoli,Stadio Danilo Martelli – Pata Stadium
+2026-08-30-mantova-v-empoli,42,yellow,Alessio Castellini,Mantova,Stadio Danilo Martelli – Pata Stadium
 2026-08-30-monterey-bay-fc-v-sacramento-republic-fc,44,goal,Omari Glasgow,Monterey Bay FC,Cardinale Stadium
 2026-08-30-monterey-bay-fc-v-sacramento-republic-fc,64,sub_off,Forster Ajago,Sacramento Republic FC,Cardinale Stadium
 2026-08-30-monterey-bay-fc-v-sacramento-republic-fc,64,sub_on,Cal Jennings,Sacramento Republic FC,Cardinale Stadium
@@ -4057,6 +4066,8 @@ match_id,minute,type,player,team,venue
 2026-08-30-puskas-fc-academy-v-ferencvaros,14,sub_off,Lenny Joseph,Ferencváros,Pancho Arena
 2026-08-30-puskas-fc-academy-v-ferencvaros,14,sub_on,Krisztián Lisztes,Ferencváros,Pancho Arena
 2026-08-30-puskas-fc-academy-v-ferencvaros,24,yellow,Cadu,Ferencváros,Pancho Arena
+2026-08-30-puskas-fc-academy-v-ferencvaros,45,sub_off,Brandon Ormonde-Ottewill,Puskás FC Academy,Pancho Arena
+2026-08-30-puskas-fc-academy-v-ferencvaros,45,sub_on,Bendeguz Farkas,Puskás FC Academy,Pancho Arena
 2026-08-30-real-madrid-v-malaga,19,goal,Jude Bellingham,Real Madrid,Estadio Bernabéu
 2026-08-30-real-madrid-v-malaga,26,own_goal,Alfonso Herrero,Real Madrid,Estadio Bernabéu
 2026-08-30-real-madrid-v-malaga,30,goal,Kylian Mbappé,Real Madrid,Estadio Bernabéu
@@ -4183,6 +4194,9 @@ match_id,minute,type,player,team,venue
 2026-08-30-viktoria-koln-1904-v-preussen-munster,1,yellow,Lucas Zeller,Preussen Münster,Sportpark Höhenberg
 2026-08-30-viktoria-koln-1904-v-preussen-munster,6,goal,Niklas Castelle,Viktoria Köln 1904,Sportpark Höhenberg
 2026-08-30-viktoria-koln-1904-v-preussen-munster,12,goal,David Otto,Viktoria Köln 1904,Sportpark Höhenberg
+2026-08-30-viktoria-koln-1904-v-preussen-munster,15,yellow,Lucas Wolf,Viktoria Köln 1904,Sportpark Höhenberg
+2026-08-30-viktoria-koln-1904-v-preussen-munster,20,goal,Felix Higl,Preussen Münster,Sportpark Höhenberg
+2026-08-30-viktoria-koln-1904-v-preussen-munster,36,yellow,Niklas Varelmann,Preussen Münster,Sportpark Höhenberg
 2026-08-30-virton-v-francs-borains,67,goal,Maxime Bastian,Francs Borains,Stade Yvan Georges
 2026-08-30-virton-v-francs-borains,68,sub_off,Yannis Kari,Francs Borains,Stade Yvan Georges
 2026-08-30-virton-v-francs-borains,68,sub_off,Raymond Asante,Francs Borains,Stade Yvan Georges
