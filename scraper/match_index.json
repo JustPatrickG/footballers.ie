@@ -564,7 +564,6 @@
    "kameron-ledwidge",
    "lee-grace",
    "lee-steacy",
-   "luca-cailloce",
    "luke-oregan",
    "matthew-healy",
    "max-kovalevskis",
@@ -935,32 +934,6 @@
   ]
  },
  {
-  "fotmob_id": "5109910",
-  "url": "/matches/new-mexico-united-vs-lexington-sc/11sdh3ps0#5109910",
-  "kickoff": "2026-08-27T01:30:00Z",
-  "comp": "USL Championship",
-  "home": "New Mexico United",
-  "away": "Lexington SC",
-  "home_id": "1003208",
-  "away_id": "1430405",
-  "slugs": [
-   "aaron-molloy"
-  ]
- },
- {
-  "fotmob_id": "5109903",
-  "url": "/matches/las-vegas-lights-fc-vs-lexington-sc/z4f1d3c6#5109903",
-  "kickoff": "2026-08-22T23:00:00Z",
-  "comp": "USL Championship",
-  "home": "Lexington SC",
-  "away": "Las Vegas Lights FC",
-  "home_id": "1430405",
-  "away_id": "915809",
-  "slugs": [
-   "aaron-molloy"
-  ]
- },
- {
   "fotmob_id": "5109916",
   "url": "/matches/colorado-springs-switchbacks-fc-vs-lexington-sc/qoca8tfi#5109916",
   "kickoff": "2026-08-29T23:00:00Z",
@@ -969,6 +942,19 @@
   "away": "Colorado Springs Switchbacks FC",
   "home_id": "1430405",
   "away_id": "614321",
+  "slugs": [
+   "aaron-molloy"
+  ]
+ },
+ {
+  "fotmob_id": "5109910",
+  "url": "/matches/new-mexico-united-vs-lexington-sc/11sdh3ps0#5109910",
+  "kickoff": "2026-08-27T01:30:00Z",
+  "comp": "USL Championship",
+  "home": "New Mexico United",
+  "away": "Lexington SC",
+  "home_id": "1003208",
+  "away_id": "1430405",
   "slugs": [
    "aaron-molloy"
   ]
@@ -986,6 +972,19 @@
    "aaron-molloy",
    "harvey-neville",
    "kieran-sadlier"
+  ]
+ },
+ {
+  "fotmob_id": "5109939",
+  "url": "/matches/oakland-roots-sc-vs-lexington-sc/15uayou0w#5109939",
+  "kickoff": "2026-09-13T02:00:00Z",
+  "comp": "USL Championship",
+  "home": "Oakland Roots SC",
+  "away": "Lexington SC",
+  "home_id": "1130413",
+  "away_id": "1430405",
+  "slugs": [
+   "aaron-molloy"
   ]
  },
  {
@@ -1345,7 +1344,6 @@
    "john-russell",
    "jonathan-lunney",
    "kameron-ledwidge",
-   "luca-cailloce",
    "mark-connolly",
    "michael-duffy",
    "michael-mccolgan",
@@ -1702,6 +1700,7 @@
    "charles-akinrintoyo",
    "dara-mccormick",
    "goodness-ogbonna",
+   "luca-cailloce",
    "ronan-mansfield"
   ]
  },
@@ -2109,6 +2108,7 @@
    "charles-akinrintoyo",
    "goodness-ogbonna",
    "kyle-robinson",
+   "luca-cailloce",
    "stephen-kenny"
   ]
  },
@@ -2403,6 +2403,19 @@
   "away": "Colorado Springs Switchbacks FC",
   "home_id": "1003206",
   "away_id": "614321",
+  "slugs": [
+   "barry-coffey"
+  ]
+ },
+ {
+  "fotmob_id": "5109937",
+  "url": "/matches/tampa-bay-rowdies-vs-hartford-athletic/9723hhfx#5109937",
+  "kickoff": "2026-09-12T23:00:00Z",
+  "comp": "USL Championship",
+  "home": "Hartford Athletic",
+  "away": "Tampa Bay Rowdies",
+  "home_id": "1003206",
+  "away_id": "197328",
   "slugs": [
    "barry-coffey"
   ]
@@ -2737,19 +2750,6 @@
   ]
  },
  {
-  "fotmob_id": "5071299",
-  "url": "/matches/columbus-crew-vs-nashville-sc/5f6igu2v#5071299",
-  "kickoff": "2026-08-23T00:30:00Z",
-  "comp": "Major League Soccer",
-  "home": "Nashville SC",
-  "away": "Columbus Crew",
-  "home_id": "915807",
-  "away_id": "6001",
-  "slugs": [
-   "brooks-lennon"
-  ]
- },
- {
   "fotmob_id": "5071307",
   "url": "/matches/columbus-crew-vs-new-england-revolution/1b4jcj#5071307",
   "kickoff": "2026-08-30T20:30:00Z",
@@ -2784,6 +2784,19 @@
   "away": "Columbus",
   "home_id": "6602",
   "away_id": "6001",
+  "slugs": [
+   "brooks-lennon"
+  ]
+ },
+ {
+  "fotmob_id": "5071352",
+  "url": "/matches/columbus-crew-vs-red-bull-new-york/1ams94#5071352",
+  "kickoff": "2026-09-12T23:30:00Z",
+  "comp": "Major League Soccer",
+  "home": "Columbus",
+  "away": "NY Red Bulls",
+  "home_id": "6001",
+  "away_id": "6514",
   "slugs": [
    "brooks-lennon"
   ]
@@ -3021,6 +3034,19 @@
    "harvey-vale",
    "jimmy-dunne",
    "sean-mcloughlin"
+  ]
+ },
+ {
+  "fotmob_id": "1000012814",
+  "url": "/matches/brora-rangers-vs-turriff-united/1aeymtgn#1000012814",
+  "kickoff": "2026-08-29T14:00:00Z",
+  "comp": "Highland / Lowland",
+  "home": "Brora Rangers",
+  "away": "Turriff United",
+  "home_id": "97904",
+  "away_id": "351621",
+  "slugs": [
+   "cameron-reid"
   ]
  },
  {
@@ -5612,20 +5638,6 @@
   ]
  },
  {
-  "fotmob_id": "5109897",
-  "url": "/matches/birmingham-legion-fc-vs-sporting-jax/1bxzc7e8g#5109897",
-  "kickoff": "2026-08-23T00:00:00Z",
-  "comp": "USL Championship",
-  "home": "Birmingham Legion FC",
-  "away": "Sporting JAX",
-  "home_id": "1003207",
-  "away_id": "1737991",
-  "slugs": [
-   "harvey-neville",
-   "kieran-sadlier"
-  ]
- },
- {
   "fotmob_id": "5109911",
   "url": "/matches/sporting-jax-vs-brooklyn/2bexmh50j#5109911",
   "kickoff": "2026-08-29T23:00:00Z",
@@ -5634,6 +5646,20 @@
   "away": "Sporting JAX",
   "home_id": "1877733",
   "away_id": "1737991",
+  "slugs": [
+   "harvey-neville",
+   "kieran-sadlier"
+  ]
+ },
+ {
+  "fotmob_id": "5109944",
+  "url": "/matches/rhode-island-fc-vs-sporting-jax/1yyxwxw9t#5109944",
+  "kickoff": "2026-09-12T23:00:00Z",
+  "comp": "USL Championship",
+  "home": "Sporting JAX",
+  "away": "Rhode Island FC",
+  "home_id": "1737991",
+  "away_id": "1597140",
   "slugs": [
    "harvey-neville",
    "kieran-sadlier"
@@ -6256,19 +6282,6 @@
   ]
  },
  {
-  "fotmob_id": "5071291",
-  "url": "/matches/dc-united-vs-charlotte-fc/ban4d2jn#5071291",
-  "kickoff": "2026-08-22T23:30:00Z",
-  "comp": "Major League Soccer",
-  "home": "Charlotte FC",
-  "away": "DC United",
-  "home_id": "1323940",
-  "away_id": "6602",
-  "slugs": [
-   "joe-byrne"
-  ]
- },
- {
   "fotmob_id": "5071306",
   "url": "/matches/atlanta-united-vs-charlotte-fc/s2xqd9kd#5071306",
   "kickoff": "2026-08-29T23:30:00Z",
@@ -6287,7 +6300,7 @@
   "kickoff": "2026-09-05T23:30:00Z",
   "comp": "Major League Soccer",
   "home": "Charlotte FC",
-  "away": "Houston",
+  "away": "Houston Dynamo FC",
   "home_id": "1323940",
   "away_id": "8259",
   "slugs": [
@@ -6302,6 +6315,19 @@
   "home": "Montreal",
   "away": "Charlotte FC",
   "home_id": "161195",
+  "away_id": "1323940",
+  "slugs": [
+   "joe-byrne"
+  ]
+ },
+ {
+  "fotmob_id": "5071351",
+  "url": "/matches/fc-cincinnati-vs-charlotte-fc/qpqbgm3g#5071351",
+  "kickoff": "2026-09-12T23:30:00Z",
+  "comp": "Major League Soccer",
+  "home": "Cincinnati",
+  "away": "Charlotte FC",
+  "home_id": "722265",
   "away_id": "1323940",
   "slugs": [
    "joe-byrne"
@@ -6459,32 +6485,6 @@
   ]
  },
  {
-  "fotmob_id": "6028325",
-  "url": "/matches/toluca-vs-austin-fc/9kz0pv1m#6028325",
-  "kickoff": "2026-08-27T00:30:00Z",
-  "comp": "Leagues Cup",
-  "home": "Toluca",
-  "away": "Austin FC",
-  "home_id": "6618",
-  "away_id": "1218886",
-  "slugs": [
-   "jon-gallagher"
-  ]
- },
- {
-  "fotmob_id": "5071297",
-  "url": "/matches/philadelphia-union-vs-austin-fc/cp1tpmjv#5071297",
-  "kickoff": "2026-08-23T01:00:00Z",
-  "comp": "Major League Soccer",
-  "home": "Austin FC",
-  "away": "Philadelphia Union",
-  "home_id": "1218886",
-  "away_id": "191716",
-  "slugs": [
-   "jon-gallagher"
-  ]
- },
- {
   "fotmob_id": "5071318",
   "url": "/matches/portland-timbers-vs-austin-fc/evaku77m#5071318",
   "kickoff": "2026-08-30T02:30:00Z",
@@ -6498,12 +6498,25 @@
   ]
  },
  {
+  "fotmob_id": "6028325",
+  "url": "/matches/toluca-vs-austin-fc/9kz0pv1m#6028325",
+  "kickoff": "2026-08-27T00:30:00Z",
+  "comp": "Leagues Cup",
+  "home": "Toluca",
+  "away": "Austin FC",
+  "home_id": "6618",
+  "away_id": "1218886",
+  "slugs": [
+   "jon-gallagher"
+  ]
+ },
+ {
   "fotmob_id": "5071329",
   "url": "/matches/san-jose-earthquakes-vs-austin-fc/9kyprv1g#5071329",
   "kickoff": "2026-09-06T00:30:00Z",
   "comp": "Major League Soccer",
   "home": "Austin FC",
-  "away": "San Jose",
+  "away": "San Jose Earthquakes",
   "home_id": "1218886",
   "away_id": "6603",
   "slugs": [
@@ -6661,19 +6674,6 @@
   "away_id": "580438",
   "slugs": [
    "josh-barrett"
-  ]
- },
- {
-  "fotmob_id": "5109902",
-  "url": "/matches/indy-eleven-vs-louisville-city-fc/84rhch4r#5109902",
-  "kickoff": "2026-08-22T23:00:00Z",
-  "comp": "USL Championship",
-  "home": "Indy Eleven",
-  "away": "Louisville City FC",
-  "home_id": "514649",
-  "away_id": "614316",
-  "slugs": [
-   "josh-obrien"
   ]
  },
  {
@@ -6836,6 +6836,19 @@
   ]
  },
  {
+  "fotmob_id": "5071312",
+  "url": "/matches/toronto-fc-vs-new-york-city-fc/2bfn0g2z#5071312",
+  "kickoff": "2026-08-29T23:30:00Z",
+  "comp": "Major League Soccer",
+  "home": "Toronto FC",
+  "away": "New York City FC",
+  "home_id": "56453",
+  "away_id": "546238",
+  "slugs": [
+   "kevin-otoole"
+  ]
+ },
+ {
   "fotmob_id": "5071305",
   "url": "/matches/new-england-revolution-vs-new-york-city-fc/1y73nbgv#5071305",
   "kickoff": "2026-08-23T20:30:00Z",
@@ -6849,14 +6862,14 @@
   ]
  },
  {
-  "fotmob_id": "5071312",
-  "url": "/matches/toronto-fc-vs-new-york-city-fc/2bfn0g2z#5071312",
-  "kickoff": "2026-08-29T23:30:00Z",
+  "fotmob_id": "5071321",
+  "url": "/matches/new-york-city-fc-vs-nashville-sc/dmztmw7m#5071321",
+  "kickoff": "2026-09-04T23:30:00Z",
   "comp": "Major League Soccer",
-  "home": "Toronto FC",
-  "away": "New York City FC",
-  "home_id": "56453",
-  "away_id": "546238",
+  "home": "New York City FC",
+  "away": "Nashville SC",
+  "home_id": "546238",
+  "away_id": "915807",
   "slugs": [
    "kevin-otoole"
   ]
@@ -6928,19 +6941,6 @@
   ]
  },
  {
-  "fotmob_id": "5109907",
-  "url": "/matches/phoenix-rising-fc-vs-sacramento-republic-fc/5p8rnuko#5109907",
-  "kickoff": "2026-08-23T03:00:00Z",
-  "comp": "USL Championship",
-  "home": "Sacramento Republic FC",
-  "away": "Phoenix Rising FC",
-  "home_id": "521004",
-  "away_id": "424268",
-  "slugs": [
-   "lee-desmond"
-  ]
- },
- {
   "fotmob_id": "5109918",
   "url": "/matches/sacramento-republic-fc-vs-monterey-bay-fc/d66yr3se#5109918",
   "kickoff": "2026-08-30T02:00:00Z",
@@ -6962,6 +6962,19 @@
   "away": "Sacramento Republic FC",
   "home_id": "267813",
   "away_id": "521004",
+  "slugs": [
+   "lee-desmond"
+  ]
+ },
+ {
+  "fotmob_id": "5109943",
+  "url": "/matches/sacramento-republic-fc-vs-detroit-city-fc/76zs38zx#5109943",
+  "kickoff": "2026-09-13T02:00:00Z",
+  "comp": "USL Championship",
+  "home": "Sacramento Republic FC",
+  "away": "Detroit City FC",
+  "home_id": "521004",
+  "away_id": "540855",
   "slugs": [
    "lee-desmond"
   ]
@@ -7081,6 +7094,19 @@
   "away_id": "8586",
   "slugs": [
    "liam-delap"
+  ]
+ },
+ {
+  "fotmob_id": "5907018",
+  "url": "/matches/hednesford-vs-harborough-town-fc/cdg62rbb#5907018",
+  "kickoff": "2026-08-28T18:45:00Z",
+  "comp": "National League North",
+  "home": "Hednesford",
+  "away": "Harborough Town FC",
+  "home_id": "9923",
+  "away_id": "1382661",
+  "slugs": [
+   "liam-kinsella"
   ]
  },
  {
@@ -7338,55 +7364,17 @@
   ]
  },
  {
-  "fotmob_id": "5907035",
-  "url": "/matches/spalding-united-vs-south-shields/dbzjhfsl#5907035",
-  "kickoff": "2026-08-31T14:00:00Z",
-  "comp": "National League North",
-  "home": "South Shields",
-  "away": "Spalding United",
-  "home_id": "865163",
-  "away_id": "580400",
-  "slugs": [
-   "michael-kelly"
-  ]
- },
- {
-  "fotmob_id": "5907049",
-  "url": "/matches/southport-vs-spalding-united/284b7n3z#5907049",
-  "kickoff": "2026-09-05T14:00:00Z",
+  "fotmob_id": "5907025",
+  "url": "/matches/worksop-town-vs-spalding-united/281ccutf#5907025",
+  "kickoff": "2026-08-29T14:00:00Z",
   "comp": "National League North",
   "home": "Spalding United",
-  "away": "Southport",
+  "away": "Worksop Town",
   "home_id": "580400",
-  "away_id": "10197",
+  "away_id": "9894",
   "slugs": [
-   "michael-kelly"
-  ]
- },
- {
-  "fotmob_id": "5907060",
-  "url": "/matches/spennymoor-town-fc-vs-spalding-united/897gjqgz#5907060",
-  "kickoff": "2026-09-08T18:45:00Z",
-  "comp": "National League North",
-  "home": "Spennymoor Town FC",
-  "away": "Spalding United",
-  "home_id": "557101",
-  "away_id": "580400",
-  "slugs": [
-   "michael-kelly"
-  ]
- },
- {
-  "fotmob_id": "5907071",
-  "url": "/matches/bedford-town-vs-spalding-united/27pv47ao#5907071",
-  "kickoff": "2026-09-12T14:00:00Z",
-  "comp": "National League North",
-  "home": "Spalding United",
-  "away": "Bedford Town",
-  "home_id": "580400",
-  "away_id": "8717",
-  "slugs": [
-   "michael-kelly"
+   "michael-kelly",
+   "shane-byrne"
   ]
  },
  {
@@ -8119,6 +8107,19 @@
   ]
  },
  {
+  "fotmob_id": "1000008695",
+  "url": "/matches/cavalry-fc-vs-vancouver-fc/12l2txdxx#1000008695",
+  "kickoff": "2026-08-29T21:00:00Z",
+  "comp": "Premier League",
+  "home": "Cavalry FC",
+  "away": "Vancouver FC",
+  "home_id": "1022952",
+  "away_id": "1436202",
+  "slugs": [
+   "tom-field"
+  ]
+ },
+ {
   "fotmob_id": "5175960",
   "url": "/matches/vancouver-fc-vs-supra-du-quebec/1z01kvhvr#5175960",
   "kickoff": "2026-09-06T22:00:00Z",
@@ -8262,6 +8263,19 @@
   ]
  },
  {
+  "fotmob_id": "5907035",
+  "url": "/matches/spalding-united-vs-south-shields/dbzjhfsl#5907035",
+  "kickoff": "2026-08-31T14:00:00Z",
+  "comp": "National League North",
+  "home": "South Shields",
+  "away": "Spalding United",
+  "home_id": "865163",
+  "away_id": "580400",
+  "slugs": [
+   "michael-kelly"
+  ]
+ },
+ {
   "fotmob_id": "5991401",
   "url": "/matches/potenza-vs-cosenza/1axj3u#5991401",
   "kickoff": "2026-08-29T19:00:00Z",
@@ -8288,19 +8302,6 @@
   ]
  },
  {
-  "fotmob_id": "1000008695",
-  "url": "/matches/cavalry-fc-vs-vancouver-fc/12l2txdxx#1000008695",
-  "kickoff": "2026-08-29T21:00:00Z",
-  "comp": "Premier League",
-  "home": "Cavalry FC",
-  "away": "Vancouver FC",
-  "home_id": "1022952",
-  "away_id": "1436202",
-  "slugs": [
-   "tom-field"
-  ]
- },
- {
   "fotmob_id": "5847412",
   "url": "/matches/larne-vs-ballymena-united/bpbqa#5847412",
   "kickoff": "2026-08-29T17:00:00Z",
@@ -8316,19 +8317,6 @@
    "josh-ukek",
    "ronan-doherty",
    "sean-murray"
-  ]
- },
- {
-  "fotmob_id": "1000012814",
-  "url": "/matches/brora-rangers-vs-turriff-united/1aeymtgn#1000012814",
-  "kickoff": "2026-08-29T14:00:00Z",
-  "comp": "Highland League",
-  "home": "Brora Rangers",
-  "away": "Turriff United",
-  "home_id": "97904",
-  "away_id": "351621",
-  "slugs": [
-   "cameron-reid"
   ]
  }
 ]

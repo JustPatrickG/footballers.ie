@@ -57,7 +57,6 @@ aaron-mceneff,2026-09-19T14:00:00Z,Cliftonville,A,Premiership
 aaron-mceneff,2026-09-26T14:00:00Z,Carrick Rangers,H,Premiership
 aaron-mceneff,2026-10-03T14:00:00Z,Dungannon Swifts,H,Premiership
 aaron-mceneff,2026-10-10T14:00:00Z,Portadown,A,Premiership
-aaron-molloy,2026-08-29T23:00:00Z,Colorado Springs Switchbacks FC,H,USL Championship
 aaron-molloy,2026-09-05T23:00:00Z,Sporting JAX,A,USL Championship
 aaron-molloy,2026-09-13T02:00:00Z,Oakland Roots SC,A,USL Championship
 aaron-molloy,2026-09-19T23:00:00Z,Orange County SC,H,USL Championship
@@ -306,7 +305,6 @@ baba-adeeko,2026-09-26T14:00:00Z,Fleetwood,A,League Two
 baba-adeeko,2026-10-03T14:00:00Z,Swindon,H,League Two
 baba-adeeko,2026-10-06T18:00:00Z,Huddersfield,A,EFL Trophy Northern Grp. H
 baba-adeeko,2026-10-10T14:00:00Z,Tranmere,A,League Two
-barry-coffey,2026-08-29T23:00:00Z,Birmingham Legion FC,H,USL Championship
 barry-coffey,2026-09-02T23:00:00Z,Charleston Battery,A,USL Championship
 barry-coffey,2026-09-05T23:00:00Z,Detroit City FC,A,USL Championship
 barry-coffey,2026-09-08T23:00:00Z,Colorado Springs Switchbacks FC,H,USL Cup
@@ -315,6 +313,7 @@ barry-coffey,2026-09-16T22:00:00Z,Sporting JAX,H,USL Championship
 barry-coffey,2026-09-20T02:30:00Z,Las Vegas Lights FC,A,USL Championship
 barry-coffey,2026-09-25T23:00:00Z,Louisville City FC,H,USL Championship
 barry-coffey,2026-10-03T23:00:00Z,Charleston Battery,H,USL Championship
+barry-coffey,2026-10-10T23:00:00Z,Pittsburgh Riverhounds SC,A,USL Championship
 barry-cotter,2026-08-30T15:00:00Z,Shamrock Rovers,H,Premier Division
 barry-cotter,2026-09-06T15:00:00Z,Dundalk,H,FAI Cup
 barry-cotter,2026-09-11T18:45:00Z,Shelbourne,A,Premier Division
@@ -430,6 +429,7 @@ brooks-lennon,2026-09-12T23:30:00Z,NY Red Bulls,H,Major League Soccer
 brooks-lennon,2026-09-16T23:00:00Z,Orlando,H,US Open Cup
 brooks-lennon,2026-09-19T23:30:00Z,Montreal,A,Major League Soccer
 brooks-lennon,2026-09-27T23:00:00Z,Inter Miami CF,H,Major League Soccer
+brooks-lennon,2026-10-10T23:30:00Z,Orlando,A,Major League Soccer
 callum-downey,2026-08-30T15:00:00Z,Shamrock Rovers,H,Premier Division
 callum-downey,2026-09-06T15:00:00Z,Dundalk,H,FAI Cup
 callum-downey,2026-09-11T18:45:00Z,Shelbourne,A,Premier Division
@@ -1565,7 +1565,6 @@ harvey-boddy,2026-09-26T14:00:00Z,FC Halifax Town,H,National League
 harvey-boddy,2026-09-29T18:45:00Z,Yeovil,A,National League
 harvey-boddy,2026-10-03T14:00:00Z,Gateshead FC,A,National League
 harvey-boddy,2026-10-10T14:00:00Z,Solihull Moors,H,National League
-harvey-neville,2026-08-29T23:00:00Z,Brooklyn,A,USL Championship
 harvey-neville,2026-09-05T23:00:00Z,Lexington SC,H,USL Championship
 harvey-neville,2026-09-12T23:00:00Z,Rhode Island FC,H,USL Championship
 harvey-neville,2026-09-16T22:00:00Z,Hartford Athletic,A,USL Championship
@@ -1882,12 +1881,12 @@ jimmy-keohane,2026-09-14T18:45:00Z,Sligo Rovers,A,Premier Division
 jimmy-keohane,2026-09-18T18:45:00Z,Derry City,A,Premier Division
 jimmy-keohane,2026-09-25T18:45:00Z,Shelbourne,H,Premier Division
 jimmy-keohane,2026-10-09T18:45:00Z,Waterford FC,A,Premier Division
-joe-byrne,2026-08-29T23:30:00Z,Atlanta United,A,Major League Soccer
 joe-byrne,2026-09-05T23:30:00Z,Houston,H,Major League Soccer
 joe-byrne,2026-09-09T23:30:00Z,Montreal,A,Major League Soccer
 joe-byrne,2026-09-12T23:30:00Z,Cincinnati,A,Major League Soccer
 joe-byrne,2026-09-19T23:30:00Z,DC United,A,Major League Soccer
 joe-byrne,2026-09-26T23:30:00Z,Chicago,H,Major League Soccer
+joe-byrne,2026-10-10T23:30:00Z,Dallas,H,Major League Soccer
 joe-carroll-byrne,2026-09-05T15:00:00Z,Bohemian FC,H,FAI Cup
 joe-carroll-byrne,2026-09-11T19:00:00Z,Shamrock Rovers,H,Premier Division
 joe-carroll-byrne,2026-09-14T18:45:00Z,Dundalk,A,Premier Division
@@ -1984,12 +1983,12 @@ johnny-kenny,2026-09-13T11:00:00Z,Rangers,A,League Cup
 johnny-kenny,2026-09-17T19:00:00Z,Ferencváros,H,Europa League
 johnny-kenny,2026-09-20T11:00:00Z,Rangers,H,Premiership
 johnny-kenny,2026-10-10T14:00:00Z,Motherwell,A,Premiership
-jon-gallagher,2026-08-30T02:30:00Z,Portland,A,Major League Soccer
 jon-gallagher,2026-09-06T00:30:00Z,San Jose,H,Major League Soccer
 jon-gallagher,2026-09-10T00:30:00Z,Colorado,H,Major League Soccer
 jon-gallagher,2026-09-13T22:30:00Z,Vancouver,A,Major League Soccer
 jon-gallagher,2026-09-20T00:30:00Z,Dallas,A,Major League Soccer
 jon-gallagher,2026-09-27T00:30:00Z,San Diego FC,H,Major League Soccer
+jon-gallagher,2026-10-11T00:30:00Z,Nashville SC,H,Major League Soccer
 jonathan-afolabi,2026-08-30T15:00:00Z,Derry City,A,Premier Division
 jonathan-afolabi,2026-09-04T19:00:00Z,Shelbourne,H,Premier Division
 jonathan-afolabi,2026-09-04T19:00:00Z,Bohemian FC,H,Premier Division
@@ -2073,7 +2072,6 @@ josh-keeley,2026-09-26T14:00:00Z,Huddersfield,A,League One
 josh-keeley,2026-10-03T14:00:00Z,Doncaster,H,League One
 josh-keeley,2026-10-06T18:45:00Z,Colchester,A,EFL Trophy Southern Grp. D
 josh-keeley,2026-10-10T14:00:00Z,Wycombe,A,League One
-josh-obrien,2026-08-30T02:30:00Z,Phoenix Rising FC,A,USL Championship
 josh-obrien,2026-09-05T23:00:00Z,Birmingham Legion FC,H,USL Championship
 josh-obrien,2026-09-12T01:30:00Z,New Mexico United,A,USL Championship
 josh-obrien,2026-09-15T23:00:00Z,Brooklyn,H,USL Championship
@@ -2081,6 +2079,7 @@ josh-obrien,2026-09-20T21:00:00Z,Oakland Roots SC,H,USL Championship
 josh-obrien,2026-09-26T23:00:00Z,Miami FC,H,USL Championship
 josh-obrien,2026-09-30T23:30:00Z,Rhode Island FC,A,USL Championship
 josh-obrien,2026-10-03T22:00:00Z,Loudoun United FC,A,USL Championship
+josh-obrien,2026-10-10T23:00:00Z,Tampa Bay Rowdies,H,USL Championship
 josh-oconnor,2026-09-05T15:00:00Z,Bohemian FC,H,FAI Cup
 josh-oconnor,2026-09-11T19:00:00Z,Shamrock Rovers,H,Premier Division
 josh-oconnor,2026-09-14T18:45:00Z,Dundalk,A,Premier Division
@@ -2216,7 +2215,6 @@ kieran-ohara,2026-09-02T18:45:00Z,St. Johnstone,H,Premiership
 kieran-ohara,2026-09-06T14:00:00Z,Hearts,A,Premiership
 kieran-ohara,2026-09-19T14:00:00Z,Motherwell,H,Premiership
 kieran-ohara,2026-10-10T14:00:00Z,Falkirk,A,Premiership
-kieran-sadlier,2026-08-29T23:00:00Z,Brooklyn,A,USL Championship
 kieran-sadlier,2026-09-05T23:00:00Z,Lexington SC,H,USL Championship
 kieran-sadlier,2026-09-12T23:00:00Z,Rhode Island FC,H,USL Championship
 kieran-sadlier,2026-09-16T22:00:00Z,Hartford Athletic,A,USL Championship
@@ -2269,13 +2267,13 @@ kyle-robinson,2026-09-18T18:45:00Z,Kerry FC,H,First Division
 kyle-robinson,2026-09-25T18:45:00Z,Cobh Ramblers,A,First Division
 kyle-robinson,2026-10-02T18:45:00Z,Cork City,H,First Division
 kyle-robinson,2026-10-09T18:45:00Z,Treaty United,H,First Division
-lee-desmond,2026-08-30T02:00:00Z,Monterey Bay FC,A,USL Championship
 lee-desmond,2026-09-06T02:00:00Z,Orange County SC,A,USL Championship
 lee-desmond,2026-09-13T02:00:00Z,Detroit City FC,H,USL Championship
 lee-desmond,2026-09-20T23:00:00Z,San Antonio FC,H,USL Championship
 lee-desmond,2026-09-27T01:00:00Z,New Mexico United,A,USL Championship
 lee-desmond,2026-10-01T02:00:00Z,Las Vegas Lights FC,H,USL Championship
 lee-desmond,2026-10-04T00:00:00Z,FC Tulsa,A,USL Championship
+lee-desmond,2026-10-11T02:00:00Z,Colorado Springs Switchbacks FC,H,USL Championship
 lee-devitt,2026-09-04T18:45:00Z,Drogheda United,A,FAI Cup
 lee-devitt,2026-09-11T18:45:00Z,Bohemian FC,H,Premier Division
 lee-devitt,2026-09-14T18:45:00Z,Sligo Rovers,A,Premier Division
@@ -2395,12 +2393,12 @@ louis-dunne,2026-09-19T14:00:00Z,Eastbourne Borough,H,Isthmian Premier Division
 louis-dunne,2026-10-03T14:00:00Z,Burgess Hill Town,A,Isthmian Premier Division
 louis-dunne,2026-10-06T18:45:00Z,Welling United,H,Isthmian Premier Division
 louis-dunne,2026-10-10T14:00:00Z,Whyteleafe,H,Isthmian Premier Division
-luca-cailloce,2026-09-04T19:00:00Z,Shamrock Rovers,A,Premier Division
-luca-cailloce,2026-09-11T18:45:00Z,Derry City,H,Premier Division
-luca-cailloce,2026-09-14T18:45:00Z,Drogheda United,H,Premier Division
-luca-cailloce,2026-09-18T18:45:00Z,Dundalk,A,Premier Division
-luca-cailloce,2026-09-25T18:45:00Z,Galway United FC,A,Premier Division
-luca-cailloce,2026-10-09T18:45:00Z,Sligo Rovers,H,Premier Division
+luca-cailloce,2026-09-04T18:45:00Z,Cobh Ramblers,A,First Division
+luca-cailloce,2026-09-11T18:45:00Z,Athlone Town,H,First Division
+luca-cailloce,2026-09-18T18:45:00Z,Cork City,A,First Division
+luca-cailloce,2026-09-25T18:45:00Z,Bray Wanderers,H,First Division
+luca-cailloce,2026-10-02T18:45:00Z,Treaty United,A,First Division
+luca-cailloce,2026-10-09T18:45:00Z,Longford Town,H,First Division
 luca-connell,2026-09-02T18:45:00Z,Blackpool,H,League One
 luca-connell,2026-09-05T14:00:00Z,Stevenage,H,League One
 luca-connell,2026-09-12T14:00:00Z,Plymouth,A,League One
@@ -2597,12 +2595,6 @@ michael-duffy,2026-09-11T18:45:00Z,Shelbourne,A,Premier Division
 michael-duffy,2026-09-14T18:45:00Z,Waterford FC,A,Premier Division
 michael-duffy,2026-09-18T18:45:00Z,Galway United FC,H,Premier Division
 michael-duffy,2026-10-09T18:45:00Z,St. Patrick's Athletic,H,Premier Division
-michael-kelly,2026-08-31T14:00:00Z,South Shields,A,National League North
-michael-kelly,2026-09-05T14:00:00Z,Southport,H,National League North
-michael-kelly,2026-09-08T18:45:00Z,Spennymoor Town FC,A,National League North
-michael-kelly,2026-09-12T14:00:00Z,Bedford Town,H,National League North
-michael-kelly,2026-09-26T14:00:00Z,Chorley,A,National League North
-michael-kelly,2026-10-10T14:00:00Z,Marine,A,National League North
 michael-mccolgan,2026-08-30T15:00:00Z,Shamrock Rovers,H,Premier Division
 michael-mccolgan,2026-09-06T15:00:00Z,Dundalk,H,FAI Cup
 michael-mccolgan,2026-09-11T18:45:00Z,Shelbourne,A,Premier Division
