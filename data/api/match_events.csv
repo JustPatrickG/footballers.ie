@@ -4001,6 +4001,20 @@ match_id,minute,type,player,team,venue
 2026-08-30-mantova-v-empoli,57,yellow,Marco Curto,Empoli,Stadio Danilo Martelli – Pata Stadium
 2026-08-30-mantova-v-empoli,58,goal,Francesco Ruocco,Mantova,Stadio Danilo Martelli – Pata Stadium
 2026-08-30-mantova-v-empoli,61,goal,Vanja Vlahovic,Mantova,Stadio Danilo Martelli – Pata Stadium
+2026-08-30-mantova-v-empoli,72,sub_off,Gerard Yepes,Empoli,Stadio Danilo Martelli – Pata Stadium
+2026-08-30-mantova-v-empoli,72,sub_off,Filippo Distefano,Empoli,Stadio Danilo Martelli – Pata Stadium
+2026-08-30-mantova-v-empoli,72,sub_on,Lapo Deli,Empoli,Stadio Danilo Martelli – Pata Stadium
+2026-08-30-mantova-v-empoli,72,sub_on,Bogdan Popov,Empoli,Stadio Danilo Martelli – Pata Stadium
+2026-08-30-mantova-v-empoli,74,yellow,Luca Belardinelli,Empoli,Stadio Danilo Martelli – Pata Stadium
+2026-08-30-mantova-v-empoli,78,sub_off,Francesco Ruocco,Mantova,Stadio Danilo Martelli – Pata Stadium
+2026-08-30-mantova-v-empoli,78,sub_on,Jean-Pierre Longonda,Mantova,Stadio Danilo Martelli – Pata Stadium
+2026-08-30-mantova-v-empoli,83,sub_off,Bodin Tomasevic,Mantova,Stadio Danilo Martelli – Pata Stadium
+2026-08-30-mantova-v-empoli,83,sub_on,Eman Kospo,Mantova,Stadio Danilo Martelli – Pata Stadium
+2026-08-30-mantova-v-empoli,86,sub_off,Edoardo Saporiti,Empoli,Stadio Danilo Martelli – Pata Stadium
+2026-08-30-mantova-v-empoli,86,sub_off,Niccolò Corrado,Empoli,Stadio Danilo Martelli – Pata Stadium
+2026-08-30-mantova-v-empoli,86,sub_on,Andrea Orlandi,Empoli,Stadio Danilo Martelli – Pata Stadium
+2026-08-30-mantova-v-empoli,86,sub_on,Roberto Berizzi,Empoli,Stadio Danilo Martelli – Pata Stadium
+2026-08-30-mantova-v-empoli,86,yellow,Lapo Deli,Empoli,Stadio Danilo Martelli – Pata Stadium
 2026-08-30-monterey-bay-fc-v-sacramento-republic-fc,44,goal,Omari Glasgow,Monterey Bay FC,Cardinale Stadium
 2026-08-30-monterey-bay-fc-v-sacramento-republic-fc,64,sub_off,Forster Ajago,Sacramento Republic FC,Cardinale Stadium
 2026-08-30-monterey-bay-fc-v-sacramento-republic-fc,64,sub_on,Cal Jennings,Sacramento Republic FC,Cardinale Stadium
@@ -4025,6 +4039,7 @@ match_id,minute,type,player,team,venue
 2026-08-30-monterey-bay-fc-v-sacramento-republic-fc,90,sub_on,Zackery Farnsworth,Monterey Bay FC,Cardinale Stadium
 2026-08-30-monterey-bay-fc-v-sacramento-republic-fc,90,sub_on,Diego Otoya,Monterey Bay FC,Cardinale Stadium
 2026-08-30-nafta-v-maribor,7,goal,Tio Cipot,Maribor,Stadium
+2026-08-30-nafta-v-maribor,18,goal,Zan Karnicnik,Maribor,Stadium
 2026-08-30-phoenix-rising-fc-v-indy-eleven,5,goal,Dominique Badji,Phoenix Rising FC,Phoenix Rising Stadium at 38th St/Washington
 2026-08-30-phoenix-rising-fc-v-indy-eleven,7,own_goal,Pape Boye,Indy Eleven,Phoenix Rising Stadium at 38th St/Washington
 2026-08-30-phoenix-rising-fc-v-indy-eleven,24,yellow,Jean Moursou,Phoenix Rising FC,Phoenix Rising Stadium at 38th St/Washington
@@ -4214,6 +4229,20 @@ match_id,minute,type,player,team,venue
 2026-08-30-viktoria-koln-1904-v-preussen-munster,20,goal,Felix Higl,Preussen Münster,Sportpark Höhenberg
 2026-08-30-viktoria-koln-1904-v-preussen-munster,36,yellow,Niklas Varelmann,Preussen Münster,Sportpark Höhenberg
 2026-08-30-viktoria-koln-1904-v-preussen-munster,43,goal,David Otto,Viktoria Köln 1904,Sportpark Höhenberg
+2026-08-30-viktoria-koln-1904-v-preussen-munster,46,sub_off,Lucas Zeller,Preussen Münster,Sportpark Höhenberg
+2026-08-30-viktoria-koln-1904-v-preussen-munster,46,sub_off,Meiko Sponsel,Viktoria Köln 1904,Sportpark Höhenberg
+2026-08-30-viktoria-koln-1904-v-preussen-munster,46,sub_on,Torge Paetow,Preussen Münster,Sportpark Höhenberg
+2026-08-30-viktoria-koln-1904-v-preussen-munster,46,sub_on,Verthomy Boboy,Viktoria Köln 1904,Sportpark Höhenberg
+2026-08-30-viktoria-koln-1904-v-preussen-munster,49,yellow,Antonio Tikvic,Preussen Münster,Sportpark Höhenberg
+2026-08-30-viktoria-koln-1904-v-preussen-munster,58,yellow,Torge Paetow,Preussen Münster,Sportpark Höhenberg
+2026-08-30-viktoria-koln-1904-v-preussen-munster,63,sub_off,Wesley Adeh,Preussen Münster,Sportpark Höhenberg
+2026-08-30-viktoria-koln-1904-v-preussen-munster,63,sub_off,Niklas Varelmann,Preussen Münster,Sportpark Höhenberg
+2026-08-30-viktoria-koln-1904-v-preussen-munster,63,sub_off,Niklas Castelle,Viktoria Köln 1904,Sportpark Höhenberg
+2026-08-30-viktoria-koln-1904-v-preussen-munster,63,sub_off,Yannick Tonye,Viktoria Köln 1904,Sportpark Höhenberg
+2026-08-30-viktoria-koln-1904-v-preussen-munster,63,sub_on,Montell Ndikom,Preussen Münster,Sportpark Höhenberg
+2026-08-30-viktoria-koln-1904-v-preussen-munster,63,sub_on,Samuel Althaus,Preussen Münster,Sportpark Höhenberg
+2026-08-30-viktoria-koln-1904-v-preussen-munster,63,sub_on,Noah Maboulou,Viktoria Köln 1904,Sportpark Höhenberg
+2026-08-30-viktoria-koln-1904-v-preussen-munster,63,sub_on,Pascal Fallmann,Viktoria Köln 1904,Sportpark Höhenberg
 2026-08-30-virton-v-francs-borains,67,goal,Maxime Bastian,Francs Borains,Stade Yvan Georges
 2026-08-30-virton-v-francs-borains,68,sub_off,Yannis Kari,Francs Borains,Stade Yvan Georges
 2026-08-30-virton-v-francs-borains,68,sub_off,Raymond Asante,Francs Borains,Stade Yvan Georges
