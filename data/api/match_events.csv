@@ -3774,6 +3774,8 @@ match_id,minute,type,player,team,venue
 2026-08-30-afc-wimbledon-v-wigan-athletic,25,yellow,Jon Mellish,Wigan Athletic,The Cherry Red Records Stadium
 2026-08-30-chelsea-v-brighton-hove-albion,4,goal,Roméo Lavia,Chelsea,Stamford Bridge
 2026-08-30-chelsea-v-brighton-hove-albion,14,goal,Pedro Neto,Chelsea,Stamford Bridge
+2026-08-30-chelsea-v-brighton-hove-albion,32,goal,João Pedro,Chelsea,Stamford Bridge
+2026-08-30-chelsea-v-brighton-hove-albion,36,goal,<TBD>,Brighton & Hove Albion,Stamford Bridge
 2026-08-30-cong-an-ha-noi-v-cong-an-ho-chi-minh-city,8,goal,Alan Grafite,Công An Hà Nội,Stadium
 2026-08-30-cong-an-ha-noi-v-cong-an-ho-chi-minh-city,11,yellow,Lee Williams,Cong An Ho Chí Minh City,Stadium
 2026-08-30-cong-an-ha-noi-v-cong-an-ho-chi-minh-city,27,goal,Alan Grafite,Công An Hà Nội,Stadium
@@ -3786,8 +3788,13 @@ match_id,minute,type,player,team,venue
 2026-08-30-cong-an-ha-noi-v-cong-an-ho-chi-minh-city,72,goal,Frans Putros,Công An Hà Nội,Stadium
 2026-08-30-fcv-farul-constanta-v-botosani,21,yellow,Narcis Ilas,Botoșani,Stadionul Central
 2026-08-30-fcv-farul-constanta-v-botosani,28,yellow,Victor Dican,FCV Farul Constanța,Stadionul Central
+2026-08-30-fcv-farul-constanta-v-botosani,31,yellow,Valentin Ticu,FCV Farul Constanța,Stadionul Central
 2026-08-30-feyenoord-v-ado-den-haag,12,goal,Nigel Thomas,ADO Den Haag,Stadion Feijenoord
-2026-08-30-leeds-united-v-brentford,,,,,Elland Road
+2026-08-30-feyenoord-v-ado-den-haag,46,sub_off,Gaoussou Diarra,Feyenoord,Stadion Feijenoord
+2026-08-30-feyenoord-v-ado-den-haag,46,sub_on,Sem Steijn,Feyenoord,Stadion Feijenoord
+2026-08-30-leeds-united-v-brentford,30,yellow,Jaidon Anthony,Brentford,Elland Road
+2026-08-30-leeds-united-v-brentford,34,sub_off,Joe Rodon,Leeds United,Elland Road
+2026-08-30-leeds-united-v-brentford,34,sub_on,Nico Elvedi,Leeds United,Elland Road
 2026-08-30-magdeburg-v-holstein-kiel,6,yellow,Alexander Nollenberger,Magdeburg,Avnet Arena
 2026-08-30-magdeburg-v-holstein-kiel,20,yellow,Jonas Torrissen Therkelsen,Holstein Kiel,Avnet Arena
 2026-08-30-magdeburg-v-holstein-kiel,28,yellow,Baris Atik,Magdeburg,Avnet Arena
@@ -3918,4 +3925,4 @@ match_id,minute,type,player,team,venue
 2026-08-30-st-pauli-v-kaiserslautern,84,sub_off,Maxwell Gyamfi,Kaiserslautern,Millerntor-Stadion
 2026-08-30-st-pauli-v-kaiserslautern,84,sub_on,Kelven Frees,Kaiserslautern,Millerntor-Stadion
 2026-08-30-st-pauli-v-kaiserslautern,89,yellow,Tomoya Ando,St. Pauli,Millerntor-Stadion
-2026-08-30-sunderland-v-fulham,,,,,Stadium of Light
+2026-08-30-sunderland-v-fulham,35,yellow,Joachim Andersen,Fulham,Stadium of Light
