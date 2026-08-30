@@ -976,6 +976,19 @@
   ]
  },
  {
+  "fotmob_id": "5109939",
+  "url": "/matches/oakland-roots-sc-vs-lexington-sc/15uayou0w#5109939",
+  "kickoff": "2026-09-13T02:00:00Z",
+  "comp": "USL Championship",
+  "home": "Oakland Roots SC",
+  "away": "Lexington SC",
+  "home_id": "1130413",
+  "away_id": "1430405",
+  "slugs": [
+   "aaron-molloy"
+  ]
+ },
+ {
   "fotmob_id": "5868038",
   "url": "/matches/real-madrid-vs-malaga/2tv0tl#5868038",
   "kickoff": "2026-08-30T15:00:00Z",
@@ -6256,6 +6269,19 @@
   ]
  },
  {
+  "fotmob_id": "5071306",
+  "url": "/matches/atlanta-united-vs-charlotte-fc/s2xqd9kd#5071306",
+  "kickoff": "2026-08-29T23:30:00Z",
+  "comp": "Major League Soccer",
+  "home": "Atlanta United",
+  "away": "Charlotte FC",
+  "home_id": "773958",
+  "away_id": "1323940",
+  "slugs": [
+   "joe-byrne"
+  ]
+ },
+ {
   "fotmob_id": "5071322",
   "url": "/matches/houston-dynamo-fc-vs-charlotte-fc/bbnlt3e7#5071322",
   "kickoff": "2026-09-05T23:30:00Z",
@@ -6446,19 +6472,6 @@
   ]
  },
  {
-  "fotmob_id": "6028325",
-  "url": "/matches/toluca-vs-austin-fc/9kz0pv1m#6028325",
-  "kickoff": "2026-08-27T00:30:00Z",
-  "comp": "Leagues Cup",
-  "home": "Toluca",
-  "away": "Austin FC",
-  "home_id": "6618",
-  "away_id": "1218886",
-  "slugs": [
-   "jon-gallagher"
-  ]
- },
- {
   "fotmob_id": "5071318",
   "url": "/matches/portland-timbers-vs-austin-fc/evaku77m#5071318",
   "kickoff": "2026-08-30T02:30:00Z",
@@ -6472,12 +6485,25 @@
   ]
  },
  {
+  "fotmob_id": "6028325",
+  "url": "/matches/toluca-vs-austin-fc/9kz0pv1m#6028325",
+  "kickoff": "2026-08-27T00:30:00Z",
+  "comp": "Leagues Cup",
+  "home": "Toluca",
+  "away": "Austin FC",
+  "home_id": "6618",
+  "away_id": "1218886",
+  "slugs": [
+   "jon-gallagher"
+  ]
+ },
+ {
   "fotmob_id": "5071329",
   "url": "/matches/san-jose-earthquakes-vs-austin-fc/9kyprv1g#5071329",
   "kickoff": "2026-09-06T00:30:00Z",
   "comp": "Major League Soccer",
   "home": "Austin FC",
-  "away": "San Jose",
+  "away": "San Jose Earthquakes",
   "home_id": "1218886",
   "away_id": "6603",
   "slugs": [
@@ -6797,6 +6823,19 @@
   ]
  },
  {
+  "fotmob_id": "5071312",
+  "url": "/matches/toronto-fc-vs-new-york-city-fc/2bfn0g2z#5071312",
+  "kickoff": "2026-08-29T23:30:00Z",
+  "comp": "Major League Soccer",
+  "home": "Toronto FC",
+  "away": "New York City FC",
+  "home_id": "56453",
+  "away_id": "546238",
+  "slugs": [
+   "kevin-otoole"
+  ]
+ },
+ {
   "fotmob_id": "5071305",
   "url": "/matches/new-england-revolution-vs-new-york-city-fc/1y73nbgv#5071305",
   "kickoff": "2026-08-23T20:30:00Z",
@@ -6889,19 +6928,6 @@
   ]
  },
  {
-  "fotmob_id": "5109907",
-  "url": "/matches/phoenix-rising-fc-vs-sacramento-republic-fc/5p8rnuko#5109907",
-  "kickoff": "2026-08-23T03:00:00Z",
-  "comp": "USL Championship",
-  "home": "Sacramento Republic FC",
-  "away": "Phoenix Rising FC",
-  "home_id": "521004",
-  "away_id": "424268",
-  "slugs": [
-   "lee-desmond"
-  ]
- },
- {
   "fotmob_id": "5109918",
   "url": "/matches/sacramento-republic-fc-vs-monterey-bay-fc/d66yr3se#5109918",
   "kickoff": "2026-08-30T02:00:00Z",
@@ -6923,6 +6949,19 @@
   "away": "Sacramento Republic FC",
   "home_id": "267813",
   "away_id": "521004",
+  "slugs": [
+   "lee-desmond"
+  ]
+ },
+ {
+  "fotmob_id": "5109943",
+  "url": "/matches/sacramento-republic-fc-vs-detroit-city-fc/76zs38zx#5109943",
+  "kickoff": "2026-09-13T02:00:00Z",
+  "comp": "USL Championship",
+  "home": "Sacramento Republic FC",
+  "away": "Detroit City FC",
+  "home_id": "521004",
+  "away_id": "540855",
   "slugs": [
    "lee-desmond"
   ]
@@ -8233,32 +8272,6 @@
   "away_id": "8280",
   "slugs": [
    "zak-delaney"
-  ]
- },
- {
-  "fotmob_id": "5071312",
-  "url": "/matches/toronto-fc-vs-new-york-city-fc/2bfn0g2z#5071312",
-  "kickoff": "2026-08-29T23:30:00Z",
-  "comp": "Major League Soccer",
-  "home": "Toronto FC",
-  "away": "New York City FC",
-  "home_id": "56453",
-  "away_id": "546238",
-  "slugs": [
-   "kevin-otoole"
-  ]
- },
- {
-  "fotmob_id": "5071306",
-  "url": "/matches/atlanta-united-vs-charlotte-fc/s2xqd9kd#5071306",
-  "kickoff": "2026-08-29T23:30:00Z",
-  "comp": "Major League Soccer",
-  "home": "Atlanta United",
-  "away": "Charlotte FC",
-  "home_id": "773958",
-  "away_id": "1323940",
-  "slugs": [
-   "joe-byrne"
   ]
  },
  {
