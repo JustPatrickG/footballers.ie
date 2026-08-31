@@ -85,7 +85,7 @@ Premiership,64,11,Falkirk,8596,3,0,1,2,1,4,-3,1
 Premiership,64,12,Kilmarnock,8597,3,0,0,3,4,13,-9,0
 Premier League 2,9084,1,Manchester United U21,1070257,2,2,0,0,9,1,8,6
 Premier League 2,9084,2,Brentford U21,2054260,2,2,0,0,8,3,5,6
-Premier League 2,9084,3,Fulham U21,860801,2,2,0,0,7,3,4,6
+Premier League 2,9084,3,Fulham U21,860801,2,2,0,0,8,3,5,6
 Premier League 2,9084,4,Bournemouth U21,2128213,2,2,0,0,5,2,3,6
 Premier League 2,9084,5,Derby County U21,773680,2,1,1,0,7,5,2,4
 Premier League 2,9084,6,Tottenham Hotspur U21,860802,2,1,1,0,6,4,2,4
@@ -101,11 +101,11 @@ Premier League 2,9084,15,Reading U21,773686,2,1,0,1,4,4,0,3
 Premier League 2,9084,16,Aston Villa U21,1070261,2,1,0,1,2,3,-1,3
 Premier League 2,9084,17,Ipswich Town U21,1796115,2,1,0,1,4,6,-2,3
 Premier League 2,9084,18,Nottingham Forest U21,1389162,2,1,0,1,3,6,-3,3
-Premier League 2,9084,19,Arsenal U21,950214,2,0,2,0,2,2,0,2
+Premier League 2,9084,19,Arsenal U21,950214,2,0,2,0,3,3,0,2
 Premier League 2,9084,20,Birmingham U21,1796111,1,0,1,0,3,3,0,1
 Premier League 2,9084,21,West Bromwich Albion U21,773656,2,0,1,1,7,8,-1,1
 Premier League 2,9084,22,West Ham United U21,773649,2,0,1,1,4,5,-1,1
-Premier League 2,9084,23,Brighton & Hove Albion U21,773678,2,0,1,1,2,3,-1,1
+Premier League 2,9084,23,Brighton & Hove Albion U21,773678,2,0,1,1,3,4,-1,1
 Premier League 2,9084,24,Everton U21,773653,2,0,1,1,2,3,-1,1
 Premier League 2,9084,25,Stoke City U21,773650,2,0,1,1,2,3,-1,1
 Premier League 2,9084,26,Burnley U21,1796112,2,0,0,2,4,7,-3,0
@@ -113,7 +113,7 @@ Premier League 2,9084,27,Blackburn Rovers U21,773685,1,0,0,1,1,4,-3,0
 Premier League 2,9084,28,Leicester City U21,773642,1,0,0,1,1,4,-3,0
 Premier League 2,9084,29,Middlesbrough U21,773660,2,0,0,2,1,4,-3,0
 Premier League 2,9084,30,Wolverhampton Wanderers U21,773683,1,0,0,1,0,4,-4,0
-Premier League 2,9084,31,Newcastle United U21,860798,2,0,0,2,1,6,-5,0
+Premier League 2,9084,31,Newcastle United U21,860798,2,0,0,2,1,7,-6,0
 Premier League,47,1,Manchester City,8456,2,2,0,0,6,2,4,6
 Premier League,47,2,Hull City,8667,2,2,0,0,3,0,3,6
 Premier League,47,3,Chelsea,8455,2,2,0,0,7,5,2,6
@@ -285,10 +285,10 @@ League of Ireland Premier Division,126,8,Waterford FC,6042,29,7,11,11,39,48,-9,3
 League of Ireland Premier Division,126,9,Drogheda United,8339,29,6,10,13,33,48,-15,28
 League of Ireland Premier Division,126,10,Sligo Rovers,6361,29,5,8,16,23,48,-25,23
 LaLiga,87,1,Real Madrid,8633,3,3,0,0,10,2,8,9
-LaLiga,87,2,Atlético Madrid,9906,3,2,1,0,7,3,4,7
-LaLiga,87,3,Deportivo Alavés,9866,3,2,1,0,5,1,4,7
-LaLiga,87,4,Osasuna,8371,3,2,1,0,3,1,2,7
-LaLiga,87,5,Barcelona,8634,2,2,0,0,7,0,7,6
+LaLiga,87,2,Barcelona,8634,3,3,0,0,9,1,8,9
+LaLiga,87,3,Atlético Madrid,9906,3,2,1,0,7,3,4,7
+LaLiga,87,4,Deportivo Alavés,9866,3,2,1,0,5,1,4,7
+LaLiga,87,5,Osasuna,8371,3,2,1,0,3,1,2,7
 LaLiga,87,6,Sevilla,8302,3,2,0,1,6,5,1,6
 LaLiga,87,7,Real Betis,8603,3,2,0,1,4,5,-1,6
 LaLiga,87,8,Deportivo A Coruña,9783,3,1,2,0,5,3,2,5
@@ -299,7 +299,7 @@ LaLiga,87,12,Athletic Club,8315,3,1,0,2,3,5,-2,3
 LaLiga,87,13,Real Sociedad,8560,3,1,0,2,3,6,-3,3
 LaLiga,87,14,Getafe,8305,3,1,0,2,1,4,-3,3
 LaLiga,87,15,Villarreal,10205,3,0,2,1,4,5,-1,2
-LaLiga,87,16,Rayo Vallecano,8370,2,0,1,1,2,3,-1,1
+LaLiga,87,16,Rayo Vallecano,8370,3,0,1,2,3,5,-2,1
 LaLiga,87,17,Celta Vigo,9910,3,0,1,2,1,4,-3,1
 LaLiga,87,18,Valencia,10267,3,0,1,2,1,4,-3,1
 LaLiga,87,19,Elche,10268,3,0,1,2,3,9,-6,1
@@ -408,7 +408,7 @@ Serie A,55,20,Fiorentina,8535,2,0,0,2,0,7,-7,0
 Super Lig,71,1,Galatasaray,8637,3,2,1,0,9,4,5,7
 Super Lig,71,2,Gençlerbirliği,7800,3,2,1,0,4,2,2,7
 Super Lig,71,3,Fenerbahçe,8695,3,2,0,1,7,4,3,6
-Super Lig,71,4,Beşiktaş,10188,3,2,0,1,3,1,2,6
+Super Lig,71,4,Beşiktaş,10188,3,2,0,1,5,2,3,6
 Super Lig,71,5,Kocaelispor,1569,3,2,0,1,4,3,1,6
 Super Lig,71,6,Rizespor,2166,3,2,0,1,3,3,0,6
 Super Lig,71,7,Trabzonspor,9752,3,1,2,0,4,3,1,5
@@ -420,7 +420,7 @@ Super Lig,71,12,Alanyaspor,4678,3,1,1,1,3,3,0,4
 Super Lig,71,13,Gaziantep FK,4081,3,1,1,1,3,3,0,4
 Super Lig,71,14,Eyüpspor,4681,3,1,0,2,2,3,-1,3
 Super Lig,71,15,Göztepe,1925,3,0,1,2,5,7,-2,1
-Super Lig,71,16,Çorum FK,357274,3,0,1,2,2,5,-3,1
+Super Lig,71,16,Çorum FK,357274,3,0,1,2,3,7,-4,1
 Super Lig,71,17,Erzurumspor FK,281467,3,0,1,2,1,8,-7,1
 Super Lig,71,18,Konyaspor,8622,3,0,0,3,3,7,-4,0
 A-League,113,1,Adelaide United,8008,0,0,0,0,0,0,0,0
