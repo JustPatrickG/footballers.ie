@@ -12,13 +12,13 @@
 <meta property="og:title" content="Italy — Irish players — footballers.ie">
 <meta property="og:description" content="Irish players in Italy, by league.">
 <meta property="og:url" content="https://footballers.ie/country/italy.html">
-<meta property="og:image" content="https://footballers.ie/api/og?n=Italy&amp;gw=gold&amp;l=6+Irish+players+tracked&amp;f=Where+are+the+Irish%3F">
+<meta property="og:image" content="https://footballers.ie/api/og?n=Italy&amp;gw=gold&amp;l=7+Irish+players+tracked&amp;f=Where+are+the+Irish%3F">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Italy — Irish players — footballers.ie">
 <meta name="twitter:description" content="Irish players in Italy, by league.">
-<meta name="twitter:image" content="https://footballers.ie/api/og?n=Italy&amp;gw=gold&amp;l=6+Irish+players+tracked&amp;f=Where+are+the+Irish%3F">
+<meta name="twitter:image" content="https://footballers.ie/api/og?n=Italy&amp;gw=gold&amp;l=7+Irish+players+tracked&amp;f=Where+are+the+Irish%3F">
 <link rel="icon" href="../favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="../apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -1521,8 +1521,8 @@ a.intlblock.lnk:hover{border-color:var(--teal)}
   <button class="burger" id="burger" aria-label="Menu" aria-expanded="false" aria-controls="navlinks">
     <span></span><span></span><span></span>
   </button>
-  <div class="navlinks" id="navlinks"><a class="" href="../news.html">News</a><a class="" href="../players.html">Players</a><a class="" href="../transfers.html">Transfers</a><a class="on" href="../clubs.html">Clubs</a><a class="" href="../ireland.html">Ireland</a><a class="" href="../fixtures.html">Fixtures</a><a class="" href="../alerts.html">Alerts</a><div class="navfoot">26 AUG-1 SEP · <b>686</b> tracked</div></div>
-  <div class="navmeta"><span id="navdate">26 AUG-1 SEP</span> · <b>686</b> TRACKED</div>
+  <div class="navlinks" id="navlinks"><a class="" href="../news.html">News</a><a class="" href="../players.html">Players</a><a class="" href="../transfers.html">Transfers</a><a class="on" href="../clubs.html">Clubs</a><a class="" href="../ireland.html">Ireland</a><a class="" href="../fixtures.html">Fixtures</a><a class="" href="../alerts.html">Alerts</a><div class="navfoot">28 AUG-3 SEP · <b>686</b> tracked</div></div>
+  <div class="navmeta"><span id="navdate">28 AUG-3 SEP</span> · <b>686</b> TRACKED</div>
 </nav>
 <script>
 (function(){
@@ -1534,11 +1534,11 @@ a.intlblock.lnk:hover{border-color:var(--teal)}
   });
 })();
 </script>
-<a class="crumb" data-back href="../clubs.html">← Back</a><div class="pagehead"><h1>Italy</h1><p>6 Irish players across 4 leagues.</p></div><div class="clubgrid"><a class="clubcard" href="../league/italy-serie-a.html"><div class="cn">Serie A</div><div class="cl2">2 clubs</div><div class="cc">2 Irish players</div></a><a class="clubcard" href="../league/italy-other.html"><div class="cn">—</div><div class="cl2">2 clubs</div><div class="cc">2 Irish players</div></a><a class="clubcard" href="../league/italy-serie-b.html"><div class="cn">Serie B</div><div class="cl2">1 club</div><div class="cc">1 Irish player</div></a><a class="clubcard" href="../league/italy-serie-c-grp-c.html"><div class="cn">Serie C Grp. C</div><div class="cl2">1 club</div><div class="cc">1 Irish player</div></a></div>
+<a class="crumb" data-back href="../clubs.html">← Back</a><div class="pagehead"><h1>Italy</h1><p>4 Irish players across 3 leagues.</p></div><div class="clubgrid"><a class="clubcard" href="../league/italy-serie-a.html"><div class="cn">Serie A</div><div class="cl2">2 clubs</div><div class="cc">2 Irish players</div></a><a class="clubcard" href="../league/italy-serie-b.html"><div class="cn">Serie B</div><div class="cl2">1 club</div><div class="cc">1 Irish player</div></a><a class="clubcard" href="../league/italy-serie-c-grp-c.html"><div class="cn">Serie C Grp. C</div><div class="cl2">1 club</div><div class="cc">1 Irish player</div></a></div>
 <footer>
   <div class="foothead">
     footballers.ie
-    <span class="updated" data-stamp="2026-08-29T19:00:10Z">checking for updates…</span>
+    <span class="updated" data-stamp="2026-08-31T17:38:54Z">checking for updates…</span>
   </div>
   Every Irish player at a professional club — abroad, senior international and League of Ireland
   <div class="footlinks">
@@ -1942,7 +1942,7 @@ a.intlblock.lnk:hover{border-color:var(--teal)}
     }
   }
 
-  /* ---------- Fixtures page (FotMob-style) ----------
+  /* ---------- Fixtures page ----------
      One day at a time, a scrollable date strip on top, matches grouped by
      competition. Abroad / LOI / All filter. Opens on today. */
   var fxSel = null, fxFilter = 'abroad', fxStripBuilt = false;
@@ -2060,7 +2060,7 @@ a.intlblock.lnk:hover{border-color:var(--teal)}
 
   /* Live scores. First choice: /api/live, which asks the source directly
      the moment a browser polls, edge-cached ~25s — genuinely live. Fallback:
-     the old live.json file the scraper commits, for when the function is
+     the old live.json file the data pipeline commits, for when the function is
      down. The old path alone is why scores froze for hours: it depends on
      GitHub running a schedule it frequently just doesn't run. */
   function liveWindow(m, now) {

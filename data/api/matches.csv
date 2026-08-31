@@ -3,7 +3,7 @@ kickoff,competition,home,away,home_id,away_id,home_score,away_score,status,minut
 2026-08-24T18:00:00Z,Premier League 2,Manchester City U21,Wolverhampton Wanderers U21,860800,773683,4,0,ft,,nathan-fraser
 2026-08-24T18:00:00Z,Premier League 2,Newcastle United U21,Tottenham Hotspur U21,860798,860802,1,3,ft,,rory-finneran
 2026-08-25T18:00:00Z,EFL Cup,Cardiff City,Norwich City,8344,9850,1,2,ft,,callum-robinson;jack-moylan;joel-bagan
-2026-08-25T18:00:00Z,EFL Trophy Southern Grp. C,Bristol Rovers,Chelsea U21,10104,773652,2,2,ft,,ciaran-kelly;joe-quigley;promise-omochere
+2026-08-25T18:00:00Z,EFL Trophy Southern Grp. C,Bristol Rovers,Chelsea U21,10104,773652,2,2,ft,,ciaran-kelly;joe-quigley;philip-sanyaolu;promise-omochere
 2026-08-25T18:30:00Z,EFL Cup,Doncaster Rovers,Middlesbrough,9903,8549,1,3,ft,,jay-mcgrath;leon-ayinde;neill-byrne;sean-grehan
 2026-08-25T18:45:00Z,EFL Cup,Fleetwood Town,Shrewsbury Town,45723,9896,4,0,ft,,adam-murphy;jesse-dempsey;ronan-coughlan;sean-costelloe
 2026-08-25T18:45:00Z,EFL Cup,Barnsley,Crewe Alexandra,8283,9784,3,2,ft,,adrien-thibaut;charlie-mcneill;corey-okeeffe
@@ -29,7 +29,7 @@ kickoff,competition,home,away,home_id,away_id,home_score,away_score,status,minut
 2026-08-27T00:30:00Z,Leagues Cup,Toluca,Austin FC,6618,1218886,2,0,ft,,jon-gallagher
 2026-08-27T01:30:00Z,USL Championship,New Mexico United,Lexington SC,1003208,1430405,2,1,ft,,aaron-molloy
 2026-08-27T02:45:00Z,Leagues Cup,CF América,Columbus Crew,6576,6001,2,0,ft,,brooks-lennon
-2026-08-27T15:00:00Z,Conference League Qualification,KuPS,Shamrock Rovers,1693,4131,1,0,ft,,aaron-greene;adam-brennan;alex-noonan;ben-mahon;cory-osullivan;dylan-watts;edward-mcginty;enda-stevens;graham-burke;jack-byrne;jake-mulraney;john-osullivan;jonathan-afolabi;lee-grace;lee-steacy;luke-oregan;matthew-healy;michael-noonan;tunmise-sobowale;william-fitzgerald
+2026-08-27T15:00:00Z,Conference League Qualification,KuPS,Shamrock Rovers,1693,4131,1,0,ft,,aaron-greene;adam-brennan;alex-noonan;ben-mahon;cory-osullivan;dylan-watts;edward-mcginty;enda-stevens;graham-burke;jack-byrne;jake-mulraney;john-osullivan;jonathan-afolabi;lee-grace;lee-steacy;luke-oregan;matthew-healy;michael-noonan;tunmise-sobowale;will-fitzgerald;william-fitzgerald
 2026-08-27T16:45:00Z,Conference League Qualification,Freiburg,Motherwell,8358,9927,4,1,ft,,joe-hodge
 2026-08-27T18:30:00Z,EFL Cup,Chelsea,Luton Town,8455,8346,2,0,ft,,callum-marshall;josh-keeley
 2026-08-27T18:30:00Z,Europa League Qualification,Ferencváros,Trabzonspor,8222,9752,4,0,ft,,callum-odowda
@@ -72,7 +72,7 @@ kickoff,competition,home,away,home_id,away_id,home_score,away_score,status,minut
 2026-08-29T14:00:00Z,Premiership,Kilmarnock,Dundee United,8597,9938,0,4,ft,,cathal-mccarthy;neil-farrugia;will-ferry
 2026-08-29T14:00:00Z,League Two,York City,Exeter City,9916,9833,2,1,ft,,charlie-cummins
 2026-08-29T14:00:00Z,League Two,Newport County,Tranmere Rovers,10262,8313,2,2,ft,,ciaran-brennan;jacob-slater;lee-oconnor
-2026-08-29T14:00:00Z,League Two,Crawley Town,Bristol Rovers,8647,10104,0,2,ft,,ciaran-kelly;joe-quigley;lewis-richards;louie-watson
+2026-08-29T14:00:00Z,League Two,Crawley Town,Bristol Rovers,8647,10104,0,2,ft,,ciaran-kelly;joe-quigley;lewis-richards;louie-watson;philip-sanyaolu
 2026-08-29T14:00:00Z,League One,Leyton Orient,Barnsley,8351,8283,1,3,ft,,connor-oriordan;corey-okeeffe;jaze-kabia;killian-cahill;tony-springett
 2026-08-29T14:00:00Z,League One,Notts County,Burton Albion,9819,9792,2,1,ft,,conor-grant;darius-lipsiuc;rory-finneran
 2026-08-29T14:00:00Z,League Two,Gillingham,Northampton Town,10173,8651,1,1,ft,,conor-mccarthy;conor-mcmanus;joe-obrien-whitmarsh
@@ -118,68 +118,33 @@ kickoff,competition,home,away,home_id,away_id,home_score,away_score,status,minut
 2026-08-30T02:30:00Z,Major League Soccer,Portland Timbers,Austin FC,307690,1218886,1,2,ft,,jon-gallagher
 2026-08-30T02:30:00Z,USL Championship,Phoenix Rising FC,Indy Eleven,424268,514649,2,1,ft,,josh-obrien
 2026-08-30T11:00:00Z,Premiership,Aberdeen,Rangers,8485,8548,0,1,ft,,connor-ronan;gavin-molloy
-2026-08-30T11:00:00Z,Super Cup,Công An Hà Nội,Cong An Ho Chí Minh City,614354,179228,,,scheduled,,brandon-ly
 2026-08-30T11:30:00Z,2. Bundesliga,St. Pauli,Kaiserslautern,8152,8350,1,2,ft,,alex-murphy
 2026-08-30T11:30:00Z,2. Bundesliga,Magdeburg,Holstein Kiel,8188,8150,2,0,ft,,anselmo-garcia-macnulty
 2026-08-30T12:30:00Z,Eredivisie,Feyenoord,ADO Den Haag,10235,10217,2,2,ft,,liam-bossin
 2026-08-30T13:00:00Z,Premier League,Leeds United,Brentford,8463,9937,1,1,ft,,caoimhin-kelleher;nathan-collins
 2026-08-30T13:00:00Z,League One,AFC Wimbledon,Wigan Athletic,158319,8528,1,0,ft,,dara-costelloe;sonny-perkins
 2026-08-30T13:00:00Z,Superliga,FCV Farul Constanța,Botoșani,210132,188191,0,0,ft,,roland-idowu
-2026-08-30T13:00:00Z,Premier League,Chelsea,Brighton & Hove Albion,8455,10204,,,scheduled,,evan-ferguson
-2026-08-30T13:00:00Z,Premier League,Sunderland,Fulham,8472,9879,,,live,,alan-browne
 2026-08-30T14:00:00Z,Premiership,Dundee FC,Hibernian,8284,10251,1,2,ft,,bobby-wales;jacob-devaney;jamie-mcgrath;kieran-ohara
 2026-08-30T14:00:00Z,League One,Mansfield Town,Luton Town,9818,8346,5,2,ft,,callum-marshall;david-mcgoldrick;josh-keeley;ryan-sweeney;stephen-mclaughlin
 2026-08-30T14:00:00Z,Premiership,St. Mirren,Motherwell,9800,9927,3,3,ft,,joe-hodge
 2026-08-30T14:00:00Z,First Division B,Virton,Francs Borains,8174,96953,0,1,ft,,noah-jauny
 2026-08-30T14:45:00Z,Eerste Divisie,VVV-Venlo,FC Emmen,9839,6660,4,0,ft,,eanna-clancy
-2026-08-30T15:00:00Z,Premier Division,Derry City,Shamrock Rovers,8338,4131,3,3,ft,,aaron-greene;adam-brennan;adam-oreilly;alex-noonan;barry-cotter;brian-maher;brooklyn-lyons-foster;christy-grogan;cory-osullivan;daniel-cleary;darragh-burns;dylan-watts;edward-mcginty;enda-stevens;graham-burke;jack-byrne;jake-mulraney;john-osullivan;lee-grace;luke-oregan;mark-connolly;matthew-healy;michael-duffy;michael-mccolgan;michael-noonan;patrick-mcclean;terence-doherty;tunmise-sobowale;william-fitzgerald
+2026-08-30T15:00:00Z,Premier Division,Derry City,Shamrock Rovers,8338,4131,3,3,ft,,aaron-greene;adam-brennan;adam-oreilly;alex-noonan;barry-cotter;brian-maher;brooklyn-lyons-foster;christy-grogan;cory-osullivan;daniel-cleary;darragh-burns;dylan-watts;edward-mcginty;enda-stevens;graham-burke;jack-byrne;jake-mulraney;john-osullivan;lee-grace;luke-oregan;mark-connolly;matthew-healy;michael-duffy;michael-mccolgan;michael-noonan;patrick-mcclean;terence-doherty;tunmise-sobowale;will-fitzgerald;william-fitzgerald
 2026-08-30T15:00:00Z,Eliteserien,Vålerenga,Molde,8007,9917,3,4,ft,,trent-kone-doherty
-2026-08-30T15:00:00Z,LaLiga,Real Madrid,Málaga,8633,9864,,,scheduled,,aaron-ochoa
 2026-08-30T15:30:00Z,Premier League,Manchester United,Ipswich Town,10260,9902,5,2,ft,,dara-oshea;jack-clarke;kasey-mcateer
 2026-08-30T16:00:00Z,First Professional League,Botev Plovdiv,Levski Sofia,10131,8632,1,3,ft,,armstrong-oko-flex
 2026-08-30T17:00:00Z,NB I,Puskás FC Academy,Ferencváros,355346,8222,1,2,ft,,callum-odowda
 2026-08-30T17:00:00Z,Serie B,Mantova,Empoli,9889,8534,3,1,ft,,matteo-egan
 2026-08-30T17:30:00Z,3. Liga,Viktoria Köln 1904,Preussen Münster,276267,8171,4,1,ft,,ryan-johansson
-2026-08-30T18:15:00Z,Prva Liga,Nafta,Maribor,2420,8340,,,live,,ali-reghba
 2026-08-30T20:30:00Z,Major League Soccer,Columbus Crew,New England Revolution,6001,6580,1,3,ft,,brooks-lennon
 2026-08-31T12:00:00Z,Premier League 2,Bournemouth U21,Middlesbrough U21,2128213,773660,3,1,ft,,ade-solanke
 2026-08-31T12:00:00Z,Premier League 2,Brentford U21,Sunderland U21,2054260,773657,5,1,ft,,donal-oconnor
-2026-08-31T12:00:00Z,Premier League 2,AFC Bournemouth Academy,Middlesbrough U21,2128213,773660,,,scheduled,,ade-solanke
-2026-08-31T12:00:00Z,Premier League 2,Brentford Academy,Sunderland U21,2054260,773657,,,scheduled,,donal-oconnor
-2026-08-31T12:00:00Z,Premier League 2,Chelsea U21,West Ham United U21,773652,773649,,,scheduled,,justin-osagie;shaun-wade
-2026-08-31T13:00:00Z,Premier League 2,Tottenham Hotspur U21,Birmingham U21,860802,1796111,,,live,,aaron-maguire;finn-mcgreevy
-2026-08-31T13:00:00Z,Premier League 2,Manchester United U21,Leicester City U21,1070257,773642,,,scheduled,,jack-moorhouse
-2026-08-31T13:30:00Z,Premier League,Flint Town United,Connah's Quay Nomads,316297,2193,,,live,,shane-flynn
-2026-08-31T14:00:00Z,National League North,King's Lynn Town,Scarborough Athletic,45731,580382,,,live,,adam-rooney
-2026-08-31T14:00:00Z,National League North,Buxton,Merthyr Town,161824,5762,,,live,,cian-coleman;matthew-harris
-2026-08-31T14:00:00Z,Southern Premier Division Central,Bishop's Stortford,Hitchin Town,4046,161838,,,live,,daniel-idiakhoa
-2026-08-31T14:00:00Z,National League South,Ebbsfleet United,Horsham,9794,105554,,,scheduled,,danny-burke
 2026-08-31T14:00:00Z,National League,Harrogate Town,Gateshead FC,7946,6189,2,1,ft,,david-eguaibor
-2026-08-31T14:00:00Z,National League South,Weston Super Mare,Chelmsford,6314,45724,,,live,,dominic-bernard
 2026-08-31T14:00:00Z,National League,Sutton United,Wealdstone,158316,161812,0,2,ft,,emmanuel-osadebe;wilson-waweru
-2026-08-31T14:00:00Z,Premier League,Caernarfon,The New Saints,2198,7852,,,live,,eoin-farrell;zach-nolan
 2026-08-31T14:00:00Z,National League,Boston United,Hornchurch,8646,4047,2,3,ft,,gavan-holohan;niall-canavan
-2026-08-31T14:00:00Z,National League,Worthing,Boreham Wood,282351,2488,,,live,,harvey-boddy
 2026-08-31T14:00:00Z,National League,Carlisle United,Scunthorpe United,10196,8412,4,2,ft,,hugh-parker
-2026-08-31T14:00:00Z,Northern Premier Division,Warrington Rylands,Bamber Bridge,1186092,282395,,,live,,isaac-abankwah
-2026-08-31T14:00:00Z,National League North,Chester FC,Morecambe,9797,8489,,,scheduled,,jake-griffin;sam-foley
 2026-08-31T14:00:00Z,National League,Solihull Moors,AFC Fylde,161801,282396,1,3,ft,,jevon-mills
-2026-08-31T14:00:00Z,National League South,Dorking Wanderers,Truro City,580438,177067,,,live,,josh-barrett
-2026-08-31T14:00:00Z,Northern Premier Division,FC United of Manchester,Avro,161822,1290988,,,scheduled,,josh-seary
-2026-08-31T14:00:00Z,National League South,Salisbury,Billericay,1114695,2261,,,scheduled,,joshua-keeya
-2026-08-31T14:00:00Z,National League North,Spennymoor Town FC,Hednesford,557101,9923,,,live,,liam-kinsella
-2026-08-31T14:00:00Z,Isthmian Premier Division,Brentwood Town,Maldon & Tiptree,282343,282501,,,scheduled,,louis-dunne
-2026-08-31T14:00:00Z,Northern Premier Division,Whitby,Alfreton Town,6195,6258,,,scheduled,,oisin-mcdonagh
-2026-08-31T14:00:00Z,Southern Premier Division South,Yate Town,Taunton Town,161839,282502,,,scheduled,,rabby-tabu-minzamba
-2026-08-31T14:00:00Z,National League,Eastleigh,Aldershot Town,161803,8465,,,live,,scott-davies
-2026-08-31T14:00:00Z,National League,Woking,Southend United,8345,8652,,,live,,shadrach-ogie
-2026-08-31T14:00:00Z,Isthmian Premier Division,Whitehawk,Burgess Hill Town,282373,282340,,,scheduled,,shamir-fenelon
-2026-08-31T14:00:00Z,National League North,Chorley,Brackley Town,274599,158321,,,scheduled,,shane-byrne
-2026-08-31T14:00:00Z,National League North,Radcliffe,Darlington,282390,8598,,,scheduled,,bobby-jones
-2026-08-31T14:00:00Z,National League North,South Shields,Spalding United,865163,580400,,,scheduled,,michael-kelly
-2026-08-31T16:00:00Z,Veikkausliiga,AC Oulu,SJK,4449,162162,,,scheduled,,aaron-okpolokpo;josh-okpolokpo
-2026-08-31T16:00:00Z,Veikkausliiga,Ilves,HJK,162146,9861,,,scheduled,,david-eze;david-ezeh
-2026-08-31T16:30:00Z,Serie A,Lecce,Roma,9888,8686,,,scheduled,,corrie-ndaba
+2026-08-31T14:00:00Z,National League,Woking,Southend United,8345,8652,1,1,ft,,shadrach-ogie
 2026-08-31T18:00:00Z,Premier League 2,Brighton & Hove Albion U21,Arsenal U21,773678,950214,,,scheduled,,mark-omahony;sean-keogh
 2026-09-01T18:45:00Z,League One,Bromley,Leyton Orient,45729,8351,,,scheduled,,aaron-connolly;jaze-kabia;killian-cahill;ollie-oneill;owen-mason;tony-springett
 2026-09-01T18:45:00Z,League Two,Swindon Town,Port Vale,9795,9799,,,scheduled,,aaron-drinan;gavin-kilkenny
@@ -193,7 +158,7 @@ kickoff,competition,home,away,home_id,away_id,home_score,away_score,status,minut
 2026-09-01T18:45:00Z,League Two,Exeter City,Barnet,9833,8175,,,scheduled,,charlie-cummins;jake-doyle-hayes;oisin-gallagher
 2026-09-01T18:45:00Z,League Two,Accrington Stanley,Grimsby Town,8671,10005,,,scheduled,,cian-doyle;connor-obrien;reece-staunton;seamus-conneely
 2026-09-01T18:45:00Z,League Two,Salford City,Newport County,282326,10262,,,scheduled,,ciaran-brennan;ryan-graydon
-2026-09-01T18:45:00Z,League Two,Bristol Rovers,Colchester United,10104,8416,,,scheduled,,ciaran-kelly;joe-quigley;promise-omochere;sean-raggett
+2026-09-01T18:45:00Z,League Two,Bristol Rovers,Colchester United,10104,8416,,,scheduled,,ciaran-kelly;joe-quigley;philip-sanyaolu;promise-omochere;sean-raggett
 2026-09-01T18:45:00Z,National League,FC Halifax Town,Hartlepool United,10195,8488,,,scheduled,,conor-carty;max-bardell;zak-gilsenan
 2026-09-01T18:45:00Z,League One,Doncaster Rovers,Notts County,9903,9819,,,scheduled,,conor-grant;darius-lipsiuc;jay-mcgrath;leon-ayinde;luke-browne;neill-byrne;rory-finneran;sean-grehan
 2026-09-01T18:45:00Z,League Two,Northampton Town,Crawley Town,8651,8647,,,scheduled,,conor-mccarthy;joe-obrien-whitmarsh;justin-ferizaj;lewis-richards;louie-watson
@@ -235,13 +200,13 @@ kickoff,competition,home,away,home_id,away_id,home_score,away_score,status,minut
 2026-09-04T18:45:00Z,FAI Cup,Drogheda United,Galway United FC,8339,520517,,,scheduled,,aaron-bolger;adam-ohalloran;andrew-quinn;anthony-oconnor;brandon-kavanagh;calum-donnelly;cian-oconnor;colm-horgan;connor-barratt;connor-whittaker;conor-gleeson;conor-james-mccormack;conor-kane;conor-keeley;daniel-mare;dara-mcguinness;david-hurley;donnacha-sammon;dylan-connolly;dylan-connolly-athlone;edward-mccarthy;edwin-agbaje;eoin-doyle;ethan-obrien;francely-lomboto;james-bolger;james-morahan;jamie-brennan;jimmy-keohane;junior-thiam;kevin-doherty;kieran-cruise;killian-brouder;lee-devitt;leigh-kavanagh;macdarragh-scanlon;mark-doyle;ryan-brennan;ryan-markey;sean-mcgrath;shane-farrell;stephen-walsh;theo-hennessy;thomas-oluwa;warren-davis
 2026-09-04T18:45:00Z,FAI Cup,Waterford FC,Sligo Rovers,6042,6361,,,scheduled,,aaron-brennan;aidan-gabbidon;alex-nolan;arlo-doherty;bobby-keohan;callum-lynch;carl-mchugh;charlie-mcgarvey;cian-barrett;cian-kavanagh;conan-noonan;conor-cannon;conor-reynolds;daire-patton;david-jonathan;dean-mcmenamy;evan-mclaughlin;gareth-mcelroy;graham-coughlan;jad-hakiki;james-mcmanus;jamie-odonnell;john-mahon;kevin-long;kevin-zefi;kyle-mcdonagh;luke-heeney;luke-pearce;mason-murphy;noah-obrien;oisin-kelly;orion-cala;padraig-amond;ryan-okane;seamus-maughan;sean-keane;sean-mchale;tom-lonergan
 2026-09-04T18:45:00Z,Premiership,Larne,Glentoran,2206,2203,,,scheduled,,aaron-mceneff;ciaran-coll;greg-sloggett;jordan-mceneff;josh-ukek;pat-hoban;ronan-doherty
-2026-09-04T18:45:00Z,First Division,Treaty United,Wexford FC,1233534,62337,,,scheduled,,ajibola-oluwabiyi;billy-regan;dare-kareem;gideon-tetteh;rhys-bartley;ryan-butler;zak-osullivan
+2026-09-04T18:45:00Z,First Division,Treaty United,Wexford FC,1233534,62337,,,scheduled,,ajibola-oluwabiyi;billy-regan;clyde-oconnell;dare-kareem;gideon-tetteh;rhys-bartley;ryan-butler;zak-osullivan
 2026-09-04T18:45:00Z,First Division,Cobh Ramblers,UCD,2383,1578,,,scheduled,,alan-zborowski;callum-honohan;charles-akinrintoyo;dara-mccormick;goodness-ogbonna;luca-cailloce;ronan-mansfield
 2026-09-04T18:45:00Z,First Division,Finn Harps,Athlone Town,1627,2378,,,scheduled,,andy-spain;bridel-bosakani;gavin-mcateer;guilherme-rego-priosti;josh-cullen;kyle-robinson;stephen-kenny
 2026-09-04T18:45:00Z,First Division,Bray Wanderers,Cork City,1629,2201,,,scheduled,,ben-mccormack;billy-oneill;brody-lee;cillian-murphy;flynn-ryan;graham-kelly;killian-cantwell;leon-keogh;matthew-murray;zach-dunne;zak-reddy
 2026-09-04T18:45:00Z,Premier League,Connah's Quay Nomads,Haverfordwest,2193,2194,,,scheduled,,shane-flynn
-2026-09-04T19:00:00Z,Premier Division,Shamrock Rovers,Shelbourne,4131,5751,,,scheduled,,aaron-greene;adam-brennan;ademipo-odubeko;alex-noonan;ben-mahon;conor-walsh;cory-osullivan;daniel-cleary;daniel-grant;daniel-kelly;daniel-mandroiu;daniel-ring;dylan-watts;edward-mcginty;enda-stevens;evan-caffrey;finn-moylan;gary-oneil;graham-burke;jack-byrne;jack-henry-francis;jake-mulraney;james-roche;john-martin;john-osullivan;john-russell;jonathan-afolabi;jonathan-lunney;kameron-ledwidge;lee-grace;lee-steacy;luke-oregan;matthew-healy;max-kovalevskis;michael-noonan;naj-razi;odhran-casey;patrick-barrett;rory-gaffney;sean-boyd;sean-gannon;sean-moore;todd-bazunu;tunmise-sobowale;victor-ozhianvuna;william-fitzgerald
-2026-09-04T19:00:00Z,Premier Division,Shamrock Rovers,Bohemian FC,4131,4594,,,scheduled,,aaron-greene;adam-brennan;adam-mcdonnell;alan-reynolds;alex-noonan;ben-mahon;christopher-conlan;cian-byrne;colm-whelan;cory-osullivan;daniel-cleary;daniel-grant;daniel-mandroiu;darragh-power;dawson-devoy;dayle-rooney;dylan-watts;edward-mcginty;enda-stevens;finn-mcdonnell;gary-oneil;graham-burke;harry-vaughan;hugh-martin;jack-byrne;jake-mulraney;john-osullivan;jonathan-afolabi;josh-adam;josh-harpur;lee-grace;lee-steacy;luke-oregan;matthew-healy;max-kovalevskis;michael-noonan;naj-razi;niall-morahan;paddy-madden;rory-gaffney;ross-tierney;ryan-burke;sam-todd;senan-mullen;todd-bazunu;tunmise-sobowale;victor-ozhianvuna;william-fitzgerald
+2026-09-04T19:00:00Z,Premier Division,Shamrock Rovers,Shelbourne,4131,5751,,,scheduled,,aaron-greene;adam-brennan;ademipo-odubeko;alex-noonan;ben-mahon;conor-walsh;cory-osullivan;daniel-cleary;daniel-grant;daniel-kelly;daniel-mandroiu;daniel-ring;dylan-watts;edward-mcginty;enda-stevens;evan-caffrey;finn-moylan;gary-oneil;graham-burke;jack-byrne;jack-henry-francis;jake-mulraney;james-roche;john-martin;john-osullivan;john-russell;jonathan-afolabi;jonathan-lunney;kameron-ledwidge;lee-grace;lee-steacy;luke-oregan;matthew-healy;max-kovalevskis;michael-noonan;naj-razi;odhran-casey;patrick-barrett;rory-gaffney;sean-boyd;sean-gannon;sean-moore;todd-bazunu;tunmise-sobowale;victor-ozhianvuna;will-fitzgerald;william-fitzgerald
+2026-09-04T19:00:00Z,Premier Division,Shamrock Rovers,Bohemian FC,4131,4594,,,scheduled,,aaron-greene;adam-brennan;adam-mcdonnell;alan-reynolds;alex-noonan;ben-mahon;christopher-conlan;cian-byrne;colm-whelan;cory-osullivan;daniel-cleary;daniel-grant;daniel-mandroiu;darragh-power;dawson-devoy;dayle-rooney;dylan-watts;edward-mcginty;enda-stevens;finn-mcdonnell;gary-oneil;graham-burke;harry-vaughan;hugh-martin;jack-byrne;jake-mulraney;john-osullivan;jonathan-afolabi;josh-adam;josh-harpur;lee-grace;lee-steacy;luke-oregan;matthew-healy;max-kovalevskis;michael-noonan;naj-razi;niall-morahan;paddy-madden;rory-gaffney;ross-tierney;ryan-burke;sam-todd;senan-mullen;todd-bazunu;tunmise-sobowale;victor-ozhianvuna;will-fitzgerald;william-fitzgerald
 2026-09-04T19:00:00Z,Premier League,Ipswich Town,Liverpool,9902,8650,,,scheduled,,chiedozie-ogbene;dara-oshea;jack-clarke;jack-taylor;kasey-mcateer
 2026-09-04T19:00:00Z,LaLiga,Real Betis,Real Madrid,8603,8633,,,scheduled,,troy-parrott
 2026-09-04T23:30:00Z,Major League Soccer,New York City FC,Nashville SC,546238,915807,,,scheduled,,kevin-otoole
@@ -283,7 +248,7 @@ kickoff,competition,home,away,home_id,away_id,home_score,away_score,status,minut
 2026-09-05T14:00:00Z,National League North,Morecambe,Buxton,8489,161824,,,scheduled,,cian-coleman
 2026-09-05T14:00:00Z,League Two,Cheltenham,Grimsby,8680,10005,,,scheduled,,cian-doyle;jordan-shipley;pierce-sweeney;reece-staunton
 2026-09-05T14:00:00Z,League Two,Northampton,Newport,8651,10262,,,scheduled,,ciaran-brennan;conor-mccarthy;joe-obrien-whitmarsh
-2026-09-05T14:00:00Z,League Two,Bristol Rovers,Rotherham,10104,8119,,,scheduled,,ciaran-kelly;emmanuel-adegboyega;joe-quigley;joe-rafferty;joshua-kayode;promise-omochere
+2026-09-05T14:00:00Z,League Two,Bristol Rovers,Rotherham,10104,8119,,,scheduled,,ciaran-kelly;emmanuel-adegboyega;joe-quigley;joe-rafferty;joshua-kayode;philip-sanyaolu;promise-omochere
 2026-09-05T14:00:00Z,League Two,Accrington,Crawley,8671,8647,,,scheduled,,connor-obrien;justin-ferizaj;lewis-richards;louie-watson;seamus-conneely
 2026-09-05T14:00:00Z,League One,Barnsley,Stevenage,8283,10253,,,scheduled,,connor-oriordan;corey-okeeffe;luca-connell
 2026-09-05T14:00:00Z,League One,Huddersfield,Notts County,9796,9819,,,scheduled,,conor-grant;darius-lipsiuc;luke-browne;marcus-harness;rory-finneran;sean-roughan
@@ -367,12 +332,11 @@ kickoff,competition,home,away,home_id,away_id,home_score,away_score,status,minut
 2026-09-08T18:00:00Z,National League Cup Group A,FC Halifax Town,Wolverhampton Wanderers U21,10195,773683,,,scheduled,,conor-carty;max-bardell;nathan-fraser;zak-gilsenan
 2026-09-08T18:00:00Z,National League Cup Group A,Gateshead FC,Derby County U21,6189,773680,,,scheduled,,david-eguaibor
 2026-09-08T18:00:00Z,National League Cup Group D,Sutton United,Birmingham U21,158316,1796111,,,scheduled,,emmanuel-osadebe;finn-mcgreevy
-2026-09-08T18:00:00Z,National League Cup Group A,Wealdstone,Stoke City U21,161812,773650,,,scheduled,,gabriel-kelly;pijus-otegbayo;wilson-waweru
+2026-09-08T18:00:00Z,National League Cup,Wealdstone,Stoke City U21,161812,773650,,,scheduled,,gabriel-kelly;pijus-otegbayo;wilson-waweru
 2026-09-08T18:00:00Z,National League Cup Group D,Boston United,West Bromwich Albion U21,8646,773656,,,scheduled,,gavan-holohan;niall-canavan
 2026-09-08T18:00:00Z,National League Cup,Scunthorpe United,Nottingham Forest U21,8412,1389162,,,scheduled,,grady-mcdonnell;hugh-parker
 2026-09-08T18:00:00Z,EFL Trophy Northern Grp. H,Doncaster,Huddersfield,9903,9796,,,scheduled,,jay-mcgrath;leon-ayinde;marcus-harness;neill-byrne;sean-grehan;sean-roughan
 2026-09-08T18:00:00Z,National League Cup Group C,Solihull Moors,Leeds United U21,161801,1177187,,,scheduled,,jevon-mills
-2026-09-08T18:00:00Z,National League Cup Group A,Scunthorpe,Nottingham Forest U21,8412,1389162,,,scheduled,,hugh-parker
 2026-09-08T18:30:00Z,National League Cup Group B,Worthing,Norwich City U21,282351,773658,,,scheduled,,harvey-boddy;vinnie-leonard
 2026-09-08T18:30:00Z,National League Cup Group B,Aldershot Town,West Ham United U21,8465,773649,,,scheduled,,scott-davies
 2026-09-08T18:45:00Z,EFL Cup,Leyton Orient,Bradford,8351,8484,,,scheduled,,aaron-connolly;jaze-kabia;killian-cahill;ollie-oneill;tony-springett;tyreik-wright
@@ -434,7 +398,7 @@ kickoff,competition,home,away,home_id,away_id,home_score,away_score,status,minut
 2026-09-11T18:45:00Z,First Division,Kerry FC,Bray Wanderers,1426348,1629,,,scheduled,,ben-mccormack;billy-oneill;flynn-ryan;graham-kelly;killian-cantwell;leon-keogh;zak-reddy
 2026-09-11T18:45:00Z,Premiership,Coleraine,Ballymena United,2202,4063,,,scheduled,,charles-dunne;david-toure;jack-oreilly;mark-coyle;rob-slevin;sean-murray;success-edogun
 2026-09-11T18:45:00Z,Premier League,Airbus UK Broughton,The New Saints,2200,7852,,,scheduled,,eoin-farrell;zach-nolan
-2026-09-11T19:00:00Z,Premier Division,St. Patrick's Athletic,Shamrock Rovers,1854,4131,,,scheduled,,aaron-greene;adam-banim;adam-brennan;adam-deans;aidan-keena;alex-noonan;anthony-breslin;ben-mahon;billy-canny;billy-hayes;chris-forrester;cory-osullivan;daniel-chukwu;daniel-cleary;daniel-grant;daniel-mandroiu;daniel-rogers;darragh-brunton;darragh-nugent;dylan-watts;edward-mcginty;enda-stevens;gary-oneil;glory-nzingo;graham-burke;jack-byrne;jake-mulraney;james-brown;jamie-lennon;jason-mcclelland;joe-carroll-byrne;joe-redmond;john-osullivan;jonathan-afolabi;josh-oconnor;kian-leavy;kian-quigley;lee-grace;lee-steacy;luke-cullen;luke-kehir;luke-oregan;luke-turner;matthew-healy;matthew-ohara;max-kovalevskis;michael-noonan;naj-razi;niall-sullivan;ronan-boyce;rory-gaffney;ryan-sheridan;sam-rooney;sam-steward;samuel-ogungbe;sean-hoare;sean-molloy;simon-power;todd-bazunu;tunmise-sobowale;victor-ozhianvuna;william-fitzgerald;zack-elbouzedi
+2026-09-11T19:00:00Z,Premier Division,St. Patrick's Athletic,Shamrock Rovers,1854,4131,,,scheduled,,aaron-greene;adam-banim;adam-brennan;adam-deans;aidan-keena;alex-noonan;anthony-breslin;ben-mahon;billy-canny;billy-hayes;chris-forrester;cory-osullivan;daniel-chukwu;daniel-cleary;daniel-grant;daniel-mandroiu;daniel-rogers;darragh-brunton;darragh-nugent;dylan-watts;edward-mcginty;enda-stevens;gary-oneil;glory-nzingo;graham-burke;jack-byrne;jake-mulraney;james-brown;jamie-lennon;jason-mcclelland;joe-carroll-byrne;joe-redmond;john-osullivan;jonathan-afolabi;josh-oconnor;kian-leavy;kian-quigley;lee-grace;lee-steacy;luke-cullen;luke-kehir;luke-oregan;luke-turner;matthew-healy;matthew-ohara;max-kovalevskis;michael-noonan;naj-razi;niall-sullivan;ronan-boyce;rory-gaffney;ryan-sheridan;sam-rooney;sam-steward;samuel-ogungbe;sean-hoare;sean-molloy;simon-power;todd-bazunu;tunmise-sobowale;victor-ozhianvuna;will-fitzgerald;william-fitzgerald;zack-elbouzedi
 2026-09-12T01:30:00Z,USL Championship,New Mexico United,Indy Eleven,1003208,514649,,,scheduled,,josh-obrien
 2026-09-12T10:00:00Z,Premier League U18,West Brom U18,Aston Villa U18,1113548,1113564,,,scheduled,,aaron-oreilly
 2026-09-12T10:00:00Z,Premier League U18,Arsenal U18,Crystal Palace U18,1113566,1183385,,,scheduled,,alfie-mulvenna
@@ -444,7 +408,7 @@ kickoff,competition,home,away,home_id,away_id,home_score,away_score,status,minut
 2026-09-12T11:00:00Z,Premier League U18,Nottm Forest U18,Middlesbrough U18,1281661,1113557,,,scheduled,,eamonn-tohill
 2026-09-12T11:30:00Z,League One,Leyton Orient,Wycombe,8351,8676,,,scheduled,,aaron-connolly;dan-casey;jamie-mullins;jaze-kabia;killian-cahill;ollie-oneill;tony-springett
 2026-09-12T11:30:00Z,Championship,Bolton,Cardiff,8559,8344,,,scheduled,,callum-robinson;cyrus-christie;gavin-bazunu;jack-bonham;jack-moylan;joel-bagan
-2026-09-12T11:30:00Z,League Two,Grimsby,Bristol Rovers,10005,10104,,,scheduled,,cian-doyle;ciaran-kelly;joe-quigley;promise-omochere;reece-staunton
+2026-09-12T11:30:00Z,League Two,Grimsby,Bristol Rovers,10005,10104,,,scheduled,,cian-doyle;ciaran-kelly;joe-quigley;philip-sanyaolu;promise-omochere;reece-staunton
 2026-09-12T11:30:00Z,League One,Notts County,Bradford,9819,8484,,,scheduled,,conor-grant;darius-lipsiuc;luke-browne;rory-finneran;tyreik-wright
 2026-09-12T11:30:00Z,National League,Worthing,Barrow,282351,6350,,,scheduled,,harvey-boddy
 2026-09-12T11:30:00Z,Championship,West Brom,QPR,8659,10172,,,scheduled,,jayson-molumby;max-oleary;mikey-johnston
@@ -522,7 +486,7 @@ kickoff,competition,home,away,home_id,away_id,home_score,away_score,status,minut
 2026-09-12T16:45:00Z,League Cup,Kilmarnock,Aberdeen,8597,8485,,,scheduled,,cathal-mccarthy;connor-ronan;gavin-molloy
 2026-09-12T17:00:00Z,Premiership,Dungannon Swifts,Linfield,4615,7971,,,scheduled,,chris-shields;darragh-leahy;kealan-dillon;paul-doyle;ryan-patrick-nolan
 2026-09-12T18:00:00Z,Premier League 2,Manchester City U21,Manchester United U21,860800,1070257,,,scheduled,,jack-moorhouse
-2026-09-12T18:30:00Z,First Division,Longford Town,Treaty United,4569,1233534,,,scheduled,,billy-regan;dare-kareem;emre-topcu;james-bailey;scott-brady
+2026-09-12T18:30:00Z,First Division,Longford Town,Treaty United,4569,1233534,,,scheduled,,billy-regan;clyde-oconnell;dare-kareem;emre-topcu;james-bailey;scott-brady
 2026-09-12T18:45:00Z,Belgian Pro League,OH Leuven,Cercle Brugge,1773,9984,,,scheduled,,tayo-adaramola
 2026-09-12T19:00:00Z,Premier League,Sunderland,Arsenal,8472,9825,,,scheduled,,alan-browne
 2026-09-12T23:00:00Z,USL Championship,Hartford Athletic,Tampa Bay Rowdies,1003206,197328,,,scheduled,,barry-coffey
@@ -547,3 +511,38 @@ kickoff,competition,home,away,home_id,away_id,home_score,away_score,status,minut
 2026-09-13T18:15:00Z,Prva Liga,Radomlje,Maribor,272871,8340,,,scheduled,,ali-reghba
 2026-09-13T19:00:00Z,Premier League,Inter Toronto FC,Vancouver FC,1022954,1436202,,,scheduled,,tom-field
 2026-09-13T22:30:00Z,Major League Soccer,Vancouver,Austin FC,307691,1218886,,,scheduled,,jon-gallagher
+2026-08-30T11:00:00Z,Super Cup,Công An Hà Nội,Cong An Ho Chí Minh City,614354,179228,,,scheduled,,brandon-ly
+2026-08-30T13:00:00Z,Premier League,Chelsea,Brighton & Hove Albion,8455,10204,,,scheduled,,evan-ferguson
+2026-08-30T13:00:00Z,Premier League,Sunderland,Fulham,8472,9879,,,live,,alan-browne
+2026-08-30T15:00:00Z,LaLiga,Real Madrid,Málaga,8633,9864,,,scheduled,,aaron-ochoa
+2026-08-30T18:15:00Z,Prva Liga,Nafta,Maribor,2420,8340,,,live,,ali-reghba
+2026-08-31T12:00:00Z,Premier League 2,AFC Bournemouth Academy,Middlesbrough U21,2128213,773660,,,scheduled,,ade-solanke
+2026-08-31T12:00:00Z,Premier League 2,Brentford Academy,Sunderland U21,2054260,773657,,,scheduled,,donal-oconnor
+2026-08-31T12:00:00Z,Premier League 2,Chelsea U21,West Ham United U21,773652,773649,,,scheduled,,justin-osagie;shaun-wade
+2026-08-31T13:00:00Z,Premier League 2,Tottenham Hotspur U21,Birmingham U21,860802,1796111,,,live,,aaron-maguire;finn-mcgreevy
+2026-08-31T13:00:00Z,Premier League 2,Manchester United U21,Leicester City U21,1070257,773642,,,scheduled,,jack-moorhouse
+2026-08-31T13:30:00Z,Premier League,Flint Town United,Connah's Quay Nomads,316297,2193,,,live,,shane-flynn
+2026-08-31T14:00:00Z,National League North,King's Lynn Town,Scarborough Athletic,45731,580382,,,live,,adam-rooney
+2026-08-31T14:00:00Z,National League North,Buxton,Merthyr Town,161824,5762,,,live,,cian-coleman;matthew-harris
+2026-08-31T14:00:00Z,Southern Premier Division Central,Bishop's Stortford,Hitchin Town,4046,161838,,,live,,daniel-idiakhoa
+2026-08-31T14:00:00Z,National League South,Ebbsfleet United,Horsham,9794,105554,,,scheduled,,danny-burke
+2026-08-31T14:00:00Z,National League South,Weston Super Mare,Chelmsford,6314,45724,,,live,,dominic-bernard
+2026-08-31T14:00:00Z,Premier League,Caernarfon,The New Saints,2198,7852,,,live,,eoin-farrell;zach-nolan
+2026-08-31T14:00:00Z,National League,Worthing,Boreham Wood,282351,2488,,,live,,harvey-boddy
+2026-08-31T14:00:00Z,Northern Premier Division,Warrington Rylands,Bamber Bridge,1186092,282395,,,live,,isaac-abankwah
+2026-08-31T14:00:00Z,National League North,Chester FC,Morecambe,9797,8489,,,scheduled,,jake-griffin;sam-foley
+2026-08-31T14:00:00Z,National League South,Dorking Wanderers,Truro City,580438,177067,,,live,,josh-barrett
+2026-08-31T14:00:00Z,Northern Premier Division,FC United of Manchester,Avro,161822,1290988,,,scheduled,,josh-seary
+2026-08-31T14:00:00Z,National League South,Salisbury,Billericay,1114695,2261,,,scheduled,,joshua-keeya
+2026-08-31T14:00:00Z,National League North,Spennymoor Town FC,Hednesford,557101,9923,,,live,,liam-kinsella
+2026-08-31T14:00:00Z,Isthmian Premier Division,Brentwood Town,Maldon & Tiptree,282343,282501,,,scheduled,,louis-dunne
+2026-08-31T14:00:00Z,Northern Premier Division,Whitby,Alfreton Town,6195,6258,,,scheduled,,oisin-mcdonagh
+2026-08-31T14:00:00Z,Southern Premier Division South,Yate Town,Taunton Town,161839,282502,,,scheduled,,rabby-tabu-minzamba
+2026-08-31T14:00:00Z,National League,Eastleigh,Aldershot Town,161803,8465,,,live,,scott-davies
+2026-08-31T14:00:00Z,Isthmian Premier Division,Whitehawk,Burgess Hill Town,282373,282340,,,scheduled,,shamir-fenelon
+2026-08-31T14:00:00Z,National League North,Chorley,Brackley Town,274599,158321,,,scheduled,,shane-byrne
+2026-08-31T14:00:00Z,National League North,Radcliffe,Darlington,282390,8598,,,scheduled,,bobby-jones
+2026-08-31T14:00:00Z,National League North,South Shields,Spalding United,865163,580400,,,scheduled,,michael-kelly
+2026-08-31T16:00:00Z,Veikkausliiga,AC Oulu,SJK,4449,162162,,,scheduled,,aaron-okpolokpo;josh-okpolokpo
+2026-08-31T16:00:00Z,Veikkausliiga,Ilves,HJK,162146,9861,,,scheduled,,david-eze;david-ezeh
+2026-08-31T16:30:00Z,Serie A,Lecce,Roma,9888,8686,,,scheduled,,corrie-ndaba

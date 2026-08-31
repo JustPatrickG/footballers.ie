@@ -1521,8 +1521,8 @@ a.intlblock.lnk:hover{border-color:var(--teal)}
   <button class="burger" id="burger" aria-label="Menu" aria-expanded="false" aria-controls="navlinks">
     <span></span><span></span><span></span>
   </button>
-  <div class="navlinks" id="navlinks"><a class="" href="../news.html">News</a><a class="" href="../players.html">Players</a><a class="" href="../transfers.html">Transfers</a><a class="" href="../clubs.html">Clubs</a><a class="" href="../ireland.html">Ireland</a><a class="" href="../fixtures.html">Fixtures</a><a class="" href="../alerts.html">Alerts</a><div class="navfoot">26 AUG-1 SEP · <b>686</b> tracked</div></div>
-  <div class="navmeta"><span id="navdate">26 AUG-1 SEP</span> · <b>686</b> TRACKED</div>
+  <div class="navlinks" id="navlinks"><a class="" href="../news.html">News</a><a class="" href="../players.html">Players</a><a class="" href="../transfers.html">Transfers</a><a class="" href="../clubs.html">Clubs</a><a class="" href="../ireland.html">Ireland</a><a class="" href="../fixtures.html">Fixtures</a><a class="" href="../alerts.html">Alerts</a><div class="navfoot">28 AUG-3 SEP · <b>686</b> tracked</div></div>
+  <div class="navmeta"><span id="navdate">28 AUG-3 SEP</span> · <b>686</b> TRACKED</div>
 </nav>
 <script>
 (function(){
@@ -1563,11 +1563,11 @@ a.intlblock.lnk:hover{border-color:var(--teal)}
     <div class="ppane" id="pane-profile">
       <div class="pcard biocard"><div class="bigrid"><div class="bic"><div class="bib">16 yrs</div><div class="bis">Age</div></div><div class="bic"><div class="bib">Ireland</div><div class="bis">Country</div></div><div class="bic"><div class="bib">CB</div><div class="bis">Position</div></div></div></div>
       <div class="pcard">
-      <div class="pchead"><span class="badge sm generic"></span><b>— 2025/26</b><span class="stale">last season</span></div>
+      <div class="pchead"><span class="badge sm generic"></span><b>Premier League 2 2025/26</b><span class="stale">last season</span></div>
       <div class="sumgrid">
         <div><b>0</b><span>Goals</span></div>
         <div><b>0</b><span>Assists</span></div>
-        <div><span class="rate md" title="Season average FotMob match rating">6.54</span><span>Rating</span></div>
+        <div><span class="rate md" title="Season average match rating">6.54</span><span>Rating</span></div>
         <div><b data-live="apps" data-base="2">2</b><span>Matches</span></div>
         <div><b data-live="starts" data-base="1">1</b><span>Started</span></div>
         <div><b data-live="mins" data-base="122">122</b><span>Minutes played</span></div>
@@ -1594,11 +1594,11 @@ a.intlblock.lnk:hover{border-color:var(--teal)}
 
     <div class="ppane" id="pane-pstats" hidden>
       <div class="pcard">
-      <div class="pchead"><span class="badge sm generic"></span><b>— 2025/26</b><span class="stale">last season</span></div>
+      <div class="pchead"><span class="badge sm generic"></span><b>Premier League 2 2025/26</b><span class="stale">last season</span></div>
       <div class="sumgrid">
         <div><b>0</b><span>Goals</span></div>
         <div><b>0</b><span>Assists</span></div>
-        <div><span class="rate md" title="Season average FotMob match rating">6.54</span><span>Rating</span></div>
+        <div><span class="rate md" title="Season average match rating">6.54</span><span>Rating</span></div>
         <div><b data-live="apps" data-base="2">2</b><span>Matches</span></div>
         <div><b data-live="starts" data-base="1">1</b><span>Started</span></div>
         <div><b data-live="mins" data-base="122">122</b><span>Minutes played</span></div>
@@ -1686,7 +1686,7 @@ a.intlblock.lnk:hover{border-color:var(--teal)}
 <footer>
   <div class="foothead">
     footballers.ie
-    <span class="updated" data-stamp="2026-08-29T19:00:10Z">checking for updates…</span>
+    <span class="updated" data-stamp="2026-08-31T17:38:54Z">checking for updates…</span>
   </div>
   Every Irish player at a professional club — abroad, senior international and League of Ireland
   <div class="footlinks">
@@ -2090,7 +2090,7 @@ a.intlblock.lnk:hover{border-color:var(--teal)}
     }
   }
 
-  /* ---------- Fixtures page (FotMob-style) ----------
+  /* ---------- Fixtures page ----------
      One day at a time, a scrollable date strip on top, matches grouped by
      competition. Abroad / LOI / All filter. Opens on today. */
   var fxSel = null, fxFilter = 'abroad', fxStripBuilt = false;
@@ -2208,7 +2208,7 @@ a.intlblock.lnk:hover{border-color:var(--teal)}
 
   /* Live scores. First choice: /api/live, which asks the source directly
      the moment a browser polls, edge-cached ~25s — genuinely live. Fallback:
-     the old live.json file the scraper commits, for when the function is
+     the old live.json file the data pipeline commits, for when the function is
      down. The old path alone is why scores froze for hours: it depends on
      GitHub running a schedule it frequently just doesn't run. */
   function liveWindow(m, now) {

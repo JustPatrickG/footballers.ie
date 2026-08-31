@@ -1521,8 +1521,8 @@ a.intlblock.lnk:hover{border-color:var(--teal)}
   <button class="burger" id="burger" aria-label="Menu" aria-expanded="false" aria-controls="navlinks">
     <span></span><span></span><span></span>
   </button>
-  <div class="navlinks" id="navlinks"><a class="" href="../news.html">News</a><a class="" href="../players.html">Players</a><a class="" href="../transfers.html">Transfers</a><a class="on" href="../clubs.html">Clubs</a><a class="" href="../ireland.html">Ireland</a><a class="" href="../fixtures.html">Fixtures</a><a class="" href="../alerts.html">Alerts</a><div class="navfoot">26 AUG-1 SEP · <b>686</b> tracked</div></div>
-  <div class="navmeta"><span id="navdate">26 AUG-1 SEP</span> · <b>686</b> TRACKED</div>
+  <div class="navlinks" id="navlinks"><a class="" href="../news.html">News</a><a class="" href="../players.html">Players</a><a class="" href="../transfers.html">Transfers</a><a class="on" href="../clubs.html">Clubs</a><a class="" href="../ireland.html">Ireland</a><a class="" href="../fixtures.html">Fixtures</a><a class="" href="../alerts.html">Alerts</a><div class="navfoot">28 AUG-3 SEP · <b>686</b> tracked</div></div>
+  <div class="navmeta"><span id="navdate">28 AUG-3 SEP</span> · <b>686</b> TRACKED</div>
 </nav>
 <script>
 (function(){
@@ -1538,7 +1538,7 @@ a.intlblock.lnk:hover{border-color:var(--teal)}
 <footer>
   <div class="foothead">
     footballers.ie
-    <span class="updated" data-stamp="2026-08-29T19:00:10Z">checking for updates…</span>
+    <span class="updated" data-stamp="2026-08-31T17:38:54Z">checking for updates…</span>
   </div>
   Every Irish player at a professional club — abroad, senior international and League of Ireland
   <div class="footlinks">
@@ -1942,7 +1942,7 @@ a.intlblock.lnk:hover{border-color:var(--teal)}
     }
   }
 
-  /* ---------- Fixtures page (FotMob-style) ----------
+  /* ---------- Fixtures page ----------
      One day at a time, a scrollable date strip on top, matches grouped by
      competition. Abroad / LOI / All filter. Opens on today. */
   var fxSel = null, fxFilter = 'abroad', fxStripBuilt = false;
@@ -2060,7 +2060,7 @@ a.intlblock.lnk:hover{border-color:var(--teal)}
 
   /* Live scores. First choice: /api/live, which asks the source directly
      the moment a browser polls, edge-cached ~25s — genuinely live. Fallback:
-     the old live.json file the scraper commits, for when the function is
+     the old live.json file the data pipeline commits, for when the function is
      down. The old path alone is why scores froze for hours: it depends on
      GitHub running a schedule it frequently just doesn't run. */
   function liveWindow(m, now) {

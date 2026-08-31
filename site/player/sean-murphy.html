@@ -4,21 +4,21 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Sean Murphy — footballers.ie</title>
-<meta name="description" content="Sean Murphy (UCD, League of Ireland) — season stats, fixtures, results and international record.">
+<meta name="description" content="Sean Murphy (UCD, League of Ireland First Division) — season stats, fixtures, results and international record.">
 <link rel="canonical" href="https://footballers.ie/player/sean-murphy.html">
 <meta name="theme-color" content="#0C0F10">
 <meta property="og:site_name" content="Footballers">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Sean Murphy — footballers.ie">
-<meta property="og:description" content="Sean Murphy (UCD, League of Ireland) — season stats, fixtures, results and international record.">
+<meta property="og:description" content="Sean Murphy (UCD, League of Ireland First Division) — season stats, fixtures, results and international record.">
 <meta property="og:url" content="https://footballers.ie/player/sean-murphy.html">
-<meta property="og:image" content="https://footballers.ie/api/og?t=player&amp;n=Sean+Murphy&amp;c=UCD&amp;l=League+of+Ireland&amp;x=DEF&amp;cb=1578&amp;f=Season+2026%2F27">
+<meta property="og:image" content="https://footballers.ie/api/og?t=player&amp;n=Sean+Murphy&amp;c=UCD&amp;l=League+of+Ireland+First+Division&amp;x=DEF&amp;cb=1578&amp;f=Season+2026%2F27">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Sean Murphy — footballers.ie">
-<meta name="twitter:description" content="Sean Murphy (UCD, League of Ireland) — season stats, fixtures, results and international record.">
-<meta name="twitter:image" content="https://footballers.ie/api/og?t=player&amp;n=Sean+Murphy&amp;c=UCD&amp;l=League+of+Ireland&amp;x=DEF&amp;cb=1578&amp;f=Season+2026%2F27">
+<meta name="twitter:description" content="Sean Murphy (UCD, League of Ireland First Division) — season stats, fixtures, results and international record.">
+<meta name="twitter:image" content="https://footballers.ie/api/og?t=player&amp;n=Sean+Murphy&amp;c=UCD&amp;l=League+of+Ireland+First+Division&amp;x=DEF&amp;cb=1578&amp;f=Season+2026%2F27">
 <link rel="icon" href="../favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="../apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -1521,8 +1521,8 @@ a.intlblock.lnk:hover{border-color:var(--teal)}
   <button class="burger" id="burger" aria-label="Menu" aria-expanded="false" aria-controls="navlinks">
     <span></span><span></span><span></span>
   </button>
-  <div class="navlinks" id="navlinks"><a class="" href="../news.html">News</a><a class="" href="../players.html">Players</a><a class="" href="../transfers.html">Transfers</a><a class="" href="../clubs.html">Clubs</a><a class="" href="../ireland.html">Ireland</a><a class="" href="../fixtures.html">Fixtures</a><a class="" href="../alerts.html">Alerts</a><div class="navfoot">26 AUG-1 SEP · <b>686</b> tracked</div></div>
-  <div class="navmeta"><span id="navdate">26 AUG-1 SEP</span> · <b>686</b> TRACKED</div>
+  <div class="navlinks" id="navlinks"><a class="" href="../news.html">News</a><a class="" href="../players.html">Players</a><a class="" href="../transfers.html">Transfers</a><a class="" href="../clubs.html">Clubs</a><a class="" href="../ireland.html">Ireland</a><a class="" href="../fixtures.html">Fixtures</a><a class="" href="../alerts.html">Alerts</a><div class="navfoot">28 AUG-3 SEP · <b>686</b> tracked</div></div>
+  <div class="navmeta"><span id="navdate">28 AUG-3 SEP</span> · <b>686</b> TRACKED</div>
 </nav>
 <script>
 (function(){
@@ -1668,7 +1668,7 @@ a.intlblock.lnk:hover{border-color:var(--teal)}
 <footer>
   <div class="foothead">
     footballers.ie
-    <span class="updated" data-stamp="2026-08-29T19:00:10Z">checking for updates…</span>
+    <span class="updated" data-stamp="2026-08-31T17:38:54Z">checking for updates…</span>
   </div>
   Every Irish player at a professional club — abroad, senior international and League of Ireland
   <div class="footlinks">
@@ -2072,7 +2072,7 @@ a.intlblock.lnk:hover{border-color:var(--teal)}
     }
   }
 
-  /* ---------- Fixtures page (FotMob-style) ----------
+  /* ---------- Fixtures page ----------
      One day at a time, a scrollable date strip on top, matches grouped by
      competition. Abroad / LOI / All filter. Opens on today. */
   var fxSel = null, fxFilter = 'abroad', fxStripBuilt = false;
@@ -2190,7 +2190,7 @@ a.intlblock.lnk:hover{border-color:var(--teal)}
 
   /* Live scores. First choice: /api/live, which asks the source directly
      the moment a browser polls, edge-cached ~25s — genuinely live. Fallback:
-     the old live.json file the scraper commits, for when the function is
+     the old live.json file the data pipeline commits, for when the function is
      down. The old path alone is why scores froze for hours: it depends on
      GitHub running a schedule it frequently just doesn't run. */
   function liveWindow(m, now) {

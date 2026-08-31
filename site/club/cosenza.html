@@ -1521,8 +1521,8 @@ a.intlblock.lnk:hover{border-color:var(--teal)}
   <button class="burger" id="burger" aria-label="Menu" aria-expanded="false" aria-controls="navlinks">
     <span></span><span></span><span></span>
   </button>
-  <div class="navlinks" id="navlinks"><a class="" href="../news.html">News</a><a class="" href="../players.html">Players</a><a class="" href="../transfers.html">Transfers</a><a class="on" href="../clubs.html">Clubs</a><a class="" href="../ireland.html">Ireland</a><a class="" href="../fixtures.html">Fixtures</a><a class="" href="../alerts.html">Alerts</a><div class="navfoot">26 AUG-1 SEP · <b>686</b> tracked</div></div>
-  <div class="navmeta"><span id="navdate">26 AUG-1 SEP</span> · <b>686</b> TRACKED</div>
+  <div class="navlinks" id="navlinks"><a class="" href="../news.html">News</a><a class="" href="../players.html">Players</a><a class="" href="../transfers.html">Transfers</a><a class="on" href="../clubs.html">Clubs</a><a class="" href="../ireland.html">Ireland</a><a class="" href="../fixtures.html">Fixtures</a><a class="" href="../alerts.html">Alerts</a><div class="navfoot">28 AUG-3 SEP · <b>686</b> tracked</div></div>
+  <div class="navmeta"><span id="navdate">28 AUG-3 SEP</span> · <b>686</b> TRACKED</div>
 </nav>
 <script>
 (function(){
@@ -1540,12 +1540,12 @@ a.intlblock.lnk:hover{border-color:var(--teal)}
     <div class="sec"><h2>Irish players</h2></div>
     <div class="tiergroup"><a class="plrow" href="../player/ed-mcjannett.html"><div class="pavatar sm"><img src="../img/players/ed-mcjannett.png" alt="Ed McJannett" loading="lazy" onerror="this.parentNode.innerHTML='<span>EM</span>'"></div><div class="nm">Ed McJannett <span class="cl"><img class="badge xs" src="https://images.fotmob.com/image_resources/logo/teamlogo/6456.png" alt="" loading="lazy" onerror="this.outerHTML='<span class=&quot;badge xs generic&quot;></span>'">Cosenza</span></div><div class="ev">—</div><div class="mn"><span class="rate none">—</span></div><button class="star" data-fav="ed-mcjannett" aria-pressed="false" aria-label="Follow Ed McJannett">★</button></a></div>
     <div class="sec"><h2>Upcoming fixtures</h2></div>
-    <div class="fxlist"><div class="fxrow"><div class="fxd">29 Aug</div><div class="fxo">Potenza <span class="ha">H</span></div><div class="fxc">Serie C Grp. C</div></div><div class="fxrow"><div class="fxd">07 Sep</div><div class="fxo">Catania <span class="ha">A</span></div><div class="fxc">Serie C Grp. C</div></div><div class="fxrow"><div class="fxd">12 Sep</div><div class="fxo">Cavese <span class="ha">H</span></div><div class="fxc">Serie C Grp. C</div></div><div class="fxrow"><div class="fxd">15 Sep</div><div class="fxo">Giugliano <span class="ha">A</span></div><div class="fxc">Serie C Grp. C</div></div><div class="fxrow"><div class="fxd">19 Sep</div><div class="fxo">Scafatese <span class="ha">H</span></div><div class="fxc">Serie C Grp. C</div></div><div class="fxrow"><div class="fxd">26 Sep</div><div class="fxo">Bari <span class="ha">A</span></div><div class="fxc">Serie C Grp. C</div></div><div class="fxrow"><div class="fxd">04 Oct</div><div class="fxo">Foggia <span class="ha">H</span></div><div class="fxc">Serie C Grp. C</div></div></div>
+    <div class="fxlist"><div class="fxrow"><div class="fxd">07 Sep</div><div class="fxo">Catania <span class="ha">A</span></div><div class="fxc">Serie C Grp. C</div></div><div class="fxrow"><div class="fxd">12 Sep</div><div class="fxo">Cavese <span class="ha">H</span></div><div class="fxc">Serie C Grp. C</div></div><div class="fxrow"><div class="fxd">15 Sep</div><div class="fxo">Giugliano <span class="ha">A</span></div><div class="fxc">Serie C Grp. C</div></div><div class="fxrow"><div class="fxd">19 Sep</div><div class="fxo">Scafatese <span class="ha">H</span></div><div class="fxc">Serie C Grp. C</div></div><div class="fxrow"><div class="fxd">26 Sep</div><div class="fxo">Bari <span class="ha">A</span></div><div class="fxc">Serie C Grp. C</div></div><div class="fxrow"><div class="fxd">04 Oct</div><div class="fxo">Foggia <span class="ha">H</span></div><div class="fxc">Serie C Grp. C</div></div><div class="fxrow"><div class="fxd">11 Oct</div><div class="fxo">AZ Picerno <span class="ha">A</span></div><div class="fxc">Serie C Grp. C</div></div></div>
     
 <footer>
   <div class="foothead">
     footballers.ie
-    <span class="updated" data-stamp="2026-08-29T19:00:10Z">checking for updates…</span>
+    <span class="updated" data-stamp="2026-08-31T17:38:54Z">checking for updates…</span>
   </div>
   Every Irish player at a professional club — abroad, senior international and League of Ireland
   <div class="footlinks">
@@ -1949,7 +1949,7 @@ a.intlblock.lnk:hover{border-color:var(--teal)}
     }
   }
 
-  /* ---------- Fixtures page (FotMob-style) ----------
+  /* ---------- Fixtures page ----------
      One day at a time, a scrollable date strip on top, matches grouped by
      competition. Abroad / LOI / All filter. Opens on today. */
   var fxSel = null, fxFilter = 'abroad', fxStripBuilt = false;
@@ -2067,7 +2067,7 @@ a.intlblock.lnk:hover{border-color:var(--teal)}
 
   /* Live scores. First choice: /api/live, which asks the source directly
      the moment a browser polls, edge-cached ~25s — genuinely live. Fallback:
-     the old live.json file the scraper commits, for when the function is
+     the old live.json file the data pipeline commits, for when the function is
      down. The old path alone is why scores froze for hours: it depends on
      GitHub running a schedule it frequently just doesn't run. */
   function liveWindow(m, now) {
