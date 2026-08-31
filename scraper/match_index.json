@@ -4729,19 +4729,6 @@
   ]
  },
  {
-  "fotmob_id": "1000019108",
-  "url": "/matches/sunderland-u21-vs-brentford-academy/1f0wv2er8#1000019108",
-  "kickoff": "2026-08-31T12:00:00Z",
-  "comp": "Premier League 2",
-  "home": "Brentford Academy",
-  "away": "Sunderland U21",
-  "home_id": "2054260",
-  "away_id": "773657",
-  "slugs": [
-   "donal-oconnor"
-  ]
- },
- {
   "fotmob_id": "1000019126",
   "url": "/matches/everton-u21-vs-brentford-academy/1f0wobyma#1000019126",
   "kickoff": "2026-09-13T12:00:00Z",
@@ -6793,20 +6780,6 @@
   ]
  },
  {
-  "fotmob_id": "1000019109",
-  "url": "/matches/west-ham-united-u21-vs-chelsea-u21/f9xdltqr#1000019109",
-  "kickoff": "2026-08-31T12:00:00Z",
-  "comp": "Premier League 2",
-  "home": "Chelsea U21",
-  "away": "West Ham United U21",
-  "home_id": "773652",
-  "away_id": "773649",
-  "slugs": [
-   "justin-osagie",
-   "shaun-wade"
-  ]
- },
- {
   "fotmob_id": "1000019121",
   "url": "/matches/chelsea-u21-vs-arsenal-u21/iyldyvlx#1000019121",
   "kickoff": "2026-09-12T12:00:00Z",
@@ -8324,6 +8297,33 @@
   "away_id": "8280",
   "slugs": [
    "zak-delaney"
+  ]
+ },
+ {
+  "fotmob_id": "1000019108",
+  "url": "/matches/sunderland-u21-vs-brentford-academy/1f0wv2er8#1000019108",
+  "kickoff": "2026-08-31T12:00:00Z",
+  "comp": "Premier League 2",
+  "home": "Brentford Academy",
+  "away": "Sunderland U21",
+  "home_id": "2054260",
+  "away_id": "773657",
+  "slugs": [
+   "donal-oconnor"
+  ]
+ },
+ {
+  "fotmob_id": "1000019109",
+  "url": "/matches/west-ham-united-u21-vs-chelsea-u21/f9xdltqr#1000019109",
+  "kickoff": "2026-08-31T12:00:00Z",
+  "comp": "Premier League 2",
+  "home": "Chelsea U21",
+  "away": "West Ham United U21",
+  "home_id": "773652",
+  "away_id": "773649",
+  "slugs": [
+   "justin-osagie",
+   "shaun-wade"
   ]
  },
  {
