@@ -23,6 +23,7 @@ import json
 import os
 import re
 import sys
+import tempfile
 import time
 import unicodedata
 import urllib.parse
@@ -31,8 +32,7 @@ import urllib.request
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROSTER = os.path.join(HERE, "players_list.csv")
 API = "https://en.wikipedia.org/w/api.php"
-UA = ("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
-      "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0 Safari/537.36")
+UA = "loi-squad-audit/1.1 (League of Ireland squad completeness check)"
 YEAR = time.localtime().tm_year
 
 PREM = "League of Ireland Premier Division"
@@ -72,18 +72,53 @@ def slugify(name):
     return s
 
 
+CACHE = os.path.join(tempfile.gettempdir(), "loi_wiki_cache")
+_last_req = [0.0]
+
+
 def get_wikitext(title):
-    q = urllib.parse.urlencode({
-        "action": "parse", "page": title, "prop": "wikitext",
-        "format": "json", "formatversion": "2", "redirects": "1"})
-    req = urllib.request.Request(f"{API}?{q}", headers={"User-Agent": UA})
-    try:
-        with urllib.request.urlopen(req, timeout=30) as r:
-            data = json.loads(r.read().decode())
-    except Exception as e:
-        return None, str(e)
+    """Fetch a page's wikitext: 6h disk cache, >=1.2s between requests,
+    and a backoff-retry on 429 - Wikipedia throttles bursts hard."""
+    os.makedirs(CACHE, exist_ok=True)
+    cpath = os.path.join(
+        CACHE, re.sub(r"[^A-Za-z0-9._-]", "_", title) + ".json")
+    data = None
+    if (os.path.exists(cpath)
+            and time.time() - os.path.getmtime(cpath) < 6 * 3600):
+        with open(cpath, encoding="utf-8") as f:
+            data = json.load(f)
+    if data is None:
+        q = urllib.parse.urlencode({
+            "action": "parse", "page": title, "prop": "wikitext",
+            "format": "json", "formatversion": "2", "redirects": "1"})
+        req = urllib.request.Request(f"{API}?{q}",
+                                     headers={"User-Agent": UA})
+        for attempt in range(4):
+            gap = _last_req[0] + 1.2 - time.time()
+            if gap > 0:
+                time.sleep(gap)
+            try:
+                with urllib.request.urlopen(req, timeout=30) as r:
+                    data = json.loads(r.read().decode())
+                _last_req[0] = time.time()
+                break
+            except urllib.error.HTTPError as e:
+                _last_req[0] = time.time()
+                if e.code == 429 and attempt < 3:
+                    ra = (e.headers.get("Retry-After") or "").strip()
+                    wait = int(ra) if ra.isdigit() else 15 * (attempt + 1)
+                    print(f"      429 - waiting {wait}s")
+                    time.sleep(wait)
+                    continue
+                return None, f"HTTP {e.code}"
+            except Exception as e:
+                return None, str(e)
+        if data is None:
+            return None, "rate limited (gave up)"
     if "error" in data:
         return None, data["error"].get("code", "error")
+    with open(cpath, "w", encoding="utf-8") as f:
+        json.dump(data, f)
     return data["parse"]["wikitext"], None
 
 
@@ -117,19 +152,89 @@ def parse_squad(wikitext):
     return out
 
 
+# Everything from a women's / academy / underage / reserve heading onward
+# is out of scope - the site tracks the senior men's game. Club articles
+# often carry those squads right below the first team.
+CUT_RE = re.compile(
+    r"^=+[^=\n]*(women|ladies|academy|under[- ]?\d|\bu-?\d{2}\b|reserve)"
+    r"[^=\n]*=+\s*$", re.IGNORECASE | re.MULTILINE)
+
+
+def trim_scope(wikitext):
+    m = CUT_RE.search(wikitext)
+    return wikitext[:m.start()] if m else wikitext
+
+
 def squad_for(club, art):
-    """Try this season's page first, then last season's, then the club page."""
+    """This season's page first; then the club article (its Current squad
+    is kept fresher than a finished season's page); then last season."""
     tried = []
-    for title in (f"{YEAR} {art} season", f"{YEAR - 1} {art} season", art):
+    for title in (f"{YEAR} {art} season", art, f"{YEAR - 1} {art} season"):
         wt, err = get_wikitext(title)
         tried.append((title, err))
         if wt:
-            sq = parse_squad(wt)
+            sq = parse_squad(trim_scope(wt))
             if sq:
                 return sq, title
     for t, e in tried:
         print(f"      tried {t!r}: {e or 'no squad templates found'}")
     return [], None
+
+
+# "Danny Mandroiu" and "Daniel Mândroiu" are one player, not two. Compare
+# surname (ASCII-folded, doubled letters collapsed, so O'Neill == O'Neil)
+# plus a forgiving first-name check: shared prefix, containment
+# (Mipo / Ademipo), or a known short form.
+NICKS = {"paddy": "patrick", "pat": "patrick", "bobby": "robert",
+         "rob": "robert", "robbie": "robert", "bob": "robert",
+         "danny": "daniel", "dan": "daniel", "matt": "matthew",
+         "sammy": "samuel", "sam": "samuel", "johnny": "jonathan",
+         "jonny": "jonathan", "jon": "jonathan", "mick": "michael",
+         "mikey": "michael", "mike": "michael", "tommy": "thomas",
+         "tom": "thomas", "joey": "joseph", "joe": "joseph",
+         "jimmy": "james", "jim": "james", "billy": "william",
+         "will": "william", "willie": "william",
+         "eddie": "edward", "ted": "edward", "teddy": "edward",
+         "ned": "edward", "charlie": "charles", "alfie": "alfred",
+         "freddie": "frederick", "fred": "frederick", "ollie": "oliver",
+         "harry": "henry", "ricky": "richard",
+         "richie": "richard", "andy": "andrew", "tony": "anthony",
+         "nick": "nicholas", "chris": "christopher", "gerry": "gerard",
+         "ger": "gerard", "dave": "david", "davy": "david",
+         "steve": "stephen", "stevie": "stephen", "ben": "benjamin",
+         "josh": "joshua", "greg": "gregory", "ronnie": "ronald",
+         "kenny": "kenneth", "ken": "kenneth", "denny": "dennis",
+         "larry": "laurence", "vinny": "vincent"}
+
+
+def _letters(x):
+    x = unicodedata.normalize("NFKD", x).encode("ascii", "ignore").decode()
+    return re.sub(r"[^a-z]", "", x.lower())
+
+
+def _dedouble(x):
+    return re.sub(r"(.)\1+", r"\1", x)
+
+
+def _same_first(a, b):
+    a, b = _letters(a), _letters(b)
+    if not a or not b:
+        return False
+    a, b = NICKS.get(a, a), NICKS.get(b, b)
+    if a == b:
+        return True
+    if (len(a) >= 3 and b.startswith(a)) or (len(b) >= 3 and a.startswith(b)):
+        return True
+    return (len(a) >= 4 and a in b) or (len(b) >= 4 and b in a)
+
+
+def same_person(n1, n2):
+    p1, p2 = n1.split(), n2.split()
+    if not p1 or not p2:
+        return False
+    if _dedouble(_letters(p1[-1])) != _dedouble(_letters(p2[-1])):
+        return False
+    return _same_first(p1[0], p2[0])
 
 
 def load_roster():
@@ -167,26 +272,28 @@ def main():
         irish = [p for p in squad if p["nat"] in wanted_nats]
         nir_seen += [f'{p["name"]} ({club})' for p in squad
                      if p["nat"] == "NIR" and not args.nir]
-        ours = {r["slug"] for r in by_club.get(club, [])}
-        missing = [p for p in irish if slugify(p["name"]) not in have]
-        elsewhere = [p for p in irish
-                     if slugify(p["name"]) in have
-                     and slugify(p["name"]) not in ours]
-        gone = [r["name"] for r in by_club.get(club, [])
-                if slugify(r["name"]) not in {slugify(p["name"])
-                                              for p in squad}]
+        club_names = [r["name"] for r in by_club.get(club, [])]
+        all_names = {r["name"]: r.get("club", "") for r in roster}
         print(f"   {page}: {len(squad)} in squad, {len(irish)} Irish, "
-              f"{len(ours)} on roster at this club")
-        for p in missing:
+              f"{len(club_names)} on roster at this club")
+        for p in irish:
+            slug = slugify(p["name"])
+            if slug in have or any(same_person(p["name"], n)
+                                   for n in club_names):
+                continue                       # already ours (any spelling)
+            match = next((n for n in all_names
+                          if same_person(p["name"], n)), None)
+            if match:
+                print(f"   ~ probably {match!r} "
+                      f"({all_names[match] or 'no club'}) - skipped")
+                continue
             print(f"   + MISSING  {p['name']:<28} {p['pos'] or '?'}")
-            to_add.append({"slug": slugify(p["name"]), "name": p["name"],
+            to_add.append({"slug": slug, "name": p["name"],
                            "club": club, "league": division, "tier": "loi",
                            "pos": p["pos"], "ireland_level": ""})
-        for p in elsewhere:
-            print(f"   ~ name clash (slug exists at another club, skipped): "
-                  f"{p['name']}")
-        for n in gone:
-            print(f"   - on roster, not in wiki squad (moved on?): {n}")
+        for n in club_names:
+            if not any(same_person(n, p["name"]) for p in squad):
+                print(f"   - on roster, not in wiki squad (moved on?): {n}")
         time.sleep(1)          # be polite to the API
 
     if nir_seen:
