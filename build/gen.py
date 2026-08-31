@@ -4096,7 +4096,7 @@ TRANSFERS_JS = '\n(function(){\n  var D=window.FB_TF; if(!D||!D.t) return;\n  va
 def build_newsletter():
     body = f'''
     <div class="pagehead"><h1>The <i>newsletter</i></h1>
-      <p>Two emails a week on every Irish professional — written by hand, not scraped together.</p></div>
+      <p>Two emails a week on every Irish professional — written by hand, every week.</p></div>
     {signup()}
     <div class="sec"><h2>What you get</h2></div>
     <div class="nlgrid">

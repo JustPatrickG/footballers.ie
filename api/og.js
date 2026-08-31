@@ -5,7 +5,7 @@
 // is first shared and then held at the edge, so it can never fall out of step
 // with the page.
 //
-// Match cards carry a FotMob id and look the score up as they are drawn, which
+// Match cards carry a match id and look the score up as they are drawn, which
 // is why they are cached for a minute and everything else for a day.
 
 // CommonJS on purpose: satori's text shaper locates its WebAssembly through
@@ -59,7 +59,7 @@ function initials(name) {
   return (w.length === 1 ? w[0].slice(0, 3) : w[0][0] + w[w.length - 1][0]).toUpperCase();
 }
 
-/* live score for a match card, when the page handed us a FotMob id */
+/* live score for a match card, when the page handed us a match id */
 async function liveScore(fmid) {
   if (!/^[0-9]{4,12}$/.test(String(fmid || ''))) return null;
   try {
@@ -159,7 +159,7 @@ module.exports = async function handler(req, res) {
 
     const svg = await satori(buildCard(kind, data), { width: 1200, height: 630, fonts: FONTS });
     // asPng() hands back a Uint8Array; res.send() would JSON-encode that into
-    // {"0":137,"1":80,...} and every scraper would see a broken image. Buffer
+    // {"0":137,"1":80,...} and every consumer would see a broken image. Buffer
     // it and write the bytes out directly.
     const png = Buffer.from(new Resvg(svg, { fitTo: { mode: 'width', value: 1200 } })
       .render().asPng());

@@ -1,13 +1,13 @@
 // Vercel serverless function: live scores straight from the source, on demand.
 //
-// The old pipeline went GitHub cron -> scraper -> commit live.json -> raw
+// The old pipeline went GitHub cron -> commit live.json -> raw
 // CDN -> browser. GitHub fires a */5 schedule whenever it feels like it -
 // gaps of eleven HOURS are in the run history - so scores simply stopped.
 // This cuts every link out of that chain: the browser asks us, we ask the
 // source, the edge caches the answer for ~25 seconds so any number of
 // visitors cost one upstream request per match per half-minute.
 //
-// GET /api/live?ids=5988076,5988080   (fotmob match ids, max 20)
+// GET /api/live?ids=5988076,5988080   (match ids, max 20)
 // -> { updated, matches: { "5988076": { hs, as, status, minute } } }
 //
 // status is "scheduled" | "live" | "ft". minute is "67" or "45+2", live only.
@@ -21,7 +21,7 @@ const UA =
   '(KHTML, like Gecko) Chrome/126.0 Safari/537.36';
 
 function parseMatch(data) {
-  // Same hunt the scraper does: find the {teams:[..,..], status:{...}} pair.
+  // Find the {teams:[..,..], status:{...}} pair.
   function hunt(obj) {
     if (Array.isArray(obj)) {
       for (const it of obj) { const r = hunt(it); if (r) return r; }
@@ -60,7 +60,7 @@ function parseMatch(data) {
 
 function parseEvents(data) {
   // Find the matchFacts events list: an array whose items look like
-  // {type, timeStr, isHome, player:{name}} - same shape the scraper reads.
+  // {type, timeStr, isHome, player:{name}}.
   let list = null;
   (function hunt(obj) {
     if (list || !obj || typeof obj !== 'object') return;
@@ -87,7 +87,7 @@ function parseEvents(data) {
     } else if (e.type === 'MissedPenalty') {
       type = 'missed_penalty';
     } else if (e.type === 'Substitution') {
-      // fotmob's swap pair: coming on first, going off second
+      // swap pair: coming on first, going off second
       const sw = Array.isArray(e.swap) ? e.swap : [];
       const nm = x => (x && (x.name || x.nameStr)) ? String(x.name || x.nameStr) : '';
       if (sw.length === 2 && (nm(sw[0]) || nm(sw[1]))) {
@@ -118,7 +118,7 @@ function parseEvents(data) {
 // While people are watching a live match, this function is getting hit every
 // ~30s anyway - so occasionally use one of those hits to poke the GitHub
 // matchday workflow, whose own cron is the unreliable part. Fire-and-forget,
-// probability-gated so fotmob traffic stays what it was.
+// probability-gated so upstream traffic stays what it was.
 function kickWorkflow() {
   const token = process.env.GITHUB_TOKEN, repo = process.env.GITHUB_REPO;
   if (!token || !repo) return Promise.resolve();
@@ -138,7 +138,7 @@ function kickWorkflow() {
    .catch(e => console.log('kick ' + wf + ' failed:', String(e)));
 }
 
-// Live per-player stats (rating, minutes). FotMob's match JSON nests players in
+// Live per-player stats (rating, minutes). The upstream match JSON nests players in
 // several shapes and the fields drift, so rather than trust a fixed path we hunt
 // for anything that looks like a player carrying a plausible match rating.
 function pName(o) {
@@ -230,7 +230,7 @@ export default async function handler(req, res) {
   }
 
   // the edge serves everyone from this for 25s; stale for 30 more while
-  // the next one is fetched, so nobody ever waits on fotmob directly
+  // the next one is fetched, so nobody ever waits on the upstream directly
   res.setHeader('Cache-Control', 's-maxage=25, stale-while-revalidate=30');
   res.setHeader('Access-Control-Allow-Origin', '*');
   return res.status(200).json({

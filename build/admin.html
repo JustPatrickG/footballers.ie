@@ -384,8 +384,8 @@ function tableView(){
     };
     const hidep=v.querySelector('#hidep');
     if(hidep) hidep.onclick=()=>{
-      /* The scraper takes the whole squad page, which on FotMob includes the
-         manager. This writes a manual row that hides them everywhere. */
+      /* Squad listings upstream sometimes include the manager. This writes
+         a manual row that hides them everywhere. */
       const n=prompt('Name of the person to hide (e.g. a manager listed as a player):');
       if(!n) return;
       const slug=slugify(n); if(!slug) return;
