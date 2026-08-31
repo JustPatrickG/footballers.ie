@@ -1546,13 +1546,25 @@ def season_from_matches(mlist, league, now):
             "league": league}
 
 
-def season_splits(mlist, now):
-    """Per-(team, competition) breakdown of this season's club football,
+def season_splits(mlist, now, label=None):
+    """Per-(team, competition) breakdown of one season's club football,
     built from the player's own match list. The stats block labels the
     whole season with one club, but the matches remember which shirt each
     game was played in - loans and mid-season moves come out as separate
-    splits. Sorted by minutes, biggest first."""
-    label, (start, end) = current_season_label(now)
+    splits. Sorted by minutes, biggest first. label picks WHICH season to
+    split ("2025/26" or a bare year for calendar leagues); the stats block
+    can sit a season behind, and its matches live in that older window."""
+    m = re.fullmatch(r"(\d{4})/(\d{2})", str(label or "").strip())
+    if m:
+        y = int(m.group(1))
+        start = dt.datetime(y, 7, 1, tzinfo=dt.timezone.utc)
+        end = dt.datetime(y + 1, 6, 30, tzinfo=dt.timezone.utc)
+    elif re.fullmatch(r"\d{4}", str(label or "").strip()):
+        y = int(str(label).strip())
+        start = dt.datetime(y, 1, 1, tzinfo=dt.timezone.utc)
+        end = dt.datetime(y, 12, 31, tzinfo=dt.timezone.utc)
+    else:
+        label, (start, end) = current_season_label(now)
     agg, order = {}, []
     for m in mlist:
         if not (m.get("played") and start <= m["utc"] <= end):
@@ -1851,7 +1863,7 @@ def scrape(args):
         s_team, s_team_id = source_club, str(pt.get("teamId") or "")
         s_league = season["league"] or source_league
         _clean = lambda x: str(x).replace("|", "/").replace(";", ",")
-        _, splits = season_splits(mlist, now)
+        _, splits = season_splits(mlist, now, season["season"])
         splits_str = ";".join(
             "|".join([_clean(sp["team"]), sp["team_id"], _clean(sp["comp"]),
                       str(sp["apps"]), str(sp["goals"]), str(sp["assists"]),

@@ -3584,8 +3584,10 @@ def build_player(p):
         <div><b data-live="mins" data-base="{s["mins"] or 0}">{stat(p,"s_mins",s["mins"])}</b><span>Minutes played</span></div>
       </div></div>'''
         # Further spells this season (the parent club after a loan, the old
-        # club after a January move) get their own smaller cards.
-        for _sp in (p.get("s_splits") or "").split(";")[1:3]:
+        # club after a January move) get their own smaller cards - but only
+        # when the season is genuinely split across shirts. A normal player's
+        # cup competitions don't need cards of their own.
+        for _sp in ((p.get("s_splits") or "").split(";")[1:3] if _sdiff else []):
             _f = _sp.split("|")
             if len(_f) < 8 or not _f[0]:
                 continue
