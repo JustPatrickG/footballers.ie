@@ -633,7 +633,7 @@ alex-gilbert,2026-04-06,Swansea City,2-2,Championship,9,0,0,
 alex-gilbert,2026-04-11,Portsmouth,0-1,Championship,6,0,0,
 alex-gilbert,2026-04-19,Ipswich Town,2-2,Championship,61,0,0,6.90
 alex-gilbert,2026-04-25,Watford,5-1,Championship,90,0,0,7.50
-alex-murphy,2025-09-09,Andorra U21,1-0,EURO U21 Qualification Grp. D,90,0,0,
+alex-murphy,2025-09-09,Andorra U21,1-0,EURO U-21 Qualification,90,0,0,
 alex-murphy,2025-09-24,Bradford City,4-1,EFL Cup,1,0,0,
 alex-murphy,2025-10-05,Tottenham Hotspur U21,1-4,Premier League 2,90,0,0,6.30
 alex-murphy,2025-10-27,Crystal Palace U21,2-0,Premier League 2,74,0,1,8.10
@@ -643,7 +643,7 @@ alex-murphy,2026-01-31,Liverpool,1-4,Premier League,1,0,0,
 alex-murphy,2026-02-14,Aston Villa,3-1,FA Cup,1,0,0,
 alex-murphy,2026-02-24,Qarabağ FK,3-2,Champions League,90,0,0,7.10
 alex-murphy,2026-03-13,Blackburn Rovers U21,2-0,Premier League 2,45,0,1,7.90
-alex-murphy,2026-03-26,Moldova U21,1-1,EURO U21 Qualification Grp. D,90,0,0,
+alex-murphy,2026-03-26,Moldova U21,1-1,EURO U-21 Qualification,90,0,0,
 alex-murphy,2026-04-13,Wolverhampton Wanderers U21,1-1,Premier League 2,90,0,0,7.10
 alex-murphy,2026-05-24,Fulham,0-2,Premier League,6,0,0,
 alex-murphy,2026-07-25,Gateshead FC,1-1,Club Friendlies,90,0,0,7.00
@@ -3287,6 +3287,7 @@ david-eguaibor,2026-04-11,Queen of the South,0-2,League One,6,0,0,
 david-eguaibor,2026-04-18,Stenhousemuir,2-0,League One,16,0,0,
 david-eguaibor,2026-08-22,Yeovil Town,0-3,National League,44,0,0,
 david-eguaibor,2026-08-28,Sutton United,0-1,National League,31,0,0,
+david-eguaibor,2026-08-31,Harrogate Town,1-2,National League,46,0,0,
 david-eze,2025-09-13,SJK,3-3,Veikkausliiga Championship Group,8,0,0,
 david-eze,2025-09-23,FC Inter Turku,0-0,Veikkausliiga Championship Group,3,0,0,
 david-eze,2026-04-04,SJK,3-0,Veikkausliiga,75,1,1,8.60
@@ -3856,20 +3857,21 @@ emmanuel-adegboyega,2026-04-21,Luton Town,0-2,League One,90,0,0,6.60
 emmanuel-adegboyega,2026-04-25,Reading,1-1,League One,90,0,0,7.40
 emmanuel-adegboyega,2026-08-08,West Bromwich Albion,1-4,EFL Cup,90,0,0,5.50
 emmanuel-adegboyega,2026-08-29,Chesterfield,2-1,League Two,58,0,0,7.20
-emmanuel-osadebe,2025-09-02,Luton Town,1-4,EFL Trophy Southern Grp. H,90,0,0,7.30
+emmanuel-osadebe,2025-09-02,Luton Town,1-4,EFL Trophy,90,0,0,7.30
 emmanuel-osadebe,2025-09-20,Grimsby Town,3-0,League Two,13,0,0,5.90
 emmanuel-osadebe,2025-09-27,Oldham Athletic,1-1,League Two,30,0,0,5.60
-emmanuel-osadebe,2025-09-30,Brighton & Hove Albion U21,1-1,EFL Trophy Southern Grp. H,90,0,0,6.70
+emmanuel-osadebe,2025-09-30,Brighton & Hove Albion U21,1-1,EFL Trophy,90,0,0,6.70
 emmanuel-osadebe,2025-10-04,Accrington Stanley,2-0,League Two,65,0,0,6.90
 emmanuel-osadebe,2025-10-11,Tranmere Rovers,2-0,League Two,1,0,0,
-emmanuel-osadebe,2025-10-21,Cambridge United,3-2,EFL Trophy Southern Grp. H,90,1,0,7.80
+emmanuel-osadebe,2025-10-21,Cambridge United,3-2,EFL Trophy,90,1,0,7.80
 emmanuel-osadebe,2025-11-08,Milton Keynes Dons,2-2,League Two,15,0,0,6.10
 emmanuel-osadebe,2025-11-15,Cambridge United,0-0,League Two,10,0,0,6.00
 emmanuel-osadebe,2026-08-08,Woking,3-0,National League,90,0,0,
 emmanuel-osadebe,2026-08-15,Altrincham,1-0,National League,90,0,0,
-emmanuel-osadebe,2026-08-18,Leicester City U21,0-0,National League Cup Group D,5,0,0,
+emmanuel-osadebe,2026-08-18,Leicester City U21,0-0,National League Cup,5,0,0,
 emmanuel-osadebe,2026-08-22,Hartlepool United,2-1,National League,90,1,0,
 emmanuel-osadebe,2026-08-28,Gateshead FC,1-0,National League,90,0,0,
+emmanuel-osadebe,2026-08-31,Wealdstone,0-2,National League,90,0,0,
 enda-minogue,2026-03-16,Sligo Rovers,1-0,Premier Division,90,0,0,8.20
 enda-minogue,2026-03-20,Bohemian FC,1-1,Premier Division,90,0,0,6.90
 enda-minogue,2026-04-03,Shelbourne,3-2,Premier Division,90,0,0,6.90
@@ -4342,7 +4344,7 @@ gavan-holohan,2025-09-13,Cheltenham Town,2-0,League Two,28,0,0,6.10
 gavan-holohan,2025-09-20,Notts County,0-4,League Two,37,0,0,6.30
 gavan-holohan,2025-09-27,Barrow,1-2,League Two,90,0,0,7.20
 gavan-holohan,2025-10-04,Cambridge United,1-3,League Two,90,0,0,6.50
-gavan-holohan,2025-10-07,Leyton Orient,1-2,EFL Trophy Southern Grp. F,3,0,0,
+gavan-holohan,2025-10-07,Leyton Orient,1-2,EFL Trophy,3,0,0,
 gavan-holohan,2025-10-11,Walsall,1-1,League Two,90,0,0,6.90
 gavan-holohan,2025-10-18,Shrewsbury Town,0-1,League Two,58,0,0,6.80
 gavan-holohan,2025-10-25,Bristol Rovers,4-0,League Two,81,0,0,6.40
@@ -4358,9 +4360,10 @@ gavan-holohan,2026-02-21,Solihull Moors,4-3,National League,67,0,0,
 gavan-holohan,2026-02-25,Carlisle United,3-1,National League,18,0,0,
 gavan-holohan,2026-03-03,Sutton United,0-2,National League,25,0,0,
 gavan-holohan,2026-08-15,Solihull Moors,2-0,National League,45,0,0,
-gavan-holohan,2026-08-18,Birmingham U21,2-3,National League Cup Group D,63,0,1,
+gavan-holohan,2026-08-18,Birmingham U21,2-3,National League Cup,63,0,1,
 gavan-holohan,2026-08-22,Altrincham,1-0,National League,90,0,0,
 gavan-holohan,2026-08-27,Boreham Wood,1-2,National League,78,0,0,
+gavan-holohan,2026-08-31,Hornchurch,2-3,National League,90,0,0,
 gavin-bazunu,2025-09-14,Portsmouth,0-0,Championship,90,0,0,7.80
 gavin-bazunu,2025-09-20,Hull City,1-3,Championship,90,0,0,5.10
 gavin-bazunu,2025-11-05,Queens Park Rangers,2-1,Championship,90,0,0,6.80
@@ -4783,6 +4786,7 @@ hugh-parker,2026-08-15,Southend United,0-1,National League,32,0,0,
 hugh-parker,2026-08-18,Stoke City U21,4-0,National League Cup,63,1,0,
 hugh-parker,2026-08-22,Eastleigh,2-3,National League,29,0,0,
 hugh-parker,2026-08-28,Solihull Moors,3-1,National League,64,0,0,
+hugh-parker,2026-08-31,Carlisle United,2-4,National League,62,0,0,
 ian-lawlor,2025-09-02,Everton U21,2-1,EFL Trophy Northern Grp. C,90,0,0,6.30
 ian-lawlor,2025-09-24,Tottenham Hotspur,0-3,EFL Cup,90,0,0,6.40
 ian-lawlor,2025-09-27,Luton Town,0-1,League One,90,0,0,8.00
@@ -5990,15 +5994,15 @@ jevon-mills,2025-10-01,Rochdale,2-1,National League,90,0,0,
 jevon-mills,2025-10-04,Brackley Town,2-0,National League,90,0,0,
 jevon-mills,2025-10-11,Southport,3-1,FA Cup Qualification,90,0,0,
 jevon-mills,2025-10-18,Truro City,1-2,National League,90,0,0,
-jevon-mills,2025-10-21,Leeds United U21,3-0,National League Cup Group D,90,0,0,7.20
+jevon-mills,2025-10-21,Leeds United U21,3-0,National League Cup,90,0,0,7.20
 jevon-mills,2025-10-25,York City,1-1,National League,90,0,0,
 jevon-mills,2025-11-01,Exeter City,0-2,FA Cup,90,0,0,
 jevon-mills,2025-11-04,Carlisle United,0-2,National League,90,0,0,
 jevon-mills,2025-11-08,Hartlepool United,0-1,National League,90,0,0,
 jevon-mills,2025-11-15,Sutton United,0-2,National League,78,0,0,
-jevon-mills,2025-11-25,Sunderland U21,1-1,National League Cup Group D,90,0,0,6.40
+jevon-mills,2025-11-25,Sunderland U21,1-1,National League Cup,90,0,0,6.40
 jevon-mills,2025-12-06,Braintree Town,4-0,National League,5,1,0,
-jevon-mills,2025-12-16,Newcastle United U21,0-0,National League Cup Group D,90,0,0,7.00
+jevon-mills,2025-12-16,Newcastle United U21,0-0,National League Cup,90,0,0,7.00
 jevon-mills,2025-12-21,Wealdstone,2-2,National League,13,0,0,
 jevon-mills,2026-01-27,Tamworth,0-1,National League Cup,90,0,0,
 jevon-mills,2026-02-11,Brackley Town,1-1,National League,48,0,0,
@@ -6010,6 +6014,7 @@ jevon-mills,2026-02-28,Sutton United,2-2,National League,90,0,0,
 jevon-mills,2026-04-06,Tamworth,2-2,National League,81,0,0,
 jevon-mills,2026-04-11,Yeovil Town,0-0,National League,70,0,0,
 jevon-mills,2026-08-28,Scunthorpe United,1-3,National League,28,0,0,
+jevon-mills,2026-08-31,AFC Fylde,1-3,National League,81,0,0,
 jimmy-dunne,2025-09-13,Wrexham,3-1,Championship,90,0,1,7.50
 jimmy-dunne,2025-09-20,Stoke City,1-0,Championship,90,0,0,7.80
 jimmy-dunne,2025-09-27,Sheffield Wednesday,1-1,Championship,90,0,0,7.50
@@ -8766,6 +8771,7 @@ niall-canavan,2026-08-08,Aldershot Town,0-1,National League,90,0,0,
 niall-canavan,2026-08-15,Solihull Moors,2-0,National League,90,0,0,
 niall-canavan,2026-08-22,Altrincham,1-0,National League,90,0,0,
 niall-canavan,2026-08-27,Boreham Wood,1-2,National League,90,0,0,
+niall-canavan,2026-08-31,Hornchurch,2-3,National League,90,0,0,
 niall-morahan,2025-09-12,Derry City,3-4,Premier Division,90,0,0,5.60
 niall-morahan,2025-09-19,Waterford FC,2-1,Premier Division,90,0,0,6.60
 niall-morahan,2025-09-26,Shamrock Rovers,1-2,Premier Division,90,0,0,6.50

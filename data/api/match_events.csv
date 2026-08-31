@@ -4312,7 +4312,8 @@ match_id,minute,type,player,team,venue
 2026-08-30-vvv-venlo-v-fc-emmen,88,yellow,Alessandro Hojabrpour,FC Emmen,Seacon Stadion – De Koel –
 2026-08-30-vvv-venlo-v-fc-emmen,89,yellow,Thomas Janssen,VVV-Venlo,Seacon Stadion – De Koel –
 2026-08-30-vvv-venlo-v-fc-emmen,90,goal,Luis Görlich,VVV-Venlo,Seacon Stadion – De Koel –
-2026-08-31-ac-oulu-v-sjk,,,,,Raatin stadion
+2026-08-31-ac-oulu-v-sjk,33,sub_off,Jaakko Moisio,SJK,Raatin stadion
+2026-08-31-ac-oulu-v-sjk,33,sub_on,Leon Vesterbacka,SJK,Raatin stadion
 2026-08-31-afc-bournemouth-academy-v-middlesbrough-u21,4,goal,Harold William,AFC Bournemouth Academy,The Wyatt Homes Stadium
 2026-08-31-afc-bournemouth-academy-v-middlesbrough-u21,13,goal,Jonny Day,AFC Bournemouth Academy,The Wyatt Homes Stadium
 2026-08-31-afc-bournemouth-academy-v-middlesbrough-u21,17,sub_off,Jonny Day,AFC Bournemouth Academy,The Wyatt Homes Stadium
@@ -4506,11 +4507,14 @@ match_id,minute,type,player,team,venue
 2026-08-31-harrogate-town-v-gateshead-fc,69,sub_on,George Thomson,Harrogate Town,Marcy Fitness Stadium
 2026-08-31-harrogate-town-v-gateshead-fc,70,sub_off,Josh Hmami,Harrogate Town,Marcy Fitness Stadium
 2026-08-31-harrogate-town-v-gateshead-fc,70,sub_on,Ciaran McGuckin,Harrogate Town,Marcy Fitness Stadium
-2026-08-31-ilves-v-hjk,,,,,Tammelan stadion
+2026-08-31-ilves-v-hjk,14,sub_off,Oliver Pettersson,Ilves,Tammelan stadion
+2026-08-31-ilves-v-hjk,14,sub_on,Goudouss Bamba,Ilves,Tammelan stadion
+2026-08-31-ilves-v-hjk,23,yellow,Martin Kirilov,HJK,Tammelan stadion
 2026-08-31-kings-lynn-town-v-scarborough-athletic,35,goal,Mo Fadera,Scarborough Athletic,The Walks
 2026-08-31-kings-lynn-town-v-scarborough-athletic,45,goal,Jesse Nwabueze,King's Lynn Town,The Walks
 2026-08-31-kings-lynn-town-v-scarborough-athletic,54,goal,Carlton Ubaezuonu,King's Lynn Town,The Walks
 2026-08-31-kings-lynn-town-v-scarborough-athletic,88,goal,Reece Hall-Johnson,King's Lynn Town,The Walks
+2026-08-31-lecce-v-roma,4,goal,<TBD>,Roma,Stadio Ettore Giardiniero - Via del Mare
 2026-08-31-manchester-united-u21-v-leicester-city-u21,14,goal,Shea Lacey,Manchester United U21,Progress with Unity Stadium
 2026-08-31-manchester-united-u21-v-leicester-city-u21,27,goal,Bobby Amartey,Leicester City U21,Progress with Unity Stadium
 2026-08-31-manchester-united-u21-v-leicester-city-u21,29,goal,Shea Lacey,Manchester United U21,Progress with Unity Stadium
