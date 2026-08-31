@@ -1,1 +1,493 @@
 league,league_id,idx,team,team_id,played,wins,draws,losses,gf,ga,gd,pts
+League One,108,1,Blackpool,8483,3,2,1,0,7,2,5,7
+League One,108,2,Huddersfield Town,9796,3,2,1,0,6,2,4,7
+League One,108,3,Stockport County,10007,3,2,0,1,9,4,5,6
+League One,108,4,Sheffield Wednesday,10163,3,2,0,1,9,4,5,6
+League One,108,5,Mansfield Town,9818,3,2,0,1,8,5,3,6
+League One,108,6,Bradford City,8484,3,2,0,1,3,2,1,6
+League One,108,7,Notts County,9819,3,1,2,0,5,4,1,5
+League One,108,8,Oxford United,8653,2,1,1,0,4,3,1,4
+League One,108,9,Barnsley,8283,3,1,1,1,3,2,1,4
+League One,108,10,Cambridge United,9834,3,1,1,1,5,5,0,4
+League One,108,11,Burton Albion,9792,3,1,1,1,4,4,0,4
+League One,108,12,Plymouth Argyle,8401,3,1,1,1,4,4,0,4
+League One,108,13,Luton Town,8346,3,1,1,1,8,10,-2,4
+League One,108,14,AFC Wimbledon,158319,3,1,1,1,1,3,-2,4
+League One,108,15,Bromley,45729,3,1,1,1,4,8,-4,4
+League One,108,16,Milton Keynes Dons,8645,3,0,3,0,3,3,0,3
+League One,108,17,Leyton Orient,8351,3,1,0,2,4,5,-1,3
+League One,108,18,Peterborough United,8677,3,1,0,2,2,7,-5,3
+League One,108,19,Stevenage,10253,3,0,2,1,4,5,-1,2
+League One,108,20,Doncaster Rovers,9903,3,0,2,1,3,4,-1,2
+League One,108,21,Leicester City,8197,3,0,2,1,2,3,-1,2
+League One,108,22,Wycombe Wanderers,8676,3,0,2,1,3,7,-4,2
+League One,108,23,Reading,9798,2,0,1,1,3,4,-1,1
+League One,108,24,Wigan Athletic,8528,3,0,0,3,2,6,-4,0
+League Two,109,1,Barnet,8175,3,2,1,0,8,4,4,7
+League Two,109,2,Walsall,10006,3,2,1,0,6,2,4,7
+League Two,109,3,York City,9916,3,2,1,0,6,4,2,7
+League Two,109,4,Colchester United,8416,3,2,1,0,5,3,2,7
+League Two,109,5,Crewe Alexandra,9784,3,2,1,0,2,0,2,7
+League Two,109,6,Oldham Athletic,9785,3,2,0,1,6,2,4,6
+League Two,109,7,Bristol Rovers,10104,3,2,0,1,9,6,3,6
+League Two,109,8,Tranmere Rovers,8313,3,1,2,0,5,3,2,5
+League Two,109,9,Fleetwood Town,45723,3,1,2,0,3,2,1,5
+League Two,109,10,Grimsby Town,10005,3,1,2,0,3,2,1,5
+League Two,109,11,Newport County,10262,3,1,1,1,8,7,1,4
+League Two,109,12,Cheltenham Town,8680,3,1,1,1,5,5,0,4
+League Two,109,13,Rotherham United,8119,3,1,1,1,4,4,0,4
+League Two,109,14,Swindon Town,9795,3,1,1,1,2,4,-2,4
+League Two,109,15,Exeter City,9833,3,1,0,2,3,3,0,3
+League Two,109,16,Chesterfield,9786,3,1,0,2,2,3,-1,3
+League Two,109,17,Crawley Town,8647,3,1,0,2,2,4,-2,3
+League Two,109,18,Shrewsbury Town,9896,3,1,0,2,2,5,-3,3
+League Two,109,19,Northampton Town,8651,3,0,2,1,1,2,-1,2
+League Two,109,20,Port Vale,9799,3,0,2,1,1,3,-2,2
+League Two,109,21,Gillingham,10173,3,0,2,1,1,4,-3,2
+League Two,109,22,Accrington Stanley,8671,3,0,1,2,4,7,-3,1
+League Two,109,23,Salford City,282326,3,0,0,3,1,5,-4,0
+League Two,109,24,Rochdale,8493,3,0,0,3,1,6,-5,0
+Championship,48,1,Charlton Athletic,8451,3,3,0,0,5,2,3,9
+Championship,48,2,Wolverhampton Wanderers,8602,3,2,1,0,9,4,5,7
+Championship,48,3,Swansea City,10003,3,2,1,0,5,1,4,7
+Championship,48,4,Queens Park Rangers,10172,3,2,1,0,5,2,3,7
+Championship,48,5,Middlesbrough,8549,3,2,0,1,6,4,2,6
+Championship,48,6,Millwall,10004,3,2,0,1,6,5,1,6
+Championship,48,7,West Bromwich Albion,8659,3,2,0,1,6,5,1,6
+Championship,48,8,Birmingham City,8658,3,1,2,0,4,3,1,5
+Championship,48,9,Watford,9817,3,1,2,0,4,3,1,5
+Championship,48,10,Blackburn Rovers,8655,3,1,1,1,5,5,0,4
+Championship,48,11,Bolton Wanderers,8559,3,1,1,1,2,2,0,4
+Championship,48,12,Bristol City,8427,3,1,1,1,4,5,-1,4
+Championship,48,13,Cardiff City,8344,3,0,3,0,5,5,0,3
+Championship,48,14,Sheffield United,8657,3,0,3,0,2,2,0,3
+Championship,48,15,Portsmouth,8462,3,1,0,2,5,6,-1,3
+Championship,48,16,Norwich City,9850,3,1,0,2,5,6,-1,3
+Championship,48,17,Lincoln City,8430,3,1,0,2,3,5,-2,3
+Championship,48,18,Southampton,8466,3,2,0,1,9,4,5,2
+Championship,48,19,West Ham United,8654,3,0,2,1,4,5,-1,2
+Championship,48,20,Wrexham,9841,3,0,2,1,3,4,-1,2
+Championship,48,21,Derby County,10170,3,0,1,2,3,7,-4,1
+Championship,48,22,Burnley,8191,3,0,1,2,4,9,-5,1
+Championship,48,23,Preston North End,8411,3,0,0,3,2,6,-4,0
+Championship,48,24,Stoke City,10194,3,0,0,3,3,9,-6,0
+Premiership,64,1,Celtic,9925,3,3,0,0,8,2,6,9
+Premiership,64,2,St. Mirren,9800,3,2,1,0,6,3,3,7
+Premiership,64,3,Heart of Midlothian,9860,3,2,0,1,7,3,4,6
+Premiership,64,4,Dundee FC,8284,4,2,0,2,5,3,2,6
+Premiership,64,5,Hibernian,10251,3,2,0,1,5,4,1,6
+Premiership,64,6,Motherwell,9927,3,1,2,0,5,4,1,5
+Premiership,64,7,Rangers,8548,3,1,1,1,3,3,0,4
+Premiership,64,8,Dundee United,9938,4,1,1,2,5,7,-2,4
+Premiership,64,9,St. Johnstone,8467,3,1,0,2,5,6,-1,3
+Premiership,64,10,Aberdeen,8485,3,1,0,2,2,4,-2,3
+Premiership,64,11,Falkirk,8596,3,0,1,2,1,4,-3,1
+Premiership,64,12,Kilmarnock,8597,3,0,0,3,4,13,-9,0
+Premier League 2,9084,1,Manchester United U21,1070257,2,2,0,0,9,1,8,6
+Premier League 2,9084,2,Brentford U21,2054260,2,2,0,0,8,3,5,6
+Premier League 2,9084,3,Fulham U21,860801,2,2,0,0,7,3,4,6
+Premier League 2,9084,4,Bournemouth U21,2128213,2,2,0,0,5,2,3,6
+Premier League 2,9084,5,Derby County U21,773680,2,1,1,0,7,5,2,4
+Premier League 2,9084,6,Tottenham Hotspur U21,860802,2,1,1,0,6,4,2,4
+Premier League 2,9084,7,Crystal Palace U21,1267874,2,1,1,0,3,1,2,4
+Premier League 2,9084,8,Liverpool U21,1070259,2,1,1,0,3,2,1,4
+Premier League 2,9084,9,Southampton U21,773645,2,1,1,0,2,1,1,4
+Premier League 2,9084,10,Norwich City U21,773658,2,1,1,0,1,0,1,4
+Premier League 2,9084,11,Manchester City U21,860800,2,1,0,1,5,2,3,3
+Premier League 2,9084,12,Chelsea U21,773652,2,1,0,1,6,6,0,3
+Premier League 2,9084,13,Sunderland U21,773657,2,1,0,1,6,6,0,3
+Premier League 2,9084,14,Leeds United U21,1177187,2,1,0,1,5,5,0,3
+Premier League 2,9084,15,Reading U21,773686,2,1,0,1,4,4,0,3
+Premier League 2,9084,16,Aston Villa U21,1070261,2,1,0,1,2,3,-1,3
+Premier League 2,9084,17,Ipswich Town U21,1796115,2,1,0,1,4,6,-2,3
+Premier League 2,9084,18,Nottingham Forest U21,1389162,2,1,0,1,3,6,-3,3
+Premier League 2,9084,19,Arsenal U21,950214,2,0,2,0,2,2,0,2
+Premier League 2,9084,20,Birmingham U21,1796111,1,0,1,0,3,3,0,1
+Premier League 2,9084,21,West Bromwich Albion U21,773656,2,0,1,1,7,8,-1,1
+Premier League 2,9084,22,West Ham United U21,773649,2,0,1,1,4,5,-1,1
+Premier League 2,9084,23,Brighton & Hove Albion U21,773678,2,0,1,1,2,3,-1,1
+Premier League 2,9084,24,Everton U21,773653,2,0,1,1,2,3,-1,1
+Premier League 2,9084,25,Stoke City U21,773650,2,0,1,1,2,3,-1,1
+Premier League 2,9084,26,Burnley U21,1796112,2,0,0,2,4,7,-3,0
+Premier League 2,9084,27,Blackburn Rovers U21,773685,1,0,0,1,1,4,-3,0
+Premier League 2,9084,28,Leicester City U21,773642,1,0,0,1,1,4,-3,0
+Premier League 2,9084,29,Middlesbrough U21,773660,2,0,0,2,1,4,-3,0
+Premier League 2,9084,30,Wolverhampton Wanderers U21,773683,1,0,0,1,0,4,-4,0
+Premier League 2,9084,31,Newcastle United U21,860798,2,0,0,2,1,6,-5,0
+Premier League,47,1,Manchester City,8456,2,2,0,0,6,2,4,6
+Premier League,47,2,Hull City,8667,2,2,0,0,3,0,3,6
+Premier League,47,3,Chelsea,8455,2,2,0,0,7,5,2,6
+Premier League,47,4,Brentford,9937,2,1,1,0,4,1,3,4
+Premier League,47,5,Arsenal,9825,2,1,1,0,3,0,3,4
+Premier League,47,6,Newcastle United,10261,2,1,1,0,4,2,2,4
+Premier League,47,7,Everton,8668,2,1,1,0,3,1,2,4
+Premier League,47,8,Leeds United,8463,2,1,1,0,2,1,1,4
+Premier League,47,9,Brighton & Hove Albion,10204,2,1,0,1,7,4,3,3
+Premier League,47,10,Manchester United,10260,2,1,0,1,5,4,1,3
+Premier League,47,11,Sunderland,8472,2,1,0,1,2,2,0,3
+Premier League,47,12,Ipswich Town,9902,2,1,0,1,4,6,-2,3
+Premier League,47,13,Liverpool,8650,2,0,2,0,4,4,0,2
+Premier League,47,14,AFC Bournemouth,8678,2,0,1,1,2,3,-1,1
+Premier League,47,15,Nottingham Forest,10203,2,0,1,1,2,3,-1,1
+Premier League,47,16,Aston Villa,10252,2,0,1,1,0,4,-4,1
+Premier League,47,17,Fulham,9879,2,0,0,2,2,4,-2,0
+Premier League,47,18,Coventry City,8669,2,0,0,2,0,4,-4,0
+Premier League,47,19,Crystal Palace,9826,2,0,0,2,1,6,-5,0
+Premier League,47,20,Tottenham Hotspur,8586,2,0,0,2,0,5,-5,0
+Premier Division,126,1,Shamrock Rovers,4131,28,16,7,5,46,27,19,55
+Premier Division,126,2,St. Patrick's Athletic,1854,29,14,8,7,45,25,20,50
+Premier Division,126,3,Bohemian FC,4594,29,14,8,7,50,34,16,50
+Premier Division,126,4,Dundalk,1853,29,10,10,9,46,45,1,40
+Premier Division,126,5,Shelbourne,5751,27,8,11,8,37,39,-2,35
+Premier Division,126,6,Derry City,8338,29,7,13,9,41,40,1,34
+Premier Division,126,7,Galway United FC,520517,28,8,10,10,36,42,-6,34
+Premier Division,126,8,Waterford FC,6042,29,7,11,11,39,48,-9,32
+Premier Division,126,9,Drogheda United,8339,29,6,10,13,33,48,-15,28
+Premier Division,126,10,Sligo Rovers,6361,29,5,8,16,23,48,-25,23
+First Division,218,1,Cork City,2201,29,21,4,4,61,25,36,67
+First Division,218,2,UCD,1578,29,14,5,10,52,37,15,47
+First Division,218,3,Bray Wanderers,1629,29,12,7,10,57,43,14,43
+First Division,218,4,Longford Town,4569,29,11,8,10,41,38,3,41
+First Division,218,5,Cobh Ramblers,2383,29,12,5,12,34,40,-6,41
+First Division,218,6,Kerry FC,1426348,29,10,9,10,38,35,3,39
+First Division,218,7,Athlone Town,2378,29,10,7,12,30,34,-4,37
+First Division,218,8,Wexford FC,62337,29,9,7,13,32,43,-11,34
+First Division,218,9,Treaty United,1233534,29,7,9,13,29,44,-15,30
+First Division,218,10,Finn Harps,1627,29,5,7,17,26,61,-35,22
+National League,117,1,Boreham Wood,2488,5,4,1,0,14,7,7,13
+National League,117,2,Sutton United,158316,5,4,0,1,7,3,4,12
+National League,117,3,Hornchurch,4047,5,4,0,1,10,7,3,12
+National League,117,4,Yeovil Town,10198,5,3,2,0,10,5,5,11
+National League,117,5,Harrogate Town,7946,5,3,1,1,13,9,4,10
+National League,117,6,AFC Fylde,282396,5,3,1,1,11,7,4,10
+National League,117,7,Southend United,8652,5,3,1,1,9,6,3,10
+National League,117,8,Eastleigh,161803,5,3,1,1,7,5,2,10
+National League,117,9,Carlisle United,10196,5,2,2,1,12,8,4,8
+National League,117,10,Aldershot Town,8465,5,2,2,1,6,4,2,8
+National League,117,11,Kidderminster Harriers,10284,5,2,2,1,6,6,0,8
+National League,117,12,Hartlepool United,8488,4,2,0,2,4,3,1,6
+National League,117,13,Boston United,8646,5,2,0,3,6,6,0,6
+National League,117,14,Worthing,282351,5,2,0,3,9,10,-1,6
+National League,117,15,Altrincham,9915,5,2,0,3,5,7,-2,6
+National League,117,16,Forest Green Rovers,9828,5,2,0,3,6,10,-4,6
+National League,117,17,Wealdstone,161812,5,1,2,2,6,7,-1,5
+National League,117,18,Scunthorpe United,8412,5,1,1,3,8,10,-2,4
+National League,117,19,Tamworth,10254,5,1,1,3,10,14,-4,4
+National League,117,20,Woking,8345,5,1,1,3,4,9,-5,4
+National League,117,21,FC Halifax Town,10195,4,1,0,3,8,9,-1,3
+National League,117,22,Gateshead FC,6189,5,1,0,4,4,8,-4,3
+National League,117,23,Barrow,6350,5,0,2,3,5,9,-4,2
+National League,117,24,Solihull Moors,161801,5,0,0,5,5,16,-11,0
+League of Ireland First Division,218,1,Cork City,2201,29,21,4,4,61,25,36,67
+League of Ireland First Division,218,2,UCD,1578,29,14,5,10,52,37,15,47
+League of Ireland First Division,218,3,Bray Wanderers,1629,29,12,7,10,57,43,14,43
+League of Ireland First Division,218,4,Longford Town,4569,29,11,8,10,41,38,3,41
+League of Ireland First Division,218,5,Cobh Ramblers,2383,29,12,5,12,34,40,-6,41
+League of Ireland First Division,218,6,Kerry FC,1426348,29,10,9,10,38,35,3,39
+League of Ireland First Division,218,7,Athlone Town,2378,29,10,7,12,30,34,-4,37
+League of Ireland First Division,218,8,Wexford FC,62337,29,9,7,13,32,43,-11,34
+League of Ireland First Division,218,9,Treaty United,1233534,29,7,9,13,29,44,-15,30
+League of Ireland First Division,218,10,Finn Harps,1627,29,5,7,17,26,61,-35,22
+USL Championship,8972,1,Tampa Bay Rowdies,197328,22,13,6,3,38,20,18,45
+USL Championship,8972,1,El Paso Locomotive FC,1003209,23,12,4,7,39,29,10,40
+USL Championship,8972,2,Charleston Battery,162183,22,12,3,7,46,27,19,39
+USL Championship,8972,2,New Mexico United,1003208,20,11,4,5,29,20,9,37
+USL Championship,8972,3,Detroit City FC,540855,21,10,6,5,27,17,10,36
+USL Championship,8972,3,FC Tulsa,614325,21,10,5,6,26,19,7,35
+USL Championship,8972,4,Pittsburgh Riverhounds SC,267816,23,10,4,9,25,23,2,34
+USL Championship,8972,4,Orange County SC,267813,22,9,8,5,33,31,2,35
+USL Championship,8972,5,Louisville City FC,614316,22,9,5,8,37,36,1,32
+USL Championship,8972,5,San Antonio FC,722269,22,9,8,5,28,26,2,35
+USL Championship,8972,6,Indy Eleven,514649,20,8,4,8,24,24,0,28
+USL Championship,8972,6,Sacramento Republic FC,521004,21,8,8,5,28,19,9,32
+USL Championship,8972,7,Rhode Island FC,1597140,20,8,4,8,30,23,7,28
+USL Championship,8972,7,Colorado Springs Switchbacks FC,614321,22,9,4,9,33,32,1,31
+USL Championship,8972,8,Hartford Athletic,1003206,20,6,9,5,18,20,-2,27
+USL Championship,8972,8,Lexington SC,1430405,22,9,4,9,31,26,5,31
+USL Championship,8972,9,Miami FC,721896,22,5,7,10,25,39,-14,22
+USL Championship,8972,9,Las Vegas Lights FC,915809,22,8,5,9,28,32,-4,29
+USL Championship,8972,10,Loudoun United FC,1003205,21,3,11,7,22,34,-12,20
+USL Championship,8972,10,Phoenix Rising FC,424268,22,7,8,7,31,30,1,29
+USL Championship,8972,11,Birmingham Legion FC,1003207,20,3,8,9,24,30,-6,17
+USL Championship,8972,11,Oakland Roots SC,1130413,23,6,9,8,28,31,-3,27
+USL Championship,8972,12,Brooklyn,1877733,20,4,4,12,22,36,-14,16
+USL Championship,8972,12,Monterey Bay FC,915808,23,4,5,14,24,41,-17,17
+USL Championship,8972,13,Sporting JAX,1737991,22,2,5,15,27,58,-31,11
+Premier League U18,10068,1,Manchester City U18,1113543,3,3,0,0,8,2,6,9
+Premier League U18,10068,1,Southampton U18,1113567,3,3,0,0,15,7,8,9
+Premier League U18,10068,2,Newcastle United U18,1113561,3,3,0,0,12,4,8,9
+Premier League U18,10068,2,Tottenham Hotspur U18,1113562,3,3,0,0,20,4,16,9
+Premier League U18,10068,3,Nottingham Forest U18,1281661,2,2,0,0,11,1,10,6
+Premier League U18,10068,3,Fulham U18,1113550,3,2,1,0,14,7,7,7
+Premier League U18,10068,4,Burnley U18,1183384,3,1,1,1,6,4,2,4
+Premier League U18,10068,4,Brighton & Hove Albion U18,1113555,3,2,0,1,9,9,0,6
+Premier League U18,10068,5,Liverpool U18,1113546,3,1,1,1,7,6,1,4
+Premier League U18,10068,5,Chelsea U18,1113552,3,2,0,1,12,5,7,6
+Premier League U18,10068,6,Blackburn Rovers U18,1113560,3,1,0,2,3,14,-11,3
+Premier League U18,10068,6,Ipswich Town U18,1791531,3,2,0,1,11,8,3,6
+Premier League U18,10068,7,Derby County U18,1113549,3,1,0,2,5,8,-3,3
+Premier League U18,10068,7,West Ham United U18,1113558,3,2,0,1,11,9,2,6
+Premier League U18,10068,8,Everton U18,1113547,2,1,0,1,6,4,2,3
+Premier League U18,10068,8,Aston Villa U18,1113564,3,1,2,0,8,7,1,5
+Premier League U18,10068,9,Leeds United U18,1183383,3,1,0,2,4,12,-8,3
+Premier League U18,10068,9,AFC Bournemouth U18,2137380,3,1,1,1,11,12,-1,4
+Premier League U18,10068,10,Manchester United U18,1113551,2,1,0,1,3,1,2,3
+Premier League U18,10068,10,Brentford U18,2137381,3,1,0,2,9,9,0,3
+Premier League U18,10068,11,Stoke City U18,1113556,3,1,0,2,4,6,-2,3
+Premier League U18,10068,11,Crystal Palace U18,1183385,3,1,0,2,4,6,-2,3
+Premier League U18,10068,12,Middlesbrough U18,1113557,3,0,2,1,5,7,-2,2
+Premier League U18,10068,12,Norwich City U18,1113570,3,1,0,2,8,15,-7,3
+Premier League U18,10068,13,Leicester City U18,1113559,1,0,1,0,2,2,0,1
+Premier League U18,10068,13,Arsenal U18,1113566,3,0,1,2,2,5,-3,1
+Premier League U18,10068,14,Sunderland U18,1113563,1,0,1,0,2,2,0,1
+Premier League U18,10068,14,West Bromwich Albion U18,1113548,3,0,1,2,0,7,-7,1
+Premier League U18,10068,15,Wolverhampton Wanderers U18,1113554,3,0,0,3,3,8,-5,0
+Premier League U18,10068,15,Birmingham City U18,1281663,3,0,0,3,4,15,-11,0
+Premier League U18,10068,16,Reading U18,1113569,3,0,0,3,4,17,-13,0
+Major League Soccer,130,1,Nashville SC,915807,22,16,4,2,47,17,30,52
+Major League Soccer,130,1,Vancouver Whitecaps,307691,21,13,4,4,48,18,30,43
+Major League Soccer,130,2,Inter Miami CF,960720,22,12,6,4,56,41,15,42
+Major League Soccer,130,2,Houston Dynamo FC,8259,22,12,3,7,30,26,4,39
+Major League Soccer,130,3,Chicago Fire FC,6397,21,11,4,6,39,28,11,37
+Major League Soccer,130,3,Los Angeles FC,867280,23,10,6,7,36,22,14,36
+Major League Soccer,130,4,New England Revolution,6580,22,11,4,7,36,27,9,37
+Major League Soccer,130,4,San Jose Earthquakes,6603,22,10,4,8,39,33,6,34
+Major League Soccer,130,5,Charlotte FC,1323940,22,10,5,7,40,32,8,35
+Major League Soccer,130,5,FC Dallas,6399,22,9,7,6,41,37,4,34
+Major League Soccer,130,6,FC Cincinnati,722265,22,8,7,7,49,51,-2,31
+Major League Soccer,130,6,St. Louis City,1427963,22,9,7,6,33,30,3,34
+Major League Soccer,130,7,New York City FC,546238,22,7,7,8,36,31,5,28
+Major League Soccer,130,7,Colorado Rapids,8314,22,10,1,11,31,28,3,31
+Major League Soccer,130,8,Red Bull New York,6514,22,7,5,10,32,46,-14,26
+Major League Soccer,130,8,San Diego FC,1701119,22,8,6,8,40,33,7,30
+Major League Soccer,130,9,Orlando City,267810,22,7,4,11,37,54,-17,25
+Major League Soccer,130,9,Minnesota United,207242,22,7,8,7,30,32,-2,29
+Major League Soccer,130,10,Toronto FC,56453,22,5,10,7,32,38,-6,25
+Major League Soccer,130,10,Real Salt Lake,6606,21,8,4,9,34,33,1,28
+Major League Soccer,130,11,DC United,6602,22,5,10,7,28,36,-8,25
+Major League Soccer,130,11,Portland Timbers,307690,22,8,4,10,39,39,0,28
+Major League Soccer,130,12,Philadelphia Union,191716,22,6,6,10,34,39,-5,24
+Major League Soccer,130,12,Seattle Sounders FC,130394,21,7,5,9,24,29,-5,26
+Major League Soccer,130,13,Atlanta United,773958,22,6,3,13,25,38,-13,21
+Major League Soccer,130,13,LA Galaxy,6637,23,6,8,9,28,35,-7,26
+Major League Soccer,130,14,CF Montréal,161195,22,5,6,11,30,46,-16,21
+Major League Soccer,130,14,Austin FC,1218886,22,6,6,10,28,41,-13,24
+Major League Soccer,130,15,Columbus Crew,6001,22,5,5,12,31,39,-8,20
+Major League Soccer,130,15,Sporting Kansas City,6604,22,4,3,15,20,54,-34,15
+League of Ireland Premier Division,126,1,Shamrock Rovers,4131,28,16,7,5,46,27,19,55
+League of Ireland Premier Division,126,2,St. Patrick's Athletic,1854,29,14,8,7,45,25,20,50
+League of Ireland Premier Division,126,3,Bohemian FC,4594,29,14,8,7,50,34,16,50
+League of Ireland Premier Division,126,4,Dundalk,1853,29,10,10,9,46,45,1,40
+League of Ireland Premier Division,126,5,Shelbourne,5751,27,8,11,8,37,39,-2,35
+League of Ireland Premier Division,126,6,Derry City,8338,29,7,13,9,41,40,1,34
+League of Ireland Premier Division,126,7,Galway United FC,520517,28,8,10,10,36,42,-6,34
+League of Ireland Premier Division,126,8,Waterford FC,6042,29,7,11,11,39,48,-9,32
+League of Ireland Premier Division,126,9,Drogheda United,8339,29,6,10,13,33,48,-15,28
+League of Ireland Premier Division,126,10,Sligo Rovers,6361,29,5,8,16,23,48,-25,23
+LaLiga,87,1,Real Madrid,8633,3,3,0,0,10,2,8,9
+LaLiga,87,2,Atlético Madrid,9906,3,2,1,0,7,3,4,7
+LaLiga,87,3,Deportivo Alavés,9866,3,2,1,0,5,1,4,7
+LaLiga,87,4,Osasuna,8371,3,2,1,0,3,1,2,7
+LaLiga,87,5,Barcelona,8634,2,2,0,0,7,0,7,6
+LaLiga,87,6,Sevilla,8302,3,2,0,1,6,5,1,6
+LaLiga,87,7,Real Betis,8603,3,2,0,1,4,5,-1,6
+LaLiga,87,8,Deportivo A Coruña,9783,3,1,2,0,5,3,2,5
+LaLiga,87,9,Levante,8581,3,1,1,1,5,5,0,4
+LaLiga,87,10,Racing Santander,8696,3,1,1,1,5,5,0,4
+LaLiga,87,11,Espanyol,8558,3,1,0,2,5,4,1,3
+LaLiga,87,12,Athletic Club,8315,3,1,0,2,3,5,-2,3
+LaLiga,87,13,Real Sociedad,8560,3,1,0,2,3,6,-3,3
+LaLiga,87,14,Getafe,8305,3,1,0,2,1,4,-3,3
+LaLiga,87,15,Villarreal,10205,3,0,2,1,4,5,-1,2
+LaLiga,87,16,Rayo Vallecano,8370,2,0,1,1,2,3,-1,1
+LaLiga,87,17,Celta Vigo,9910,3,0,1,2,1,4,-3,1
+LaLiga,87,18,Valencia,10267,3,0,1,2,1,4,-3,1
+LaLiga,87,19,Elche,10268,3,0,1,2,3,9,-6,1
+LaLiga,87,20,Málaga,9864,3,0,1,2,1,7,-6,1
+Veikkausliiga,51,1,KuPS,1693,22,12,7,3,38,23,15,43
+Veikkausliiga,51,2,FC Inter Turku,6550,22,11,9,2,29,16,13,42
+Veikkausliiga,51,3,HJK,9861,22,11,4,7,36,27,9,37
+Veikkausliiga,51,4,IF Gnistan,2361,22,10,6,6,36,29,7,36
+Veikkausliiga,51,5,AC Oulu,4449,22,10,4,8,25,25,0,34
+Veikkausliiga,51,6,VPS,6597,22,9,6,7,29,22,7,33
+Veikkausliiga,51,7,FC Lahti,8424,22,9,5,8,26,19,7,32
+Veikkausliiga,51,8,TPS,6633,22,8,7,7,28,23,5,31
+Veikkausliiga,51,9,Ilves,162146,22,7,4,11,34,37,-3,25
+Veikkausliiga,51,10,SJK,162162,22,4,7,11,25,33,-8,19
+Veikkausliiga,51,11,FF Jaro,8473,22,3,6,13,18,44,-26,15
+Veikkausliiga,51,12,IFK Mariehamn,6634,22,3,5,14,17,43,-26,14
+2. Bundesliga,146,1,1. FC Nürnberg,8165,3,3,0,0,11,3,8,9
+2. Bundesliga,146,2,Hertha BSC,8177,3,3,0,0,10,4,6,9
+2. Bundesliga,146,3,Wolfsburg,8721,3,2,1,0,6,2,4,7
+2. Bundesliga,146,4,FC Heidenheim,94937,3,2,0,1,10,10,0,6
+2. Bundesliga,146,5,Magdeburg,8188,3,2,0,1,6,6,0,6
+2. Bundesliga,146,6,Kaiserslautern,8350,3,1,2,0,2,1,1,5
+2. Bundesliga,146,7,Greuther Fürth,8357,3,1,1,1,7,8,-1,4
+2. Bundesliga,146,8,Karlsruher SC,8295,3,1,1,1,4,6,-2,4
+2. Bundesliga,146,9,Eintracht Braunschweig,9776,3,1,0,2,9,7,2,3
+2. Bundesliga,146,10,Arminia Bielefeld,9912,3,1,0,2,5,6,-1,3
+2. Bundesliga,146,11,Bochum,9911,3,1,0,2,1,2,-1,3
+2. Bundesliga,146,12,Energie Cottbus,8398,3,1,0,2,6,8,-2,3
+2. Bundesliga,146,13,Hannover 96,9904,3,1,0,2,2,4,-2,3
+2. Bundesliga,146,14,VfL Osnabrück,9775,3,1,0,2,4,7,-3,3
+2. Bundesliga,146,15,Dynamo Dresden,8480,3,1,0,2,4,8,-4,3
+2. Bundesliga,146,16,St. Pauli,8152,3,0,2,1,4,5,-1,2
+2. Bundesliga,146,17,Holstein Kiel,8150,3,0,2,1,4,6,-2,2
+2. Bundesliga,146,18,Darmstadt,8262,3,0,1,2,2,4,-2,1
+Highland / Lowland,9545,1,Tranent,1215940,6,6,0,0,13,2,11,18
+Highland / Lowland,9545,1,Auchinleck Talbot,183952,7,5,1,1,28,7,21,16
+Highland / Lowland,9545,1,Brora Rangers,97904,8,6,2,0,26,7,19,20
+Highland / Lowland,9545,2,Broxburn Athletic,1088196,6,5,1,0,11,2,9,16
+Highland / Lowland,9545,2,Pollok,97922,6,5,1,0,15,5,10,16
+Highland / Lowland,9545,2,Buckie Thistle,1630,7,6,1,0,26,5,21,19
+Highland / Lowland,9545,3,Brechin City,8146,5,4,1,0,14,8,6,13
+Highland / Lowland,9545,3,Caledonian Braves,861453,7,5,1,1,23,14,9,16
+Highland / Lowland,9545,3,Fraserburgh,46037,8,5,2,1,19,4,15,17
+Highland / Lowland,9545,4,Lochee United,154584,6,4,1,1,13,10,3,13
+Highland / Lowland,9545,4,Largs Thistle,2063858,7,5,1,1,12,5,7,16
+Highland / Lowland,9545,4,Formartine United,351618,8,5,1,2,17,13,4,16
+Highland / Lowland,9545,5,Bonnyrigg Rose,183953,6,4,0,2,15,5,10,12
+Highland / Lowland,9545,5,Kilwinning Rangers,1402055,7,5,0,2,21,13,8,15
+Highland / Lowland,9545,5,Inverurie Loco Works,1908,8,4,3,1,15,10,5,15
+Highland / Lowland,9545,6,Hill of Beath Hawthorn,1088194,6,4,0,2,10,10,0,12
+Highland / Lowland,9545,6,Celtic B,1266921,7,4,2,1,25,12,13,14
+Highland / Lowland,9545,6,Lossiemouth,5754,8,4,2,2,13,13,0,14
+Highland / Lowland,9545,7,Linlithgow Rose,97914,6,3,1,2,13,9,4,10
+Highland / Lowland,9545,7,Clydebank,6102,6,4,1,1,22,14,8,13
+Highland / Lowland,9545,7,Clachnacuddin,4053,7,3,3,1,17,7,10,12
+Highland / Lowland,9545,8,Bo'ness United,214367,6,3,1,2,13,11,2,10
+Highland / Lowland,9545,8,Johnstone Burgh,1809964,6,3,2,1,13,8,5,11
+Highland / Lowland,9545,8,Banks O'Dee,154583,8,3,3,2,17,18,-1,12
+Highland / Lowland,9545,9,East Stirlingshire,10220,6,3,1,2,11,11,0,10
+Highland / Lowland,9545,9,Troon Juniors,6114,7,3,0,4,12,12,0,9
+Highland / Lowland,9545,9,Forres Mechanics,1809,8,3,2,3,15,13,2,11
+Highland / Lowland,9545,10,Civil Service Strollers,97910,6,2,1,3,8,11,-3,7
+Highland / Lowland,9545,10,Cumnock Juniors,1292397,6,2,2,2,13,13,0,8
+Highland / Lowland,9545,10,Strathspey Thistle,575415,8,3,1,4,11,11,0,10
+Highland / Lowland,9545,11,Berwick Rangers,8368,6,1,1,4,7,13,-6,4
+Highland / Lowland,9545,11,Beith Juniors,792770,7,2,1,4,12,21,-9,7
+Highland / Lowland,9545,11,Turriff United,351621,8,3,1,4,8,9,-1,10
+Highland / Lowland,9545,12,Musselburgh Athletic,1215929,6,1,1,4,7,13,-6,4
+Highland / Lowland,9545,12,Cumbernauld Colts,660561,7,1,3,3,12,15,-3,6
+Highland / Lowland,9545,12,Huntly,2498,7,2,2,3,9,14,-5,8
+Highland / Lowland,9545,13,Cowdenbeath,8144,6,1,0,5,8,12,-4,3
+Highland / Lowland,9545,13,Albion Rovers,8612,6,1,1,4,6,11,-5,4
+Highland / Lowland,9545,13,Invergordon,1809963,8,2,1,5,10,18,-8,7
+Highland / Lowland,9545,14,Gala Fairydean Rovers,1811,6,1,0,5,7,16,-9,3
+Highland / Lowland,9545,14,Gretna FC 2008,711844,7,1,1,5,13,25,-12,4
+Highland / Lowland,9545,14,Keith,1633,7,1,3,3,10,15,-5,6
+Highland / Lowland,9545,15,Dunipace,1292390,5,0,1,4,4,11,-7,1
+Highland / Lowland,9545,15,Renfrew FC,2063860,7,0,1,6,10,25,-15,1
+Highland / Lowland,9545,15,Nairn County,97920,8,1,3,4,8,15,-7,6
+Highland / Lowland,9545,16,Stirling University FC,372898,6,0,0,6,7,17,-10,0
+Highland / Lowland,9545,16,Dalbeattie Star,2270,6,0,1,5,3,20,-17,1
+Highland / Lowland,9545,16,Deveronvale,1810,7,1,2,4,5,10,-5,5
+Highland / Lowland,9545,17,Newton Stewart,97913,6,0,1,5,6,26,-20,1
+Highland / Lowland,9545,17,Rothes,97917,7,1,0,6,6,28,-22,3
+Highland / Lowland,9545,18,Wick Academy,1776,8,0,0,8,4,26,-22,0
+Serie A,55,1,Roma,8686,2,2,0,0,8,0,8,6
+Serie A,55,2,Inter,8636,2,2,0,0,5,1,4,6
+Serie A,55,3,Milan,8564,2,2,0,0,4,1,3,6
+Serie A,55,4,Juventus,9885,2,2,0,0,3,0,3,6
+Serie A,55,5,Lazio,8543,2,2,0,0,2,0,2,6
+Serie A,55,6,Udinese,8600,2,1,1,0,4,3,1,4
+Serie A,55,7,Como,10171,2,1,1,0,3,2,1,4
+Serie A,55,8,Atalanta,8524,2,1,1,0,2,1,1,4
+Serie A,55,9,Frosinone,9891,2,1,0,1,3,1,2,3
+Serie A,55,10,Napoli,9875,2,1,0,1,3,2,1,3
+Serie A,55,11,Sassuolo,7943,2,1,0,1,3,3,0,3
+Serie A,55,12,Cagliari,8529,2,1,0,1,1,1,0,3
+Serie A,55,13,Lecce,9888,2,1,0,1,2,4,-2,3
+Serie A,55,14,Bologna,9857,2,0,1,1,0,1,-1,1
+Serie A,55,15,Torino,9804,2,0,0,2,2,4,-2,0
+Serie A,55,16,Genoa,10233,2,0,0,2,0,3,-3,0
+Serie A,55,17,Parma,10167,2,0,0,2,0,3,-3,0
+Serie A,55,18,Monza,6504,2,0,0,2,3,7,-4,0
+Serie A,55,19,Venezia,7881,2,0,0,2,0,4,-4,0
+Serie A,55,20,Fiorentina,8535,2,0,0,2,0,7,-7,0
+Super Lig,71,1,Galatasaray,8637,3,2,1,0,9,4,5,7
+Super Lig,71,2,Gençlerbirliği,7800,3,2,1,0,4,2,2,7
+Super Lig,71,3,Fenerbahçe,8695,3,2,0,1,7,4,3,6
+Super Lig,71,4,Beşiktaş,10188,3,2,0,1,3,1,2,6
+Super Lig,71,5,Kocaelispor,1569,3,2,0,1,4,3,1,6
+Super Lig,71,6,Rizespor,2166,3,2,0,1,3,3,0,6
+Super Lig,71,7,Trabzonspor,9752,3,1,2,0,4,3,1,5
+Super Lig,71,8,Kasımpaşa,4685,3,1,2,0,3,2,1,5
+Super Lig,71,9,Başakşehir,1933,3,1,1,1,4,3,1,4
+Super Lig,71,10,Amed Sportif,96498,3,1,1,1,4,3,1,4
+Super Lig,71,11,Samsunspor,9750,3,1,1,1,5,5,0,4
+Super Lig,71,12,Alanyaspor,4678,3,1,1,1,3,3,0,4
+Super Lig,71,13,Gaziantep FK,4081,3,1,1,1,3,3,0,4
+Super Lig,71,14,Eyüpspor,4681,3,1,0,2,2,3,-1,3
+Super Lig,71,15,Göztepe,1925,3,0,1,2,5,7,-2,1
+Super Lig,71,16,Çorum FK,357274,3,0,1,2,2,5,-3,1
+Super Lig,71,17,Erzurumspor FK,281467,3,0,1,2,1,8,-7,1
+Super Lig,71,18,Konyaspor,8622,3,0,0,3,3,7,-4,0
+A-League,113,1,Adelaide United,8008,0,0,0,0,0,0,0,0
+A-League,113,2,Auckland FC,1642068,0,0,0,0,0,0,0,0
+A-League,113,3,Brisbane Roar FC,8118,0,0,0,0,0,0,0,0
+A-League,113,4,Central Coast Mariners,8164,0,0,0,0,0,0,0,0
+A-League,113,5,Macarthur FC,1209973,0,0,0,0,0,0,0,0
+A-League,113,6,Melbourne City FC,203576,0,0,0,0,0,0,0,0
+A-League,113,7,Melbourne Victory,6230,0,0,0,0,0,0,0,0
+A-League,113,8,Newcastle Jets,6454,0,0,0,0,0,0,0,0
+A-League,113,9,Perth Glory,7961,0,0,0,0,0,0,0,0
+A-League,113,10,Sydney FC,10164,0,0,0,0,0,0,0,0
+A-League,113,11,Wellington Phoenix,78785,0,0,0,0,0,0,0,0
+A-League,113,12,Western Sydney Wanderers FC,323834,0,0,0,0,0,0,0,0
+3. Liga,208,1,MSV Duisburg,8293,3,3,0,0,10,2,8,9
+3. Liga,208,2,Hansa Rostock,8294,3,2,1,0,10,7,3,7
+3. Liga,208,3,Hoffenheim II,94940,3,2,0,1,9,4,5,6
+3. Liga,208,4,Viktoria Köln 1904,276267,3,2,0,1,9,7,2,6
+3. Liga,208,5,Saarbrücken,8271,3,2,0,1,8,6,2,6
+3. Liga,208,6,Meppen,79904,3,2,0,1,5,3,2,6
+3. Liga,208,7,Ingolstadt,8234,3,1,2,0,5,3,2,5
+3. Liga,208,8,Würzburger Kickers,145486,3,1,1,1,6,5,1,4
+3. Liga,208,9,Waldhof Mannheim,9743,3,1,1,1,7,7,0,4
+3. Liga,208,10,Alemannia Aachen,8396,3,1,1,1,5,5,0,4
+3. Liga,208,11,Fortuna Köln,7786,3,1,1,1,3,3,0,4
+3. Liga,208,12,Preussen Münster,8171,3,1,1,1,5,6,-1,4
+3. Liga,208,13,RW Essen,8296,3,1,1,1,3,5,-2,4
+3. Liga,208,14,TSV Havelse,89338,3,1,0,2,5,6,-1,3
+3. Liga,208,15,Jahn Regensburg,7789,3,1,0,2,6,8,-2,3
+3. Liga,208,16,VfB Stuttgart II,8458,3,1,0,2,4,6,-2,3
+3. Liga,208,17,Fortuna Düsseldorf,8194,3,1,0,2,2,4,-2,3
+3. Liga,208,18,Sonnenhof Großaspach,94941,3,1,0,2,1,4,-3,3
+3. Liga,208,19,Wehen Wiesbaden,8196,3,0,1,2,1,7,-6,1
+3. Liga,208,20,SC Verl,7783,3,0,0,3,4,10,-6,0
+Ligue 1,53,1,Monaco,9829,2,2,0,0,3,0,3,6
+Ligue 1,53,2,Paris FC,6379,2,1,1,0,3,0,3,4
+Ligue 1,53,3,Lille,8639,2,1,1,0,4,2,2,4
+Ligue 1,53,4,Lyon,9748,2,1,1,0,3,1,2,4
+Ligue 1,53,5,Rennes,9851,2,1,1,0,5,4,1,4
+Ligue 1,53,6,Troyes,10242,2,1,1,0,2,1,1,4
+Ligue 1,53,7,Lens,8588,2,1,0,1,6,4,2,3
+Ligue 1,53,8,Marseille,8592,2,1,0,1,4,2,2,3
+Ligue 1,53,9,Angers,8121,2,1,0,1,3,3,0,3
+Ligue 1,53,10,Strasbourg,9848,2,1,0,1,2,5,-3,3
+Ligue 1,53,11,Paris Saint-Germain,9847,2,0,2,0,4,4,0,2
+Ligue 1,53,12,Brest,8521,2,0,2,0,4,4,0,2
+Ligue 1,53,13,Le Mans,8682,2,0,1,1,4,5,-1,1
+Ligue 1,53,14,Le Havre,9746,2,0,1,1,1,2,-1,1
+Ligue 1,53,15,Lorient,8689,2,0,1,1,1,2,-1,1
+Ligue 1,53,16,Toulouse,9941,2,0,1,1,2,4,-2,1
+Ligue 1,53,17,Nice,9831,2,0,1,1,0,3,-3,1
+Ligue 1,53,18,Auxerre,8583,2,0,0,2,3,8,-5,0
+Eredivisie,57,1,AZ Alkmaar,10229,4,4,0,0,13,3,10,12
+Eredivisie,57,2,PSV Eindhoven,8640,4,3,1,0,15,5,10,10
+Eredivisie,57,3,Feyenoord,10235,4,2,2,0,10,6,4,8
+Eredivisie,57,4,Ajax,8593,3,2,1,0,8,2,6,7
+Eredivisie,57,5,Go Ahead Eagles,6433,4,2,1,1,11,9,2,7
+Eredivisie,57,6,Fortuna Sittard,6422,4,2,1,1,8,7,1,7
+Eredivisie,57,7,NEC Nijmegen,8464,3,2,0,1,8,4,4,6
+Eredivisie,57,8,Excelsior,10218,3,2,0,1,7,3,4,6
+Eredivisie,57,9,FC Twente,8611,3,2,0,1,7,3,4,6
+Eredivisie,57,10,FC Groningen,8674,4,2,0,2,9,10,-1,6
+Eredivisie,57,11,SC Heerenveen,10228,4,1,2,1,5,6,-1,5
+Eredivisie,57,12,Sparta Rotterdam,8614,4,1,1,2,7,7,0,4
+Eredivisie,57,13,Telstar,6414,3,1,0,2,3,8,-5,3
+Eredivisie,57,14,PEC Zwolle,6413,4,1,0,3,4,8,-4,3
+Eredivisie,57,15,Willem II,8525,3,0,1,2,4,10,-6,1
+Eredivisie,57,16,ADO Den Haag,10217,4,0,1,3,4,11,-7,1
+Eredivisie,57,17,FC Utrecht,9908,4,0,1,3,6,15,-9,1
+Eredivisie,57,18,Cambuur,7788,4,0,0,4,4,16,-12,0
