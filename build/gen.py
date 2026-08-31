@@ -2987,8 +2987,22 @@ def build_club(cname, ps):
                     + "".join(_sq_card(p) for p in rest) + '</div>')
 
     # ---- top performers this season ----
+    # Only stats earned in THIS shirt, THIS season. A returned loanee's
+    # numbers belong to the loan club's page, and last season's numbers
+    # belong to nobody's.
+    def _here_now(p):
+        if not season_is_current(p.get("season_label")):
+            return False
+        st = (p.get("s_team") or "").strip()
+        if st:
+            a = re.sub(r"(afc|fc)$", "", re.sub(r"[^a-z0-9]", "", st.lower()))
+            b = re.sub(r"(afc|fc)$", "", re.sub(r"[^a-z0-9]", "", cname.lower()))
+            if a != b and a not in b and b not in a:
+                return False
+        return True
     def _leader(key, label):
-        cands = [p for p in ps if has_data(p) and p["season"].get(key)]
+        cands = [p for p in ps if has_data(p) and _here_now(p)
+                 and p["season"].get(key)]
         if not cands:
             return ""
         top = max(cands, key=lambda p: p["season"][key])
@@ -2999,7 +3013,7 @@ def build_club(cname, ps):
                 f'<span>{esc(top["n"])}</span><i>{label}</i></div></a>')
     def _leader_rt():
         cands = [(p, float(p["rating"])) for p in ps
-                 if p.get("rating") and has_data(p)
+                 if p.get("rating") and has_data(p) and _here_now(p)
                  and _int(p["season"].get("ap")) >= 3]
         if not cands:
             return ""
@@ -3795,20 +3809,54 @@ def build_player(p):
     # ---------------- PROFILE: season summary card ----------------
     if has_data(p):
         stale = "" if season_is_current(p.get("season_label")) else '<span class="stale">last season</span>'
-        # The season numbers may belong to a different shirt than the one the
-        # player wears today (a loan spell, a mid-season move). s_team is the
-        # team the scraper attributed the stats to; when it differs from the
-        # current club, badge and name that team instead of implying the
-        # current club played these matches.
-        _nrm = lambda x: re.sub(r"[^a-z0-9]", "", (x or "").lower())
-        _steam = p.get("s_team") or ""
-        _sdiff = bool(_steam) and _nrm(_steam) != _nrm(p["club"]) \
-            and _nrm(_steam) not in _nrm(p["club"]) and _nrm(p["club"]) not in _nrm(_steam)
-        _sbadge = badge_by_id(p.get("s_team_id")) if _sdiff and p.get("s_team_id") else club_badge(_steam if _sdiff else p["club"])
-        _sleague = p.get("s_league") or p["league"]
-        _at = f'<span class="stale">at {esc(_steam)}</span>' if _sdiff else ""
-        season_card = f'''<div class="pcard">
-      <div class="pchead">{_sbadge}<b>{esc(_sleague)} {esc(p.get("season_label") or SEASON)}</b>{_at}{stale}</div>
+        # One card for the whole season: totals across every competition and
+        # every shirt. The badges say WHERE the football was played - most
+        # recent shirt on top when a season crossed clubs.
+        splits = []
+        for _sp in (p.get("s_splits") or "").split(";"):
+            _f = _sp.split("|")
+            if len(_f) >= 8 and _f[0]:
+                splits.append(_f)
+        if splits:
+            tap = tg = ta = tmins = 0
+            wr = wn = 0.0
+            for _f in splits:
+                _ap = _int(_f[3])
+                tap += _ap; tg += _int(_f[4]); ta += _int(_f[5]); tmins += _int(_f[6])
+                try:
+                    wr += float(_f[7]) * _ap; wn += _ap
+                except ValueError:
+                    pass
+            _rt = (wr / wn) if wn else None
+            if _rt is not None:
+                _rtchip = ('<span class="rate %s" title="Season average match rating">%.2f</span>'
+                           % ("hi" if _rt >= 7.3 else ("md" if _rt >= 6.5 else "lo"), _rt))
+            else:
+                _rtchip = rating_chip(p)
+            # shirts by recency: last match date, newest first
+            _seen, shirts = set(), []
+            for _f in sorted(splits, key=lambda f: f[8] if len(f) > 8 else "",
+                             reverse=True):
+                if _f[0] not in _seen:
+                    _seen.add(_f[0]); shirts.append((_f[0], _f[1]))
+            badges = "".join((badge_by_id(tid) if tid else club_badge(nm))
+                             for nm, tid in shirts[:3])
+            if len(shirts) > 1:
+                badges = f'<span class="badgestack">{badges}</span>'
+            names = " · ".join(nm for nm, _ in shirts[:3])
+            season_card = f'''<div class="pcard">
+      <div class="pchead">{badges}<b>{esc(names)}</b><span class="stale">{esc(p.get("season_label") or SEASON)}</span>{stale}</div>
+      <div class="sumgrid">
+        <div><b>{tg}</b><span>Goals</span></div>
+        <div><b>{ta}</b><span>Assists</span></div>
+        <div>{_rtchip}<span>Rating</span></div>
+        <div><b data-live="apps" data-base="{tap}">{tap}</b><span>Matches</span></div>
+        <div><b data-live="starts" data-base="{s["starts"] or 0}">{stat(p,"s_starts",s["starts"])}</b><span>Started</span></div>
+        <div><b data-live="mins" data-base="{tmins}">{tmins}</b><span>Minutes played</span></div>
+      </div></div>'''
+        else:
+            season_card = f'''<div class="pcard">
+      <div class="pchead">{club_badge(p["club"])}<b>{esc(p.get("s_league") or p["league"])} {esc(p.get("season_label") or SEASON)}</b>{stale}</div>
       <div class="sumgrid">
         <div><b>{stat(p,"s_goals",s["g"])}</b><span>Goals</span></div>
         <div><b>{stat(p,"s_assists",s["a"])}</b><span>Assists</span></div>
@@ -3816,30 +3864,6 @@ def build_player(p):
         <div><b data-live="apps" data-base="{s["ap"] or 0}">{stat(p,"s_apps",s["ap"])}</b><span>Matches</span></div>
         <div><b data-live="starts" data-base="{s["starts"] or 0}">{stat(p,"s_starts",s["starts"])}</b><span>Started</span></div>
         <div><b data-live="mins" data-base="{s["mins"] or 0}">{stat(p,"s_mins",s["mins"])}</b><span>Minutes played</span></div>
-      </div></div>'''
-        # Further spells this season (the parent club after a loan, the old
-        # club after a January move) get their own smaller cards - but only
-        # when the season is genuinely split across shirts. A normal player's
-        # cup competitions don't need cards of their own.
-        for _sp in ((p.get("s_splits") or "").split(";")[1:3] if _sdiff else []):
-            _f = _sp.split("|")
-            if len(_f) < 8 or not _f[0]:
-                continue
-            _spr = _f[7]
-            try:
-                _sprf = float(_spr)
-                _spchip = ('<span class="rate %s sm">%.2f</span>'
-                           % ("hi" if _sprf >= 7.3 else ("md" if _sprf >= 6.5 else "lo"), _sprf))
-            except ValueError:
-                _spchip = '<span class="rate none">—</span>'
-            season_card += f'''<div class="pcard">
-      <div class="pchead">{badge_by_id(_f[1]) if _f[1] else club_badge(_f[0])}<b>{esc(_f[2])} {esc(p.get("season_label") or SEASON)}</b><span class="stale">at {esc(_f[0])}</span></div>
-      <div class="sumgrid">
-        <div><b>{esc(_f[4])}</b><span>Goals</span></div>
-        <div><b>{esc(_f[5])}</b><span>Assists</span></div>
-        <div>{_spchip}<span>Rating</span></div>
-        <div><b>{esc(_f[3])}</b><span>Matches</span></div>
-        <div><b>{esc(_f[6])}</b><span>Minutes played</span></div>
       </div></div>'''
     elif p["slug"] in MISMATCHED:
         season_card = ('<div class="pcard nodata">We haven\'t matched this player to a record on our stats '

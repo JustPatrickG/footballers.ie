@@ -1587,8 +1587,12 @@ def season_splits(mlist, now, label=None):
     for m in mlist:
         if not (m.get("played") and start <= m["utc"] <= end):
             continue
-        if "friendl" in norm(m.get("comp", "")):
-            continue
+        _c = norm(m.get("comp", ""))
+        if any(t in _c for t in (
+                "friendl", "world cup", "nations league", "africa cup",
+                "gold cup", "copa america", "euro qualification",
+                "euro grp", "international")):
+            continue                    # country football, not club football
         if "ireland" in norm(m.get("team", "")):
             continue
         key = (norm(m.get("team", "")), norm(m.get("comp", "")))
@@ -1596,9 +1600,12 @@ def season_splits(mlist, now, label=None):
             tid = m.get("home_id") if m.get("side") == "H" else m.get("away_id")
             agg[key] = {"team": m.get("team", ""), "team_id": str(tid or ""),
                         "comp": m.get("comp", ""), "apps": 0, "goals": 0,
-                        "assists": 0, "mins": 0, "_r": []}
+                        "assists": 0, "mins": 0, "last": "", "_r": []}
             order.append(key)
         a = agg[key]
+        d = m["utc"].strftime("%Y-%m-%d")
+        if d > a["last"]:
+            a["last"] = d
         a["apps"] += 1
         a["goals"] += int(m.get("goals") or 0)
         a["assists"] += int(m.get("assists") or 0)
@@ -2022,7 +2029,7 @@ def scrape(args):
         splits_str = ";".join(
             "|".join([_clean(sp["team"]), sp["team_id"], _clean(sp["comp"]),
                       str(sp["apps"]), str(sp["goals"]), str(sp["assists"]),
-                      str(sp["mins"]), sp["rating"]])
+                      str(sp["mins"]), sp["rating"], sp.get("last", "")])
             for sp in splits)
         if splits and norm(splits[0]["team"]) != norm(source_club):
             top = splits[0]

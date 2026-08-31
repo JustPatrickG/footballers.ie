@@ -1507,3 +1507,9 @@ a.ltr:hover{background:var(--panel2)}
 a.sitebanner:hover{background:var(--panel)}
 .maintwrap{min-height:55vh;display:flex;align-items:center;justify-content:center;text-align:center}
 .maintcard p{color:var(--mute);margin-top:12px;max-width:420px}
+/* overlapping club badges on the season card */
+.badgestack{display:inline-flex;align-items:center}
+.badgestack .badge{position:relative;border-radius:50%;background:var(--panel2);box-shadow:0 0 0 2px var(--panel)}
+.badgestack .badge:first-child{z-index:3}
+.badgestack .badge:nth-child(2){z-index:2;margin-left:-9px}
+.badgestack .badge:nth-child(3){z-index:1;margin-left:-9px}
