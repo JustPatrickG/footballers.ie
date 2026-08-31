@@ -95,6 +95,24 @@ def get_json(url, debug_name=None):
 
 
 MATCH_API = "https://www.fotmob.com/api/data/matchDetails?matchId={mid}"
+ALL_LEAGUES_API = "https://www.fotmob.com/api/allLeagues"
+LEAGUE_API = ("https://www.fotmob.com/api/leagues?id={lid}"
+              "&tab=table&type=league&timeZone=UTC")
+
+# League name (as our data spells it) -> source league id, for the leagues
+# players actually sit in. Anything not here is discovered by name from the
+# allLeagues listing and then VALIDATED: a candidate table is only accepted
+# if it contains at least one club our players play at, so "Premiership"
+# (Scotland) can never be confused with another country's "Premiership".
+CURATED_LEAGUE_IDS = {
+    "premier league": 47, "championship": 48, "league one": 108,
+    "league two": 109, "national league": 117,
+    "premier division": 126, "first division": 218,
+    "league of ireland premier division": 126,
+    "league of ireland first division": 218,
+    "laliga": 87, "serie a": 55, "bundesliga": 54, "ligue 1": 53,
+    "major league soccer": 130, "eredivisie": 57,
+}
 MATCH_BY_ID = "https://www.fotmob.com/match/{mid}"
 
 
@@ -1672,6 +1690,124 @@ def team_primary_league(tid, tname, _cache={}):
     return league
 
 
+def parse_table_rows(data):
+    """Hunt the league JSON for standings rows. A row is any dict carrying
+    a team name/id plus played/pts - the nesting drifts, the fields don't."""
+    rows, seen = [], set()
+    def walk(o):
+        if isinstance(o, dict):
+            if ("id" in o and ("name" in o or "shortName" in o)
+                    and "played" in o and "pts" in o):
+                tid = str(o.get("id") or "")
+                if tid and tid not in seen:
+                    seen.add(tid)
+                    scores = str(o.get("scoresStr") or "")
+                    m = re.match(r"(\d+)\s*-\s*(\d+)", scores)
+                    rows.append({
+                        "team": o.get("name") or o.get("shortName") or "",
+                        "team_id": tid,
+                        "idx": o.get("idx") or len(rows) + 1,
+                        "played": o.get("played", ""),
+                        "wins": o.get("wins", ""),
+                        "draws": o.get("draws", ""),
+                        "losses": o.get("losses", ""),
+                        "gf": m.group(1) if m else "",
+                        "ga": m.group(2) if m else "",
+                        "gd": o.get("goalConDiff", ""),
+                        "pts": o.get("pts", ""),
+                    })
+            for v in o.values():
+                walk(v)
+        elif isinstance(o, list):
+            for i in o:
+                walk(i)
+    walk(data)
+    rows.sort(key=lambda r: (int(r["idx"]) if str(r["idx"]).isdigit()
+                             else 999))
+    return rows
+
+
+def cmd_tables(args):
+    """League tables for every league our players sit in ->
+    data/api/tables.csv. Curated ids are trusted; discovered ids must
+    prove themselves by containing a club we track."""
+    root = SCRAPER_DIR.parent
+    by_league = {}
+    with open(root / "data/api/players.csv", newline="",
+              encoding="utf-8") as f:
+        for r in csv.DictReader(f):
+            lg = (r.get("league") or "").strip()
+            cl = (r.get("club") or "").strip()
+            if lg and cl:
+                by_league.setdefault(lg, set()).add(cl)
+    targets = {lg: clubs for lg, clubs in by_league.items()
+               if len(clubs) >= 2 or "league of ireland" in norm(lg)
+               or norm(lg) in CURATED_LEAGUE_IDS}
+
+    catalogue = {}          # norm(league name) -> [ids]
+    try:
+        alll = get_json(ALL_LEAGUES_API)
+        for grp in find_all(alll, "leagues"):
+            if not isinstance(grp, list):
+                continue
+            for lg in grp:
+                if isinstance(lg, dict) and lg.get("id") and lg.get("name"):
+                    catalogue.setdefault(norm(lg["name"]),
+                                         []).append(lg["id"])
+    except Exception as e:
+        print(f"  allLeagues listing failed ({e}) - curated ids only")
+
+    out_rows, done_ids = [], {}
+    for lg, clubs in sorted(targets.items(),
+                            key=lambda kv: -len(kv[1])):
+        nl = norm(lg)
+        cands = []
+        if nl in CURATED_LEAGUE_IDS:
+            cands = [(CURATED_LEAGUE_IDS[nl], True)]
+        else:
+            cands = [(i, False) for i in catalogue.get(nl, [])[:4]]
+        if not cands:
+            print(f"  ?? {lg}: no source league found")
+            continue
+        best, best_score = None, -1
+        for lid, trusted in cands:
+            if lid in done_ids:
+                rows = done_ids[lid]
+            else:
+                try:
+                    rows = parse_table_rows(
+                        get_json(LEAGUE_API.format(lid=lid)))
+                except Exception as e:
+                    print(f"  !! {lg} (id {lid}): {e}")
+                    continue
+                done_ids[lid] = rows
+                time.sleep(1)
+            names = [norm(r["team"]) for r in rows]
+            score = sum(1 for c in clubs
+                        if any(norm(c) in n or n in norm(c)
+                               for n in names if n))
+            if trusted:
+                score += 1000        # curated ids win unless they 404'd
+            if score > best_score and rows:
+                best, best_score = (lid, rows), score
+        if not best or (best_score <= 0):
+            print(f"  ?? {lg}: no candidate table matched our clubs")
+            continue
+        lid, rows = best
+        for r in rows:
+            out_rows.append([lg, lid, r["idx"], r["team"], r["team_id"],
+                             r["played"], r["wins"], r["draws"],
+                             r["losses"], r["gf"], r["ga"], r["gd"],
+                             r["pts"]])
+        print(f"  ok {lg}: id {lid}, {len(rows)} rows")
+    write_csv(root / "data/api/tables.csv",
+              ["league", "league_id", "idx", "team", "team_id", "played",
+               "wins", "draws", "losses", "gf", "ga", "gd", "pts"],
+              out_rows)
+    print(f"wrote {len(out_rows)} table rows for "
+          f"{len(set(r[0] for r in out_rows))} leagues")
+
+
 def merge_rows(path, new_rows, touched, header_hint=None):
     """Replace rows for the touched players, keep everyone else's.
     header_hint upgrades the file in place when a scrape starts writing
@@ -2994,6 +3130,9 @@ def main():
                     help="how far back to look (default 6)")
     ln.add_argument("--debug", action="store_true")
 
+    tb = sub.add_parser("tables", help="league tables for every league "
+                        "our players sit in -> data/api/tables.csv")
+
     lv = sub.add_parser("live", help="write live.json for matches "
                                      "within +-3h")
     lv.add_argument("--out", default=".")
@@ -3031,6 +3170,8 @@ def main():
         events_cmd(args)
     elif args.cmd == "lineups":
         lineups_cmd(args)
+    elif args.cmd == "tables":
+        cmd_tables(args)
     elif args.cmd == "clubs":
         clubs_file(args)
     elif args.cmd == "ireland":

@@ -826,6 +826,118 @@ NAV = [("News","news.html"),("Players","players.html"),("Transfers","transfers.h
        ("Alerts","alerts.html")]
 
 
+# ---- league tables (data/api/tables.csv, written by the tables scrape) ----
+def _tbl_key(league):
+    k = re.sub(r"[^a-z0-9]", "", (league or "").lower())
+    return re.sub(r"^leagueofireland", "", k)
+
+
+def _load_tables():
+    out = {}
+    for r in _rows("api/tables.csv"):
+        if not (r.get("league") and r.get("team")):
+            continue
+        out.setdefault(_tbl_key(r["league"]), []).append(r)
+    return out
+
+
+TABLES = _load_tables()
+_CLUB_PAGES = {}     # norm club name -> canonical club name
+for _p in PLAYERS:
+    _c = (_p.get("club") or "").strip()
+    if _c and _c not in ("No club", "Unattached", "—"):
+        _k = re.sub(r"(afc|fc)$", "", re.sub(r"[^a-z0-9]", "", _c.lower()))
+        _CLUB_PAGES.setdefault(_k, _c)
+
+
+def table_rows_for(league):
+    return TABLES.get(_tbl_key(league), [])
+
+
+def _row_club_link(team, root):
+    """A table team that we track links to its club page."""
+    k = re.sub(r"[^a-z0-9]", "", (team or "").lower())
+    k = re.sub(r"(afc|fc)$", "", k)
+    hit = _CLUB_PAGES.get(k)
+    return f'{root}{clink(hit)}' if hit else ""
+
+
+def league_table_html(league, root="../", around_club="", title=""):
+    """FotMob-style standings. around_club trims to that club +-3 places
+    (a club page snippet); otherwise the full table. Tracked clubs link
+    through and get the highlight bar."""
+    rows = table_rows_for(league)
+    if not rows:
+        return ""
+    focus = -1
+    if around_club:
+        ck = re.sub(r"[^a-z0-9]", "", around_club.lower())
+        ck = re.sub(r"(afc|fc)$", "", ck)
+        for i, r in enumerate(rows):
+            tk = re.sub(r"[^a-z0-9]", "", r["team"].lower())
+            tk = re.sub(r"(afc|fc)$", "", tk)
+            if tk == ck or (len(ck) > 3 and (ck in tk or tk in ck)):
+                focus = i
+                break
+        if focus < 0:
+            return ""
+        lo = max(0, min(focus - 3, len(rows) - 7))
+        rows = rows[lo:lo + 7]
+    body = ""
+    for r in rows:
+        link = _row_club_link(r["team"], root)
+        cls = "ltr"
+        tk = re.sub(r"[^a-z0-9]", "", r["team"].lower())
+        fk = re.sub(r"[^a-z0-9]", "", (around_club or "").lower())
+        fk = re.sub(r"(afc|fc)$", "", fk)
+        if around_club and fk and (fk in tk or tk.rstrip("afc") == fk):
+            cls += " me"
+        elif link:
+            cls += " ours"
+        gd = str(r.get("gd") or "")
+        if gd and not gd.startswith("-") and gd not in ("0",):
+            gd = "+" + gd
+        cell = (f'<span class="ltp">{esc(r["idx"])}</span>'
+                f'{badge_by_id(r.get("team_id"), "sm")}'
+                f'<span class="ltn">{esc(r["team"])}</span>'
+                f'<span class="ltc">{esc(r.get("played",""))}</span>'
+                f'<span class="ltc wdl">{esc(r.get("wins",""))}</span>'
+                f'<span class="ltc wdl">{esc(r.get("draws",""))}</span>'
+                f'<span class="ltc wdl">{esc(r.get("losses",""))}</span>'
+                f'<span class="ltc">{esc(gd)}</span>'
+                f'<span class="ltc pts">{esc(r.get("pts",""))}</span>')
+        body += (f'<a class="{cls}" href="{link}">{cell}</a>' if link
+                 else f'<div class="{cls}">{cell}</div>')
+    head = ('<div class="ltr lthead"><span class="ltp">#</span>'
+            '<span class="badge sm generic" style="visibility:hidden"></span>'
+            '<span class="ltn">Team</span><span class="ltc">P</span>'
+            '<span class="ltc wdl">W</span><span class="ltc wdl">D</span>'
+            '<span class="ltc wdl">L</span><span class="ltc">+/-</span>'
+            '<span class="ltc pts">Pts</span></div>')
+    cap = (f'<div class="sec"><h2>{esc(title or "Table")}</h2></div>'
+           if title is not None else "")
+    return f'{cap}<div class="ltable">{head}{body}</div>'
+
+
+def league_position_of(club, league):
+    for r in table_rows_for(league):
+        tk = re.sub(r"[^a-z0-9]", "", r["team"].lower())
+        ck = re.sub(r"[^a-z0-9]", "", (club or "").lower())
+        tk2 = re.sub(r"(afc|fc)$", "", tk)
+        ck2 = re.sub(r"(afc|fc)$", "", ck)
+        if tk2 == ck2 or (len(ck2) > 3 and (ck2 in tk2 or tk2 in ck2)):
+            return str(r["idx"])
+    return ""
+
+
+def _ord_pos(n):
+    try:
+        n = int(n)
+    except (TypeError, ValueError):
+        return ""
+    return f"{n}{'th' if 10 <= n % 100 <= 20 else {1:'st',2:'nd',3:'rd'}.get(n % 10, 'th')}"
+
+
 def matchweek_label():
     """Work out the label from the data: the window the current fixtures cover."""
     if MATCHWEEK: return MATCHWEEK
@@ -2720,11 +2832,30 @@ def build_clubs_index():
                   f'<div class="cn">{esc(c)}</div>'
                   f'<div class="cl2">{leagues} league{"s" if leagues!=1 else ""}</div>'
                   f'<div class="cc">{len(ps)} Irish player{"s" if len(ps)!=1 else ""}</div></a>')
+    # leagues we hold a live table for, most Irish players first
+    lg_counts = {}
+    for p in PLAYERS:
+        lg = (p.get("league") or "").strip()
+        if lg and table_rows_for(lg):
+            lg_counts[lg] = lg_counts.get(lg, 0) + 1
+    lg_cards = ""
+    for lg in sorted(lg_counts, key=lambda x: -lg_counts[x]):
+        cn = country_of(lg)
+        if not cn:
+            continue
+        lg_cards += (f'<a class="clubcard" href="league/{club_slug(cn)}-{club_slug(lg)}.html">'
+                     f'<div class="cn">{esc(lg)}</div>'
+                     f'<div class="cl2">{esc(cn)} · table</div>'
+                     f'<div class="cc">{lg_counts[lg]} Irish player{"s" if lg_counts[lg]!=1 else ""}</div></a>')
+    lg_html = (f'<div class="sec"><h2>Leagues</h2></div>'
+               f'<div class="clubgrid">{lg_cards}</div>'
+               f'<div class="sec"><h2>By country</h2></div>') if lg_cards else ""
     body = (f'<div class="pagehead"><h1>Clubs</h1>'
             f'<p>Pick a country, then a league, then a club.</p></div>'
             f'<a class="mapcta" href="where-are-the-irish.html">'
             f'<div><b>Where are the Irish?</b><span>See every country on a map</span></div>'
             f'<span class="go">Open map →</span></a>'
+            f'{lg_html}'
             f'<div class="clubgrid">{cards}</div>')
     return shell("Clubs — footballers.ie","Irish players by country, league and club.","", "clubs.html", body,
                  canonical="clubs.html",
@@ -2775,9 +2906,12 @@ def build_league(cname, lname, ps):
                   f'<div class="cn">{club_badge(c)}{esc(c)}</div>'
                   f'<div class="cl2">{esc(lname)}</div>'
                   f'<div class="cc">{len(cp)} Irish player{"s" if len(cp)!=1 else ""}</div></a>')
+    tbl = league_table_html(lname, "../", title="Table")
     body = (f'<a class="crumb" data-back href="../country/{country_slug(cname)}.html">← Back</a>'
             f'<div class="pagehead"><h1>{esc(lname)}</h1>'
             f'<p>{esc(cname)} · {len(ps)} Irish player{"s" if len(ps)!=1 else ""} at {len(order)} club{"s" if len(order)!=1 else ""}.</p></div>'
+            f'{tbl}'
+            f'<div class="sec"><h2>Irish players by club</h2></div>'
             f'<div class="clubgrid">{cards}</div>')
     return shell(f"{lname} — Irish players — footballers.ie",
                  f"Irish players in the {lname}.", "../", "clubs.html", body,
@@ -2788,16 +2922,83 @@ def build_league(cname, lname, ps):
                             f="League"))
 
 def build_club(cname, ps):
-    rows = "".join(player_row(p, "../") for p in ps)
+    league = ps[0]["league"] if ps[0]["league"] not in ("", "—") else ""
+    pos = league_position_of(cname, league) if league else ""
+    subline = " · ".join(x for x in (
+        f"{_ord_pos(pos)} in the {league}" if pos else league,
+        f'{len(ps)} Irish player{"s" if len(ps) != 1 else ""} tracked') if x)
+
+    # ---- squad, grouped by position like a team sheet ----
+    LINES = [("Goalkeepers", ("GK",)), ("Defenders", ("DEF", "DF")),
+             ("Midfielders", ("MID", "MF")), ("Forwards", ("FWD", "FW", "ST"))]
+    grouped, used = "", set()
+    def _sq_card(p):
+        age = f'{p["age"]} yrs' if p.get("age") else ""
+        meta = " · ".join(x for x in (age,) if x)
+        return (f'<a class="sqpcard" href="../player/{p["slug"]}.html">'
+                f'{avatar(p, "../", "sm")}<div class="sq2">'
+                f'<b>{esc(p["n"])}</b><span>{esc(meta)}</span></div>'
+                f'<div class="mn">{rating_chip(p, True)}</div>{star(p)}</a>')
+    for label, codes in LINES:
+        grp = [p for p in ps if (p.get("pos") or "").upper() in codes]
+        used.update(p["slug"] for p in grp)
+        if grp:
+            grouped += (f'<div class="sqhead"><b>{label}</b>'
+                        f'<span>{len(grp)}</span></div>'
+                        f'<div class="squadgrid">'
+                        + "".join(_sq_card(p) for p in grp) + '</div>')
+    rest = [p for p in ps if p["slug"] not in used]
+    if rest:
+        grouped += ('<div class="sqhead"><b>Players</b>'
+                    f'<span>{len(rest)}</span></div><div class="squadgrid">'
+                    + "".join(_sq_card(p) for p in rest) + '</div>')
+
+    # ---- top performers this season ----
+    def _leader(key, label):
+        cands = [p for p in ps if has_data(p) and p["season"].get(key)]
+        if not cands:
+            return ""
+        top = max(cands, key=lambda p: p["season"][key])
+        if not top["season"][key]:
+            return ""
+        return (f'<a class="leader" href="../player/{top["slug"]}.html">'
+                f'<b>{top["season"][key]}</b><div class="lwho">'
+                f'<span>{esc(top["n"])}</span><i>{label}</i></div></a>')
+    def _leader_rt():
+        cands = [(p, float(p["rating"])) for p in ps
+                 if p.get("rating") and has_data(p)
+                 and _int(p["season"].get("ap")) >= 3]
+        if not cands:
+            return ""
+        top = max(cands, key=lambda t: t[1])
+        return (f'<a class="leader" href="../player/{top[0]["slug"]}.html">'
+                f'<b>{top[1]:.2f}</b><div class="lwho">'
+                f'<span>{esc(top[0]["n"])}</span><i>Top rated</i></div></a>')
+    leaders = (_leader("g", "Goals") + _leader("a", "Assists") + _leader_rt())
+    leaders_html = (f'<div class="sec"><h2>Top performers</h2></div>'
+                    f'<div class="leaders">{leaders}</div>') if leaders else ""
+
+    # ---- league table around this club ----
+    tbl = league_table_html(league, "../", around_club=cname,
+                            title="Table") if league else ""
+    if tbl:
+        _cn = country_of(league)
+        if _cn:
+            tbl += (f'<a class="lt-foot" href="../league/'
+                    f'{club_slug(_cn)}-{club_slug(league)}.html">'
+                    f'Full table →</a>')
+
     fx = ps[0]["fixtures"]
     fxr = "".join(f'<div class="fxrow"><div class="fxd">{esc(day_label(d))}</div><div class="fxo">{esc(o)} '
                   f'<span class="ha">{"H" if h=="H" else "A"}</span></div><div class="fxc">{esc(c)}</div></div>'
                   for d,o,h,c in fx)
     body = f'''
     <a class="crumb" data-back href="../clubs.html">← Back</a>
-    <div class="pagehead"><h1>{club_badge(cname,"lg")}{esc(cname)}</h1><p>{esc(ps[0]["league"]) + " · " if ps[0]["league"] not in ("","—") else ""}{len(ps)} Irish player{"s" if len(ps)!=1 else ""} tracked</p></div>
-    <div class="sec"><h2>Irish players</h2></div>
-    <div class="tiergroup">{rows}</div>
+    <div class="pagehead"><h1>{club_badge(cname,"lg")}{esc(cname)}</h1><p>{esc(subline)}</p></div>
+    {tbl}
+    {leaders_html}
+    <div class="sec"><h2>{"Squad" if ps[0].get("tier") == "loi" else "Irish players"}</h2><span class="more" style="border:0">{len(ps)}</span></div>
+    {grouped}
     <div class="sec"><h2>Upcoming fixtures</h2></div>
     <div class="fxlist">{fxr or '<div class="emptystate" style="display:block">No fixtures listed.</div>'}</div>
     '''

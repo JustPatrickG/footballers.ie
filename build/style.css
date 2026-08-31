@@ -1469,3 +1469,36 @@ a.intlblock.lnk:hover{border-color:var(--teal)}
 .tlempty{padding:18px 16px;color:var(--mute);font-family:'IBM Plex Mono',monospace;font-size:13px;text-align:center}
 .mxrow.ongoing{border-color:rgba(255,84,112,.4)}
 .livedot{color:#FF5470;font-family:'IBM Plex Mono',monospace;font-size:10px;font-weight:700;letter-spacing:.06em}
+
+/* ---- league tables ---- */
+.ltable{border:1px solid var(--line);border-radius:6px;overflow:hidden;background:var(--panel)}
+.ltr{display:grid;grid-template-columns:26px 22px minmax(0,1fr) 32px 28px 28px 28px 40px 36px;align-items:center;gap:6px;padding:8px 12px;border-bottom:1px solid var(--line);font-size:13px;color:var(--white);text-decoration:none}
+.ltr:last-child{border-bottom:0}
+a.ltr:hover{background:var(--panel2)}
+.ltr.lthead{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--mute);background:var(--panel2)}
+.ltr.ours .ltn{color:var(--teal)}
+.ltr.me{background:var(--panel2);box-shadow:inset 3px 0 0 var(--teal)}
+.ltp{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--mute);text-align:right}
+.ltn{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-weight:600}
+.ltc{font-family:'IBM Plex Mono',monospace;font-size:12px;text-align:right;color:var(--mute)}
+.ltc.pts{font-weight:700;color:var(--white)}
+.lt-foot{display:block;text-align:right;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--mute);padding:8px 2px}
+.lt-foot:hover{color:var(--white)}
+@media(max-width:560px){
+  .ltr{grid-template-columns:24px 20px minmax(0,1fr) 30px 36px 34px;padding:8px 9px}
+  .ltc.wdl{display:none}
+}
+/* ---- club page: squad + leaders ---- */
+.leaders{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:6px;overflow:hidden}
+.leader{background:var(--panel);padding:14px;display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--white)}
+.leader:hover{background:var(--panel2)}
+.leader b{font-size:22px;font-family:'IBM Plex Mono',monospace}
+.leader .lwho{display:flex;flex-direction:column;min-width:0}
+.leader .lwho span{font-size:13px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.leader .lwho i{font-style:normal;font-size:10px;font-family:'IBM Plex Mono',monospace;letter-spacing:.1em;text-transform:uppercase;color:var(--mute)}
+/* club page squad cards (row style, grouped by line) */
+.sqpcard{background:var(--panel);padding:12px 14px;display:flex;align-items:center;gap:12px;color:var(--white);text-decoration:none;transition:background .12s;min-width:0}
+.sqpcard:hover{background:var(--panel2)}
+.sqpcard .sq2{display:flex;flex-direction:column;min-width:0;flex:1}
+.sqpcard .sq2 b{font-size:14px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.sqpcard .sq2 span{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.06em;color:var(--mute);margin-top:2px}
