@@ -95,9 +95,9 @@ def get_json(url, debug_name=None):
 
 
 MATCH_API = "https://www.fotmob.com/api/data/matchDetails?matchId={mid}"
-ALL_LEAGUES_API = "https://www.fotmob.com/api/allLeagues"
-LEAGUE_API = ("https://www.fotmob.com/api/leagues?id={lid}"
-              "&tab=table&type=league&timeZone=UTC")
+# The league OVERVIEW PAGE embeds the full standings in its page JSON -
+# the old /api/leagues endpoint is gone, but get_next_data on the page
+# still works (discover-loi rides the same route).
 
 # League name (as our data spells it) -> source league id, for the leagues
 # players actually sit in. Anything not here is discovered by name from the
@@ -1744,28 +1744,47 @@ def cmd_tables(args):
                if len(clubs) >= 2 or "league of ireland" in norm(lg)
                or norm(lg) in CURATED_LEAGUE_IDS}
 
-    catalogue = {}          # norm(league name) -> [ids]
-    try:
-        alll = get_json(ALL_LEAGUES_API)
-        for grp in find_all(alll, "leagues"):
-            if not isinstance(grp, list):
-                continue
-            for lg in grp:
-                if isinstance(lg, dict) and lg.get("id") and lg.get("name"):
-                    catalogue.setdefault(norm(lg["name"]),
-                                         []).append(lg["id"])
-    except Exception as e:
-        print(f"  allLeagues listing failed ({e}) - curated ids only")
+    def find_league_ids(term):
+        """Search the source for a league by name -> candidate ids."""
+        try:
+            data = get_json(SEARCH_URL.format(
+                term=requests.utils.quote(term)))
+        except Exception:
+            return []
+        found = []
+        def walk(obj):
+            if isinstance(obj, dict):
+                t = str(obj.get("type", "")).lower()
+                name = str(obj.get("name") or obj.get("text") or "")
+                oid = obj.get("id") or obj.get("leagueId")
+                if oid and "league" in t and norm(term) in norm(name):
+                    found.append(str(oid).split("|")[-1])
+                if "|" in name and norm(term) in norm(name.rsplit("|", 1)[0]):
+                    tail = name.rsplit("|", 1)[-1].strip()
+                    if tail.isdigit():
+                        found.append(tail)
+                for v in obj.values():
+                    walk(v)
+            elif isinstance(obj, list):
+                for i in obj:
+                    walk(i)
+        walk(data)
+        seen, out = set(), []
+        for f in found:
+            if f not in seen:
+                seen.add(f)
+                out.append(f)
+        return out[:4]
 
     out_rows, done_ids = [], {}
     for lg, clubs in sorted(targets.items(),
                             key=lambda kv: -len(kv[1])):
         nl = norm(lg)
-        cands = []
         if nl in CURATED_LEAGUE_IDS:
             cands = [(CURATED_LEAGUE_IDS[nl], True)]
         else:
-            cands = [(i, False) for i in catalogue.get(nl, [])[:4]]
+            cands = [(i, False) for i in find_league_ids(lg)]
+            time.sleep(1)
         if not cands:
             print(f"  ?? {lg}: no source league found")
             continue
@@ -1775,8 +1794,8 @@ def cmd_tables(args):
                 rows = done_ids[lid]
             else:
                 try:
-                    rows = parse_table_rows(
-                        get_json(LEAGUE_API.format(lid=lid)))
+                    rows = parse_table_rows(get_next_data(
+                        LEAGUE_URL.format(lid=lid)))
                 except Exception as e:
                     print(f"  !! {lg} (id {lid}): {e}")
                     continue
