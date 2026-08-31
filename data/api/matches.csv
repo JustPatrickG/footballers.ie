@@ -142,6 +142,7 @@ kickoff,competition,home,away,home_id,away_id,home_score,away_score,status,minut
 2026-08-31T14:00:00Z,National League,Carlisle United,Scunthorpe United,10196,8412,4,2,ft,,hugh-parker
 2026-08-31T14:00:00Z,National League,Solihull Moors,AFC Fylde,161801,282396,1,3,ft,,jevon-mills
 2026-08-31T14:00:00Z,National League,Woking,Southend United,8345,8652,1,1,ft,,shadrach-ogie
+2026-08-31T16:30:00Z,Serie A,Lecce,Roma,9888,8686,0,4,ft,,corrie-ndaba
 2026-09-01T18:45:00Z,League One,Bromley,Leyton Orient,45729,8351,,,scheduled,,aaron-connolly;jaze-kabia;killian-cahill;ollie-oneill;owen-mason;tony-springett
 2026-09-01T18:45:00Z,League Two,Swindon Town,Port Vale,9795,9799,,,scheduled,,aaron-drinan;gavin-kilkenny
 2026-09-01T18:45:00Z,Championship,Swansea City,Watford,10003,9817,,,scheduled,,adam-idah;rocco-vata
@@ -364,7 +365,6 @@ kickoff,competition,home,away,home_id,away_id,home_score,away_score,status,minut
 2026-09-08T19:00:00Z,Champions League,Lille,Real Betis,8639,8603,,,scheduled,,troy-parrott
 2026-09-08T23:00:00Z,USL Cup,Hartford Athletic,Colorado Springs Switchbacks FC,1003206,614321,,,scheduled,,barry-coffey
 2026-09-09T15:30:00Z,Super Cup,Levski Sofia,CSKA Sofia,8632,10144,,,scheduled,,armstrong-oko-flex
-2026-09-09T16:00:00Z,Super Cup,Levski Sofia,CSKA Sofia,8632,10144,,,scheduled,,armstrong-oko-flex
 2026-09-09T16:45:00Z,Champions League,Barcelona,Feyenoord,8634,10235,,,scheduled,,liam-bossin
 2026-09-09T18:45:00Z,EFL Cup,Everton,Wolves,8668,8602,,,scheduled,,desmond-armstrong;jake-obrien;mark-travers
 2026-09-09T18:45:00Z,Championship,Derby,West Brom,10170,8659,,,scheduled,,jayson-molumby;max-johnston;max-oleary;mikey-johnston;sammie-szmodics
@@ -550,7 +550,6 @@ kickoff,competition,home,away,home_id,away_id,home_score,away_score,status,minut
 2026-08-31T14:00:00Z,National League North,South Shields,Spalding United,865163,580400,,,scheduled,,michael-kelly
 2026-08-31T16:00:00Z,Veikkausliiga,AC Oulu,SJK,4449,162162,,,scheduled,,aaron-okpolokpo;josh-okpolokpo
 2026-08-31T16:00:00Z,Veikkausliiga,Ilves,HJK,162146,9861,,,scheduled,,david-eze;david-ezeh
-2026-08-31T16:30:00Z,Serie A,Lecce,Roma,9888,8686,,,live,,corrie-ndaba
 2026-08-31T18:00:00Z,Premier League 2,Brighton & Hove Albion U21,Arsenal U21,773678,950214,,,scheduled,,mark-omahony;sean-keogh
 2026-08-30T11:00:00Z,Super Cup,Công An Hà Nội,Cong An Ho Chí Minh City,614354,179228,,,scheduled,,brandon-ly
 2026-08-30T13:00:00Z,Premier League,Chelsea,Brighton & Hove Albion,8455,10204,,,scheduled,,evan-ferguson
@@ -586,4 +585,3 @@ kickoff,competition,home,away,home_id,away_id,home_score,away_score,status,minut
 2026-08-31T14:00:00Z,National League North,South Shields,Spalding United,865163,580400,,,scheduled,,michael-kelly
 2026-08-31T16:00:00Z,Veikkausliiga,AC Oulu,SJK,4449,162162,,,scheduled,,aaron-okpolokpo;josh-okpolokpo
 2026-08-31T16:00:00Z,Veikkausliiga,Ilves,HJK,162146,9861,,,scheduled,,david-eze;david-ezeh
-2026-08-31T16:30:00Z,Serie A,Lecce,Roma,9888,8686,,,scheduled,,corrie-ndaba
