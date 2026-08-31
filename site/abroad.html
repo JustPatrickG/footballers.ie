@@ -1533,6 +1533,17 @@ a.ltr:hover{background:var(--panel2)}
 a.sitebanner:hover{background:var(--panel)}
 .maintwrap{min-height:55vh;display:flex;align-items:center;justify-content:center;text-align:center}
 .maintcard p{color:var(--mute);margin-top:12px;max-width:420px}
+/* overlapping club badges on the season card */
+.badgestack{display:inline-flex;align-items:center}
+.badgestack .badge{position:relative;border-radius:50%;background:var(--panel2);box-shadow:0 0 0 2px var(--panel)}
+.badgestack .badge:first-child{z-index:3}
+.badgestack .badge:nth-child(2){z-index:2;margin-left:-9px}
+.badgestack .badge:nth-child(3){z-index:1;margin-left:-9px}
+/* clickable club names */
+.teamlink{color:inherit;text-decoration:none;display:inline-flex;align-items:center;gap:inherit}
+.teamlink:hover span,.teamlink:hover b,a.teamlink:hover{color:var(--teal)}
+.mct .teamlink,.fxt .teamlink{gap:0}
+.msmeta .teamlink{color:inherit;border-bottom:1px dotted var(--mute)}
 </style><script>
 (function(){
   try{
@@ -1614,7 +1625,7 @@ a.sitebanner:hover{background:var(--panel)}
 <footer>
   <div class="foothead">
     footballers.ie
-    <span class="updated" data-stamp="2026-08-31T18:39:32Z">checking for updates…</span>
+    <span class="updated" data-stamp="2026-08-31T19:59:36Z">checking for updates…</span>
   </div>
   Every Irish player at a professional club — abroad, senior international and League of Ireland
   <div class="footlinks">
@@ -1624,7 +1635,7 @@ a.sitebanner:hover{background:var(--panel)}
   </div>
 </footer>
 </div>
-<script>window.FB_SUBSCRIBE_URL="";window.FB_ACCOUNTS=[{"email": "business@matchweek.ie", "name": "Owner", "role": "owner", "hash": "1b9f81291f1a6b0e6c1b135aa1ab58608e1f96e88ef490935ec97041b89b1450"}, {"email": "editor@footballers.ie", "name": "Editor", "role": "editor", "hash": "1d5c990ab4b660edea1b9a24484dffee52d12f9b68c369ddab8b02ec5d79a789"}, {"email": "writer@footballers.ie", "name": "Example Writer", "role": "journalist", "hash": "0f1f96b3f10518d3ab8cc7d4aa1aba02406779d55632fb6f9f3613d7d3f04e19"}, {"email": "betterkdul@gmail.com", "name": "Admin1", "role": "owner", "hash": "4dd6e75323b7efe6bde8fc32890797c1cbf47979feacc30a144efc7269edb218"}];</script>
+<script>window.FB_CLUBS={"aberdeen": "aberdeen", "accringtonstanley": "accrington-stanley", "airdrieonians": "airdrieonians", "aldershottown": "aldershot-town", "almera": "almeria", "annaghunited": "annagh-united", "armagh": "armagh", "arsenal": "arsenal", "astonvillau18": "aston-villa-u18", "athlonetown": "athlone-town", "austin": "austin-fc", "balatown": "bala-town", "ballinamallardunited": "ballinamallard-united", "ballymenaunited": "ballymena-united", "bamberbridge": "bamber-bridge", "barnet": "barnet", "barnsley": "barnsley", "benfica": "benfica", "benficau19": "benfica-u19", "berwickrangers": "berwick-rangers", "birminghamu21": "birmingham-u21", "blackburnrovers": "blackburn-rovers", "blackpool": "blackpool", "bohemian": "bohemian-fc", "bolognau20": "bologna-u20", "boltonwanderers": "bolton-wanderers", "bostonunited": "boston-united", "botoani": "botosani", "bournemouth": "bournemouth", "bournemouthu21": "bournemouth-u21", "brackleytown": "brackley-town", "bradfordcity": "bradford-city", "braywanderers": "bray-wanderers", "brentford": "brentford", "brentfordu21": "brentford-u21", "brightonhovealbion": "brighton-hove-albion", "brightonhovealbionu21": "brighton-hove-albion-u21", "brisbaneroar": "brisbane-roar-fc", "bristolcity": "bristol-city", "bristolrovers": "bristol-rovers", "bromley": "bromley", "burgesshilltown": "burgess-hill-town", "burnley": "burnley", "burnleyu21": "burnley-u21", "burnleyunder18academy": "burnley-under-18-academy", "burtonalbion": "burton-albion", "buxton": "buxton", "cabinteely": "cabinteely", "cambridgeunited": "cambridge-united", "cardiffcity": "cardiff-city", "carrickrangers": "carrick-rangers", "cashmeretechnical": "cashmere-technical", "celtic": "celtic", "cerclebrugge": "cercle-brugge", "chanmari": "chanmari-fc", "charltonathletic": "charlton-athletic", "chelseau21": "chelsea-u21", "cheltenhamtown": "cheltenham-town", "chester": "chester-fc", "chesterfield": "chesterfield", "cliftonville": "cliftonville", "cnganhni": "cong-an-ha-noi", "coastal": "coastal", "cobhramblers": "cobh-ramblers", "colchesterunited": "colchester-united", "coleraine": "coleraine", "columbuscrew": "columbus-crew", "colwynbay": "colwyn-bay", "connahsquaynomads": "connahs-quay-nomads", "corkcity": "cork-city", "cosenza": "cosenza", "coventrycity": "coventry-city", "crawleytown": "crawley-town", "crewealexandra": "crewe-alexandra", "crusaders": "crusaders", "crystalpalaceu18": "crystal-palace-u18", "darlington": "darlington", "deportivaminera": "deportiva-minera", "derbycounty": "derby-county", "dergview": "dergview-fc", "derrycity": "derry-city", "doncasterrovers": "doncaster-rovers", "dorkingwanderers": "dorking-wanderers", "droghedaunited": "drogheda-united", "dundalk": "dundalk", "dundee": "dundee-fc", "dundeeunited": "dundee-united", "dunfermlineathletic": "dunfermline-athletic", "dungannonswifts": "dungannon-swifts", "eastkilbride": "east-kilbride", "eettelbrck": "e-ettelbruck", "efsctitans": "efsc-titans", "empoli": "empoli", "erzurumsporfk": "erzurumspor-fk", "everton": "everton", "exetercity": "exeter-city", "falkirk": "falkirk", "fchalifaxtown": "fc-halifax-town", "fcliefering": "fc-liefering", "fcunitedofmanchester": "fc-united-of-manchester", "ferencvros": "ferencvaros", "feyenoord": "feyenoord", "fightingmaroons": "fighting-maroons", "finnharps": "finn-harps", "fiorenzuola": "fiorenzuola", "fkapolonia": "fk-apolonia", "fleetwoodtown": "fleetwood-town", "fleetwoodtownacademy": "fleetwood-town-academy", "francsborains": "francs-borains", "fulham": "fulham", "galwayunited": "galway-united-fc", "gateshead": "gateshead-fc", "gillingham": "gillingham", "gir": "aegir", "glenavon": "glenavon", "glentoran": "glentoran", "grimsbytown": "grimsby-town", "gztepe": "goztepe", "harlandwolffwelders": "harland-wolff-welders-f-c", "hartfordathletic": "hartford-athletic", "heartofmidlothian": "heart-of-midlothian", "hearts": "hearts", "hednesford": "hednesford", "hibernian": "hibernian", "hitchintown": "hitchin-town", "hjk": "hjk", "hoffenheim": "hoffenheim", "hoffenheimii": "hoffenheim-ii", "huddersfieldtown": "huddersfield-town", "hullcity": "hull-city", "hzehlendorf": "h-zehlendorf", "indyeleven": "indy-eleven", "ipswichtown": "ipswich-town", "ipswichtownu18": "ipswich-town-u18", "kaiserslautern": "kaiserslautern", "kerry": "kerry-fc", "kilmarnock": "kilmarnock", "kingslynntown": "kings-lynn-town", "larne": "larne", "larneu19": "larne-u19", "leamington": "leamington", "lecce": "lecce", "legans": "leganes", "levskisofia": "levski-sofia", "lexingtonsc": "lexington-sc", "leytonorient": "leyton-orient", "libertyflames": "liberty-flames", "limerick": "limerick", "lincolncity": "lincoln-city", "linfield": "linfield", "liverpool": "liverpool", "livingston": "livingston", "longfordtown": "longford-town", "lorient": "lorient", "loughgall": "loughgall", "lutontown": "luton-town", "magdeburg": "magdeburg", "maldontiptree": "maldon-tiptree", "manchesterunitedu21": "manchester-united-u21", "mansfieldtown": "mansfield-town", "maribor": "maribor", "merstham": "merstham", "merthyrtown": "merthyr-town", "middlesbroughu18": "middlesbrough-u18", "millwall": "millwall", "mlaga": "malaga", "molde": "molde", "monacou19": "monaco-u19", "montrose": "montrose", "motherwell": "motherwell", "newcastlejets": "newcastle-jets", "newington": "newington-fc", "newportcounty": "newport-county", "newry": "newry", "newyorkcity": "new-york-city-fc", "northamptontown": "northampton-town", "norwichcityu21": "norwich-city-u21", "nottinghamforest": "nottingham-forest", "nottinghamforestu21": "nottingham-forest-u21", "nottscounty": "notts-county", "oldham": "oldham", "oldhamathletic": "oldham-athletic", "orvietanacalcio": "orvietana-calcio", "oxfordunited": "oxford-united", "partickthistle": "partick-thistle", "peterboroughunited": "peterborough-united", "pikerovers": "pike-rovers", "plymouthargyle": "plymouth-argyle", "portadown": "portadown", "portsmouth": "portsmouth", "prestonnorthend": "preston-north-end", "prestonnorthendu23": "preston-north-end-u23", "preussenmnster": "preussen-munster", "queensparkrangers": "queens-park-rangers", "ragusa": "ragusa", "raithrovers": "raith-rovers", "reading": "reading", "realbetis": "real-betis", "reims": "reims", "rochdale": "rochdale", "rosscounty": "ross-county", "rotherhamunited": "rotherham-united", "sacramentorepublic": "sacramento-republic-fc", "salfordcity": "salford-city", "salisbury": "salisbury", "scunthorpeunited": "scunthorpe-united", "shamrockrovers": "shamrock-rovers", "shamrockroversu19": "shamrock-rovers-u19", "sheffieldunited": "sheffield-united", "sheffieldwednesday": "sheffield-wednesday", "shelbourne": "shelbourne", "shelbourneu19": "shelbourne-u19", "shrewsburytown": "shrewsbury-town", "sjk": "sjk", "skdynamoeskbudjovice": "sk-dynamo-ceske-budejovice", "sligorovers": "sligo-rovers", "solihullmoors": "solihull-moors", "southampton": "southampton", "southamptonu18": "southampton-u18", "spartans": "spartans-fc", "sportingjax": "sporting-jax", "stjohnstone": "st-johnstone", "stmirren": "st-mirren", "stmochtas": "st-mochtas", "stockportcounty": "stockport-county", "stokecity": "stoke-city", "stokecityu21": "stoke-city-u21", "stpatricksathletic": "st-patricks-athletic", "strabaneathletic": "strabane-athletic", "strasbourg": "strasbourg", "sunderland": "sunderland", "suttonunited": "sutton-united", "swanseacity": "swansea-city", "swindontown": "swindon-town", "tauntontown": "taunton-town", "ternana": "ternana", "thenewsaints": "the-new-saints", "torino": "torino", "tottenhamhotspuru21": "tottenham-hotspur-u21", "tranmererovers": "tranmere-rovers", "treatyunited": "treaty-united", "turriffunited": "turriff-united", "ucc": "ucc", "ucd": "ucd", "udinese": "udinese", "vancouver": "vancouver-fc", "venezia": "venezia", "vvvvenlo": "vvv-venlo", "walsall": "walsall", "warrenpoint": "warrenpoint", "waterford": "waterford-fc", "watford": "watford", "wealdstone": "wealdstone", "westbromwichalbion": "west-bromwich-albion", "westham": "west-ham", "westonsupermare": "weston-super-mare", "wexford": "wexford-fc", "wiganathletic": "wigan-athletic", "withoutclubwithoutclub": "without-clubwithout-club", "woking": "woking", "wolverhamptonwanderersu21": "wolverhampton-wanderers-u21", "worthing": "worthing", "wycombewanderers": "wycombe-wanderers"};window.FB_SUBSCRIBE_URL="";window.FB_ACCOUNTS=[{"email": "business@matchweek.ie", "name": "Owner", "role": "owner", "hash": "1b9f81291f1a6b0e6c1b135aa1ab58608e1f96e88ef490935ec97041b89b1450"}, {"email": "editor@footballers.ie", "name": "Editor", "role": "editor", "hash": "1d5c990ab4b660edea1b9a24484dffee52d12f9b68c369ddab8b02ec5d79a789"}, {"email": "writer@footballers.ie", "name": "Example Writer", "role": "journalist", "hash": "0f1f96b3f10518d3ab8cc7d4aa1aba02406779d55632fb6f9f3613d7d3f04e19"}, {"email": "betterkdul@gmail.com", "name": "Admin1", "role": "owner", "hash": "4dd6e75323b7efe6bde8fc32890797c1cbf47979feacc30a144efc7269edb218"}];</script>
 <script>/* ---- site controls: fast path -------------------------------------
    The admin's Site tab commits data/manual/settings.csv. A rebuild bakes
    most switches in, but maintenance and the live-score brake also apply
@@ -2024,6 +2035,18 @@ a.sitebanner:hover{background:var(--panel)}
     return h;
   }
 
+  function clubHref(name, root) {
+    // slug lookup for clubs we build a page for (FB_CLUBS: normkey -> slug)
+    var k = String(name || '').toLowerCase().normalize('NFKD')
+      .replace(/[\u0300-\u036f]/g, '').replace(/[^a-z0-9]/g, '')
+      .replace(/(afc|fc)$/, '');
+    var slug = (window.FB_CLUBS || {})[k];
+    return slug ? (root || '') + 'club/' + slug + '.html' : '';
+  }
+  function clubName(name, root) {
+    var h = clubHref(name, root);
+    return h ? '<a class="teamlink" href="' + h + '">' + name + '</a>' : name;
+  }
   function bdg(id, cls) {
     if (!id) return '<span class="badge ' + cls + ' generic"></span>';
     return '<img class="badge ' + cls + '" src="https://images.fotmob.com/image_resources/logo/teamlogo/' + id + '.png" alt="" loading="lazy" onerror="this.outerHTML=\'<span class=&quot;badge ' + cls + ' generic&quot;></span>\'">';
@@ -2034,8 +2057,8 @@ a.sitebanner:hover{background:var(--panel)}
            '<div class="mcrow">' +
              '<span class="mccomp">' + m.comp + '</span>' + statusChip(m, now) +
            '</div>' +
-           '<div class="mcteams"><div class="mct">' + bdg(m.hb, 'sm') + m.home + '</div>' + score(m, now) +
-           '<div class="mct right">' + m.away + bdg(m.ab, 'sm') + '</div></div>' +
+           '<div class="mcteams"><div class="mct">' + bdg(m.hb, 'sm') + clubName(m.home, root) + '</div>' + score(m, now) +
+           '<div class="mct right">' + clubName(m.away, root) + bdg(m.ab, 'sm') + '</div></div>' +
            '<div class="mcplayers">' + playersHtml(m, root, limit) + '</div></div>';
   }
 
@@ -2120,7 +2143,7 @@ a.sitebanner:hover{background:var(--panel)}
     box.innerHTML = comps.map(function (c) {
       var rows = byComp[c].map(function (m) {
         return '<div class="fxmatch' + (m.loi || m.sq ? ' loi' : '') + '" data-href="match/' + m.id + '.html" role="link" tabindex="0">' +
-               '<div class="fxt"><div class="h">' + m.home + bdg(m.hb, 'sm') + '</div>' + midRow(m, now) + '<div class="a">' + bdg(m.ab, 'sm') + m.away + '</div></div>' +
+               '<div class="fxt"><div class="h">' + clubName(m.home, '') + bdg(m.hb, 'sm') + '</div>' + midRow(m, now) + '<div class="a">' + bdg(m.ab, 'sm') + clubName(m.away, '') + '</div></div>' +
                (m.ven ? '<div class="fxven">' + m.ven + '</div>' : '') +
                '<div class="fxp">' + playersHtml(m, '', 0) + '</div></div>';
       }).join('');
@@ -2238,7 +2261,9 @@ a.sitebanner:hover{background:var(--panel)}
     }
     var irish = [];
     var ST = window.FB_MSTATS || {};
-    for (var k in ST) irish.push(norm(ST[k].n));
+    // ST holds the whole teamsheet; only entries WITHOUT .u are tracked
+    // Irish players - the rest are teammates who happen to be on the sheet.
+    for (var k in ST) { if (!ST[k].u) irish.push(norm(ST[k].n)); }
     function isIrish(name) {
       var n = norm(name);
       if (!n) return false;
@@ -3092,8 +3117,12 @@ a.sitebanner:hover{background:var(--panel)}
       // The teamsheet knows more than the stats feed does mid-match: whether he
       // started, and when he went off. Say that rather than claiming nothing.
       var started = !!document.querySelector('.pitch [data-mstat="' + slug + '"]');
+      var notYet = m0 && m0.status !== 'live' && m0.status !== 'ft'
+        && Date.parse(m0.kickoff) && Date.parse(m0.kickoff) > Date.now();
       var note;
-      if (d.son && d.soff)  note = 'On ' + esc(d.son) + "', off " + esc(d.soff) + "'";
+      if (notYet)           note = started ? "In the lineup — game hasn't started yet"
+                                           : "Game hasn't started yet";
+      else if (d.son && d.soff)  note = 'On ' + esc(d.son) + "', off " + esc(d.soff) + "'";
       else if (d.soff)      note = 'Started, off on ' + esc(d.soff) + "'";
       else if (d.son)       note = 'Came on on ' + esc(d.son) + "'";
       else if (started && !done) note = 'Started — still on';
@@ -3130,7 +3159,7 @@ a.sitebanner:hover{background:var(--panel)}
       + '<div>' + (d.u
           ? '<span class="msname">' + esc(d.n) + '</span>'
           : '<a class="msname" href="../player/' + slug + '.html">' + esc(d.n) + ' →</a>')
-      + '<div class="msmeta">' + esc(d.club)
+      + '<div class="msmeta">' + (clubHref(d.club, '../') ? '<a class="teamlink" href="' + clubHref(d.club, '../') + '">' + esc(d.club) + '</a>' : esc(d.club))
       + (d.num ? ' · #' + esc(d.num) : '')
       + (d.pos && d.pos !== '—' ? ' · ' + esc(d.pos) : '') + '</div></div>'
       + '<button class="msx" aria-label="Close">×</button></div>'
