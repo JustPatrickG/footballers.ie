@@ -150,7 +150,7 @@ try{ localStorage.setItem('fb_no_track','1'); }catch(e){}
 /* what each role can touch */
 var ROLES = {
   owner:      {label:'Owner',      tabs:'*',                                          note:'Full access, including accounts.'},
-  admin:      {label:'Admin',      tabs:['players','matches','articles','writers','fixtures','results','ireland','reports','subs'], note:'Everything except accounts.'},
+  admin:      {label:'Admin',      tabs:['players','matches','articles','writers','fixtures','results','ireland','reports','subs','site'], note:'Everything except accounts.'},
   editor:     {label:'Editor',     tabs:['articles','writers','players','reports'],             note:'News, writers and player details.'},
   journalist: {label:'Journalist', tabs:['articles'],  ownOnly:true,                  note:'Write and edit your own articles.'},
   data:       {label:'Data',       tabs:['players','matches','fixtures','results','ireland'], note:'Stats and fixtures, no news.'},
@@ -172,6 +172,7 @@ const FILES = {
   results:  {path:'manual/results.csv',  label:'Results'},
   ireland:  {path:'manual/ireland.csv',  label:'Ireland'},
   accounts: {path:'manual/accounts.csv', label:'Accounts'},
+  site:     {path:'manual/settings.csv', cols:['key','value'], label:'Site'},
   reports:  {path:null, label:'Reports'},
   subs:     {path:null, label:'Signups'},
 };
@@ -1221,9 +1222,78 @@ async function subsView(){
   return v;
 }
 
+/* ---- Site tab: every switch on the site in one place ------------- */
+const SITE_SCHEMA=[
+ {h:'Availability'},
+ {key:'maintenance', label:'Maintenance mode', type:'toggle',
+  hint:'Replaces every page with a "back soon" notice. Turns off the same way.'},
+ {key:'maintenance_message', label:'Maintenance message', type:'text',
+  ph:'Back shortly — doing a bit of work on the site.'},
+ {h:'Announcement'},
+ {key:'banner', label:'Site-wide banner', type:'text',
+  ph:'e.g. Transfer deadline day — follow every Irish move here', hint:'Shows under the nav on every page. Leave empty for none.'},
+ {key:'banner_link', label:'Banner link', type:'text', ph:'news.html'},
+ {h:'Identity'},
+ {key:'site_title', label:'Site name', type:'text', ph:'footballers.ie'},
+ {key:'tagline', label:'Homepage tagline', type:'text', ph:'Every Irish professional footballer. One site.'},
+ {key:'footer_text', label:'Footer line', type:'text', ph:''},
+ {key:'theme_default', label:'Default theme', type:'select', options:['dark','pitch']},
+ {h:'Sections'},
+ {key:'show_map', label:'World map', type:'toggle', on:true},
+ {key:'show_transfers', label:'Transfers page in nav', type:'toggle', on:true},
+ {key:'show_newsletter', label:'Newsletter promos', type:'toggle', on:true},
+ {key:'show_tables', label:'League tables', type:'toggle', on:true},
+ {key:'show_milestones', label:'Milestones', type:'toggle', on:true},
+ {h:'Home page'},
+ {key:'carousel_count', label:'Articles in the carousel', type:'num', ph:'8'},
+ {key:'live_polling', label:'Live score polling', type:'toggle', on:true,
+  hint:'Off = the match centre stops hitting the live API (emergency brake).'},
+];
+function siteGet(k){ const r=(data.site.rows||[]).find(r=>r.key===k); return r?String(r.value||''):''; }
+function siteSet(k,val){
+  let r=(data.site.rows||[]).find(r=>r.key===k);
+  if(!r){ r={key:k,value:''}; data.site.rows.push(r); }
+  if(!data.site.cols.length) data.site.cols=['key','value'];
+  r.value=val; markDirty();
+}
+function siteView(){
+  const el=document.createElement('div');
+  let h='<div class="panel"><h2>Site controls</h2><div class="hint">Every switch takes effect on the next publish (a minute or two after you save). Maintenance mode also flips a fast flag the site checks directly.</div>';
+  SITE_SCHEMA.forEach(f=>{
+    if(f.h){ h+='<h3 style="margin:18px 0 6px;font-size:12px;letter-spacing:.1em;text-transform:uppercase;opacity:.6">'+f.h+'</h3>'; return; }
+    const cur=siteGet(f.key);
+    h+='<div class="frow" style="display:flex;gap:10px;align-items:center;margin:7px 0">';
+    if(f.type==='toggle'){
+      const onNow = cur===''? !!f.on : (cur==='yes');
+      h+='<label style="display:flex;gap:10px;align-items:center;cursor:pointer"><input type="checkbox" data-sk="'+f.key+'" '+(onNow?'checked':'')+'> <b>'+f.label+'</b></label>';
+    } else if(f.type==='select'){
+      h+='<b style="min-width:180px">'+f.label+'</b><select data-sk="'+f.key+'">'+f.options.map(o=>'<option '+(cur===o?'selected':'')+'>'+o+'</option>').join('')+'</select>';
+    } else {
+      h+='<b style="min-width:180px">'+f.label+'</b><input style="flex:1" data-sk="'+f.key+'" type="'+(f.type==='num'?'number':'text')+'" value="'+esc(cur)+'" placeholder="'+esc(f.ph||'')+'">';
+    }
+    h+='</div>';
+    if(f.hint) h+='<div class="hint" style="margin:-2px 0 8px 0">'+f.hint+'</div>';
+  });
+  h+='</div>';
+  el.innerHTML=h;
+  el.querySelectorAll('[data-sk]').forEach(inp=>{
+    inp.onchange=()=>{
+      const k=inp.getAttribute('data-sk');
+      if(inp.type==='checkbox') siteSet(k, inp.checked?'yes':'no');
+      else siteSet(k, inp.value);
+    };
+  });
+  return el;
+}
+
 function render(){
   const v=document.getElementById('view'); v.innerHTML='';
   if(!loaded){ v.innerHTML='<div class="panel"><h2>Loading</h2><div class="hint">Reading the site data…</div></div>'; return; }
+  if(active==='site'){
+    v.appendChild(siteView());
+    if(!readOnly()) v.appendChild(publishNote());
+    return;
+  }
   if(active==='reports'){
     reportsView().then(el=>{ v.innerHTML=''; v.appendChild(el); });
     return;

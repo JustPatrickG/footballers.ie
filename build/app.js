@@ -1,3 +1,42 @@
+/* ---- site controls: fast path -------------------------------------
+   The admin's Site tab commits data/manual/settings.csv. A rebuild bakes
+   most switches in, but maintenance and the live-score brake also apply
+   here directly from the raw file, so they bite in seconds rather than
+   after a deploy. */
+(function(){
+  var RAW='https://raw.githubusercontent.com/JustPatrickG/footballers.ie/main/data/manual/settings.csv';
+  window.FB_SETTINGS={};
+  function parse(t){
+    var o={};
+    String(t||'').split(/\r?\n/).slice(1).forEach(function(l){
+      var i=l.indexOf(','); if(i<0) return;
+      var k=l.slice(0,i).trim(), v=l.slice(i+1).trim().replace(/^"|"$/g,'');
+      if(k) o[k]=v;
+    });
+    return o;
+  }
+  function apply(o){
+    window.FB_SETTINGS=o;
+    var on=String(o.maintenance||'').toLowerCase();
+    var maint=(on==='yes'||on==='true'||on==='on'||on==='1');
+    var have=document.getElementById('fb-maint');
+    if(maint && !have && !location.pathname.match(/\/build\/admin/)){
+      var d=document.createElement('div');
+      d.id='fb-maint';
+      d.style.cssText='position:fixed;inset:0;z-index:9999;background:var(--bg,#0C0F10);display:flex;align-items:center;justify-content:center;text-align:center;padding:24px';
+      d.innerHTML='<div><div style="font-weight:700;font-size:24px;margin-bottom:10px">footballers<i style="color:var(--teal,#35D4BF)">.ie</i></div>'+
+        '<p style="opacity:.75;max-width:420px">'+
+        String(o.maintenance_message||'Back shortly — doing a bit of work on the site.').replace(/</g,'&lt;')+'</p></div>';
+      document.body.appendChild(d);
+    } else if(!maint && have){ have.remove(); }
+  }
+  try{
+    fetch(RAW+'?t='+Math.floor(Date.now()/60000),{cache:'no-store'})
+      .then(function(r){ return r.ok?r.text():''; })
+      .then(function(t){ if(t) apply(parse(t)); })
+      .catch(function(){});
+  }catch(e){}
+})();
 /* footballers.ie — favourites
    Stored in the browser (localStorage). No account needed.
    Powers: star toggles, the "Your players" rail, and the alerts page. */
@@ -633,6 +672,7 @@
     var ids = [];
     want.forEach(function (m) { if (ids.indexOf(m.fmid) < 0) ids.push(m.fmid); });
     var wantEv = !!document.getElementById('mtl');
+    if(window.FB_SETTINGS && /^(no|off|false|0)$/i.test(String(window.FB_SETTINGS.live_polling||''))) return null;
     var res = await fetch('/api/live?ids=' + ids.slice(0, 30).join(',') + (wantEv ? '&full=1' : ''), { cache: 'no-store' });
     if (!res.ok) return false;
     var data = await res.json();

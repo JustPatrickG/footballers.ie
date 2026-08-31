@@ -841,6 +841,23 @@ def _load_tables():
     return out
 
 
+# ---- site controls (data/manual/settings.csv, edited in the admin) ----
+SETTINGS = {r.get("key", "").strip(): (r.get("value") or "").strip()
+            for r in _rows("manual/settings.csv") if r.get("key")}
+
+
+def setting(key, default=""):
+    v = SETTINGS.get(key, "")
+    return v if v != "" else default
+
+
+def setting_on(key, default=True):
+    v = SETTINGS.get(key, "")
+    if v == "":
+        return default
+    return v.strip().lower() in ("yes", "y", "true", "1", "on")
+
+
 TABLES = _load_tables()
 _CLUB_PAGES = {}     # norm club name -> canonical club name
 for _p in PLAYERS:
@@ -1042,10 +1059,24 @@ def shell(title, desc, root, active, body, extra_head="", canonical="",
     is_home = (root == "" and active in ("index.html", ""))
     loader    = LOADER_HTML if is_home else ""
     loader_js = LOADER_JS   if is_home else ""
-    links = "".join(f'<a class="{"on" if active==href else ""}" href="{root}{href}">{l}</a>' for l,href in NAV)
+    nav_items = [(l, h) for l, h in NAV
+                 if not (h == "transfers.html" and not setting_on("show_transfers"))]
+    links = "".join(f'<a class="{"on" if active==href else ""}" href="{root}{href}">{l}</a>' for l,href in nav_items)
+    banner = ""
+    if setting("banner"):
+        _bl = setting("banner_link")
+        _bo = f'<a class="sitebanner" href="{root}{esc(_bl)}">' if _bl else '<div class="sitebanner">'
+        _bc = '</a>' if _bl else '</div>'
+        banner = f'{_bo}{esc(setting("banner"))}{_bc}'
+    if setting_on("maintenance", False):
+        body = (f'<div class="maintwrap"><div class="maintcard">'
+                f'<div class="mark" style="font-size:26px">footballers<i>.ie</i></div>'
+                f'<p>{esc(setting("maintenance_message", "Back shortly — doing a bit of work on the site."))}</p>'
+                f'</div></div>')
+        banner = ""
     can = f"{SITE_URL}/{canonical}" if canonical else SITE_URL
     return f"""<!DOCTYPE html>
-<html lang="en" data-theme="pitch">
+<html lang="en" data-theme="{esc(setting("theme_default", "pitch"))}">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -1096,13 +1127,14 @@ def shell(title, desc, root, active, body, extra_head="", canonical="",
   }});
 }})();
 </script>
+{banner}
 {body}
 <footer>
   <div class="foothead">
     {'footballers.ie · prototype · sample data' if SAMPLE_DATA else 'footballers.ie'}
     <span class="updated" data-stamp="{DATA_STAMP}">checking for updates…</span>
   </div>
-  Every Irish player at a professional club — abroad, senior international and League of Ireland
+  {esc(setting("footer_text", "Every Irish player at a professional club — abroad, senior international and League of Ireland"))}
   <div class="footlinks">
     <a href="{root}faq.html">FAQ</a>
     <a href="{root}where-are-the-irish.html">Where are the Irish?</a>
@@ -1588,7 +1620,8 @@ def build_index():
     pool = [a for a in ARTICLES if _unexpired(a)]
     pool.sort(key=lambda a: (0 if _is_now(a) else 1))     # stable: NOW first, then newest
     HEAD = [(a.get("tag",""), a.get("headline",""), a.get("standfirst",""), art_slug(a), _is_now(a), partner_of(a))
-            for a in pool[:5]] or [(t,h,s,sl,False,None) for (t,h,s,sl) in NEWS]
+            for a in pool[:max(1, _int(setting("carousel_count", "5"), 5))]] \
+        or [(t,h,s,sl,False,None) for (t,h,s,sl) in NEWS]
     HEAD_IS_ARTICLE = bool(pool)
     slides = "".join(
       f'<a class="slide{" now" if s[4] else ""}" data-i="{i}" href="{"news/" + s[3] + ".html" if HEAD_IS_ARTICLE else "player/" + s[3] + ".html"}">'
