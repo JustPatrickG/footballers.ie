@@ -397,6 +397,18 @@
     return h;
   }
 
+  function clubHref(name, root) {
+    // slug lookup for clubs we build a page for (FB_CLUBS: normkey -> slug)
+    var k = String(name || '').toLowerCase().normalize('NFKD')
+      .replace(/[\u0300-\u036f]/g, '').replace(/[^a-z0-9]/g, '')
+      .replace(/(afc|fc)$/, '');
+    var slug = (window.FB_CLUBS || {})[k];
+    return slug ? (root || '') + 'club/' + slug + '.html' : '';
+  }
+  function clubName(name, root) {
+    var h = clubHref(name, root);
+    return h ? '<a class="teamlink" href="' + h + '">' + name + '</a>' : name;
+  }
   function bdg(id, cls) {
     if (!id) return '<span class="badge ' + cls + ' generic"></span>';
     return '<img class="badge ' + cls + '" src="https://images.fotmob.com/image_resources/logo/teamlogo/' + id + '.png" alt="" loading="lazy" onerror="this.outerHTML=\'<span class=&quot;badge ' + cls + ' generic&quot;></span>\'">';
@@ -407,8 +419,8 @@
            '<div class="mcrow">' +
              '<span class="mccomp">' + m.comp + '</span>' + statusChip(m, now) +
            '</div>' +
-           '<div class="mcteams"><div class="mct">' + bdg(m.hb, 'sm') + m.home + '</div>' + score(m, now) +
-           '<div class="mct right">' + m.away + bdg(m.ab, 'sm') + '</div></div>' +
+           '<div class="mcteams"><div class="mct">' + bdg(m.hb, 'sm') + clubName(m.home, root) + '</div>' + score(m, now) +
+           '<div class="mct right">' + clubName(m.away, root) + bdg(m.ab, 'sm') + '</div></div>' +
            '<div class="mcplayers">' + playersHtml(m, root, limit) + '</div></div>';
   }
 
@@ -493,7 +505,7 @@
     box.innerHTML = comps.map(function (c) {
       var rows = byComp[c].map(function (m) {
         return '<div class="fxmatch' + (m.loi || m.sq ? ' loi' : '') + '" data-href="match/' + m.id + '.html" role="link" tabindex="0">' +
-               '<div class="fxt"><div class="h">' + m.home + bdg(m.hb, 'sm') + '</div>' + midRow(m, now) + '<div class="a">' + bdg(m.ab, 'sm') + m.away + '</div></div>' +
+               '<div class="fxt"><div class="h">' + clubName(m.home, '') + bdg(m.hb, 'sm') + '</div>' + midRow(m, now) + '<div class="a">' + bdg(m.ab, 'sm') + clubName(m.away, '') + '</div></div>' +
                (m.ven ? '<div class="fxven">' + m.ven + '</div>' : '') +
                '<div class="fxp">' + playersHtml(m, '', 0) + '</div></div>';
       }).join('');
@@ -1465,8 +1477,12 @@
       // The teamsheet knows more than the stats feed does mid-match: whether he
       // started, and when he went off. Say that rather than claiming nothing.
       var started = !!document.querySelector('.pitch [data-mstat="' + slug + '"]');
+      var notYet = m0 && m0.status !== 'live' && m0.status !== 'ft'
+        && Date.parse(m0.kickoff) && Date.parse(m0.kickoff) > Date.now();
       var note;
-      if (d.son && d.soff)  note = 'On ' + esc(d.son) + "', off " + esc(d.soff) + "'";
+      if (notYet)           note = started ? "In the lineup — game hasn't started yet"
+                                           : "Game hasn't started yet";
+      else if (d.son && d.soff)  note = 'On ' + esc(d.son) + "', off " + esc(d.soff) + "'";
       else if (d.soff)      note = 'Started, off on ' + esc(d.soff) + "'";
       else if (d.son)       note = 'Came on on ' + esc(d.son) + "'";
       else if (started && !done) note = 'Started — still on';
@@ -1503,7 +1519,7 @@
       + '<div>' + (d.u
           ? '<span class="msname">' + esc(d.n) + '</span>'
           : '<a class="msname" href="../player/' + slug + '.html">' + esc(d.n) + ' →</a>')
-      + '<div class="msmeta">' + esc(d.club)
+      + '<div class="msmeta">' + (clubHref(d.club, '../') ? '<a class="teamlink" href="' + clubHref(d.club, '../') + '">' + esc(d.club) + '</a>' : esc(d.club))
       + (d.num ? ' · #' + esc(d.num) : '')
       + (d.pos && d.pos !== '—' ? ' · ' + esc(d.pos) : '') + '</div></div>'
       + '<button class="msx" aria-label="Close">×</button></div>'

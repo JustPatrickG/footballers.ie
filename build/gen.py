@@ -871,6 +871,14 @@ def table_rows_for(league):
     return TABLES.get(_tbl_key(league), [])
 
 
+def club_href(name, root=""):
+    """Path to a club's page, or "" when we don't build one for it."""
+    k = re.sub(r"(afc|fc)$", "", re.sub(r"[^a-z0-9]", "",
+                                        (name or "").lower()))
+    hit = _CLUB_PAGES.get(k)
+    return f"{root}club/{club_slug(hit)}.html" if hit else ""
+
+
 def _row_club_link(team, root):
     """A table team that we track links to its club page."""
     k = re.sub(r"[^a-z0-9]", "", (team or "").lower())
@@ -1142,7 +1150,7 @@ def shell(title, desc, root, active, body, extra_head="", canonical="",
   </div>
 </footer>
 </div>
-<script>window.FB_SUBSCRIBE_URL={json.dumps(NEWSLETTER_ACTION)};window.FB_ACCOUNTS={json.dumps([{k:a.get(k,"") for k in ("email","name","role","hash")} for a in ACCOUNTS])};</script>
+<script>window.FB_CLUBS={json.dumps({k: club_slug(v) for k, v in sorted(_CLUB_PAGES.items())})};window.FB_SUBSCRIBE_URL={json.dumps(NEWSLETTER_ACTION)};window.FB_ACCOUNTS={json.dumps([{k:a.get(k,"") for k in ("email","name","role","hash")} for a in ACCOUNTS])};</script>
 <script>{APPJS}</script>
 </body>
 </html>"""
@@ -3423,8 +3431,12 @@ def lineup_block(m, involved):
         side = lu.get(side_key)
         if not side: return '<div class="luteam"></div>'
         st = STATUS_LABEL.get(side["status"] or ("confirmed" if played else ""), "Lineup")
-        return (f'<div class="luteam">{club_badge(side["team"] or m.get(side_key,""),"sm")}'
-                f'<b>{esc(side["team"] or m.get(side_key,""))}</b>'
+        _tn = side["team"] or m.get(side_key, "")
+        _th = club_href(_tn, "../")
+        _o = f'<a class="teamlink" href="{_th}">' if _th else ''
+        _c = '</a>' if _th else ''
+        return (f'<div class="luteam">{_o}{club_badge(_tn,"sm")}'
+                f'<b>{esc(_tn)}</b>{_c}'
                 f'<span class="luform">{esc(side["formation"])}</span>'
                 f'<span class="lustat {esc(lu[side_key]["status"])}">{st}</span></div>')
 
@@ -3471,7 +3483,10 @@ def squad_groups(players, heading, root="../"):
     order = sorted(by, key=lambda c: (-len(by[c]), c))
     out = f'<div class="sec"><h2>{heading}</h2><span class="more" style="border:0">{len(players)}</span></div>'
     for c in order:
-        out += (f'<div class="sqhead">{club_badge(c,"sm")}<b>{esc(c)}</b>'
+        _ch = club_href(c, root)
+        _o = f'<a class="teamlink" href="{_ch}">' if _ch else ''
+        _c2 = '</a>' if _ch else ''
+        out += (f'<div class="sqhead">{_o}{club_badge(c,"sm")}<b>{esc(c)}</b>{_c2}'
                 f'<span>{len(by[c])}</span></div><div class="tiergroup">'
                 + "".join(
                     f'<a class="plrow" href="{root}player/{p["slug"]}.html" data-mstat="{p["slug"]}">{avatar(p,root,"sm")}'
@@ -3551,6 +3566,13 @@ def match_player_stats(m, involved):
                 out[_ukey(pl["name"])] = d
     return out
 
+def _team_link(name, size="md", right=False):
+    inner = (f'<span>{esc(name)}</span>{club_badge(name, size)}' if right
+             else f'{club_badge(name, size)}<span>{esc(name)}</span>')
+    href = club_href(name, "../")
+    return f'<a class="teamlink" href="{href}">{inner}</a>' if href else inner
+
+
 def build_match(m, involved, squad_list=False):
     hs, as_ = m.get("home_score",""), m.get("away_score","")
     status = (m.get("status") or "scheduled")
@@ -3585,9 +3607,9 @@ def build_match(m, involved, squad_list=False):
       <div class="mcrow"><span class="mccomp">{esc(m.get("competition",""))}</span><span id="mchip">{chip}</span></div>
       {f'<div class="mvenue">{esc(match_venue(m))}</div>' if match_venue(m) else ''}
       <div class="mteams">
-        <div class="mteam">{club_badge(m.get("home",""),"md")}<span>{esc(m.get("home",""))}</span></div>
+        <div class="mteam">{_team_link(m.get("home",""), "md")}</div>
         <div id="mscorewrap">{scoreline}</div>
-        <div class="mteam right"><span>{esc(m.get("away",""))}</span>{club_badge(m.get("away",""),"md")}</div>
+        <div class="mteam right">{_team_link(m.get("away",""), "md", True)}</div>
       </div>
     </div>
     <div id="mtl">{events_block(m, involved)}</div>
