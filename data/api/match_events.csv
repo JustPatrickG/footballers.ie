@@ -2711,6 +2711,8 @@ match_id,minute,type,player,team,venue
 2026-08-29-charlton-athletic-v-preston-north-end,90,sub_on,Nathan Asiimwe,Charlton Athletic,The Valley
 2026-08-29-charlton-athletic-v-preston-north-end,90,sub_on,Joe Rankin-Costello,Charlton Athletic,The Valley
 2026-08-29-charlton-athletic-v-preston-north-end,90,yellow,Joe Rankin-Costello,Charlton Athletic,The Valley
+2026-08-29-chelmsford-v-maidenhead-united,42,red,Matthew Achuba,Maidenhead United,Melbourne Stadium
+2026-08-29-chelmsford-v-maidenhead-united,45,goal,George Alexander,Chelmsford,Melbourne Stadium
 2026-08-29-cliftonville-v-dungannon-swifts,,,,,Solitude
 2026-08-29-colchester-united-v-rochdale,37,yellow,Rob Hunt,Colchester United,JobServe Community Stadium
 2026-08-29-colchester-united-v-rochdale,40,yellow,Harvey Gilmour,Rochdale,JobServe Community Stadium
@@ -2784,7 +2786,9 @@ match_id,minute,type,player,team,venue
 2026-08-29-crawley-town-v-bristol-rovers,90,sub_off,Tommy Leigh,Bristol Rovers,Broadfield Stadium
 2026-08-29-crawley-town-v-bristol-rovers,90,sub_on,Ellis Harrison,Bristol Rovers,Broadfield Stadium
 2026-08-29-crawley-town-v-bristol-rovers,90,sub_on,Jack Aitchison,Bristol Rovers,Broadfield Stadium
-2026-08-29-darlington-v-macclesfield-fc,,,,,Blackwell Meadows
+2026-08-29-darlington-v-macclesfield-fc,16,goal,Dylan Stephenson,Darlington,Blackwell Meadows
+2026-08-29-darlington-v-macclesfield-fc,51,goal,Danny Elliott,Macclesfield FC,Blackwell Meadows
+2026-08-29-darlington-v-macclesfield-fc,69,goal,Daniel Elliott,Macclesfield FC,Blackwell Meadows
 2026-08-29-derby-county-v-swansea-city,2,goal,Joseph Opoku,Swansea City,Pride Park Stadium
 2026-08-29-derby-county-v-swansea-city,24,sub_off,Joseph Opoku,Swansea City,Pride Park Stadium
 2026-08-29-derby-county-v-swansea-city,24,sub_on,Moussa Kounfolo Yeo,Swansea City,Pride Park Stadium
@@ -3104,6 +3108,10 @@ match_id,minute,type,player,team,venue
 2026-08-29-maidstone-united-v-salisbury,90,goal,Ryan Hanson,Maidstone United,Gallagher Stadium
 2026-08-29-maidstone-united-v-salisbury,90,red,Yacou Traore,Salisbury,Gallagher Stadium
 2026-08-29-maldon-tiptree-v-cray-wanderers,,,,,Wallace Binder Stadium
+2026-08-29-marine-v-radcliffe,1,goal,George Newell,Marine,The Marine Travel Arena
+2026-08-29-marine-v-radcliffe,64,goal,George Newell,Marine,The Marine Travel Arena
+2026-08-29-merthyr-town-v-chorley,23,goal,Warren Clarke,Chorley,Penydarren Park
+2026-08-29-merthyr-town-v-chorley,83,goal,Elis Watts,Merthyr Town,Penydarren Park
 2026-08-29-middlesbrough-u18-v-derby-county-u18,12,goal,Kieran Clarke,Derby County U18,Stadium
 2026-08-29-middlesbrough-u18-v-derby-county-u18,22,goal,Troy Ogedengbe,Derby County U18,Stadium
 2026-08-29-middlesbrough-u18-v-derby-county-u18,48,goal,Finlay Turner,Middlesbrough U18,Stadium
@@ -3633,6 +3641,8 @@ match_id,minute,type,player,team,venue
 2026-08-29-toronto-fc-v-new-york-city-fc,77,sub_off,Keaton Parks,New York City FC,BMO Field
 2026-08-29-toronto-fc-v-new-york-city-fc,77,sub_on,Jonathan Shore,New York City FC,BMO Field
 2026-08-29-toronto-fc-v-new-york-city-fc,90,yellow,Jonathan Shore,New York City FC,BMO Field
+2026-08-29-torquay-united-v-hampton-richmond,22,goal,Cody Cooke,Torquay United,Plainmoor Ground
+2026-08-29-torquay-united-v-hampton-richmond,45,goal,Luis Fernandez,Hampton & Richmond,Plainmoor Ground
 2026-08-29-vfb-eichstatt-v-tsv-aubstadt,27,goal,Jonathan Grimm,VfB Eichstätt,HIRSCH-Sportpark
 2026-08-29-vfb-eichstatt-v-tsv-aubstadt,72,goal,Leon Peric,VfB Eichstätt,HIRSCH-Sportpark
 2026-08-29-vfb-eichstatt-v-tsv-aubstadt,81,own_goal,Tim Hüttl,VfB Eichstätt,HIRSCH-Sportpark
