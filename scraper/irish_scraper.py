@@ -1546,6 +1546,49 @@ def season_from_matches(mlist, league, now):
             "league": league}
 
 
+def season_splits(mlist, now):
+    """Per-(team, competition) breakdown of this season's club football,
+    built from the player's own match list. The stats block labels the
+    whole season with one club, but the matches remember which shirt each
+    game was played in - loans and mid-season moves come out as separate
+    splits. Sorted by minutes, biggest first."""
+    label, (start, end) = current_season_label(now)
+    agg, order = {}, []
+    for m in mlist:
+        if not (m.get("played") and start <= m["utc"] <= end):
+            continue
+        if "friendl" in norm(m.get("comp", "")):
+            continue
+        if "ireland" in norm(m.get("team", "")):
+            continue
+        key = (norm(m.get("team", "")), norm(m.get("comp", "")))
+        if key not in agg:
+            tid = m.get("home_id") if m.get("side") == "H" else m.get("away_id")
+            agg[key] = {"team": m.get("team", ""), "team_id": str(tid or ""),
+                        "comp": m.get("comp", ""), "apps": 0, "goals": 0,
+                        "assists": 0, "mins": 0, "_r": []}
+            order.append(key)
+        a = agg[key]
+        a["apps"] += 1
+        a["goals"] += int(m.get("goals") or 0)
+        a["assists"] += int(m.get("assists") or 0)
+        a["mins"] += int(m.get("minutes") or 0)
+        if str(m.get("rating")) not in ("", "None"):
+            try:
+                a["_r"].append(float(m["rating"]))
+            except ValueError:
+                pass
+    out = []
+    for key in order:
+        a = agg[key]
+        a["rating"] = (f"{sum(a['_r']) / len(a['_r']):.2f}"
+                       if a["_r"] else "")
+        del a["_r"]
+        out.append(a)
+    out.sort(key=lambda a: -a["mins"])
+    return label, out
+
+
 def extract_personal(blob):
     """age, born(blank - fotmob lacks town), foot.
 
@@ -1617,8 +1660,10 @@ def team_primary_league(tid, tname, _cache={}):
     return league
 
 
-def merge_rows(path, new_rows, touched):
-    """Replace rows for the touched players, keep everyone else's."""
+def merge_rows(path, new_rows, touched, header_hint=None):
+    """Replace rows for the touched players, keep everyone else's.
+    header_hint upgrades the file in place when a scrape starts writing
+    more columns than the file has - old rows are padded with blanks."""
     slugs = {p["slug"] for p in touched}
     header, keep = None, []
     if path.exists():
@@ -1628,6 +1673,9 @@ def merge_rows(path, new_rows, touched):
             keep = [row for row in r if row and row[0] not in slugs]
     if header is None:
         return
+    if header_hint and len(header_hint) > len(header):
+        keep = [row + [""] * (len(header_hint) - len(row)) for row in keep]
+        header = list(header_hint)
     rows = keep + [[("" if v is None else v) for v in row]
                    for row in new_rows]
     rows.sort(key=lambda x: (x[0], x[1] if len(x) > 1 else ""))
@@ -1796,6 +1844,31 @@ def scrape(args):
             if live_season:
                 live_season["league"] = source_league or season["league"]
                 season = live_season
+        # Which shirt do this season's numbers actually belong to? A loanee's
+        # stats block is the loan club's football, but the roster (and the
+        # profile header) show the parent club - so name the team explicitly
+        # and keep the per-team splits so every spell can be shown.
+        s_team, s_team_id = source_club, str(pt.get("teamId") or "")
+        s_league = season["league"] or source_league
+        _clean = lambda x: str(x).replace("|", "/").replace(";", ",")
+        _, splits = season_splits(mlist, now)
+        splits_str = ";".join(
+            "|".join([_clean(sp["team"]), sp["team_id"], _clean(sp["comp"]),
+                      str(sp["apps"]), str(sp["goals"]), str(sp["assists"]),
+                      str(sp["mins"]), sp["rating"]])
+            for sp in splits)
+        if splits and norm(splits[0]["team"]) != norm(source_club):
+            top = splits[0]
+            keep = norm(season["league"]) == norm(top["comp"])
+            s_team, s_team_id, s_league = top["team"], top["team_id"], top["comp"]
+            season = {"season": season["season"] or cur_label,
+                      "league": top["comp"], "apps": top["apps"],
+                      "starts": season["starts"] if keep else "",
+                      "goals": top["goals"], "assists": top["assists"],
+                      "mins": top["mins"],
+                      "yellow": season["yellow"] if keep else "",
+                      "red": season["red"] if keep else "",
+                      "rating": top["rating"]}
         players_rows.append([
             slug,
             source_league,
@@ -1810,6 +1883,7 @@ def scrape(args):
             c_apps, c_goals, c_assists,
             season["rating"],
             "auto",
+            s_team, s_team_id, s_league, splits_str,
         ])
         # upcoming fixtures for this player's club, next N weeks
         if source_club and pt.get("teamId"):
@@ -1925,7 +1999,8 @@ def scrape(args):
                    "senior_goals", "senior_debut", "youth", "season",
                    "s_apps", "s_starts",
                    "s_goals", "s_assists", "s_mins", "s_yellow", "s_red",
-                   "c_apps", "c_goals", "c_assists", "avg_rating", "source"],
+                   "c_apps", "c_goals", "c_assists", "avg_rating", "source",
+                   "s_team", "s_team_id", "s_league", "s_splits"],
                   players_rows)
 
     if cache_dirty:
@@ -1943,7 +2018,14 @@ def scrape(args):
                    [r[:-1] for r in results_rows], todo)
         merge_rows(out_root / "data/manual/fixtures.csv",
                    [r[:-1] for r in fixtures_rows], todo)
-        merge_rows(out_root / "data/api/players.csv", players_rows, todo)
+        merge_rows(out_root / "data/api/players.csv", players_rows, todo,
+                   header_hint=["slug", "league", "club", "club_id", "age",
+                                "born", "foot", "senior_caps", "senior_goals",
+                                "senior_debut", "youth", "season", "s_apps",
+                                "s_starts", "s_goals", "s_assists", "s_mins",
+                                "s_yellow", "s_red", "c_apps", "c_goals",
+                                "c_assists", "avg_rating", "source", "s_team",
+                                "s_team_id", "s_league", "s_splits"])
         merge_matches(out_root / "data/api/matches.csv", matches_by_id,
                       status_of)
         print("  merged active-player rows into existing CSVs")
