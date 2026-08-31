@@ -8005,6 +8005,19 @@
   ]
  },
  {
+  "fotmob_id": "1000019113",
+  "url": "/matches/brighton-hove-albion-u21-vs-arsenal-u21/iym4njm0#1000019113",
+  "kickoff": "2026-08-31T18:00:00Z",
+  "comp": "Premier League 2",
+  "home": "Brighton & Hove Albion U21",
+  "away": "Arsenal U21",
+  "home_id": "773678",
+  "away_id": "950214",
+  "slugs": [
+   "sean-keogh"
+  ]
+ },
+ {
   "fotmob_id": "5907535",
   "url": "/matches/weston-super-mare-vs-hemel-hempstead/6hshf1f#5907535",
   "kickoff": "2026-08-29T14:00:00Z",
@@ -8470,20 +8483,6 @@
   "away_id": "2205",
   "slugs": [
    "billy-vance"
-  ]
- },
- {
-  "fotmob_id": "1000019113",
-  "url": "/matches/brighton-hove-albion-u21-vs-arsenal-u21/iym4njm0#1000019113",
-  "kickoff": "2026-08-31T18:00:00Z",
-  "comp": "Premier League 2",
-  "home": "Brighton & Hove Albion U21",
-  "away": "Arsenal U21",
-  "home_id": "773678",
-  "away_id": "950214",
-  "slugs": [
-   "mark-omahony",
-   "sean-keogh"
   ]
  },
  {
