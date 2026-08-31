@@ -378,8 +378,8 @@ adam-rooney,2026-03-24,Leamington,5-2,National League North,90,0,0,
 adam-rooney,2026-03-28,Spennymoor Town FC,0-1,National League North,90,0,0,
 adam-rooney,2026-04-03,Peterborough Sports,2-2,National League North,90,0,0,
 adam-rooney,2026-04-06,Bedford Town,0-1,National League North,90,0,0,
-ade-solanke,2025-11-05,Panama U17,4-1,World Cup U17 Grp. J,90,0,0,
-ade-solanke,2025-11-08,Uzbekistan U17,2-1,World Cup U17 Grp. J,90,0,0,
+ade-solanke,2025-11-05,Panama U17,4-1,World Cup U17,90,0,0,
+ade-solanke,2025-11-08,Uzbekistan U17,2-1,World Cup U17,90,0,0,
 ade-solanke,2025-11-14,Canada U17,1-1,World Cup U17,90,0,0,
 ade-solanke,2025-11-18,Switzerland U17,1-3,World Cup U17,90,0,0,
 ade-solanke,2026-08-21,Chelsea U21,2-1,Premier League 2,90,0,0,7.40
@@ -4295,7 +4295,7 @@ gabriel-otegbayo,2026-01-17,Portsmouth,0-1,Championship,90,0,0,6.90
 gabriel-otegbayo,2026-01-20,Birmingham City,0-2,Championship,90,0,0,7.10
 gabriel-otegbayo,2026-01-24,Bristol City,0-2,Championship,90,0,0,6.70
 gabriel-otegbayo,2026-01-31,Wrexham,0-1,Championship,90,0,0,6.70
-gabriel-otegbayo,2026-02-03,Blackburn Rovers,0-1,Championship,90,0,0,7.20
+gabriel-otegbayo,2026-02-03,Blackburn Rovers,0-1,Championship,90,0,0,
 gabriel-otegbayo,2026-02-08,Swansea City,0-4,Championship,90,0,0,5.30
 gabriel-otegbayo,2026-02-14,Millwall,1-2,Championship,90,0,0,6.50
 gabriel-otegbayo,2026-02-22,Sheffield United,1-2,Championship,90,0,0,5.60
@@ -7229,7 +7229,7 @@ kieran-cruise,2026-05-15,Bohemian FC,1-2,Premier Division,25,0,1,6.80
 kieran-cruise,2026-05-18,Waterford FC,1-2,Premier Division,36,0,0,6.10
 kieran-cruise,2026-05-22,Dundalk,1-1,Premier Division,61,0,0,7.00
 kieran-cruise,2026-06-12,St. Patrick's Athletic,0-2,Premier Division,37,0,0,6.80
-kieran-morrison,2025-09-02,Burton Albion,0-2,EFL Trophy Northern Grp. H,90,0,0,4.80
+kieran-morrison,2025-09-02,Burton Albion,0-2,EFL Trophy,90,0,0,4.80
 kieran-morrison,2025-09-17,Atlético Madrid U19,0-0,UEFA Youth League,90,0,0,
 kieran-morrison,2025-09-27,Ipswich Town U21,2-3,Premier League 2,90,0,0,7.20
 kieran-morrison,2025-10-03,Fulham U21,1-1,Premier League 2,90,0,1,7.20
@@ -7238,15 +7238,15 @@ kieran-morrison,2025-10-29,Crystal Palace,0-3,EFL Cup,67,0,0,6.30
 kieran-morrison,2025-11-01,Middlesbrough U21,4-2,Premier League 2,90,1,0,8.40
 kieran-morrison,2025-11-04,Real Madrid U19,0-4,UEFA Youth League,90,0,0,
 kieran-morrison,2025-11-07,West Ham United U21,0-3,Premier League 2,90,0,0,6.10
-kieran-morrison,2025-11-13,Latvia U21,1-0,EURO U21 Qualification Grp. F,90,0,0,
-kieran-morrison,2025-11-18,Greece U21,0-4,EURO U21 Qualification Grp. F,90,0,0,
+kieran-morrison,2025-11-13,Latvia U21,1-0,EURO U-21 Qualification,90,0,0,
+kieran-morrison,2025-11-18,Greece U21,0-4,EURO U-21 Qualification,90,0,0,
 kieran-morrison,2025-11-26,PSV Eindhoven U19,1-0,UEFA Youth League,90,0,0,
-kieran-morrison,2025-12-09,Inter U19,0-5,UEFA Youth League,90,0,0,6.80
+kieran-morrison,2025-12-09,Inter U19,0-5,UEFA Youth League,90,0,0,
 kieran-morrison,2026-01-09,Norwich City U21,3-2,Premier League 2,90,0,0,7.60
 kieran-morrison,2026-01-17,Arsenal U21,7-0,Premier League 2,90,3,0,9.70
 kieran-morrison,2026-01-25,Leeds United U21,2-1,Premier League 2,90,1,0,8.60
 kieran-morrison,2026-01-30,Brighton & Hove Albion U21,1-0,Premier League 2,90,1,0,8.60
-kieran-morrison,2026-02-03,Žilina U19,1-2,UEFA Youth League,90,1,0,7.50
+kieran-morrison,2026-02-03,Žilina U19,1-2,UEFA Youth League,90,1,0,
 kieran-morrison,2026-02-08,Southampton U21,1-1,Premier League 2,90,0,0,6.40
 kieran-morrison,2026-02-15,West Bromwich Albion U21,4-3,Premier League 2,90,1,0,8.40
 kieran-morrison,2026-02-20,Nottingham Forest U21,3-0,Premier League 2,85,2,1,9.40
@@ -7806,9 +7806,9 @@ louie-barry,2026-04-21,Mansfield Town,0-1,League One,61,0,0,6.40
 louie-barry,2026-04-25,Peterborough United,3-1,League One,73,3,0,9.80
 louie-barry,2026-04-28,Port Vale,1-2,League One,45,0,0,5.60
 louie-barry,2026-05-02,Barnsley,3-1,League One,73,0,0,6.30
-louie-barry,2026-05-09,Stevenage,1-0,League One Playoff,76,0,0,6.70
-louie-barry,2026-05-13,Stevenage,2-0,League One Playoff,69,1,0,8.00
-louie-barry,2026-05-24,Bolton Wanderers,1-4,League One Playoff,65,0,0,6.80
+louie-barry,2026-05-09,Stevenage,1-0,League One,76,0,0,6.70
+louie-barry,2026-05-13,Stevenage,2-0,League One,69,1,0,8.00
+louie-barry,2026-05-24,Bolton Wanderers,1-4,League One,65,0,0,6.80
 louie-barry,2026-08-08,Bolton Wanderers,1-0,EFL Cup,27,0,0,6.40
 louie-barry,2026-08-15,Leyton Orient,2-1,League One,45,0,0,6.90
 louie-barry,2026-08-20,Bradford City,0-1,League One,69,0,0,6.20
@@ -8957,9 +8957,9 @@ owen-elding,2026-08-09,Rangers,2-1,Premiership,1,0,0,
 owen-elding,2026-08-13,KF Shkendija,0-0,Conference League Qualification,71,0,0,
 owen-elding,2026-08-16,Partick Thistle,1-0,League Cup,73,1,0,
 owen-elding,2026-08-20,Gent,0-0,Conference League Qualification,64,0,0,
-owen-mason,2025-09-09,Harrogate Town,0-1,EFL Trophy Northern Grp. F,90,0,0,6.00
-owen-mason,2025-10-15,Newcastle United U21,2-2,EFL Trophy Northern Grp. F,90,0,0,6.60
-owen-mason,2025-11-04,Huddersfield Town,1-3,EFL Trophy Northern Grp. F,90,0,0,5.90
+owen-mason,2025-09-09,Harrogate Town,0-1,EFL Trophy,90,0,0,6.00
+owen-mason,2025-10-15,Newcastle United U21,2-2,EFL Trophy,90,0,0,6.60
+owen-mason,2025-11-04,Huddersfield Town,1-3,EFL Trophy,90,0,0,5.90
 owen-mason,2025-12-06,Accrington Stanley,2-2,FA Cup,120,0,0,
 owen-mason,2026-02-07,Scunthorpe United,0-1,National League,90,0,0,
 owen-mason,2026-02-14,Morecambe,5-1,National League,90,0,0,

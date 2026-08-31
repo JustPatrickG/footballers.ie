@@ -4329,6 +4329,9 @@ match_id,minute,type,player,team,venue
 2026-08-31-afc-bournemouth-academy-v-middlesbrough-u21,64,sub_on,Dane Ndimukum,AFC Bournemouth Academy,The Wyatt Homes Stadium
 2026-08-31-afc-bournemouth-academy-v-middlesbrough-u21,65,sub_off,Cayden Cole,Middlesbrough U21,The Wyatt Homes Stadium
 2026-08-31-afc-bournemouth-academy-v-middlesbrough-u21,65,sub_on,Tyler Smith,Middlesbrough U21,The Wyatt Homes Stadium
+2026-08-31-bishops-stortford-v-hitchin-town,31,goal,Frank Norris,Bishop's Stortford,Woodside Park
+2026-08-31-boston-united-v-hornchurch,13,yellow,Jack Powell,Hornchurch,The Jakemans Community Stadium
+2026-08-31-boston-united-v-hornchurch,33,yellow,Ryan Inniss,Hornchurch,The Jakemans Community Stadium
 2026-08-31-brentford-academy-v-sunderland-u21,1,goal,Kaye Furo,Brentford Academy,Wheatsheaf Park
 2026-08-31-brentford-academy-v-sunderland-u21,31,sub_off,Josh Dasilva,Brentford Academy,Wheatsheaf Park
 2026-08-31-brentford-academy-v-sunderland-u21,31,sub_on,Isaac Holland,Brentford Academy,Wheatsheaf Park
@@ -4350,6 +4353,12 @@ match_id,minute,type,player,team,venue
 2026-08-31-brentford-academy-v-sunderland-u21,79,sub_off,Donal O'Connor,Brentford Academy,Wheatsheaf Park
 2026-08-31-brentford-academy-v-sunderland-u21,79,sub_on,Ben Wilson,Brentford Academy,Wheatsheaf Park
 2026-08-31-brentford-academy-v-sunderland-u21,79,sub_on,Matas Klimas,Brentford Academy,Wheatsheaf Park
+2026-08-31-brentwood-town-v-maldon-tiptree,,,,,Brentwood Centre Arena
+2026-08-31-buxton-v-merthyr-town,17,goal,Tony Weston,Buxton,The Tarmac Silverlands Stadium
+2026-08-31-caernarfon-v-the-new-saints,14,goal,Ben Wilson,The New Saints,The Go Goodwins Stadium
+2026-08-31-caernarfon-v-the-new-saints,22,goal,Rhys Hughes,The New Saints,The Go Goodwins Stadium
+2026-08-31-carlisle-united-v-scunthorpe-united,7,goal,Miguel Azeez,Carlisle United,Brunton Park
+2026-08-31-carlisle-united-v-scunthorpe-united,28,goal,Jordan Richards,Scunthorpe United,Brunton Park
 2026-08-31-chelsea-u21-v-west-ham-united-u21,13,goal,Josh Landers,West Ham United U21,Kingsmeadow
 2026-08-31-chelsea-u21-v-west-ham-united-u21,16,yellow,Harrison Bettoni,Chelsea U21,Kingsmeadow
 2026-08-31-chelsea-u21-v-west-ham-united-u21,19,yellow,Junior Robinson,West Ham United U21,Kingsmeadow
@@ -4366,7 +4375,16 @@ match_id,minute,type,player,team,venue
 2026-08-31-chelsea-u21-v-west-ham-united-u21,68,yellow,Jethro Medine,West Ham United U21,Kingsmeadow
 2026-08-31-chelsea-u21-v-west-ham-united-u21,69,yellow,Connor Brooks,West Ham United U21,Kingsmeadow
 2026-08-31-chelsea-u21-v-west-ham-united-u21,74,yellow,Lewi Richards,Chelsea U21,Kingsmeadow
-2026-08-31-flint-town-united-v-connahs-quay-nomads,,,,,Essity Stadium
+2026-08-31-chester-fc-v-morecambe,,,,,Deva Stadium
+2026-08-31-chorley-v-brackley-town,26,goal,Tahvon Campbell,Brackley Town,Victory Park
+2026-08-31-dorking-wanderers-v-truro-city,,,,,Meadowbank Stadium
+2026-08-31-eastleigh-v-aldershot-town,,,,,Silverlake Stadium
+2026-08-31-ebbsfleet-united-v-horsham,,,,,Morrow Stadium
+2026-08-31-fc-united-of-manchester-v-avro,10,goal,Jordan Buckley,FC United of Manchester,Broadhurst Park
+2026-08-31-fc-united-of-manchester-v-avro,17,goal,Harry Salt,Avro,Broadhurst Park
+2026-08-31-flint-town-united-v-connahs-quay-nomads,10,goal,Callum West,Connah's Quay Nomads,Essity Stadium
+2026-08-31-harrogate-town-v-gateshead-fc,,,,,Marcy Fitness Stadium
+2026-08-31-kings-lynn-town-v-scarborough-athletic,,,,,The Walks
 2026-08-31-manchester-united-u21-v-leicester-city-u21,14,goal,Shea Lacey,Manchester United U21,Progress with Unity Stadium
 2026-08-31-manchester-united-u21-v-leicester-city-u21,27,goal,Bobby Amartey,Leicester City U21,Progress with Unity Stadium
 2026-08-31-manchester-united-u21-v-leicester-city-u21,29,goal,Shea Lacey,Manchester United U21,Progress with Unity Stadium
@@ -4374,7 +4392,44 @@ match_id,minute,type,player,team,venue
 2026-08-31-manchester-united-u21-v-leicester-city-u21,34,yellow,Michael Toko,Leicester City U21,Progress with Unity Stadium
 2026-08-31-manchester-united-u21-v-leicester-city-u21,41,sub_off,Ashton Missin,Manchester United U21,Progress with Unity Stadium
 2026-08-31-manchester-united-u21-v-leicester-city-u21,41,sub_on,Tynan Thompson,Manchester United U21,Progress with Unity Stadium
+2026-08-31-radcliffe-v-darlington,,,,,Neuven Stadium
+2026-08-31-salisbury-v-billericay,,,,,The Raymond McEnhill Stadium
+2026-08-31-solihull-moors-v-afc-fylde,17,sub_off,Ethan Mitchell,AFC Fylde,Damson Park
+2026-08-31-solihull-moors-v-afc-fylde,17,sub_on,Luca Thomas,AFC Fylde,Damson Park
+2026-08-31-solihull-moors-v-afc-fylde,20,sub_off,Cedric Main,AFC Fylde,Damson Park
+2026-08-31-solihull-moors-v-afc-fylde,20,sub_on,Jack Morris,AFC Fylde,Damson Park
+2026-08-31-solihull-moors-v-afc-fylde,34,goal,Harvey Broad,AFC Fylde,Damson Park
+2026-08-31-south-shields-v-spalding-united,,,,,Wolf Competitions Stadium
+2026-08-31-spennymoor-town-fc-v-hednesford,18,goal,Matthew Dolan,Spennymoor Town FC,The Brewery Field
+2026-08-31-spennymoor-town-fc-v-hednesford,26,goal,Ahkeem Rose,Hednesford,The Brewery Field
+2026-08-31-sutton-united-v-wealdstone,12,goal,Micah Obiero,Wealdstone,VBS Community Stadium
 2026-08-31-tottenham-hotspur-u21-v-birmingham-u21,2,goal,Salif Bamba,Birmingham U21,SPORTA Arena
 2026-08-31-tottenham-hotspur-u21-v-birmingham-u21,7,goal,Reiss Elliot-Parris,Tottenham Hotspur U21,SPORTA Arena
 2026-08-31-tottenham-hotspur-u21-v-birmingham-u21,33,goal,Riquelme Thompson-Jones,Birmingham U21,SPORTA Arena
 2026-08-31-tottenham-hotspur-u21-v-birmingham-u21,38,yellow,Jack Quirk,Birmingham U21,SPORTA Arena
+2026-08-31-tottenham-hotspur-u21-v-birmingham-u21,46,sub_off,Carey Bloedorn,Tottenham Hotspur U21,SPORTA Arena
+2026-08-31-tottenham-hotspur-u21-v-birmingham-u21,46,sub_off,Tye Hall,Tottenham Hotspur U21,SPORTA Arena
+2026-08-31-tottenham-hotspur-u21-v-birmingham-u21,46,sub_on,Samual Archer,Tottenham Hotspur U21,SPORTA Arena
+2026-08-31-tottenham-hotspur-u21-v-birmingham-u21,46,sub_on,Max McFadden,Tottenham Hotspur U21,SPORTA Arena
+2026-08-31-tottenham-hotspur-u21-v-birmingham-u21,56,goal,Ellis Lehane,Tottenham Hotspur U21,SPORTA Arena
+2026-08-31-tottenham-hotspur-u21-v-birmingham-u21,57,sub_off,Salif Bamba,Birmingham U21,SPORTA Arena
+2026-08-31-tottenham-hotspur-u21-v-birmingham-u21,57,sub_on,Junior Wilson,Birmingham U21,SPORTA Arena
+2026-08-31-tottenham-hotspur-u21-v-birmingham-u21,62,sub_off,Maeson King,Tottenham Hotspur U21,SPORTA Arena
+2026-08-31-tottenham-hotspur-u21-v-birmingham-u21,62,sub_on,George Feeney,Tottenham Hotspur U21,SPORTA Arena
+2026-08-31-tottenham-hotspur-u21-v-birmingham-u21,69,sub_off,Cobi Maddox,Birmingham U21,SPORTA Arena
+2026-08-31-tottenham-hotspur-u21-v-birmingham-u21,69,sub_off,Tobey Ugorji,Birmingham U21,SPORTA Arena
+2026-08-31-tottenham-hotspur-u21-v-birmingham-u21,69,sub_on,Dynaeo Martin-Moore,Birmingham U21,SPORTA Arena
+2026-08-31-tottenham-hotspur-u21-v-birmingham-u21,69,sub_on,Connor Reilly,Birmingham U21,SPORTA Arena
+2026-08-31-tottenham-hotspur-u21-v-birmingham-u21,71,goal,Tyrese Hall,Tottenham Hotspur U21,SPORTA Arena
+2026-08-31-tottenham-hotspur-u21-v-birmingham-u21,74,sub_off,Reiss Elliot-Parris,Tottenham Hotspur U21,SPORTA Arena
+2026-08-31-tottenham-hotspur-u21-v-birmingham-u21,74,sub_on,Cole Ramsey,Tottenham Hotspur U21,SPORTA Arena
+2026-08-31-tottenham-hotspur-u21-v-birmingham-u21,78,goal,Menzi Mazwi,Birmingham U21,SPORTA Arena
+2026-08-31-tottenham-hotspur-u21-v-birmingham-u21,80,sub_off,Alezandro Da Silva,Birmingham U21,SPORTA Arena
+2026-08-31-tottenham-hotspur-u21-v-birmingham-u21,80,sub_on,Joshua Cook,Birmingham U21,SPORTA Arena
+2026-08-31-warrington-rylands-v-bamber-bridge,31,goal,Adam Caddick,Warrington Rylands,Gorsey Lane
+2026-08-31-weston-super-mare-v-chelmsford,,,,,The Optima Stadium
+2026-08-31-whitby-v-alfreton-town,16,goal,Dylan Youmbi,Alfreton Town,Turnbull Ground
+2026-08-31-whitehawk-v-burgess-hill-town,17,goal,Rhys Murphy,Whitehawk,The Enclosed Ground
+2026-08-31-woking-v-southend-united,10,yellow,Vontae Daley-Campbell,Southend United,The Laithwaite Community Stadium
+2026-08-31-worthing-v-boreham-wood,22,goal,Razzaq Coleman De-Graft,Worthing,Sussex Transport Community Stadium
+2026-08-31-yate-town-v-taunton-town,6,goal,Ben Seymour,Taunton Town,The Jelf Stadium
