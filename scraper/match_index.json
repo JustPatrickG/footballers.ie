@@ -1363,7 +1363,6 @@
   "away_id": "45731",
   "slugs": [
    "adam-rooney",
-   "bobby-jones",
    "jesse-nwabueze"
   ]
  },
@@ -2495,40 +2494,14 @@
   ]
  },
  {
-  "fotmob_id": "5907033",
-  "url": "/matches/darlington-vs-radcliffe/jg6gbec#5907033",
-  "kickoff": "2026-08-31T14:00:00Z",
+  "fotmob_id": "5907016",
+  "url": "/matches/darlington-vs-macclesfield-fc/2g1p9e#5907016",
+  "kickoff": "2026-08-29T14:00:00Z",
   "comp": "National League North",
-  "home": "Radcliffe",
-  "away": "Darlington",
-  "home_id": "282390",
-  "away_id": "8598",
-  "slugs": [
-   "bobby-jones"
-  ]
- },
- {
-  "fotmob_id": "5907053",
-  "url": "/matches/darlington-vs-chorley/if6r6k9#5907053",
-  "kickoff": "2026-09-08T18:45:00Z",
-  "comp": "National League North",
-  "home": "Chorley",
-  "away": "Darlington",
-  "home_id": "274599",
-  "away_id": "8598",
-  "slugs": [
-   "bobby-jones"
-  ]
- },
- {
-  "fotmob_id": "5907067",
-  "url": "/matches/darlington-vs-marine/6o55zf3#5907067",
-  "kickoff": "2026-09-12T14:00:00Z",
-  "comp": "National League North",
-  "home": "Marine",
-  "away": "Darlington",
-  "home_id": "161816",
-  "away_id": "8598",
+  "home": "Darlington",
+  "away": "Macclesfield FC",
+  "home_id": "8598",
+  "away_id": "8599",
   "slugs": [
    "bobby-jones"
   ]
@@ -4263,6 +4236,19 @@
   ]
  },
  {
+  "fotmob_id": "5907536",
+  "url": "/matches/horsham-vs-farnham-town/3voyex2p#5907536",
+  "kickoff": "2026-08-29T14:00:00Z",
+  "comp": "National League South",
+  "home": "Horsham",
+  "away": "Farnham Town",
+  "home_id": "105554",
+  "away_id": "674293",
+  "slugs": [
+   "danny-burke"
+  ]
+ },
+ {
   "fotmob_id": "5907546",
   "url": "/matches/ebbsfleet-united-vs-horsham/320tc2c#5907546",
   "kickoff": "2026-08-31T14:00:00Z",
@@ -4678,6 +4664,19 @@
   ]
  },
  {
+  "fotmob_id": "5907539",
+  "url": "/matches/torquay-united-vs-hampton-richmond/32s6l4x#5907539",
+  "kickoff": "2026-08-29T14:00:00Z",
+  "comp": "National League South",
+  "home": "Torquay United",
+  "away": "Hampton & Richmond",
+  "home_id": "10193",
+  "away_id": "105552",
+  "slugs": [
+   "dominic-bernard"
+  ]
+ },
+ {
   "fotmob_id": "5907553",
   "url": "/matches/weston-super-mare-vs-chelmsford/me542n#5907553",
   "kickoff": "2026-08-31T14:00:00Z",
@@ -4687,8 +4686,7 @@
   "home_id": "6314",
   "away_id": "45724",
   "slugs": [
-   "dominic-bernard",
-   "sean-long"
+   "dominic-bernard"
   ]
  },
  {
@@ -4701,8 +4699,7 @@
   "home_id": "8131",
   "away_id": "6314",
   "slugs": [
-   "dominic-bernard",
-   "sean-long"
+   "dominic-bernard"
   ]
  },
  {
@@ -4715,8 +4712,7 @@
   "home_id": "6314",
   "away_id": "275027",
   "slugs": [
-   "dominic-bernard",
-   "sean-long"
+   "dominic-bernard"
   ]
  },
  {
@@ -4729,8 +4725,7 @@
   "home_id": "6314",
   "away_id": "8009",
   "slugs": [
-   "dominic-bernard",
-   "sean-long"
+   "dominic-bernard"
   ]
  },
  {
@@ -5823,6 +5818,20 @@
   ]
  },
  {
+  "fotmob_id": "5907019",
+  "url": "/matches/chester-fc-vs-hereford/46cky4te#5907019",
+  "kickoff": "2026-08-29T14:00:00Z",
+  "comp": "National League North",
+  "home": "Hereford",
+  "away": "Chester FC",
+  "home_id": "799249",
+  "away_id": "9797",
+  "slugs": [
+   "jake-griffin",
+   "sam-foley"
+  ]
+ },
+ {
   "fotmob_id": "5907028",
   "url": "/matches/morecambe-vs-chester-fc/2rjue6#5907028",
   "kickoff": "2026-08-31T14:00:00Z",
@@ -6576,6 +6585,19 @@
   ]
  },
  {
+  "fotmob_id": "5907541",
+  "url": "/matches/walton-hersham-vs-dorking-wanderers/270q2toj#5907541",
+  "kickoff": "2026-08-29T14:00:00Z",
+  "comp": "National League South",
+  "home": "Walton and Hersham",
+  "away": "Dorking Wanderers",
+  "home_id": "6093",
+  "away_id": "580438",
+  "slugs": [
+   "josh-barrett"
+  ]
+ },
+ {
   "fotmob_id": "5907545",
   "url": "/matches/truro-city-vs-dorking-wanderers/3nsxjemv#5907545",
   "kickoff": "2026-08-31T14:00:00Z",
@@ -6677,6 +6699,19 @@
   "away_id": "1907",
   "slugs": [
    "josh-odwyer"
+  ]
+ },
+ {
+  "fotmob_id": "5907020",
+  "url": "/matches/marine-vs-radcliffe/19bnlz9r#5907020",
+  "kickoff": "2026-08-29T14:00:00Z",
+  "comp": "National League North",
+  "home": "Marine",
+  "away": "Radcliffe",
+  "home_id": "161816",
+  "away_id": "282390",
+  "slugs": [
+   "josh-seary"
   ]
  },
  {
@@ -7113,6 +7148,19 @@
   ]
  },
  {
+  "fotmob_id": "5907532",
+  "url": "/matches/chelmsford-vs-maidenhead-united/1x5l5le#5907532",
+  "kickoff": "2026-08-29T14:00:00Z",
+  "comp": "National League South",
+  "home": "Chelmsford",
+  "away": "Maidenhead United",
+  "home_id": "45724",
+  "away_id": "45725",
+  "slugs": [
+   "louis-dunne"
+  ]
+ },
+ {
   "fotmob_id": "5948046",
   "url": "/matches/brentwood-town-vs-maldon-tiptree/21a9118j#5948046",
   "kickoff": "2026-08-31T14:00:00Z",
@@ -7245,6 +7293,19 @@
   "away_id": "9849",
   "slugs": [
    "matteo-egan"
+  ]
+ },
+ {
+  "fotmob_id": "5907021",
+  "url": "/matches/merthyr-town-vs-chorley/i1yz2an#5907021",
+  "kickoff": "2026-08-29T14:00:00Z",
+  "comp": "National League North",
+  "home": "Merthyr Town",
+  "away": "Chorley",
+  "home_id": "5762",
+  "away_id": "274599",
+  "slugs": [
+   "matthew-harris"
   ]
  },
  {
@@ -7785,6 +7846,19 @@
   ]
  },
  {
+  "fotmob_id": "5907535",
+  "url": "/matches/weston-super-mare-vs-hemel-hempstead/6hshf1f#5907535",
+  "kickoff": "2026-08-29T14:00:00Z",
+  "comp": "National League South",
+  "home": "Hemel Hempstead",
+  "away": "Weston Super Mare",
+  "home_id": "161831",
+  "away_id": "6314",
+  "slugs": [
+   "sean-long"
+  ]
+ },
+ {
   "fotmob_id": "5794536",
   "url": "/matches/montrose-vs-queen-south/2qet77#5794536",
   "kickoff": "2026-08-29T14:00:00Z",
@@ -8253,6 +8327,19 @@
   ]
  },
  {
+  "fotmob_id": "5907033",
+  "url": "/matches/darlington-vs-radcliffe/jg6gbec#5907033",
+  "kickoff": "2026-08-31T14:00:00Z",
+  "comp": "National League North",
+  "home": "Radcliffe",
+  "away": "Darlington",
+  "home_id": "282390",
+  "away_id": "8598",
+  "slugs": [
+   "bobby-jones"
+  ]
+ },
+ {
   "fotmob_id": "5868038",
   "url": "/matches/real-madrid-vs-malaga/2tv0tl#5868038",
   "kickoff": "2026-08-30T15:00:00Z",
@@ -8328,50 +8415,6 @@
   "away_id": "580400",
   "slugs": [
    "michael-kelly"
-  ]
- },
- {
-  "fotmob_id": "5991401",
-  "url": "/matches/potenza-vs-cosenza/1axj3u#5991401",
-  "kickoff": "2026-08-29T19:00:00Z",
-  "comp": "Serie C",
-  "home": "Cosenza",
-  "away": "Potenza",
-  "home_id": "6456",
-  "away_id": "6099",
-  "slugs": [
-   "ed-mcjannett"
-  ]
- },
- {
-  "fotmob_id": "5811739",
-  "url": "/matches/lommel-vs-cercle-brugge/2aw69l#5811739",
-  "kickoff": "2026-08-29T18:45:00Z",
-  "comp": "Belgian Pro League",
-  "home": "Cercle Brugge",
-  "away": "Lommel",
-  "home_id": "9984",
-  "away_id": "6702",
-  "slugs": [
-   "tayo-adaramola"
-  ]
- },
- {
-  "fotmob_id": "5847412",
-  "url": "/matches/larne-vs-ballymena-united/bpbqa#5847412",
-  "kickoff": "2026-08-29T17:00:00Z",
-  "comp": "Premiership",
-  "home": "Ballymena United",
-  "away": "Larne",
-  "home_id": "4063",
-  "away_id": "2206",
-  "slugs": [
-   "david-toure",
-   "jack-oreilly",
-   "jordan-mceneff",
-   "josh-ukek",
-   "ronan-doherty",
-   "sean-murray"
   ]
  }
 ]
