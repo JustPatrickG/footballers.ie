@@ -623,7 +623,9 @@
     }
     var irish = [];
     var ST = window.FB_MSTATS || {};
-    for (var k in ST) irish.push(norm(ST[k].n));
+    // ST holds the whole teamsheet; only entries WITHOUT .u are tracked
+    // Irish players - the rest are teammates who happen to be on the sheet.
+    for (var k in ST) { if (!ST[k].u) irish.push(norm(ST[k].n)); }
     function isIrish(name) {
       var n = norm(name);
       if (!n) return false;
