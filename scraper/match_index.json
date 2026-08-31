@@ -18,6 +18,7 @@
    "david-hurley",
    "dylan-connolly",
    "dylan-connolly-athlone",
+   "ed-mccarthy",
    "edward-mccarthy",
    "evan-caffrey",
    "francely-lomboto",
@@ -69,6 +70,7 @@
    "donnacha-sammon",
    "dylan-connolly",
    "dylan-connolly-athlone",
+   "ed-mccarthy",
    "edward-mccarthy",
    "edwin-agbaje",
    "eoin-doyle",
@@ -127,6 +129,7 @@
    "donnacha-sammon",
    "dylan-connolly",
    "dylan-connolly-athlone",
+   "ed-mccarthy",
    "edward-mccarthy",
    "eoin-doyle",
    "finn-mcdonnell",
@@ -1543,14 +1546,40 @@
   "home_id": "1233534",
   "away_id": "62337",
   "slugs": [
+   "adam-verdon",
    "ajibola-oluwabiyi",
+   "ben-feeney",
+   "ben-lynch",
    "billy-regan",
+   "brian-cunningham",
+   "cian-curtis",
    "clyde-oconnell",
+   "colin-conroy",
+   "corey-chambers",
    "dare-kareem",
+   "darren-nwankwo",
+   "evan-osam",
+   "gavin-hodgins",
    "gideon-tetteh",
+   "jake-doyle",
+   "jamie-wynne",
+   "kaylem-harnett",
+   "liam-doyle",
+   "mark-walsh",
+   "max-murphy",
+   "mikie-rowe",
+   "paul-martin",
+   "reece-webb",
    "rhys-bartley",
+   "richkov-boevi",
+   "robbie-lynch",
+   "robbie-mccourt",
+   "ronan-manning",
    "ryan-butler",
-   "zak-osullivan"
+   "ryan-ritchie",
+   "steven-healy",
+   "zak-osullivan",
+   "zayd-abada"
   ]
  },
  {
@@ -1563,15 +1592,38 @@
   "home_id": "62337",
   "away_id": "1627",
   "slugs": [
+   "aaron-mclaughlin",
+   "adam-mcdaid",
+   "adam-verdon",
    "ajibola-oluwabiyi",
    "bridel-bosakani",
+   "conor-tourish",
+   "darragh-coyle",
+   "evan-osam",
+   "gavin-hodgins",
    "gavin-mcateer",
    "gideon-tetteh",
    "guilherme-rego-priosti",
+   "jake-doyle",
+   "jamie-wynne",
+   "joel-bradley-walsh",
    "josh-cullen",
+   "kaylem-harnett",
+   "liam-doyle",
+   "max-murphy",
+   "mikie-rowe",
+   "odhran-mchugh",
+   "oran-brogan",
+   "paul-martin",
+   "reece-webb",
    "rhys-bartley",
+   "robbie-mccourt",
    "ryan-butler",
-   "zak-osullivan"
+   "ryan-ritchie",
+   "shaunie-bradley",
+   "tony-mcnamee",
+   "zak-osullivan",
+   "zayd-abada"
   ]
  },
  {
@@ -1626,13 +1678,33 @@
   "home_id": "2383",
   "away_id": "1578",
   "slugs": [
+   "adam-wells",
    "alan-zborowski",
+   "anthony-adenopo",
    "callum-honohan",
+   "carl-lennox",
    "charles-akinrintoyo",
+   "ciaran-behan",
+   "colin-bolton",
    "dara-mccormick",
+   "dylan-mcglade",
+   "garry-buckley",
    "goodness-ogbonna",
+   "harry-curtis",
+   "jason-abbott",
+   "jordan-adeyemi",
+   "kai-oneill",
+   "killian-cailloce",
    "luca-cailloce",
-   "ronan-mansfield"
+   "matthew-alonge",
+   "mikey-carroll",
+   "mikey-mccullagh",
+   "niall-holohan",
+   "rhys-kellynoonan",
+   "ronan-mansfield",
+   "ryan-mcbrearty",
+   "sam-norval",
+   "shane-griffin"
   ]
  },
  {
@@ -1645,13 +1717,39 @@
   "home_id": "2201",
   "away_id": "2383",
   "slugs": [
+   "aj-nash",
    "alan-zborowski",
+   "anthony-adenopo",
    "brody-lee",
    "callum-honohan",
+   "charlie-hanover",
+   "charlie-lyons",
    "cillian-murphy",
+   "conor-brann",
+   "conor-drinan",
    "dara-mccormick",
+   "darragh-crowley",
+   "david-odumosu",
+   "dylan-mcglade",
+   "fiacre-kelleher",
+   "garry-buckley",
+   "greg-bolger",
+   "harry-nevin",
+   "jason-abbott",
+   "jordan-adeyemi",
+   "josh-fitzpatrick",
+   "kai-oneill",
+   "luke-downey",
+   "matthew-kiernan",
    "matthew-murray",
+   "mikey-carroll",
+   "rhys-kellynoonan",
    "ronan-mansfield",
+   "rory-feely",
+   "rory-moloney",
+   "ruairi-keating",
+   "sean-maguire",
+   "shane-griffin",
    "zach-dunne"
   ]
  },
@@ -2016,13 +2114,31 @@
   "home_id": "1627",
   "away_id": "2378",
   "slugs": [
+   "aaron-mclaughlin",
+   "adam-mcdaid",
    "andy-spain",
+   "brendan-clarke",
+   "brian-mcmanus",
    "bridel-bosakani",
+   "colm-doyle",
+   "conor-tourish",
+   "darragh-coyle",
+   "derinsola-adewale",
    "gavin-mcateer",
+   "gradi-lomboto",
    "guilherme-rego-priosti",
+   "joel-bradley-walsh",
    "josh-cullen",
+   "kyle-oconnor",
    "kyle-robinson",
-   "stephen-kenny"
+   "odhran-mchugh",
+   "oran-brogan",
+   "patrick-ferry",
+   "peter-grogan",
+   "shaunie-bradley",
+   "stephen-kenny",
+   "tony-mcnamee",
+   "will-smith"
   ]
  },
  {
@@ -2035,12 +2151,32 @@
   "home_id": "1578",
   "away_id": "2378",
   "slugs": [
+   "adam-wells",
    "andy-spain",
+   "brendan-clarke",
+   "brian-mcmanus",
+   "carl-lennox",
    "charles-akinrintoyo",
+   "ciaran-behan",
+   "colin-bolton",
+   "colm-doyle",
+   "derinsola-adewale",
    "goodness-ogbonna",
+   "gradi-lomboto",
+   "harry-curtis",
+   "killian-cailloce",
+   "kyle-oconnor",
    "kyle-robinson",
    "luca-cailloce",
-   "stephen-kenny"
+   "matthew-alonge",
+   "mikey-mccullagh",
+   "niall-holohan",
+   "patrick-ferry",
+   "peter-grogan",
+   "ryan-mcbrearty",
+   "sam-norval",
+   "stephen-kenny",
+   "will-smith"
   ]
  },
  {
@@ -2348,15 +2484,47 @@
   "home_id": "1629",
   "away_id": "2201",
   "slugs": [
+   "aj-nash",
+   "alain-kizenga",
    "ben-mccormack",
+   "benjamin-fagbemi",
    "billy-oneill",
    "brody-lee",
+   "charlie-hanover",
+   "charlie-lyons",
    "cillian-murphy",
+   "conor-brann",
+   "conor-drinan",
+   "conor-knight",
+   "cristiano-bramley",
+   "darragh-crowley",
+   "david-odumosu",
+   "dean-oshea",
+   "declan-osagie",
+   "fiacre-kelleher",
    "flynn-ryan",
    "graham-kelly",
+   "greg-bolger",
+   "harry-nevin",
+   "jack-lawless",
+   "jamie-duggan",
+   "jamie-ryan",
+   "jimmy-corcoran",
+   "josh-fitzpatrick",
    "killian-cantwell",
    "leon-keogh",
+   "luke-downey",
+   "matthew-kiernan",
    "matthew-murray",
+   "philip-cooney",
+   "richard-ferizaj",
+   "rory-feely",
+   "rory-moloney",
+   "ruairi-keating",
+   "ryan-kelly",
+   "sean-maguire",
+   "stephen-mcguinness",
+   "tyreik-sammy",
    "zach-dunne",
    "zak-reddy"
   ]
@@ -2371,12 +2539,30 @@
   "home_id": "1426348",
   "away_id": "1629",
   "slugs": [
+   "alain-kizenga",
    "ben-mccormack",
+   "benjamin-fagbemi",
    "billy-oneill",
+   "conor-knight",
+   "cristiano-bramley",
+   "dean-oshea",
+   "declan-osagie",
+   "eric-koufie",
    "flynn-ryan",
    "graham-kelly",
+   "jack-lawless",
+   "jamie-duggan",
+   "jamie-ryan",
+   "jimmy-corcoran",
    "killian-cantwell",
    "leon-keogh",
+   "matthew-britton",
+   "oran-crowe",
+   "philip-cooney",
+   "richard-ferizaj",
+   "ryan-kelly",
+   "stephen-mcguinness",
+   "tyreik-sammy",
    "zak-reddy"
   ]
  },
@@ -2450,12 +2636,40 @@
   "home_id": "4569",
   "away_id": "1233534",
   "slugs": [
+   "aaron-doran",
+   "alex-obrien",
+   "andy-paraschiv",
+   "ben-feeney",
+   "ben-lynch",
    "billy-regan",
+   "brian-cunningham",
+   "cian-curtis",
    "clyde-oconnell",
+   "cole-omorehiomwan",
+   "colin-conroy",
+   "corey-chambers",
+   "daniel-mckenna",
    "dare-kareem",
+   "darren-nwankwo",
+   "dean-george",
+   "dean-williams",
    "emre-topcu",
+   "eric-yoro",
+   "jake-hough",
    "james-bailey",
-   "scott-brady"
+   "jamie-egan",
+   "kian-moore",
+   "mark-walsh",
+   "oisin-hand",
+   "osaze-irhue",
+   "pharrell-manuel",
+   "richkov-boevi",
+   "robbie-lynch",
+   "ronan-manning",
+   "scott-brady",
+   "stefan-ugbesia",
+   "steven-healy",
+   "taylor-mccarthy"
   ]
  },
  {
@@ -3131,6 +3345,7 @@
   "home_id": "2202",
   "away_id": "1937",
   "slugs": [
+   "billy-vance",
    "charles-dunne",
    "mark-coyle",
    "rob-slevin"
@@ -4889,9 +5104,28 @@
   "home_id": "4569",
   "away_id": "1426348",
   "slugs": [
+   "aaron-doran",
+   "alex-obrien",
+   "andy-paraschiv",
+   "cole-omorehiomwan",
+   "daniel-mckenna",
+   "dean-george",
+   "dean-williams",
    "emre-topcu",
+   "eric-koufie",
+   "eric-yoro",
+   "jake-hough",
    "james-bailey",
-   "scott-brady"
+   "jamie-egan",
+   "kian-moore",
+   "matthew-britton",
+   "oisin-hand",
+   "oran-crowe",
+   "osaze-irhue",
+   "pharrell-manuel",
+   "scott-brady",
+   "stefan-ugbesia",
+   "taylor-mccarthy"
   ]
  },
  {
@@ -5325,19 +5559,6 @@
   ]
  },
  {
-  "fotmob_id": "1000019099",
-  "url": "/matches/sunderland-u21-vs-nottingham-forest-u21/tuh1m6lb#1000019099",
-  "kickoff": "2026-08-24T18:00:00Z",
-  "comp": "Premier League 2",
-  "home": "Sunderland U21",
-  "away": "Nottingham Forest U21",
-  "home_id": "773657",
-  "away_id": "1389162",
-  "slugs": [
-   "grady-mcdonnell"
-  ]
- },
- {
   "fotmob_id": "6000874",
   "url": "/matches/scunthorpe-united-vs-nottingham-forest-u21/cgnaqosx#6000874",
   "kickoff": "2026-09-08T18:00:00Z",
@@ -5349,6 +5570,20 @@
   "slugs": [
    "grady-mcdonnell",
    "hugh-parker"
+  ]
+ },
+ {
+  "fotmob_id": "1000019128",
+  "url": "/matches/nottingham-forest-u21-vs-burnley-u21/1sqhyfw4f#1000019128",
+  "kickoff": "2026-09-14T18:00:00Z",
+  "comp": "Premier League 2",
+  "home": "Nottingham Forest U21",
+  "away": "Burnley U21",
+  "home_id": "1389162",
+  "away_id": "1796112",
+  "slugs": [
+   "grady-mcdonnell",
+   "kian-mcmahon-brown"
   ]
  },
  {
@@ -7187,19 +7422,6 @@
   ]
  },
  {
-  "fotmob_id": "1000019095",
-  "url": "/matches/wolverhampton-wanderers-u21-vs-manchester-city-u21/h1n6dtny#1000019095",
-  "kickoff": "2026-08-24T18:00:00Z",
-  "comp": "Premier League 2",
-  "home": "Manchester City U21",
-  "away": "Wolverhampton Wanderers U21",
-  "home_id": "860800",
-  "away_id": "773683",
-  "slugs": [
-   "nathan-fraser"
-  ]
- },
- {
   "fotmob_id": "1000015456",
   "url": "/matches/virton-vs-francs-borains/2je175x#1000015456",
   "kickoff": "2026-08-30T14:00:00Z",
@@ -7432,19 +7654,6 @@
   "away_id": "188191",
   "slugs": [
    "roland-idowu"
-  ]
- },
- {
-  "fotmob_id": "1000019097",
-  "url": "/matches/newcastle-united-u21-vs-tottenham-hotspur-u21/iwstqtj6#1000019097",
-  "kickoff": "2026-08-24T18:00:00Z",
-  "comp": "Premier League 2",
-  "home": "Newcastle United U21",
-  "away": "Tottenham Hotspur U21",
-  "home_id": "860798",
-  "away_id": "860802",
-  "slugs": [
-   "rory-finneran"
   ]
  },
  {
@@ -7991,6 +8200,19 @@
   "away_id": "8280",
   "slugs": [
    "zak-delaney"
+  ]
+ },
+ {
+  "fotmob_id": "5847426",
+  "url": "/matches/crusaders-vs-limavady/53y6u#5847426",
+  "kickoff": "2026-09-12T14:00:00Z",
+  "comp": "Premiership",
+  "home": "Crusaders",
+  "away": "Limavady",
+  "home_id": "1937",
+  "away_id": "2205",
+  "slugs": [
+   "billy-vance"
   ]
  },
  {

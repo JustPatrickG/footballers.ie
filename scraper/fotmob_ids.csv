@@ -2,6 +2,7 @@ slug,fotmob_id,fotmob_name,fotmob_team,note
 aaron-bolger,794399,Aaron Bolger,Galway United FC,discovered
 aaron-brennan,2139800,Aaron Brennan,Waterford FC,discovered
 aaron-connolly,874617,Aaron Connolly,Leyton Orient,
+aaron-doran,1281502,Aaron Doran,Longford Town,
 aaron-drinan,843660,Aaron Drinan,Swindon Town,
 aaron-greene,197116,Aaron Greene,Shamrock Rovers,discovered
 aaron-heaney,1667739,Aaron Heaney,Newington FC,from transfer list
@@ -9,22 +10,28 @@ aaron-keogh,1814704,Aaron Keogh,Dundalk,discovered
 aaron-maguire,1617298,Aaron Maguire,Tottenham Hotspur U21,
 aaron-mccarey,187608,Aaron McCarey,Portadown,
 aaron-mceneff,664503,Aaron McEneff,Glentoran,
+aaron-mclaughlin,1484020,Aaron McLaughlin,Finn Harps,
 aaron-molloy,731870,Aaron Molloy,Lexington SC,
+aaron-moloney,,Aaron Maloney,Athlone Town,name mismatch (Aaron Maloney) - not used
 aaron-ochoa,1669621,Aarón Ochoa,Malaga,
 aaron-okpolokpo,1527371,Joshua Okpolokpo,SJK,
 aaron-oreilly,1238053,Aaron O'Reilly,Aston Villa U18,from transfer list
+abagail-martin,,Abígail Martínez,Mazatlán FC,name mismatch (Abígail Martínez) - not used
 adam-banim,1612238,Adam Banim,St. Patrick's Athletic,discovered
 adam-brennan,1681980,Adam Brennan,Shamrock Rovers,
 adam-brogan,,,,not found
 adam-byrne,,,,not found
 adam-deans,1635510,Adam Deans,St. Patrick's Athletic,discovered
 adam-idah,846009,Adam Idah,Swansea City,club mismatch - CHECK
+adam-mcdaid,1762474,Adam McDaid,Finn Harps,
 adam-mcdonnell,556349,Adam McDonnell,Bohemian FC,discovered
 adam-murphy,1269869,Adam Murphy,Fleetwood Town,from transfer list
 adam-nelson,,,,not found
 adam-ohalloran,1683709,Adam O'Halloran,Galway United FC,discovered
 adam-oreilly,923219,Adam O'Reilly,Derry City,discovered
 adam-rooney,31916,Adam Rooney,King's Lynn Town,from transfer list
+adam-verdon,1290732,Adam Verdon,Wexford FC,
+adam-wells,1249990,Adam Wells,UCD,
 ade-solanke,1648652,Ademide Solanke,AFC Bournemouth Academy,
 ademipo-odubeko,1113675,Ademipo Odubeko,Shelbourne,discovered
 adrien-thibaut,1631615,Adrien Thibaut,Crewe Alexandra,
@@ -32,46 +39,61 @@ ahu-obhakhan,1133778,Ahu Obhakhan,Portadown,
 aidan-gabbidon,1646397,Aidan Gabbidon,Sligo Rovers,discovered
 aidan-keena,825815,Aidan Keena,St. Patrick's Athletic,discovered
 aidomo-emakhu,1248057,Aidomo Emakhu,Oxford United,club mismatch - CHECK
+aj-nash,1716387,AJ Nash,Cork City,
 ajibola-oluwabiyi,1793263,Ajibola Oluwabiyi,Wexford FC,from transfer list
+alain-kizenga,1694651,Alain Kizenga,Bray Wanderers,
 alan-browne,434498,Alan Browne,Sunderland,
 alan-reynolds,13949,Alan Reynolds,Bohemian FC,discovered
 alan-zborowski,1717409,Alan Zborowski,Cobh Ramblers,from transfer list
 alex-flynn,1820590,Alex Flynn,Shelbourne,discovered
 alex-gilbert,1113678,Alex Gilbert,,from transfer list
+alex-moody,1457730,Alex Moody,Bray Wanderers,
 alex-murphy,1362341,Alex Murphy,Kaiserslautern,added by id
 alex-nolan,1336954,Alex Nolan,Sligo Rovers,discovered
 alex-noonan,1669229,Alex Noonan,Shamrock Rovers,discovered
+alex-obrien,1380513,Alex O'Brien,Longford Town,
+alex-sheerin,,,,not found
 alfie-mulvenna,1839661,Alfie Mulvenna,Crystal Palace U18,from transfer list
 alfie-pollock,1970939,Alfie Pollock,Glenavon,from transfer list
 ali-reghba,964494,Ali Reghba,Maribor,
 ali-topcu,1660138,Ali Topcu,Shelbourne,discovered
+alicia-maher,,,,not found
 andrew-moran,1137404,Andrew Moran,Preston North End,
 andrew-omobamidele,1050822,Andrew Omobamidele,Strasbourg,club mismatch - CHECK
 andrew-quinn,1190122,Andrew Quinn,Drogheda United,discovered
+andrew-stuart-trainor,,,,not found
 andrew-wogan,1450519,Andrew Wogan,Stockport County,
 andy-lyons,888884,Andy Lyons,Blackpool,
+andy-paraschiv,1748308,Andy Paraschiv,Longford Town,
 andy-spain,1387847,Andrew Spain,Athlone Town,
 anselmo-garcia-macnulty,1286190,Anselmo MacNulty,Magdeburg,id set by hand
+anthony-adenopo,1609361,Anthony Adenopo,Cobh Ramblers,
 anthony-breslin,798602,Anthony Breslin,St. Patrick's Athletic,discovered
 anthony-oconnor,361772,Anthony O'Connor,Galway United FC,discovered
 anthony-scully,654097,Anthony Scully,Shrewsbury Town,from transfer list
 aodh-dervin,843941,Aodh Dervin,Dundalk,discovered
 aodhan-doherty,1512798,Aodhan Doherty,Falkirk,from transfer list
+aoife-fanning,,,,not found
 aran-fitzpatrick,1585610,Aran Fitzpatrick,EFSC Titans,from transfer list
 archie-quinn,,,,not found
 arlo-doherty,1187316,Arlo Doherty,Waterford FC,
 armstrong-oko-flex,1023017,Armstrong Oko-Flex,Levski Sofia,added by id
 baba-adeeko,1298713,Babajide Adeeko,Rochdale,
+bailey-shelley,,,,not found
 barry-coffey,1072821,Barry Coffey,Hartford Athletic,
 barry-cotter,825825,Barry Cotter,Derry City,discovered
+ben-feeney,1290818,Ben Feeney,Treaty United,
+ben-lynch,1248054,Benjamin Lynch,Treaty United,
 ben-mahon,1789949,Ben Mahon,Shamrock Rovers,discovered
 ben-mccormack,1172615,Ben McCormack,Bray Wanderers,
 ben-quinn,1399377,Ben Quinn,Cliftonville,club mismatch - CHECK
 ben-wilson,302783,Ben Wilson,Coventry City,club mismatch - CHECK
+benjamin-fagbemi,1762471,Benjamin Fagbemi,Bray Wanderers,
 billy-canny,1725200,Billy Canny,St. Patrick's Athletic,discovered
 billy-hayes,1765928,Billy Hayes,St. Patrick's Athletic,discovered
 billy-oneill,1694653,Billy O'Neill,Bray Wanderers,
 billy-regan,1692059,Billy Regan,Treaty United,from transfer list
+billy-vance,1382412,Billy Vance,Crusaders,
 bobby-amadasun,,,,not found
 bobby-jones,1184472,Bobby Jones,Darlington,from transfer list
 bobby-keohan,1719907,Bobby Keohan,Waterford FC,discovered
@@ -80,7 +102,12 @@ bosco-grau,,,,not found
 bosun-lawal,1276045,Bosun Lawal,Stoke City,
 brandon-kavanagh,928435,Brandon Kavanagh,Drogheda United,discovered
 brandon-ly,1796504,Brandon Ly,XT Phu Tho,from transfer list
+brendan-clarke,77699,Brendan Clarke,Athlone Town,
+brendean-frahill,,Brendan Frahill,Cobh Ramblers,name mismatch (Brendan Frahill) - not used
+brian-cunningham,1609322,Brian Cunningham,Treaty United,
+brian-linehan,,,,not found
 brian-maher,923159,Brian Maher,Derry City,discovered
+brian-mcmanus,1172835,Brian McManus,Athlone Town,
 bridel-bosakani,1526228,Bridel Bosakani,Finn Harps,from transfer list
 brody-lee,1783305,Brody Lee,Cork City,
 brooklyn-lyons-foster,886145,Brooklyn Lyons-Foster,Derry City,from transfer list
@@ -98,7 +125,9 @@ calum-donnelly,1996049,Calum Donnelly,Drogheda United,discovered
 calum-kavanagh,1113729,Calum Kavanagh,Oldham Athletic,
 calum-ward,1083200,Calum Ward,Queens Park Rangers,from transfer list
 cameron-reid,1817742,Cameron Reid,Turriff United,from transfer list
+caoimhe-carolan,,,,not found
 caoimhin-kelleher,776689,Caoimhín Kelleher,Brentford,
+carl-lennox,1311540,Carl Lennox,UCD,
 carl-mchugh,275470,Carl McHugh,Sligo Rovers,discovered
 cathal-heffernan,1578910,Cathal Heffernan,Harrogate Town,
 cathal-mccarthy,1683723,Cathal McCarthy,Kilmarnock,from transfer list
@@ -106,6 +135,8 @@ cathal-osullivan,1613299,Cathal O'Sullivan,Preston North End U23,
 charles-akinrintoyo,1719306,Charles Akinrintayo,UCD,"id set by hand - same club, spelling variant"
 charles-dunne,309516,Charles Dunne,Coleraine,
 charlie-cummins,1665584,Charlie Cummins,Exeter City,
+charlie-hanover,1793226,Charlie Hanover,Cork City,
+charlie-lyons,1037557,Charlie Lyons,Cork City,
 charlie-mcgarvey,2008021,Charlie McGarvey,Sligo Rovers,discovered
 charlie-mcneill,1137393,Charlie McNeill,Crewe Alexandra,from transfer list
 chiedozie-ogbene,674009,Chiedozie Ogbene,Ipswich Town,club mismatch - CHECK
@@ -118,6 +149,7 @@ cian-barrett,1536437,Cian Barrett,Waterford FC,discovered
 cian-bolger,243298,Cian Bolger,,
 cian-byrne,1362460,Cian Byrne,Bohemian FC,discovered
 cian-coleman,1187341,Cian Coleman,Buxton,club mismatch - CHECK
+cian-curtis,1635715,Cian Curtis,Treaty United,
 cian-dillon,1612455,Cian Dillon,Dundalk,discovered
 cian-doyle,1638909,Cian Doyle,Grimsby Town,from transfer list
 cian-hayes,1111678,Cian Hayes,Rochdale,from transfer list
@@ -126,6 +158,8 @@ cian-oconnor,1921595,Cian O'Connor,Drogheda United,discovered
 cian-omalley,1556407,Cian O'Malley,Carrick Rangers,
 cian-spaight,1899435,Cian Spaight,Dundalk,discovered
 cian-wilson,,,,not found
+ciara-brady,,,,not found
+ciaran-behan,1089898,Ciaran Behan,UCD,
 ciaran-brennan,1164489,Ciarán Brennan,Newport County,
 ciaran-coll,187414,Ciarán Coll,Glentoran,from transfer list
 ciaran-gilligan,1184681,Ciaran Gilligan,Burton Albion,
@@ -138,6 +172,10 @@ cillian-ryan,1786205,Cillian Ryan,Shelbourne,discovered
 cillian-tollett,1688535,Cillian Tollett,Athlone Town,club mismatch - CHECK
 cj-hamilton,673437,CJ Hamilton,Blackpool,
 clyde-oconnell,731873,Clyde O'Connell,Treaty United,
+cole-omorehiomwan,1250498,Cole Omorehiomwan,Longford Town,
+colin-bolton,1461012,Colin Bolton,UCD,
+colin-conroy,1417418,Colin Conroy,Treaty United,
+colm-doyle,1818796,Colm Doyle,Athlone Town,
 colm-horgan,310712,Colm Horgan,Galway United FC,discovered
 colm-whelan,939029,Colm Whelan,Bohemian FC,discovered
 conal-mcdermott,2134987,Conal McDermott,Derry City,discovered
@@ -149,25 +187,36 @@ connor-obrien,1420163,Connor O'Brien,Accrington Stanley,
 connor-oriordan,1318728,Connor O'Riordan,Blackburn Rovers,
 connor-ronan,672484,Connor Ronan,Aberdeen,from transfer list
 connor-whittaker,2100526,Connor Whittaker,Galway United FC,discovered
+conor-brann,1401989,Conor Brann,Cork City,
 conor-cannon,1648658,Conor Cannon,Sligo Rovers,discovered
 conor-carty,1113748,Conor Carty,FC Halifax Town,from transfer list
 conor-coventry,770256,Conor Coventry,Charlton Athletic,
+conor-drinan,1179025,Conor Drinan,Cork City,
+conor-errity,,,,not found
 conor-gleeson,310694,Conor Gleeson,Galway United FC,discovered
 conor-grant,1086940,Conor Grant,Notts County,
 conor-james-mccormack,183067,Conor James McCormack,Galway United FC,discovered
 conor-kane,825812,Conor Kane,Drogheda United,discovered
 conor-kearns,944311,Conor Kearns,Dundalk,discovered
 conor-keeley,747264,Conor Keeley,Drogheda United,discovered
+conor-knight,1559287,Conor Knight,Bray Wanderers,
 conor-masterson,716647,Conor Masterson,Gillingham,from transfer list
 conor-mccarthy,658364,Conor McCarthy,Northampton Town,
+conor-mcgranaghan,,,,not found
 conor-mcmanus,1388761,Conor McManus,Gillingham,club mismatch - CHECK
 conor-okeeffe,292683,Conor O'Keeffe,Dundalk,discovered
+conor-quinn,,Connor Quinn,,name mismatch (Connor Quinn) - not used
 conor-reynolds,1508464,Conor Reynolds,Sligo Rovers,discovered
 conor-shaughnessy,866163,Conor Shaughnessy,Portsmouth,
+conor-tourish,1138679,Conor Tourish,Finn Harps,
+conor-wall,,,,not found
 conor-walsh,1344250,Conor Walsh,Shelbourne,
+corey-chambers,656276,Corey Chambers,Treaty United,
 corey-okeeffe,815772,Corey O'Keeffe,Barnsley,
+corey-sheridan,,,,not found
 corrie-ndaba,1041508,Corrie Ndaba,Lecce,club mismatch - CHECK
 cory-osullivan,1378319,Cory O'Sullivan,Shamrock Rovers,
+cristiano-bramley,1843320,Cristiano Bramley,Bray Wanderers,
 cyrus-christie,212418,Cyrus Christie,Bolton Wanderers,
 daire-oconnor,669940,Daire O'Connor,Carrick Rangers,from transfer list
 daire-patton,1526230,Daire Patton,Sligo Rovers,discovered
@@ -185,25 +234,31 @@ daniel-mandroiu,820174,Daniel Mândroiu,Shamrock Rovers,discovered
 daniel-mare,1710663,Daniel Mare,Drogheda United,discovered
 daniel-mccarron,,,,not found
 daniel-mcgrath,1437320,Daniel McGrath,,
+daniel-mckenna,789504,Daniel McKenna,Longford Town,
 daniel-oreilly,622103,Daniel O'Reilly,Partick Thistle,
 daniel-ring,1638908,Daniel Ring,Shelbourne,discovered
 daniel-rogers,315886,Daniel Rogers,St. Patrick's Athletic,discovered
 danny-burke,1311266,Danny Barker,Horsham,
 danny-kane,923163,Danny Kane,Cashmere Technical,
 dara-costelloe,1045828,Dara Costelloe,Wigan Athletic,
+dara-kavanagh,,,,not found
 dara-mccormick,1726751,Dara McCormick,Cobh Ramblers,from transfer list
 dara-mcguinness,1200930,Dara McGuinness,Galway United FC,discovered
 dara-oshea,789578,Dara O'Shea,Ipswich Town,
+daragh-murtagh,,Darragh Murtagh,Longford Town,name mismatch (Darragh Murtagh) - not used
 dare-kareem,1726754,Dare Kareem,Treaty United,from transfer list
 darius-lipsiuc,1347258,Darius Lipsiuc,Notts County,club mismatch - CHECK
 darragh-brunton,1901117,Darragh Brunton,St. Patrick's Athletic,
 darragh-burns,1068592,Darragh Burns,Derry City,discovered
+darragh-coyle,2056768,Darragh Coyle,Finn Harps,
+darragh-crowley,1036642,Darragh Crowley,Cork City,
 darragh-leahy,766649,Darragh Leahy,Linfield,
 darragh-lenihan,524651,Darragh Lenihan,,from transfer list
 darragh-markey,621665,Darragh Markey,Derry City,discovered
 darragh-nugent,1032780,Darragh Nugent,St. Patrick's Athletic,discovered
 darragh-oconnor,1107636,Darragh O'Connor,East Kilbride,from transfer list
 darragh-power,1064852,Darragh Power,Bohemian FC,discovered
+darren-nwankwo,1516059,Darren Nwankwo,Treaty United,
 daryl-horgan,253356,Daryl Horgan,Dundalk,discovered
 david-dunne,1711577,David Dunne,Monaco U19,
 david-eguaibor,1649657,David Eguaibor,Gateshead FC,from transfer list
@@ -211,12 +266,20 @@ david-eze,1375812,David Ezeh,HJK,
 david-ezeh,1375812,David Ezeh,HJK,from transfer list
 david-hurley,887638,David Hurley,Galway United FC,discovered
 david-jonathan,1640690,David Jonathan,Sligo Rovers,discovered
+david-jonathon,,,,not found
 david-mcgoldrick,31922,David McGoldrick,Mansfield Town,from transfer list
+david-odumosu,1239280,David Odumosu,Cork City,
 david-okagbue,1235088,David Okagbue,Peterborough United,
 david-toure,1337663,David Toure,Ballymena United,
 dawson-devoy,1055841,Dawson Devoy,Bohemian FC,club mismatch - CHECK
 dayle-rooney,829108,Dayle Rooney,Bohemian FC,discovered
+dean-george,799174,Dean George,Longford Town,
 dean-mcmenamy,1248055,Dean McMenamy,Waterford FC,discovered
+dean-oshea,1638294,Dean O'Shea,Bray Wanderers,
+dean-williams,949277,Dean Williams,Longford Town,
+declan-osagie,1633687,Declan Osagie,Bray Wanderers,
+derin-adewale,,,,not found
+derinsola-adewale,1408505,Derinsola Adewale,Athlone Town,
 desmond-armstrong,1559637,Harrison Armstrong,Everton,club mismatch - CHECK
 divin-isamala,1614186,Divin Isamala,Portadown,
 dominic-bernard,952007,Dominic Bernard,Weston Super Mare,from transfer list
@@ -225,10 +288,14 @@ donnacha-sammon,1783376,Donnacha Sammon,Galway United FC,discovered
 dylan-connolly,400650,Dylan Connolly,Galway United FC,discovered
 dylan-connolly-athlone,400650,Dylan Connolly,Galway United FC,club mismatch - CHECK
 dylan-duffy,1195372,Dylan Duffy,Chesterfield,
+dylan-hand,1027835,Dylan Hand,Fiorenzuola,
+dylan-mcglade,641025,Dylan McGlade,Cobh Ramblers,
 dylan-watts,641044,Dylan Watts,Shamrock Rovers,discovered
 eamonn-tohill,2146834,Eamonn Tohill,Middlesbrough U18,from transfer list
 eanna-clancy,1375733,Éanna Clancy,VVV-Venlo,from transfer list
+ed-mccarthy,1248051,Edward McCarthy,Galway United FC,
 ed-mcjannett,1287251,Ed McJannett,Cosenza,added by id
+eden-laughton-taylor,,,,not found
 edward-mccarthy,1248051,Edward McCarthy,Galway United FC,discovered
 edward-mcginty,829101,Edward McGinty,Shamrock Rovers,discovered
 edwin-agbaje,1420125,Edwin Agbaje,Drogheda United,discovered
@@ -244,15 +311,22 @@ eoghan-oconnell,514802,Eoghan O'Connell,Stockport County,from transfer list
 eoin-doyle,2100524,Eoin Doyle,Galway United FC,discovered
 eoin-farrell,1294804,Eoin Farrell,The New Saints,
 eoin-kenny,1459970,Eoin Kenny,Portsmouth,from transfer list
+eric-koufie,1801096,Eric Koufie,Kerry FC,
 eric-yahaya,1801964,Eric Yahaya,Leamington,from transfer list
+eric-yoro,1338780,Eric Yoro,Longford Town,
 erskine-rennie,1905008,Erskine Rennie,Fulham,from transfer list
+ethan-cheese,,,,not found
 ethan-hall,1964869,Ethan Hall,Dundalk,discovered
 ethan-obrien,1621330,Ethan O'Brien,Drogheda United,discovered
+ethan-odonovan,,John O'Donovan,Cobh Ramblers,name mismatch (John O'Donovan) - not used
 evan-caffrey,1271838,Evan Caffrey,Shelbourne,discovered
 evan-ferguson,1068482,Evan Ferguson,Brighton & Hove Albion,
 evan-mclaughlin,1269330,Evan McLaughlin,Waterford FC,discovered
+evan-oconnor,,,,not found
+evan-osam,539845,Evan Osam,Wexford FC,
 evan-weir,1195337,Evan Weir,Peterborough United,from transfer list
 festy-ebosele,1060654,Festy Ebosele,Erzurumspor FK,club mismatch - CHECK
+fiacre-kelleher,660281,Fiacre Kelleher,Cork City,
 finn-azaz,883079,Finn Azaz,Southampton,club mismatch - CHECK
 finn-flanagan,1557935,Finn Flanagan,Portadown,from transfer list
 finn-mcdonnell,1901116,Finn McDonnell,Bohemian FC,discovered
@@ -260,6 +334,7 @@ finn-mcgreevy,2146856,Finn McGreevy,Birmingham U21,from transfer list
 finn-moylan,1796094,Finn Moylan,Shelbourne,discovered
 finn-sherlock,1120709,David Sherlock,Atherton Collieries,
 flynn-ryan,1843323,Flynn Ryan,Bray Wanderers,from transfer list
+fran-campbell,,,,not found
 francely-lomboto,1173735,Francely Lomboto,Galway United FC,discovered
 franco-umeh,1437781,Franco Umeh-Chibueze,Portsmouth,
 frankie-mcmahon-brown,1962799,Frankie McMahon-Brown,Oldham Athletic,from transfer list
@@ -270,10 +345,12 @@ gabriel-kelly,1557205,Gabriel Kelly,Stoke City U21,
 gabriel-otegbayo,1668969,Gabriel Otegbayo,Sheffield Wednesday,
 garbhan-coughlan,271631,Garbhan Coughlan,Limerick,
 gareth-mcelroy,1502145,Gareth McElroy,Sligo Rovers,discovered
+garry-buckley,307183,Garry Buckley,Cobh Ramblers,
 gary-oneil,516279,Gary O'Neil,Shamrock Rovers,discovered
 gavan-holohan,279480,Gavan Holohan,Boston United,from transfer list
 gavin-bazunu,939390,Gavin Bazunu,Southampton,
 gavin-gilmore,1735064,Gavin Gilmore,Glenavon,
+gavin-hodgins,1375407,Gavin Hodgins,Wexford FC,
 gavin-kilkenny,1086939,Gavin Kilkenny,Swindon Town,
 gavin-mcateer,1815987,Gavin McAteer,Finn Harps,
 gavin-molloy,1336979,Gavin Molloy,Aberdeen,
@@ -284,14 +361,19 @@ glenn-ilunga,1933834,Glen Ilunga,Burnley Under 18 Academy,
 glenn-mcconnell,1321336,Glenn McConnell,Cambridge United,
 glory-nzingo,1738134,Glory Nzingo,St. Patrick's Athletic,discovered
 goodness-ogbonna,1719304,Goodness Ogbonna,UCD,
+grace-mccabe,,,,not found
+gradi-lomboto,1772159,Gradi Lomboto,Athlone Town,
 grady-mcdonnell,1844097,Grady McDonnell,Nottingham Forest U21,club mismatch - CHECK
 graham-burke,301367,Graham Burke,Shamrock Rovers,discovered
 graham-carey,166963,Graham Carey,Livingston,from transfer list
 graham-coughlan,23252,Graham Coughlan,Waterford FC,discovered
 graham-kelly,208331,Graham Kelly,Bray Wanderers,club mismatch - CHECK
+greg-bolger,119438,Greg Bolger,Cork City,
 greg-sloggett,544277,Gregory Sloggett,Glentoran,
 guilherme-rego-priosti,1713025,Guilherme Rego Priosti,Finn Harps,from transfer list
+harry-curtis,1520076,Harry Curtis,UCD,
 harry-groome,1342525,Harry Groome,Dundalk,discovered
+harry-nevin,1413839,Harry Nevin,Cork City,
 harry-vaughan,1231219,Harry Vaughan,Bohemian FC,club mismatch - CHECK
 harvey-boddy,2122499,Harvey Boddy,Worthing,from transfer list
 harvey-neville,1187155,Harvey Neville,Sporting JAX,
@@ -306,9 +388,11 @@ isaac-akinsete,,,,not found
 issa-kargbo,1014981,Augustus Kargbo,Blackburn Rovers,club mismatch - CHECK
 ivan-savshak,,,,not found
 jack-bonham,299148,Jack Bonham,Bolton Wanderers,
+jack-brady,734081,Jack Brady,Treaty United FC,
 jack-byrne,661902,Jack Byrne,Shamrock Rovers,discovered
 jack-clarke,914402,Jack Clarke,Ipswich Town,club mismatch - CHECK
 jack-henry-francis,1257557,Jack Henry-Francis,Shelbourne,
+jack-lawless,1843327,Jack Lawless,Bray Wanderers,
 jack-moorhouse,1315314,Jack Moorhouse,Manchester United U21,
 jack-moylan,1196750,Jack Moylan,Cardiff City,club mismatch - CHECK
 jack-oreilly,1340511,Jack O'Reilly,Ballymena United,
@@ -318,8 +402,10 @@ jacob-keleghan,,,,not found
 jacob-slater,1395681,Jacob Slater,Tranmere Rovers,from transfer list
 jad-hakiki,1336923,Jad Hakiki,Sligo Rovers,discovered
 jaden-umeh,1577511,Jaden Umeh,Benfica U19,
+jake-doyle,1441600,Jake Doyle,Wexford FC,
 jake-doyle-hayes,867081,Jake Doyle-Hayes,Exeter City,
 jake-griffin,1578147,Jake Griffin,Chester FC,from transfer list
+jake-hough,1466570,Jake Hough,Longford Town,
 jake-mulraney,685725,Jake Mulraney,Shamrock Rovers,discovered
 jake-obrien,1098607,Jake O'Brien,Everton,
 james-abankwah,1269329,James Abankwah,Udinese,club mismatch - CHECK
@@ -335,14 +421,21 @@ james-mcclean,175947,James McClean,Derry City,discovered
 james-mcgrath,324813,James McGrath,Pike Rovers,club mismatch - CHECK
 james-mcmanus,1306317,James McManus,Sligo Rovers,discovered
 james-morahan,1901351,James Morahan,Galway United FC,discovered
+james-ohalloran,1116799,James O'Halloran,Merstham,
 james-roche,1648657,James Roche,Shelbourne,discovered
 james-storer,1310631,James Storer,Plymouth Argyle,from transfer list
 jamie-barry,,Jamie Barron,Winchester City,name mismatch (Jamie Barron) - not used
 jamie-brennan,1965673,Jamie Brennan,Drogheda United,discovered
+jamie-duggan,1359164,Jamie Duggan,Bray Wanderers,
+jamie-egan,1387114,Jamie Egan,Longford Town,
 jamie-lennon,923157,Jamie Lennon,St. Patrick's Athletic,discovered
 jamie-mcgrath,591987,Jamie McGrath,Hibernian,
 jamie-mullins,1263278,Jamie Mullins,Wycombe Wanderers,
 jamie-odonnell,2039249,Jamie O'Donnell,Sligo Rovers,discovered
+jamie-ryan,1690094,Jamie Ryan,Bray Wanderers,
+jamie-wynne,1190123,Jamie Wynne,Wexford FC,
+jason-abbott,433117,Jason Abbott,Cobh Ramblers,
+jason-folarin-oyenuga,,,,not found
 jason-healy,1609363,Jason Healy,Harland & Wolff Welders F.C.,from transfer list
 jason-knight,1051415,Jason Knight,Bristol City,
 jason-mcclelland,734103,Jason McClelland,St. Patrick's Athletic,discovered
@@ -351,9 +444,12 @@ jay-mcgrath,1441584,Jay McGrath,Doncaster Rovers,
 jay-oshea,75688,Jay O'Shea,,from transfer list
 jayson-molumby,789574,Jayson Molumby,West Bromwich Albion,
 jaze-kabia,938380,Jaze Kabia,Leyton Orient,from transfer list
+jennifer-freeman,,,,not found
 jesse-dempsey,1441597,Jesse Dempsey,Fleetwood Town,from transfer list
 jesse-nwabueze,1748199,Jesse Nwabueze,King's Lynn Town,from transfer list
+jessica-cox,,,,not found
 jevon-mills,1315279,Jevon Mills,Solihull Moors,from transfer list
+jimmy-corcoran,941540,James Corcoran,Bray Wanderers,
 jimmy-dunne,767173,Jimmy Dunne,Queens Park Rangers,club mismatch - CHECK
 jimmy-keohane,187637,Jimmy Keohane,Galway United FC,discovered
 jimmy-mwanga,1656768,Jimmy Mwanga,,
@@ -368,6 +464,7 @@ joe-rafferty,330467,Joe Rafferty,Rotherham United,
 joe-redmond,1077899,Joe Redmond,St. Patrick's Athletic,discovered
 joe-shaughnessy,189927,Joe Shaughnessy,Newcastle Jets,
 joel-bagan,1130978,Joel Bagan,Cardiff City,
+joel-bradley-walsh,1054369,Joel Bradley-Walsh,Finn Harps,
 joey-wuna,1820588,Joey Ikala Wuna,Shelbourne U19,
 john-egan,295062,John Egan,Hull City,club mismatch - CHECK
 john-mahon,825846,John Mahon,Waterford FC,discovered
@@ -380,8 +477,10 @@ john-russell,77657,John Russell,Shelbourne,discovered
 johnny-kenny,1239600,Johnny Kenny,Celtic,club mismatch - CHECK
 jon-gallagher,922849,Jon Gallagher,Austin FC,
 jonathan-afolabi,798653,Jonathan Afolabi,Shamrock Rovers,discovered
+jonathan-kehir,,,,not found
 jonathan-lunney,791835,Jonathan Lunney,Shelbourne,discovered
 jonny-smith,720454,Jonny Smith,Rochdale,from transfer list
+jordan-adeyemi,2089150,Jordan Adeyemi,Cobh Ramblers,
 jordan-adeyemo,1059136,Jordan Adeyemo,Ægir,
 jordan-doherty,1081948,Jordan Doherty,Livingston,from transfer list
 jordan-mceneff,1086714,Jordan McEneff,Larne,
@@ -389,6 +488,7 @@ jordan-shipley,766650,Jordan Shipley,Cheltenham Town,from transfer list
 josh-adam,1254176,Josh Adam,Bohemian FC,from transfer list
 josh-barrett,706439,Josh Barrett,Dorking Wanderers,from transfer list
 josh-cullen,1800277,Josh Cullen,Finn Harps,
+josh-fitzpatrick,1473222,Joshua Fitzpatrick,Cork City,
 josh-harpur,1785761,Josh Harpur,Bohemian FC,club mismatch - CHECK
 josh-honohan,1068590,Joshua Honohan,Lincoln City,
 josh-keeley,1204776,Josh Keeley,Luton Town,club mismatch - CHECK
@@ -404,32 +504,41 @@ joshua-keeya,1418214,Joshua Keeya,Salisbury,from transfer list
 junior-thiam,1751164,Junior Thiam,Galway United FC,discovered
 justin-ferizaj,1369689,Justin Ferizaj,Crawley Town,
 justin-osagie,1818284,Justin Osagie,Chelsea U21,from transfer list
+kai-oneill,1916341,Kai O'Neill,Cobh Ramblers,
 kameron-ledwidge,1098797,Kameron Ledwidge,Shelbourne,discovered
 kasey-mcateer,1113915,Kasey McAteer,Ipswich Town,club mismatch - CHECK
+kaylem-harnett,1638275,Kaylem Harnett,Wexford FC,
 kealan-dillon,467922,Kealan Dillon,Dungannon Swifts,
 keith-buckley,253259,Keith Buckley,Dundalk,discovered
 keith-ward,179456,Keith Ward,Dundalk,discovered
 keleb-nwubani,,,,not found
 kevin-doherty,13895,Kevin Doherty,Drogheda United,discovered
+kevin-fitzpatrick,,,,not found
 kevin-long,172323,Kevin Long,Waterford FC,discovered
 kevin-otoole,769648,Kevin O'Toole,New York City FC,
 kevin-toner,680815,Kevin Toner,Deportiva Minera,
 kevin-zefi,1179287,Kevin Zefi,Sligo Rovers,discovered
 kian-brunton,,,,not found
 kian-corbally,1241607,Kian Corbally,Dunfermline Athletic,from transfer list
+kian-dignam,1643778,Kian Dignam,Shamrock Rovers U19,
 kian-leavy,1287388,Kian Leavy,St. Patrick's Athletic,
 kian-mcmahon-brown,1789421,Kian McMahon-Brown,Burnley U21,
+kian-moore,1263279,Kian Moore,Longford Town,
 kian-quigley,1796517,Kian Quigley,St. Patrick's Athletic,
 kieran-cruise,1311536,Kieran Cruise,Drogheda United,discovered
 kieran-morrison,1439550,Kieran Morrison,Sheffield Wednesday,from transfer list
 kieran-ohara,674202,Kieran O'Hara,Dundee FC,
 kieran-sadlier,614458,Kieran Sadlier,Sporting JAX,
+kilian-cantwell,,Killian Cantwell,Bray Wanderers,name mismatch (Killian Cantwell) - not used
 killian-brouder,731874,Killian Brouder,Galway United FC,discovered
 killian-cahill,1288116,Killian Cahill,Leyton Orient,
+killian-cailloce,1342514,Killian Cailloce,UCD,
 killian-cantwell,562613,Killian Cantwell,Bray Wanderers,from transfer list
 killian-phillips,1239281,Killian Phillips,St. Mirren,club mismatch - CHECK
+kyal-byrne,,,,not found
 kyle-degelman,1690918,Owen Degelman,TSV Aubstadt,
 kyle-mcdonagh,1531892,Kyle McDonagh,Sligo Rovers,discovered
+kyle-oconnor,1337661,Kyle O'Connor,Athlone Town,
 kyle-robinson,1248061,Kyle Robinson,Athlone Town,from transfer list
 lee-axworthy,,,,not found
 lee-desmond,556023,Lee Desmond,Sacramento Republic FC,
@@ -443,8 +552,10 @@ leon-ayinde,1678277,Leon Ayinde,Doncaster Rovers,from transfer list
 leon-keogh,1843321,Leon Keogh,Bray Wanderers,from transfer list
 lewis-richards,968942,Lewis Richards,Crawley Town,
 lewis-temple,1375413,Lewis Temple,Oldham Athletic,from transfer list
+liadh-tobin,,,,not found
 liam-bossin,445926,Liam Bossin,Feyenoord,
 liam-delap,1113903,Liam Delap,Nottingham Forest,from transfer list
+liam-doyle,1904357,Liam Doyle,Wexford FC,
 liam-kelly,662975,Liam Kelly,Peterborough United,from transfer list
 liam-kerrigan,928283,Liam Kerrigan,Ternana,from transfer list
 liam-kinsella,562891,Liam Kinsella,Hednesford,from transfer list
@@ -456,8 +567,11 @@ louie-watson,1101052,Louie Watson,Crawley Town,
 louis-dunne,670107,Louis Dunne,Maldon & Tiptree,from transfer list
 luca-cailloce,1614361,Luca Cailloce,Shelbourne,discovered
 luca-connell,1010219,Luca Connell,Barnsley,
+lucas-curtin,,,,not found
+luka-le-bervet,,,,not found
 luke-browne,1416111,Luke Browne,Notts County,
 luke-cullen,1901111,Luke Cullen,St. Patrick's Athletic,
+luke-downey,1741913,Luke Downey,Cork City,
 luke-fitzsimons,,,,not found
 luke-heeney,967229,Luke Heeney,Waterford FC,discovered
 luke-kehir,1482735,Luke Kehir,St. Patrick's Athletic,discovered
@@ -467,22 +581,31 @@ luke-oregan,1457398,Luke O'Regan,Shamrock Rovers,discovered
 luke-pearce,1116911,Luke Pearce,Sligo Rovers,from transfer list
 luke-turner,1068648,Luke Turner,St. Patrick's Athletic,discovered
 macdarragh-scanlon,1810867,MacDarragh Scanlon,Galway United FC,discovered
+macy-treanor,,,,not found
+makenzie-crowley,,,,not found
 marcus-harness,522440,Marcus Harness,Huddersfield Town,
 mark-byrne,1125903,Mark Byrne,Glenavon,
+mark-canavan,,,,not found
 mark-connolly,194134,Mark Connolly,Derry City,discovered
 mark-coyle,793601,Mark Coyle,Coleraine,
 mark-doyle,734061,Mark Doyle,Drogheda United,discovered
 mark-mcguinness,1109477,Mark McGuinness,Sheffield United,
+mark-murphy,253307,Mark Murphy,UCC,
 mark-omahony,1435604,Mark O'Mahony,Brighton & Hove Albion U21,
 mark-sykes,552569,Mark Sykes,Millwall,club mismatch - CHECK
 mark-travers,731855,Mark Travers,Everton,club mismatch - CHECK
+mark-walsh,310112,Mark Walsh,Treaty United,
+martin-scally,,,,not found
 mason-ayre,,,,not found
 mason-melia,1463084,Mason Melia,Lincoln City,club mismatch - CHECK
 mason-murphy,2075514,Mason Murphy,Waterford FC,discovered
 matt-doherty,239920,Matt Doherty,Sheffield United,club mismatch - CHECK
 matteo-egan,2155260,Matteo Egan,Empoli,
+matthew-alonge,1481119,Matthew Alonge,UCD,
+matthew-britton,1640692,Matthew Britton,Kerry FC,
 matthew-harris,409405,Matthew Harris,Merthyr Town,
 matthew-healy,1206281,Matthew Healy,Shamrock Rovers,discovered
+matthew-kiernan,1711566,Matthew Kiernan,Cork City,
 matthew-moore,2025051,Matthew Moore,Hoffenheim II,
 matthew-murray,1711576,Matthew Murray,Cork City,
 matthew-ohara,1725204,Matthew O'Hara,St. Patrick's Athletic,discovered
@@ -490,32 +613,45 @@ max-bardell,1134299,Max Bardell,FC Halifax Town,from transfer list
 max-ferguson,1839952,Max Ferguson,Dundalk,discovered
 max-johnston,1174648,Max Johnston,Derby County,club mismatch - CHECK
 max-kovalevskis,1640689,Max Kovalevskis,Shamrock Rovers,discovered
+max-murphy,1178881,Max Murphy,Wexford FC,
 max-oleary,496732,Max O'Leary,West Bromwich Albion,club mismatch - CHECK
 maxim-afonin,140158,Vadim Afonin,,
 mayowa-animasahun,1250503,Mayowa Animasahun,Dundalk,discovered
+megan-oconnor,,,,not found
 michael-duffy,335731,Michael Duffy,Derry City,
 michael-hulholland,,,,not found
 michael-kelly,553791,Michael Kelly,Spalding United,club mismatch - CHECK
 michael-mccolgan,2139802,Michael McColgan,Derry City,discovered
 michael-noonan,1612239,Michael Noonan,Shamrock Rovers,
 michael-obafemi,817720,Michael Obafemi,Burnley,
+mikey-carroll,1718891,Mikey Carroll,Cobh Ramblers,
 mikey-johnston,766622,Michael Johnston,West Bromwich Albion,
+mikey-mccullagh,1635758,Mikey McCullagh,UCD,
 mikey-place,730240,Michael Place,Carrick Rangers,
+mikey-ragett,,Mikey Raggett,UCD,name mismatch (Mikey Raggett) - not used
+mikie-rowe,583876,Mikie Rowe,Wexford FC,
 millenic-alli,1119806,Millenic Alli,Charlton Athletic,club mismatch - CHECK
 muhammad-oladiti,1899469,Muhammad Oladiti,Fleetwood Town Academy,club mismatch - CHECK
 naj-razi,1469649,Naj Razi,Shamrock Rovers,
+nana-michelle-koudjou,,,,not found
+naomi-dowd,,,,not found
 nathan-collins,961306,Nathan Collins,Brentford,
 nathan-fraser,1292835,Nathan Fraser,Wolverhampton Wanderers U21,
 neil-farrugia,863652,Neil Farrugia,Dundee United,
 neill-byrne,279487,Neill Byrne,Doncaster Rovers,
 niall-canavan,181243,Niall Canavan,Boston United,from transfer list
+niall-holohan,1638932,Niall Holohan,UCD,
 niall-morahan,939908,Niall Morahan,Bohemian FC,club mismatch - CHECK
+niall-okeefe,,Niall O'Keeffe,Cork City,name mismatch (Niall O'Keeffe) - not used
 niall-sullivan,1901112,Niall Sullivan,St. Patrick's Athletic,discovered
+noah-douglas,,,,not found
 noah-jauny,1667660,Noah Jauny,Francs Borains,club mismatch - CHECK
 noah-obrien,1717410,Noah O'Brien,Waterford FC,discovered
 odhran-casey,1382384,Odhrán Casey,Shelbourne,discovered
+odhran-mchugh,1996158,Odhran McHugh,Finn Harps,
 oisin-duffy,1445820,Oisin Duffy,Strabane Athletic,from transfer list
 oisin-gallagher,1299857,Oisín Gallagher,Barnet,club mismatch - CHECK
+oisin-hand,1626144,Oisin Hand,Longford Town,
 oisin-kelly,1904739,Oisin Kelly,Sligo Rovers,discovered
 oisin-mcdonagh,673374,Gerry McDonagh,Alfreton Town,club mismatch - CHECK
 oisin-mcentee,1012563,Oisin McEntee,Heart of Midlothian,
@@ -523,33 +659,52 @@ oisin-obrien,2039239,Oisin O'Brien,Derry City,discovered
 olamide-ibrahim,1186156,Olamide Ibrahim,Bala Town,
 ollie-oneill,1113786,Oliver O'Neill,Leyton Orient,
 onesime-tembe,1688020,Onesime Tembe,Ragusa,from transfer list
+oran-brogan,2172486,Oran Brogan,Finn Harps,
+oran-crowe,1437325,Oran Crowe,Kerry FC,
 orion-cala,1762362,Orion Cala,Waterford FC,discovered
+osaze-irhue,1807604,Osaze Irhue,Longford Town,
 owen-elding,1459966,Owen Elding,Hibernian,
 owen-mason,1387353,Owen Mason,Bromley,from transfer list
+pa-doyle,,,,not found
 paddy-madden,159397,Paddy Madden,Bohemian FC,discovered
 padraig-amond,116084,Pádraig Amond,Waterford FC,discovered
 pat-hoban,214541,Pat Hoban,Glentoran,
 patrick-barrett,293564,Patrick Barrett,Shelbourne,discovered
+patrick-ferry,1077897,Patrick Ferry,Athlone Town,
 patrick-mcclean,621852,Patrick McClean,Derry City,discovered
 paudie-oconnor,590619,Paudie O'Connor,Reading,
 paul-doyle,754573,Paul Doyle,Dungannon Swifts,
+paul-martin,1064851,Paul Martin,Wexford FC,
 paul-mcgovern,1593517,Paul McGovern,Falkirk,from transfer list
 pearse-obrien,1255715,Pearse O'Brien,Coastal,from transfer list
+peter-grogan,1614523,Peter Grogan,Athlone Town,
 peter-maguire,1246255,Peter Maguire,Dungannon Swifts,
+pharrell-manuel,2029972,Pharrell Manuel,Longford Town,
+philip-cooney,1843324,Philip Cooney,Bray Wanderers,
 philip-sanyaolu,2130176,Philip Sanyaolu,Bristol Rovers,
 phoenix-blayney,1839677,Phoenix Blayney,Larne U19,from transfer list
 pierce-sweeney,307178,Pierce Sweeney,Cheltenham Town,from transfer list
 pijus-otegbayo,1692751,Raphael-Pijus Otegbayo,Stoke City U21,
+promise-akinyemi,,,,not found
 promise-omochere,939035,Promise Omochere,Bristol Rovers,
 rabby-tabu-minzamba,1607356,Rabby Tabu Minzamba,Taunton Town,
 ramon-martos,1910972,Jan Martos,Estoril U23,club mismatch - CHECK
+rebekah-clavin,,,,not found
 reece-staunton,896065,Reece Staunton,Grimsby Town,
+reece-webb,1562172,Reece Webb,Wexford FC,club mismatch - CHECK
 rhys-bartley,1473220,Rhys Bartley,Wexford FC,from transfer list
+rhys-kellynoonan,1645910,Rhys Kelly-Noonan,Cobh Ramblers,
+rian-hogan,,,,not found
 ricardo-dinanga,1101831,Ricardo Dinanga,Spartans FC,from transfer list
+richard-ferizaj,1843322,Richard Ferizaj,Bray Wanderers,
+richkov-boevi,1717090,Richkov Boevi,Treaty United,
 rob-slevin,1064855,Robert Slevin,Coleraine,
 robbie-benson,187389,Robbie Benson,,
 robbie-brady,231801,Robert Brady,,
+robbie-lynch,1751160,Robbie Lynch,Treaty United,
+robbie-lyons,,,,not found
 robbie-mahon,1245463,Robbie Mahon,Airdrieonians,
+robbie-mccourt,760328,Robert McCourt,Wexford FC,
 robert-cornwall,433825,Robert Cornwall,Dundalk,discovered
 rocco-vata,1394402,Rocco Vata,Watford,
 roland-idowu,1113766,Roland Idowu,Botosani,from transfer list
@@ -560,13 +715,18 @@ ronan-curtis,621849,Ronan Curtis,Plymouth Argyle,
 ronan-dawson,,,,not found
 ronan-doherty,1041087,Ronan Doherty,Larne,
 ronan-maher,1390011,Ronan Maher,Walsall,
+ronan-manning,862831,Ronan Manning,Treaty United,
 ronan-mansfield,1609362,Ronan Mansfield,Cobh Ramblers,from transfer list
 ronan-teahan,1664590,Ronan Teahan,Dundalk,discovered
+rory-feely,591988,Rory Feely,Cork City,
 rory-finneran,1593438,Rory Finneran,Newcastle United U21,
 rory-gaffney,187593,Rory Gaffney,Shamrock Rovers,discovered
 rory-hale,865914,Rory Hale,Cliftonville,
+rory-moloney,1716385,Rory Moloney,Cork City,
 ross-taheny,571534,Ross Taheny,Ballinamallard United,from transfer list
 ross-tierney,1055839,Ross Tierney,Bohemian FC,discovered
+roy-lawlor,,,,not found
+ruairi-keating,525788,Ruairí Keating,Cork City,
 ruari-paton,1104042,Ruari Paton,St. Johnstone,from transfer list
 ryan-brennan,197572,Ryan Brennan,Drogheda United,discovered
 ryan-burke,1077896,Ryan Burke,Bohemian FC,discovered
@@ -574,22 +734,28 @@ ryan-butler,1755479,Ryan Butler,Wexford FC,
 ryan-delaney,562616,Ryan Delaney,Oldham Athletic,from transfer list
 ryan-graydon,933747,Ryan Graydon,Salford City,
 ryan-johansson,950831,Ryan Johansson,Preussen Münster,from transfer list
+ryan-kelly,1751957,Ryan Kelly,Bray Wanderers,
 ryan-manning,435513,Ryan Manning,Southampton,
 ryan-markey,2075513,Ryan Markey,Drogheda United,discovered
+ryan-mcbrearty,1441590,Ryan McBrearty,UCD,
+ryan-mcconnell,731228,Ryan McConnell,Dergview FC,
 ryan-okane,1239596,Ryan O'Kane,Sligo Rovers,
 ryan-patrick-nolan,949722,Ryan Patrick Nolan,Linfield,from transfer list
+ryan-ritchie,1813114,Ryan Ritchie,Wexford FC,
 ryan-sheridan,1901118,Ryan Sheridan,St. Patrick's Athletic,
 ryan-swan,577175,Ryan Swan,Annagh United,from transfer list
 ryan-sweeney,601346,Ryan Sweeney,Mansfield Town,
 sam-curtis,1285838,Sam Curtis,Sheffield United,
 sam-foley,39103,Sam Foley,Chester FC,from transfer list
 sam-kierans,,,,not found
+sam-norval,1663004,Sam Norval,UCD,
 sam-rooney,1901114,Sam Rooney,St. Patrick's Athletic,discovered
 sam-steward,1901109,Sam Steward,St. Patrick's Athletic,discovered
 sam-todd,775981,Sam Todd,Bohemian FC,discovered
 sammie-szmodics,491827,Sammie Szmodics,Derby County,club mismatch - CHECK
 samuel-ogungbe,1901113,Samuel Ogungbe,St. Patrick's Athletic,discovered
 samuel-safaei,1881625,Samuel Safaei,Dundalk,discovered
+sarah-byrne,,,,not found
 scott-brady,1656402,Scott Brady,Longford Town,from transfer list
 scott-davies,93204,Scott Davies,Aldershot Town,from transfer list
 scott-hogan,190424,Scott Hogan,,from transfer list
@@ -605,6 +771,8 @@ sean-hoare,395686,Seán Hoare,St. Patrick's Athletic,discovered
 sean-keane,1719906,Sean Keane,Waterford FC,discovered
 sean-keogh,1610421,Sean Keogh,Brighton & Hove Albion U21,
 sean-long,575798,Sean Long,Weston Super Mare,from transfer list
+sean-maguire,310743,Sean Maguire,Cork City,
+sean-mccarthy,1666023,Sean McCarthy,,club mismatch - CHECK
 sean-mcdonald,1023052,Sean McDonald,Cabinteely,from transfer list
 sean-mcevoy,1174846,Sean McEvoy,Ballinamallard United,from transfer list
 sean-mcginty,307627,Sean McGinty,Montrose,
@@ -628,25 +796,34 @@ shane-byrne,139711,Shane Byrne,Brackley Town,from transfer list
 shane-duffy,174325,Shane Duffy,,club mismatch - CHECK
 shane-farrell,936722,Shane Farrell,Drogheda United,discovered
 shane-flynn,937152,Shane Flynn,Connah's Quay Nomads,from transfer list
+shane-griffin,575799,Shane Anthony Griffin,Cobh Ramblers,
 shane-mcloughlin,720464,Shane McLoughlin,Cambridge United,
 shane-tracey,1899449,Shane Tracey,Dundalk,discovered
 shaun-platt,1899433,Shaun Platt,Dundalk,discovered
 shaun-wade,1614548,Shaun Wade,Chelsea U21,from transfer list
+shauna-smyth,,,,not found
+shaunie-bradley,1827432,Shaunie Bradley,Finn Harps,
 shay-casey,1899451,Shay Casey,Dundalk,discovered
 shea-mcgarry,,,,not found
 sheikhan-aljabir,,,,not found
 simon-power,732900,Simon Power,St. Patrick's Athletic,discovered
 sinclair-armstrong,1307663,Sinclair Armstrong,Göztepe,added by id
 sonny-perkins,1199868,Sonny Perkins,Wigan Athletic,from transfer list
+sophie-hanlon,,,,not found
+stefan-ugbesia,1783487,Stefan Ugbesia,Longford Town,
 stephen-bradley,,,,cleared by hand
 stephen-kenny,307189,Stephen Kenny,Athlone Town,
 stephen-mallon,1020759,Stephen Mallon,Glenavon,
+stephen-mcguinness,438785,Stephen McGuinness,Bray Wanderers,
 stephen-mclaughlin,187427,Stephen McLaughlin,Mansfield Town,
 stephen-walsh,205933,Stephen Walsh,Galway United FC,discovered
+steven-healy,1603469,Steven Healy,Treaty United,
 success-edogun,1347370,Success Edogun,Ballymena United,
 tadhg-prizeman,,,,not found
+taylor-mccarthy,1652016,Taylor McCarthy,Longford Town,
 tayo-adaramola,1197626,Omotayo Adaramola,Cercle Brugge,
 terence-doherty,2029340,Terence Doherty,Derry City,discovered
+theo-hennessey,,Theo Hennessy,Drogheda United,name mismatch (Theo Hennessy) - not used
 theo-hennessy,1716388,Theo Hennessy,Drogheda United,discovered
 thomas-oconnor,789601,Thomas O'Connor,Peterborough United,club mismatch - CHECK
 thomas-oluwa,1032781,Thomas Oluwa,Drogheda United,discovered
@@ -658,13 +835,16 @@ tom-field,746404,Tom Field,Vancouver FC,
 tom-hill,,,,not found
 tom-lonergan,1263510,Tom Lonergan,Waterford FC,discovered
 tom-mcgrath,,,,not found
+tony-mcnamee,253286,Tony McNamee,Finn Harps,
 tony-springett,1113727,Tony Springett,Leyton Orient,from transfer list
 trent-kone-doherty,1347272,Trent Koné-Doherty,Molde,added by id
 trevor-clarke,730242,Trevor Clarke,Dundalk,discovered
 troy-parrott,942365,Troy Parrott,Real Betis,club mismatch - CHECK
+troy-preston-holder,,,,not found
 tunmise-sobowale,949667,Tunmise Sobowale,Shamrock Rovers,discovered
 tyler-doherty,1759796,Tyler Doherty,St Mochta's,from transfer list
 tyler-goodrham,1086653,Tyler Goodrham,Oxford United,
+tyreik-sammy,1685525,Tyreik Sammy,Bray Wanderers,
 tyreik-wright,1089611,Tyreik Samuel Wright,Bradford City,
 tyreke-wilson,863820,Tyreke Wilson,Dundalk,discovered
 ultan-mclaughlin,,,,not found
@@ -677,6 +857,7 @@ will-ferry,843138,Will Ferry,Dundee United,
 will-fitzgerald,889125,William Fitzgerald,Shamrock Rovers,
 will-keane,290409,Will Keane,,from transfer list
 will-smallbone,807925,Will Smallbone,,club mismatch - CHECK
+will-smith,2129401,Will Smith,Athlone Town,
 william-fitzgerald,889125,William Fitzgerald,Shamrock Rovers,discovered
 wilson-waweru,1042019,Wilson Waweru,Wealdstone,from transfer list
 zach-dunne,1437324,Zach Dunne,Cork City,from transfer list
@@ -687,3 +868,4 @@ zak-gilsenan,1125865,Zak Gilsenan,FC Halifax Town,from transfer list
 zak-magowan,,,,not found
 zak-osullivan,1717412,Zak O'Sullivan,Wexford FC,from transfer list
 zak-reddy,1640688,Zak Reddy,Bray Wanderers,from transfer list
+zayd-abada,1311535,Zayd Abada,Wexford FC,
