@@ -3044,9 +3044,53 @@ def build_club(cname, ps):
                     f'Full table →</a>')
 
     fx = ps[0]["fixtures"]
-    fxr = "".join(f'<div class="fxrow"><div class="fxd">{esc(day_label(d))}</div><div class="fxo">{esc(o)} '
-                  f'<span class="ha">{"H" if h=="H" else "A"}</span></div><div class="fxc">{esc(c)}</div></div>'
-                  for d,o,h,c in fx)
+    def _cfx(d, o, h, c):
+        # key on the club itself first - keying on the opponent alone can
+        # catch the opponent's OTHER match that day
+        href = match_href(d, cname) or match_href(d, o)
+        tag, at = ("a", f' href="{href}"') if href else ("div", "")
+        return (f'<{tag} class="fxrow{" lnk" if href else ""}"{at}>'
+                f'<div class="fxd">{esc(day_label(d))}</div><div class="fxo">{esc(o)} '
+                f'<span class="ha">{"H" if h=="H" else "A"}</span></div><div class="fxc">{esc(c)}</div></{tag}>')
+    fxr = "".join(_cfx(d,o,h,c) for d,o,h,c in fx)
+
+    # recent results from the match centre (finished games this club played)
+    _ck = _club_key(cname)
+    import datetime as _dt
+    _now_iso = _dt.datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ")
+    _res_rows = ""
+    _seen_r = set()
+    for m in sorted(MATCHES, key=lambda m: m.get("kickoff",""), reverse=True):
+        hk, ak = _club_key(m.get("home","")), _club_key(m.get("away",""))
+        if _ck not in (hk, ak) and not (
+                len(_ck) > 3 and (_ck in hk or hk in _ck or _ck in ak or ak in _ck)):
+            continue
+        hs, as_ = str(m.get("home_score","")), str(m.get("away_score",""))
+        done = (m.get("status") == "ft") or (hs != "" and as_ != ""
+                and (m.get("kickoff","") < _now_iso))
+        if not done or hs == "" or as_ == "":
+            continue
+        mid = match_id(m)
+        if mid in _seen_r:
+            continue
+        _seen_r.add(mid)
+        home_side = _ck == hk or (len(_ck) > 3 and (_ck in hk or hk in _ck))
+        opp = m.get("away","") if home_side else m.get("home","")
+        own, oth = (hs, as_) if home_side else (as_, hs)
+        try:
+            wdl = "w" if int(own) > int(oth) else ("l" if int(own) < int(oth) else "d")
+        except ValueError:
+            wdl = "d"
+        _res_rows += (f'<a class="fxrow lnk" href="../match/{mid}.html">'
+                      f'<div class="fxd">{esc(day_label(m.get("kickoff","")[:10]))}</div>'
+                      f'<div class="fxo"><span class="wdl {wdl}">{wdl.upper()}</span> '
+                      f'{esc(own)}-{esc(oth)} {esc(opp)} '
+                      f'<span class="ha">{"H" if home_side else "A"}</span></div>'
+                      f'<div class="fxc">{esc(m.get("competition",""))}</div></a>')
+        if len(_seen_r) >= 8:
+            break
+    results_html = (f'<div class="sec"><h2>Recent results</h2></div>'
+                    f'<div class="fxlist">{_res_rows}</div>') if _res_rows else ""
     body = f'''
     <a class="crumb" data-back href="../clubs.html">← Back</a>
     <div class="pagehead"><h1>{club_badge(cname,"lg")}{esc(cname)}</h1><p>{esc(subline)}</p></div>
@@ -3054,6 +3098,7 @@ def build_club(cname, ps):
     {leaders_html}
     <div class="sec"><h2>{"Squad" if ps[0].get("tier") == "loi" else "Irish players"}</h2><span class="more" style="border:0">{len(ps)}</span></div>
     {grouped}
+    {results_html}
     <div class="sec"><h2>Upcoming fixtures</h2></div>
     <div class="fxlist">{fxr or '<div class="emptystate" style="display:block">No fixtures listed.</div>'}</div>
     '''
@@ -3095,11 +3140,17 @@ def build_ireland():
                       f'<div class="who">{esc(p["n"])}</div><div class="cl">{esc(p["club"])}</div>'
                       f'<div class="caps">{meta}</div>'
                       f'<div class="sqrate">{rating_chip(p, True)}</div></a>')
-        fxr = "".join(f'<div class="fxrow"><div class="fxd">{esc(day_label(d))}</div><div class="fxo">{esc(o)} '
-                      f'<span class="ha">{h}</span></div><div class="fxc">{esc(cp)}</div></div>'
+        def _ie_row(d, o, mid_extra, tail):
+            href = match_href(d, o, "")
+            tag, at = ("a", f' href="{href}"') if href else ("div", "")
+            return (f'<{tag} class="fxrow{" lnk" if href else ""}"{at}>'
+                    f'<div class="fxd">{esc(day_label(d))}</div>'
+                    f'<div class="fxo">{esc(o)}{mid_extra}</div>{tail}</{tag}>')
+        fxr = "".join(_ie_row(d, o, f' <span class="ha">{h}</span>',
+                              f'<div class="fxc">{esc(cp)}</div>')
                       for d,o,h,cp in info["fixtures"])
-        rsr = "".join(f'<div class="fxrow"><div class="fxd">{esc(day_label(d))}</div><div class="fxo">{esc(o)}</div>'
-                      f'<div class="fxs">{esc(sc)}</div><div class="fxc">{esc(cp)}</div></div>'
+        rsr = "".join(_ie_row(d, o, "",
+                              f'<div class="fxs">{esc(sc)}</div><div class="fxc">{esc(cp)}</div>')
                       for d,o,sc,cp in info["results"])
         tabs += f'<button class="tab {"on" if i==0 else ""}" data-t="{lvl}">{esc(lvl)}</button>'
         panels += f'''<div class="tabpanel {"on" if i==0 else ""}" data-t="{lvl}">
@@ -3705,8 +3756,9 @@ def rating_pill(rt):
     return f'<span class="rt {c}">{v:.1f}</span>'
 
 _MATCH_LOOKUP = None
-def match_page_for(p, date, opponent):
-    """Find the match page for a player's result row, if the match centre has that game."""
+def match_href(date, team, root="../"):
+    """Path to the match page for (date, either team's name), or "" when the
+    match centre doesn't hold that game."""
     global _MATCH_LOOKUP
     if _MATCH_LOOKUP is None:
         _MATCH_LOOKUP = {}
@@ -3714,7 +3766,14 @@ def match_page_for(p, date, opponent):
             k = m.get("kickoff","")[:10]
             for side in ("home","away"):
                 _MATCH_LOOKUP.setdefault((k, club_slug(m.get(side,""))), match_id(m))
-    return _MATCH_LOOKUP.get(((date or "")[:10], club_slug(opponent)))
+    mid = _MATCH_LOOKUP.get(((date or "")[:10], club_slug(team)))
+    return f"{root}match/{mid}.html" if mid else ""
+
+
+def match_page_for(p, date, opponent):
+    """Find the match page for a player's result row, if the match centre has that game."""
+    h = match_href(date, opponent)
+    return h.split("/")[-1][:-5] if h else None
 
 def _season_of(date):
     """'2026-08-29' -> '2026/27'. Football seasons turn over in July."""
@@ -4019,9 +4078,9 @@ def build_player(p):
             plive = json.dumps({"fmid": _fid, "ko": _lm.get("kickoff", ""), "name": p["n"]})
 
     def _fxrow(d,o,h,cp):
-        mid = match_page_for(p, d, o)
-        tag, href = ("a", f' href="../match/{mid}.html"') if mid else ("div", "")
         at = club_at(p["slug"], d) or p["club"]
+        mid = match_page_for(p, d, at) or match_page_for(p, d, o)
+        tag, href = ("a", f' href="../match/{mid}.html"') if mid else ("div", "")
         where = f'<span class="atclub">{esc(at)}</span>' if at else ""
         return (f'<{tag} class="fxrow when{" lnk" if mid else ""}"{href} data-when="{esc(d)}" data-opp="{esc(o)}" data-ha="{h}">'
                 f'<div class="fxwhen">{esc(day_label(d))}</div>'
@@ -4039,7 +4098,7 @@ def build_player(p):
         ev = "".join('<span class="evi g" title="Goal">⚽</span>' for _ in range(g or 0)) + \
              "".join('<span class="evi a" title="Assist">A</span>' for _ in range(a or 0))
         res = result_class(sc)
-        mid = match_page_for(p, d, o)
+        mid = match_page_for(p, d, at) or match_page_for(p, d, o)
         tag, href = ("a", f' href="../match/{mid}.html"') if mid else ("div", "")
         mxr += (f'<{tag} class="mxrow{" lnk" if mid else ""}"{href}>'
                 f'<div class="mxtop"><span>{esc(day_label(d))}</span><span class="mxcomp">{esc(cp)}</span></div>'
