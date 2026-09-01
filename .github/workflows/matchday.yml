@@ -30,6 +30,8 @@ jobs:
         run: python3 scraper/irish_scraper.py badges --limit 25 || true
       - name: league tables
         run: python3 scraper/irish_scraper.py tables || true
+      - name: auto match reports
+        run: python3 scraper/auto_reports.py --days 2 || true
       - name: commit if changed
         run: |
           git config user.name "scraper-bot"

@@ -774,9 +774,16 @@ def load():
     # that slug in the admin and the generated one stops rendering.
     articles = [r for r in _rows("manual/articles.csv") if r.get("slug")]
     _mine = {(r.get("slug") or "").strip().lower() for r in articles}
-    articles += [r for r in _rows("api/articles.csv")
-                 if r.get("slug")
-                 and (r["slug"] or "").strip().lower() not in _mine]
+    _api = [r for r in _rows("api/articles.csv")
+            if r.get("slug")
+            and (r["slug"] or "").strip().lower() not in _mine]
+    # newest day first; within a day the heaviest story leads, so a big-league
+    # performance is never buried under a fresher small-league one
+    def _aw(r):
+        try: return float(r.get("weight") or 0)
+        except ValueError: return 0.0
+    _api.sort(key=lambda r: ((r.get("date") or ""), _aw(r)), reverse=True)
+    articles += _api
     accounts = _rows("manual/accounts.csv")
     clubgeo  = {r["club"]: r for r in _rows("manual/clubs.csv") if r.get("club")}
     return players, ireland, news, matches, articles, accounts, clubgeo, tmdata, alias
