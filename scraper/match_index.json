@@ -480,6 +480,23 @@
   ]
  },
  {
+  "fotmob_id": "6016339",
+  "url": "/matches/leyton-orient-vs-arsenal-u21/5v21p61x#6016339",
+  "kickoff": "2026-09-15T18:00:00Z",
+  "comp": "EFL Trophy Southern Grp. F",
+  "home": "Leyton Orient",
+  "away": "Arsenal U21",
+  "home_id": "8351",
+  "away_id": "950214",
+  "slugs": [
+   "aaron-connolly",
+   "jaze-kabia",
+   "killian-cahill",
+   "ollie-oneill",
+   "tony-springett"
+  ]
+ },
+ {
   "fotmob_id": "5837889",
   "url": "/matches/oldham-athletic-vs-swindon-town/364yo9#5837889",
   "kickoff": "2026-08-29T14:00:00Z",
@@ -533,6 +550,20 @@
   "away": "Swindon",
   "home_id": "9916",
   "away_id": "9795",
+  "slugs": [
+   "aaron-drinan",
+   "gavin-kilkenny"
+  ]
+ },
+ {
+  "fotmob_id": "6016315",
+  "url": "/matches/swindon-town-vs-crystal-palace-u21/aeys4jz6#6016315",
+  "kickoff": "2026-09-15T18:00:00Z",
+  "comp": "EFL Trophy Southern Grp. E",
+  "home": "Swindon",
+  "away": "Crystal Palace U21",
+  "home_id": "9795",
+  "away_id": "1267874",
   "slugs": [
    "aaron-drinan",
    "gavin-kilkenny"
@@ -3248,21 +3279,6 @@
   ]
  },
  {
-  "fotmob_id": "6005657",
-  "url": "/matches/cardiff-city-vs-norwich-city/2qjvl1#6005657",
-  "kickoff": "2026-08-25T18:00:00Z",
-  "comp": "EFL Cup",
-  "home": "Cardiff City",
-  "away": "Norwich City",
-  "home_id": "8344",
-  "away_id": "9850",
-  "slugs": [
-   "callum-robinson",
-   "jack-moylan",
-   "joel-bagan"
-  ]
- },
- {
   "fotmob_id": "5836800",
   "url": "/matches/cardiff-city-vs-queens-park-rangers/2u2iyy#5836800",
   "kickoff": "2026-09-02T18:45:00Z",
@@ -3932,22 +3948,6 @@
   ]
  },
  {
-  "fotmob_id": "6016304",
-  "url": "/matches/bristol-rovers-vs-chelsea-u21/3x3hz3tu#6016304",
-  "kickoff": "2026-08-25T18:00:00Z",
-  "comp": "EFL Trophy",
-  "home": "Bristol Rovers",
-  "away": "Chelsea U21",
-  "home_id": "10104",
-  "away_id": "773652",
-  "slugs": [
-   "ciaran-kelly",
-   "joe-quigley",
-   "philip-sanyaolu",
-   "promise-omochere"
-  ]
- },
- {
   "fotmob_id": "5837896",
   "url": "/matches/colchester-united-vs-bristol-rovers/2u446k#5837896",
   "kickoff": "2026-09-01T18:45:00Z",
@@ -4579,6 +4579,22 @@
   ]
  },
  {
+  "fotmob_id": "6016305",
+  "url": "/matches/wycombe-wanderers-vs-chelsea-u21/3wkzs4qo#6016305",
+  "kickoff": "2026-09-15T18:00:00Z",
+  "comp": "EFL Trophy Southern Grp. C",
+  "home": "Wycombe",
+  "away": "Chelsea U21",
+  "home_id": "8676",
+  "away_id": "773652",
+  "slugs": [
+   "dan-casey",
+   "jamie-mullins",
+   "justin-osagie",
+   "shaun-wade"
+  ]
+ },
+ {
   "fotmob_id": "5953408",
   "url": "/matches/stourbridge-vs-hitchin-town/o2ayb96#5953408",
   "kickoff": "2026-09-12T14:00:00Z",
@@ -5081,6 +5097,19 @@
   "slugs": [
    "dylan-duffy",
    "oisin-gallagher"
+  ]
+ },
+ {
+  "fotmob_id": "6015005",
+  "url": "/matches/chesterfield-vs-manchester-city-u21/4u3b9cfd#6015005",
+  "kickoff": "2026-09-15T18:00:00Z",
+  "comp": "EFL Trophy Northern Grp. D",
+  "home": "Chesterfield",
+  "away": "Manchester City U21",
+  "home_id": "9786",
+  "away_id": "860800",
+  "slugs": [
+   "dylan-duffy"
   ]
  },
  {
@@ -7149,6 +7178,19 @@
   "away": "Unterhaching",
   "home_id": "340719",
   "away_id": "8486",
+  "slugs": [
+   "kyle-degelman"
+  ]
+ },
+ {
+  "fotmob_id": "5911530",
+  "url": "/matches/spvgg-bayreuth-vs-tsv-aubstadt/rwd5oe8#5911530",
+  "kickoff": "2026-09-15T17:00:00Z",
+  "comp": "Regionalliga Bayern",
+  "home": "SpVgg Bayreuth",
+  "away": "TSV Aubstadt",
+  "home_id": "7792",
+  "away_id": "340719",
   "slugs": [
    "kyle-degelman"
   ]
