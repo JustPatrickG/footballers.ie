@@ -1558,11 +1558,11 @@
  },
  {
   "fotmob_id": "1000019120",
-  "url": "/matches/southampton-u21-vs-afc-bournemouth-academy/1hq86rzi8#1000019120",
+  "url": "/matches/southampton-u21-vs-bournemouth-u21/1hq86rzi8#1000019120",
   "kickoff": "2026-09-12T11:00:00Z",
   "comp": "Premier League 2",
   "home": "Southampton U21",
-  "away": "AFC Bournemouth Academy",
+  "away": "Bournemouth U21",
   "home_id": "773645",
   "away_id": "2128213",
   "slugs": [
@@ -2583,7 +2583,7 @@
  {
   "fotmob_id": "5760490",
   "url": "/matches/levski-sofia-vs-botev-vratsa/8vbu3d4#5760490",
-  "kickoff": "2026-09-12T16:00:00Z",
+  "kickoff": "2026-09-13T14:45:00Z",
   "comp": "First Professional League",
   "home": "Botev Vratsa",
   "away": "Levski Sofia",
@@ -5011,21 +5011,6 @@
   ]
  },
  {
-  "fotmob_id": "6099338",
-  "url": "/matches/wolverhampton-wanderers-vs-everton/2gso21#6099338",
-  "kickoff": "2026-09-09T18:45:00Z",
-  "comp": "EFL Cup",
-  "home": "Everton",
-  "away": "Wolves",
-  "home_id": "8668",
-  "away_id": "8602",
-  "slugs": [
-   "desmond-armstrong",
-   "jake-obrien",
-   "mark-travers"
-  ]
- },
- {
   "fotmob_id": "5795454",
   "url": "/matches/tottenham-hotspur-vs-everton/2gmqxt#5795454",
   "kickoff": "2026-09-12T16:30:00Z",
@@ -5107,10 +5092,10 @@
  },
  {
   "fotmob_id": "1000019126",
-  "url": "/matches/everton-u21-vs-brentford-academy/1f0wobyma#1000019126",
+  "url": "/matches/everton-u21-vs-brentford-u21/1f0wobyma#1000019126",
   "kickoff": "2026-09-13T12:00:00Z",
   "comp": "Premier League 2",
-  "home": "Brentford Academy",
+  "home": "Brentford U21",
   "away": "Everton U21",
   "home_id": "2054260",
   "away_id": "773653",
@@ -8828,19 +8813,6 @@
   "away_id": "8598",
   "slugs": [
    "bobby-jones"
-  ]
- },
- {
-  "fotmob_id": "5833565",
-  "url": "/matches/nafta-vs-maribor/yh1vc#5833565",
-  "kickoff": "2026-08-30T18:15:00Z",
-  "comp": "Prva Liga",
-  "home": "Nafta",
-  "away": "Maribor",
-  "home_id": "2420",
-  "away_id": "8340",
-  "slugs": [
-   "ali-reghba"
   ]
  },
  {
