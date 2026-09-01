@@ -160,14 +160,14 @@ kickoff,competition,home,away,home_id,away_id,home_score,away_score,status,minut
 2026-08-31T16:00:00Z,Veikkausliiga,Ilves,HJK,162146,9861,,,scheduled,,david-eze;david-ezeh
 2026-08-31T16:30:00Z,Serie A,Lecce,Roma,9888,8686,0,4,ft,,corrie-ndaba
 2026-08-31T18:00:00Z,Premier League 2,Brighton & Hove Albion U21,Arsenal U21,773678,950214,2,2,ft,,sean-keogh
-2026-09-01T18:45:00Z,League One,Bromley,Leyton Orient,45729,8351,,,scheduled,,aaron-connolly;jaze-kabia;killian-cahill;ollie-oneill;owen-mason;tony-springett
+2026-09-01T18:45:00Z,League One,Bromley,Leyton Orient,45729,8351,,,live,,aaron-connolly;jaze-kabia;killian-cahill;ollie-oneill;owen-mason;tony-springett
 2026-09-01T18:45:00Z,League Two,Swindon Town,Port Vale,9795,9799,,,live,,aaron-drinan;gavin-kilkenny
-2026-09-01T18:45:00Z,Championship,Swansea City,Watford,10003,9817,,,scheduled,,adam-idah;rocco-vata
+2026-09-01T18:45:00Z,Championship,Swansea City,Watford,10003,9817,,,live,,adam-idah;rocco-vata
 2026-09-01T18:45:00Z,League Two,Fleetwood Town,Oldham Athletic,45723,9785,,,live,,adam-murphy;calum-kavanagh;frankie-mcmahon-brown;jesse-dempsey;lewis-temple;ronan-coughlan;ryan-delaney;sean-costelloe
 2026-09-01T18:45:00Z,League Two,Crewe Alexandra,Walsall,9784,10006,,,live,,adrien-thibaut;charlie-mcneill;ian-lawlor;james-furlong;ronan-maher
 2026-09-01T18:45:00Z,League One,Huddersfield Town,Oxford United,9796,8653,,,live,,aidomo-emakhu;james-golding;marcus-harness;sean-roughan;tyler-goodrham
 2026-09-01T18:45:00Z,Championship,Preston North End,Bristol City,8411,8427,,,live,,andrew-moran;jason-knight;luke-mcnally
-2026-09-01T18:45:00Z,League Two,Rochdale,Shrewsbury Town,8493,9896,,,scheduled,,anthony-scully;baba-adeeko;cian-hayes;jonny-smith
+2026-09-01T18:45:00Z,League Two,Rochdale,Shrewsbury Town,8493,9896,,,live,,anthony-scully;baba-adeeko;cian-hayes;jonny-smith
 2026-09-01T18:45:00Z,League One,Bradford City,Cambridge United,8484,9834,,,live,,cathal-heffernan;glenn-mcconnell;shane-mcloughlin;tyreik-wright
 2026-09-01T18:45:00Z,League Two,Exeter City,Barnet,9833,8175,,,live,,charlie-cummins;jake-doyle-hayes;oisin-gallagher
 2026-09-01T18:45:00Z,League Two,Accrington Stanley,Grimsby Town,8671,10005,,,live,,cian-doyle;connor-obrien;reece-staunton;seamus-conneely
@@ -179,15 +179,15 @@ kickoff,competition,home,away,home_id,away_id,home_score,away_score,status,minut
 2026-09-01T18:45:00Z,League Two,Chesterfield,Gillingham,9786,10173,,,scheduled,,conor-mcmanus;dylan-duffy
 2026-09-01T18:45:00Z,Championship,Portsmouth,Derby County,8462,10170,,,live,,conor-shaughnessy;eoin-kenny;franco-umeh;max-johnston;sammie-szmodics
 2026-09-01T18:45:00Z,Championship,Sheffield United,Bolton Wanderers,8657,8559,,,live,,cyrus-christie;gavin-bazunu;jack-bonham;mark-mcguinness;matt-doherty;sam-curtis;tom-cannon
-2026-09-01T18:45:00Z,League One,Wycombe Wanderers,Sheffield Wednesday,8676,10163,,,scheduled,,dan-casey;gabriel-otegbayo;jamie-mullins;kieran-morrison;louie-barry
+2026-09-01T18:45:00Z,League One,Wycombe Wanderers,Sheffield Wednesday,8676,10163,,,live,,dan-casey;gabriel-otegbayo;jamie-mullins;kieran-morrison;louie-barry
 2026-09-01T18:45:00Z,League One,Peterborough United,Stevenage,8677,10253,,,scheduled,,david-okagbue;evan-weir;liam-kelly;thomas-oconnor
 2026-09-01T18:45:00Z,League Two,Tranmere Rovers,Rotherham United,8313,8119,,,scheduled,,emmanuel-adegboyega;jacob-slater;joe-rafferty;joshua-kayode;lee-oconnor
-2026-09-01T18:45:00Z,Southern Premier Division Central,Stourbridge,Leamington,161834,5764,,,scheduled,,eric-yahaya
+2026-09-01T18:45:00Z,Southern Premier Division Central,Stourbridge,Leamington,161834,5764,,,live,,eric-yahaya
 2026-09-01T18:45:00Z,Championship,Lincoln City,Blackburn Rovers,8430,8655,,,live,,issa-kargbo;james-collins;josh-honohan;mason-melia;sean-mcloughlin
 2026-09-01T18:45:00Z,League One,Leicester City,Plymouth Argyle,8197,8401,,,live,,james-storer;ronan-curtis
-2026-09-01T18:45:00Z,League Two,Cheltenham Town,York City,8680,9916,,,scheduled,,jordan-shipley;pierce-sweeney
+2026-09-01T18:45:00Z,League Two,Cheltenham Town,York City,8680,9916,,,live,,jordan-shipley;pierce-sweeney
 2026-09-01T19:00:00Z,Championship,Stoke City,Norwich City,10194,9850,,,live,,bosun-lawal
-2026-09-01T19:00:00Z,Championship,Birmingham City,Southampton,8658,8466,,,scheduled,,finn-azaz;romeo-akachukwu;ryan-manning
+2026-09-01T19:00:00Z,Championship,Birmingham City,Southampton,8658,8466,,,live,,finn-azaz;romeo-akachukwu;ryan-manning
 2026-09-02T13:45:00Z,Cupa României,Botoșani,Corvinul Hunedoara,188191,1515102,,,scheduled,,roland-idowu
 2026-09-02T16:00:00Z,Coppa Italia,Udinese,Venezia,8600,7881,,,scheduled,,james-abankwah
 2026-09-02T17:00:00Z,First Professional League,Slavia Sofia,Levski Sofia,10134,8632,,,scheduled,,armstrong-oko-flex
