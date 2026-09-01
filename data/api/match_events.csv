@@ -4659,41 +4659,68 @@ match_id,minute,type,player,team,venue
 2026-08-31-yate-town-v-taunton-town,40,goal,Rex Mannings,Yate Town,The Jelf Stadium
 2026-08-31-yate-town-v-taunton-town,90,goal,Daniel Koita,Taunton Town,The Jelf Stadium
 2026-09-01-accrington-stanley-v-grimsby-town,6,own_goal,Joseph Anderson,Grimsby Town,Wham Stadium
+2026-09-01-accrington-stanley-v-grimsby-town,38,goal,Andy Cook,Grimsby Town,Wham Stadium
 2026-09-01-birmingham-city-v-southampton,,,,,St. Andrew's @ Knighthead Park
 2026-09-01-bradford-city-v-cambridge-united,,,,,Mbanq Valley Parade
 2026-09-01-bristol-rovers-v-colchester-united,22,yellow,Tom James,Bristol Rovers,Memorial Stadium
+2026-09-01-bristol-rovers-v-colchester-united,27,goal,Tom James,Bristol Rovers,Memorial Stadium
+2026-09-01-bristol-rovers-v-colchester-united,35,yellow,Jack Tucker,Colchester United,Memorial Stadium
 2026-09-01-bromley-v-leyton-orient,5,yellow,Fin Stevens,Leyton Orient,Copperjax Community Stadium
+2026-09-01-bromley-v-leyton-orient,36,goal,Jaze Kabia,Leyton Orient,Copperjax Community Stadium
 2026-09-01-cheltenham-town-v-york-city,5,yellow,Shaun McWilliams,Cheltenham Town,EV Charger Points Stadium
 2026-09-01-cheltenham-town-v-york-city,12,goal,Ollie Pearce,York City,EV Charger Points Stadium
 2026-09-01-cheltenham-town-v-york-city,17,goal,Jake Evans,Cheltenham Town,EV Charger Points Stadium
 2026-09-01-cheltenham-town-v-york-city,17,missed_penalty,Charlie McCann,Cheltenham Town,EV Charger Points Stadium
 2026-09-01-chesterfield-v-gillingham,22,goal,Josh Koroma,Chesterfield,SMH Group Stadium
-2026-09-01-crewe-alexandra-v-walsall,,,,,Mornflake Stadium
-2026-09-01-doncaster-rovers-v-notts-county,,,,,Club Doncaster Sports Village
+2026-09-01-chesterfield-v-gillingham,29,yellow,Logan Dobbs,Gillingham,SMH Group Stadium
+2026-09-01-chesterfield-v-gillingham,31,yellow,Kyle McFadzean,Chesterfield,SMH Group Stadium
+2026-09-01-crewe-alexandra-v-walsall,42,goal,Aaron Pressley,Walsall,Mornflake Stadium
+2026-09-01-doncaster-rovers-v-notts-county,36,goal,Isaac Hutchinson,Doncaster Rovers,Club Doncaster Sports Village
+2026-09-01-doncaster-rovers-v-notts-county,44,yellow,Jack Senior,Doncaster Rovers,Club Doncaster Sports Village
 2026-09-01-exeter-city-v-barnet,22,yellow,Brandon Comley,Barnet,St James Park
+2026-09-01-exeter-city-v-barnet,27,sub_off,Andrew Oluwabori,Exeter City,St James Park
+2026-09-01-exeter-city-v-barnet,27,sub_on,Ethan Sutherland,Exeter City,St James Park
+2026-09-01-exeter-city-v-barnet,41,yellow,Charlie Lakin,Barnet,St James Park
 2026-09-01-fc-halifax-town-v-hartlepool-united,16,yellow,Sam Johnson,FC Halifax Town,The Shay Stadium
+2026-09-01-fc-halifax-town-v-hartlepool-united,38,yellow,Jamie Miley,Hartlepool United,The Shay Stadium
+2026-09-01-fc-halifax-town-v-hartlepool-united,39,yellow,Tayt-Lemar Trusty,FC Halifax Town,The Shay Stadium
 2026-09-01-fleetwood-town-v-oldham-athletic,5,yellow,Harrison Neal,Fleetwood Town,Highbury Stadium
-2026-09-01-huddersfield-town-v-oxford-united,,,,,Accu Stadium
+2026-09-01-huddersfield-town-v-oxford-united,35,yellow,Jack Currie,Oxford United,Accu Stadium
 2026-09-01-leicester-city-v-plymouth-argyle,6,sub_off,Jakub Stolarczyk,Leicester City,King Power Stadium
 2026-09-01-leicester-city-v-plymouth-argyle,6,sub_on,Alex McCarthy,Leicester City,King Power Stadium
+2026-09-01-leicester-city-v-plymouth-argyle,38,yellow,Xavier Amaechi,Plymouth Argyle,King Power Stadium
+2026-09-01-leicester-city-v-plymouth-argyle,43,yellow,Jayden Joseph,Leicester City,King Power Stadium
 2026-09-01-lincoln-city-v-blackburn-rovers,13,yellow,Tom Atcheson,Blackburn Rovers,ProAmpac Stadium
-2026-09-01-northampton-town-v-crawley-town,,,,,Sixfields Stadium
-2026-09-01-peterborough-united-v-stevenage,,,,,Weston Homes Stadium
+2026-09-01-northampton-town-v-crawley-town,38,goal,Nathaniel Opoku,Northampton Town,Sixfields Stadium
+2026-09-01-northampton-town-v-crawley-town,42,yellow,Klaudio Krasniqi,Crawley Town,Sixfields Stadium
+2026-09-01-peterborough-united-v-stevenage,24,sub_off,Owura Edwards,Peterborough United,Weston Homes Stadium
+2026-09-01-peterborough-united-v-stevenage,24,sub_on,Boluwatife Shofowoke,Peterborough United,Weston Homes Stadium
 2026-09-01-portsmouth-v-derby-county,17,goal,Sammie Szmodics,Derby County,Fratton Park
 2026-09-01-preston-north-end-v-bristol-city,4,goal,Scott Twine,Bristol City,Deepdale
 2026-09-01-preston-north-end-v-bristol-city,9,yellow,Jordan Thompson,Preston North End,Deepdale
 2026-09-01-rochdale-v-shrewsbury-town,22,sub_off,Ethan Ebanks-Landell,Rochdale,Crown Oil Arena
 2026-09-01-rochdale-v-shrewsbury-town,22,sub_on,Zain Silcott-Duberry,Rochdale,Crown Oil Arena
+2026-09-01-rochdale-v-shrewsbury-town,27,yellow,Thomas Anderson,Shrewsbury Town,Crown Oil Arena
+2026-09-01-rochdale-v-shrewsbury-town,33,goal,Babajide Adeeko,Rochdale,Crown Oil Arena
+2026-09-01-rochdale-v-shrewsbury-town,43,goal,Luke Hannant,Rochdale,Crown Oil Arena
 2026-09-01-salford-city-v-newport-county,14,yellow,Joe Thomas,Newport County,AIG Stadium
 2026-09-01-sheffield-united-v-bolton-wanderers,1,goal,Xavier Simons,Bolton Wanderers,Bramall Lane
 2026-09-01-sheffield-united-v-bolton-wanderers,4,goal,Japhet Tanganga,Sheffield United,Bramall Lane
-2026-09-01-stoke-city-v-norwich-city,,,,,bet365 Stadium
+2026-09-01-sheffield-united-v-bolton-wanderers,39,yellow,Gaizka Larrazabal,Bolton Wanderers,Bramall Lane
+2026-09-01-stoke-city-v-norwich-city,13,goal,Ethan Galbraith,Stoke City,bet365 Stadium
 2026-09-01-stourbridge-v-leamington,5,goal,Kyle Finn,Leamington,War Memorial Athletic Ground
 2026-09-01-swansea-city-v-watford,8,goal,Ji-Sung Eom,Swansea City,Swansea.com Stadium
+2026-09-01-swansea-city-v-watford,25,yellow,Omar Traoré,Watford,Swansea.com Stadium
+2026-09-01-swansea-city-v-watford,29,goal,Adam Idah,Swansea City,Swansea.com Stadium
+2026-09-01-swansea-city-v-watford,31,sub_off,Omar Traoré,Watford,Swansea.com Stadium
+2026-09-01-swansea-city-v-watford,31,sub_on,Branimir Mlacic,Watford,Swansea.com Stadium
 2026-09-01-swindon-town-v-port-vale,2,goal,Oliver Lynch,Port Vale,The Nigel Eady County Ground
 2026-09-01-swindon-town-v-port-vale,13,goal,Aaron Drinan,Swindon Town,The Nigel Eady County Ground
 2026-09-01-tranmere-rovers-v-rotherham-united,16,goal,Zane Okoro,Tranmere Rovers,Prenton Park
+2026-09-01-tranmere-rovers-v-rotherham-united,34,yellow,Ewan Otoo,Rotherham United,Prenton Park
 2026-09-01-wycombe-wanderers-v-sheffield-wednesday,6,goal,Cauley Woodrow,Wycombe Wanderers,Adams Park
 2026-09-01-wycombe-wanderers-v-sheffield-wednesday,11,goal,Louie Barry,Sheffield Wednesday,Adams Park
 2026-09-01-wycombe-wanderers-v-sheffield-wednesday,16,sub_off,Louie Barry,Sheffield Wednesday,Adams Park
 2026-09-01-wycombe-wanderers-v-sheffield-wednesday,16,sub_on,Kieran Morrison,Sheffield Wednesday,Adams Park
+2026-09-01-wycombe-wanderers-v-sheffield-wednesday,41,sub_off,Daniel Harvie,Wycombe Wanderers,Adams Park
+2026-09-01-wycombe-wanderers-v-sheffield-wednesday,41,sub_on,Dan Casey,Wycombe Wanderers,Adams Park
