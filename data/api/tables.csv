@@ -132,8 +132,8 @@ Premier League,47,15,Nottingham Forest,10203,2,0,1,1,2,3,-1,1
 Premier League,47,16,Fulham,9879,2,0,0,2,2,4,-2,0
 Premier League,47,17,Coventry City,8669,2,0,0,2,0,4,-4,0
 Premier League,47,18,Crystal Palace,9826,2,0,0,2,1,6,-5,0
-Premier League,47,19,Tottenham Hotspur,8586,2,0,0,2,0,5,-5,0
-Premier League,47,20,Aston Villa,10252,2,0,0,2,0,5,-5,0
+Premier League,47,19,Aston Villa,10252,2,0,0,2,0,5,-5,0
+Premier League,47,20,Tottenham Hotspur,8586,2,0,0,2,0,5,-5,0
 Premier Division,126,1,Shamrock Rovers,4131,28,16,7,5,46,27,19,55
 Premier Division,126,2,St. Patrick's Athletic,1854,29,14,8,7,45,25,20,50
 Premier Division,126,3,Bohemian FC,4594,29,14,8,7,50,34,16,50
@@ -284,8 +284,8 @@ League of Ireland Premier Division,126,7,Galway United FC,520517,28,8,10,10,36,4
 League of Ireland Premier Division,126,8,Waterford FC,6042,29,7,11,11,39,48,-9,32
 League of Ireland Premier Division,126,9,Drogheda United,8339,29,6,10,13,33,48,-15,28
 League of Ireland Premier Division,126,10,Sligo Rovers,6361,29,5,8,16,23,48,-25,23
-LaLiga,87,1,Real Madrid,8633,3,3,0,0,10,2,8,9
-LaLiga,87,2,Barcelona,8634,3,3,0,0,10,2,8,9
+LaLiga,87,1,Barcelona,8634,3,3,0,0,12,2,10,9
+LaLiga,87,2,Real Madrid,8633,3,3,0,0,10,2,8,9
 LaLiga,87,3,Atlético Madrid,9906,3,2,1,0,7,3,4,7
 LaLiga,87,4,Deportivo Alavés,9866,3,2,1,0,5,1,4,7
 LaLiga,87,5,Osasuna,8371,3,2,1,0,3,1,2,7
@@ -299,9 +299,9 @@ LaLiga,87,12,Athletic Club,8315,3,1,0,2,3,5,-2,3
 LaLiga,87,13,Real Sociedad,8560,3,1,0,2,3,6,-3,3
 LaLiga,87,14,Getafe,8305,3,1,0,2,1,4,-3,3
 LaLiga,87,15,Villarreal,10205,3,0,2,1,4,5,-1,2
-LaLiga,87,16,Rayo Vallecano,8370,3,0,1,2,4,6,-2,1
-LaLiga,87,17,Celta Vigo,9910,3,0,1,2,1,4,-3,1
-LaLiga,87,18,Valencia,10267,3,0,1,2,1,4,-3,1
+LaLiga,87,16,Celta Vigo,9910,3,0,1,2,1,4,-3,1
+LaLiga,87,17,Valencia,10267,3,0,1,2,1,4,-3,1
+LaLiga,87,18,Rayo Vallecano,8370,3,0,1,2,4,8,-4,1
 LaLiga,87,19,Elche,10268,3,0,1,2,3,9,-6,1
 LaLiga,87,20,Málaga,9864,3,0,1,2,1,7,-6,1
 Veikkausliiga,51,1,KuPS,1693,22,12,7,3,38,23,15,43
