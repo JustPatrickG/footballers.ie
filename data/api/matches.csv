@@ -161,7 +161,7 @@ kickoff,competition,home,away,home_id,away_id,home_score,away_score,status,minut
 2026-09-01T18:45:00Z,Championship,Portsmouth,Derby County,8462,10170,0,2,ft,,max-johnston;sammie-szmodics
 2026-09-01T19:00:00Z,Championship,Stoke City,Norwich City,10194,9850,1,0,ft,,bosun-lawal;gabriel-kelly
 2026-09-01T19:00:00Z,Championship,Birmingham City,Southampton,8658,8466,1,1,ft,,finn-azaz;romeo-akachukwu;ryan-manning
-2026-09-02T13:45:00Z,Cupa României,Botoșani,Corvinul Hunedoara,188191,1515102,,,scheduled,,roland-idowu
+2026-09-02T13:45:00Z,Cup Grp. A,Botoșani,Corvinul Hunedoara,188191,1515102,,,scheduled,,roland-idowu
 2026-09-02T16:00:00Z,Coppa Italia,Udinese,Venezia,8600,7881,,,scheduled,,james-abankwah
 2026-09-02T17:00:00Z,First Professional League,Slavia Sofia,Levski Sofia,10134,8632,,,scheduled,,armstrong-oko-flex
 2026-09-02T18:45:00Z,League One,Luton Town,Stockport County,8346,10007,,,scheduled,,andrew-wogan;callum-marshall;eoghan-oconnell;josh-keeley
@@ -371,6 +371,7 @@ kickoff,competition,home,away,home_id,away_id,home_score,away_score,status,minut
 2026-09-09T23:30:00Z,Major League Soccer,Montreal,Charlotte FC,161195,1323940,,,scheduled,,joe-byrne
 2026-09-10T00:30:00Z,Major League Soccer,Austin FC,Colorado,1218886,8314,,,scheduled,,jon-gallagher
 2026-09-10T19:00:00Z,League One,Stevenage,Luton,10253,8346,,,scheduled,,callum-marshall;josh-keeley
+2026-09-11T17:00:00Z,Super Lig,Beşiktaş,Erzurumspor FK,10188,281467,,,scheduled,,festy-ebosele
 2026-09-11T17:00:00Z,Regionalliga Bayern,TSV Aubstadt,Unterhaching,340719,8486,,,scheduled,,kyle-degelman
 2026-09-11T17:00:00Z,Serie B,Empoli,Arezzo,8534,9849,,,scheduled,,matteo-egan
 2026-09-11T18:00:00Z,Premier League 2,Derby County U21,Tottenham Hotspur U21,773680,860802,,,scheduled,,aaron-maguire
@@ -504,7 +505,6 @@ kickoff,competition,home,away,home_id,away_id,home_score,away_score,status,minut
 2026-09-13T14:45:00Z,Eredivisie,PEC Zwolle,Feyenoord,6413,10235,,,scheduled,,liam-bossin
 2026-09-13T15:00:00Z,Segunda Federacion - Group 3,Mallorca B,Deportiva Minera,177225,278805,,,scheduled,,kevin-toner
 2026-09-13T15:00:00Z,Eliteserien,HamKam,Molde,8448,9917,,,scheduled,,trent-kone-doherty
-2026-09-13T17:00:00Z,Super Lig,Beşiktaş,Erzurumspor FK,10188,281467,,,scheduled,,festy-ebosele
 2026-09-13T17:30:00Z,3. Liga,Hoffenheim II,Fortuna Köln,94940,7786,,,scheduled,,matthew-moore
 2026-09-13T18:15:00Z,Prva Liga,Radomlje,Maribor,272871,8340,,,scheduled,,ali-reghba
 2026-09-13T19:00:00Z,Premier League,Inter Toronto FC,Vancouver FC,1022954,1436202,,,scheduled,,tom-field

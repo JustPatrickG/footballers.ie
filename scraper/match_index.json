@@ -1216,20 +1216,6 @@
   ]
  },
  {
-  "fotmob_id": "6145900",
-  "url": "/matches/ff-jaro-vs-sjk/6orlq1n#6145900",
-  "kickoff": "2026-09-12T16:00:00Z",
-  "comp": "Veikkausliiga Relegation Group",
-  "home": "FF Jaro",
-  "away": "SJK",
-  "home_id": "8473",
-  "away_id": "162162",
-  "slugs": [
-   "aaron-okpolokpo",
-   "josh-okpolokpo"
-  ]
- },
- {
   "fotmob_id": "6145898",
   "url": "/matches/tps-vs-sjk/6jloiir#6145898",
   "kickoff": "2026-09-08T15:00:00Z",
@@ -1237,6 +1223,20 @@
   "home": "TPS",
   "away": "SJK",
   "home_id": "6633",
+  "away_id": "162162",
+  "slugs": [
+   "aaron-okpolokpo",
+   "josh-okpolokpo"
+  ]
+ },
+ {
+  "fotmob_id": "6145900",
+  "url": "/matches/ff-jaro-vs-sjk/6orlq1n#6145900",
+  "kickoff": "2026-09-12T16:00:00Z",
+  "comp": "Veikkausliiga Relegation Group",
+  "home": "FF Jaro",
+  "away": "SJK",
+  "home_id": "8473",
   "away_id": "162162",
   "slugs": [
    "aaron-okpolokpo",
@@ -5639,7 +5639,7 @@
  {
   "fotmob_id": "5904747",
   "url": "/matches/besiktas-vs-erzurumspor-fk/jjeaxvb#5904747",
-  "kickoff": "2026-09-13T17:00:00Z",
+  "kickoff": "2026-09-11T17:00:00Z",
   "comp": "Super Lig",
   "home": "Be\u015fikta\u015f",
   "away": "Erzurumspor FK",
@@ -8269,19 +8269,6 @@
   ]
  },
  {
-  "fotmob_id": "6093725",
-  "url": "/matches/botosani-vs-corvinul-hunedoara/iieci3c2#6093725",
-  "kickoff": "2026-09-02T13:45:00Z",
-  "comp": "Cupa Rom\u00e2niei",
-  "home": "Boto\u0219ani",
-  "away": "Corvinul Hunedoara",
-  "home_id": "188191",
-  "away_id": "1515102",
-  "slugs": [
-   "roland-idowu"
-  ]
- },
- {
   "fotmob_id": "5853490",
   "url": "/matches/botosani-vs-sepsi-osk/3suxzc3z#5853490",
   "kickoff": "2026-09-05T12:00:00Z",
@@ -8290,6 +8277,19 @@
   "away": "Sepsi OSK",
   "home_id": "188191",
   "away_id": "583706",
+  "slugs": [
+   "roland-idowu"
+  ]
+ },
+ {
+  "fotmob_id": "6093725",
+  "url": "/matches/botosani-vs-corvinul-hunedoara/iieci3c2#6093725",
+  "kickoff": "2026-09-02T13:45:00Z",
+  "comp": "Cup Grp. A",
+  "home": "Boto\u0219ani",
+  "away": "Corvinul Hunedoara",
+  "home_id": "188191",
+  "away_id": "1515102",
   "slugs": [
    "roland-idowu"
   ]
