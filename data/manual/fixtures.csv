@@ -431,6 +431,11 @@ billy-vance,2026-09-19T14:00:00Z,Linfield,A,Premiership
 billy-vance,2026-09-26T14:00:00Z,Bangor,H,Premiership
 billy-vance,2026-10-03T14:00:00Z,Carrick Rangers,A,Premiership
 billy-vance,2026-10-10T14:00:00Z,Larne,H,Premiership
+bobby-jones,2026-09-05T14:00:00Z,King's Lynn Town,H,National League North
+bobby-jones,2026-09-08T18:45:00Z,Chorley,A,National League North
+bobby-jones,2026-09-12T14:00:00Z,Marine,A,National League North
+bobby-jones,2026-09-26T14:00:00Z,Hebburn Town,H,National League North
+bobby-jones,2026-10-10T14:00:00Z,Merthyr Town,H,National League North
 bobby-keohan,2026-09-04T18:45:00Z,Sligo Rovers,H,FAI Cup
 bobby-keohan,2026-09-11T18:45:00Z,Dundalk,H,Premier Division
 bobby-keohan,2026-09-14T18:45:00Z,Derry City,H,Premier Division
@@ -451,13 +456,6 @@ brandon-kavanagh,2026-09-11T18:45:00Z,Sligo Rovers,H,Premier Division
 brandon-kavanagh,2026-09-14T18:45:00Z,Shelbourne,A,Premier Division
 brandon-kavanagh,2026-09-18T19:00:00Z,Bohemian FC,A,Premier Division
 brandon-kavanagh,2026-10-09T19:00:00Z,Shamrock Rovers,A,Premier Division
-brandon-ly,2026-09-05T12:15:00Z,Hong Linh Ha Tinh,H,V-League
-brandon-ly,2026-09-10T12:15:00Z,Viettel,A,V-League
-brandon-ly,2026-09-15T10:00:00Z,Gamba Osaka,A,AFC Champions League Elite East
-brandon-ly,2026-09-18T11:00:00Z,Bình Định,A,Cup
-brandon-ly,2026-09-20T11:00:00Z,Trường Tươi Đồng Nai,A,V-League
-brandon-ly,2026-10-08T00:00:00Z,Lion City Sailors FC,A,ASEAN Club Championship
-brandon-ly,2026-10-13T12:15:00Z,Kashima Antlers,H,AFC Champions League Elite East
 brendan-clarke,2026-09-04T18:45:00Z,Finn Harps,A,First Division
 brendan-clarke,2026-09-11T18:45:00Z,UCD,A,First Division
 brendan-clarke,2026-09-18T18:45:00Z,Kerry FC,H,First Division
@@ -638,11 +636,12 @@ charlie-mcneill,2026-09-26T14:00:00Z,Rotherham,A,League Two
 charlie-mcneill,2026-10-03T14:00:00Z,Bristol Rovers,H,League Two
 charlie-mcneill,2026-10-06T18:00:00Z,Blackpool,A,EFL Trophy Northern Grp. B
 charlie-mcneill,2026-10-10T11:30:00Z,Swindon,A,League Two
-chiedozie-ogbene,2026-09-04T19:00:00Z,Liverpool,H,Premier League
-chiedozie-ogbene,2026-09-12T14:00:00Z,Crystal Palace,A,Premier League
-chiedozie-ogbene,2026-09-15T19:00:00Z,Arsenal,H,EFL Cup
-chiedozie-ogbene,2026-09-19T14:00:00Z,Everton,A,Premier League
-chiedozie-ogbene,2026-10-10T14:00:00Z,Fulham,H,Premier League
+chiedozie-ogbene,2026-09-05T11:30:00Z,Southampton,H,Championship
+chiedozie-ogbene,2026-09-08T18:45:00Z,Bournemouth,A,EFL Cup
+chiedozie-ogbene,2026-09-12T14:00:00Z,Preston,A,Championship
+chiedozie-ogbene,2026-09-15T18:45:00Z,Bristol City,A,Championship
+chiedozie-ogbene,2026-09-19T14:00:00Z,Swansea,H,Championship
+chiedozie-ogbene,2026-10-10T14:00:00Z,Sheff Utd,A,Championship
 chris-forrester,2026-09-05T15:00:00Z,Bohemian FC,H,FAI Cup
 chris-forrester,2026-09-11T19:00:00Z,Shamrock Rovers,H,Premier Division
 chris-forrester,2026-09-14T18:45:00Z,Dundalk,A,Premier Division
@@ -1438,11 +1437,11 @@ egor-vassenin,2026-09-11T18:45:00Z,Waterford FC,A,Premier Division
 egor-vassenin,2026-09-14T18:45:00Z,St. Patrick's Athletic,H,Premier Division
 egor-vassenin,2026-09-18T18:45:00Z,Shelbourne,H,Premier Division
 egor-vassenin,2026-10-09T18:45:00Z,Bohemian FC,H,Premier Division
-eiran-cashin,2026-09-05T14:00:00Z,Leeds,H,Premier League
-eiran-cashin,2026-09-13T13:00:00Z,Coventry,A,Premier League
-eiran-cashin,2026-09-16T19:00:00Z,Man United,A,EFL Cup
-eiran-cashin,2026-09-19T14:00:00Z,Arsenal,H,Premier League
-eiran-cashin,2026-10-10T14:00:00Z,Sunderland,A,Premier League
+eiran-cashin,2026-09-05T14:00:00Z,West Ham,A,Championship
+eiran-cashin,2026-09-09T18:45:00Z,West Brom,H,Championship
+eiran-cashin,2026-09-12T11:30:00Z,Birmingham,H,Championship
+eiran-cashin,2026-09-19T14:00:00Z,Burnley,A,Championship
+eiran-cashin,2026-10-10T14:00:00Z,Wrexham,H,Championship
 emmanuel-adegboyega,2026-09-05T14:00:00Z,Bristol Rovers,A,League Two
 emmanuel-adegboyega,2026-09-12T14:00:00Z,Salford,H,League Two
 emmanuel-adegboyega,2026-09-19T14:00:00Z,Northampton,A,League Two
@@ -2952,6 +2951,11 @@ michael-duffy,2026-09-11T18:45:00Z,Shelbourne,A,Premier Division
 michael-duffy,2026-09-14T18:45:00Z,Waterford FC,A,Premier Division
 michael-duffy,2026-09-18T18:45:00Z,Galway United FC,H,Premier Division
 michael-duffy,2026-10-09T18:45:00Z,St. Patrick's Athletic,H,Premier Division
+michael-kelly,2026-09-05T14:00:00Z,Southport,H,National League North
+michael-kelly,2026-09-08T18:45:00Z,Spennymoor Town FC,A,National League North
+michael-kelly,2026-09-12T14:00:00Z,Bedford Town,H,National League North
+michael-kelly,2026-09-26T14:00:00Z,Chorley,A,National League North
+michael-kelly,2026-10-10T14:00:00Z,Marine,A,National League North
 michael-mccolgan,2026-09-06T15:00:00Z,Dundalk,H,FAI Cup
 michael-mccolgan,2026-09-11T18:45:00Z,Shelbourne,A,Premier Division
 michael-mccolgan,2026-09-14T18:45:00Z,Waterford FC,A,Premier Division
@@ -3684,6 +3688,11 @@ sean-keane,2026-10-09T18:45:00Z,Galway United FC,H,Premier Division
 sean-keogh,2026-09-11T18:00:00Z,Leicester City U21,H,Premier League 2
 sean-keogh,2026-09-19T11:00:00Z,Liverpool U21,A,Premier League 2
 sean-keogh,2026-10-13T18:00:00Z,Gillingham,A,EFL Trophy Southern Grp. G
+sean-long,2026-09-05T14:00:00Z,Maidstone United,A,National League South
+sean-long,2026-09-08T18:45:00Z,AFC Totton,H,National League South
+sean-long,2026-09-12T14:00:00Z,Dagenham & Redbridge,H,National League South
+sean-long,2026-09-26T14:00:00Z,Farnham Town,A,National League South
+sean-long,2026-10-10T14:00:00Z,Folkestone Invicta,H,National League South
 sean-maguire,2026-09-04T18:45:00Z,Bray Wanderers,A,First Division
 sean-maguire,2026-09-11T18:45:00Z,Cobh Ramblers,H,First Division
 sean-maguire,2026-09-18T18:45:00Z,UCD,H,First Division
@@ -3971,6 +3980,7 @@ tony-springett,2026-10-03T14:00:00Z,Plymouth,H,League One
 tony-springett,2026-10-10T14:00:00Z,Bradford,A,League One
 trent-kone-doherty,2026-09-06T15:00:00Z,KFUM,H,Eliteserien
 trent-kone-doherty,2026-09-13T15:00:00Z,HamKam,A,Eliteserien
+trent-kone-doherty,2026-09-16T16:00:00Z,Trygg/Lade,A,Cup
 trent-kone-doherty,2026-09-19T16:00:00Z,Aalesund,H,Eliteserien
 trent-kone-doherty,2026-10-11T15:00:00Z,Lillestrøm,A,Eliteserien
 trevor-clarke,2026-09-06T15:00:00Z,Derry City,A,FAI Cup
