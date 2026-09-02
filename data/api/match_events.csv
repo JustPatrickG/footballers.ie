@@ -4893,7 +4893,18 @@ match_id,minute,type,player,team,venue
 2026-09-01-wycombe-wanderers-v-sheffield-wednesday,16,sub_on,Kieran Morrison,Sheffield Wednesday,Adams Park
 2026-09-01-wycombe-wanderers-v-sheffield-wednesday,41,sub_off,Daniel Harvie,Wycombe Wanderers,Adams Park
 2026-09-01-wycombe-wanderers-v-sheffield-wednesday,41,sub_on,Dan Casey,Wycombe Wanderers,Adams Park
-2026-09-02-barnsley-v-blackpool,,,,,Oakwell
+2026-09-02-barnsley-v-blackpool,37,yellow,George Honeyman,Blackpool,Oakwell
+2026-09-02-barnsley-v-blackpool,46,sub_off,Luke Alker,Barnsley,Oakwell
+2026-09-02-barnsley-v-blackpool,46,sub_off,Makenzie Kirk,Barnsley,Oakwell
+2026-09-02-barnsley-v-blackpool,46,sub_on,Amani Richards,Barnsley,Oakwell
+2026-09-02-barnsley-v-blackpool,46,sub_on,Leo Farrell,Barnsley,Oakwell
+2026-09-02-barnsley-v-blackpool,54,sub_off,George Honeyman,Blackpool,Oakwell
+2026-09-02-barnsley-v-blackpool,54,sub_on,Leighton Clarkson,Blackpool,Oakwell
+2026-09-02-barnsley-v-blackpool,59,sub_off,Tom Bloxham,Blackpool,Oakwell
+2026-09-02-barnsley-v-blackpool,59,sub_on,Jerry Yates,Blackpool,Oakwell
+2026-09-02-barnsley-v-blackpool,60,yellow,Finley Munroe,Blackpool,Oakwell
+2026-09-02-barnsley-v-blackpool,61,goal,Cameron McGeehan,Barnsley,Oakwell
+2026-09-02-barnsley-v-blackpool,65,goal,Josh Bowler,Blackpool,Oakwell
 2026-09-02-botosani-v-corvinul-hunedoara,17,goal,Emmanuel Yeboah,Corvinul Hunedoara,Stadium
 2026-09-02-botosani-v-corvinul-hunedoara,46,sub_off,Mihai Bordeianu,Botoșani,Stadium
 2026-09-02-botosani-v-corvinul-hunedoara,46,sub_off,Roland Idowu,Botoșani,Stadium
@@ -4913,14 +4924,124 @@ match_id,minute,type,player,team,venue
 2026-09-02-botosani-v-corvinul-hunedoara,74,sub_off,Mohammed Hayatu,Corvinul Hunedoara,Stadium
 2026-09-02-botosani-v-corvinul-hunedoara,74,sub_on,Andrej Fábry,Corvinul Hunedoara,Stadium
 2026-09-02-botosani-v-corvinul-hunedoara,74,sub_on,Sergio Ribeiro,Corvinul Hunedoara,Stadium
-2026-09-02-burton-albion-v-afc-wimbledon,,,,,Pirelli Stadium
-2026-09-02-celtic-v-aberdeen,,,,,Celtic Park
-2026-09-02-dundee-fc-v-st-johnstone,,,,,Dens Park
-2026-09-02-kilmarnock-v-st-mirren,,,,,The BBSP Stadium Rugby Park
-2026-09-02-luton-town-v-stockport-county,,,,,Kenilworth Road
-2026-09-02-millwall-v-wrexham,,,,,The Den
-2026-09-02-motherwell-v-dundee-united,,,,,Fir Park
-2026-09-02-queens-park-rangers-v-cardiff-city,,,,,MATRADE Loftus Road
+2026-09-02-burnley-v-middlesbrough,23,goal,Aidan Morris,Middlesbrough,Turf Moor
+2026-09-02-burnley-v-middlesbrough,28,yellow,Hannibal Mejbri,Burnley,Turf Moor
+2026-09-02-burnley-v-middlesbrough,39,yellow,Will Lankshear,Middlesbrough,Turf Moor
+2026-09-02-burnley-v-middlesbrough,46,sub_off,Hannibal Mejbri,Burnley,Turf Moor
+2026-09-02-burnley-v-middlesbrough,46,sub_off,Andréas Hountondji,Burnley,Turf Moor
+2026-09-02-burnley-v-middlesbrough,46,sub_on,Max Alleyne,Burnley,Turf Moor
+2026-09-02-burnley-v-middlesbrough,46,sub_on,Largie Ramazani,Burnley,Turf Moor
+2026-09-02-burton-albion-v-afc-wimbledon,18,goal,Jayden Stockley,AFC Wimbledon,Pirelli Stadium
+2026-09-02-burton-albion-v-afc-wimbledon,28,goal,George Evans,Burton Albion,Pirelli Stadium
+2026-09-02-burton-albion-v-afc-wimbledon,34,own_goal,Alistair Smith,Burton Albion,Pirelli Stadium
+2026-09-02-burton-albion-v-afc-wimbledon,46,goal,Charlie Webster,Burton Albion,Pirelli Stadium
+2026-09-02-burton-albion-v-afc-wimbledon,61,sub_off,Dan Sweeney,AFC Wimbledon,Pirelli Stadium
+2026-09-02-burton-albion-v-afc-wimbledon,61,sub_off,Zack Nelson,AFC Wimbledon,Pirelli Stadium
+2026-09-02-burton-albion-v-afc-wimbledon,61,sub_off,Donnell McNeilly,AFC Wimbledon,Pirelli Stadium
+2026-09-02-burton-albion-v-afc-wimbledon,61,sub_on,Steven Sessegnon,AFC Wimbledon,Pirelli Stadium
+2026-09-02-burton-albion-v-afc-wimbledon,61,sub_on,Callum Maycock,AFC Wimbledon,Pirelli Stadium
+2026-09-02-burton-albion-v-afc-wimbledon,61,sub_on,Aron Sasu,AFC Wimbledon,Pirelli Stadium
+2026-09-02-burton-albion-v-afc-wimbledon,65,sub_off,William Collar,Burton Albion,Pirelli Stadium
+2026-09-02-burton-albion-v-afc-wimbledon,65,sub_off,George Evans,Burton Albion,Pirelli Stadium
+2026-09-02-burton-albion-v-afc-wimbledon,65,sub_on,Kain Adom,Burton Albion,Pirelli Stadium
+2026-09-02-burton-albion-v-afc-wimbledon,65,sub_on,Joe Lewis,Burton Albion,Pirelli Stadium
+2026-09-02-celtic-v-aberdeen,14,goal,Camilo Durán,Celtic,Celtic Park
+2026-09-02-celtic-v-aberdeen,34,goal,Benjamin Nygren,Celtic,Celtic Park
+2026-09-02-celtic-v-aberdeen,38,yellow,Cameron Carter-Vickers,Celtic,Celtic Park
+2026-09-02-celtic-v-aberdeen,42,yellow,Lewis Mayo,Aberdeen,Celtic Park
+2026-09-02-celtic-v-aberdeen,45,goal,Hyun-Jun Yang,Celtic,Celtic Park
+2026-09-02-celtic-v-aberdeen,46,sub_off,Afeez Aremu,Aberdeen,Celtic Park
+2026-09-02-celtic-v-aberdeen,46,sub_off,Kevin Nisbet,Aberdeen,Celtic Park
+2026-09-02-celtic-v-aberdeen,46,sub_off,Ayoub Mouloua,Aberdeen,Celtic Park
+2026-09-02-celtic-v-aberdeen,46,sub_off,Alexander Briedl,Aberdeen,Celtic Park
+2026-09-02-celtic-v-aberdeen,46,sub_on,Connor Ronan,Aberdeen,Celtic Park
+2026-09-02-celtic-v-aberdeen,46,sub_on,Lewis Smith,Aberdeen,Celtic Park
+2026-09-02-celtic-v-aberdeen,46,sub_on,Mitchy Ntelo,Aberdeen,Celtic Park
+2026-09-02-celtic-v-aberdeen,46,sub_on,Toyosi Olusanya,Aberdeen,Celtic Park
+2026-09-02-dundee-fc-v-st-johnstone,63,yellow,Zach Mitchell,St. Johnstone,Dens Park
+2026-09-02-dundee-fc-v-st-johnstone,64,sub_off,Bobby Wales,Dundee FC,Dens Park
+2026-09-02-dundee-fc-v-st-johnstone,64,sub_off,Alan Forrest,Dundee FC,Dens Park
+2026-09-02-dundee-fc-v-st-johnstone,64,sub_on,Bradley Fink,Dundee FC,Dens Park
+2026-09-02-dundee-fc-v-st-johnstone,64,sub_on,Finlay Robertson,Dundee FC,Dens Park
+2026-09-02-falkirk-v-rangers,8,goal,Lawrence Shankland,Rangers,The Falkirk Stadium
+2026-09-02-falkirk-v-rangers,44,own_goal,Kosta Nedeljkovic,Falkirk,The Falkirk Stadium
+2026-09-02-falkirk-v-rangers,53,yellow,Ethan Ross,Falkirk,The Falkirk Stadium
+2026-09-02-falkirk-v-rangers,54,sub_off,CJ Fodrey,Falkirk,The Falkirk Stadium
+2026-09-02-falkirk-v-rangers,54,sub_on,Aodhan Doherty,Falkirk,The Falkirk Stadium
+2026-09-02-kilmarnock-v-st-mirren,4,goal,Fraser Taylor,St. Mirren,The BBSP Stadium Rugby Park
+2026-09-02-kilmarnock-v-st-mirren,38,yellow,Greg Kiltie,Kilmarnock,The BBSP Stadium Rugby Park
+2026-09-02-kilmarnock-v-st-mirren,42,yellow,Nikolas Agrafiotis,St. Mirren,The BBSP Stadium Rugby Park
+2026-09-02-kilmarnock-v-st-mirren,46,sub_off,Johnly Yfeko,Kilmarnock,The BBSP Stadium Rugby Park
+2026-09-02-kilmarnock-v-st-mirren,46,sub_off,Erik Ring,Kilmarnock,The BBSP Stadium Rugby Park
+2026-09-02-kilmarnock-v-st-mirren,46,sub_off,Tyreece John-Jules,Kilmarnock,The BBSP Stadium Rugby Park
+2026-09-02-kilmarnock-v-st-mirren,46,sub_on,Jamie Brandon,Kilmarnock,The BBSP Stadium Rugby Park
+2026-09-02-kilmarnock-v-st-mirren,46,sub_on,Aaron Tshibola,Kilmarnock,The BBSP Stadium Rugby Park
+2026-09-02-kilmarnock-v-st-mirren,46,sub_on,Djenairo Daniëls,Kilmarnock,The BBSP Stadium Rugby Park
+2026-09-02-kilmarnock-v-st-mirren,61,sub_off,Nikolas Agrafiotis,St. Mirren,The BBSP Stadium Rugby Park
+2026-09-02-kilmarnock-v-st-mirren,61,sub_on,Jake Young,St. Mirren,The BBSP Stadium Rugby Park
+2026-09-02-kilmarnock-v-st-mirren,66,sub_off,Mark O'Hara,Kilmarnock,The BBSP Stadium Rugby Park
+2026-09-02-kilmarnock-v-st-mirren,66,sub_off,Chris Mochrie,St. Mirren,The BBSP Stadium Rugby Park
+2026-09-02-kilmarnock-v-st-mirren,66,sub_on,Rory McKenzie,Kilmarnock,The BBSP Stadium Rugby Park
+2026-09-02-kilmarnock-v-st-mirren,66,sub_on,Luke Thomas,St. Mirren,The BBSP Stadium Rugby Park
+2026-09-02-luton-town-v-stockport-county,46,sub_off,Benedict Benagr,Luton Town,Kenilworth Road
+2026-09-02-luton-town-v-stockport-county,46,sub_on,Isaiah Jones,Luton Town,Kenilworth Road
+2026-09-02-luton-town-v-stockport-county,50,goal,Nahki Wells,Luton Town,Kenilworth Road
+2026-09-02-luton-town-v-stockport-county,56,yellow,Daniel Gore,Luton Town,Kenilworth Road
+2026-09-02-luton-town-v-stockport-county,64,sub_off,Josh Dacres-Cogley,Stockport County,Kenilworth Road
+2026-09-02-luton-town-v-stockport-county,64,sub_on,Ryan Glover,Stockport County,Kenilworth Road
+2026-09-02-luton-town-v-stockport-county,65,sub_off,Daniel Gore,Luton Town,Kenilworth Road
+2026-09-02-luton-town-v-stockport-county,65,sub_off,Nahki Wells,Luton Town,Kenilworth Road
+2026-09-02-luton-town-v-stockport-county,65,sub_off,Tayo Edun,Stockport County,Kenilworth Road
+2026-09-02-luton-town-v-stockport-county,65,sub_on,Jake Richards,Luton Town,Kenilworth Road
+2026-09-02-luton-town-v-stockport-county,65,sub_on,Callum Marshall,Luton Town,Kenilworth Road
+2026-09-02-luton-town-v-stockport-county,65,sub_on,Ben Osborn,Stockport County,Kenilworth Road
+2026-09-02-millwall-v-wrexham,18,yellow,Casper de Norre,Millwall,The Den
+2026-09-02-millwall-v-wrexham,28,own_goal,Zak Sturge,Wrexham,The Den
+2026-09-02-millwall-v-wrexham,36,yellow,Ben Whiteman,Wrexham,The Den
+2026-09-02-millwall-v-wrexham,43,sub_off,Casper de Norre,Millwall,The Den
+2026-09-02-millwall-v-wrexham,43,sub_on,Camiel Neghli,Millwall,The Den
+2026-09-02-millwall-v-wrexham,52,goal,Kieffer Moore,Wrexham,The Den
+2026-09-02-millwall-v-wrexham,56,yellow,Lyndon Dykes,Millwall,The Den
+2026-09-02-millwall-v-wrexham,63,sub_off,Josh Coburn,Millwall,The Den
+2026-09-02-millwall-v-wrexham,63,sub_on,Zak Lovelace,Millwall,The Den
+2026-09-02-millwall-v-wrexham,64,sub_off,Elkan Baggott,Millwall,The Den
+2026-09-02-millwall-v-wrexham,64,sub_on,Derek Mazou-Sacko,Millwall,The Den
+2026-09-02-motherwell-v-dundee-united,14,red,Emmanuel Agyei,Dundee United,Fir Park
+2026-09-02-motherwell-v-dundee-united,19,goal,Seb Palmer Houlden,Motherwell,Fir Park
+2026-09-02-motherwell-v-dundee-united,20,sub_off,Abdoulaye Yoro,Dundee United,Fir Park
+2026-09-02-motherwell-v-dundee-united,20,sub_on,Dylan Tait,Dundee United,Fir Park
+2026-09-02-motherwell-v-dundee-united,35,yellow,Seb Palmer Houlden,Motherwell,Fir Park
+2026-09-02-motherwell-v-dundee-united,46,sub_off,Jamie Knight-Lebel,Motherwell,Fir Park
+2026-09-02-motherwell-v-dundee-united,46,sub_off,Mehdi Merghem,Dundee United,Fir Park
+2026-09-02-motherwell-v-dundee-united,46,sub_on,Jake Girdwood-Reich,Motherwell,Fir Park
+2026-09-02-motherwell-v-dundee-united,46,sub_on,Jesse Randall,Dundee United,Fir Park
+2026-09-02-motherwell-v-dundee-united,57,sub_off,Daniel Bennie,Dundee United,Fir Park
+2026-09-02-motherwell-v-dundee-united,57,sub_on,Neil Farrugia,Dundee United,Fir Park
+2026-09-02-motherwell-v-dundee-united,58,sub_off,Zachary Sapsford,Dundee United,Fir Park
+2026-09-02-motherwell-v-dundee-united,58,sub_on,Lachlan Rose,Dundee United,Fir Park
+2026-09-02-motherwell-v-dundee-united,59,sub_off,Lukas Fadinger,Motherwell,Fir Park
+2026-09-02-motherwell-v-dundee-united,59,sub_off,Seb Palmer Houlden,Motherwell,Fir Park
+2026-09-02-motherwell-v-dundee-united,59,sub_on,Dylan Levitt,Motherwell,Fir Park
+2026-09-02-motherwell-v-dundee-united,59,sub_on,Eythor Martin Bjørgolfsson,Motherwell,Fir Park
+2026-09-02-motherwell-v-dundee-united,64,sub_off,Will Ferry,Dundee United,Fir Park
+2026-09-02-motherwell-v-dundee-united,64,sub_on,Kevin Ciubotaru,Dundee United,Fir Park
+2026-09-02-motherwell-v-dundee-united,65,goal,Alex Lowry,Motherwell,Fir Park
+2026-09-02-motherwell-v-dundee-united,67,goal,Dylan Levitt,Motherwell,Fir Park
+2026-09-02-queens-park-rangers-v-cardiff-city,36,goal,Rumarn Burrell,Queens Park Rangers,MATRADE Loftus Road
+2026-09-02-queens-park-rangers-v-cardiff-city,46,sub_off,Calum Scanlon,Cardiff City,MATRADE Loftus Road
+2026-09-02-queens-park-rangers-v-cardiff-city,46,sub_off,Cian Ashford,Cardiff City,MATRADE Loftus Road
+2026-09-02-queens-park-rangers-v-cardiff-city,46,sub_on,Krystian Bielik,Cardiff City,MATRADE Loftus Road
+2026-09-02-queens-park-rangers-v-cardiff-city,46,sub_on,Chris Willock,Cardiff City,MATRADE Loftus Road
+2026-09-02-queens-park-rangers-v-cardiff-city,47,yellow,Ollie Tanner,Cardiff City,MATRADE Loftus Road
+2026-09-02-queens-park-rangers-v-cardiff-city,53,goal,Rumarn Burrell,Queens Park Rangers,MATRADE Loftus Road
+2026-09-02-reading-v-mansfield-town,35,goal,Jack Marriott,Reading,Select Car Leasing Stadium
+2026-09-02-reading-v-mansfield-town,40,goal,Benn Ward,Reading,Select Car Leasing Stadium
+2026-09-02-reading-v-mansfield-town,44,goal,George Earthy,Reading,Select Car Leasing Stadium
+2026-09-02-reading-v-mansfield-town,46,sub_off,Liam Thompson,Mansfield Town,Select Car Leasing Stadium
+2026-09-02-reading-v-mansfield-town,46,sub_off,Nathan Moriah-Welsh,Mansfield Town,Select Car Leasing Stadium
+2026-09-02-reading-v-mansfield-town,46,sub_on,Regan Hendry,Mansfield Town,Select Car Leasing Stadium
+2026-09-02-reading-v-mansfield-town,46,sub_on,George Maris,Mansfield Town,Select Car Leasing Stadium
+2026-09-02-reading-v-mansfield-town,58,goal,Jack Marriott,Reading,Select Car Leasing Stadium
 2026-09-02-slavia-sofia-v-levski-sofia,32,sub_off,Mehdi Moubarik,Levski Sofia,Aleksandar Shalamanov
 2026-09-02-slavia-sofia-v-levski-sofia,32,sub_on,Christian Makoun,Levski Sofia,Aleksandar Shalamanov
 2026-09-02-slavia-sofia-v-levski-sofia,40,sub_off,Nikola Serafimov,Levski Sofia,Aleksandar Shalamanov
@@ -4966,5 +5087,33 @@ match_id,minute,type,player,team,venue
 2026-09-02-udinese-v-venezia,82,sub_on,Simone Panada,Venezia,Bluenergy Stadium
 2026-09-02-udinese-v-venezia,85,sub_off,Christian Kabasele,Udinese,Bluenergy Stadium
 2026-09-02-udinese-v-venezia,85,sub_on,Enzo Ebosse,Udinese,Bluenergy Stadium
-2026-09-02-west-bromwich-albion-v-charlton-athletic,,,,,The Hawthorns
-2026-09-02-wigan-athletic-v-milton-keynes-dons,,,,,The Brick Community Stadium
+2026-09-02-west-bromwich-albion-v-charlton-athletic,46,sub_off,Kareem Tunde,West Bromwich Albion,The Hawthorns
+2026-09-02-west-bromwich-albion-v-charlton-athletic,46,sub_on,Rabby Nzingoula,West Bromwich Albion,The Hawthorns
+2026-09-02-west-bromwich-albion-v-charlton-athletic,59,goal,Callum Styles,West Bromwich Albion,The Hawthorns
+2026-09-02-west-bromwich-albion-v-charlton-athletic,60,sub_off,Millenic Alli,Charlton Athletic,The Hawthorns
+2026-09-02-west-bromwich-albion-v-charlton-athletic,60,sub_off,Alan Mwamba,Charlton Athletic,The Hawthorns
+2026-09-02-west-bromwich-albion-v-charlton-athletic,60,sub_off,Karlan Grant,Charlton Athletic,The Hawthorns
+2026-09-02-west-bromwich-albion-v-charlton-athletic,60,sub_on,Joe Rankin-Costello,Charlton Athletic,The Hawthorns
+2026-09-02-west-bromwich-albion-v-charlton-athletic,60,sub_on,Ivan Mesík,Charlton Athletic,The Hawthorns
+2026-09-02-west-bromwich-albion-v-charlton-athletic,60,sub_on,Timothy Noor Ouma,Charlton Athletic,The Hawthorns
+2026-09-02-wigan-athletic-v-milton-keynes-dons,8,yellow,Finley Burns,Wigan Athletic,The Brick Community Stadium
+2026-09-02-wigan-athletic-v-milton-keynes-dons,18,yellow,Jack Sanders,Milton Keynes Dons,The Brick Community Stadium
+2026-09-02-wigan-athletic-v-milton-keynes-dons,22,sub_off,Luke Harris,Wigan Athletic,The Brick Community Stadium
+2026-09-02-wigan-athletic-v-milton-keynes-dons,22,sub_on,Reggie Walsh,Wigan Athletic,The Brick Community Stadium
+2026-09-02-wigan-athletic-v-milton-keynes-dons,36,goal,Jensen Weir,Wigan Athletic,The Brick Community Stadium
+2026-09-02-wigan-athletic-v-milton-keynes-dons,46,sub_off,Ben Wiles,Milton Keynes Dons,The Brick Community Stadium
+2026-09-02-wigan-athletic-v-milton-keynes-dons,46,sub_off,Jack Sanders,Milton Keynes Dons,The Brick Community Stadium
+2026-09-02-wigan-athletic-v-milton-keynes-dons,46,sub_on,Alex Gilbey,Milton Keynes Dons,The Brick Community Stadium
+2026-09-02-wigan-athletic-v-milton-keynes-dons,46,sub_on,Marvin Ekpiteta,Milton Keynes Dons,The Brick Community Stadium
+2026-09-02-wigan-athletic-v-milton-keynes-dons,48,goal,Max Power,Wigan Athletic,The Brick Community Stadium
+2026-09-02-wigan-athletic-v-milton-keynes-dons,62,yellow,Alex Gilbey,Milton Keynes Dons,The Brick Community Stadium
+2026-09-02-wigan-athletic-v-milton-keynes-dons,64,sub_off,Sam Nombe,Milton Keynes Dons,The Brick Community Stadium
+2026-09-02-wigan-athletic-v-milton-keynes-dons,64,sub_off,Daniel Barlaser,Milton Keynes Dons,The Brick Community Stadium
+2026-09-02-wigan-athletic-v-milton-keynes-dons,64,sub_off,Ryan Barnett,Milton Keynes Dons,The Brick Community Stadium
+2026-09-02-wigan-athletic-v-milton-keynes-dons,64,sub_on,Aaron Collins,Milton Keynes Dons,The Brick Community Stadium
+2026-09-02-wigan-athletic-v-milton-keynes-dons,64,sub_on,Daniel Crowley,Milton Keynes Dons,The Brick Community Stadium
+2026-09-02-wigan-athletic-v-milton-keynes-dons,64,sub_on,Samuel Silvera,Milton Keynes Dons,The Brick Community Stadium
+2026-09-02-wigan-athletic-v-milton-keynes-dons,66,sub_off,Charlie Gray,Wigan Athletic,The Brick Community Stadium
+2026-09-02-wigan-athletic-v-milton-keynes-dons,66,sub_off,Finley Burns,Wigan Athletic,The Brick Community Stadium
+2026-09-02-wigan-athletic-v-milton-keynes-dons,66,sub_on,Connor Barrett,Wigan Athletic,The Brick Community Stadium
+2026-09-02-wigan-athletic-v-milton-keynes-dons,66,sub_on,Jon Mellish,Wigan Athletic,The Brick Community Stadium

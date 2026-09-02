@@ -159,15 +159,20 @@ kickoff,competition,home,away,home_id,away_id,home_score,away_score,status,minut
 2026-09-02T13:45:00Z,Cupa României,Botoșani,Corvinul Hunedoara,188191,1515102,0,1,ft,,roland-idowu
 2026-09-02T16:00:00Z,Coppa Italia,Udinese,Venezia,8600,7881,2,1,ft,,james-abankwah
 2026-09-02T17:00:00Z,First Professional League,Slavia Sofia,Levski Sofia,10134,8632,1,2,ft,,armstrong-oko-flex
-2026-09-02T18:45:00Z,League One,Luton Town,Stockport County,8346,10007,,,live,,andrew-wogan
-2026-09-02T18:45:00Z,League One,Barnsley,Blackpool,8283,8483,,,live,,andy-lyons;cj-hamilton;connor-oriordan;corey-okeeffe
-2026-09-02T18:45:00Z,Championship,Queens Park Rangers,Cardiff City,10172,8344,,,live,,callum-robinson;calum-ward
-2026-09-02T18:45:00Z,Premiership,Kilmarnock,St. Mirren,8597,9800,,,live,,cathal-mccarthy
-2026-09-02T18:45:00Z,Premiership,Celtic,Aberdeen,9925,8485,,,live,,connor-ronan
-2026-09-02T18:45:00Z,Championship,West Bromwich Albion,Charlton Athletic,8659,8451,,,live,,conor-coventry;dan-mcnamara
-2026-09-02T18:45:00Z,League One,Wigan Athletic,Milton Keynes Dons,8528,8645,,,live,,dara-costelloe
-2026-09-02T19:00:00Z,Premiership,Falkirk,Rangers,8596,8548,,,live,,aodhan-doherty;joe-gardner
-2026-09-02T19:00:00Z,League One,Reading,Mansfield Town,9798,9818,,,live,,david-mcgoldrick
+2026-09-02T18:45:00Z,League One,Luton Town,Stockport County,8346,10007,,,live,,andrew-wogan;callum-marshall;eoghan-oconnell;josh-keeley
+2026-09-02T18:45:00Z,League One,Barnsley,Blackpool,8283,8483,,,live,,andy-lyons;cj-hamilton;connor-oriordan;corey-okeeffe;luca-connell
+2026-09-02T18:45:00Z,Premiership,Dundee FC,St. Johnstone,8284,8467,,,scheduled,,bobby-wales;kieran-ohara;ruari-paton
+2026-09-02T18:45:00Z,Championship,Queens Park Rangers,Cardiff City,10172,8344,,,live,,callum-robinson;calum-ward;harvey-vale;jack-moylan;jimmy-dunne;joel-bagan
+2026-09-02T18:45:00Z,Premiership,Kilmarnock,St. Mirren,8597,9800,,,live,,cathal-mccarthy;killian-phillips
+2026-09-02T18:45:00Z,League One,Burton Albion,AFC Wimbledon,9792,158319,,,scheduled,,ciaran-gilligan;gbemi-arubi
+2026-09-02T18:45:00Z,Premiership,Celtic,Aberdeen,9925,8485,,,live,,connor-ronan;gavin-molloy;liam-scales
+2026-09-02T18:45:00Z,Championship,West Bromwich Albion,Charlton Athletic,8659,8451,,,live,,conor-coventry;dan-mcnamara;jayson-molumby;max-oleary;mikey-johnston;millenic-alli
+2026-09-02T18:45:00Z,League One,Wigan Athletic,Milton Keynes Dons,8528,8645,,,live,,dara-costelloe;sonny-perkins
+2026-09-02T18:45:00Z,Premiership,Motherwell,Dundee United,9927,9938,,,scheduled,,joe-hodge;neil-farrugia;will-ferry
+2026-09-02T18:45:00Z,Championship,Millwall,Wrexham,10004,9841,,,scheduled,,mark-sykes
+2026-09-02T19:00:00Z,Premiership,Falkirk,Rangers,8596,8548,,,live,,aodhan-doherty;joe-gardner;paul-mcgovern
+2026-09-02T19:00:00Z,League One,Reading,Mansfield Town,9798,9818,,,live,,conor-masterson;david-mcgoldrick;paudie-oconnor;ryan-sweeney;stephen-mclaughlin
+2026-09-02T19:00:00Z,Championship,Burnley,Middlesbrough,8191,8549,,,scheduled,,michael-obafemi
 2026-09-02T23:00:00Z,USL Championship,Charleston Battery,Hartford Athletic,162183,1003206,,,scheduled,,barry-coffey
 2026-09-03T17:30:00Z,NB I,Györi ETO,Ferencváros,5755,8222,,,scheduled,,callum-odowda
 2026-09-03T18:45:00Z,Premiership,Hibernian,Heart of Midlothian,10251,9860,,,scheduled,,jacob-devaney;jamie-mcgrath;oisin-mcentee;owen-elding;warren-ohora
@@ -270,6 +275,8 @@ kickoff,competition,home,away,home_id,away_id,home_score,away_score,status,minut
 2026-09-05T14:00:00Z,National League North,Brackley Town,Harborough Town FC,158321,1382661,,,scheduled,,shane-byrne
 2026-09-05T14:00:00Z,National League,Wealdstone,Kidderminster Harriers,161812,10284,,,scheduled,,wilson-waweru
 2026-09-05T14:00:00Z,Championship,Inverness Caledonian Thistle,Raith Rovers,8066,10250,,,scheduled,,zak-delaney
+2026-09-05T14:00:00Z,Championship,Queens Park Rangers,Middlesbrough,10172,8549,,,scheduled,,harvey-vale;jimmy-dunne
+2026-09-05T14:00:00Z,Championship,West Bromwich Albion,Watford,8659,9817,,,scheduled,,jayson-molumby;max-oleary;mikey-johnston;rocco-vata
 2026-09-05T14:30:00Z,Eredivisie,NEC Nijmegen,Feyenoord,8464,10235,,,scheduled,,liam-bossin
 2026-09-05T15:00:00Z,FAI Cup,St. Patrick's Athletic,Bohemian FC,1854,4594,,,scheduled,,adam-banim;adam-deans;adam-mcdonnell;aidan-keena;alan-reynolds;anthony-breslin;billy-canny;billy-hayes;chris-forrester;christopher-conlan;cian-byrne;colm-whelan;daniel-chukwu;daniel-rogers;darragh-brunton;darragh-nugent;darragh-power;dawson-devoy;dayle-rooney;finn-mcdonnell;glory-nzingo;harry-vaughan;hugh-martin;james-brown;jamie-lennon;jason-mcclelland;joe-carroll-byrne;joe-redmond;josh-adam;josh-harpur;josh-oconnor;kian-leavy;kian-quigley;luke-cullen;luke-kehir;luke-turner;matthew-ohara;niall-morahan;niall-sullivan;paddy-madden;ronan-boyce;ross-tierney;ryan-burke;ryan-sheridan;sam-rooney;sam-steward;sam-todd;samuel-ogungbe;sean-hoare;sean-molloy;senan-mullen;simon-power;zack-elbouzedi
 2026-09-05T15:00:00Z,Cup,FC Inter Turku,HJK,6550,9861,,,scheduled,,david-eze;david-ezeh
@@ -294,6 +301,7 @@ kickoff,competition,home,away,home_id,away_id,home_score,away_score,status,minut
 2026-09-06T13:00:00Z,Premier League,Everton,Manchester United,8668,10260,,,scheduled,,desmond-armstrong;jake-obrien;mark-travers
 2026-09-06T14:00:00Z,Premiership,Heart of Midlothian,Dundee FC,9860,8284,,,scheduled,,bobby-wales;kieran-ohara
 2026-09-06T14:00:00Z,Premiership,St. Johnstone,Hibernian,8467,10251,,,scheduled,,jacob-devaney;jamie-mcgrath;owen-elding;ruari-paton;warren-ohora
+2026-09-06T14:00:00Z,Premiership,Heart of Midlothian,Dundee FC,9860,8284,,,scheduled,,bobby-wales;kieran-ohara
 2026-09-06T14:30:00Z,3. Liga,Sonnenhof Großaspach,Hoffenheim II,94941,94940,,,scheduled,,matthew-moore
 2026-09-06T15:00:00Z,FAI Cup,Derry City,Dundalk,8338,1853,,,scheduled,,aaron-keogh;adam-oreilly;aodh-dervin;barry-cotter;brian-maher;brooklyn-lyons-foster;callum-downey;christy-grogan;cian-dillon;cian-spaight;ciaran-kilduff;ciaran-mullan;conal-mcdermott;conall-alfred;conor-kearns;conor-okeeffe;daithi-folan;darragh-burns;darragh-markey;daryl-horgan;egor-vassenin;enda-minogue;eoghan-curran;ethan-hall;harry-groome;harvey-warren;james-clarke;james-mcclean;john-ross-wilson;keith-buckley;keith-ward;luke-mulligan;mark-connolly;max-ferguson;mayowa-animasahun;michael-duffy;michael-mccolgan;oisin-obrien;patrick-mcclean;robert-cornwall;ronan-teahan;samuel-safaei;sean-spaight;shane-tracey;shaun-platt;shay-casey;terence-doherty;trevor-clarke;tyreke-wilson
 2026-09-06T15:00:00Z,Segunda Federación,Deportiva Minera,Peña Dep. Santa Eulalia,278805,8210,,,scheduled,,kevin-toner
@@ -541,21 +549,4 @@ kickoff,competition,home,away,home_id,away_id,home_score,away_score,status,minut
 2026-09-15T19:00:00Z,EFL Cup,Reading,Brentford,9798,9937,,,scheduled,,caoimhin-kelleher;conor-masterson;nathan-collins;paudie-oconnor
 2026-09-15T19:00:00Z,EFL Cup,Ipswich,Arsenal,9902,9825,,,scheduled,,dara-oshea;jack-clarke;jack-taylor;kasey-mcateer
 2026-09-15T23:00:00Z,USL Championship,Indy Eleven,Brooklyn,514649,1877733,,,scheduled,,josh-obrien
-2026-09-16T16:00:00Z,AFC Champions League Two,Al Khalidiyah,Nasaf Qarshi,1288463,102153,,,scheduled,,clyde-oconnell
-2026-09-16T16:00:00Z,Cup,Trygg/Lade,Molde,525114,9917,,,scheduled,,trent-kone-doherty
-2026-09-16T17:00:00Z,Highland / Lowland,Turriff United,Huntly,351621,2498,,,scheduled,,cameron-reid
-2026-09-16T17:00:00Z,3. Liga,Ingolstadt,Hoffenheim II,8234,94940,,,scheduled,,matthew-moore
-2026-09-16T17:00:00Z,3. Liga,Preussen Münster,Saarbrücken,8171,8271,,,scheduled,,ryan-johansson
 2026-09-16T18:45:00Z,EFL Cup,Fleetwood,Sheff Utd,45723,8657,,,scheduled,,adam-murphy;jesse-dempsey;ronan-coughlan;sean-costelloe
-2026-09-16T18:45:00Z,National League,Kidderminster Harriers,Gateshead FC,10284,6189,,,scheduled,,david-eguaibor
-2026-09-16T18:45:00Z,EFL Cup,Everton,Wolves,8668,8602,,,scheduled,,desmond-armstrong;jake-obrien;mark-travers
-2026-09-16T18:45:00Z,National League,Scunthorpe,Boreham Wood,8412,2488,,,scheduled,,hugh-parker
-2026-09-16T19:00:00Z,Europa League,Sunderland,AZ Alkmaar,8472,10229,,,scheduled,,alan-browne
-2026-09-16T19:00:00Z,EFL Cup,Coventry,Aston Villa,8669,10252,,,scheduled,,ben-wilson
-2026-09-16T19:00:00Z,EFL Cup,Man United,Brighton,10260,10204,,,scheduled,,evan-ferguson
-2026-09-01T18:45:00Z,Southern Premier Division Central,Stourbridge,Leamington,161834,5764,,,live,,eric-yahaya
-2026-09-02T18:45:00Z,Premiership,Dundee FC,St. Johnstone,8284,8467,,,scheduled,,bobby-wales;kieran-ohara;ruari-paton
-2026-09-02T18:45:00Z,League One,Burton Albion,AFC Wimbledon,9792,158319,,,scheduled,,ciaran-gilligan;gbemi-arubi
-2026-09-02T18:45:00Z,Premiership,Motherwell,Dundee United,9927,9938,,,scheduled,,joe-hodge;neil-farrugia;will-ferry
-2026-09-02T18:45:00Z,Championship,Millwall,Wrexham,10004,9841,,,scheduled,,mark-sykes
-2026-09-02T19:00:00Z,Championship,Burnley,Middlesbrough,8191,8549,,,scheduled,,michael-obafemi
