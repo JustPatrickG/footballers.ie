@@ -1216,6 +1216,34 @@
   ]
  },
  {
+  "fotmob_id": "6145900",
+  "url": "/matches/ff-jaro-vs-sjk/6orlq1n#6145900",
+  "kickoff": "2026-09-12T16:00:00Z",
+  "comp": "Veikkausliiga Relegation Group",
+  "home": "FF Jaro",
+  "away": "SJK",
+  "home_id": "8473",
+  "away_id": "162162",
+  "slugs": [
+   "aaron-okpolokpo",
+   "josh-okpolokpo"
+  ]
+ },
+ {
+  "fotmob_id": "6145898",
+  "url": "/matches/tps-vs-sjk/6jloiir#6145898",
+  "kickoff": "2026-09-08T15:00:00Z",
+  "comp": "Veikkausliiga Relegation Group",
+  "home": "TPS",
+  "away": "SJK",
+  "home_id": "6633",
+  "away_id": "162162",
+  "slugs": [
+   "aaron-okpolokpo",
+   "josh-okpolokpo"
+  ]
+ },
+ {
   "fotmob_id": "6022235",
   "url": "/matches/aston-villa-u18-vs-brentford-u18/1vfl2xvvq#6022235",
   "kickoff": "2026-09-05T11:00:00Z",
@@ -4938,6 +4966,34 @@
   ]
  },
  {
+  "fotmob_id": "6145868",
+  "url": "/matches/fc-inter-turku-vs-hjk/286mm7#6145868",
+  "kickoff": "2026-09-09T15:00:00Z",
+  "comp": "Veikkausliiga Championship Group",
+  "home": "HJK",
+  "away": "FC Inter Turku",
+  "home_id": "9861",
+  "away_id": "6550",
+  "slugs": [
+   "david-eze",
+   "david-ezeh"
+  ]
+ },
+ {
+  "fotmob_id": "6145870",
+  "url": "/matches/kups-vs-hjk/13qyqg#6145870",
+  "kickoff": "2026-09-13T12:00:00Z",
+  "comp": "Veikkausliiga Championship Group",
+  "home": "KuPS",
+  "away": "HJK",
+  "home_id": "1693",
+  "away_id": "9861",
+  "slugs": [
+   "david-eze",
+   "david-ezeh"
+  ]
+ },
+ {
   "fotmob_id": "5837136",
   "url": "/matches/bradford-city-vs-mansfield-town/2rq49n#5837136",
   "kickoff": "2026-09-05T14:00:00Z",
@@ -8241,7 +8297,7 @@
  {
   "fotmob_id": "5853499",
   "url": "/matches/fc-arges-pitesti-vs-botosani/8zxii9m#5853499",
-  "kickoff": "2026-09-12T16:00:00Z",
+  "kickoff": "2026-09-13T12:00:00Z",
   "comp": "Superliga",
   "home": "FC Arge\u0219 Pitesti",
   "away": "Boto\u0219ani",
@@ -8644,7 +8700,7 @@
  {
   "fotmob_id": "5904742",
   "url": "/matches/goztepe-vs-alanyaspor/czezs#5904742",
-  "kickoff": "2026-09-13T17:00:00Z",
+  "kickoff": "2026-09-12T17:00:00Z",
   "comp": "Super Lig",
   "home": "Alanyaspor",
   "away": "G\u00f6ztepe",

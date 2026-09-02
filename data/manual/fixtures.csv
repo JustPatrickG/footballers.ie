@@ -77,6 +77,10 @@ aaron-ochoa,2026-09-13T12:00:00Z,Celta Vigo,A,LaLiga
 aaron-ochoa,2026-09-17T19:30:00Z,Villarreal,H,LaLiga
 aaron-ochoa,2026-09-20T12:00:00Z,Getafe,A,LaLiga
 aaron-ochoa,2026-10-11T13:00:00Z,Espanyol,H,LaLiga
+aaron-okpolokpo,2026-09-08T15:00:00Z,TPS,A,Veikkausliiga Relegation Group
+aaron-okpolokpo,2026-09-12T16:00:00Z,FF Jaro,A,Veikkausliiga Relegation Group
+aaron-okpolokpo,2026-09-18T15:00:00Z,IFK Mariehamn,H,Veikkausliiga Relegation Group
+aaron-okpolokpo,2026-10-09T15:00:00Z,FC Lahti,H,Veikkausliiga Relegation Group
 aaron-oreilly,2026-09-05T11:00:00Z,Brentford U18,A,Premier League U18
 aaron-oreilly,2026-09-12T10:00:00Z,West Brom U18,A,Premier League U18
 aaron-oreilly,2026-09-19T10:00:00Z,Brighton U18,H,Premier League U18
@@ -1090,7 +1094,6 @@ daniel-idiakhoa,2026-09-22T18:45:00Z,Bury Town,A,Southern Premier Division Centr
 daniel-idiakhoa,2026-09-29T18:45:00Z,Leighton Town,H,Southern Premier Division Central
 daniel-idiakhoa,2026-10-03T14:00:00Z,Leamington,A,Southern Premier Division Central
 daniel-idiakhoa,2026-10-10T14:00:00Z,Peterborough Sports,H,Southern Premier Division Central
-daniel-idiakhoa,2026-10-13T18:45:00Z,Leiston,A,Southern Premier Division Central
 daniel-kelly,2026-09-04T19:00:00Z,Shamrock Rovers,A,Premier Division
 daniel-kelly,2026-09-11T18:45:00Z,Derry City,H,Premier Division
 daniel-kelly,2026-09-14T18:45:00Z,Drogheda United,H,Premier Division
@@ -1249,7 +1252,17 @@ david-eguaibor,2026-10-03T14:00:00Z,Worthing,H,National League
 david-eguaibor,2026-10-10T14:00:00Z,FC Halifax Town,A,National League
 david-eguaibor,2026-10-13T18:00:00Z,Wolverhampton Wanderers U21,H,National League Cup Group A
 david-eze,2026-09-05T15:00:00Z,FC Inter Turku,A,Cup
+david-eze,2026-09-09T15:00:00Z,FC Inter Turku,H,Veikkausliiga Championship Group
+david-eze,2026-09-13T12:00:00Z,KuPS,A,Veikkausliiga Championship Group
+david-eze,2026-09-18T16:00:00Z,IF Gnistan,A,Veikkausliiga Championship Group
+david-eze,2026-10-08T15:00:00Z,VPS,H,Veikkausliiga Championship Group
+david-eze,2026-10-12T16:00:00Z,AC Oulu,A,Veikkausliiga Championship Group
 david-ezeh,2026-09-05T15:00:00Z,FC Inter Turku,A,Cup
+david-ezeh,2026-09-09T15:00:00Z,FC Inter Turku,H,Veikkausliiga Championship Group
+david-ezeh,2026-09-13T12:00:00Z,KuPS,A,Veikkausliiga Championship Group
+david-ezeh,2026-09-18T16:00:00Z,IF Gnistan,A,Veikkausliiga Championship Group
+david-ezeh,2026-10-08T15:00:00Z,VPS,H,Veikkausliiga Championship Group
+david-ezeh,2026-10-12T16:00:00Z,AC Oulu,A,Veikkausliiga Championship Group
 david-hurley,2026-09-04T18:45:00Z,Drogheda United,A,FAI Cup
 david-hurley,2026-09-11T18:45:00Z,Bohemian FC,H,Premier Division
 david-hurley,2026-09-14T18:45:00Z,Sligo Rovers,A,Premier Division
@@ -2387,6 +2400,10 @@ josh-oconnor,2026-10-09T18:45:00Z,Derry City,A,Premier Division
 josh-odwyer,2026-09-13T08:30:00Z,SKN St. Pölten,H,2. Liga
 josh-odwyer,2026-09-18T16:30:00Z,Floridsdorfer AC,A,2. Liga
 josh-odwyer,2026-10-10T13:30:00Z,Sturm Graz II,H,2. Liga
+josh-okpolokpo,2026-09-08T15:00:00Z,TPS,A,Veikkausliiga Relegation Group
+josh-okpolokpo,2026-09-12T16:00:00Z,FF Jaro,A,Veikkausliiga Relegation Group
+josh-okpolokpo,2026-09-18T15:00:00Z,IFK Mariehamn,H,Veikkausliiga Relegation Group
+josh-okpolokpo,2026-10-09T15:00:00Z,FC Lahti,H,Veikkausliiga Relegation Group
 josh-seary,2026-09-12T14:00:00Z,Warrington Town,H,Northern Premier Division
 josh-seary,2026-09-19T14:00:00Z,Curzon,A,Northern Premier Division
 josh-seary,2026-10-03T14:00:00Z,Whitby,H,Northern Premier Division
@@ -3852,7 +3869,7 @@ simon-power,2026-09-14T18:45:00Z,Dundalk,A,Premier Division
 simon-power,2026-09-19T18:45:00Z,Sligo Rovers,A,Premier Division
 simon-power,2026-10-09T18:45:00Z,Derry City,A,Premier Division
 sinclair-armstrong,2026-09-07T17:00:00Z,Gaziantep FK,H,Super Lig
-sinclair-armstrong,2026-09-13T17:00:00Z,Alanyaspor,A,Super Lig
+sinclair-armstrong,2026-09-12T17:00:00Z,Alanyaspor,A,Super Lig
 sinclair-armstrong,2026-09-20T17:00:00Z,Rizespor,H,Super Lig
 sinclair-armstrong,2026-10-11T17:00:00Z,Eyüpspor,A,Super Lig
 sonny-perkins,2026-09-02T18:45:00Z,MK Dons,H,League One
