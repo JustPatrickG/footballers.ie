@@ -159,9 +159,11 @@ kickoff,competition,home,away,home_id,away_id,home_score,away_score,status,minut
 2026-09-01T18:45:00Z,Championship,Lincoln City,Blackburn Rovers,8430,8655,0,0,ft,,josh-honohan;mason-melia;sean-mcloughlin
 2026-09-01T18:45:00Z,League One,Huddersfield Town,Oxford United,9796,8653,3,1,ft,,marcus-harness;tyler-goodrham
 2026-09-01T18:45:00Z,Championship,Portsmouth,Derby County,8462,10170,0,2,ft,,max-johnston;sammie-szmodics
+2026-09-01T18:45:00Z,Southern Premier Division Central,Stourbridge,Leamington,161834,5764,,,live,,eric-yahaya
 2026-09-01T19:00:00Z,Championship,Stoke City,Norwich City,10194,9850,1,0,ft,,bosun-lawal;gabriel-kelly
 2026-09-01T19:00:00Z,Championship,Birmingham City,Southampton,8658,8466,1,1,ft,,finn-azaz;romeo-akachukwu;ryan-manning
-2026-09-02T16:00:00Z,Coppa Italia,Udinese,Venezia,8600,7881,,,scheduled,,james-abankwah
+2026-09-02T13:45:00Z,Cupa României,Botoșani,Corvinul Hunedoara,188191,1515102,0,1,ft,,roland-idowu
+2026-09-02T16:00:00Z,Coppa Italia,Udinese,Venezia,8600,7881,2,1,ft,,james-abankwah
 2026-09-02T17:00:00Z,First Professional League,Slavia Sofia,Levski Sofia,10134,8632,,,scheduled,,armstrong-oko-flex
 2026-09-02T18:45:00Z,League One,Luton Town,Stockport County,8346,10007,,,scheduled,,andrew-wogan;callum-marshall;eoghan-oconnell;josh-keeley
 2026-09-02T18:45:00Z,League One,Barnsley,Blackpool,8283,8483,,,scheduled,,andy-lyons;cj-hamilton;connor-oriordan;corey-okeeffe;luca-connell
@@ -327,6 +329,7 @@ kickoff,competition,home,away,home_id,away_id,home_score,away_score,status,minut
 2026-09-08T18:00:00Z,National League Cup,Scunthorpe United,Nottingham Forest U21,8412,1389162,,,scheduled,,grady-mcdonnell;hugh-parker
 2026-09-08T18:00:00Z,EFL Trophy Northern Grp. H,Doncaster,Huddersfield,9903,9796,,,scheduled,,jay-mcgrath;leon-ayinde;marcus-harness;neill-byrne;sean-grehan;sean-roughan
 2026-09-08T18:00:00Z,National League Cup Group C,Solihull Moors,Leeds United U21,161801,1177187,,,scheduled,,jevon-mills
+2026-09-08T18:00:00Z,EFL Trophy Southern Grp. A,Exeter,Tottenham Hotspur U21,9833,860802,,,scheduled,,charlie-cummins;jake-doyle-hayes
 2026-09-08T18:30:00Z,National League Cup Group B,Worthing,Norwich City U21,282351,773658,,,scheduled,,harvey-boddy;vinnie-leonard
 2026-09-08T18:30:00Z,National League Cup Group B,Aldershot Town,West Ham United U21,8465,773649,,,scheduled,,scott-davies
 2026-09-08T18:45:00Z,EFL Cup,Leyton Orient,Bradford,8351,8484,,,scheduled,,aaron-connolly;jaze-kabia;killian-cahill;ollie-oneill;tony-springett;tyreik-wright
@@ -550,5 +553,3 @@ kickoff,competition,home,away,home_id,away_id,home_score,away_score,status,minut
 2026-09-15T19:00:00Z,EFL Cup,Reading,Brentford,9798,9937,,,scheduled,,caoimhin-kelleher;conor-masterson;nathan-collins;paudie-oconnor
 2026-09-15T19:00:00Z,EFL Cup,Ipswich,Arsenal,9902,9825,,,scheduled,,dara-oshea;jack-clarke;jack-taylor;kasey-mcateer
 2026-09-15T23:00:00Z,USL Championship,Indy Eleven,Brooklyn,514649,1877733,,,scheduled,,josh-obrien
-2026-09-01T18:45:00Z,Southern Premier Division Central,Stourbridge,Leamington,161834,5764,,,live,,eric-yahaya
-2026-09-02T13:45:00Z,Cup Grp. A,Botoșani,Corvinul Hunedoara,188191,1515102,,,scheduled,,roland-idowu
