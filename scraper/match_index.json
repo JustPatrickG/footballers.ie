@@ -7468,7 +7468,7 @@
  {
   "fotmob_id": "5109930",
   "url": "/matches/orange-county-sc-vs-sacramento-republic-fc/3yxb20f9#5109930",
-  "kickoff": "2026-09-06T02:00:00Z",
+  "kickoff": "2026-09-06T01:00:00Z",
   "comp": "USL Championship",
   "home": "Orange County SC",
   "away": "Sacramento Republic FC",
@@ -8282,19 +8282,6 @@
   ]
  },
  {
-  "fotmob_id": "6093725",
-  "url": "/matches/botosani-vs-corvinul-hunedoara/iieci3c2#6093725",
-  "kickoff": "2026-09-02T13:45:00Z",
-  "comp": "Cup Grp. A",
-  "home": "Boto\u0219ani",
-  "away": "Corvinul Hunedoara",
-  "home_id": "188191",
-  "away_id": "1515102",
-  "slugs": [
-   "roland-idowu"
-  ]
- },
- {
   "fotmob_id": "5853499",
   "url": "/matches/fc-arges-pitesti-vs-botosani/8zxii9m#5853499",
   "kickoff": "2026-09-13T12:00:00Z",
@@ -8929,6 +8916,19 @@
   "away_id": "2205",
   "slugs": [
    "billy-vance"
+  ]
+ },
+ {
+  "fotmob_id": "6093725",
+  "url": "/matches/botosani-vs-corvinul-hunedoara/iieci3c2#6093725",
+  "kickoff": "2026-09-02T13:45:00Z",
+  "comp": "Cup Grp. A",
+  "home": "Boto\u0219ani",
+  "away": "Corvinul Hunedoara",
+  "home_id": "188191",
+  "away_id": "1515102",
+  "slugs": [
+   "roland-idowu"
   ]
  },
  {
