@@ -1747,7 +1747,8 @@
   "slugs": [
    "aidomo-emakhu",
    "james-golding",
-   "tyler-goodrham"
+   "tyler-goodrham",
+   "warren-ohora"
   ]
  },
  {
@@ -2144,7 +2145,6 @@
   "slugs": [
    "andrew-moran",
    "chiedozie-ogbene",
-   "james-collins",
    "johnny-kenny",
    "josh-honohan",
    "mason-melia"
@@ -2164,27 +2164,53 @@
   ]
  },
  {
-  "fotmob_id": "5802927",
-  "url": "/matches/strasbourg-vs-troyes/3c5scn#5802927",
-  "kickoff": "2026-09-06T13:00:00Z",
-  "comp": "Ligue 1",
-  "home": "Troyes",
-  "away": "Strasbourg",
-  "home_id": "10242",
-  "away_id": "9848",
+  "fotmob_id": "5811733",
+  "url": "/matches/kortrijk-vs-anderlecht/2g50qw#5811733",
+  "kickoff": "2026-09-03T18:30:00Z",
+  "comp": "Belgian Pro League",
+  "home": "Anderlecht",
+  "away": "Kortrijk",
+  "home_id": "8635",
+  "away_id": "8571",
   "slugs": [
    "andrew-omobamidele"
   ]
  },
  {
-  "fotmob_id": "5802936",
-  "url": "/matches/monaco-vs-strasbourg/379ruz#5802936",
-  "kickoff": "2026-09-12T15:15:00Z",
-  "comp": "Ligue 1",
-  "home": "Strasbourg",
-  "away": "Monaco",
-  "home_id": "9848",
-  "away_id": "9829",
+  "fotmob_id": "5811753",
+  "url": "/matches/anderlecht-vs-genk/2v8r1g#5811753",
+  "kickoff": "2026-09-06T16:30:00Z",
+  "comp": "Belgian Pro League",
+  "home": "Anderlecht",
+  "away": "Genk",
+  "home_id": "8635",
+  "away_id": "9987",
+  "slugs": [
+   "andrew-omobamidele"
+  ]
+ },
+ {
+  "fotmob_id": "5811755",
+  "url": "/matches/kv-mechelen-vs-anderlecht/2cer74#5811755",
+  "kickoff": "2026-09-11T18:45:00Z",
+  "comp": "Belgian Pro League",
+  "home": "KV Mechelen",
+  "away": "Anderlecht",
+  "home_id": "8203",
+  "away_id": "8635",
+  "slugs": [
+   "andrew-omobamidele"
+  ]
+ },
+ {
+  "fotmob_id": "6112310",
+  "url": "/matches/anderlecht-vs-lyon/2slyng#6112310",
+  "kickoff": "2026-09-16T19:00:00Z",
+  "comp": "Europa League",
+  "home": "Anderlecht",
+  "away": "Lyon",
+  "home_id": "8635",
+  "away_id": "9748",
   "slugs": [
    "andrew-omobamidele"
   ]
@@ -2216,7 +2242,8 @@
   "away_id": "8197",
   "slugs": [
    "andrew-wogan",
-   "eoghan-oconnell"
+   "eoghan-oconnell",
+   "warren-ohora"
   ]
  },
  {
@@ -2975,6 +3002,7 @@
   "away_id": "8284",
   "slugs": [
    "bobby-wales",
+   "jack-moorhouse",
    "kieran-ohara"
   ]
  },
@@ -3491,6 +3519,7 @@
    "ciaran-gilligan",
    "gbemi-arubi",
    "glenn-mcconnell",
+   "mark-omahony",
    "sam-curtis",
    "shane-mcloughlin"
   ]
@@ -3584,8 +3613,7 @@
    "cathal-mccarthy",
    "jacob-devaney",
    "jamie-mcgrath",
-   "owen-elding",
-   "warren-ohora"
+   "owen-elding"
   ]
  },
  {
@@ -3693,7 +3721,6 @@
   "slugs": [
    "chiedozie-ogbene",
    "finn-azaz",
-   "james-collins",
    "josh-honohan",
    "mason-melia",
    "romeo-akachukwu",
@@ -3711,7 +3738,6 @@
   "away_id": "8430",
   "slugs": [
    "chiedozie-ogbene",
-   "james-collins",
    "josh-honohan",
    "mason-melia"
   ]
@@ -3727,7 +3753,6 @@
   "away_id": "8430",
   "slugs": [
    "chiedozie-ogbene",
-   "james-collins",
    "jason-knight",
    "josh-honohan",
    "luke-mcnally",
@@ -3945,7 +3970,8 @@
   "away_id": "9792",
   "slugs": [
    "ciaran-gilligan",
-   "gbemi-arubi"
+   "gbemi-arubi",
+   "mark-omahony"
   ]
  },
  {
@@ -6263,19 +6289,6 @@
   ]
  },
  {
-  "fotmob_id": "1000019124",
-  "url": "/matches/manchester-city-u21-vs-manchester-united-u21/nsjamrbd#1000019124",
-  "kickoff": "2026-09-12T18:00:00Z",
-  "comp": "Premier League 2",
-  "home": "Manchester City U21",
-  "away": "Manchester United U21",
-  "home_id": "860800",
-  "away_id": "1070257",
-  "slugs": [
-   "jack-moorhouse"
-  ]
- },
- {
   "fotmob_id": "5793925",
   "url": "/matches/heart-midlothian-vs-hibernian/3ceu2k#5793925",
   "kickoff": "2026-09-03T18:45:00Z",
@@ -6288,8 +6301,7 @@
    "jacob-devaney",
    "jamie-mcgrath",
    "oisin-mcentee",
-   "owen-elding",
-   "warren-ohora"
+   "owen-elding"
   ]
  },
  {
@@ -6305,8 +6317,7 @@
    "jacob-devaney",
    "jamie-mcgrath",
    "owen-elding",
-   "ruari-paton",
-   "warren-ohora"
+   "ruari-paton"
   ]
  },
  {
@@ -6322,8 +6333,7 @@
    "jacob-devaney",
    "jamie-mcgrath",
    "len-osullivan",
-   "owen-elding",
-   "warren-ohora"
+   "owen-elding"
   ]
  },
  {
@@ -6451,6 +6461,61 @@
   ]
  },
  {
+  "fotmob_id": "5837139",
+  "url": "/matches/plymouth-argyle-vs-doncaster-rovers/2rqwkv#5837139",
+  "kickoff": "2026-09-05T14:00:00Z",
+  "comp": "League One",
+  "home": "Doncaster Rovers",
+  "away": "Plymouth Argyle",
+  "home_id": "9903",
+  "away_id": "8401",
+  "slugs": [
+   "james-collins",
+   "james-storer",
+   "jay-mcgrath",
+   "leon-ayinde",
+   "neill-byrne",
+   "ronan-curtis",
+   "sean-grehan"
+  ]
+ },
+ {
+  "fotmob_id": "6015881",
+  "url": "/matches/huddersfield-town-vs-doncaster-rovers/37j24d#6015881",
+  "kickoff": "2026-09-08T18:00:00Z",
+  "comp": "EFL Trophy Northern Grp. H",
+  "home": "Doncaster",
+  "away": "Huddersfield",
+  "home_id": "9903",
+  "away_id": "9796",
+  "slugs": [
+   "james-collins",
+   "jay-mcgrath",
+   "leon-ayinde",
+   "marcus-harness",
+   "neill-byrne",
+   "sean-grehan",
+   "sean-roughan"
+  ]
+ },
+ {
+  "fotmob_id": "5837147",
+  "url": "/matches/doncaster-rovers-vs-afc-wimbledon/6i07280#5837147",
+  "kickoff": "2026-09-12T14:00:00Z",
+  "comp": "League One",
+  "home": "Wimbledon",
+  "away": "Doncaster",
+  "home_id": "158319",
+  "away_id": "9903",
+  "slugs": [
+   "james-collins",
+   "jay-mcgrath",
+   "leon-ayinde",
+   "neill-byrne",
+   "sean-grehan"
+  ]
+ },
+ {
   "fotmob_id": "5837893",
   "url": "/matches/accrington-stanley-vs-walsall/2vuphy#5837893",
   "kickoff": "2026-08-29T14:00:00Z",
@@ -6493,24 +6558,6 @@
   ]
  },
  {
-  "fotmob_id": "5837139",
-  "url": "/matches/plymouth-argyle-vs-doncaster-rovers/2rqwkv#5837139",
-  "kickoff": "2026-09-05T14:00:00Z",
-  "comp": "League One",
-  "home": "Doncaster Rovers",
-  "away": "Plymouth Argyle",
-  "home_id": "9903",
-  "away_id": "8401",
-  "slugs": [
-   "james-storer",
-   "jay-mcgrath",
-   "leon-ayinde",
-   "neill-byrne",
-   "ronan-curtis",
-   "sean-grehan"
-  ]
- },
- {
   "fotmob_id": "5988087",
   "url": "/matches/gent-vs-hibernian/3dzho2#5988087",
   "kickoff": "2026-08-27T19:00:00Z",
@@ -6547,40 +6594,6 @@
   "home": "Stevenage",
   "away": "Doncaster Rovers",
   "home_id": "10253",
-  "away_id": "9903",
-  "slugs": [
-   "jay-mcgrath",
-   "leon-ayinde",
-   "neill-byrne",
-   "sean-grehan"
-  ]
- },
- {
-  "fotmob_id": "6015881",
-  "url": "/matches/huddersfield-town-vs-doncaster-rovers/37j24d#6015881",
-  "kickoff": "2026-09-08T18:00:00Z",
-  "comp": "EFL Trophy Northern Grp. H",
-  "home": "Doncaster",
-  "away": "Huddersfield",
-  "home_id": "9903",
-  "away_id": "9796",
-  "slugs": [
-   "jay-mcgrath",
-   "leon-ayinde",
-   "marcus-harness",
-   "neill-byrne",
-   "sean-grehan",
-   "sean-roughan"
-  ]
- },
- {
-  "fotmob_id": "5837147",
-  "url": "/matches/doncaster-rovers-vs-afc-wimbledon/6i07280#5837147",
-  "kickoff": "2026-09-12T14:00:00Z",
-  "comp": "League One",
-  "home": "Wimbledon",
-  "away": "Doncaster",
-  "home_id": "158319",
   "away_id": "9903",
   "slugs": [
    "jay-mcgrath",
@@ -7770,20 +7783,6 @@
   ]
  },
  {
-  "fotmob_id": "1000019115",
-  "url": "/matches/leicester-city-u21-vs-brighton-hove-albion-u21/f9xv3y3u#1000019115",
-  "kickoff": "2026-09-11T18:00:00Z",
-  "comp": "Premier League 2",
-  "home": "Brighton & Hove Albion U21",
-  "away": "Leicester City U21",
-  "home_id": "773678",
-  "away_id": "773642",
-  "slugs": [
-   "mark-omahony",
-   "sean-keogh"
-  ]
- },
- {
   "fotmob_id": "5836799",
   "url": "/matches/wrexham-vs-millwall/398xj4#5836799",
   "kickoff": "2026-09-02T18:45:00Z",
@@ -8438,6 +8437,19 @@
   ]
  },
  {
+  "fotmob_id": "1000019115",
+  "url": "/matches/leicester-city-u21-vs-brighton-hove-albion-u21/f9xv3y3u#1000019115",
+  "kickoff": "2026-09-11T18:00:00Z",
+  "comp": "Premier League 2",
+  "home": "Brighton & Hove Albion U21",
+  "away": "Leicester City U21",
+  "home_id": "773678",
+  "away_id": "773642",
+  "slugs": [
+   "sean-keogh"
+  ]
+ },
+ {
   "fotmob_id": "5907535",
   "url": "/matches/weston-super-mare-vs-hemel-hempstead/6hshf1f#5907535",
   "kickoff": "2026-08-29T14:00:00Z",
@@ -8956,19 +8968,6 @@
   "away_id": "8549",
   "slugs": [
    "michael-obafemi"
-  ]
- },
- {
-  "fotmob_id": "5953401",
-  "url": "/matches/leamington-vs-stourbridge/6g9t98d#5953401",
-  "kickoff": "2026-09-01T18:45:00Z",
-  "comp": "Southern Premier Division Central",
-  "home": "Stourbridge",
-  "away": "Leamington",
-  "home_id": "161834",
-  "away_id": "5764",
-  "slugs": [
-   "eric-yahaya"
   ]
  }
 ]
