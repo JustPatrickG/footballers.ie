@@ -1,7 +1,4 @@
 kickoff,competition,home,away,home_id,away_id,home_score,away_score,status,minute,players
-2026-08-27T00:30:00Z,Leagues Cup,Toluca,Austin FC,6618,1218886,2,0,ft,,jon-gallagher
-2026-08-27T01:30:00Z,USL Championship,New Mexico United,Lexington SC,1003208,1430405,2,1,ft,,aaron-molloy
-2026-08-27T02:45:00Z,Leagues Cup,CF América,Columbus Crew,6576,6001,2,0,ft,,brooks-lennon
 2026-08-27T15:00:00Z,Conference League Qualification,KuPS,Shamrock Rovers,1693,4131,1,0,ft,,aaron-greene;adam-brennan;alex-noonan;ben-mahon;cory-osullivan;dylan-watts;edward-mcginty;enda-stevens;graham-burke;jack-byrne;jake-mulraney;john-osullivan;jonathan-afolabi;lee-grace;lee-steacy;luke-oregan;matthew-healy;michael-noonan;tunmise-sobowale;will-fitzgerald;william-fitzgerald
 2026-08-27T16:45:00Z,Conference League Qualification,Freiburg,Motherwell,8358,9927,4,1,ft,,joe-hodge
 2026-08-27T18:30:00Z,EFL Cup,Chelsea,Luton Town,8455,8346,2,0,ft,,callum-marshall;josh-keeley
@@ -169,10 +166,8 @@ kickoff,competition,home,away,home_id,away_id,home_score,away_score,status,minut
 2026-09-02T18:45:00Z,League One,Wigan Athletic,Milton Keynes Dons,8528,8645,3,1,ft,,dara-costelloe;sonny-perkins
 2026-09-02T18:45:00Z,Premiership,Motherwell,Dundee United,9927,9938,3,0,ft,,joe-hodge;neil-farrugia;will-ferry
 2026-09-02T18:45:00Z,Championship,Millwall,Wrexham,10004,9841,0,3,ft,,mark-sykes
-2026-09-02T18:45:00Z,League One,Burton Albion,AFC Wimbledon,9792,158319,,,scheduled,,ciaran-gilligan;gbemi-arubi
 2026-09-02T19:00:00Z,Premiership,Falkirk,Rangers,8596,8548,1,2,ft,,aodhan-doherty
 2026-09-02T19:00:00Z,League One,Reading,Mansfield Town,9798,9818,5,0,ft,,conor-masterson;david-mcgoldrick;paudie-oconnor;ryan-sweeney;stephen-mclaughlin
-2026-09-02T19:00:00Z,Championship,Burnley,Middlesbrough,8191,8549,,,scheduled,,michael-obafemi
 2026-09-02T23:00:00Z,USL Championship,Charleston Battery,Hartford Athletic,162183,1003206,1,2,ft,,barry-coffey
 2026-09-03T17:30:00Z,NB I,Györi ETO,Ferencváros,5755,8222,,,scheduled,,callum-odowda
 2026-09-03T18:45:00Z,Premiership,Hibernian,Heart of Midlothian,10251,9860,,,scheduled,,jacob-devaney;jamie-mcgrath;oisin-mcentee;owen-elding;warren-ohora
@@ -323,7 +318,6 @@ kickoff,competition,home,away,home_id,away_id,home_score,away_score,status,minut
 2026-09-08T18:00:00Z,National League Cup,Scunthorpe United,Nottingham Forest U21,8412,1389162,,,scheduled,,grady-mcdonnell;hugh-parker
 2026-09-08T18:00:00Z,EFL Trophy Northern Grp. H,Doncaster,Huddersfield,9903,9796,,,scheduled,,jay-mcgrath;leon-ayinde;marcus-harness;neill-byrne;sean-grehan;sean-roughan
 2026-09-08T18:00:00Z,National League Cup Group C,Solihull Moors,Leeds United U21,161801,1177187,,,scheduled,,jevon-mills
-2026-09-08T18:00:00Z,EFL Trophy Southern Grp. A,Exeter,Tottenham Hotspur U21,9833,860802,,,scheduled,,charlie-cummins;jake-doyle-hayes
 2026-09-08T18:30:00Z,National League Cup Group B,Worthing,Norwich City U21,282351,773658,,,scheduled,,harvey-boddy;vinnie-leonard
 2026-09-08T18:30:00Z,National League Cup Group B,Aldershot Town,West Ham United U21,8465,773649,,,scheduled,,scott-davies
 2026-09-08T18:45:00Z,EFL Cup,Leyton Orient,Bradford,8351,8484,,,scheduled,,aaron-connolly;corey-okeeffe;jaze-kabia;killian-cahill;ollie-oneill;tony-springett;tyreik-wright
@@ -561,3 +555,5 @@ kickoff,competition,home,away,home_id,away_id,home_score,away_score,status,minut
 2026-09-16T19:00:00Z,EFL Cup,Man United,Brighton,10260,10204,,,scheduled,,evan-ferguson
 2026-09-16T22:00:00Z,USL Championship,Hartford Athletic,Sporting JAX,1003206,1737991,,,scheduled,,barry-coffey;harvey-neville;kieran-sadlier
 2026-09-16T23:00:00Z,US Open Cup,Columbus,Orlando,6001,267810,,,scheduled,,brooks-lennon
+2026-09-02T18:45:00Z,League One,Burton Albion,AFC Wimbledon,9792,158319,,,scheduled,,ciaran-gilligan;gbemi-arubi
+2026-09-02T19:00:00Z,Championship,Burnley,Middlesbrough,8191,8549,,,scheduled,,michael-obafemi

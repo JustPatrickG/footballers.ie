@@ -1089,19 +1089,6 @@
   ]
  },
  {
-  "fotmob_id": "5109910",
-  "url": "/matches/new-mexico-united-vs-lexington-sc/11sdh3ps0#5109910",
-  "kickoff": "2026-08-27T01:30:00Z",
-  "comp": "USL Championship",
-  "home": "New Mexico United",
-  "away": "Lexington SC",
-  "home_id": "1003208",
-  "away_id": "1430405",
-  "slugs": [
-   "aaron-molloy"
-  ]
- },
- {
   "fotmob_id": "5109933",
   "url": "/matches/lexington-sc-vs-sporting-jax/1s1v79bx1#5109933",
   "kickoff": "2026-09-05T23:00:00Z",
@@ -2603,19 +2590,6 @@
   ]
  },
  {
-  "fotmob_id": "5109914",
-  "url": "/matches/hartford-athletic-vs-birmingham-legion-fc/poou2gde#5109914",
-  "kickoff": "2026-08-29T23:00:00Z",
-  "comp": "USL Championship",
-  "home": "Hartford Athletic",
-  "away": "Birmingham Legion FC",
-  "home_id": "1003206",
-  "away_id": "1003207",
-  "slugs": [
-   "barry-coffey"
-  ]
- },
- {
   "fotmob_id": "5109923",
   "url": "/matches/charleston-battery-vs-hartford-athletic/8nyinx36#5109923",
   "kickoff": "2026-09-02T23:00:00Z",
@@ -2624,6 +2598,19 @@
   "away": "Hartford Athletic",
   "home_id": "162183",
   "away_id": "1003206",
+  "slugs": [
+   "barry-coffey"
+  ]
+ },
+ {
+  "fotmob_id": "5109914",
+  "url": "/matches/hartford-athletic-vs-birmingham-legion-fc/poou2gde#5109914",
+  "kickoff": "2026-08-29T23:00:00Z",
+  "comp": "USL Championship",
+  "home": "Hartford Athletic",
+  "away": "Birmingham Legion FC",
+  "home_id": "1003206",
+  "away_id": "1003207",
   "slugs": [
    "barry-coffey"
   ]
@@ -3073,19 +3060,6 @@
   "away": "New England Revolution",
   "home_id": "6001",
   "away_id": "6580",
-  "slugs": [
-   "brooks-lennon"
-  ]
- },
- {
-  "fotmob_id": "6028327",
-  "url": "/matches/columbus-crew-vs-cf-america/1b3gip#6028327",
-  "kickoff": "2026-08-27T02:45:00Z",
-  "comp": "Leagues Cup",
-  "home": "CF Am\u00e9rica",
-  "away": "Columbus Crew",
-  "home_id": "6576",
-  "away_id": "6001",
   "slugs": [
    "brooks-lennon"
   ]
@@ -6922,19 +6896,6 @@
   "home": "Portland Timbers",
   "away": "Austin FC",
   "home_id": "307690",
-  "away_id": "1218886",
-  "slugs": [
-   "jon-gallagher"
-  ]
- },
- {
-  "fotmob_id": "6028325",
-  "url": "/matches/toluca-vs-austin-fc/9kz0pv1m#6028325",
-  "kickoff": "2026-08-27T00:30:00Z",
-  "comp": "Leagues Cup",
-  "home": "Toluca",
-  "away": "Austin FC",
-  "home_id": "6618",
   "away_id": "1218886",
   "slugs": [
    "jon-gallagher"
