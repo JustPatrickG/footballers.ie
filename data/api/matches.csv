@@ -159,12 +159,14 @@ kickoff,competition,home,away,home_id,away_id,home_score,away_score,status,minut
 2026-09-02T18:45:00Z,League One,Wigan Athletic,Milton Keynes Dons,8528,8645,3,1,ft,,dara-costelloe;sonny-perkins
 2026-09-02T18:45:00Z,Premiership,Motherwell,Dundee United,9927,9938,3,0,ft,,joe-hodge;neil-farrugia;will-ferry
 2026-09-02T18:45:00Z,Championship,Millwall,Wrexham,10004,9841,0,3,ft,,mark-sykes
+2026-09-02T18:45:00Z,League One,Burton Albion,AFC Wimbledon,9792,158319,,,scheduled,,ciaran-gilligan;gbemi-arubi
 2026-09-02T19:00:00Z,Premiership,Falkirk,Rangers,8596,8548,1,2,ft,,aodhan-doherty
 2026-09-02T19:00:00Z,League One,Reading,Mansfield Town,9798,9818,5,0,ft,,conor-masterson;david-mcgoldrick;paudie-oconnor;ryan-sweeney;stephen-mclaughlin
+2026-09-02T19:00:00Z,Championship,Burnley,Middlesbrough,8191,8549,,,scheduled,,michael-obafemi
 2026-09-02T23:00:00Z,USL Championship,Charleston Battery,Hartford Athletic,162183,1003206,1,2,ft,,barry-coffey
 2026-09-03T17:30:00Z,Nemzeti Bajnokság I,Györi ETO,Ferencváros,5755,8222,0,3,ft,,callum-odowda
 2026-09-03T18:30:00Z,Belgian Pro League,Anderlecht,Kortrijk,8635,8571,,,scheduled,,andrew-omobamidele
-2026-09-03T18:45:00Z,Premiership,Hibernian,Heart of Midlothian,10251,9860,1,3,ft,,jacob-devaney;jamie-mcgrath;oisin-mcentee;owen-elding
+2026-09-03T18:45:00Z,Premiership,Hibernian,Heart of Midlothian,10251,9860,1,3,ft,,jacob-devaney;jamie-mcgrath;oisin-mcentee
 2026-09-04T17:00:00Z,Regionalliga Bayern,TSV Aubstadt,Ansbach,340719,1711,,,scheduled,,kyle-degelman
 2026-09-04T18:00:00Z,Eerste Divisie,Helmond Sport,VVV-Venlo,6417,9839,,,scheduled,,eanna-clancy
 2026-09-04T18:30:00Z,Championship,Livingston,Stenhousemuir,8282,8143,,,scheduled,,graham-carey;jordan-doherty;shane-blaney
@@ -553,6 +555,3 @@ kickoff,competition,home,away,home_id,away_id,home_score,away_score,status,minut
 2026-09-17T17:00:00Z,LaLiga,Real Betis,Getafe,8603,8305,,,scheduled,,troy-parrott
 2026-09-17T19:00:00Z,Europa League,Celtic,Ferencváros,9925,8222,,,scheduled,,callum-odowda;liam-scales
 2026-09-17T19:30:00Z,LaLiga,Málaga,Villarreal,9864,10205,,,scheduled,,aaron-ochoa
-2026-09-02T18:45:00Z,League One,Burton Albion,AFC Wimbledon,9792,158319,,,scheduled,,ciaran-gilligan;gbemi-arubi
-2026-09-02T19:00:00Z,Championship,Burnley,Middlesbrough,8191,8549,,,scheduled,,michael-obafemi
-2026-09-03T18:30:00Z,Belgian Pro League,Anderlecht,Kortrijk,8635,8571,,,scheduled,,andrew-omobamidele
