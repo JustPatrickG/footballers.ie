@@ -780,8 +780,10 @@ def load():
     # newest day first; within a day the heaviest story leads, so a big-league
     # performance is never buried under a fresher small-league one
     def _aw(r):
-        try: return float(r.get("weight") or 0)
-        except ValueError: return 0.0
+        # No weight column = the news pipeline wrote it. Real news sits above
+        # all but the biggest auto match reports.
+        try: return float(r.get("weight") or 150)
+        except ValueError: return 150.0
     _api.sort(key=lambda r: ((r.get("date") or ""), _aw(r)), reverse=True)
     articles += _api
     accounts = _rows("manual/accounts.csv")
