@@ -1,0 +1,67 @@
+name: social posting
+
+# Posts new articles (news + auto match reports) to Reddit, and to X once X
+# has its own secrets. X's write API needs a paid tier now, so until those
+# are set this half just idles - the same way news.yml idles without
+# X_BEARER_TOKEN - rather than failing every run.
+#
+# Polling costs nothing here; the only spend is whatever tier X needs for
+# posting, which is exactly what stays off until those secrets exist.
+
+on:
+  schedule:
+    - cron: '*/20 * * * *'
+  workflow_dispatch:
+    inputs:
+      dry:
+        description: 'dry run - print what would post, touch nothing'
+        default: 'false'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: social-posting
+  cancel-in-progress: false
+
+jobs:
+  post:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install requests requests-oauthlib praw
+
+      - name: post anything new
+        env:
+          REDDIT_CLIENT_ID: ${{ secrets.REDDIT_CLIENT_ID }}
+          REDDIT_CLIENT_SECRET: ${{ secrets.REDDIT_CLIENT_SECRET }}
+          REDDIT_USERNAME: ${{ secrets.REDDIT_USERNAME }}
+          REDDIT_PASSWORD: ${{ secrets.REDDIT_PASSWORD }}
+          REDDIT_SUBREDDIT: ${{ vars.REDDIT_SUBREDDIT }}
+          X_API_KEY: ${{ secrets.X_API_KEY }}
+          X_API_SECRET: ${{ secrets.X_API_SECRET }}
+          X_ACCESS_TOKEN: ${{ secrets.X_ACCESS_TOKEN }}
+          X_ACCESS_SECRET: ${{ secrets.X_ACCESS_SECRET }}
+        run: |
+          if [ "${{ inputs.dry || 'false' }}" = "true" ]; then
+            python3 scraper/social_post.py --dry
+          else
+            python3 scraper/social_post.py
+          fi
+
+      - name: commit the posted-slugs state if it changed
+        run: |
+          git config user.name "social-bot"
+          git config user.email "actions@github.com"
+          git add scraper/social_posted.json 2>/dev/null || true
+          if git diff --cached --quiet; then
+            echo "nothing new posted"
+          else
+            git commit -m "social: mark posted"
+            git pull --rebase --autostash -X theirs || (git rebase --abort; git reset --hard origin/main; echo "lost the race, next run catches up")
+            git push
+          fi

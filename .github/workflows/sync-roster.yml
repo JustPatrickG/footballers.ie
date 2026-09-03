@@ -20,7 +20,13 @@ jobs:
           python-version: '3.12'
 
       - name: Pull roster from Wikidata
-        run: python build/fetch_roster.py
+        run: python build/fetch_roster.py || true
+
+      # Same Wikidata trip, for the ~220 roster players with no headshot from
+      # any source. Soft-failed: a bad week for the endpoint shouldn't fail
+      # the roster sync.
+      - name: Fill missing headshots from Wikidata
+        run: python scraper/photo_fill.py || true
 
       - name: Commit if anything changed
         run: |

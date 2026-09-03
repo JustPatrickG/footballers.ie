@@ -1640,9 +1640,12 @@ def build_index():
             for a in pool[:max(1, _int(setting("carousel_count", "5"), 5))]] \
         or [(t,h,s,sl,False,None) for (t,h,s,sl) in NEWS]
     HEAD_IS_ARTICLE = bool(pool)
+    # kept out of the f-string below: a backslash-escaped quote inside an
+    # f-string expression is a SyntaxError before Python 3.12 (CLAUDE.md).
+    _NOWDOT = '<span class="nowdot"></span>HAPPENING NOW'
     slides = "".join(
       f'<a class="slide{" now" if s[4] else ""}" data-i="{i}" href="{"news/" + s[3] + ".html" if HEAD_IS_ARTICLE else "player/" + s[3] + ".html"}">'
-      f'<div class="tag">{"<span class=\"nowdot\"></span>HAPPENING NOW" if s[4] else esc(s[0])}</div>'
+      f'<div class="tag">{_NOWDOT if s[4] else esc(s[0])}</div>'
       f'<h3>{esc(s[1])}</h3><p>{esc(s[2])}</p></a>'
       for i,s in enumerate(HEAD))
     dots = "".join(f'<button aria-current="{"true" if i==0 else "false"}" data-i="{i}"></button>' for i in range(len(HEAD)))
@@ -2498,7 +2501,13 @@ def _register_places():
 
 # AS Monaco sit in France's league despite the postcode; anything else
 # geography reads wrong goes here too.
-CLUB_COUNTRY_FIX = {"Monaco": "France", "AS Monaco": "France"}
+CLUB_COUNTRY_FIX = {
+    "Monaco": "France", "AS Monaco": "France",
+    # nearest-ground-wins gets these wrong or cannot reach them at all:
+    "Ragusa": "Italy",              # southern Sicily sits closer to Malta
+    "Chanmari FC": "India",         # Aizawl - outside the European refs
+    "EFSC Titans": "United States", # Florida - ditto
+}
 
 NO_CLUB = "No club"
 def player_country(p):
@@ -3320,7 +3329,9 @@ def events_block(m, involved):
                  f'<div class="tla">{cell if side=="a" else ""}</div></div>')
     if not rows:
         return _empty_tl if _started else ""
-    return (f'<div class="sec"><h2>Timeline</h2>{f"<span class=\"more\" style=\"border:0\">{esc(venue)}</span>" if venue else ""}</div>'
+    # same reason as the carousel: no backslashes inside f-string expressions
+    _venue_bit = f'<span class="more" style="border:0">{esc(venue)}</span>' if venue else ""
+    return (f'<div class="sec"><h2>Timeline</h2>{_venue_bit}</div>'
             f'<div class="timeline">{rows}</div>'
             f'<div class="rmnote">Irish players in <b class="ir">green</b>. Goals, cards and missed penalties only.</div>')
 

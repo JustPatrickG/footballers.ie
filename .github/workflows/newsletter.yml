@@ -1,0 +1,75 @@
+name: newsletter
+
+# Assembles and sends the twice-weekly newsletter from the auto match
+# reports and upcoming fixtures already on disk - see scraper/newsletter.py.
+# Free: Gmail SMTP (same account as the goal alerts) plus a read-only token
+# on the private subscribers repo. Idles quietly and sends nothing until
+# both are configured.
+
+on:
+  schedule:
+    - cron: '0 7 * * 1'    # Monday 07:00 UTC - weekend round-up
+    - cron: '0 7 * * 5'    # Friday 07:00 UTC - weekend preview
+  workflow_dispatch:
+    inputs:
+      edition:
+        description: 'monday or friday (ignored on a scheduled run)'
+        default: 'monday'
+      dry:
+        description: 'dry run - print the issue, send nothing'
+        default: 'false'
+      force:
+        description: 'send even if already sent today'
+        default: 'false'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: newsletter
+  cancel-in-progress: false
+
+jobs:
+  send:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install requests
+
+      - name: work out which edition
+        id: which
+        run: |
+          case "${{ github.event.schedule }}" in
+            '0 7 * * 1') echo "edition=monday" >> "$GITHUB_OUTPUT" ;;
+            '0 7 * * 5') echo "edition=friday" >> "$GITHUB_OUTPUT" ;;
+            *) echo "edition=${{ inputs.edition || 'monday' }}" >> "$GITHUB_OUTPUT" ;;
+          esac
+
+      - name: assemble and send
+        env:
+          GMAIL_USER: ${{ secrets.GMAIL_USER }}
+          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+          SUBSCRIBERS_REPO: ${{ vars.SUBSCRIBERS_REPO }}
+          SUBSCRIBERS_READ_TOKEN: ${{ secrets.SUBSCRIBERS_READ_TOKEN }}
+        run: |
+          ARGS="--edition ${{ steps.which.outputs.edition }}"
+          [ "${{ inputs.dry || 'false' }}" = "true" ] && ARGS="$ARGS --dry"
+          [ "${{ inputs.force || 'false' }}" = "true" ] && ARGS="$ARGS --force"
+          python3 scraper/newsletter.py $ARGS
+
+      - name: commit the sent-state if it changed
+        run: |
+          git config user.name "newsletter-bot"
+          git config user.email "actions@github.com"
+          git add scraper/newsletter_sent.json 2>/dev/null || true
+          if git diff --cached --quiet; then
+            echo "nothing to commit"
+          else
+            git commit -m "newsletter: mark sent"
+            git pull --rebase --autostash -X theirs || (git rebase --abort; git reset --hard origin/main; echo "lost the race, next run catches up")
+            git push
+          fi

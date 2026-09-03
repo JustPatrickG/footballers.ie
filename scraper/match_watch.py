@@ -89,6 +89,9 @@ def harvest(finished):
     run([py, "scraper/irish_scraper.py", "scrape", "--active"])
     run([py, "scraper/irish_scraper.py", "events", "--days", "1"])
     run([py, "scraper/irish_scraper.py", "lineups"])
+    # write the report now, off the ratings we just pulled, rather than waiting
+    # up to 10 minutes for the next matchday run to do it
+    run([py, "scraper/auto_reports.py", "--days", "1"])
     subprocess.run(["git", "add", "-A", "data/api", "scraper/match_index.json"],
                    cwd=ROOT)
     staged = subprocess.run(["git", "diff", "--cached", "--quiet"], cwd=ROOT)

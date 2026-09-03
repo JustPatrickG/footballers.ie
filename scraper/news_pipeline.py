@@ -44,7 +44,11 @@ IMG_DIR = ROOT / "img" / "articles"
 
 ARTICLE_COLUMNS = ["slug", "date", "tag", "headline", "standfirst", "body",
                    "author", "image", "player_slug", "expires",
-                   "use_player_photo", "partner", "partner_url"]
+                   "use_player_photo", "partner", "partner_url", "weight"]
+# "weight" belongs to auto_reports.py, not to news posts - but write_rows()
+# rewrites the whole file through this list with extrasaction="ignore", so
+# leaving it out silently strips the weight off every match report and
+# collapses same-day ordering to date only. News rows just leave it blank.
 
 # Articles go out under the site's journalist byline. That name is on the
 # site in this one capacity and no other - no credits, no about text, no
