@@ -1584,7 +1584,7 @@ charlie-cummins,2026-08-10,Plymouth Argyle,0-2,EFL Cup,90,0,0,6.40
 charlie-cummins,2026-08-15,Grimsby Town,0-1,League Two,90,0,0,6.50
 charlie-cummins,2026-08-22,Accrington Stanley,2-0,League Two,90,0,0,7.40
 charlie-cummins,2026-08-29,York City,1-2,League Two,90,0,0,7.00
-charlie-cummins,2026-09-01,Barnet,1-1,League Two,90,0,0,7.60
+charlie-cummins,2026-09-01,Barnet,1-1,League Two,90,0,0,7.30
 charlie-hanover,2025-10-13,Shelbourne,1-2,Premier Division,1,0,0,
 charlie-hanover,2025-10-17,Drogheda United,0-1,Premier Division,11,0,0,
 charlie-lyons,2025-09-22,St. Patrick's Athletic,0-4,Premier Division,45,0,0,6.20
@@ -1634,7 +1634,7 @@ charlie-mcneill,2026-08-15,Crawley Town,1-0,League Two,23,0,0,6.40
 charlie-mcneill,2026-08-22,Northampton Town,1-0,League Two,15,0,0,6.30
 charlie-mcneill,2026-08-25,Barnsley,2-3,EFL Cup,90,0,1,8.00
 charlie-mcneill,2026-08-29,Port Vale,0-0,League Two,3,0,0,
-charlie-mcneill,2026-09-01,Walsall,2-2,League Two,58,0,0,6.30
+charlie-mcneill,2026-09-01,Walsall,2-2,League Two,58,0,0,6.40
 chiedozie-ogbene,2025-09-06,Hungary,2-2,World Cup Qualification UEFA,24,0,0,6.10
 chiedozie-ogbene,2025-09-09,Armenia,1-2,World Cup Qualification UEFA,45,0,0,6.10
 chiedozie-ogbene,2025-09-20,Charlton Athletic,0-1,Championship,67,0,0,6.30
@@ -2273,7 +2273,7 @@ conor-grant,2026-08-08,Burnley,1-1,EFL Cup,24,0,0,6.20
 conor-grant,2026-08-15,Leicester City,1-1,League One,23,1,0,7.40
 conor-grant,2026-08-22,Luton Town,2-2,League One,28,0,0,6.10
 conor-grant,2026-08-29,Burton Albion,2-1,League One,24,0,0,6.60
-conor-grant,2026-09-01,Doncaster Rovers,1-1,League One,63,0,0,6.90
+conor-grant,2026-09-01,Doncaster Rovers,1-1,League One,63,0,0,7.00
 conor-james-mccormack,2025-11-01,Waterford FC,1-1,Premier Division,20,0,0,6.40
 conor-james-mccormack,2026-02-06,Drogheda United,0-1,Premier Division,1,0,0,
 conor-james-mccormack,2026-03-06,Dundalk,2-2,Premier Division,9,0,0,
@@ -2624,7 +2624,7 @@ dan-casey,2026-03-07,Bolton Wanderers,2-3,League One,51,0,0,6.90
 dan-casey,2026-08-01,Ipswich Town,1-2,Club Friendlies,18,0,0,
 dan-casey,2026-08-18,Reading,1-1,EFL Trophy,90,0,0,7.10
 dan-casey,2026-08-29,Stockport County,1-5,League One,14,0,0,6.10
-dan-casey,2026-09-01,Sheffield Wednesday,1-2,League One,49,0,0,6.90
+dan-casey,2026-09-01,Sheffield Wednesday,1-2,League One,49,0,0,6.80
 dan-mcnamara,2025-11-22,Portsmouth,1-3,Championship,62,0,0,6.30
 dan-mcnamara,2025-11-26,Sheffield Wednesday,1-0,Championship,18,0,0,6.40
 dan-mcnamara,2025-11-29,Southampton,3-2,Championship,74,0,0,7.60
@@ -3001,7 +3001,7 @@ darius-lipsiuc,2026-08-08,Burnley,1-1,EFL Cup,90,0,0,6.50
 darius-lipsiuc,2026-08-15,Leicester City,1-1,League One,90,0,0,6.90
 darius-lipsiuc,2026-08-22,Luton Town,2-2,League One,86,0,0,6.50
 darius-lipsiuc,2026-08-29,Burton Albion,2-1,League One,66,0,0,6.70
-darius-lipsiuc,2026-09-01,Doncaster Rovers,1-1,League One,45,0,0,6.30
+darius-lipsiuc,2026-09-01,Doncaster Rovers,1-1,League One,45,0,0,6.20
 darragh-burns,2025-09-06,Milton Keynes Dons,3-2,League Two,89,0,0,7.10
 darragh-burns,2025-09-13,Cambridge United,1-1,League Two,75,0,0,6.10
 darragh-burns,2025-09-16,Sheffield Wednesday,1-0,EFL Cup,12,0,0,6.30
@@ -4313,7 +4313,7 @@ gabriel-otegbayo,2026-08-15,Leyton Orient,2-1,League One,90,0,0,6.40
 gabriel-otegbayo,2026-08-20,Bradford City,0-1,League One,81,0,0,6.70
 gabriel-otegbayo,2026-08-25,Wolverhampton Wanderers,0-2,EFL Cup,24,0,0,6.50
 gabriel-otegbayo,2026-08-29,Bromley,7-2,League One,45,1,0,6.50
-gabriel-otegbayo,2026-09-01,Wycombe Wanderers,2-1,League One,90,0,0,6.00
+gabriel-otegbayo,2026-09-01,Wycombe Wanderers,2-1,League One,90,0,0,6.10
 gareth-mcelroy,2025-09-22,Galway United FC,1-0,Premier Division,90,0,1,8.50
 gareth-mcelroy,2025-09-27,St. Patrick's Athletic,1-0,Premier Division,90,0,0,7.60
 gareth-mcelroy,2025-10-05,Derry City,0-1,Premier Division,65,0,0,6.60
@@ -5135,6 +5135,7 @@ jacob-devaney,2026-05-25,Partick Thistle,1-0,Premiership playoff,90,0,0,
 jacob-devaney,2026-07-18,Wrexham,0-1,Club Friendlies,45,0,0,6.30
 jacob-devaney,2026-07-24,Rosenborg,5-0,Club Friendlies,29,1,0,7.00
 jacob-devaney,2026-08-30,Dundee FC,2-1,Premiership,81,0,0,7.60
+jacob-devaney,2026-09-03,Heart of Midlothian,1-3,Premiership,45,0,0,5.80
 jacob-slater,2025-09-04,Moldova U21,2-1,EURO U-21 Qualification,90,0,0,
 jacob-slater,2025-09-20,Shrewsbury Town,2-0,League Two,90,0,0,7.50
 jacob-slater,2025-09-27,Gillingham,1-0,League Two,90,0,0,7.70
@@ -5234,7 +5235,7 @@ jake-doyle-hayes,2026-02-17,Wycombe Wanderers,1-1,League One,85,0,0,6.60
 jake-doyle-hayes,2026-08-10,Plymouth Argyle,0-2,EFL Cup,45,0,0,6.00
 jake-doyle-hayes,2026-08-15,Grimsby Town,0-1,League Two,58,0,0,6.40
 jake-doyle-hayes,2026-08-22,Accrington Stanley,2-0,League Two,81,0,0,7.50
-jake-doyle-hayes,2026-09-01,Barnet,1-1,League Two,58,0,0,6.20
+jake-doyle-hayes,2026-09-01,Barnet,1-1,League Two,58,0,0,6.10
 jake-griffin,2025-09-03,Woking,1-1,National League,17,0,0,
 jake-griffin,2025-09-09,Middlesbrough U21,2-1,National League Cup,90,0,0,7.30
 jake-griffin,2025-09-27,Chelsea U21,2-1,Premier League 2,90,0,0,7.30
@@ -5702,6 +5703,7 @@ jamie-mcgrath,2026-08-16,Partick Thistle,1-0,League Cup,61,0,0,
 jamie-mcgrath,2026-08-20,Gent,0-0,Conference League Qualification,26,0,0,
 jamie-mcgrath,2026-08-27,Gent,2-3,Conference League Qualification,83,0,1,7.70
 jamie-mcgrath,2026-08-30,Dundee FC,2-1,Premiership,90,0,0,7.40
+jamie-mcgrath,2026-09-03,Heart of Midlothian,1-3,Premiership,90,0,0,7.00
 jamie-mullins,2025-09-04,Moldova U21,2-1,EURO U-21 Qualification,90,0,0,
 jamie-mullins,2025-09-09,Andorra U21,1-0,EURO U-21 Qualification,90,0,0,
 jamie-mullins,2025-09-20,Northampton Town,2-0,League One,62,0,0,7.10
@@ -7196,7 +7198,7 @@ kieran-morrison,2026-08-16,Como,0-0,Club Friendlies,19,0,0,6.00
 kieran-morrison,2026-08-20,Bradford City,0-1,League One,21,0,0,6.50
 kieran-morrison,2026-08-25,Wolverhampton Wanderers,0-2,EFL Cup,81,0,0,6.80
 kieran-morrison,2026-08-29,Bromley,7-2,League One,29,0,1,7.30
-kieran-morrison,2026-09-01,Wycombe Wanderers,2-1,League One,74,0,0,6.90
+kieran-morrison,2026-09-01,Wycombe Wanderers,2-1,League One,74,0,0,6.80
 kieran-ohara,2026-05-02,St. Mirren,1-0,Premiership,24,0,0,6.70
 kieran-ohara,2026-05-09,Livingston,3-0,Premiership,90,0,0,8.80
 kieran-ohara,2026-05-12,Kilmarnock,1-3,Premiership,90,0,0,7.00
@@ -7746,7 +7748,7 @@ louie-barry,2026-08-15,Leyton Orient,2-1,League One,45,0,0,6.90
 louie-barry,2026-08-20,Bradford City,0-1,League One,69,0,0,6.20
 louie-barry,2026-08-25,Wolverhampton Wanderers,0-2,EFL Cup,23,0,0,6.00
 louie-barry,2026-08-29,Bromley,7-2,League One,79,2,1,9.40
-louie-barry,2026-09-01,Wycombe Wanderers,2-1,League One,16,1,0,7.40
+louie-barry,2026-09-01,Wycombe Wanderers,2-1,League One,16,1,0,7.50
 louie-watson,2025-09-27,Barrow,1-2,League Two,90,0,0,6.80
 louie-watson,2025-10-11,Walsall,1-1,League Two,10,0,0,6.20
 louie-watson,2025-10-18,Shrewsbury Town,0-1,League Two,32,0,0,6.30
@@ -8800,7 +8802,7 @@ oisin-gallagher,2026-08-15,Salford City,3-1,League Two,83,1,0,7.90
 oisin-gallagher,2026-08-18,Arsenal U21,5-1,EFL Trophy,45,0,0,6.40
 oisin-gallagher,2026-08-22,Shrewsbury Town,3-1,League Two,90,0,0,7.00
 oisin-gallagher,2026-08-29,Cheltenham Town,2-2,League Two,90,0,0,7.80
-oisin-gallagher,2026-09-01,Exeter City,1-1,League Two,90,0,0,7.00
+oisin-gallagher,2026-09-01,Exeter City,1-1,League Two,90,0,0,6.90
 oisin-mcdonagh,2026-02-10,Chester FC,2-2,National North & South,90,0,0,
 oisin-mcdonagh,2026-02-14,AFC Fylde,0-3,National North & South,90,0,0,
 oisin-mcdonagh,2026-03-07,AFC Telford United,1-4,National North & South,90,0,0,
@@ -8844,6 +8846,7 @@ oisin-mcentee,2026-08-13,Benfica,1-1,Europa League Qualification,84,0,0,7.20
 oisin-mcentee,2026-08-20,Rapid Wien,2-2,Conference League Qualification,90,0,0,7.10
 oisin-mcentee,2026-08-26,Rapid Wien,2-2,Conference League Qualification,120,0,0,7.00
 oisin-mcentee,2026-08-29,St. Johnstone,2-1,Premiership,90,0,0,7.50
+oisin-mcentee,2026-09-03,Hibernian,3-1,Premiership,90,0,0,6.80
 ollie-oneill,2025-09-06,Port Vale,3-2,League One,69,0,0,6.60
 ollie-oneill,2025-09-27,Stevenage,2-3,League One,19,0,0,6.30
 ollie-oneill,2025-11-08,Wycombe Wanderers,1-4,League One,8,0,0,
@@ -9474,7 +9477,7 @@ ronan-curtis,2026-08-10,Exeter City,2-0,EFL Cup,90,0,0,7.20
 ronan-curtis,2026-08-15,Stockport County,1-3,League One,90,0,0,5.90
 ronan-curtis,2026-08-22,Wycombe Wanderers,1-1,League One,90,0,0,6.70
 ronan-curtis,2026-08-29,Bradford City,2-0,League One,89,0,0,8.10
-ronan-curtis,2026-09-01,Leicester City,0-2,League One,45,0,0,6.10
+ronan-curtis,2026-09-01,Leicester City,0-2,League One,45,0,0,6.20
 ronan-doherty,2026-07-07,Tre Fiori,1-0,Champions League Qualification,63,0,0,
 ronan-doherty,2026-07-14,Tre Fiori,2-1,Champions League Qualification,76,0,1,
 ronan-doherty,2026-07-21,FK Crvena Zvezda,0-4,Champions League Qualification,76,0,0,
@@ -10231,7 +10234,7 @@ sean-grehan,2026-08-08,Stockport County,1-1,EFL Cup,17,0,0,6.10
 sean-grehan,2026-08-15,Mansfield Town,1-2,League One,79,0,0,7.20
 sean-grehan,2026-08-25,Middlesbrough,1-3,EFL Cup,90,0,0,6.00
 sean-grehan,2026-08-29,Stevenage,2-2,League One,26,0,0,6.20
-sean-grehan,2026-09-01,Notts County,1-1,League One,89,0,0,7.40
+sean-grehan,2026-09-01,Notts County,1-1,League One,89,0,0,7.30
 sean-hoare,2026-02-27,Dundalk,4-0,Premier Division,53,1,0,7.80
 sean-hoare,2026-03-02,Galway United FC,1-0,Premier Division,75,0,0,7.80
 sean-hoare,2026-03-06,Shelbourne,3-2,Premier Division,90,0,0,7.50
