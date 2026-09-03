@@ -1,123 +1,87 @@
 match_id,side,team,formation,status,updated,role,number,name,slug,pos,x,y
-2026-09-02-charleston-battery-v-hartford-athletic,home,Charleston Battery,4-2-3-1,,2026-09-03T01:35:45Z,start,1,John Berner,,,0.1,0.5
-2026-09-02-charleston-battery-v-hartford-athletic,home,Charleston Battery,4-2-3-1,,2026-09-03T01:35:45Z,start,42,Douglas Martínez,,,0.292,0.875
-2026-09-02-charleston-battery-v-hartford-athletic,home,Charleston Battery,4-2-3-1,,2026-09-03T01:35:45Z,start,16,Graham Smith,,,0.292,0.625
-2026-09-02-charleston-battery-v-hartford-athletic,home,Charleston Battery,4-2-3-1,,2026-09-03T01:35:45Z,start,22,Joey Akpunonu,,,0.292,0.375
-2026-09-02-charleston-battery-v-hartford-athletic,home,Charleston Battery,4-2-3-1,,2026-09-03T01:35:45Z,start,3,Nathan Messer,,,0.292,0.125
-2026-09-02-charleston-battery-v-hartford-athletic,home,Charleston Battery,4-2-3-1,,2026-09-03T01:35:45Z,start,88,Kirill Pakhomov,,,0.485,0.7
-2026-09-02-charleston-battery-v-hartford-athletic,home,Charleston Battery,4-2-3-1,,2026-09-03T01:35:45Z,start,8,Emilio Ycaza,,,0.485,0.3
-2026-09-02-charleston-battery-v-hartford-athletic,home,Charleston Battery,4-2-3-1,,2026-09-03T01:35:45Z,start,99,Maalique Foster,,,0.678,0.837
-2026-09-02-charleston-battery-v-hartford-athletic,home,Charleston Battery,4-2-3-1,,2026-09-03T01:35:45Z,start,90,Miguel Berry,,,0.678,0.5
-2026-09-02-charleston-battery-v-hartford-athletic,home,Charleston Battery,4-2-3-1,,2026-09-03T01:35:45Z,start,29,Jeremy Kelly,,,0.678,0.163
-2026-09-02-charleston-battery-v-hartford-athletic,home,Charleston Battery,4-2-3-1,,2026-09-03T01:35:45Z,start,13,Wilmer Cabrera,,,0.87,0.5
-2026-09-02-charleston-battery-v-hartford-athletic,home,Charleston Battery,4-2-3-1,,2026-09-03T01:35:45Z,bench,91,Nanan Houssou,,,,
-2026-09-02-charleston-battery-v-hartford-athletic,home,Charleston Battery,4-2-3-1,,2026-09-03T01:35:45Z,bench,7,Langston Blackstock,,,,
-2026-09-02-charleston-battery-v-hartford-athletic,home,Charleston Battery,4-2-3-1,,2026-09-03T01:35:45Z,bench,10,Laurent Kissiedou,,,,
-2026-09-02-charleston-battery-v-hartford-athletic,home,Charleston Battery,4-2-3-1,,2026-09-03T01:35:45Z,bench,12,Alec Hughes,,,,
-2026-09-02-charleston-battery-v-hartford-athletic,home,Charleston Battery,4-2-3-1,,2026-09-03T01:35:45Z,bench,30,Colton Swan,,,,
-2026-09-02-charleston-battery-v-hartford-athletic,home,Charleston Battery,4-2-3-1,,2026-09-03T01:35:45Z,bench,56,Luis Zamudio,,,,
-2026-09-02-charleston-battery-v-hartford-athletic,home,Charleston Battery,4-2-3-1,,2026-09-03T01:35:45Z,bench,4,Chris Allan,,,,
-2026-09-02-charleston-battery-v-hartford-athletic,away,Hartford Athletic,3-4-1-2,,2026-09-03T01:35:45Z,start,77,Antony Siaha,,,0.1,0.5
-2026-09-02-charleston-battery-v-hartford-athletic,away,Hartford Athletic,3-4-1-2,,2026-09-03T01:35:45Z,start,15,Adrián Diz,,,0.292,0.79
-2026-09-02-charleston-battery-v-hartford-athletic,away,Hartford Athletic,3-4-1-2,,2026-09-03T01:35:45Z,start,4,Jordan Scarlett,,,0.292,0.5
-2026-09-02-charleston-battery-v-hartford-athletic,away,Hartford Athletic,3-4-1-2,,2026-09-03T01:35:45Z,start,25,Britton Fischer,,,0.292,0.21
-2026-09-02-charleston-battery-v-hartford-athletic,away,Hartford Athletic,3-4-1-2,,2026-09-03T01:35:45Z,start,2,Sebastian Anderson,,,0.485,0.875
-2026-09-02-charleston-battery-v-hartford-athletic,away,Hartford Athletic,3-4-1-2,,2026-09-03T01:35:45Z,start,6,Beverly Makangila,,,0.485,0.625
-2026-09-02-charleston-battery-v-hartford-athletic,away,Hartford Athletic,3-4-1-2,,2026-09-03T01:35:45Z,start,8,Junior Moreira,,,0.485,0.375
-2026-09-02-charleston-battery-v-hartford-athletic,away,Hartford Athletic,3-4-1-2,,2026-09-03T01:35:45Z,start,19,Emmanuel Samadia,,,0.485,0.125
-2026-09-02-charleston-battery-v-hartford-athletic,away,Hartford Athletic,3-4-1-2,,2026-09-03T01:35:45Z,start,16,Barry Coffey,barry-coffey,,0.678,0.5
-2026-09-02-charleston-battery-v-hartford-athletic,away,Hartford Athletic,3-4-1-2,,2026-09-03T01:35:45Z,start,11,Michee Ngalina,,,0.87,0.7
-2026-09-02-charleston-battery-v-hartford-athletic,away,Hartford Athletic,3-4-1-2,,2026-09-03T01:35:45Z,start,9,Augustine Williams,,,0.87,0.3
-2026-09-02-charleston-battery-v-hartford-athletic,away,Hartford Athletic,3-4-1-2,,2026-09-03T01:35:45Z,bench,22,TJ Presthus,,,,
-2026-09-02-charleston-battery-v-hartford-athletic,away,Hartford Athletic,3-4-1-2,,2026-09-03T01:35:45Z,bench,5,Baboucarr Njie,,,,
-2026-09-02-charleston-battery-v-hartford-athletic,away,Hartford Athletic,3-4-1-2,,2026-09-03T01:35:45Z,bench,7,Michael Adedokun,,,,
-2026-09-02-charleston-battery-v-hartford-athletic,away,Hartford Athletic,3-4-1-2,,2026-09-03T01:35:45Z,bench,17,Sadat Anaku,,,,
-2026-09-02-charleston-battery-v-hartford-athletic,away,Hartford Athletic,3-4-1-2,,2026-09-03T01:35:45Z,bench,3,Matthew Real,,,,
-2026-09-02-charleston-battery-v-hartford-athletic,away,Hartford Athletic,3-4-1-2,,2026-09-03T01:35:45Z,bench,1,Enzo Carvalho,,,,
-2026-09-02-charleston-battery-v-hartford-athletic,away,Hartford Athletic,3-4-1-2,,2026-09-03T01:35:45Z,bench,23,Arturo Ordóñez,,,,
-2026-09-03-gyori-eto-v-ferencvaros,home,Györi ETO,5-4-1,,2026-09-03T01:35:45Z,start,99,Samuel Petrás,,,0.1,0.5
-2026-09-03-gyori-eto-v-ferencvaros,home,Györi ETO,5-4-1,,2026-09-03T01:35:45Z,start,37,Norbert Urblík,,,0.357,0.695
-2026-09-03-gyori-eto-v-ferencvaros,home,Györi ETO,5-4-1,,2026-09-03T01:35:45Z,start,27,Leon Balogun,,,0.357,0.5
-2026-09-03-gyori-eto-v-ferencvaros,home,Györi ETO,5-4-1,,2026-09-03T01:35:45Z,start,24,Miljan Krpic,,,0.357,0.305
-2026-09-03-gyori-eto-v-ferencvaros,home,Györi ETO,5-4-1,,2026-09-03T01:35:45Z,start,53,Balint Selyem,,,0.371,0.89
-2026-09-03-gyori-eto-v-ferencvaros,home,Györi ETO,5-4-1,,2026-09-03T01:35:45Z,start,23,Daniel Stefulj,,,0.371,0.11
-2026-09-03-gyori-eto-v-ferencvaros,home,Györi ETO,5-4-1,,2026-09-03T01:35:45Z,start,34,Viktor Djukanovic,,,0.613,0.875
-2026-09-03-gyori-eto-v-ferencvaros,home,Györi ETO,5-4-1,,2026-09-03T01:35:45Z,start,7,Peter Agba,,,0.613,0.625
-2026-09-03-gyori-eto-v-ferencvaros,home,Györi ETO,5-4-1,,2026-09-03T01:35:45Z,start,10,Claudiu Bumba,,,0.613,0.375
-2026-09-03-gyori-eto-v-ferencvaros,home,Györi ETO,5-4-1,,2026-09-03T01:35:45Z,start,80,Zeljko Gavric,,,0.613,0.125
-2026-09-03-gyori-eto-v-ferencvaros,home,Györi ETO,5-4-1,,2026-09-03T01:35:45Z,start,11,Nfansu Njie,,,0.87,0.5
-2026-09-03-gyori-eto-v-ferencvaros,home,Györi ETO,5-4-1,,2026-09-03T01:35:45Z,bench,16,Balázs Megyeri,,,,
-2026-09-03-gyori-eto-v-ferencvaros,home,Györi ETO,5-4-1,,2026-09-03T01:35:45Z,bench,26,Ádám Umathum,,,,
-2026-09-03-gyori-eto-v-ferencvaros,home,Györi ETO,5-4-1,,2026-09-03T01:35:45Z,bench,20,Barnabás Bíró,,,,
-2026-09-03-gyori-eto-v-ferencvaros,home,Györi ETO,5-4-1,,2026-09-03T01:35:45Z,bench,75,Noel Csorba,,,,
-2026-09-03-gyori-eto-v-ferencvaros,home,Györi ETO,5-4-1,,2026-09-03T01:35:45Z,bench,2,Stefan Vladoiu,,,,
-2026-09-03-gyori-eto-v-ferencvaros,home,Györi ETO,5-4-1,,2026-09-03T01:35:45Z,bench,47,Ádám Décsy,,,,
-2026-09-03-gyori-eto-v-ferencvaros,home,Györi ETO,5-4-1,,2026-09-03T01:35:45Z,bench,21,Efraim Bödo,,,,
-2026-09-03-gyori-eto-v-ferencvaros,home,Györi ETO,5-4-1,,2026-09-03T01:35:45Z,bench,14,Márton Szép,,,,
-2026-09-03-gyori-eto-v-ferencvaros,home,Györi ETO,5-4-1,,2026-09-03T01:35:45Z,bench,19,Jewison Bennette,,,,
-2026-09-03-gyori-eto-v-ferencvaros,home,Györi ETO,5-4-1,,2026-09-03T01:35:45Z,bench,90,Kevin Bánáti,,,,
-2026-09-03-gyori-eto-v-ferencvaros,home,Györi ETO,5-4-1,,2026-09-03T01:35:45Z,bench,96,Marcell Huszár,,,,
-2026-09-03-gyori-eto-v-ferencvaros,home,Györi ETO,5-4-1,,2026-09-03T01:35:45Z,bench,29,Nicolae Rotaru,,,,
-2026-09-03-gyori-eto-v-ferencvaros,away,Ferencváros,4-2-3-1,,2026-09-03T01:35:45Z,start,90,Dénes Dibusz,,,0.1,0.5
-2026-09-03-gyori-eto-v-ferencvaros,away,Ferencváros,4-2-3-1,,2026-09-03T01:35:45Z,start,14,Attila Osváth,,,0.292,0.875
-2026-09-03-gyori-eto-v-ferencvaros,away,Ferencváros,4-2-3-1,,2026-09-03T01:35:45Z,start,28,Toon Raemaekers,,,0.292,0.625
-2026-09-03-gyori-eto-v-ferencvaros,away,Ferencváros,4-2-3-1,,2026-09-03T01:35:45Z,start,4,Mariano Gómez,,,0.292,0.375
-2026-09-03-gyori-eto-v-ferencvaros,away,Ferencváros,4-2-3-1,,2026-09-03T01:35:45Z,start,20,Cadu,,,0.292,0.125
-2026-09-03-gyori-eto-v-ferencvaros,away,Ferencváros,4-2-3-1,,2026-09-03T01:35:45Z,start,17,Márius Corbu,,,0.485,0.7
-2026-09-03-gyori-eto-v-ferencvaros,away,Ferencváros,4-2-3-1,,2026-09-03T01:35:45Z,start,6,Ádám Nagy,,,0.485,0.3
-2026-09-03-gyori-eto-v-ferencvaros,away,Ferencváros,4-2-3-1,,2026-09-03T01:35:45Z,start,68,Zétény Varga,,,0.678,0.837
-2026-09-03-gyori-eto-v-ferencvaros,away,Ferencváros,4-2-3-1,,2026-09-03T01:35:45Z,start,16,Kristoffer Zachariassen,,,0.678,0.5
-2026-09-03-gyori-eto-v-ferencvaros,away,Ferencváros,4-2-3-1,,2026-09-03T01:35:45Z,start,15,Daniel Arzani,,,0.678,0.163
-2026-09-03-gyori-eto-v-ferencvaros,away,Ferencváros,4-2-3-1,,2026-09-03T01:35:45Z,start,75,Lenny Joseph,,,0.87,0.5
-2026-09-03-gyori-eto-v-ferencvaros,away,Ferencváros,4-2-3-1,,2026-09-03T01:35:45Z,bench,1,Ádám Varga,,,,
-2026-09-03-gyori-eto-v-ferencvaros,away,Ferencváros,4-2-3-1,,2026-09-03T01:35:45Z,bench,33,Levente Ori,,,,
-2026-09-03-gyori-eto-v-ferencvaros,away,Ferencváros,4-2-3-1,,2026-09-03T01:35:45Z,bench,5,Nathan Zohoré,,,,
-2026-09-03-gyori-eto-v-ferencvaros,away,Ferencváros,4-2-3-1,,2026-09-03T01:35:45Z,bench,54,Olivér Nagy,,,,
-2026-09-03-gyori-eto-v-ferencvaros,away,Ferencváros,4-2-3-1,,2026-09-03T01:35:45Z,bench,47,Callum O'Dowda,callum-odowda,,,
-2026-09-03-gyori-eto-v-ferencvaros,away,Ferencváros,4-2-3-1,,2026-09-03T01:35:45Z,bench,71,Csongor Lakatos,,,,
-2026-09-03-gyori-eto-v-ferencvaros,away,Ferencváros,4-2-3-1,,2026-09-03T01:35:45Z,bench,36,Gabi Kanichowsky,,,,
-2026-09-03-gyori-eto-v-ferencvaros,away,Ferencváros,4-2-3-1,,2026-09-03T01:35:45Z,bench,10,Jonathan Levi,,,,
-2026-09-03-gyori-eto-v-ferencvaros,away,Ferencváros,4-2-3-1,,2026-09-03T01:35:45Z,bench,8,Naby Keïta,,,,
-2026-09-03-gyori-eto-v-ferencvaros,away,Ferencváros,4-2-3-1,,2026-09-03T01:35:45Z,bench,11,Bamidele Yusuf,,,,
-2026-09-03-gyori-eto-v-ferencvaros,away,Ferencváros,4-2-3-1,,2026-09-03T01:35:45Z,bench,76,Krisztián Lisztes,,,,
-2026-09-03-gyori-eto-v-ferencvaros,away,Ferencváros,4-2-3-1,,2026-09-03T01:35:45Z,bench,7,Veljko Birmancevic,,,,
-2026-09-03-hibernian-v-heart-of-midlothian,home,Hibernian,3-4-3,,2026-09-03T01:35:45Z,start,1,Raphael Sallinger,,,0.1,0.5
-2026-09-03-hibernian-v-heart-of-midlothian,home,Hibernian,3-4-3,,2026-09-03T01:35:45Z,start,6,Jason Kerr,,,0.357,0.79
-2026-09-03-hibernian-v-heart-of-midlothian,home,Hibernian,3-4-3,,2026-09-03T01:35:45Z,start,4,Grant Hanley,,,0.357,0.5
-2026-09-03-hibernian-v-heart-of-midlothian,home,Hibernian,3-4-3,,2026-09-03T01:35:45Z,start,21,Jordan Obita,,,0.357,0.21
-2026-09-03-hibernian-v-heart-of-midlothian,home,Hibernian,3-4-3,,2026-09-03T01:35:45Z,start,25,Felix Passlack,,,0.613,0.875
-2026-09-03-hibernian-v-heart-of-midlothian,home,Hibernian,3-4-3,,2026-09-03T01:35:45Z,start,8,Josh Mulligan,,,0.613,0.625
-2026-09-03-hibernian-v-heart-of-midlothian,home,Hibernian,3-4-3,,2026-09-03T01:35:45Z,start,24,Jacob Devaney,jacob-devaney,,0.613,0.375
-2026-09-03-hibernian-v-heart-of-midlothian,home,Hibernian,3-4-3,,2026-09-03T01:35:45Z,start,23,Callum Wright,,,0.613,0.125
-2026-09-03-hibernian-v-heart-of-midlothian,home,Hibernian,3-4-3,,2026-09-03T01:35:45Z,start,10,Martin Boyle,,,0.87,0.79
-2026-09-03-hibernian-v-heart-of-midlothian,home,Hibernian,3-4-3,,2026-09-03T01:35:45Z,start,9,Nathan Lowe,,,0.87,0.5
-2026-09-03-hibernian-v-heart-of-midlothian,home,Hibernian,3-4-3,,2026-09-03T01:35:45Z,start,17,Jamie McGrath,jamie-mcgrath,,0.87,0.21
-2026-09-03-hibernian-v-heart-of-midlothian,home,Hibernian,3-4-3,,2026-09-03T01:35:45Z,bench,13,Jordan Smith,,,,
-2026-09-03-hibernian-v-heart-of-midlothian,home,Hibernian,3-4-3,,2026-09-03T01:35:45Z,bench,15,Jack Iredale,,,,
-2026-09-03-hibernian-v-heart-of-midlothian,home,Hibernian,3-4-3,,2026-09-03T01:35:45Z,bench,47,Azeem Abdulai,,,,
-2026-09-03-hibernian-v-heart-of-midlothian,home,Hibernian,3-4-3,,2026-09-03T01:35:45Z,bench,11,Joe Newell,,,,
-2026-09-03-hibernian-v-heart-of-midlothian,home,Hibernian,3-4-3,,2026-09-03T01:35:45Z,bench,27,Kanayochukwu Megwa,,,,
-2026-09-03-hibernian-v-heart-of-midlothian,home,Hibernian,3-4-3,,2026-09-03T01:35:45Z,bench,14,Miguel Chaiwa,,,,
-2026-09-03-hibernian-v-heart-of-midlothian,home,Hibernian,3-4-3,,2026-09-03T01:35:45Z,bench,20,Rudi Allan Molotnikov,,,,
-2026-09-03-hibernian-v-heart-of-midlothian,home,Hibernian,3-4-3,,2026-09-03T01:35:45Z,bench,22,Ante Suto,,,,
-2026-09-03-hibernian-v-heart-of-midlothian,home,Hibernian,3-4-3,,2026-09-03T01:35:45Z,bench,18,Thibault Klidje,,,,
-2026-09-03-hibernian-v-heart-of-midlothian,away,Heart of Midlothian,4-2-3-1,,2026-09-03T01:35:45Z,start,1,Beau Reus,,,0.1,0.5
-2026-09-03-hibernian-v-heart-of-midlothian,away,Heart of Midlothian,4-2-3-1,,2026-09-03T01:35:45Z,start,23,Jordi Altena,,,0.292,0.875
-2026-09-03-hibernian-v-heart-of-midlothian,away,Heart of Midlothian,4-2-3-1,,2026-09-03T01:35:45Z,start,6,Oisin McEntee,oisin-mcentee,,0.292,0.625
-2026-09-03-hibernian-v-heart-of-midlothian,away,Heart of Midlothian,4-2-3-1,,2026-09-03T01:35:45Z,start,17,Stuart Findlay,,,0.292,0.375
-2026-09-03-hibernian-v-heart-of-midlothian,away,Heart of Midlothian,4-2-3-1,,2026-09-03T01:35:45Z,start,2,Christian Dahle Borchgrevink,,,0.292,0.125
-2026-09-03-hibernian-v-heart-of-midlothian,away,Heart of Midlothian,4-2-3-1,,2026-09-03T01:35:45Z,start,22,Tómas Magnússon,,,0.485,0.7
-2026-09-03-hibernian-v-heart-of-midlothian,away,Heart of Midlothian,4-2-3-1,,2026-09-03T01:35:45Z,start,78,Laurent Mendy,,,0.485,0.3
-2026-09-03-hibernian-v-heart-of-midlothian,away,Heart of Midlothian,4-2-3-1,,2026-09-03T01:35:45Z,start,29,Sabah Kerjota,,,0.678,0.837
-2026-09-03-hibernian-v-heart-of-midlothian,away,Heart of Midlothian,4-2-3-1,,2026-09-03T01:35:45Z,start,10,Cláudio Braga,,,0.678,0.5
-2026-09-03-hibernian-v-heart-of-midlothian,away,Heart of Midlothian,4-2-3-1,,2026-09-03T01:35:45Z,start,15,Joshua McPake,,,0.678,0.163
-2026-09-03-hibernian-v-heart-of-midlothian,away,Heart of Midlothian,4-2-3-1,,2026-09-03T01:35:45Z,start,21,James Wilson,,,0.87,0.5
-2026-09-03-hibernian-v-heart-of-midlothian,away,Heart of Midlothian,4-2-3-1,,2026-09-03T01:35:45Z,bench,30,Ryan Fulton,,,,
-2026-09-03-hibernian-v-heart-of-midlothian,away,Heart of Midlothian,4-2-3-1,,2026-09-03T01:35:45Z,bench,24,MJ Kamara,,,,
-2026-09-03-hibernian-v-heart-of-midlothian,away,Heart of Midlothian,4-2-3-1,,2026-09-03T01:35:45Z,bench,16,Blair Spittal,,,,
-2026-09-03-hibernian-v-heart-of-midlothian,away,Heart of Midlothian,4-2-3-1,,2026-09-03T01:35:45Z,bench,19,Sabri Guendouz,,,,
-2026-09-03-hibernian-v-heart-of-midlothian,away,Heart of Midlothian,4-2-3-1,,2026-09-03T01:35:45Z,bench,77,Amadou Ba-Sy,,,,
-2026-09-03-hibernian-v-heart-of-midlothian,away,Heart of Midlothian,4-2-3-1,,2026-09-03T01:35:45Z,bench,7,Calvin Miller,,,,
-2026-09-03-hibernian-v-heart-of-midlothian,away,Heart of Midlothian,4-2-3-1,,2026-09-03T01:35:45Z,bench,9,JJ Williams,,,,
-2026-09-03-hibernian-v-heart-of-midlothian,away,Heart of Midlothian,4-2-3-1,,2026-09-03T01:35:45Z,bench,11,Pierre Landry Kaboré,,,,
-2026-09-03-hibernian-v-heart-of-midlothian,away,Heart of Midlothian,4-2-3-1,,2026-09-03T01:35:45Z,bench,74,Rogers Mato,,,,
+2026-09-03-gyori-eto-v-ferencvaros,home,Györi ETO,5-4-1,,2026-09-03T05:04:09Z,start,99,Samuel Petrás,,,0.1,0.5
+2026-09-03-gyori-eto-v-ferencvaros,home,Györi ETO,5-4-1,,2026-09-03T05:04:09Z,start,37,Norbert Urblík,,,0.357,0.695
+2026-09-03-gyori-eto-v-ferencvaros,home,Györi ETO,5-4-1,,2026-09-03T05:04:09Z,start,27,Leon Balogun,,,0.357,0.5
+2026-09-03-gyori-eto-v-ferencvaros,home,Györi ETO,5-4-1,,2026-09-03T05:04:09Z,start,24,Miljan Krpic,,,0.357,0.305
+2026-09-03-gyori-eto-v-ferencvaros,home,Györi ETO,5-4-1,,2026-09-03T05:04:09Z,start,53,Balint Selyem,,,0.371,0.89
+2026-09-03-gyori-eto-v-ferencvaros,home,Györi ETO,5-4-1,,2026-09-03T05:04:09Z,start,23,Daniel Stefulj,,,0.371,0.11
+2026-09-03-gyori-eto-v-ferencvaros,home,Györi ETO,5-4-1,,2026-09-03T05:04:09Z,start,34,Viktor Djukanovic,,,0.613,0.875
+2026-09-03-gyori-eto-v-ferencvaros,home,Györi ETO,5-4-1,,2026-09-03T05:04:09Z,start,7,Peter Agba,,,0.613,0.625
+2026-09-03-gyori-eto-v-ferencvaros,home,Györi ETO,5-4-1,,2026-09-03T05:04:09Z,start,10,Claudiu Bumba,,,0.613,0.375
+2026-09-03-gyori-eto-v-ferencvaros,home,Györi ETO,5-4-1,,2026-09-03T05:04:09Z,start,80,Zeljko Gavric,,,0.613,0.125
+2026-09-03-gyori-eto-v-ferencvaros,home,Györi ETO,5-4-1,,2026-09-03T05:04:09Z,start,11,Nfansu Njie,,,0.87,0.5
+2026-09-03-gyori-eto-v-ferencvaros,home,Györi ETO,5-4-1,,2026-09-03T05:04:09Z,bench,16,Balázs Megyeri,,,,
+2026-09-03-gyori-eto-v-ferencvaros,home,Györi ETO,5-4-1,,2026-09-03T05:04:09Z,bench,26,Ádám Umathum,,,,
+2026-09-03-gyori-eto-v-ferencvaros,home,Györi ETO,5-4-1,,2026-09-03T05:04:09Z,bench,20,Barnabás Bíró,,,,
+2026-09-03-gyori-eto-v-ferencvaros,home,Györi ETO,5-4-1,,2026-09-03T05:04:09Z,bench,75,Noel Csorba,,,,
+2026-09-03-gyori-eto-v-ferencvaros,home,Györi ETO,5-4-1,,2026-09-03T05:04:09Z,bench,2,Stefan Vladoiu,,,,
+2026-09-03-gyori-eto-v-ferencvaros,home,Györi ETO,5-4-1,,2026-09-03T05:04:09Z,bench,47,Ádám Décsy,,,,
+2026-09-03-gyori-eto-v-ferencvaros,home,Györi ETO,5-4-1,,2026-09-03T05:04:09Z,bench,21,Efraim Bödo,,,,
+2026-09-03-gyori-eto-v-ferencvaros,home,Györi ETO,5-4-1,,2026-09-03T05:04:09Z,bench,14,Márton Szép,,,,
+2026-09-03-gyori-eto-v-ferencvaros,home,Györi ETO,5-4-1,,2026-09-03T05:04:09Z,bench,19,Jewison Bennette,,,,
+2026-09-03-gyori-eto-v-ferencvaros,home,Györi ETO,5-4-1,,2026-09-03T05:04:09Z,bench,90,Kevin Bánáti,,,,
+2026-09-03-gyori-eto-v-ferencvaros,home,Györi ETO,5-4-1,,2026-09-03T05:04:09Z,bench,96,Marcell Huszár,,,,
+2026-09-03-gyori-eto-v-ferencvaros,home,Györi ETO,5-4-1,,2026-09-03T05:04:09Z,bench,29,Nicolae Rotaru,,,,
+2026-09-03-gyori-eto-v-ferencvaros,away,Ferencváros,4-2-3-1,,2026-09-03T05:04:09Z,start,90,Dénes Dibusz,,,0.1,0.5
+2026-09-03-gyori-eto-v-ferencvaros,away,Ferencváros,4-2-3-1,,2026-09-03T05:04:09Z,start,14,Attila Osváth,,,0.292,0.875
+2026-09-03-gyori-eto-v-ferencvaros,away,Ferencváros,4-2-3-1,,2026-09-03T05:04:09Z,start,28,Toon Raemaekers,,,0.292,0.625
+2026-09-03-gyori-eto-v-ferencvaros,away,Ferencváros,4-2-3-1,,2026-09-03T05:04:09Z,start,4,Mariano Gómez,,,0.292,0.375
+2026-09-03-gyori-eto-v-ferencvaros,away,Ferencváros,4-2-3-1,,2026-09-03T05:04:09Z,start,20,Cadu,,,0.292,0.125
+2026-09-03-gyori-eto-v-ferencvaros,away,Ferencváros,4-2-3-1,,2026-09-03T05:04:09Z,start,17,Márius Corbu,,,0.485,0.7
+2026-09-03-gyori-eto-v-ferencvaros,away,Ferencváros,4-2-3-1,,2026-09-03T05:04:09Z,start,6,Ádám Nagy,,,0.485,0.3
+2026-09-03-gyori-eto-v-ferencvaros,away,Ferencváros,4-2-3-1,,2026-09-03T05:04:09Z,start,68,Zétény Varga,,,0.678,0.837
+2026-09-03-gyori-eto-v-ferencvaros,away,Ferencváros,4-2-3-1,,2026-09-03T05:04:09Z,start,16,Kristoffer Zachariassen,,,0.678,0.5
+2026-09-03-gyori-eto-v-ferencvaros,away,Ferencváros,4-2-3-1,,2026-09-03T05:04:09Z,start,15,Daniel Arzani,,,0.678,0.163
+2026-09-03-gyori-eto-v-ferencvaros,away,Ferencváros,4-2-3-1,,2026-09-03T05:04:09Z,start,75,Lenny Joseph,,,0.87,0.5
+2026-09-03-gyori-eto-v-ferencvaros,away,Ferencváros,4-2-3-1,,2026-09-03T05:04:09Z,bench,1,Ádám Varga,,,,
+2026-09-03-gyori-eto-v-ferencvaros,away,Ferencváros,4-2-3-1,,2026-09-03T05:04:09Z,bench,33,Levente Ori,,,,
+2026-09-03-gyori-eto-v-ferencvaros,away,Ferencváros,4-2-3-1,,2026-09-03T05:04:09Z,bench,5,Nathan Zohoré,,,,
+2026-09-03-gyori-eto-v-ferencvaros,away,Ferencváros,4-2-3-1,,2026-09-03T05:04:09Z,bench,54,Olivér Nagy,,,,
+2026-09-03-gyori-eto-v-ferencvaros,away,Ferencváros,4-2-3-1,,2026-09-03T05:04:09Z,bench,47,Callum O'Dowda,callum-odowda,,,
+2026-09-03-gyori-eto-v-ferencvaros,away,Ferencváros,4-2-3-1,,2026-09-03T05:04:09Z,bench,71,Csongor Lakatos,,,,
+2026-09-03-gyori-eto-v-ferencvaros,away,Ferencváros,4-2-3-1,,2026-09-03T05:04:09Z,bench,36,Gabi Kanichowsky,,,,
+2026-09-03-gyori-eto-v-ferencvaros,away,Ferencváros,4-2-3-1,,2026-09-03T05:04:09Z,bench,10,Jonathan Levi,,,,
+2026-09-03-gyori-eto-v-ferencvaros,away,Ferencváros,4-2-3-1,,2026-09-03T05:04:09Z,bench,8,Naby Keïta,,,,
+2026-09-03-gyori-eto-v-ferencvaros,away,Ferencváros,4-2-3-1,,2026-09-03T05:04:09Z,bench,11,Bamidele Yusuf,,,,
+2026-09-03-gyori-eto-v-ferencvaros,away,Ferencváros,4-2-3-1,,2026-09-03T05:04:09Z,bench,76,Krisztián Lisztes,,,,
+2026-09-03-gyori-eto-v-ferencvaros,away,Ferencváros,4-2-3-1,,2026-09-03T05:04:09Z,bench,7,Veljko Birmancevic,,,,
+2026-09-03-hibernian-v-heart-of-midlothian,home,Hibernian,3-4-3,,2026-09-03T05:04:09Z,start,1,Raphael Sallinger,,,0.1,0.5
+2026-09-03-hibernian-v-heart-of-midlothian,home,Hibernian,3-4-3,,2026-09-03T05:04:09Z,start,6,Jason Kerr,,,0.357,0.79
+2026-09-03-hibernian-v-heart-of-midlothian,home,Hibernian,3-4-3,,2026-09-03T05:04:09Z,start,4,Grant Hanley,,,0.357,0.5
+2026-09-03-hibernian-v-heart-of-midlothian,home,Hibernian,3-4-3,,2026-09-03T05:04:09Z,start,21,Jordan Obita,,,0.357,0.21
+2026-09-03-hibernian-v-heart-of-midlothian,home,Hibernian,3-4-3,,2026-09-03T05:04:09Z,start,25,Felix Passlack,,,0.613,0.875
+2026-09-03-hibernian-v-heart-of-midlothian,home,Hibernian,3-4-3,,2026-09-03T05:04:09Z,start,8,Josh Mulligan,,,0.613,0.625
+2026-09-03-hibernian-v-heart-of-midlothian,home,Hibernian,3-4-3,,2026-09-03T05:04:09Z,start,24,Jacob Devaney,jacob-devaney,,0.613,0.375
+2026-09-03-hibernian-v-heart-of-midlothian,home,Hibernian,3-4-3,,2026-09-03T05:04:09Z,start,23,Callum Wright,,,0.613,0.125
+2026-09-03-hibernian-v-heart-of-midlothian,home,Hibernian,3-4-3,,2026-09-03T05:04:09Z,start,10,Martin Boyle,,,0.87,0.79
+2026-09-03-hibernian-v-heart-of-midlothian,home,Hibernian,3-4-3,,2026-09-03T05:04:09Z,start,9,Nathan Lowe,,,0.87,0.5
+2026-09-03-hibernian-v-heart-of-midlothian,home,Hibernian,3-4-3,,2026-09-03T05:04:09Z,start,17,Jamie McGrath,jamie-mcgrath,,0.87,0.21
+2026-09-03-hibernian-v-heart-of-midlothian,home,Hibernian,3-4-3,,2026-09-03T05:04:09Z,bench,13,Jordan Smith,,,,
+2026-09-03-hibernian-v-heart-of-midlothian,home,Hibernian,3-4-3,,2026-09-03T05:04:09Z,bench,15,Jack Iredale,,,,
+2026-09-03-hibernian-v-heart-of-midlothian,home,Hibernian,3-4-3,,2026-09-03T05:04:09Z,bench,47,Azeem Abdulai,,,,
+2026-09-03-hibernian-v-heart-of-midlothian,home,Hibernian,3-4-3,,2026-09-03T05:04:09Z,bench,11,Joe Newell,,,,
+2026-09-03-hibernian-v-heart-of-midlothian,home,Hibernian,3-4-3,,2026-09-03T05:04:09Z,bench,27,Kanayochukwu Megwa,,,,
+2026-09-03-hibernian-v-heart-of-midlothian,home,Hibernian,3-4-3,,2026-09-03T05:04:09Z,bench,14,Miguel Chaiwa,,,,
+2026-09-03-hibernian-v-heart-of-midlothian,home,Hibernian,3-4-3,,2026-09-03T05:04:09Z,bench,20,Rudi Allan Molotnikov,,,,
+2026-09-03-hibernian-v-heart-of-midlothian,home,Hibernian,3-4-3,,2026-09-03T05:04:09Z,bench,22,Ante Suto,,,,
+2026-09-03-hibernian-v-heart-of-midlothian,home,Hibernian,3-4-3,,2026-09-03T05:04:09Z,bench,18,Thibault Klidje,,,,
+2026-09-03-hibernian-v-heart-of-midlothian,away,Heart of Midlothian,4-2-3-1,,2026-09-03T05:04:09Z,start,1,Beau Reus,,,0.1,0.5
+2026-09-03-hibernian-v-heart-of-midlothian,away,Heart of Midlothian,4-2-3-1,,2026-09-03T05:04:09Z,start,23,Jordi Altena,,,0.292,0.875
+2026-09-03-hibernian-v-heart-of-midlothian,away,Heart of Midlothian,4-2-3-1,,2026-09-03T05:04:09Z,start,6,Oisin McEntee,oisin-mcentee,,0.292,0.625
+2026-09-03-hibernian-v-heart-of-midlothian,away,Heart of Midlothian,4-2-3-1,,2026-09-03T05:04:09Z,start,17,Stuart Findlay,,,0.292,0.375
+2026-09-03-hibernian-v-heart-of-midlothian,away,Heart of Midlothian,4-2-3-1,,2026-09-03T05:04:09Z,start,2,Christian Dahle Borchgrevink,,,0.292,0.125
+2026-09-03-hibernian-v-heart-of-midlothian,away,Heart of Midlothian,4-2-3-1,,2026-09-03T05:04:09Z,start,22,Tómas Magnússon,,,0.485,0.7
+2026-09-03-hibernian-v-heart-of-midlothian,away,Heart of Midlothian,4-2-3-1,,2026-09-03T05:04:09Z,start,78,Laurent Mendy,,,0.485,0.3
+2026-09-03-hibernian-v-heart-of-midlothian,away,Heart of Midlothian,4-2-3-1,,2026-09-03T05:04:09Z,start,29,Sabah Kerjota,,,0.678,0.837
+2026-09-03-hibernian-v-heart-of-midlothian,away,Heart of Midlothian,4-2-3-1,,2026-09-03T05:04:09Z,start,10,Cláudio Braga,,,0.678,0.5
+2026-09-03-hibernian-v-heart-of-midlothian,away,Heart of Midlothian,4-2-3-1,,2026-09-03T05:04:09Z,start,15,Joshua McPake,,,0.678,0.163
+2026-09-03-hibernian-v-heart-of-midlothian,away,Heart of Midlothian,4-2-3-1,,2026-09-03T05:04:09Z,start,21,James Wilson,,,0.87,0.5
+2026-09-03-hibernian-v-heart-of-midlothian,away,Heart of Midlothian,4-2-3-1,,2026-09-03T05:04:09Z,bench,30,Ryan Fulton,,,,
+2026-09-03-hibernian-v-heart-of-midlothian,away,Heart of Midlothian,4-2-3-1,,2026-09-03T05:04:09Z,bench,24,MJ Kamara,,,,
+2026-09-03-hibernian-v-heart-of-midlothian,away,Heart of Midlothian,4-2-3-1,,2026-09-03T05:04:09Z,bench,16,Blair Spittal,,,,
+2026-09-03-hibernian-v-heart-of-midlothian,away,Heart of Midlothian,4-2-3-1,,2026-09-03T05:04:09Z,bench,19,Sabri Guendouz,,,,
+2026-09-03-hibernian-v-heart-of-midlothian,away,Heart of Midlothian,4-2-3-1,,2026-09-03T05:04:09Z,bench,77,Amadou Ba-Sy,,,,
+2026-09-03-hibernian-v-heart-of-midlothian,away,Heart of Midlothian,4-2-3-1,,2026-09-03T05:04:09Z,bench,7,Calvin Miller,,,,
+2026-09-03-hibernian-v-heart-of-midlothian,away,Heart of Midlothian,4-2-3-1,,2026-09-03T05:04:09Z,bench,9,JJ Williams,,,,
+2026-09-03-hibernian-v-heart-of-midlothian,away,Heart of Midlothian,4-2-3-1,,2026-09-03T05:04:09Z,bench,11,Pierre Landry Kaboré,,,,
+2026-09-03-hibernian-v-heart-of-midlothian,away,Heart of Midlothian,4-2-3-1,,2026-09-03T05:04:09Z,bench,74,Rogers Mato,,,,
