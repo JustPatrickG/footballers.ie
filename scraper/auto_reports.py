@@ -21,6 +21,7 @@ import csv
 import datetime as dt
 import os
 import re
+import sys
 import unicodedata
 
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -80,16 +81,61 @@ def comp_weight(comp):
     return COMP_DEFAULT
 
 
+# The site's own tags are editorial sections, not event types - ABROAD,
+# LEAGUE OF IRELAND, TRANSFER. A generated report with no tag renders an
+# empty pill and never appears under any filter on the news page, so it
+# takes the same two sections everything else uses.
+LOI_KEYS = ("premier division", "first division", "league of ireland",
+            "fai cup", "presidents cup", "loi cup", "munster senior cup")
+
+
+def section_tag(comp):
+    n = norm(comp)
+    return "LEAGUE OF IRELAND" if any(k in n for k in LOI_KEYS) else "ABROAD"
+
+
 def youth_side(name):
     return bool(re.search(r"\bu-?\d{2}\b|\byouth\b|\bacademy\b",
                           str(name or ""), re.I))
+
+
+def retag():
+    """Fill the section tag on reports written before they had one."""
+    path = os.path.join(ROOT, "data/api/articles.csv")
+    existing = rows("data/api/articles.csv")
+    if not existing:
+        print("no articles on file")
+        return 0
+    n = 0
+    for r in existing:
+        if not (r.get("slug") or "").startswith("report-"):
+            continue
+        if (r.get("tag") or "").strip():
+            continue
+        m = re.match(r"([^:]+):", r.get("standfirst") or "")
+        r["tag"] = section_tag(m.group(1) if m else "")
+        n += 1
+    if not n:
+        print("every report already has a tag")
+        return 0
+    with open(path, "w", newline="", encoding="utf-8") as f:
+        w = csv.DictWriter(f, fieldnames=ARTICLE_COLUMNS, extrasaction="ignore")
+        w.writeheader()
+        for r in existing:
+            w.writerow({c: r.get(c, "") for c in ARTICLE_COLUMNS})
+    print(f"tagged {n} report(s)")
+    return 0
 
 
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--days", type=int, default=3)
     ap.add_argument("--dry", action="store_true")
+    ap.add_argument("--retag", action="store_true",
+                    help="fill the section tag on reports that have none, then exit")
     args = ap.parse_args()
+    if args.retag:
+        return retag()
     today = dt.date.today()
     lo = (today - dt.timedelta(days=args.days)).isoformat()
 
@@ -235,7 +281,7 @@ def main():
         expires = (dt.datetime.fromisoformat(ko)
                    + dt.timedelta(hours=60)).strftime("%Y-%m-%dT%H:%M")
         out.append({
-            "slug": slug, "date": g["date"], "tag": "",
+            "slug": slug, "date": g["date"], "tag": section_tag(g["comp"]),
             "headline": headline, "standfirst": standfirst, "body": body,
             "author": AUTHOR, "image": "", "player_slug": star["slug"],
             "expires": expires, "use_player_photo": "yes",
@@ -262,4 +308,4 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    sys.exit(main() or 0)
