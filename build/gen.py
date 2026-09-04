@@ -1635,7 +1635,15 @@ def build_index():
     def _is_now(a): return (a.get("tag") or "").strip().upper() in ("NOW","LIVE","BREAKING")
 
     pool = [a for a in ARTICLES if _unexpired(a)]
-    pool.sort(key=lambda a: (0 if _is_now(a) else 1))     # stable: NOW first, then newest
+    # Two stable passes. ARTICLES arrives as every hand-written article and
+    # then every generated one, so without the date pass the carousel could
+    # never reach a generated story while five manual ones existed - however
+    # old they were. Sorting by date first, NOW second, means: pinned stories
+    # lead, then the newest day. Ties keep the order they came in, so within
+    # one day a hand-written article still leads the generated ones and the
+    # admin's drag-to-reorder still decides between hand-written articles.
+    pool.sort(key=lambda a: (a.get("date") or ""), reverse=True)
+    pool.sort(key=lambda a: (0 if _is_now(a) else 1))
     HEAD = [(a.get("tag",""), a.get("headline",""), a.get("standfirst",""), art_slug(a), _is_now(a), partner_of(a))
             for a in pool[:max(1, _int(setting("carousel_count", "5"), 5))]] \
         or [(t,h,s,sl,False,None) for (t,h,s,sl) in NEWS]

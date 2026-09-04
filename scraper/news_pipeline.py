@@ -540,6 +540,16 @@ def story_key(row):
     return (who, (row.get("date") or "")[:10], tag)
 
 
+def person_day(row):
+    """A looser key, used only against hand-written articles. Their tags are
+       editorial sections - ABROAD, TRANSFER - not event types, so they will
+       never line up with the generated RESULT/NEWS ones. If the desk has
+       published anything about this player today, that is the story; a
+       generated second take on the same man on the same day adds nothing."""
+    who = (row.get("player_slug") or "").strip().lower()
+    return (who, (row.get("date") or "")[:10]) if who else None
+
+
 def richness(row):
     """Which telling of a story to keep. The longer body carries more of the
        facts; a picture breaks the tie. A generated match report loses to a
@@ -558,6 +568,20 @@ def read_existing():
         return [r for r in csv.DictReader(f) if r.get("slug")]
 
 
+MANUAL_CSV = ROOT / "data" / "manual" / "articles.csv"
+
+
+def read_manual():
+    """Hand-written articles. Read only, never written back - but they count
+       when deciding whether a story is already told. If the desk has written
+       the Parrott goal up itself, generating a second version of it is worse
+       than useless."""
+    if not MANUAL_CSV.exists():
+        return []
+    with open(MANUAL_CSV, newline="", encoding="utf-8-sig") as f:
+        return [r for r in csv.DictReader(f) if r.get("slug")]
+
+
 def write_rows(rows):
     OUT_CSV.parent.mkdir(parents=True, exist_ok=True)
     tmp = OUT_CSV.with_suffix(".tmp")
@@ -573,6 +597,14 @@ def dedupe_existing():
        the same story, keep the richest and drop the rest. Same rule the live
        pipeline now applies as it publishes, applied backwards."""
     rows = read_existing()
+    started_with = len(rows)
+    hand = {person_day(r) for r in read_manual() if person_day(r)}
+    if hand:
+        gone = [r for r in rows if person_day(r) in hand]
+        for r in gone:
+            print(f"  dropping: {r['headline']}")
+            print(f"       for: the hand-written article on the same story")
+        rows = [r for r in rows if person_day(r) not in hand]
     best = {}
     for r in rows:
         k = story_key(r)
@@ -587,14 +619,15 @@ def dedupe_existing():
             keep.append(r)
         else:
             dropped.append((r, best[k]))
-    if not dropped:
+    if not dropped and len(keep) == started_with:
         print("no duplicate stories - nothing to do")
         return 0
     for r, winner in dropped:
         print(f"  dropping: {r['headline']}")
         print(f"       for: {winner['headline']}")
     write_rows(keep)
-    print(f"{len(rows)} articles -> {len(keep)} ({len(dropped)} folded away)")
+    print(f"{started_with} articles -> {len(keep)} "
+          f"({started_with - len(keep)} folded away)")
     return 0
 
 
@@ -631,6 +664,7 @@ def main():
 
     seen = load_seen()
     existing = read_existing()
+    manual = read_manual()
     have_slugs = {r["slug"] for r in existing}
     fresh, drafts, published, replaced, merged = [], [], 0, 0, 0
 
@@ -686,8 +720,19 @@ def main():
         # Already covered? Keep the better telling, not both. This is what
         # stops one goal becoming three articles and filling the carousel.
         key = story_key(row)
-        twin = next((r for r in existing if story_key(r) == key), None) if key else None
+        pd = person_day(row)
+        twin = next((r for r in manual if pd and person_day(r) == pd), None)
+        if twin is None and key:
+            twin = next((r for r in existing if story_key(r) == key), None)
         if twin:
+            if twin in manual:
+                # A hand-written article always wins. Never replace one, never
+                # sit a generated version beside it.
+                merged += 1
+                log_skip(k, f"already written by hand as {twin['slug']}")
+                print(f"  written by hand already, skipped: {row['headline']}")
+                fresh.append(k)
+                continue
             if richness(row) > richness(twin):
                 existing[existing.index(twin)] = row
                 have_slugs.add(slug)
