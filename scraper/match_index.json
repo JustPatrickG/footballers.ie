@@ -1153,6 +1153,20 @@
   ]
  },
  {
+  "fotmob_id": "6145903",
+  "url": "/matches/ifk-mariehamn-vs-sjk/6jls4rk#6145903",
+  "kickoff": "2026-09-18T15:00:00Z",
+  "comp": "Veikkausliiga Relegation Group",
+  "home": "SJK",
+  "away": "IFK Mariehamn",
+  "home_id": "162162",
+  "away_id": "6634",
+  "slugs": [
+   "aaron-okpolokpo",
+   "josh-okpolokpo"
+  ]
+ },
+ {
   "fotmob_id": "6022235",
   "url": "/matches/aston-villa-u18-vs-brentford-u18/1vfl2xvvq#6022235",
   "kickoff": "2026-09-05T11:00:00Z",
@@ -2376,6 +2390,19 @@
   "home": "Hertha BSC",
   "away": "Magdeburg",
   "home_id": "8177",
+  "away_id": "8188",
+  "slugs": [
+   "anselmo-garcia-macnulty"
+  ]
+ },
+ {
+  "fotmob_id": "5881674",
+  "url": "/matches/magdeburg-vs-greuther-furth/29hx92#5881674",
+  "kickoff": "2026-09-18T16:30:00Z",
+  "comp": "2. Bundesliga",
+  "home": "Greuther F\u00fcrth",
+  "away": "Magdeburg",
+  "home_id": "8357",
   "away_id": "8188",
   "slugs": [
    "anselmo-garcia-macnulty"
@@ -4963,6 +4990,20 @@
   ]
  },
  {
+  "fotmob_id": "6145873",
+  "url": "/matches/if-gnistan-vs-hjk/18h6g6#6145873",
+  "kickoff": "2026-09-18T16:00:00Z",
+  "comp": "Veikkausliiga Championship Group",
+  "home": "IF Gnistan",
+  "away": "HJK",
+  "home_id": "2361",
+  "away_id": "9861",
+  "slugs": [
+   "david-eze",
+   "david-ezeh"
+  ]
+ },
+ {
   "fotmob_id": "5837152",
   "url": "/matches/huddersfield-town-vs-mansfield-town/36j8tn#5837152",
   "kickoff": "2026-09-12T14:00:00Z",
@@ -7097,6 +7138,19 @@
   ]
  },
  {
+  "fotmob_id": "5874976",
+  "url": "/matches/fc-liefering-vs-floridsdorfer-ac/uwuod#5874976",
+  "kickoff": "2026-09-18T16:30:00Z",
+  "comp": "2. Liga",
+  "home": "Floridsdorfer AC",
+  "away": "FC Liefering",
+  "home_id": "8274",
+  "away_id": "1915",
+  "slugs": [
+   "josh-odwyer"
+  ]
+ },
+ {
   "fotmob_id": "5907020",
   "url": "/matches/marine-vs-radcliffe/19bnlz9r#5907020",
   "kickoff": "2026-08-29T14:00:00Z",
@@ -7324,19 +7378,6 @@
   ]
  },
  {
-  "fotmob_id": "5911510",
-  "url": "/matches/ansbach-vs-tsv-aubstadt/qxml6kg#5911510",
-  "kickoff": "2026-09-04T17:00:00Z",
-  "comp": "Regionalliga Bayern",
-  "home": "TSV Aubstadt",
-  "away": "Ansbach",
-  "home_id": "340719",
-  "away_id": "1711",
-  "slugs": [
-   "kyle-degelman"
-  ]
- },
- {
   "fotmob_id": "5911521",
   "url": "/matches/unterhaching-vs-tsv-aubstadt/s0dawi5#5911521",
   "kickoff": "2026-09-11T17:00:00Z",
@@ -7358,6 +7399,19 @@
   "away": "TSV Aubstadt",
   "home_id": "7792",
   "away_id": "340719",
+  "slugs": [
+   "kyle-degelman"
+  ]
+ },
+ {
+  "fotmob_id": "5911539",
+  "url": "/matches/bayern-munchen-ii-vs-tsv-aubstadt/rz35tqk#5911539",
+  "kickoff": "2026-09-18T17:00:00Z",
+  "comp": "Regionalliga Bayern",
+  "home": "TSV Aubstadt",
+  "away": "Bayern M\u00fcnchen II",
+  "home_id": "340719",
+  "away_id": "8264",
   "slugs": [
    "kyle-degelman"
   ]
@@ -8864,6 +8918,19 @@
   "away_id": "2205",
   "slugs": [
    "billy-vance"
+  ]
+ },
+ {
+  "fotmob_id": "5911510",
+  "url": "/matches/ansbach-vs-tsv-aubstadt/qxml6kg#5911510",
+  "kickoff": "2026-09-04T17:00:00Z",
+  "comp": "Regionalliga Bayern",
+  "home": "TSV Aubstadt",
+  "away": "Ansbach",
+  "home_id": "340719",
+  "away_id": "1711",
+  "slugs": [
+   "kyle-degelman"
   ]
  },
  {
