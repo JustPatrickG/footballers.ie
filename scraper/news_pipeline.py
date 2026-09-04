@@ -31,7 +31,18 @@ import time
 import unicodedata
 from pathlib import Path
 
-import requests
+# Imported lazily by _requests() below. The offline paths - --dedupe above
+# all - do real work with no network at all, and refusing to run them on a
+# machine without requests installed helps nobody.
+
+def _requests():
+    """requests, or a clear message about why this particular run needs it."""
+    try:
+        import requests
+    except ImportError:
+        raise SystemExit("this step needs the requests package: pip3 install requests")
+    return requests
+
 
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parent
@@ -289,7 +300,7 @@ def extract(text, retry_note="", temperature=0):
 
     for attempt in (1, 2):
         try:
-            r = requests.post(url, headers=headers, json=payload, timeout=60)
+            r = _requests().post(url, headers=headers, json=payload, timeout=60)
             if r.status_code == 429:
                 # rate limited: wait once, then give up and leave it unseen
                 print("    rate limited, waiting")
@@ -457,7 +468,7 @@ def fetch_image(urls, slug):
        is the article slug, never the post id."""
     for u in urls[:3]:
         try:
-            r = requests.get(u, timeout=30, headers={"User-Agent": UA},
+            r = _requests().get(u, timeout=30, headers={"User-Agent": UA},
                              stream=True)
             r.raise_for_status()
             ctype = r.headers.get("content-type", "")
