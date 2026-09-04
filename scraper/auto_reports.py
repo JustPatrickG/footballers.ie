@@ -95,8 +95,20 @@ def main():
 
     names = {r["slug"]: r.get("name", "") for r in rows("scraper/players_list.csv")}
     pmeta = {r["slug"]: r for r in rows("data/api/players.csv")}
-    have = {(r.get("slug") or "").strip().lower()
-            for r in rows("data/manual/articles.csv") + rows("data/api/articles.csv")}
+    _arts = rows("data/manual/articles.csv") + rows("data/api/articles.csv")
+    have = {(r.get("slug") or "").strip().lower() for r in _arts}
+
+    # A written-up post about the same player on the same day already tells
+    # this story, with a picture and a human's judgement that it mattered.
+    # Adding the generated version underneath it just says the same thing
+    # twice on the homepage. Only result-shaped news counts - a transfer
+    # story about a player should not stop a report on the game he played.
+    RESULT_TAGS = {"RESULT", "GOAL", "MATCH", "REPORT"}
+    covered = {((r.get("player_slug") or "").strip().lower(), (r.get("date") or "")[:10])
+               for r in _arts
+               if not (r.get("slug") or "").startswith("report-")
+               and (r.get("tag") or "").strip().upper() in RESULT_TAGS
+               and (r.get("player_slug") or "").strip()}
 
     # ---- qualifying performances, grouped per (date, match) --------------
     games = {}
@@ -215,6 +227,9 @@ def main():
                   + min(star["caps"], 50))
         slug = f"report-{g['date']}-{slugify(club)}-v-{slugify(opp)}"
         if slug.lower() in have:
+            continue
+        if any((p["slug"], g["date"]) in covered for p in ps):
+            print(f"  skipping {slug} - already written up as news")
             continue
         ko = f"{g['date']}T12:00"
         expires = (dt.datetime.fromisoformat(ko)

@@ -506,6 +506,40 @@ def build_row(d, post, slug):
     }
 
 
+# --------------------------------------------------------------- one story
+# Three posts about one goal are three posts. They are not three stories, and
+# publishing them as three buries everything else on the homepage.
+
+# Tags that all describe the same kind of event: something happened in a match.
+# A match report written by auto_reports.py carries no tag at all, so it lands
+# in this bucket too and competes with the news write-up of the same goal.
+RESULT_TAGS = {"RESULT", "GOAL", "MATCH", "REPORT", ""}
+
+
+def story_key(row):
+    """Same player, same day, same kind of event = same story. Returns None
+       when there is no player to match on, which lets the article through
+       rather than guessing."""
+    who = (row.get("player_slug") or "").strip().lower()
+    if not who:
+        return None
+    tag = (row.get("tag") or "").strip().upper()
+    if (row.get("slug") or "").startswith("report-") or tag in RESULT_TAGS:
+        tag = "RESULT"
+    return (who, (row.get("date") or "")[:10], tag)
+
+
+def richness(row):
+    """Which telling of a story to keep. The longer body carries more of the
+       facts; a picture breaks the tie. A generated match report loses to a
+       written-up post of the same length, because the post had a human
+       deciding it was worth posting."""
+    body = (row.get("body") or "")
+    return (len(body),
+            1 if (row.get("image") or "").strip() else 0,
+            0 if (row.get("slug") or "").startswith("report-") else 1)
+
+
 def read_existing():
     if not OUT_CSV.exists():
         return []
@@ -523,14 +557,53 @@ def write_rows(rows):
     os.replace(tmp, OUT_CSV)
 
 
+def dedupe_existing():
+    """One-off tidy of articles already published: where several articles tell
+       the same story, keep the richest and drop the rest. Same rule the live
+       pipeline now applies as it publishes, applied backwards."""
+    rows = read_existing()
+    best = {}
+    for r in rows:
+        k = story_key(r)
+        if k is None:
+            continue
+        if k not in best or richness(r) > richness(best[k]):
+            best[k] = r
+    keep, dropped = [], []
+    for r in rows:
+        k = story_key(r)
+        if k is None or best[k] is r:
+            keep.append(r)
+        else:
+            dropped.append((r, best[k]))
+    if not dropped:
+        print("no duplicate stories - nothing to do")
+        return 0
+    for r, winner in dropped:
+        print(f"  dropping: {r['headline']}")
+        print(f"       for: {winner['headline']}")
+    write_rows(keep)
+    print(f"{len(rows)} articles -> {len(keep)} ({len(dropped)} folded away)")
+    return 0
+
+
 # ----------------------------------------------------------------------- main
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--posts", required=True,
+    ap.add_argument("--posts",
                     help="JSON file: a list of posts, or {items:[...]}")
+    ap.add_argument("--dedupe", action="store_true",
+                    help="fold existing duplicate tellings of one story into "
+                         "the best one and exit; fetches nothing")
     ap.add_argument("--dry", action="store_true",
                     help="write drafts and publish nothing")
     args = ap.parse_args()
+
+    if args.dedupe:
+        return dedupe_existing()
+    if not args.posts:
+        print("nothing to do - pass --posts or --dedupe")
+        return 0
 
     try:
         raw = json.loads(Path(args.posts).read_text())
@@ -548,7 +621,7 @@ def main():
     seen = load_seen()
     existing = read_existing()
     have_slugs = {r["slug"] for r in existing}
-    fresh, drafts, published = [], [], 0
+    fresh, drafts, published, replaced, merged = [], [], 0, 0, 0
 
     posts = [normalise(p) for p in raw]
     posts = [p for p in posts if p["id"] and key_for(p["id"]) not in seen]
@@ -599,6 +672,24 @@ def main():
                                _facts=d.get("facts")))
             print(f"  draft: {row['headline']}")
             continue
+        # Already covered? Keep the better telling, not both. This is what
+        # stops one goal becoming three articles and filling the carousel.
+        key = story_key(row)
+        twin = next((r for r in existing if story_key(r) == key), None) if key else None
+        if twin:
+            if richness(row) > richness(twin):
+                existing[existing.index(twin)] = row
+                have_slugs.add(slug)
+                replaced += 1
+                print(f"  replaced a thinner telling of the same story: {row['headline']}")
+                print(f"    (dropped: {twin['headline']})")
+            else:
+                merged += 1
+                log_skip(k, f"same story as {twin['slug']}")
+                print(f"  already covered, skipped: {row['headline']}")
+            fresh.append(k)
+            continue
+
         existing.insert(0, row)
         have_slugs.add(slug)
         fresh.append(k)
@@ -617,13 +708,14 @@ def main():
               f"nothing marked seen")
         return 0
 
-    if published:
+    if published or replaced:
         write_rows(existing)
     # Only now, with the rows on disk, is a post finished with. A crash before
     # this point leaves it unseen and the next run picks it up again.
     if fresh:
         save_seen(seen | set(fresh))
-    print(f"{published} published, {len(fresh)} posts settled")
+    print(f"{published} published, {replaced} replaced a thinner version, "
+          f"{merged} folded into a story already told, {len(fresh)} posts settled")
     return 0
 
 
