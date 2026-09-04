@@ -150,8 +150,8 @@ try{ localStorage.setItem('fb_no_track','1'); }catch(e){}
 /* what each role can touch */
 var ROLES = {
   owner:      {label:'Owner',      tabs:'*',                                          note:'Full access, including accounts.'},
-  admin:      {label:'Admin',      tabs:['players','matches','articles','writers','fixtures','results','ireland','reports','subs','site'], note:'Everything except accounts.'},
-  editor:     {label:'Editor',     tabs:['articles','writers','players','reports'],             note:'News, writers and player details.'},
+  admin:      {label:'Admin',      tabs:['players','matches','articles','generated','writers','fixtures','results','ireland','reports','subs','site'], note:'Everything except accounts.'},
+  editor:     {label:'Editor',     tabs:['articles','generated','writers','players','reports'],  note:'News, writers and player details.'},
   journalist: {label:'Journalist', tabs:['articles'],  ownOnly:true,                  note:'Write and edit your own articles.'},
   data:       {label:'Data',       tabs:['players','matches','fixtures','results','ireland'], note:'Stats and fixtures, no news.'},
   viewer:     {label:'Viewer',     tabs:'*', readOnly:true,                           note:'Can look, cannot change anything.'}
@@ -167,6 +167,7 @@ const FILES = {
   players:  {path:'manual/players.csv',  ensure:['exclude'], label:'Players'},
   matches:  {path:'api/matches.csv',     label:'Matches'},
   articles: {path:'manual/articles.csv', ensure:['expires','use_player_photo','partner','partner_url'], label:'News'},
+  generated:{path:'api/articles.csv',    label:'Generated'},
   writers:  {path:'manual/writers.csv', cols:['slug','name','bio','photo','links'], label:'Writers'},
   fixtures: {path:'manual/fixtures.csv', label:'Fixtures'},
   results:  {path:'manual/results.csv',  label:'Results'},
@@ -1286,6 +1287,81 @@ function siteView(){
   return el;
 }
 
+
+/* ---- Generated: what the news pipeline published while you weren't looking.
+   Read-only on purpose. The pipeline owns api/articles.csv and rewrites it
+   every half hour, so edits made here would be overwritten. To change one,
+   promote it - that copies it into your own articles.csv, where it wins
+   over the generated version and becomes editable like anything else. ---- */
+function generatedView(){
+  const d=data.generated;
+  const v=document.createElement('div');
+  if(!d || !d.cols.length){
+    v.innerHTML='<div class="panel"><h2>Generated</h2><div class="hint">'+
+      'Nothing published by the pipeline yet.</div></div>';
+    return v;
+  }
+  const items=d.rows.map((r,i)=>({r,i}))
+    .sort((a,b)=>String(b.r.date||'').localeCompare(String(a.r.date||'')));
+  const ro=readOnly();
+
+  v.innerHTML=`
+    <div class="bar"><span class="count">${items.length} article${items.length===1?'':'s'} written by the pipeline</span></div>
+    <div class="hint" style="margin-bottom:10px">
+      These were written automatically from the wire and are live on the site now.
+      This list is read-only because the pipeline rewrites this file every half hour.
+      <b>Promote</b> copies one into your own News tab, where your version overrules
+      the generated one and you can edit it. <b>Delete</b> pulls it off the site.
+      Either way, hit <b>Publish changes</b> after.
+    </div>
+    <div class="artlist">${items.map(({r,i})=>`
+      <div class="artitem" data-i="${i}" style="align-items:flex-start">
+        <div style="flex:1;min-width:0">
+          <b>${esc(r.headline)||'(untitled)'}</b><br>
+          <small>${esc(r.date)} · ${esc(r.tag)||'—'} · ${esc(r.author)||'no byline'}${r.player_slug?' · '+esc(r.player_slug):''}</small>
+          <div style="color:#77837F;font-size:12.5px;margin-top:4px">${esc(r.standfirst)}</div>
+        </div>
+        ${ro?'':`<div style="display:flex;gap:6px;flex:0 0 auto">
+          <button class="btn sm" data-promote="${i}" title="Copy into your own News tab to edit">Promote</button>
+          <button class="rowdel" data-del="${i}" title="Remove from the site">×</button>
+        </div>`}
+      </div>`).join('')}</div>`;
+
+  if(ro) return v;
+
+  v.querySelectorAll('[data-del]').forEach(b=>{
+    b.onclick=()=>{
+      const i=+b.getAttribute('data-del');
+      const r=d.rows[i];
+      if(!confirm('Delete "'+(r.headline||'this article')+'" from the site?\n\n'+
+                  'It will not come back - the pipeline remembers the post it came from.')) return;
+      d.rows.splice(i,1);
+      markDirty();
+      render();
+    };
+  });
+
+  v.querySelectorAll('[data-promote]').forEach(b=>{
+    b.onclick=()=>{
+      const i=+b.getAttribute('data-promote');
+      const src=d.rows[i];
+      const a=data.articles;
+      if(!a.cols.length) a.cols=Object.keys(src);
+      if(a.rows.some(x=>(x.slug||'').trim().toLowerCase()===(src.slug||'').trim().toLowerCase())){
+        alert('There is already an article of yours with that slug.'); return;
+      }
+      // only the columns your own file has - `weight` belongs to the pipeline
+      const row={}; a.cols.forEach(c=>row[c]=src[c]||'');
+      a.rows.unshift(row);
+      d.rows.splice(i,1);                 // the generated original steps aside
+      a.dirty=true; d.dirty=true;
+      selectedArticle=0; active='articles';
+      renderTabs(); render();
+    };
+  });
+  return v;
+}
+
 function render(){
   const v=document.getElementById('view'); v.innerHTML='';
   if(!loaded){ v.innerHTML='<div class="panel"><h2>Loading</h2><div class="hint">Reading the site data…</div></div>'; return; }
@@ -1302,7 +1378,9 @@ function render(){
     subsView().then(el=>{ v.innerHTML=''; v.appendChild(el); });
     return;
   }
-  const content = active==='articles' ? articleView() : active==='writers' ? writersView() : tableView();
+  const content = active==='articles' ? articleView()
+                : active==='generated' ? generatedView()
+                : active==='writers' ? writersView() : tableView();
   if(typeof content==='string') v.innerHTML=content; else v.appendChild(content);
   if(active==='accounts') v.appendChild(accountsExtra());
   if(!readOnly()) v.appendChild(publishNote());
