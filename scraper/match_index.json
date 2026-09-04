@@ -416,6 +416,7 @@
   "away_id": "8351",
   "slugs": [
    "aaron-connolly",
+   "alex-gilbert",
    "callum-marshall",
    "jaze-kabia",
    "josh-keeley",
@@ -435,6 +436,7 @@
   "away_id": "8484",
   "slugs": [
    "aaron-connolly",
+   "alex-gilbert",
    "corey-okeeffe",
    "jaze-kabia",
    "killian-cahill",
@@ -454,6 +456,7 @@
   "away_id": "8676",
   "slugs": [
    "aaron-connolly",
+   "alex-gilbert",
    "dan-casey",
    "jamie-mullins",
    "jaze-kabia",
@@ -473,6 +476,7 @@
   "away_id": "950214",
   "slugs": [
    "aaron-connolly",
+   "alex-gilbert",
    "jaze-kabia",
    "killian-cahill",
    "ollie-oneill",
@@ -605,7 +609,6 @@
    "aaron-greene",
    "adam-brennan",
    "ademipo-odubeko",
-   "alex-noonan",
    "ben-mahon",
    "conor-walsh",
    "cory-osullivan",
@@ -666,7 +669,6 @@
    "adam-brennan",
    "adam-deans",
    "aidan-keena",
-   "alex-noonan",
    "anthony-breslin",
    "ben-mahon",
    "billy-canny",
@@ -2434,7 +2436,6 @@
   "away_id": "8596",
   "slugs": [
    "aodhan-doherty",
-   "joe-gardner",
    "neil-farrugia",
    "paul-mcgovern",
    "will-ferry"
@@ -2451,7 +2452,6 @@
   "away_id": "9860",
   "slugs": [
    "aodhan-doherty",
-   "joe-gardner",
    "paul-mcgovern"
   ]
  },
@@ -3390,7 +3390,7 @@
  {
   "fotmob_id": "1000012831",
   "url": "/matches/huntly-vs-turriff-united/ssycs8x#1000012831",
-  "kickoff": "2026-09-16T17:00:00Z",
+  "kickoff": "2026-09-16T19:00:00Z",
   "comp": "Highland / Lowland",
   "home": "Turriff United",
   "away": "Huntly",
@@ -4376,20 +4376,6 @@
    "paudie-oconnor",
    "ryan-sweeney",
    "stephen-mclaughlin"
-  ]
- },
- {
-  "fotmob_id": "5837118",
-  "url": "/matches/oxford-united-vs-reading/2tct1g#5837118",
-  "kickoff": "2026-09-08T18:45:00Z",
-  "comp": "League One",
-  "home": "Oxford Utd",
-  "away": "Reading",
-  "home_id": "8653",
-  "away_id": "9798",
-  "slugs": [
-   "conor-masterson",
-   "paudie-oconnor"
   ]
  },
  {
@@ -5704,6 +5690,19 @@
   "slugs": [
    "finn-mcgreevy",
    "vinnie-leonard"
+  ]
+ },
+ {
+  "fotmob_id": "1000019130",
+  "url": "/matches/arsenal-u21-vs-birmingham-u21/1c4fz0vnx#1000019130",
+  "kickoff": "2026-09-18T12:00:00Z",
+  "comp": "Premier League 2",
+  "home": "Birmingham U21",
+  "away": "Arsenal U21",
+  "home_id": "1796111",
+  "away_id": "950214",
+  "slugs": [
+   "finn-mcgreevy"
   ]
  },
  {
@@ -8878,33 +8877,6 @@
   "away_id": "8571",
   "slugs": [
    "andrew-omobamidele"
-  ]
- },
- {
-  "fotmob_id": "5837126",
-  "url": "/matches/burton-albion-vs-afc-wimbledon/6hp2yy0#5837126",
-  "kickoff": "2026-09-02T18:45:00Z",
-  "comp": "League One",
-  "home": "Burton Albion",
-  "away": "AFC Wimbledon",
-  "home_id": "9792",
-  "away_id": "158319",
-  "slugs": [
-   "ciaran-gilligan",
-   "gbemi-arubi"
-  ]
- },
- {
-  "fotmob_id": "5836798",
-  "url": "/matches/burnley-vs-middlesbrough/2bfhjz#5836798",
-  "kickoff": "2026-09-02T19:00:00Z",
-  "comp": "Championship",
-  "home": "Burnley",
-  "away": "Middlesbrough",
-  "home_id": "8191",
-  "away_id": "8549",
-  "slugs": [
-   "michael-obafemi"
   ]
  }
 ]
