@@ -485,6 +485,49 @@
   ]
  },
  {
+  "fotmob_id": "5100950",
+  "url": "/matches/shamrock-rovers-vs-shelbourne/t2rdi#5100950",
+  "kickoff": "2026-09-04T19:00:00Z",
+  "comp": "Premier Division",
+  "home": "Shamrock Rovers",
+  "away": "Shelbourne",
+  "home_id": "4131",
+  "away_id": "5751",
+  "slugs": [
+   "aaron-greene",
+   "adam-brennan",
+   "ademipo-odubeko",
+   "cory-osullivan",
+   "daniel-cleary",
+   "daniel-kelly",
+   "daniel-ring",
+   "dylan-watts",
+   "edward-mcginty",
+   "enda-stevens",
+   "evan-caffrey",
+   "graham-burke",
+   "jack-byrne",
+   "jack-henry-francis",
+   "jake-mulraney",
+   "james-roche",
+   "john-osullivan",
+   "jonathan-afolabi",
+   "jonathan-lunney",
+   "kameron-ledwidge",
+   "lee-grace",
+   "lee-steacy",
+   "matthew-healy",
+   "michael-noonan",
+   "odhran-casey",
+   "sean-boyd",
+   "sean-gannon",
+   "sean-moore",
+   "tunmise-sobowale",
+   "will-fitzgerald",
+   "william-fitzgerald"
+  ]
+ },
+ {
   "fotmob_id": "5100953",
   "url": "/matches/shamrock-rovers-vs-derry-city/1aai95#5100953",
   "kickoff": "2026-08-30T15:00:00Z",
@@ -4114,19 +4157,6 @@
   ]
  },
  {
-  "fotmob_id": "6046148",
-  "url": "/matches/drogheda-united-vs-galway-united-fc/1s8rv9gf#6046148",
-  "kickoff": "2026-09-04T18:45:00Z",
-  "comp": "FAI Cup",
-  "home": "Drogheda United",
-  "away": "Galway United FC",
-  "home_id": "8339",
-  "away_id": "520517",
-  "slugs": [
-   "connor-whittaker"
-  ]
- },
- {
   "fotmob_id": "5906408",
   "url": "/matches/hartlepool-united-vs-fc-halifax-town/2vx3ua#5906408",
   "kickoff": "2026-09-01T18:45:00Z",
@@ -4686,6 +4716,21 @@
   "slugs": [
    "dara-costelloe",
    "sonny-perkins"
+  ]
+ },
+ {
+  "fotmob_id": "5795441",
+  "url": "/matches/liverpool-vs-ipswich-town/2ugv0q#5795441",
+  "kickoff": "2026-09-04T19:00:00Z",
+  "comp": "Premier League",
+  "home": "Ipswich Town",
+  "away": "Liverpool",
+  "home_id": "9902",
+  "away_id": "8650",
+  "slugs": [
+   "dara-oshea",
+   "jack-clarke",
+   "kasey-mcateer"
   ]
  },
  {
@@ -6788,33 +6833,6 @@
   ]
  },
  {
-  "fotmob_id": "5100950",
-  "url": "/matches/shamrock-rovers-vs-shelbourne/t2rdi#5100950",
-  "kickoff": "2026-09-04T19:00:00Z",
-  "comp": "Premier Division",
-  "home": "Shamrock Rovers",
-  "away": "Shelbourne",
-  "home_id": "4131",
-  "away_id": "5751",
-  "slugs": [
-   "john-osullivan",
-   "jonathan-afolabi",
-   "jonathan-lunney",
-   "kameron-ledwidge",
-   "lee-grace",
-   "lee-steacy",
-   "matthew-healy",
-   "michael-noonan",
-   "odhran-casey",
-   "sean-boyd",
-   "sean-gannon",
-   "sean-moore",
-   "tunmise-sobowale",
-   "will-fitzgerald",
-   "william-fitzgerald"
-  ]
- },
- {
   "fotmob_id": "5803243",
   "url": "/matches/red-star-vs-reims/26e9mr#5803243",
   "kickoff": "2026-08-29T12:00:00Z",
@@ -7227,19 +7245,6 @@
   "slugs": [
    "justin-osagie",
    "shaun-wade"
-  ]
- },
- {
-  "fotmob_id": "5795441",
-  "url": "/matches/liverpool-vs-ipswich-town/2ugv0q#5795441",
-  "kickoff": "2026-09-04T19:00:00Z",
-  "comp": "Premier League",
-  "home": "Ipswich Town",
-  "away": "Liverpool",
-  "home_id": "9902",
-  "away_id": "8650",
-  "slugs": [
-   "kasey-mcateer"
   ]
  },
  {
@@ -8891,6 +8896,19 @@
   "away_id": "2205",
   "slugs": [
    "billy-vance"
+  ]
+ },
+ {
+  "fotmob_id": "6046148",
+  "url": "/matches/drogheda-united-vs-galway-united-fc/1s8rv9gf#6046148",
+  "kickoff": "2026-09-04T18:45:00Z",
+  "comp": "FAI Cup",
+  "home": "Drogheda United",
+  "away": "Galway United FC",
+  "home_id": "8339",
+  "away_id": "520517",
+  "slugs": [
+   "connor-whittaker"
   ]
  },
  {
