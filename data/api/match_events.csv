@@ -5187,12 +5187,17 @@ match_id,minute,type,player,team,venue
 2026-09-03-hibernian-v-heart-of-midlothian,43,goal,Laurent Mendy,Heart of Midlothian,Easter Road Stadium
 2026-09-03-hibernian-v-heart-of-midlothian,45,yellow,Jack Iredale,Hibernian,Easter Road Stadium
 2026-09-04-bray-wanderers-v-cork-city,12,goal,Ajibola Oluwabiyi,Bray Wanderers,Stadium
-2026-09-04-bray-wanderers-v-cork-city,26,goal,<TBD>,Cork City,Stadium
-2026-09-04-cobh-ramblers-v-ucd,,,,,Stadium
-2026-09-04-connahs-quay-nomads-v-haverfordwest,,,,,Deeside Stadium
+2026-09-04-bray-wanderers-v-cork-city,26,goal,Sean Maguire,Cork City,Stadium
+2026-09-04-bray-wanderers-v-cork-city,72,red,John Bilili Sesay,Bray Wanderers,Stadium
+2026-09-04-cobh-ramblers-v-ucd,71,goal,Oran Crowe,Cobh Ramblers,Stadium
+2026-09-04-cobh-ramblers-v-ucd,90,goal,Goodness Ogbonna,UCD,Stadium
+2026-09-04-connahs-quay-nomads-v-haverfordwest,50,goal,Jack Walker,Haverfordwest,Deeside Stadium
+2026-09-04-connahs-quay-nomads-v-haverfordwest,73,goal,Max Woodcock,Connah's Quay Nomads,Deeside Stadium
 2026-09-04-drogheda-united-v-galway-united-fc,15,goal,Brandon Kavanagh,Drogheda United,Stadium
 2026-09-04-drogheda-united-v-galway-united-fc,23,goal,Stephen Walsh,Galway United FC,Stadium
-2026-09-04-finn-harps-v-athlone-town,,,,,Stadium
+2026-09-04-drogheda-united-v-galway-united-fc,63,red,Mark Doyle,Drogheda United,Stadium
+2026-09-04-drogheda-united-v-galway-united-fc,82,goal,Lee Devitt,Galway United FC,Stadium
+2026-09-04-finn-harps-v-athlone-town,52,goal,Peter Grogan,Athlone Town,Stadium
 2026-09-04-helmond-sport-v-vvv-venlo,17,goal,Livio Cicero,Helmond Sport,MySteel Stadion
 2026-09-04-helmond-sport-v-vvv-venlo,36,sub_off,Alex Schalk,VVV-Venlo,MySteel Stadion
 2026-09-04-helmond-sport-v-vvv-venlo,36,sub_on,Mattheos Tsigkas,VVV-Venlo,MySteel Stadion
@@ -5201,13 +5206,104 @@ match_id,minute,type,player,team,venue
 2026-09-04-ipswich-town-v-liverpool,6,goal,Alexander Isak,Liverpool,Portman Road
 2026-09-04-ipswich-town-v-liverpool,9,goal,Alexander Isak,Liverpool,Portman Road
 2026-09-04-ipswich-town-v-liverpool,10,yellow,Alexis Mac Allister,Liverpool,Portman Road
-2026-09-04-larne-v-glentoran,,,,,Inver Park
+2026-09-04-ipswich-town-v-liverpool,41,yellow,Julio Enciso,Ipswich Town,Portman Road
+2026-09-04-ipswich-town-v-liverpool,52,yellow,Jérémy Jacquet,Liverpool,Portman Road
+2026-09-04-ipswich-town-v-liverpool,57,yellow,Milos Kerkez,Liverpool,Portman Road
+2026-09-04-ipswich-town-v-liverpool,64,sub_off,Alexander Isak,Liverpool,Portman Road
+2026-09-04-ipswich-town-v-liverpool,64,sub_off,Víctor Muñoz,Liverpool,Portman Road
+2026-09-04-ipswich-town-v-liverpool,64,sub_on,Ryan Gravenberch,Liverpool,Portman Road
+2026-09-04-ipswich-town-v-liverpool,64,sub_on,Bradley Barcola,Liverpool,Portman Road
+2026-09-04-ipswich-town-v-liverpool,66,sub_off,Daizen Maeda,Ipswich Town,Portman Road
+2026-09-04-ipswich-town-v-liverpool,66,sub_off,Emersonn,Ipswich Town,Portman Road
+2026-09-04-ipswich-town-v-liverpool,66,sub_on,Jack Clarke,Ipswich Town,Portman Road
+2026-09-04-ipswich-town-v-liverpool,66,sub_on,Zian Flemming,Ipswich Town,Portman Road
+2026-09-04-ipswich-town-v-liverpool,78,sub_off,Exequiel Palacios,Ipswich Town,Portman Road
+2026-09-04-ipswich-town-v-liverpool,78,sub_on,Abdoul Ouattara,Ipswich Town,Portman Road
+2026-09-04-ipswich-town-v-liverpool,79,sub_off,Abdul Fatawu,Ipswich Town,Portman Road
+2026-09-04-ipswich-town-v-liverpool,79,sub_on,Kasey McAteer,Ipswich Town,Portman Road
+2026-09-04-ipswich-town-v-liverpool,84,sub_off,Alexis Mac Allister,Liverpool,Portman Road
+2026-09-04-ipswich-town-v-liverpool,84,sub_on,Trey Nyoni,Liverpool,Portman Road
+2026-09-04-ipswich-town-v-liverpool,90,sub_off,Florian Wirtz,Liverpool,Portman Road
+2026-09-04-ipswich-town-v-liverpool,90,sub_on,Lewis Koumas,Liverpool,Portman Road
+2026-09-04-larne-v-glentoran,52,goal,Sean Graham,Larne,Inver Park
+2026-09-04-larne-v-glentoran,73,goal,Matthew Lusty,Larne,Inver Park
+2026-09-04-larne-v-glentoran,88,goal,Aaron McEneff,Glentoran,Inver Park
 2026-09-04-livingston-v-stenhousemuir,13,goal,Andrew Shinnie,Stenhousemuir,Home of the Set Fare Arena
 2026-09-04-livingston-v-stenhousemuir,37,yellow,Emmanuel Danso,Livingston,Home of the Set Fare Arena
 2026-09-04-livingston-v-stenhousemuir,42,yellow,Sam Culbert,Livingston,Home of the Set Fare Arena
-2026-09-04-real-betis-v-real-madrid,,,,,Estadio La Cartuja de Sevilla
-2026-09-04-shamrock-rovers-v-shelbourne,,,,,Tallaght Stadium
-2026-09-04-treaty-united-v-wexford-fc,29,goal,<TBD>,Wexford FC,Stadium
+2026-09-04-livingston-v-stenhousemuir,44,yellow,Sam Young,Stenhousemuir,Home of the Set Fare Arena
+2026-09-04-livingston-v-stenhousemuir,53,yellow,Robbie Muirhead,Livingston,Home of the Set Fare Arena
+2026-09-04-livingston-v-stenhousemuir,56,sub_off,Sam Culbert,Livingston,Home of the Set Fare Arena
+2026-09-04-livingston-v-stenhousemuir,56,sub_off,Cammy Palmer,Livingston,Home of the Set Fare Arena
+2026-09-04-livingston-v-stenhousemuir,56,sub_on,Tyrese Sinclair,Livingston,Home of the Set Fare Arena
+2026-09-04-livingston-v-stenhousemuir,56,sub_on,Liam Polworth,Livingston,Home of the Set Fare Arena
+2026-09-04-livingston-v-stenhousemuir,65,sub_off,Lewis O'Donnell,Stenhousemuir,Home of the Set Fare Arena
+2026-09-04-livingston-v-stenhousemuir,65,sub_off,Lewis Hodgkiss,Stenhousemuir,Home of the Set Fare Arena
+2026-09-04-livingston-v-stenhousemuir,65,sub_on,Gus Stevenson,Stenhousemuir,Home of the Set Fare Arena
+2026-09-04-livingston-v-stenhousemuir,65,sub_on,Euan O'Reilly,Stenhousemuir,Home of the Set Fare Arena
+2026-09-04-livingston-v-stenhousemuir,77,sub_off,Finn Robson,Stenhousemuir,Home of the Set Fare Arena
+2026-09-04-livingston-v-stenhousemuir,77,sub_off,Kinlay Bilham,Stenhousemuir,Home of the Set Fare Arena
+2026-09-04-livingston-v-stenhousemuir,77,sub_off,Bradly van Hoeven,Livingston,Home of the Set Fare Arena
+2026-09-04-livingston-v-stenhousemuir,77,sub_on,Oscar MacIntyre,Stenhousemuir,Home of the Set Fare Arena
+2026-09-04-livingston-v-stenhousemuir,77,sub_on,Matthew Gillies,Stenhousemuir,Home of the Set Fare Arena
+2026-09-04-livingston-v-stenhousemuir,77,sub_on,Babacar Fati,Livingston,Home of the Set Fare Arena
+2026-09-04-livingston-v-stenhousemuir,82,sub_off,Andrew Shinnie,Stenhousemuir,Home of the Set Fare Arena
+2026-09-04-livingston-v-stenhousemuir,82,sub_on,Shea Scally,Stenhousemuir,Home of the Set Fare Arena
+2026-09-04-livingston-v-stenhousemuir,84,sub_off,Emmanuel Danso,Livingston,Home of the Set Fare Arena
+2026-09-04-livingston-v-stenhousemuir,84,sub_on,Stevie May,Livingston,Home of the Set Fare Arena
+2026-09-04-livingston-v-stenhousemuir,90,yellow,Liam Polworth,Livingston,Home of the Set Fare Arena
+2026-09-04-real-betis-v-real-madrid,39,sub_off,Diego Llorente,Real Betis,Estadio La Cartuja de Sevilla
+2026-09-04-real-betis-v-real-madrid,39,sub_on,Marc Bartra,Real Betis,Estadio La Cartuja de Sevilla
+2026-09-04-real-betis-v-real-madrid,45,yellow,Arda Güler,Real Madrid,Estadio La Cartuja de Sevilla
+2026-09-04-real-betis-v-real-madrid,55,yellow,Ibrahima Konaté,Real Madrid,Estadio La Cartuja de Sevilla
+2026-09-04-real-betis-v-real-madrid,55,yellow,José Mourinho,Real Madrid,Estadio La Cartuja de Sevilla
+2026-09-04-real-betis-v-real-madrid,60,sub_off,Isco,Real Betis,Estadio La Cartuja de Sevilla
+2026-09-04-real-betis-v-real-madrid,60,sub_on,Álvaro Fidalgo,Real Betis,Estadio La Cartuja de Sevilla
+2026-09-04-real-betis-v-real-madrid,62,yellow,Eduardo Camavinga,Real Madrid,Estadio La Cartuja de Sevilla
+2026-09-04-real-betis-v-real-madrid,64,sub_off,Eduardo Camavinga,Real Madrid,Estadio La Cartuja de Sevilla
+2026-09-04-real-betis-v-real-madrid,64,sub_on,Bernardo Silva,Real Madrid,Estadio La Cartuja de Sevilla
+2026-09-04-real-betis-v-real-madrid,64,yellow,Facundo Bernal,Real Betis,Estadio La Cartuja de Sevilla
+2026-09-04-real-betis-v-real-madrid,65,sub_off,Denzel Dumfries,Real Madrid,Estadio La Cartuja de Sevilla
+2026-09-04-real-betis-v-real-madrid,65,sub_off,Arda Güler,Real Madrid,Estadio La Cartuja de Sevilla
+2026-09-04-real-betis-v-real-madrid,65,sub_on,Trent Alexander-Arnold,Real Madrid,Estadio La Cartuja de Sevilla
+2026-09-04-real-betis-v-real-madrid,65,sub_on,Yan Diomande,Real Madrid,Estadio La Cartuja de Sevilla
+2026-09-04-real-betis-v-real-madrid,69,sub_off,Facundo Bernal,Real Betis,Estadio La Cartuja de Sevilla
+2026-09-04-real-betis-v-real-madrid,69,sub_off,Juan Hernández,Real Betis,Estadio La Cartuja de Sevilla
+2026-09-04-real-betis-v-real-madrid,69,sub_on,Nelson Deossa,Real Betis,Estadio La Cartuja de Sevilla
+2026-09-04-real-betis-v-real-madrid,69,sub_on,Troy Parrott,Real Betis,Estadio La Cartuja de Sevilla
+2026-09-04-real-betis-v-real-madrid,77,sub_off,Antony,Real Betis,Estadio La Cartuja de Sevilla
+2026-09-04-real-betis-v-real-madrid,77,sub_on,Rodrigo Riquelme,Real Betis,Estadio La Cartuja de Sevilla
+2026-09-04-real-betis-v-real-madrid,81,goal,Troy Parrott,Real Betis,Estadio La Cartuja de Sevilla
+2026-09-04-real-betis-v-real-madrid,82,sub_off,Federico Valverde,Real Madrid,Estadio La Cartuja de Sevilla
+2026-09-04-real-betis-v-real-madrid,82,sub_on,Carlos Espí,Real Madrid,Estadio La Cartuja de Sevilla
+2026-09-04-real-betis-v-real-madrid,83,yellow,Marc Roca,Real Betis,Estadio La Cartuja de Sevilla
+2026-09-04-real-betis-v-real-madrid,88,sub_off,Marc Cucurella,Real Madrid,Estadio La Cartuja de Sevilla
+2026-09-04-real-betis-v-real-madrid,88,sub_on,Alvaro Carreras,Real Madrid,Estadio La Cartuja de Sevilla
+2026-09-04-real-betis-v-real-madrid,90,missed_penalty,Kylian Mbappé,Real Madrid,Estadio La Cartuja de Sevilla
+2026-09-04-real-betis-v-real-madrid,90,yellow,Natan,Real Betis,Estadio La Cartuja de Sevilla
+2026-09-04-real-betis-v-real-madrid,90,yellow,Vinícius Júnior,Real Madrid,Estadio La Cartuja de Sevilla
+2026-09-04-shamrock-rovers-v-shelbourne,33,yellow,Jonathan Lunney,Shelbourne,Tallaght Stadium
+2026-09-04-shamrock-rovers-v-shelbourne,35,yellow,Daniel Kelly,Shelbourne,Tallaght Stadium
+2026-09-04-shamrock-rovers-v-shelbourne,46,sub_off,Seán Gannon,Shelbourne,Tallaght Stadium
+2026-09-04-shamrock-rovers-v-shelbourne,46,sub_off,Jonathan Lunney,Shelbourne,Tallaght Stadium
+2026-09-04-shamrock-rovers-v-shelbourne,46,sub_on,Milan Mbeng,Shelbourne,Tallaght Stadium
+2026-09-04-shamrock-rovers-v-shelbourne,46,sub_on,Alistair Coote,Shelbourne,Tallaght Stadium
+2026-09-04-shamrock-rovers-v-shelbourne,61,yellow,Enda Stevens,Shamrock Rovers,Tallaght Stadium
+2026-09-04-shamrock-rovers-v-shelbourne,64,sub_off,Rodrigo Freitas,Shelbourne,Tallaght Stadium
+2026-09-04-shamrock-rovers-v-shelbourne,64,sub_on,Ademipo Odubeko,Shelbourne,Tallaght Stadium
+2026-09-04-shamrock-rovers-v-shelbourne,66,sub_off,Jack Byrne,Shamrock Rovers,Tallaght Stadium
+2026-09-04-shamrock-rovers-v-shelbourne,66,sub_off,Michael Noonan,Shamrock Rovers,Tallaght Stadium
+2026-09-04-shamrock-rovers-v-shelbourne,66,sub_off,Graham Burke,Shamrock Rovers,Tallaght Stadium
+2026-09-04-shamrock-rovers-v-shelbourne,66,sub_on,William Fitzgerald,Shamrock Rovers,Tallaght Stadium
+2026-09-04-shamrock-rovers-v-shelbourne,66,sub_on,Jonathan Afolabi,Shamrock Rovers,Tallaght Stadium
+2026-09-04-shamrock-rovers-v-shelbourne,66,sub_on,John McGovern,Shamrock Rovers,Tallaght Stadium
+2026-09-04-shamrock-rovers-v-shelbourne,75,sub_off,Adam Brennan,Shamrock Rovers,Tallaght Stadium
+2026-09-04-shamrock-rovers-v-shelbourne,75,sub_on,John O'Sullivan,Shamrock Rovers,Tallaght Stadium
+2026-09-04-shamrock-rovers-v-shelbourne,78,sub_off,Jack Henry-Francis,Shelbourne,Tallaght Stadium
+2026-09-04-shamrock-rovers-v-shelbourne,78,sub_on,Sean Moore,Shelbourne,Tallaght Stadium
+2026-09-04-treaty-united-v-wexford-fc,29,goal,Mikie Rowe,Wexford FC,Stadium
 2026-09-04-tsv-aubstadt-v-ansbach,2,goal,Ingo Feser,TSV Aubstadt,NGN-Arena
 2026-09-04-tsv-aubstadt-v-ansbach,49,goal,Joshua Endres,TSV Aubstadt,NGN-Arena
 2026-09-04-waterford-fc-v-sligo-rovers,8,goal,Pádraig Amond,Waterford FC,Stadium
+2026-09-04-waterford-fc-v-sligo-rovers,50,goal,Tom Lonergan,Waterford FC,Stadium
+2026-09-04-waterford-fc-v-sligo-rovers,59,own_goal,Oliver Denham,Waterford FC,Stadium
