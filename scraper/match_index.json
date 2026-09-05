@@ -335,32 +335,12 @@
   ]
  },
  {
-  "fotmob_id": "5837142",
-  "url": "/matches/luton-town-vs-leyton-orient/2b02ok#5837142",
-  "kickoff": "2026-09-05T14:00:00Z",
-  "comp": "League One",
-  "home": "Luton Town",
-  "away": "Leyton Orient",
-  "home_id": "8346",
-  "away_id": "8351",
-  "slugs": [
-   "aaron-connolly",
-   "alex-gilbert",
-   "callum-marshall",
-   "jaze-kabia",
-   "josh-keeley",
-   "killian-cahill",
-   "ollie-oneill",
-   "tony-springett"
-  ]
- },
- {
   "fotmob_id": "6099339",
   "url": "/matches/leyton-orient-vs-bradford-city/2cdo3u#6099339",
   "kickoff": "2026-09-08T18:45:00Z",
   "comp": "EFL Cup",
   "home": "Leyton Orient",
-  "away": "Bradford",
+  "away": "Bradford City",
   "home_id": "8351",
   "away_id": "8484",
   "slugs": [
@@ -413,32 +393,21 @@
   ]
  },
  {
-  "fotmob_id": "5837905",
-  "url": "/matches/swindon-town-vs-port-vale/36au9q#5837905",
-  "kickoff": "2026-09-01T18:45:00Z",
-  "comp": "League Two",
-  "home": "Swindon Town",
-  "away": "Port Vale",
-  "home_id": "9795",
-  "away_id": "9799",
+  "fotmob_id": "5837164",
+  "url": "/matches/leyton-orient-vs-stevenage/2v1j99#5837164",
+  "kickoff": "2026-09-19T14:00:00Z",
+  "comp": "League One",
+  "home": "Leyton Orient",
+  "away": "Stevenage",
+  "home_id": "8351",
+  "away_id": "10253",
   "slugs": [
-   "aaron-drinan"
-  ]
- },
- {
-  "fotmob_id": "5837889",
-  "url": "/matches/oldham-athletic-vs-swindon-town/364yo9#5837889",
-  "kickoff": "2026-08-29T14:00:00Z",
-  "comp": "League Two",
-  "home": "Oldham Athletic",
-  "away": "Swindon Town",
-  "home_id": "9785",
-  "away_id": "9795",
-  "slugs": [
-   "aaron-drinan",
-   "calum-kavanagh",
-   "lewis-temple",
-   "ryan-delaney"
+   "aaron-connolly",
+   "alex-gilbert",
+   "jaze-kabia",
+   "killian-cahill",
+   "ollie-oneill",
+   "tony-springett"
   ]
  },
  {
@@ -452,8 +421,20 @@
   "away_id": "8416",
   "slugs": [
    "aaron-drinan",
-   "gavin-kilkenny",
    "sean-raggett"
+  ]
+ },
+ {
+  "fotmob_id": "5837905",
+  "url": "/matches/swindon-town-vs-port-vale/36au9q#5837905",
+  "kickoff": "2026-09-01T18:45:00Z",
+  "comp": "League Two",
+  "home": "Swindon Town",
+  "away": "Port Vale",
+  "home_id": "9795",
+  "away_id": "9799",
+  "slugs": [
+   "aaron-drinan"
   ]
  },
  {
@@ -462,7 +443,7 @@
   "kickoff": "2026-09-12T14:00:00Z",
   "comp": "League Two",
   "home": "York City",
-  "away": "Swindon",
+  "away": "Swindon Town",
   "home_id": "9916",
   "away_id": "9795",
   "slugs": [
@@ -482,6 +463,21 @@
   "slugs": [
    "aaron-drinan",
    "gavin-kilkenny"
+  ]
+ },
+ {
+  "fotmob_id": "5837941",
+  "url": "/matches/swindon-town-vs-salford-city/jln4hzc#5837941",
+  "kickoff": "2026-09-19T14:00:00Z",
+  "comp": "League Two",
+  "home": "Salford",
+  "away": "Swindon",
+  "home_id": "282326",
+  "away_id": "9795",
+  "slugs": [
+   "aaron-drinan",
+   "gavin-kilkenny",
+   "ryan-graydon"
   ]
  },
  {
@@ -881,24 +877,6 @@
   ]
  },
  {
-  "fotmob_id": "5847419",
-  "url": "/matches/cliftonville-vs-portadown/rxwtg#5847419",
-  "kickoff": "2026-09-05T14:00:00Z",
-  "comp": "Premiership",
-  "home": "Cliftonville",
-  "away": "Portadown",
-  "home_id": "1703",
-  "away_id": "7984",
-  "slugs": [
-   "aaron-mccarey",
-   "ahu-obhakhan",
-   "ben-quinn",
-   "divin-isamala",
-   "finn-flanagan",
-   "rory-hale"
-  ]
- },
- {
   "fotmob_id": "5847429",
   "url": "/matches/larne-vs-portadown/ux2bd#5847429",
   "kickoff": "2026-09-12T14:00:00Z",
@@ -937,6 +915,22 @@
   ]
  },
  {
+  "fotmob_id": "5847436",
+  "url": "/matches/portadown-vs-bangor/1osdp4y#5847436",
+  "kickoff": "2026-09-19T14:00:00Z",
+  "comp": "Premiership",
+  "home": "Bangor",
+  "away": "Portadown",
+  "home_id": "77755",
+  "away_id": "7984",
+  "slugs": [
+   "aaron-mccarey",
+   "ahu-obhakhan",
+   "divin-isamala",
+   "finn-flanagan"
+  ]
+ },
+ {
   "fotmob_id": "5847428",
   "url": "/matches/glentoran-vs-bangor/1gv9mqg#5847428",
   "kickoff": "2026-09-12T14:00:00Z",
@@ -969,6 +963,24 @@
    "mark-coyle",
    "pat-hoban",
    "rob-slevin"
+  ]
+ },
+ {
+  "fotmob_id": "5847438",
+  "url": "/matches/cliftonville-vs-glentoran/4jlby#5847438",
+  "kickoff": "2026-09-19T14:00:00Z",
+  "comp": "Premiership",
+  "home": "Cliftonville",
+  "away": "Glentoran",
+  "home_id": "1703",
+  "away_id": "2203",
+  "slugs": [
+   "aaron-mceneff",
+   "ben-quinn",
+   "ciaran-coll",
+   "greg-sloggett",
+   "pat-hoban",
+   "rory-hale"
   ]
  },
  {
@@ -1061,8 +1073,7 @@
   "home_id": "6633",
   "away_id": "162162",
   "slugs": [
-   "aaron-okpolokpo",
-   "josh-okpolokpo"
+   "aaron-okpolokpo"
   ]
  },
  {
@@ -1075,8 +1086,7 @@
   "home_id": "8473",
   "away_id": "162162",
   "slugs": [
-   "aaron-okpolokpo",
-   "josh-okpolokpo"
+   "aaron-okpolokpo"
   ]
  },
  {
@@ -1089,8 +1099,7 @@
   "home_id": "162162",
   "away_id": "6634",
   "slugs": [
-   "aaron-okpolokpo",
-   "josh-okpolokpo"
+   "aaron-okpolokpo"
   ]
  },
  {
@@ -1117,71 +1126,6 @@
   "away_id": "1113555",
   "slugs": [
    "aaron-oreilly"
-  ]
- },
- {
-  "fotmob_id": "6046150",
-  "url": "/matches/st-patricks-athletic-vs-bohemian-fc/cdqfe#6046150",
-  "kickoff": "2026-09-05T15:00:00Z",
-  "comp": "FAI Cup",
-  "home": "St. Patrick's Athletic",
-  "away": "Bohemian FC",
-  "home_id": "1854",
-  "away_id": "4594",
-  "slugs": [
-   "adam-banim",
-   "adam-deans",
-   "adam-mcdonnell",
-   "aidan-keena",
-   "alan-reynolds",
-   "anthony-breslin",
-   "billy-canny",
-   "billy-hayes",
-   "chris-forrester",
-   "christopher-conlan",
-   "cian-byrne",
-   "colm-whelan",
-   "daniel-chukwu",
-   "daniel-rogers",
-   "darragh-brunton",
-   "darragh-nugent",
-   "darragh-power",
-   "dawson-devoy",
-   "dayle-rooney",
-   "finn-mcdonnell",
-   "glory-nzingo",
-   "harry-vaughan",
-   "hugh-martin",
-   "james-brown",
-   "jamie-lennon",
-   "jason-mcclelland",
-   "joe-carroll-byrne",
-   "joe-redmond",
-   "josh-adam",
-   "josh-harpur",
-   "josh-oconnor",
-   "kian-leavy",
-   "kian-quigley",
-   "luke-cullen",
-   "luke-kehir",
-   "luke-turner",
-   "matthew-ohara",
-   "niall-morahan",
-   "niall-sullivan",
-   "paddy-madden",
-   "ronan-boyce",
-   "ross-tierney",
-   "ryan-burke",
-   "ryan-sheridan",
-   "sam-rooney",
-   "sam-steward",
-   "sam-todd",
-   "samuel-ogungbe",
-   "sean-hoare",
-   "sean-molloy",
-   "senan-mullen",
-   "simon-power",
-   "zack-elbouzedi"
   ]
  },
  {
@@ -1239,6 +1183,22 @@
   "slugs": [
    "adam-idah",
    "michael-obafemi"
+  ]
+ },
+ {
+  "fotmob_id": "5836842",
+  "url": "/matches/lincoln-city-vs-swansea-city/2t5nu7#5836842",
+  "kickoff": "2026-09-19T14:00:00Z",
+  "comp": "Championship",
+  "home": "Lincoln",
+  "away": "Swansea",
+  "home_id": "8430",
+  "away_id": "10003",
+  "slugs": [
+   "adam-idah",
+   "chiedozie-ogbene",
+   "josh-honohan",
+   "mason-melia"
   ]
  },
  {
@@ -1327,21 +1287,6 @@
   ]
  },
  {
-  "fotmob_id": "5837887",
-  "url": "/matches/grimsby-town-vs-fleetwood-town/pojks3#5837887",
-  "kickoff": "2026-08-29T14:00:00Z",
-  "comp": "League Two",
-  "home": "Grimsby Town",
-  "away": "Fleetwood Town",
-  "home_id": "10005",
-  "away_id": "45723",
-  "slugs": [
-   "adam-murphy",
-   "cian-doyle",
-   "ronan-coughlan"
-  ]
- },
- {
   "fotmob_id": "5837924",
   "url": "/matches/newport-county-vs-fleetwood-town/px39d0#5837924",
   "kickoff": "2026-09-12T14:00:00Z",
@@ -1370,6 +1315,23 @@
   "slugs": [
    "adam-murphy",
    "jesse-dempsey",
+   "ronan-coughlan",
+   "sean-costelloe"
+  ]
+ },
+ {
+  "fotmob_id": "5837932",
+  "url": "/matches/barnet-vs-fleetwood-town/o0st46#5837932",
+  "kickoff": "2026-09-19T14:00:00Z",
+  "comp": "League Two",
+  "home": "Barnet",
+  "away": "Fleetwood",
+  "home_id": "8175",
+  "away_id": "45723",
+  "slugs": [
+   "adam-murphy",
+   "jesse-dempsey",
+   "oisin-gallagher",
    "ronan-coughlan",
    "sean-costelloe"
   ]
@@ -1420,21 +1382,6 @@
    "sean-gannon",
    "sean-moore",
    "terence-doherty"
-  ]
- },
- {
-  "fotmob_id": "5907040",
-  "url": "/matches/darlington-vs-kings-lynn-town/oeopor#5907040",
-  "kickoff": "2026-09-05T14:00:00Z",
-  "comp": "National League North",
-  "home": "Darlington",
-  "away": "King's Lynn Town",
-  "home_id": "8598",
-  "away_id": "45731",
-  "slugs": [
-   "adam-rooney",
-   "bobby-jones",
-   "jesse-nwabueze"
   ]
  },
  {
@@ -1543,6 +1490,21 @@
   ]
  },
  {
+  "fotmob_id": "5837911",
+  "url": "/matches/crewe-alexandra-vs-york-city/37jhby#5837911",
+  "kickoff": "2026-09-05T14:00:00Z",
+  "comp": "League Two",
+  "home": "Crewe Alexandra",
+  "away": "York City",
+  "home_id": "9784",
+  "away_id": "9916",
+  "slugs": [
+   "adrien-thibaut",
+   "charlie-mcneill",
+   "ian-lawlor"
+  ]
+ },
+ {
   "fotmob_id": "5837899",
   "url": "/matches/crewe-alexandra-vs-walsall/38lkg1#5837899",
   "kickoff": "2026-09-01T18:45:00Z",
@@ -1560,27 +1522,12 @@
   ]
  },
  {
-  "fotmob_id": "5837911",
-  "url": "/matches/crewe-alexandra-vs-york-city/37jhby#5837911",
-  "kickoff": "2026-09-05T14:00:00Z",
-  "comp": "League Two",
-  "home": "Crewe Alexandra",
-  "away": "York City",
-  "home_id": "9784",
-  "away_id": "9916",
-  "slugs": [
-   "adrien-thibaut",
-   "charlie-mcneill",
-   "ian-lawlor"
-  ]
- },
- {
   "fotmob_id": "5837920",
   "url": "/matches/colchester-united-vs-crewe-alexandra/2qm7s4#5837920",
   "kickoff": "2026-09-12T14:00:00Z",
   "comp": "League Two",
-  "home": "Colchester",
-  "away": "Crewe",
+  "home": "Colchester United",
+  "away": "Crewe Alexandra",
   "home_id": "8416",
   "away_id": "9784",
   "slugs": [
@@ -1588,6 +1535,23 @@
    "charlie-mcneill",
    "ian-lawlor",
    "sean-raggett"
+  ]
+ },
+ {
+  "fotmob_id": "5837935",
+  "url": "/matches/crewe-alexandra-vs-shrewsbury-town/37b1g8#5837935",
+  "kickoff": "2026-09-19T14:00:00Z",
+  "comp": "League Two",
+  "home": "Crewe",
+  "away": "Shrewsbury",
+  "home_id": "9784",
+  "away_id": "9896",
+  "slugs": [
+   "adrien-thibaut",
+   "anthony-scully",
+   "charlie-mcneill",
+   "ian-lawlor",
+   "kian-mcmahon-brown"
   ]
  },
  {
@@ -1645,19 +1609,21 @@
   ]
  },
  {
-  "fotmob_id": "5837141",
-  "url": "/matches/leicester-city-vs-oxford-united/2cj36g#5837141",
-  "kickoff": "2026-09-05T14:00:00Z",
+  "fotmob_id": "5837154",
+  "url": "/matches/oxford-united-vs-burton-albion/2tafmj#5837154",
+  "kickoff": "2026-09-12T14:00:00Z",
   "comp": "League One",
-  "home": "Leicester City",
-  "away": "Oxford United",
-  "home_id": "8197",
-  "away_id": "8653",
+  "home": "Oxford United",
+  "away": "Burton Albion",
+  "home_id": "8653",
+  "away_id": "9792",
   "slugs": [
    "aidomo-emakhu",
+   "ciaran-gilligan",
+   "gbemi-arubi",
    "james-golding",
-   "tyler-goodrham",
-   "warren-ohora"
+   "mark-omahony",
+   "tyler-goodrham"
   ]
  },
  {
@@ -1749,27 +1715,12 @@
   ]
  },
  {
-  "fotmob_id": "5795436",
-  "url": "/matches/sunderland-vs-brentford/2sw7v2#5795436",
-  "kickoff": "2026-09-05T14:00:00Z",
-  "comp": "Premier League",
-  "home": "Brentford",
-  "away": "Sunderland",
-  "home_id": "9937",
-  "away_id": "8472",
-  "slugs": [
-   "alan-browne",
-   "caoimhin-kelleher",
-   "nathan-collins"
-  ]
- },
- {
   "fotmob_id": "6099331",
   "url": "/matches/sunderland-vs-hull-city/2fgcyx#6099331",
   "kickoff": "2026-09-08T18:45:00Z",
   "comp": "EFL Cup",
   "home": "Sunderland",
-  "away": "Hull",
+  "away": "Hull City",
   "home_id": "8472",
   "away_id": "8667",
   "slugs": [
@@ -1955,6 +1906,19 @@
   ]
  },
  {
+  "fotmob_id": "5833580",
+  "url": "/matches/aluminij-vs-maribor/uzp03#5833580",
+  "kickoff": "2026-09-19T16:00:00Z",
+  "comp": "Prva Liga",
+  "home": "Maribor",
+  "away": "Aluminij",
+  "home_id": "8340",
+  "away_id": "1862",
+  "slugs": [
+   "ali-reghba"
+  ]
+ },
+ {
   "fotmob_id": "5836807",
   "url": "/matches/preston-north-end-vs-blackburn-rovers/2eplli#5836807",
   "kickoff": "2026-09-05T11:30:00Z",
@@ -1981,22 +1945,6 @@
   "slugs": [
    "andrew-moran",
    "jason-knight"
-  ]
- },
- {
-  "fotmob_id": "5836782",
-  "url": "/matches/preston-north-end-vs-charlton-athletic/2cnf3o#5836782",
-  "kickoff": "2026-08-29T14:00:00Z",
-  "comp": "Championship",
-  "home": "Charlton Athletic",
-  "away": "Preston North End",
-  "home_id": "8451",
-  "away_id": "8411",
-  "slugs": [
-   "andrew-moran",
-   "conor-coventry",
-   "dan-mcnamara",
-   "millenic-alli"
   ]
  },
  {
@@ -2032,16 +1980,17 @@
   ]
  },
  {
-  "fotmob_id": "5802917",
-  "url": "/matches/lens-vs-strasbourg/2t6vlu#5802917",
-  "kickoff": "2026-08-29T15:15:00Z",
-  "comp": "Ligue 1",
-  "home": "Strasbourg",
-  "away": "Lens",
-  "home_id": "9848",
-  "away_id": "8588",
+  "fotmob_id": "5836846",
+  "url": "/matches/preston-north-end-vs-queens-park-rangers/2ut60f#5836846",
+  "kickoff": "2026-09-19T14:00:00Z",
+  "comp": "Championship",
+  "home": "QPR",
+  "away": "Preston",
+  "home_id": "10172",
+  "away_id": "8411",
   "slugs": [
-   "andrew-omobamidele"
+   "andrew-moran",
+   "johnny-kenny"
   ]
  },
  {
@@ -2099,6 +2048,35 @@
   ]
  },
  {
+  "fotmob_id": "5837169",
+  "url": "/matches/stockport-county-vs-sheffield-wednesday/3d4b7u#5837169",
+  "kickoff": "2026-09-19T14:00:00Z",
+  "comp": "League One",
+  "home": "Sheff Wed",
+  "away": "Stockport County",
+  "home_id": "10163",
+  "away_id": "10007",
+  "slugs": [
+   "andrew-wogan",
+   "eoghan-oconnell"
+  ]
+ },
+ {
+  "fotmob_id": "5837144",
+  "url": "/matches/blackpool-vs-reading/2rhvur#5837144",
+  "kickoff": "2026-09-05T14:00:00Z",
+  "comp": "League One",
+  "home": "Reading",
+  "away": "Blackpool",
+  "home_id": "9798",
+  "away_id": "8483",
+  "slugs": [
+   "andy-lyons",
+   "conor-masterson",
+   "paudie-oconnor"
+  ]
+ },
+ {
   "fotmob_id": "5837123",
   "url": "/matches/barnsley-vs-blackpool/2botlw#5837123",
   "kickoff": "2026-09-02T18:45:00Z",
@@ -2115,22 +2093,6 @@
   ]
  },
  {
-  "fotmob_id": "5837144",
-  "url": "/matches/blackpool-vs-reading/2rhvur#5837144",
-  "kickoff": "2026-09-05T14:00:00Z",
-  "comp": "League One",
-  "home": "Reading",
-  "away": "Blackpool",
-  "home_id": "9798",
-  "away_id": "8483",
-  "slugs": [
-   "andy-lyons",
-   "cj-hamilton",
-   "conor-masterson",
-   "paudie-oconnor"
-  ]
- },
- {
   "fotmob_id": "5837148",
   "url": "/matches/blackpool-vs-bromley/oawm4t#5837148",
   "kickoff": "2026-09-12T14:00:00Z",
@@ -2143,6 +2105,22 @@
    "andy-lyons",
    "cj-hamilton",
    "owen-mason"
+  ]
+ },
+ {
+  "fotmob_id": "5837161",
+  "url": "/matches/plymouth-argyle-vs-blackpool/2cvdk5#5837161",
+  "kickoff": "2026-09-19T14:00:00Z",
+  "comp": "League One",
+  "home": "Blackpool",
+  "away": "Plymouth",
+  "home_id": "8483",
+  "away_id": "8401",
+  "slugs": [
+   "andy-lyons",
+   "cj-hamilton",
+   "james-storer",
+   "ronan-curtis"
   ]
  },
  {
@@ -2279,48 +2257,32 @@
   ]
  },
  {
-  "fotmob_id": "5793917",
-  "url": "/matches/falkirk-vs-celtic/2u4jmy#5793917",
-  "kickoff": "2026-08-29T14:00:00Z",
-  "comp": "Premiership",
-  "home": "Celtic",
-  "away": "Falkirk",
-  "home_id": "9925",
-  "away_id": "8596",
-  "slugs": [
-   "aodhan-doherty",
-   "johnny-kenny",
-   "liam-scales"
-  ]
- },
- {
-  "fotmob_id": "5793929",
-  "url": "/matches/falkirk-vs-dundee-united/2u9phz#5793929",
-  "kickoff": "2026-09-05T14:00:00Z",
-  "comp": "Premiership",
-  "home": "Dundee United",
-  "away": "Falkirk",
-  "home_id": "9938",
-  "away_id": "8596",
-  "slugs": [
-   "aodhan-doherty",
-   "neil-farrugia",
-   "paul-mcgovern",
-   "will-ferry"
-  ]
- },
- {
   "fotmob_id": "5793911",
   "url": "/matches/falkirk-vs-heart-midlothian/2tesa8#5793911",
   "kickoff": "2026-09-15T18:45:00Z",
   "comp": "Premiership",
   "home": "Falkirk",
-  "away": "Hearts",
+  "away": "Heart of Midlothian",
   "home_id": "8596",
   "away_id": "9860",
   "slugs": [
    "aodhan-doherty",
    "paul-mcgovern"
+  ]
+ },
+ {
+  "fotmob_id": "5793937",
+  "url": "/matches/st-johnstone-vs-falkirk/2eoi1s#5793937",
+  "kickoff": "2026-09-19T14:00:00Z",
+  "comp": "Premiership",
+  "home": "St. Johnstone",
+  "away": "Falkirk",
+  "home_id": "8467",
+  "away_id": "8596",
+  "slugs": [
+   "aodhan-doherty",
+   "paul-mcgovern",
+   "ruari-paton"
   ]
  },
  {
@@ -2402,6 +2364,21 @@
   ]
  },
  {
+  "fotmob_id": "5837915",
+  "url": "/matches/rochdale-vs-gillingham/2vqavo#5837915",
+  "kickoff": "2026-09-05T14:00:00Z",
+  "comp": "League Two",
+  "home": "Rochdale",
+  "away": "Gillingham",
+  "home_id": "8493",
+  "away_id": "10173",
+  "slugs": [
+   "baba-adeeko",
+   "conor-mcmanus",
+   "jonny-smith"
+  ]
+ },
+ {
   "fotmob_id": "5837903",
   "url": "/matches/rochdale-vs-shrewsbury-town/2sobvz#5837903",
   "kickoff": "2026-09-01T18:45:00Z",
@@ -2414,37 +2391,6 @@
    "baba-adeeko",
    "jonny-smith",
    "kian-mcmahon-brown"
-  ]
- },
- {
-  "fotmob_id": "5837884",
-  "url": "/matches/colchester-united-vs-rochdale/2d4fig#5837884",
-  "kickoff": "2026-08-29T14:00:00Z",
-  "comp": "League Two",
-  "home": "Colchester United",
-  "away": "Rochdale",
-  "home_id": "8416",
-  "away_id": "8493",
-  "slugs": [
-   "baba-adeeko",
-   "jonny-smith",
-   "sean-raggett"
-  ]
- },
- {
-  "fotmob_id": "5837915",
-  "url": "/matches/rochdale-vs-gillingham/2vqavo#5837915",
-  "kickoff": "2026-09-05T14:00:00Z",
-  "comp": "League Two",
-  "home": "Rochdale",
-  "away": "Gillingham",
-  "home_id": "8493",
-  "away_id": "10173",
-  "slugs": [
-   "baba-adeeko",
-   "cian-hayes",
-   "conor-mcmanus",
-   "jonny-smith"
   ]
  },
  {
@@ -2683,25 +2629,12 @@
   ]
  },
  {
-  "fotmob_id": "5795442",
-  "url": "/matches/manchester-city-vs-coventry-city/2fb7wc#5795442",
-  "kickoff": "2026-09-05T14:00:00Z",
-  "comp": "Premier League",
-  "home": "Manchester City",
-  "away": "Coventry City",
-  "home_id": "8456",
-  "away_id": "8669",
-  "slugs": [
-   "ben-wilson"
-  ]
- },
- {
   "fotmob_id": "5795448",
   "url": "/matches/coventry-city-vs-brighton-hove-albion/2y1l02#5795448",
   "kickoff": "2026-09-13T13:00:00Z",
   "comp": "Premier League",
-  "home": "Coventry",
-  "away": "Brighton",
+  "home": "Coventry City",
+  "away": "Brighton & Hove Albion",
   "home_id": "8669",
   "away_id": "10204",
   "slugs": [
@@ -2718,6 +2651,19 @@
   "away": "Aston Villa",
   "home_id": "8669",
   "away_id": "10252",
+  "slugs": [
+   "ben-wilson"
+  ]
+ },
+ {
+  "fotmob_id": "5795463",
+  "url": "/matches/coventry-city-vs-nottingham-forest/2y16ft#5795463",
+  "kickoff": "2026-09-19T16:30:00Z",
+  "comp": "Premier League",
+  "home": "Nottm Forest",
+  "away": "Coventry",
+  "home_id": "10203",
+  "away_id": "8669",
   "slugs": [
    "ben-wilson"
   ]
@@ -2779,19 +2725,6 @@
   "slugs": [
    "bobby-jones",
    "josh-seary"
-  ]
- },
- {
-  "fotmob_id": "5907016",
-  "url": "/matches/darlington-vs-macclesfield-fc/2g1p9e#5907016",
-  "kickoff": "2026-08-29T14:00:00Z",
-  "comp": "National North & South",
-  "home": "Darlington",
-  "away": "Macclesfield FC",
-  "home_id": "8598",
-  "away_id": "8599",
-  "slugs": [
-   "bobby-jones"
   ]
  },
  {
@@ -2865,6 +2798,22 @@
    "jack-moorhouse",
    "kieran-ohara",
    "oisin-mcentee"
+  ]
+ },
+ {
+  "fotmob_id": "5793934",
+  "url": "/matches/dundee-fc-vs-motherwell/2qqif1#5793934",
+  "kickoff": "2026-09-19T14:00:00Z",
+  "comp": "Premiership",
+  "home": "Dundee FC",
+  "away": "Motherwell",
+  "home_id": "8284",
+  "away_id": "9927",
+  "slugs": [
+   "bobby-wales",
+   "jack-moorhouse",
+   "joe-hodge",
+   "kieran-ohara"
   ]
  },
  {
@@ -3097,6 +3046,22 @@
   ]
  },
  {
+  "fotmob_id": "5837142",
+  "url": "/matches/luton-town-vs-leyton-orient/2b02ok#5837142",
+  "kickoff": "2026-09-05T14:00:00Z",
+  "comp": "League One",
+  "home": "Luton Town",
+  "away": "Leyton Orient",
+  "home_id": "8346",
+  "away_id": "8351",
+  "slugs": [
+   "callum-marshall",
+   "jaze-kabia",
+   "josh-keeley",
+   "tony-springett"
+  ]
+ },
+ {
   "fotmob_id": "5837130",
   "url": "/matches/luton-town-vs-stockport-county/2sa4df#5837130",
   "kickoff": "2026-09-02T18:45:00Z",
@@ -3134,12 +3099,28 @@
   "kickoff": "2026-09-10T19:00:00Z",
   "comp": "League One",
   "home": "Stevenage",
-  "away": "Luton",
+  "away": "Luton Town",
   "home_id": "10253",
   "away_id": "8346",
   "slugs": [
    "callum-marshall",
    "josh-keeley"
+  ]
+ },
+ {
+  "fotmob_id": "5837165",
+  "url": "/matches/luton-town-vs-bradford-city/2cbv5x#5837165",
+  "kickoff": "2026-09-19T14:00:00Z",
+  "comp": "League One",
+  "home": "Luton",
+  "away": "Bradford",
+  "home_id": "8346",
+  "away_id": "8484",
+  "slugs": [
+   "callum-marshall",
+   "corey-okeeffe",
+   "josh-keeley",
+   "tyreik-wright"
   ]
  },
  {
@@ -3196,6 +3177,23 @@
   ]
  },
  {
+  "fotmob_id": "5836806",
+  "url": "/matches/cardiff-city-vs-portsmouth/2c37oz#5836806",
+  "kickoff": "2026-09-05T14:00:00Z",
+  "comp": "Championship",
+  "home": "Portsmouth",
+  "away": "Cardiff City",
+  "home_id": "8462",
+  "away_id": "8344",
+  "slugs": [
+   "callum-robinson",
+   "conor-shaughnessy",
+   "eoin-kenny",
+   "jack-moylan",
+   "joel-bagan"
+  ]
+ },
+ {
   "fotmob_id": "5836800",
   "url": "/matches/cardiff-city-vs-queens-park-rangers/2u2iyy#5836800",
   "kickoff": "2026-09-02T18:45:00Z",
@@ -3210,42 +3208,6 @@
    "harvey-vale",
    "jack-moylan",
    "jimmy-dunne",
-   "joel-bagan"
-  ]
- },
- {
-  "fotmob_id": "5836781",
-  "url": "/matches/cardiff-city-vs-sheffield-united/2e1v9q#5836781",
-  "kickoff": "2026-08-29T14:00:00Z",
-  "comp": "Championship",
-  "home": "Cardiff City",
-  "away": "Sheffield United",
-  "home_id": "8344",
-  "away_id": "8657",
-  "slugs": [
-   "callum-robinson",
-   "jack-moylan",
-   "joel-bagan",
-   "mark-mcguinness",
-   "matt-doherty",
-   "tom-cannon"
-  ]
- },
- {
-  "fotmob_id": "5836806",
-  "url": "/matches/cardiff-city-vs-portsmouth/2c37oz#5836806",
-  "kickoff": "2026-09-05T14:00:00Z",
-  "comp": "Championship",
-  "home": "Portsmouth",
-  "away": "Cardiff City",
-  "home_id": "8462",
-  "away_id": "8344",
-  "slugs": [
-   "callum-robinson",
-   "conor-shaughnessy",
-   "eoin-kenny",
-   "franco-umeh",
-   "jack-moylan",
    "joel-bagan"
   ]
  },
@@ -3295,7 +3257,6 @@
   "away_id": "9785",
   "slugs": [
    "calum-kavanagh",
-   "frankie-mcmahon-brown",
    "jacob-slater",
    "lee-oconnor",
    "lewis-temple",
@@ -3307,7 +3268,7 @@
   "url": "/matches/oldham-athletic-vs-chesterfield/3616q0#5837925",
   "kickoff": "2026-09-12T14:00:00Z",
   "comp": "League Two",
-  "home": "Oldham",
+  "home": "Oldham Athletic",
   "away": "Chesterfield",
   "home_id": "9785",
   "away_id": "9786",
@@ -3317,22 +3278,6 @@
    "frankie-mcmahon-brown",
    "lewis-temple",
    "ryan-delaney"
-  ]
- },
- {
-  "fotmob_id": "5836778",
-  "url": "/matches/blackburn-rovers-vs-queens-park-rangers/2xizwx#5836778",
-  "kickoff": "2026-08-29T14:00:00Z",
-  "comp": "Championship",
-  "home": "Blackburn Rovers",
-  "away": "Queens Park Rangers",
-  "home_id": "8655",
-  "away_id": "10172",
-  "slugs": [
-   "calum-ward",
-   "harvey-vale",
-   "jimmy-dunne",
-   "sean-mcloughlin"
   ]
  },
  {
@@ -3351,42 +3296,61 @@
   ]
  },
  {
-  "fotmob_id": "1000012814",
-  "url": "/matches/brora-rangers-vs-turriff-united/1aeymtgn#1000012814",
-  "kickoff": "2026-08-29T14:00:00Z",
-  "comp": "Highland / Lowland",
-  "home": "Brora Rangers",
-  "away": "Turriff United",
-  "home_id": "97904",
-  "away_id": "351621",
+  "fotmob_id": "5836822",
+  "url": "/matches/charlton-athletic-vs-queens-park-rangers/2v9483#5836822",
+  "kickoff": "2026-09-09T19:00:00Z",
+  "comp": "Championship",
+  "home": "Charlton Athletic",
+  "away": "Queens Park Rangers",
+  "home_id": "8451",
+  "away_id": "10172",
   "slugs": [
-   "cameron-reid"
-  ]
- },
- {
-  "fotmob_id": "1000012822",
-  "url": "/matches/inverurie-loco-works-vs-turriff-united/spi2eqi#1000012822",
-  "kickoff": "2026-09-05T13:00:00Z",
-  "comp": "Highland League",
-  "home": "Turriff United",
-  "away": "Inverurie Loco Works",
-  "home_id": "351621",
-  "away_id": "1908",
-  "slugs": [
-   "cameron-reid"
+   "calum-ward",
+   "conor-coventry",
+   "dan-mcnamara",
+   "harvey-vale",
+   "jimmy-dunne",
+   "millenic-alli"
   ]
  },
  {
   "fotmob_id": "1000012831",
   "url": "/matches/huntly-vs-turriff-united/ssycs8x#1000012831",
   "kickoff": "2026-09-16T19:00:00Z",
-  "comp": "Highland / Lowland",
+  "comp": "Highland League",
   "home": "Turriff United",
   "away": "Huntly",
   "home_id": "351621",
   "away_id": "2498",
   "slugs": [
    "cameron-reid"
+  ]
+ },
+ {
+  "fotmob_id": "1000012880",
+  "url": "/matches/turriff-united-vs-invergordon/tt8vix99#1000012880",
+  "kickoff": "2026-09-19T14:00:00Z",
+  "comp": "Highland / Lowland",
+  "home": "Invergordon",
+  "away": "Turriff United",
+  "home_id": "1809963",
+  "away_id": "351621",
+  "slugs": [
+   "cameron-reid"
+  ]
+ },
+ {
+  "fotmob_id": "5795436",
+  "url": "/matches/sunderland-vs-brentford/2sw7v2#5795436",
+  "kickoff": "2026-09-05T14:00:00Z",
+  "comp": "Premier League",
+  "home": "Brentford",
+  "away": "Sunderland",
+  "home_id": "9937",
+  "away_id": "8472",
+  "slugs": [
+   "caoimhin-kelleher",
+   "nathan-collins"
   ]
  },
  {
@@ -3408,7 +3372,7 @@
   "url": "/matches/afc-bournemouth-vs-brentford/2v5yfp#5795445",
   "kickoff": "2026-09-12T14:00:00Z",
   "comp": "Premier League",
-  "home": "Bournemouth",
+  "home": "AFC Bournemouth",
   "away": "Brentford",
   "home_id": "8678",
   "away_id": "9937",
@@ -3448,6 +3412,21 @@
   ]
  },
  {
+  "fotmob_id": "5837138",
+  "url": "/matches/burton-albion-vs-cambridge-united/36oai9#5837138",
+  "kickoff": "2026-09-05T14:00:00Z",
+  "comp": "League One",
+  "home": "Burton Albion",
+  "away": "Cambridge United",
+  "home_id": "9792",
+  "away_id": "9834",
+  "slugs": [
+   "cathal-heffernan",
+   "mark-omahony",
+   "sam-curtis"
+  ]
+ },
+ {
   "fotmob_id": "5837124",
   "url": "/matches/bradford-city-vs-cambridge-united/2rwec3#5837124",
   "kickoff": "2026-09-01T18:45:00Z",
@@ -3462,45 +3441,11 @@
   ]
  },
  {
-  "fotmob_id": "5837113",
-  "url": "/matches/huddersfield-town-vs-cambridge-united/36pz37#5837113",
-  "kickoff": "2026-08-29T14:00:00Z",
-  "comp": "League One",
-  "home": "Cambridge United",
-  "away": "Huddersfield Town",
-  "home_id": "9834",
-  "away_id": "9796",
-  "slugs": [
-   "cathal-heffernan",
-   "glenn-mcconnell",
-   "marcus-harness"
-  ]
- },
- {
-  "fotmob_id": "5837138",
-  "url": "/matches/burton-albion-vs-cambridge-united/36oai9#5837138",
-  "kickoff": "2026-09-05T14:00:00Z",
-  "comp": "League One",
-  "home": "Burton Albion",
-  "away": "Cambridge United",
-  "home_id": "9792",
-  "away_id": "9834",
-  "slugs": [
-   "cathal-heffernan",
-   "ciaran-gilligan",
-   "gbemi-arubi",
-   "glenn-mcconnell",
-   "mark-omahony",
-   "sam-curtis",
-   "shane-mcloughlin"
-  ]
- },
- {
   "fotmob_id": "5837149",
   "url": "/matches/reading-vs-cambridge-united/36qtdu#5837149",
   "kickoff": "2026-09-12T14:00:00Z",
   "comp": "League One",
-  "home": "Cambridge",
+  "home": "Cambridge United",
   "away": "Reading",
   "home_id": "9834",
   "away_id": "9798",
@@ -3514,31 +3459,19 @@
   ]
  },
  {
-  "fotmob_id": "5793926",
-  "url": "/matches/kilmarnock-vs-st-mirren/2srhcr#5793926",
-  "kickoff": "2026-09-02T18:45:00Z",
-  "comp": "Premiership",
-  "home": "Kilmarnock",
-  "away": "St. Mirren",
-  "home_id": "8597",
-  "away_id": "9800",
+  "fotmob_id": "5837166",
+  "url": "/matches/oxford-united-vs-cambridge-united/2tr23y#5837166",
+  "kickoff": "2026-09-19T14:00:00Z",
+  "comp": "League One",
+  "home": "Oxford Utd",
+  "away": "Cambridge",
+  "home_id": "8653",
+  "away_id": "9834",
   "slugs": [
-   "cathal-mccarthy"
-  ]
- },
- {
-  "fotmob_id": "5793920",
-  "url": "/matches/kilmarnock-vs-dundee-united/2ua3su#5793920",
-  "kickoff": "2026-08-29T14:00:00Z",
-  "comp": "Premiership",
-  "home": "Kilmarnock",
-  "away": "Dundee United",
-  "home_id": "8597",
-  "away_id": "9938",
-  "slugs": [
-   "cathal-mccarthy",
-   "neil-farrugia",
-   "will-ferry"
+   "cathal-heffernan",
+   "glenn-mcconnell",
+   "sam-curtis",
+   "shane-mcloughlin"
   ]
  },
  {
@@ -3552,8 +3485,20 @@
   "away_id": "8597",
   "slugs": [
    "cathal-mccarthy",
-   "connor-ronan",
    "gavin-molloy"
+  ]
+ },
+ {
+  "fotmob_id": "5793926",
+  "url": "/matches/kilmarnock-vs-st-mirren/2srhcr#5793926",
+  "kickoff": "2026-09-02T18:45:00Z",
+  "comp": "Premiership",
+  "home": "Kilmarnock",
+  "away": "St. Mirren",
+  "home_id": "8597",
+  "away_id": "9800",
+  "slugs": [
+   "cathal-mccarthy"
   ]
  },
  {
@@ -3623,6 +3568,21 @@
   ]
  },
  {
+  "fotmob_id": "5837912",
+  "url": "/matches/exeter-city-vs-walsall/396dnt#5837912",
+  "kickoff": "2026-09-05T14:00:00Z",
+  "comp": "League Two",
+  "home": "Exeter City",
+  "away": "Walsall",
+  "home_id": "9833",
+  "away_id": "10006",
+  "slugs": [
+   "charlie-cummins",
+   "jake-doyle-hayes",
+   "james-furlong"
+  ]
+ },
+ {
   "fotmob_id": "5837900",
   "url": "/matches/barnet-vs-exeter-city/2ojpo5#5837900",
   "kickoff": "2026-09-01T18:45:00Z",
@@ -3638,35 +3598,6 @@
   ]
  },
  {
-  "fotmob_id": "5837894",
-  "url": "/matches/exeter-city-vs-york-city/38473v#5837894",
-  "kickoff": "2026-08-29T14:00:00Z",
-  "comp": "League Two",
-  "home": "York City",
-  "away": "Exeter City",
-  "home_id": "9916",
-  "away_id": "9833",
-  "slugs": [
-   "charlie-cummins"
-  ]
- },
- {
-  "fotmob_id": "5837912",
-  "url": "/matches/exeter-city-vs-walsall/396dnt#5837912",
-  "kickoff": "2026-09-05T14:00:00Z",
-  "comp": "League Two",
-  "home": "Exeter City",
-  "away": "Walsall",
-  "home_id": "9833",
-  "away_id": "10006",
-  "slugs": [
-   "charlie-cummins",
-   "jake-doyle-hayes",
-   "james-furlong",
-   "ronan-maher"
-  ]
- },
- {
   "fotmob_id": "5837926",
   "url": "/matches/port-vale-vs-exeter-city/36qtdt#5837926",
   "kickoff": "2026-09-12T14:00:00Z",
@@ -3678,6 +3609,22 @@
   "slugs": [
    "charlie-cummins",
    "jake-doyle-hayes"
+  ]
+ },
+ {
+  "fotmob_id": "5837936",
+  "url": "/matches/tranmere-rovers-vs-exeter-city/2q16l8#5837936",
+  "kickoff": "2026-09-19T14:00:00Z",
+  "comp": "League Two",
+  "home": "Exeter",
+  "away": "Tranmere",
+  "home_id": "9833",
+  "away_id": "8313",
+  "slugs": [
+   "charlie-cummins",
+   "jacob-slater",
+   "jake-doyle-hayes",
+   "lee-oconnor"
   ]
  },
  {
@@ -3728,24 +3675,6 @@
   ]
  },
  {
-  "fotmob_id": "5847423",
-  "url": "/matches/linfield-vs-carrick-rangers/8th0cpp#5847423",
-  "kickoff": "2026-09-05T14:00:00Z",
-  "comp": "Premiership",
-  "home": "Linfield",
-  "away": "Carrick Rangers",
-  "home_id": "7971",
-  "away_id": "187969",
-  "slugs": [
-   "chris-shields",
-   "cian-omalley",
-   "daire-oconnor",
-   "darragh-leahy",
-   "mikey-place",
-   "ryan-patrick-nolan"
-  ]
- },
- {
   "fotmob_id": "5847427",
   "url": "/matches/dungannon-swifts-vs-linfield/1b5wyy#5847427",
   "kickoff": "2026-09-12T17:00:00Z",
@@ -3763,6 +3692,22 @@
   ]
  },
  {
+  "fotmob_id": "5847441",
+  "url": "/matches/crusaders-vs-linfield/t8blx#5847441",
+  "kickoff": "2026-09-19T14:00:00Z",
+  "comp": "Premiership",
+  "home": "Linfield",
+  "away": "Crusaders",
+  "home_id": "7971",
+  "away_id": "1937",
+  "slugs": [
+   "billy-vance",
+   "chris-shields",
+   "darragh-leahy",
+   "ryan-patrick-nolan"
+  ]
+ },
+ {
   "fotmob_id": "6022244",
   "url": "/matches/southampton-u18-vs-ipswich-town-u18/1hujs895u#6022244",
   "kickoff": "2026-09-12T10:00:00Z",
@@ -3774,19 +3719,6 @@
   "slugs": [
    "christopher-atherton",
    "george-moloney"
-  ]
- },
- {
-  "fotmob_id": "5907046",
-  "url": "/matches/morecambe-vs-buxton/6nux6ie#5907046",
-  "kickoff": "2026-09-05T14:00:00Z",
-  "comp": "National League North",
-  "home": "Morecambe",
-  "away": "Buxton",
-  "home_id": "8489",
-  "away_id": "161824",
-  "slugs": [
-   "cian-coleman"
   ]
  },
  {
@@ -3819,6 +3751,21 @@
   ]
  },
  {
+  "fotmob_id": "5837909",
+  "url": "/matches/cheltenham-town-vs-grimsby-town/2vxwtn#5837909",
+  "kickoff": "2026-09-05T14:00:00Z",
+  "comp": "League Two",
+  "home": "Cheltenham Town",
+  "away": "Grimsby Town",
+  "home_id": "8680",
+  "away_id": "10005",
+  "slugs": [
+   "cian-doyle",
+   "jordan-shipley",
+   "pierce-sweeney"
+  ]
+ },
+ {
   "fotmob_id": "5837895",
   "url": "/matches/accrington-stanley-vs-grimsby-town/2vub35#5837895",
   "kickoff": "2026-09-01T18:45:00Z",
@@ -3832,27 +3779,11 @@
   ]
  },
  {
-  "fotmob_id": "5837909",
-  "url": "/matches/cheltenham-town-vs-grimsby-town/2vxwtn#5837909",
-  "kickoff": "2026-09-05T14:00:00Z",
-  "comp": "League Two",
-  "home": "Cheltenham Town",
-  "away": "Grimsby Town",
-  "home_id": "8680",
-  "away_id": "10005",
-  "slugs": [
-   "cian-doyle",
-   "jordan-shipley",
-   "pierce-sweeney",
-   "reece-staunton"
-  ]
- },
- {
   "fotmob_id": "5837923",
   "url": "/matches/grimsby-town-vs-bristol-rovers/3cdz83#5837923",
   "kickoff": "2026-09-12T11:30:00Z",
   "comp": "League Two",
-  "home": "Grimsby",
+  "home": "Grimsby Town",
   "away": "Bristol Rovers",
   "home_id": "10005",
   "away_id": "10104",
@@ -3861,6 +3792,23 @@
    "ciaran-kelly",
    "joe-quigley",
    "philip-sanyaolu",
+   "reece-staunton"
+  ]
+ },
+ {
+  "fotmob_id": "5837938",
+  "url": "/matches/crawley-town-vs-grimsby-town/2vkpfh#5837938",
+  "kickoff": "2026-09-19T14:00:00Z",
+  "comp": "League Two",
+  "home": "Grimsby",
+  "away": "Crawley",
+  "home_id": "10005",
+  "away_id": "8647",
+  "slugs": [
+   "cian-doyle",
+   "justin-ferizaj",
+   "lewis-richards",
+   "louie-watson",
    "reece-staunton"
   ]
  },
@@ -3884,6 +3832,38 @@
   ]
  },
  {
+  "fotmob_id": "5847437",
+  "url": "/matches/larne-vs-carrick-rangers/8b2d7vy#5847437",
+  "kickoff": "2026-09-19T14:00:00Z",
+  "comp": "Premiership",
+  "home": "Carrick Rangers",
+  "away": "Larne",
+  "home_id": "187969",
+  "away_id": "2206",
+  "slugs": [
+   "cian-omalley",
+   "daire-oconnor",
+   "jordan-mceneff",
+   "josh-ukek",
+   "mikey-place",
+   "ronan-doherty"
+  ]
+ },
+ {
+  "fotmob_id": "5837914",
+  "url": "/matches/northampton-town-vs-newport-county/2yhs4c#5837914",
+  "kickoff": "2026-09-05T14:00:00Z",
+  "comp": "League Two",
+  "home": "Northampton Town",
+  "away": "Newport County",
+  "home_id": "8651",
+  "away_id": "10262",
+  "slugs": [
+   "ciaran-brennan",
+   "joe-obrien-whitmarsh"
+  ]
+ },
+ {
   "fotmob_id": "5837904",
   "url": "/matches/newport-county-vs-salford-city/jnwknbo#5837904",
   "kickoff": "2026-09-01T18:45:00Z",
@@ -3898,48 +3878,18 @@
   ]
  },
  {
-  "fotmob_id": "5837888",
-  "url": "/matches/tranmere-rovers-vs-newport-county/2upz8x#5837888",
-  "kickoff": "2026-08-29T14:00:00Z",
+  "fotmob_id": "5837931",
+  "url": "/matches/accrington-stanley-vs-newport-county/2ypw5y#5837931",
+  "kickoff": "2026-09-19T14:00:00Z",
   "comp": "League Two",
-  "home": "Newport County",
-  "away": "Tranmere Rovers",
-  "home_id": "10262",
-  "away_id": "8313",
-  "slugs": [
-   "ciaran-brennan",
-   "jacob-slater",
-   "lee-oconnor"
-  ]
- },
- {
-  "fotmob_id": "5837914",
-  "url": "/matches/northampton-town-vs-newport-county/2yhs4c#5837914",
-  "kickoff": "2026-09-05T14:00:00Z",
-  "comp": "League Two",
-  "home": "Northampton Town",
-  "away": "Newport County",
-  "home_id": "8651",
+  "home": "Accrington",
+  "away": "Newport",
+  "home_id": "8671",
   "away_id": "10262",
   "slugs": [
    "ciaran-brennan",
-   "conor-mccarthy",
-   "joe-obrien-whitmarsh"
-  ]
- },
- {
-  "fotmob_id": "5837154",
-  "url": "/matches/oxford-united-vs-burton-albion/2tafmj#5837154",
-  "kickoff": "2026-09-12T14:00:00Z",
-  "comp": "League One",
-  "home": "Oxford Utd",
-  "away": "Burton",
-  "home_id": "8653",
-  "away_id": "9792",
-  "slugs": [
-   "ciaran-gilligan",
-   "gbemi-arubi",
-   "mark-omahony"
+   "connor-obrien",
+   "seamus-conneely"
   ]
  },
  {
@@ -3977,37 +3927,18 @@
   ]
  },
  {
-  "fotmob_id": "5837885",
-  "url": "/matches/crawley-town-vs-bristol-rovers/2woe1z#5837885",
-  "kickoff": "2026-08-29T14:00:00Z",
+  "fotmob_id": "5837937",
+  "url": "/matches/bristol-rovers-vs-gillingham/3eeoyc#5837937",
+  "kickoff": "2026-09-19T14:00:00Z",
   "comp": "League Two",
-  "home": "Crawley Town",
+  "home": "Gillingham",
   "away": "Bristol Rovers",
-  "home_id": "8647",
+  "home_id": "10173",
   "away_id": "10104",
   "slugs": [
    "ciaran-kelly",
+   "conor-mcmanus",
    "joe-quigley",
-   "lewis-richards",
-   "louie-watson",
-   "philip-sanyaolu"
-  ]
- },
- {
-  "fotmob_id": "5837908",
-  "url": "/matches/rotherham-united-vs-bristol-rovers/2qv5pb#5837908",
-  "kickoff": "2026-09-05T14:00:00Z",
-  "comp": "League Two",
-  "home": "Bristol Rovers",
-  "away": "Rotherham United",
-  "home_id": "10104",
-  "away_id": "8119",
-  "slugs": [
-   "ciaran-kelly",
-   "emmanuel-adegboyega",
-   "joe-quigley",
-   "joe-rafferty",
-   "joshua-kayode",
    "philip-sanyaolu"
   ]
  },
@@ -4025,52 +3956,18 @@
   ]
  },
  {
-  "fotmob_id": "5837907",
-  "url": "/matches/crawley-town-vs-accrington-stanley/2haglg#5837907",
-  "kickoff": "2026-09-05T14:00:00Z",
-  "comp": "League Two",
-  "home": "Accrington Stanley",
-  "away": "Crawley Town",
-  "home_id": "8671",
-  "away_id": "8647",
-  "slugs": [
-   "connor-obrien",
-   "justin-ferizaj",
-   "lewis-richards",
-   "louie-watson",
-   "seamus-conneely"
-  ]
- },
- {
   "fotmob_id": "5837919",
   "url": "/matches/barnet-vs-accrington-stanley/2chn6w#5837919",
   "kickoff": "2026-09-12T14:00:00Z",
   "comp": "League Two",
   "home": "Barnet",
-  "away": "Accrington",
+  "away": "Accrington Stanley",
   "home_id": "8175",
   "away_id": "8671",
   "slugs": [
    "connor-obrien",
    "oisin-gallagher",
    "seamus-conneely"
-  ]
- },
- {
-  "fotmob_id": "5837114",
-  "url": "/matches/barnsley-vs-leyton-orient/2adkj2#5837114",
-  "kickoff": "2026-08-29T14:00:00Z",
-  "comp": "League One",
-  "home": "Leyton Orient",
-  "away": "Barnsley",
-  "home_id": "8351",
-  "away_id": "8283",
-  "slugs": [
-   "connor-oriordan",
-   "corey-okeeffe",
-   "jaze-kabia",
-   "killian-cahill",
-   "tony-springett"
   ]
  },
  {
@@ -4092,7 +3989,7 @@
   "url": "/matches/barnsley-vs-plymouth-argyle/2avfan#5837155",
   "kickoff": "2026-09-12T14:00:00Z",
   "comp": "League One",
-  "home": "Plymouth",
+  "home": "Plymouth Argyle",
   "away": "Barnsley",
   "home_id": "8401",
   "away_id": "8283",
@@ -4181,6 +4078,23 @@
   ]
  },
  {
+  "fotmob_id": "5793935",
+  "url": "/matches/aberdeen-vs-hibernian/2wiczh#5793935",
+  "kickoff": "2026-09-19T14:00:00Z",
+  "comp": "Premiership",
+  "home": "Hibernian",
+  "away": "Aberdeen",
+  "home_id": "10251",
+  "away_id": "8485",
+  "slugs": [
+   "connor-ronan",
+   "gavin-molloy",
+   "jacob-devaney",
+   "jamie-mcgrath",
+   "owen-elding"
+  ]
+ },
+ {
   "fotmob_id": "5906419",
   "url": "/matches/aldershot-town-vs-fc-halifax-town/2vnwgb#5906419",
   "kickoff": "2026-09-05T11:30:00Z",
@@ -4258,6 +4172,22 @@
   ]
  },
  {
+  "fotmob_id": "5906458",
+  "url": "/matches/fc-halifax-town-vs-sutton-united/6it95jg#5906458",
+  "kickoff": "2026-09-19T14:00:00Z",
+  "comp": "National League",
+  "home": "FC Halifax Town",
+  "away": "Sutton United",
+  "home_id": "10195",
+  "away_id": "158316",
+  "slugs": [
+   "conor-carty",
+   "emmanuel-osadebe",
+   "max-bardell",
+   "zak-gilsenan"
+  ]
+ },
+ {
   "fotmob_id": "5836801",
   "url": "/matches/charlton-athletic-vs-west-bromwich-albion/2f5prk#5836801",
   "kickoff": "2026-09-02T18:45:00Z",
@@ -4271,21 +4201,6 @@
    "dan-mcnamara",
    "jayson-molumby",
    "max-oleary",
-   "millenic-alli"
-  ]
- },
- {
-  "fotmob_id": "5836822",
-  "url": "/matches/charlton-athletic-vs-queens-park-rangers/2v9483#5836822",
-  "kickoff": "2026-09-09T19:00:00Z",
-  "comp": "Championship",
-  "home": "Charlton Athletic",
-  "away": "Queens Park Rangers",
-  "home_id": "8451",
-  "away_id": "10172",
-  "slugs": [
-   "conor-coventry",
-   "dan-mcnamara",
    "millenic-alli"
   ]
  },
@@ -4308,6 +4223,22 @@
   ]
  },
  {
+  "fotmob_id": "5837140",
+  "url": "/matches/huddersfield-town-vs-notts-county/36jnyj#5837140",
+  "kickoff": "2026-09-05T14:00:00Z",
+  "comp": "League One",
+  "home": "Huddersfield Town",
+  "away": "Notts County",
+  "home_id": "9796",
+  "away_id": "9819",
+  "slugs": [
+   "conor-grant",
+   "darius-lipsiuc",
+   "marcus-harness",
+   "rory-finneran"
+  ]
+ },
+ {
   "fotmob_id": "5837127",
   "url": "/matches/notts-county-vs-doncaster-rovers/37srxi#5837127",
   "kickoff": "2026-09-01T18:45:00Z",
@@ -4327,45 +4258,12 @@
   ]
  },
  {
-  "fotmob_id": "5837117",
-  "url": "/matches/burton-albion-vs-notts-county/36hzf9#5837117",
-  "kickoff": "2026-08-29T14:00:00Z",
-  "comp": "League One",
-  "home": "Notts County",
-  "away": "Burton Albion",
-  "home_id": "9819",
-  "away_id": "9792",
-  "slugs": [
-   "conor-grant",
-   "darius-lipsiuc",
-   "rory-finneran"
-  ]
- },
- {
-  "fotmob_id": "5837140",
-  "url": "/matches/huddersfield-town-vs-notts-county/36jnyj#5837140",
-  "kickoff": "2026-09-05T14:00:00Z",
-  "comp": "League One",
-  "home": "Huddersfield Town",
-  "away": "Notts County",
-  "home_id": "9796",
-  "away_id": "9819",
-  "slugs": [
-   "conor-grant",
-   "darius-lipsiuc",
-   "luke-browne",
-   "marcus-harness",
-   "rory-finneran",
-   "sean-roughan"
-  ]
- },
- {
   "fotmob_id": "5837153",
   "url": "/matches/bradford-city-vs-notts-county/2rqie3#5837153",
   "kickoff": "2026-09-12T11:30:00Z",
   "comp": "League One",
   "home": "Notts County",
-  "away": "Bradford",
+  "away": "Bradford City",
   "home_id": "9819",
   "away_id": "8484",
   "slugs": [
@@ -4375,6 +4273,24 @@
    "luke-browne",
    "rory-finneran",
    "tyreik-wright"
+  ]
+ },
+ {
+  "fotmob_id": "5837168",
+  "url": "/matches/reading-vs-notts-county/36ki8c#5837168",
+  "kickoff": "2026-09-19T14:00:00Z",
+  "comp": "League One",
+  "home": "Reading",
+  "away": "Notts County",
+  "home_id": "9798",
+  "away_id": "9819",
+  "slugs": [
+   "conor-grant",
+   "conor-masterson",
+   "darius-lipsiuc",
+   "luke-browne",
+   "paudie-oconnor",
+   "rory-finneran"
   ]
  },
  {
@@ -4395,18 +4311,20 @@
   ]
  },
  {
-  "fotmob_id": "5837886",
-  "url": "/matches/northampton-town-vs-gillingham/2xhsbz#5837886",
-  "kickoff": "2026-08-29T14:00:00Z",
+  "fotmob_id": "5837939",
+  "url": "/matches/rotherham-united-vs-northampton-town/2bq9hq#5837939",
+  "kickoff": "2026-09-19T14:00:00Z",
   "comp": "League Two",
-  "home": "Gillingham",
-  "away": "Northampton Town",
-  "home_id": "10173",
-  "away_id": "8651",
+  "home": "Northampton",
+  "away": "Rotherham",
+  "home_id": "8651",
+  "away_id": "8119",
   "slugs": [
    "conor-mccarthy",
-   "conor-mcmanus",
-   "joe-obrien-whitmarsh"
+   "emmanuel-adegboyega",
+   "joe-obrien-whitmarsh",
+   "joe-rafferty",
+   "joshua-kayode"
   ]
  },
  {
@@ -4428,7 +4346,7 @@
   "kickoff": "2026-09-12T14:00:00Z",
   "comp": "League Two",
   "home": "Gillingham",
-  "away": "Tranmere",
+  "away": "Tranmere Rovers",
   "home_id": "10173",
   "away_id": "8313",
   "slugs": [
@@ -4438,34 +4356,20 @@
   ]
  },
  {
-  "fotmob_id": "5836780",
-  "url": "/matches/bristol-city-vs-portsmouth/2cx6oz#5836780",
-  "kickoff": "2026-08-29T14:00:00Z",
+  "fotmob_id": "5836845",
+  "url": "/matches/portsmouth-vs-blackburn-rovers/2f8a76#5836845",
+  "kickoff": "2026-09-19T14:00:00Z",
   "comp": "Championship",
-  "home": "Bristol City",
-  "away": "Portsmouth",
-  "home_id": "8427",
-  "away_id": "8462",
+  "home": "Portsmouth",
+  "away": "Blackburn",
+  "home_id": "8462",
+  "away_id": "8655",
   "slugs": [
    "conor-shaughnessy",
-   "jason-knight"
-  ]
- },
- {
-  "fotmob_id": "5837136",
-  "url": "/matches/bradford-city-vs-mansfield-town/2rq49n#5837136",
-  "kickoff": "2026-09-05T14:00:00Z",
-  "comp": "League One",
-  "home": "Bradford City",
-  "away": "Mansfield Town",
-  "home_id": "8484",
-  "away_id": "9818",
-  "slugs": [
-   "corey-okeeffe",
-   "david-mcgoldrick",
-   "ryan-sweeney",
-   "stephen-mclaughlin",
-   "tyreik-wright"
+   "eoin-kenny",
+   "franco-umeh",
+   "issa-kargbo",
+   "sean-mcloughlin"
   ]
  },
  {
@@ -4534,6 +4438,19 @@
   ]
  },
  {
+  "fotmob_id": "5837146",
+  "url": "/matches/milton-keynes-dons-vs-wycombe-wanderers/2hbkox#5837146",
+  "kickoff": "2026-09-05T14:00:00Z",
+  "comp": "League One",
+  "home": "Wycombe Wanderers",
+  "away": "Milton Keynes Dons",
+  "home_id": "8676",
+  "away_id": "8645",
+  "slugs": [
+   "dan-casey"
+  ]
+ },
+ {
   "fotmob_id": "5837133",
   "url": "/matches/wycombe-wanderers-vs-sheffield-wednesday/2xnubc#5837133",
   "kickoff": "2026-09-01T18:45:00Z",
@@ -4548,35 +4465,6 @@
    "jamie-mullins",
    "kieran-morrison",
    "louie-barry"
-  ]
- },
- {
-  "fotmob_id": "5837122",
-  "url": "/matches/wycombe-wanderers-vs-stockport-county/2vx3zi#5837122",
-  "kickoff": "2026-08-29T14:00:00Z",
-  "comp": "League One",
-  "home": "Stockport County",
-  "away": "Wycombe Wanderers",
-  "home_id": "10007",
-  "away_id": "8676",
-  "slugs": [
-   "dan-casey",
-   "eoghan-oconnell",
-   "jamie-mullins"
-  ]
- },
- {
-  "fotmob_id": "5837146",
-  "url": "/matches/milton-keynes-dons-vs-wycombe-wanderers/2hbkox#5837146",
-  "kickoff": "2026-09-05T14:00:00Z",
-  "comp": "League One",
-  "home": "Wycombe Wanderers",
-  "away": "Milton Keynes Dons",
-  "home_id": "8676",
-  "away_id": "8645",
-  "slugs": [
-   "dan-casey",
-   "jamie-mullins"
   ]
  },
  {
@@ -4596,6 +4484,22 @@
   ]
  },
  {
+  "fotmob_id": "5837170",
+  "url": "/matches/wigan-athletic-vs-wycombe-wanderers/2g4a86#5837170",
+  "kickoff": "2026-09-19T14:00:00Z",
+  "comp": "League One",
+  "home": "Wigan",
+  "away": "Wycombe",
+  "home_id": "8528",
+  "away_id": "8676",
+  "slugs": [
+   "dan-casey",
+   "dara-costelloe",
+   "jamie-mullins",
+   "sonny-perkins"
+  ]
+ },
+ {
   "fotmob_id": "5953408",
   "url": "/matches/stourbridge-vs-hitchin-town/o2ayb96#5953408",
   "kickoff": "2026-09-12T14:00:00Z",
@@ -4606,19 +4510,6 @@
   "away_id": "161834",
   "slugs": [
    "daniel-idiakhoa"
-  ]
- },
- {
-  "fotmob_id": "5794311",
-  "url": "/matches/queens-park-vs-partick-thistle/2an7f5#5794311",
-  "kickoff": "2026-08-29T14:00:00Z",
-  "comp": "Championship",
-  "home": "Partick Thistle",
-  "away": "Queen's Park",
-  "home_id": "8426",
-  "away_id": "8235",
-  "slugs": [
-   "daniel-oreilly"
   ]
  },
  {
@@ -4648,29 +4539,17 @@
   ]
  },
  {
-  "fotmob_id": "5907536",
-  "url": "/matches/horsham-vs-farnham-town/3voyex2p#5907536",
-  "kickoff": "2026-08-29T14:00:00Z",
-  "comp": "National North & South",
-  "home": "Horsham",
-  "away": "Farnham Town",
-  "home_id": "105554",
-  "away_id": "674293",
+  "fotmob_id": "5794325",
+  "url": "/matches/partick-thistle-vs-raith-rovers/2vuawc#5794325",
+  "kickoff": "2026-09-19T14:00:00Z",
+  "comp": "Championship",
+  "home": "Partick Thistle",
+  "away": "Raith Rovers",
+  "home_id": "8426",
+  "away_id": "10250",
   "slugs": [
-   "danny-burke"
-  ]
- },
- {
-  "fotmob_id": "5907560",
-  "url": "/matches/dagenham-redbridge-vs-horsham/2yn6cqr#5907560",
-  "kickoff": "2026-09-05T14:00:00Z",
-  "comp": "National League South",
-  "home": "Horsham",
-  "away": "Dagenham & Redbridge",
-  "home_id": "105554",
-  "away_id": "8009",
-  "slugs": [
-   "danny-burke"
+   "daniel-oreilly",
+   "zak-delaney"
   ]
  },
  {
@@ -4822,16 +4701,22 @@
   ]
  },
  {
-  "fotmob_id": "5794537",
-  "url": "/matches/ross-county-vs-east-kilbride/26cvsioj#5794537",
-  "kickoff": "2026-08-29T16:30:00Z",
-  "comp": "League One",
-  "home": "Ross County",
-  "away": "East Kilbride",
-  "home_id": "8649",
-  "away_id": "575419",
+  "fotmob_id": "5795458",
+  "url": "/matches/everton-vs-ipswich-town/2uo0th#5795458",
+  "kickoff": "2026-09-19T14:00:00Z",
+  "comp": "Premier League",
+  "home": "Everton",
+  "away": "Ipswich",
+  "home_id": "8668",
+  "away_id": "9902",
   "slugs": [
-   "darragh-oconnor"
+   "dara-oshea",
+   "desmond-armstrong",
+   "jack-clarke",
+   "jack-taylor",
+   "jake-obrien",
+   "kasey-mcateer",
+   "mark-travers"
   ]
  },
  {
@@ -4874,16 +4759,16 @@
   ]
  },
  {
-  "fotmob_id": "5906410",
-  "url": "/matches/gateshead-fc-vs-harrogate-town/1nhi8e#5906410",
-  "kickoff": "2026-08-31T14:00:00Z",
-  "comp": "National League",
-  "home": "Harrogate Town",
-  "away": "Gateshead FC",
-  "home_id": "7946",
-  "away_id": "6189",
+  "fotmob_id": "5794548",
+  "url": "/matches/alloa-athletic-vs-east-kilbride/2685tguy#5794548",
+  "kickoff": "2026-09-19T14:00:00Z",
+  "comp": "League One",
+  "home": "Alloa Athletic",
+  "away": "East Kilbride",
+  "home_id": "8160",
+  "away_id": "575419",
   "slugs": [
-   "david-eguaibor"
+   "darragh-oconnor"
   ]
  },
  {
@@ -4901,10 +4786,23 @@
   ]
  },
  {
+  "fotmob_id": "5906410",
+  "url": "/matches/gateshead-fc-vs-harrogate-town/1nhi8e#5906410",
+  "kickoff": "2026-08-31T14:00:00Z",
+  "comp": "National League",
+  "home": "Harrogate Town",
+  "away": "Gateshead FC",
+  "home_id": "7946",
+  "away_id": "6189",
+  "slugs": [
+   "david-eguaibor"
+  ]
+ },
+ {
   "fotmob_id": "6000873",
   "url": "/matches/gateshead-fc-vs-derby-county-u21/3vp8os3n#6000873",
   "kickoff": "2026-09-08T18:00:00Z",
-  "comp": "National League Cup Group A",
+  "comp": "National League Cup",
   "home": "Gateshead FC",
   "away": "Derby County U21",
   "home_id": "6189",
@@ -4940,17 +4838,17 @@
   ]
  },
  {
-  "fotmob_id": "5878658",
-  "url": "/matches/fc-inter-turku-vs-hjk/286mm7#5878658",
-  "kickoff": "2026-09-05T15:00:00Z",
-  "comp": "Cup",
-  "home": "FC Inter Turku",
-  "away": "HJK",
-  "home_id": "6550",
-  "away_id": "9861",
+  "fotmob_id": "5906460",
+  "url": "/matches/gateshead-fc-vs-southend-united/1tkrfl#5906460",
+  "kickoff": "2026-09-19T14:00:00Z",
+  "comp": "National League",
+  "home": "Gateshead FC",
+  "away": "Southend",
+  "home_id": "6189",
+  "away_id": "8652",
   "slugs": [
-   "david-eze",
-   "david-ezeh"
+   "david-eguaibor",
+   "promise-omochere"
   ]
  },
  {
@@ -4996,12 +4894,26 @@
   ]
  },
  {
+  "fotmob_id": "5837136",
+  "url": "/matches/bradford-city-vs-mansfield-town/2rq49n#5837136",
+  "kickoff": "2026-09-05T14:00:00Z",
+  "comp": "League One",
+  "home": "Bradford City",
+  "away": "Mansfield Town",
+  "home_id": "8484",
+  "away_id": "9818",
+  "slugs": [
+   "david-mcgoldrick",
+   "ryan-sweeney"
+  ]
+ },
+ {
   "fotmob_id": "5837152",
   "url": "/matches/huddersfield-town-vs-mansfield-town/36j8tn#5837152",
   "kickoff": "2026-09-12T14:00:00Z",
   "comp": "League One",
-  "home": "Mansfield",
-  "away": "Huddersfield",
+  "home": "Mansfield Town",
+  "away": "Huddersfield Town",
   "home_id": "9818",
   "away_id": "9796",
   "slugs": [
@@ -5062,34 +4974,42 @@
   ]
  },
  {
-  "fotmob_id": "5847418",
-  "url": "/matches/ballymena-united-vs-bangor/1jcucpm#5847418",
-  "kickoff": "2026-09-05T14:00:00Z",
+  "fotmob_id": "5837167",
+  "url": "/matches/peterborough-united-vs-doncaster-rovers/2us05d#5837167",
+  "kickoff": "2026-09-19T14:00:00Z",
+  "comp": "League One",
+  "home": "Peterborough",
+  "away": "Doncaster",
+  "home_id": "8677",
+  "away_id": "9903",
+  "slugs": [
+   "david-okagbue",
+   "evan-weir",
+   "james-collins",
+   "jay-mcgrath",
+   "leon-ayinde",
+   "liam-kelly",
+   "neill-byrne",
+   "sean-grehan",
+   "thomas-oconnor"
+  ]
+ },
+ {
+  "fotmob_id": "5847440",
+  "url": "/matches/ballymena-united-vs-dungannon-swifts/mf8ss#5847440",
+  "kickoff": "2026-09-19T14:00:00Z",
   "comp": "Premiership",
-  "home": "Bangor",
+  "home": "Dungannon Swifts",
   "away": "Ballymena United",
-  "home_id": "77755",
+  "home_id": "4615",
   "away_id": "4063",
   "slugs": [
    "david-toure",
    "jack-oreilly",
+   "kealan-dillon",
+   "paul-doyle",
    "sean-murray",
    "success-edogun"
-  ]
- },
- {
-  "fotmob_id": "5795425",
-  "url": "/matches/everton-vs-afc-bournemouth/2hkv2h#5795425",
-  "kickoff": "2026-08-29T14:00:00Z",
-  "comp": "Premier League",
-  "home": "AFC Bournemouth",
-  "away": "Everton",
-  "home_id": "8678",
-  "away_id": "8668",
-  "slugs": [
-   "desmond-armstrong",
-   "jake-obrien",
-   "mark-travers"
   ]
  },
  {
@@ -5148,33 +5068,6 @@
   "away_id": "10193",
   "slugs": [
    "dominic-bernard"
-  ]
- },
- {
-  "fotmob_id": "5907539",
-  "url": "/matches/torquay-united-vs-hampton-richmond/32s6l4x#5907539",
-  "kickoff": "2026-08-29T14:00:00Z",
-  "comp": "National North & South",
-  "home": "Torquay United",
-  "away": "Hampton & Richmond",
-  "home_id": "10193",
-  "away_id": "105552",
-  "slugs": [
-   "dominic-bernard"
-  ]
- },
- {
-  "fotmob_id": "5907561",
-  "url": "/matches/weston-super-mare-vs-maidstone-united/1q4gmm#5907561",
-  "kickoff": "2026-09-05T14:00:00Z",
-  "comp": "National League South",
-  "home": "Maidstone United",
-  "away": "Weston Super Mare",
-  "home_id": "8131",
-  "away_id": "6314",
-  "slugs": [
-   "dominic-bernard",
-   "sean-long"
   ]
  },
  {
@@ -5245,20 +5138,6 @@
   ]
  },
  {
-  "fotmob_id": "5837910",
-  "url": "/matches/barnet-vs-chesterfield/2o1lef#5837910",
-  "kickoff": "2026-09-05T14:00:00Z",
-  "comp": "League Two",
-  "home": "Chesterfield",
-  "away": "Barnet",
-  "home_id": "9786",
-  "away_id": "8175",
-  "slugs": [
-   "dylan-duffy",
-   "oisin-gallagher"
-  ]
- },
- {
   "fotmob_id": "6015005",
   "url": "/matches/chesterfield-vs-manchester-city-u21/4u3b9cfd#6015005",
   "kickoff": "2026-09-15T18:00:00Z",
@@ -5267,6 +5146,19 @@
   "away": "Manchester City U21",
   "home_id": "9786",
   "away_id": "860800",
+  "slugs": [
+   "dylan-duffy"
+  ]
+ },
+ {
+  "fotmob_id": "5837933",
+  "url": "/matches/chesterfield-vs-york-city/37kbqh#5837933",
+  "kickoff": "2026-09-19T14:00:00Z",
+  "comp": "League Two",
+  "home": "Chesterfield",
+  "away": "York City",
+  "home_id": "9786",
+  "away_id": "9916",
   "slugs": [
    "dylan-duffy"
   ]
@@ -5402,27 +5294,12 @@
   ]
  },
  {
-  "fotmob_id": "5836813",
-  "url": "/matches/west-ham-united-vs-derby-county/2xhsc2#5836813",
-  "kickoff": "2026-09-05T14:00:00Z",
-  "comp": "Championship",
-  "home": "West Ham United",
-  "away": "Derby County",
-  "home_id": "8654",
-  "away_id": "10170",
-  "slugs": [
-   "eiran-cashin",
-   "max-johnston",
-   "sammie-szmodics"
-  ]
- },
- {
   "fotmob_id": "5836823",
   "url": "/matches/west-bromwich-albion-vs-derby-county/2xjsz2#5836823",
   "kickoff": "2026-09-09T18:45:00Z",
   "comp": "Championship",
-  "home": "Derby",
-  "away": "West Brom",
+  "home": "Derby County",
+  "away": "West Bromwich Albion",
   "home_id": "10170",
   "away_id": "8659",
   "slugs": [
@@ -5450,12 +5327,44 @@
   ]
  },
  {
+  "fotmob_id": "5836840",
+  "url": "/matches/burnley-vs-derby-county/2sd9kk#5836840",
+  "kickoff": "2026-09-19T14:00:00Z",
+  "comp": "Championship",
+  "home": "Burnley",
+  "away": "Derby",
+  "home_id": "8191",
+  "away_id": "10170",
+  "slugs": [
+   "eiran-cashin",
+   "max-johnston",
+   "michael-obafemi",
+   "sammie-szmodics"
+  ]
+ },
+ {
+  "fotmob_id": "5837908",
+  "url": "/matches/rotherham-united-vs-bristol-rovers/2qv5pb#5837908",
+  "kickoff": "2026-09-05T14:00:00Z",
+  "comp": "League Two",
+  "home": "Bristol Rovers",
+  "away": "Rotherham United",
+  "home_id": "10104",
+  "away_id": "8119",
+  "slugs": [
+   "emmanuel-adegboyega",
+   "joe-quigley",
+   "joe-rafferty",
+   "philip-sanyaolu"
+  ]
+ },
+ {
   "fotmob_id": "5837927",
   "url": "/matches/rotherham-united-vs-salford-city/jdkgtzm#5837927",
   "kickoff": "2026-09-12T14:00:00Z",
   "comp": "League Two",
-  "home": "Rotherham",
-  "away": "Salford",
+  "home": "Rotherham United",
+  "away": "Salford City",
   "home_id": "8119",
   "away_id": "282326",
   "slugs": [
@@ -5463,6 +5372,19 @@
    "joe-rafferty",
    "joshua-kayode",
    "ryan-graydon"
+  ]
+ },
+ {
+  "fotmob_id": "5906420",
+  "url": "/matches/barrow-vs-sutton-united/687t0jh#5906420",
+  "kickoff": "2026-09-05T14:00:00Z",
+  "comp": "National League",
+  "home": "Barrow",
+  "away": "Sutton United",
+  "home_id": "6350",
+  "away_id": "158316",
+  "slugs": [
+   "emmanuel-osadebe"
   ]
  },
  {
@@ -5480,23 +5402,10 @@
   ]
  },
  {
-  "fotmob_id": "5906420",
-  "url": "/matches/barrow-vs-sutton-united/687t0jh#5906420",
-  "kickoff": "2026-09-05T14:00:00Z",
-  "comp": "National League",
-  "home": "Barrow",
-  "away": "Sutton United",
-  "home_id": "6350",
-  "away_id": "158316",
-  "slugs": [
-   "emmanuel-osadebe"
-  ]
- },
- {
   "fotmob_id": "6000927",
   "url": "/matches/sutton-united-vs-birmingham-u21/ode6ax95#6000927",
   "kickoff": "2026-09-08T18:00:00Z",
-  "comp": "National League Cup Group D",
+  "comp": "National League Cup",
   "home": "Sutton United",
   "away": "Birmingham U21",
   "home_id": "158316",
@@ -5568,20 +5477,6 @@
   ]
  },
  {
-  "fotmob_id": "5882079",
-  "url": "/matches/barry-town-vs-new-saints/qmbas#5882079",
-  "kickoff": "2026-09-05T16:15:00Z",
-  "comp": "Premier League",
-  "home": "The New Saints",
-  "away": "Barry Town",
-  "home_id": "7852",
-  "away_id": "1603",
-  "slugs": [
-   "eoin-farrell",
-   "zach-nolan"
-  ]
- },
- {
   "fotmob_id": "5882080",
   "url": "/matches/airbus-uk-broughton-vs-new-saints/u34gm#5882080",
   "kickoff": "2026-09-11T18:45:00Z",
@@ -5610,6 +5505,20 @@
   ]
  },
  {
+  "fotmob_id": "5882102",
+  "url": "/matches/new-saints-vs-llandudno-fc/o4unnke#5882102",
+  "kickoff": "2026-09-19T16:30:00Z",
+  "comp": "Premier League",
+  "home": "The New Saints",
+  "away": "Llandudno FC",
+  "home_id": "7852",
+  "away_id": "316296",
+  "slugs": [
+   "eoin-farrell",
+   "zach-nolan"
+  ]
+ },
+ {
   "fotmob_id": "5953405",
   "url": "/matches/bishops-stortford-vs-leamington/snkcv#5953405",
   "kickoff": "2026-09-12T14:00:00Z",
@@ -5620,19 +5529,6 @@
   "away_id": "5764",
   "slugs": [
    "eric-yahaya"
-  ]
- },
- {
-  "fotmob_id": "5795437",
-  "url": "/matches/leeds-united-vs-brighton-hove-albion/2vqp9d#5795437",
-  "kickoff": "2026-09-05T14:00:00Z",
-  "comp": "Premier League",
-  "home": "Brighton & Hove Albion",
-  "away": "Leeds United",
-  "home_id": "10204",
-  "away_id": "8463",
-  "slugs": [
-   "evan-ferguson"
   ]
  },
  {
@@ -5649,10 +5545,23 @@
   ]
  },
  {
+  "fotmob_id": "5795457",
+  "url": "/matches/arsenal-vs-brighton-hove-albion/3bfk5g#5795457",
+  "kickoff": "2026-09-19T14:00:00Z",
+  "comp": "Premier League",
+  "home": "Brighton",
+  "away": "Arsenal",
+  "home_id": "10204",
+  "away_id": "9825",
+  "slugs": [
+   "evan-ferguson"
+  ]
+ },
+ {
   "fotmob_id": "5904739",
   "url": "/matches/konyaspor-vs-erzurumspor-fk/jbuy0ej#5904739",
   "kickoff": "2026-09-05T14:00:00Z",
-  "comp": "Super Lig",
+  "comp": "S\u00fcper Lig",
   "home": "Erzurumspor FK",
   "away": "Konyaspor",
   "home_id": "281467",
@@ -5690,22 +5599,6 @@
   ]
  },
  {
-  "fotmob_id": "5836786",
-  "url": "/matches/southampton-vs-millwall/2tkanr#5836786",
-  "kickoff": "2026-08-29T14:00:00Z",
-  "comp": "Championship",
-  "home": "Southampton",
-  "away": "Millwall",
-  "home_id": "8466",
-  "away_id": "10004",
-  "slugs": [
-   "finn-azaz",
-   "mark-sykes",
-   "romeo-akachukwu",
-   "ryan-manning"
-  ]
- },
- {
   "fotmob_id": "5836833",
   "url": "/matches/bristol-city-vs-southampton/2cymtx#5836833",
   "kickoff": "2026-09-12T14:00:00Z",
@@ -5718,6 +5611,21 @@
    "finn-azaz",
    "jason-knight",
    "luke-mcnally",
+   "romeo-akachukwu",
+   "ryan-manning"
+  ]
+ },
+ {
+  "fotmob_id": "5836849",
+  "url": "/matches/southampton-vs-wrexham/2rs2wn#5836849",
+  "kickoff": "2026-09-19T14:00:00Z",
+  "comp": "Championship",
+  "home": "Wrexham",
+  "away": "Southampton",
+  "home_id": "9841",
+  "away_id": "8466",
+  "slugs": [
+   "finn-azaz",
    "romeo-akachukwu",
    "ryan-manning"
   ]
@@ -5750,20 +5658,6 @@
   ]
  },
  {
-  "fotmob_id": "5794313",
-  "url": "/matches/arbroath-vs-dunfermline-athletic/2beeqi#5794313",
-  "kickoff": "2026-09-05T14:00:00Z",
-  "comp": "Championship",
-  "home": "Arbroath",
-  "away": "Dunfermline Athletic",
-  "home_id": "8280",
-  "away_id": "8457",
-  "slugs": [
-   "freddie-turley",
-   "kian-corbally"
-  ]
- },
- {
   "fotmob_id": "5794319",
   "url": "/matches/queens-park-vs-dunfermline-athletic/2ayacr#5794319",
   "kickoff": "2026-09-12T14:00:00Z",
@@ -5772,6 +5666,20 @@
   "away": "Queen's Park",
   "home_id": "8457",
   "away_id": "8235",
+  "slugs": [
+   "freddie-turley",
+   "kian-corbally"
+  ]
+ },
+ {
+  "fotmob_id": "5794324",
+  "url": "/matches/dunfermline-athletic-vs-greenock-morton/2f3vr5#5794324",
+  "kickoff": "2026-09-19T14:00:00Z",
+  "comp": "Championship",
+  "home": "Greenock Morton",
+  "away": "Dunfermline Athletic",
+  "home_id": "8648",
+  "away_id": "8457",
   "slugs": [
    "freddie-turley",
    "kian-corbally"
@@ -5808,19 +5716,17 @@
   ]
  },
  {
-  "fotmob_id": "5837120",
-  "url": "/matches/sheffield-wednesday-vs-bromley/ptzr83#5837120",
-  "kickoff": "2026-08-29T14:00:00Z",
-  "comp": "League One",
-  "home": "Sheffield Wednesday",
-  "away": "Bromley",
-  "home_id": "10163",
-  "away_id": "45729",
+  "fotmob_id": "5906427",
+  "url": "/matches/boston-united-vs-tamworth/2ycigo#5906427",
+  "kickoff": "2026-09-05T14:00:00Z",
+  "comp": "National League",
+  "home": "Tamworth",
+  "away": "Boston United",
+  "home_id": "10254",
+  "away_id": "8646",
   "slugs": [
-   "gabriel-otegbayo",
-   "kieran-morrison",
-   "louie-barry",
-   "owen-mason"
+   "gavan-holohan",
+   "niall-canavan"
   ]
  },
  {
@@ -5838,24 +5744,10 @@
   ]
  },
  {
-  "fotmob_id": "5906427",
-  "url": "/matches/boston-united-vs-tamworth/2ycigo#5906427",
-  "kickoff": "2026-09-05T14:00:00Z",
-  "comp": "National League",
-  "home": "Tamworth",
-  "away": "Boston United",
-  "home_id": "10254",
-  "away_id": "8646",
-  "slugs": [
-   "gavan-holohan",
-   "niall-canavan"
-  ]
- },
- {
   "fotmob_id": "6000926",
   "url": "/matches/boston-united-vs-west-bromwich-albion-u21/3wkno647#6000926",
   "kickoff": "2026-09-08T18:00:00Z",
-  "comp": "National League Cup Group D",
+  "comp": "National League Cup",
   "home": "Boston United",
   "away": "West Bromwich Albion U21",
   "home_id": "8646",
@@ -5896,6 +5788,34 @@
   ]
  },
  {
+  "fotmob_id": "5906459",
+  "url": "/matches/boston-united-vs-forest-green-rovers/2tlwq3#5906459",
+  "kickoff": "2026-09-19T14:00:00Z",
+  "comp": "National League",
+  "home": "Forest Green",
+  "away": "Boston United",
+  "home_id": "9828",
+  "away_id": "8646",
+  "slugs": [
+   "gavan-holohan",
+   "niall-canavan"
+  ]
+ },
+ {
+  "fotmob_id": "5836805",
+  "url": "/matches/bolton-wanderers-vs-millwall/2ul7hx#5836805",
+  "kickoff": "2026-09-05T14:00:00Z",
+  "comp": "Championship",
+  "home": "Millwall",
+  "away": "Bolton Wanderers",
+  "home_id": "10004",
+  "away_id": "8559",
+  "slugs": [
+   "gavin-bazunu",
+   "jack-bonham"
+  ]
+ },
+ {
   "fotmob_id": "5836794",
   "url": "/matches/bolton-wanderers-vs-sheffield-united/2g8pkh#5836794",
   "kickoff": "2026-09-01T18:45:00Z",
@@ -5913,43 +5833,12 @@
   ]
  },
  {
-  "fotmob_id": "5836779",
-  "url": "/matches/lincoln-city-vs-bolton-wanderers/2dxhtu#5836779",
-  "kickoff": "2026-08-29T14:00:00Z",
-  "comp": "Championship",
-  "home": "Bolton Wanderers",
-  "away": "Lincoln City",
-  "home_id": "8559",
-  "away_id": "8430",
-  "slugs": [
-   "gavin-bazunu",
-   "jack-bonham",
-   "josh-honohan",
-   "mason-melia"
-  ]
- },
- {
-  "fotmob_id": "5836805",
-  "url": "/matches/bolton-wanderers-vs-millwall/2ul7hx#5836805",
-  "kickoff": "2026-09-05T14:00:00Z",
-  "comp": "Championship",
-  "home": "Millwall",
-  "away": "Bolton Wanderers",
-  "home_id": "10004",
-  "away_id": "8559",
-  "slugs": [
-   "gavin-bazunu",
-   "jack-bonham",
-   "mark-sykes"
-  ]
- },
- {
   "fotmob_id": "5836815",
   "url": "/matches/bolton-wanderers-vs-west-ham-united/2g7lpt#5836815",
   "kickoff": "2026-09-08T19:00:00Z",
   "comp": "Championship",
-  "home": "Bolton",
-  "away": "West Ham",
+  "home": "Bolton Wanderers",
+  "away": "West Ham United",
   "home_id": "8559",
   "away_id": "8654",
   "slugs": [
@@ -6026,20 +5915,6 @@
   ]
  },
  {
-  "fotmob_id": "5794308",
-  "url": "/matches/arbroath-vs-livingston/29nyc5#5794308",
-  "kickoff": "2026-08-29T14:00:00Z",
-  "comp": "Championship",
-  "home": "Arbroath",
-  "away": "Livingston",
-  "home_id": "8280",
-  "away_id": "8282",
-  "slugs": [
-   "graham-carey",
-   "jordan-doherty"
-  ]
- },
- {
   "fotmob_id": "5794320",
   "url": "/matches/livingston-vs-greenock-morton/2dc1sr#5794320",
   "kickoff": "2026-09-11T18:30:00Z",
@@ -6055,23 +5930,25 @@
   ]
  },
  {
-  "fotmob_id": "5906418",
-  "url": "/matches/worthing-vs-afc-fylde/219cesm6#5906418",
-  "kickoff": "2026-09-05T14:00:00Z",
-  "comp": "National League",
-  "home": "AFC Fylde",
-  "away": "Worthing",
-  "home_id": "282396",
-  "away_id": "282351",
+  "fotmob_id": "5794323",
+  "url": "/matches/inverness-caledonian-thistle-vs-livingston/27kh5c#5794323",
+  "kickoff": "2026-09-19T14:00:00Z",
+  "comp": "Championship",
+  "home": "Livingston",
+  "away": "Inverness",
+  "home_id": "8282",
+  "away_id": "8066",
   "slugs": [
-   "harvey-boddy"
+   "graham-carey",
+   "jordan-doherty",
+   "shane-blaney"
   ]
  },
  {
   "fotmob_id": "6000895",
   "url": "/matches/worthing-vs-norwich-city-u21/745c0vyf#6000895",
   "kickoff": "2026-09-08T18:30:00Z",
-  "comp": "National League Cup Group B",
+  "comp": "National League Cup",
   "home": "Worthing",
   "away": "Norwich City U21",
   "home_id": "282351",
@@ -6149,19 +6026,6 @@
   ]
  },
  {
-  "fotmob_id": "5906406",
-  "url": "/matches/scunthorpe-united-vs-carlisle-united/2v34qc#5906406",
-  "kickoff": "2026-08-31T14:00:00Z",
-  "comp": "National League",
-  "home": "Carlisle United",
-  "away": "Scunthorpe United",
-  "home_id": "10196",
-  "away_id": "8412",
-  "slugs": [
-   "hugh-parker"
-  ]
- },
- {
   "fotmob_id": "5906425",
   "url": "/matches/harrogate-town-vs-scunthorpe-united/27nzfl#5906425",
   "kickoff": "2026-09-05T14:00:00Z",
@@ -6175,6 +6039,19 @@
   ]
  },
  {
+  "fotmob_id": "5906406",
+  "url": "/matches/scunthorpe-united-vs-carlisle-united/2v34qc#5906406",
+  "kickoff": "2026-08-31T14:00:00Z",
+  "comp": "National League",
+  "home": "Carlisle United",
+  "away": "Scunthorpe United",
+  "home_id": "10196",
+  "away_id": "8412",
+  "slugs": [
+   "hugh-parker"
+  ]
+ },
+ {
   "fotmob_id": "5906452",
   "url": "/matches/boreham-wood-vs-scunthorpe-united/zdjvy#5906452",
   "kickoff": "2026-09-16T18:45:00Z",
@@ -6183,6 +6060,19 @@
   "away": "Boreham Wood",
   "home_id": "8412",
   "away_id": "2488",
+  "slugs": [
+   "hugh-parker"
+  ]
+ },
+ {
+  "fotmob_id": "5906462",
+  "url": "/matches/hornchurch-vs-scunthorpe-united/1a7u4u#5906462",
+  "kickoff": "2026-09-19T16:30:00Z",
+  "comp": "National League",
+  "home": "Hornchurch",
+  "away": "Scunthorpe",
+  "home_id": "4047",
+  "away_id": "8412",
   "slugs": [
    "hugh-parker"
   ]
@@ -6230,6 +6120,19 @@
   ]
  },
  {
+  "fotmob_id": "5949252",
+  "url": "/matches/bamber-bridge-vs-stockton-town/bytbkvvq#5949252",
+  "kickoff": "2026-09-19T14:00:00Z",
+  "comp": "Northern Premier Division",
+  "home": "Stockton Town",
+  "away": "Bamber Bridge",
+  "home_id": "1087122",
+  "away_id": "282395",
+  "slugs": [
+   "isaac-abankwah"
+  ]
+ },
+ {
   "fotmob_id": "5836814",
   "url": "/matches/blackburn-rovers-vs-sheffield-united/2h88f5#5836814",
   "kickoff": "2026-09-08T18:45:00Z",
@@ -6240,7 +6143,10 @@
   "away_id": "8657",
   "slugs": [
    "issa-kargbo",
-   "sean-mcloughlin"
+   "mark-mcguinness",
+   "matt-doherty",
+   "sean-mcloughlin",
+   "tom-cannon"
   ]
  },
  {
@@ -6335,34 +6241,6 @@
   ]
  },
  {
-  "fotmob_id": "5907019",
-  "url": "/matches/chester-fc-vs-hereford/46cky4te#5907019",
-  "kickoff": "2026-08-29T14:00:00Z",
-  "comp": "National North & South",
-  "home": "Hereford",
-  "away": "Chester FC",
-  "home_id": "799249",
-  "away_id": "9797",
-  "slugs": [
-   "jake-griffin",
-   "sam-foley"
-  ]
- },
- {
-  "fotmob_id": "5907041",
-  "url": "/matches/chester-fc-vs-hebburn-town/l1rymit#5907041",
-  "kickoff": "2026-09-05T14:00:00Z",
-  "comp": "National League North",
-  "home": "Hebburn Town",
-  "away": "Chester FC",
-  "home_id": "292923",
-  "away_id": "9797",
-  "slugs": [
-   "jake-griffin",
-   "sam-foley"
-  ]
- },
- {
   "fotmob_id": "5907052",
   "url": "/matches/merthyr-town-vs-chester-fc/202pkx#5907052",
   "kickoff": "2026-09-08T18:45:00Z",
@@ -6386,19 +6264,6 @@
   "away": "Venezia",
   "home_id": "8600",
   "away_id": "7881",
-  "slugs": [
-   "james-abankwah"
-  ]
- },
- {
-  "fotmob_id": "5749657",
-  "url": "/matches/monza-vs-udinese/1vx5w8#5749657",
-  "kickoff": "2026-08-29T16:30:00Z",
-  "comp": "Serie A",
-  "home": "Monza",
-  "away": "Udinese",
-  "home_id": "6504",
-  "away_id": "8600",
   "slugs": [
    "james-abankwah"
   ]
@@ -6443,31 +6308,12 @@
   ]
  },
  {
-  "fotmob_id": "5837139",
-  "url": "/matches/plymouth-argyle-vs-doncaster-rovers/2rqwkv#5837139",
-  "kickoff": "2026-09-05T14:00:00Z",
-  "comp": "League One",
-  "home": "Doncaster Rovers",
-  "away": "Plymouth Argyle",
-  "home_id": "9903",
-  "away_id": "8401",
-  "slugs": [
-   "james-collins",
-   "james-storer",
-   "jay-mcgrath",
-   "leon-ayinde",
-   "neill-byrne",
-   "ronan-curtis",
-   "sean-grehan"
-  ]
- },
- {
   "fotmob_id": "6015881",
   "url": "/matches/huddersfield-town-vs-doncaster-rovers/37j24d#6015881",
   "kickoff": "2026-09-08T18:00:00Z",
-  "comp": "EFL Trophy Northern Grp. H",
-  "home": "Doncaster",
-  "away": "Huddersfield",
+  "comp": "EFL Trophy",
+  "home": "Doncaster Rovers",
+  "away": "Huddersfield Town",
   "home_id": "9903",
   "away_id": "9796",
   "slugs": [
@@ -6498,20 +6344,6 @@
   ]
  },
  {
-  "fotmob_id": "5837893",
-  "url": "/matches/accrington-stanley-vs-walsall/2vuphy#5837893",
-  "kickoff": "2026-08-29T14:00:00Z",
-  "comp": "League Two",
-  "home": "Walsall",
-  "away": "Accrington Stanley",
-  "home_id": "10006",
-  "away_id": "8671",
-  "slugs": [
-   "james-furlong",
-   "seamus-conneely"
-  ]
- },
- {
   "fotmob_id": "5837942",
   "url": "/matches/port-vale-vs-walsall/38rxlm#5837942",
   "kickoff": "2026-09-19T11:30:00Z",
@@ -6523,6 +6355,24 @@
   "slugs": [
    "james-furlong",
    "ronan-maher"
+  ]
+ },
+ {
+  "fotmob_id": "5837139",
+  "url": "/matches/plymouth-argyle-vs-doncaster-rovers/2rqwkv#5837139",
+  "kickoff": "2026-09-05T14:00:00Z",
+  "comp": "League One",
+  "home": "Doncaster Rovers",
+  "away": "Plymouth Argyle",
+  "home_id": "9903",
+  "away_id": "8401",
+  "slugs": [
+   "james-storer",
+   "jay-mcgrath",
+   "leon-ayinde",
+   "neill-byrne",
+   "ronan-curtis",
+   "sean-grehan"
   ]
  },
  {
@@ -6540,20 +6390,6 @@
   ]
  },
  {
-  "fotmob_id": "5837119",
-  "url": "/matches/plymouth-argyle-vs-bradford-city/2cvql7#5837119",
-  "kickoff": "2026-08-29T14:00:00Z",
-  "comp": "League One",
-  "home": "Plymouth Argyle",
-  "away": "Bradford City",
-  "home_id": "8401",
-  "away_id": "8484",
-  "slugs": [
-   "james-storer",
-   "ronan-curtis"
-  ]
- },
- {
   "fotmob_id": "5836803",
   "url": "/matches/burnley-vs-bristol-city/2a7vbm#5836803",
   "kickoff": "2026-09-05T14:00:00Z",
@@ -6563,9 +6399,7 @@
   "home_id": "8191",
   "away_id": "8427",
   "slugs": [
-   "jason-knight",
-   "luke-mcnally",
-   "michael-obafemi"
+   "jason-knight"
   ]
  },
  {
@@ -6584,22 +6418,6 @@
   ]
  },
  {
-  "fotmob_id": "5837121",
-  "url": "/matches/doncaster-rovers-vs-stevenage/3cy979#5837121",
-  "kickoff": "2026-08-29T14:00:00Z",
-  "comp": "League One",
-  "home": "Stevenage",
-  "away": "Doncaster Rovers",
-  "home_id": "10253",
-  "away_id": "9903",
-  "slugs": [
-   "jay-mcgrath",
-   "leon-ayinde",
-   "neill-byrne",
-   "sean-grehan"
-  ]
- },
- {
   "fotmob_id": "5836812",
   "url": "/matches/west-bromwich-albion-vs-watford/2tmp87#5836812",
   "kickoff": "2026-09-05T14:00:00Z",
@@ -6611,7 +6429,6 @@
   "slugs": [
    "jayson-molumby",
    "max-oleary",
-   "mikey-johnston",
    "rocco-vata"
   ]
  },
@@ -6663,7 +6480,7 @@
   "fotmob_id": "6000911",
   "url": "/matches/solihull-moors-vs-leeds-united-u21/bftkd43r#6000911",
   "kickoff": "2026-09-08T18:00:00Z",
-  "comp": "National League Cup Group C",
+  "comp": "National League Cup",
   "home": "Solihull Moors",
   "away": "Leeds United U21",
   "home_id": "161801",
@@ -6765,6 +6582,19 @@
   ]
  },
  {
+  "fotmob_id": "5793931",
+  "url": "/matches/rangers-vs-motherwell/2tmb21#5793931",
+  "kickoff": "2026-09-05T14:00:00Z",
+  "comp": "Premiership",
+  "home": "Rangers",
+  "away": "Motherwell",
+  "home_id": "8548",
+  "away_id": "9927",
+  "slugs": [
+   "joe-hodge"
+  ]
+ },
+ {
   "fotmob_id": "5793927",
   "url": "/matches/motherwell-vs-dundee-united/39hg0n#5793927",
   "kickoff": "2026-09-02T18:45:00Z",
@@ -6787,19 +6617,6 @@
   "home": "St. Mirren",
   "away": "Motherwell",
   "home_id": "9800",
-  "away_id": "9927",
-  "slugs": [
-   "joe-hodge"
-  ]
- },
- {
-  "fotmob_id": "5793931",
-  "url": "/matches/rangers-vs-motherwell/2tmb21#5793931",
-  "kickoff": "2026-09-05T14:00:00Z",
-  "comp": "Premiership",
-  "home": "Rangers",
-  "away": "Motherwell",
-  "home_id": "8548",
   "away_id": "9927",
   "slugs": [
    "joe-hodge"
@@ -6833,32 +6650,6 @@
   ]
  },
  {
-  "fotmob_id": "5795428",
-  "url": "/matches/hull-city-vs-coventry-city/2hh595#5795428",
-  "kickoff": "2026-08-29T14:00:00Z",
-  "comp": "Premier League",
-  "home": "Coventry City",
-  "away": "Hull City",
-  "home_id": "8669",
-  "away_id": "8667",
-  "slugs": [
-   "john-egan"
-  ]
- },
- {
-  "fotmob_id": "5795440",
-  "url": "/matches/hull-city-vs-aston-villa/2yk7pj#5795440",
-  "kickoff": "2026-09-05T16:30:00Z",
-  "comp": "Premier League",
-  "home": "Hull City",
-  "away": "Aston Villa",
-  "home_id": "8667",
-  "away_id": "10252",
-  "slugs": [
-   "john-egan"
-  ]
- },
- {
   "fotmob_id": "5795447",
   "url": "/matches/chelsea-vs-hull-city/2fa49a#5795447",
   "kickoff": "2026-09-12T14:00:00Z",
@@ -6866,6 +6657,19 @@
   "home": "Chelsea",
   "away": "Hull",
   "home_id": "8455",
+  "away_id": "8667",
+  "slugs": [
+   "john-egan"
+  ]
+ },
+ {
+  "fotmob_id": "5795462",
+  "url": "/matches/hull-city-vs-newcastle-united/2ynv4j#5795462",
+  "kickoff": "2026-09-19T14:00:00Z",
+  "comp": "Premier League",
+  "home": "Newcastle",
+  "away": "Hull",
+  "home_id": "10261",
   "away_id": "8667",
   "slugs": [
    "john-egan"
@@ -6937,19 +6741,6 @@
   ]
  },
  {
-  "fotmob_id": "5225859",
-  "url": "/matches/grindavik-vs-aegir/21zy8gq1#5225859",
-  "kickoff": "2026-09-05T14:00:00Z",
-  "comp": "1. Deild",
-  "home": "\u00c6gir",
-  "away": "Grindavik",
-  "home_id": "559291",
-  "away_id": "8298",
-  "slugs": [
-   "jordan-adeyemo"
-  ]
- },
- {
   "fotmob_id": "5847399",
   "url": "/matches/larne-vs-bangor/1gverts#5847399",
   "kickoff": "2026-09-08T18:45:00Z",
@@ -6983,8 +6774,8 @@
   "url": "/matches/crawley-town-vs-cheltenham-town/2hdswg#5837921",
   "kickoff": "2026-09-12T11:30:00Z",
   "comp": "League Two",
-  "home": "Crawley",
-  "away": "Cheltenham",
+  "home": "Crawley Town",
+  "away": "Cheltenham Town",
   "home_id": "8647",
   "away_id": "8680",
   "slugs": [
@@ -6996,6 +6787,21 @@
   ]
  },
  {
+  "fotmob_id": "5837934",
+  "url": "/matches/colchester-united-vs-cheltenham-town/2f0l0s#5837934",
+  "kickoff": "2026-09-19T14:00:00Z",
+  "comp": "League Two",
+  "home": "Colchester",
+  "away": "Cheltenham",
+  "home_id": "8416",
+  "away_id": "8680",
+  "slugs": [
+   "jordan-shipley",
+   "pierce-sweeney",
+   "sean-raggett"
+  ]
+ },
+ {
   "fotmob_id": "5907545",
   "url": "/matches/truro-city-vs-dorking-wanderers/3nsxjemv#5907545",
   "kickoff": "2026-08-31T14:00:00Z",
@@ -7004,32 +6810,6 @@
   "away": "Truro City",
   "home_id": "580438",
   "away_id": "177067",
-  "slugs": [
-   "josh-barrett"
-  ]
- },
- {
-  "fotmob_id": "5907541",
-  "url": "/matches/walton-hersham-vs-dorking-wanderers/270q2toj#5907541",
-  "kickoff": "2026-08-29T14:00:00Z",
-  "comp": "National North & South",
-  "home": "Walton and Hersham",
-  "away": "Dorking Wanderers",
-  "home_id": "6093",
-  "away_id": "580438",
-  "slugs": [
-   "josh-barrett"
-  ]
- },
- {
-  "fotmob_id": "5907555",
-  "url": "/matches/billericay-vs-dorking-wanderers/25zomvig#5907555",
-  "kickoff": "2026-09-05T14:00:00Z",
-  "comp": "National League South",
-  "home": "Billericay",
-  "away": "Dorking Wanderers",
-  "home_id": "2261",
-  "away_id": "580438",
   "slugs": [
    "josh-barrett"
   ]
@@ -7154,19 +6934,6 @@
   ]
  },
  {
-  "fotmob_id": "5907020",
-  "url": "/matches/marine-vs-radcliffe/19bnlz9r#5907020",
-  "kickoff": "2026-08-29T14:00:00Z",
-  "comp": "National North & South",
-  "home": "Marine",
-  "away": "Radcliffe",
-  "home_id": "161816",
-  "away_id": "282390",
-  "slugs": [
-   "josh-seary"
-  ]
- },
- {
   "fotmob_id": "5949246",
   "url": "/matches/fc-united-manchester-vs-warrington-town/19boxl1f#5949246",
   "kickoff": "2026-09-12T14:00:00Z",
@@ -7180,6 +6947,19 @@
   ]
  },
  {
+  "fotmob_id": "5949257",
+  "url": "/matches/curzon-vs-fc-united-manchester/njvr49c#5949257",
+  "kickoff": "2026-09-19T14:00:00Z",
+  "comp": "Northern Premier Division",
+  "home": "Curzon",
+  "away": "FC United of Manchester",
+  "home_id": "158390",
+  "away_id": "161822",
+  "slugs": [
+   "josh-seary"
+  ]
+ },
+ {
   "fotmob_id": "5907573",
   "url": "/matches/slough-town-vs-salisbury/80pmwnf0#5907573",
   "kickoff": "2026-09-08T18:45:00Z",
@@ -7188,19 +6968,6 @@
   "away": "Slough Town",
   "home_id": "1114695",
   "away_id": "6432",
-  "slugs": [
-   "joshua-keeya"
-  ]
- },
- {
-  "fotmob_id": "5907556",
-  "url": "/matches/chelmsford-vs-salisbury/8laxjs1e#5907556",
-  "kickoff": "2026-09-05T14:00:00Z",
-  "comp": "National League South",
-  "home": "Chelmsford",
-  "away": "Salisbury",
-  "home_id": "45724",
-  "away_id": "1114695",
   "slugs": [
    "joshua-keeya"
   ]
@@ -7270,20 +7037,6 @@
   "slugs": [
    "justin-osagie",
    "shaun-wade"
-  ]
- },
- {
-  "fotmob_id": "5847422",
-  "url": "/matches/limavady-vs-dungannon-swifts/dumsh#5847422",
-  "kickoff": "2026-09-05T14:00:00Z",
-  "comp": "Premiership",
-  "home": "Limavady",
-  "away": "Dungannon Swifts",
-  "home_id": "2205",
-  "away_id": "4615",
-  "slugs": [
-   "kealan-dillon",
-   "paul-doyle"
   ]
  },
  {
@@ -7367,6 +7120,19 @@
   ]
  },
  {
+  "fotmob_id": "5794313",
+  "url": "/matches/arbroath-vs-dunfermline-athletic/2beeqi#5794313",
+  "kickoff": "2026-09-05T14:00:00Z",
+  "comp": "Championship",
+  "home": "Arbroath",
+  "away": "Dunfermline Athletic",
+  "home_id": "8280",
+  "away_id": "8457",
+  "slugs": [
+   "kian-corbally"
+  ]
+ },
+ {
   "fotmob_id": "5793933",
   "url": "/matches/st-mirren-vs-celtic/37u1ls#5793933",
   "kickoff": "2026-09-05T19:00:00Z",
@@ -7391,6 +7157,21 @@
   "away_id": "9800",
   "slugs": [
    "killian-phillips"
+  ]
+ },
+ {
+  "fotmob_id": "5793938",
+  "url": "/matches/st-mirren-vs-dundee-united/37zjjl#5793938",
+  "kickoff": "2026-09-19T14:00:00Z",
+  "comp": "Premiership",
+  "home": "St. Mirren",
+  "away": "Dundee United",
+  "home_id": "9800",
+  "away_id": "9938",
+  "slugs": [
+   "killian-phillips",
+   "neil-farrugia",
+   "will-ferry"
   ]
  },
  {
@@ -7472,19 +7253,6 @@
   ]
  },
  {
-  "fotmob_id": "5794539",
-  "url": "/matches/ross-county-vs-east-fife/2svfbe#5794539",
-  "kickoff": "2026-09-05T14:00:00Z",
-  "comp": "League One",
-  "home": "East Fife",
-  "away": "Ross County",
-  "home_id": "9758",
-  "away_id": "8649",
-  "slugs": [
-   "len-osullivan"
-  ]
- },
- {
   "fotmob_id": "5959580",
   "url": "/matches/ross-county-vs-aberdeen-b/ahc42mvc#5959580",
   "kickoff": "2026-09-08T18:45:00Z",
@@ -7524,16 +7292,16 @@
   ]
  },
  {
-  "fotmob_id": "5781727",
-  "url": "/matches/ado-den-haag-vs-feyenoord/3gj2wl#5781727",
-  "kickoff": "2026-08-30T12:30:00Z",
-  "comp": "Eredivisie",
-  "home": "Feyenoord",
-  "away": "ADO Den Haag",
-  "home_id": "10235",
-  "away_id": "10217",
+  "fotmob_id": "5794549",
+  "url": "/matches/cove-rangers-vs-ross-county/1rwpir#5794549",
+  "kickoff": "2026-09-19T14:00:00Z",
+  "comp": "League One",
+  "home": "Cove Rangers",
+  "away": "Ross County",
+  "home_id": "6002",
+  "away_id": "8649",
   "slugs": [
-   "liam-bossin"
+   "len-osullivan"
   ]
  },
  {
@@ -7545,6 +7313,19 @@
   "away": "Feyenoord",
   "home_id": "8464",
   "away_id": "10235",
+  "slugs": [
+   "liam-bossin"
+  ]
+ },
+ {
+  "fotmob_id": "5781727",
+  "url": "/matches/ado-den-haag-vs-feyenoord/3gj2wl#5781727",
+  "kickoff": "2026-08-30T12:30:00Z",
+  "comp": "Eredivisie",
+  "home": "Feyenoord",
+  "away": "ADO Den Haag",
+  "home_id": "10235",
+  "away_id": "10217",
   "slugs": [
    "liam-bossin"
   ]
@@ -7576,6 +7357,19 @@
   ]
  },
  {
+  "fotmob_id": "5795444",
+  "url": "/matches/tottenham-hotspur-vs-nottingham-forest/2x3odl#5795444",
+  "kickoff": "2026-09-05T14:00:00Z",
+  "comp": "Premier League",
+  "home": "Nottingham Forest",
+  "away": "Tottenham Hotspur",
+  "home_id": "10203",
+  "away_id": "8586",
+  "slugs": [
+   "liam-delap"
+  ]
+ },
+ {
   "fotmob_id": "5795446",
   "url": "/matches/nottingham-forest-vs-aston-villa/3gke9k#5795446",
   "kickoff": "2026-09-12T14:00:00Z",
@@ -7597,19 +7391,6 @@
   "away": "Hednesford",
   "home_id": "557101",
   "away_id": "9923",
-  "slugs": [
-   "liam-kinsella"
-  ]
- },
- {
-  "fotmob_id": "5907042",
-  "url": "/matches/hednesford-vs-south-shields/4vw9qyto#5907042",
-  "kickoff": "2026-09-05T14:00:00Z",
-  "comp": "National League North",
-  "home": "Hednesford",
-  "away": "South Shields",
-  "home_id": "9923",
-  "away_id": "865163",
   "slugs": [
    "liam-kinsella"
   ]
@@ -7655,6 +7436,19 @@
   ]
  },
  {
+  "fotmob_id": "5837907",
+  "url": "/matches/crawley-town-vs-accrington-stanley/2haglg#5837907",
+  "kickoff": "2026-09-05T14:00:00Z",
+  "comp": "League Two",
+  "home": "Accrington Stanley",
+  "away": "Crawley Town",
+  "home_id": "8671",
+  "away_id": "8647",
+  "slugs": [
+   "louie-watson"
+  ]
+ },
+ {
   "fotmob_id": "5907553",
   "url": "/matches/weston-super-mare-vs-chelmsford/me542n#5907553",
   "kickoff": "2026-08-31T14:00:00Z",
@@ -7666,19 +7460,6 @@
   "slugs": [
    "louis-dunne",
    "sean-long"
-  ]
- },
- {
-  "fotmob_id": "5907532",
-  "url": "/matches/chelmsford-vs-maidenhead-united/1x5l5le#5907532",
-  "kickoff": "2026-08-29T14:00:00Z",
-  "comp": "National North & South",
-  "home": "Chelmsford",
-  "away": "Maidenhead United",
-  "home_id": "45724",
-  "away_id": "45725",
-  "slugs": [
-   "louis-dunne"
   ]
  },
  {
@@ -7708,6 +7489,19 @@
   ]
  },
  {
+  "fotmob_id": "5948084",
+  "url": "/matches/eastbourne-borough-vs-maldon-tiptree/j798q7r#5948084",
+  "kickoff": "2026-09-19T14:00:00Z",
+  "comp": "Isthmian Premier Division",
+  "home": "Maldon & Tiptree",
+  "away": "Eastbourne Borough",
+  "home_id": "282501",
+  "away_id": "6627",
+  "slugs": [
+   "louis-dunne"
+  ]
+ },
+ {
   "fotmob_id": "5837128",
   "url": "/matches/oxford-united-vs-huddersfield-town/2tc0kd#5837128",
   "kickoff": "2026-09-01T18:45:00Z",
@@ -7722,6 +7516,21 @@
   ]
  },
  {
+  "fotmob_id": "5837162",
+  "url": "/matches/huddersfield-town-vs-bromley/phsrvn#5837162",
+  "kickoff": "2026-09-19T14:00:00Z",
+  "comp": "League One",
+  "home": "Bromley",
+  "away": "Huddersfield",
+  "home_id": "45729",
+  "away_id": "9796",
+  "slugs": [
+   "marcus-harness",
+   "owen-mason",
+   "sean-roughan"
+  ]
+ },
+ {
   "fotmob_id": "5836809",
   "url": "/matches/sheffield-united-vs-norwich-city/2tyzks#5836809",
   "kickoff": "2026-09-05T14:00:00Z",
@@ -7732,7 +7541,6 @@
   "away_id": "9850",
   "slugs": [
    "mark-mcguinness",
-   "matt-doherty",
    "tom-cannon"
   ]
  },
@@ -7755,7 +7563,7 @@
   "kickoff": "2026-09-08T19:00:00Z",
   "comp": "EFL Cup",
   "home": "Millwall",
-  "away": "Newcastle",
+  "away": "Newcastle United",
   "home_id": "10004",
   "away_id": "10261",
   "slugs": [
@@ -7841,32 +7649,6 @@
   ]
  },
  {
-  "fotmob_id": "5907021",
-  "url": "/matches/merthyr-town-vs-chorley/i1yz2an#5907021",
-  "kickoff": "2026-08-29T14:00:00Z",
-  "comp": "National North & South",
-  "home": "Merthyr Town",
-  "away": "Chorley",
-  "home_id": "5762",
-  "away_id": "274599",
-  "slugs": [
-   "matthew-harris"
-  ]
- },
- {
-  "fotmob_id": "5907045",
-  "url": "/matches/merthyr-town-vs-macclesfield-fc/1pejfg#5907045",
-  "kickoff": "2026-09-05T14:00:00Z",
-  "comp": "National League North",
-  "home": "Merthyr Town",
-  "away": "Macclesfield FC",
-  "home_id": "5762",
-  "away_id": "8599",
-  "slugs": [
-   "matthew-harris"
-  ]
- },
- {
   "fotmob_id": "5907070",
   "url": "/matches/merthyr-town-vs-scarborough-athletic/26wzblri#5907070",
   "kickoff": "2026-09-12T14:00:00Z",
@@ -7877,19 +7659,6 @@
   "away_id": "5762",
   "slugs": [
    "matthew-harris"
-  ]
- },
- {
-  "fotmob_id": "5905872",
-  "url": "/matches/jahn-regensburg-vs-hoffenheim-ii/2f9nht5#5905872",
-  "kickoff": "2026-08-29T14:30:00Z",
-  "comp": "3. Liga",
-  "home": "Hoffenheim II",
-  "away": "Jahn Regensburg",
-  "home_id": "94940",
-  "away_id": "7789",
-  "slugs": [
-   "matthew-moore"
   ]
  },
  {
@@ -7945,6 +7714,20 @@
   ]
  },
  {
+  "fotmob_id": "5836813",
+  "url": "/matches/west-ham-united-vs-derby-county/2xhsc2#5836813",
+  "kickoff": "2026-09-05T14:00:00Z",
+  "comp": "Championship",
+  "home": "West Ham United",
+  "away": "Derby County",
+  "home_id": "8654",
+  "away_id": "10170",
+  "slugs": [
+   "max-johnston",
+   "sammie-szmodics"
+  ]
+ },
+ {
   "fotmob_id": "5836792",
   "url": "/matches/portsmouth-vs-derby-county/2vcple#5836792",
   "kickoff": "2026-09-01T18:45:00Z",
@@ -7970,33 +7753,6 @@
   "slugs": [
    "michael-kelly",
    "shane-byrne"
-  ]
- },
- {
-  "fotmob_id": "5907025",
-  "url": "/matches/worksop-town-vs-spalding-united/281ccutf#5907025",
-  "kickoff": "2026-08-29T14:00:00Z",
-  "comp": "National North & South",
-  "home": "Spalding United",
-  "away": "Worksop Town",
-  "home_id": "580400",
-  "away_id": "9894",
-  "slugs": [
-   "michael-kelly",
-   "shane-byrne"
-  ]
- },
- {
-  "fotmob_id": "5907049",
-  "url": "/matches/southport-vs-spalding-united/284b7n3z#5907049",
-  "kickoff": "2026-09-05T14:00:00Z",
-  "comp": "National League North",
-  "home": "Spalding United",
-  "away": "Southport",
-  "home_id": "580400",
-  "away_id": "10197",
-  "slugs": [
-   "michael-kelly"
   ]
  },
  {
@@ -8052,6 +7808,19 @@
   ]
  },
  {
+  "fotmob_id": "5793929",
+  "url": "/matches/falkirk-vs-dundee-united/2u9phz#5793929",
+  "kickoff": "2026-09-05T14:00:00Z",
+  "comp": "Premiership",
+  "home": "Dundee United",
+  "away": "Falkirk",
+  "home_id": "9938",
+  "away_id": "8596",
+  "slugs": [
+   "neil-farrugia"
+  ]
+ },
+ {
   "fotmob_id": "1000015456",
   "url": "/matches/virton-vs-francs-borains/2je175x#1000015456",
   "kickoff": "2026-08-30T14:00:00Z",
@@ -8091,17 +7860,29 @@
   ]
  },
  {
-  "fotmob_id": "5793919",
-  "url": "/matches/st-johnstone-vs-heart-midlothian/2rzxlk#5793919",
-  "kickoff": "2026-08-29T14:00:00Z",
-  "comp": "Premiership",
-  "home": "Heart of Midlothian",
-  "away": "St. Johnstone",
-  "home_id": "9860",
-  "away_id": "8467",
+  "fotmob_id": "5837910",
+  "url": "/matches/barnet-vs-chesterfield/2o1lef#5837910",
+  "kickoff": "2026-09-05T14:00:00Z",
+  "comp": "League Two",
+  "home": "Chesterfield",
+  "away": "Barnet",
+  "home_id": "9786",
+  "away_id": "8175",
   "slugs": [
-   "oisin-mcentee",
-   "ruari-paton"
+   "oisin-gallagher"
+  ]
+ },
+ {
+  "fotmob_id": "5949260",
+  "url": "/matches/guiseley-vs-alfreton-town/vx4wd#5949260",
+  "kickoff": "2026-09-19T14:00:00Z",
+  "comp": "Northern Premier Division",
+  "home": "Alfreton Town",
+  "away": "Guiseley",
+  "home_id": "6258",
+  "away_id": "4096",
+  "slugs": [
+   "oisin-mcdonagh"
   ]
  },
  {
@@ -8170,19 +7951,6 @@
   ]
  },
  {
-  "fotmob_id": "5794716",
-  "url": "/matches/spartans-fc-vs-clyde/1vm5xm#5794716",
-  "kickoff": "2026-08-29T14:00:00Z",
-  "comp": "League Two",
-  "home": "Spartans FC",
-  "away": "Clyde",
-  "home_id": "6661",
-  "away_id": "8409",
-  "slugs": [
-   "ricardo-dinanga"
-  ]
- },
- {
   "fotmob_id": "5794722",
   "url": "/matches/spartans-fc-vs-stirling-albion/1t8d08#5794722",
   "kickoff": "2026-09-05T14:00:00Z",
@@ -8222,16 +7990,16 @@
   ]
  },
  {
-  "fotmob_id": "5794542",
-  "url": "/matches/airdrieonians-vs-queen-south/2pjbdy#5794542",
-  "kickoff": "2026-09-05T14:00:00Z",
-  "comp": "League One",
-  "home": "Queen of the South",
-  "away": "Airdrieonians",
-  "home_id": "9924",
-  "away_id": "8176",
+  "fotmob_id": "5794728",
+  "url": "/matches/spartans-fc-vs-dumbarton/1uttjq#5794728",
+  "kickoff": "2026-09-19T14:00:00Z",
+  "comp": "League Two",
+  "home": "Dumbarton",
+  "away": "Spartans FC",
+  "home_id": "8321",
+  "away_id": "6661",
   "slugs": [
-   "robbie-mahon"
+   "ricardo-dinanga"
   ]
  },
  {
@@ -8261,16 +8029,16 @@
   ]
  },
  {
-  "fotmob_id": "5836787",
-  "url": "/matches/west-ham-united-vs-watford/2tkpyd#5836787",
-  "kickoff": "2026-08-29T14:00:00Z",
-  "comp": "Championship",
-  "home": "Watford",
-  "away": "West Ham United",
-  "home_id": "9817",
-  "away_id": "8654",
+  "fotmob_id": "5794552",
+  "url": "/matches/peterhead-vs-airdrieonians/27fkjd#5794552",
+  "kickoff": "2026-09-19T14:00:00Z",
+  "comp": "League One",
+  "home": "Peterhead",
+  "away": "Airdrieonians",
+  "home_id": "8158",
+  "away_id": "8176",
   "slugs": [
-   "rocco-vata"
+   "robbie-mahon"
   ]
  },
  {
@@ -8326,6 +8094,19 @@
   ]
  },
  {
+  "fotmob_id": "5853504",
+  "url": "/matches/cfr-cluj-vs-botosani/8zxe9jq#5853504",
+  "kickoff": "2026-09-19T16:00:00Z",
+  "comp": "Superliga",
+  "home": "CFR Cluj",
+  "away": "Boto\u0219ani",
+  "home_id": "9731",
+  "away_id": "188191",
+  "slugs": [
+   "roland-idowu"
+  ]
+ },
+ {
   "fotmob_id": "5837916",
   "url": "/matches/port-vale-vs-salford-city/jlntjlm#5837916",
   "kickoff": "2026-09-05T11:30:00Z",
@@ -8334,19 +8115,6 @@
   "away": "Port Vale",
   "home_id": "282326",
   "away_id": "9799",
-  "slugs": [
-   "ryan-graydon"
-  ]
- },
- {
-  "fotmob_id": "5837892",
-  "url": "/matches/shrewsbury-town-vs-salford-city/jm4ozmx#5837892",
-  "kickoff": "2026-08-29T14:00:00Z",
-  "comp": "League Two",
-  "home": "Shrewsbury Town",
-  "away": "Salford City",
-  "home_id": "9896",
-  "away_id": "282326",
   "slugs": [
    "ryan-graydon"
   ]
@@ -8430,6 +8198,19 @@
   ]
  },
  {
+  "fotmob_id": "5906455",
+  "url": "/matches/barrow-vs-aldershot-town/1tchsx#5906455",
+  "kickoff": "2026-09-19T14:00:00Z",
+  "comp": "National League",
+  "home": "Barrow",
+  "away": "Aldershot Town",
+  "home_id": "6350",
+  "away_id": "8465",
+  "slugs": [
+   "scott-davies"
+  ]
+ },
+ {
   "fotmob_id": "5959567",
   "url": "/matches/berwick-rangers-vs-hibernian-b/ah64wkky#5959567",
   "kickoff": "2026-09-08T18:45:00Z",
@@ -8464,6 +8245,19 @@
   "away": "Berwick Rangers",
   "home_id": "97910",
   "away_id": "8368",
+  "slugs": [
+   "sean-brennan"
+  ]
+ },
+ {
+  "fotmob_id": "1000016992",
+  "url": "/matches/berwick-rangers-vs-musselburgh-athletic/9kakhgtp#1000016992",
+  "kickoff": "2026-09-19T14:00:00Z",
+  "comp": "Highland / Lowland",
+  "home": "Berwick Rangers",
+  "away": "Musselburgh Athletic",
+  "home_id": "8368",
+  "away_id": "1215929",
   "slugs": [
    "sean-brennan"
   ]
@@ -8508,32 +8302,6 @@
   ]
  },
  {
-  "fotmob_id": "5907535",
-  "url": "/matches/weston-super-mare-vs-hemel-hempstead/6hshf1f#5907535",
-  "kickoff": "2026-08-29T14:00:00Z",
-  "comp": "National North & South",
-  "home": "Hemel Hempstead",
-  "away": "Weston Super Mare",
-  "home_id": "161831",
-  "away_id": "6314",
-  "slugs": [
-   "sean-long"
-  ]
- },
- {
-  "fotmob_id": "5794536",
-  "url": "/matches/montrose-vs-queen-south/2qet77#5794536",
-  "kickoff": "2026-08-29T14:00:00Z",
-  "comp": "League One",
-  "home": "Montrose",
-  "away": "Queen of the South",
-  "home_id": "8257",
-  "away_id": "9924",
-  "slugs": [
-   "sean-mcginty"
-  ]
- },
- {
   "fotmob_id": "5794541",
   "url": "/matches/peterhead-vs-montrose/28801d#5794541",
   "kickoff": "2026-09-05T14:00:00Z",
@@ -8573,16 +8341,16 @@
   ]
  },
  {
-  "fotmob_id": "5906414",
-  "url": "/matches/woking-vs-southend-united/2e0esr#5906414",
-  "kickoff": "2026-08-31T14:00:00Z",
-  "comp": "National League",
-  "home": "Woking",
-  "away": "Southend United",
-  "home_id": "8345",
-  "away_id": "8652",
+  "fotmob_id": "5794550",
+  "url": "/matches/montrose-vs-east-fife/2omewe#5794550",
+  "kickoff": "2026-09-19T14:00:00Z",
+  "comp": "League One",
+  "home": "East Fife",
+  "away": "Montrose",
+  "home_id": "9758",
+  "away_id": "8257",
   "slugs": [
-   "shadrach-ogie"
+   "sean-mcginty"
   ]
  },
  {
@@ -8599,10 +8367,23 @@
   ]
  },
  {
+  "fotmob_id": "5906414",
+  "url": "/matches/woking-vs-southend-united/2e0esr#5906414",
+  "kickoff": "2026-08-31T14:00:00Z",
+  "comp": "National League",
+  "home": "Woking",
+  "away": "Southend United",
+  "home_id": "8345",
+  "away_id": "8652",
+  "slugs": [
+   "shadrach-ogie"
+  ]
+ },
+ {
   "fotmob_id": "6000929",
   "url": "/matches/woking-vs-southampton-u21/3wgmdrcu#6000929",
   "kickoff": "2026-09-08T18:45:00Z",
-  "comp": "National League Cup Group D",
+  "comp": "National League Cup",
   "home": "Woking",
   "away": "Southampton U21",
   "home_id": "8345",
@@ -8620,6 +8401,19 @@
   "away": "Altrincham",
   "home_id": "8345",
   "away_id": "9915",
+  "slugs": [
+   "shadrach-ogie"
+  ]
+ },
+ {
+  "fotmob_id": "5906464",
+  "url": "/matches/woking-vs-kidderminster-harriers/2vbidk#5906464",
+  "kickoff": "2026-09-19T14:00:00Z",
+  "comp": "National League",
+  "home": "Woking",
+  "away": "Kidderminster Harriers",
+  "home_id": "8345",
+  "away_id": "10284",
   "slugs": [
    "shadrach-ogie"
   ]
@@ -8651,16 +8445,16 @@
   ]
  },
  {
-  "fotmob_id": "5907039",
-  "url": "/matches/brackley-town-vs-harborough-town-fc/f5fzwz8e#5907039",
-  "kickoff": "2026-09-05T14:00:00Z",
-  "comp": "National League North",
-  "home": "Brackley Town",
-  "away": "Harborough Town FC",
-  "home_id": "158321",
-  "away_id": "1382661",
+  "fotmob_id": "5948085",
+  "url": "/matches/st-albans-vs-burgess-hill-town/jnjon07#5948085",
+  "kickoff": "2026-09-19T14:00:00Z",
+  "comp": "Isthmian Premier Division",
+  "home": "St Albans",
+  "away": "Burgess Hill Town",
+  "home_id": "10174",
+  "away_id": "282340",
   "slugs": [
-   "shane-byrne"
+   "shamir-fenelon"
   ]
  },
  {
@@ -8781,6 +8575,19 @@
   ]
  },
  {
+  "fotmob_id": "5811766",
+  "url": "/matches/cercle-brugge-vs-sporting-charleroi/3aq9s5#5811766",
+  "kickoff": "2026-09-19T16:15:00Z",
+  "comp": "Belgian Pro League",
+  "home": "Sporting Charleroi",
+  "away": "Cercle Brugge",
+  "home_id": "9986",
+  "away_id": "9984",
+  "slugs": [
+   "tayo-adaramola"
+  ]
+ },
+ {
   "fotmob_id": "1000008695",
   "url": "/matches/cavalry-fc-vs-vancouver-fc/12l2txdxx#1000008695",
   "kickoff": "2026-08-29T21:00:00Z",
@@ -8872,6 +8679,19 @@
   ]
  },
  {
+  "fotmob_id": "5105016",
+  "url": "/matches/aalesund-vs-molde/2rxkt2#5105016",
+  "kickoff": "2026-09-19T16:00:00Z",
+  "comp": "Eliteserien",
+  "home": "Molde",
+  "away": "Aalesund",
+  "home_id": "9917",
+  "away_id": "8404",
+  "slugs": [
+   "trent-kone-doherty"
+  ]
+ },
+ {
   "fotmob_id": "5868043",
   "url": "/matches/real-betis-vs-real-madrid/2gg3e3#5868043",
   "kickoff": "2026-09-04T19:00:00Z",
@@ -8880,19 +8700,6 @@
   "away": "Real Madrid",
   "home_id": "8603",
   "away_id": "8633",
-  "slugs": [
-   "troy-parrott"
-  ]
- },
- {
-  "fotmob_id": "5868035",
-  "url": "/matches/levante-vs-real-betis/2fwwtn#5868035",
-  "kickoff": "2026-08-29T15:00:00Z",
-  "comp": "LaLiga",
-  "home": "Levante",
-  "away": "Real Betis",
-  "home_id": "8581",
-  "away_id": "8603",
   "slugs": [
    "troy-parrott"
   ]
@@ -8937,6 +8744,20 @@
   ]
  },
  {
+  "fotmob_id": "5837141",
+  "url": "/matches/leicester-city-vs-oxford-united/2cj36g#5837141",
+  "kickoff": "2026-09-05T14:00:00Z",
+  "comp": "League One",
+  "home": "Leicester City",
+  "away": "Oxford United",
+  "home_id": "8197",
+  "away_id": "8653",
+  "slugs": [
+   "tyler-goodrham",
+   "warren-ohora"
+  ]
+ },
+ {
   "fotmob_id": "1000019136",
   "url": "/matches/sunderland-u21-vs-norwich-city-u21/f9xqi4i0#1000019136",
   "kickoff": "2026-09-18T18:00:00Z",
@@ -8976,6 +8797,19 @@
   ]
  },
  {
+  "fotmob_id": "5794314",
+  "url": "/matches/inverness-caledonian-thistle-vs-raith-rovers/2rvkpc#5794314",
+  "kickoff": "2026-09-05T14:00:00Z",
+  "comp": "Championship",
+  "home": "Inverness Caledonian Thistle",
+  "away": "Raith Rovers",
+  "home_id": "8066",
+  "away_id": "10250",
+  "slugs": [
+   "zak-delaney"
+  ]
+ },
+ {
   "fotmob_id": "5794321",
   "url": "/matches/arbroath-vs-raith-rovers/2u830r#5794321",
   "kickoff": "2026-09-12T14:00:00Z",
@@ -8984,19 +8818,6 @@
   "away": "Arbroath",
   "home_id": "10250",
   "away_id": "8280",
-  "slugs": [
-   "zak-delaney"
-  ]
- },
- {
-  "fotmob_id": "5794314",
-  "url": "/matches/inverness-caledonian-thistle-vs-raith-rovers/2rvkpc#5794314",
-  "kickoff": "2026-09-05T14:00:00Z",
-  "comp": "Championship",
-  "home": "Inverness",
-  "away": "Raith Rovers",
-  "home_id": "8066",
-  "away_id": "10250",
   "slugs": [
    "zak-delaney"
   ]
@@ -9012,6 +8833,416 @@
   "away_id": "2205",
   "slugs": [
    "billy-vance"
+  ]
+ },
+ {
+  "fotmob_id": "5847419",
+  "url": "/matches/cliftonville-vs-portadown/rxwtg#5847419",
+  "kickoff": "2026-09-05T14:00:00Z",
+  "comp": "Premiership",
+  "home": "Cliftonville",
+  "away": "Portadown",
+  "home_id": "1703",
+  "away_id": "7984",
+  "slugs": [
+   "aaron-mccarey",
+   "ahu-obhakhan",
+   "ben-quinn",
+   "divin-isamala",
+   "finn-flanagan",
+   "rory-hale"
+  ]
+ },
+ {
+  "fotmob_id": "6046150",
+  "url": "/matches/st-patricks-athletic-vs-bohemian-fc/cdqfe#6046150",
+  "kickoff": "2026-09-05T15:00:00Z",
+  "comp": "FAI Cup",
+  "home": "St. Patrick's Athletic",
+  "away": "Bohemian FC",
+  "home_id": "1854",
+  "away_id": "4594",
+  "slugs": [
+   "adam-banim",
+   "adam-deans",
+   "adam-mcdonnell",
+   "aidan-keena",
+   "alan-reynolds",
+   "anthony-breslin",
+   "billy-canny",
+   "billy-hayes",
+   "chris-forrester",
+   "christopher-conlan",
+   "cian-byrne",
+   "colm-whelan",
+   "daniel-chukwu",
+   "daniel-rogers",
+   "darragh-brunton",
+   "darragh-nugent",
+   "darragh-power",
+   "dawson-devoy",
+   "dayle-rooney",
+   "finn-mcdonnell",
+   "glory-nzingo",
+   "harry-vaughan",
+   "hugh-martin",
+   "james-brown",
+   "jamie-lennon",
+   "jason-mcclelland",
+   "joe-carroll-byrne",
+   "joe-redmond",
+   "josh-adam",
+   "josh-harpur",
+   "josh-oconnor",
+   "kian-leavy",
+   "kian-quigley",
+   "luke-cullen",
+   "luke-kehir",
+   "luke-turner",
+   "matthew-ohara",
+   "niall-morahan",
+   "niall-sullivan",
+   "paddy-madden",
+   "ronan-boyce",
+   "ross-tierney",
+   "ryan-burke",
+   "ryan-sheridan",
+   "sam-rooney",
+   "sam-steward",
+   "sam-todd",
+   "samuel-ogungbe",
+   "sean-hoare",
+   "sean-molloy",
+   "senan-mullen",
+   "simon-power",
+   "zack-elbouzedi"
+  ]
+ },
+ {
+  "fotmob_id": "5907040",
+  "url": "/matches/darlington-vs-kings-lynn-town/oeopor#5907040",
+  "kickoff": "2026-09-05T14:00:00Z",
+  "comp": "National League North",
+  "home": "Darlington",
+  "away": "King's Lynn Town",
+  "home_id": "8598",
+  "away_id": "45731",
+  "slugs": [
+   "adam-rooney",
+   "bobby-jones",
+   "jesse-nwabueze"
+  ]
+ },
+ {
+  "fotmob_id": "5795442",
+  "url": "/matches/manchester-city-vs-coventry-city/2fb7wc#5795442",
+  "kickoff": "2026-09-05T14:00:00Z",
+  "comp": "Premier League",
+  "home": "Manchester City",
+  "away": "Coventry City",
+  "home_id": "8456",
+  "away_id": "8669",
+  "slugs": [
+   "ben-wilson"
+  ]
+ },
+ {
+  "fotmob_id": "1000012822",
+  "url": "/matches/inverurie-loco-works-vs-turriff-united/spi2eqi#1000012822",
+  "kickoff": "2026-09-05T13:00:00Z",
+  "comp": "Highland League",
+  "home": "Turriff United",
+  "away": "Inverurie Loco Works",
+  "home_id": "351621",
+  "away_id": "1908",
+  "slugs": [
+   "cameron-reid"
+  ]
+ },
+ {
+  "fotmob_id": "5847423",
+  "url": "/matches/linfield-vs-carrick-rangers/8th0cpp#5847423",
+  "kickoff": "2026-09-05T14:00:00Z",
+  "comp": "Premiership",
+  "home": "Linfield",
+  "away": "Carrick Rangers",
+  "home_id": "7971",
+  "away_id": "187969",
+  "slugs": [
+   "chris-shields",
+   "cian-omalley",
+   "daire-oconnor",
+   "darragh-leahy",
+   "mikey-place",
+   "ryan-patrick-nolan"
+  ]
+ },
+ {
+  "fotmob_id": "5907046",
+  "url": "/matches/morecambe-vs-buxton/6nux6ie#5907046",
+  "kickoff": "2026-09-05T14:00:00Z",
+  "comp": "National League North",
+  "home": "Morecambe",
+  "away": "Buxton",
+  "home_id": "8489",
+  "away_id": "161824",
+  "slugs": [
+   "cian-coleman"
+  ]
+ },
+ {
+  "fotmob_id": "5907560",
+  "url": "/matches/dagenham-redbridge-vs-horsham/2yn6cqr#5907560",
+  "kickoff": "2026-09-05T14:00:00Z",
+  "comp": "National League South",
+  "home": "Horsham",
+  "away": "Dagenham & Redbridge",
+  "home_id": "105554",
+  "away_id": "8009",
+  "slugs": [
+   "danny-burke"
+  ]
+ },
+ {
+  "fotmob_id": "5878658",
+  "url": "/matches/fc-inter-turku-vs-hjk/286mm7#5878658",
+  "kickoff": "2026-09-05T15:00:00Z",
+  "comp": "Cup",
+  "home": "FC Inter Turku",
+  "away": "HJK",
+  "home_id": "6550",
+  "away_id": "9861",
+  "slugs": [
+   "david-eze",
+   "david-ezeh"
+  ]
+ },
+ {
+  "fotmob_id": "5847418",
+  "url": "/matches/ballymena-united-vs-bangor/1jcucpm#5847418",
+  "kickoff": "2026-09-05T14:00:00Z",
+  "comp": "Premiership",
+  "home": "Bangor",
+  "away": "Ballymena United",
+  "home_id": "77755",
+  "away_id": "4063",
+  "slugs": [
+   "david-toure",
+   "jack-oreilly",
+   "sean-murray",
+   "success-edogun"
+  ]
+ },
+ {
+  "fotmob_id": "5907561",
+  "url": "/matches/weston-super-mare-vs-maidstone-united/1q4gmm#5907561",
+  "kickoff": "2026-09-05T14:00:00Z",
+  "comp": "National League South",
+  "home": "Maidstone United",
+  "away": "Weston Super Mare",
+  "home_id": "8131",
+  "away_id": "6314",
+  "slugs": [
+   "dominic-bernard",
+   "sean-long"
+  ]
+ },
+ {
+  "fotmob_id": "5882079",
+  "url": "/matches/barry-town-vs-new-saints/qmbas#5882079",
+  "kickoff": "2026-09-05T16:15:00Z",
+  "comp": "Premier League",
+  "home": "The New Saints",
+  "away": "Barry Town",
+  "home_id": "7852",
+  "away_id": "1603",
+  "slugs": [
+   "eoin-farrell",
+   "zach-nolan"
+  ]
+ },
+ {
+  "fotmob_id": "5795437",
+  "url": "/matches/leeds-united-vs-brighton-hove-albion/2vqp9d#5795437",
+  "kickoff": "2026-09-05T14:00:00Z",
+  "comp": "Premier League",
+  "home": "Brighton & Hove Albion",
+  "away": "Leeds United",
+  "home_id": "10204",
+  "away_id": "8463",
+  "slugs": [
+   "evan-ferguson"
+  ]
+ },
+ {
+  "fotmob_id": "5906418",
+  "url": "/matches/worthing-vs-afc-fylde/219cesm6#5906418",
+  "kickoff": "2026-09-05T14:00:00Z",
+  "comp": "National League",
+  "home": "AFC Fylde",
+  "away": "Worthing",
+  "home_id": "282396",
+  "away_id": "282351",
+  "slugs": [
+   "harvey-boddy"
+  ]
+ },
+ {
+  "fotmob_id": "5907041",
+  "url": "/matches/chester-fc-vs-hebburn-town/l1rymit#5907041",
+  "kickoff": "2026-09-05T14:00:00Z",
+  "comp": "National League North",
+  "home": "Hebburn Town",
+  "away": "Chester FC",
+  "home_id": "292923",
+  "away_id": "9797",
+  "slugs": [
+   "jake-griffin",
+   "sam-foley"
+  ]
+ },
+ {
+  "fotmob_id": "5795440",
+  "url": "/matches/hull-city-vs-aston-villa/2yk7pj#5795440",
+  "kickoff": "2026-09-05T16:30:00Z",
+  "comp": "Premier League",
+  "home": "Hull City",
+  "away": "Aston Villa",
+  "home_id": "8667",
+  "away_id": "10252",
+  "slugs": [
+   "john-egan"
+  ]
+ },
+ {
+  "fotmob_id": "5225859",
+  "url": "/matches/grindavik-vs-aegir/21zy8gq1#5225859",
+  "kickoff": "2026-09-05T14:00:00Z",
+  "comp": "1. Deild",
+  "home": "\u00c6gir",
+  "away": "Grindavik",
+  "home_id": "559291",
+  "away_id": "8298",
+  "slugs": [
+   "jordan-adeyemo"
+  ]
+ },
+ {
+  "fotmob_id": "5907555",
+  "url": "/matches/billericay-vs-dorking-wanderers/25zomvig#5907555",
+  "kickoff": "2026-09-05T14:00:00Z",
+  "comp": "National League South",
+  "home": "Billericay",
+  "away": "Dorking Wanderers",
+  "home_id": "2261",
+  "away_id": "580438",
+  "slugs": [
+   "josh-barrett"
+  ]
+ },
+ {
+  "fotmob_id": "5907556",
+  "url": "/matches/chelmsford-vs-salisbury/8laxjs1e#5907556",
+  "kickoff": "2026-09-05T14:00:00Z",
+  "comp": "National League South",
+  "home": "Chelmsford",
+  "away": "Salisbury",
+  "home_id": "45724",
+  "away_id": "1114695",
+  "slugs": [
+   "joshua-keeya"
+  ]
+ },
+ {
+  "fotmob_id": "5847422",
+  "url": "/matches/limavady-vs-dungannon-swifts/dumsh#5847422",
+  "kickoff": "2026-09-05T14:00:00Z",
+  "comp": "Premiership",
+  "home": "Limavady",
+  "away": "Dungannon Swifts",
+  "home_id": "2205",
+  "away_id": "4615",
+  "slugs": [
+   "kealan-dillon",
+   "paul-doyle"
+  ]
+ },
+ {
+  "fotmob_id": "5794539",
+  "url": "/matches/ross-county-vs-east-fife/2svfbe#5794539",
+  "kickoff": "2026-09-05T14:00:00Z",
+  "comp": "League One",
+  "home": "East Fife",
+  "away": "Ross County",
+  "home_id": "9758",
+  "away_id": "8649",
+  "slugs": [
+   "len-osullivan"
+  ]
+ },
+ {
+  "fotmob_id": "5907042",
+  "url": "/matches/hednesford-vs-south-shields/4vw9qyto#5907042",
+  "kickoff": "2026-09-05T14:00:00Z",
+  "comp": "National League North",
+  "home": "Hednesford",
+  "away": "South Shields",
+  "home_id": "9923",
+  "away_id": "865163",
+  "slugs": [
+   "liam-kinsella"
+  ]
+ },
+ {
+  "fotmob_id": "5907045",
+  "url": "/matches/merthyr-town-vs-macclesfield-fc/1pejfg#5907045",
+  "kickoff": "2026-09-05T14:00:00Z",
+  "comp": "National League North",
+  "home": "Merthyr Town",
+  "away": "Macclesfield FC",
+  "home_id": "5762",
+  "away_id": "8599",
+  "slugs": [
+   "matthew-harris"
+  ]
+ },
+ {
+  "fotmob_id": "5907049",
+  "url": "/matches/southport-vs-spalding-united/284b7n3z#5907049",
+  "kickoff": "2026-09-05T14:00:00Z",
+  "comp": "National League North",
+  "home": "Spalding United",
+  "away": "Southport",
+  "home_id": "580400",
+  "away_id": "10197",
+  "slugs": [
+   "michael-kelly"
+  ]
+ },
+ {
+  "fotmob_id": "5794542",
+  "url": "/matches/airdrieonians-vs-queen-south/2pjbdy#5794542",
+  "kickoff": "2026-09-05T14:00:00Z",
+  "comp": "League One",
+  "home": "Queen of the South",
+  "away": "Airdrieonians",
+  "home_id": "9924",
+  "away_id": "8176",
+  "slugs": [
+   "robbie-mahon"
+  ]
+ },
+ {
+  "fotmob_id": "5907039",
+  "url": "/matches/brackley-town-vs-harborough-town-fc/f5fzwz8e#5907039",
+  "kickoff": "2026-09-05T14:00:00Z",
+  "comp": "National League North",
+  "home": "Brackley Town",
+  "away": "Harborough Town FC",
+  "home_id": "158321",
+  "away_id": "1382661",
+  "slugs": [
+   "shane-byrne"
   ]
  },
  {
@@ -9077,19 +9308,6 @@
   "away_id": "1113567",
   "slugs": [
    "george-moloney"
-  ]
- },
- {
-  "fotmob_id": "5795444",
-  "url": "/matches/tottenham-hotspur-vs-nottingham-forest/2x3odl#5795444",
-  "kickoff": "2026-09-05T14:00:00Z",
-  "comp": "Premier League",
-  "home": "Nottingham Forest",
-  "away": "Tottenham Hotspur",
-  "home_id": "10203",
-  "away_id": "8586",
-  "slugs": [
-   "liam-delap"
   ]
  },
  {
