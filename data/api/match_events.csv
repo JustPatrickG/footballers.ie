@@ -5315,13 +5315,50 @@ match_id,minute,type,player,team,venue
 2026-09-04-waterford-fc-v-sligo-rovers,8,goal,Pádraig Amond,Waterford FC,Stadium
 2026-09-04-waterford-fc-v-sligo-rovers,50,goal,Tom Lonergan,Waterford FC,Stadium
 2026-09-04-waterford-fc-v-sligo-rovers,59,own_goal,Oliver Denham,Waterford FC,Stadium
-2026-09-05-aldershot-town-v-fc-halifax-town,,,,,The EBB Stadium at The Recreation Ground
-2026-09-05-arsenal-u18-v-southampton-u18,,,,,Stadium
-2026-09-05-birmingham-city-u18-v-ipswich-town-u18,,,,,Stadium
-2026-09-05-botosani-v-sepsi-osk,,,,,Stadionul Municipal
+2026-09-05-aldershot-town-v-fc-halifax-town,24,yellow,Cody Johnson,FC Halifax Town,The EBB Stadium at The Recreation Ground
+2026-09-05-aldershot-town-v-fc-halifax-town,27,missed_penalty,Tristan Abrahams,Aldershot Town,The EBB Stadium at The Recreation Ground
+2026-09-05-aldershot-town-v-fc-halifax-town,34,yellow,Tyrese Dyce,Aldershot Town,The EBB Stadium at The Recreation Ground
+2026-09-05-aldershot-town-v-fc-halifax-town,41,sub_off,Cody Johnson,FC Halifax Town,The EBB Stadium at The Recreation Ground
+2026-09-05-aldershot-town-v-fc-halifax-town,41,sub_on,Cruz Allen,FC Halifax Town,The EBB Stadium at The Recreation Ground
+2026-09-05-aldershot-town-v-fc-halifax-town,60,yellow,Cruz Allen,FC Halifax Town,The EBB Stadium at The Recreation Ground
+2026-09-05-aldershot-town-v-fc-halifax-town,64,sub_off,Amari Morgan-Smith,FC Halifax Town,The EBB Stadium at The Recreation Ground
+2026-09-05-aldershot-town-v-fc-halifax-town,64,sub_off,Zak Gilsenan,FC Halifax Town,The EBB Stadium at The Recreation Ground
+2026-09-05-aldershot-town-v-fc-halifax-town,64,sub_on,David Kawa,FC Halifax Town,The EBB Stadium at The Recreation Ground
+2026-09-05-aldershot-town-v-fc-halifax-town,64,sub_on,Ben Tollitt,FC Halifax Town,The EBB Stadium at The Recreation Ground
+2026-09-05-aldershot-town-v-fc-halifax-town,65,sub_off,Tristan Abrahams,Aldershot Town,The EBB Stadium at The Recreation Ground
+2026-09-05-aldershot-town-v-fc-halifax-town,65,sub_off,Marcus Dinanga,Aldershot Town,The EBB Stadium at The Recreation Ground
+2026-09-05-aldershot-town-v-fc-halifax-town,65,sub_on,Alfonso Tenconi,Aldershot Town,The EBB Stadium at The Recreation Ground
+2026-09-05-aldershot-town-v-fc-halifax-town,65,sub_on,Marcus Wyllie,Aldershot Town,The EBB Stadium at The Recreation Ground
+2026-09-05-aldershot-town-v-fc-halifax-town,75,sub_off,Conor Carty,FC Halifax Town,The EBB Stadium at The Recreation Ground
+2026-09-05-aldershot-town-v-fc-halifax-town,75,sub_on,Connor Douglas,FC Halifax Town,The EBB Stadium at The Recreation Ground
+2026-09-05-aldershot-town-v-fc-halifax-town,76,sub_off,Hakeem Sandah,Aldershot Town,The EBB Stadium at The Recreation Ground
+2026-09-05-aldershot-town-v-fc-halifax-town,76,sub_on,Brody Peart,Aldershot Town,The EBB Stadium at The Recreation Ground
+2026-09-05-arsenal-u18-v-southampton-u18,16,goal,Maalik Hashi,Arsenal U18,Stadium
+2026-09-05-birmingham-city-u18-v-ipswich-town-u18,45,goal,Jayden Adetiba,Ipswich Town U18,Stadium
+2026-09-05-botosani-v-sepsi-osk,8,goal,Sebastian Mailat,Botoșani,Stadionul Municipal
+2026-09-05-botosani-v-sepsi-osk,10,goal,Sebastian Mailat,Botoșani,Stadionul Municipal
+2026-09-05-botosani-v-sepsi-osk,13,yellow,George Miron,Botoșani,Stadionul Municipal
+2026-09-05-botosani-v-sepsi-osk,24,goal,Andrei Dumiter,Botoșani,Stadionul Municipal
+2026-09-05-botosani-v-sepsi-osk,36,goal,Zoran Mitrov,Botoșani,Stadionul Municipal
+2026-09-05-botosani-v-sepsi-osk,39,sub_off,Sebastian Mailat,Botoșani,Stadionul Municipal
+2026-09-05-botosani-v-sepsi-osk,39,sub_on,Stefan Bodisteanu,Botoșani,Stadionul Municipal
+2026-09-05-botosani-v-sepsi-osk,45,missed_penalty,Andrei Dumiter,Botoșani,Stadionul Municipal
+2026-09-05-botosani-v-sepsi-osk,45,yellow,Setigui Karamoko,Sepsi OSK,Stadionul Municipal
+2026-09-05-botosani-v-sepsi-osk,46,sub_off,Hunor Batzula,Sepsi OSK,Stadionul Municipal
+2026-09-05-botosani-v-sepsi-osk,46,sub_off,Robert Mihai Silaghi,Sepsi OSK,Stadionul Municipal
+2026-09-05-botosani-v-sepsi-osk,46,sub_off,Fábio Vianna,Sepsi OSK,Stadionul Municipal
+2026-09-05-botosani-v-sepsi-osk,46,sub_on,Raul Cimpean,Sepsi OSK,Stadionul Municipal
+2026-09-05-botosani-v-sepsi-osk,46,sub_on,Bogdan Otelita,Sepsi OSK,Stadionul Municipal
+2026-09-05-botosani-v-sepsi-osk,46,sub_on,Bogdan Vatajelu,Sepsi OSK,Stadionul Municipal
 2026-09-05-brentford-u18-v-aston-villa-u18,19,goal,Erinoluwa Orebowale,Aston Villa U18,Stadium
 2026-09-05-brentford-u18-v-aston-villa-u18,31,goal,Joshua Blake,Aston Villa U18,Stadium
+2026-09-05-brentford-u18-v-aston-villa-u18,49,goal,Jahmi Kellyman,Aston Villa U18,Stadium
+2026-09-05-brentford-u18-v-aston-villa-u18,73,goal,George Thomas,Aston Villa U18,Stadium
+2026-09-05-brentford-u18-v-aston-villa-u18,90,goal,Dodzi Sanchez,Aston Villa U18,Stadium
 2026-09-05-cong-an-ho-chi-minh-city-v-ha-noi-fc,27,goal,Nguyen Tien Linh,Cong An Ho Chí Minh City,Stadium
+2026-09-05-cong-an-ho-chi-minh-city-v-ha-noi-fc,50,goal,Nguyen Thái Quoc Cuong,Cong An Ho Chí Minh City,Stadium
+2026-09-05-cong-an-ho-chi-minh-city-v-ha-noi-fc,65,goal,Andrew Jung,Ha Nội FC,Stadium
+2026-09-05-cong-an-ho-chi-minh-city-v-ha-noi-fc,82,goal,Jason Cummings,Cong An Ho Chí Minh City,Stadium
 2026-09-05-crystal-palace-u18-v-tottenham-hotspur-u18,37,goal,Donte Martin,Crystal Palace U18,Stadium
 2026-09-05-crystal-palace-u18-v-tottenham-hotspur-u18,40,goal,Donte Martin,Crystal Palace U18,Stadium
 2026-09-05-crystal-palace-u18-v-tottenham-hotspur-u18,57,goal,Oliver Boast,Tottenham Hotspur U18,Stadium
@@ -5329,26 +5366,154 @@ match_id,minute,type,player,team,venue
 2026-09-05-crystal-palace-u18-v-tottenham-hotspur-u18,80,goal,Toju Wellspring,Tottenham Hotspur U18,Stadium
 2026-09-05-crystal-palace-u18-v-tottenham-hotspur-u18,88,goal,Oliver Boast,Tottenham Hotspur U18,Stadium
 2026-09-05-fleetwood-town-v-shrewsbury-town,25,yellow,Luca Hoole,Shrewsbury Town,Highbury Stadium
+2026-09-05-fleetwood-town-v-shrewsbury-town,32,yellow,Sam Stubbs,Shrewsbury Town,Highbury Stadium
+2026-09-05-fleetwood-town-v-shrewsbury-town,39,goal,Ronan Coughlan,Fleetwood Town,Highbury Stadium
+2026-09-05-fleetwood-town-v-shrewsbury-town,48,yellow,Kevin Berkoe,Shrewsbury Town,Highbury Stadium
+2026-09-05-fleetwood-town-v-shrewsbury-town,55,yellow,Lewis McCann,Fleetwood Town,Highbury Stadium
+2026-09-05-fleetwood-town-v-shrewsbury-town,57,sub_off,Danny Andrew,Fleetwood Town,Highbury Stadium
+2026-09-05-fleetwood-town-v-shrewsbury-town,57,sub_off,Will Davies,Fleetwood Town,Highbury Stadium
+2026-09-05-fleetwood-town-v-shrewsbury-town,57,sub_on,Raffaele Cirino,Fleetwood Town,Highbury Stadium
+2026-09-05-fleetwood-town-v-shrewsbury-town,57,sub_on,Ched Evans,Fleetwood Town,Highbury Stadium
+2026-09-05-fleetwood-town-v-shrewsbury-town,63,yellow,Harrison Neal,Fleetwood Town,Highbury Stadium
+2026-09-05-fleetwood-town-v-shrewsbury-town,67,sub_off,Josh Davison,Shrewsbury Town,Highbury Stadium
+2026-09-05-fleetwood-town-v-shrewsbury-town,67,sub_off,Ronan Coughlan,Fleetwood Town,Highbury Stadium
+2026-09-05-fleetwood-town-v-shrewsbury-town,67,sub_off,Adam Murphy,Fleetwood Town,Highbury Stadium
+2026-09-05-fleetwood-town-v-shrewsbury-town,67,sub_on,Joseph Gbodé,Shrewsbury Town,Highbury Stadium
+2026-09-05-fleetwood-town-v-shrewsbury-town,67,sub_on,Aaron Loupalo-Bi,Fleetwood Town,Highbury Stadium
+2026-09-05-fleetwood-town-v-shrewsbury-town,67,sub_on,Crispin McLean,Fleetwood Town,Highbury Stadium
+2026-09-05-fleetwood-town-v-shrewsbury-town,73,sub_off,Will Gray,Shrewsbury Town,Highbury Stadium
+2026-09-05-fleetwood-town-v-shrewsbury-town,73,sub_on,Jay Turner-Cooke,Shrewsbury Town,Highbury Stadium
 2026-09-05-kaiserslautern-v-darmstadt,29,missed_penalty,Lance Duijvestijn,Darmstadt,Fritz-Walter-Stadion
 2026-09-05-kaiserslautern-v-darmstadt,43,goal,Mário Sauer,Kaiserslautern,Fritz-Walter-Stadion
-2026-09-05-lincoln-city-v-southampton,,,,,ProAmpac Stadium
+2026-09-05-kaiserslautern-v-darmstadt,57,yellow,Milan Smit,Darmstadt,Fritz-Walter-Stadion
+2026-09-05-kaiserslautern-v-darmstadt,63,sub_off,Paul Joly,Kaiserslautern,Fritz-Walter-Stadion
+2026-09-05-kaiserslautern-v-darmstadt,63,sub_off,Mário Sauer,Kaiserslautern,Fritz-Walter-Stadion
+2026-09-05-kaiserslautern-v-darmstadt,63,sub_on,Mërgim Berisha,Kaiserslautern,Fritz-Walter-Stadion
+2026-09-05-kaiserslautern-v-darmstadt,63,sub_on,Simon Asta,Kaiserslautern,Fritz-Walter-Stadion
+2026-09-05-kaiserslautern-v-darmstadt,63,yellow,Yannik Lührs,Darmstadt,Fritz-Walter-Stadion
+2026-09-05-kaiserslautern-v-darmstadt,64,goal,Thierry Fidjeu-Tazemeta,Kaiserslautern,Fritz-Walter-Stadion
+2026-09-05-kaiserslautern-v-darmstadt,67,yellow,Simon Asta,Kaiserslautern,Fritz-Walter-Stadion
+2026-09-05-kaiserslautern-v-darmstadt,68,sub_off,Lars Kehl,Darmstadt,Fritz-Walter-Stadion
+2026-09-05-kaiserslautern-v-darmstadt,68,sub_on,Ho-Jae Lee,Darmstadt,Fritz-Walter-Stadion
+2026-09-05-kaiserslautern-v-darmstadt,74,sub_off,Mika Haas,Kaiserslautern,Fritz-Walter-Stadion
+2026-09-05-kaiserslautern-v-darmstadt,74,sub_off,Marlon Ritter,Kaiserslautern,Fritz-Walter-Stadion
+2026-09-05-kaiserslautern-v-darmstadt,74,sub_on,Alex Murphy,Kaiserslautern,Fritz-Walter-Stadion
+2026-09-05-kaiserslautern-v-darmstadt,74,sub_on,Ibrahim Kanaté,Kaiserslautern,Fritz-Walter-Stadion
+2026-09-05-kaiserslautern-v-darmstadt,76,yellow,Maxwell Gyamfi,Kaiserslautern,Fritz-Walter-Stadion
+2026-09-05-kaiserslautern-v-darmstadt,77,sub_off,Noah Weißhaupt,Darmstadt,Fritz-Walter-Stadion
+2026-09-05-kaiserslautern-v-darmstadt,77,sub_off,Raoul Petretta,Darmstadt,Fritz-Walter-Stadion
+2026-09-05-kaiserslautern-v-darmstadt,77,sub_on,Ibrahim El Kadiri,Darmstadt,Fritz-Walter-Stadion
+2026-09-05-kaiserslautern-v-darmstadt,77,sub_on,William Mikelbrencis,Darmstadt,Fritz-Walter-Stadion
+2026-09-05-kaiserslautern-v-darmstadt,90,goal,Mërgim Berisha,Kaiserslautern,Fritz-Walter-Stadion
+2026-09-05-lincoln-city-v-southampton,43,yellow,Conor McGrandles,Lincoln City,ProAmpac Stadium
+2026-09-05-lincoln-city-v-southampton,44,goal,Welington,Southampton,ProAmpac Stadium
+2026-09-05-lincoln-city-v-southampton,56,yellow,Ivan Varfolomeev,Lincoln City,ProAmpac Stadium
+2026-09-05-lincoln-city-v-southampton,62,sub_off,Cyle Larin,Southampton,ProAmpac Stadium
+2026-09-05-lincoln-city-v-southampton,62,sub_on,Divin Mubama,Southampton,ProAmpac Stadium
+2026-09-05-lincoln-city-v-southampton,63,sub_off,Léo Scienza,Southampton,ProAmpac Stadium
+2026-09-05-lincoln-city-v-southampton,63,sub_on,Samuel Edozie,Southampton,ProAmpac Stadium
+2026-09-05-lincoln-city-v-southampton,64,sub_off,Sonny Bradley,Lincoln City,ProAmpac Stadium
+2026-09-05-lincoln-city-v-southampton,64,sub_off,Ivan Varfolomeev,Lincoln City,ProAmpac Stadium
+2026-09-05-lincoln-city-v-southampton,64,sub_on,Reeco Hackett,Lincoln City,ProAmpac Stadium
+2026-09-05-lincoln-city-v-southampton,64,sub_on,Yunus Emre Konak,Lincoln City,ProAmpac Stadium
+2026-09-05-lincoln-city-v-southampton,65,sub_off,Robert Street,Lincoln City,ProAmpac Stadium
+2026-09-05-lincoln-city-v-southampton,65,sub_on,Mikkel Ladefoged,Lincoln City,ProAmpac Stadium
+2026-09-05-lincoln-city-v-southampton,75,yellow,Freddie Draper,Lincoln City,ProAmpac Stadium
+2026-09-05-lincoln-city-v-southampton,76,sub_off,Conor McGrandles,Lincoln City,ProAmpac Stadium
+2026-09-05-lincoln-city-v-southampton,76,sub_off,Ben House,Lincoln City,ProAmpac Stadium
+2026-09-05-lincoln-city-v-southampton,76,sub_on,Tom Bayliss,Lincoln City,ProAmpac Stadium
+2026-09-05-lincoln-city-v-southampton,76,sub_on,Chiedozie Ogbene,Lincoln City,ProAmpac Stadium
+2026-09-05-lincoln-city-v-southampton,78,sub_off,Welington,Southampton,ProAmpac Stadium
+2026-09-05-lincoln-city-v-southampton,78,sub_off,Finn Azaz,Southampton,ProAmpac Stadium
+2026-09-05-lincoln-city-v-southampton,78,sub_on,Ryan Manning,Southampton,ProAmpac Stadium
+2026-09-05-lincoln-city-v-southampton,78,sub_on,Lewis Dobbin,Southampton,ProAmpac Stadium
 2026-09-05-manchester-united-u18-v-middlesbrough-u18,24,goal,Jay McEvoy,Manchester United U18,Stadium
 2026-09-05-manchester-united-u18-v-middlesbrough-u18,31,own_goal,Ike Givenson,Manchester United U18,Stadium
 2026-09-05-manchester-united-u18-v-middlesbrough-u18,42,goal,Edson DeJonge-Seiros,Manchester United U18,Stadium
+2026-09-05-manchester-united-u18-v-middlesbrough-u18,47,goal,Camron Mpofu,Manchester United U18,Stadium
+2026-09-05-manchester-united-u18-v-middlesbrough-u18,90,goal,Douka Abdoulaye,Manchester United U18,Stadium
 2026-09-05-peterborough-united-v-sheffield-wednesday,14,sub_off,Thomas O'Connor,Peterborough United,Weston Homes Stadium
 2026-09-05-peterborough-united-v-sheffield-wednesday,14,sub_on,David Okagbue,Peterborough United,Weston Homes Stadium
 2026-09-05-preston-north-end-v-blackburn-rovers,9,goal,Callum Lang,Preston North End,Deepdale
 2026-09-05-preston-north-end-v-blackburn-rovers,25,yellow,Yuri Ribeiro,Blackburn Rovers,Deepdale
-2026-09-05-preston-north-end-v-blackburn-rovers,28,goal,<TBD>,Preston North End,Deepdale
-2026-09-05-preussen-munster-v-tsv-havelse,,,,,LVM-Preußenstadion
-2026-09-05-reims-v-guingamp,,,,,Stade Auguste-Delaune
-2026-09-05-salford-city-v-port-vale,,,,,AIG Stadium
+2026-09-05-preston-north-end-v-blackburn-rovers,28,goal,Callum Lang,Preston North End,Deepdale
+2026-09-05-preston-north-end-v-blackburn-rovers,40,yellow,Sam Morsy,Blackburn Rovers,Deepdale
+2026-09-05-preston-north-end-v-blackburn-rovers,42,yellow,Delano Burgzorg,Preston North End,Deepdale
+2026-09-05-preston-north-end-v-blackburn-rovers,51,own_goal,Stanley Mills,Blackburn Rovers,Deepdale
+2026-09-05-preston-north-end-v-blackburn-rovers,52,yellow,Stanley Mills,Preston North End,Deepdale
+2026-09-05-preston-north-end-v-blackburn-rovers,59,sub_off,Delano Burgzorg,Preston North End,Deepdale
+2026-09-05-preston-north-end-v-blackburn-rovers,59,sub_off,Callum Lang,Preston North End,Deepdale
+2026-09-05-preston-north-end-v-blackburn-rovers,59,sub_off,Caleb Wiley,Preston North End,Deepdale
+2026-09-05-preston-north-end-v-blackburn-rovers,59,sub_on,Johnny Kenny,Preston North End,Deepdale
+2026-09-05-preston-north-end-v-blackburn-rovers,59,sub_on,Jusef Erabi,Preston North End,Deepdale
+2026-09-05-preston-north-end-v-blackburn-rovers,59,sub_on,Andrija Vukcevic,Preston North End,Deepdale
+2026-09-05-preston-north-end-v-blackburn-rovers,64,sub_off,Oladapo Afolayan,Blackburn Rovers,Deepdale
+2026-09-05-preston-north-end-v-blackburn-rovers,64,sub_off,Adam Forshaw,Blackburn Rovers,Deepdale
+2026-09-05-preston-north-end-v-blackburn-rovers,64,sub_on,Hayden Carter,Blackburn Rovers,Deepdale
+2026-09-05-preston-north-end-v-blackburn-rovers,64,sub_on,Jayden Fevrier,Blackburn Rovers,Deepdale
+2026-09-05-preston-north-end-v-blackburn-rovers,65,yellow,Harry Clarke,Preston North End,Deepdale
+2026-09-05-preston-north-end-v-blackburn-rovers,69,sub_off,Stanley Mills,Preston North End,Deepdale
+2026-09-05-preston-north-end-v-blackburn-rovers,69,sub_on,Odel Offiah,Preston North End,Deepdale
+2026-09-05-preston-north-end-v-blackburn-rovers,74,sub_off,Sam Morsy,Blackburn Rovers,Deepdale
+2026-09-05-preston-north-end-v-blackburn-rovers,74,sub_off,Alfie Devine,Preston North End,Deepdale
+2026-09-05-preston-north-end-v-blackburn-rovers,74,sub_on,Harvey Higgins,Blackburn Rovers,Deepdale
+2026-09-05-preston-north-end-v-blackburn-rovers,74,sub_on,Liam Gibbs,Preston North End,Deepdale
+2026-09-05-preussen-munster-v-tsv-havelse,9,goal,Antonio Tikvic,Preussen Münster,LVM-Preußenstadion
+2026-09-05-preussen-munster-v-tsv-havelse,35,goal,Alexander Guiddir,TSV Havelse,LVM-Preußenstadion
+2026-09-05-preussen-munster-v-tsv-havelse,39,sub_off,Niko Koulis,Preussen Münster,LVM-Preußenstadion
+2026-09-05-preussen-munster-v-tsv-havelse,39,sub_on,Lucas Zeller,Preussen Münster,LVM-Preußenstadion
+2026-09-05-reims-v-guingamp,5,goal,Stanislas Kielt,Guingamp,Stade Auguste-Delaune
+2026-09-05-reims-v-guingamp,48,goal,Yaya Fofana,Reims,Stade Auguste-Delaune
+2026-09-05-reims-v-guingamp,50,goal,Yaya Fofana,Reims,Stade Auguste-Delaune
+2026-09-05-salford-city-v-port-vale,51,yellow,Kyle Dempsey,Port Vale,AIG Stadium
+2026-09-05-salford-city-v-port-vale,52,goal,Joe Powell,Salford City,AIG Stadium
+2026-09-05-salford-city-v-port-vale,53,sub_off,Maleace Asamoah,Port Vale,AIG Stadium
+2026-09-05-salford-city-v-port-vale,53,sub_on,Onel Hernández,Port Vale,AIG Stadium
+2026-09-05-salford-city-v-port-vale,55,yellow,Lewis Montsma,Port Vale,AIG Stadium
+2026-09-05-salford-city-v-port-vale,61,sub_off,Ryan Graydon,Salford City,AIG Stadium
+2026-09-05-salford-city-v-port-vale,61,sub_on,Brendan Sarpong-Wiredu,Salford City,AIG Stadium
+2026-09-05-salford-city-v-port-vale,62,sub_off,Abraham Odoh,Salford City,AIG Stadium
+2026-09-05-salford-city-v-port-vale,62,sub_on,Kelly N'Mai,Salford City,AIG Stadium
+2026-09-05-salford-city-v-port-vale,64,yellow,Macaulay Langstaff,Salford City,AIG Stadium
+2026-09-05-salford-city-v-port-vale,69,sub_off,Kyle John,Port Vale,AIG Stadium
+2026-09-05-salford-city-v-port-vale,69,sub_on,Keyrol Figueroa,Port Vale,AIG Stadium
+2026-09-05-salford-city-v-port-vale,71,sub_off,Macaulay Langstaff,Salford City,AIG Stadium
+2026-09-05-salford-city-v-port-vale,71,sub_off,Luke Molyneux,Salford City,AIG Stadium
+2026-09-05-salford-city-v-port-vale,71,sub_on,Daniel Udoh,Salford City,AIG Stadium
+2026-09-05-salford-city-v-port-vale,71,sub_on,Nathan Asiimwe,Salford City,AIG Stadium
+2026-09-05-salford-city-v-port-vale,80,sub_off,Oliver Lynch,Port Vale,AIG Stadium
+2026-09-05-salford-city-v-port-vale,80,sub_off,Jaheim Headley,Port Vale,AIG Stadium
+2026-09-05-salford-city-v-port-vale,80,sub_on,Ben Waine,Port Vale,AIG Stadium
+2026-09-05-salford-city-v-port-vale,80,sub_on,Liam Gordon,Port Vale,AIG Stadium
+2026-09-05-salford-city-v-port-vale,82,sub_off,Joe Powell,Salford City,AIG Stadium
+2026-09-05-salford-city-v-port-vale,82,sub_on,Jorge Grant,Salford City,AIG Stadium
 2026-09-05-stoke-city-v-charlton-athletic,15,goal,Justin Devenny,Stoke City,bet365 Stadium
 2026-09-05-stoke-city-v-charlton-athletic,22,goal,Ethan Galbraith,Stoke City,bet365 Stadium
 2026-09-05-stoke-city-v-charlton-athletic,25,goal,George Hirst,Stoke City,bet365 Stadium
 2026-09-05-stoke-city-v-charlton-athletic,26,sub_off,Tyreece Campbell,Charlton Athletic,bet365 Stadium
 2026-09-05-stoke-city-v-charlton-athletic,26,sub_on,Dan McNamara,Charlton Athletic,bet365 Stadium
+2026-09-05-turriff-united-v-inverurie-loco-works,1,goal,Ethan Cairns,Inverurie Loco Works,The Haughs
 2026-09-05-wigan-athletic-v-stockport-county,10,goal,Kyle Wootton,Stockport County,The Brick Community Stadium
 2026-09-05-wigan-athletic-v-stockport-county,19,goal,Harry Wood,Stockport County,The Brick Community Stadium
 2026-09-05-wigan-athletic-v-stockport-county,21,goal,Jack Diamond,Stockport County,The Brick Community Stadium
 2026-09-05-wigan-athletic-v-stockport-county,27,yellow,Connor Barrett,Wigan Athletic,The Brick Community Stadium
+2026-09-05-wigan-athletic-v-stockport-county,31,yellow,James Carragher,Wigan Athletic,The Brick Community Stadium
+2026-09-05-wigan-athletic-v-stockport-county,35,yellow,Kyron Gordon,Stockport County,The Brick Community Stadium
+2026-09-05-wigan-athletic-v-stockport-county,46,sub_off,Connor Barrett,Wigan Athletic,The Brick Community Stadium
+2026-09-05-wigan-athletic-v-stockport-county,46,sub_off,Charlie Gray,Wigan Athletic,The Brick Community Stadium
+2026-09-05-wigan-athletic-v-stockport-county,46,sub_off,Reggie Walsh,Wigan Athletic,The Brick Community Stadium
+2026-09-05-wigan-athletic-v-stockport-county,46,sub_on,Fraser Murray,Wigan Athletic,The Brick Community Stadium
+2026-09-05-wigan-athletic-v-stockport-county,46,sub_on,Chris Sze,Wigan Athletic,The Brick Community Stadium
+2026-09-05-wigan-athletic-v-stockport-county,46,sub_on,Bradley Burrowes,Wigan Athletic,The Brick Community Stadium
+2026-09-05-wigan-athletic-v-stockport-county,63,sub_off,Oliver Norwood,Stockport County,The Brick Community Stadium
+2026-09-05-wigan-athletic-v-stockport-county,63,sub_off,Harry Wood,Stockport County,The Brick Community Stadium
+2026-09-05-wigan-athletic-v-stockport-county,63,sub_on,Lewis Fiorini,Stockport County,The Brick Community Stadium
+2026-09-05-wigan-athletic-v-stockport-county,63,sub_on,Jason Adigun,Stockport County,The Brick Community Stadium
+2026-09-05-wigan-athletic-v-stockport-county,69,sub_off,Finley Burns,Wigan Athletic,The Brick Community Stadium
+2026-09-05-wigan-athletic-v-stockport-county,69,sub_off,Dara Costelloe,Wigan Athletic,The Brick Community Stadium
+2026-09-05-wigan-athletic-v-stockport-county,69,sub_on,Sonny Perkins,Wigan Athletic,The Brick Community Stadium
+2026-09-05-wigan-athletic-v-stockport-county,69,sub_on,Jon Mellish,Wigan Athletic,The Brick Community Stadium
+2026-09-05-wigan-athletic-v-stockport-county,71,sub_off,Ben Osborn,Stockport County,The Brick Community Stadium
+2026-09-05-wigan-athletic-v-stockport-county,71,sub_off,Kyle Wootton,Stockport County,The Brick Community Stadium
+2026-09-05-wigan-athletic-v-stockport-county,71,sub_on,Josh Dacres-Cogley,Stockport County,The Brick Community Stadium
+2026-09-05-wigan-athletic-v-stockport-county,71,sub_on,Mikaël Mandron,Stockport County,The Brick Community Stadium
