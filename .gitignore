@@ -7,3 +7,5 @@ scraper/news_since.json
 __pycache__/
 data/api/news_drafts.json
 data/api/news_skipped.log
+.DS_Store
+**/.DS_Store
