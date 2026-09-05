@@ -5654,7 +5654,9 @@ match_id,minute,type,player,team,venue
 2026-09-05-burton-albion-v-cambridge-united,74,sub_on,Joe Lewis,Burton Albion,Pirelli Stadium
 2026-09-05-burton-albion-v-cambridge-united,90,goal,Curtis Tilt,Burton Albion,Pirelli Stadium
 2026-09-05-burton-albion-v-cambridge-united,90,yellow,Callum Perry,Cambridge United,Pirelli Stadium
-2026-09-05-carrarese-v-empoli,,,,,Stadio dei Marmi - IV Olimpionici Azzurri
+2026-09-05-carrarese-v-empoli,46,sub_off,Joseph Ceesay,Empoli,Stadio dei Marmi - IV Olimpionici Azzurri
+2026-09-05-carrarese-v-empoli,46,sub_on,Filippo Distefano,Empoli,Stadio dei Marmi - IV Olimpionici Azzurri
+2026-09-05-carrarese-v-empoli,50,yellow,Luca Magnino,Empoli,Stadio dei Marmi - IV Olimpionici Azzurri
 2026-09-05-chelmsford-v-salisbury,31,goal,Robbie Gallagher,Salisbury,Melbourne Stadium
 2026-09-05-chelmsford-v-salisbury,40,goal,George Alexander,Chelmsford,Melbourne Stadium
 2026-09-05-cheltenham-town-v-grimsby-town,12,goal,Charlie McCann,Cheltenham Town,EV Charger Points Stadium
@@ -5717,6 +5719,7 @@ match_id,minute,type,player,team,venue
 2026-09-05-coleraine-v-crusaders,5,goal,Jay Henderson,Coleraine,The Showgrounds
 2026-09-05-coleraine-v-crusaders,8,goal,Matthew Shevlin,Coleraine,The Showgrounds
 2026-09-05-coleraine-v-crusaders,53,goal,Senan Devine,Coleraine,The Showgrounds
+2026-09-05-coleraine-v-crusaders,83,goal,Michael Mulholland,Crusaders,The Showgrounds
 2026-09-05-cong-an-ho-chi-minh-city-v-ha-noi-fc,27,goal,Nguyen Tien Linh,Cong An Ho Chí Minh City,Stadium
 2026-09-05-cong-an-ho-chi-minh-city-v-ha-noi-fc,50,goal,Nguyen Thái Quoc Cuong,Cong An Ho Chí Minh City,Stadium
 2026-09-05-cong-an-ho-chi-minh-city-v-ha-noi-fc,65,goal,Andrew Jung,Ha Nội FC,Stadium
@@ -6108,7 +6111,8 @@ match_id,minute,type,player,team,venue
 2026-09-05-leicester-city-v-oxford-united,81,sub_off,Cameron Brannagan,Oxford United,King Power Stadium
 2026-09-05-leicester-city-v-oxford-united,81,sub_on,Louie Sibley,Oxford United,King Power Stadium
 2026-09-05-leicester-city-v-oxford-united,81,sub_on,Jack Currie,Oxford United,King Power Stadium
-2026-09-05-levski-sofia-v-cska-1948,,,,,Georgi Asparuhov
+2026-09-05-levski-sofia-v-cska-1948,17,yellow,Héctor Cuéllar,CSKA 1948,Georgi Asparuhov
+2026-09-05-levski-sofia-v-cska-1948,28,yellow,Juan Perea,Levski Sofia,Georgi Asparuhov
 2026-09-05-limavady-v-dungannon-swifts,30,goal,Leonel Alves,Dungannon Swifts,The Showgrounds Limavady
 2026-09-05-limavady-v-dungannon-swifts,68,goal,Tiernan Kelly,Dungannon Swifts,The Showgrounds Limavady
 2026-09-05-lincoln-city-v-southampton,43,yellow,Conor McGrandles,Lincoln City,ProAmpac Stadium
