@@ -81,6 +81,7 @@ aaron-okpolokpo,2026-09-08T15:00:00Z,TPS,A,Veikkausliiga Relegation Group
 aaron-okpolokpo,2026-09-12T16:00:00Z,FF Jaro,A,Veikkausliiga Relegation Group
 aaron-okpolokpo,2026-09-18T15:00:00Z,IFK Mariehamn,H,Veikkausliiga Relegation Group
 aaron-okpolokpo,2026-10-09T15:00:00Z,FC Lahti,H,Veikkausliiga Relegation Group
+aaron-okpolokpo,2026-10-17T11:00:00Z,Ilves,A,Veikkausliiga Relegation Group
 aaron-oreilly,2026-09-12T10:00:00Z,West Brom U18,A,Premier League U18
 aaron-oreilly,2026-09-19T10:00:00Z,Brighton U18,H,Premier League U18
 aaron-oreilly,2026-10-17T11:30:00Z,West Ham U18,A,Premier League U18
@@ -569,7 +570,6 @@ calum-kavanagh,2026-09-26T16:30:00Z,Salford,H,League Two
 calum-kavanagh,2026-10-03T14:00:00Z,Northampton,A,League Two
 calum-kavanagh,2026-10-10T11:30:00Z,Accrington,H,League Two
 calum-kavanagh,2026-10-13T18:00:00Z,Leeds United U21,H,EFL Trophy Northern Grp. G
-cameron-reid,2026-09-05T13:00:00Z,Inverurie Loco Works,H,Highland / Lowland
 cameron-reid,2026-09-16T19:00:00Z,Huntly,H,Highland / Lowland
 cameron-reid,2026-09-19T14:00:00Z,Invergordon,A,Highland / Lowland
 cameron-reid,2026-09-26T14:00:00Z,Rothes,H,Highland / Lowland
@@ -1268,12 +1268,14 @@ david-eze,2026-09-13T12:00:00Z,KuPS,A,Veikkausliiga Championship Group
 david-eze,2026-09-18T16:00:00Z,IF Gnistan,A,Veikkausliiga Championship Group
 david-eze,2026-10-08T15:00:00Z,VPS,H,Veikkausliiga Championship Group
 david-eze,2026-10-12T16:00:00Z,AC Oulu,A,Veikkausliiga Championship Group
+david-eze,2026-10-17T13:00:00Z,IF Gnistan,H,Veikkausliiga Championship Group
 david-ezeh,2026-09-05T15:00:00Z,FC Inter Turku,A,Cup
 david-ezeh,2026-09-09T15:00:00Z,FC Inter Turku,H,Veikkausliiga Championship Group
 david-ezeh,2026-09-13T12:00:00Z,KuPS,A,Veikkausliiga Championship Group
 david-ezeh,2026-09-18T16:00:00Z,IF Gnistan,A,Veikkausliiga Championship Group
 david-ezeh,2026-10-08T15:00:00Z,VPS,H,Veikkausliiga Championship Group
 david-ezeh,2026-10-12T16:00:00Z,AC Oulu,A,Veikkausliiga Championship Group
+david-ezeh,2026-10-17T13:00:00Z,IF Gnistan,H,Veikkausliiga Championship Group
 david-hurley,2026-09-11T18:45:00Z,Bohemian FC,H,Premier Division
 david-hurley,2026-09-14T18:45:00Z,Sligo Rovers,A,Premier Division
 david-hurley,2026-09-18T18:45:00Z,Derry City,A,Premier Division
@@ -2431,6 +2433,7 @@ josh-okpolokpo,2026-09-08T15:00:00Z,TPS,A,Veikkausliiga Relegation Group
 josh-okpolokpo,2026-09-12T16:00:00Z,FF Jaro,A,Veikkausliiga Relegation Group
 josh-okpolokpo,2026-09-18T15:00:00Z,IFK Mariehamn,H,Veikkausliiga Relegation Group
 josh-okpolokpo,2026-10-09T15:00:00Z,FC Lahti,H,Veikkausliiga Relegation Group
+josh-okpolokpo,2026-10-17T11:00:00Z,Ilves,A,Veikkausliiga Relegation Group
 josh-seary,2026-09-12T14:00:00Z,Warrington Town,H,Northern Premier Division
 josh-seary,2026-09-19T14:00:00Z,Curzon,A,Northern Premier Division
 josh-seary,2026-10-03T14:00:00Z,Whitby,H,Northern Premier Division
@@ -2622,6 +2625,7 @@ kyle-degelman,2026-09-26T12:00:00Z,Augsburg II,A,Regionalliga Bayern
 kyle-degelman,2026-10-03T14:00:00Z,FC Memmingen,H,Regionalliga Bayern
 kyle-degelman,2026-10-10T12:00:00Z,TSV Landsberg,A,Regionalliga Bayern
 kyle-degelman,2026-10-13T16:30:00Z,FV Illertissen,H,Regionalliga Bayern
+kyle-degelman,2026-10-17T13:30:00Z,TSV Schwaben Augsburg,A,Regionalliga Bayern
 kyle-mcdonagh,2026-09-11T18:45:00Z,Drogheda United,A,Premier Division
 kyle-mcdonagh,2026-09-14T18:45:00Z,Galway United FC,H,Premier Division
 kyle-mcdonagh,2026-09-19T18:45:00Z,St. Patrick's Athletic,H,Premier Division
@@ -2911,6 +2915,7 @@ matteo-egan,2026-09-05T17:30:00Z,Carrarese,A,Serie B
 matteo-egan,2026-09-11T17:00:00Z,Arezzo,H,Serie B
 matteo-egan,2026-09-20T17:30:00Z,Modena,A,Serie B
 matteo-egan,2026-10-10T13:00:00Z,Palermo,H,Serie B
+matteo-egan,2026-10-17T13:00:00Z,Ascoli,A,Serie B
 matthew-alonge,2026-09-11T18:45:00Z,Athlone Town,H,First Division
 matthew-alonge,2026-09-18T18:45:00Z,Cork City,A,First Division
 matthew-alonge,2026-09-25T18:45:00Z,Bray Wanderers,H,First Division
@@ -3316,14 +3321,13 @@ pijus-otegbayo,2026-09-11T18:00:00Z,Wolverhampton Wanderers U21,H,Premier League
 pijus-otegbayo,2026-09-21T18:00:00Z,Bournemouth U21,A,Premier League 2
 pijus-otegbayo,2026-10-13T18:00:00Z,FC Halifax Town,A,National League Cup Group A
 pijus-otegbayo,2026-10-16T18:00:00Z,Chelsea U21,H,Premier League 2
-promise-omochere,2026-09-05T14:00:00Z,Rotherham,H,League Two
-promise-omochere,2026-09-12T11:30:00Z,Grimsby,A,League Two
-promise-omochere,2026-09-19T14:00:00Z,Gillingham,A,League Two
-promise-omochere,2026-09-26T14:00:00Z,Exeter,H,League Two
-promise-omochere,2026-10-03T14:00:00Z,Crewe,A,League Two
-promise-omochere,2026-10-06T18:00:00Z,Wycombe,A,EFL Trophy Southern Grp. C
-promise-omochere,2026-10-10T14:00:00Z,Barnet,H,League Two
-promise-omochere,2026-10-17T11:30:00Z,Shrewsbury,A,League Two
+promise-omochere,2026-09-12T16:30:00Z,Carlisle,A,National League
+promise-omochere,2026-09-15T18:45:00Z,Tamworth,H,National League
+promise-omochere,2026-09-19T14:00:00Z,Gateshead FC,A,National League
+promise-omochere,2026-09-26T14:00:00Z,Barrow,H,National League
+promise-omochere,2026-09-30T18:45:00Z,Eastleigh,A,National League
+promise-omochere,2026-10-03T14:00:00Z,AFC Fylde,H,National League
+promise-omochere,2026-10-10T14:00:00Z,Boston United,A,National League
 rabby-tabu-minzamba,2026-09-12T14:00:00Z,Gosport Borough,A,Southern Premier Division South
 rabby-tabu-minzamba,2026-09-22T18:45:00Z,Bath City,H,Southern Premier Division South
 rabby-tabu-minzamba,2026-09-30T18:45:00Z,Frome Town,A,Southern Premier Division South
