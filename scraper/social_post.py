@@ -299,6 +299,14 @@ def run(dry=False):
         print("reddit: " + ("ON -> r/" + sub if reddit else "off (secrets/subreddit not set)"))
         print("x: " + ("ON" if x else "off (secrets not set - needs a paid X tier to post)"))
 
+    if not dry and not reddit and not x:
+        # Nothing configured means nothing can be decided. Falling through here
+        # would mark every article "skipped" and settle it forever - so the day
+        # the X keys are finally added, the whole backlog would already be
+        # marked done and would never post.
+        print("no platform configured - nothing posted, nothing marked")
+        return 0
+
     rule = ("everything over weight %.0f" % MIN_WEIGHT) if POST_ALL else (
            "Irish goals outside the League of Ireland" + (" + news" if POST_NEWS else ""))
     print(f"posting: {rule}")
@@ -333,8 +341,14 @@ def run(dry=False):
             continue
 
         if not (take_reddit or take_x):
-            # Settle it rather than reconsider the same article every 20
-            # minutes for the next two days.
+            if take:
+                # It qualifies - the platform just has no room right now
+                # (monthly cap). Leave it unmarked so it goes out when the
+                # cap resets, rather than settling it as though it failed.
+                print(f"  qualifies, but X is capped - holding: {headline[:44]}")
+                continue
+            # Genuinely not wanted. Settle it rather than reconsider the same
+            # article every 20 minutes for the next two days.
             why = ("League of Ireland" if is_loi(a)
                    else "no goal in it" if is_report(a) else "not a goal report")
             state[slug] = dict(result, skipped=why)
