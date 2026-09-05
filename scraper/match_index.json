@@ -1107,6 +1107,19 @@
   ]
  },
  {
+  "fotmob_id": "6022256",
+  "url": "/matches/brighton-hove-albion-u18-vs-aston-villa-u18/vnb6vb7o#6022256",
+  "kickoff": "2026-09-19T10:00:00Z",
+  "comp": "Premier League U18",
+  "home": "Aston Villa U18",
+  "away": "Brighton U18",
+  "home_id": "1113564",
+  "away_id": "1113555",
+  "slugs": [
+   "aaron-oreilly"
+  ]
+ },
+ {
   "fotmob_id": "6046150",
   "url": "/matches/st-patricks-athletic-vs-bohemian-fc/cdqfe#6046150",
   "kickoff": "2026-09-05T15:00:00Z",
@@ -1931,6 +1944,19 @@
   "away": "Crystal Palace U18",
   "home_id": "1113566",
   "away_id": "1183385",
+  "slugs": [
+   "alfie-mulvenna"
+  ]
+ },
+ {
+  "fotmob_id": "6022257",
+  "url": "/matches/fulham-u18-vs-crystal-palace-u18/xnuzswat#6022257",
+  "kickoff": "2026-09-19T10:00:00Z",
+  "comp": "Premier League U18",
+  "home": "Crystal Palace U18",
+  "away": "Fulham U18",
+  "home_id": "1183385",
+  "away_id": "1113550",
   "slugs": [
    "alfie-mulvenna"
   ]
@@ -5945,6 +5971,19 @@
   ]
  },
  {
+  "fotmob_id": "6022258",
+  "url": "/matches/southampton-u18-vs-reading-u18/vnbtet35#6022258",
+  "kickoff": "2026-09-19T10:00:00Z",
+  "comp": "Premier League U18",
+  "home": "Southampton U18",
+  "away": "Reading U18",
+  "home_id": "1113567",
+  "away_id": "1113569",
+  "slugs": [
+   "george-moloney"
+  ]
+ },
+ {
   "fotmob_id": "6000874",
   "url": "/matches/scunthorpe-united-vs-nottingham-forest-u21/cgnaqosx#6000874",
   "kickoff": "2026-09-08T18:00:00Z",
@@ -5995,7 +6034,8 @@
   "away_id": "8143",
   "slugs": [
    "graham-carey",
-   "jordan-doherty"
+   "jordan-doherty",
+   "uniss-kargbo"
   ]
  },
  {
@@ -9193,19 +9233,6 @@
   "away_id": "1711",
   "slugs": [
    "kyle-degelman"
-  ]
- },
- {
-  "fotmob_id": "5811733",
-  "url": "/matches/kortrijk-vs-anderlecht/2g50qw#5811733",
-  "kickoff": "2026-09-03T18:30:00Z",
-  "comp": "Belgian Pro League",
-  "home": "Anderlecht",
-  "away": "Kortrijk",
-  "home_id": "8635",
-  "away_id": "8571",
-  "slugs": [
-   "andrew-omobamidele"
   ]
  }
 ]
