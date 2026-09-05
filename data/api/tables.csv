@@ -99,11 +99,11 @@ Premier League,47,13,Crystal Palace,9826,3,1,0,2,4,8,-4,3
 Premier League,47,14,Ipswich Town,9902,3,1,0,2,4,8,-4,3
 Premier League,47,15,AFC Bournemouth,8678,3,0,2,1,4,5,-1,2
 Premier League,47,16,Nottingham Forest,10203,3,0,2,1,2,3,-1,2
-Premier League,47,17,Tottenham Hotspur,8586,3,0,1,2,0,5,-5,1
-Premier League,47,18,Aston Villa,10252,3,0,1,2,0,5,-5,1
+Premier League,47,17,Aston Villa,10252,3,0,1,2,0,5,-5,1
+Premier League,47,18,Tottenham Hotspur,8586,3,0,1,2,0,5,-5,1
 Premier League,47,19,Fulham,9879,3,0,0,3,4,7,-3,0
 Premier League,47,20,Coventry City,8669,3,0,0,3,0,5,-5,0
-National League,117,1,Boreham Wood,2488,6,4,2,0,14,7,7,14
+National League,117,1,Boreham Wood,2488,6,5,1,0,16,8,8,16
 National League,117,2,Harrogate Town,7946,6,4,1,1,15,9,6,13
 National League,117,3,Southend United,8652,6,4,1,1,12,8,4,13
 National League,117,4,Hornchurch,4047,6,4,0,2,10,8,2,12
@@ -113,10 +113,10 @@ National League,117,7,Yeovil Town,10198,6,3,2,1,12,8,4,11
 National League,117,8,Kidderminster Harriers,10284,6,3,2,1,10,7,3,11
 National League,117,9,Aldershot Town,8465,6,3,2,1,7,4,3,11
 National League,117,10,Eastleigh,161803,6,3,1,2,8,7,1,10
-National League,117,11,Carlisle United,10196,6,2,3,1,12,8,4,9
-National League,117,12,Hartlepool United,8488,6,3,0,3,5,4,1,9
-National League,117,13,Altrincham,9915,6,3,0,3,7,8,-1,9
-National League,117,14,Forest Green Rovers,9828,6,3,0,3,7,10,-3,9
+National League,117,11,Hartlepool United,8488,6,3,0,3,5,4,1,9
+National League,117,12,Altrincham,9915,6,3,0,3,7,8,-1,9
+National League,117,13,Forest Green Rovers,9828,6,3,0,3,7,10,-3,9
+National League,117,14,Carlisle United,10196,6,2,2,2,13,10,3,8
 National League,117,15,Boston United,8646,6,2,1,3,8,8,0,7
 National League,117,16,Worthing,282351,6,2,1,3,11,12,-1,7
 National League,117,17,FC Halifax Town,10195,6,2,0,4,9,10,-1,6
@@ -140,10 +140,10 @@ Premier Division,126,10,Sligo Rovers,6361,29,5,8,16,23,48,-25,23
 First Division,218,1,Cork City,2201,30,21,5,4,62,26,36,68
 First Division,218,2,UCD,1578,30,14,6,10,53,38,15,48
 First Division,218,3,Bray Wanderers,1629,30,12,8,10,58,44,14,44
-First Division,218,4,Cobh Ramblers,2383,30,12,6,12,35,41,-6,42
-First Division,218,5,Longford Town,4569,29,11,8,10,41,38,3,41
-First Division,218,6,Athlone Town,2378,30,11,7,12,31,34,-3,40
-First Division,218,7,Kerry FC,1426348,29,10,9,10,38,35,3,39
+First Division,218,4,Longford Town,4569,30,11,9,10,41,38,3,42
+First Division,218,5,Cobh Ramblers,2383,30,12,6,12,35,41,-6,42
+First Division,218,6,Kerry FC,1426348,30,10,10,10,38,35,3,40
+First Division,218,7,Athlone Town,2378,30,11,7,12,31,34,-3,40
 First Division,218,8,Wexford FC,62337,30,10,7,13,33,43,-10,37
 First Division,218,9,Treaty United,1233534,30,7,9,14,29,45,-16,30
 First Division,218,10,Finn Harps,1627,30,5,7,18,26,62,-36,22
@@ -181,10 +181,10 @@ Premier League 2,9084,31,Newcastle United U21,860798,2,0,0,2,1,7,-6,0
 League of Ireland First Division,218,1,Cork City,2201,30,21,5,4,62,26,36,68
 League of Ireland First Division,218,2,UCD,1578,30,14,6,10,53,38,15,48
 League of Ireland First Division,218,3,Bray Wanderers,1629,30,12,8,10,58,44,14,44
-League of Ireland First Division,218,4,Cobh Ramblers,2383,30,12,6,12,35,41,-6,42
-League of Ireland First Division,218,5,Longford Town,4569,29,11,8,10,41,38,3,41
-League of Ireland First Division,218,6,Athlone Town,2378,30,11,7,12,31,34,-3,40
-League of Ireland First Division,218,7,Kerry FC,1426348,29,10,9,10,38,35,3,39
+League of Ireland First Division,218,4,Longford Town,4569,30,11,9,10,41,38,3,42
+League of Ireland First Division,218,5,Cobh Ramblers,2383,30,12,6,12,35,41,-6,42
+League of Ireland First Division,218,6,Kerry FC,1426348,30,10,10,10,38,35,3,40
+League of Ireland First Division,218,7,Athlone Town,2378,30,11,7,12,31,34,-3,40
 League of Ireland First Division,218,8,Wexford FC,62337,30,10,7,13,33,43,-10,37
 League of Ireland First Division,218,9,Treaty United,1233534,30,7,9,14,29,45,-16,30
 League of Ireland First Division,218,10,Finn Harps,1627,30,5,7,18,26,62,-36,22
@@ -293,14 +293,14 @@ LaLiga,87,6,Atlético Madrid,9906,4,2,1,1,7,6,1,7
 LaLiga,87,7,Athletic Club,8315,4,2,0,2,6,5,1,6
 LaLiga,87,8,Sevilla,8302,3,2,0,1,6,5,1,6
 LaLiga,87,9,Deportivo A Coruña,9783,3,1,2,0,5,3,2,5
-LaLiga,87,10,Racing Santander,8696,4,1,2,1,7,7,0,5
-LaLiga,87,11,Levante,8581,3,1,1,1,5,5,0,4
-LaLiga,87,12,Real Sociedad,8560,4,1,1,2,3,6,-3,4
-LaLiga,87,13,Espanyol,8558,3,1,0,2,5,4,1,3
-LaLiga,87,14,Getafe,8305,3,1,0,2,1,4,-3,3
-LaLiga,87,15,Villarreal,10205,3,0,2,1,4,5,-1,2
-LaLiga,87,16,Celta Vigo,9910,4,0,2,2,1,4,-3,2
-LaLiga,87,17,Rayo Vallecano,8370,4,0,2,2,6,10,-4,2
+LaLiga,87,10,Levante,8581,3,1,1,1,5,5,0,4
+LaLiga,87,11,Racing Santander,8696,4,1,1,2,7,8,-1,4
+LaLiga,87,12,Rayo Vallecano,8370,4,1,1,2,7,10,-3,4
+LaLiga,87,13,Real Sociedad,8560,4,1,1,2,3,6,-3,4
+LaLiga,87,14,Espanyol,8558,3,1,0,2,5,4,1,3
+LaLiga,87,15,Getafe,8305,3,1,0,2,1,4,-3,3
+LaLiga,87,16,Villarreal,10205,3,0,2,1,4,5,-1,2
+LaLiga,87,17,Celta Vigo,9910,4,0,2,2,1,4,-3,2
 LaLiga,87,18,Valencia,10267,3,0,1,2,1,4,-3,1
 LaLiga,87,19,Elche,10268,3,0,1,2,3,9,-6,1
 LaLiga,87,20,Málaga,9864,3,0,1,2,1,7,-6,1
@@ -310,17 +310,17 @@ LaLiga,87,20,Málaga,9864,3,0,1,2,1,7,-6,1
 2. Bundesliga,146,4,Kaiserslautern,8350,4,2,2,0,5,1,4,8
 2. Bundesliga,146,5,FC Heidenheim,94937,3,2,0,1,10,10,0,6
 2. Bundesliga,146,6,Magdeburg,8188,3,2,0,1,6,6,0,6
-2. Bundesliga,146,7,Karlsruher SC,8295,4,1,2,1,6,8,-2,5
-2. Bundesliga,146,8,Arminia Bielefeld,9912,4,1,1,2,7,8,-1,4
-2. Bundesliga,146,9,Greuther Fürth,8357,3,1,1,1,7,8,-1,4
-2. Bundesliga,146,10,Energie Cottbus,8398,4,1,1,2,10,12,-2,4
-2. Bundesliga,146,11,Hannover 96,9904,4,1,1,2,4,6,-2,4
-2. Bundesliga,146,12,Eintracht Braunschweig,9776,3,1,0,2,9,7,2,3
-2. Bundesliga,146,13,St. Pauli,8152,4,0,3,1,6,7,-1,3
-2. Bundesliga,146,14,Bochum,9911,3,1,0,2,1,2,-1,3
+2. Bundesliga,146,7,Bochum,9911,4,2,0,2,2,2,0,6
+2. Bundesliga,146,8,Karlsruher SC,8295,4,1,2,1,6,8,-2,5
+2. Bundesliga,146,9,Arminia Bielefeld,9912,4,1,1,2,7,8,-1,4
+2. Bundesliga,146,10,Greuther Fürth,8357,3,1,1,1,7,8,-1,4
+2. Bundesliga,146,11,Energie Cottbus,8398,4,1,1,2,10,12,-2,4
+2. Bundesliga,146,12,Hannover 96,9904,4,1,1,2,4,6,-2,4
+2. Bundesliga,146,13,Eintracht Braunschweig,9776,3,1,0,2,9,7,2,3
+2. Bundesliga,146,14,St. Pauli,8152,4,0,3,1,6,7,-1,3
 2. Bundesliga,146,15,Holstein Kiel,8150,4,0,3,1,6,8,-2,3
 2. Bundesliga,146,16,VfL Osnabrück,9775,3,1,0,2,4,7,-3,3
-2. Bundesliga,146,17,Dynamo Dresden,8480,3,1,0,2,4,8,-4,3
+2. Bundesliga,146,17,Dynamo Dresden,8480,4,1,0,3,4,9,-5,3
 2. Bundesliga,146,18,Darmstadt,8262,4,0,1,3,2,7,-5,1
 Highland / Lowland,9545,1,Tranent,1215940,6,6,0,0,13,2,11,18
 Highland / Lowland,9545,1,Auchinleck Talbot,183952,7,5,1,1,28,7,21,16
@@ -373,17 +373,17 @@ Highland / Lowland,9545,16,Invergordon,1809963,9,2,1,6,10,20,-10,7
 Highland / Lowland,9545,17,Newton Stewart,97913,6,0,1,5,6,26,-20,1
 Highland / Lowland,9545,17,Wick Academy,1776,9,1,0,8,5,26,-21,3
 Highland / Lowland,9545,18,Rothes,97917,8,1,0,7,6,33,-27,3
-Serie A,55,1,Como,10171,3,2,1,0,7,3,4,7
-Serie A,55,2,Napoli,9875,3,2,0,1,5,3,2,6
+Serie A,55,1,Inter,8636,3,3,0,0,8,3,5,9
+Serie A,55,2,Como,10171,3,2,1,0,7,3,4,7
 Serie A,55,3,Roma,8686,2,2,0,0,8,0,8,6
 Serie A,55,4,Milan,8564,2,2,0,0,4,1,3,6
 Serie A,55,5,Juventus,9885,2,2,0,0,3,0,3,6
 Serie A,55,6,Atalanta,8524,2,2,0,0,3,1,2,6
 Serie A,55,7,Lazio,8543,2,2,0,0,2,0,2,6
-Serie A,55,8,Inter,8636,3,2,0,1,6,3,3,6
-Serie A,55,9,Udinese,8600,2,1,1,0,4,3,1,4
-Serie A,55,10,Sassuolo,7943,2,1,0,1,3,3,0,3
-Serie A,55,11,Frosinone,9891,2,1,0,1,3,1,2,3
+Serie A,55,8,Udinese,8600,2,1,1,0,4,3,1,4
+Serie A,55,9,Sassuolo,7943,2,1,0,1,3,3,0,3
+Serie A,55,10,Frosinone,9891,2,1,0,1,3,1,2,3
+Serie A,55,11,Napoli,9875,3,1,0,2,5,5,0,3
 Serie A,55,12,Cagliari,8529,2,1,0,1,1,1,0,3
 Serie A,55,13,Lecce,9888,2,1,0,1,2,4,-2,3
 Serie A,55,14,Torino,9804,3,1,0,2,4,5,-1,3
@@ -394,9 +394,9 @@ Serie A,55,18,Venezia,7881,2,0,0,2,0,4,-4,0
 Serie A,55,19,Genoa,10233,3,0,0,3,1,7,-6,0
 Serie A,55,20,Fiorentina,8535,3,0,0,3,1,9,-8,0
 Super Lig,71,1,Galatasaray,8637,4,3,1,0,12,6,6,10
-Super Lig,71,2,Fenerbahçe,8695,4,3,0,1,8,4,4,9
+Super Lig,71,2,Beşiktaş,10188,4,3,0,1,9,4,5,9
 Super Lig,71,3,Gençlerbirliği,7800,3,2,1,0,4,2,2,7
-Super Lig,71,4,Beşiktaş,10188,4,2,0,2,7,4,3,6
+Super Lig,71,4,Fenerbahçe,8695,4,2,0,2,8,6,2,6
 Super Lig,71,5,Amed Sportif,96498,3,2,0,1,5,3,2,6
 Super Lig,71,6,Kocaelispor,1569,3,2,0,1,4,3,1,6
 Super Lig,71,7,Rizespor,2166,3,2,0,1,3,3,0,6
@@ -444,10 +444,10 @@ A-League,113,12,Western Sydney Wanderers FC,323834,0,0,0,0,0,0,0,0
 3. Liga,208,19,SC Verl,7783,4,1,0,3,5,10,-5,3
 3. Liga,208,20,Wehen Wiesbaden,8196,4,0,2,2,2,8,-6,2
 Eredivisie,57,1,AZ Alkmaar,10229,4,4,0,0,13,3,10,12
-Eredivisie,57,2,Feyenoord,10235,5,3,2,0,13,7,6,11
-Eredivisie,57,3,PSV Eindhoven,8640,4,3,1,0,15,5,10,10
-Eredivisie,57,4,Go Ahead Eagles,6433,5,3,1,1,12,9,3,10
-Eredivisie,57,5,Ajax,8593,3,2,1,0,8,2,6,7
+Eredivisie,57,2,PSV Eindhoven,8640,5,3,2,0,16,6,10,11
+Eredivisie,57,3,Feyenoord,10235,5,3,2,0,13,7,6,11
+Eredivisie,57,4,Ajax,8593,4,2,2,0,9,3,6,8
+Eredivisie,57,5,Go Ahead Eagles,6433,4,2,1,1,11,9,2,7
 Eredivisie,57,6,Fortuna Sittard,6422,4,2,1,1,8,7,1,7
 Eredivisie,57,7,Excelsior,10218,3,2,0,1,7,3,4,6
 Eredivisie,57,8,FC Twente,8611,3,2,0,1,7,3,4,6
@@ -459,5 +459,5 @@ Eredivisie,57,13,PEC Zwolle,6413,5,1,1,3,6,10,-4,4
 Eredivisie,57,14,Telstar,6414,3,1,0,2,3,8,-5,3
 Eredivisie,57,15,Willem II,8525,3,0,1,2,4,10,-6,1
 Eredivisie,57,16,ADO Den Haag,10217,4,0,1,3,4,11,-7,1
-Eredivisie,57,17,FC Utrecht,9908,5,0,1,4,6,16,-10,1
+Eredivisie,57,17,FC Utrecht,9908,4,0,1,3,6,15,-9,1
 Eredivisie,57,18,Cambuur,7788,4,0,0,4,4,16,-12,0

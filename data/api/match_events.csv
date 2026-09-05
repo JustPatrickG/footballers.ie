@@ -5716,6 +5716,7 @@ match_id,minute,type,player,team,venue
 2026-09-05-coleraine-v-crusaders,2,goal,Senan Devine,Coleraine,The Showgrounds
 2026-09-05-coleraine-v-crusaders,5,goal,Jay Henderson,Coleraine,The Showgrounds
 2026-09-05-coleraine-v-crusaders,8,goal,Matthew Shevlin,Coleraine,The Showgrounds
+2026-09-05-coleraine-v-crusaders,53,goal,Senan Devine,Coleraine,The Showgrounds
 2026-09-05-cong-an-ho-chi-minh-city-v-ha-noi-fc,27,goal,Nguyen Tien Linh,Cong An Ho Chí Minh City,Stadium
 2026-09-05-cong-an-ho-chi-minh-city-v-ha-noi-fc,50,goal,Nguyen Thái Quoc Cuong,Cong An Ho Chí Minh City,Stadium
 2026-09-05-cong-an-ho-chi-minh-city-v-ha-noi-fc,65,goal,Andrew Jung,Ha Nội FC,Stadium
@@ -5990,6 +5991,51 @@ match_id,minute,type,player,team,venue
 2026-09-05-huddersfield-town-v-notts-county,82,sub_on,Bali Mumba,Huddersfield Town,Accu Stadium
 2026-09-05-huddersfield-town-v-notts-county,82,yellow,Conor Grant,Notts County,Accu Stadium
 2026-09-05-hull-city-v-aston-villa,39,yellow,Semi Ajayi,Hull City,MKM Stadium
+2026-09-05-hull-city-v-aston-villa,63,sub_off,Elliot Stroud,Hull City,MKM Stadium
+2026-09-05-hull-city-v-aston-villa,63,sub_on,Sorba Thomas,Hull City,MKM Stadium
+2026-09-05-hull-city-v-aston-villa,64,sub_off,Lewie Coyle,Hull City,MKM Stadium
+2026-09-05-hull-city-v-aston-villa,64,sub_on,Brooke Norton-Cuffy,Hull City,MKM Stadium
+2026-09-05-hull-city-v-aston-villa,67,yellow,Lucas Gourna-Douath,Hull City,MKM Stadium
+2026-09-05-hull-city-v-aston-villa,71,sub_off,Nobel Mendy,Hull City,MKM Stadium
+2026-09-05-hull-city-v-aston-villa,71,sub_on,Lucas Herrington,Hull City,MKM Stadium
+2026-09-05-hull-city-v-aston-villa,75,sub_off,Emiliano Buendía,Aston Villa,MKM Stadium
+2026-09-05-hull-city-v-aston-villa,75,sub_off,George Hemmings,Aston Villa,MKM Stadium
+2026-09-05-hull-city-v-aston-villa,75,sub_off,Ian Maatsen,Aston Villa,MKM Stadium
+2026-09-05-hull-city-v-aston-villa,75,sub_on,Alejandro Garnacho,Aston Villa,MKM Stadium
+2026-09-05-hull-city-v-aston-villa,75,sub_on,Alysson Edward,Aston Villa,MKM Stadium
+2026-09-05-hull-city-v-aston-villa,75,sub_on,Matteo Ruggeri,Aston Villa,MKM Stadium
+2026-09-05-hull-city-v-aston-villa,82,sub_off,Lucas Gourna-Douath,Hull City,MKM Stadium
+2026-09-05-hull-city-v-aston-villa,82,sub_off,Mohamed Belloumi,Hull City,MKM Stadium
+2026-09-05-hull-city-v-aston-villa,82,sub_on,Jens Hjertø-Dahl,Hull City,MKM Stadium
+2026-09-05-hull-city-v-aston-villa,82,sub_on,Mohamed-Ali Cho,Hull City,MKM Stadium
+2026-09-05-hull-city-v-aston-villa,85,sub_off,Nicolas Jackson,Aston Villa,MKM Stadium
+2026-09-05-hull-city-v-aston-villa,85,sub_off,Matty Cash,Aston Villa,MKM Stadium
+2026-09-05-hull-city-v-aston-villa,85,sub_on,Tammy Abraham,Aston Villa,MKM Stadium
+2026-09-05-hull-city-v-aston-villa,85,sub_on,Aaron Wan-Bissaka,Aston Villa,MKM Stadium
+2026-09-05-inverness-caledonian-thistle-v-raith-rovers,13,goal,John Robertson,Raith Rovers,Sarens PSG Stadium
+2026-09-05-inverness-caledonian-thistle-v-raith-rovers,48,yellow,Zak Delaney,Raith Rovers,Sarens PSG Stadium
+2026-09-05-inverness-caledonian-thistle-v-raith-rovers,54,sub_off,Anton Dowds,Raith Rovers,Sarens PSG Stadium
+2026-09-05-inverness-caledonian-thistle-v-raith-rovers,54,sub_on,George Oakley,Raith Rovers,Sarens PSG Stadium
+2026-09-05-inverness-caledonian-thistle-v-raith-rovers,67,sub_off,Zak Delaney,Raith Rovers,Sarens PSG Stadium
+2026-09-05-inverness-caledonian-thistle-v-raith-rovers,67,sub_off,Paul McMullan,Raith Rovers,Sarens PSG Stadium
+2026-09-05-inverness-caledonian-thistle-v-raith-rovers,67,sub_on,Lewis Stevenson,Raith Rovers,Sarens PSG Stadium
+2026-09-05-inverness-caledonian-thistle-v-raith-rovers,67,sub_on,Dylan Easton,Raith Rovers,Sarens PSG Stadium
+2026-09-05-inverness-caledonian-thistle-v-raith-rovers,68,sub_off,Alfie Stewart,Inverness Caledonian Thistle,Sarens PSG Stadium
+2026-09-05-inverness-caledonian-thistle-v-raith-rovers,68,sub_off,Liam Sole,Inverness Caledonian Thistle,Sarens PSG Stadium
+2026-09-05-inverness-caledonian-thistle-v-raith-rovers,68,sub_on,Adam MacKinnon,Inverness Caledonian Thistle,Sarens PSG Stadium
+2026-09-05-inverness-caledonian-thistle-v-raith-rovers,68,sub_on,Daniel Mackay,Inverness Caledonian Thistle,Sarens PSG Stadium
+2026-09-05-inverness-caledonian-thistle-v-raith-rovers,78,sub_off,Calum Adamson,Raith Rovers,Sarens PSG Stadium
+2026-09-05-inverness-caledonian-thistle-v-raith-rovers,78,sub_off,John Robertson,Raith Rovers,Sarens PSG Stadium
+2026-09-05-inverness-caledonian-thistle-v-raith-rovers,78,sub_on,Scott Brown,Raith Rovers,Sarens PSG Stadium
+2026-09-05-inverness-caledonian-thistle-v-raith-rovers,78,sub_on,Charles Telfer,Raith Rovers,Sarens PSG Stadium
+2026-09-05-inverness-caledonian-thistle-v-raith-rovers,81,sub_off,Alfie Bavidge,Inverness Caledonian Thistle,Sarens PSG Stadium
+2026-09-05-inverness-caledonian-thistle-v-raith-rovers,81,sub_off,Graeme Shinnie,Inverness Caledonian Thistle,Sarens PSG Stadium
+2026-09-05-inverness-caledonian-thistle-v-raith-rovers,81,sub_off,Calum MacLeod,Inverness Caledonian Thistle,Sarens PSG Stadium
+2026-09-05-inverness-caledonian-thistle-v-raith-rovers,81,sub_on,Morgan Bates,Inverness Caledonian Thistle,Sarens PSG Stadium
+2026-09-05-inverness-caledonian-thistle-v-raith-rovers,81,sub_on,Roddy MacGregor,Inverness Caledonian Thistle,Sarens PSG Stadium
+2026-09-05-inverness-caledonian-thistle-v-raith-rovers,81,sub_on,Luis Longstaff,Inverness Caledonian Thistle,Sarens PSG Stadium
+2026-09-05-inverness-caledonian-thistle-v-raith-rovers,86,goal,Jai Rowe,Raith Rovers,Sarens PSG Stadium
+2026-09-05-inverness-caledonian-thistle-v-raith-rovers,90,yellow,Daniel Mackay,Inverness Caledonian Thistle,Sarens PSG Stadium
 2026-09-05-inverness-v-raith-rovers,13,goal,John Robertson,Raith Rovers,Sarens PSG Stadium
 2026-09-05-inverness-v-raith-rovers,48,yellow,Zak Delaney,Raith Rovers,Sarens PSG Stadium
 2026-09-05-inverness-v-raith-rovers,54,sub_off,Anton Dowds,Raith Rovers,Sarens PSG Stadium
@@ -6062,6 +6108,7 @@ match_id,minute,type,player,team,venue
 2026-09-05-leicester-city-v-oxford-united,81,sub_off,Cameron Brannagan,Oxford United,King Power Stadium
 2026-09-05-leicester-city-v-oxford-united,81,sub_on,Louie Sibley,Oxford United,King Power Stadium
 2026-09-05-leicester-city-v-oxford-united,81,sub_on,Jack Currie,Oxford United,King Power Stadium
+2026-09-05-levski-sofia-v-cska-1948,,,,,Georgi Asparuhov
 2026-09-05-limavady-v-dungannon-swifts,30,goal,Leonel Alves,Dungannon Swifts,The Showgrounds Limavady
 2026-09-05-limavady-v-dungannon-swifts,68,goal,Tiernan Kelly,Dungannon Swifts,The Showgrounds Limavady
 2026-09-05-lincoln-city-v-southampton,43,yellow,Conor McGrandles,Lincoln City,ProAmpac Stadium
@@ -6089,6 +6136,7 @@ match_id,minute,type,player,team,venue
 2026-09-05-linfield-v-carrick-rangers,49,red,Jimmy Callacher,Carrick Rangers,Windsor Park
 2026-09-05-linfield-v-carrick-rangers,55,goal,Ben Hall,Linfield,Windsor Park
 2026-09-05-linfield-v-carrick-rangers,90,red,Paul Heatley,Carrick Rangers,Windsor Park
+2026-09-05-longford-town-v-kerry-fc,,,,,Stadium
 2026-09-05-luton-town-v-leyton-orient,21,sub_off,Harrison Ashby,Luton Town,Kenilworth Road
 2026-09-05-luton-town-v-leyton-orient,21,sub_on,Harry Fox,Luton Town,Kenilworth Road
 2026-09-05-luton-town-v-leyton-orient,25,goal,Jamie Donley,Luton Town,Kenilworth Road
@@ -6593,6 +6641,7 @@ match_id,minute,type,player,team,venue
 2026-09-05-spalding-united-v-southport,26,goal,Bartosz Cybulski,Spalding United,Sir Halley Stewart Field
 2026-09-05-spalding-united-v-southport,75,goal,Sam Straughan-Brown,Spalding United,Sir Halley Stewart Field
 2026-09-05-st-patricks-athletic-v-bohemian-fc,100,goal,Anthony Breslin,St. Patrick's Athletic,Stadium
+2026-09-05-st-patricks-athletic-v-bohemian-fc,112,own_goal,Ryan Edmondson,Bohemian FC,Stadium
 2026-09-05-stirling-albion-v-spartans-fc,23,goal,Mark Stowe,Spartans FC,Forthbank Stadium
 2026-09-05-stirling-albion-v-spartans-fc,45,sub_off,Lucas Fyfe,Stirling Albion,Forthbank Stadium
 2026-09-05-stirling-albion-v-spartans-fc,45,sub_on,Russell McLean,Stirling Albion,Forthbank Stadium
@@ -6660,7 +6709,7 @@ match_id,minute,type,player,team,venue
 2026-09-05-tamworth-v-boston-united,75,sub_on,Lennon Wheeldon,Boston United,The Lamb Ground
 2026-09-05-tamworth-v-boston-united,75,sub_on,Connor Teale,Boston United,The Lamb Ground
 2026-09-05-tamworth-v-boston-united,80,yellow,Terrell Agyemang,Boston United,The Lamb Ground
-2026-09-05-the-new-saints-v-barry-town,,,,,Park Hall Stadium
+2026-09-05-the-new-saints-v-barry-town,88,goal,Rhys Hughes,The New Saints,Park Hall Stadium
 2026-09-05-tranmere-rovers-v-oldham-athletic,8,yellow,Oliver Norburn,Oldham Athletic,Prenton Park
 2026-09-05-tranmere-rovers-v-oldham-athletic,11,yellow,Jamie Robson,Oldham Athletic,Prenton Park
 2026-09-05-tranmere-rovers-v-oldham-athletic,17,goal,Dylan Jones,Tranmere Rovers,Prenton Park
