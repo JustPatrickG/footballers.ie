@@ -34,6 +34,7 @@ import argparse
 import csv
 import json
 import os
+import re
 import sys
 import time
 import datetime as dt
@@ -46,8 +47,111 @@ MANUAL = ROOT / "data" / "manual"
 STATE = HERE / "social_posted.json"
 SITE_URL = "https://footballers.ie"
 
-LOOKBACK_DAYS = int(os.environ.get("SOCIAL_LOOKBACK_DAYS", "2"))
-MAX_PER_RUN = int(os.environ.get("SOCIAL_MAX_PER_RUN", "5"))
+def _num(name, default, cast=int):
+    """An unset GitHub Actions variable arrives as an empty string, not as an
+       absent key, so os.environ.get(name, default) hands back "" and int("")
+       raises. Anything unparseable falls back rather than failing the run."""
+    try:
+        return cast(str(os.environ.get(name, "")).strip())
+    except (TypeError, ValueError):
+        return default
+
+
+LOOKBACK_DAYS = _num("SOCIAL_LOOKBACK_DAYS", 2)
+MAX_PER_RUN = _num("SOCIAL_MAX_PER_RUN", 2)
+X_MONTHLY_MAX = _num("X_MONTHLY_MAX", 200)
+
+# WHAT GETS POSTED. An Irish player scoring, anywhere in the world except the
+# League of Ireland - that is the rule, and it goes to both Reddit and X every
+# time. Domestic LOI goals are left alone: the audience for those is already
+# following those clubs, and they would be most of the volume.
+#
+# A match report's standfirst is built by auto_reports.py as
+#   "LaLiga: Troy Parrott (1 goal, rated 7.4)."
+# so a goal is genuinely in the text, and a rating-only report ("shines") has
+# no "goal" in it and is correctly left out.
+#
+# Everything else - transfers, injuries, retirements, rating-only reports - is
+# off by default. SOCIAL_POST_NEWS=yes adds the news-pipeline articles
+# (transfers and the like); SOCIAL_POST_ALL=yes posts everything that clears
+# the weight bar below, which is how this worked before.
+POST_NEWS = os.environ.get("SOCIAL_POST_NEWS", "").strip().lower() in ("1", "yes", "true")
+POST_ALL = os.environ.get("SOCIAL_POST_ALL", "").strip().lower() in ("1", "yes", "true")
+
+# COST CONTROL. X bills per post, and the price depends entirely on whether
+# the text contains a link: about $0.015 without, about $0.20 with - roughly
+# thirteen times more. At six posts a day that is the difference between $3
+# and $38 a month, so X posts carry no link by default and Reddit, which is
+# free, carries them instead.
+#
+# Careful with X_SUFFIX: X auto-links anything that looks like a domain, so
+# putting "footballers.ie" in the text would very likely be billed as a post
+# with a link and undo the whole saving. An @handle is safe; a domain is not.
+X_INCLUDE_LINK = os.environ.get("X_INCLUDE_LINK", "").strip().lower() in ("1", "yes", "true")
+X_SUFFIX = os.environ.get("X_SUFFIX", "").strip()
+
+# A hard ceiling on X posts per calendar month, counted from the state file.
+# This is a spend cap, not a style choice: at the link-free price, 200 posts
+# is about $3. Reddit is free and is not capped.
+NO_WEIGHT = 150.0
+MIN_WEIGHT = _num("SOCIAL_MIN_WEIGHT", 140.0, float)   # only used by SOCIAL_POST_ALL
+
+
+def is_report(a):
+    return (a.get("slug") or "").startswith("report-")
+
+
+def is_loi(a):
+    return (a.get("tag") or "").strip().upper() == "LEAGUE OF IRELAND"
+
+
+# Deliberately narrow. "goal" on its own would match goalkeeper and goalless,
+# and "winner" matches award write-ups, so neither is in here.
+GOAL_RE = re.compile(r"\b(scores?|scored|nets?|netted|brace|hat-?tricks?)\b", re.I)
+
+
+def scored(a):
+    """True when the article is about someone putting the ball in the net.
+
+       A generated report says so in its standfirst - auto_reports.py builds it
+       as "LaLiga: Troy Parrott (1 goal, rated 7.4)" - and a rating-only report
+       ("shines") has no goal in it. A hand-written article has no such shape,
+       so its headline is what gets read. Either way the question is the same:
+       did somebody score."""
+    if is_report(a):
+        return "goal" in (a.get("standfirst") or "").lower()
+    return bool(GOAL_RE.search((a.get("headline") or "") + " " + (a.get("standfirst") or "")))
+
+
+def wanted(a):
+    """The posting rule, in one place."""
+    if POST_ALL:
+        return weight_of(a) >= MIN_WEIGHT
+    if is_loi(a):
+        return False
+    if scored(a):
+        return True          # a goal abroad, whoever wrote it up
+    return POST_NEWS and not is_report(a)
+
+
+def weight_of(a):
+    try:
+        return float(a.get("weight") or NO_WEIGHT)
+    except (TypeError, ValueError):
+        return NO_WEIGHT
+
+
+def posted_today(state, platform):
+    """How many the given platform has already taken today, so the daily cap
+       survives a restart - the state file is the only memory this has."""
+    today = dt.date.today().isoformat()
+    n = 0
+    for v in state.values():
+        if not isinstance(v, dict):
+            continue
+        if v.get(platform) == "ok" and str(v.get("at", ""))[:10] == today:
+            n += 1
+    return n
 
 
 def load_articles():
@@ -90,7 +194,10 @@ def pick_candidates(articles, posted, cutoff):
         if not headline:
             continue
         out.append(a)
-    out.sort(key=lambda a: a.get("date", ""))   # oldest of the new batch first
+    # Best first, not oldest first. Reddit only gets a few slots a day and a
+    # backlog only clears a couple at a time, so whatever goes out first has
+    # to be the strongest thing waiting - never whatever happens to be oldest.
+    out.sort(key=lambda a: (weight_of(a), a.get("date", "")), reverse=True)
     return out
 
 
@@ -98,6 +205,14 @@ def post_text_for(a):
     headline = (a.get("headline") or "").strip()
     slug = (a.get("slug") or "").strip()
     return headline, f"{SITE_URL}/news/{slug}.html"   # news + match reports both live here
+
+
+def x_posts_this_month(state):
+    """X posts already made this calendar month, so the cap survives restarts."""
+    month = dt.date.today().strftime("%Y-%m")
+    return sum(1 for v in state.values()
+               if isinstance(v, dict) and v.get("x") == "ok"
+               and str(v.get("at", ""))[:7] == month)
 
 
 # --------------------------------------------------------------- Reddit
@@ -143,7 +258,16 @@ def x_session():
 
 
 def post_to_x(session, headline, link):
-    text = f"{headline}\n\n{link}"
+    text = headline if not X_INCLUDE_LINK else f"{headline}\n\n{link}"
+    if X_SUFFIX:
+        text = f"{text}\n\n{X_SUFFIX}"
+    if not X_INCLUDE_LINK:
+        if len(text) > 280:
+            text = text[:279].rstrip() + "\u2026"
+        r = session.post("https://api.twitter.com/2/tweets", json={"text": text}, timeout=20)
+        if r.status_code >= 300:
+            raise RuntimeError(f"X {r.status_code}: {r.text[:300]}")
+        return
     if len(text) > 280:
         # X shortens the link itself; trim the headline, not the url
         room = 280 - len(link) - 4
@@ -166,20 +290,60 @@ def run(dry=False):
 
     reddit, sub = (None, None) if dry else reddit_client()
     x = None if dry else x_session()
-    print("reddit: " + ("ON -> r/" + sub if reddit else "off (secrets/subreddit not set)"))
-    print("x: " + ("ON" if x else "off (secrets not set - needs a paid X tier to post)"))
+    if dry:
+        # A dry run that reported "nobody wants this" purely because no keys
+        # are set would tell you nothing. Preview as though both were on, so
+        # what you see is the split you would get once they are.
+        print("dry run - previewing as though both platforms were configured")
+    else:
+        print("reddit: " + ("ON -> r/" + sub if reddit else "off (secrets/subreddit not set)"))
+        print("x: " + ("ON" if x else "off (secrets not set - needs a paid X tier to post)"))
+
+    rule = ("everything over weight %.0f" % MIN_WEIGHT) if POST_ALL else (
+           "Irish goals outside the League of Ireland" + (" + news" if POST_NEWS else ""))
+    print(f"posting: {rule}")
+    x_used = x_posts_this_month(state)
+    x_left = X_MONTHLY_MAX - x_used
+    price = 0.20 if X_INCLUDE_LINK else 0.015
+    print(f"x: {x_used}/{X_MONTHLY_MAX} posts this month "
+          f"(~${x_used * price:.2f} so far, {'with' if X_INCLUDE_LINK else 'no'} links)")
+    if x_left <= 0:
+        print("  x: monthly cap reached - Reddit only until the 1st")
 
     changed = False
     for a in candidates:
         headline, link = post_text_for(a)
         slug = a["slug"]
-        result = {"headline": headline, "link": link, "at": dt.datetime.now(dt.timezone.utc).isoformat()}
+        w = weight_of(a)
+        result = {"headline": headline, "link": link, "weight": w,
+                  "at": dt.datetime.now(dt.timezone.utc).isoformat()}
+
+        # who actually wants this one
+        take = wanted(a)
+        take_reddit = (dry or bool(reddit)) and take
+        take_x = (dry or bool(x)) and take and x_left > 0
+
         if dry:
-            print(f"[dry] would post: {headline}  ({link})")
+            if take and take_x:
+                x_left -= 1
+            who = ("reddit + x" if (take and take_x) else "reddit only" if take
+                   else "League of Ireland" if is_loi(a)
+                   else "no goal" if is_report(a) else "not a goal")
+            print(f"[dry] {who:18} {headline[:56]}")
+            continue
+
+        if not (take_reddit or take_x):
+            # Settle it rather than reconsider the same article every 20
+            # minutes for the next two days.
+            why = ("League of Ireland" if is_loi(a)
+                   else "no goal in it" if is_report(a) else "not a goal report")
+            state[slug] = dict(result, skipped=why)
+            changed = True
+            print(f"  not posting ({why}): {headline[:52]}")
             continue
 
         ok_any = False
-        if reddit:
+        if take_reddit:
             try:
                 post_to_reddit(reddit, sub, headline, link)
                 result["reddit"] = "ok"
@@ -188,11 +352,12 @@ def run(dry=False):
             except Exception as e:
                 result["reddit"] = f"failed: {e}"
                 print(f"  reddit: FAILED {slug}: {e}")
-        if x:
+        if take_x:
             try:
                 post_to_x(x, headline, link)
                 result["x"] = "ok"
                 ok_any = True
+                x_left -= 1
                 print(f"  x: posted {slug}")
             except Exception as e:
                 result["x"] = f"failed: {e}"

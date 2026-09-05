@@ -46,6 +46,18 @@ jobs:
           X_API_SECRET: ${{ secrets.X_API_SECRET }}
           X_ACCESS_TOKEN: ${{ secrets.X_ACCESS_TOKEN }}
           X_ACCESS_SECRET: ${{ secrets.X_ACCESS_SECRET }}
+          # Optional, set as repo variables - no code change needed.
+          # SOCIAL_POST_NEWS=yes  also posts transfers, injuries and the like.
+          # SOCIAL_POST_ALL=yes   posts everything over SOCIAL_MIN_WEIGHT instead.
+          SOCIAL_POST_NEWS: ${{ vars.SOCIAL_POST_NEWS }}
+          SOCIAL_POST_ALL: ${{ vars.SOCIAL_POST_ALL }}
+          SOCIAL_MIN_WEIGHT: ${{ vars.SOCIAL_MIN_WEIGHT }}
+          SOCIAL_MAX_PER_RUN: ${{ vars.SOCIAL_MAX_PER_RUN }}
+          # X costs ~$0.015 a post without a link and ~$0.20 with one.
+          # Leave X_INCLUDE_LINK unset. X_MONTHLY_MAX is a hard spend cap.
+          X_INCLUDE_LINK: ${{ vars.X_INCLUDE_LINK }}
+          X_MONTHLY_MAX: ${{ vars.X_MONTHLY_MAX }}
+          X_SUFFIX: ${{ vars.X_SUFFIX }}
         run: |
           if [ "${{ inputs.dry || 'false' }}" = "true" ]; then
             python3 scraper/social_post.py --dry
