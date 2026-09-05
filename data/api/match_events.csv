@@ -5426,8 +5426,8 @@ match_id,minute,type,player,team,venue
 2026-09-05-bangor-v-ballymena-united,15,goal,Joshua Archer,Ballymena United,Clandeboye Park
 2026-09-05-bangor-v-ballymena-united,32,goal,Matthew Clarke,Ballymena United,Clandeboye Park
 2026-09-05-bangor-v-ballymena-united,55,goal,Lewis Francis,Bangor,Clandeboye Park
-2026-09-05-bangor-v-ballymena-united,90,goal,T. Mulvenna,Bangor,Clandeboye Park
-2026-09-05-bangor-v-ballymena-united,90,red,<TBD>,Bangor,Clandeboye Park
+2026-09-05-bangor-v-ballymena-united,90,goal,Tiernan Mulvenna,Bangor,Clandeboye Park
+2026-09-05-bangor-v-ballymena-united,90,red,Lucas McRoberts,Bangor,Clandeboye Park
 2026-09-05-barnsley-v-stevenage,16,yellow,Carl Piergianni,Stevenage,Oakwell
 2026-09-05-barnsley-v-stevenage,17,goal,Cameron McGeehan,Barnsley,Oakwell
 2026-09-05-barnsley-v-stevenage,23,sub_off,Terry Taylor,Stevenage,Oakwell
@@ -5654,6 +5654,7 @@ match_id,minute,type,player,team,venue
 2026-09-05-burton-albion-v-cambridge-united,74,sub_on,Joe Lewis,Burton Albion,Pirelli Stadium
 2026-09-05-burton-albion-v-cambridge-united,90,goal,Curtis Tilt,Burton Albion,Pirelli Stadium
 2026-09-05-burton-albion-v-cambridge-united,90,yellow,Callum Perry,Cambridge United,Pirelli Stadium
+2026-09-05-carrarese-v-empoli,,,,,Stadio dei Marmi - IV Olimpionici Azzurri
 2026-09-05-chelmsford-v-salisbury,31,goal,Robbie Gallagher,Salisbury,Melbourne Stadium
 2026-09-05-chelmsford-v-salisbury,40,goal,George Alexander,Chelmsford,Melbourne Stadium
 2026-09-05-cheltenham-town-v-grimsby-town,12,goal,Charlie McCann,Cheltenham Town,EV Charger Points Stadium
@@ -5712,6 +5713,9 @@ match_id,minute,type,player,team,venue
 2026-09-05-cliftonville-v-portadown,35,goal,Ben Quinn,Cliftonville,Solitude
 2026-09-05-cliftonville-v-portadown,58,goal,Brian Healy,Cliftonville,Solitude
 2026-09-05-cliftonville-v-portadown,66,goal,Eamon Fyfe,Portadown,Solitude
+2026-09-05-coleraine-v-crusaders,2,goal,Senan Devine,Coleraine,The Showgrounds
+2026-09-05-coleraine-v-crusaders,5,goal,Jay Henderson,Coleraine,The Showgrounds
+2026-09-05-coleraine-v-crusaders,8,goal,Matthew Shevlin,Coleraine,The Showgrounds
 2026-09-05-cong-an-ho-chi-minh-city-v-ha-noi-fc,27,goal,Nguyen Tien Linh,Cong An Ho Chí Minh City,Stadium
 2026-09-05-cong-an-ho-chi-minh-city-v-ha-noi-fc,50,goal,Nguyen Thái Quoc Cuong,Cong An Ho Chí Minh City,Stadium
 2026-09-05-cong-an-ho-chi-minh-city-v-ha-noi-fc,65,goal,Andrew Jung,Ha Nội FC,Stadium
@@ -5883,6 +5887,23 @@ match_id,minute,type,player,team,venue
 2026-09-05-exeter-city-v-walsall,90,sub_off,Elicha Ahui,Walsall,St James Park
 2026-09-05-exeter-city-v-walsall,90,sub_on,Harrison Burke,Walsall,St James Park
 2026-09-05-fc-inter-turku-v-hjk,35,yellow,Leonel Montano,HJK,Tammelan stadion
+2026-09-05-fc-inter-turku-v-hjk,45,goal,Alie Conteh,FC Inter Turku,Tammelan stadion
+2026-09-05-fc-inter-turku-v-hjk,64,sub_off,Jasse Tuominen,FC Inter Turku,Tammelan stadion
+2026-09-05-fc-inter-turku-v-hjk,64,sub_off,Herman Sjögrell,FC Inter Turku,Tammelan stadion
+2026-09-05-fc-inter-turku-v-hjk,64,sub_on,Prosper Ahiabu,FC Inter Turku,Tammelan stadion
+2026-09-05-fc-inter-turku-v-hjk,64,sub_on,Johannes Yli-Kokko,FC Inter Turku,Tammelan stadion
+2026-09-05-fc-inter-turku-v-hjk,65,sub_off,Liam Möller,HJK,Tammelan stadion
+2026-09-05-fc-inter-turku-v-hjk,65,sub_off,Kaius Simojoki,HJK,Tammelan stadion
+2026-09-05-fc-inter-turku-v-hjk,65,sub_off,Mouhamed Guèye,HJK,Tammelan stadion
+2026-09-05-fc-inter-turku-v-hjk,65,sub_on,Mads Borchers,HJK,Tammelan stadion
+2026-09-05-fc-inter-turku-v-hjk,65,sub_on,Nikolai Alho,HJK,Tammelan stadion
+2026-09-05-fc-inter-turku-v-hjk,65,sub_on,Lucas Lingman,HJK,Tammelan stadion
+2026-09-05-fc-inter-turku-v-hjk,69,sub_off,Teemu Pukki,HJK,Tammelan stadion
+2026-09-05-fc-inter-turku-v-hjk,69,sub_on,Santeri Haarala,HJK,Tammelan stadion
+2026-09-05-fc-inter-turku-v-hjk,71,yellow,Nikolai Alho,HJK,Tammelan stadion
+2026-09-05-fc-inter-turku-v-hjk,75,sub_off,Mihailo Bogicevic,HJK,Tammelan stadion
+2026-09-05-fc-inter-turku-v-hjk,75,sub_on,Emil Leveälahti,HJK,Tammelan stadion
+2026-09-05-fc-inter-turku-v-hjk,86,yellow,Luka Kuittinen,FC Inter Turku,Tammelan stadion
 2026-09-05-fleetwood-town-v-shrewsbury-town,25,yellow,Luca Hoole,Shrewsbury Town,Highbury Stadium
 2026-09-05-fleetwood-town-v-shrewsbury-town,32,yellow,Sam Stubbs,Shrewsbury Town,Highbury Stadium
 2026-09-05-fleetwood-town-v-shrewsbury-town,39,goal,Ronan Coughlan,Fleetwood Town,Highbury Stadium
@@ -5968,6 +5989,7 @@ match_id,minute,type,player,team,venue
 2026-09-05-huddersfield-town-v-notts-county,82,sub_off,Ibane Bowat,Huddersfield Town,Accu Stadium
 2026-09-05-huddersfield-town-v-notts-county,82,sub_on,Bali Mumba,Huddersfield Town,Accu Stadium
 2026-09-05-huddersfield-town-v-notts-county,82,yellow,Conor Grant,Notts County,Accu Stadium
+2026-09-05-hull-city-v-aston-villa,39,yellow,Semi Ajayi,Hull City,MKM Stadium
 2026-09-05-inverness-v-raith-rovers,13,goal,John Robertson,Raith Rovers,Sarens PSG Stadium
 2026-09-05-inverness-v-raith-rovers,48,yellow,Zak Delaney,Raith Rovers,Sarens PSG Stadium
 2026-09-05-inverness-v-raith-rovers,54,sub_off,Anton Dowds,Raith Rovers,Sarens PSG Stadium
@@ -6570,7 +6592,7 @@ match_id,minute,type,player,team,venue
 2026-09-05-southend-united-v-yeovil-town,90,yellow,Promise Omochere,Southend United,Roots Hall
 2026-09-05-spalding-united-v-southport,26,goal,Bartosz Cybulski,Spalding United,Sir Halley Stewart Field
 2026-09-05-spalding-united-v-southport,75,goal,Sam Straughan-Brown,Spalding United,Sir Halley Stewart Field
-2026-09-05-st-patricks-athletic-v-bohemian-fc,,,,,Stadium
+2026-09-05-st-patricks-athletic-v-bohemian-fc,100,goal,Anthony Breslin,St. Patrick's Athletic,Stadium
 2026-09-05-stirling-albion-v-spartans-fc,23,goal,Mark Stowe,Spartans FC,Forthbank Stadium
 2026-09-05-stirling-albion-v-spartans-fc,45,sub_off,Lucas Fyfe,Stirling Albion,Forthbank Stadium
 2026-09-05-stirling-albion-v-spartans-fc,45,sub_on,Russell McLean,Stirling Albion,Forthbank Stadium
@@ -6638,7 +6660,7 @@ match_id,minute,type,player,team,venue
 2026-09-05-tamworth-v-boston-united,75,sub_on,Lennon Wheeldon,Boston United,The Lamb Ground
 2026-09-05-tamworth-v-boston-united,75,sub_on,Connor Teale,Boston United,The Lamb Ground
 2026-09-05-tamworth-v-boston-united,80,yellow,Terrell Agyemang,Boston United,The Lamb Ground
-2026-09-05-the-new-saints-v-barry-town,7,goal,<TBD>,Barry Town,Park Hall Stadium
+2026-09-05-the-new-saints-v-barry-town,,,,,Park Hall Stadium
 2026-09-05-tranmere-rovers-v-oldham-athletic,8,yellow,Oliver Norburn,Oldham Athletic,Prenton Park
 2026-09-05-tranmere-rovers-v-oldham-athletic,11,yellow,Jamie Robson,Oldham Athletic,Prenton Park
 2026-09-05-tranmere-rovers-v-oldham-athletic,17,goal,Dylan Jones,Tranmere Rovers,Prenton Park
