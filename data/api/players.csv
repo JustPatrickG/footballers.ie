@@ -1,5 +1,5 @@
 slug,league,club,club_id,age,born,foot,senior_caps,senior_goals,senior_debut,youth,season,s_apps,s_starts,s_goals,s_assists,s_mins,s_yellow,s_red,c_apps,c_goals,c_assists,avg_rating,source,s_team,s_team_id,s_league,s_splits
-aaron-bolger,Premier Division,Galway United FC,520517,26,,Right,,,,U19:7:0:2017; U17:9:0:2016,2026,26,25,3,2,2151,4,0,216,6,5,7.06,auto,Galway United FC,520517,Premier Division,Galway United FC|520517|Premier Division|26|3|2|2151|7.06|2026-08-28
+aaron-bolger,Premier Division,Galway United FC,520517,26,,Right,,,,U19:7:0:2017; U17:9:0:2016,2026,26,25,3,2,2151,4,0,217,6,5,7.06,auto,Galway United FC,520517,Premier Division,Galway United FC|520517|Premier Division|26|3|2|2151|7.06|2026-08-28
 aaron-brennan,Premier Division,Waterford FC,6042,,,,,,,,,,,,,,,,,,,,auto,Waterford FC,6042,Premier Division,
 aaron-connolly,League One,Leyton Orient,8351,26,,Right,9,0,2019,U21:9:1:2019; U19:3:1:2018; U17:10:7:2016,2025/26,21,20,8,4,1724,4,0,165,31,6,7.06,auto,Leyton Orient,8351,League One,Leyton Orient|8351|League One|15|7|4|1187|7.31|2026-05-02;Leyton Orient|8351|FA Cup|2|0|0|180|6.75|2025-12-05;Leyton Orient|8351|EFL Trophy|1|1|0|13|7.30|2025-10-07
 aaron-drinan,League Two,Swindon Town,9795,28,,Left,,,,U21:6:0:2019,2026/27,4,4,2,0,359,0,0,287,70,18,7.10,auto,Swindon Town,9795,League Two,Swindon Town|9795|League Two|4|2|0|359|7.10|2026-09-01;Swindon Town|9795|EFL Cup|1|0|0|90|6.70|2026-08-08
@@ -53,7 +53,7 @@ andy-lyons,League One,Blackpool,8483,26,,Right,,,,U21:4:0:2021; U19:9:0:2018,202
 andy-spain,First Division,Athlone Town,2378,25,,,,,,,,,,,,,,,,,,,auto,Athlone Town,2378,First Division,
 anselmo-garcia-macnulty,2. Bundesliga,Magdeburg,8188,23,,Left,,,,U21:9:0:2021; U19:5:1:2021; U17:6:2:2019,2026/27,3,3,0,0,270,1,0,146,5,2,6.48,auto,Magdeburg,8188,2. Bundesliga,Magdeburg|8188|2. Bundesliga|3|0|0|270|6.50|2026-08-30;Magdeburg|8188|DFB Pokal|1|0|0|90|7.30|2026-08-23
 anthony-breslin,Premier Division,St. Patrick's Athletic,1854,29,,,,,,U19:::2015; U17:6:0:2013,2026,24,6,1,0,778,1,0,248,6,10,6.45,auto,St. Patrick's Athletic,1854,Premier Division,St. Patrick's Athletic|1854|Premier Division|24|1|0|778|6.46|2026-08-28
-anthony-oconnor,Premier Division,Galway United FC,520517,33,,Right,,,,U21:5:0:2013; U19:7:2:2010,2026,4,,0,0,335,,,597,33,16,7.38,auto,Harrogate Town,7946,League Two,Harrogate Town|7946|League Two|4|0|0|335|7.38|2026-02-14;Galway United FC|520517|Premier Division|2|0|1|180|7.35|2026-08-28;Harrogate Town|7946|EFL Trophy|1|0|0|90|6.10|2026-01-13
+anthony-oconnor,Premier Division,Galway United FC,520517,33,,Right,,,,U21:5:0:2013; U19:7:2:2010,2026,4,,0,0,335,,,598,33,16,7.38,auto,Harrogate Town,7946,League Two,Harrogate Town|7946|League Two|4|0|0|335|7.38|2026-02-14;Galway United FC|520517|Premier Division|2|0|1|180|7.35|2026-08-28;Harrogate Town|7946|EFL Trophy|1|0|0|90|6.10|2026-01-13
 anthony-scully,League Two,Shrewsbury Town,9896,27,,Right,,,,U21:2:0:2019; U19:1:0:2017; U17:6:0:2015,2025/26,31,23,3,2,1697,1,0,173,44,21,6.51,auto,Shrewsbury Town,9896,League Two,Shrewsbury Town|9896|League Two|26|3|2|1494|6.59|2026-04-18;Shrewsbury Town|9896|FA Cup|2|2|0|138|7.95|2025-12-06;Shrewsbury Town|9896|EFL Trophy|1|0|0|65|6.40|2025-11-11
 aodh-dervin,Premier Division,Dundalk,1853,27,,,,,,,2026,26,21,1,2,1823,7,1,271,11,4,6.88,auto,Dundalk,1853,Premier Division,Dundalk|1853|Premier Division|26|1|2|1823|6.89|2026-08-28
 aodhan-doherty,Premiership,Falkirk,8596,20,,Left,,,,U21:3:0:2025; U19:4:0:2024; U18:1:0:2024; U17:3:0:2023,2026/27,4,1,0,0,156,1,0,22,0,0,5.92,auto,Falkirk,8596,Premiership,Falkirk|8596|Premiership|4|0|0|156|5.90|2026-09-02
@@ -99,6 +99,7 @@ calum-kavanagh,League Two,Oldham Athletic,9785,23,,Right,,,,U21:::2024; U17:2:0:
 calum-ward,Championship,Queens Park Rangers,10172,25,,Right,,,,,2025/26,33,,0,0,2970,1,0,184,0,1,7.30,auto,Motherwell,9927,Premiership,Motherwell|9927|Premiership|33|0|0|2970|7.30|2026-05-13;Motherwell|9927|League Cup|2|0|0|180||2025-11-01
 cameron-reid,Highland / Lowland,Turriff United,351621,18,,,,,,,,,,,,,,,9,1,0,,auto,Turriff United,351621,Highland / Lowland,
 caoimhin-kelleher,Premier League,Brentford,9937,27,,Right,32,0,2018,U21:10:0:2017; U19:5:0:2015; U17:7:0:2014,2026/27,2,,,,180,0,0,107,0,0,7.50,auto,Brentford,9937,Premier League,Brentford|9937|Premier League|2|0|0|180|7.50|2026-08-30
+carl-lennox,First Division,UCD,1578,21,,,,,,,2026,0,0,2,,0,0,0,63,3,0,,auto,UCD,1578,First Division,
 carl-mchugh,Premier Division,Sligo Rovers,6361,33,,,,,,U21:::2013; U19:5:0:2010,2026,24,21,1,1,1655,5,1,404,24,17,6.74,auto,Sligo Rovers,6361,Premier Division,Sligo Rovers|6361|Premier Division|24|1|1|1655|6.75|2026-08-28
 cathal-heffernan,League One,Cambridge United,9834,21,,,,,,U17:6:0:2021,2026/27,3,,1,0,270,,,27,2,0,,auto,Harrogate Town,7946,National League,Harrogate Town|7946|National League|3|1|0|270||2026-08-22;Cambridge United|9834|League One|2|0|0|180|6.80|2026-09-01
 cathal-mccarthy,Premiership,Kilmarnock,8597,20,,,,,,U21:3:0:2025; U19:2:0:2024,2026/27,2,2,0,0,180,1,0,29,0,0,6.75,auto,Kilmarnock,8597,Premiership,Kilmarnock|8597|Premiership|2|0|0|180|6.75|2026-09-02
@@ -144,7 +145,7 @@ conal-mcdermott,Premier Division,Derry City,8338,19,,,,,,,,,,,,,,,,,,,auto,Derry
 conal-ocaheny,,Wexford,,,,,,,,,,,,,,,,,,,,none
 conall-alfred,Premier Division,Dundalk,1853,,,,,,,,,,,,,,,,,,,,auto,Dundalk,1853,Premier Division,
 conan-noonan,Premier Division,Waterford FC,6042,23,,,,,,U21:1:0:2024,2026,27,24,1,3,2099,4,0,102,9,17,6.96,auto,Waterford FC,6042,Premier Division,Waterford FC|6042|Premier Division|27|1|3|2099|6.97|2026-08-28
-connor-barratt,Premier Division,Galway United FC,520517,22,,,,,,U21:::2025,2026,19,16,0,0,1165,3,0,47,0,0,6.58,auto,Galway United FC,520517,Premier Division,Galway United FC|520517|Premier Division|19|0|0|1165|6.59|2026-08-28
+connor-barratt,Premier Division,Galway United FC,520517,22,,,,,,U21:::2025,2026,19,16,0,0,1165,3,0,48,0,0,6.58,auto,Galway United FC,520517,Premier Division,Galway United FC|520517|Premier Division|19|0|0|1165|6.59|2026-08-28
 connor-obrien,League Two,Accrington Stanley,8671,22,,Both,,,,U21:2:0:2024,2026/27,2,2,0,1,168,0,0,104,0,3,6.88,auto,Accrington Stanley,8671,League Two,Accrington Stanley|8671|League Two|2|0|1|168|6.85|2026-08-22;Accrington Stanley|8671|EFL Cup|1|0|0|90|6.50|2026-08-08
 connor-oriordan,League One,Barnsley,8283,22,,Right,,,,U21:4:0:2023,2026/27,2,2,0,0,180,0,0,140,9,2,7.53,auto,Barnsley,8283,League One,Barnsley|8283|League One|2|0|0|180|7.50|2026-09-02
 connor-ronan,Premiership,Aberdeen,8485,28,,Right,,,2022,U21:14:1:2017; U19:6:1:2015; U17:6:0:2015,2026/27,3,2,0,0,193,1,0,264,14,24,6.44,auto,Aberdeen,8485,Premiership,Aberdeen|8485|Premiership|3|0|0|193|6.43|2026-09-02;Aberdeen|8485|League Cup|1|0|0|66||2026-08-15
@@ -194,6 +195,7 @@ dara-costelloe,League One,Wigan Athletic,8528,23,,Both,,,,U21:::2022,2026/27,4,4
 dara-mccormick,First Division,Cobh Ramblers,2383,,,Right,,,,,2026,0,0,2,,0,0,0,6,2,0,,auto,Cobh Ramblers,2383,First Division,
 dara-mcguinness,Premier Division,Galway United FC,520517,22,,,,,,,2025,10,7,1,1,624,0,0,28,7,1,6.25,auto,Galway United FC,520517,Premier Division,Galway United FC|520517|Premier Division|6|0|1|437|6.42|2025-10-24
 dara-oshea,Premier League,Ipswich Town,9902,27,,Right,45,0,2020,U21:10:0:2019; U19:7:0:2016; U17:5:0:2015,2026/27,3,3,0,0,270,0,0,271,13,8,6.43,auto,Ipswich Town,9902,Premier League,Ipswich Town|9902|Premier League|3|0|0|270|6.40|2026-09-04;Ipswich Town|9902|EFL Cup|1|0|0|90|7.50|2026-08-25
+daragh-murtagh,League of Ireland First Division,Longford Town,,,,,,,,,,,,,,,,,,,,none
 dare-kareem,First Division,Treaty United,1233534,20,,,,,,,2026,12,,0,0,296,,,37,4,0,5.97,auto,Drogheda United,8339,Premier Division,Drogheda United|8339|Premier Division|12|0|0|296|5.97|2026-06-26
 darius-lipsiuc,League One,Notts County,9819,20,,Right,,,,U21:6:0:2025; U19:2:0:2023; U17:4:0:2021,2026/27,4,4,0,0,287,1,0,45,10,4,6.56,auto,Notts County,9819,League One,Notts County|9819|League One|4|0|0|287|6.58|2026-09-01;Notts County|9819|EFL Cup|1|0|0|90|6.50|2026-08-08
 darragh-brunton,Premier Division,St. Patrick's Athletic,1854,17,,,,,,,,,,,,,,,,,,,auto,St. Patrick's Athletic,1854,Premier Division,
@@ -231,7 +233,7 @@ eanna-clancy,Eerste Divisie,VVV-Venlo,9839,22,,,,,,,2026/27,5,5,1,0,428,0,0,106,
 ed-mcjannett,Serie C Grp. C,Cosenza,6456,22,,Left,,,,U21:2:0:2023; U19:11:0:2021,2026/27,0,0,1,,0,0,0,45,1,0,,auto,Cosenza,6456,Serie C Grp. C,
 edward-mccarthy,Premier Division,Galway United FC,520517,25,,,,,,,2026,27,23,3,0,1882,1,0,184,22,1,6.82,auto,Galway United FC,520517,Premier Division,Galway United FC|520517|Premier Division|27|3|0|1882|6.83|2026-08-28
 edward-mcginty,Premier Division,Shamrock Rovers,4131,27,,,,,2026,U21:2:0:2020,2026,29,,,,2610,4,0,246,0,0,7.08,auto,Shamrock Rovers,4131,Premier Division,Shamrock Rovers|4131|Premier Division|29|0|0|2610|7.08|2026-09-04;Shamrock Rovers|4131|Champions League Qualification|4|0|0|360||2026-07-28;Shamrock Rovers|4131|Conference League Qualification|2|0|0|180||2026-08-27;Shamrock Rovers|4131|Europa League Qualification|2|0|0|180||2026-08-13;Shamrock Rovers|4131|Super Cup|1|0|0|44||2026-01-31
-edwin-agbaje,Premier Division,Drogheda United,8339,22,,,,,,U16:1:0:2019,2026,29,29,1,1,2476,5,0,55,1,1,6.82,auto,Drogheda United,8339,Premier Division,Drogheda United|8339|Premier Division|29|1|1|2476|6.83|2026-08-28
+edwin-agbaje,Premier Division,Drogheda United,8339,22,,,,,,U16:1:0:2019,2026,29,29,1,1,2476,5,0,56,1,1,6.82,auto,Drogheda United,8339,Premier Division,Drogheda United|8339|Premier Division|29|1|1|2476|6.83|2026-08-28
 egor-vassenin,Premier Division,Dundalk,1853,18,,Left,,,,U17:2:0:2024,2026,4,1,0,0,157,1,0,7,0,0,6.60,auto,Dundalk,1853,Premier Division,Dundalk|1853|Premier Division|4|0|0|157|6.60|2026-08-28
 eiran-cashin,Championship,Derby County,10170,24,,Left,,,2026,U21:4:0:2022,2025/26,18,20,1,1,1542,7,0,178,7,4,7.35,auto,Blackburn Rovers,8655,Championship,Blackburn Rovers|8655|Championship|18|1|1|1542|7.35|2026-05-02;Birmingham City|8658|Championship|10|0|0|415|6.60|2026-01-04;Blackburn Rovers|8655|FA Cup|1|0|0|75|7.50|2026-01-11
 emmanuel-adegboyega,League Two,Rotherham United,8119,22,,Right,,,,U21:2:0:2024,2026/27,1,1,0,0,58,0,0,83,8,2,7.10,auto,Rotherham United,8119,League Two,Rotherham United|8119|EFL Cup|1|0|0|90|5.50|2026-08-08;Rotherham United|8119|League Two|1|0|0|58|7.10|2026-08-29
@@ -251,6 +253,8 @@ ethan-obrien,Premier Division,Drogheda United,8339,25,,,,,,,2026,17,12,0,0,1050,
 evan-caffrey,Premier Division,Shelbourne,5751,23,,,,,,U19:5:1:2021,2026,25,19,1,0,1655,4,0,205,14,17,6.93,auto,Shelbourne,5751,Premier Division,Shelbourne|5751|Premier Division|25|1|0|1655|6.93|2026-09-04;Shelbourne|5751|Conference League Qualification|4|0|3|360|7.10|2026-08-13
 evan-ferguson,Premier League,Brighton & Hove Albion,10204,21,,Right,26,8,2022,U21:10:1:2021; U17:3:3:2019; U16:1:0:2019,2025/26,14,10,3,1,629,1,0,114,22,7,6.55,auto,Roma,8686,Serie A,Roma|8686|Serie A|14|3|1|629|6.55|2026-01-10;Roma|8686|Europa League|6|2|0|302|6.60|2026-01-22
 evan-mclaughlin,Premier Division,Waterford FC,6042,24,,,,,,,2026,16,11,0,2,943,4,0,144,18,4,6.91,auto,Waterford FC,6042,Premier Division,Waterford FC|6042|Premier Division|16|0|2|943|6.91|2026-08-28
+evan-oconnor,League of Ireland First Division,Athlone Town,,,,,,,,,,,,,,,,,,,,none
+evan-osam,First Division,Wexford FC,62337,29,,,,,,U17:3:0:2013,,,,,,,,,217,1,1,,auto,Wexford FC,62337,First Division,
 evan-weir,League One,Peterborough United,8677,24,,Left,,,,,2026/27,2,1,0,0,119,1,0,171,17,12,6.88,auto,Peterborough United,8677,League One,Peterborough United|8677|League One|2|0|0|119|6.90|2026-08-22;Peterborough United|8677|EFL Cup|1|0|0|12|6.40|2026-08-08
 festy-ebosele,Super Lig,Erzurumspor FK,281467,24,,Right,13,0,2022,U21:2:0:2021; U19:7:0:2019; U17:2:0:2019,2026/27,3,0,0,0,51,0,0,140,4,3,6.42,auto,Erzurumspor FK,281467,Super Lig,Erzurumspor FK|281467|Süper Lig|3|0|0|51|6.40|2026-08-28
 finn-azaz,Championship,Southampton,8466,25,,Right,14,1,2024,U21:1:0:2022,2026/27,4,3,1,2,302,0,0,277,54,50,7.56,auto,Southampton,8466,Championship,Southampton|8466|Championship|4|1|2|302|7.58|2026-09-01;Southampton|8466|EFL Cup|2|0|1|39|6.45|2026-08-25
@@ -260,7 +264,8 @@ finn-mcgreevy,Premier League 2,Birmingham U21,1796111,18,,,,,,,,,,,,,,,,,,,auto,
 finn-moylan,Premier Division,Shelbourne,5751,18,,,,,,,,,,,,,,,1,0,0,,auto,Shelbourne,5751,Premier Division,
 finn-sherlock,,Atherton Collieries,616935,,,,,,,,,,,,,,,,,,,,auto,Atherton Collieries,616935,,
 flynn-ryan,First Division,Bray Wanderers,1629,,,,,,,,,,,,,,,,,,,,auto,Bray Wanderers,1629,First Division,
-francely-lomboto,Premier Division,Galway United FC,520517,26,,,,,,,2026,19,6,2,0,625,1,0,149,21,0,6.21,auto,Galway United FC,520517,Premier Division,Galway United FC|520517|Premier Division|19|2|0|625|6.23|2026-08-28
+fran-campbell,League of Ireland First Division,Longford Town,,,,,,,,,,,,,,,,,,,,none
+francely-lomboto,Premier Division,Galway United FC,520517,26,,,,,,,2026,19,6,2,0,625,1,0,150,21,0,6.21,auto,Galway United FC,520517,Premier Division,Galway United FC|520517|Premier Division|19|2|0|625|6.23|2026-08-28
 franco-umeh,Championship,Portsmouth,8462,21,,Left,,,,U21:::2024; U19:6:2:2022; U17:6:2:2021,2025/26,1,0,0,0,1,0,0,4,0,0,,auto,Portsmouth,8462,Championship,Portsmouth|8462|FA Cup|1|0|0|43|6.30|2026-01-11;Portsmouth|8462|Championship|1|0|0|1||2025-12-29
 frankie-mcmahon-brown,League Two,Oldham Athletic,9785,19,,,,,,,2025/26,1,0,0,0,1,0,0,1,0,0,,auto,Oldham Athletic,9785,League Two,Oldham Athletic|9785|League Two|1|0|0|1||2026-05-02
 freddie-turley,Championship,Dunfermline Athletic,8457,20,,Right,,,,U21:::2025; U19:9:0:2023; U17:9:0:2022,2025/26,7,,0,0,630,,,32,0,0,6.21,auto,Derby County U21,773680,Premier League 2,Derby County U21|773680|Premier League 2|7|0|0|630|6.21|2026-01-26;Dunfermline Athletic|8457|Championship|9|0|0|482||2026-04-14;Dunfermline Athletic|8457|Scottish Cup|1|0|0|80||2026-03-07
@@ -270,6 +275,7 @@ gabriel-kelly,Premier League 2,Stoke City U21,773650,19,,,,,,U21:1:0:2026; U17::
 gabriel-otegbayo,League One,Sheffield Wednesday,10163,21,,Right,,,,U21:1:0:2025,2026/27,4,3,1,0,306,1,0,59,3,0,6.43,auto,Sheffield Wednesday,10163,League One,Sheffield Wednesday|10163|League One|4|1|0|306|6.42|2026-09-01;Sheffield Wednesday|10163|EFL Cup|2|0|0|114|6.75|2026-08-25
 garbhan-coughlan,,Limerick,2375,33,,,,,,,,,,,,,,,,,,,auto,Limerick,2375,,
 gareth-mcelroy,Premier Division,Sligo Rovers,6361,21,,,,,,,2026,29,26,1,0,2406,4,0,56,3,1,6.90,auto,Sligo Rovers,6361,Premier Division,Sligo Rovers|6361|Premier Division|29|1|0|2406|6.90|2026-08-28
+garry-buckley,First Division,Cobh Ramblers,2383,33,,,,,,,2026,0,0,1,,0,0,0,373,46,0,,auto,Cobh Ramblers,2383,First Division,
 gary-oneil,Premier Division,Shamrock Rovers,4131,31,,,,,,U17:6:1:2011,2025,13,4,0,0,348,3,0,343,39,3,6.72,auto,Shamrock Rovers,4131,Premier Division,Shamrock Rovers|4131|Premier Division|2|0|0|9||2025-09-22
 gavan-holohan,National League,Boston United,8646,34,,Right,,,,,2026/27,4,3,0,,303,1,0,412,61,12,,auto,Boston United,8646,National League,Boston United|8646|National League|4|0|0|303||2026-08-31;Boston United|8646|National League Cup|1|0|1|63||2026-08-18
 gavin-bazunu,Championship,Bolton Wanderers,8559,24,,Right,22,0,2021,U21:3:0:2019; U17:2:0:2019,2025/26,15,,0,0,1350,1,0,195,0,1,6.37,auto,Southampton,8466,Championship,Southampton|8466|Championship|15|0|0|1350|6.37|2026-01-04;Stoke City|10194|Championship|6|0|0|540|6.50|2026-04-21
@@ -324,7 +330,7 @@ jake-mulraney,Premier Division,Shamrock Rovers,4131,30,,Left,,,,U21:8:1:2016; U1
 jake-obrien,Premier League,Everton,8668,25,,Right,17,0,2024,U21:11:0:2021,2025/26,37,35,1,1,3124,6,1,158,11,7,6.72,auto,Everton,8668,Premier League,Everton|8668|Premier League|34|1|1|2854|6.75|2026-05-24;Everton|8668|FA Cup|1|0|0|120|7.20|2026-01-10;Everton|8668|EFL Cup|1|0|0|90|6.90|2025-09-23
 james-abankwah,Serie A,Udinese,8600,22,,Right,4,0,2025,U21:11:0:2023; U19:10:1:2021; U16:1:0:2019,2026/27,2,2,0,0,180,1,0,93,1,0,6.46,auto,Udinese,8600,Serie A,Udinese|8600|Serie A|2|0|0|180|6.50|2026-08-29;Udinese|8600|Coppa Italia|2|0|0|135|7.10|2026-09-02
 james-bailey,First Division,Longford Town,4569,19,,Right,,,,,2026,0,0,2,,0,0,0,6,2,0,,auto,Longford Town,4569,First Division,
-james-bolger,Premier Division,Drogheda United,8339,25,,,,,,,2026,18,12,0,0,1151,3,0,67,2,0,6.39,auto,Drogheda United,8339,Premier Division,Drogheda United|8339|Premier Division|18|0|0|1151|6.39|2026-08-28
+james-bolger,Premier Division,Drogheda United,8339,25,,,,,,,2026,18,12,0,0,1151,3,0,68,2,0,6.39,auto,Drogheda United,8339,Premier Division,Drogheda United|8339|Premier Division|18|0|0|1151|6.39|2026-08-28
 james-brown,Premier Division,St. Patrick's Athletic,1854,28,,Right,,,,,2026,27,26,1,3,2180,5,0,273,8,14,7.18,auto,St. Patrick's Athletic,1854,Premier Division,St. Patrick's Athletic|1854|Premier Division|27|1|3|2180|7.18|2026-08-28
 james-carroll,,Loughgall,2207,26,,,,,,,,,,,,,,,83,3,0,,auto,Loughgall,2207,,
 james-clarke,Premier Division,Derry City,8338,25,,,,,,,2026,24,22,6,1,1683,4,1,214,32,10,6.85,auto,Derry City,8338,Premier Division,Derry City|8338|Premier Division|24|6|1|1683|6.85|2026-08-21;Derry City|8338|Super Cup|1|0|0|81||2026-01-31;Derry City|8338|Conference League Qualification|2|0|0|73||2026-07-30;Derry City|8338|Europa League Qualification|1|0|0|1||2026-07-16
@@ -355,7 +361,7 @@ jesse-dempsey,League Two,Fleetwood Town,45723,21,,,,,,,2026,4,3,0,0,315,0,0,44,1
 jesse-nwabueze,National League North,King's Lynn Town,45731,22,,,,,,,2026/27,0,0,3,,0,0,0,,,,,auto,King's Lynn Town,45731,National League North,
 jevon-mills,National League,Solihull Moors,161801,22,,,,,,,2026/27,2,1,0,,109,0,0,83,2,0,,auto,Solihull Moors,161801,National League,Solihull Moors|161801|National League|2|0|0|109||2026-08-31
 jimmy-dunne,Championship,Queens Park Rangers,10172,28,,Right,3,0,2018,U21:1:0:2018,2026/27,4,4,1,0,360,0,0,297,22,9,7.60,auto,Queens Park Rangers,10172,Championship,Queens Park Rangers|10172|Championship|4|1|0|360|7.62|2026-09-02;Queens Park Rangers|10172|EFL Cup|1|0|0|90|6.90|2026-08-08
-jimmy-keohane,Premier Division,Galway United FC,520517,35,,Right,,,,U19:5:1:2009,2026,24,23,3,3,1861,3,0,517,61,14,6.69,auto,Galway United FC,520517,Premier Division,Galway United FC|520517|Premier Division|24|3|3|1861|6.69|2026-08-28
+jimmy-keohane,Premier Division,Galway United FC,520517,35,,Right,,,,U19:5:1:2009,2026,24,23,3,3,1861,3,0,518,61,14,6.69,auto,Galway United FC,520517,Premier Division,Galway United FC|520517|Premier Division|24|3|3|1861|6.69|2026-08-28
 jimmy-mwanga,,,,27,,Right,,,,,2025/26,18,14,2,0,998,2,0,62,7,0,6.22,auto,Ghazl Al Mahalla,101752,Premier League,Ghazl Al Mahalla|101752|Premier League|18|2|0|998|6.22|2026-05-23
 joe-byrne,Major League Soccer,Charlotte FC,1323940,34,,Right,,,,,2026,19,17,0,0,1512,3,0,528,17,45,6.47,auto,Charlotte FC,1323940,Major League Soccer,Charlotte FC|1323940|MLS|19|0|0|1512|6.47|2026-08-29;Charlotte FC|1323940|Leagues Cup|3|0|0|191|6.50|2026-08-12
 joe-carroll-byrne,Premier Division,St. Patrick's Athletic,1854,17,,Right,,,,U17:7:2:2025,,,,,,,,,,,,,auto,St. Patrick's Athletic,1854,Premier Division,
@@ -401,7 +407,7 @@ josh-seary,Northern Premier Division,FC United of Manchester,161822,21,,,,,,U19:
 josh-ukek,Premiership,Larne,2206,27,,Right,,,,,2026/27,3,,0,0,70,,,81,21,0,,auto,Larne,2206,Premiership,Larne|2206|Europa League Qualification|1|0|0|42||2026-08-11;Larne|2206|Champions League Qualification|1|0|0|27||2026-07-07;Larne|2206|Conference League Qualification|1|0|0|1||2026-08-27
 joshua-kayode,League Two,Rotherham United,8119,26,,,,,,U21:10:2:2020,2025/26,3,1,0,0,98,0,0,140,22,7,5.82,auto,Rotherham United,8119,League One,Rotherham United|8119|League One|3|0|0|98|5.85|2025-09-20
 joshua-keeya,National League South,Salisbury,1114695,,,,,,,,2025/26,0,0,3,,0,0,0,,,,,auto,Salisbury,1114695,National League South,
-junior-thiam,Premier Division,Galway United FC,520517,19,,Right,,,,,2026,3,0,0,0,5,0,0,14,0,0,,auto,Galway United FC,520517,Premier Division,Galway United FC|520517|Premier Division|3|0|0|5||2026-08-21
+junior-thiam,Premier Division,Galway United FC,520517,19,,Right,,,,,2026,3,0,0,0,5,0,0,15,0,0,,auto,Galway United FC,520517,Premier Division,Galway United FC|520517|Premier Division|3|0|0|5||2026-08-21
 justin-ferizaj,League Two,Crawley Town,8647,21,,,,,,U19:5:1:2022; U17:5:2:2021,2025/26,3,2,0,0,180,0,0,38,2,1,6.28,auto,Crawley Town,8647,League Two,Crawley Town|8647|League Two|3|0|0|180|6.27|2026-02-21;Bray Wanderers|1629|Premier Division Qualification|1|0|0|90|6.40|2025-11-07
 justin-osagie,Premier League 2,Chelsea U21,773652,20,,Right,,,,,2026/27,2,2,0,0,180,0,0,3,0,0,6.76,auto,Chelsea U21,773652,Premier League 2,Chelsea U21|773652|Premier League 2|2|0|0|180|6.75|2026-08-31
 kameron-ledwidge,Premier Division,Shelbourne,5751,25,,,,,,U21:1:0:2019; U19:6:0:2019; U18:1:0:2018; U17:20:0:2016,2026,28,27,0,1,2377,3,0,192,1,4,6.89,auto,Shelbourne,5751,Premier Division,Shelbourne|5751|Premier Division|28|0|1|2377|6.90|2026-09-04;Shelbourne|5751|Conference League Qualification|4|0|0|351|6.40|2026-08-13
@@ -411,6 +417,7 @@ keith-buckley,Premier Division,Dundalk,1853,34,,,,,,,2026,28,21,0,1,1768,8,0,407
 keith-ward,Premier Division,Dundalk,1853,35,,Both,,,,,,,,,,,,,426,43,9,,auto,Dundalk,1853,Premier Division,
 keleb-nwubani,,E.Ettelbrück,,,,,,,,,,,,,,,,,,,,none
 kevin-doherty,Premier Division,Drogheda United,8339,46,,,,,,,,,,,,,,,13,1,0,,auto,Drogheda United,8339,Premier Division,
+kevin-fitzpatrick,League of Ireland First Division,Treaty United,,,,,,,,,,,,,,,,,,,,none
 kevin-long,Premier Division,Waterford FC,6042,36,,Right,17,1,2017,U21:::2010,2026,19,18,2,1,1639,4,0,306,15,4,7.11,auto,Waterford FC,6042,Premier Division,Waterford FC|6042|Premier Division|19|2|1|1639|7.11|2026-08-28
 kevin-otoole,Major League Soccer,New York City FC,546238,27,,Left,,,2025,,2026,15,12,0,0,1145,1,0,155,3,4,6.53,auto,New York City FC,546238,Major League Soccer,New York City FC|546238|MLS|15|0|0|1145|6.53|2026-09-04;New York City FC|546238|Leagues Cup|3|0|0|98|6.30|2026-08-13
 kevin-toner,Segunda Federacion - Group 3,Deportiva Minera,278805,30,,Left,,,,U21:::2016; U19:5:0:2013,2025/26,0,0,1,,0,0,2,245,12,2,,auto,Deportiva Minera,278805,Segunda Federacion - Group 4,
@@ -433,11 +440,11 @@ kyle-mcdonagh,Premier Division,Sligo Rovers,6361,20,,,,,,,2026,12,2,0,0,327,0,0,
 kyle-robinson,First Division,Athlone Town,2378,23,,,,,,,,,,,,,,,129,26,2,,auto,Athlone Town,2378,First Division,
 lee-axworthy,,Without ClubWithout Club,,,,,,,,,,,,,,,,,,,,none
 lee-desmond,USL Championship,Sacramento Republic FC,521004,31,,Left,,,,U21:::2015,2026,21,21,1,0,1845,2,0,385,7,3,7.25,auto,Sacramento Republic FC,521004,USL Championship,Sacramento Republic FC|521004|USL Championship|21|1|0|1845|7.26|2026-08-30;Sacramento Republic FC|521004|USL Jägermeister Cup|4|0|0|360|7.17|2026-07-12;Sacramento Republic FC|521004|Open Cup|3|1|0|303|8.00|2026-04-15
-lee-devitt,Premier Division,Galway United FC,520517,26,,,,,,,2026,27,19,0,0,1822,4,0,239,39,0,6.71,auto,Galway United FC,520517,Premier Division,Galway United FC|520517|Premier Division|27|0|0|1822|6.72|2026-08-28
+lee-devitt,Premier Division,Galway United FC,520517,26,,,,,,,2026,27,19,0,0,1822,4,0,240,39,0,6.71,auto,Galway United FC,520517,Premier Division,Galway United FC|520517|Premier Division|27|0|0|1822|6.72|2026-08-28
 lee-grace,Premier Division,Shamrock Rovers,4131,33,,,,,,,2026,22,18,0,0,1698,1,0,397,15,5,7.39,auto,Shamrock Rovers,4131,Premier Division,Shamrock Rovers|4131|Premier Division|22|0|0|1698|7.40|2026-09-04;Shamrock Rovers|4131|Champions League Qualification|4|1|0|332||2026-07-28;Shamrock Rovers|4131|Conference League Qualification|2|0|0|180||2026-08-27;Shamrock Rovers|4131|Europa League Qualification|1|0|0|45||2026-08-13
 lee-oconnor,League Two,Tranmere Rovers,8313,26,,Right,1,0,2018,U21:25:1:2019; U19:12:2:2017; U17:14:0:2015,2026/27,1,0,0,0,12,0,0,230,1,9,6.01,auto,Tranmere Rovers,8313,League Two,Tranmere Rovers|8313|England Cup Qualification 2|1|0|0|72|6.50|2026-08-01;Tranmere Rovers|8313|League Two|1|0|0|12|6.00|2026-08-29
 lee-steacy,Premier Division,Shamrock Rovers,4131,33,,,,,,,2025,1,,,,90,0,0,128,0,0,6.89,auto,Shamrock Rovers,4131,Premier Division,Shamrock Rovers|4131|Premier Division|1|0|0|90|6.90|2025-11-01
-leigh-kavanagh,Premier Division,Galway United FC,520517,22,,,,,,U17:2:1:2019,2026,11,4,0,0,524,2,0,47,0,2,6.81,auto,Galway United FC,520517,Premier Division,Galway United FC|520517|Premier Division|6|0|0|411|7.03|2026-08-28;Bohemian FC|4594|Premier Division|5|0|0|113|6.45|2026-05-15
+leigh-kavanagh,Premier Division,Galway United FC,520517,22,,,,,,U17:2:1:2019,2026,11,4,0,0,524,2,0,48,0,2,6.81,auto,Galway United FC,520517,Premier Division,Galway United FC|520517|Premier Division|6|0|0|411|7.03|2026-08-28;Bohemian FC|4594|Premier Division|5|0|0|113|6.45|2026-05-15
 len-osullivan,League One,Ross County,8649,22,,Left,,,,,2025/26,26,20,0,0,1725,1,0,140,2,1,,auto,Ross County,8649,Championship,Ross County|8649|Championship|22|0|0|1378||2026-05-01
 leon-ayinde,League One,Doncaster Rovers,9903,22,,,,,,U21:2:0:2025,2026/27,3,0,0,0,74,0,0,56,5,2,5.92,auto,Doncaster Rovers,9903,League One,Doncaster Rovers|9903|EFL Cup|2|0|0|75|6.55|2026-08-25;Doncaster Rovers|9903|League One|3|0|0|74|5.90|2026-09-01
 leon-keogh,First Division,Bray Wanderers,1629,20,,,,,,,,,,,,,,,,,,,auto,Bray Wanderers,1629,First Division,
@@ -459,7 +466,7 @@ luca-connell,League One,Barnsley,8283,25,,Left,,,,U21:::2020; U19:3:0:2019; U18:
 luke-browne,League One,Notts County,9819,20,,,,,,U19:3:0:2023; U17:3:0:2021,2026/27,1,,0,0,10,,,24,1,0,6.10,auto,Notts County,9819,League One,Notts County|9819|EFL Cup|1|0|0|10|6.10|2026-08-08
 luke-cullen,Premier Division,St. Patrick's Athletic,1854,17,,,,,,,,,,,,,,,,,,,auto,St. Patrick's Athletic,1854,Premier Division,
 luke-fitzsimons,,Torino,,,,,,,,,,,,,,,,,,,,none
-luke-heeney,Premier Division,Waterford FC,6042,27,,,,,,,2026,24,16,0,0,1375,6,0,217,4,4,6.50,auto,Waterford FC,6042,Premier Division,Waterford FC|6042|Premier Division|24|0|0|1375|6.50|2026-08-28
+luke-heeney,Premier Division,Waterford FC,6042,27,,,,,,,2026,24,16,0,0,1375,6,0,218,4,4,6.50,auto,Waterford FC,6042,Premier Division,Waterford FC|6042|Premier Division|24|0|0|1375|6.50|2026-08-28
 luke-kehir,Premier Division,St. Patrick's Athletic,1854,20,,,,,,U17:::,,,,,,,,,,,,,auto,St. Patrick's Athletic,1854,Premier Division,
 luke-mcnally,Championship,Bristol City,8427,26,,Right,,,,,,,,,,,,,183,19,3,,auto,Bristol City,8427,Championship,
 luke-mulligan,Premier Division,Dundalk,1853,18,,,,,,U19:3:0:2025,,,,,,,,,22,2,0,,auto,Dundalk,1853,Premier Division,
@@ -471,7 +478,7 @@ marcus-harness,League One,Huddersfield Town,9796,30,,Right,,,,,2026/27,4,4,0,0,3
 mark-byrne,,Glenavon,1956,25,,,,,,,,,,,,,,,48,0,0,,auto,Glenavon,1956,,
 mark-connolly,Premier Division,Derry City,8338,34,,Right,,,,U21:4:0:2011,2025,35,32,1,0,2731,6,0,474,22,7,,auto,Derry City,8338,Premier Division,Derry City|8338|Premier Division|7|0|0|319|7.04|2025-11-01
 mark-coyle,Premiership,Coleraine,2202,29,,,,,,,2026/27,1,,0,0,53,,,258,11,4,,auto,Coleraine,2202,Premiership,Coleraine|2202|Conference League Qualification|1|0|0|53||2026-07-23
-mark-doyle,Premier Division,Drogheda United,8339,27,,,,,,,2026,28,26,9,0,2079,5,0,291,83,8,6.69,auto,Drogheda United,8339,Premier Division,Drogheda United|8339|Premier Division|28|9|0|2079|6.69|2026-08-28
+mark-doyle,Premier Division,Drogheda United,8339,27,,,,,,,2026,28,26,9,0,2079,5,0,292,83,8,6.69,auto,Drogheda United,8339,Premier Division,Drogheda United|8339|Premier Division|28|9|0|2079|6.69|2026-08-28
 mark-mcguinness,Championship,Sheffield United,8657,25,,Right,2,0,2024,U21:9:1:2020; U19:10:2:2019,2026/27,4,4,0,0,360,1,0,218,13,4,6.71,auto,Sheffield United,8657,Championship,Sheffield United|8657|Championship|4|0|0|360|6.70|2026-09-01;Sheffield United|8657|EFL Cup|2|1|0|180|7.60|2026-08-25
 mark-omahony,League One,Burton Albion,9792,21,,Right,,,,U21:10:0:2024; U19:9:5:2022; U17:6:4:2021,2026/27,1,,1,0,90,,,50,6,1,7.70,auto,Brighton & Hove Albion U21,773678,EFL Trophy,Brighton & Hove Albion U21|773678|EFL Trophy|1|1|0|90|7.70|2026-08-18
 mark-sykes,Championship,Millwall,10004,29,,Right,7,0,2019,U21:10:2:2016; U19:3:0:2016,2026/27,4,3,1,0,296,1,0,429,47,29,6.58,auto,Millwall,10004,Championship,Millwall|10004|Championship|4|1|0|296|6.60|2026-09-02;Millwall|10004|EFL Cup|2|0|0|40|6.35|2026-08-25
@@ -642,13 +649,14 @@ stephen-kenny,First Division,Athlone Town,2378,33,,,,,,,,,,,,,,,,,,,auto,Athlone
 stephen-mallon,,Glenavon,1956,27,,,,,,U21:2:0:2019; U19:1:0:2017; U17:5:1:2015,2025,14,2,0,0,364,0,0,116,7,1,6.25,auto,Glenavon,1956,Premier Division,
 stephen-mclaughlin,League One,Mansfield Town,9818,36,,Left,,,,,2026/27,3,3,0,0,220,0,0,578,70,54,,auto,Mansfield Town,9818,League One,Mansfield Town|9818|League One|3|0|0|222|7.07|2026-08-30;Mansfield Town|9818|EFL Cup|1|0|0|74|7.40|2026-08-09;Mansfield Town|9818|EFL Trophy|1|0|0|20|6.00|2026-08-19
 stephen-walsh,Premier Division,Galway United FC,520517,36,,Left,,,,,2026,27,24,4,3,1880,5,0,462,77,8,6.55,auto,Galway United FC,520517,Premier Division,Galway United FC|520517|Premier Division|27|4|3|1880|6.56|2026-08-28
+steven-healy,First Division,Treaty United,1233534,22,,,,,,,,,,,,,,,,,,,auto,Treaty United,1233534,First Division,
 success-edogun,Premiership,Ballymena United,4063,25,,,,,,,2026/27,0,0,1,,0,0,0,,,,,auto,Ballymena United,4063,Premiership,
 tadhg-prizeman,League of Ireland,Shamrock Rovers,,,,,,,,,,,,,,,,,,,,none
 tayo-adaramola,Belgian Pro League,Cercle Brugge,9984,22,,Left,1,0,2026,U21:5:0:2022; U19:4:0:2021; U17:3:0:2019,2026/27,1,0,0,0,26,0,0,79,0,5,6.31,auto,Cercle Brugge,9984,Belgian Pro League,Cercle Brugge|9984|First Division A|1|0|0|26|6.30|2026-08-23
 terence-doherty,Premier Division,Derry City,8338,17,,,,,,,2026,2,0,0,0,30,0,0,2,0,0,5.88,auto,Derry City,8338,Premier Division,Derry City|8338|Premier Division|2|0|0|30|5.90|2026-07-03
 theo-hennessy,Premier Division,Drogheda United,8339,,,Right,,,,,,,,,,,,,,,,,auto,Drogheda United,8339,Premier Division,
 thomas-oconnor,League One,Peterborough United,8677,27,,Left,,,,U21:4:0:2019; U19:5:0:2017; U17:2:0:2016,2026/27,3,3,0,0,241,0,0,226,14,10,6.18,auto,Peterborough United,8677,League One,Peterborough United|8677|League One|3|0|0|241|6.17|2026-08-29;Peterborough United|8677|EFL Cup|1|0|0|45|6.60|2026-08-08
-thomas-oluwa,Premier Division,Drogheda United,8339,25,,,,,,,2026,29,23,4,1,2031,2,0,205,44,2,6.46,auto,Drogheda United,8339,Premier Division,Drogheda United|8339|Premier Division|29|4|1|2031|6.47|2026-08-28
+thomas-oluwa,Premier Division,Drogheda United,8339,25,,,,,,,2026,29,23,4,1,2031,2,0,206,44,2,6.46,auto,Drogheda United,8339,Premier Division,Drogheda United|8339|Premier Division|29|4|1|2031|6.47|2026-08-28
 tj-molloy,,Armagh,4618,17,,,,,,U17:5:1:2025,,,,,,,,,5,0,0,,auto,Armagh,4618,,
 tobi-jinadu,,Warrenpoint,,,,,,,,,,,,,,,,,,,,none
 todd-bazunu,Premier Division,Shamrock Rovers,4131,18,,,,,,,,,,,,,,,,,,,auto,Shamrock Rovers,4131,Premier Division,
@@ -660,7 +668,8 @@ tom-mcgrath,League of Ireland,Cork City,,,,,,,,,,,,,,,,,,,,none
 tony-springett,League One,Leyton Orient,8351,23,,Left,,,,U21:5:0:2023,2026/27,4,2,1,1,188,1,0,64,3,2,7.00,auto,Leyton Orient,8351,League One,Leyton Orient|8351|League One|4|1|1|188|7.00|2026-09-01;Leyton Orient|8351|EFL Trophy|1|0|0|45|6.50|2026-08-18;Leyton Orient|8351|EFL Cup|1|0|1|20|7.10|2026-08-08
 trent-kone-doherty,Eliteserien,Molde,9917,20,,Right,,,,U21:6:0:2025; U19:8:0:2023; U17:3:0:2021,2026,6,,0,3,455,,,18,5,1,7.52,auto,Liverpool U21,1070259,Premier League 2,Liverpool U21|1070259|Premier League 2|6|0|3|455|7.52|2026-02-20;Molde|9917|Eliteserien|14|2|1|438|6.52|2026-08-30;Molde|9917|Norgesmesterskapet|1|3|0|90||2026-08-22;Liverpool U19|394197|UEFA Youth League|1|0|0|90||2026-02-03
 trevor-clarke,Premier Division,Dundalk,1853,28,,Left,,,,U21:::2019; U19:6:0:2016; U17:8:4:2014,2026,8,6,1,0,479,1,0,212,17,8,6.63,auto,Dundalk,1853,Premier Division,Dundalk|1853|Premier Division|7|1|0|413|6.54|2026-08-28;Shamrock Rovers|4131|Premier Division|1|0|0|66|7.30|2026-02-23
-troy-parrott,LaLiga,Real Betis,8603,24,,Right,37,11,2019,U21:5:4:2019; U19:3:4:2018; U17:9:4:2017,2026/27,3,1,1,0,98,0,0,248,84,25,6.77,auto,Real Betis,8603,LaLiga,Real Betis|8603|LaLiga|3|1|0|98|6.77|2026-09-04;AZ Alkmaar|10229|Super Cup|1|0|0|45|6.60|2026-08-02;AZ Alkmaar|10229|Eredivisie|1|0|0|33|5.80|2026-08-08
+troy-parrott,LaLiga,Real Betis,8603,24,,Right,37,11,2019,U21:5:4:2019; U19:3:4:2018; U17:9:4:2017,2026/27,3,1,1,0,98,0,0,249,85,25,6.77,auto,Real Betis,8603,LaLiga,Real Betis|8603|LaLiga|3|1|0|98|6.77|2026-09-04;AZ Alkmaar|10229|Super Cup|1|0|0|45|6.60|2026-08-02;AZ Alkmaar|10229|Eredivisie|1|0|0|33|5.80|2026-08-08
+troy-preston-holder,League of Ireland First Division,Finn Harps,,,,,,,,,,,,,,,,,,,,none
 tunmise-sobowale,Premier Division,Shamrock Rovers,4131,27,,Right,,,,,2026,27,26,1,3,2267,4,0,224,6,6,7.17,auto,Shamrock Rovers,4131,Premier Division,Shamrock Rovers|4131|Premier Division|27|1|3|2267|7.17|2026-09-04;Shamrock Rovers|4131|Champions League Qualification|3|0|0|205||2026-07-28;Shamrock Rovers|4131|Conference League Qualification|2|0|0|170||2026-08-27;Shamrock Rovers|4131|Europa League Qualification|2|0|0|135||2026-08-13;St. Mirren|9800|Premiership|3|0|0|60|6.50|2026-02-03
 tyler-doherty,,St Mochta's,532490,,,,,,,,,,,,,,,,,,,,auto,St Mochta's,532490,,
 tyler-goodrham,League One,Oxford United,8653,23,,,,,,U21:::2023,2026/27,3,2,0,0,154,0,0,179,24,14,6.96,auto,Oxford United,8653,League One,Oxford United|8653|League One|3|0|0|154|6.95|2026-09-01;Oxford United|8653|EFL Cup|1|0|0|74|6.60|2026-08-08
@@ -670,7 +679,7 @@ ultan-mclaughlin,,Armagh,,,,,,,,,,,,,,,,,,,,none
 uniss-kargbo,Premier League Relegation Group,Bala Town,175654,,,,,,,,,,,,,,,,62,0,0,,auto,Bala Town,175654,Premier League Relegation Group,
 victor-ozhianvuna,Premier Division,Shamrock Rovers,4131,17,,Right,,,,U17:9:0:2025,2026,18,14,0,2,1174,2,0,36,1,2,6.92,auto,Shamrock Rovers,4131,Premier Division,Shamrock Rovers|4131|Premier Division|18|0|2|1174|6.92|2026-05-25;Shamrock Rovers|4131|Super Cup|1|0|0|90||2026-01-31
 vinnie-leonard,Premier League 2,Norwich City U21,773658,18,,,,,,U17:10:1:2024,2026,3,2,0,0,212,1,1,39,3,0,6.60,auto,Dundalk,1853,Premier Division,Dundalk|1853|Premier Division|3|0|0|212|6.60|2026-02-23
-warren-davis,Premier Division,Drogheda United,8339,21,,,,,,U21:1:0:2025,2026,19,10,3,0,982,0,0,109,13,3,6.51,auto,Drogheda United,8339,Premier Division,Drogheda United|8339|Premier Division|19|3|0|982|6.51|2026-08-28
+warren-davis,Premier Division,Drogheda United,8339,21,,,,,,U21:1:0:2025,2026,19,10,3,0,982,0,0,110,13,3,6.51,auto,Drogheda United,8339,Premier Division,Drogheda United|8339|Premier Division|19|3|0|982|6.51|2026-08-28
 warren-ohora,League One,Leicester City,8197,27,,Right,,,,U19:1:0:2017,2026/27,6,,1,0,540,,,273,13,2,5.70,auto,Hibernian,10251,Conference League Qualification,Hibernian|10251|Conference League Qualification|6|1|0|540|5.70|2026-08-27;Hibernian|10251|Premiership|2|0|0|180|7.00|2026-08-09;Hibernian|10251|League Cup|1|0|0|90||2026-08-16
 will-ferry,Premiership,Dundee United,9938,25,,Left,1,0,2025,U21:5:0:2020; U19:4:2:2018,2026/27,5,5,1,1,424,1,0,210,8,27,7.57,auto,Dundee United,9938,Premiership,Dundee United|9938|Premiership|5|1|1|424|7.56|2026-09-02
 will-fitzgerald,Premier Division,Shamrock Rovers,4131,27,,,,,,,2026,25,26,5,3,2228,4,0,266,11,25,7.04,auto,Sligo Rovers,6361,Premier Division,Sligo Rovers|6361|Premier Division|25|5|3|2228|7.04|2026-07-25;Shamrock Rovers|4131|Conference League Qualification|2|0|0|180||2026-08-27;Shamrock Rovers|4131|Europa League Qualification|2|0|0|180||2026-08-13;Shamrock Rovers|4131|Premier Division|3|0|2|135|6.87|2026-09-04
