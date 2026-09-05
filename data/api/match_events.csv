@@ -5718,7 +5718,7 @@ match_id,minute,type,player,team,venue
 2026-09-05-coleraine-v-crusaders,2,goal,Senan Devine,Coleraine,The Showgrounds
 2026-09-05-coleraine-v-crusaders,5,goal,Jay Henderson,Coleraine,The Showgrounds
 2026-09-05-coleraine-v-crusaders,8,goal,Matthew Shevlin,Coleraine,The Showgrounds
-2026-09-05-coleraine-v-crusaders,53,goal,Senan Devine,Coleraine,The Showgrounds
+2026-09-05-coleraine-v-crusaders,52,goal,Senan Devine,Coleraine,The Showgrounds
 2026-09-05-coleraine-v-crusaders,83,goal,Michael Mulholland,Crusaders,The Showgrounds
 2026-09-05-cong-an-ho-chi-minh-city-v-ha-noi-fc,27,goal,Nguyen Tien Linh,Cong An Ho Chí Minh City,Stadium
 2026-09-05-cong-an-ho-chi-minh-city-v-ha-noi-fc,50,goal,Nguyen Thái Quoc Cuong,Cong An Ho Chí Minh City,Stadium
@@ -6113,6 +6113,32 @@ match_id,minute,type,player,team,venue
 2026-09-05-leicester-city-v-oxford-united,81,sub_on,Jack Currie,Oxford United,King Power Stadium
 2026-09-05-levski-sofia-v-cska-1948,17,yellow,Héctor Cuéllar,CSKA 1948,Georgi Asparuhov
 2026-09-05-levski-sofia-v-cska-1948,28,yellow,Juan Perea,Levski Sofia,Georgi Asparuhov
+2026-09-05-levski-sofia-v-cska-1948,46,sub_off,Andre Hoffmann,CSKA 1948,Georgi Asparuhov
+2026-09-05-levski-sofia-v-cska-1948,46,sub_on,Lasha Dvali,CSKA 1948,Georgi Asparuhov
+2026-09-05-levski-sofia-v-cska-1948,51,sub_off,Elias Franco,CSKA 1948,Georgi Asparuhov
+2026-09-05-levski-sofia-v-cska-1948,51,sub_on,Jules Meyer,CSKA 1948,Georgi Asparuhov
+2026-09-05-levski-sofia-v-cska-1948,58,goal,Juan Perea,Levski Sofia,Georgi Asparuhov
+2026-09-05-levski-sofia-v-cska-1948,62,sub_off,Borislav Tsonev,CSKA 1948,Georgi Asparuhov
+2026-09-05-levski-sofia-v-cska-1948,62,sub_off,Frédéric Maciel,CSKA 1948,Georgi Asparuhov
+2026-09-05-levski-sofia-v-cska-1948,62,sub_on,Brian Sobrero,CSKA 1948,Georgi Asparuhov
+2026-09-05-levski-sofia-v-cska-1948,62,sub_on,Atanas Iliev,CSKA 1948,Georgi Asparuhov
+2026-09-05-levski-sofia-v-cska-1948,65,sub_off,Mazire Soula,Levski Sofia,Georgi Asparuhov
+2026-09-05-levski-sofia-v-cska-1948,65,sub_off,Asen Mitkov,Levski Sofia,Georgi Asparuhov
+2026-09-05-levski-sofia-v-cska-1948,65,sub_on,Sérginho,Levski Sofia,Georgi Asparuhov
+2026-09-05-levski-sofia-v-cska-1948,65,sub_on,Everton Bala,Levski Sofia,Georgi Asparuhov
+2026-09-05-levski-sofia-v-cska-1948,74,sub_off,Petar Vitanov,CSKA 1948,Georgi Asparuhov
+2026-09-05-levski-sofia-v-cska-1948,74,sub_on,Mamadou Diallo,CSKA 1948,Georgi Asparuhov
+2026-09-05-levski-sofia-v-cska-1948,76,sub_off,Juan Perea,Levski Sofia,Georgi Asparuhov
+2026-09-05-levski-sofia-v-cska-1948,76,sub_off,Marko Grujic,Levski Sofia,Georgi Asparuhov
+2026-09-05-levski-sofia-v-cska-1948,76,sub_on,Reinaldo,Levski Sofia,Georgi Asparuhov
+2026-09-05-levski-sofia-v-cska-1948,76,sub_on,Álex Centelles,Levski Sofia,Georgi Asparuhov
+2026-09-05-levski-sofia-v-cska-1948,82,yellow,Armstrong Oko-Flex,Levski Sofia,Georgi Asparuhov
+2026-09-05-levski-sofia-v-cska-1948,83,yellow,Julio Velázquez,Levski Sofia,Georgi Asparuhov
+2026-09-05-levski-sofia-v-cska-1948,85,sub_off,Armstrong Oko-Flex,Levski Sofia,Georgi Asparuhov
+2026-09-05-levski-sofia-v-cska-1948,85,sub_on,Aldair,Levski Sofia,Georgi Asparuhov
+2026-09-05-levski-sofia-v-cska-1948,86,yellow,Diego Medina,CSKA 1948,Georgi Asparuhov
+2026-09-05-levski-sofia-v-cska-1948,90,red,Sasho Aleksandrov,CSKA 1948,Georgi Asparuhov
+2026-09-05-levski-sofia-v-cska-1948,90,yellow,Sasho Aleksandrov,CSKA 1948,Georgi Asparuhov
 2026-09-05-limavady-v-dungannon-swifts,30,goal,Leonel Alves,Dungannon Swifts,The Showgrounds Limavady
 2026-09-05-limavady-v-dungannon-swifts,68,goal,Tiernan Kelly,Dungannon Swifts,The Showgrounds Limavady
 2026-09-05-lincoln-city-v-southampton,43,yellow,Conor McGrandles,Lincoln City,ProAmpac Stadium
@@ -6140,7 +6166,7 @@ match_id,minute,type,player,team,venue
 2026-09-05-linfield-v-carrick-rangers,49,red,Jimmy Callacher,Carrick Rangers,Windsor Park
 2026-09-05-linfield-v-carrick-rangers,55,goal,Ben Hall,Linfield,Windsor Park
 2026-09-05-linfield-v-carrick-rangers,90,red,Paul Heatley,Carrick Rangers,Windsor Park
-2026-09-05-longford-town-v-kerry-fc,,,,,Stadium
+2026-09-05-longford-town-v-kerry-fc,75,goal,Cian Murphy,Kerry FC,Stadium
 2026-09-05-luton-town-v-leyton-orient,21,sub_off,Harrison Ashby,Luton Town,Kenilworth Road
 2026-09-05-luton-town-v-leyton-orient,21,sub_on,Harry Fox,Luton Town,Kenilworth Road
 2026-09-05-luton-town-v-leyton-orient,25,goal,Jamie Donley,Luton Town,Kenilworth Road
@@ -6644,6 +6670,30 @@ match_id,minute,type,player,team,venue
 2026-09-05-southend-united-v-yeovil-town,90,yellow,Promise Omochere,Southend United,Roots Hall
 2026-09-05-spalding-united-v-southport,26,goal,Bartosz Cybulski,Spalding United,Sir Halley Stewart Field
 2026-09-05-spalding-united-v-southport,75,goal,Sam Straughan-Brown,Spalding United,Sir Halley Stewart Field
+2026-09-05-st-mirren-v-celtic,8,yellow,Colby Donovan,Celtic,The Marbill Coaches Stadium
+2026-09-05-st-mirren-v-celtic,22,goal,Nikolas Agrafiotis,St. Mirren,The Marbill Coaches Stadium
+2026-09-05-st-mirren-v-celtic,37,yellow,Calvin Ramsay,St. Mirren,The Marbill Coaches Stadium
+2026-09-05-st-mirren-v-celtic,51,goal,Liam Scales,Celtic,The Marbill Coaches Stadium
+2026-09-05-st-mirren-v-celtic,62,sub_off,Fraser Taylor,St. Mirren,The Marbill Coaches Stadium
+2026-09-05-st-mirren-v-celtic,62,sub_on,Samuel Ramos,St. Mirren,The Marbill Coaches Stadium
+2026-09-05-st-mirren-v-celtic,68,goal,Hyun-Jun Yang,Celtic,The Marbill Coaches Stadium
+2026-09-05-st-mirren-v-celtic,68,sub_off,Nikolas Agrafiotis,St. Mirren,The Marbill Coaches Stadium
+2026-09-05-st-mirren-v-celtic,68,sub_on,Eseosa Sule,St. Mirren,The Marbill Coaches Stadium
+2026-09-05-st-mirren-v-celtic,69,sub_off,Chris Mochrie,St. Mirren,The Marbill Coaches Stadium
+2026-09-05-st-mirren-v-celtic,69,sub_on,Luke Thomas,St. Mirren,The Marbill Coaches Stadium
+2026-09-05-st-mirren-v-celtic,72,sub_off,Haissem Hassan,Celtic,The Marbill Coaches Stadium
+2026-09-05-st-mirren-v-celtic,72,sub_on,James Forrest,Celtic,The Marbill Coaches Stadium
+2026-09-05-st-mirren-v-celtic,73,sub_off,Mika Baur,Celtic,The Marbill Coaches Stadium
+2026-09-05-st-mirren-v-celtic,73,sub_off,Hyun-Jun Yang,Celtic,The Marbill Coaches Stadium
+2026-09-05-st-mirren-v-celtic,73,sub_on,Oliver Sørensen,Celtic,The Marbill Coaches Stadium
+2026-09-05-st-mirren-v-celtic,73,sub_on,Sebastian Tounekti,Celtic,The Marbill Coaches Stadium
+2026-09-05-st-mirren-v-celtic,83,sub_off,Camilo Durán,Celtic,The Marbill Coaches Stadium
+2026-09-05-st-mirren-v-celtic,83,sub_off,Ryan Carr,St. Mirren,The Marbill Coaches Stadium
+2026-09-05-st-mirren-v-celtic,83,sub_on,Shumaira Mheuka,Celtic,The Marbill Coaches Stadium
+2026-09-05-st-mirren-v-celtic,83,sub_on,Jake Young,St. Mirren,The Marbill Coaches Stadium
+2026-09-05-st-mirren-v-celtic,87,sub_off,Colby Donovan,Celtic,The Marbill Coaches Stadium
+2026-09-05-st-mirren-v-celtic,87,sub_on,Dane Murray,Celtic,The Marbill Coaches Stadium
+2026-09-05-st-mirren-v-celtic,90,yellow,Eseosa Sule,St. Mirren,The Marbill Coaches Stadium
 2026-09-05-st-patricks-athletic-v-bohemian-fc,100,goal,Anthony Breslin,St. Patrick's Athletic,Stadium
 2026-09-05-st-patricks-athletic-v-bohemian-fc,112,own_goal,Ryan Edmondson,Bohemian FC,Stadium
 2026-09-05-stirling-albion-v-spartans-fc,23,goal,Mark Stowe,Spartans FC,Forthbank Stadium
@@ -6673,6 +6723,29 @@ match_id,minute,type,player,team,venue
 2026-09-05-stoke-city-v-charlton-athletic,25,goal,George Hirst,Stoke City,bet365 Stadium
 2026-09-05-stoke-city-v-charlton-athletic,26,sub_off,Tyreece Campbell,Charlton Athletic,bet365 Stadium
 2026-09-05-stoke-city-v-charlton-athletic,26,sub_on,Dan McNamara,Charlton Athletic,bet365 Stadium
+2026-09-05-swansea-city-v-wrexham,53,sub_off,Filip Lissah,Swansea City,Swansea.com Stadium
+2026-09-05-swansea-city-v-wrexham,53,sub_off,Ji-Sung Eom,Swansea City,Swansea.com Stadium
+2026-09-05-swansea-city-v-wrexham,53,sub_on,Ben Cabango,Swansea City,Swansea.com Stadium
+2026-09-05-swansea-city-v-wrexham,53,sub_on,Joseph Opoku,Swansea City,Swansea.com Stadium
+2026-09-05-swansea-city-v-wrexham,62,sub_off,Oliver Rathbone,Wrexham,Swansea.com Stadium
+2026-09-05-swansea-city-v-wrexham,62,sub_off,Ryan Longman,Wrexham,Swansea.com Stadium
+2026-09-05-swansea-city-v-wrexham,62,sub_off,Daniel Imray,Wrexham,Swansea.com Stadium
+2026-09-05-swansea-city-v-wrexham,62,sub_on,Josh Windass,Wrexham,Swansea.com Stadium
+2026-09-05-swansea-city-v-wrexham,62,sub_on,Jacques Ekomié,Wrexham,Swansea.com Stadium
+2026-09-05-swansea-city-v-wrexham,62,sub_on,Issa Kaboré,Wrexham,Swansea.com Stadium
+2026-09-05-swansea-city-v-wrexham,63,sub_off,Sam Smith,Wrexham,Swansea.com Stadium
+2026-09-05-swansea-city-v-wrexham,63,sub_off,Adam Idah,Swansea City,Swansea.com Stadium
+2026-09-05-swansea-city-v-wrexham,63,sub_on,Kieffer Moore,Wrexham,Swansea.com Stadium
+2026-09-05-swansea-city-v-wrexham,63,sub_on,Zan Vipotnik,Swansea City,Swansea.com Stadium
+2026-09-05-swansea-city-v-wrexham,67,yellow,Joseph Opoku,Swansea City,Swansea.com Stadium
+2026-09-05-swansea-city-v-wrexham,75,sub_off,Melker Widell,Swansea City,Swansea.com Stadium
+2026-09-05-swansea-city-v-wrexham,75,sub_off,Jay Fulton,Swansea City,Swansea.com Stadium
+2026-09-05-swansea-city-v-wrexham,75,sub_on,Elijah Just,Swansea City,Swansea.com Stadium
+2026-09-05-swansea-city-v-wrexham,75,sub_on,Marko Stamenic,Swansea City,Swansea.com Stadium
+2026-09-05-swansea-city-v-wrexham,77,yellow,Ben Cabango,Swansea City,Swansea.com Stadium
+2026-09-05-swansea-city-v-wrexham,78,sub_off,Callum O'Hare,Wrexham,Swansea.com Stadium
+2026-09-05-swansea-city-v-wrexham,78,sub_on,Lewis O'Brien,Wrexham,Swansea.com Stadium
+2026-09-05-swansea-city-v-wrexham,88,yellow,Stephen Welsh,Swansea City,Swansea.com Stadium
 2026-09-05-swindon-town-v-colchester-united,13,goal,Kylian Kouassi,Colchester United,The Nigel Eady County Ground
 2026-09-05-swindon-town-v-colchester-united,46,sub_off,Ollie Clarke,Swindon Town,The Nigel Eady County Ground
 2026-09-05-swindon-town-v-colchester-united,46,sub_off,Billy Kirkman,Swindon Town,The Nigel Eady County Ground
