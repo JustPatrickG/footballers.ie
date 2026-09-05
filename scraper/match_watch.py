@@ -23,7 +23,6 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import irish_scraper as ir            # noqa: E402  (path set above)
-import goal_alert                    # noqa: E402
 
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parent
@@ -119,10 +118,9 @@ def main():
         log(f"watching {m['home']} v {m['away']} (ko {m['_ko']:%H:%M}Z)")
     deadline = now + dt.timedelta(minutes=BUDGET_MIN)
     done = set()
-    IRISH = goal_alert.load_irish()
-    CFG = goal_alert.config()
-    SEEN = set()
-    log('goal alerts: ' + (('ON -> ' + CFG['to']) if CFG else 'logging only (set GMAIL_* secrets to email)'))
+    # Per-goal emails are gone: a busy Saturday sent a dozen of them. One
+    # digest a day now goes out from goal_digest.py instead, which also saves
+    # a match-details fetch on every poll of every live game.
 
     while dt.datetime.now(dt.timezone.utc) < deadline:
         now = dt.datetime.now(dt.timezone.utc)
@@ -132,13 +130,6 @@ def main():
                 continue
             if now < m["_ko"]:
                 continue                       # not kicked off yet
-            # live goal alerts, from kickoff onwards
-            try:
-                _d = ir.get_json(ir.MATCH_API.format(mid=m["fotmob_id"]))
-                goal_alert.alert_new_goals(m, _d, SEEN, CFG, IRISH, log)
-            except Exception as _e:
-                log(f"  goal-check failed ({m['home']} v {m['away']}): {_e}")
-            time.sleep(1)
             # Full time: only ask once a game could plausibly have ended, so we
             # do not hammer match pages that are nowhere near over.
             if now < m["_ko"] + dt.timedelta(minutes=EARLIEST_FT):

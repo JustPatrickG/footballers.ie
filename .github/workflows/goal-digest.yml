@@ -1,0 +1,67 @@
+name: goal digest
+
+# One email a day listing every Irish goalscorer, replacing the per-goal
+# alerts that used to fire from match_watch.
+#
+# 06:00 UTC reports on YESTERDAY, on purpose. "Every match is over" is later
+# than it sounds - League of Ireland games finish around 21:45 Irish, European
+# ties nearer 22:00, and USL matches in the States can end at 03:00. Running
+# the next morning is the only way to catch all of them, and it gives the
+# scrapers all night to fill in ratings.
+
+on:
+  schedule:
+    - cron: '0 6 * * *'
+  workflow_dispatch:
+    inputs:
+      date:
+        description: 'YYYY-MM-DD (blank = yesterday)'
+        default: ''
+      dry:
+        description: 'print it, send nothing'
+        default: 'false'
+      force:
+        description: 'send again even if already sent'
+        default: 'false'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: goal-digest
+  cancel-in-progress: false
+
+jobs:
+  send:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: assemble and send
+        env:
+          GMAIL_USER: ${{ secrets.GMAIL_USER }}
+          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+          ALERT_TO: ${{ secrets.ALERT_TO }}
+        run: |
+          ARGS=""
+          [ -n "${{ inputs.date }}" ] && ARGS="$ARGS --date ${{ inputs.date }}"
+          [ "${{ inputs.dry || 'false' }}" = "true" ] && ARGS="$ARGS --dry"
+          [ "${{ inputs.force || 'false' }}" = "true" ] && ARGS="$ARGS --force"
+          python3 scraper/goal_digest.py $ARGS
+
+      - name: remember it went out
+        run: |
+          git config user.name "digest-bot"
+          git config user.email "actions@github.com"
+          git add scraper/goal_digest_sent.json 2>/dev/null || true
+          if git diff --cached --quiet; then
+            echo "nothing to record"
+          else
+            git commit -m "goal digest: mark sent"
+            git pull --rebase --autostash -X theirs || (git rebase --abort; git reset --hard origin/main; echo "lost the race, next run catches up")
+            git push
+          fi
