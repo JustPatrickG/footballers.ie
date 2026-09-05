@@ -7277,6 +7277,19 @@
   ]
  },
  {
+  "fotmob_id": "5071321",
+  "url": "/matches/new-york-city-fc-vs-nashville-sc/dmztmw7m#5071321",
+  "kickoff": "2026-09-04T23:30:00Z",
+  "comp": "MLS",
+  "home": "New York City FC",
+  "away": "Nashville SC",
+  "home_id": "546238",
+  "away_id": "915807",
+  "slugs": [
+   "kevin-otoole"
+  ]
+ },
+ {
   "fotmob_id": "5071312",
   "url": "/matches/toronto-fc-vs-new-york-city-fc/2bfn0g2z#5071312",
   "kickoff": "2026-08-29T23:30:00Z",
@@ -7290,14 +7303,14 @@
   ]
  },
  {
-  "fotmob_id": "5071321",
-  "url": "/matches/new-york-city-fc-vs-nashville-sc/dmztmw7m#5071321",
-  "kickoff": "2026-09-04T23:30:00Z",
+  "fotmob_id": "5071339",
+  "url": "/matches/new-england-revolution-vs-new-york-city-fc/1y73nbgv#5071339",
+  "kickoff": "2026-09-10T00:00:00Z",
   "comp": "Major League Soccer",
   "home": "New York City FC",
-  "away": "Nashville SC",
+  "away": "New England Revolution",
   "home_id": "546238",
-  "away_id": "915807",
+  "away_id": "6580",
   "slugs": [
    "kevin-otoole"
   ]
