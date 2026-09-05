@@ -1073,7 +1073,8 @@
   "home_id": "6633",
   "away_id": "162162",
   "slugs": [
-   "aaron-okpolokpo"
+   "aaron-okpolokpo",
+   "josh-okpolokpo"
   ]
  },
  {
@@ -1086,7 +1087,8 @@
   "home_id": "8473",
   "away_id": "162162",
   "slugs": [
-   "aaron-okpolokpo"
+   "aaron-okpolokpo",
+   "josh-okpolokpo"
   ]
  },
  {
@@ -1099,7 +1101,8 @@
   "home_id": "162162",
   "away_id": "6634",
   "slugs": [
-   "aaron-okpolokpo"
+   "aaron-okpolokpo",
+   "josh-okpolokpo"
   ]
  },
  {
@@ -1126,6 +1129,73 @@
   "away_id": "1113555",
   "slugs": [
    "aaron-oreilly"
+  ]
+ },
+ {
+  "fotmob_id": "5100971",
+  "url": "/matches/st-patricks-athletic-vs-sligo-rovers/k3gfh#5100971",
+  "kickoff": "2026-09-19T18:45:00Z",
+  "comp": "Premier Division",
+  "home": "Sligo Rovers",
+  "away": "St. Patrick's Athletic",
+  "home_id": "6361",
+  "away_id": "1854",
+  "slugs": [
+   "adam-banim",
+   "adam-deans",
+   "aidan-gabbidon",
+   "aidan-keena",
+   "alex-nolan",
+   "anthony-breslin",
+   "billy-canny",
+   "billy-hayes",
+   "callum-lynch",
+   "carl-mchugh",
+   "charlie-mcgarvey",
+   "chris-forrester",
+   "cian-kavanagh",
+   "conor-cannon",
+   "conor-reynolds",
+   "daire-patton",
+   "daniel-chukwu",
+   "daniel-rogers",
+   "darragh-brunton",
+   "darragh-nugent",
+   "david-jonathan",
+   "gareth-mcelroy",
+   "glory-nzingo",
+   "jad-hakiki",
+   "james-brown",
+   "james-mcmanus",
+   "jamie-lennon",
+   "jamie-odonnell",
+   "jason-mcclelland",
+   "joe-carroll-byrne",
+   "joe-redmond",
+   "josh-oconnor",
+   "kevin-zefi",
+   "kian-leavy",
+   "kian-quigley",
+   "kyle-mcdonagh",
+   "luke-cullen",
+   "luke-kehir",
+   "luke-pearce",
+   "luke-turner",
+   "matthew-ohara",
+   "niall-sullivan",
+   "oisin-kelly",
+   "ronan-boyce",
+   "ryan-okane",
+   "ryan-sheridan",
+   "sam-rooney",
+   "sam-steward",
+   "samuel-ogungbe",
+   "seamus-maughan",
+   "sean-hoare",
+   "sean-mchale",
+   "sean-molloy",
+   "simon-power",
+   "zack-elbouzedi"
   ]
  },
  {
@@ -2033,6 +2103,19 @@
   ]
  },
  {
+  "fotmob_id": "5811767",
+  "url": "/matches/anderlecht-vs-zulte-waregem/2vdwv1#5811767",
+  "kickoff": "2026-09-19T18:45:00Z",
+  "comp": "Belgian Pro League",
+  "home": "Anderlecht",
+  "away": "Zulte Waregem",
+  "home_id": "8635",
+  "away_id": "10000",
+  "slugs": [
+   "andrew-omobamidele"
+  ]
+ },
+ {
   "fotmob_id": "5837158",
   "url": "/matches/leicester-city-vs-stockport-county/2qnqqj#5837158",
   "kickoff": "2026-09-12T14:00:00Z",
@@ -2241,6 +2324,20 @@
    "conor-mccarthy",
    "joe-obrien-whitmarsh",
    "kian-mcmahon-brown"
+  ]
+ },
+ {
+  "fotmob_id": "5793929",
+  "url": "/matches/falkirk-vs-dundee-united/2u9phz#5793929",
+  "kickoff": "2026-09-05T14:00:00Z",
+  "comp": "Premiership",
+  "home": "Dundee United",
+  "away": "Falkirk",
+  "home_id": "9938",
+  "away_id": "8596",
+  "slugs": [
+   "aodhan-doherty",
+   "neil-farrugia"
   ]
  },
  {
@@ -3533,19 +3630,16 @@
   ]
  },
  {
-  "fotmob_id": "5847420",
-  "url": "/matches/crusaders-vs-coleraine/53olo#5847420",
-  "kickoff": "2026-09-05T17:00:00Z",
+  "fotmob_id": "5793936",
+  "url": "/matches/kilmarnock-vs-heart-midlothian/2tf6ix#5793936",
+  "kickoff": "2026-09-19T16:45:00Z",
   "comp": "Premiership",
-  "home": "Coleraine",
-  "away": "Crusaders",
-  "home_id": "2202",
-  "away_id": "1937",
+  "home": "Kilmarnock",
+  "away": "Hearts",
+  "home_id": "8597",
+  "away_id": "9860",
   "slugs": [
-   "billy-vance",
-   "charles-dunne",
-   "mark-coyle",
-   "rob-slevin"
+   "cathal-mccarthy"
   ]
  },
  {
@@ -3565,6 +3659,21 @@
    "rob-slevin",
    "sean-murray",
    "success-edogun"
+  ]
+ },
+ {
+  "fotmob_id": "5847439",
+  "url": "/matches/coleraine-vs-limavady/5s8bl#5847439",
+  "kickoff": "2026-09-19T17:00:00Z",
+  "comp": "Premiership",
+  "home": "Coleraine",
+  "away": "Limavady",
+  "home_id": "2202",
+  "away_id": "2205",
+  "slugs": [
+   "charles-dunne",
+   "mark-coyle",
+   "rob-slevin"
   ]
  },
  {
@@ -7610,19 +7719,6 @@
   ]
  },
  {
-  "fotmob_id": "5967060",
-  "url": "/matches/carrarese-vs-empoli/1v6or3#5967060",
-  "kickoff": "2026-09-05T17:30:00Z",
-  "comp": "Serie B",
-  "home": "Carrarese",
-  "away": "Empoli",
-  "home_id": "6488",
-  "away_id": "8534",
-  "slugs": [
-   "matteo-egan"
-  ]
- },
- {
   "fotmob_id": "5967073",
   "url": "/matches/empoli-vs-arezzo/2slyq9#5967073",
   "kickoff": "2026-09-11T17:00:00Z",
@@ -7805,19 +7901,6 @@
   "away_id": "773645",
   "slugs": [
    "nathan-fraser"
-  ]
- },
- {
-  "fotmob_id": "5793929",
-  "url": "/matches/falkirk-vs-dundee-united/2u9phz#5793929",
-  "kickoff": "2026-09-05T14:00:00Z",
-  "comp": "Premiership",
-  "home": "Dundee United",
-  "away": "Falkirk",
-  "home_id": "9938",
-  "away_id": "8596",
-  "slugs": [
-   "neil-farrugia"
   ]
  },
  {
@@ -8510,19 +8593,6 @@
   ]
  },
  {
-  "fotmob_id": "5904728",
-  "url": "/matches/goztepe-vs-galatasaray/x7t9c#5904728",
-  "kickoff": "2026-08-29T18:30:00Z",
-  "comp": "S\u00fcper Lig",
-  "home": "Galatasaray",
-  "away": "G\u00f6ztepe",
-  "home_id": "8637",
-  "away_id": "1925",
-  "slugs": [
-   "sinclair-armstrong"
-  ]
- },
- {
   "fotmob_id": "5904735",
   "url": "/matches/goztepe-vs-gaziantep-fk/aqq5a#5904735",
   "kickoff": "2026-09-07T17:00:00Z",
@@ -8833,6 +8903,35 @@
   "away_id": "2205",
   "slugs": [
    "billy-vance"
+  ]
+ },
+ {
+  "fotmob_id": "5847420",
+  "url": "/matches/crusaders-vs-coleraine/53olo#5847420",
+  "kickoff": "2026-09-05T17:00:00Z",
+  "comp": "Premiership",
+  "home": "Coleraine",
+  "away": "Crusaders",
+  "home_id": "2202",
+  "away_id": "1937",
+  "slugs": [
+   "billy-vance",
+   "charles-dunne",
+   "mark-coyle",
+   "rob-slevin"
+  ]
+ },
+ {
+  "fotmob_id": "5967060",
+  "url": "/matches/carrarese-vs-empoli/1v6or3#5967060",
+  "kickoff": "2026-09-05T17:30:00Z",
+  "comp": "Serie B",
+  "home": "Carrarese",
+  "away": "Empoli",
+  "home_id": "6488",
+  "away_id": "8534",
+  "slugs": [
+   "matteo-egan"
   ]
  },
  {
