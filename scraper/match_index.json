@@ -1199,6 +1199,19 @@
   ]
  },
  {
+  "fotmob_id": "5836811",
+  "url": "/matches/wrexham-vs-swansea-city/398i7v#5836811",
+  "kickoff": "2026-09-05T19:00:00Z",
+  "comp": "Championship",
+  "home": "Swansea City",
+  "away": "Wrexham",
+  "home_id": "10003",
+  "away_id": "9841",
+  "slugs": [
+   "adam-idah"
+  ]
+ },
+ {
   "fotmob_id": "5836796",
   "url": "/matches/watford-vs-swansea-city/38yaxj#5836796",
   "kickoff": "2026-09-01T18:45:00Z",
@@ -7470,6 +7483,19 @@
   ]
  },
  {
+  "fotmob_id": "5793933",
+  "url": "/matches/st-mirren-vs-celtic/37u1ls#5793933",
+  "kickoff": "2026-09-05T19:00:00Z",
+  "comp": "Premiership",
+  "home": "St. Mirren",
+  "away": "Celtic",
+  "home_id": "9800",
+  "away_id": "9925",
+  "slugs": [
+   "liam-scales"
+  ]
+ },
+ {
   "fotmob_id": "5793915",
   "url": "/matches/st-johnstone-vs-celtic/2spihd#5793915",
   "kickoff": "2026-09-09T19:00:00Z",
@@ -8858,19 +8884,6 @@
   ]
  },
  {
-  "fotmob_id": "5836811",
-  "url": "/matches/wrexham-vs-swansea-city/398i7v#5836811",
-  "kickoff": "2026-09-05T19:00:00Z",
-  "comp": "Championship",
-  "home": "Swansea City",
-  "away": "Wrexham",
-  "home_id": "10003",
-  "away_id": "9841",
-  "slugs": [
-   "adam-idah"
-  ]
- },
- {
   "fotmob_id": "5101273",
   "url": "/matches/longford-town-vs-kerry-fc/d2b5qaeg#5101273",
   "kickoff": "2026-09-05T18:30:00Z",
@@ -8902,20 +8915,6 @@
    "scott-brady",
    "stefan-ugbesia",
    "taylor-mccarthy"
-  ]
- },
- {
-  "fotmob_id": "5793933",
-  "url": "/matches/st-mirren-vs-celtic/37u1ls#5793933",
-  "kickoff": "2026-09-05T19:00:00Z",
-  "comp": "Premiership",
-  "home": "St. Mirren",
-  "away": "Celtic",
-  "home_id": "9800",
-  "away_id": "9925",
-  "slugs": [
-   "killian-phillips",
-   "liam-scales"
   ]
  },
  {
