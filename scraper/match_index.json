@@ -908,19 +908,6 @@
   ]
  },
  {
-  "fotmob_id": "5868047",
-  "url": "/matches/levante-vs-malaga/2tafoj#5868047",
-  "kickoff": "2026-09-06T16:30:00Z",
-  "comp": "LaLiga",
-  "home": "M\u00e1laga",
-  "away": "Levante",
-  "home_id": "9864",
-  "away_id": "8581",
-  "slugs": [
-   "aaron-ochoa"
-  ]
- },
- {
   "fotmob_id": "5868052",
   "url": "/matches/malaga-vs-celta-vigo/38esbb#5868052",
   "kickoff": "2026-09-13T12:00:00Z",
@@ -1990,6 +1977,19 @@
   ]
  },
  {
+  "fotmob_id": "5811753",
+  "url": "/matches/anderlecht-vs-genk/2v8r1g#5811753",
+  "kickoff": "2026-09-06T16:30:00Z",
+  "comp": "First Division A",
+  "home": "Anderlecht",
+  "away": "Genk",
+  "home_id": "8635",
+  "away_id": "9987",
+  "slugs": [
+   "andrew-omobamidele"
+  ]
+ },
+ {
   "fotmob_id": "5811755",
   "url": "/matches/kv-mechelen-vs-anderlecht/2cer74#5811755",
   "kickoff": "2026-09-11T18:45:00Z",
@@ -2342,6 +2342,19 @@
   "away": "Salzburg",
   "home_id": "8632",
   "away_id": "10013",
+  "slugs": [
+   "armstrong-oko-flex"
+  ]
+ },
+ {
+  "fotmob_id": "5760499",
+  "url": "/matches/levski-sofia-vs-ludogorets-razgrad/azw0ykv#5760499",
+  "kickoff": "2026-09-20T17:30:00Z",
+  "comp": "First Professional League",
+  "home": "Levski Sofia",
+  "away": "Ludogorets Razgrad",
+  "home_id": "8632",
+  "away_id": "210173",
   "slugs": [
    "armstrong-oko-flex"
   ]
@@ -3045,6 +3058,19 @@
   ]
  },
  {
+  "fotmob_id": "5865462",
+  "url": "/matches/ujpest-vs-ferencvaros/26rgqz#5865462",
+  "kickoff": "2026-09-06T15:45:00Z",
+  "comp": "Nemzeti Bajnoks\u00e1g I",
+  "home": "Ferencv\u00e1ros",
+  "away": "\u00dajpest",
+  "home_id": "8222",
+  "away_id": "8043",
+  "slugs": [
+   "callum-odowda"
+  ]
+ },
+ {
   "fotmob_id": "5865439",
   "url": "/matches/gyori-eto-vs-ferencvaros/1m5wrn#5865439",
   "kickoff": "2026-09-03T17:30:00Z",
@@ -3052,19 +3078,6 @@
   "home": "Gy\u00f6ri ETO",
   "away": "Ferencv\u00e1ros",
   "home_id": "5755",
-  "away_id": "8222",
-  "slugs": [
-   "callum-odowda"
-  ]
- },
- {
-  "fotmob_id": "5865456",
-  "url": "/matches/ferencvaros-vs-puskas-fc-academy/ud0w986#5865456",
-  "kickoff": "2026-08-30T17:00:00Z",
-  "comp": "Nemzeti Bajnoks\u00e1g I",
-  "home": "Pusk\u00e1s FC Academy",
-  "away": "Ferencv\u00e1ros",
-  "home_id": "355346",
   "away_id": "8222",
   "slugs": [
    "callum-odowda"
@@ -3082,6 +3095,19 @@
   "slugs": [
    "callum-odowda",
    "liam-scales"
+  ]
+ },
+ {
+  "fotmob_id": "5865467",
+  "url": "/matches/nyiregyhaza-spartacus-fc-vs-ferencvaros/vbr1z#5865467",
+  "kickoff": "2026-09-20T17:30:00Z",
+  "comp": "NB I",
+  "home": "Ny\u00edregyh\u00e1za Spartacus FC",
+  "away": "Ferencv\u00e1ros",
+  "home_id": "2035",
+  "away_id": "8222",
+  "slugs": [
+   "callum-odowda"
   ]
  },
  {
@@ -4312,6 +4338,19 @@
   "away": "Monza",
   "home_id": "9888",
   "away_id": "6504",
+  "slugs": [
+   "corrie-ndaba"
+  ]
+ },
+ {
+  "fotmob_id": "5749680",
+  "url": "/matches/milan-vs-lecce/2td7ci#5749680",
+  "kickoff": "2026-09-20T18:45:00Z",
+  "comp": "Serie A",
+  "home": "Milan",
+  "away": "Lecce",
+  "home_id": "8564",
+  "away_id": "9888",
   "slugs": [
    "corrie-ndaba"
   ]
@@ -7466,19 +7505,6 @@
   ]
  },
  {
-  "fotmob_id": "5967055",
-  "url": "/matches/empoli-vs-mantova/2t1qrp#5967055",
-  "kickoff": "2026-08-30T17:00:00Z",
-  "comp": "Serie B",
-  "home": "Mantova",
-  "away": "Empoli",
-  "home_id": "9889",
-  "away_id": "8534",
-  "slugs": [
-   "matteo-egan"
-  ]
- },
- {
   "fotmob_id": "5967073",
   "url": "/matches/empoli-vs-arezzo/2slyq9#5967073",
   "kickoff": "2026-09-11T17:00:00Z",
@@ -7487,6 +7513,19 @@
   "away": "Arezzo",
   "home_id": "8534",
   "away_id": "9849",
+  "slugs": [
+   "matteo-egan"
+  ]
+ },
+ {
+  "fotmob_id": "5967085",
+  "url": "/matches/empoli-vs-modena/2t0yc6#5967085",
+  "kickoff": "2026-09-20T17:30:00Z",
+  "comp": "Serie B",
+  "home": "Modena",
+  "away": "Empoli",
+  "home_id": "9887",
+  "away_id": "8534",
   "slugs": [
    "matteo-egan"
   ]
@@ -7664,19 +7703,6 @@
   ]
  },
  {
-  "fotmob_id": "1000015474",
-  "url": "/matches/francs-borains-vs-anderlecht-futures/dw0jl7me#1000015474",
-  "kickoff": "2026-09-18T18:00:00Z",
-  "comp": "First Division B",
-  "home": "Francs Borains",
-  "away": "Anderlecht Futures",
-  "home_id": "96953",
-  "away_id": "1378461",
-  "slugs": [
-   "noah-jauny"
-  ]
- },
- {
   "fotmob_id": "1000015463",
   "url": "/matches/francs-borains-vs-ksc-lokeren/m3zvx8b#1000015463",
   "kickoff": "2026-09-06T17:15:00Z",
@@ -7685,6 +7711,19 @@
   "away": "KSC Lokeren",
   "home_id": "96953",
   "away_id": "213307",
+  "slugs": [
+   "noah-jauny"
+  ]
+ },
+ {
+  "fotmob_id": "1000015474",
+  "url": "/matches/francs-borains-vs-anderlecht-futures/dw0jl7me#1000015474",
+  "kickoff": "2026-09-18T18:00:00Z",
+  "comp": "First Division B",
+  "home": "Francs Borains",
+  "away": "Anderlecht Futures",
+  "home_id": "96953",
+  "away_id": "1378461",
   "slugs": [
    "noah-jauny"
   ]
@@ -7958,19 +7997,6 @@
   "away": "TSV Havelse",
   "home_id": "8171",
   "away_id": "89338",
-  "slugs": [
-   "ryan-johansson"
-  ]
- },
- {
-  "fotmob_id": "5905876",
-  "url": "/matches/preussen-munster-vs-viktoria-koln-1904/il0gfhk#5905876",
-  "kickoff": "2026-08-30T17:30:00Z",
-  "comp": "3. Liga",
-  "home": "Viktoria K\u00f6ln 1904",
-  "away": "Preussen M\u00fcnster",
-  "home_id": "276267",
-  "away_id": "8171",
   "slugs": [
    "ryan-johansson"
   ]
@@ -8379,6 +8405,19 @@
   ]
  },
  {
+  "fotmob_id": "5904753",
+  "url": "/matches/goztepe-vs-rizespor/4zg5c#5904753",
+  "kickoff": "2026-09-20T17:00:00Z",
+  "comp": "Super Lig",
+  "home": "G\u00f6ztepe",
+  "away": "Rizespor",
+  "home_id": "1925",
+  "away_id": "2166",
+  "slugs": [
+   "sinclair-armstrong"
+  ]
+ },
+ {
   "fotmob_id": "5811758",
   "url": "/matches/oh-leuven-vs-cercle-brugge/155okr#5811758",
   "kickoff": "2026-09-12T18:45:00Z",
@@ -8653,6 +8692,19 @@
   ]
  },
  {
+  "fotmob_id": "5868047",
+  "url": "/matches/levante-vs-malaga/2tafoj#5868047",
+  "kickoff": "2026-09-06T16:30:00Z",
+  "comp": "LaLiga",
+  "home": "M\u00e1laga",
+  "away": "Levante",
+  "home_id": "9864",
+  "away_id": "8581",
+  "slugs": [
+   "aaron-ochoa"
+  ]
+ },
+ {
   "fotmob_id": "6046149",
   "url": "/matches/dundalk-vs-derry-city/uxaga#6046149",
   "kickoff": "2026-09-06T15:00:00Z",
@@ -8724,32 +8776,6 @@
   "away_id": "2172",
   "slugs": [
    "ali-reghba"
-  ]
- },
- {
-  "fotmob_id": "5811753",
-  "url": "/matches/anderlecht-vs-genk/2v8r1g#5811753",
-  "kickoff": "2026-09-06T16:30:00Z",
-  "comp": "Belgian Pro League",
-  "home": "Anderlecht",
-  "away": "Genk",
-  "home_id": "8635",
-  "away_id": "9987",
-  "slugs": [
-   "andrew-omobamidele"
-  ]
- },
- {
-  "fotmob_id": "5865462",
-  "url": "/matches/ujpest-vs-ferencvaros/26rgqz#5865462",
-  "kickoff": "2026-09-06T15:45:00Z",
-  "comp": "NB I",
-  "home": "Ferencv\u00e1ros",
-  "away": "\u00dajpest",
-  "home_id": "8222",
-  "away_id": "8043",
-  "slugs": [
-   "callum-odowda"
   ]
  },
  {

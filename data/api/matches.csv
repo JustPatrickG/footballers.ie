@@ -1,7 +1,4 @@
 kickoff,competition,home,away,home_id,away_id,home_score,away_score,status,minute,players
-2026-08-30T17:00:00Z,Nemzeti Bajnokság I,Puskás FC Academy,Ferencváros,355346,8222,1,2,ft,,callum-odowda
-2026-08-30T17:00:00Z,Serie B,Mantova,Empoli,9889,8534,3,1,ft,,matteo-egan
-2026-08-30T17:30:00Z,3. Liga,Viktoria Köln 1904,Preussen Münster,276267,8171,4,1,ft,,ryan-johansson
 2026-08-30T20:30:00Z,MLS,Columbus Crew,New England Revolution,6001,6580,1,3,ft,,brooks-lennon
 2026-08-31T12:00:00Z,Premier League 2,Bournemouth U21,Middlesbrough U21,2128213,773660,3,1,ft,,ade-solanke
 2026-08-31T12:00:00Z,Premier League 2,Brentford U21,Sunderland U21,2054260,773657,5,1,ft,,donal-oconnor
@@ -148,15 +145,12 @@ kickoff,competition,home,away,home_id,away_id,home_score,away_score,status,minut
 2026-09-06T11:30:00Z,2. Bundesliga,Hertha BSC,Magdeburg,8177,8188,2,1,ft,,anselmo-garcia-macnulty
 2026-09-06T13:00:00Z,Premier League,Everton,Manchester United,8668,10260,2,2,ft,,desmond-armstrong;jake-obrien;mark-travers
 2026-09-06T14:00:00Z,Premiership,Heart of Midlothian,Dundee FC,9860,8284,2,1,ft,,bobby-wales;jack-moorhouse;kieran-ohara;oisin-mcentee
-2026-09-06T14:00:00Z,Premiership,St. Johnstone,Hibernian,8467,10251,2,1,ft,,jacob-devaney;jamie-mcgrath;owen-elding;ruari-paton
+2026-09-06T14:00:00Z,Premiership,St. Johnstone,Hibernian,8467,10251,2,1,ft,,jacob-devaney;jamie-mcgrath;ruari-paton
 2026-09-06T14:30:00Z,3. Liga,Sonnenhof Großaspach,Hoffenheim II,94941,94940,1,0,ft,,matthew-moore
-2026-09-06T15:00:00Z,FAI Cup,Derry City,Dundalk,8338,1853,,,live,,aaron-keogh;adam-oreilly;aodh-dervin;barry-cotter;brian-maher;brooklyn-lyons-foster;callum-downey;christy-grogan;cian-dillon;cian-spaight;ciaran-kilduff;ciaran-mullan;conal-mcdermott;conall-alfred;conor-kearns;conor-okeeffe;daithi-folan;darragh-burns;darragh-markey;daryl-horgan;egor-vassenin;enda-minogue;eoghan-curran;ethan-hall;harry-groome;harvey-warren;james-clarke;james-mcclean;john-ross-wilson;keith-buckley;keith-ward;luke-mulligan;mark-connolly;max-ferguson;mayowa-animasahun;michael-duffy;michael-mccolgan;oisin-obrien;patrick-mcclean;robert-cornwall;ronan-teahan;samuel-safaei;sean-spaight;shane-tracey;shaun-platt;shay-casey;terence-doherty;trevor-clarke;tyreke-wilson
 2026-09-06T15:00:00Z,Eliteserien,Molde,KFUM,9917,2305,2,0,ft,,trent-kone-doherty
-2026-09-06T15:30:00Z,Prva Liga,Maribor,Mura,8340,2172,,,live,,ali-reghba
-2026-09-06T15:45:00Z,NB I,Ferencváros,Újpest,8222,8043,,,live,,callum-odowda
-2026-09-06T16:30:00Z,LaLiga,Málaga,Levante,9864,8581,,,live,,aaron-ochoa
-2026-09-06T16:30:00Z,Belgian Pro League,Anderlecht,Genk,8635,9987,,,scheduled,,andrew-omobamidele
-2026-09-06T17:15:00Z,First Division B,Francs Borains,KSC Lokeren,96953,213307,,,scheduled,,noah-jauny
+2026-09-06T15:45:00Z,Nemzeti Bajnokság I,Ferencváros,Újpest,8222,8043,2,2,ft,,callum-odowda
+2026-09-06T16:30:00Z,First Division A,Anderlecht,Genk,8635,9987,0,0,ft,,andrew-omobamidele
+2026-09-06T17:15:00Z,First Division B,Francs Borains,KSC Lokeren,96953,213307,3,0,ft,,noah-jauny
 2026-09-06T22:00:00Z,Premier League,Vancouver FC,Supra du Québec,1436202,1899648,,,scheduled,,tom-field
 2026-09-07T16:30:00Z,Serie A,Cagliari,Lecce,8529,9888,,,scheduled,,corrie-ndaba
 2026-09-07T17:00:00Z,Super Lig,Göztepe,Gaziantep FK,1925,4081,,,scheduled,,sinclair-armstrong
@@ -547,7 +541,12 @@ kickoff,competition,home,away,home_id,away_id,home_score,away_score,status,minut
 2026-09-20T14:00:00Z,Super Lig,Erzurumspor FK,Samsunspor,281467,9750,,,scheduled,,festy-ebosele
 2026-09-20T14:30:00Z,3. Liga,Waldhof Mannheim,Preussen Münster,9743,8171,,,scheduled,,ryan-johansson
 2026-09-20T15:00:00Z,Segunda Federacion - Group 3,Deportiva Minera,Orihuela,278805,8213,,,scheduled,,kevin-toner
+2026-09-20T16:30:00Z,LaLiga,Deportivo A Coruña,Real Betis,9783,8603,,,scheduled,,troy-parrott
 2026-09-20T17:00:00Z,Super Lig,Göztepe,Rizespor,1925,2166,,,scheduled,,sinclair-armstrong
 2026-09-20T17:30:00Z,First Professional League,Levski Sofia,Ludogorets Razgrad,8632,210173,,,scheduled,,armstrong-oko-flex
 2026-09-20T17:30:00Z,NB I,Nyíregyháza Spartacus FC,Ferencváros,2035,8222,,,scheduled,,callum-odowda
 2026-09-20T17:30:00Z,Serie B,Modena,Empoli,9887,8534,,,scheduled,,matteo-egan
+2026-09-20T18:45:00Z,Serie A,Milan,Lecce,8564,9888,,,scheduled,,corrie-ndaba
+2026-09-06T15:00:00Z,FAI Cup,Derry City,Dundalk,8338,1853,,,live,,aaron-keogh;adam-oreilly;aodh-dervin;barry-cotter;brian-maher;brooklyn-lyons-foster;callum-downey;christy-grogan;cian-dillon;cian-spaight;ciaran-kilduff;ciaran-mullan;conal-mcdermott;conall-alfred;conor-kearns;conor-okeeffe;daithi-folan;darragh-burns;darragh-markey;daryl-horgan;egor-vassenin;enda-minogue;eoghan-curran;ethan-hall;harry-groome;harvey-warren;james-clarke;james-mcclean;john-ross-wilson;keith-buckley;keith-ward;luke-mulligan;mark-connolly;max-ferguson;mayowa-animasahun;michael-duffy;michael-mccolgan;oisin-obrien;patrick-mcclean;robert-cornwall;ronan-teahan;samuel-safaei;sean-spaight;shane-tracey;shaun-platt;shay-casey;terence-doherty;trevor-clarke;tyreke-wilson
+2026-09-06T15:30:00Z,Prva Liga,Maribor,Mura,8340,2172,,,live,,ali-reghba
+2026-09-06T16:30:00Z,LaLiga,Málaga,Levante,9864,8581,,,live,,aaron-ochoa
