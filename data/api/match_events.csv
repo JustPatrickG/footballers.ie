@@ -5532,7 +5532,7 @@ match_id,minute,type,player,team,venue
 2026-09-05-bradford-city-v-mansfield-town,90,sub_off,Ibou Touray,Bradford City,Mbanq Valley Parade
 2026-09-05-bradford-city-v-mansfield-town,90,sub_on,Macaulay Gillesphey,Bradford City,Mbanq Valley Parade
 2026-09-05-bradford-city-v-mansfield-town,90,yellow,George Pratt,Bradford City,Mbanq Valley Parade
-2026-09-05-brentford-u18-v-aston-villa-u18,19,goal,Erinoluwa Orebowale,Aston Villa U18,Stadium
+2026-09-05-brentford-u18-v-aston-villa-u18,19,goal,Erin Orebowale,Aston Villa U18,Stadium
 2026-09-05-brentford-u18-v-aston-villa-u18,31,goal,Joshua Blake,Aston Villa U18,Stadium
 2026-09-05-brentford-u18-v-aston-villa-u18,49,goal,Jahmi Kellyman,Aston Villa U18,Stadium
 2026-09-05-brentford-u18-v-aston-villa-u18,73,goal,George Thomas,Aston Villa U18,Stadium
@@ -7054,6 +7054,9 @@ match_id,minute,type,player,team,venue
 2026-09-05-wycombe-wanderers-v-milton-keynes-dons,79,sub_off,Cauley Woodrow,Wycombe Wanderers,Adams Park
 2026-09-05-wycombe-wanderers-v-milton-keynes-dons,79,sub_on,Josh Scowen,Wycombe Wanderers,Adams Park
 2026-09-05-wycombe-wanderers-v-milton-keynes-dons,84,yellow,Marvin Ekpiteta,Milton Keynes Dons,Adams Park
+2026-09-06-anderlecht-v-genk,20,yellow,Oliver Antman,Anderlecht,Lotto Park
+2026-09-06-anderlecht-v-genk,46,sub_off,Ayumu Yokoyama,Genk,Lotto Park
+2026-09-06-anderlecht-v-genk,46,sub_on,Noah Adedeji-Sternberg,Genk,Lotto Park
 2026-09-06-austin-fc-v-san-jose-earthquakes,8,goal,Beau Leroux,San Jose Earthquakes,Q2 Stadium
 2026-09-06-austin-fc-v-san-jose-earthquakes,61,sub_off,Jon Gallagher,Austin FC,Q2 Stadium
 2026-09-06-austin-fc-v-san-jose-earthquakes,61,sub_on,Zan Kolmanic,Austin FC,Q2 Stadium
@@ -7101,6 +7104,9 @@ match_id,minute,type,player,team,venue
 2026-09-06-derry-city-v-dundalk,12,goal,Shane Tracey,Dundalk,Stadium
 2026-09-06-derry-city-v-dundalk,23,goal,Patrick McClean,Derry City,Stadium
 2026-09-06-derry-city-v-dundalk,44,goal,Michael Duffy,Derry City,Stadium
+2026-09-06-derry-city-v-dundalk,80,goal,Michael Duffy,Derry City,Stadium
+2026-09-06-derry-city-v-dundalk,85,goal,Michael Duffy,Derry City,Stadium
+2026-09-06-derry-city-v-dundalk,90,goal,Leonardo Gaxha,Dundalk,Stadium
 2026-09-06-everton-v-manchester-united,13,yellow,Harrison Armstrong,Everton,Hill Dickinson Stadium
 2026-09-06-everton-v-manchester-united,34,yellow,Brennan Johnson,Everton,Hill Dickinson Stadium
 2026-09-06-everton-v-manchester-united,46,goal,Bryan Mbeumo,Manchester United,Hill Dickinson Stadium
@@ -7130,6 +7136,26 @@ match_id,minute,type,player,team,venue
 2026-09-06-ferencvaros-v-ujpest,8,yellow,Miron Mucsanyi,Újpest,Groupama Arena
 2026-09-06-ferencvaros-v-ujpest,20,goal,Bamidele Yusuf,Ferencváros,Groupama Arena
 2026-09-06-ferencvaros-v-ujpest,23,yellow,Toon Raemaekers,Ferencváros,Groupama Arena
+2026-09-06-ferencvaros-v-ujpest,44,goal,Kristoffer Zachariassen,Ferencváros,Groupama Arena
+2026-09-06-ferencvaros-v-ujpest,45,goal,Patrizio Stronati,Újpest,Groupama Arena
+2026-09-06-ferencvaros-v-ujpest,46,sub_off,Miron Mucsanyi,Újpest,Groupama Arena
+2026-09-06-ferencvaros-v-ujpest,46,sub_off,Ádám Bagi,Ferencváros,Groupama Arena
+2026-09-06-ferencvaros-v-ujpest,46,sub_on,Gleofilo Vlijter,Újpest,Groupama Arena
+2026-09-06-ferencvaros-v-ujpest,46,sub_on,Krisztián Lisztes,Ferencváros,Groupama Arena
+2026-09-06-ferencvaros-v-ujpest,55,goal,Aljosa Matko,Újpest,Groupama Arena
+2026-09-06-ferencvaros-v-ujpest,65,sub_off,Daniel Arzani,Ferencváros,Groupama Arena
+2026-09-06-ferencvaros-v-ujpest,65,sub_off,Ádám Nagy,Ferencváros,Groupama Arena
+2026-09-06-ferencvaros-v-ujpest,65,sub_on,Veljko Birmancevic,Ferencváros,Groupama Arena
+2026-09-06-ferencvaros-v-ujpest,65,sub_on,Naby Keïta,Ferencváros,Groupama Arena
+2026-09-06-ferencvaros-v-ujpest,75,sub_off,Etienne Amenyido,Újpest,Groupama Arena
+2026-09-06-ferencvaros-v-ujpest,75,sub_off,Matija Ljujic,Újpest,Groupama Arena
+2026-09-06-ferencvaros-v-ujpest,75,sub_on,Tizian-Valentino Scharmer,Újpest,Groupama Arena
+2026-09-06-ferencvaros-v-ujpest,75,sub_on,Noah Fenyö,Újpest,Groupama Arena
+2026-09-06-ferencvaros-v-ujpest,81,sub_off,Krisztofer Horváth,Újpest,Groupama Arena
+2026-09-06-ferencvaros-v-ujpest,81,sub_on,Arijan Ademi,Újpest,Groupama Arena
+2026-09-06-ferencvaros-v-ujpest,85,yellow,Kristoffer Zachariassen,Ferencváros,Groupama Arena
+2026-09-06-ferencvaros-v-ujpest,90,yellow,Bamidele Yusuf,Ferencváros,Groupama Arena
+2026-09-06-francs-borains-v-ksc-lokeren,,,,,Stade Robert Urbain
 2026-09-06-heart-of-midlothian-v-dundee-fc,10,sub_off,Joe Westley,Dundee FC,Tynecastle Park
 2026-09-06-heart-of-midlothian-v-dundee-fc,10,sub_on,Bobby Wales,Dundee FC,Tynecastle Park
 2026-09-06-heart-of-midlothian-v-dundee-fc,17,goal,Bradley Fink,Dundee FC,Tynecastle Park
@@ -7168,8 +7194,13 @@ match_id,minute,type,player,team,venue
 2026-09-06-hertha-bsc-v-magdeburg,74,sub_on,Luca Schuler,Hertha BSC,Olympiastadion Berlin
 2026-09-06-hertha-bsc-v-magdeburg,75,sub_off,Luka Hyryläinen,Magdeburg,Olympiastadion Berlin
 2026-09-06-hertha-bsc-v-magdeburg,75,sub_on,Torben Müsel,Magdeburg,Olympiastadion Berlin
+2026-09-06-malaga-v-levante,9,missed_penalty,Chupe,Málaga,Estadio La Rosaleda
+2026-09-06-malaga-v-levante,25,yellow,Dani Lorenzo,Málaga,Estadio La Rosaleda
+2026-09-06-malaga-v-levante,34,yellow,Rafita,Málaga,Estadio La Rosaleda
+2026-09-06-malaga-v-levante,45,yellow,Pablo Martínez,Málaga,Estadio La Rosaleda
 2026-09-06-maribor-v-mura,2,goal,Isaac Tshipamba,Maribor,Stadium
 2026-09-06-maribor-v-mura,44,goal,Niko Kasalo,Mura,Stadium
+2026-09-06-maribor-v-mura,54,red,Aljaz Zalaznik,Mura,Stadium
 2026-09-06-molde-v-kfum,26,yellow,Jørgen Isnes,KFUM,Aker Stadion
 2026-09-06-molde-v-kfum,37,goal,Oskar Spiten-Nysæter,Molde,Aker Stadion
 2026-09-06-molde-v-kfum,39,sub_off,Eirik Haugan,Molde,Aker Stadion
