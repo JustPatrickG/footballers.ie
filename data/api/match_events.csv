@@ -7079,7 +7079,26 @@ match_id,minute,type,player,team,venue
 2026-09-06-austin-fc-v-san-jose-earthquakes,88,sub_on,Nick Fernandez,San Jose Earthquakes,Q2 Stadium
 2026-09-06-austin-fc-v-san-jose-earthquakes,90,goal,Guilherme Biro,Austin FC,Q2 Stadium
 2026-09-06-cercle-brugge-v-gent,21,own_goal,Emmanuel Kakou,Gent,Jan Breydelstadion
+2026-09-06-cercle-brugge-v-gent,61,sub_off,Lucas Michal,Cercle Brugge,Jan Breydelstadion
+2026-09-06-cercle-brugge-v-gent,61,sub_on,Erick Nunes,Cercle Brugge,Jan Breydelstadion
+2026-09-06-cercle-brugge-v-gent,67,sub_off,Momodou Sonko,Gent,Jan Breydelstadion
+2026-09-06-cercle-brugge-v-gent,67,sub_off,Michel-Ange Balikwisha,Gent,Jan Breydelstadion
+2026-09-06-cercle-brugge-v-gent,67,sub_on,El Hadji Seck,Gent,Jan Breydelstadion
+2026-09-06-cercle-brugge-v-gent,67,sub_on,Lászlo Bénes,Gent,Jan Breydelstadion
+2026-09-06-cercle-brugge-v-gent,70,yellow,Lazare Amani,Cercle Brugge,Jan Breydelstadion
+2026-09-06-cercle-brugge-v-gent,72,sub_off,Emmanuel Kakou,Cercle Brugge,Jan Breydelstadion
+2026-09-06-cercle-brugge-v-gent,72,sub_off,Lazare Amani,Cercle Brugge,Jan Breydelstadion
+2026-09-06-cercle-brugge-v-gent,72,sub_on,Babatunde Akinsola,Cercle Brugge,Jan Breydelstadion
+2026-09-06-cercle-brugge-v-gent,72,sub_on,Krys Kouassi,Cercle Brugge,Jan Breydelstadion
+2026-09-06-cercle-brugge-v-gent,78,goal,Tibe De Vlieger,Gent,Jan Breydelstadion
+2026-09-06-cercle-brugge-v-gent,78,sub_off,Mathias Delorge,Gent,Jan Breydelstadion
+2026-09-06-cercle-brugge-v-gent,78,sub_on,Leonardo Lopes,Gent,Jan Breydelstadion
+2026-09-06-cercle-brugge-v-gent,81,sub_off,Valy Konaté,Cercle Brugge,Jan Breydelstadion
+2026-09-06-cercle-brugge-v-gent,81,sub_on,Royer Caicedo,Cercle Brugge,Jan Breydelstadion
+2026-09-06-cercle-brugge-v-gent,82,sub_off,Steve Ngoura,Cercle Brugge,Jan Breydelstadion
+2026-09-06-cercle-brugge-v-gent,82,sub_on,Abdoul Ouattara,Cercle Brugge,Jan Breydelstadion
 2026-09-06-deportiva-minera-v-pena-dep-santa-eulalia,85,goal,Aaron Pinan,Deportiva Minera,Stadium
+2026-09-06-everton-v-manchester-united,,,,,Hill Dickinson Stadium
 2026-09-06-hertha-bsc-v-magdeburg,10,goal,Josip Brekalo,Hertha BSC,Olympiastadion Berlin
 2026-09-06-hertha-bsc-v-magdeburg,12,yellow,Jón Thorsteinsson,Hertha BSC,Olympiastadion Berlin
 2026-09-06-hertha-bsc-v-magdeburg,31,goal,Falko Michel,Magdeburg,Olympiastadion Berlin
@@ -7088,6 +7107,15 @@ match_id,minute,type,player,team,venue
 2026-09-06-hertha-bsc-v-magdeburg,46,sub_on,Oluwaseun Adewumi,Hertha BSC,Olympiastadion Berlin
 2026-09-06-hertha-bsc-v-magdeburg,47,goal,Oluwaseun Adewumi,Hertha BSC,Olympiastadion Berlin
 2026-09-06-hertha-bsc-v-magdeburg,50,yellow,Tobias Müller,Magdeburg,Olympiastadion Berlin
+2026-09-06-hertha-bsc-v-magdeburg,51,yellow,Paul Seguin,Hertha BSC,Olympiastadion Berlin
+2026-09-06-hertha-bsc-v-magdeburg,62,second_yellow,Paul Seguin,Hertha BSC,Olympiastadion Berlin
+2026-09-06-hertha-bsc-v-magdeburg,64,sub_off,Sebastian Grønning,Hertha BSC,Olympiastadion Berlin
+2026-09-06-hertha-bsc-v-magdeburg,64,sub_on,Pascal Klemens,Hertha BSC,Olympiastadion Berlin
+2026-09-06-hertha-bsc-v-magdeburg,73,second_yellow,Tobias Müller,Magdeburg,Olympiastadion Berlin
+2026-09-06-hertha-bsc-v-magdeburg,74,sub_off,Jón Thorsteinsson,Hertha BSC,Olympiastadion Berlin
+2026-09-06-hertha-bsc-v-magdeburg,74,sub_on,Luca Schuler,Hertha BSC,Olympiastadion Berlin
+2026-09-06-hertha-bsc-v-magdeburg,75,sub_off,Luka Hyryläinen,Magdeburg,Olympiastadion Berlin
+2026-09-06-hertha-bsc-v-magdeburg,75,sub_on,Torben Müsel,Magdeburg,Olympiastadion Berlin
 2026-09-06-orange-county-sc-v-sacramento-republic-fc,19,yellow,Tyler Wolff,Sacramento Republic FC,Championship Soccer Stadium
 2026-09-06-orange-county-sc-v-sacramento-republic-fc,61,goal,Chris Hegardt,Orange County SC,Championship Soccer Stadium
 2026-09-06-orange-county-sc-v-sacramento-republic-fc,62,sub_off,Cal Jennings,Sacramento Republic FC,Championship Soccer Stadium
