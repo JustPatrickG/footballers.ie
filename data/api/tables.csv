@@ -90,11 +90,11 @@ Premier League,47,4,Chelsea,8455,2,2,0,0,7,5,2,6
 Premier League,47,5,Brentford,9937,3,1,2,0,5,2,3,5
 Premier League,47,6,Liverpool,8650,3,1,2,0,6,4,2,5
 Premier League,47,7,Newcastle United,10261,3,1,2,0,6,4,2,5
-Premier League,47,8,Everton,8668,3,1,2,0,3,1,2,5
-Premier League,47,9,Leeds United,8463,3,1,2,0,3,2,1,5
-Premier League,47,10,Brighton & Hove Albion,10204,3,1,1,1,8,5,3,4
-Premier League,47,11,Manchester United,10260,3,1,1,1,5,4,1,4
-Premier League,47,12,Sunderland,8472,3,1,1,1,3,3,0,4
+Premier League,47,8,Leeds United,8463,3,1,2,0,3,2,1,5
+Premier League,47,9,Brighton & Hove Albion,10204,3,1,1,1,8,5,3,4
+Premier League,47,10,Everton,8668,2,1,1,0,3,1,2,4
+Premier League,47,11,Sunderland,8472,3,1,1,1,3,3,0,4
+Premier League,47,12,Manchester United,10260,2,1,0,1,5,4,1,3
 Premier League,47,13,Crystal Palace,9826,3,1,0,2,4,8,-4,3
 Premier League,47,14,Ipswich Town,9902,3,1,0,2,4,8,-4,3
 Premier League,47,15,AFC Bournemouth,8678,3,0,2,1,4,5,-1,2
@@ -309,15 +309,15 @@ LaLiga,87,20,Málaga,9864,3,0,1,2,1,7,-6,1
 2. Bundesliga,146,3,FC Heidenheim,94937,4,3,0,1,11,10,1,9
 2. Bundesliga,146,4,Wolfsburg,8721,4,2,2,0,10,6,4,8
 2. Bundesliga,146,5,Kaiserslautern,8350,4,2,2,0,5,1,4,8
-2. Bundesliga,146,6,VfL Osnabrück,9775,4,2,0,2,7,7,0,6
-2. Bundesliga,146,7,Bochum,9911,4,2,0,2,3,3,0,6
-2. Bundesliga,146,8,Magdeburg,8188,4,2,0,2,7,8,-1,6
+2. Bundesliga,146,6,Bochum,9911,4,2,0,2,3,3,0,6
+2. Bundesliga,146,7,Magdeburg,8188,4,2,0,2,7,8,-1,6
+2. Bundesliga,146,8,VfL Osnabrück,9775,4,2,0,2,5,7,-2,6
 2. Bundesliga,146,9,Karlsruher SC,8295,4,1,2,1,6,8,-2,5
 2. Bundesliga,146,10,Arminia Bielefeld,9912,4,1,1,2,7,8,-1,4
 2. Bundesliga,146,11,Energie Cottbus,8398,4,1,1,2,10,12,-2,4
 2. Bundesliga,146,12,Greuther Fürth,8357,4,1,1,2,7,9,-2,4
 2. Bundesliga,146,13,Hannover 96,9904,4,1,1,2,4,6,-2,4
-2. Bundesliga,146,14,Eintracht Braunschweig,9776,4,1,0,3,9,10,-1,3
+2. Bundesliga,146,14,Eintracht Braunschweig,9776,4,1,0,3,9,8,1,3
 2. Bundesliga,146,15,St. Pauli,8152,4,0,3,1,6,7,-1,3
 2. Bundesliga,146,16,Holstein Kiel,8150,4,0,3,1,6,8,-2,3
 2. Bundesliga,146,17,Dynamo Dresden,8480,4,1,0,3,5,10,-5,3
@@ -380,17 +380,17 @@ Serie A,55,4,Milan,8564,2,2,0,0,4,1,3,6
 Serie A,55,5,Juventus,9885,2,2,0,0,3,0,3,6
 Serie A,55,6,Lazio,8543,2,2,0,0,2,0,2,6
 Serie A,55,7,Atalanta,8524,3,2,0,1,4,3,1,6
-Serie A,55,8,Frosinone,9891,3,1,1,1,3,1,2,4
-Serie A,55,9,Udinese,8600,2,1,1,0,4,3,1,4
-Serie A,55,10,Sassuolo,7943,2,1,0,1,3,3,0,3
+Serie A,55,8,Udinese,8600,2,1,1,0,4,3,1,4
+Serie A,55,9,Sassuolo,7943,2,1,0,1,3,3,0,3
+Serie A,55,10,Frosinone,9891,2,1,0,1,3,1,2,3
 Serie A,55,11,Napoli,9875,3,1,0,2,5,5,0,3
 Serie A,55,12,Cagliari,8529,2,1,0,1,1,1,0,3
 Serie A,55,13,Lecce,9888,2,1,0,1,2,4,-2,3
 Serie A,55,14,Torino,9804,3,1,0,2,4,5,-1,3
-Serie A,55,15,Parma,10167,3,0,1,2,0,3,-3,1
-Serie A,55,16,Monza,6504,3,0,1,2,3,7,-4,1
-Serie A,55,17,Venezia,7881,3,0,1,2,0,4,-4,1
-Serie A,55,18,Bologna,9857,2,0,0,2,0,2,-2,0
+Serie A,55,15,Bologna,9857,2,0,0,2,0,2,-2,0
+Serie A,55,16,Parma,10167,2,0,0,2,0,3,-3,0
+Serie A,55,17,Monza,6504,2,0,0,2,3,7,-4,0
+Serie A,55,18,Venezia,7881,2,0,0,2,0,4,-4,0
 Serie A,55,19,Genoa,10233,3,0,0,3,1,7,-6,0
 Serie A,55,20,Fiorentina,8535,3,0,0,3,1,9,-8,0
 Super Lig,71,1,Galatasaray,8637,4,3,1,0,12,6,6,10
@@ -431,30 +431,30 @@ A-League,113,12,Western Sydney Wanderers FC,323834,0,0,0,0,0,0,0,0
 3. Liga,208,6,RW Essen,8296,4,2,1,1,4,5,-1,7
 3. Liga,208,7,Hoffenheim II,94940,3,2,0,1,9,4,5,6
 3. Liga,208,8,Viktoria Köln 1904,276267,4,2,0,2,9,8,1,6
-3. Liga,208,9,VfB Stuttgart II,8458,4,2,0,2,6,7,-1,6
-3. Liga,208,10,Meppen,79904,4,2,0,2,6,9,-3,6
+3. Liga,208,9,Meppen,79904,4,2,0,2,6,9,-3,6
+3. Liga,208,10,Würzburger Kickers,145486,4,1,2,1,7,6,1,5
 3. Liga,208,11,Ingolstadt,8234,4,1,2,1,5,6,-1,5
-3. Liga,208,12,Würzburger Kickers,145486,4,1,1,2,7,7,0,4
-3. Liga,208,13,Fortuna Köln,7786,3,1,1,1,3,3,0,4
-3. Liga,208,14,Waldhof Mannheim,9743,4,1,1,2,7,8,-1,4
+3. Liga,208,12,Fortuna Köln,7786,3,1,1,1,3,3,0,4
+3. Liga,208,13,Waldhof Mannheim,9743,4,1,1,2,7,8,-1,4
+3. Liga,208,14,VfB Stuttgart II,8458,4,1,1,2,5,7,-2,4
 3. Liga,208,15,TSV Havelse,89338,4,1,0,3,6,8,-2,3
 3. Liga,208,16,Fortuna Düsseldorf,8194,3,1,0,2,2,4,-2,3
 3. Liga,208,17,Jahn Regensburg,7789,4,1,0,3,7,10,-3,3
 3. Liga,208,18,Sonnenhof Großaspach,94941,3,1,0,2,1,4,-3,3
 3. Liga,208,19,SC Verl,7783,4,1,0,3,5,10,-5,3
 3. Liga,208,20,Wehen Wiesbaden,8196,4,0,2,2,2,8,-6,2
-Eredivisie,57,1,PSV Eindhoven,8640,5,4,1,0,18,6,12,13
-Eredivisie,57,2,AZ Alkmaar,10229,5,4,0,1,14,5,9,12
+Eredivisie,57,1,AZ Alkmaar,10229,5,5,0,0,14,3,11,15
+Eredivisie,57,2,PSV Eindhoven,8640,5,4,1,0,18,6,12,13
 Eredivisie,57,3,Feyenoord,10235,5,3,2,0,13,7,6,11
 Eredivisie,57,4,Excelsior,10218,4,3,0,1,10,3,7,9
-Eredivisie,57,5,SC Heerenveen,10228,5,2,2,1,7,7,0,8
-Eredivisie,57,6,Ajax,8593,4,2,1,1,9,5,4,7
-Eredivisie,57,7,FC Twente,8611,4,2,1,1,9,5,4,7
-Eredivisie,57,8,Go Ahead Eagles,6433,4,2,1,1,11,9,2,7
-Eredivisie,57,9,Fortuna Sittard,6422,4,2,1,1,8,7,1,7
-Eredivisie,57,10,FC Groningen,8674,5,2,1,2,11,12,-1,7
-Eredivisie,57,11,NEC Nijmegen,8464,4,2,0,2,9,7,2,6
-Eredivisie,57,12,Sparta Rotterdam,8614,5,1,2,2,9,9,0,5
+Eredivisie,57,5,Ajax,8593,4,2,1,1,9,5,4,7
+Eredivisie,57,6,FC Twente,8611,4,2,1,1,9,5,4,7
+Eredivisie,57,7,Go Ahead Eagles,6433,4,2,1,1,11,9,2,7
+Eredivisie,57,8,Fortuna Sittard,6422,4,2,1,1,8,7,1,7
+Eredivisie,57,9,FC Groningen,8674,5,2,1,2,11,12,-1,7
+Eredivisie,57,10,NEC Nijmegen,8464,4,2,0,2,9,7,2,6
+Eredivisie,57,11,Sparta Rotterdam,8614,5,1,2,2,9,9,0,5
+Eredivisie,57,12,SC Heerenveen,10228,5,1,2,2,5,7,-2,5
 Eredivisie,57,13,Telstar,6414,4,1,1,2,3,8,-5,4
 Eredivisie,57,14,PEC Zwolle,6413,5,1,1,3,6,10,-4,4
 Eredivisie,57,15,ADO Den Haag,10217,4,0,1,3,4,11,-7,1
