@@ -7155,7 +7155,8 @@ match_id,minute,type,player,team,venue
 2026-09-06-ferencvaros-v-ujpest,81,sub_on,Arijan Ademi,Újpest,Groupama Arena
 2026-09-06-ferencvaros-v-ujpest,85,yellow,Kristoffer Zachariassen,Ferencváros,Groupama Arena
 2026-09-06-ferencvaros-v-ujpest,90,yellow,Bamidele Yusuf,Ferencváros,Groupama Arena
-2026-09-06-francs-borains-v-ksc-lokeren,,,,,Stade Robert Urbain
+2026-09-06-francs-borains-v-ksc-lokeren,32,yellow,Rune van den Bergh,KSC Lokeren,Stade Robert Urbain
+2026-09-06-francs-borains-v-ksc-lokeren,41,goal,Aboubacar Ali Abdallah,Francs Borains,Stade Robert Urbain
 2026-09-06-heart-of-midlothian-v-dundee-fc,10,sub_off,Joe Westley,Dundee FC,Tynecastle Park
 2026-09-06-heart-of-midlothian-v-dundee-fc,10,sub_on,Bobby Wales,Dundee FC,Tynecastle Park
 2026-09-06-heart-of-midlothian-v-dundee-fc,17,goal,Bradley Fink,Dundee FC,Tynecastle Park
@@ -7198,6 +7199,28 @@ match_id,minute,type,player,team,venue
 2026-09-06-malaga-v-levante,25,yellow,Dani Lorenzo,Málaga,Estadio La Rosaleda
 2026-09-06-malaga-v-levante,34,yellow,Rafita,Málaga,Estadio La Rosaleda
 2026-09-06-malaga-v-levante,45,yellow,Pablo Martínez,Málaga,Estadio La Rosaleda
+2026-09-06-malaga-v-levante,59,sub_off,Juan Cruz,Málaga,Estadio La Rosaleda
+2026-09-06-malaga-v-levante,59,sub_off,Pablo Martínez,Málaga,Estadio La Rosaleda
+2026-09-06-malaga-v-levante,59,sub_on,Joaquín Muñoz,Málaga,Estadio La Rosaleda
+2026-09-06-malaga-v-levante,59,sub_on,Izan Merino,Málaga,Estadio La Rosaleda
+2026-09-06-malaga-v-levante,60,sub_off,Iván Romero,Levante,Estadio La Rosaleda
+2026-09-06-malaga-v-levante,60,sub_on,Yanis Musuayi,Levante,Estadio La Rosaleda
+2026-09-06-malaga-v-levante,67,sub_off,Dani Lorenzo,Málaga,Estadio La Rosaleda
+2026-09-06-malaga-v-levante,67,sub_off,Rafita,Málaga,Estadio La Rosaleda
+2026-09-06-malaga-v-levante,67,sub_on,Ramón Enríquez,Málaga,Estadio La Rosaleda
+2026-09-06-malaga-v-levante,67,sub_on,Carlos Puga,Málaga,Estadio La Rosaleda
+2026-09-06-malaga-v-levante,70,yellow,Adrián De La Fuente,Levante,Estadio La Rosaleda
+2026-09-06-malaga-v-levante,77,sub_off,Thiago Fernández,Levante,Estadio La Rosaleda
+2026-09-06-malaga-v-levante,77,sub_off,Nacho Pérez,Levante,Estadio La Rosaleda
+2026-09-06-malaga-v-levante,77,sub_off,Enzo Bardeli,Levante,Estadio La Rosaleda
+2026-09-06-malaga-v-levante,77,sub_on,Paco Cortés,Levante,Estadio La Rosaleda
+2026-09-06-malaga-v-levante,77,sub_on,Jeremy Toljan,Levante,Estadio La Rosaleda
+2026-09-06-malaga-v-levante,77,sub_on,Hugo Sotelo,Levante,Estadio La Rosaleda
+2026-09-06-malaga-v-levante,83,yellow,Luís Castro,Levante,Estadio La Rosaleda
+2026-09-06-malaga-v-levante,86,sub_off,Carlos Dotor,Málaga,Estadio La Rosaleda
+2026-09-06-malaga-v-levante,86,sub_off,Jon Olasagasti,Levante,Estadio La Rosaleda
+2026-09-06-malaga-v-levante,86,sub_on,Jens-Lys Cajuste,Málaga,Estadio La Rosaleda
+2026-09-06-malaga-v-levante,86,sub_on,Dani Requena,Levante,Estadio La Rosaleda
 2026-09-06-maribor-v-mura,2,goal,Isaac Tshipamba,Maribor,Stadium
 2026-09-06-maribor-v-mura,44,goal,Niko Kasalo,Mura,Stadium
 2026-09-06-maribor-v-mura,54,red,Aljaz Zalaznik,Mura,Stadium
