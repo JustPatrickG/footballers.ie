@@ -5658,6 +5658,8 @@ match_id,minute,type,player,team,venue
 2026-09-05-carrarese-v-empoli,46,sub_on,Filippo Distefano,Empoli,Stadio dei Marmi - IV Olimpionici Azzurri
 2026-09-05-carrarese-v-empoli,50,yellow,Luca Magnino,Empoli,Stadio dei Marmi - IV Olimpionici Azzurri
 2026-09-05-charlotte-fc-v-houston-dynamo-fc,9,yellow,Felipe Andrade,Houston Dynamo FC,Bank of America Stadium
+2026-09-05-charlotte-fc-v-houston-dynamo-fc,45,yellow,Tim Ream,Charlotte FC,Bank of America Stadium
+2026-09-05-charlotte-fc-v-houston-dynamo-fc,49,yellow,Djibril Diani,Charlotte FC,Bank of America Stadium
 2026-09-05-chelmsford-v-salisbury,31,goal,Robbie Gallagher,Salisbury,Melbourne Stadium
 2026-09-05-chelmsford-v-salisbury,40,goal,George Alexander,Chelmsford,Melbourne Stadium
 2026-09-05-cheltenham-town-v-grimsby-town,12,goal,Charlie McCann,Cheltenham Town,EV Charger Points Stadium
@@ -5722,6 +5724,14 @@ match_id,minute,type,player,team,venue
 2026-09-05-coleraine-v-crusaders,52,goal,Senan Devine,Coleraine,The Showgrounds
 2026-09-05-coleraine-v-crusaders,83,goal,Michael Mulholland,Crusaders,The Showgrounds
 2026-09-05-columbus-crew-v-colorado-rapids,22,goal,Santiago Rodríguez,Columbus Crew,ScottsMiracle-Gro Field
+2026-09-05-columbus-crew-v-colorado-rapids,45,yellow,Santiago Rodríguez,Columbus Crew,ScottsMiracle-Gro Field
+2026-09-05-columbus-crew-v-colorado-rapids,54,yellow,Tarun Karumanchi,Columbus Crew,ScottsMiracle-Gro Field
+2026-09-05-columbus-crew-v-colorado-rapids,59,sub_off,Youssef Maziz,Colorado Rapids,ScottsMiracle-Gro Field
+2026-09-05-columbus-crew-v-colorado-rapids,59,sub_off,Noah Cobb,Colorado Rapids,ScottsMiracle-Gro Field
+2026-09-05-columbus-crew-v-colorado-rapids,59,sub_off,Joshua Atencio,Colorado Rapids,ScottsMiracle-Gro Field
+2026-09-05-columbus-crew-v-colorado-rapids,59,sub_on,Alex Harris,Colorado Rapids,ScottsMiracle-Gro Field
+2026-09-05-columbus-crew-v-colorado-rapids,59,sub_on,Reggie Cannon,Colorado Rapids,ScottsMiracle-Gro Field
+2026-09-05-columbus-crew-v-colorado-rapids,59,sub_on,Kosi Thompson,Colorado Rapids,ScottsMiracle-Gro Field
 2026-09-05-cong-an-ho-chi-minh-city-v-ha-noi-fc,27,goal,Nguyen Tien Linh,Cong An Ho Chí Minh City,Stadium
 2026-09-05-cong-an-ho-chi-minh-city-v-ha-noi-fc,50,goal,Nguyen Thái Quoc Cuong,Cong An Ho Chí Minh City,Stadium
 2026-09-05-cong-an-ho-chi-minh-city-v-ha-noi-fc,65,goal,Andrew Jung,Ha Nội FC,Stadium
@@ -5766,6 +5776,15 @@ match_id,minute,type,player,team,venue
 2026-09-05-detroit-city-fc-v-hartford-athletic,46,sub_off,Arturo Ordóñez,Hartford Athletic,Keyworth Stadium
 2026-09-05-detroit-city-fc-v-hartford-athletic,46,sub_on,Sean Canada,Hartford Athletic,Keyworth Stadium
 2026-09-05-detroit-city-fc-v-hartford-athletic,46,sub_on,Britton Fischer,Hartford Athletic,Keyworth Stadium
+2026-09-05-detroit-city-fc-v-hartford-athletic,60,sub_off,Ben Morris,Detroit City FC,Keyworth Stadium
+2026-09-05-detroit-city-fc-v-hartford-athletic,60,sub_off,Jeciel Cedeño,Detroit City FC,Keyworth Stadium
+2026-09-05-detroit-city-fc-v-hartford-athletic,60,sub_on,Chisom Egbuchunam,Detroit City FC,Keyworth Stadium
+2026-09-05-detroit-city-fc-v-hartford-athletic,60,sub_on,Alexander Dalou,Detroit City FC,Keyworth Stadium
+2026-09-05-detroit-city-fc-v-hartford-athletic,62,sub_off,Barry Coffey,Hartford Athletic,Keyworth Stadium
+2026-09-05-detroit-city-fc-v-hartford-athletic,62,sub_on,Augustine Williams,Hartford Athletic,Keyworth Stadium
+2026-09-05-detroit-city-fc-v-hartford-athletic,75,sub_off,Abdoulaye Diop,Detroit City FC,Keyworth Stadium
+2026-09-05-detroit-city-fc-v-hartford-athletic,75,sub_on,Ryan Williams,Detroit City FC,Keyworth Stadium
+2026-09-05-detroit-city-fc-v-hartford-athletic,77,yellow,Devon Amoo-Mensah,Detroit City FC,Keyworth Stadium
 2026-09-05-doncaster-rovers-v-plymouth-argyle,28,goal,Will Evans,Plymouth Argyle,Club Doncaster Sports Village
 2026-09-05-doncaster-rovers-v-plymouth-argyle,51,goal,Alfie May,Doncaster Rovers,Club Doncaster Sports Village
 2026-09-05-doncaster-rovers-v-plymouth-argyle,62,sub_off,Tommi O'Reilly,Doncaster Rovers,Club Doncaster Sports Village
@@ -6029,6 +6048,24 @@ match_id,minute,type,player,team,venue
 2026-09-05-indy-eleven-v-birmingham-legion-fc,40,goal,Tyler Pasher,Birmingham Legion FC,Michael A. Carroll Stadium
 2026-09-05-indy-eleven-v-birmingham-legion-fc,52,sub_off,Josh O'Brien,Indy Eleven,Michael A. Carroll Stadium
 2026-09-05-indy-eleven-v-birmingham-legion-fc,52,sub_on,Loïc Mesanvi,Indy Eleven,Michael A. Carroll Stadium
+2026-09-05-indy-eleven-v-birmingham-legion-fc,66,goal,Romario Williams,Birmingham Legion FC,Michael A. Carroll Stadium
+2026-09-05-indy-eleven-v-birmingham-legion-fc,67,sub_off,Tyler Pasher,Birmingham Legion FC,Michael A. Carroll Stadium
+2026-09-05-indy-eleven-v-birmingham-legion-fc,67,sub_off,Romario Williams,Birmingham Legion FC,Michael A. Carroll Stadium
+2026-09-05-indy-eleven-v-birmingham-legion-fc,67,sub_off,Sebastian Tregarthen,Birmingham Legion FC,Michael A. Carroll Stadium
+2026-09-05-indy-eleven-v-birmingham-legion-fc,67,sub_on,Serge Ngoma,Birmingham Legion FC,Michael A. Carroll Stadium
+2026-09-05-indy-eleven-v-birmingham-legion-fc,67,sub_on,Ronaldo Damus,Birmingham Legion FC,Michael A. Carroll Stadium
+2026-09-05-indy-eleven-v-birmingham-legion-fc,67,sub_on,Dawson McCartney,Birmingham Legion FC,Michael A. Carroll Stadium
+2026-09-05-indy-eleven-v-birmingham-legion-fc,76,sub_off,Edward Kizza,Indy Eleven,Michael A. Carroll Stadium
+2026-09-05-indy-eleven-v-birmingham-legion-fc,76,sub_off,Alejandro Mitrano,Indy Eleven,Michael A. Carroll Stadium
+2026-09-05-indy-eleven-v-birmingham-legion-fc,76,sub_on,Dylan Sing,Indy Eleven,Michael A. Carroll Stadium
+2026-09-05-indy-eleven-v-birmingham-legion-fc,76,sub_on,Charles Sharp,Indy Eleven,Michael A. Carroll Stadium
+2026-09-05-indy-eleven-v-birmingham-legion-fc,77,sub_off,Hamady Diop,Birmingham Legion FC,Michael A. Carroll Stadium
+2026-09-05-indy-eleven-v-birmingham-legion-fc,77,sub_off,Paco Craig,Indy Eleven,Michael A. Carroll Stadium
+2026-09-05-indy-eleven-v-birmingham-legion-fc,77,sub_on,AJ Paterson,Birmingham Legion FC,Michael A. Carroll Stadium
+2026-09-05-indy-eleven-v-birmingham-legion-fc,77,sub_on,Makel Rasheed,Indy Eleven,Michael A. Carroll Stadium
+2026-09-05-indy-eleven-v-birmingham-legion-fc,85,sub_off,Gevork Diarbian,Birmingham Legion FC,Michael A. Carroll Stadium
+2026-09-05-indy-eleven-v-birmingham-legion-fc,85,sub_on,Amir Daley,Birmingham Legion FC,Michael A. Carroll Stadium
+2026-09-05-indy-eleven-v-birmingham-legion-fc,87,yellow,Kadeem Cole,Birmingham Legion FC,Michael A. Carroll Stadium
 2026-09-05-inverness-caledonian-thistle-v-raith-rovers,13,goal,John Robertson,Raith Rovers,Sarens PSG Stadium
 2026-09-05-inverness-caledonian-thistle-v-raith-rovers,48,yellow,Zak Delaney,Raith Rovers,Sarens PSG Stadium
 2026-09-05-inverness-caledonian-thistle-v-raith-rovers,54,sub_off,Anton Dowds,Raith Rovers,Sarens PSG Stadium
@@ -6685,6 +6722,24 @@ match_id,minute,type,player,team,venue
 2026-09-05-spalding-united-v-southport,26,goal,Bartosz Cybulski,Spalding United,Sir Halley Stewart Field
 2026-09-05-spalding-united-v-southport,75,goal,Sam Straughan-Brown,Spalding United,Sir Halley Stewart Field
 2026-09-05-sporting-jax-v-lexington-sc,19,goal,Kieran Sadlier,Sporting JAX,Hodges Stadium
+2026-09-05-sporting-jax-v-lexington-sc,60,yellow,Jordan Rossiter,Sporting JAX,Hodges Stadium
+2026-09-05-sporting-jax-v-lexington-sc,69,sub_off,Malcolm Fry,Lexington SC,Hodges Stadium
+2026-09-05-sporting-jax-v-lexington-sc,69,sub_off,Nicolas Firmino,Lexington SC,Hodges Stadium
+2026-09-05-sporting-jax-v-lexington-sc,69,sub_on,Tarik Scott,Lexington SC,Hodges Stadium
+2026-09-05-sporting-jax-v-lexington-sc,69,sub_on,Milo Yosef,Lexington SC,Hodges Stadium
+2026-09-05-sporting-jax-v-lexington-sc,72,sub_off,Kieran Sadlier,Sporting JAX,Hodges Stadium
+2026-09-05-sporting-jax-v-lexington-sc,72,sub_on,Harvey Neville,Sporting JAX,Hodges Stadium
+2026-09-05-sporting-jax-v-lexington-sc,73,goal,Marcus Epps,Lexington SC,Hodges Stadium
+2026-09-05-sporting-jax-v-lexington-sc,80,sub_off,Marcus Godinho,Sporting JAX,Hodges Stadium
+2026-09-05-sporting-jax-v-lexington-sc,80,sub_off,Rafferty Pedder,Sporting JAX,Hodges Stadium
+2026-09-05-sporting-jax-v-lexington-sc,80,sub_on,Thomas Roberts,Sporting JAX,Hodges Stadium
+2026-09-05-sporting-jax-v-lexington-sc,80,sub_on,Ahmad Al-Qaq,Sporting JAX,Hodges Stadium
+2026-09-05-sporting-jax-v-lexington-sc,84,goal,Xavier Zengue,Lexington SC,Hodges Stadium
+2026-09-05-sporting-jax-v-lexington-sc,86,sub_off,Wan Kuzain,Sporting JAX,Hodges Stadium
+2026-09-05-sporting-jax-v-lexington-sc,86,sub_off,Wahab Ackwei,Sporting JAX,Hodges Stadium
+2026-09-05-sporting-jax-v-lexington-sc,86,sub_on,Adam Luckhurst,Sporting JAX,Hodges Stadium
+2026-09-05-sporting-jax-v-lexington-sc,86,sub_on,Antonio Gomez,Sporting JAX,Hodges Stadium
+2026-09-05-sporting-jax-v-lexington-sc,88,goal,Emil Jääskeläinen,Sporting JAX,Hodges Stadium
 2026-09-05-st-mirren-v-celtic,8,yellow,Colby Donovan,Celtic,The Marbill Coaches Stadium
 2026-09-05-st-mirren-v-celtic,22,goal,Nikolas Agrafiotis,St. Mirren,The Marbill Coaches Stadium
 2026-09-05-st-mirren-v-celtic,37,yellow,Calvin Ramsay,St. Mirren,The Marbill Coaches Stadium
@@ -6969,3 +7024,5 @@ match_id,minute,type,player,team,venue
 2026-09-05-wycombe-wanderers-v-milton-keynes-dons,79,sub_off,Cauley Woodrow,Wycombe Wanderers,Adams Park
 2026-09-05-wycombe-wanderers-v-milton-keynes-dons,79,sub_on,Josh Scowen,Wycombe Wanderers,Adams Park
 2026-09-05-wycombe-wanderers-v-milton-keynes-dons,84,yellow,Marvin Ekpiteta,Milton Keynes Dons,Adams Park
+2026-09-06-austin-fc-v-san-jose-earthquakes,8,goal,Beau Leroux,San Jose Earthquakes,Q2 Stadium
+2026-09-06-orange-county-sc-v-sacramento-republic-fc,,,,,Championship Soccer Stadium

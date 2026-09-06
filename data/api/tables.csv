@@ -178,31 +178,41 @@ Premier League 2,9084,28,Leicester City U21,773642,1,0,0,1,1,4,-3,0
 Premier League 2,9084,29,Middlesbrough U21,773660,2,0,0,2,1,4,-3,0
 Premier League 2,9084,30,Wolverhampton Wanderers U21,773683,1,0,0,1,0,4,-4,0
 Premier League 2,9084,31,Newcastle United U21,860798,2,0,0,2,1,7,-6,0
+League of Ireland First Division,218,1,Cork City,2201,30,21,5,4,62,26,36,68
+League of Ireland First Division,218,2,UCD,1578,30,14,6,10,53,38,15,48
+League of Ireland First Division,218,3,Bray Wanderers,1629,30,12,8,10,58,44,14,44
+League of Ireland First Division,218,4,Kerry FC,1426348,30,11,9,10,39,35,4,42
+League of Ireland First Division,218,5,Cobh Ramblers,2383,30,12,6,12,35,41,-6,42
+League of Ireland First Division,218,6,Longford Town,4569,30,11,8,11,41,39,2,41
+League of Ireland First Division,218,7,Athlone Town,2378,30,11,7,12,31,34,-3,40
+League of Ireland First Division,218,8,Wexford FC,62337,30,10,7,13,33,43,-10,37
+League of Ireland First Division,218,9,Treaty United,1233534,30,7,9,14,29,45,-16,30
+League of Ireland First Division,218,10,Finn Harps,1627,30,5,7,18,26,62,-36,22
 USL Championship,8972,1,Tampa Bay Rowdies,197328,23,14,6,3,39,20,19,48
 USL Championship,8972,1,El Paso Locomotive FC,1003209,23,12,4,7,39,29,10,40
 USL Championship,8972,2,Charleston Battery,162183,23,12,3,8,47,29,18,39
 USL Championship,8972,2,New Mexico United,1003208,20,11,4,5,29,20,9,37
 USL Championship,8972,3,Detroit City FC,540855,22,10,7,5,27,17,10,37
-USL Championship,8972,3,FC Tulsa,614325,21,10,5,6,26,19,7,35
-USL Championship,8972,4,Louisville City FC,614316,23,10,5,8,38,36,2,35
-USL Championship,8972,4,Orange County SC,267813,22,9,8,5,33,31,2,35
-USL Championship,8972,5,Pittsburgh Riverhounds SC,267816,23,10,4,9,25,23,2,34
-USL Championship,8972,5,San Antonio FC,722269,22,9,8,5,28,26,2,35
+USL Championship,8972,3,FC Tulsa,614325,22,10,6,6,26,19,7,36
+USL Championship,8972,4,Pittsburgh Riverhounds SC,267816,23,10,4,9,25,23,2,34
+USL Championship,8972,4,Orange County SC,267813,23,9,9,5,33,31,2,36
+USL Championship,8972,5,Louisville City FC,614316,23,9,6,8,38,37,1,33
+USL Championship,8972,5,San Antonio FC,722269,23,9,9,5,28,26,2,36
 USL Championship,8972,6,Hartford Athletic,1003206,22,7,10,5,20,21,-1,31
 USL Championship,8972,6,Colorado Springs Switchbacks FC,614321,23,10,4,9,38,36,2,34
-USL Championship,8972,7,Indy Eleven,514649,21,8,5,8,25,25,0,29
-USL Championship,8972,7,Sacramento Republic FC,521004,21,8,8,5,28,19,9,32
-USL Championship,8972,8,Rhode Island FC,1597140,21,8,4,9,30,24,6,28
-USL Championship,8972,8,Lexington SC,1430405,23,9,4,10,31,27,4,31
+USL Championship,8972,7,Rhode Island FC,1597140,21,8,5,8,31,24,7,29
+USL Championship,8972,7,Sacramento Republic FC,521004,22,8,9,5,28,19,9,33
+USL Championship,8972,8,Indy Eleven,514649,21,8,4,9,25,26,-1,28
+USL Championship,8972,8,Lexington SC,1430405,23,9,4,10,33,29,4,31
 USL Championship,8972,9,Miami FC,721896,22,5,7,10,25,39,-14,22
 USL Championship,8972,9,Las Vegas Lights FC,915809,22,8,5,9,28,32,-4,29
 USL Championship,8972,10,Loudoun United FC,1003205,22,3,11,8,26,39,-13,20
 USL Championship,8972,10,Phoenix Rising FC,424268,22,7,8,7,31,30,1,29
-USL Championship,8972,11,Birmingham Legion FC,1003207,21,3,9,9,25,31,-6,18
+USL Championship,8972,11,Birmingham Legion FC,1003207,21,4,8,9,26,31,-5,20
 USL Championship,8972,11,Oakland Roots SC,1130413,23,6,9,8,28,31,-3,27
 USL Championship,8972,12,Brooklyn,1877733,21,4,4,13,22,37,-15,16
 USL Championship,8972,12,Monterey Bay FC,915808,23,4,5,14,24,41,-17,17
-USL Championship,8972,13,Sporting JAX,1737991,23,3,5,15,28,58,-30,14
+USL Championship,8972,13,Sporting JAX,1737991,23,3,5,15,30,60,-30,14
 Premier League U18,10068,1,Newcastle United U18,1113561,4,4,0,0,16,5,11,12
 Premier League U18,10068,1,Tottenham Hotspur U18,1113562,4,4,0,0,24,6,18,12
 Premier League U18,10068,2,Manchester City U18,1113543,4,4,0,0,16,7,9,12
@@ -248,32 +258,42 @@ Major League Soccer,130,1,Nashville SC,915807,23,16,5,2,47,17,30,53
 Major League Soccer,130,1,Vancouver Whitecaps,307691,21,13,4,4,48,18,30,43
 Major League Soccer,130,2,Inter Miami CF,960720,22,12,6,4,56,41,15,42
 Major League Soccer,130,2,Houston Dynamo FC,8259,23,12,4,7,30,26,4,40
-Major League Soccer,130,3,Chicago Fire FC,6397,22,11,4,7,40,30,10,37
-Major League Soccer,130,3,Los Angeles FC,867280,23,10,6,7,36,22,14,36
+Major League Soccer,130,3,Chicago Fire FC,6397,22,12,4,6,43,31,12,40
+Major League Soccer,130,3,San Jose Earthquakes,6603,23,11,4,8,40,33,7,37
 Major League Soccer,130,4,New England Revolution,6580,22,11,4,7,36,27,9,37
-Major League Soccer,130,4,San Jose Earthquakes,6603,22,10,4,8,39,33,6,34
+Major League Soccer,130,4,Los Angeles FC,867280,23,10,6,7,36,22,14,36
 Major League Soccer,130,5,Charlotte FC,1323940,23,10,6,7,40,32,8,36
-Major League Soccer,130,5,FC Dallas,6399,22,9,7,6,41,37,4,34
+Major League Soccer,130,5,St. Louis City,1427963,22,9,7,6,33,30,3,34
 Major League Soccer,130,6,FC Cincinnati,722265,22,8,7,7,49,51,-2,31
-Major League Soccer,130,6,St. Louis City,1427963,22,9,7,6,33,30,3,34
+Major League Soccer,130,6,FC Dallas,6399,23,9,7,7,41,39,2,34
 Major League Soccer,130,7,New York City FC,546238,23,7,8,8,36,31,5,29
 Major League Soccer,130,7,Colorado Rapids,8314,23,10,1,12,31,29,2,31
-Major League Soccer,130,8,Toronto FC,56453,23,6,10,7,34,39,-5,28
+Major League Soccer,130,8,Orlando City,267810,23,8,4,11,38,54,-16,28
 Major League Soccer,130,8,San Diego FC,1701119,23,8,6,9,40,34,6,30
-Major League Soccer,130,9,Orlando City,267810,23,8,4,11,38,54,-16,28
+Major League Soccer,130,9,Philadelphia Union,191716,23,7,6,10,35,39,-4,27
 Major League Soccer,130,9,Minnesota United,207242,22,7,8,7,30,32,-2,29
-Major League Soccer,130,10,Red Bull New York,6514,22,7,5,10,32,46,-14,26
+Major League Soccer,130,10,Red Bull New York,6514,23,7,6,10,32,46,-14,27
 Major League Soccer,130,10,Real Salt Lake,6606,21,8,4,9,34,33,1,28
-Major League Soccer,130,11,Philadelphia Union,191716,23,6,7,10,34,39,-5,25
+Major League Soccer,130,11,Toronto FC,56453,23,5,10,8,35,42,-7,25
 Major League Soccer,130,11,Portland Timbers,307690,22,8,4,10,39,39,0,28
 Major League Soccer,130,12,DC United,6602,22,5,10,7,28,36,-8,25
-Major League Soccer,130,12,Seattle Sounders FC,130394,21,7,5,9,24,29,-5,26
+Major League Soccer,130,12,Seattle Sounders FC,130394,22,7,6,9,24,29,-5,27
 Major League Soccer,130,13,Columbus Crew,6001,23,6,5,12,32,39,-7,23
 Major League Soccer,130,13,LA Galaxy,6637,23,6,8,9,28,35,-7,26
-Major League Soccer,130,14,CF Montréal,161195,23,5,7,11,30,46,-16,22
-Major League Soccer,130,14,Austin FC,1218886,22,6,6,10,28,41,-13,24
-Major League Soccer,130,15,Atlanta United,773958,22,6,3,13,25,38,-13,21
-Major League Soccer,130,15,Sporting Kansas City,6604,22,4,3,15,20,54,-34,15
+Major League Soccer,130,14,Atlanta United,773958,22,6,3,13,25,38,-13,21
+Major League Soccer,130,14,Austin FC,1218886,23,6,6,11,28,42,-14,24
+Major League Soccer,130,15,CF Montréal,161195,23,5,6,12,30,47,-17,21
+Major League Soccer,130,15,Sporting Kansas City,6604,23,5,3,15,22,54,-32,18
+League of Ireland Premier Division,126,1,Shamrock Rovers,4131,29,16,8,5,46,27,19,56
+League of Ireland Premier Division,126,2,St. Patrick's Athletic,1854,29,14,8,7,45,25,20,50
+League of Ireland Premier Division,126,3,Bohemian FC,4594,29,14,8,7,50,34,16,50
+League of Ireland Premier Division,126,4,Dundalk,1853,29,10,10,9,46,45,1,40
+League of Ireland Premier Division,126,5,Shelbourne,5751,28,8,12,8,37,39,-2,36
+League of Ireland Premier Division,126,6,Derry City,8338,29,7,13,9,41,40,1,34
+League of Ireland Premier Division,126,7,Galway United FC,520517,28,8,10,10,36,42,-6,34
+League of Ireland Premier Division,126,8,Waterford FC,6042,29,7,11,11,39,48,-9,32
+League of Ireland Premier Division,126,9,Drogheda United,8339,29,6,10,13,33,48,-15,28
+League of Ireland Premier Division,126,10,Sligo Rovers,6361,29,5,8,16,23,48,-25,23
 LaLiga,87,1,Barcelona,8634,3,3,0,0,12,2,10,9
 LaLiga,87,2,Real Madrid,8633,4,3,0,1,10,3,7,9
 LaLiga,87,3,Real Betis,8603,4,3,0,1,5,5,0,9

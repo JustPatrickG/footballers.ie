@@ -155,7 +155,11 @@ kickoff,competition,home,away,home_id,away_id,home_score,away_score,status,minut
 2026-09-05T14:00:00Z,National League North,Brackley Town,Harborough Town FC,158321,1382661,,,live,,shane-byrne
 2026-09-05T14:00:00Z,Championship,Inverness,Raith Rovers,8066,10250,,,scheduled,,zak-delaney
 2026-09-05T14:30:00Z,Eredivisie,NEC Nijmegen,Feyenoord,8464,10235,1,3,ft,,liam-bossin
+2026-09-05T15:00:00Z,FAI Cup,St. Patrick's Athletic,Bohemian FC,1854,4594,,,scheduled,,adam-banim;adam-deans;adam-mcdonnell;aidan-keena;alan-reynolds;anthony-breslin;billy-canny;billy-hayes;chris-forrester;christopher-conlan;cian-byrne;colm-whelan;daniel-chukwu;daniel-rogers;darragh-brunton;darragh-nugent;darragh-power;dawson-devoy;dayle-rooney;finn-mcdonnell;glory-nzingo;harry-vaughan;hugh-martin;james-brown;jamie-lennon;jason-mcclelland;joe-carroll-byrne;joe-redmond;josh-adam;josh-harpur;josh-oconnor;kian-leavy;kian-quigley;luke-cullen;luke-kehir;luke-turner;matthew-ohara;niall-morahan;niall-sullivan;paddy-madden;ronan-boyce;ross-tierney;ryan-burke;ryan-sheridan;sam-rooney;sam-steward;sam-todd;samuel-ogungbe;sean-hoare;sean-molloy;senan-mullen;simon-power;zack-elbouzedi
+2026-09-05T15:00:00Z,Cup,FC Inter Turku,HJK,6550,9861,,,scheduled,,david-eze;david-ezeh
+2026-09-05T16:15:00Z,Premier League,The New Saints,Barry Town,7852,1603,,,scheduled,,eoin-farrell;zach-nolan
 2026-09-05T16:30:00Z,Premier League,Hull City,Aston Villa,8667,10252,0,0,ft,,john-egan
+2026-09-05T17:00:00Z,Premiership,Coleraine,Crusaders,2202,1937,,,scheduled,,billy-vance;charles-dunne;mark-coyle;rob-slevin
 2026-09-05T17:30:00Z,Serie B,Carrarese,Empoli,6488,8534,0,1,ft,,matteo-egan
 2026-09-05T18:15:00Z,First Professional League,Levski Sofia,CSKA 1948,8632,944215,1,0,ft,,armstrong-oko-flex
 2026-09-05T18:30:00Z,First Division,Longford Town,Kerry FC,4569,1426348,,,scheduled,,aaron-doran;alex-obrien;andy-paraschiv;cole-omorehiomwan;daniel-mckenna;dean-george;dean-williams;emre-topcu;eric-koufie;eric-yoro;jake-hough;james-bailey;jamie-egan;kian-moore;matthew-britton;oisin-hand;oran-crowe;osaze-irhue;pharrell-manuel;scott-brady;stefan-ugbesia;taylor-mccarthy
@@ -166,7 +170,7 @@ kickoff,competition,home,away,home_id,away_id,home_score,away_score,status,minut
 2026-09-05T23:00:00Z,USL Championship,Indy Eleven,Birmingham Legion FC,514649,1003207,,,scheduled,,josh-obrien
 2026-09-05T23:30:00Z,Major League Soccer,Columbus Crew,Colorado Rapids,6001,8314,,,scheduled,,brooks-lennon
 2026-09-05T23:30:00Z,Major League Soccer,Charlotte FC,Houston Dynamo FC,1323940,8259,,,scheduled,,joe-byrne
-2026-09-06T00:30:00Z,Major League Soccer,Austin FC,San Jose Earthquakes,1218886,6603,,,scheduled,,jon-gallagher
+2026-09-06T00:30:00Z,Major League Soccer,Austin FC,San Jose Earthquakes,1218886,6603,,,live,,jon-gallagher
 2026-09-06T01:00:00Z,USL Championship,Orange County SC,Sacramento Republic FC,267813,521004,,,scheduled,,lee-desmond
 2026-09-06T09:00:00Z,Segunda Federación,Deportiva Minera,Peña Dep. Santa Eulalia,278805,8210,,,scheduled,,kevin-toner
 2026-09-06T11:30:00Z,2. Bundesliga,Hertha BSC,Magdeburg,8177,8188,,,scheduled,,anselmo-garcia-macnulty
@@ -560,3 +564,4 @@ kickoff,competition,home,away,home_id,away_id,home_score,away_score,status,minut
 2026-09-19T23:00:00Z,USL Championship,Lexington SC,Orange County SC,1430405,267813,,,scheduled,,aaron-molloy
 2026-09-19T23:30:00Z,Major League Soccer,Montreal,Columbus,161195,6001,,,scheduled,,brooks-lennon
 2026-09-19T23:30:00Z,Major League Soccer,DC United,Charlotte FC,6602,1323940,,,scheduled,,joe-byrne
+2026-09-20T00:00:00Z,Premier League,Pacific FC,Vancouver FC,1022953,1436202,,,scheduled,,tom-field
