@@ -7098,9 +7098,55 @@ match_id,minute,type,player,team,venue
 2026-09-06-cercle-brugge-v-gent,82,sub_off,Steve Ngoura,Cercle Brugge,Jan Breydelstadion
 2026-09-06-cercle-brugge-v-gent,82,sub_on,Abdoul Ouattara,Cercle Brugge,Jan Breydelstadion
 2026-09-06-deportiva-minera-v-pena-dep-santa-eulalia,85,goal,Aaron Pinan,Deportiva Minera,Stadium
+2026-09-06-derry-city-v-dundalk,12,goal,Shane Tracey,Dundalk,Stadium
+2026-09-06-derry-city-v-dundalk,23,goal,Patrick McClean,Derry City,Stadium
 2026-09-06-everton-v-manchester-united,13,yellow,Harrison Armstrong,Everton,Hill Dickinson Stadium
 2026-09-06-everton-v-manchester-united,34,yellow,Brennan Johnson,Everton,Hill Dickinson Stadium
-2026-09-06-heart-of-midlothian-v-dundee-fc,,,,,Tynecastle Park
+2026-09-06-everton-v-manchester-united,46,goal,Bryan Mbeumo,Manchester United,Hill Dickinson Stadium
+2026-09-06-everton-v-manchester-united,62,yellow,Luke Shaw,Manchester United,Hill Dickinson Stadium
+2026-09-06-everton-v-manchester-united,64,yellow,Merlin Röhl,Everton,Hill Dickinson Stadium
+2026-09-06-everton-v-manchester-united,66,sub_off,Brennan Johnson,Everton,Hill Dickinson Stadium
+2026-09-06-everton-v-manchester-united,66,sub_on,Jack Grealish,Everton,Hill Dickinson Stadium
+2026-09-06-everton-v-manchester-united,70,sub_off,Matheus Cunha,Manchester United,Hill Dickinson Stadium
+2026-09-06-everton-v-manchester-united,70,sub_off,Marcus Rashford,Manchester United,Hill Dickinson Stadium
+2026-09-06-everton-v-manchester-united,70,sub_on,Benjamin Sesko,Manchester United,Hill Dickinson Stadium
+2026-09-06-everton-v-manchester-united,70,sub_on,Patrick Dorgu,Manchester United,Hill Dickinson Stadium
+2026-09-06-everton-v-manchester-united,75,sub_off,Merlin Röhl,Everton,Hill Dickinson Stadium
+2026-09-06-everton-v-manchester-united,75,sub_on,Hayden Hackney,Everton,Hill Dickinson Stadium
+2026-09-06-everton-v-manchester-united,77,sub_off,James Garner,Everton,Hill Dickinson Stadium
+2026-09-06-everton-v-manchester-united,77,sub_on,Ainsley Maitland-Niles,Everton,Hill Dickinson Stadium
+2026-09-06-everton-v-manchester-united,79,yellow,Harry Maguire,Manchester United,Hill Dickinson Stadium
+2026-09-06-everton-v-manchester-united,81,yellow,Diogo Dalot,Manchester United,Hill Dickinson Stadium
+2026-09-06-everton-v-manchester-united,83,goal,Tyrique George,Everton,Hill Dickinson Stadium
+2026-09-06-everton-v-manchester-united,84,sub_off,Diogo Dalot,Manchester United,Hill Dickinson Stadium
+2026-09-06-everton-v-manchester-united,84,sub_off,Kobbie Mainoo,Manchester United,Hill Dickinson Stadium
+2026-09-06-everton-v-manchester-united,84,sub_on,Leny Yoro,Manchester United,Hill Dickinson Stadium
+2026-09-06-everton-v-manchester-united,84,sub_on,Andrey Santos,Manchester United,Hill Dickinson Stadium
+2026-09-06-everton-v-manchester-united,88,goal,Benjamin Sesko,Manchester United,Hill Dickinson Stadium
+2026-09-06-everton-v-manchester-united,90,goal,Ainsley Maitland-Niles,Everton,Hill Dickinson Stadium
+2026-09-06-everton-v-manchester-united,90,sub_off,Luke Shaw,Manchester United,Hill Dickinson Stadium
+2026-09-06-everton-v-manchester-united,90,sub_on,Noussair Mazraoui,Manchester United,Hill Dickinson Stadium
+2026-09-06-heart-of-midlothian-v-dundee-fc,10,sub_off,Joe Westley,Dundee FC,Tynecastle Park
+2026-09-06-heart-of-midlothian-v-dundee-fc,10,sub_on,Bobby Wales,Dundee FC,Tynecastle Park
+2026-09-06-heart-of-midlothian-v-dundee-fc,17,goal,Bradley Fink,Dundee FC,Tynecastle Park
+2026-09-06-heart-of-midlothian-v-dundee-fc,35,yellow,Joshua McPake,Heart of Midlothian,Tynecastle Park
+2026-09-06-heart-of-midlothian-v-dundee-fc,45,yellow,Ryan Finnigan,Dundee FC,Tynecastle Park
+2026-09-06-heart-of-midlothian-v-dundee-fc,46,sub_off,Ryan Finnigan,Dundee FC,Tynecastle Park
+2026-09-06-heart-of-midlothian-v-dundee-fc,46,sub_off,Oisin McEntee,Heart of Midlothian,Tynecastle Park
+2026-09-06-heart-of-midlothian-v-dundee-fc,46,sub_on,Jack Moorhouse,Dundee FC,Tynecastle Park
+2026-09-06-heart-of-midlothian-v-dundee-fc,46,sub_on,Harry Milne,Heart of Midlothian,Tynecastle Park
+2026-09-06-heart-of-midlothian-v-dundee-fc,60,sub_off,Jordi Altena,Heart of Midlothian,Tynecastle Park
+2026-09-06-heart-of-midlothian-v-dundee-fc,60,sub_off,Calvin Miller,Heart of Midlothian,Tynecastle Park
+2026-09-06-heart-of-midlothian-v-dundee-fc,60,sub_on,Christian Dahle Borchgrevink,Heart of Midlothian,Tynecastle Park
+2026-09-06-heart-of-midlothian-v-dundee-fc,60,sub_on,Sabah Kerjota,Heart of Midlothian,Tynecastle Park
+2026-09-06-heart-of-midlothian-v-dundee-fc,62,yellow,Ethan Hamilton,Dundee FC,Tynecastle Park
+2026-09-06-heart-of-midlothian-v-dundee-fc,65,sub_off,Alan Forrest,Dundee FC,Tynecastle Park
+2026-09-06-heart-of-midlothian-v-dundee-fc,65,sub_off,Bradley Fink,Dundee FC,Tynecastle Park
+2026-09-06-heart-of-midlothian-v-dundee-fc,65,sub_on,Joe Wright,Dundee FC,Tynecastle Park
+2026-09-06-heart-of-midlothian-v-dundee-fc,65,sub_on,Joe Bevan,Dundee FC,Tynecastle Park
+2026-09-06-heart-of-midlothian-v-dundee-fc,66,sub_off,James Wilson,Heart of Midlothian,Tynecastle Park
+2026-09-06-heart-of-midlothian-v-dundee-fc,66,sub_on,JJ Williams,Heart of Midlothian,Tynecastle Park
+2026-09-06-heart-of-midlothian-v-dundee-fc,69,yellow,Imari Samuels,Dundee FC,Tynecastle Park
 2026-09-06-hertha-bsc-v-magdeburg,10,goal,Josip Brekalo,Hertha BSC,Olympiastadion Berlin
 2026-09-06-hertha-bsc-v-magdeburg,12,yellow,Jón Thorsteinsson,Hertha BSC,Olympiastadion Berlin
 2026-09-06-hertha-bsc-v-magdeburg,31,goal,Falko Michel,Magdeburg,Olympiastadion Berlin
@@ -7118,6 +7164,11 @@ match_id,minute,type,player,team,venue
 2026-09-06-hertha-bsc-v-magdeburg,74,sub_on,Luca Schuler,Hertha BSC,Olympiastadion Berlin
 2026-09-06-hertha-bsc-v-magdeburg,75,sub_off,Luka Hyryläinen,Magdeburg,Olympiastadion Berlin
 2026-09-06-hertha-bsc-v-magdeburg,75,sub_on,Torben Müsel,Magdeburg,Olympiastadion Berlin
+2026-09-06-maribor-v-mura,2,goal,Isaac Tshipamba,Maribor,Stadium
+2026-09-06-molde-v-kfum,26,yellow,Jørgen Isnes,KFUM,Aker Stadion
+2026-09-06-molde-v-kfum,37,goal,Oskar Spiten-Nysæter,Molde,Aker Stadion
+2026-09-06-molde-v-kfum,39,sub_off,Eirik Haugan,Molde,Aker Stadion
+2026-09-06-molde-v-kfum,39,sub_on,Mats Møller Dæhli,Molde,Aker Stadion
 2026-09-06-orange-county-sc-v-sacramento-republic-fc,19,yellow,Tyler Wolff,Sacramento Republic FC,Championship Soccer Stadium
 2026-09-06-orange-county-sc-v-sacramento-republic-fc,61,goal,Chris Hegardt,Orange County SC,Championship Soccer Stadium
 2026-09-06-orange-county-sc-v-sacramento-republic-fc,62,sub_off,Cal Jennings,Sacramento Republic FC,Championship Soccer Stadium
@@ -7141,4 +7192,36 @@ match_id,minute,type,player,team,venue
 2026-09-06-orange-county-sc-v-sacramento-republic-fc,83,sub_off,Chris Hegardt,Orange County SC,Championship Soccer Stadium
 2026-09-06-orange-county-sc-v-sacramento-republic-fc,83,sub_on,Marcelo Palomino,Orange County SC,Championship Soccer Stadium
 2026-09-06-orange-county-sc-v-sacramento-republic-fc,90,yellow,Tom Brewitt,Orange County SC,Championship Soccer Stadium
-2026-09-06-st-johnstone-v-hibernian,,,,,McDiarmid Park
+2026-09-06-sonnenhof-gro-aspach-v-hoffenheim-ii,22,goal,Loris Maier,Sonnenhof Großaspach,WIRmachenDRUCK Arena
+2026-09-06-sonnenhof-gro-aspach-v-hoffenheim-ii,34,yellow,Antonis Aidonis,Sonnenhof Großaspach,WIRmachenDRUCK Arena
+2026-09-06-sonnenhof-gro-aspach-v-hoffenheim-ii,43,sub_off,Florian Micheler,Hoffenheim II,WIRmachenDRUCK Arena
+2026-09-06-sonnenhof-gro-aspach-v-hoffenheim-ii,43,sub_off,Tiago Poller,Hoffenheim II,WIRmachenDRUCK Arena
+2026-09-06-sonnenhof-gro-aspach-v-hoffenheim-ii,43,sub_on,Luis Engelns,Hoffenheim II,WIRmachenDRUCK Arena
+2026-09-06-sonnenhof-gro-aspach-v-hoffenheim-ii,43,sub_on,Alex Honajzer,Hoffenheim II,WIRmachenDRUCK Arena
+2026-09-06-sonnenhof-gro-aspach-v-hoffenheim-ii,45,yellow,Blessing Makanda,Hoffenheim II,WIRmachenDRUCK Arena
+2026-09-06-sonnenhof-gro-aspach-v-hoffenheim-ii,46,sub_off,Koki Machida,Hoffenheim II,WIRmachenDRUCK Arena
+2026-09-06-sonnenhof-gro-aspach-v-hoffenheim-ii,46,sub_on,Tristan Spranger,Hoffenheim II,WIRmachenDRUCK Arena
+2026-09-06-st-johnstone-v-hibernian,17,goal,Josh Fowler,St. Johnstone,McDiarmid Park
+2026-09-06-st-johnstone-v-hibernian,22,sub_off,Jamie Gullan,St. Johnstone,McDiarmid Park
+2026-09-06-st-johnstone-v-hibernian,22,sub_on,Kai Fotheringham,St. Johnstone,McDiarmid Park
+2026-09-06-st-johnstone-v-hibernian,29,goal,Nathan Lowe,Hibernian,McDiarmid Park
+2026-09-06-st-johnstone-v-hibernian,36,yellow,Taylor Steven,St. Johnstone,McDiarmid Park
+2026-09-06-st-johnstone-v-hibernian,41,goal,Josh Fowler,St. Johnstone,McDiarmid Park
+2026-09-06-st-johnstone-v-hibernian,46,sub_off,Martin Boyle,Hibernian,McDiarmid Park
+2026-09-06-st-johnstone-v-hibernian,46,sub_on,Ante Suto,Hibernian,McDiarmid Park
+2026-09-06-st-johnstone-v-hibernian,57,sub_off,Taylor Steven,St. Johnstone,McDiarmid Park
+2026-09-06-st-johnstone-v-hibernian,57,sub_on,Joel Cotterill,St. Johnstone,McDiarmid Park
+2026-09-06-st-johnstone-v-hibernian,61,sub_off,Grant Hanley,Hibernian,McDiarmid Park
+2026-09-06-st-johnstone-v-hibernian,61,sub_off,Jacob Devaney,Hibernian,McDiarmid Park
+2026-09-06-st-johnstone-v-hibernian,61,sub_off,Nathan Lowe,Hibernian,McDiarmid Park
+2026-09-06-st-johnstone-v-hibernian,61,sub_on,Thibault Klidje,Hibernian,McDiarmid Park
+2026-09-06-st-johnstone-v-hibernian,61,sub_on,Callum Wright,Hibernian,McDiarmid Park
+2026-09-06-st-johnstone-v-hibernian,61,sub_on,Kanayochukwu Megwa,Hibernian,McDiarmid Park
+2026-09-06-st-johnstone-v-hibernian,72,sub_off,Kai Fotheringham,St. Johnstone,McDiarmid Park
+2026-09-06-st-johnstone-v-hibernian,72,sub_off,Samuel Stanton,St. Johnstone,McDiarmid Park
+2026-09-06-st-johnstone-v-hibernian,72,sub_off,Josh Fowler,St. Johnstone,McDiarmid Park
+2026-09-06-st-johnstone-v-hibernian,72,sub_on,Danny Schmidt,St. Johnstone,McDiarmid Park
+2026-09-06-st-johnstone-v-hibernian,72,sub_on,Macaulay Tait,St. Johnstone,McDiarmid Park
+2026-09-06-st-johnstone-v-hibernian,72,sub_on,Matty Todd,St. Johnstone,McDiarmid Park
+2026-09-06-st-johnstone-v-hibernian,75,sub_off,Josh Mulligan,Hibernian,McDiarmid Park
+2026-09-06-st-johnstone-v-hibernian,75,sub_on,Nicky Cadden,Hibernian,McDiarmid Park
