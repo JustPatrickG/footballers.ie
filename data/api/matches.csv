@@ -163,13 +163,13 @@ kickoff,competition,home,away,home_id,away_id,home_score,away_score,status,minut
 2026-09-06T11:30:00Z,2. Bundesliga,Hertha BSC,Magdeburg,8177,8188,2,1,ft,,anselmo-garcia-macnulty
 2026-09-06T11:30:00Z,Belgian Pro League,Cercle Brugge,Gent,9984,9991,,,scheduled,,tayo-adaramola
 2026-09-06T13:00:00Z,Premier League,Everton,Manchester United,8668,10260,2,2,ft,,desmond-armstrong;jake-obrien;mark-travers
-2026-09-06T14:00:00Z,Premiership,Heart of Midlothian,Dundee FC,9860,8284,,,scheduled,,bobby-wales;jack-moorhouse;kieran-ohara;oisin-mcentee
-2026-09-06T14:00:00Z,Premiership,St. Johnstone,Hibernian,8467,10251,,,scheduled,,jacob-devaney;jamie-mcgrath;owen-elding;ruari-paton
+2026-09-06T14:00:00Z,Premiership,Heart of Midlothian,Dundee FC,9860,8284,2,1,ft,,bobby-wales;jack-moorhouse;kieran-ohara;oisin-mcentee
+2026-09-06T14:00:00Z,Premiership,St. Johnstone,Hibernian,8467,10251,2,1,ft,,jacob-devaney;jamie-mcgrath;owen-elding;ruari-paton
 2026-09-06T14:30:00Z,3. Liga,Sonnenhof Großaspach,Hoffenheim II,94941,94940,,,scheduled,,matthew-moore
 2026-09-06T15:00:00Z,FAI Cup,Derry City,Dundalk,8338,1853,,,live,,aaron-keogh;adam-oreilly;aodh-dervin;barry-cotter;brian-maher;brooklyn-lyons-foster;callum-downey;christy-grogan;cian-dillon;cian-spaight;ciaran-kilduff;ciaran-mullan;conal-mcdermott;conall-alfred;conor-kearns;conor-okeeffe;daithi-folan;darragh-burns;darragh-markey;daryl-horgan;egor-vassenin;enda-minogue;eoghan-curran;ethan-hall;harry-groome;harvey-warren;james-clarke;james-mcclean;john-ross-wilson;keith-buckley;keith-ward;luke-mulligan;mark-connolly;max-ferguson;mayowa-animasahun;michael-duffy;michael-mccolgan;oisin-obrien;patrick-mcclean;robert-cornwall;ronan-teahan;samuel-safaei;sean-spaight;shane-tracey;shaun-platt;shay-casey;terence-doherty;trevor-clarke;tyreke-wilson
 2026-09-06T15:00:00Z,Eliteserien,Molde,KFUM,9917,2305,,,scheduled,,trent-kone-doherty
-2026-09-06T15:30:00Z,Prva Liga,Maribor,Mura,8340,2172,,,scheduled,,ali-reghba
-2026-09-06T15:45:00Z,NB I,Ferencváros,Újpest,8222,8043,,,scheduled,,callum-odowda
+2026-09-06T15:30:00Z,Prva Liga,Maribor,Mura,8340,2172,,,live,,ali-reghba
+2026-09-06T15:45:00Z,NB I,Ferencváros,Újpest,8222,8043,,,live,,callum-odowda
 2026-09-06T16:30:00Z,LaLiga,Málaga,Levante,9864,8581,,,scheduled,,aaron-ochoa
 2026-09-06T16:30:00Z,Belgian Pro League,Anderlecht,Genk,8635,9987,,,scheduled,,andrew-omobamidele
 2026-09-06T17:15:00Z,First Division B,Francs Borains,KSC Lokeren,96953,213307,,,scheduled,,noah-jauny

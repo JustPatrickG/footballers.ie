@@ -7100,6 +7100,7 @@ match_id,minute,type,player,team,venue
 2026-09-06-deportiva-minera-v-pena-dep-santa-eulalia,85,goal,Aaron Pinan,Deportiva Minera,Stadium
 2026-09-06-derry-city-v-dundalk,12,goal,Shane Tracey,Dundalk,Stadium
 2026-09-06-derry-city-v-dundalk,23,goal,Patrick McClean,Derry City,Stadium
+2026-09-06-derry-city-v-dundalk,44,goal,Michael Duffy,Derry City,Stadium
 2026-09-06-everton-v-manchester-united,13,yellow,Harrison Armstrong,Everton,Hill Dickinson Stadium
 2026-09-06-everton-v-manchester-united,34,yellow,Brennan Johnson,Everton,Hill Dickinson Stadium
 2026-09-06-everton-v-manchester-united,46,goal,Bryan Mbeumo,Manchester United,Hill Dickinson Stadium
@@ -7126,6 +7127,9 @@ match_id,minute,type,player,team,venue
 2026-09-06-everton-v-manchester-united,90,goal,Ainsley Maitland-Niles,Everton,Hill Dickinson Stadium
 2026-09-06-everton-v-manchester-united,90,sub_off,Luke Shaw,Manchester United,Hill Dickinson Stadium
 2026-09-06-everton-v-manchester-united,90,sub_on,Noussair Mazraoui,Manchester United,Hill Dickinson Stadium
+2026-09-06-ferencvaros-v-ujpest,8,yellow,Miron Mucsanyi,Újpest,Groupama Arena
+2026-09-06-ferencvaros-v-ujpest,20,goal,Bamidele Yusuf,Ferencváros,Groupama Arena
+2026-09-06-ferencvaros-v-ujpest,23,yellow,Toon Raemaekers,Ferencváros,Groupama Arena
 2026-09-06-heart-of-midlothian-v-dundee-fc,10,sub_off,Joe Westley,Dundee FC,Tynecastle Park
 2026-09-06-heart-of-midlothian-v-dundee-fc,10,sub_on,Bobby Wales,Dundee FC,Tynecastle Park
 2026-09-06-heart-of-midlothian-v-dundee-fc,17,goal,Bradley Fink,Dundee FC,Tynecastle Park
@@ -7165,6 +7169,7 @@ match_id,minute,type,player,team,venue
 2026-09-06-hertha-bsc-v-magdeburg,75,sub_off,Luka Hyryläinen,Magdeburg,Olympiastadion Berlin
 2026-09-06-hertha-bsc-v-magdeburg,75,sub_on,Torben Müsel,Magdeburg,Olympiastadion Berlin
 2026-09-06-maribor-v-mura,2,goal,Isaac Tshipamba,Maribor,Stadium
+2026-09-06-maribor-v-mura,44,goal,Niko Kasalo,Mura,Stadium
 2026-09-06-molde-v-kfum,26,yellow,Jørgen Isnes,KFUM,Aker Stadion
 2026-09-06-molde-v-kfum,37,goal,Oskar Spiten-Nysæter,Molde,Aker Stadion
 2026-09-06-molde-v-kfum,39,sub_off,Eirik Haugan,Molde,Aker Stadion
