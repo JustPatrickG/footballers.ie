@@ -5740,6 +5740,7 @@ match_id,minute,type,player,team,venue
 2026-09-05-cong-an-ho-chi-minh-city-v-ha-noi-fc,27,goal,Nguyen Tien Linh,Cong An Ho Chí Minh City,Stadium
 2026-09-05-cong-an-ho-chi-minh-city-v-ha-noi-fc,50,goal,Nguyen Thái Quoc Cuong,Cong An Ho Chí Minh City,Stadium
 2026-09-05-cong-an-ho-chi-minh-city-v-ha-noi-fc,65,goal,Andrew Jung,Ha Nội FC,Stadium
+2026-09-05-cong-an-ho-chi-minh-city-v-ha-noi-fc,70,yellow,Pham Xuân Manh,Ha Nội FC,Stadium
 2026-09-05-cong-an-ho-chi-minh-city-v-ha-noi-fc,82,goal,Jason Cummings,Cong An Ho Chí Minh City,Stadium
 2026-09-05-crewe-alexandra-v-york-city,9,goal,Luke Offord,Crewe Alexandra,Mornflake Stadium
 2026-09-05-crewe-alexandra-v-york-city,13,yellow,Oliver Banks,York City,Mornflake Stadium
@@ -7034,4 +7035,49 @@ match_id,minute,type,player,team,venue
 2026-09-05-wycombe-wanderers-v-milton-keynes-dons,79,sub_on,Josh Scowen,Wycombe Wanderers,Adams Park
 2026-09-05-wycombe-wanderers-v-milton-keynes-dons,84,yellow,Marvin Ekpiteta,Milton Keynes Dons,Adams Park
 2026-09-06-austin-fc-v-san-jose-earthquakes,8,goal,Beau Leroux,San Jose Earthquakes,Q2 Stadium
-2026-09-06-orange-county-sc-v-sacramento-republic-fc,,,,,Championship Soccer Stadium
+2026-09-06-austin-fc-v-san-jose-earthquakes,61,sub_off,Jon Gallagher,Austin FC,Q2 Stadium
+2026-09-06-austin-fc-v-san-jose-earthquakes,61,sub_on,Zan Kolmanic,Austin FC,Q2 Stadium
+2026-09-06-austin-fc-v-san-jose-earthquakes,62,sub_off,Oleksandr Svatok,Austin FC,Q2 Stadium
+2026-09-06-austin-fc-v-san-jose-earthquakes,62,sub_on,Jon Bell,Austin FC,Q2 Stadium
+2026-09-06-austin-fc-v-san-jose-earthquakes,65,yellow,Reid Roberts,San Jose Earthquakes,Q2 Stadium
+2026-09-06-austin-fc-v-san-jose-earthquakes,70,sub_off,Ousseni Bouda,San Jose Earthquakes,Q2 Stadium
+2026-09-06-austin-fc-v-san-jose-earthquakes,70,sub_off,Jorge Alastuey,Austin FC,Q2 Stadium
+2026-09-06-austin-fc-v-san-jose-earthquakes,70,sub_off,Joseph Rosales,Austin FC,Q2 Stadium
+2026-09-06-austin-fc-v-san-jose-earthquakes,70,sub_on,Preston Judd,San Jose Earthquakes,Q2 Stadium
+2026-09-06-austin-fc-v-san-jose-earthquakes,70,sub_on,Christian Ramirez,Austin FC,Q2 Stadium
+2026-09-06-austin-fc-v-san-jose-earthquakes,70,sub_on,Przemyslaw Placheta,Austin FC,Q2 Stadium
+2026-09-06-austin-fc-v-san-jose-earthquakes,75,sub_off,Mikkel Desler,Austin FC,Q2 Stadium
+2026-09-06-austin-fc-v-san-jose-earthquakes,75,sub_on,Brendan Hines-Ike,Austin FC,Q2 Stadium
+2026-09-06-austin-fc-v-san-jose-earthquakes,81,sub_off,Jamar Ricketts,San Jose Earthquakes,Q2 Stadium
+2026-09-06-austin-fc-v-san-jose-earthquakes,81,sub_off,Benji Kikanovic,San Jose Earthquakes,Q2 Stadium
+2026-09-06-austin-fc-v-san-jose-earthquakes,81,sub_off,Niko Tsakiris,San Jose Earthquakes,Q2 Stadium
+2026-09-06-austin-fc-v-san-jose-earthquakes,81,sub_on,Vítor Costa,San Jose Earthquakes,Q2 Stadium
+2026-09-06-austin-fc-v-san-jose-earthquakes,81,sub_on,Jack Jasinski,San Jose Earthquakes,Q2 Stadium
+2026-09-06-austin-fc-v-san-jose-earthquakes,81,sub_on,Ian Harkes,San Jose Earthquakes,Q2 Stadium
+2026-09-06-austin-fc-v-san-jose-earthquakes,87,yellow,Brad Stuver,Austin FC,Q2 Stadium
+2026-09-06-austin-fc-v-san-jose-earthquakes,88,sub_off,Eduard Löwen,San Jose Earthquakes,Q2 Stadium
+2026-09-06-austin-fc-v-san-jose-earthquakes,88,sub_on,Nick Fernandez,San Jose Earthquakes,Q2 Stadium
+2026-09-06-austin-fc-v-san-jose-earthquakes,90,goal,Guilherme Biro,Austin FC,Q2 Stadium
+2026-09-06-orange-county-sc-v-sacramento-republic-fc,19,yellow,Tyler Wolff,Sacramento Republic FC,Championship Soccer Stadium
+2026-09-06-orange-county-sc-v-sacramento-republic-fc,61,goal,Chris Hegardt,Orange County SC,Championship Soccer Stadium
+2026-09-06-orange-county-sc-v-sacramento-republic-fc,62,sub_off,Cal Jennings,Sacramento Republic FC,Championship Soccer Stadium
+2026-09-06-orange-county-sc-v-sacramento-republic-fc,62,sub_off,Blake Willey,Sacramento Republic FC,Championship Soccer Stadium
+2026-09-06-orange-county-sc-v-sacramento-republic-fc,62,sub_on,Kyle Edwards,Sacramento Republic FC,Championship Soccer Stadium
+2026-09-06-orange-county-sc-v-sacramento-republic-fc,62,sub_on,Alfredo Midence,Sacramento Republic FC,Championship Soccer Stadium
+2026-09-06-orange-county-sc-v-sacramento-republic-fc,66,sub_off,Tyler Wolff,Sacramento Republic FC,Championship Soccer Stadium
+2026-09-06-orange-county-sc-v-sacramento-republic-fc,66,sub_off,Ryan Spaulding,Sacramento Republic FC,Championship Soccer Stadium
+2026-09-06-orange-county-sc-v-sacramento-republic-fc,66,sub_on,Mayele Malango,Sacramento Republic FC,Championship Soccer Stadium
+2026-09-06-orange-county-sc-v-sacramento-republic-fc,66,sub_on,Tim Leibold,Sacramento Republic FC,Championship Soccer Stadium
+2026-09-06-orange-county-sc-v-sacramento-republic-fc,69,sub_off,Lyam MacKinnon,Orange County SC,Championship Soccer Stadium
+2026-09-06-orange-county-sc-v-sacramento-republic-fc,69,sub_on,Mataeo Bunbury,Orange County SC,Championship Soccer Stadium
+2026-09-06-orange-county-sc-v-sacramento-republic-fc,71,yellow,Daniel Crisostomo,Sacramento Republic FC,Championship Soccer Stadium
+2026-09-06-orange-county-sc-v-sacramento-republic-fc,75,yellow,Ousmane Sylla,Orange County SC,Championship Soccer Stadium
+2026-09-06-orange-county-sc-v-sacramento-republic-fc,79,yellow,Stephen Kelly,Orange County SC,Championship Soccer Stadium
+2026-09-06-orange-county-sc-v-sacramento-republic-fc,81,sub_off,Freddy Kleemann,Sacramento Republic FC,Championship Soccer Stadium
+2026-09-06-orange-county-sc-v-sacramento-republic-fc,81,sub_on,Aaron Essel,Sacramento Republic FC,Championship Soccer Stadium
+2026-09-06-orange-county-sc-v-sacramento-republic-fc,82,sub_off,Ousmane Sylla,Orange County SC,Championship Soccer Stadium
+2026-09-06-orange-county-sc-v-sacramento-republic-fc,82,sub_on,Tyson Espy,Orange County SC,Championship Soccer Stadium
+2026-09-06-orange-county-sc-v-sacramento-republic-fc,83,goal,Aaron Essel,Sacramento Republic FC,Championship Soccer Stadium
+2026-09-06-orange-county-sc-v-sacramento-republic-fc,83,sub_off,Chris Hegardt,Orange County SC,Championship Soccer Stadium
+2026-09-06-orange-county-sc-v-sacramento-republic-fc,83,sub_on,Marcelo Palomino,Orange County SC,Championship Soccer Stadium
+2026-09-06-orange-county-sc-v-sacramento-republic-fc,90,yellow,Tom Brewitt,Orange County SC,Championship Soccer Stadium

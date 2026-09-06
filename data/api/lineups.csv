@@ -1,735 +1,757 @@
 match_id,side,team,formation,status,updated,role,number,name,slug,pos,x,y
-2026-09-05-sporting-jax-v-lexington-sc,home,Sporting JAX,4-1-4-1,,2026-09-06T01:16:18Z,start,1,Jake McGuire,,,0.1,0.5
-2026-09-05-sporting-jax-v-lexington-sc,home,Sporting JAX,4-1-4-1,,2026-09-06T01:16:18Z,start,12,Edgardo Rito,,,0.292,0.875
-2026-09-05-sporting-jax-v-lexington-sc,home,Sporting JAX,4-1-4-1,,2026-09-06T01:16:18Z,start,18,Wahab Ackwei,,,0.292,0.625
-2026-09-05-sporting-jax-v-lexington-sc,home,Sporting JAX,4-1-4-1,,2026-09-06T01:16:18Z,start,15,Ryan Edwards,,,0.292,0.375
-2026-09-05-sporting-jax-v-lexington-sc,home,Sporting JAX,4-1-4-1,,2026-09-06T01:16:18Z,start,21,Marcus Godinho,,,0.292,0.125
-2026-09-05-sporting-jax-v-lexington-sc,home,Sporting JAX,4-1-4-1,,2026-09-06T01:16:18Z,start,8,Wan Kuzain,,,0.485,0.5
-2026-09-05-sporting-jax-v-lexington-sc,home,Sporting JAX,4-1-4-1,,2026-09-06T01:16:18Z,start,19,Rafferty Pedder,,,0.678,0.875
-2026-09-05-sporting-jax-v-lexington-sc,home,Sporting JAX,4-1-4-1,,2026-09-06T01:16:18Z,start,14,Jean Mota,,,0.678,0.625
-2026-09-05-sporting-jax-v-lexington-sc,home,Sporting JAX,4-1-4-1,,2026-09-06T01:16:18Z,start,6,Jordan Rossiter,,,0.678,0.375
-2026-09-05-sporting-jax-v-lexington-sc,home,Sporting JAX,4-1-4-1,,2026-09-06T01:16:18Z,start,10,Kieran Sadlier,kieran-sadlier,,0.678,0.125
-2026-09-05-sporting-jax-v-lexington-sc,home,Sporting JAX,4-1-4-1,,2026-09-06T01:16:18Z,start,16,Emil Jääskeläinen,,,0.89,0.5
-2026-09-05-sporting-jax-v-lexington-sc,home,Sporting JAX,4-1-4-1,,2026-09-06T01:16:18Z,bench,2,Harvey Neville,harvey-neville,,,
-2026-09-05-sporting-jax-v-lexington-sc,home,Sporting JAX,4-1-4-1,,2026-09-06T01:16:18Z,bench,24,Thomas Roberts,,,,
-2026-09-05-sporting-jax-v-lexington-sc,home,Sporting JAX,4-1-4-1,,2026-09-06T01:16:18Z,bench,11,Ahmad Al-Qaq,,,,
-2026-09-05-sporting-jax-v-lexington-sc,home,Sporting JAX,4-1-4-1,,2026-09-06T01:16:18Z,bench,22,Antonio Gomez,,,,
-2026-09-05-sporting-jax-v-lexington-sc,home,Sporting JAX,4-1-4-1,,2026-09-06T01:16:18Z,bench,9,Adam Luckhurst,,,,
-2026-09-05-sporting-jax-v-lexington-sc,home,Sporting JAX,4-1-4-1,,2026-09-06T01:16:18Z,bench,42,Esteban Casas,,,,
-2026-09-05-sporting-jax-v-lexington-sc,home,Sporting JAX,4-1-4-1,,2026-09-06T01:16:18Z,bench,27,Danny Wilson,,,,
-2026-09-05-sporting-jax-v-lexington-sc,home,Sporting JAX,4-1-4-1,,2026-09-06T01:16:18Z,bench,28,Ethan Underwood,,,,
-2026-09-05-sporting-jax-v-lexington-sc,away,Lexington SC,4-2-3-1,,2026-09-06T01:16:18Z,start,17,Oliver Semmle,,,0.1,0.5
-2026-09-05-sporting-jax-v-lexington-sc,away,Lexington SC,4-2-3-1,,2026-09-06T01:16:18Z,start,12,Xavier Zengue,,,0.292,0.875
-2026-09-05-sporting-jax-v-lexington-sc,away,Lexington SC,4-2-3-1,,2026-09-06T01:16:18Z,start,5,Kendall Burks,,,0.292,0.625
-2026-09-05-sporting-jax-v-lexington-sc,away,Lexington SC,4-2-3-1,,2026-09-06T01:16:18Z,start,23,Javain Brown,,,0.292,0.375
-2026-09-05-sporting-jax-v-lexington-sc,away,Lexington SC,4-2-3-1,,2026-09-06T01:16:18Z,start,2,Jacob Greene,,,0.292,0.125
-2026-09-05-sporting-jax-v-lexington-sc,away,Lexington SC,4-2-3-1,,2026-09-06T01:16:18Z,start,16,Blaine Ferri,,,0.485,0.7
-2026-09-05-sporting-jax-v-lexington-sc,away,Lexington SC,4-2-3-1,,2026-09-06T01:16:18Z,start,15,Noble Okello,,,0.485,0.3
-2026-09-05-sporting-jax-v-lexington-sc,away,Lexington SC,4-2-3-1,,2026-09-06T01:16:18Z,start,34,Malcolm Fry,,,0.678,0.837
-2026-09-05-sporting-jax-v-lexington-sc,away,Lexington SC,4-2-3-1,,2026-09-06T01:16:18Z,start,8,Nicolas Firmino,,,0.678,0.5
-2026-09-05-sporting-jax-v-lexington-sc,away,Lexington SC,4-2-3-1,,2026-09-06T01:16:18Z,start,7,Marcus Epps,,,0.678,0.163
-2026-09-05-sporting-jax-v-lexington-sc,away,Lexington SC,4-2-3-1,,2026-09-06T01:16:18Z,start,9,Phillip Goodrum,,,0.87,0.5
-2026-09-05-sporting-jax-v-lexington-sc,away,Lexington SC,4-2-3-1,,2026-09-06T01:16:18Z,bench,20,Milo Yosef,,,,
-2026-09-05-sporting-jax-v-lexington-sc,away,Lexington SC,4-2-3-1,,2026-09-06T01:16:18Z,bench,19,Tarik Scott,,,,
-2026-09-05-sporting-jax-v-lexington-sc,away,Lexington SC,4-2-3-1,,2026-09-06T01:16:18Z,bench,98,Patrick Seagrist,,,,
-2026-09-05-sporting-jax-v-lexington-sc,away,Lexington SC,4-2-3-1,,2026-09-06T01:16:18Z,bench,40,Garret Addams,,,,
-2026-09-05-sporting-jax-v-lexington-sc,away,Lexington SC,4-2-3-1,,2026-09-06T01:16:18Z,bench,14,Andrew Caborn,,,,
-2026-09-05-sporting-jax-v-lexington-sc,away,Lexington SC,4-2-3-1,,2026-09-06T01:16:18Z,bench,24,Brady Stockton,,,,
-2026-09-05-sporting-jax-v-lexington-sc,away,Lexington SC,4-2-3-1,,2026-09-06T01:16:18Z,bench,21,Marqes Muir,,,,
-2026-09-05-detroit-city-fc-v-hartford-athletic,home,Detroit City FC,4-2-3-1,,2026-09-06T01:16:18Z,start,1,Carlos Herrera,,,0.1,0.5
-2026-09-05-detroit-city-fc-v-hartford-athletic,home,Detroit City FC,4-2-3-1,,2026-09-06T01:16:18Z,start,14,Haruki Yamazaki,,,0.292,0.875
-2026-09-05-detroit-city-fc-v-hartford-athletic,home,Detroit City FC,4-2-3-1,,2026-09-06T01:16:18Z,start,30,Devon Amoo-Mensah,,,0.292,0.625
-2026-09-05-detroit-city-fc-v-hartford-athletic,home,Detroit City FC,4-2-3-1,,2026-09-06T01:16:18Z,start,4,Callum Montgomery,,,0.292,0.375
-2026-09-05-detroit-city-fc-v-hartford-athletic,home,Detroit City FC,4-2-3-1,,2026-09-06T01:16:18Z,start,33,Tommy Silva,,,0.292,0.125
-2026-09-05-detroit-city-fc-v-hartford-athletic,home,Detroit City FC,4-2-3-1,,2026-09-06T01:16:18Z,start,8,Abdoulaye Diop,,,0.485,0.7
-2026-09-05-detroit-city-fc-v-hartford-athletic,home,Detroit City FC,4-2-3-1,,2026-09-06T01:16:18Z,start,22,Kobe Hernández-Foster,,,0.485,0.3
-2026-09-05-detroit-city-fc-v-hartford-athletic,home,Detroit City FC,4-2-3-1,,2026-09-06T01:16:18Z,start,10,Jeciel Cedeño,,,0.678,0.837
-2026-09-05-detroit-city-fc-v-hartford-athletic,home,Detroit City FC,4-2-3-1,,2026-09-06T01:16:18Z,start,21,Maxi Rodriguez,,,0.678,0.5
-2026-09-05-detroit-city-fc-v-hartford-athletic,home,Detroit City FC,4-2-3-1,,2026-09-06T01:16:18Z,start,23,Kian Williams,,,0.678,0.163
-2026-09-05-detroit-city-fc-v-hartford-athletic,home,Detroit City FC,4-2-3-1,,2026-09-06T01:16:18Z,start,9,Ben Morris,,,0.87,0.5
-2026-09-05-detroit-city-fc-v-hartford-athletic,home,Detroit City FC,4-2-3-1,,2026-09-06T01:16:18Z,bench,15,Alexander Dalou,,,,
-2026-09-05-detroit-city-fc-v-hartford-athletic,home,Detroit City FC,4-2-3-1,,2026-09-06T01:16:18Z,bench,26,Chisom Egbuchunam,,,,
-2026-09-05-detroit-city-fc-v-hartford-athletic,home,Detroit City FC,4-2-3-1,,2026-09-06T01:16:18Z,bench,6,Ryan Williams,,,,
-2026-09-05-detroit-city-fc-v-hartford-athletic,home,Detroit City FC,4-2-3-1,,2026-09-06T01:16:18Z,bench,12,Michael Bryant,,,,
-2026-09-05-detroit-city-fc-v-hartford-athletic,home,Detroit City FC,4-2-3-1,,2026-09-06T01:16:18Z,bench,91,Carlos Saldaña,,,,
-2026-09-05-detroit-city-fc-v-hartford-athletic,home,Detroit City FC,4-2-3-1,,2026-09-06T01:16:18Z,bench,3,Aedan Stanley,,,,
-2026-09-05-detroit-city-fc-v-hartford-athletic,home,Detroit City FC,4-2-3-1,,2026-09-06T01:16:18Z,bench,20,Rio Hope-Gund,,,,
-2026-09-05-detroit-city-fc-v-hartford-athletic,away,Hartford Athletic,4-3-2-1,,2026-09-06T01:16:18Z,start,1,Enzo Carvalho,,,0.1,0.5
-2026-09-05-detroit-city-fc-v-hartford-athletic,away,Hartford Athletic,4-3-2-1,,2026-09-06T01:16:18Z,start,24,Galen Flynn,,,0.292,0.875
-2026-09-05-detroit-city-fc-v-hartford-athletic,away,Hartford Athletic,4-3-2-1,,2026-09-06T01:16:18Z,start,22,TJ Presthus,,,0.292,0.625
-2026-09-05-detroit-city-fc-v-hartford-athletic,away,Hartford Athletic,4-3-2-1,,2026-09-06T01:16:18Z,start,23,Arturo Ordóñez,,,0.292,0.375
-2026-09-05-detroit-city-fc-v-hartford-athletic,away,Hartford Athletic,4-3-2-1,,2026-09-06T01:16:18Z,start,5,Baboucarr Njie,,,0.292,0.125
-2026-09-05-detroit-city-fc-v-hartford-athletic,away,Hartford Athletic,4-3-2-1,,2026-09-06T01:16:18Z,start,18,Christos Hadjipaschalis,,,0.485,0.79
-2026-09-05-detroit-city-fc-v-hartford-athletic,away,Hartford Athletic,4-3-2-1,,2026-09-06T01:16:18Z,start,7,Michael Adedokun,,,0.485,0.5
-2026-09-05-detroit-city-fc-v-hartford-athletic,away,Hartford Athletic,4-3-2-1,,2026-09-06T01:16:18Z,start,47,Oscar Pearman,,,0.485,0.21
-2026-09-05-detroit-city-fc-v-hartford-athletic,away,Hartford Athletic,4-3-2-1,,2026-09-06T01:16:18Z,start,17,Sadat Anaku,,,0.678,0.7
-2026-09-05-detroit-city-fc-v-hartford-athletic,away,Hartford Athletic,4-3-2-1,,2026-09-06T01:16:18Z,start,3,Matthew Real,,,0.678,0.3
-2026-09-05-detroit-city-fc-v-hartford-athletic,away,Hartford Athletic,4-3-2-1,,2026-09-06T01:16:18Z,start,27,Spencer Gordon,,,0.87,0.5
-2026-09-05-detroit-city-fc-v-hartford-athletic,away,Hartford Athletic,4-3-2-1,,2026-09-06T01:16:18Z,bench,16,Barry Coffey,barry-coffey,,,
-2026-09-05-detroit-city-fc-v-hartford-athletic,away,Hartford Athletic,4-3-2-1,,2026-09-06T01:16:18Z,bench,33,Sean Canada,,,,
-2026-09-05-detroit-city-fc-v-hartford-athletic,away,Hartford Athletic,4-3-2-1,,2026-09-06T01:16:18Z,bench,25,Britton Fischer,,,,
-2026-09-05-detroit-city-fc-v-hartford-athletic,away,Hartford Athletic,4-3-2-1,,2026-09-06T01:16:18Z,bench,9,Augustine Williams,,,,
-2026-09-05-detroit-city-fc-v-hartford-athletic,away,Hartford Athletic,4-3-2-1,,2026-09-06T01:16:18Z,bench,77,Antony Siaha,,,,
-2026-09-05-indy-eleven-v-birmingham-legion-fc,home,Indy Eleven,4-4-2,,2026-09-06T01:16:18Z,start,1,Eric Dick,,,0.1,0.5
-2026-09-05-indy-eleven-v-birmingham-legion-fc,home,Indy Eleven,4-4-2,,2026-09-06T01:16:18Z,start,13,Joe Hafferty,,,0.357,0.875
-2026-09-05-indy-eleven-v-birmingham-legion-fc,home,Indy Eleven,4-4-2,,2026-09-06T01:16:18Z,start,37,Paco Craig,,,0.357,0.625
-2026-09-05-indy-eleven-v-birmingham-legion-fc,home,Indy Eleven,4-4-2,,2026-09-06T01:16:18Z,start,4,Anthony Herbert,,,0.357,0.375
-2026-09-05-indy-eleven-v-birmingham-legion-fc,home,Indy Eleven,4-4-2,,2026-09-06T01:16:18Z,start,29,Alejandro Mitrano,,,0.357,0.125
-2026-09-05-indy-eleven-v-birmingham-legion-fc,home,Indy Eleven,4-4-2,,2026-09-06T01:16:18Z,start,5,Josh O'Brien,josh-obrien,,0.613,0.875
-2026-09-05-indy-eleven-v-birmingham-legion-fc,home,Indy Eleven,4-4-2,,2026-09-06T01:16:18Z,start,8,Jack Blake,,,0.613,0.625
-2026-09-05-indy-eleven-v-birmingham-legion-fc,home,Indy Eleven,4-4-2,,2026-09-06T01:16:18Z,start,6,Cameron Lindley,,,0.613,0.375
-2026-09-05-indy-eleven-v-birmingham-legion-fc,home,Indy Eleven,4-4-2,,2026-09-06T01:16:18Z,start,14,Aodhan Quinn,,,0.613,0.125
-2026-09-05-indy-eleven-v-birmingham-legion-fc,home,Indy Eleven,4-4-2,,2026-09-06T01:16:18Z,start,19,Edward Kizza,,,0.87,0.7
-2026-09-05-indy-eleven-v-birmingham-legion-fc,home,Indy Eleven,4-4-2,,2026-09-06T01:16:18Z,start,27,Bruno Rendón,,,0.87,0.3
-2026-09-05-indy-eleven-v-birmingham-legion-fc,home,Indy Eleven,4-4-2,,2026-09-06T01:16:18Z,bench,90,Loïc Mesanvi,,,,
-2026-09-05-indy-eleven-v-birmingham-legion-fc,home,Indy Eleven,4-4-2,,2026-09-06T01:16:18Z,bench,9,Charles Sharp,,,,
-2026-09-05-indy-eleven-v-birmingham-legion-fc,home,Indy Eleven,4-4-2,,2026-09-06T01:16:18Z,bench,20,Dylan Sing,,,,
-2026-09-05-indy-eleven-v-birmingham-legion-fc,home,Indy Eleven,4-4-2,,2026-09-06T01:16:18Z,bench,21,Makel Rasheed,,,,
-2026-09-05-indy-eleven-v-birmingham-legion-fc,home,Indy Eleven,4-4-2,,2026-09-06T01:16:18Z,bench,23,Reice Charles-Cook,,,,
-2026-09-05-indy-eleven-v-birmingham-legion-fc,home,Indy Eleven,4-4-2,,2026-09-06T01:16:18Z,bench,39,Hesron Barry,,,,
-2026-09-05-indy-eleven-v-birmingham-legion-fc,home,Indy Eleven,4-4-2,,2026-09-06T01:16:18Z,bench,15,Malik Henry-Scott,,,,
-2026-09-05-indy-eleven-v-birmingham-legion-fc,away,Birmingham Legion FC,4-3-3,,2026-09-06T01:16:18Z,start,1,Jassem Koleilat,,,0.1,0.5
-2026-09-05-indy-eleven-v-birmingham-legion-fc,away,Birmingham Legion FC,4-3-3,,2026-09-06T01:16:18Z,start,21,Sebastian Tregarthen,,,0.357,0.875
-2026-09-05-indy-eleven-v-birmingham-legion-fc,away,Birmingham Legion FC,4-3-3,,2026-09-06T01:16:18Z,start,27,Bryce Washington,,,0.357,0.625
-2026-09-05-indy-eleven-v-birmingham-legion-fc,away,Birmingham Legion FC,4-3-3,,2026-09-06T01:16:18Z,start,32,Hamady Diop,,,0.357,0.375
-2026-09-05-indy-eleven-v-birmingham-legion-fc,away,Birmingham Legion FC,4-3-3,,2026-09-06T01:16:18Z,start,77,Nico Brown,,,0.357,0.125
-2026-09-05-indy-eleven-v-birmingham-legion-fc,away,Birmingham Legion FC,4-3-3,,2026-09-06T01:16:18Z,start,18,Seth Antwi,,,0.613,0.79
-2026-09-05-indy-eleven-v-birmingham-legion-fc,away,Birmingham Legion FC,4-3-3,,2026-09-06T01:16:18Z,start,16,Peter-Lee Vassell,,,0.613,0.5
-2026-09-05-indy-eleven-v-birmingham-legion-fc,away,Birmingham Legion FC,4-3-3,,2026-09-06T01:16:18Z,start,8,Kadeem Cole,,,0.613,0.21
-2026-09-05-indy-eleven-v-birmingham-legion-fc,away,Birmingham Legion FC,4-3-3,,2026-09-06T01:16:18Z,start,15,Tyler Pasher,,,0.87,0.79
-2026-09-05-indy-eleven-v-birmingham-legion-fc,away,Birmingham Legion FC,4-3-3,,2026-09-06T01:16:18Z,start,17,Romario Williams,,,0.87,0.5
-2026-09-05-indy-eleven-v-birmingham-legion-fc,away,Birmingham Legion FC,4-3-3,,2026-09-06T01:16:18Z,start,19,Gevork Diarbian,,,0.87,0.21
-2026-09-05-indy-eleven-v-birmingham-legion-fc,away,Birmingham Legion FC,4-3-3,,2026-09-06T01:16:18Z,bench,11,Dawson McCartney,,,,
-2026-09-05-indy-eleven-v-birmingham-legion-fc,away,Birmingham Legion FC,4-3-3,,2026-09-06T01:16:18Z,bench,81,Serge Ngoma,,,,
-2026-09-05-indy-eleven-v-birmingham-legion-fc,away,Birmingham Legion FC,4-3-3,,2026-09-06T01:16:18Z,bench,9,Ronaldo Damus,,,,
-2026-09-05-indy-eleven-v-birmingham-legion-fc,away,Birmingham Legion FC,4-3-3,,2026-09-06T01:16:18Z,bench,20,AJ Paterson,,,,
-2026-09-05-indy-eleven-v-birmingham-legion-fc,away,Birmingham Legion FC,4-3-3,,2026-09-06T01:16:18Z,bench,26,Amir Daley,,,,
-2026-09-05-indy-eleven-v-birmingham-legion-fc,away,Birmingham Legion FC,4-3-3,,2026-09-06T01:16:18Z,bench,12,Trevor McMullen,,,,
-2026-09-05-indy-eleven-v-birmingham-legion-fc,away,Birmingham Legion FC,4-3-3,,2026-09-06T01:16:18Z,bench,7,Sebastián Saucedo,,,,
-2026-09-05-columbus-crew-v-colorado-rapids,home,Columbus Crew,4-4-2,,2026-09-06T01:16:18Z,start,28,Patrick Schulte,,,0.1,0.5
-2026-09-05-columbus-crew-v-colorado-rapids,home,Columbus Crew,4-4-2,,2026-09-06T01:16:18Z,start,31,Steven Moreira,,,0.357,0.875
-2026-09-05-columbus-crew-v-colorado-rapids,home,Columbus Crew,4-4-2,,2026-09-06T01:16:18Z,start,25,Sean Zawadzki,,,0.357,0.625
-2026-09-05-columbus-crew-v-colorado-rapids,home,Columbus Crew,4-4-2,,2026-09-06T01:16:18Z,start,18,Malte Amundsen,,,0.357,0.375
-2026-09-05-columbus-crew-v-colorado-rapids,home,Columbus Crew,4-4-2,,2026-09-06T01:16:18Z,start,11,Brooks Lennon,brooks-lennon,,0.357,0.125
-2026-09-05-columbus-crew-v-colorado-rapids,home,Columbus Crew,4-4-2,,2026-09-06T01:16:18Z,start,23,Mohamed Farsi,,,0.613,0.875
-2026-09-05-columbus-crew-v-colorado-rapids,home,Columbus Crew,4-4-2,,2026-09-06T01:16:18Z,start,50,Tarun Karumanchi,,,0.613,0.625
-2026-09-05-columbus-crew-v-colorado-rapids,home,Columbus Crew,4-4-2,,2026-09-06T01:16:18Z,start,20,André Gomes,,,0.613,0.375
-2026-09-05-columbus-crew-v-colorado-rapids,home,Columbus Crew,4-4-2,,2026-09-06T01:16:18Z,start,8,Santiago Rodríguez,,,0.613,0.125
-2026-09-05-columbus-crew-v-colorado-rapids,home,Columbus Crew,4-4-2,,2026-09-06T01:16:18Z,start,10,Brais Méndez,,,0.87,0.7
-2026-09-05-columbus-crew-v-colorado-rapids,home,Columbus Crew,4-4-2,,2026-09-06T01:16:18Z,start,77,Josef Martínez,,,0.87,0.3
-2026-09-05-columbus-crew-v-colorado-rapids,home,Columbus Crew,4-4-2,,2026-09-06T01:16:18Z,bench,1,Nicholas Hagen,,,,
-2026-09-05-columbus-crew-v-colorado-rapids,home,Columbus Crew,4-4-2,,2026-09-06T01:16:18Z,bench,12,Cesar Ruvalcaba,,,,
-2026-09-05-columbus-crew-v-colorado-rapids,home,Columbus Crew,4-4-2,,2026-09-06T01:16:18Z,bench,3,Eric Bailly,,,,
-2026-09-05-columbus-crew-v-colorado-rapids,home,Columbus Crew,4-4-2,,2026-09-06T01:16:18Z,bench,14,Amar Sejdic,,,,
-2026-09-05-columbus-crew-v-colorado-rapids,home,Columbus Crew,4-4-2,,2026-09-06T01:16:18Z,bench,7,Dylan Chambost,,,,
-2026-09-05-columbus-crew-v-colorado-rapids,home,Columbus Crew,4-4-2,,2026-09-06T01:16:18Z,bench,2,Andrés Herrera,,,,
-2026-09-05-columbus-crew-v-colorado-rapids,home,Columbus Crew,4-4-2,,2026-09-06T01:16:18Z,bench,16,Taha Habroune,,,,
-2026-09-05-columbus-crew-v-colorado-rapids,home,Columbus Crew,4-4-2,,2026-09-06T01:16:18Z,bench,33,Gonzalo Tapia,,,,
-2026-09-05-columbus-crew-v-colorado-rapids,home,Columbus Crew,4-4-2,,2026-09-06T01:16:18Z,bench,26,Lautaro Giaccone,,,,
-2026-09-05-columbus-crew-v-colorado-rapids,away,Colorado Rapids,4-3-3,,2026-09-06T01:16:18Z,start,31,Adam Beaudry,,,0.1,0.5
-2026-09-05-columbus-crew-v-colorado-rapids,away,Colorado Rapids,4-3-3,,2026-09-06T01:16:18Z,start,24,Noah Cobb,,,0.357,0.875
-2026-09-05-columbus-crew-v-colorado-rapids,away,Colorado Rapids,4-3-3,,2026-09-06T01:16:18Z,start,6,Rob Holding,,,0.357,0.625
-2026-09-05-columbus-crew-v-colorado-rapids,away,Colorado Rapids,4-3-3,,2026-09-06T01:16:18Z,start,5,Loïc Williams,,,0.357,0.375
-2026-09-05-columbus-crew-v-colorado-rapids,away,Colorado Rapids,4-3-3,,2026-09-06T01:16:18Z,start,29,Miguel Navarro,,,0.357,0.125
-2026-09-05-columbus-crew-v-colorado-rapids,away,Colorado Rapids,4-3-3,,2026-09-06T01:16:18Z,start,12,Joshua Atencio,,,0.613,0.79
-2026-09-05-columbus-crew-v-colorado-rapids,away,Colorado Rapids,4-3-3,,2026-09-06T01:16:18Z,start,10,Paxten Aaronson,,,0.613,0.5
-2026-09-05-columbus-crew-v-colorado-rapids,away,Colorado Rapids,4-3-3,,2026-09-06T01:16:18Z,start,13,Wayne Frederick,,,0.613,0.21
-2026-09-05-columbus-crew-v-colorado-rapids,away,Colorado Rapids,4-3-3,,2026-09-06T01:16:18Z,start,77,Darren Yapi,,,0.87,0.79
-2026-09-05-columbus-crew-v-colorado-rapids,away,Colorado Rapids,4-3-3,,2026-09-06T01:16:18Z,start,88,Youssef Maziz,,,0.87,0.5
-2026-09-05-columbus-crew-v-colorado-rapids,away,Colorado Rapids,4-3-3,,2026-09-06T01:16:18Z,start,93,Georgi Minoungou,,,0.87,0.21
-2026-09-05-columbus-crew-v-colorado-rapids,away,Colorado Rapids,4-3-3,,2026-09-06T01:16:18Z,bench,33,Kosi Thompson,,,,
-2026-09-05-columbus-crew-v-colorado-rapids,away,Colorado Rapids,4-3-3,,2026-09-06T01:16:18Z,bench,4,Reggie Cannon,,,,
-2026-09-05-columbus-crew-v-colorado-rapids,away,Colorado Rapids,4-3-3,,2026-09-06T01:16:18Z,bench,16,Alex Harris,,,,
-2026-09-05-columbus-crew-v-colorado-rapids,away,Colorado Rapids,4-3-3,,2026-09-06T01:16:18Z,bench,32,Donavan Phillip,,,,
-2026-09-05-columbus-crew-v-colorado-rapids,away,Colorado Rapids,4-3-3,,2026-09-06T01:16:18Z,bench,61,Bryan Dowd,,,,
-2026-09-05-columbus-crew-v-colorado-rapids,away,Colorado Rapids,4-3-3,,2026-09-06T01:16:18Z,bench,99,Jackson Travis,,,,
-2026-09-05-columbus-crew-v-colorado-rapids,away,Colorado Rapids,4-3-3,,2026-09-06T01:16:18Z,bench,2,Keegan Rosenberry,,,,
-2026-09-05-columbus-crew-v-colorado-rapids,away,Colorado Rapids,4-3-3,,2026-09-06T01:16:18Z,bench,94,Vincent Rinaldi,,,,
-2026-09-05-charlotte-fc-v-houston-dynamo-fc,home,Charlotte FC,4-3-3,,2026-09-06T01:16:18Z,start,1,Kristijan Kahlina,,,0.1,0.5
-2026-09-05-charlotte-fc-v-houston-dynamo-fc,home,Charlotte FC,4-3-3,,2026-09-06T01:16:18Z,start,35,Will Cleary,,,0.357,0.875
-2026-09-05-charlotte-fc-v-houston-dynamo-fc,home,Charlotte FC,4-3-3,,2026-09-06T01:16:18Z,start,22,Henry Kessler,,,0.357,0.625
-2026-09-05-charlotte-fc-v-houston-dynamo-fc,home,Charlotte FC,4-3-3,,2026-09-06T01:16:18Z,start,3,Tim Ream,,,0.357,0.375
-2026-09-05-charlotte-fc-v-houston-dynamo-fc,home,Charlotte FC,4-3-3,,2026-09-06T01:16:18Z,start,23,David Schnegg,,,0.357,0.125
-2026-09-05-charlotte-fc-v-houston-dynamo-fc,home,Charlotte FC,4-3-3,,2026-09-06T01:16:18Z,start,16,Pep Biel,,,0.613,0.79
-2026-09-05-charlotte-fc-v-houston-dynamo-fc,home,Charlotte FC,4-3-3,,2026-09-06T01:16:18Z,start,8,Ashley Westwood,,,0.613,0.5
-2026-09-05-charlotte-fc-v-houston-dynamo-fc,home,Charlotte FC,4-3-3,,2026-09-06T01:16:18Z,start,28,Djibril Diani,,,0.613,0.21
-2026-09-05-charlotte-fc-v-houston-dynamo-fc,home,Charlotte FC,4-3-3,,2026-09-06T01:16:18Z,start,11,Liel Abada,,,0.87,0.79
-2026-09-05-charlotte-fc-v-houston-dynamo-fc,home,Charlotte FC,4-3-3,,2026-09-06T01:16:18Z,start,9,Idan Toklomati,,,0.87,0.5
-2026-09-05-charlotte-fc-v-houston-dynamo-fc,home,Charlotte FC,4-3-3,,2026-09-06T01:16:18Z,start,10,Allan Saint-Maximin,,,0.87,0.21
-2026-09-05-charlotte-fc-v-houston-dynamo-fc,home,Charlotte FC,4-3-3,,2026-09-06T01:16:18Z,bench,21,Tyler Miller,,,,
-2026-09-05-charlotte-fc-v-houston-dynamo-fc,home,Charlotte FC,4-3-3,,2026-09-06T01:16:18Z,bench,4,Andrew Privett,,,,
-2026-09-05-charlotte-fc-v-houston-dynamo-fc,home,Charlotte FC,4-3-3,,2026-09-06T01:16:18Z,bench,44,Morrison Agyemang,,,,
-2026-09-05-charlotte-fc-v-houston-dynamo-fc,home,Charlotte FC,4-3-3,,2026-09-06T01:16:18Z,bench,14,Nathan Byrne,joe-byrne,,,
-2026-09-05-charlotte-fc-v-houston-dynamo-fc,home,Charlotte FC,4-3-3,,2026-09-06T01:16:18Z,bench,13,Brandt Bronico,,,,
-2026-09-05-charlotte-fc-v-houston-dynamo-fc,home,Charlotte FC,4-3-3,,2026-09-06T01:16:18Z,bench,17,Luca de la Torre,,,,
-2026-09-05-charlotte-fc-v-houston-dynamo-fc,home,Charlotte FC,4-3-3,,2026-09-06T01:16:18Z,bench,7,Archie Goodwin,,,,
-2026-09-05-charlotte-fc-v-houston-dynamo-fc,home,Charlotte FC,4-3-3,,2026-09-06T01:16:18Z,bench,37,Rodolfo Aloko,,,,
-2026-09-05-charlotte-fc-v-houston-dynamo-fc,home,Charlotte FC,4-3-3,,2026-09-06T01:16:18Z,bench,25,Tyger Smalls,,,,
-2026-09-05-charlotte-fc-v-houston-dynamo-fc,away,Houston Dynamo FC,4-2-3-1,,2026-09-06T01:16:18Z,start,31,Jonathan Bond,,,0.1,0.5
-2026-09-05-charlotte-fc-v-houston-dynamo-fc,away,Houston Dynamo FC,4-2-3-1,,2026-09-06T01:16:18Z,start,36,Felipe Andrade,,,0.292,0.875
-2026-09-05-charlotte-fc-v-houston-dynamo-fc,away,Houston Dynamo FC,4-2-3-1,,2026-09-06T01:16:18Z,start,5,Lucas Halter,,,0.292,0.625
-2026-09-05-charlotte-fc-v-houston-dynamo-fc,away,Houston Dynamo FC,4-2-3-1,,2026-09-06T01:16:18Z,start,34,Agustin Resch,,,0.292,0.375
-2026-09-05-charlotte-fc-v-houston-dynamo-fc,away,Houston Dynamo FC,4-2-3-1,,2026-09-06T01:16:18Z,start,11,Lawrence Ennali,,,0.292,0.125
-2026-09-05-charlotte-fc-v-houston-dynamo-fc,away,Houston Dynamo FC,4-2-3-1,,2026-09-06T01:16:18Z,start,6,Artur,,,0.485,0.7
-2026-09-05-charlotte-fc-v-houston-dynamo-fc,away,Houston Dynamo FC,4-2-3-1,,2026-09-06T01:16:18Z,start,16,Héctor Herrera,,,0.485,0.3
-2026-09-05-charlotte-fc-v-houston-dynamo-fc,away,Houston Dynamo FC,4-2-3-1,,2026-09-06T01:16:18Z,start,19,Mateusz Bogusz,,,0.678,0.837
-2026-09-05-charlotte-fc-v-houston-dynamo-fc,away,Houston Dynamo FC,4-2-3-1,,2026-09-06T01:16:18Z,start,30,Agustín Bouzat,,,0.678,0.5
-2026-09-05-charlotte-fc-v-houston-dynamo-fc,away,Houston Dynamo FC,4-2-3-1,,2026-09-06T01:16:18Z,start,20,Guilherme Augusto,,,0.678,0.163
-2026-09-05-charlotte-fc-v-houston-dynamo-fc,away,Houston Dynamo FC,4-2-3-1,,2026-09-06T01:16:18Z,start,23,Duncan McGuire,,,0.87,0.5
-2026-09-05-charlotte-fc-v-houston-dynamo-fc,away,Houston Dynamo FC,4-2-3-1,,2026-09-06T01:16:18Z,bench,24,Ibrahim Aliyu,,,,
-2026-09-05-charlotte-fc-v-houston-dynamo-fc,away,Houston Dynamo FC,4-2-3-1,,2026-09-06T01:16:18Z,bench,26,Blake Gillingham,,,,
-2026-09-05-charlotte-fc-v-houston-dynamo-fc,away,Houston Dynamo FC,4-2-3-1,,2026-09-06T01:16:18Z,bench,3,Antônio Carlos,,,,
-2026-09-05-charlotte-fc-v-houston-dynamo-fc,away,Houston Dynamo FC,4-2-3-1,,2026-09-06T01:16:18Z,bench,21,Franco Negri,,,,
-2026-09-05-charlotte-fc-v-houston-dynamo-fc,away,Houston Dynamo FC,4-2-3-1,,2026-09-06T01:16:18Z,bench,18,Diadie Samassékou,,,,
-2026-09-05-charlotte-fc-v-houston-dynamo-fc,away,Houston Dynamo FC,4-2-3-1,,2026-09-06T01:16:18Z,bench,14,Duane Holmes,,,,
-2026-09-05-charlotte-fc-v-houston-dynamo-fc,away,Houston Dynamo FC,4-2-3-1,,2026-09-06T01:16:18Z,bench,22,Matthew Arana,,,,
-2026-09-05-charlotte-fc-v-houston-dynamo-fc,away,Houston Dynamo FC,4-2-3-1,,2026-09-06T01:16:18Z,bench,17,Nick Markanich,,,,
-2026-09-06-austin-fc-v-san-jose-earthquakes,home,Austin FC,3-4-2-1,,2026-09-06T01:16:18Z,start,1,Brad Stuver,,,0.1,0.5
-2026-09-06-austin-fc-v-san-jose-earthquakes,home,Austin FC,3-4-2-1,,2026-09-06T01:16:18Z,start,3,Mikkel Desler,,,0.292,0.79
-2026-09-06-austin-fc-v-san-jose-earthquakes,home,Austin FC,3-4-2-1,,2026-09-06T01:16:18Z,start,5,Oleksandr Svatok,,,0.292,0.5
-2026-09-06-austin-fc-v-san-jose-earthquakes,home,Austin FC,3-4-2-1,,2026-09-06T01:16:18Z,start,29,Guilherme Biro,,,0.292,0.21
-2026-09-06-austin-fc-v-san-jose-earthquakes,home,Austin FC,3-4-2-1,,2026-09-06T01:16:18Z,start,30,Joseph Rosales,,,0.485,0.875
-2026-09-06-austin-fc-v-san-jose-earthquakes,home,Austin FC,3-4-2-1,,2026-09-06T01:16:18Z,start,38,Ervin Torres,,,0.485,0.625
-2026-09-06-austin-fc-v-san-jose-earthquakes,home,Austin FC,3-4-2-1,,2026-09-06T01:16:18Z,start,14,Besard Sabovic,,,0.485,0.375
-2026-09-06-austin-fc-v-san-jose-earthquakes,home,Austin FC,3-4-2-1,,2026-09-06T01:16:18Z,start,17,Jon Gallagher,jon-gallagher,,0.485,0.125
-2026-09-06-austin-fc-v-san-jose-earthquakes,home,Austin FC,3-4-2-1,,2026-09-06T01:16:18Z,start,11,Facundo Torres,,,0.678,0.7
-2026-09-06-austin-fc-v-san-jose-earthquakes,home,Austin FC,3-4-2-1,,2026-09-06T01:16:18Z,start,24,Jorge Alastuey,,,0.678,0.3
-2026-09-06-austin-fc-v-san-jose-earthquakes,home,Austin FC,3-4-2-1,,2026-09-06T01:16:18Z,start,9,Brandon Vázquez,,,0.87,0.5
-2026-09-06-austin-fc-v-san-jose-earthquakes,home,Austin FC,3-4-2-1,,2026-09-06T01:16:18Z,bench,12,Damian Las,,,,
-2026-09-06-austin-fc-v-san-jose-earthquakes,home,Austin FC,3-4-2-1,,2026-09-06T01:16:18Z,bench,4,Brendan Hines-Ike,,,,
-2026-09-06-austin-fc-v-san-jose-earthquakes,home,Austin FC,3-4-2-1,,2026-09-06T01:16:18Z,bench,15,Jon Bell,,,,
-2026-09-06-austin-fc-v-san-jose-earthquakes,home,Austin FC,3-4-2-1,,2026-09-06T01:16:18Z,bench,35,Mateja Djordjevic,,,,
-2026-09-06-austin-fc-v-san-jose-earthquakes,home,Austin FC,3-4-2-1,,2026-09-06T01:16:18Z,bench,23,Zan Kolmanic,,,,
-2026-09-06-austin-fc-v-san-jose-earthquakes,home,Austin FC,3-4-2-1,,2026-09-06T01:16:18Z,bench,6,Ilie Sánchez,,,,
-2026-09-06-austin-fc-v-san-jose-earthquakes,home,Austin FC,3-4-2-1,,2026-09-06T01:16:18Z,bench,77,Przemyslaw Placheta,,,,
-2026-09-06-austin-fc-v-san-jose-earthquakes,home,Austin FC,3-4-2-1,,2026-09-06T01:16:18Z,bench,21,Christian Ramirez,,,,
-2026-09-06-austin-fc-v-san-jose-earthquakes,home,Austin FC,3-4-2-1,,2026-09-06T01:16:18Z,bench,32,Micah Burton,,,,
-2026-09-06-austin-fc-v-san-jose-earthquakes,away,San Jose Earthquakes,3-4-2-1,,2026-09-06T01:16:18Z,start,1,Angus Gunn,,,0.1,0.5
-2026-09-06-austin-fc-v-san-jose-earthquakes,away,San Jose Earthquakes,3-4-2-1,,2026-09-06T01:16:18Z,start,25,Max Floriani,,,0.292,0.79
-2026-09-06-austin-fc-v-san-jose-earthquakes,away,San Jose Earthquakes,3-4-2-1,,2026-09-06T01:16:18Z,start,5,Daniel Munie,,,0.292,0.5
-2026-09-06-austin-fc-v-san-jose-earthquakes,away,San Jose Earthquakes,3-4-2-1,,2026-09-06T01:16:18Z,start,18,Reid Roberts,,,0.292,0.21
-2026-09-06-austin-fc-v-san-jose-earthquakes,away,San Jose Earthquakes,3-4-2-1,,2026-09-06T01:16:18Z,start,28,Benji Kikanovic,,,0.485,0.875
-2026-09-06-austin-fc-v-san-jose-earthquakes,away,San Jose Earthquakes,3-4-2-1,,2026-09-06T01:16:18Z,start,14,Ronaldo Vieira,,,0.485,0.625
-2026-09-06-austin-fc-v-san-jose-earthquakes,away,San Jose Earthquakes,3-4-2-1,,2026-09-06T01:16:18Z,start,34,Beau Leroux,,,0.485,0.375
-2026-09-06-austin-fc-v-san-jose-earthquakes,away,San Jose Earthquakes,3-4-2-1,,2026-09-06T01:16:18Z,start,2,Jamar Ricketts,,,0.485,0.125
-2026-09-06-austin-fc-v-san-jose-earthquakes,away,San Jose Earthquakes,3-4-2-1,,2026-09-06T01:16:18Z,start,10,Niko Tsakiris,,,0.678,0.7
-2026-09-06-austin-fc-v-san-jose-earthquakes,away,San Jose Earthquakes,3-4-2-1,,2026-09-06T01:16:18Z,start,23,Eduard Löwen,,,0.678,0.3
-2026-09-06-austin-fc-v-san-jose-earthquakes,away,San Jose Earthquakes,3-4-2-1,,2026-09-06T01:16:18Z,start,7,Ousseni Bouda,,,0.87,0.5
-2026-09-06-austin-fc-v-san-jose-earthquakes,away,San Jose Earthquakes,3-4-2-1,,2026-09-06T01:16:18Z,bench,31,Francesco Montali,,,,
-2026-09-06-austin-fc-v-san-jose-earthquakes,away,San Jose Earthquakes,3-4-2-1,,2026-09-06T01:16:18Z,bench,4,David Romney,,,,
-2026-09-06-austin-fc-v-san-jose-earthquakes,away,San Jose Earthquakes,3-4-2-1,,2026-09-06T01:16:18Z,bench,17,Jack Jasinski,,,,
-2026-09-06-austin-fc-v-san-jose-earthquakes,away,San Jose Earthquakes,3-4-2-1,,2026-09-06T01:16:18Z,bench,87,Vítor Costa,,,,
-2026-09-06-austin-fc-v-san-jose-earthquakes,away,San Jose Earthquakes,3-4-2-1,,2026-09-06T01:16:18Z,bench,6,Ian Harkes,,,,
-2026-09-06-austin-fc-v-san-jose-earthquakes,away,San Jose Earthquakes,3-4-2-1,,2026-09-06T01:16:18Z,bench,20,Nick Fernandez,,,,
-2026-09-06-austin-fc-v-san-jose-earthquakes,away,San Jose Earthquakes,3-4-2-1,,2026-09-06T01:16:18Z,bench,16,Jack Skahan,,,,
-2026-09-06-austin-fc-v-san-jose-earthquakes,away,San Jose Earthquakes,3-4-2-1,,2026-09-06T01:16:18Z,bench,9,Luka Jovanovic,,,,
-2026-09-06-austin-fc-v-san-jose-earthquakes,away,San Jose Earthquakes,3-4-2-1,,2026-09-06T01:16:18Z,bench,19,Preston Judd,,,,
-2026-09-06-orange-county-sc-v-sacramento-republic-fc,home,Orange County SC,4-1-4-1,,2026-09-06T01:16:18Z,start,1,Alexander Rando,,,0.1,0.5
-2026-09-06-orange-county-sc-v-sacramento-republic-fc,home,Orange County SC,4-1-4-1,,2026-09-06T01:16:18Z,start,16,Jaylin Lindsey,,,0.292,0.875
-2026-09-06-orange-county-sc-v-sacramento-republic-fc,home,Orange County SC,4-1-4-1,,2026-09-06T01:16:18Z,start,5,Tom Brewitt,,,0.292,0.625
-2026-09-06-orange-county-sc-v-sacramento-republic-fc,home,Orange County SC,4-1-4-1,,2026-09-06T01:16:18Z,start,6,Garrison Tubbs,,,0.292,0.375
-2026-09-06-orange-county-sc-v-sacramento-republic-fc,home,Orange County SC,4-1-4-1,,2026-09-06T01:16:18Z,start,23,Ryan Doghman,,,0.292,0.125
-2026-09-06-orange-county-sc-v-sacramento-republic-fc,home,Orange County SC,4-1-4-1,,2026-09-06T01:16:18Z,start,4,Nico Benalcázar,,,0.485,0.5
-2026-09-06-orange-county-sc-v-sacramento-republic-fc,home,Orange County SC,4-1-4-1,,2026-09-06T01:16:18Z,start,11,Lyam MacKinnon,,,0.678,0.875
-2026-09-06-orange-county-sc-v-sacramento-republic-fc,home,Orange County SC,4-1-4-1,,2026-09-06T01:16:18Z,start,8,Ousmane Sylla,,,0.678,0.625
-2026-09-06-orange-county-sc-v-sacramento-republic-fc,home,Orange County SC,4-1-4-1,,2026-09-06T01:16:18Z,start,27,Stephen Kelly,,,0.678,0.375
-2026-09-06-orange-county-sc-v-sacramento-republic-fc,home,Orange County SC,4-1-4-1,,2026-09-06T01:16:18Z,start,10,Chris Hegardt,,,0.678,0.125
-2026-09-06-orange-county-sc-v-sacramento-republic-fc,home,Orange County SC,4-1-4-1,,2026-09-06T01:16:18Z,start,12,Yaniv Bazini,,,0.89,0.5
-2026-09-06-orange-county-sc-v-sacramento-republic-fc,home,Orange County SC,4-1-4-1,,2026-09-06T01:16:18Z,bench,33,Jack Gentile,,,,
-2026-09-06-orange-county-sc-v-sacramento-republic-fc,home,Orange County SC,4-1-4-1,,2026-09-06T01:16:18Z,bench,31,Tetsuya Kadono,,,,
-2026-09-06-orange-county-sc-v-sacramento-republic-fc,home,Orange County SC,4-1-4-1,,2026-09-06T01:16:18Z,bench,28,Finn O'Brien,,,,
-2026-09-06-orange-county-sc-v-sacramento-republic-fc,home,Orange County SC,4-1-4-1,,2026-09-06T01:16:18Z,bench,15,Tyson Espy,,,,
-2026-09-06-orange-county-sc-v-sacramento-republic-fc,home,Orange County SC,4-1-4-1,,2026-09-06T01:16:18Z,bench,18,Marcelo Palomino,,,,
-2026-09-06-orange-county-sc-v-sacramento-republic-fc,home,Orange County SC,4-1-4-1,,2026-09-06T01:16:18Z,bench,9,Ethan Zubak,,,,
-2026-09-06-orange-county-sc-v-sacramento-republic-fc,home,Orange County SC,4-1-4-1,,2026-09-06T01:16:18Z,bench,35,Jerome Carter,,,,
-2026-09-06-orange-county-sc-v-sacramento-republic-fc,home,Orange County SC,4-1-4-1,,2026-09-06T01:16:18Z,bench,30,Joaquin Castro,,,,
-2026-09-06-orange-county-sc-v-sacramento-republic-fc,home,Orange County SC,4-1-4-1,,2026-09-06T01:16:18Z,bench,20,Mataeo Bunbury,,,,
-2026-09-06-orange-county-sc-v-sacramento-republic-fc,away,Sacramento Republic FC,4-4-2,,2026-09-06T01:16:18Z,start,1,Danny Vitiello,,,0.1,0.5
-2026-09-06-orange-county-sc-v-sacramento-republic-fc,away,Sacramento Republic FC,4-4-2,,2026-09-06T01:16:18Z,start,6,Freddy Kleemann,,,0.357,0.875
-2026-09-06-orange-county-sc-v-sacramento-republic-fc,away,Sacramento Republic FC,4-4-2,,2026-09-06T01:16:18Z,start,5,Jared Timmer,,,0.357,0.625
-2026-09-06-orange-county-sc-v-sacramento-republic-fc,away,Sacramento Republic FC,4-4-2,,2026-09-06T01:16:18Z,start,4,Lee Desmond,lee-desmond,,0.357,0.375
-2026-09-06-orange-county-sc-v-sacramento-republic-fc,away,Sacramento Republic FC,4-4-2,,2026-09-06T01:16:18Z,start,3,Ryan Spaulding,,,0.357,0.125
-2026-09-06-orange-county-sc-v-sacramento-republic-fc,away,Sacramento Republic FC,4-4-2,,2026-09-06T01:16:18Z,start,20,Blake Willey,,,0.613,0.875
-2026-09-06-orange-county-sc-v-sacramento-republic-fc,away,Sacramento Republic FC,4-4-2,,2026-09-06T01:16:18Z,start,27,Daniel Crisostomo,,,0.613,0.625
-2026-09-06-orange-county-sc-v-sacramento-republic-fc,away,Sacramento Republic FC,4-4-2,,2026-09-06T01:16:18Z,start,24,Pep Casas,,,0.613,0.375
-2026-09-06-orange-county-sc-v-sacramento-republic-fc,away,Sacramento Republic FC,4-4-2,,2026-09-06T01:16:18Z,start,8,Memo Rodríguez,,,0.613,0.125
-2026-09-06-orange-county-sc-v-sacramento-republic-fc,away,Sacramento Republic FC,4-4-2,,2026-09-06T01:16:18Z,start,16,Tyler Wolff,,,0.87,0.7
-2026-09-06-orange-county-sc-v-sacramento-republic-fc,away,Sacramento Republic FC,4-4-2,,2026-09-06T01:16:18Z,start,26,Cal Jennings,,,0.87,0.3
-2026-09-06-orange-county-sc-v-sacramento-republic-fc,away,Sacramento Republic FC,4-4-2,,2026-09-06T01:16:18Z,bench,31,Jacob Randolph,,,,
-2026-09-06-orange-county-sc-v-sacramento-republic-fc,away,Sacramento Republic FC,4-4-2,,2026-09-06T01:16:18Z,bench,15,Aaron Essel,,,,
-2026-09-06-orange-county-sc-v-sacramento-republic-fc,away,Sacramento Republic FC,4-4-2,,2026-09-06T01:16:18Z,bench,21,Tim Leibold,,,,
-2026-09-06-orange-county-sc-v-sacramento-republic-fc,away,Sacramento Republic FC,4-4-2,,2026-09-06T01:16:18Z,bench,19,Alfredo Midence,,,,
-2026-09-06-orange-county-sc-v-sacramento-republic-fc,away,Sacramento Republic FC,4-4-2,,2026-09-06T01:16:18Z,bench,10,Arturo Rodríguez,,,,
-2026-09-06-orange-county-sc-v-sacramento-republic-fc,away,Sacramento Republic FC,4-4-2,,2026-09-06T01:16:18Z,bench,11,Forster Ajago,,,,
-2026-09-06-orange-county-sc-v-sacramento-republic-fc,away,Sacramento Republic FC,4-4-2,,2026-09-06T01:16:18Z,bench,71,Kyle Edwards,,,,
-2026-09-06-orange-county-sc-v-sacramento-republic-fc,away,Sacramento Republic FC,4-4-2,,2026-09-06T01:16:18Z,bench,7,Mayele Malango,,,,
-2026-09-06-hertha-bsc-v-magdeburg,home,Hertha BSC,4-2-3-1,,2026-09-06T01:16:18Z,start,35,Marius Gersbeck,,,0.1,0.5
-2026-09-06-hertha-bsc-v-magdeburg,home,Hertha BSC,4-2-3-1,,2026-09-06T01:16:18Z,start,2,Julian Eitschberger,,,0.292,0.875
-2026-09-06-hertha-bsc-v-magdeburg,home,Hertha BSC,4-2-3-1,,2026-09-06T01:16:18Z,start,44,Linus Gechter,,,0.292,0.625
-2026-09-06-hertha-bsc-v-magdeburg,home,Hertha BSC,4-2-3-1,,2026-09-06T01:16:18Z,start,27,Niklas Kolbe,,,0.292,0.375
-2026-09-06-hertha-bsc-v-magdeburg,home,Hertha BSC,4-2-3-1,,2026-09-06T01:16:18Z,start,22,Mads Valentin Pedersen,,,0.292,0.125
-2026-09-06-hertha-bsc-v-magdeburg,home,Hertha BSC,4-2-3-1,,2026-09-06T01:16:18Z,start,30,Paul Seguin,,,0.485,0.7
-2026-09-06-hertha-bsc-v-magdeburg,home,Hertha BSC,4-2-3-1,,2026-09-06T01:16:18Z,start,8,Kevin Sessa,,,0.485,0.3
-2026-09-06-hertha-bsc-v-magdeburg,home,Hertha BSC,4-2-3-1,,2026-09-06T01:16:18Z,start,23,Jón Thorsteinsson,,,0.678,0.837
-2026-09-06-hertha-bsc-v-magdeburg,home,Hertha BSC,4-2-3-1,,2026-09-06T01:16:18Z,start,33,Soufian Gouram,,,0.678,0.5
-2026-09-06-hertha-bsc-v-magdeburg,home,Hertha BSC,4-2-3-1,,2026-09-06T01:16:18Z,start,7,Josip Brekalo,,,0.678,0.163
-2026-09-06-hertha-bsc-v-magdeburg,home,Hertha BSC,4-2-3-1,,2026-09-06T01:16:18Z,start,17,Sebastian Grønning,,,0.87,0.5
-2026-09-06-hertha-bsc-v-magdeburg,home,Hertha BSC,4-2-3-1,,2026-09-06T01:16:18Z,bench,43,Tim Goller,,,,
-2026-09-06-hertha-bsc-v-magdeburg,home,Hertha BSC,4-2-3-1,,2026-09-06T01:16:18Z,bench,29,Jerome Diallo,,,,
-2026-09-06-hertha-bsc-v-magdeburg,home,Hertha BSC,4-2-3-1,,2026-09-06T01:16:18Z,bench,31,Márton Dárdai,,,,
-2026-09-06-hertha-bsc-v-magdeburg,home,Hertha BSC,4-2-3-1,,2026-09-06T01:16:18Z,bench,21,Boris Lum,,,,
-2026-09-06-hertha-bsc-v-magdeburg,home,Hertha BSC,4-2-3-1,,2026-09-06T01:16:18Z,bench,41,Pascal Klemens,,,,
-2026-09-06-hertha-bsc-v-magdeburg,home,Hertha BSC,4-2-3-1,,2026-09-06T01:16:18Z,bench,20,Farid Alfa-Ruprecht,,,,
-2026-09-06-hertha-bsc-v-magdeburg,home,Hertha BSC,4-2-3-1,,2026-09-06T01:16:18Z,bench,28,Jelani Ndi,,,,
-2026-09-06-hertha-bsc-v-magdeburg,home,Hertha BSC,4-2-3-1,,2026-09-06T01:16:18Z,bench,18,Luca Schuler,,,,
-2026-09-06-hertha-bsc-v-magdeburg,home,Hertha BSC,4-2-3-1,,2026-09-06T01:16:18Z,bench,19,Oluwaseun Adewumi,,,,
-2026-09-06-hertha-bsc-v-magdeburg,away,Magdeburg,4-3-3,,2026-09-06T01:16:18Z,start,1,Dominik Reimann,,,0.1,0.5
-2026-09-06-hertha-bsc-v-magdeburg,away,Magdeburg,4-3-3,,2026-09-06T01:16:18Z,start,28,Pierre Nadjombe,,,0.357,0.875
-2026-09-06-hertha-bsc-v-magdeburg,away,Magdeburg,4-3-3,,2026-09-06T01:16:18Z,start,5,Tobias Müller,,,0.357,0.625
-2026-09-06-hertha-bsc-v-magdeburg,away,Magdeburg,4-3-3,,2026-09-06T01:16:18Z,start,3,Anselmo MacNulty,anselmo-garcia-macnulty,,0.357,0.375
-2026-09-06-hertha-bsc-v-magdeburg,away,Magdeburg,4-3-3,,2026-09-06T01:16:18Z,start,17,Alexander Nollenberger,,,0.357,0.125
-2026-09-06-hertha-bsc-v-magdeburg,away,Magdeburg,4-3-3,,2026-09-06T01:16:18Z,start,38,Luka Hyryläinen,,,0.613,0.79
-2026-09-06-hertha-bsc-v-magdeburg,away,Magdeburg,4-3-3,,2026-09-06T01:16:18Z,start,10,Moritz-Broni Kwarteng,,,0.613,0.5
-2026-09-06-hertha-bsc-v-magdeburg,away,Magdeburg,4-3-3,,2026-09-06T01:16:18Z,start,21,Falko Michel,,,0.613,0.21
-2026-09-06-hertha-bsc-v-magdeburg,away,Magdeburg,4-3-3,,2026-09-06T01:16:18Z,start,8,Emmanuel Iyoha,,,0.87,0.79
-2026-09-06-hertha-bsc-v-magdeburg,away,Magdeburg,4-3-3,,2026-09-06T01:16:18Z,start,22,Mateusz Żukowski,,,0.87,0.5
-2026-09-06-hertha-bsc-v-magdeburg,away,Magdeburg,4-3-3,,2026-09-06T01:16:18Z,start,23,Barış Atik,,,0.87,0.21
-2026-09-06-hertha-bsc-v-magdeburg,away,Magdeburg,4-3-3,,2026-09-06T01:16:18Z,bench,30,Noah Kruth,,,,
-2026-09-06-hertha-bsc-v-magdeburg,away,Magdeburg,4-3-3,,2026-09-06T01:16:18Z,bench,6,Paul Jaeckel,,,,
-2026-09-06-hertha-bsc-v-magdeburg,away,Magdeburg,4-3-3,,2026-09-06T01:16:18Z,bench,4,Eldin Džogović,,,,
-2026-09-06-hertha-bsc-v-magdeburg,away,Magdeburg,4-3-3,,2026-09-06T01:16:18Z,bench,11,Felipe Chávez,,,,
-2026-09-06-hertha-bsc-v-magdeburg,away,Magdeburg,4-3-3,,2026-09-06T01:16:18Z,bench,33,Leon Mergner,,,,
-2026-09-06-hertha-bsc-v-magdeburg,away,Magdeburg,4-3-3,,2026-09-06T01:16:18Z,bench,35,Magnus Baars,,,,
-2026-09-06-hertha-bsc-v-magdeburg,away,Magdeburg,4-3-3,,2026-09-06T01:16:18Z,bench,26,Torben Müsel,,,,
-2026-09-06-hertha-bsc-v-magdeburg,away,Magdeburg,4-3-3,,2026-09-06T01:16:18Z,bench,29,Richmond Tachie,,,,
-2026-09-06-hertha-bsc-v-magdeburg,away,Magdeburg,4-3-3,,2026-09-06T01:16:18Z,bench,9,Roko Šimić,,,,
-2026-09-06-cercle-brugge-v-gent,home,Cercle Brugge,3-5-2,,2026-09-06T01:16:18Z,start,1,Gaëtan Coucke,,,0.1,0.5
-2026-09-06-cercle-brugge-v-gent,home,Cercle Brugge,3-5-2,,2026-09-06T01:16:18Z,start,5,Emmanuel Kakou,,,0.357,0.79
-2026-09-06-cercle-brugge-v-gent,home,Cercle Brugge,3-5-2,,2026-09-06T01:16:18Z,start,24,Geoffrey Kondo,,,0.357,0.5
-2026-09-06-cercle-brugge-v-gent,home,Cercle Brugge,3-5-2,,2026-09-06T01:16:18Z,start,12,Valy Konaté,,,0.357,0.21
-2026-09-06-cercle-brugge-v-gent,home,Cercle Brugge,3-5-2,,2026-09-06T01:16:18Z,start,15,Gary Magnée,,,0.613,0.89
-2026-09-06-cercle-brugge-v-gent,home,Cercle Brugge,3-5-2,,2026-09-06T01:16:18Z,start,19,Ibrahima Diaby,,,0.613,0.695
-2026-09-06-cercle-brugge-v-gent,home,Cercle Brugge,3-5-2,,2026-09-06T01:16:18Z,start,71,Viggo Martens,,,0.613,0.5
-2026-09-06-cercle-brugge-v-gent,home,Cercle Brugge,3-5-2,,2026-09-06T01:16:18Z,start,42,Lukas Mondele,,,0.613,0.305
-2026-09-06-cercle-brugge-v-gent,home,Cercle Brugge,3-5-2,,2026-09-06T01:16:18Z,start,2,Ibrahim Diakité,,,0.613,0.11
-2026-09-06-cercle-brugge-v-gent,home,Cercle Brugge,3-5-2,,2026-09-06T01:16:18Z,start,13,Dante Vanzeir,,,0.87,0.7
-2026-09-06-cercle-brugge-v-gent,home,Cercle Brugge,3-5-2,,2026-09-06T01:16:18Z,start,9,Steve Ngoura,,,0.87,0.3
-2026-09-06-cercle-brugge-v-gent,home,Cercle Brugge,3-5-2,,2026-09-06T01:16:18Z,bench,84,Bas Langenbick,,,,
-2026-09-06-cercle-brugge-v-gent,home,Cercle Brugge,3-5-2,,2026-09-06T01:16:18Z,bench,33,Royer Caicedo,,,,
-2026-09-06-cercle-brugge-v-gent,home,Cercle Brugge,3-5-2,,2026-09-06T01:16:18Z,bench,8,Erick Nunes,,,,
-2026-09-06-cercle-brugge-v-gent,home,Cercle Brugge,3-5-2,,2026-09-06T01:16:18Z,bench,6,Lawrence Agyekum,,,,
-2026-09-06-cercle-brugge-v-gent,home,Cercle Brugge,3-5-2,,2026-09-06T01:16:18Z,bench,10,Lazare Amani,,,,
-2026-09-06-cercle-brugge-v-gent,home,Cercle Brugge,3-5-2,,2026-09-06T01:16:18Z,bench,41,Krys Kouassi,,,,
-2026-09-06-cercle-brugge-v-gent,home,Cercle Brugge,3-5-2,,2026-09-06T01:16:18Z,bench,22,Lucas Michal,,,,
-2026-09-06-cercle-brugge-v-gent,home,Cercle Brugge,3-5-2,,2026-09-06T01:16:18Z,bench,73,Lukas Rocha Torres,,,,
-2026-09-06-cercle-brugge-v-gent,away,Gent,3-4-2-1,,2026-09-06T01:16:18Z,start,33,Davy Roef,,,0.1,0.5
-2026-09-06-cercle-brugge-v-gent,away,Gent,3-4-2-1,,2026-09-06T01:16:18Z,start,5,Mouhamed Ngom,,,0.292,0.79
-2026-09-06-cercle-brugge-v-gent,away,Gent,3-4-2-1,,2026-09-06T01:16:18Z,start,16,Christian Burgess,,,0.292,0.5
-2026-09-06-cercle-brugge-v-gent,away,Gent,3-4-2-1,,2026-09-06T01:16:18Z,start,44,Siebe van der Heyden,,,0.292,0.21
-2026-09-06-cercle-brugge-v-gent,away,Gent,3-4-2-1,,2026-09-06T01:16:18Z,start,14,Kyrell Wilson,,,0.485,0.875
-2026-09-06-cercle-brugge-v-gent,away,Gent,3-4-2-1,,2026-09-06T01:16:18Z,start,17,Mathias Delorge,,,0.485,0.625
-2026-09-06-cercle-brugge-v-gent,away,Gent,3-4-2-1,,2026-09-06T01:16:18Z,start,22,Leonardo Lopes,,,0.485,0.375
-2026-09-06-cercle-brugge-v-gent,away,Gent,3-4-2-1,,2026-09-06T01:16:18Z,start,20,Tiago Araújo,,,0.485,0.125
-2026-09-06-cercle-brugge-v-gent,away,Gent,3-4-2-1,,2026-09-06T01:16:18Z,start,8,Lászlo Bénes,,,0.678,0.7
-2026-09-06-cercle-brugge-v-gent,away,Gent,3-4-2-1,,2026-09-06T01:16:18Z,start,11,Momodou Sonko,,,0.678,0.3
-2026-09-06-cercle-brugge-v-gent,away,Gent,3-4-2-1,,2026-09-06T01:16:18Z,start,47,Josué Vergara,,,0.87,0.5
-2026-09-06-cercle-brugge-v-gent,away,Gent,3-4-2-1,,2026-09-06T01:16:18Z,bench,30,Kjell Peersman,,,,
-2026-09-06-cercle-brugge-v-gent,away,Gent,3-4-2-1,,2026-09-06T01:16:18Z,bench,39,Abdoul Ayindé,,,,
-2026-09-06-cercle-brugge-v-gent,away,Gent,3-4-2-1,,2026-09-06T01:16:18Z,bench,3,Maksim Paskotši,,,,
-2026-09-06-cercle-brugge-v-gent,away,Gent,3-4-2-1,,2026-09-06T01:16:18Z,bench,56,Mamadou Diallo,,,,
-2026-09-06-cercle-brugge-v-gent,away,Gent,3-4-2-1,,2026-09-06T01:16:18Z,bench,57,Matties Volckaert,,,,
-2026-09-06-cercle-brugge-v-gent,away,Gent,3-4-2-1,,2026-09-06T01:16:18Z,bench,37,Abdelkahar Kadri,,,,
-2026-09-06-cercle-brugge-v-gent,away,Gent,3-4-2-1,,2026-09-06T01:16:18Z,bench,10,Aimé Omgba,,,,
-2026-09-06-cercle-brugge-v-gent,away,Gent,3-4-2-1,,2026-09-06T01:16:18Z,bench,27,Tibe De Vlieger,,,,
-2026-09-06-cercle-brugge-v-gent,away,Gent,3-4-2-1,,2026-09-06T01:16:18Z,bench,59,El Hadji Seck,,,,
-2026-09-06-cercle-brugge-v-gent,away,Gent,3-4-2-1,,2026-09-06T01:16:18Z,bench,7,Michel-Ange Balikwisha,,,,
-2026-09-06-everton-v-manchester-united,home,Everton,4-2-3-1,,2026-09-06T01:16:18Z,start,1,Jordan Pickford,,,0.1,0.5
-2026-09-06-everton-v-manchester-united,home,Everton,4-2-3-1,,2026-09-06T01:16:18Z,start,15,Jake O'Brien,jake-obrien,,0.292,0.875
-2026-09-06-everton-v-manchester-united,home,Everton,4-2-3-1,,2026-09-06T01:16:18Z,start,6,James Tarkowski,,,0.292,0.625
-2026-09-06-everton-v-manchester-united,home,Everton,4-2-3-1,,2026-09-06T01:16:18Z,start,4,Jarrad Branthwaite,,,0.292,0.375
-2026-09-06-everton-v-manchester-united,home,Everton,4-2-3-1,,2026-09-06T01:16:18Z,start,16,Vitaliy Mykolenko,,,0.292,0.125
-2026-09-06-everton-v-manchester-united,home,Everton,4-2-3-1,,2026-09-06T01:16:18Z,start,45,Harrison Armstrong,desmond-armstrong,,0.485,0.7
-2026-09-06-everton-v-manchester-united,home,Everton,4-2-3-1,,2026-09-06T01:16:18Z,start,37,James Garner,,,0.485,0.3
-2026-09-06-everton-v-manchester-united,home,Everton,4-2-3-1,,2026-09-06T01:16:18Z,start,34,Merlin Röhl,,,0.678,0.837
-2026-09-06-everton-v-manchester-united,home,Everton,4-2-3-1,,2026-09-06T01:16:18Z,start,8,Kiernan Dewsbury-Hall,,,0.678,0.5
-2026-09-06-everton-v-manchester-united,home,Everton,4-2-3-1,,2026-09-06T01:16:18Z,start,19,Tyrique George,,,0.678,0.163
-2026-09-06-everton-v-manchester-united,home,Everton,4-2-3-1,,2026-09-06T01:16:18Z,start,11,Thierno Barry,,,0.87,0.5
-2026-09-06-everton-v-manchester-united,away,Manchester United,4-2-3-1,,2026-09-06T01:16:18Z,start,1,Senne Lammens,,,0.1,0.5
-2026-09-06-everton-v-manchester-united,away,Manchester United,4-2-3-1,,2026-09-06T01:16:18Z,start,2,Diogo Dalot,,,0.292,0.875
-2026-09-06-everton-v-manchester-united,away,Manchester United,4-2-3-1,,2026-09-06T01:16:18Z,start,5,Harry Maguire,,,0.292,0.625
-2026-09-06-everton-v-manchester-united,away,Manchester United,4-2-3-1,,2026-09-06T01:16:18Z,start,6,Lisandro Martínez,,,0.292,0.375
-2026-09-06-everton-v-manchester-united,away,Manchester United,4-2-3-1,,2026-09-06T01:16:18Z,start,23,Luke Shaw,,,0.292,0.125
-2026-09-06-everton-v-manchester-united,away,Manchester United,4-2-3-1,,2026-09-06T01:16:18Z,start,18,Youri Tielemans,,,0.485,0.7
-2026-09-06-everton-v-manchester-united,away,Manchester United,4-2-3-1,,2026-09-06T01:16:18Z,start,37,Kobbie Mainoo,,,0.485,0.3
-2026-09-06-everton-v-manchester-united,away,Manchester United,4-2-3-1,,2026-09-06T01:16:18Z,start,19,Bryan Mbeumo,,,0.678,0.837
-2026-09-06-everton-v-manchester-united,away,Manchester United,4-2-3-1,,2026-09-06T01:16:18Z,start,8,Bruno Fernandes,,,0.678,0.5
-2026-09-06-everton-v-manchester-united,away,Manchester United,4-2-3-1,,2026-09-06T01:16:18Z,start,9,Marcus Rashford,,,0.678,0.163
-2026-09-06-everton-v-manchester-united,away,Manchester United,4-2-3-1,,2026-09-06T01:16:18Z,start,10,Matheus Cunha,,,0.87,0.5
-2026-09-06-heart-of-midlothian-v-dundee-fc,home,Heart of Midlothian,4-4-2,,2026-09-06T01:16:18Z,start,1,Beau Reus,,,0.1,0.5
-2026-09-06-heart-of-midlothian-v-dundee-fc,home,Heart of Midlothian,4-4-2,,2026-09-06T01:16:18Z,start,23,Jordi Altena,,,0.357,0.875
-2026-09-06-heart-of-midlothian-v-dundee-fc,home,Heart of Midlothian,4-4-2,,2026-09-06T01:16:18Z,start,6,Oisin McEntee,oisin-mcentee,,0.357,0.625
-2026-09-06-heart-of-midlothian-v-dundee-fc,home,Heart of Midlothian,4-4-2,,2026-09-06T01:16:18Z,start,17,Stuart Findlay,,,0.357,0.375
-2026-09-06-heart-of-midlothian-v-dundee-fc,home,Heart of Midlothian,4-4-2,,2026-09-06T01:16:18Z,start,5,Jamie McCart,,,0.357,0.125
-2026-09-06-heart-of-midlothian-v-dundee-fc,home,Heart of Midlothian,4-4-2,,2026-09-06T01:16:18Z,start,7,Calvin Miller,,,0.613,0.875
-2026-09-06-heart-of-midlothian-v-dundee-fc,home,Heart of Midlothian,4-4-2,,2026-09-06T01:16:18Z,start,78,Laurent Mendy,,,0.613,0.625
-2026-09-06-heart-of-midlothian-v-dundee-fc,home,Heart of Midlothian,4-4-2,,2026-09-06T01:16:18Z,start,16,Blair Spittal,,,0.613,0.375
-2026-09-06-heart-of-midlothian-v-dundee-fc,home,Heart of Midlothian,4-4-2,,2026-09-06T01:16:18Z,start,15,Joshua McPake,,,0.613,0.125
-2026-09-06-heart-of-midlothian-v-dundee-fc,home,Heart of Midlothian,4-4-2,,2026-09-06T01:16:18Z,start,21,James Wilson,,,0.87,0.7
-2026-09-06-heart-of-midlothian-v-dundee-fc,home,Heart of Midlothian,4-4-2,,2026-09-06T01:16:18Z,start,10,Cláudio Braga,,,0.87,0.3
-2026-09-06-heart-of-midlothian-v-dundee-fc,home,Heart of Midlothian,4-4-2,,2026-09-06T01:16:18Z,bench,30,Ryan Fulton,,,,
-2026-09-06-heart-of-midlothian-v-dundee-fc,home,Heart of Midlothian,4-4-2,,2026-09-06T01:16:18Z,bench,18,Harry Milne,,,,
-2026-09-06-heart-of-midlothian-v-dundee-fc,home,Heart of Midlothian,4-4-2,,2026-09-06T01:16:18Z,bench,19,Sabri Guendouz,,,,
-2026-09-06-heart-of-midlothian-v-dundee-fc,home,Heart of Midlothian,4-4-2,,2026-09-06T01:16:18Z,bench,22,Tómas Magnússon,,,,
-2026-09-06-heart-of-midlothian-v-dundee-fc,home,Heart of Midlothian,4-4-2,,2026-09-06T01:16:18Z,bench,77,Amadou Ba-Sy,,,,
-2026-09-06-heart-of-midlothian-v-dundee-fc,home,Heart of Midlothian,4-4-2,,2026-09-06T01:16:18Z,bench,9,JJ Williams,,,,
-2026-09-06-heart-of-midlothian-v-dundee-fc,home,Heart of Midlothian,4-4-2,,2026-09-06T01:16:18Z,bench,11,Pierre Landry Kaboré,,,,
-2026-09-06-heart-of-midlothian-v-dundee-fc,home,Heart of Midlothian,4-4-2,,2026-09-06T01:16:18Z,bench,74,Rogers Mato,,,,
-2026-09-06-heart-of-midlothian-v-dundee-fc,home,Heart of Midlothian,4-4-2,,2026-09-06T01:16:18Z,bench,29,Sabah Kerjota,,,,
-2026-09-06-heart-of-midlothian-v-dundee-fc,away,Dundee FC,4-4-2,,2026-09-06T01:16:18Z,start,1,Owen Goodman,,,0.1,0.5
-2026-09-06-heart-of-midlothian-v-dundee-fc,away,Dundee FC,4-4-2,,2026-09-06T01:16:18Z,start,2,Bradley Halliday,,,0.357,0.875
-2026-09-06-heart-of-midlothian-v-dundee-fc,away,Dundee FC,4-4-2,,2026-09-06T01:16:18Z,start,4,Ryan Astley,,,0.357,0.625
-2026-09-06-heart-of-midlothian-v-dundee-fc,away,Dundee FC,4-4-2,,2026-09-06T01:16:18Z,start,5,Owen Bevan,,,0.357,0.375
-2026-09-06-heart-of-midlothian-v-dundee-fc,away,Dundee FC,4-4-2,,2026-09-06T01:16:18Z,start,3,Idris Odutayo,,,0.357,0.125
-2026-09-06-heart-of-midlothian-v-dundee-fc,away,Dundee FC,4-4-2,,2026-09-06T01:16:18Z,start,27,Joe Bevan,,,0.613,0.875
-2026-09-06-heart-of-midlothian-v-dundee-fc,away,Dundee FC,4-4-2,,2026-09-06T01:16:18Z,start,8,Ryan Finnigan,,,0.613,0.625
-2026-09-06-heart-of-midlothian-v-dundee-fc,away,Dundee FC,4-4-2,,2026-09-06T01:16:18Z,start,48,Ethan Hamilton,,,0.613,0.375
-2026-09-06-heart-of-midlothian-v-dundee-fc,away,Dundee FC,4-4-2,,2026-09-06T01:16:18Z,start,14,Alan Forrest,,,0.613,0.125
-2026-09-06-heart-of-midlothian-v-dundee-fc,away,Dundee FC,4-4-2,,2026-09-06T01:16:18Z,start,9,Bobby Wales,bobby-wales,,0.87,0.7
-2026-09-06-heart-of-midlothian-v-dundee-fc,away,Dundee FC,4-4-2,,2026-09-06T01:16:18Z,start,19,Joe Westley,,,0.87,0.3
-2026-09-06-heart-of-midlothian-v-dundee-fc,away,Dundee FC,4-4-2,,2026-09-06T01:16:18Z,bench,13,Kieran O'Hara,kieran-ohara,,,
-2026-09-06-heart-of-midlothian-v-dundee-fc,away,Dundee FC,4-4-2,,2026-09-06T01:16:18Z,bench,7,Drey Wright,,,,
-2026-09-06-heart-of-midlothian-v-dundee-fc,away,Dundee FC,4-4-2,,2026-09-06T01:16:18Z,bench,12,Imari Samuels,,,,
-2026-09-06-heart-of-midlothian-v-dundee-fc,away,Dundee FC,4-4-2,,2026-09-06T01:16:18Z,bench,26,Joe Wright,,,,
-2026-09-06-heart-of-midlothian-v-dundee-fc,away,Dundee FC,4-4-2,,2026-09-06T01:16:18Z,bench,28,Callum Jones,,,,
-2026-09-06-heart-of-midlothian-v-dundee-fc,away,Dundee FC,4-4-2,,2026-09-06T01:16:18Z,bench,10,Finlay Robertson,,,,
-2026-09-06-heart-of-midlothian-v-dundee-fc,away,Dundee FC,4-4-2,,2026-09-06T01:16:18Z,bench,17,Žan Bešir,,,,
-2026-09-06-heart-of-midlothian-v-dundee-fc,away,Dundee FC,4-4-2,,2026-09-06T01:16:18Z,bench,21,Bradley Fink,,,,
-2026-09-06-heart-of-midlothian-v-dundee-fc,away,Dundee FC,4-4-2,,2026-09-06T01:16:18Z,bench,18,Charlie Reilly,,,,
-2026-09-06-st-johnstone-v-hibernian,home,St. Johnstone,4-4-2,,2026-09-06T01:16:18Z,start,1,Toby Steward,,,0.1,0.5
-2026-09-06-st-johnstone-v-hibernian,home,St. Johnstone,4-4-2,,2026-09-06T01:16:18Z,start,26,Matty Todd,,,0.357,0.875
-2026-09-06-st-johnstone-v-hibernian,home,St. Johnstone,4-4-2,,2026-09-06T01:16:18Z,start,5,Zach Mitchell,,,0.357,0.625
-2026-09-06-st-johnstone-v-hibernian,home,St. Johnstone,4-4-2,,2026-09-06T01:16:18Z,start,3,Cheick Diabate,,,0.357,0.375
-2026-09-06-st-johnstone-v-hibernian,home,St. Johnstone,4-4-2,,2026-09-06T01:16:18Z,start,2,Enes Alić,,,0.357,0.125
-2026-09-06-st-johnstone-v-hibernian,home,St. Johnstone,4-4-2,,2026-09-06T01:16:18Z,start,11,Samuel Stanton,,,0.613,0.875
-2026-09-06-st-johnstone-v-hibernian,home,St. Johnstone,4-4-2,,2026-09-06T01:16:18Z,start,8,Jason Holt,,,0.613,0.625
-2026-09-06-st-johnstone-v-hibernian,home,St. Johnstone,4-4-2,,2026-09-06T01:16:18Z,start,42,Reece McAlear,,,0.613,0.375
-2026-09-06-st-johnstone-v-hibernian,home,St. Johnstone,4-4-2,,2026-09-06T01:16:18Z,start,7,Taylor Steven,,,0.613,0.125
-2026-09-06-st-johnstone-v-hibernian,home,St. Johnstone,4-4-2,,2026-09-06T01:16:18Z,start,10,Jamie Gullan,,,0.87,0.7
-2026-09-06-st-johnstone-v-hibernian,home,St. Johnstone,4-4-2,,2026-09-06T01:16:18Z,start,99,Ruari Paton,ruari-paton,,0.87,0.3
-2026-09-06-st-johnstone-v-hibernian,home,St. Johnstone,4-4-2,,2026-09-06T01:16:18Z,bench,20,Ross Sinclair,,,,
-2026-09-06-st-johnstone-v-hibernian,home,St. Johnstone,4-4-2,,2026-09-06T01:16:18Z,bench,6,Božo Mikulić,,,,
-2026-09-06-st-johnstone-v-hibernian,home,St. Johnstone,4-4-2,,2026-09-06T01:16:18Z,bench,33,Liam Smith,,,,
-2026-09-06-st-johnstone-v-hibernian,home,St. Johnstone,4-4-2,,2026-09-06T01:16:18Z,bench,14,Matty Foulds,,,,
-2026-09-06-st-johnstone-v-hibernian,home,St. Johnstone,4-4-2,,2026-09-06T01:16:18Z,bench,4,Morgan Boyes,,,,
-2026-09-06-st-johnstone-v-hibernian,home,St. Johnstone,4-4-2,,2026-09-06T01:16:18Z,bench,25,Macaulay Tait,,,,
-2026-09-06-st-johnstone-v-hibernian,home,St. Johnstone,4-4-2,,2026-09-06T01:16:18Z,bench,9,Josh Fowler,,,,
-2026-09-06-st-johnstone-v-hibernian,home,St. Johnstone,4-4-2,,2026-09-06T01:16:18Z,bench,18,Kai Fotheringham,,,,
-2026-09-06-st-johnstone-v-hibernian,home,St. Johnstone,4-4-2,,2026-09-06T01:16:18Z,bench,23,Logan Chalmers,,,,
-2026-09-06-st-johnstone-v-hibernian,away,Hibernian,3-4-3,,2026-09-06T01:16:18Z,start,1,Raphael Sallinger,,,0.1,0.5
-2026-09-06-st-johnstone-v-hibernian,away,Hibernian,3-4-3,,2026-09-06T01:16:18Z,start,6,Jason Kerr,,,0.357,0.79
-2026-09-06-st-johnstone-v-hibernian,away,Hibernian,3-4-3,,2026-09-06T01:16:18Z,start,4,Grant Hanley,,,0.357,0.5
-2026-09-06-st-johnstone-v-hibernian,away,Hibernian,3-4-3,,2026-09-06T01:16:18Z,start,21,Jordan Obita,,,0.357,0.21
-2026-09-06-st-johnstone-v-hibernian,away,Hibernian,3-4-3,,2026-09-06T01:16:18Z,start,25,Felix Passlack,,,0.613,0.875
-2026-09-06-st-johnstone-v-hibernian,away,Hibernian,3-4-3,,2026-09-06T01:16:18Z,start,8,Josh Mulligan,,,0.613,0.625
-2026-09-06-st-johnstone-v-hibernian,away,Hibernian,3-4-3,,2026-09-06T01:16:18Z,start,24,Jacob Devaney,jacob-devaney,,0.613,0.375
-2026-09-06-st-johnstone-v-hibernian,away,Hibernian,3-4-3,,2026-09-06T01:16:18Z,start,17,Jamie McGrath,jamie-mcgrath,,0.613,0.125
-2026-09-06-st-johnstone-v-hibernian,away,Hibernian,3-4-3,,2026-09-06T01:16:18Z,start,10,Martin Boyle,,,0.87,0.79
-2026-09-06-st-johnstone-v-hibernian,away,Hibernian,3-4-3,,2026-09-06T01:16:18Z,start,9,Nathan Lowe,,,0.87,0.5
-2026-09-06-st-johnstone-v-hibernian,away,Hibernian,3-4-3,,2026-09-06T01:16:18Z,start,23,Callum Wright,,,0.87,0.21
-2026-09-06-st-johnstone-v-hibernian,away,Hibernian,3-4-3,,2026-09-06T01:16:18Z,bench,13,Jordan Smith,,,,
-2026-09-06-st-johnstone-v-hibernian,away,Hibernian,3-4-3,,2026-09-06T01:16:18Z,bench,15,Jack Iredale,,,,
-2026-09-06-st-johnstone-v-hibernian,away,Hibernian,3-4-3,,2026-09-06T01:16:18Z,bench,3,Adam Mayor,,,,
-2026-09-06-st-johnstone-v-hibernian,away,Hibernian,3-4-3,,2026-09-06T01:16:18Z,bench,47,Azeem Abdulai,,,,
-2026-09-06-st-johnstone-v-hibernian,away,Hibernian,3-4-3,,2026-09-06T01:16:18Z,bench,11,Joe Newell,,,,
-2026-09-06-st-johnstone-v-hibernian,away,Hibernian,3-4-3,,2026-09-06T01:16:18Z,bench,27,Kanayochukwu Megwa,,,,
-2026-09-06-st-johnstone-v-hibernian,away,Hibernian,3-4-3,,2026-09-06T01:16:18Z,bench,14,Miguel Chaiwa,,,,
-2026-09-06-st-johnstone-v-hibernian,away,Hibernian,3-4-3,,2026-09-06T01:16:18Z,bench,22,Ante Šuto,,,,
-2026-09-06-st-johnstone-v-hibernian,away,Hibernian,3-4-3,,2026-09-06T01:16:18Z,bench,18,Thibault Klidje,,,,
-2026-09-06-sonnenhof-gro-aspach-v-hoffenheim-ii,home,Sonnenhof Großaspach,4-2-3-1,,2026-09-06T01:16:18Z,start,1,Maximilian Reule,,,0.1,0.5
-2026-09-06-sonnenhof-gro-aspach-v-hoffenheim-ii,home,Sonnenhof Großaspach,4-2-3-1,,2026-09-06T01:16:18Z,start,8,Elias Rahn,,,0.292,0.875
-2026-09-06-sonnenhof-gro-aspach-v-hoffenheim-ii,home,Sonnenhof Großaspach,4-2-3-1,,2026-09-06T01:16:18Z,start,15,Antonis Aidonis,,,0.292,0.625
-2026-09-06-sonnenhof-gro-aspach-v-hoffenheim-ii,home,Sonnenhof Großaspach,4-2-3-1,,2026-09-06T01:16:18Z,start,25,Arbnor Nuraj,,,0.292,0.375
-2026-09-06-sonnenhof-gro-aspach-v-hoffenheim-ii,home,Sonnenhof Großaspach,4-2-3-1,,2026-09-06T01:16:18Z,start,21,Luka Molinari,,,0.292,0.125
-2026-09-06-sonnenhof-gro-aspach-v-hoffenheim-ii,home,Sonnenhof Großaspach,4-2-3-1,,2026-09-06T01:16:18Z,start,16,Marius Kunde,,,0.485,0.7
-2026-09-06-sonnenhof-gro-aspach-v-hoffenheim-ii,home,Sonnenhof Großaspach,4-2-3-1,,2026-09-06T01:16:18Z,start,6,Christian Mistl,,,0.485,0.3
-2026-09-06-sonnenhof-gro-aspach-v-hoffenheim-ii,home,Sonnenhof Großaspach,4-2-3-1,,2026-09-06T01:16:18Z,start,18,Niklas Pollex,,,0.678,0.837
-2026-09-06-sonnenhof-gro-aspach-v-hoffenheim-ii,home,Sonnenhof Großaspach,4-2-3-1,,2026-09-06T01:16:18Z,start,27,Loris Maier,,,0.678,0.5
-2026-09-06-sonnenhof-gro-aspach-v-hoffenheim-ii,home,Sonnenhof Großaspach,4-2-3-1,,2026-09-06T01:16:18Z,start,11,Tim Rossmann,,,0.678,0.163
-2026-09-06-sonnenhof-gro-aspach-v-hoffenheim-ii,home,Sonnenhof Großaspach,4-2-3-1,,2026-09-06T01:16:18Z,start,23,Fabian Eisele,,,0.87,0.5
-2026-09-06-sonnenhof-gro-aspach-v-hoffenheim-ii,home,Sonnenhof Großaspach,4-2-3-1,,2026-09-06T01:16:18Z,bench,33,Tim Schulz,,,,
-2026-09-06-sonnenhof-gro-aspach-v-hoffenheim-ii,home,Sonnenhof Großaspach,4-2-3-1,,2026-09-06T01:16:18Z,bench,20,Leon Maier,,,,
-2026-09-06-sonnenhof-gro-aspach-v-hoffenheim-ii,home,Sonnenhof Großaspach,4-2-3-1,,2026-09-06T01:16:18Z,bench,19,Marius Uhl,,,,
-2026-09-06-sonnenhof-gro-aspach-v-hoffenheim-ii,home,Sonnenhof Großaspach,4-2-3-1,,2026-09-06T01:16:18Z,bench,36,Mark Gashi,,,,
-2026-09-06-sonnenhof-gro-aspach-v-hoffenheim-ii,home,Sonnenhof Großaspach,4-2-3-1,,2026-09-06T01:16:18Z,bench,4,Franz Bleicher,,,,
-2026-09-06-sonnenhof-gro-aspach-v-hoffenheim-ii,home,Sonnenhof Großaspach,4-2-3-1,,2026-09-06T01:16:18Z,bench,10,Lukas Stoppel,,,,
-2026-09-06-sonnenhof-gro-aspach-v-hoffenheim-ii,home,Sonnenhof Großaspach,4-2-3-1,,2026-09-06T01:16:18Z,bench,5,Volkan Celiktas,,,,
-2026-09-06-sonnenhof-gro-aspach-v-hoffenheim-ii,home,Sonnenhof Großaspach,4-2-3-1,,2026-09-06T01:16:18Z,bench,37,Leon Schuerer,,,,
-2026-09-06-sonnenhof-gro-aspach-v-hoffenheim-ii,home,Sonnenhof Großaspach,4-2-3-1,,2026-09-06T01:16:18Z,bench,9,Marlon Fass,,,,
-2026-09-06-sonnenhof-gro-aspach-v-hoffenheim-ii,away,Hoffenheim II,4-2-3-1,,2026-09-06T01:16:18Z,start,1,Lúkas Petersson,,,0.1,0.5
-2026-09-06-sonnenhof-gro-aspach-v-hoffenheim-ii,away,Hoffenheim II,4-2-3-1,,2026-09-06T01:16:18Z,start,15,Matthew Moore,matthew-moore,,0.292,0.875
-2026-09-06-sonnenhof-gro-aspach-v-hoffenheim-ii,away,Hoffenheim II,4-2-3-1,,2026-09-06T01:16:18Z,start,3,Sean Dulic,,,0.292,0.625
-2026-09-06-sonnenhof-gro-aspach-v-hoffenheim-ii,away,Hoffenheim II,4-2-3-1,,2026-09-06T01:16:18Z,start,6,Valentin Lässig,,,0.292,0.375
-2026-09-06-sonnenhof-gro-aspach-v-hoffenheim-ii,away,Hoffenheim II,4-2-3-1,,2026-09-06T01:16:18Z,start,13,Tristan Spranger,,,0.292,0.125
-2026-09-06-sonnenhof-gro-aspach-v-hoffenheim-ii,away,Hoffenheim II,4-2-3-1,,2026-09-06T01:16:18Z,start,5,Klaus Gjasula,,,0.485,0.7
-2026-09-06-sonnenhof-gro-aspach-v-hoffenheim-ii,away,Hoffenheim II,4-2-3-1,,2026-09-06T01:16:18Z,start,28,Florian Micheler,,,0.485,0.3
-2026-09-06-sonnenhof-gro-aspach-v-hoffenheim-ii,away,Hoffenheim II,4-2-3-1,,2026-09-06T01:16:18Z,start,17,Blessing Makanda,,,0.678,0.837
-2026-09-06-sonnenhof-gro-aspach-v-hoffenheim-ii,away,Hoffenheim II,4-2-3-1,,2026-09-06T01:16:18Z,start,20,Tiago Poller,,,0.678,0.5
-2026-09-06-sonnenhof-gro-aspach-v-hoffenheim-ii,away,Hoffenheim II,4-2-3-1,,2026-09-06T01:16:18Z,start,10,Yasin Zor,,,0.678,0.163
-2026-09-06-sonnenhof-gro-aspach-v-hoffenheim-ii,away,Hoffenheim II,4-2-3-1,,2026-09-06T01:16:18Z,start,36,Jakov Dedić,,,0.87,0.5
-2026-09-06-sonnenhof-gro-aspach-v-hoffenheim-ii,away,Hoffenheim II,4-2-3-1,,2026-09-06T01:16:18Z,bench,27,Tobias Trautner,,,,
-2026-09-06-sonnenhof-gro-aspach-v-hoffenheim-ii,away,Hoffenheim II,4-2-3-1,,2026-09-06T01:16:18Z,bench,47,Maximilian Theuer,,,,
-2026-09-06-sonnenhof-gro-aspach-v-hoffenheim-ii,away,Hoffenheim II,4-2-3-1,,2026-09-06T01:16:18Z,bench,44,Ndong Penda,,,,
-2026-09-06-sonnenhof-gro-aspach-v-hoffenheim-ii,away,Hoffenheim II,4-2-3-1,,2026-09-06T01:16:18Z,bench,21,Timo Hildmann,,,,
-2026-09-06-sonnenhof-gro-aspach-v-hoffenheim-ii,away,Hoffenheim II,4-2-3-1,,2026-09-06T01:16:18Z,bench,23,Alex Honajzer,,,,
-2026-09-06-sonnenhof-gro-aspach-v-hoffenheim-ii,away,Hoffenheim II,4-2-3-1,,2026-09-06T01:16:18Z,bench,8,Diren Dağdeviren,,,,
-2026-09-06-sonnenhof-gro-aspach-v-hoffenheim-ii,away,Hoffenheim II,4-2-3-1,,2026-09-06T01:16:18Z,bench,16,Luis Engelns,,,,
-2026-09-06-sonnenhof-gro-aspach-v-hoffenheim-ii,away,Hoffenheim II,4-2-3-1,,2026-09-06T01:16:18Z,bench,11,Jykese Fields,,,,
-2026-09-06-sonnenhof-gro-aspach-v-hoffenheim-ii,away,Hoffenheim II,4-2-3-1,,2026-09-06T01:16:18Z,bench,18,Lion Wagenbach,,,,
-2026-09-06-derry-city-v-dundalk,home,Derry City,4-5-1,,2026-09-06T01:16:18Z,start,13,Tom Norcott,,,0.1,0.5
-2026-09-06-derry-city-v-dundalk,home,Derry City,4-5-1,,2026-09-06T01:16:18Z,start,4,Jamie Stott,,,0.357,0.875
-2026-09-06-derry-city-v-dundalk,home,Derry City,4-5-1,,2026-09-06T01:16:18Z,start,22,Conor Barr,,,0.357,0.625
-2026-09-06-derry-city-v-dundalk,home,Derry City,4-5-1,,2026-09-06T01:16:18Z,start,3,Patrick McClean,patrick-mcclean,,0.357,0.375
-2026-09-06-derry-city-v-dundalk,home,Derry City,4-5-1,,2026-09-06T01:16:18Z,start,19,Brandon Fleming,,,0.357,0.125
-2026-09-06-derry-city-v-dundalk,home,Derry City,4-5-1,,2026-09-06T01:16:18Z,start,12,Darragh Burns,darragh-burns,,0.613,0.89
-2026-09-06-derry-city-v-dundalk,home,Derry City,4-5-1,,2026-09-06T01:16:18Z,start,8,Adam O'Reilly,adam-oreilly,,0.613,0.695
-2026-09-06-derry-city-v-dundalk,home,Derry City,4-5-1,,2026-09-06T01:16:18Z,start,17,Nick Twisk,,,0.613,0.5
-2026-09-06-derry-city-v-dundalk,home,Derry City,4-5-1,,2026-09-06T01:16:18Z,start,14,Ellis Chapman,,,0.613,0.305
-2026-09-06-derry-city-v-dundalk,home,Derry City,4-5-1,,2026-09-06T01:16:18Z,start,7,Michael Duffy,michael-duffy,,0.613,0.11
-2026-09-06-derry-city-v-dundalk,home,Derry City,4-5-1,,2026-09-06T01:16:18Z,start,29,Tyler Smith,,,0.87,0.5
-2026-09-06-derry-city-v-dundalk,home,Derry City,4-5-1,,2026-09-06T01:16:18Z,bench,1,Brian Maher,brian-maher,,,
-2026-09-06-derry-city-v-dundalk,home,Derry City,4-5-1,,2026-09-06T01:16:18Z,bench,2,Barry Cotter,barry-cotter,,,
-2026-09-06-derry-city-v-dundalk,home,Derry City,4-5-1,,2026-09-06T01:16:18Z,bench,24,Brooklyn Lyons-Foster,brooklyn-lyons-foster,,,
-2026-09-06-derry-city-v-dundalk,home,Derry City,4-5-1,,2026-09-06T01:16:18Z,bench,25,Christy Grogan,christy-grogan,,,
-2026-09-06-derry-city-v-dundalk,home,Derry City,4-5-1,,2026-09-06T01:16:18Z,bench,23,Cameron Dummigan,,,,
-2026-09-06-derry-city-v-dundalk,home,Derry City,4-5-1,,2026-09-06T01:16:18Z,bench,28,James Olayinka,,,,
-2026-09-06-derry-city-v-dundalk,home,Derry City,4-5-1,,2026-09-06T01:16:18Z,bench,33,Yoann Prigent,,,,
-2026-09-06-derry-city-v-dundalk,home,Derry City,4-5-1,,2026-09-06T01:16:18Z,bench,36,Michael McColgan,michael-mccolgan,,,
-2026-09-06-derry-city-v-dundalk,home,Derry City,4-5-1,,2026-09-06T01:16:18Z,bench,32,Terence Doherty,terence-doherty,,,
-2026-09-06-derry-city-v-dundalk,away,Dundalk,4-2-3-1,,2026-09-06T01:16:18Z,start,1,Enda Minogue,enda-minogue,,0.1,0.5
-2026-09-06-derry-city-v-dundalk,away,Dundalk,4-2-3-1,,2026-09-06T01:16:18Z,start,44,Tom Grivosti,,,0.292,0.875
-2026-09-06-derry-city-v-dundalk,away,Dundalk,4-2-3-1,,2026-09-06T01:16:18Z,start,4,Mayowa Animasahun,mayowa-animasahun,,0.292,0.625
-2026-09-06-derry-city-v-dundalk,away,Dundalk,4-2-3-1,,2026-09-06T01:16:18Z,start,16,Egor Vassenin,egor-vassenin,,0.292,0.375
-2026-09-06-derry-city-v-dundalk,away,Dundalk,4-2-3-1,,2026-09-06T01:16:18Z,start,3,Bobby Burns,,,0.292,0.125
-2026-09-06-derry-city-v-dundalk,away,Dundalk,4-2-3-1,,2026-09-06T01:16:18Z,start,18,Keith Buckley,keith-buckley,,0.485,0.7
-2026-09-06-derry-city-v-dundalk,away,Dundalk,4-2-3-1,,2026-09-06T01:16:18Z,start,8,Harry Groome,harry-groome,,0.485,0.3
-2026-09-06-derry-city-v-dundalk,away,Dundalk,4-2-3-1,,2026-09-06T01:16:18Z,start,15,Trevor Clarke,trevor-clarke,,0.678,0.837
-2026-09-06-derry-city-v-dundalk,away,Dundalk,4-2-3-1,,2026-09-06T01:16:18Z,start,10,Leonardo Gaxha,,,0.678,0.5
-2026-09-06-derry-city-v-dundalk,away,Dundalk,4-2-3-1,,2026-09-06T01:16:18Z,start,7,Daryl Horgan,daryl-horgan,,0.678,0.163
-2026-09-06-derry-city-v-dundalk,away,Dundalk,4-2-3-1,,2026-09-06T01:16:18Z,start,9,Cian Dillon,cian-dillon,,0.87,0.5
-2026-09-06-derry-city-v-dundalk,away,Dundalk,4-2-3-1,,2026-09-06T01:16:18Z,bench,13,Peter Cherrie,,,,
-2026-09-06-derry-city-v-dundalk,away,Dundalk,4-2-3-1,,2026-09-06T01:16:18Z,bench,20,Samuel Safaei,samuel-safaei,,,
-2026-09-06-derry-city-v-dundalk,away,Dundalk,4-2-3-1,,2026-09-06T01:16:18Z,bench,12,Luke Mulligan,luke-mulligan,,,
-2026-09-06-derry-city-v-dundalk,away,Dundalk,4-2-3-1,,2026-09-06T01:16:18Z,bench,24,Robert Cornwall,robert-cornwall,,,
-2026-09-06-derry-city-v-dundalk,away,Dundalk,4-2-3-1,,2026-09-06T01:16:18Z,bench,23,Aaron Keogh,aaron-keogh,,,
-2026-09-06-derry-city-v-dundalk,away,Dundalk,4-2-3-1,,2026-09-06T01:16:18Z,bench,6,Aodh Dervin,aodh-dervin,,,
-2026-09-06-derry-city-v-dundalk,away,Dundalk,4-2-3-1,,2026-09-06T01:16:18Z,bench,11,Ronan Teahan,ronan-teahan,,,
-2026-09-06-derry-city-v-dundalk,away,Dundalk,4-2-3-1,,2026-09-06T01:16:18Z,bench,17,Shane Tracey,shane-tracey,,,
-2026-09-06-derry-city-v-dundalk,away,Dundalk,4-2-3-1,,2026-09-06T01:16:18Z,bench,27,Declan McDaid,,,,
-2026-09-06-molde-v-kfum,home,Molde,4-2-3-1,,2026-09-06T01:16:18Z,start,22,Albert Posiadala,,,0.1,0.5
-2026-09-06-molde-v-kfum,home,Molde,4-2-3-1,,2026-09-06T01:16:18Z,start,25,Martin Linnes,,,0.292,0.875
-2026-09-06-molde-v-kfum,home,Molde,4-2-3-1,,2026-09-06T01:16:18Z,start,19,Eirik Haugan,,,0.292,0.625
-2026-09-06-molde-v-kfum,home,Molde,4-2-3-1,,2026-09-06T01:16:18Z,start,33,Birk Risa,,,0.292,0.375
-2026-09-06-molde-v-kfum,home,Molde,4-2-3-1,,2026-09-06T01:16:18Z,start,26,Samukelo Kabini,,,0.292,0.125
-2026-09-06-molde-v-kfum,home,Molde,4-2-3-1,,2026-09-06T01:16:18Z,start,17,Mats Møller Dæhli,,,0.485,0.7
-2026-09-06-molde-v-kfum,home,Molde,4-2-3-1,,2026-09-06T01:16:18Z,start,30,Daniel Daga,,,0.485,0.3
-2026-09-06-molde-v-kfum,home,Molde,4-2-3-1,,2026-09-06T01:16:18Z,start,21,Oskar Spiten-Nysæter,,,0.678,0.837
-2026-09-06-molde-v-kfum,home,Molde,4-2-3-1,,2026-09-06T01:16:18Z,start,10,Emil Breivik,,,0.678,0.5
-2026-09-06-molde-v-kfum,home,Molde,4-2-3-1,,2026-09-06T01:16:18Z,start,11,Caleb Zady Sery,,,0.678,0.163
-2026-09-06-molde-v-kfum,home,Molde,4-2-3-1,,2026-09-06T01:16:18Z,start,9,Jalal Abdullai,,,0.87,0.5
-2026-09-06-molde-v-kfum,away,KFUM,3-4-3,,2026-09-06T01:16:18Z,start,25,Håvar Jenssen,,,0.1,0.5
-2026-09-06-molde-v-kfum,away,KFUM,3-4-3,,2026-09-06T01:16:18Z,start,24,Håkon Røsten,,,0.357,0.79
-2026-09-06-molde-v-kfum,away,KFUM,3-4-3,,2026-09-06T01:16:18Z,start,13,Brage Skaret,,,0.357,0.5
-2026-09-06-molde-v-kfum,away,KFUM,3-4-3,,2026-09-06T01:16:18Z,start,5,Fredrik Tobias Berglie,,,0.357,0.21
-2026-09-06-molde-v-kfum,away,KFUM,3-4-3,,2026-09-06T01:16:18Z,start,14,Håkon Hoseth,,,0.613,0.875
-2026-09-06-molde-v-kfum,away,KFUM,3-4-3,,2026-09-06T01:16:18Z,start,9,Martin Tangen Vinjor,,,0.613,0.625
-2026-09-06-molde-v-kfum,away,KFUM,3-4-3,,2026-09-06T01:16:18Z,start,6,Jacob Blixt Flaten,,,0.613,0.375
-2026-09-06-molde-v-kfum,away,KFUM,3-4-3,,2026-09-06T01:16:18Z,start,16,Jonas Lange Hjorth,,,0.613,0.125
-2026-09-06-molde-v-kfum,away,KFUM,3-4-3,,2026-09-06T01:16:18Z,start,18,Rasmus Eggen Vinge,,,0.87,0.79
-2026-09-06-molde-v-kfum,away,KFUM,3-4-3,,2026-09-06T01:16:18Z,start,17,Julian Bakkeli Gonstad,,,0.87,0.5
-2026-09-06-molde-v-kfum,away,KFUM,3-4-3,,2026-09-06T01:16:18Z,start,10,Bilal Njie,,,0.87,0.21
-2026-09-06-ferencvaros-v-ujpest,home,Ferencváros,4-1-4-1,,2026-09-06T01:16:18Z,start,90,Dénes Dibusz,,,0.1,0.5
-2026-09-06-ferencvaros-v-ujpest,home,Ferencváros,4-1-4-1,,2026-09-06T01:16:18Z,start,54,Olivér Nagy,,,0.292,0.875
-2026-09-06-ferencvaros-v-ujpest,home,Ferencváros,4-1-4-1,,2026-09-06T01:16:18Z,start,28,Toon Raemaekers,,,0.292,0.625
-2026-09-06-ferencvaros-v-ujpest,home,Ferencváros,4-1-4-1,,2026-09-06T01:16:18Z,start,4,Mariano Gómez,,,0.292,0.375
-2026-09-06-ferencvaros-v-ujpest,home,Ferencváros,4-1-4-1,,2026-09-06T01:16:18Z,start,20,Cadu,,,0.292,0.125
-2026-09-06-ferencvaros-v-ujpest,home,Ferencváros,4-1-4-1,,2026-09-06T01:16:18Z,start,6,Ádám Nagy,,,0.485,0.5
-2026-09-06-ferencvaros-v-ujpest,home,Ferencváros,4-1-4-1,,2026-09-06T01:16:18Z,start,11,Bamidele Yusuf,,,0.678,0.875
-2026-09-06-ferencvaros-v-ujpest,home,Ferencváros,4-1-4-1,,2026-09-06T01:16:18Z,start,16,Kristoffer Zachariassen,,,0.678,0.625
-2026-09-06-ferencvaros-v-ujpest,home,Ferencváros,4-1-4-1,,2026-09-06T01:16:18Z,start,17,Márius Corbu,,,0.678,0.375
-2026-09-06-ferencvaros-v-ujpest,home,Ferencváros,4-1-4-1,,2026-09-06T01:16:18Z,start,15,Daniel Arzani,,,0.678,0.125
-2026-09-06-ferencvaros-v-ujpest,home,Ferencváros,4-1-4-1,,2026-09-06T01:16:18Z,start,18,Ádám Bagi,,,0.89,0.5
-2026-09-06-ferencvaros-v-ujpest,home,Ferencváros,4-1-4-1,,2026-09-06T01:16:18Z,bench,1,Ádám Varga,,,,
-2026-09-06-ferencvaros-v-ujpest,home,Ferencváros,4-1-4-1,,2026-09-06T01:16:18Z,bench,14,Attila Osváth,,,,
-2026-09-06-ferencvaros-v-ujpest,home,Ferencváros,4-1-4-1,,2026-09-06T01:16:18Z,bench,5,Nathan Zohoré,,,,
-2026-09-06-ferencvaros-v-ujpest,home,Ferencváros,4-1-4-1,,2026-09-06T01:16:18Z,bench,47,Callum O'Dowda,callum-odowda,,,
-2026-09-06-ferencvaros-v-ujpest,home,Ferencváros,4-1-4-1,,2026-09-06T01:16:18Z,bench,71,Csongor Lakatos,,,,
-2026-09-06-ferencvaros-v-ujpest,home,Ferencváros,4-1-4-1,,2026-09-06T01:16:18Z,bench,10,Jonathan Levi,,,,
-2026-09-06-ferencvaros-v-ujpest,home,Ferencváros,4-1-4-1,,2026-09-06T01:16:18Z,bench,22,Matús Bero,,,,
-2026-09-06-ferencvaros-v-ujpest,home,Ferencváros,4-1-4-1,,2026-09-06T01:16:18Z,bench,8,Naby Keïta,,,,
-2026-09-06-ferencvaros-v-ujpest,home,Ferencváros,4-1-4-1,,2026-09-06T01:16:18Z,bench,19,Franko Kovačević,,,,
-2026-09-06-ferencvaros-v-ujpest,home,Ferencváros,4-1-4-1,,2026-09-06T01:16:18Z,bench,76,Krisztián Lisztes,,,,
-2026-09-06-ferencvaros-v-ujpest,home,Ferencváros,4-1-4-1,,2026-09-06T01:16:18Z,bench,7,Veljko Birmančević,,,,
-2026-09-06-ferencvaros-v-ujpest,home,Ferencváros,4-1-4-1,,2026-09-06T01:16:18Z,bench,68,Zétény Varga,,,,
-2026-09-06-ferencvaros-v-ujpest,away,Újpest,4-4-2,,2026-09-06T01:16:18Z,start,1,Péter Szappanos,,,0.1,0.5
-2026-09-06-ferencvaros-v-ujpest,away,Újpest,4-4-2,,2026-09-06T01:16:18Z,start,36,Ferenc Ujvary,,,0.357,0.875
-2026-09-06-ferencvaros-v-ujpest,away,Újpest,4-4-2,,2026-09-06T01:16:18Z,start,3,Heitor,,,0.357,0.625
-2026-09-06-ferencvaros-v-ujpest,away,Újpest,4-4-2,,2026-09-06T01:16:18Z,start,94,Patrizio Stronati,,,0.357,0.375
-2026-09-06-ferencvaros-v-ujpest,away,Újpest,4-4-2,,2026-09-06T01:16:18Z,start,5,Attila Fiola,,,0.357,0.125
-2026-09-06-ferencvaros-v-ujpest,away,Újpest,4-4-2,,2026-09-06T01:16:18Z,start,17,Aljoša Matko,,,0.613,0.875
-2026-09-06-ferencvaros-v-ujpest,away,Újpest,4-4-2,,2026-09-06T01:16:18Z,start,10,Arne Maier,,,0.613,0.625
-2026-09-06-ferencvaros-v-ujpest,away,Újpest,4-4-2,,2026-09-06T01:16:18Z,start,88,Matija Ljujić,,,0.613,0.375
-2026-09-06-ferencvaros-v-ujpest,away,Újpest,4-4-2,,2026-09-06T01:16:18Z,start,11,Krisztofer Horváth,,,0.613,0.125
-2026-09-06-ferencvaros-v-ujpest,away,Újpest,4-4-2,,2026-09-06T01:16:18Z,start,15,Miron Mucsanyi,,,0.87,0.7
-2026-09-06-ferencvaros-v-ujpest,away,Újpest,4-4-2,,2026-09-06T01:16:18Z,start,14,Etienne Amenyido,,,0.87,0.3
-2026-09-06-ferencvaros-v-ujpest,away,Újpest,4-4-2,,2026-09-06T01:16:18Z,bench,23,Dávid Banai,,,,
-2026-09-06-ferencvaros-v-ujpest,away,Újpest,4-4-2,,2026-09-06T01:16:18Z,bench,32,David Dombo,,,,
-2026-09-06-ferencvaros-v-ujpest,away,Újpest,4-4-2,,2026-09-06T01:16:18Z,bench,45,Arijan Ademi,,,,
-2026-09-06-ferencvaros-v-ujpest,away,Újpest,4-4-2,,2026-09-06T01:16:18Z,bench,2,Gergő Bodnár,,,,
-2026-09-06-ferencvaros-v-ujpest,away,Újpest,4-4-2,,2026-09-06T01:16:18Z,bench,30,João Nunes,,,,
-2026-09-06-ferencvaros-v-ujpest,away,Újpest,4-4-2,,2026-09-06T01:16:18Z,bench,38,Kristof Sarkadi,,,,
-2026-09-06-ferencvaros-v-ujpest,away,Újpest,4-4-2,,2026-09-06T01:16:18Z,bench,27,Ábel Krajcsovics,,,,
-2026-09-06-ferencvaros-v-ujpest,away,Újpest,4-4-2,,2026-09-06T01:16:18Z,bench,77,Noah Fenyö,,,,
-2026-09-06-ferencvaros-v-ujpest,away,Újpest,4-4-2,,2026-09-06T01:16:18Z,bench,8,Norbert Szendrei,,,,
-2026-09-06-ferencvaros-v-ujpest,away,Újpest,4-4-2,,2026-09-06T01:16:18Z,bench,39,Gleofilo Vlijter,,,,
-2026-09-06-ferencvaros-v-ujpest,away,Újpest,4-4-2,,2026-09-06T01:16:18Z,bench,19,Prince Manu Ballodom,,,,
-2026-09-06-malaga-v-levante,home,Málaga,4-1-4-1,,2026-09-06T01:16:18Z,start,1,Alfonso Herrero,,,0.1,0.5
-2026-09-06-malaga-v-levante,home,Málaga,4-1-4-1,,2026-09-06T01:16:18Z,start,3,Carlos Puga,,,0.292,0.875
-2026-09-06-malaga-v-levante,home,Málaga,4-1-4-1,,2026-09-06T01:16:18Z,start,15,Ángel Recio,,,0.292,0.625
-2026-09-06-malaga-v-levante,home,Málaga,4-1-4-1,,2026-09-06T01:16:18Z,start,4,Einar Galilea,,,0.292,0.375
-2026-09-06-malaga-v-levante,home,Málaga,4-1-4-1,,2026-09-06T01:16:18Z,start,31,Rafita,,,0.292,0.125
-2026-09-06-malaga-v-levante,home,Málaga,4-1-4-1,,2026-09-06T01:16:18Z,start,23,Izan Merino,,,0.485,0.5
-2026-09-06-malaga-v-levante,home,Málaga,4-1-4-1,,2026-09-06T01:16:18Z,start,10,David Larrubia,,,0.678,0.875
-2026-09-06-malaga-v-levante,home,Málaga,4-1-4-1,,2026-09-06T01:16:18Z,start,22,Dani Lorenzo,,,0.678,0.625
-2026-09-06-malaga-v-levante,home,Málaga,4-1-4-1,,2026-09-06T01:16:18Z,start,8,Carlos Dotor,,,0.678,0.375
-2026-09-06-malaga-v-levante,home,Málaga,4-1-4-1,,2026-09-06T01:16:18Z,start,11,Joaquín Muñoz,,,0.678,0.125
-2026-09-06-malaga-v-levante,home,Málaga,4-1-4-1,,2026-09-06T01:16:18Z,start,9,Chupe,,,0.89,0.5
-2026-09-06-malaga-v-levante,away,Levante,4-3-3,,2026-09-06T01:16:18Z,start,13,Mathew Ryan,,,0.1,0.5
-2026-09-06-malaga-v-levante,away,Levante,4-3-3,,2026-09-06T01:16:18Z,start,29,Nacho Pérez,,,0.357,0.875
-2026-09-06-malaga-v-levante,away,Levante,4-3-3,,2026-09-06T01:16:18Z,start,4,Adrián De La Fuente,,,0.357,0.625
-2026-09-06-malaga-v-levante,away,Levante,4-3-3,,2026-09-06T01:16:18Z,start,2,Aïssa Mandi,,,0.357,0.375
-2026-09-06-malaga-v-levante,away,Levante,4-3-3,,2026-09-06T01:16:18Z,start,23,Manuel Sánchez,,,0.357,0.125
-2026-09-06-malaga-v-levante,away,Levante,4-3-3,,2026-09-06T01:16:18Z,start,18,Enzo Bardeli,,,0.613,0.79
-2026-09-06-malaga-v-levante,away,Levante,4-3-3,,2026-09-06T01:16:18Z,start,20,Oriol Rey,,,0.613,0.5
-2026-09-06-malaga-v-levante,away,Levante,4-3-3,,2026-09-06T01:16:18Z,start,8,Jon Olasagasti,,,0.613,0.21
-2026-09-06-malaga-v-levante,away,Levante,4-3-3,,2026-09-06T01:16:18Z,start,7,Roger Brugué,,,0.87,0.79
-2026-09-06-malaga-v-levante,away,Levante,4-3-3,,2026-09-06T01:16:18Z,start,9,Iván Romero,,,0.87,0.5
-2026-09-06-malaga-v-levante,away,Levante,4-3-3,,2026-09-06T01:16:18Z,start,24,Thiago Fernández,,,0.87,0.21
-2026-09-06-anderlecht-v-genk,home,Anderlecht,4-4-2,,2026-09-06T01:16:18Z,start,26,Colin Coosemans,,,0.1,0.5
-2026-09-06-anderlecht-v-genk,home,Anderlecht,4-4-2,,2026-09-06T01:16:18Z,start,79,Ali Maamar,,,0.357,0.875
-2026-09-06-anderlecht-v-genk,home,Anderlecht,4-4-2,,2026-09-06T01:16:18Z,start,4,Giulian Biancone,,,0.357,0.625
-2026-09-06-anderlecht-v-genk,home,Anderlecht,4-4-2,,2026-09-06T01:16:18Z,start,27,Léo Pétrot,,,0.357,0.375
-2026-09-06-anderlecht-v-genk,home,Anderlecht,4-4-2,,2026-09-06T01:16:18Z,start,6,Ludwig Augustinsson,,,0.357,0.125
-2026-09-06-anderlecht-v-genk,home,Anderlecht,4-4-2,,2026-09-06T01:16:18Z,start,18,Lukás Ambros,,,0.613,0.875
-2026-09-06-anderlecht-v-genk,home,Anderlecht,4-4-2,,2026-09-06T01:16:18Z,start,24,Enric Llansana,,,0.613,0.625
-2026-09-06-anderlecht-v-genk,home,Anderlecht,4-4-2,,2026-09-06T01:16:18Z,start,55,Marco Kana,,,0.613,0.375
-2026-09-06-anderlecht-v-genk,home,Anderlecht,4-4-2,,2026-09-06T01:16:18Z,start,61,Joshua Nga Kana,,,0.613,0.125
-2026-09-06-anderlecht-v-genk,home,Anderlecht,4-4-2,,2026-09-06T01:16:18Z,start,14,Danylo Sikan,,,0.87,0.7
-2026-09-06-anderlecht-v-genk,home,Anderlecht,4-4-2,,2026-09-06T01:16:18Z,start,9,Mihajlo Cvetković,,,0.87,0.3
-2026-09-06-anderlecht-v-genk,home,Anderlecht,4-4-2,,2026-09-06T01:16:18Z,bench,32,Justin Heekeren,,,,
-2026-09-06-anderlecht-v-genk,home,Anderlecht,4-4-2,,2026-09-06T01:16:18Z,bench,33,Mattis Seghers,,,,
-2026-09-06-anderlecht-v-genk,home,Anderlecht,4-4-2,,2026-09-06T01:16:18Z,bench,50,Kaïs Barry,,,,
-2026-09-06-anderlecht-v-genk,home,Anderlecht,4-4-2,,2026-09-06T01:16:18Z,bench,2,Zoumana Keita,,,,
-2026-09-06-anderlecht-v-genk,home,Anderlecht,4-4-2,,2026-09-06T01:16:18Z,bench,68,Noah Kalonji,,,,
-2026-09-06-anderlecht-v-genk,home,Anderlecht,4-4-2,,2026-09-06T01:16:18Z,bench,49,Jayden Seke,,,,
-2026-09-06-anderlecht-v-genk,home,Anderlecht,4-4-2,,2026-09-06T01:16:18Z,bench,10,Marten Winkler,,,,
-2026-09-06-anderlecht-v-genk,home,Anderlecht,4-4-2,,2026-09-06T01:16:18Z,bench,53,Noa Ojea,,,,
-2026-09-06-anderlecht-v-genk,home,Anderlecht,4-4-2,,2026-09-06T01:16:18Z,bench,11,Oliver Antman,,,,
-2026-09-06-anderlecht-v-genk,home,Anderlecht,4-4-2,,2026-09-06T01:16:18Z,bench,21,Tawfik Bentayeb,,,,
-2026-09-06-anderlecht-v-genk,away,Genk,4-2-3-1,,2026-09-06T01:16:18Z,start,28,Lucca Brughmans,,,0.1,0.5
-2026-09-06-anderlecht-v-genk,away,Genk,4-2-3-1,,2026-09-06T01:16:18Z,start,77,Zakaria El Ouahdi,,,0.292,0.875
-2026-09-06-anderlecht-v-genk,away,Genk,4-2-3-1,,2026-09-06T01:16:18Z,start,6,Matte Smets,,,0.292,0.625
-2026-09-06-anderlecht-v-genk,away,Genk,4-2-3-1,,2026-09-06T01:16:18Z,start,44,Josue Kongolo,,,0.292,0.375
-2026-09-06-anderlecht-v-genk,away,Genk,4-2-3-1,,2026-09-06T01:16:18Z,start,18,Joris Kayembe Ditu,,,0.292,0.125
-2026-09-06-anderlecht-v-genk,away,Genk,4-2-3-1,,2026-09-06T01:16:18Z,start,21,Ibrahima Sory Bangoura,,,0.485,0.7
-2026-09-06-anderlecht-v-genk,away,Genk,4-2-3-1,,2026-09-06T01:16:18Z,start,8,Bryan Heynen,,,0.485,0.3
-2026-09-06-anderlecht-v-genk,away,Genk,4-2-3-1,,2026-09-06T01:16:18Z,start,10,Junya Ito,,,0.678,0.837
-2026-09-06-anderlecht-v-genk,away,Genk,4-2-3-1,,2026-09-06T01:16:18Z,start,11,Jeppe Erenbjerg,,,0.678,0.5
-2026-09-06-anderlecht-v-genk,away,Genk,4-2-3-1,,2026-09-06T01:16:18Z,start,30,Ayumu Yokoyama,,,0.678,0.163
-2026-09-06-anderlecht-v-genk,away,Genk,4-2-3-1,,2026-09-06T01:16:18Z,start,17,Rafiu Durosinmi,,,0.87,0.5
-2026-09-06-anderlecht-v-genk,away,Genk,4-2-3-1,,2026-09-06T01:16:18Z,bench,26,Tobias Lawal,,,,
-2026-09-06-anderlecht-v-genk,away,Genk,4-2-3-1,,2026-09-06T01:16:18Z,bench,19,Yaimar Medina,,,,
-2026-09-06-anderlecht-v-genk,away,Genk,4-2-3-1,,2026-09-06T01:16:18Z,bench,38,Daan Heymans,,,,
-2026-09-06-anderlecht-v-genk,away,Genk,4-2-3-1,,2026-09-06T01:16:18Z,bench,20,Kevin Amaro,,,,
-2026-09-06-anderlecht-v-genk,away,Genk,4-2-3-1,,2026-09-06T01:16:18Z,bench,24,Nikolas Sattlberger,,,,
-2026-09-06-anderlecht-v-genk,away,Genk,4-2-3-1,,2026-09-06T01:16:18Z,bench,23,Aaron Bibout,,,,
-2026-09-06-anderlecht-v-genk,away,Genk,4-2-3-1,,2026-09-06T01:16:18Z,bench,33,Jerry Afriyie,,,,
-2026-09-06-anderlecht-v-genk,away,Genk,4-2-3-1,,2026-09-06T01:16:18Z,bench,32,Noah Adedeji-Sternberg,,,,
-2026-09-06-anderlecht-v-genk,away,Genk,4-2-3-1,,2026-09-06T01:16:18Z,bench,29,Robin Mirisola,,,,
-2026-09-06-francs-borains-v-ksc-lokeren,home,Francs Borains,4-4-2,,2026-09-06T01:16:18Z,start,20,Victor Swinnen,,,0.1,0.5
-2026-09-06-francs-borains-v-ksc-lokeren,home,Francs Borains,4-4-2,,2026-09-06T01:16:18Z,start,28,Mathias Francotte,,,0.357,0.875
-2026-09-06-francs-borains-v-ksc-lokeren,home,Francs Borains,4-4-2,,2026-09-06T01:16:18Z,start,77,Jason Dalle Molle,,,0.357,0.625
-2026-09-06-francs-borains-v-ksc-lokeren,home,Francs Borains,4-4-2,,2026-09-06T01:16:18Z,start,24,Dorian Dessoleil,,,0.357,0.375
-2026-09-06-francs-borains-v-ksc-lokeren,home,Francs Borains,4-4-2,,2026-09-06T01:16:18Z,start,78,Roméo Monticelli,,,0.357,0.125
-2026-09-06-francs-borains-v-ksc-lokeren,home,Francs Borains,4-4-2,,2026-09-06T01:16:18Z,start,11,Dieumerci Ndongala,,,0.613,0.875
-2026-09-06-francs-borains-v-ksc-lokeren,home,Francs Borains,4-4-2,,2026-09-06T01:16:18Z,start,8,Kéres Masangu,,,0.613,0.625
-2026-09-06-francs-borains-v-ksc-lokeren,home,Francs Borains,4-4-2,,2026-09-06T01:16:18Z,start,17,Yannis Kari,,,0.613,0.375
-2026-09-06-francs-borains-v-ksc-lokeren,home,Francs Borains,4-4-2,,2026-09-06T01:16:18Z,start,29,Maxime Bastian,,,0.613,0.125
-2026-09-06-francs-borains-v-ksc-lokeren,home,Francs Borains,4-4-2,,2026-09-06T01:16:18Z,start,12,Raymond Asante,,,0.87,0.7
-2026-09-06-francs-borains-v-ksc-lokeren,home,Francs Borains,4-4-2,,2026-09-06T01:16:18Z,start,10,Aboubacar Ali Abdallah,,,0.87,0.3
-2026-09-06-francs-borains-v-ksc-lokeren,home,Francs Borains,4-4-2,,2026-09-06T01:16:18Z,bench,1,Noah Jauny,noah-jauny,,,
-2026-09-06-francs-borains-v-ksc-lokeren,home,Francs Borains,4-4-2,,2026-09-06T01:16:18Z,bench,23,Levi Malungu,,,,
-2026-09-06-francs-borains-v-ksc-lokeren,home,Francs Borains,4-4-2,,2026-09-06T01:16:18Z,bench,27,Nicolas Wasbauer,,,,
-2026-09-06-francs-borains-v-ksc-lokeren,home,Francs Borains,4-4-2,,2026-09-06T01:16:18Z,bench,7,Philipp Wydra,,,,
-2026-09-06-francs-borains-v-ksc-lokeren,home,Francs Borains,4-4-2,,2026-09-06T01:16:18Z,bench,16,Enguerran Faucon,,,,
-2026-09-06-francs-borains-v-ksc-lokeren,home,Francs Borains,4-4-2,,2026-09-06T01:16:18Z,bench,33,Noah Diliberto,,,,
-2026-09-06-francs-borains-v-ksc-lokeren,home,Francs Borains,4-4-2,,2026-09-06T01:16:18Z,bench,19,Enzo Faty,,,,
-2026-09-06-francs-borains-v-ksc-lokeren,home,Francs Borains,4-4-2,,2026-09-06T01:16:18Z,bench,25,Corenthyn Lavie,,,,
-2026-09-06-francs-borains-v-ksc-lokeren,home,Francs Borains,4-4-2,,2026-09-06T01:16:18Z,bench,47,Hossni Soye Ndime,,,,
-2026-09-06-francs-borains-v-ksc-lokeren,away,KSC Lokeren,4-2-3-1,,2026-09-06T01:16:18Z,start,56,Simon Vervacke,,,0.1,0.5
-2026-09-06-francs-borains-v-ksc-lokeren,away,KSC Lokeren,4-2-3-1,,2026-09-06T01:16:18Z,start,26,Jarno Vervaque,,,0.292,0.875
-2026-09-06-francs-borains-v-ksc-lokeren,away,KSC Lokeren,4-2-3-1,,2026-09-06T01:16:18Z,start,76,Jonas Lietaert,,,0.292,0.625
-2026-09-06-francs-borains-v-ksc-lokeren,away,KSC Lokeren,4-2-3-1,,2026-09-06T01:16:18Z,start,29,Andreas Spegelaere,,,0.292,0.375
-2026-09-06-francs-borains-v-ksc-lokeren,away,KSC Lokeren,4-2-3-1,,2026-09-06T01:16:18Z,start,16,Jordi Palacios,,,0.292,0.125
-2026-09-06-francs-borains-v-ksc-lokeren,away,KSC Lokeren,4-2-3-1,,2026-09-06T01:16:18Z,start,55,Sam van Aerschot,,,0.485,0.7
-2026-09-06-francs-borains-v-ksc-lokeren,away,KSC Lokeren,4-2-3-1,,2026-09-06T01:16:18Z,start,27,Rune van den Bergh,,,0.485,0.3
-2026-09-06-francs-borains-v-ksc-lokeren,away,KSC Lokeren,4-2-3-1,,2026-09-06T01:16:18Z,start,19,Matias Lloci,,,0.678,0.837
-2026-09-06-francs-borains-v-ksc-lokeren,away,KSC Lokeren,4-2-3-1,,2026-09-06T01:16:18Z,start,10,Maxime Pau,,,0.678,0.5
-2026-09-06-francs-borains-v-ksc-lokeren,away,KSC Lokeren,4-2-3-1,,2026-09-06T01:16:18Z,start,34,Jassim Mazouz,,,0.678,0.163
-2026-09-06-francs-borains-v-ksc-lokeren,away,KSC Lokeren,4-2-3-1,,2026-09-06T01:16:18Z,start,11,Vancy Mabanza,,,0.87,0.5
-2026-09-06-francs-borains-v-ksc-lokeren,away,KSC Lokeren,4-2-3-1,,2026-09-06T01:16:18Z,bench,61,Viktor van Israel,,,,
-2026-09-06-francs-borains-v-ksc-lokeren,away,KSC Lokeren,4-2-3-1,,2026-09-06T01:16:18Z,bench,2,Robin Denuit,,,,
-2026-09-06-francs-borains-v-ksc-lokeren,away,KSC Lokeren,4-2-3-1,,2026-09-06T01:16:18Z,bench,14,Toon Janseen,,,,
-2026-09-06-francs-borains-v-ksc-lokeren,away,KSC Lokeren,4-2-3-1,,2026-09-06T01:16:18Z,bench,8,Luan Simnica,,,,
-2026-09-06-francs-borains-v-ksc-lokeren,away,KSC Lokeren,4-2-3-1,,2026-09-06T01:16:18Z,bench,80,Modeste Duku,,,,
-2026-09-06-francs-borains-v-ksc-lokeren,away,KSC Lokeren,4-2-3-1,,2026-09-06T01:16:18Z,bench,7,Anisse Brrou,,,,
-2026-09-06-francs-borains-v-ksc-lokeren,away,KSC Lokeren,4-2-3-1,,2026-09-06T01:16:18Z,bench,25,Jérôme Arens,,,,
-2026-09-06-francs-borains-v-ksc-lokeren,away,KSC Lokeren,4-2-3-1,,2026-09-06T01:16:18Z,bench,75,Ilyas Zerioh,,,,
-2026-09-06-francs-borains-v-ksc-lokeren,away,KSC Lokeren,4-2-3-1,,2026-09-06T01:16:18Z,bench,17,Aboubacar Dindane,,,,
-2026-09-06-vancouver-fc-v-supra-du-quebec,home,Vancouver FC,4-2-3-1,,2026-09-06T01:16:18Z,start,1,Callum Irving,,,0.1,0.5
-2026-09-06-vancouver-fc-v-supra-du-quebec,home,Vancouver FC,4-2-3-1,,2026-09-06T01:16:18Z,start,3,Morey Doner,,,0.292,0.875
-2026-09-06-vancouver-fc-v-supra-du-quebec,home,Vancouver FC,4-2-3-1,,2026-09-06T01:16:18Z,start,5,Matteo Campagna,,,0.292,0.625
-2026-09-06-vancouver-fc-v-supra-du-quebec,home,Vancouver FC,4-2-3-1,,2026-09-06T01:16:18Z,start,30,Tom Field,tom-field,,0.292,0.375
-2026-09-06-vancouver-fc-v-supra-du-quebec,home,Vancouver FC,4-2-3-1,,2026-09-06T01:16:18Z,start,23,Kian Hugh Proctor,,,0.292,0.125
-2026-09-06-vancouver-fc-v-supra-du-quebec,home,Vancouver FC,4-2-3-1,,2026-09-06T01:16:18Z,start,15,Abdoulaye Ouattara,,,0.485,0.7
-2026-09-06-vancouver-fc-v-supra-du-quebec,home,Vancouver FC,4-2-3-1,,2026-09-06T01:16:18Z,start,21,Marcello Polisi,,,0.485,0.3
-2026-09-06-vancouver-fc-v-supra-du-quebec,home,Vancouver FC,4-2-3-1,,2026-09-06T01:16:18Z,start,7,Elage Bah,,,0.678,0.837
-2026-09-06-vancouver-fc-v-supra-du-quebec,home,Vancouver FC,4-2-3-1,,2026-09-06T01:16:18Z,start,6,Damiano Pecile,,,0.678,0.5
-2026-09-06-vancouver-fc-v-supra-du-quebec,home,Vancouver FC,4-2-3-1,,2026-09-06T01:16:18Z,start,10,Mohamed Amissi,,,0.678,0.163
-2026-09-06-vancouver-fc-v-supra-du-quebec,home,Vancouver FC,4-2-3-1,,2026-09-06T01:16:18Z,start,9,Lys Mousset,,,0.87,0.5
-2026-09-06-vancouver-fc-v-supra-du-quebec,home,Vancouver FC,4-2-3-1,,2026-09-06T01:16:18Z,bench,33,Henrik Regitnig,,,,
-2026-09-06-vancouver-fc-v-supra-du-quebec,home,Vancouver FC,4-2-3-1,,2026-09-06T01:16:18Z,bench,2,Paris Gee,,,,
-2026-09-06-vancouver-fc-v-supra-du-quebec,home,Vancouver FC,4-2-3-1,,2026-09-06T01:16:18Z,bench,20,Nicolás Mezquida,,,,
-2026-09-06-vancouver-fc-v-supra-du-quebec,home,Vancouver FC,4-2-3-1,,2026-09-06T01:16:18Z,bench,8,Luis Toomey,,,,
-2026-09-06-vancouver-fc-v-supra-du-quebec,home,Vancouver FC,4-2-3-1,,2026-09-06T01:16:18Z,bench,16,Benajmin Lee,,,,
-2026-09-06-vancouver-fc-v-supra-du-quebec,home,Vancouver FC,4-2-3-1,,2026-09-06T01:16:18Z,bench,14,Terran Campbell,,,,
-2026-09-06-vancouver-fc-v-supra-du-quebec,home,Vancouver FC,4-2-3-1,,2026-09-06T01:16:18Z,bench,11,Aboubacar Traore,,,,
-2026-09-06-vancouver-fc-v-supra-du-quebec,away,Supra du Québec,4-2-3-1,,2026-09-06T01:16:18Z,start,32,Joakim Milli,,,0.1,0.5
-2026-09-06-vancouver-fc-v-supra-du-quebec,away,Supra du Québec,4-2-3-1,,2026-09-06T01:16:18Z,start,2,Charles Auguste,,,0.292,0.875
-2026-09-06-vancouver-fc-v-supra-du-quebec,away,Supra du Québec,4-2-3-1,,2026-09-06T01:16:18Z,start,5,Keesean Ferdinand,,,0.292,0.625
-2026-09-06-vancouver-fc-v-supra-du-quebec,away,Supra du Québec,4-2-3-1,,2026-09-06T01:16:18Z,start,4,Matisse Chrétien,,,0.292,0.375
-2026-09-06-vancouver-fc-v-supra-du-quebec,away,Supra du Québec,4-2-3-1,,2026-09-06T01:16:18Z,start,11,Diyaeddine Abzi,,,0.292,0.125
-2026-09-06-vancouver-fc-v-supra-du-quebec,away,Supra du Québec,4-2-3-1,,2026-09-06T01:16:18Z,start,6,Alessandro Biello,,,0.485,0.7
-2026-09-06-vancouver-fc-v-supra-du-quebec,away,Supra du Québec,4-2-3-1,,2026-09-06T01:16:18Z,start,24,Safwane Mlah,,,0.485,0.3
-2026-09-06-vancouver-fc-v-supra-du-quebec,away,Supra du Québec,4-2-3-1,,2026-09-06T01:16:18Z,start,7,David Choinière,,,0.678,0.837
-2026-09-06-vancouver-fc-v-supra-du-quebec,away,Supra du Québec,4-2-3-1,,2026-09-06T01:16:18Z,start,10,Sean Rea,,,0.678,0.5
-2026-09-06-vancouver-fc-v-supra-du-quebec,away,Supra du Québec,4-2-3-1,,2026-09-06T01:16:18Z,start,9,Loïc Kwemi,,,0.678,0.163
-2026-09-06-vancouver-fc-v-supra-du-quebec,away,Supra du Québec,4-2-3-1,,2026-09-06T01:16:18Z,start,99,Ibrahim Condé,,,0.87,0.5
-2026-09-06-vancouver-fc-v-supra-du-quebec,away,Supra du Québec,4-2-3-1,,2026-09-06T01:16:18Z,bench,80,Makhoudia Diop,,,,
-2026-09-06-vancouver-fc-v-supra-du-quebec,away,Supra du Québec,4-2-3-1,,2026-09-06T01:16:18Z,bench,23,Zach Fernandez,,,,
-2026-09-06-vancouver-fc-v-supra-du-quebec,away,Supra du Québec,4-2-3-1,,2026-09-06T01:16:18Z,bench,3,Thomas Lebeuf,,,,
-2026-09-06-vancouver-fc-v-supra-du-quebec,away,Supra du Québec,4-2-3-1,,2026-09-06T01:16:18Z,bench,49,Eliakim Awonongbadje,,,,
-2026-09-06-vancouver-fc-v-supra-du-quebec,away,Supra du Québec,4-2-3-1,,2026-09-06T01:16:18Z,bench,8,Omar Elkalouli,,,,
-2026-09-06-vancouver-fc-v-supra-du-quebec,away,Supra du Québec,4-2-3-1,,2026-09-06T01:16:18Z,bench,33,Aboubacar Sissoko,,,,
-2026-09-06-vancouver-fc-v-supra-du-quebec,away,Supra du Québec,4-2-3-1,,2026-09-06T01:16:18Z,bench,92,Noah Santos,,,,
-2026-09-06-vancouver-fc-v-supra-du-quebec,away,Supra du Québec,4-2-3-1,,2026-09-06T01:16:18Z,bench,13,Alexander Makarova,,,,
-2026-09-06-vancouver-fc-v-supra-du-quebec,away,Supra du Québec,4-2-3-1,,2026-09-06T01:16:18Z,bench,77,Riad Bey,,,,
+2026-09-05-sporting-jax-v-lexington-sc,home,Sporting JAX,4-1-4-1,,2026-09-06T04:58:18Z,start,1,Jake McGuire,,,0.1,0.5
+2026-09-05-sporting-jax-v-lexington-sc,home,Sporting JAX,4-1-4-1,,2026-09-06T04:58:18Z,start,12,Edgardo Rito,,,0.292,0.875
+2026-09-05-sporting-jax-v-lexington-sc,home,Sporting JAX,4-1-4-1,,2026-09-06T04:58:18Z,start,18,Wahab Ackwei,,,0.292,0.625
+2026-09-05-sporting-jax-v-lexington-sc,home,Sporting JAX,4-1-4-1,,2026-09-06T04:58:18Z,start,15,Ryan Edwards,,,0.292,0.375
+2026-09-05-sporting-jax-v-lexington-sc,home,Sporting JAX,4-1-4-1,,2026-09-06T04:58:18Z,start,21,Marcus Godinho,,,0.292,0.125
+2026-09-05-sporting-jax-v-lexington-sc,home,Sporting JAX,4-1-4-1,,2026-09-06T04:58:18Z,start,8,Wan Kuzain,,,0.485,0.5
+2026-09-05-sporting-jax-v-lexington-sc,home,Sporting JAX,4-1-4-1,,2026-09-06T04:58:18Z,start,19,Rafferty Pedder,,,0.678,0.875
+2026-09-05-sporting-jax-v-lexington-sc,home,Sporting JAX,4-1-4-1,,2026-09-06T04:58:18Z,start,14,Jean Mota,,,0.678,0.625
+2026-09-05-sporting-jax-v-lexington-sc,home,Sporting JAX,4-1-4-1,,2026-09-06T04:58:18Z,start,6,Jordan Rossiter,,,0.678,0.375
+2026-09-05-sporting-jax-v-lexington-sc,home,Sporting JAX,4-1-4-1,,2026-09-06T04:58:18Z,start,10,Kieran Sadlier,kieran-sadlier,,0.678,0.125
+2026-09-05-sporting-jax-v-lexington-sc,home,Sporting JAX,4-1-4-1,,2026-09-06T04:58:18Z,start,16,Emil Jääskeläinen,,,0.89,0.5
+2026-09-05-sporting-jax-v-lexington-sc,home,Sporting JAX,4-1-4-1,,2026-09-06T04:58:18Z,bench,2,Harvey Neville,harvey-neville,,,
+2026-09-05-sporting-jax-v-lexington-sc,home,Sporting JAX,4-1-4-1,,2026-09-06T04:58:18Z,bench,24,Thomas Roberts,,,,
+2026-09-05-sporting-jax-v-lexington-sc,home,Sporting JAX,4-1-4-1,,2026-09-06T04:58:18Z,bench,11,Ahmad Al-Qaq,,,,
+2026-09-05-sporting-jax-v-lexington-sc,home,Sporting JAX,4-1-4-1,,2026-09-06T04:58:18Z,bench,22,Antonio Gomez,,,,
+2026-09-05-sporting-jax-v-lexington-sc,home,Sporting JAX,4-1-4-1,,2026-09-06T04:58:18Z,bench,9,Adam Luckhurst,,,,
+2026-09-05-sporting-jax-v-lexington-sc,home,Sporting JAX,4-1-4-1,,2026-09-06T04:58:18Z,bench,42,Esteban Casas,,,,
+2026-09-05-sporting-jax-v-lexington-sc,home,Sporting JAX,4-1-4-1,,2026-09-06T04:58:18Z,bench,27,Danny Wilson,,,,
+2026-09-05-sporting-jax-v-lexington-sc,home,Sporting JAX,4-1-4-1,,2026-09-06T04:58:18Z,bench,28,Ethan Underwood,,,,
+2026-09-05-sporting-jax-v-lexington-sc,away,Lexington SC,4-2-3-1,,2026-09-06T04:58:18Z,start,17,Oliver Semmle,,,0.1,0.5
+2026-09-05-sporting-jax-v-lexington-sc,away,Lexington SC,4-2-3-1,,2026-09-06T04:58:18Z,start,12,Xavier Zengue,,,0.292,0.875
+2026-09-05-sporting-jax-v-lexington-sc,away,Lexington SC,4-2-3-1,,2026-09-06T04:58:18Z,start,5,Kendall Burks,,,0.292,0.625
+2026-09-05-sporting-jax-v-lexington-sc,away,Lexington SC,4-2-3-1,,2026-09-06T04:58:18Z,start,23,Javain Brown,,,0.292,0.375
+2026-09-05-sporting-jax-v-lexington-sc,away,Lexington SC,4-2-3-1,,2026-09-06T04:58:18Z,start,2,Jacob Greene,,,0.292,0.125
+2026-09-05-sporting-jax-v-lexington-sc,away,Lexington SC,4-2-3-1,,2026-09-06T04:58:18Z,start,16,Blaine Ferri,,,0.485,0.7
+2026-09-05-sporting-jax-v-lexington-sc,away,Lexington SC,4-2-3-1,,2026-09-06T04:58:18Z,start,15,Noble Okello,,,0.485,0.3
+2026-09-05-sporting-jax-v-lexington-sc,away,Lexington SC,4-2-3-1,,2026-09-06T04:58:18Z,start,34,Malcolm Fry,,,0.678,0.837
+2026-09-05-sporting-jax-v-lexington-sc,away,Lexington SC,4-2-3-1,,2026-09-06T04:58:18Z,start,8,Nicolas Firmino,,,0.678,0.5
+2026-09-05-sporting-jax-v-lexington-sc,away,Lexington SC,4-2-3-1,,2026-09-06T04:58:18Z,start,7,Marcus Epps,,,0.678,0.163
+2026-09-05-sporting-jax-v-lexington-sc,away,Lexington SC,4-2-3-1,,2026-09-06T04:58:18Z,start,9,Phillip Goodrum,,,0.87,0.5
+2026-09-05-sporting-jax-v-lexington-sc,away,Lexington SC,4-2-3-1,,2026-09-06T04:58:18Z,bench,20,Milo Yosef,,,,
+2026-09-05-sporting-jax-v-lexington-sc,away,Lexington SC,4-2-3-1,,2026-09-06T04:58:18Z,bench,19,Tarik Scott,,,,
+2026-09-05-sporting-jax-v-lexington-sc,away,Lexington SC,4-2-3-1,,2026-09-06T04:58:18Z,bench,98,Patrick Seagrist,,,,
+2026-09-05-sporting-jax-v-lexington-sc,away,Lexington SC,4-2-3-1,,2026-09-06T04:58:18Z,bench,40,Garret Addams,,,,
+2026-09-05-sporting-jax-v-lexington-sc,away,Lexington SC,4-2-3-1,,2026-09-06T04:58:18Z,bench,14,Andrew Caborn,,,,
+2026-09-05-sporting-jax-v-lexington-sc,away,Lexington SC,4-2-3-1,,2026-09-06T04:58:18Z,bench,24,Brady Stockton,,,,
+2026-09-05-sporting-jax-v-lexington-sc,away,Lexington SC,4-2-3-1,,2026-09-06T04:58:18Z,bench,21,Marqes Muir,,,,
+2026-09-05-detroit-city-fc-v-hartford-athletic,home,Detroit City FC,4-2-3-1,,2026-09-06T04:58:18Z,start,1,Carlos Herrera,,,0.1,0.5
+2026-09-05-detroit-city-fc-v-hartford-athletic,home,Detroit City FC,4-2-3-1,,2026-09-06T04:58:18Z,start,14,Haruki Yamazaki,,,0.292,0.875
+2026-09-05-detroit-city-fc-v-hartford-athletic,home,Detroit City FC,4-2-3-1,,2026-09-06T04:58:18Z,start,30,Devon Amoo-Mensah,,,0.292,0.625
+2026-09-05-detroit-city-fc-v-hartford-athletic,home,Detroit City FC,4-2-3-1,,2026-09-06T04:58:18Z,start,4,Callum Montgomery,,,0.292,0.375
+2026-09-05-detroit-city-fc-v-hartford-athletic,home,Detroit City FC,4-2-3-1,,2026-09-06T04:58:18Z,start,33,Tommy Silva,,,0.292,0.125
+2026-09-05-detroit-city-fc-v-hartford-athletic,home,Detroit City FC,4-2-3-1,,2026-09-06T04:58:18Z,start,8,Abdoulaye Diop,,,0.485,0.7
+2026-09-05-detroit-city-fc-v-hartford-athletic,home,Detroit City FC,4-2-3-1,,2026-09-06T04:58:18Z,start,22,Kobe Hernández-Foster,,,0.485,0.3
+2026-09-05-detroit-city-fc-v-hartford-athletic,home,Detroit City FC,4-2-3-1,,2026-09-06T04:58:18Z,start,10,Jeciel Cedeño,,,0.678,0.837
+2026-09-05-detroit-city-fc-v-hartford-athletic,home,Detroit City FC,4-2-3-1,,2026-09-06T04:58:18Z,start,21,Maxi Rodriguez,,,0.678,0.5
+2026-09-05-detroit-city-fc-v-hartford-athletic,home,Detroit City FC,4-2-3-1,,2026-09-06T04:58:18Z,start,23,Kian Williams,,,0.678,0.163
+2026-09-05-detroit-city-fc-v-hartford-athletic,home,Detroit City FC,4-2-3-1,,2026-09-06T04:58:18Z,start,9,Ben Morris,,,0.87,0.5
+2026-09-05-detroit-city-fc-v-hartford-athletic,home,Detroit City FC,4-2-3-1,,2026-09-06T04:58:18Z,bench,15,Alexander Dalou,,,,
+2026-09-05-detroit-city-fc-v-hartford-athletic,home,Detroit City FC,4-2-3-1,,2026-09-06T04:58:18Z,bench,26,Chisom Egbuchunam,,,,
+2026-09-05-detroit-city-fc-v-hartford-athletic,home,Detroit City FC,4-2-3-1,,2026-09-06T04:58:18Z,bench,6,Ryan Williams,,,,
+2026-09-05-detroit-city-fc-v-hartford-athletic,home,Detroit City FC,4-2-3-1,,2026-09-06T04:58:18Z,bench,12,Michael Bryant,,,,
+2026-09-05-detroit-city-fc-v-hartford-athletic,home,Detroit City FC,4-2-3-1,,2026-09-06T04:58:18Z,bench,91,Carlos Saldaña,,,,
+2026-09-05-detroit-city-fc-v-hartford-athletic,home,Detroit City FC,4-2-3-1,,2026-09-06T04:58:18Z,bench,3,Aedan Stanley,,,,
+2026-09-05-detroit-city-fc-v-hartford-athletic,home,Detroit City FC,4-2-3-1,,2026-09-06T04:58:18Z,bench,20,Rio Hope-Gund,,,,
+2026-09-05-detroit-city-fc-v-hartford-athletic,away,Hartford Athletic,4-3-2-1,,2026-09-06T04:58:18Z,start,1,Enzo Carvalho,,,0.1,0.5
+2026-09-05-detroit-city-fc-v-hartford-athletic,away,Hartford Athletic,4-3-2-1,,2026-09-06T04:58:18Z,start,24,Galen Flynn,,,0.292,0.875
+2026-09-05-detroit-city-fc-v-hartford-athletic,away,Hartford Athletic,4-3-2-1,,2026-09-06T04:58:18Z,start,22,TJ Presthus,,,0.292,0.625
+2026-09-05-detroit-city-fc-v-hartford-athletic,away,Hartford Athletic,4-3-2-1,,2026-09-06T04:58:18Z,start,23,Arturo Ordóñez,,,0.292,0.375
+2026-09-05-detroit-city-fc-v-hartford-athletic,away,Hartford Athletic,4-3-2-1,,2026-09-06T04:58:18Z,start,5,Baboucarr Njie,,,0.292,0.125
+2026-09-05-detroit-city-fc-v-hartford-athletic,away,Hartford Athletic,4-3-2-1,,2026-09-06T04:58:18Z,start,18,Christos Hadjipaschalis,,,0.485,0.79
+2026-09-05-detroit-city-fc-v-hartford-athletic,away,Hartford Athletic,4-3-2-1,,2026-09-06T04:58:18Z,start,7,Michael Adedokun,,,0.485,0.5
+2026-09-05-detroit-city-fc-v-hartford-athletic,away,Hartford Athletic,4-3-2-1,,2026-09-06T04:58:18Z,start,47,Oscar Pearman,,,0.485,0.21
+2026-09-05-detroit-city-fc-v-hartford-athletic,away,Hartford Athletic,4-3-2-1,,2026-09-06T04:58:18Z,start,17,Sadat Anaku,,,0.678,0.7
+2026-09-05-detroit-city-fc-v-hartford-athletic,away,Hartford Athletic,4-3-2-1,,2026-09-06T04:58:18Z,start,3,Matthew Real,,,0.678,0.3
+2026-09-05-detroit-city-fc-v-hartford-athletic,away,Hartford Athletic,4-3-2-1,,2026-09-06T04:58:18Z,start,27,Spencer Gordon,,,0.87,0.5
+2026-09-05-detroit-city-fc-v-hartford-athletic,away,Hartford Athletic,4-3-2-1,,2026-09-06T04:58:18Z,bench,16,Barry Coffey,barry-coffey,,,
+2026-09-05-detroit-city-fc-v-hartford-athletic,away,Hartford Athletic,4-3-2-1,,2026-09-06T04:58:18Z,bench,33,Sean Canada,,,,
+2026-09-05-detroit-city-fc-v-hartford-athletic,away,Hartford Athletic,4-3-2-1,,2026-09-06T04:58:18Z,bench,25,Britton Fischer,,,,
+2026-09-05-detroit-city-fc-v-hartford-athletic,away,Hartford Athletic,4-3-2-1,,2026-09-06T04:58:18Z,bench,9,Augustine Williams,,,,
+2026-09-05-detroit-city-fc-v-hartford-athletic,away,Hartford Athletic,4-3-2-1,,2026-09-06T04:58:18Z,bench,77,Antony Siaha,,,,
+2026-09-05-indy-eleven-v-birmingham-legion-fc,home,Indy Eleven,4-4-2,,2026-09-06T04:58:18Z,start,1,Eric Dick,,,0.1,0.5
+2026-09-05-indy-eleven-v-birmingham-legion-fc,home,Indy Eleven,4-4-2,,2026-09-06T04:58:18Z,start,13,Joe Hafferty,,,0.357,0.875
+2026-09-05-indy-eleven-v-birmingham-legion-fc,home,Indy Eleven,4-4-2,,2026-09-06T04:58:18Z,start,37,Paco Craig,,,0.357,0.625
+2026-09-05-indy-eleven-v-birmingham-legion-fc,home,Indy Eleven,4-4-2,,2026-09-06T04:58:18Z,start,4,Anthony Herbert,,,0.357,0.375
+2026-09-05-indy-eleven-v-birmingham-legion-fc,home,Indy Eleven,4-4-2,,2026-09-06T04:58:18Z,start,29,Alejandro Mitrano,,,0.357,0.125
+2026-09-05-indy-eleven-v-birmingham-legion-fc,home,Indy Eleven,4-4-2,,2026-09-06T04:58:18Z,start,5,Josh O'Brien,josh-obrien,,0.613,0.875
+2026-09-05-indy-eleven-v-birmingham-legion-fc,home,Indy Eleven,4-4-2,,2026-09-06T04:58:18Z,start,8,Jack Blake,,,0.613,0.625
+2026-09-05-indy-eleven-v-birmingham-legion-fc,home,Indy Eleven,4-4-2,,2026-09-06T04:58:18Z,start,6,Cameron Lindley,,,0.613,0.375
+2026-09-05-indy-eleven-v-birmingham-legion-fc,home,Indy Eleven,4-4-2,,2026-09-06T04:58:18Z,start,14,Aodhan Quinn,,,0.613,0.125
+2026-09-05-indy-eleven-v-birmingham-legion-fc,home,Indy Eleven,4-4-2,,2026-09-06T04:58:18Z,start,19,Edward Kizza,,,0.87,0.7
+2026-09-05-indy-eleven-v-birmingham-legion-fc,home,Indy Eleven,4-4-2,,2026-09-06T04:58:18Z,start,27,Bruno Rendón,,,0.87,0.3
+2026-09-05-indy-eleven-v-birmingham-legion-fc,home,Indy Eleven,4-4-2,,2026-09-06T04:58:18Z,bench,90,Loïc Mesanvi,,,,
+2026-09-05-indy-eleven-v-birmingham-legion-fc,home,Indy Eleven,4-4-2,,2026-09-06T04:58:18Z,bench,9,Charles Sharp,,,,
+2026-09-05-indy-eleven-v-birmingham-legion-fc,home,Indy Eleven,4-4-2,,2026-09-06T04:58:18Z,bench,20,Dylan Sing,,,,
+2026-09-05-indy-eleven-v-birmingham-legion-fc,home,Indy Eleven,4-4-2,,2026-09-06T04:58:18Z,bench,21,Makel Rasheed,,,,
+2026-09-05-indy-eleven-v-birmingham-legion-fc,home,Indy Eleven,4-4-2,,2026-09-06T04:58:18Z,bench,23,Reice Charles-Cook,,,,
+2026-09-05-indy-eleven-v-birmingham-legion-fc,home,Indy Eleven,4-4-2,,2026-09-06T04:58:18Z,bench,39,Hesron Barry,,,,
+2026-09-05-indy-eleven-v-birmingham-legion-fc,home,Indy Eleven,4-4-2,,2026-09-06T04:58:18Z,bench,15,Malik Henry-Scott,,,,
+2026-09-05-indy-eleven-v-birmingham-legion-fc,away,Birmingham Legion FC,4-3-3,,2026-09-06T04:58:18Z,start,1,Jassem Koleilat,,,0.1,0.5
+2026-09-05-indy-eleven-v-birmingham-legion-fc,away,Birmingham Legion FC,4-3-3,,2026-09-06T04:58:18Z,start,21,Sebastian Tregarthen,,,0.357,0.875
+2026-09-05-indy-eleven-v-birmingham-legion-fc,away,Birmingham Legion FC,4-3-3,,2026-09-06T04:58:18Z,start,27,Bryce Washington,,,0.357,0.625
+2026-09-05-indy-eleven-v-birmingham-legion-fc,away,Birmingham Legion FC,4-3-3,,2026-09-06T04:58:18Z,start,32,Hamady Diop,,,0.357,0.375
+2026-09-05-indy-eleven-v-birmingham-legion-fc,away,Birmingham Legion FC,4-3-3,,2026-09-06T04:58:18Z,start,77,Nico Brown,,,0.357,0.125
+2026-09-05-indy-eleven-v-birmingham-legion-fc,away,Birmingham Legion FC,4-3-3,,2026-09-06T04:58:18Z,start,18,Seth Antwi,,,0.613,0.79
+2026-09-05-indy-eleven-v-birmingham-legion-fc,away,Birmingham Legion FC,4-3-3,,2026-09-06T04:58:18Z,start,16,Peter-Lee Vassell,,,0.613,0.5
+2026-09-05-indy-eleven-v-birmingham-legion-fc,away,Birmingham Legion FC,4-3-3,,2026-09-06T04:58:18Z,start,8,Kadeem Cole,,,0.613,0.21
+2026-09-05-indy-eleven-v-birmingham-legion-fc,away,Birmingham Legion FC,4-3-3,,2026-09-06T04:58:18Z,start,15,Tyler Pasher,,,0.87,0.79
+2026-09-05-indy-eleven-v-birmingham-legion-fc,away,Birmingham Legion FC,4-3-3,,2026-09-06T04:58:18Z,start,17,Romario Williams,,,0.87,0.5
+2026-09-05-indy-eleven-v-birmingham-legion-fc,away,Birmingham Legion FC,4-3-3,,2026-09-06T04:58:18Z,start,19,Gevork Diarbian,,,0.87,0.21
+2026-09-05-indy-eleven-v-birmingham-legion-fc,away,Birmingham Legion FC,4-3-3,,2026-09-06T04:58:18Z,bench,11,Dawson McCartney,,,,
+2026-09-05-indy-eleven-v-birmingham-legion-fc,away,Birmingham Legion FC,4-3-3,,2026-09-06T04:58:18Z,bench,81,Serge Ngoma,,,,
+2026-09-05-indy-eleven-v-birmingham-legion-fc,away,Birmingham Legion FC,4-3-3,,2026-09-06T04:58:18Z,bench,9,Ronaldo Damus,,,,
+2026-09-05-indy-eleven-v-birmingham-legion-fc,away,Birmingham Legion FC,4-3-3,,2026-09-06T04:58:18Z,bench,20,AJ Paterson,,,,
+2026-09-05-indy-eleven-v-birmingham-legion-fc,away,Birmingham Legion FC,4-3-3,,2026-09-06T04:58:18Z,bench,26,Amir Daley,,,,
+2026-09-05-indy-eleven-v-birmingham-legion-fc,away,Birmingham Legion FC,4-3-3,,2026-09-06T04:58:18Z,bench,12,Trevor McMullen,,,,
+2026-09-05-indy-eleven-v-birmingham-legion-fc,away,Birmingham Legion FC,4-3-3,,2026-09-06T04:58:18Z,bench,7,Sebastián Saucedo,,,,
+2026-09-05-columbus-crew-v-colorado-rapids,home,Columbus Crew,4-4-2,,2026-09-06T04:58:18Z,start,28,Patrick Schulte,,,0.1,0.5
+2026-09-05-columbus-crew-v-colorado-rapids,home,Columbus Crew,4-4-2,,2026-09-06T04:58:18Z,start,31,Steven Moreira,,,0.357,0.875
+2026-09-05-columbus-crew-v-colorado-rapids,home,Columbus Crew,4-4-2,,2026-09-06T04:58:18Z,start,25,Sean Zawadzki,,,0.357,0.625
+2026-09-05-columbus-crew-v-colorado-rapids,home,Columbus Crew,4-4-2,,2026-09-06T04:58:18Z,start,18,Malte Amundsen,,,0.357,0.375
+2026-09-05-columbus-crew-v-colorado-rapids,home,Columbus Crew,4-4-2,,2026-09-06T04:58:18Z,start,11,Brooks Lennon,brooks-lennon,,0.357,0.125
+2026-09-05-columbus-crew-v-colorado-rapids,home,Columbus Crew,4-4-2,,2026-09-06T04:58:18Z,start,23,Mohamed Farsi,,,0.613,0.875
+2026-09-05-columbus-crew-v-colorado-rapids,home,Columbus Crew,4-4-2,,2026-09-06T04:58:18Z,start,50,Tarun Karumanchi,,,0.613,0.625
+2026-09-05-columbus-crew-v-colorado-rapids,home,Columbus Crew,4-4-2,,2026-09-06T04:58:18Z,start,20,André Gomes,,,0.613,0.375
+2026-09-05-columbus-crew-v-colorado-rapids,home,Columbus Crew,4-4-2,,2026-09-06T04:58:18Z,start,8,Santiago Rodríguez,,,0.613,0.125
+2026-09-05-columbus-crew-v-colorado-rapids,home,Columbus Crew,4-4-2,,2026-09-06T04:58:18Z,start,10,Brais Méndez,,,0.87,0.7
+2026-09-05-columbus-crew-v-colorado-rapids,home,Columbus Crew,4-4-2,,2026-09-06T04:58:18Z,start,77,Josef Martínez,,,0.87,0.3
+2026-09-05-columbus-crew-v-colorado-rapids,home,Columbus Crew,4-4-2,,2026-09-06T04:58:18Z,bench,16,Taha Habroune,,,,
+2026-09-05-columbus-crew-v-colorado-rapids,home,Columbus Crew,4-4-2,,2026-09-06T04:58:18Z,bench,33,Gonzalo Tapia,,,,
+2026-09-05-columbus-crew-v-colorado-rapids,home,Columbus Crew,4-4-2,,2026-09-06T04:58:18Z,bench,7,Dylan Chambost,,,,
+2026-09-05-columbus-crew-v-colorado-rapids,home,Columbus Crew,4-4-2,,2026-09-06T04:58:18Z,bench,2,Andrés Herrera,,,,
+2026-09-05-columbus-crew-v-colorado-rapids,home,Columbus Crew,4-4-2,,2026-09-06T04:58:18Z,bench,12,Cesar Ruvalcaba,,,,
+2026-09-05-columbus-crew-v-colorado-rapids,home,Columbus Crew,4-4-2,,2026-09-06T04:58:18Z,bench,1,Nicholas Hagen,,,,
+2026-09-05-columbus-crew-v-colorado-rapids,home,Columbus Crew,4-4-2,,2026-09-06T04:58:18Z,bench,3,Eric Bailly,,,,
+2026-09-05-columbus-crew-v-colorado-rapids,home,Columbus Crew,4-4-2,,2026-09-06T04:58:18Z,bench,14,Amar Sejdic,,,,
+2026-09-05-columbus-crew-v-colorado-rapids,home,Columbus Crew,4-4-2,,2026-09-06T04:58:18Z,bench,26,Lautaro Giaccone,,,,
+2026-09-05-columbus-crew-v-colorado-rapids,away,Colorado Rapids,4-3-3,,2026-09-06T04:58:18Z,start,31,Adam Beaudry,,,0.1,0.5
+2026-09-05-columbus-crew-v-colorado-rapids,away,Colorado Rapids,4-3-3,,2026-09-06T04:58:18Z,start,24,Noah Cobb,,,0.357,0.875
+2026-09-05-columbus-crew-v-colorado-rapids,away,Colorado Rapids,4-3-3,,2026-09-06T04:58:18Z,start,6,Rob Holding,,,0.357,0.625
+2026-09-05-columbus-crew-v-colorado-rapids,away,Colorado Rapids,4-3-3,,2026-09-06T04:58:18Z,start,5,Loïc Williams,,,0.357,0.375
+2026-09-05-columbus-crew-v-colorado-rapids,away,Colorado Rapids,4-3-3,,2026-09-06T04:58:18Z,start,29,Miguel Navarro,,,0.357,0.125
+2026-09-05-columbus-crew-v-colorado-rapids,away,Colorado Rapids,4-3-3,,2026-09-06T04:58:18Z,start,12,Joshua Atencio,,,0.613,0.79
+2026-09-05-columbus-crew-v-colorado-rapids,away,Colorado Rapids,4-3-3,,2026-09-06T04:58:18Z,start,10,Paxten Aaronson,,,0.613,0.5
+2026-09-05-columbus-crew-v-colorado-rapids,away,Colorado Rapids,4-3-3,,2026-09-06T04:58:18Z,start,13,Wayne Frederick,,,0.613,0.21
+2026-09-05-columbus-crew-v-colorado-rapids,away,Colorado Rapids,4-3-3,,2026-09-06T04:58:18Z,start,77,Darren Yapi,,,0.87,0.79
+2026-09-05-columbus-crew-v-colorado-rapids,away,Colorado Rapids,4-3-3,,2026-09-06T04:58:18Z,start,88,Youssef Maziz,,,0.87,0.5
+2026-09-05-columbus-crew-v-colorado-rapids,away,Colorado Rapids,4-3-3,,2026-09-06T04:58:18Z,start,93,Georgi Minoungou,,,0.87,0.21
+2026-09-05-columbus-crew-v-colorado-rapids,away,Colorado Rapids,4-3-3,,2026-09-06T04:58:18Z,bench,33,Kosi Thompson,,,,
+2026-09-05-columbus-crew-v-colorado-rapids,away,Colorado Rapids,4-3-3,,2026-09-06T04:58:18Z,bench,4,Reggie Cannon,,,,
+2026-09-05-columbus-crew-v-colorado-rapids,away,Colorado Rapids,4-3-3,,2026-09-06T04:58:18Z,bench,16,Alex Harris,,,,
+2026-09-05-columbus-crew-v-colorado-rapids,away,Colorado Rapids,4-3-3,,2026-09-06T04:58:18Z,bench,32,Donavan Phillip,,,,
+2026-09-05-columbus-crew-v-colorado-rapids,away,Colorado Rapids,4-3-3,,2026-09-06T04:58:18Z,bench,2,Keegan Rosenberry,,,,
+2026-09-05-columbus-crew-v-colorado-rapids,away,Colorado Rapids,4-3-3,,2026-09-06T04:58:18Z,bench,61,Bryan Dowd,,,,
+2026-09-05-columbus-crew-v-colorado-rapids,away,Colorado Rapids,4-3-3,,2026-09-06T04:58:18Z,bench,99,Jackson Travis,,,,
+2026-09-05-columbus-crew-v-colorado-rapids,away,Colorado Rapids,4-3-3,,2026-09-06T04:58:18Z,bench,94,Vincent Rinaldi,,,,
+2026-09-05-charlotte-fc-v-houston-dynamo-fc,home,Charlotte FC,4-2-3-1,,2026-09-06T04:58:18Z,start,1,Kristijan Kahlina,,,0.1,0.5
+2026-09-05-charlotte-fc-v-houston-dynamo-fc,home,Charlotte FC,4-2-3-1,,2026-09-06T04:58:18Z,start,35,Will Cleary,,,0.292,0.875
+2026-09-05-charlotte-fc-v-houston-dynamo-fc,home,Charlotte FC,4-2-3-1,,2026-09-06T04:58:18Z,start,22,Henry Kessler,,,0.292,0.625
+2026-09-05-charlotte-fc-v-houston-dynamo-fc,home,Charlotte FC,4-2-3-1,,2026-09-06T04:58:18Z,start,3,Tim Ream,,,0.292,0.375
+2026-09-05-charlotte-fc-v-houston-dynamo-fc,home,Charlotte FC,4-2-3-1,,2026-09-06T04:58:18Z,start,23,David Schnegg,,,0.292,0.125
+2026-09-05-charlotte-fc-v-houston-dynamo-fc,home,Charlotte FC,4-2-3-1,,2026-09-06T04:58:18Z,start,28,Djibril Diani,,,0.485,0.7
+2026-09-05-charlotte-fc-v-houston-dynamo-fc,home,Charlotte FC,4-2-3-1,,2026-09-06T04:58:18Z,start,8,Ashley Westwood,,,0.485,0.3
+2026-09-05-charlotte-fc-v-houston-dynamo-fc,home,Charlotte FC,4-2-3-1,,2026-09-06T04:58:18Z,start,11,Liel Abada,,,0.678,0.837
+2026-09-05-charlotte-fc-v-houston-dynamo-fc,home,Charlotte FC,4-2-3-1,,2026-09-06T04:58:18Z,start,16,Pep Biel,,,0.678,0.5
+2026-09-05-charlotte-fc-v-houston-dynamo-fc,home,Charlotte FC,4-2-3-1,,2026-09-06T04:58:18Z,start,10,Allan Saint-Maximin,,,0.678,0.163
+2026-09-05-charlotte-fc-v-houston-dynamo-fc,home,Charlotte FC,4-2-3-1,,2026-09-06T04:58:18Z,start,9,Idan Toklomati,,,0.87,0.5
+2026-09-05-charlotte-fc-v-houston-dynamo-fc,home,Charlotte FC,4-2-3-1,,2026-09-06T04:58:18Z,bench,17,Luca de la Torre,,,,
+2026-09-05-charlotte-fc-v-houston-dynamo-fc,home,Charlotte FC,4-2-3-1,,2026-09-06T04:58:18Z,bench,37,Rodolfo Aloko,,,,
+2026-09-05-charlotte-fc-v-houston-dynamo-fc,home,Charlotte FC,4-2-3-1,,2026-09-06T04:58:18Z,bench,13,Brandt Bronico,,,,
+2026-09-05-charlotte-fc-v-houston-dynamo-fc,home,Charlotte FC,4-2-3-1,,2026-09-06T04:58:18Z,bench,7,Archie Goodwin,,,,
+2026-09-05-charlotte-fc-v-houston-dynamo-fc,home,Charlotte FC,4-2-3-1,,2026-09-06T04:58:18Z,bench,21,Tyler Miller,,,,
+2026-09-05-charlotte-fc-v-houston-dynamo-fc,home,Charlotte FC,4-2-3-1,,2026-09-06T04:58:18Z,bench,4,Andrew Privett,,,,
+2026-09-05-charlotte-fc-v-houston-dynamo-fc,home,Charlotte FC,4-2-3-1,,2026-09-06T04:58:18Z,bench,44,Morrison Agyemang,,,,
+2026-09-05-charlotte-fc-v-houston-dynamo-fc,home,Charlotte FC,4-2-3-1,,2026-09-06T04:58:18Z,bench,14,Nathan Byrne,joe-byrne,,,
+2026-09-05-charlotte-fc-v-houston-dynamo-fc,home,Charlotte FC,4-2-3-1,,2026-09-06T04:58:18Z,bench,25,Tyger Smalls,,,,
+2026-09-05-charlotte-fc-v-houston-dynamo-fc,away,Houston Dynamo FC,4-2-3-1,,2026-09-06T04:58:18Z,start,31,Jonathan Bond,,,0.1,0.5
+2026-09-05-charlotte-fc-v-houston-dynamo-fc,away,Houston Dynamo FC,4-2-3-1,,2026-09-06T04:58:18Z,start,36,Felipe Andrade,,,0.292,0.875
+2026-09-05-charlotte-fc-v-houston-dynamo-fc,away,Houston Dynamo FC,4-2-3-1,,2026-09-06T04:58:18Z,start,5,Lucas Halter,,,0.292,0.625
+2026-09-05-charlotte-fc-v-houston-dynamo-fc,away,Houston Dynamo FC,4-2-3-1,,2026-09-06T04:58:18Z,start,34,Agustin Resch,,,0.292,0.375
+2026-09-05-charlotte-fc-v-houston-dynamo-fc,away,Houston Dynamo FC,4-2-3-1,,2026-09-06T04:58:18Z,start,11,Lawrence Ennali,,,0.292,0.125
+2026-09-05-charlotte-fc-v-houston-dynamo-fc,away,Houston Dynamo FC,4-2-3-1,,2026-09-06T04:58:18Z,start,6,Artur,,,0.485,0.7
+2026-09-05-charlotte-fc-v-houston-dynamo-fc,away,Houston Dynamo FC,4-2-3-1,,2026-09-06T04:58:18Z,start,16,Héctor Herrera,,,0.485,0.3
+2026-09-05-charlotte-fc-v-houston-dynamo-fc,away,Houston Dynamo FC,4-2-3-1,,2026-09-06T04:58:18Z,start,19,Mateusz Bogusz,,,0.678,0.837
+2026-09-05-charlotte-fc-v-houston-dynamo-fc,away,Houston Dynamo FC,4-2-3-1,,2026-09-06T04:58:18Z,start,30,Agustín Bouzat,,,0.678,0.5
+2026-09-05-charlotte-fc-v-houston-dynamo-fc,away,Houston Dynamo FC,4-2-3-1,,2026-09-06T04:58:18Z,start,20,Guilherme Augusto,,,0.678,0.163
+2026-09-05-charlotte-fc-v-houston-dynamo-fc,away,Houston Dynamo FC,4-2-3-1,,2026-09-06T04:58:18Z,start,23,Duncan McGuire,,,0.87,0.5
+2026-09-05-charlotte-fc-v-houston-dynamo-fc,away,Houston Dynamo FC,4-2-3-1,,2026-09-06T04:58:18Z,bench,24,Ibrahim Aliyu,,,,
+2026-09-05-charlotte-fc-v-houston-dynamo-fc,away,Houston Dynamo FC,4-2-3-1,,2026-09-06T04:58:18Z,bench,22,Matthew Arana,,,,
+2026-09-05-charlotte-fc-v-houston-dynamo-fc,away,Houston Dynamo FC,4-2-3-1,,2026-09-06T04:58:18Z,bench,26,Blake Gillingham,,,,
+2026-09-05-charlotte-fc-v-houston-dynamo-fc,away,Houston Dynamo FC,4-2-3-1,,2026-09-06T04:58:18Z,bench,3,Antônio Carlos,,,,
+2026-09-05-charlotte-fc-v-houston-dynamo-fc,away,Houston Dynamo FC,4-2-3-1,,2026-09-06T04:58:18Z,bench,21,Franco Negri,,,,
+2026-09-05-charlotte-fc-v-houston-dynamo-fc,away,Houston Dynamo FC,4-2-3-1,,2026-09-06T04:58:18Z,bench,18,Diadie Samassékou,,,,
+2026-09-05-charlotte-fc-v-houston-dynamo-fc,away,Houston Dynamo FC,4-2-3-1,,2026-09-06T04:58:18Z,bench,14,Duane Holmes,,,,
+2026-09-05-charlotte-fc-v-houston-dynamo-fc,away,Houston Dynamo FC,4-2-3-1,,2026-09-06T04:58:18Z,bench,17,Nick Markanich,,,,
+2026-09-06-austin-fc-v-san-jose-earthquakes,home,Austin FC,3-4-2-1,,2026-09-06T04:58:18Z,start,1,Brad Stuver,,,0.1,0.5
+2026-09-06-austin-fc-v-san-jose-earthquakes,home,Austin FC,3-4-2-1,,2026-09-06T04:58:18Z,start,3,Mikkel Desler,,,0.292,0.79
+2026-09-06-austin-fc-v-san-jose-earthquakes,home,Austin FC,3-4-2-1,,2026-09-06T04:58:18Z,start,5,Oleksandr Svatok,,,0.292,0.5
+2026-09-06-austin-fc-v-san-jose-earthquakes,home,Austin FC,3-4-2-1,,2026-09-06T04:58:18Z,start,29,Guilherme Biro,,,0.292,0.21
+2026-09-06-austin-fc-v-san-jose-earthquakes,home,Austin FC,3-4-2-1,,2026-09-06T04:58:18Z,start,30,Joseph Rosales,,,0.485,0.875
+2026-09-06-austin-fc-v-san-jose-earthquakes,home,Austin FC,3-4-2-1,,2026-09-06T04:58:18Z,start,38,Ervin Torres,,,0.485,0.625
+2026-09-06-austin-fc-v-san-jose-earthquakes,home,Austin FC,3-4-2-1,,2026-09-06T04:58:18Z,start,14,Besard Sabovic,,,0.485,0.375
+2026-09-06-austin-fc-v-san-jose-earthquakes,home,Austin FC,3-4-2-1,,2026-09-06T04:58:18Z,start,17,Jon Gallagher,jon-gallagher,,0.485,0.125
+2026-09-06-austin-fc-v-san-jose-earthquakes,home,Austin FC,3-4-2-1,,2026-09-06T04:58:18Z,start,11,Facundo Torres,,,0.678,0.7
+2026-09-06-austin-fc-v-san-jose-earthquakes,home,Austin FC,3-4-2-1,,2026-09-06T04:58:18Z,start,24,Jorge Alastuey,,,0.678,0.3
+2026-09-06-austin-fc-v-san-jose-earthquakes,home,Austin FC,3-4-2-1,,2026-09-06T04:58:18Z,start,9,Brandon Vázquez,,,0.87,0.5
+2026-09-06-austin-fc-v-san-jose-earthquakes,home,Austin FC,3-4-2-1,,2026-09-06T04:58:18Z,bench,23,Zan Kolmanic,,,,
+2026-09-06-austin-fc-v-san-jose-earthquakes,home,Austin FC,3-4-2-1,,2026-09-06T04:58:18Z,bench,15,Jon Bell,,,,
+2026-09-06-austin-fc-v-san-jose-earthquakes,home,Austin FC,3-4-2-1,,2026-09-06T04:58:18Z,bench,77,Przemyslaw Placheta,,,,
+2026-09-06-austin-fc-v-san-jose-earthquakes,home,Austin FC,3-4-2-1,,2026-09-06T04:58:18Z,bench,21,Christian Ramirez,,,,
+2026-09-06-austin-fc-v-san-jose-earthquakes,home,Austin FC,3-4-2-1,,2026-09-06T04:58:18Z,bench,4,Brendan Hines-Ike,,,,
+2026-09-06-austin-fc-v-san-jose-earthquakes,home,Austin FC,3-4-2-1,,2026-09-06T04:58:18Z,bench,12,Damian Las,,,,
+2026-09-06-austin-fc-v-san-jose-earthquakes,home,Austin FC,3-4-2-1,,2026-09-06T04:58:18Z,bench,35,Mateja Djordjevic,,,,
+2026-09-06-austin-fc-v-san-jose-earthquakes,home,Austin FC,3-4-2-1,,2026-09-06T04:58:18Z,bench,6,Ilie Sánchez,,,,
+2026-09-06-austin-fc-v-san-jose-earthquakes,home,Austin FC,3-4-2-1,,2026-09-06T04:58:18Z,bench,32,Micah Burton,,,,
+2026-09-06-austin-fc-v-san-jose-earthquakes,away,San Jose Earthquakes,3-4-2-1,,2026-09-06T04:58:18Z,start,1,Angus Gunn,,,0.1,0.5
+2026-09-06-austin-fc-v-san-jose-earthquakes,away,San Jose Earthquakes,3-4-2-1,,2026-09-06T04:58:18Z,start,25,Max Floriani,,,0.292,0.79
+2026-09-06-austin-fc-v-san-jose-earthquakes,away,San Jose Earthquakes,3-4-2-1,,2026-09-06T04:58:18Z,start,5,Daniel Munie,,,0.292,0.5
+2026-09-06-austin-fc-v-san-jose-earthquakes,away,San Jose Earthquakes,3-4-2-1,,2026-09-06T04:58:18Z,start,18,Reid Roberts,,,0.292,0.21
+2026-09-06-austin-fc-v-san-jose-earthquakes,away,San Jose Earthquakes,3-4-2-1,,2026-09-06T04:58:18Z,start,28,Benji Kikanovic,,,0.485,0.875
+2026-09-06-austin-fc-v-san-jose-earthquakes,away,San Jose Earthquakes,3-4-2-1,,2026-09-06T04:58:18Z,start,14,Ronaldo Vieira,,,0.485,0.625
+2026-09-06-austin-fc-v-san-jose-earthquakes,away,San Jose Earthquakes,3-4-2-1,,2026-09-06T04:58:18Z,start,34,Beau Leroux,,,0.485,0.375
+2026-09-06-austin-fc-v-san-jose-earthquakes,away,San Jose Earthquakes,3-4-2-1,,2026-09-06T04:58:18Z,start,2,Jamar Ricketts,,,0.485,0.125
+2026-09-06-austin-fc-v-san-jose-earthquakes,away,San Jose Earthquakes,3-4-2-1,,2026-09-06T04:58:18Z,start,10,Niko Tsakiris,,,0.678,0.7
+2026-09-06-austin-fc-v-san-jose-earthquakes,away,San Jose Earthquakes,3-4-2-1,,2026-09-06T04:58:18Z,start,23,Eduard Löwen,,,0.678,0.3
+2026-09-06-austin-fc-v-san-jose-earthquakes,away,San Jose Earthquakes,3-4-2-1,,2026-09-06T04:58:18Z,start,7,Ousseni Bouda,,,0.87,0.5
+2026-09-06-austin-fc-v-san-jose-earthquakes,away,San Jose Earthquakes,3-4-2-1,,2026-09-06T04:58:18Z,bench,19,Preston Judd,,,,
+2026-09-06-austin-fc-v-san-jose-earthquakes,away,San Jose Earthquakes,3-4-2-1,,2026-09-06T04:58:18Z,bench,17,Jack Jasinski,,,,
+2026-09-06-austin-fc-v-san-jose-earthquakes,away,San Jose Earthquakes,3-4-2-1,,2026-09-06T04:58:18Z,bench,87,Vítor Costa,,,,
+2026-09-06-austin-fc-v-san-jose-earthquakes,away,San Jose Earthquakes,3-4-2-1,,2026-09-06T04:58:18Z,bench,6,Ian Harkes,,,,
+2026-09-06-austin-fc-v-san-jose-earthquakes,away,San Jose Earthquakes,3-4-2-1,,2026-09-06T04:58:18Z,bench,20,Nick Fernandez,,,,
+2026-09-06-austin-fc-v-san-jose-earthquakes,away,San Jose Earthquakes,3-4-2-1,,2026-09-06T04:58:18Z,bench,31,Francesco Montali,,,,
+2026-09-06-austin-fc-v-san-jose-earthquakes,away,San Jose Earthquakes,3-4-2-1,,2026-09-06T04:58:18Z,bench,4,David Romney,,,,
+2026-09-06-austin-fc-v-san-jose-earthquakes,away,San Jose Earthquakes,3-4-2-1,,2026-09-06T04:58:18Z,bench,16,Jack Skahan,,,,
+2026-09-06-austin-fc-v-san-jose-earthquakes,away,San Jose Earthquakes,3-4-2-1,,2026-09-06T04:58:18Z,bench,9,Luka Jovanovic,,,,
+2026-09-06-orange-county-sc-v-sacramento-republic-fc,home,Orange County SC,4-4-2,,2026-09-06T04:58:18Z,start,1,Alexander Rando,,,0.1,0.5
+2026-09-06-orange-county-sc-v-sacramento-republic-fc,home,Orange County SC,4-4-2,,2026-09-06T04:58:18Z,start,16,Jaylin Lindsey,,,0.357,0.875
+2026-09-06-orange-county-sc-v-sacramento-republic-fc,home,Orange County SC,4-4-2,,2026-09-06T04:58:18Z,start,5,Tom Brewitt,,,0.357,0.625
+2026-09-06-orange-county-sc-v-sacramento-republic-fc,home,Orange County SC,4-4-2,,2026-09-06T04:58:18Z,start,6,Garrison Tubbs,,,0.357,0.375
+2026-09-06-orange-county-sc-v-sacramento-republic-fc,home,Orange County SC,4-4-2,,2026-09-06T04:58:18Z,start,23,Ryan Doghman,,,0.357,0.125
+2026-09-06-orange-county-sc-v-sacramento-republic-fc,home,Orange County SC,4-4-2,,2026-09-06T04:58:18Z,start,27,Stephen Kelly,,,0.613,0.875
+2026-09-06-orange-county-sc-v-sacramento-republic-fc,home,Orange County SC,4-4-2,,2026-09-06T04:58:18Z,start,8,Ousmane Sylla,,,0.613,0.625
+2026-09-06-orange-county-sc-v-sacramento-republic-fc,home,Orange County SC,4-4-2,,2026-09-06T04:58:18Z,start,10,Chris Hegardt,,,0.613,0.375
+2026-09-06-orange-county-sc-v-sacramento-republic-fc,home,Orange County SC,4-4-2,,2026-09-06T04:58:18Z,start,4,Nico Benalcázar,,,0.613,0.125
+2026-09-06-orange-county-sc-v-sacramento-republic-fc,home,Orange County SC,4-4-2,,2026-09-06T04:58:18Z,start,11,Lyam MacKinnon,,,0.87,0.7
+2026-09-06-orange-county-sc-v-sacramento-republic-fc,home,Orange County SC,4-4-2,,2026-09-06T04:58:18Z,start,12,Yaniv Bazini,,,0.87,0.3
+2026-09-06-orange-county-sc-v-sacramento-republic-fc,home,Orange County SC,4-4-2,,2026-09-06T04:58:18Z,bench,20,Mataeo Bunbury,,,,
+2026-09-06-orange-county-sc-v-sacramento-republic-fc,home,Orange County SC,4-4-2,,2026-09-06T04:58:18Z,bench,15,Tyson Espy,,,,
+2026-09-06-orange-county-sc-v-sacramento-republic-fc,home,Orange County SC,4-4-2,,2026-09-06T04:58:18Z,bench,18,Marcelo Palomino,,,,
+2026-09-06-orange-county-sc-v-sacramento-republic-fc,home,Orange County SC,4-4-2,,2026-09-06T04:58:18Z,bench,33,Jack Gentile,,,,
+2026-09-06-orange-county-sc-v-sacramento-republic-fc,home,Orange County SC,4-4-2,,2026-09-06T04:58:18Z,bench,31,Tetsuya Kadono,,,,
+2026-09-06-orange-county-sc-v-sacramento-republic-fc,home,Orange County SC,4-4-2,,2026-09-06T04:58:18Z,bench,28,Finn O'Brien,,,,
+2026-09-06-orange-county-sc-v-sacramento-republic-fc,home,Orange County SC,4-4-2,,2026-09-06T04:58:18Z,bench,9,Ethan Zubak,,,,
+2026-09-06-orange-county-sc-v-sacramento-republic-fc,home,Orange County SC,4-4-2,,2026-09-06T04:58:18Z,bench,35,Jerome Carter,,,,
+2026-09-06-orange-county-sc-v-sacramento-republic-fc,home,Orange County SC,4-4-2,,2026-09-06T04:58:18Z,bench,30,Joaquin Castro,,,,
+2026-09-06-orange-county-sc-v-sacramento-republic-fc,away,Sacramento Republic FC,3-5-2,,2026-09-06T04:58:18Z,start,1,Danny Vitiello,,,0.1,0.5
+2026-09-06-orange-county-sc-v-sacramento-republic-fc,away,Sacramento Republic FC,3-5-2,,2026-09-06T04:58:18Z,start,4,Lee Desmond,lee-desmond,,0.357,0.79
+2026-09-06-orange-county-sc-v-sacramento-republic-fc,away,Sacramento Republic FC,3-5-2,,2026-09-06T04:58:18Z,start,5,Jared Timmer,,,0.357,0.5
+2026-09-06-orange-county-sc-v-sacramento-republic-fc,away,Sacramento Republic FC,3-5-2,,2026-09-06T04:58:18Z,start,6,Freddy Kleemann,,,0.357,0.21
+2026-09-06-orange-county-sc-v-sacramento-republic-fc,away,Sacramento Republic FC,3-5-2,,2026-09-06T04:58:18Z,start,24,Pep Casas,,,0.613,0.89
+2026-09-06-orange-county-sc-v-sacramento-republic-fc,away,Sacramento Republic FC,3-5-2,,2026-09-06T04:58:18Z,start,8,Memo Rodríguez,,,0.613,0.695
+2026-09-06-orange-county-sc-v-sacramento-republic-fc,away,Sacramento Republic FC,3-5-2,,2026-09-06T04:58:18Z,start,20,Blake Willey,,,0.613,0.5
+2026-09-06-orange-county-sc-v-sacramento-republic-fc,away,Sacramento Republic FC,3-5-2,,2026-09-06T04:58:18Z,start,27,Daniel Crisostomo,,,0.613,0.305
+2026-09-06-orange-county-sc-v-sacramento-republic-fc,away,Sacramento Republic FC,3-5-2,,2026-09-06T04:58:18Z,start,3,Ryan Spaulding,,,0.613,0.11
+2026-09-06-orange-county-sc-v-sacramento-republic-fc,away,Sacramento Republic FC,3-5-2,,2026-09-06T04:58:18Z,start,16,Tyler Wolff,,,0.87,0.7
+2026-09-06-orange-county-sc-v-sacramento-republic-fc,away,Sacramento Republic FC,3-5-2,,2026-09-06T04:58:18Z,start,26,Cal Jennings,,,0.87,0.3
+2026-09-06-orange-county-sc-v-sacramento-republic-fc,away,Sacramento Republic FC,3-5-2,,2026-09-06T04:58:18Z,bench,19,Alfredo Midence,,,,
+2026-09-06-orange-county-sc-v-sacramento-republic-fc,away,Sacramento Republic FC,3-5-2,,2026-09-06T04:58:18Z,bench,71,Kyle Edwards,,,,
+2026-09-06-orange-county-sc-v-sacramento-republic-fc,away,Sacramento Republic FC,3-5-2,,2026-09-06T04:58:18Z,bench,21,Tim Leibold,,,,
+2026-09-06-orange-county-sc-v-sacramento-republic-fc,away,Sacramento Republic FC,3-5-2,,2026-09-06T04:58:18Z,bench,7,Mayele Malango,,,,
+2026-09-06-orange-county-sc-v-sacramento-republic-fc,away,Sacramento Republic FC,3-5-2,,2026-09-06T04:58:18Z,bench,15,Aaron Essel,,,,
+2026-09-06-orange-county-sc-v-sacramento-republic-fc,away,Sacramento Republic FC,3-5-2,,2026-09-06T04:58:18Z,bench,31,Jacob Randolph,,,,
+2026-09-06-orange-county-sc-v-sacramento-republic-fc,away,Sacramento Republic FC,3-5-2,,2026-09-06T04:58:18Z,bench,10,Arturo Rodríguez,,,,
+2026-09-06-orange-county-sc-v-sacramento-republic-fc,away,Sacramento Republic FC,3-5-2,,2026-09-06T04:58:18Z,bench,11,Forster Ajago,,,,
+2026-09-06-hertha-bsc-v-magdeburg,home,Hertha BSC,4-2-3-1,,2026-09-06T04:58:18Z,start,35,Marius Gersbeck,,,0.1,0.5
+2026-09-06-hertha-bsc-v-magdeburg,home,Hertha BSC,4-2-3-1,,2026-09-06T04:58:18Z,start,2,Julian Eitschberger,,,0.292,0.875
+2026-09-06-hertha-bsc-v-magdeburg,home,Hertha BSC,4-2-3-1,,2026-09-06T04:58:18Z,start,44,Linus Gechter,,,0.292,0.625
+2026-09-06-hertha-bsc-v-magdeburg,home,Hertha BSC,4-2-3-1,,2026-09-06T04:58:18Z,start,27,Niklas Kolbe,,,0.292,0.375
+2026-09-06-hertha-bsc-v-magdeburg,home,Hertha BSC,4-2-3-1,,2026-09-06T04:58:18Z,start,22,Mads Valentin Pedersen,,,0.292,0.125
+2026-09-06-hertha-bsc-v-magdeburg,home,Hertha BSC,4-2-3-1,,2026-09-06T04:58:18Z,start,30,Paul Seguin,,,0.485,0.7
+2026-09-06-hertha-bsc-v-magdeburg,home,Hertha BSC,4-2-3-1,,2026-09-06T04:58:18Z,start,8,Kevin Sessa,,,0.485,0.3
+2026-09-06-hertha-bsc-v-magdeburg,home,Hertha BSC,4-2-3-1,,2026-09-06T04:58:18Z,start,23,Jón Thorsteinsson,,,0.678,0.837
+2026-09-06-hertha-bsc-v-magdeburg,home,Hertha BSC,4-2-3-1,,2026-09-06T04:58:18Z,start,33,Soufian Gouram,,,0.678,0.5
+2026-09-06-hertha-bsc-v-magdeburg,home,Hertha BSC,4-2-3-1,,2026-09-06T04:58:18Z,start,7,Josip Brekalo,,,0.678,0.163
+2026-09-06-hertha-bsc-v-magdeburg,home,Hertha BSC,4-2-3-1,,2026-09-06T04:58:18Z,start,17,Sebastian Grønning,,,0.87,0.5
+2026-09-06-hertha-bsc-v-magdeburg,home,Hertha BSC,4-2-3-1,,2026-09-06T04:58:18Z,bench,43,Tim Goller,,,,
+2026-09-06-hertha-bsc-v-magdeburg,home,Hertha BSC,4-2-3-1,,2026-09-06T04:58:18Z,bench,29,Jerome Diallo,,,,
+2026-09-06-hertha-bsc-v-magdeburg,home,Hertha BSC,4-2-3-1,,2026-09-06T04:58:18Z,bench,31,Márton Dárdai,,,,
+2026-09-06-hertha-bsc-v-magdeburg,home,Hertha BSC,4-2-3-1,,2026-09-06T04:58:18Z,bench,21,Boris Lum,,,,
+2026-09-06-hertha-bsc-v-magdeburg,home,Hertha BSC,4-2-3-1,,2026-09-06T04:58:18Z,bench,41,Pascal Klemens,,,,
+2026-09-06-hertha-bsc-v-magdeburg,home,Hertha BSC,4-2-3-1,,2026-09-06T04:58:18Z,bench,20,Farid Alfa-Ruprecht,,,,
+2026-09-06-hertha-bsc-v-magdeburg,home,Hertha BSC,4-2-3-1,,2026-09-06T04:58:18Z,bench,28,Jelani Ndi,,,,
+2026-09-06-hertha-bsc-v-magdeburg,home,Hertha BSC,4-2-3-1,,2026-09-06T04:58:18Z,bench,18,Luca Schuler,,,,
+2026-09-06-hertha-bsc-v-magdeburg,home,Hertha BSC,4-2-3-1,,2026-09-06T04:58:18Z,bench,19,Oluwaseun Adewumi,,,,
+2026-09-06-hertha-bsc-v-magdeburg,away,Magdeburg,4-3-3,,2026-09-06T04:58:18Z,start,1,Dominik Reimann,,,0.1,0.5
+2026-09-06-hertha-bsc-v-magdeburg,away,Magdeburg,4-3-3,,2026-09-06T04:58:18Z,start,28,Pierre Nadjombe,,,0.357,0.875
+2026-09-06-hertha-bsc-v-magdeburg,away,Magdeburg,4-3-3,,2026-09-06T04:58:18Z,start,5,Tobias Müller,,,0.357,0.625
+2026-09-06-hertha-bsc-v-magdeburg,away,Magdeburg,4-3-3,,2026-09-06T04:58:18Z,start,3,Anselmo MacNulty,anselmo-garcia-macnulty,,0.357,0.375
+2026-09-06-hertha-bsc-v-magdeburg,away,Magdeburg,4-3-3,,2026-09-06T04:58:18Z,start,17,Alexander Nollenberger,,,0.357,0.125
+2026-09-06-hertha-bsc-v-magdeburg,away,Magdeburg,4-3-3,,2026-09-06T04:58:18Z,start,38,Luka Hyryläinen,,,0.613,0.79
+2026-09-06-hertha-bsc-v-magdeburg,away,Magdeburg,4-3-3,,2026-09-06T04:58:18Z,start,10,Moritz-Broni Kwarteng,,,0.613,0.5
+2026-09-06-hertha-bsc-v-magdeburg,away,Magdeburg,4-3-3,,2026-09-06T04:58:18Z,start,21,Falko Michel,,,0.613,0.21
+2026-09-06-hertha-bsc-v-magdeburg,away,Magdeburg,4-3-3,,2026-09-06T04:58:18Z,start,8,Emmanuel Iyoha,,,0.87,0.79
+2026-09-06-hertha-bsc-v-magdeburg,away,Magdeburg,4-3-3,,2026-09-06T04:58:18Z,start,22,Mateusz Żukowski,,,0.87,0.5
+2026-09-06-hertha-bsc-v-magdeburg,away,Magdeburg,4-3-3,,2026-09-06T04:58:18Z,start,23,Barış Atik,,,0.87,0.21
+2026-09-06-hertha-bsc-v-magdeburg,away,Magdeburg,4-3-3,,2026-09-06T04:58:18Z,bench,30,Noah Kruth,,,,
+2026-09-06-hertha-bsc-v-magdeburg,away,Magdeburg,4-3-3,,2026-09-06T04:58:18Z,bench,6,Paul Jaeckel,,,,
+2026-09-06-hertha-bsc-v-magdeburg,away,Magdeburg,4-3-3,,2026-09-06T04:58:18Z,bench,4,Eldin Džogović,,,,
+2026-09-06-hertha-bsc-v-magdeburg,away,Magdeburg,4-3-3,,2026-09-06T04:58:18Z,bench,11,Felipe Chávez,,,,
+2026-09-06-hertha-bsc-v-magdeburg,away,Magdeburg,4-3-3,,2026-09-06T04:58:18Z,bench,33,Leon Mergner,,,,
+2026-09-06-hertha-bsc-v-magdeburg,away,Magdeburg,4-3-3,,2026-09-06T04:58:18Z,bench,35,Magnus Baars,,,,
+2026-09-06-hertha-bsc-v-magdeburg,away,Magdeburg,4-3-3,,2026-09-06T04:58:18Z,bench,26,Torben Müsel,,,,
+2026-09-06-hertha-bsc-v-magdeburg,away,Magdeburg,4-3-3,,2026-09-06T04:58:18Z,bench,29,Richmond Tachie,,,,
+2026-09-06-hertha-bsc-v-magdeburg,away,Magdeburg,4-3-3,,2026-09-06T04:58:18Z,bench,9,Roko Šimić,,,,
+2026-09-06-cercle-brugge-v-gent,home,Cercle Brugge,3-5-2,,2026-09-06T04:58:18Z,start,1,Gaëtan Coucke,,,0.1,0.5
+2026-09-06-cercle-brugge-v-gent,home,Cercle Brugge,3-5-2,,2026-09-06T04:58:18Z,start,5,Emmanuel Kakou,,,0.357,0.79
+2026-09-06-cercle-brugge-v-gent,home,Cercle Brugge,3-5-2,,2026-09-06T04:58:18Z,start,24,Geoffrey Kondo,,,0.357,0.5
+2026-09-06-cercle-brugge-v-gent,home,Cercle Brugge,3-5-2,,2026-09-06T04:58:18Z,start,12,Valy Konaté,,,0.357,0.21
+2026-09-06-cercle-brugge-v-gent,home,Cercle Brugge,3-5-2,,2026-09-06T04:58:18Z,start,15,Gary Magnée,,,0.613,0.89
+2026-09-06-cercle-brugge-v-gent,home,Cercle Brugge,3-5-2,,2026-09-06T04:58:18Z,start,19,Ibrahima Diaby,,,0.613,0.695
+2026-09-06-cercle-brugge-v-gent,home,Cercle Brugge,3-5-2,,2026-09-06T04:58:18Z,start,71,Viggo Martens,,,0.613,0.5
+2026-09-06-cercle-brugge-v-gent,home,Cercle Brugge,3-5-2,,2026-09-06T04:58:18Z,start,42,Lukas Mondele,,,0.613,0.305
+2026-09-06-cercle-brugge-v-gent,home,Cercle Brugge,3-5-2,,2026-09-06T04:58:18Z,start,2,Ibrahim Diakité,,,0.613,0.11
+2026-09-06-cercle-brugge-v-gent,home,Cercle Brugge,3-5-2,,2026-09-06T04:58:18Z,start,13,Dante Vanzeir,,,0.87,0.7
+2026-09-06-cercle-brugge-v-gent,home,Cercle Brugge,3-5-2,,2026-09-06T04:58:18Z,start,9,Steve Ngoura,,,0.87,0.3
+2026-09-06-cercle-brugge-v-gent,home,Cercle Brugge,3-5-2,,2026-09-06T04:58:18Z,bench,84,Bas Langenbick,,,,
+2026-09-06-cercle-brugge-v-gent,home,Cercle Brugge,3-5-2,,2026-09-06T04:58:18Z,bench,33,Royer Caicedo,,,,
+2026-09-06-cercle-brugge-v-gent,home,Cercle Brugge,3-5-2,,2026-09-06T04:58:18Z,bench,8,Erick Nunes,,,,
+2026-09-06-cercle-brugge-v-gent,home,Cercle Brugge,3-5-2,,2026-09-06T04:58:18Z,bench,6,Lawrence Agyekum,,,,
+2026-09-06-cercle-brugge-v-gent,home,Cercle Brugge,3-5-2,,2026-09-06T04:58:18Z,bench,10,Lazare Amani,,,,
+2026-09-06-cercle-brugge-v-gent,home,Cercle Brugge,3-5-2,,2026-09-06T04:58:18Z,bench,41,Krys Kouassi,,,,
+2026-09-06-cercle-brugge-v-gent,home,Cercle Brugge,3-5-2,,2026-09-06T04:58:18Z,bench,22,Lucas Michal,,,,
+2026-09-06-cercle-brugge-v-gent,home,Cercle Brugge,3-5-2,,2026-09-06T04:58:18Z,bench,73,Lukas Rocha Torres,,,,
+2026-09-06-cercle-brugge-v-gent,away,Gent,3-4-2-1,,2026-09-06T04:58:18Z,start,33,Davy Roef,,,0.1,0.5
+2026-09-06-cercle-brugge-v-gent,away,Gent,3-4-2-1,,2026-09-06T04:58:18Z,start,5,Mouhamed Ngom,,,0.292,0.79
+2026-09-06-cercle-brugge-v-gent,away,Gent,3-4-2-1,,2026-09-06T04:58:18Z,start,16,Christian Burgess,,,0.292,0.5
+2026-09-06-cercle-brugge-v-gent,away,Gent,3-4-2-1,,2026-09-06T04:58:18Z,start,44,Siebe van der Heyden,,,0.292,0.21
+2026-09-06-cercle-brugge-v-gent,away,Gent,3-4-2-1,,2026-09-06T04:58:18Z,start,14,Kyrell Wilson,,,0.485,0.875
+2026-09-06-cercle-brugge-v-gent,away,Gent,3-4-2-1,,2026-09-06T04:58:18Z,start,17,Mathias Delorge,,,0.485,0.625
+2026-09-06-cercle-brugge-v-gent,away,Gent,3-4-2-1,,2026-09-06T04:58:18Z,start,22,Leonardo Lopes,,,0.485,0.375
+2026-09-06-cercle-brugge-v-gent,away,Gent,3-4-2-1,,2026-09-06T04:58:18Z,start,20,Tiago Araújo,,,0.485,0.125
+2026-09-06-cercle-brugge-v-gent,away,Gent,3-4-2-1,,2026-09-06T04:58:18Z,start,8,Lászlo Bénes,,,0.678,0.7
+2026-09-06-cercle-brugge-v-gent,away,Gent,3-4-2-1,,2026-09-06T04:58:18Z,start,11,Momodou Sonko,,,0.678,0.3
+2026-09-06-cercle-brugge-v-gent,away,Gent,3-4-2-1,,2026-09-06T04:58:18Z,start,47,Josué Vergara,,,0.87,0.5
+2026-09-06-cercle-brugge-v-gent,away,Gent,3-4-2-1,,2026-09-06T04:58:18Z,bench,30,Kjell Peersman,,,,
+2026-09-06-cercle-brugge-v-gent,away,Gent,3-4-2-1,,2026-09-06T04:58:18Z,bench,39,Abdoul Ayindé,,,,
+2026-09-06-cercle-brugge-v-gent,away,Gent,3-4-2-1,,2026-09-06T04:58:18Z,bench,3,Maksim Paskotši,,,,
+2026-09-06-cercle-brugge-v-gent,away,Gent,3-4-2-1,,2026-09-06T04:58:18Z,bench,56,Mamadou Diallo,,,,
+2026-09-06-cercle-brugge-v-gent,away,Gent,3-4-2-1,,2026-09-06T04:58:18Z,bench,57,Matties Volckaert,,,,
+2026-09-06-cercle-brugge-v-gent,away,Gent,3-4-2-1,,2026-09-06T04:58:18Z,bench,37,Abdelkahar Kadri,,,,
+2026-09-06-cercle-brugge-v-gent,away,Gent,3-4-2-1,,2026-09-06T04:58:18Z,bench,10,Aimé Omgba,,,,
+2026-09-06-cercle-brugge-v-gent,away,Gent,3-4-2-1,,2026-09-06T04:58:18Z,bench,27,Tibe De Vlieger,,,,
+2026-09-06-cercle-brugge-v-gent,away,Gent,3-4-2-1,,2026-09-06T04:58:18Z,bench,59,El Hadji Seck,,,,
+2026-09-06-cercle-brugge-v-gent,away,Gent,3-4-2-1,,2026-09-06T04:58:18Z,bench,7,Michel-Ange Balikwisha,,,,
+2026-09-06-everton-v-manchester-united,home,Everton,4-2-3-1,,2026-09-06T04:58:18Z,start,1,Jordan Pickford,,,0.1,0.5
+2026-09-06-everton-v-manchester-united,home,Everton,4-2-3-1,,2026-09-06T04:58:18Z,start,15,Jake O'Brien,jake-obrien,,0.292,0.875
+2026-09-06-everton-v-manchester-united,home,Everton,4-2-3-1,,2026-09-06T04:58:18Z,start,6,James Tarkowski,,,0.292,0.625
+2026-09-06-everton-v-manchester-united,home,Everton,4-2-3-1,,2026-09-06T04:58:18Z,start,4,Jarrad Branthwaite,,,0.292,0.375
+2026-09-06-everton-v-manchester-united,home,Everton,4-2-3-1,,2026-09-06T04:58:18Z,start,16,Vitaliy Mykolenko,,,0.292,0.125
+2026-09-06-everton-v-manchester-united,home,Everton,4-2-3-1,,2026-09-06T04:58:18Z,start,45,Harrison Armstrong,desmond-armstrong,,0.485,0.7
+2026-09-06-everton-v-manchester-united,home,Everton,4-2-3-1,,2026-09-06T04:58:18Z,start,37,James Garner,,,0.485,0.3
+2026-09-06-everton-v-manchester-united,home,Everton,4-2-3-1,,2026-09-06T04:58:18Z,start,34,Merlin Röhl,,,0.678,0.837
+2026-09-06-everton-v-manchester-united,home,Everton,4-2-3-1,,2026-09-06T04:58:18Z,start,8,Kiernan Dewsbury-Hall,,,0.678,0.5
+2026-09-06-everton-v-manchester-united,home,Everton,4-2-3-1,,2026-09-06T04:58:18Z,start,19,Tyrique George,,,0.678,0.163
+2026-09-06-everton-v-manchester-united,home,Everton,4-2-3-1,,2026-09-06T04:58:18Z,start,11,Thierno Barry,,,0.87,0.5
+2026-09-06-everton-v-manchester-united,away,Manchester United,4-2-3-1,,2026-09-06T04:58:18Z,start,1,Senne Lammens,,,0.1,0.5
+2026-09-06-everton-v-manchester-united,away,Manchester United,4-2-3-1,,2026-09-06T04:58:18Z,start,2,Diogo Dalot,,,0.292,0.875
+2026-09-06-everton-v-manchester-united,away,Manchester United,4-2-3-1,,2026-09-06T04:58:18Z,start,5,Harry Maguire,,,0.292,0.625
+2026-09-06-everton-v-manchester-united,away,Manchester United,4-2-3-1,,2026-09-06T04:58:18Z,start,6,Lisandro Martínez,,,0.292,0.375
+2026-09-06-everton-v-manchester-united,away,Manchester United,4-2-3-1,,2026-09-06T04:58:18Z,start,23,Luke Shaw,,,0.292,0.125
+2026-09-06-everton-v-manchester-united,away,Manchester United,4-2-3-1,,2026-09-06T04:58:18Z,start,18,Youri Tielemans,,,0.485,0.7
+2026-09-06-everton-v-manchester-united,away,Manchester United,4-2-3-1,,2026-09-06T04:58:18Z,start,37,Kobbie Mainoo,,,0.485,0.3
+2026-09-06-everton-v-manchester-united,away,Manchester United,4-2-3-1,,2026-09-06T04:58:18Z,start,19,Bryan Mbeumo,,,0.678,0.837
+2026-09-06-everton-v-manchester-united,away,Manchester United,4-2-3-1,,2026-09-06T04:58:18Z,start,8,Bruno Fernandes,,,0.678,0.5
+2026-09-06-everton-v-manchester-united,away,Manchester United,4-2-3-1,,2026-09-06T04:58:18Z,start,9,Marcus Rashford,,,0.678,0.163
+2026-09-06-everton-v-manchester-united,away,Manchester United,4-2-3-1,,2026-09-06T04:58:18Z,start,10,Matheus Cunha,,,0.87,0.5
+2026-09-06-heart-of-midlothian-v-dundee-fc,home,Heart of Midlothian,4-4-2,,2026-09-06T04:58:18Z,start,1,Beau Reus,,,0.1,0.5
+2026-09-06-heart-of-midlothian-v-dundee-fc,home,Heart of Midlothian,4-4-2,,2026-09-06T04:58:18Z,start,23,Jordi Altena,,,0.357,0.875
+2026-09-06-heart-of-midlothian-v-dundee-fc,home,Heart of Midlothian,4-4-2,,2026-09-06T04:58:18Z,start,6,Oisin McEntee,oisin-mcentee,,0.357,0.625
+2026-09-06-heart-of-midlothian-v-dundee-fc,home,Heart of Midlothian,4-4-2,,2026-09-06T04:58:18Z,start,17,Stuart Findlay,,,0.357,0.375
+2026-09-06-heart-of-midlothian-v-dundee-fc,home,Heart of Midlothian,4-4-2,,2026-09-06T04:58:18Z,start,5,Jamie McCart,,,0.357,0.125
+2026-09-06-heart-of-midlothian-v-dundee-fc,home,Heart of Midlothian,4-4-2,,2026-09-06T04:58:18Z,start,7,Calvin Miller,,,0.613,0.875
+2026-09-06-heart-of-midlothian-v-dundee-fc,home,Heart of Midlothian,4-4-2,,2026-09-06T04:58:18Z,start,78,Laurent Mendy,,,0.613,0.625
+2026-09-06-heart-of-midlothian-v-dundee-fc,home,Heart of Midlothian,4-4-2,,2026-09-06T04:58:18Z,start,16,Blair Spittal,,,0.613,0.375
+2026-09-06-heart-of-midlothian-v-dundee-fc,home,Heart of Midlothian,4-4-2,,2026-09-06T04:58:18Z,start,15,Joshua McPake,,,0.613,0.125
+2026-09-06-heart-of-midlothian-v-dundee-fc,home,Heart of Midlothian,4-4-2,,2026-09-06T04:58:18Z,start,21,James Wilson,,,0.87,0.7
+2026-09-06-heart-of-midlothian-v-dundee-fc,home,Heart of Midlothian,4-4-2,,2026-09-06T04:58:18Z,start,10,Cláudio Braga,,,0.87,0.3
+2026-09-06-heart-of-midlothian-v-dundee-fc,home,Heart of Midlothian,4-4-2,,2026-09-06T04:58:18Z,bench,30,Ryan Fulton,,,,
+2026-09-06-heart-of-midlothian-v-dundee-fc,home,Heart of Midlothian,4-4-2,,2026-09-06T04:58:18Z,bench,18,Harry Milne,,,,
+2026-09-06-heart-of-midlothian-v-dundee-fc,home,Heart of Midlothian,4-4-2,,2026-09-06T04:58:18Z,bench,19,Sabri Guendouz,,,,
+2026-09-06-heart-of-midlothian-v-dundee-fc,home,Heart of Midlothian,4-4-2,,2026-09-06T04:58:18Z,bench,22,Tómas Magnússon,,,,
+2026-09-06-heart-of-midlothian-v-dundee-fc,home,Heart of Midlothian,4-4-2,,2026-09-06T04:58:18Z,bench,77,Amadou Ba-Sy,,,,
+2026-09-06-heart-of-midlothian-v-dundee-fc,home,Heart of Midlothian,4-4-2,,2026-09-06T04:58:18Z,bench,9,JJ Williams,,,,
+2026-09-06-heart-of-midlothian-v-dundee-fc,home,Heart of Midlothian,4-4-2,,2026-09-06T04:58:18Z,bench,11,Pierre Landry Kaboré,,,,
+2026-09-06-heart-of-midlothian-v-dundee-fc,home,Heart of Midlothian,4-4-2,,2026-09-06T04:58:18Z,bench,74,Rogers Mato,,,,
+2026-09-06-heart-of-midlothian-v-dundee-fc,home,Heart of Midlothian,4-4-2,,2026-09-06T04:58:18Z,bench,29,Sabah Kerjota,,,,
+2026-09-06-heart-of-midlothian-v-dundee-fc,away,Dundee FC,4-4-2,,2026-09-06T04:58:18Z,start,1,Owen Goodman,,,0.1,0.5
+2026-09-06-heart-of-midlothian-v-dundee-fc,away,Dundee FC,4-4-2,,2026-09-06T04:58:18Z,start,2,Bradley Halliday,,,0.357,0.875
+2026-09-06-heart-of-midlothian-v-dundee-fc,away,Dundee FC,4-4-2,,2026-09-06T04:58:18Z,start,4,Ryan Astley,,,0.357,0.625
+2026-09-06-heart-of-midlothian-v-dundee-fc,away,Dundee FC,4-4-2,,2026-09-06T04:58:18Z,start,5,Owen Bevan,,,0.357,0.375
+2026-09-06-heart-of-midlothian-v-dundee-fc,away,Dundee FC,4-4-2,,2026-09-06T04:58:18Z,start,3,Idris Odutayo,,,0.357,0.125
+2026-09-06-heart-of-midlothian-v-dundee-fc,away,Dundee FC,4-4-2,,2026-09-06T04:58:18Z,start,27,Joe Bevan,,,0.613,0.875
+2026-09-06-heart-of-midlothian-v-dundee-fc,away,Dundee FC,4-4-2,,2026-09-06T04:58:18Z,start,8,Ryan Finnigan,,,0.613,0.625
+2026-09-06-heart-of-midlothian-v-dundee-fc,away,Dundee FC,4-4-2,,2026-09-06T04:58:18Z,start,48,Ethan Hamilton,,,0.613,0.375
+2026-09-06-heart-of-midlothian-v-dundee-fc,away,Dundee FC,4-4-2,,2026-09-06T04:58:18Z,start,14,Alan Forrest,,,0.613,0.125
+2026-09-06-heart-of-midlothian-v-dundee-fc,away,Dundee FC,4-4-2,,2026-09-06T04:58:18Z,start,9,Bobby Wales,bobby-wales,,0.87,0.7
+2026-09-06-heart-of-midlothian-v-dundee-fc,away,Dundee FC,4-4-2,,2026-09-06T04:58:18Z,start,19,Joe Westley,,,0.87,0.3
+2026-09-06-heart-of-midlothian-v-dundee-fc,away,Dundee FC,4-4-2,,2026-09-06T04:58:18Z,bench,13,Kieran O'Hara,kieran-ohara,,,
+2026-09-06-heart-of-midlothian-v-dundee-fc,away,Dundee FC,4-4-2,,2026-09-06T04:58:18Z,bench,7,Drey Wright,,,,
+2026-09-06-heart-of-midlothian-v-dundee-fc,away,Dundee FC,4-4-2,,2026-09-06T04:58:18Z,bench,12,Imari Samuels,,,,
+2026-09-06-heart-of-midlothian-v-dundee-fc,away,Dundee FC,4-4-2,,2026-09-06T04:58:18Z,bench,26,Joe Wright,,,,
+2026-09-06-heart-of-midlothian-v-dundee-fc,away,Dundee FC,4-4-2,,2026-09-06T04:58:18Z,bench,28,Callum Jones,,,,
+2026-09-06-heart-of-midlothian-v-dundee-fc,away,Dundee FC,4-4-2,,2026-09-06T04:58:18Z,bench,10,Finlay Robertson,,,,
+2026-09-06-heart-of-midlothian-v-dundee-fc,away,Dundee FC,4-4-2,,2026-09-06T04:58:18Z,bench,17,Žan Bešir,,,,
+2026-09-06-heart-of-midlothian-v-dundee-fc,away,Dundee FC,4-4-2,,2026-09-06T04:58:18Z,bench,21,Bradley Fink,,,,
+2026-09-06-heart-of-midlothian-v-dundee-fc,away,Dundee FC,4-4-2,,2026-09-06T04:58:18Z,bench,18,Charlie Reilly,,,,
+2026-09-06-st-johnstone-v-hibernian,home,St. Johnstone,4-4-2,,2026-09-06T04:58:18Z,start,1,Toby Steward,,,0.1,0.5
+2026-09-06-st-johnstone-v-hibernian,home,St. Johnstone,4-4-2,,2026-09-06T04:58:18Z,start,26,Matty Todd,,,0.357,0.875
+2026-09-06-st-johnstone-v-hibernian,home,St. Johnstone,4-4-2,,2026-09-06T04:58:18Z,start,5,Zach Mitchell,,,0.357,0.625
+2026-09-06-st-johnstone-v-hibernian,home,St. Johnstone,4-4-2,,2026-09-06T04:58:18Z,start,3,Cheick Diabate,,,0.357,0.375
+2026-09-06-st-johnstone-v-hibernian,home,St. Johnstone,4-4-2,,2026-09-06T04:58:18Z,start,2,Enes Alić,,,0.357,0.125
+2026-09-06-st-johnstone-v-hibernian,home,St. Johnstone,4-4-2,,2026-09-06T04:58:18Z,start,11,Samuel Stanton,,,0.613,0.875
+2026-09-06-st-johnstone-v-hibernian,home,St. Johnstone,4-4-2,,2026-09-06T04:58:18Z,start,8,Jason Holt,,,0.613,0.625
+2026-09-06-st-johnstone-v-hibernian,home,St. Johnstone,4-4-2,,2026-09-06T04:58:18Z,start,42,Reece McAlear,,,0.613,0.375
+2026-09-06-st-johnstone-v-hibernian,home,St. Johnstone,4-4-2,,2026-09-06T04:58:18Z,start,7,Taylor Steven,,,0.613,0.125
+2026-09-06-st-johnstone-v-hibernian,home,St. Johnstone,4-4-2,,2026-09-06T04:58:18Z,start,10,Jamie Gullan,,,0.87,0.7
+2026-09-06-st-johnstone-v-hibernian,home,St. Johnstone,4-4-2,,2026-09-06T04:58:18Z,start,99,Ruari Paton,ruari-paton,,0.87,0.3
+2026-09-06-st-johnstone-v-hibernian,home,St. Johnstone,4-4-2,,2026-09-06T04:58:18Z,bench,20,Ross Sinclair,,,,
+2026-09-06-st-johnstone-v-hibernian,home,St. Johnstone,4-4-2,,2026-09-06T04:58:18Z,bench,6,Božo Mikulić,,,,
+2026-09-06-st-johnstone-v-hibernian,home,St. Johnstone,4-4-2,,2026-09-06T04:58:18Z,bench,33,Liam Smith,,,,
+2026-09-06-st-johnstone-v-hibernian,home,St. Johnstone,4-4-2,,2026-09-06T04:58:18Z,bench,14,Matty Foulds,,,,
+2026-09-06-st-johnstone-v-hibernian,home,St. Johnstone,4-4-2,,2026-09-06T04:58:18Z,bench,4,Morgan Boyes,,,,
+2026-09-06-st-johnstone-v-hibernian,home,St. Johnstone,4-4-2,,2026-09-06T04:58:18Z,bench,25,Macaulay Tait,,,,
+2026-09-06-st-johnstone-v-hibernian,home,St. Johnstone,4-4-2,,2026-09-06T04:58:18Z,bench,9,Josh Fowler,,,,
+2026-09-06-st-johnstone-v-hibernian,home,St. Johnstone,4-4-2,,2026-09-06T04:58:18Z,bench,18,Kai Fotheringham,,,,
+2026-09-06-st-johnstone-v-hibernian,home,St. Johnstone,4-4-2,,2026-09-06T04:58:18Z,bench,23,Logan Chalmers,,,,
+2026-09-06-st-johnstone-v-hibernian,away,Hibernian,3-4-3,,2026-09-06T04:58:18Z,start,1,Raphael Sallinger,,,0.1,0.5
+2026-09-06-st-johnstone-v-hibernian,away,Hibernian,3-4-3,,2026-09-06T04:58:18Z,start,6,Jason Kerr,,,0.357,0.79
+2026-09-06-st-johnstone-v-hibernian,away,Hibernian,3-4-3,,2026-09-06T04:58:18Z,start,4,Grant Hanley,,,0.357,0.5
+2026-09-06-st-johnstone-v-hibernian,away,Hibernian,3-4-3,,2026-09-06T04:58:18Z,start,21,Jordan Obita,,,0.357,0.21
+2026-09-06-st-johnstone-v-hibernian,away,Hibernian,3-4-3,,2026-09-06T04:58:18Z,start,25,Felix Passlack,,,0.613,0.875
+2026-09-06-st-johnstone-v-hibernian,away,Hibernian,3-4-3,,2026-09-06T04:58:18Z,start,8,Josh Mulligan,,,0.613,0.625
+2026-09-06-st-johnstone-v-hibernian,away,Hibernian,3-4-3,,2026-09-06T04:58:18Z,start,24,Jacob Devaney,jacob-devaney,,0.613,0.375
+2026-09-06-st-johnstone-v-hibernian,away,Hibernian,3-4-3,,2026-09-06T04:58:18Z,start,17,Jamie McGrath,jamie-mcgrath,,0.613,0.125
+2026-09-06-st-johnstone-v-hibernian,away,Hibernian,3-4-3,,2026-09-06T04:58:18Z,start,10,Martin Boyle,,,0.87,0.79
+2026-09-06-st-johnstone-v-hibernian,away,Hibernian,3-4-3,,2026-09-06T04:58:18Z,start,9,Nathan Lowe,,,0.87,0.5
+2026-09-06-st-johnstone-v-hibernian,away,Hibernian,3-4-3,,2026-09-06T04:58:18Z,start,23,Callum Wright,,,0.87,0.21
+2026-09-06-st-johnstone-v-hibernian,away,Hibernian,3-4-3,,2026-09-06T04:58:18Z,bench,13,Jordan Smith,,,,
+2026-09-06-st-johnstone-v-hibernian,away,Hibernian,3-4-3,,2026-09-06T04:58:18Z,bench,15,Jack Iredale,,,,
+2026-09-06-st-johnstone-v-hibernian,away,Hibernian,3-4-3,,2026-09-06T04:58:18Z,bench,3,Adam Mayor,,,,
+2026-09-06-st-johnstone-v-hibernian,away,Hibernian,3-4-3,,2026-09-06T04:58:18Z,bench,47,Azeem Abdulai,,,,
+2026-09-06-st-johnstone-v-hibernian,away,Hibernian,3-4-3,,2026-09-06T04:58:18Z,bench,11,Joe Newell,,,,
+2026-09-06-st-johnstone-v-hibernian,away,Hibernian,3-4-3,,2026-09-06T04:58:18Z,bench,27,Kanayochukwu Megwa,,,,
+2026-09-06-st-johnstone-v-hibernian,away,Hibernian,3-4-3,,2026-09-06T04:58:18Z,bench,14,Miguel Chaiwa,,,,
+2026-09-06-st-johnstone-v-hibernian,away,Hibernian,3-4-3,,2026-09-06T04:58:18Z,bench,22,Ante Šuto,,,,
+2026-09-06-st-johnstone-v-hibernian,away,Hibernian,3-4-3,,2026-09-06T04:58:18Z,bench,18,Thibault Klidje,,,,
+2026-09-06-sonnenhof-gro-aspach-v-hoffenheim-ii,home,Sonnenhof Großaspach,4-2-3-1,,2026-09-06T04:58:18Z,start,1,Maximilian Reule,,,0.1,0.5
+2026-09-06-sonnenhof-gro-aspach-v-hoffenheim-ii,home,Sonnenhof Großaspach,4-2-3-1,,2026-09-06T04:58:18Z,start,8,Elias Rahn,,,0.292,0.875
+2026-09-06-sonnenhof-gro-aspach-v-hoffenheim-ii,home,Sonnenhof Großaspach,4-2-3-1,,2026-09-06T04:58:18Z,start,15,Antonis Aidonis,,,0.292,0.625
+2026-09-06-sonnenhof-gro-aspach-v-hoffenheim-ii,home,Sonnenhof Großaspach,4-2-3-1,,2026-09-06T04:58:18Z,start,25,Arbnor Nuraj,,,0.292,0.375
+2026-09-06-sonnenhof-gro-aspach-v-hoffenheim-ii,home,Sonnenhof Großaspach,4-2-3-1,,2026-09-06T04:58:18Z,start,21,Luka Molinari,,,0.292,0.125
+2026-09-06-sonnenhof-gro-aspach-v-hoffenheim-ii,home,Sonnenhof Großaspach,4-2-3-1,,2026-09-06T04:58:18Z,start,16,Marius Kunde,,,0.485,0.7
+2026-09-06-sonnenhof-gro-aspach-v-hoffenheim-ii,home,Sonnenhof Großaspach,4-2-3-1,,2026-09-06T04:58:18Z,start,6,Christian Mistl,,,0.485,0.3
+2026-09-06-sonnenhof-gro-aspach-v-hoffenheim-ii,home,Sonnenhof Großaspach,4-2-3-1,,2026-09-06T04:58:18Z,start,18,Niklas Pollex,,,0.678,0.837
+2026-09-06-sonnenhof-gro-aspach-v-hoffenheim-ii,home,Sonnenhof Großaspach,4-2-3-1,,2026-09-06T04:58:18Z,start,27,Loris Maier,,,0.678,0.5
+2026-09-06-sonnenhof-gro-aspach-v-hoffenheim-ii,home,Sonnenhof Großaspach,4-2-3-1,,2026-09-06T04:58:18Z,start,11,Tim Rossmann,,,0.678,0.163
+2026-09-06-sonnenhof-gro-aspach-v-hoffenheim-ii,home,Sonnenhof Großaspach,4-2-3-1,,2026-09-06T04:58:18Z,start,23,Fabian Eisele,,,0.87,0.5
+2026-09-06-sonnenhof-gro-aspach-v-hoffenheim-ii,home,Sonnenhof Großaspach,4-2-3-1,,2026-09-06T04:58:18Z,bench,33,Tim Schulz,,,,
+2026-09-06-sonnenhof-gro-aspach-v-hoffenheim-ii,home,Sonnenhof Großaspach,4-2-3-1,,2026-09-06T04:58:18Z,bench,20,Leon Maier,,,,
+2026-09-06-sonnenhof-gro-aspach-v-hoffenheim-ii,home,Sonnenhof Großaspach,4-2-3-1,,2026-09-06T04:58:18Z,bench,19,Marius Uhl,,,,
+2026-09-06-sonnenhof-gro-aspach-v-hoffenheim-ii,home,Sonnenhof Großaspach,4-2-3-1,,2026-09-06T04:58:18Z,bench,36,Mark Gashi,,,,
+2026-09-06-sonnenhof-gro-aspach-v-hoffenheim-ii,home,Sonnenhof Großaspach,4-2-3-1,,2026-09-06T04:58:18Z,bench,4,Franz Bleicher,,,,
+2026-09-06-sonnenhof-gro-aspach-v-hoffenheim-ii,home,Sonnenhof Großaspach,4-2-3-1,,2026-09-06T04:58:18Z,bench,10,Lukas Stoppel,,,,
+2026-09-06-sonnenhof-gro-aspach-v-hoffenheim-ii,home,Sonnenhof Großaspach,4-2-3-1,,2026-09-06T04:58:18Z,bench,5,Volkan Celiktas,,,,
+2026-09-06-sonnenhof-gro-aspach-v-hoffenheim-ii,home,Sonnenhof Großaspach,4-2-3-1,,2026-09-06T04:58:18Z,bench,37,Leon Schuerer,,,,
+2026-09-06-sonnenhof-gro-aspach-v-hoffenheim-ii,home,Sonnenhof Großaspach,4-2-3-1,,2026-09-06T04:58:18Z,bench,9,Marlon Fass,,,,
+2026-09-06-sonnenhof-gro-aspach-v-hoffenheim-ii,away,Hoffenheim II,4-2-3-1,,2026-09-06T04:58:18Z,start,1,Lúkas Petersson,,,0.1,0.5
+2026-09-06-sonnenhof-gro-aspach-v-hoffenheim-ii,away,Hoffenheim II,4-2-3-1,,2026-09-06T04:58:18Z,start,15,Matthew Moore,matthew-moore,,0.292,0.875
+2026-09-06-sonnenhof-gro-aspach-v-hoffenheim-ii,away,Hoffenheim II,4-2-3-1,,2026-09-06T04:58:18Z,start,3,Sean Dulic,,,0.292,0.625
+2026-09-06-sonnenhof-gro-aspach-v-hoffenheim-ii,away,Hoffenheim II,4-2-3-1,,2026-09-06T04:58:18Z,start,6,Valentin Lässig,,,0.292,0.375
+2026-09-06-sonnenhof-gro-aspach-v-hoffenheim-ii,away,Hoffenheim II,4-2-3-1,,2026-09-06T04:58:18Z,start,13,Tristan Spranger,,,0.292,0.125
+2026-09-06-sonnenhof-gro-aspach-v-hoffenheim-ii,away,Hoffenheim II,4-2-3-1,,2026-09-06T04:58:18Z,start,5,Klaus Gjasula,,,0.485,0.7
+2026-09-06-sonnenhof-gro-aspach-v-hoffenheim-ii,away,Hoffenheim II,4-2-3-1,,2026-09-06T04:58:18Z,start,28,Florian Micheler,,,0.485,0.3
+2026-09-06-sonnenhof-gro-aspach-v-hoffenheim-ii,away,Hoffenheim II,4-2-3-1,,2026-09-06T04:58:18Z,start,17,Blessing Makanda,,,0.678,0.837
+2026-09-06-sonnenhof-gro-aspach-v-hoffenheim-ii,away,Hoffenheim II,4-2-3-1,,2026-09-06T04:58:18Z,start,20,Tiago Poller,,,0.678,0.5
+2026-09-06-sonnenhof-gro-aspach-v-hoffenheim-ii,away,Hoffenheim II,4-2-3-1,,2026-09-06T04:58:18Z,start,10,Yasin Zor,,,0.678,0.163
+2026-09-06-sonnenhof-gro-aspach-v-hoffenheim-ii,away,Hoffenheim II,4-2-3-1,,2026-09-06T04:58:18Z,start,36,Jakov Dedić,,,0.87,0.5
+2026-09-06-sonnenhof-gro-aspach-v-hoffenheim-ii,away,Hoffenheim II,4-2-3-1,,2026-09-06T04:58:18Z,bench,27,Tobias Trautner,,,,
+2026-09-06-sonnenhof-gro-aspach-v-hoffenheim-ii,away,Hoffenheim II,4-2-3-1,,2026-09-06T04:58:18Z,bench,47,Maximilian Theuer,,,,
+2026-09-06-sonnenhof-gro-aspach-v-hoffenheim-ii,away,Hoffenheim II,4-2-3-1,,2026-09-06T04:58:18Z,bench,44,Ndong Penda,,,,
+2026-09-06-sonnenhof-gro-aspach-v-hoffenheim-ii,away,Hoffenheim II,4-2-3-1,,2026-09-06T04:58:18Z,bench,21,Timo Hildmann,,,,
+2026-09-06-sonnenhof-gro-aspach-v-hoffenheim-ii,away,Hoffenheim II,4-2-3-1,,2026-09-06T04:58:18Z,bench,23,Alex Honajzer,,,,
+2026-09-06-sonnenhof-gro-aspach-v-hoffenheim-ii,away,Hoffenheim II,4-2-3-1,,2026-09-06T04:58:18Z,bench,8,Diren Dağdeviren,,,,
+2026-09-06-sonnenhof-gro-aspach-v-hoffenheim-ii,away,Hoffenheim II,4-2-3-1,,2026-09-06T04:58:18Z,bench,16,Luis Engelns,,,,
+2026-09-06-sonnenhof-gro-aspach-v-hoffenheim-ii,away,Hoffenheim II,4-2-3-1,,2026-09-06T04:58:18Z,bench,11,Jykese Fields,,,,
+2026-09-06-sonnenhof-gro-aspach-v-hoffenheim-ii,away,Hoffenheim II,4-2-3-1,,2026-09-06T04:58:18Z,bench,18,Lion Wagenbach,,,,
+2026-09-06-derry-city-v-dundalk,home,Derry City,4-5-1,,2026-09-06T04:58:18Z,start,13,Tom Norcott,,,0.1,0.5
+2026-09-06-derry-city-v-dundalk,home,Derry City,4-5-1,,2026-09-06T04:58:18Z,start,4,Jamie Stott,,,0.357,0.875
+2026-09-06-derry-city-v-dundalk,home,Derry City,4-5-1,,2026-09-06T04:58:18Z,start,22,Conor Barr,,,0.357,0.625
+2026-09-06-derry-city-v-dundalk,home,Derry City,4-5-1,,2026-09-06T04:58:18Z,start,3,Patrick McClean,patrick-mcclean,,0.357,0.375
+2026-09-06-derry-city-v-dundalk,home,Derry City,4-5-1,,2026-09-06T04:58:18Z,start,19,Brandon Fleming,,,0.357,0.125
+2026-09-06-derry-city-v-dundalk,home,Derry City,4-5-1,,2026-09-06T04:58:18Z,start,12,Darragh Burns,darragh-burns,,0.613,0.89
+2026-09-06-derry-city-v-dundalk,home,Derry City,4-5-1,,2026-09-06T04:58:18Z,start,8,Adam O'Reilly,adam-oreilly,,0.613,0.695
+2026-09-06-derry-city-v-dundalk,home,Derry City,4-5-1,,2026-09-06T04:58:18Z,start,17,Nick Twisk,,,0.613,0.5
+2026-09-06-derry-city-v-dundalk,home,Derry City,4-5-1,,2026-09-06T04:58:18Z,start,14,Ellis Chapman,,,0.613,0.305
+2026-09-06-derry-city-v-dundalk,home,Derry City,4-5-1,,2026-09-06T04:58:18Z,start,7,Michael Duffy,michael-duffy,,0.613,0.11
+2026-09-06-derry-city-v-dundalk,home,Derry City,4-5-1,,2026-09-06T04:58:18Z,start,29,Tyler Smith,,,0.87,0.5
+2026-09-06-derry-city-v-dundalk,home,Derry City,4-5-1,,2026-09-06T04:58:18Z,bench,1,Brian Maher,brian-maher,,,
+2026-09-06-derry-city-v-dundalk,home,Derry City,4-5-1,,2026-09-06T04:58:18Z,bench,2,Barry Cotter,barry-cotter,,,
+2026-09-06-derry-city-v-dundalk,home,Derry City,4-5-1,,2026-09-06T04:58:18Z,bench,24,Brooklyn Lyons-Foster,brooklyn-lyons-foster,,,
+2026-09-06-derry-city-v-dundalk,home,Derry City,4-5-1,,2026-09-06T04:58:18Z,bench,25,Christy Grogan,christy-grogan,,,
+2026-09-06-derry-city-v-dundalk,home,Derry City,4-5-1,,2026-09-06T04:58:18Z,bench,23,Cameron Dummigan,,,,
+2026-09-06-derry-city-v-dundalk,home,Derry City,4-5-1,,2026-09-06T04:58:18Z,bench,28,James Olayinka,,,,
+2026-09-06-derry-city-v-dundalk,home,Derry City,4-5-1,,2026-09-06T04:58:18Z,bench,33,Yoann Prigent,,,,
+2026-09-06-derry-city-v-dundalk,home,Derry City,4-5-1,,2026-09-06T04:58:18Z,bench,36,Michael McColgan,michael-mccolgan,,,
+2026-09-06-derry-city-v-dundalk,home,Derry City,4-5-1,,2026-09-06T04:58:18Z,bench,32,Terence Doherty,terence-doherty,,,
+2026-09-06-derry-city-v-dundalk,away,Dundalk,4-2-3-1,,2026-09-06T04:58:18Z,start,1,Enda Minogue,enda-minogue,,0.1,0.5
+2026-09-06-derry-city-v-dundalk,away,Dundalk,4-2-3-1,,2026-09-06T04:58:18Z,start,44,Tom Grivosti,,,0.292,0.875
+2026-09-06-derry-city-v-dundalk,away,Dundalk,4-2-3-1,,2026-09-06T04:58:18Z,start,4,Mayowa Animasahun,mayowa-animasahun,,0.292,0.625
+2026-09-06-derry-city-v-dundalk,away,Dundalk,4-2-3-1,,2026-09-06T04:58:18Z,start,16,Egor Vassenin,egor-vassenin,,0.292,0.375
+2026-09-06-derry-city-v-dundalk,away,Dundalk,4-2-3-1,,2026-09-06T04:58:18Z,start,3,Bobby Burns,,,0.292,0.125
+2026-09-06-derry-city-v-dundalk,away,Dundalk,4-2-3-1,,2026-09-06T04:58:18Z,start,18,Keith Buckley,keith-buckley,,0.485,0.7
+2026-09-06-derry-city-v-dundalk,away,Dundalk,4-2-3-1,,2026-09-06T04:58:18Z,start,8,Harry Groome,harry-groome,,0.485,0.3
+2026-09-06-derry-city-v-dundalk,away,Dundalk,4-2-3-1,,2026-09-06T04:58:18Z,start,15,Trevor Clarke,trevor-clarke,,0.678,0.837
+2026-09-06-derry-city-v-dundalk,away,Dundalk,4-2-3-1,,2026-09-06T04:58:18Z,start,10,Leonardo Gaxha,,,0.678,0.5
+2026-09-06-derry-city-v-dundalk,away,Dundalk,4-2-3-1,,2026-09-06T04:58:18Z,start,7,Daryl Horgan,daryl-horgan,,0.678,0.163
+2026-09-06-derry-city-v-dundalk,away,Dundalk,4-2-3-1,,2026-09-06T04:58:18Z,start,9,Cian Dillon,cian-dillon,,0.87,0.5
+2026-09-06-derry-city-v-dundalk,away,Dundalk,4-2-3-1,,2026-09-06T04:58:18Z,bench,13,Peter Cherrie,,,,
+2026-09-06-derry-city-v-dundalk,away,Dundalk,4-2-3-1,,2026-09-06T04:58:18Z,bench,20,Samuel Safaei,samuel-safaei,,,
+2026-09-06-derry-city-v-dundalk,away,Dundalk,4-2-3-1,,2026-09-06T04:58:18Z,bench,12,Luke Mulligan,luke-mulligan,,,
+2026-09-06-derry-city-v-dundalk,away,Dundalk,4-2-3-1,,2026-09-06T04:58:18Z,bench,24,Robert Cornwall,robert-cornwall,,,
+2026-09-06-derry-city-v-dundalk,away,Dundalk,4-2-3-1,,2026-09-06T04:58:18Z,bench,23,Aaron Keogh,aaron-keogh,,,
+2026-09-06-derry-city-v-dundalk,away,Dundalk,4-2-3-1,,2026-09-06T04:58:18Z,bench,6,Aodh Dervin,aodh-dervin,,,
+2026-09-06-derry-city-v-dundalk,away,Dundalk,4-2-3-1,,2026-09-06T04:58:18Z,bench,11,Ronan Teahan,ronan-teahan,,,
+2026-09-06-derry-city-v-dundalk,away,Dundalk,4-2-3-1,,2026-09-06T04:58:18Z,bench,17,Shane Tracey,shane-tracey,,,
+2026-09-06-derry-city-v-dundalk,away,Dundalk,4-2-3-1,,2026-09-06T04:58:18Z,bench,27,Declan McDaid,,,,
+2026-09-06-molde-v-kfum,home,Molde,4-2-3-1,,2026-09-06T04:58:18Z,start,22,Albert Posiadala,,,0.1,0.5
+2026-09-06-molde-v-kfum,home,Molde,4-2-3-1,,2026-09-06T04:58:18Z,start,25,Martin Linnes,,,0.292,0.875
+2026-09-06-molde-v-kfum,home,Molde,4-2-3-1,,2026-09-06T04:58:18Z,start,19,Eirik Haugan,,,0.292,0.625
+2026-09-06-molde-v-kfum,home,Molde,4-2-3-1,,2026-09-06T04:58:18Z,start,33,Birk Risa,,,0.292,0.375
+2026-09-06-molde-v-kfum,home,Molde,4-2-3-1,,2026-09-06T04:58:18Z,start,26,Samukelo Kabini,,,0.292,0.125
+2026-09-06-molde-v-kfum,home,Molde,4-2-3-1,,2026-09-06T04:58:18Z,start,17,Mats Møller Dæhli,,,0.485,0.7
+2026-09-06-molde-v-kfum,home,Molde,4-2-3-1,,2026-09-06T04:58:18Z,start,30,Daniel Daga,,,0.485,0.3
+2026-09-06-molde-v-kfum,home,Molde,4-2-3-1,,2026-09-06T04:58:18Z,start,21,Oskar Spiten-Nysæter,,,0.678,0.837
+2026-09-06-molde-v-kfum,home,Molde,4-2-3-1,,2026-09-06T04:58:18Z,start,10,Emil Breivik,,,0.678,0.5
+2026-09-06-molde-v-kfum,home,Molde,4-2-3-1,,2026-09-06T04:58:18Z,start,11,Caleb Zady Sery,,,0.678,0.163
+2026-09-06-molde-v-kfum,home,Molde,4-2-3-1,,2026-09-06T04:58:18Z,start,9,Jalal Abdullai,,,0.87,0.5
+2026-09-06-molde-v-kfum,away,KFUM,3-4-3,,2026-09-06T04:58:18Z,start,25,Håvar Jenssen,,,0.1,0.5
+2026-09-06-molde-v-kfum,away,KFUM,3-4-3,,2026-09-06T04:58:18Z,start,24,Håkon Røsten,,,0.357,0.79
+2026-09-06-molde-v-kfum,away,KFUM,3-4-3,,2026-09-06T04:58:18Z,start,13,Brage Skaret,,,0.357,0.5
+2026-09-06-molde-v-kfum,away,KFUM,3-4-3,,2026-09-06T04:58:18Z,start,5,Fredrik Tobias Berglie,,,0.357,0.21
+2026-09-06-molde-v-kfum,away,KFUM,3-4-3,,2026-09-06T04:58:18Z,start,14,Håkon Hoseth,,,0.613,0.875
+2026-09-06-molde-v-kfum,away,KFUM,3-4-3,,2026-09-06T04:58:18Z,start,9,Martin Tangen Vinjor,,,0.613,0.625
+2026-09-06-molde-v-kfum,away,KFUM,3-4-3,,2026-09-06T04:58:18Z,start,6,Jacob Blixt Flaten,,,0.613,0.375
+2026-09-06-molde-v-kfum,away,KFUM,3-4-3,,2026-09-06T04:58:18Z,start,16,Jonas Lange Hjorth,,,0.613,0.125
+2026-09-06-molde-v-kfum,away,KFUM,3-4-3,,2026-09-06T04:58:18Z,start,18,Rasmus Eggen Vinge,,,0.87,0.79
+2026-09-06-molde-v-kfum,away,KFUM,3-4-3,,2026-09-06T04:58:18Z,start,17,Julian Bakkeli Gonstad,,,0.87,0.5
+2026-09-06-molde-v-kfum,away,KFUM,3-4-3,,2026-09-06T04:58:18Z,start,10,Bilal Njie,,,0.87,0.21
+2026-09-06-ferencvaros-v-ujpest,home,Ferencváros,4-1-4-1,,2026-09-06T04:58:18Z,start,90,Dénes Dibusz,,,0.1,0.5
+2026-09-06-ferencvaros-v-ujpest,home,Ferencváros,4-1-4-1,,2026-09-06T04:58:18Z,start,54,Olivér Nagy,,,0.292,0.875
+2026-09-06-ferencvaros-v-ujpest,home,Ferencváros,4-1-4-1,,2026-09-06T04:58:18Z,start,28,Toon Raemaekers,,,0.292,0.625
+2026-09-06-ferencvaros-v-ujpest,home,Ferencváros,4-1-4-1,,2026-09-06T04:58:18Z,start,4,Mariano Gómez,,,0.292,0.375
+2026-09-06-ferencvaros-v-ujpest,home,Ferencváros,4-1-4-1,,2026-09-06T04:58:18Z,start,20,Cadu,,,0.292,0.125
+2026-09-06-ferencvaros-v-ujpest,home,Ferencváros,4-1-4-1,,2026-09-06T04:58:18Z,start,6,Ádám Nagy,,,0.485,0.5
+2026-09-06-ferencvaros-v-ujpest,home,Ferencváros,4-1-4-1,,2026-09-06T04:58:18Z,start,11,Bamidele Yusuf,,,0.678,0.875
+2026-09-06-ferencvaros-v-ujpest,home,Ferencváros,4-1-4-1,,2026-09-06T04:58:18Z,start,16,Kristoffer Zachariassen,,,0.678,0.625
+2026-09-06-ferencvaros-v-ujpest,home,Ferencváros,4-1-4-1,,2026-09-06T04:58:18Z,start,17,Márius Corbu,,,0.678,0.375
+2026-09-06-ferencvaros-v-ujpest,home,Ferencváros,4-1-4-1,,2026-09-06T04:58:18Z,start,15,Daniel Arzani,,,0.678,0.125
+2026-09-06-ferencvaros-v-ujpest,home,Ferencváros,4-1-4-1,,2026-09-06T04:58:18Z,start,18,Ádám Bagi,,,0.89,0.5
+2026-09-06-ferencvaros-v-ujpest,home,Ferencváros,4-1-4-1,,2026-09-06T04:58:18Z,bench,1,Ádám Varga,,,,
+2026-09-06-ferencvaros-v-ujpest,home,Ferencváros,4-1-4-1,,2026-09-06T04:58:18Z,bench,14,Attila Osváth,,,,
+2026-09-06-ferencvaros-v-ujpest,home,Ferencváros,4-1-4-1,,2026-09-06T04:58:18Z,bench,5,Nathan Zohoré,,,,
+2026-09-06-ferencvaros-v-ujpest,home,Ferencváros,4-1-4-1,,2026-09-06T04:58:18Z,bench,47,Callum O'Dowda,callum-odowda,,,
+2026-09-06-ferencvaros-v-ujpest,home,Ferencváros,4-1-4-1,,2026-09-06T04:58:18Z,bench,71,Csongor Lakatos,,,,
+2026-09-06-ferencvaros-v-ujpest,home,Ferencváros,4-1-4-1,,2026-09-06T04:58:18Z,bench,10,Jonathan Levi,,,,
+2026-09-06-ferencvaros-v-ujpest,home,Ferencváros,4-1-4-1,,2026-09-06T04:58:18Z,bench,22,Matús Bero,,,,
+2026-09-06-ferencvaros-v-ujpest,home,Ferencváros,4-1-4-1,,2026-09-06T04:58:18Z,bench,8,Naby Keïta,,,,
+2026-09-06-ferencvaros-v-ujpest,home,Ferencváros,4-1-4-1,,2026-09-06T04:58:18Z,bench,19,Franko Kovačević,,,,
+2026-09-06-ferencvaros-v-ujpest,home,Ferencváros,4-1-4-1,,2026-09-06T04:58:18Z,bench,76,Krisztián Lisztes,,,,
+2026-09-06-ferencvaros-v-ujpest,home,Ferencváros,4-1-4-1,,2026-09-06T04:58:18Z,bench,7,Veljko Birmančević,,,,
+2026-09-06-ferencvaros-v-ujpest,home,Ferencváros,4-1-4-1,,2026-09-06T04:58:18Z,bench,68,Zétény Varga,,,,
+2026-09-06-ferencvaros-v-ujpest,away,Újpest,4-4-2,,2026-09-06T04:58:18Z,start,1,Péter Szappanos,,,0.1,0.5
+2026-09-06-ferencvaros-v-ujpest,away,Újpest,4-4-2,,2026-09-06T04:58:18Z,start,36,Ferenc Ujvary,,,0.357,0.875
+2026-09-06-ferencvaros-v-ujpest,away,Újpest,4-4-2,,2026-09-06T04:58:18Z,start,3,Heitor,,,0.357,0.625
+2026-09-06-ferencvaros-v-ujpest,away,Újpest,4-4-2,,2026-09-06T04:58:18Z,start,94,Patrizio Stronati,,,0.357,0.375
+2026-09-06-ferencvaros-v-ujpest,away,Újpest,4-4-2,,2026-09-06T04:58:18Z,start,5,Attila Fiola,,,0.357,0.125
+2026-09-06-ferencvaros-v-ujpest,away,Újpest,4-4-2,,2026-09-06T04:58:18Z,start,17,Aljoša Matko,,,0.613,0.875
+2026-09-06-ferencvaros-v-ujpest,away,Újpest,4-4-2,,2026-09-06T04:58:18Z,start,10,Arne Maier,,,0.613,0.625
+2026-09-06-ferencvaros-v-ujpest,away,Újpest,4-4-2,,2026-09-06T04:58:18Z,start,88,Matija Ljujić,,,0.613,0.375
+2026-09-06-ferencvaros-v-ujpest,away,Újpest,4-4-2,,2026-09-06T04:58:18Z,start,11,Krisztofer Horváth,,,0.613,0.125
+2026-09-06-ferencvaros-v-ujpest,away,Újpest,4-4-2,,2026-09-06T04:58:18Z,start,15,Miron Mucsanyi,,,0.87,0.7
+2026-09-06-ferencvaros-v-ujpest,away,Újpest,4-4-2,,2026-09-06T04:58:18Z,start,14,Etienne Amenyido,,,0.87,0.3
+2026-09-06-ferencvaros-v-ujpest,away,Újpest,4-4-2,,2026-09-06T04:58:18Z,bench,23,Dávid Banai,,,,
+2026-09-06-ferencvaros-v-ujpest,away,Újpest,4-4-2,,2026-09-06T04:58:18Z,bench,32,David Dombo,,,,
+2026-09-06-ferencvaros-v-ujpest,away,Újpest,4-4-2,,2026-09-06T04:58:18Z,bench,45,Arijan Ademi,,,,
+2026-09-06-ferencvaros-v-ujpest,away,Újpest,4-4-2,,2026-09-06T04:58:18Z,bench,2,Gergő Bodnár,,,,
+2026-09-06-ferencvaros-v-ujpest,away,Újpest,4-4-2,,2026-09-06T04:58:18Z,bench,30,João Nunes,,,,
+2026-09-06-ferencvaros-v-ujpest,away,Újpest,4-4-2,,2026-09-06T04:58:18Z,bench,38,Kristof Sarkadi,,,,
+2026-09-06-ferencvaros-v-ujpest,away,Újpest,4-4-2,,2026-09-06T04:58:18Z,bench,27,Ábel Krajcsovics,,,,
+2026-09-06-ferencvaros-v-ujpest,away,Újpest,4-4-2,,2026-09-06T04:58:18Z,bench,77,Noah Fenyö,,,,
+2026-09-06-ferencvaros-v-ujpest,away,Újpest,4-4-2,,2026-09-06T04:58:18Z,bench,8,Norbert Szendrei,,,,
+2026-09-06-ferencvaros-v-ujpest,away,Újpest,4-4-2,,2026-09-06T04:58:18Z,bench,39,Gleofilo Vlijter,,,,
+2026-09-06-ferencvaros-v-ujpest,away,Újpest,4-4-2,,2026-09-06T04:58:18Z,bench,19,Prince Manu Ballodom,,,,
+2026-09-06-malaga-v-levante,home,Málaga,4-1-4-1,,2026-09-06T04:58:18Z,start,1,Alfonso Herrero,,,0.1,0.5
+2026-09-06-malaga-v-levante,home,Málaga,4-1-4-1,,2026-09-06T04:58:18Z,start,3,Carlos Puga,,,0.292,0.875
+2026-09-06-malaga-v-levante,home,Málaga,4-1-4-1,,2026-09-06T04:58:18Z,start,15,Ángel Recio,,,0.292,0.625
+2026-09-06-malaga-v-levante,home,Málaga,4-1-4-1,,2026-09-06T04:58:18Z,start,4,Einar Galilea,,,0.292,0.375
+2026-09-06-malaga-v-levante,home,Málaga,4-1-4-1,,2026-09-06T04:58:18Z,start,31,Rafita,,,0.292,0.125
+2026-09-06-malaga-v-levante,home,Málaga,4-1-4-1,,2026-09-06T04:58:18Z,start,23,Izan Merino,,,0.485,0.5
+2026-09-06-malaga-v-levante,home,Málaga,4-1-4-1,,2026-09-06T04:58:18Z,start,10,David Larrubia,,,0.678,0.875
+2026-09-06-malaga-v-levante,home,Málaga,4-1-4-1,,2026-09-06T04:58:18Z,start,22,Dani Lorenzo,,,0.678,0.625
+2026-09-06-malaga-v-levante,home,Málaga,4-1-4-1,,2026-09-06T04:58:18Z,start,8,Carlos Dotor,,,0.678,0.375
+2026-09-06-malaga-v-levante,home,Málaga,4-1-4-1,,2026-09-06T04:58:18Z,start,11,Joaquín Muñoz,,,0.678,0.125
+2026-09-06-malaga-v-levante,home,Málaga,4-1-4-1,,2026-09-06T04:58:18Z,start,9,Chupe,,,0.89,0.5
+2026-09-06-malaga-v-levante,away,Levante,4-3-3,,2026-09-06T04:58:18Z,start,13,Mathew Ryan,,,0.1,0.5
+2026-09-06-malaga-v-levante,away,Levante,4-3-3,,2026-09-06T04:58:18Z,start,29,Nacho Pérez,,,0.357,0.875
+2026-09-06-malaga-v-levante,away,Levante,4-3-3,,2026-09-06T04:58:18Z,start,4,Adrián De La Fuente,,,0.357,0.625
+2026-09-06-malaga-v-levante,away,Levante,4-3-3,,2026-09-06T04:58:18Z,start,2,Aïssa Mandi,,,0.357,0.375
+2026-09-06-malaga-v-levante,away,Levante,4-3-3,,2026-09-06T04:58:18Z,start,23,Manuel Sánchez,,,0.357,0.125
+2026-09-06-malaga-v-levante,away,Levante,4-3-3,,2026-09-06T04:58:18Z,start,18,Enzo Bardeli,,,0.613,0.79
+2026-09-06-malaga-v-levante,away,Levante,4-3-3,,2026-09-06T04:58:18Z,start,20,Oriol Rey,,,0.613,0.5
+2026-09-06-malaga-v-levante,away,Levante,4-3-3,,2026-09-06T04:58:18Z,start,8,Jon Olasagasti,,,0.613,0.21
+2026-09-06-malaga-v-levante,away,Levante,4-3-3,,2026-09-06T04:58:18Z,start,7,Roger Brugué,,,0.87,0.79
+2026-09-06-malaga-v-levante,away,Levante,4-3-3,,2026-09-06T04:58:18Z,start,9,Iván Romero,,,0.87,0.5
+2026-09-06-malaga-v-levante,away,Levante,4-3-3,,2026-09-06T04:58:18Z,start,24,Thiago Fernández,,,0.87,0.21
+2026-09-06-anderlecht-v-genk,home,Anderlecht,4-4-2,,2026-09-06T04:58:18Z,start,26,Colin Coosemans,,,0.1,0.5
+2026-09-06-anderlecht-v-genk,home,Anderlecht,4-4-2,,2026-09-06T04:58:18Z,start,79,Ali Maamar,,,0.357,0.875
+2026-09-06-anderlecht-v-genk,home,Anderlecht,4-4-2,,2026-09-06T04:58:18Z,start,4,Giulian Biancone,,,0.357,0.625
+2026-09-06-anderlecht-v-genk,home,Anderlecht,4-4-2,,2026-09-06T04:58:18Z,start,27,Léo Pétrot,,,0.357,0.375
+2026-09-06-anderlecht-v-genk,home,Anderlecht,4-4-2,,2026-09-06T04:58:18Z,start,6,Ludwig Augustinsson,,,0.357,0.125
+2026-09-06-anderlecht-v-genk,home,Anderlecht,4-4-2,,2026-09-06T04:58:18Z,start,18,Lukás Ambros,,,0.613,0.875
+2026-09-06-anderlecht-v-genk,home,Anderlecht,4-4-2,,2026-09-06T04:58:18Z,start,24,Enric Llansana,,,0.613,0.625
+2026-09-06-anderlecht-v-genk,home,Anderlecht,4-4-2,,2026-09-06T04:58:18Z,start,55,Marco Kana,,,0.613,0.375
+2026-09-06-anderlecht-v-genk,home,Anderlecht,4-4-2,,2026-09-06T04:58:18Z,start,61,Joshua Nga Kana,,,0.613,0.125
+2026-09-06-anderlecht-v-genk,home,Anderlecht,4-4-2,,2026-09-06T04:58:18Z,start,14,Danylo Sikan,,,0.87,0.7
+2026-09-06-anderlecht-v-genk,home,Anderlecht,4-4-2,,2026-09-06T04:58:18Z,start,9,Mihajlo Cvetković,,,0.87,0.3
+2026-09-06-anderlecht-v-genk,home,Anderlecht,4-4-2,,2026-09-06T04:58:18Z,bench,32,Justin Heekeren,,,,
+2026-09-06-anderlecht-v-genk,home,Anderlecht,4-4-2,,2026-09-06T04:58:18Z,bench,33,Mattis Seghers,,,,
+2026-09-06-anderlecht-v-genk,home,Anderlecht,4-4-2,,2026-09-06T04:58:18Z,bench,50,Kaïs Barry,,,,
+2026-09-06-anderlecht-v-genk,home,Anderlecht,4-4-2,,2026-09-06T04:58:18Z,bench,2,Zoumana Keita,,,,
+2026-09-06-anderlecht-v-genk,home,Anderlecht,4-4-2,,2026-09-06T04:58:18Z,bench,68,Noah Kalonji,,,,
+2026-09-06-anderlecht-v-genk,home,Anderlecht,4-4-2,,2026-09-06T04:58:18Z,bench,49,Jayden Seke,,,,
+2026-09-06-anderlecht-v-genk,home,Anderlecht,4-4-2,,2026-09-06T04:58:18Z,bench,10,Marten Winkler,,,,
+2026-09-06-anderlecht-v-genk,home,Anderlecht,4-4-2,,2026-09-06T04:58:18Z,bench,53,Noa Ojea,,,,
+2026-09-06-anderlecht-v-genk,home,Anderlecht,4-4-2,,2026-09-06T04:58:18Z,bench,11,Oliver Antman,,,,
+2026-09-06-anderlecht-v-genk,home,Anderlecht,4-4-2,,2026-09-06T04:58:18Z,bench,21,Tawfik Bentayeb,,,,
+2026-09-06-anderlecht-v-genk,away,Genk,4-2-3-1,,2026-09-06T04:58:18Z,start,28,Lucca Brughmans,,,0.1,0.5
+2026-09-06-anderlecht-v-genk,away,Genk,4-2-3-1,,2026-09-06T04:58:18Z,start,77,Zakaria El Ouahdi,,,0.292,0.875
+2026-09-06-anderlecht-v-genk,away,Genk,4-2-3-1,,2026-09-06T04:58:18Z,start,6,Matte Smets,,,0.292,0.625
+2026-09-06-anderlecht-v-genk,away,Genk,4-2-3-1,,2026-09-06T04:58:18Z,start,44,Josue Kongolo,,,0.292,0.375
+2026-09-06-anderlecht-v-genk,away,Genk,4-2-3-1,,2026-09-06T04:58:18Z,start,18,Joris Kayembe Ditu,,,0.292,0.125
+2026-09-06-anderlecht-v-genk,away,Genk,4-2-3-1,,2026-09-06T04:58:18Z,start,21,Ibrahima Sory Bangoura,,,0.485,0.7
+2026-09-06-anderlecht-v-genk,away,Genk,4-2-3-1,,2026-09-06T04:58:18Z,start,8,Bryan Heynen,,,0.485,0.3
+2026-09-06-anderlecht-v-genk,away,Genk,4-2-3-1,,2026-09-06T04:58:18Z,start,10,Junya Ito,,,0.678,0.837
+2026-09-06-anderlecht-v-genk,away,Genk,4-2-3-1,,2026-09-06T04:58:18Z,start,11,Jeppe Erenbjerg,,,0.678,0.5
+2026-09-06-anderlecht-v-genk,away,Genk,4-2-3-1,,2026-09-06T04:58:18Z,start,30,Ayumu Yokoyama,,,0.678,0.163
+2026-09-06-anderlecht-v-genk,away,Genk,4-2-3-1,,2026-09-06T04:58:18Z,start,17,Rafiu Durosinmi,,,0.87,0.5
+2026-09-06-anderlecht-v-genk,away,Genk,4-2-3-1,,2026-09-06T04:58:18Z,bench,26,Tobias Lawal,,,,
+2026-09-06-anderlecht-v-genk,away,Genk,4-2-3-1,,2026-09-06T04:58:18Z,bench,19,Yaimar Medina,,,,
+2026-09-06-anderlecht-v-genk,away,Genk,4-2-3-1,,2026-09-06T04:58:18Z,bench,38,Daan Heymans,,,,
+2026-09-06-anderlecht-v-genk,away,Genk,4-2-3-1,,2026-09-06T04:58:18Z,bench,20,Kevin Amaro,,,,
+2026-09-06-anderlecht-v-genk,away,Genk,4-2-3-1,,2026-09-06T04:58:18Z,bench,24,Nikolas Sattlberger,,,,
+2026-09-06-anderlecht-v-genk,away,Genk,4-2-3-1,,2026-09-06T04:58:18Z,bench,23,Aaron Bibout,,,,
+2026-09-06-anderlecht-v-genk,away,Genk,4-2-3-1,,2026-09-06T04:58:18Z,bench,33,Jerry Afriyie,,,,
+2026-09-06-anderlecht-v-genk,away,Genk,4-2-3-1,,2026-09-06T04:58:18Z,bench,32,Noah Adedeji-Sternberg,,,,
+2026-09-06-anderlecht-v-genk,away,Genk,4-2-3-1,,2026-09-06T04:58:18Z,bench,29,Robin Mirisola,,,,
+2026-09-06-francs-borains-v-ksc-lokeren,home,Francs Borains,4-4-2,,2026-09-06T04:58:18Z,start,20,Victor Swinnen,,,0.1,0.5
+2026-09-06-francs-borains-v-ksc-lokeren,home,Francs Borains,4-4-2,,2026-09-06T04:58:18Z,start,28,Mathias Francotte,,,0.357,0.875
+2026-09-06-francs-borains-v-ksc-lokeren,home,Francs Borains,4-4-2,,2026-09-06T04:58:18Z,start,77,Jason Dalle Molle,,,0.357,0.625
+2026-09-06-francs-borains-v-ksc-lokeren,home,Francs Borains,4-4-2,,2026-09-06T04:58:18Z,start,24,Dorian Dessoleil,,,0.357,0.375
+2026-09-06-francs-borains-v-ksc-lokeren,home,Francs Borains,4-4-2,,2026-09-06T04:58:18Z,start,78,Roméo Monticelli,,,0.357,0.125
+2026-09-06-francs-borains-v-ksc-lokeren,home,Francs Borains,4-4-2,,2026-09-06T04:58:18Z,start,11,Dieumerci Ndongala,,,0.613,0.875
+2026-09-06-francs-borains-v-ksc-lokeren,home,Francs Borains,4-4-2,,2026-09-06T04:58:18Z,start,8,Kéres Masangu,,,0.613,0.625
+2026-09-06-francs-borains-v-ksc-lokeren,home,Francs Borains,4-4-2,,2026-09-06T04:58:18Z,start,17,Yannis Kari,,,0.613,0.375
+2026-09-06-francs-borains-v-ksc-lokeren,home,Francs Borains,4-4-2,,2026-09-06T04:58:18Z,start,29,Maxime Bastian,,,0.613,0.125
+2026-09-06-francs-borains-v-ksc-lokeren,home,Francs Borains,4-4-2,,2026-09-06T04:58:18Z,start,12,Raymond Asante,,,0.87,0.7
+2026-09-06-francs-borains-v-ksc-lokeren,home,Francs Borains,4-4-2,,2026-09-06T04:58:18Z,start,10,Aboubacar Ali Abdallah,,,0.87,0.3
+2026-09-06-francs-borains-v-ksc-lokeren,home,Francs Borains,4-4-2,,2026-09-06T04:58:18Z,bench,1,Noah Jauny,noah-jauny,,,
+2026-09-06-francs-borains-v-ksc-lokeren,home,Francs Borains,4-4-2,,2026-09-06T04:58:18Z,bench,23,Levi Malungu,,,,
+2026-09-06-francs-borains-v-ksc-lokeren,home,Francs Borains,4-4-2,,2026-09-06T04:58:18Z,bench,27,Nicolas Wasbauer,,,,
+2026-09-06-francs-borains-v-ksc-lokeren,home,Francs Borains,4-4-2,,2026-09-06T04:58:18Z,bench,7,Philipp Wydra,,,,
+2026-09-06-francs-borains-v-ksc-lokeren,home,Francs Borains,4-4-2,,2026-09-06T04:58:18Z,bench,16,Enguerran Faucon,,,,
+2026-09-06-francs-borains-v-ksc-lokeren,home,Francs Borains,4-4-2,,2026-09-06T04:58:18Z,bench,33,Noah Diliberto,,,,
+2026-09-06-francs-borains-v-ksc-lokeren,home,Francs Borains,4-4-2,,2026-09-06T04:58:18Z,bench,19,Enzo Faty,,,,
+2026-09-06-francs-borains-v-ksc-lokeren,home,Francs Borains,4-4-2,,2026-09-06T04:58:18Z,bench,25,Corenthyn Lavie,,,,
+2026-09-06-francs-borains-v-ksc-lokeren,home,Francs Borains,4-4-2,,2026-09-06T04:58:18Z,bench,47,Hossni Soye Ndime,,,,
+2026-09-06-francs-borains-v-ksc-lokeren,away,KSC Lokeren,4-2-3-1,,2026-09-06T04:58:18Z,start,56,Simon Vervacke,,,0.1,0.5
+2026-09-06-francs-borains-v-ksc-lokeren,away,KSC Lokeren,4-2-3-1,,2026-09-06T04:58:18Z,start,26,Jarno Vervaque,,,0.292,0.875
+2026-09-06-francs-borains-v-ksc-lokeren,away,KSC Lokeren,4-2-3-1,,2026-09-06T04:58:18Z,start,76,Jonas Lietaert,,,0.292,0.625
+2026-09-06-francs-borains-v-ksc-lokeren,away,KSC Lokeren,4-2-3-1,,2026-09-06T04:58:18Z,start,29,Andreas Spegelaere,,,0.292,0.375
+2026-09-06-francs-borains-v-ksc-lokeren,away,KSC Lokeren,4-2-3-1,,2026-09-06T04:58:18Z,start,16,Jordi Palacios,,,0.292,0.125
+2026-09-06-francs-borains-v-ksc-lokeren,away,KSC Lokeren,4-2-3-1,,2026-09-06T04:58:18Z,start,55,Sam van Aerschot,,,0.485,0.7
+2026-09-06-francs-borains-v-ksc-lokeren,away,KSC Lokeren,4-2-3-1,,2026-09-06T04:58:18Z,start,27,Rune van den Bergh,,,0.485,0.3
+2026-09-06-francs-borains-v-ksc-lokeren,away,KSC Lokeren,4-2-3-1,,2026-09-06T04:58:18Z,start,19,Matias Lloci,,,0.678,0.837
+2026-09-06-francs-borains-v-ksc-lokeren,away,KSC Lokeren,4-2-3-1,,2026-09-06T04:58:18Z,start,10,Maxime Pau,,,0.678,0.5
+2026-09-06-francs-borains-v-ksc-lokeren,away,KSC Lokeren,4-2-3-1,,2026-09-06T04:58:18Z,start,34,Jassim Mazouz,,,0.678,0.163
+2026-09-06-francs-borains-v-ksc-lokeren,away,KSC Lokeren,4-2-3-1,,2026-09-06T04:58:18Z,start,11,Vancy Mabanza,,,0.87,0.5
+2026-09-06-francs-borains-v-ksc-lokeren,away,KSC Lokeren,4-2-3-1,,2026-09-06T04:58:18Z,bench,61,Viktor van Israel,,,,
+2026-09-06-francs-borains-v-ksc-lokeren,away,KSC Lokeren,4-2-3-1,,2026-09-06T04:58:18Z,bench,2,Robin Denuit,,,,
+2026-09-06-francs-borains-v-ksc-lokeren,away,KSC Lokeren,4-2-3-1,,2026-09-06T04:58:18Z,bench,14,Toon Janseen,,,,
+2026-09-06-francs-borains-v-ksc-lokeren,away,KSC Lokeren,4-2-3-1,,2026-09-06T04:58:18Z,bench,8,Luan Simnica,,,,
+2026-09-06-francs-borains-v-ksc-lokeren,away,KSC Lokeren,4-2-3-1,,2026-09-06T04:58:18Z,bench,80,Modeste Duku,,,,
+2026-09-06-francs-borains-v-ksc-lokeren,away,KSC Lokeren,4-2-3-1,,2026-09-06T04:58:18Z,bench,7,Anisse Brrou,,,,
+2026-09-06-francs-borains-v-ksc-lokeren,away,KSC Lokeren,4-2-3-1,,2026-09-06T04:58:18Z,bench,25,Jérôme Arens,,,,
+2026-09-06-francs-borains-v-ksc-lokeren,away,KSC Lokeren,4-2-3-1,,2026-09-06T04:58:18Z,bench,75,Ilyas Zerioh,,,,
+2026-09-06-francs-borains-v-ksc-lokeren,away,KSC Lokeren,4-2-3-1,,2026-09-06T04:58:18Z,bench,17,Aboubacar Dindane,,,,
+2026-09-06-vancouver-fc-v-supra-du-quebec,home,Vancouver FC,4-2-3-1,,2026-09-06T04:58:18Z,start,1,Callum Irving,,,0.1,0.5
+2026-09-06-vancouver-fc-v-supra-du-quebec,home,Vancouver FC,4-2-3-1,,2026-09-06T04:58:18Z,start,3,Morey Doner,,,0.292,0.875
+2026-09-06-vancouver-fc-v-supra-du-quebec,home,Vancouver FC,4-2-3-1,,2026-09-06T04:58:18Z,start,5,Matteo Campagna,,,0.292,0.625
+2026-09-06-vancouver-fc-v-supra-du-quebec,home,Vancouver FC,4-2-3-1,,2026-09-06T04:58:18Z,start,30,Tom Field,tom-field,,0.292,0.375
+2026-09-06-vancouver-fc-v-supra-du-quebec,home,Vancouver FC,4-2-3-1,,2026-09-06T04:58:18Z,start,23,Kian Hugh Proctor,,,0.292,0.125
+2026-09-06-vancouver-fc-v-supra-du-quebec,home,Vancouver FC,4-2-3-1,,2026-09-06T04:58:18Z,start,15,Abdoulaye Ouattara,,,0.485,0.7
+2026-09-06-vancouver-fc-v-supra-du-quebec,home,Vancouver FC,4-2-3-1,,2026-09-06T04:58:18Z,start,21,Marcello Polisi,,,0.485,0.3
+2026-09-06-vancouver-fc-v-supra-du-quebec,home,Vancouver FC,4-2-3-1,,2026-09-06T04:58:18Z,start,7,Elage Bah,,,0.678,0.837
+2026-09-06-vancouver-fc-v-supra-du-quebec,home,Vancouver FC,4-2-3-1,,2026-09-06T04:58:18Z,start,6,Damiano Pecile,,,0.678,0.5
+2026-09-06-vancouver-fc-v-supra-du-quebec,home,Vancouver FC,4-2-3-1,,2026-09-06T04:58:18Z,start,10,Mohamed Amissi,,,0.678,0.163
+2026-09-06-vancouver-fc-v-supra-du-quebec,home,Vancouver FC,4-2-3-1,,2026-09-06T04:58:18Z,start,9,Lys Mousset,,,0.87,0.5
+2026-09-06-vancouver-fc-v-supra-du-quebec,home,Vancouver FC,4-2-3-1,,2026-09-06T04:58:18Z,bench,33,Henrik Regitnig,,,,
+2026-09-06-vancouver-fc-v-supra-du-quebec,home,Vancouver FC,4-2-3-1,,2026-09-06T04:58:18Z,bench,2,Paris Gee,,,,
+2026-09-06-vancouver-fc-v-supra-du-quebec,home,Vancouver FC,4-2-3-1,,2026-09-06T04:58:18Z,bench,20,Nicolás Mezquida,,,,
+2026-09-06-vancouver-fc-v-supra-du-quebec,home,Vancouver FC,4-2-3-1,,2026-09-06T04:58:18Z,bench,8,Luis Toomey,,,,
+2026-09-06-vancouver-fc-v-supra-du-quebec,home,Vancouver FC,4-2-3-1,,2026-09-06T04:58:18Z,bench,16,Benajmin Lee,,,,
+2026-09-06-vancouver-fc-v-supra-du-quebec,home,Vancouver FC,4-2-3-1,,2026-09-06T04:58:18Z,bench,14,Terran Campbell,,,,
+2026-09-06-vancouver-fc-v-supra-du-quebec,home,Vancouver FC,4-2-3-1,,2026-09-06T04:58:18Z,bench,11,Aboubacar Traore,,,,
+2026-09-06-vancouver-fc-v-supra-du-quebec,away,Supra du Québec,4-2-3-1,,2026-09-06T04:58:18Z,start,32,Joakim Milli,,,0.1,0.5
+2026-09-06-vancouver-fc-v-supra-du-quebec,away,Supra du Québec,4-2-3-1,,2026-09-06T04:58:18Z,start,2,Charles Auguste,,,0.292,0.875
+2026-09-06-vancouver-fc-v-supra-du-quebec,away,Supra du Québec,4-2-3-1,,2026-09-06T04:58:18Z,start,5,Keesean Ferdinand,,,0.292,0.625
+2026-09-06-vancouver-fc-v-supra-du-quebec,away,Supra du Québec,4-2-3-1,,2026-09-06T04:58:18Z,start,4,Matisse Chrétien,,,0.292,0.375
+2026-09-06-vancouver-fc-v-supra-du-quebec,away,Supra du Québec,4-2-3-1,,2026-09-06T04:58:18Z,start,11,Diyaeddine Abzi,,,0.292,0.125
+2026-09-06-vancouver-fc-v-supra-du-quebec,away,Supra du Québec,4-2-3-1,,2026-09-06T04:58:18Z,start,6,Alessandro Biello,,,0.485,0.7
+2026-09-06-vancouver-fc-v-supra-du-quebec,away,Supra du Québec,4-2-3-1,,2026-09-06T04:58:18Z,start,24,Safwane Mlah,,,0.485,0.3
+2026-09-06-vancouver-fc-v-supra-du-quebec,away,Supra du Québec,4-2-3-1,,2026-09-06T04:58:18Z,start,7,David Choinière,,,0.678,0.837
+2026-09-06-vancouver-fc-v-supra-du-quebec,away,Supra du Québec,4-2-3-1,,2026-09-06T04:58:18Z,start,10,Sean Rea,,,0.678,0.5
+2026-09-06-vancouver-fc-v-supra-du-quebec,away,Supra du Québec,4-2-3-1,,2026-09-06T04:58:18Z,start,9,Loïc Kwemi,,,0.678,0.163
+2026-09-06-vancouver-fc-v-supra-du-quebec,away,Supra du Québec,4-2-3-1,,2026-09-06T04:58:18Z,start,99,Ibrahim Condé,,,0.87,0.5
+2026-09-06-vancouver-fc-v-supra-du-quebec,away,Supra du Québec,4-2-3-1,,2026-09-06T04:58:18Z,bench,80,Makhoudia Diop,,,,
+2026-09-06-vancouver-fc-v-supra-du-quebec,away,Supra du Québec,4-2-3-1,,2026-09-06T04:58:18Z,bench,23,Zach Fernandez,,,,
+2026-09-06-vancouver-fc-v-supra-du-quebec,away,Supra du Québec,4-2-3-1,,2026-09-06T04:58:18Z,bench,3,Thomas Lebeuf,,,,
+2026-09-06-vancouver-fc-v-supra-du-quebec,away,Supra du Québec,4-2-3-1,,2026-09-06T04:58:18Z,bench,49,Eliakim Awonongbadje,,,,
+2026-09-06-vancouver-fc-v-supra-du-quebec,away,Supra du Québec,4-2-3-1,,2026-09-06T04:58:18Z,bench,8,Omar Elkalouli,,,,
+2026-09-06-vancouver-fc-v-supra-du-quebec,away,Supra du Québec,4-2-3-1,,2026-09-06T04:58:18Z,bench,33,Aboubacar Sissoko,,,,
+2026-09-06-vancouver-fc-v-supra-du-quebec,away,Supra du Québec,4-2-3-1,,2026-09-06T04:58:18Z,bench,92,Noah Santos,,,,
+2026-09-06-vancouver-fc-v-supra-du-quebec,away,Supra du Québec,4-2-3-1,,2026-09-06T04:58:18Z,bench,13,Alexander Makarova,,,,
+2026-09-06-vancouver-fc-v-supra-du-quebec,away,Supra du Québec,4-2-3-1,,2026-09-06T04:58:18Z,bench,77,Riad Bey,,,,
+2026-09-07-cagliari-v-lecce,home,Cagliari,4-2-3-1,,2026-09-06T04:58:18Z,start,1,Elia Caprile,,,0.1,0.5
+2026-09-07-cagliari-v-lecce,home,Cagliari,4-2-3-1,,2026-09-06T04:58:18Z,start,2,Zé Pedro,,,0.292,0.875
+2026-09-07-cagliari-v-lecce,home,Cagliari,4-2-3-1,,2026-09-06T04:58:18Z,start,14,Alessandro Deiola,,,0.292,0.625
+2026-09-07-cagliari-v-lecce,home,Cagliari,4-2-3-1,,2026-09-06T04:58:18Z,start,15,Juan Rodríguez,,,0.292,0.375
+2026-09-07-cagliari-v-lecce,home,Cagliari,4-2-3-1,,2026-09-06T04:58:18Z,start,33,Adam Obert,,,0.292,0.125
+2026-09-07-cagliari-v-lecce,home,Cagliari,4-2-3-1,,2026-09-06T04:58:18Z,start,4,Alessandro Romano,,,0.485,0.7
+2026-09-07-cagliari-v-lecce,home,Cagliari,4-2-3-1,,2026-09-06T04:58:18Z,start,6,Harry Winks,,,0.485,0.3
+2026-09-07-cagliari-v-lecce,home,Cagliari,4-2-3-1,,2026-09-06T04:58:18Z,start,8,Michel Ndary Adopo,,,0.678,0.837
+2026-09-07-cagliari-v-lecce,home,Cagliari,4-2-3-1,,2026-09-06T04:58:18Z,start,70,Daniel Maldini,,,0.678,0.5
+2026-09-07-cagliari-v-lecce,home,Cagliari,4-2-3-1,,2026-09-06T04:58:18Z,start,10,Jacopo Fazzini,,,0.678,0.163
+2026-09-07-cagliari-v-lecce,home,Cagliari,4-2-3-1,,2026-09-06T04:58:18Z,start,31,Paul Mendy,,,0.87,0.5
+2026-09-07-cagliari-v-lecce,away,Lecce,3-5-2,,2026-09-06T04:58:18Z,start,30,Wladimiro Falcone,,,0.1,0.5
+2026-09-07-cagliari-v-lecce,away,Lecce,3-5-2,,2026-09-06T04:58:18Z,start,5,Jamil Siebert,,,0.357,0.79
+2026-09-07-cagliari-v-lecce,away,Lecce,3-5-2,,2026-09-06T04:58:18Z,start,4,Kialonda Gaspar,,,0.357,0.5
+2026-09-07-cagliari-v-lecce,away,Lecce,3-5-2,,2026-09-06T04:58:18Z,start,44,Tiago Gabriel,,,0.357,0.21
+2026-09-07-cagliari-v-lecce,away,Lecce,3-5-2,,2026-09-06T04:58:18Z,start,17,Danilo Veiga,,,0.613,0.89
+2026-09-07-cagliari-v-lecce,away,Lecce,3-5-2,,2026-09-06T04:58:18Z,start,29,Lassana Coulibaly,,,0.613,0.695
+2026-09-07-cagliari-v-lecce,away,Lecce,3-5-2,,2026-09-06T04:58:18Z,start,79,Oumar Ngom,,,0.613,0.5
+2026-09-07-cagliari-v-lecce,away,Lecce,3-5-2,,2026-09-06T04:58:18Z,start,28,Olaf Gorter,,,0.613,0.305
+2026-09-07-cagliari-v-lecce,away,Lecce,3-5-2,,2026-09-06T04:58:18Z,start,3,Corrie Ndaba,corrie-ndaba,,0.613,0.11
+2026-09-07-cagliari-v-lecce,away,Lecce,3-5-2,,2026-09-06T04:58:18Z,start,50,Santiago Pierotti,,,0.87,0.7
+2026-09-07-cagliari-v-lecce,away,Lecce,3-5-2,,2026-09-06T04:58:18Z,start,9,Nikola Stulic,,,0.87,0.3

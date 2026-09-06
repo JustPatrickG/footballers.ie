@@ -165,13 +165,13 @@ kickoff,competition,home,away,home_id,away_id,home_score,away_score,status,minut
 2026-09-05T18:30:00Z,First Division,Longford Town,Kerry FC,4569,1426348,,,scheduled,,aaron-doran;alex-obrien;andy-paraschiv;cole-omorehiomwan;daniel-mckenna;dean-george;dean-williams;emre-topcu;eric-koufie;eric-yoro;jake-hough;james-bailey;jamie-egan;kian-moore;matthew-britton;oisin-hand;oran-crowe;osaze-irhue;pharrell-manuel;scott-brady;stefan-ugbesia;taylor-mccarthy
 2026-09-05T19:00:00Z,Championship,Swansea City,Wrexham,10003,9841,0,0,ft,,adam-idah
 2026-09-05T19:00:00Z,Premiership,St. Mirren,Celtic,9800,9925,1,2,ft,,liam-scales
-2026-09-05T23:00:00Z,USL Championship,Sporting JAX,Lexington SC,1737991,1430405,,,scheduled,,aaron-molloy;harvey-neville
-2026-09-05T23:00:00Z,USL Championship,Detroit City FC,Hartford Athletic,540855,1003206,,,scheduled,,barry-coffey
-2026-09-05T23:00:00Z,USL Championship,Indy Eleven,Birmingham Legion FC,514649,1003207,,,scheduled,,josh-obrien
-2026-09-05T23:30:00Z,Major League Soccer,Columbus Crew,Colorado Rapids,6001,8314,,,scheduled,,brooks-lennon
-2026-09-05T23:30:00Z,Major League Soccer,Charlotte FC,Houston Dynamo FC,1323940,8259,,,scheduled,,joe-byrne
-2026-09-06T00:30:00Z,Major League Soccer,Austin FC,San Jose Earthquakes,1218886,6603,,,live,,jon-gallagher
-2026-09-06T01:00:00Z,USL Championship,Orange County SC,Sacramento Republic FC,267813,521004,,,scheduled,,lee-desmond
+2026-09-05T23:00:00Z,USL Championship,Sporting JAX,Lexington SC,1737991,1430405,3,2,ft,,aaron-molloy;harvey-neville;kieran-sadlier
+2026-09-05T23:00:00Z,USL Championship,Detroit City FC,Hartford Athletic,540855,1003206,1,1,ft,,barry-coffey
+2026-09-05T23:00:00Z,USL Championship,Indy Eleven,Birmingham Legion FC,514649,1003207,2,2,ft,,josh-obrien
+2026-09-05T23:30:00Z,MLS,Columbus Crew,Colorado Rapids,6001,8314,3,0,ft,,brooks-lennon
+2026-09-05T23:30:00Z,MLS,Charlotte FC,Houston Dynamo FC,1323940,8259,0,0,ft,,joe-byrne
+2026-09-06T00:30:00Z,MLS,Austin FC,San Jose Earthquakes,1218886,6603,1,1,ft,,jon-gallagher
+2026-09-06T01:00:00Z,USL Championship,Orange County SC,Sacramento Republic FC,267813,521004,1,1,ft,,lee-desmond
 2026-09-06T09:00:00Z,Segunda Federación,Deportiva Minera,Peña Dep. Santa Eulalia,278805,8210,,,scheduled,,kevin-toner
 2026-09-06T11:30:00Z,2. Bundesliga,Hertha BSC,Magdeburg,8177,8188,,,scheduled,,anselmo-garcia-macnulty
 2026-09-06T11:30:00Z,Belgian Pro League,Cercle Brugge,Gent,9984,9991,,,scheduled,,tayo-adaramola
@@ -246,6 +246,7 @@ kickoff,competition,home,away,home_id,away_id,home_score,away_score,status,minut
 2026-09-09T23:30:00Z,Major League Soccer,CF Montréal,Charlotte FC,161195,1323940,,,scheduled,,joe-byrne
 2026-09-10T00:00:00Z,Major League Soccer,New York City FC,New England Revolution,546238,6580,,,scheduled,,kevin-otoole
 2026-09-10T00:30:00Z,Major League Soccer,Austin FC,Colorado,1218886,8314,,,scheduled,,jon-gallagher
+2026-09-10T00:30:00Z,Major League Soccer,Austin FC,Colorado Rapids,1218886,8314,,,scheduled,,jon-gallagher
 2026-09-10T19:00:00Z,League One,Stevenage,Luton Town,10253,8346,,,scheduled,,callum-marshall;josh-keeley
 2026-09-11T17:00:00Z,Super Lig,Beşiktaş,Erzurumspor FK,10188,281467,,,scheduled,,festy-ebosele
 2026-09-11T17:00:00Z,Regionalliga Bayern,TSV Aubstadt,Unterhaching,340719,8486,,,scheduled,,kyle-degelman
@@ -566,3 +567,4 @@ kickoff,competition,home,away,home_id,away_id,home_score,away_score,status,minut
 2026-09-19T23:30:00Z,Major League Soccer,DC United,Charlotte FC,6602,1323940,,,scheduled,,joe-byrne
 2026-09-20T00:00:00Z,Premier League,Pacific FC,Vancouver FC,1022953,1436202,,,scheduled,,tom-field
 2026-09-20T00:30:00Z,Major League Soccer,Dallas,Austin FC,6399,1218886,,,scheduled,,jon-gallagher
+2026-09-20T02:30:00Z,USL Championship,Las Vegas Lights FC,Hartford Athletic,915809,1003206,,,scheduled,,barry-coffey
