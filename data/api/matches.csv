@@ -171,7 +171,7 @@ kickoff,competition,home,away,home_id,away_id,home_score,away_score,status,minut
 2026-09-06T00:30:00Z,MLS,Austin FC,San Jose Earthquakes,1218886,6603,1,1,ft,,jon-gallagher
 2026-09-06T01:00:00Z,USL Championship,Orange County SC,Sacramento Republic FC,267813,521004,1,1,ft,,lee-desmond
 2026-09-06T09:00:00Z,Segunda Federación,Deportiva Minera,Peña Dep. Santa Eulalia,278805,8210,,,live,,kevin-toner
-2026-09-06T11:30:00Z,2. Bundesliga,Hertha BSC,Magdeburg,8177,8188,,,scheduled,,anselmo-garcia-macnulty
+2026-09-06T11:30:00Z,2. Bundesliga,Hertha BSC,Magdeburg,8177,8188,2,1,ft,,anselmo-garcia-macnulty
 2026-09-06T11:30:00Z,Belgian Pro League,Cercle Brugge,Gent,9984,9991,,,scheduled,,tayo-adaramola
 2026-09-06T13:00:00Z,Premier League,Everton,Manchester United,8668,10260,,,scheduled,,desmond-armstrong;jake-obrien;mark-travers
 2026-09-06T14:00:00Z,Premiership,Heart of Midlothian,Dundee FC,9860,8284,,,scheduled,,bobby-wales;jack-moorhouse;kieran-ohara;oisin-mcentee
@@ -353,6 +353,7 @@ kickoff,competition,home,away,home_id,away_id,home_score,away_score,status,minut
 2026-09-12T16:30:00Z,Premier League,Tottenham,Everton,8586,8668,,,scheduled,,desmond-armstrong;jake-obrien;mark-travers
 2026-09-12T16:30:00Z,National League,Carlisle United,Southend United,10196,8652,,,scheduled,,promise-omochere
 2026-09-12T16:30:00Z,Premier League,Colwyn Bay,Connah's Quay Nomads,207869,2193,,,scheduled,,shane-flynn
+2026-09-12T16:30:00Z,Premier League,Tottenham Hotspur,Everton,8586,8668,,,scheduled,,desmond-armstrong;jake-obrien;mark-travers
 2026-09-12T16:45:00Z,League Cup,Kilmarnock,Aberdeen,8597,8485,,,scheduled,,cathal-mccarthy;connor-ronan;gavin-molloy
 2026-09-12T17:00:00Z,Premiership,Dungannon Swifts,Linfield,4615,7971,,,scheduled,,chris-shields;darragh-leahy;kealan-dillon;paul-doyle;ryan-patrick-nolan
 2026-09-12T17:00:00Z,Super Lig,Alanyaspor,Göztepe,4678,1925,,,scheduled,,sinclair-armstrong
