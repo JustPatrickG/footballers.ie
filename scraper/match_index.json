@@ -2932,19 +2932,6 @@
   ]
  },
  {
-  "fotmob_id": "5071307",
-  "url": "/matches/columbus-crew-vs-new-england-revolution/1b4jcj#5071307",
-  "kickoff": "2026-08-30T20:30:00Z",
-  "comp": "MLS",
-  "home": "Columbus Crew",
-  "away": "New England Revolution",
-  "home_id": "6001",
-  "away_id": "6580",
-  "slugs": [
-   "brooks-lennon"
-  ]
- },
- {
   "fotmob_id": "5071337",
   "url": "/matches/columbus-crew-vs-dc-united/1bah4k#5071337",
   "kickoff": "2026-09-09T23:30:00Z",
@@ -6812,6 +6799,19 @@
   "away": "Brooklyn",
   "home_id": "514649",
   "away_id": "1877733",
+  "slugs": [
+   "josh-obrien"
+  ]
+ },
+ {
+  "fotmob_id": "5109958",
+  "url": "/matches/indy-eleven-vs-oakland-roots-sc/h9m287se#5109958",
+  "kickoff": "2026-09-20T21:00:00Z",
+  "comp": "USL Championship",
+  "home": "Indy Eleven",
+  "away": "Oakland Roots SC",
+  "home_id": "514649",
+  "away_id": "1130413",
   "slugs": [
    "josh-obrien"
   ]
