@@ -5660,6 +5660,9 @@ match_id,minute,type,player,team,venue
 2026-09-05-charlotte-fc-v-houston-dynamo-fc,9,yellow,Felipe Andrade,Houston Dynamo FC,Bank of America Stadium
 2026-09-05-charlotte-fc-v-houston-dynamo-fc,45,yellow,Tim Ream,Charlotte FC,Bank of America Stadium
 2026-09-05-charlotte-fc-v-houston-dynamo-fc,49,yellow,Djibril Diani,Charlotte FC,Bank of America Stadium
+2026-09-05-charlotte-fc-v-houston-dynamo-fc,66,sub_off,Duncan McGuire,Houston Dynamo FC,Bank of America Stadium
+2026-09-05-charlotte-fc-v-houston-dynamo-fc,66,sub_on,Ibrahim Aliyu,Houston Dynamo FC,Bank of America Stadium
+2026-09-05-charlotte-fc-v-houston-dynamo-fc,66,yellow,Agustin Resch,Houston Dynamo FC,Bank of America Stadium
 2026-09-05-chelmsford-v-salisbury,31,goal,Robbie Gallagher,Salisbury,Melbourne Stadium
 2026-09-05-chelmsford-v-salisbury,40,goal,George Alexander,Chelmsford,Melbourne Stadium
 2026-09-05-cheltenham-town-v-grimsby-town,12,goal,Charlie McCann,Cheltenham Town,EV Charger Points Stadium
@@ -5732,6 +5735,8 @@ match_id,minute,type,player,team,venue
 2026-09-05-columbus-crew-v-colorado-rapids,59,sub_on,Alex Harris,Colorado Rapids,ScottsMiracle-Gro Field
 2026-09-05-columbus-crew-v-colorado-rapids,59,sub_on,Reggie Cannon,Colorado Rapids,ScottsMiracle-Gro Field
 2026-09-05-columbus-crew-v-colorado-rapids,59,sub_on,Kosi Thompson,Colorado Rapids,ScottsMiracle-Gro Field
+2026-09-05-columbus-crew-v-colorado-rapids,68,sub_off,Wayne Frederick,Colorado Rapids,ScottsMiracle-Gro Field
+2026-09-05-columbus-crew-v-colorado-rapids,68,sub_on,Donavan Phillip,Colorado Rapids,ScottsMiracle-Gro Field
 2026-09-05-cong-an-ho-chi-minh-city-v-ha-noi-fc,27,goal,Nguyen Tien Linh,Cong An Ho Chí Minh City,Stadium
 2026-09-05-cong-an-ho-chi-minh-city-v-ha-noi-fc,50,goal,Nguyen Thái Quoc Cuong,Cong An Ho Chí Minh City,Stadium
 2026-09-05-cong-an-ho-chi-minh-city-v-ha-noi-fc,65,goal,Andrew Jung,Ha Nội FC,Stadium
@@ -6723,23 +6728,27 @@ match_id,minute,type,player,team,venue
 2026-09-05-spalding-united-v-southport,75,goal,Sam Straughan-Brown,Spalding United,Sir Halley Stewart Field
 2026-09-05-sporting-jax-v-lexington-sc,19,goal,Kieran Sadlier,Sporting JAX,Hodges Stadium
 2026-09-05-sporting-jax-v-lexington-sc,60,yellow,Jordan Rossiter,Sporting JAX,Hodges Stadium
-2026-09-05-sporting-jax-v-lexington-sc,69,sub_off,Malcolm Fry,Lexington SC,Hodges Stadium
 2026-09-05-sporting-jax-v-lexington-sc,69,sub_off,Nicolas Firmino,Lexington SC,Hodges Stadium
-2026-09-05-sporting-jax-v-lexington-sc,69,sub_on,Tarik Scott,Lexington SC,Hodges Stadium
+2026-09-05-sporting-jax-v-lexington-sc,69,sub_off,Malcolm Fry,Lexington SC,Hodges Stadium
 2026-09-05-sporting-jax-v-lexington-sc,69,sub_on,Milo Yosef,Lexington SC,Hodges Stadium
+2026-09-05-sporting-jax-v-lexington-sc,69,sub_on,Tarik Scott,Lexington SC,Hodges Stadium
 2026-09-05-sporting-jax-v-lexington-sc,72,sub_off,Kieran Sadlier,Sporting JAX,Hodges Stadium
 2026-09-05-sporting-jax-v-lexington-sc,72,sub_on,Harvey Neville,Sporting JAX,Hodges Stadium
 2026-09-05-sporting-jax-v-lexington-sc,73,goal,Marcus Epps,Lexington SC,Hodges Stadium
-2026-09-05-sporting-jax-v-lexington-sc,80,sub_off,Marcus Godinho,Sporting JAX,Hodges Stadium
 2026-09-05-sporting-jax-v-lexington-sc,80,sub_off,Rafferty Pedder,Sporting JAX,Hodges Stadium
-2026-09-05-sporting-jax-v-lexington-sc,80,sub_on,Thomas Roberts,Sporting JAX,Hodges Stadium
+2026-09-05-sporting-jax-v-lexington-sc,80,sub_off,Marcus Godinho,Sporting JAX,Hodges Stadium
 2026-09-05-sporting-jax-v-lexington-sc,80,sub_on,Ahmad Al-Qaq,Sporting JAX,Hodges Stadium
+2026-09-05-sporting-jax-v-lexington-sc,80,sub_on,Thomas Roberts,Sporting JAX,Hodges Stadium
 2026-09-05-sporting-jax-v-lexington-sc,84,goal,Xavier Zengue,Lexington SC,Hodges Stadium
-2026-09-05-sporting-jax-v-lexington-sc,86,sub_off,Wan Kuzain,Sporting JAX,Hodges Stadium
 2026-09-05-sporting-jax-v-lexington-sc,86,sub_off,Wahab Ackwei,Sporting JAX,Hodges Stadium
-2026-09-05-sporting-jax-v-lexington-sc,86,sub_on,Adam Luckhurst,Sporting JAX,Hodges Stadium
+2026-09-05-sporting-jax-v-lexington-sc,86,sub_off,Wan Kuzain,Sporting JAX,Hodges Stadium
 2026-09-05-sporting-jax-v-lexington-sc,86,sub_on,Antonio Gomez,Sporting JAX,Hodges Stadium
+2026-09-05-sporting-jax-v-lexington-sc,86,sub_on,Adam Luckhurst,Sporting JAX,Hodges Stadium
 2026-09-05-sporting-jax-v-lexington-sc,88,goal,Emil Jääskeläinen,Sporting JAX,Hodges Stadium
+2026-09-05-sporting-jax-v-lexington-sc,90,goal,Ahmad Al-Qaq,Sporting JAX,Hodges Stadium
+2026-09-05-sporting-jax-v-lexington-sc,90,sub_off,Jacob Greene,Lexington SC,Hodges Stadium
+2026-09-05-sporting-jax-v-lexington-sc,90,sub_on,Patrick Seagrist,Lexington SC,Hodges Stadium
+2026-09-05-sporting-jax-v-lexington-sc,90,yellow,Ahmad Al-Qaq,Sporting JAX,Hodges Stadium
 2026-09-05-st-mirren-v-celtic,8,yellow,Colby Donovan,Celtic,The Marbill Coaches Stadium
 2026-09-05-st-mirren-v-celtic,22,goal,Nikolas Agrafiotis,St. Mirren,The Marbill Coaches Stadium
 2026-09-05-st-mirren-v-celtic,37,yellow,Calvin Ramsay,St. Mirren,The Marbill Coaches Stadium
