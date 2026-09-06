@@ -5739,9 +5739,29 @@ match_id,minute,type,player,team,venue
 2026-09-05-columbus-crew-v-colorado-rapids,68,sub_on,Donavan Phillip,Colorado Rapids,ScottsMiracle-Gro Field
 2026-09-05-cong-an-ho-chi-minh-city-v-ha-noi-fc,27,goal,Nguyen Tien Linh,Cong An Ho Chí Minh City,Stadium
 2026-09-05-cong-an-ho-chi-minh-city-v-ha-noi-fc,50,goal,Nguyen Thái Quoc Cuong,Cong An Ho Chí Minh City,Stadium
+2026-09-05-cong-an-ho-chi-minh-city-v-ha-noi-fc,58,sub_off,Nguyen Thành Chung,Ha Nội FC,Stadium
+2026-09-05-cong-an-ho-chi-minh-city-v-ha-noi-fc,58,sub_on,Adam Taggart,Ha Nội FC,Stadium
 2026-09-05-cong-an-ho-chi-minh-city-v-ha-noi-fc,65,goal,Andrew Jung,Ha Nội FC,Stadium
+2026-09-05-cong-an-ho-chi-minh-city-v-ha-noi-fc,66,sub_off,Nguyen Tien Linh,Cong An Ho Chí Minh City,Stadium
+2026-09-05-cong-an-ho-chi-minh-city-v-ha-noi-fc,66,sub_off,Lenn-Minh Tran,Cong An Ho Chí Minh City,Stadium
+2026-09-05-cong-an-ho-chi-minh-city-v-ha-noi-fc,66,sub_on,Lee Williams,Cong An Ho Chí Minh City,Stadium
+2026-09-05-cong-an-ho-chi-minh-city-v-ha-noi-fc,66,sub_on,Khoa Ngo,Cong An Ho Chí Minh City,Stadium
 2026-09-05-cong-an-ho-chi-minh-city-v-ha-noi-fc,70,yellow,Pham Xuân Manh,Ha Nội FC,Stadium
+2026-09-05-cong-an-ho-chi-minh-city-v-ha-noi-fc,74,sub_off,Nguyen Thái Quoc Cuong,Cong An Ho Chí Minh City,Stadium
+2026-09-05-cong-an-ho-chi-minh-city-v-ha-noi-fc,74,sub_on,Quốc Gia Đào,Cong An Ho Chí Minh City,Stadium
+2026-09-05-cong-an-ho-chi-minh-city-v-ha-noi-fc,80,sub_off,Andrew Jung,Ha Nội FC,Stadium
+2026-09-05-cong-an-ho-chi-minh-city-v-ha-noi-fc,80,sub_on,Aymeric Faurand-Tournaire,Ha Nội FC,Stadium
 2026-09-05-cong-an-ho-chi-minh-city-v-ha-noi-fc,82,goal,Jason Cummings,Cong An Ho Chí Minh City,Stadium
+2026-09-05-cong-an-ho-chi-minh-city-v-ha-noi-fc,84,sub_off,Aldaír,Cong An Ho Chí Minh City,Stadium
+2026-09-05-cong-an-ho-chi-minh-city-v-ha-noi-fc,84,sub_off,Khong Minh Gia Bao,Cong An Ho Chí Minh City,Stadium
+2026-09-05-cong-an-ho-chi-minh-city-v-ha-noi-fc,84,sub_on,Juan Narváez,Cong An Ho Chí Minh City,Stadium
+2026-09-05-cong-an-ho-chi-minh-city-v-ha-noi-fc,84,sub_on,Hoàng Phúc Trần,Cong An Ho Chí Minh City,Stadium
+2026-09-05-cong-an-ho-chi-minh-city-v-ha-noi-fc,87,sub_off,Nguyen Hai Long,Ha Nội FC,Stadium
+2026-09-05-cong-an-ho-chi-minh-city-v-ha-noi-fc,87,sub_off,Vu Dình Hai,Ha Nội FC,Stadium
+2026-09-05-cong-an-ho-chi-minh-city-v-ha-noi-fc,87,sub_off,Yuval Sade,Ha Nội FC,Stadium
+2026-09-05-cong-an-ho-chi-minh-city-v-ha-noi-fc,87,sub_on,Nguyen Van Quyet,Ha Nội FC,Stadium
+2026-09-05-cong-an-ho-chi-minh-city-v-ha-noi-fc,87,sub_on,Nguyen Duc Anh,Ha Nội FC,Stadium
+2026-09-05-cong-an-ho-chi-minh-city-v-ha-noi-fc,87,sub_on,Anh Tiep Nguyen,Ha Nội FC,Stadium
 2026-09-05-crewe-alexandra-v-york-city,9,goal,Luke Offord,Crewe Alexandra,Mornflake Stadium
 2026-09-05-crewe-alexandra-v-york-city,13,yellow,Oliver Banks,York City,Mornflake Stadium
 2026-09-05-crewe-alexandra-v-york-city,29,yellow,Lewis Billington,Crewe Alexandra,Mornflake Stadium
@@ -7058,7 +7078,10 @@ match_id,minute,type,player,team,venue
 2026-09-06-austin-fc-v-san-jose-earthquakes,88,sub_off,Eduard Löwen,San Jose Earthquakes,Q2 Stadium
 2026-09-06-austin-fc-v-san-jose-earthquakes,88,sub_on,Nick Fernandez,San Jose Earthquakes,Q2 Stadium
 2026-09-06-austin-fc-v-san-jose-earthquakes,90,goal,Guilherme Biro,Austin FC,Q2 Stadium
+2026-09-06-cercle-brugge-v-gent,,,,,Jan Breydelstadion
 2026-09-06-deportiva-minera-v-pena-dep-santa-eulalia,,,,,Stadium
+2026-09-06-hertha-bsc-v-magdeburg,10,goal,Josip Brekalo,Hertha BSC,Olympiastadion Berlin
+2026-09-06-hertha-bsc-v-magdeburg,12,yellow,Jón Thorsteinsson,Hertha BSC,Olympiastadion Berlin
 2026-09-06-orange-county-sc-v-sacramento-republic-fc,19,yellow,Tyler Wolff,Sacramento Republic FC,Championship Soccer Stadium
 2026-09-06-orange-county-sc-v-sacramento-republic-fc,61,goal,Chris Hegardt,Orange County SC,Championship Soccer Stadium
 2026-09-06-orange-county-sc-v-sacramento-republic-fc,62,sub_off,Cal Jennings,Sacramento Republic FC,Championship Soccer Stadium
