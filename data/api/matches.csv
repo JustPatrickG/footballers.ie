@@ -135,6 +135,8 @@ kickoff,competition,home,away,home_id,away_id,home_score,away_score,status,minut
 2026-09-07T16:30:00Z,Serie A,Cagliari,Lecce,8529,9888,1,0,ft,,corrie-ndaba
 2026-09-07T17:00:00Z,Süper Lig,Göztepe,Gaziantep FK,1925,4081,2,4,ft,,sinclair-armstrong
 2026-09-07T18:30:00Z,Serie C,Catania,Cosenza,8530,6456,,,live,,ed-mcjannett
+2026-09-07T18:45:00Z,Serie A,Udinese,Lazio,8600,8543,1,2,ft,,james-abankwah
+2026-09-07T19:00:00Z,League One,Bromley,AFC Wimbledon,45729,158319,0,2,ft,,owen-mason
 2026-09-08T15:00:00Z,Veikkausliiga Relegation Group,TPS,SJK,6633,162162,,,scheduled,,aaron-okpolokpo;josh-okpolokpo
 2026-09-08T18:00:00Z,EFL Trophy,Exeter City,Tottenham Hotspur U21,9833,860802,,,scheduled,,aaron-maguire;charlie-cummins;jake-doyle-hayes
 2026-09-08T18:00:00Z,National League Cup,FC Halifax Town,Wolverhampton Wanderers U21,10195,773683,,,scheduled,,conor-carty;max-bardell;nathan-fraser;zak-gilsenan
@@ -227,6 +229,7 @@ kickoff,competition,home,away,home_id,away_id,home_score,away_score,status,minut
 2026-09-12T11:30:00Z,National League,Worthing,Barrow,282351,6350,,,scheduled,,harvey-boddy
 2026-09-12T11:30:00Z,Championship,West Brom,QPR,8659,10172,,,scheduled,,jayson-molumby;max-oleary;mikey-johnston
 2026-09-12T11:30:00Z,League Two,Crawley Town,Cheltenham Town,8647,8680,,,scheduled,,jordan-shipley;justin-ferizaj;lewis-richards;louie-watson;pierce-sweeney
+2026-09-12T11:30:00Z,League One,Notts County,Bradford,9819,8484,,,scheduled,,corey-okeeffe;tyreik-wright
 2026-09-12T12:15:00Z,V-League,Ha Nội FC,Song Lam Nghe An,179219,179221,,,scheduled,,cyrus-christie
 2026-09-12T13:00:00Z,Serie C,Cosenza,Cavese,6456,6063,,,scheduled,,ed-mcjannett
 2026-09-12T13:00:00Z,Premier League 2,Arsenal U21,Chelsea U21,950214,773652,,,scheduled,,justin-osagie;shaun-wade
@@ -296,6 +299,7 @@ kickoff,competition,home,away,home_id,away_id,home_score,away_score,status,minut
 2026-09-12T14:00:00Z,National League North,Morecambe,Brackley Town,8489,158321,,,scheduled,,shane-byrne
 2026-09-12T14:00:00Z,Championship,Raith Rovers,Arbroath,10250,8280,,,scheduled,,zak-delaney
 2026-09-12T14:00:00Z,Premiership,Crusaders,Limavady,1937,2205,,,scheduled,,billy-vance
+2026-09-12T14:00:00Z,League One,Mansfield,Huddersfield,9818,9796,,,scheduled,,marcus-harness;sean-roughan
 2026-09-12T16:00:00Z,Veikkausliiga Relegation Group,FF Jaro,SJK,8473,162162,,,scheduled,,aaron-okpolokpo;josh-okpolokpo
 2026-09-12T16:30:00Z,Premier League,Tottenham Hotspur,Everton,8586,8668,,,scheduled,,desmond-armstrong;jake-obrien;mark-travers
 2026-09-12T16:30:00Z,National League,Carlisle United,Southend United,10196,8652,,,scheduled,,promise-omochere
@@ -530,5 +534,3 @@ kickoff,competition,home,away,home_id,away_id,home_score,away_score,status,minut
 2026-09-20T21:00:00Z,USL Championship,Indy Eleven,Oakland Roots SC,514649,1130413,,,scheduled,,josh-obrien
 2026-09-20T23:00:00Z,USL Championship,Sacramento Republic FC,San Antonio FC,521004,722269,,,scheduled,,lee-desmond
 2026-09-21T18:00:00Z,Premier League 2,Bournemouth U21,Stoke City U21,2128213,773650,,,scheduled,,ade-solanke;gabriel-kelly;pijus-otegbayo
-2026-09-07T18:45:00Z,Serie A,Udinese,Lazio,8600,8543,,,scheduled,,james-abankwah
-2026-09-07T19:00:00Z,League One,Bromley,AFC Wimbledon,45729,158319,,,scheduled,,owen-mason
