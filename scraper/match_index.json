@@ -4264,32 +4264,6 @@
   ]
  },
  {
-  "fotmob_id": "5749656",
-  "url": "/matches/roma-vs-lecce/2upm4p#5749656",
-  "kickoff": "2026-08-31T16:30:00Z",
-  "comp": "Serie A",
-  "home": "Lecce",
-  "away": "Roma",
-  "home_id": "9888",
-  "away_id": "8686",
-  "slugs": [
-   "corrie-ndaba"
-  ]
- },
- {
-  "fotmob_id": "5749662",
-  "url": "/matches/cagliari-vs-lecce/2szdhl#5749662",
-  "kickoff": "2026-09-07T16:30:00Z",
-  "comp": "Serie A",
-  "home": "Cagliari",
-  "away": "Lecce",
-  "home_id": "8529",
-  "away_id": "9888",
-  "slugs": [
-   "corrie-ndaba"
-  ]
- },
- {
   "fotmob_id": "5749675",
   "url": "/matches/monza-vs-lecce/27zy6c#5749675",
   "kickoff": "2026-09-13T13:00:00Z",
@@ -8191,19 +8165,6 @@
   ]
  },
  {
-  "fotmob_id": "5904735",
-  "url": "/matches/goztepe-vs-gaziantep-fk/aqq5a#5904735",
-  "kickoff": "2026-09-07T17:00:00Z",
-  "comp": "Super Lig",
-  "home": "G\u00f6ztepe",
-  "away": "Gaziantep FK",
-  "home_id": "1925",
-  "away_id": "4081",
-  "slugs": [
-   "sinclair-armstrong"
-  ]
- },
- {
   "fotmob_id": "5904742",
   "url": "/matches/goztepe-vs-alanyaspor/czezs#5904742",
   "kickoff": "2026-09-12T17:00:00Z",
@@ -8501,6 +8462,32 @@
   "away_id": "2205",
   "slugs": [
    "billy-vance"
+  ]
+ },
+ {
+  "fotmob_id": "5749662",
+  "url": "/matches/cagliari-vs-lecce/2szdhl#5749662",
+  "kickoff": "2026-09-07T16:30:00Z",
+  "comp": "Serie A",
+  "home": "Cagliari",
+  "away": "Lecce",
+  "home_id": "8529",
+  "away_id": "9888",
+  "slugs": [
+   "corrie-ndaba"
+  ]
+ },
+ {
+  "fotmob_id": "5904735",
+  "url": "/matches/goztepe-vs-gaziantep-fk/aqq5a#5904735",
+  "kickoff": "2026-09-07T17:00:00Z",
+  "comp": "Super Lig",
+  "home": "G\u00f6ztepe",
+  "away": "Gaziantep FK",
+  "home_id": "1925",
+  "away_id": "4081",
+  "slugs": [
+   "sinclair-armstrong"
   ]
  },
  {

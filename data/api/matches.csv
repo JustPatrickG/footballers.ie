@@ -1,5 +1,4 @@
 kickoff,competition,home,away,home_id,away_id,home_score,away_score,status,minute,players
-2026-08-31T16:30:00Z,Serie A,Lecce,Roma,9888,8686,0,4,ft,,corrie-ndaba
 2026-08-31T18:00:00Z,Premier League 2,Brighton & Hove Albion U21,Arsenal U21,773678,950214,2,2,ft,,sean-keogh
 2026-09-01T18:45:00Z,League Two,Swindon Town,Port Vale,9795,9799,3,1,ft,,aaron-drinan
 2026-09-01T18:45:00Z,Championship,Swansea City,Watford,10003,9817,2,0,ft,,adam-idah;rocco-vata
@@ -134,8 +133,6 @@ kickoff,competition,home,away,home_id,away_id,home_score,away_score,status,minut
 2026-09-06T16:30:00Z,First Division A,Anderlecht,Genk,8635,9987,0,0,ft,,andrew-omobamidele
 2026-09-06T17:15:00Z,First Division B,Francs Borains,KSC Lokeren,96953,213307,3,0,ft,,noah-jauny
 2026-09-06T22:00:00Z,Premier League,Vancouver FC,Supra du Québec,1436202,1899648,3,2,ft,,tom-field
-2026-09-07T16:30:00Z,Serie A,Cagliari,Lecce,8529,9888,,,scheduled,,corrie-ndaba
-2026-09-07T17:00:00Z,Super Lig,Göztepe,Gaziantep FK,1925,4081,,,scheduled,,sinclair-armstrong
 2026-09-07T18:30:00Z,Serie C,Catania,Cosenza,8530,6456,,,scheduled,,ed-mcjannett
 2026-09-07T18:45:00Z,Serie A,Udinese,Lazio,8600,8543,,,scheduled,,james-abankwah
 2026-09-07T19:00:00Z,League One,Bromley,AFC Wimbledon,45729,158319,,,scheduled,,owen-mason
@@ -533,3 +530,5 @@ kickoff,competition,home,away,home_id,away_id,home_score,away_score,status,minut
 2026-09-20T18:45:00Z,Serie A,Milan,Lecce,8564,9888,,,scheduled,,corrie-ndaba
 2026-09-20T21:00:00Z,USL Championship,Indy Eleven,Oakland Roots SC,514649,1130413,,,scheduled,,josh-obrien
 2026-09-20T23:00:00Z,USL Championship,Sacramento Republic FC,San Antonio FC,521004,722269,,,scheduled,,lee-desmond
+2026-09-07T16:30:00Z,Serie A,Cagliari,Lecce,8529,9888,,,scheduled,,corrie-ndaba
+2026-09-07T17:00:00Z,Super Lig,Göztepe,Gaziantep FK,1925,4081,,,scheduled,,sinclair-armstrong
