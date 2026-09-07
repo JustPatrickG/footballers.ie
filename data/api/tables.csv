@@ -298,9 +298,9 @@ LaLiga,87,11,Espanyol,8558,4,1,1,2,6,5,1,4
 LaLiga,87,12,Racing Santander,8696,4,1,1,2,7,8,-1,4
 LaLiga,87,13,Rayo Vallecano,8370,4,1,1,2,7,10,-3,4
 LaLiga,87,14,Real Sociedad,8560,4,1,1,2,3,6,-3,4
-LaLiga,87,15,Getafe,8305,3,1,0,2,1,4,-3,3
-LaLiga,87,16,Villarreal,10205,4,0,2,2,6,8,-2,2
-LaLiga,87,17,Celta Vigo,9910,4,0,2,2,1,4,-3,2
+LaLiga,87,15,Getafe,8305,4,1,1,2,2,5,-3,4
+LaLiga,87,16,Celta Vigo,9910,5,0,3,2,2,5,-3,3
+LaLiga,87,17,Villarreal,10205,4,0,2,2,6,8,-2,2
 LaLiga,87,18,Málaga,9864,4,0,2,2,1,7,-6,2
 LaLiga,87,19,Elche,10268,3,0,1,2,3,9,-6,1
 LaLiga,87,20,Valencia,10267,4,0,1,3,1,9,-8,1
@@ -381,12 +381,12 @@ Serie A,55,5,Como,10171,3,2,1,0,7,3,4,7
 Serie A,55,6,Frosinone,9891,3,2,0,1,6,3,3,6
 Serie A,55,7,Lazio,8543,2,2,0,0,2,0,2,6
 Serie A,55,8,Atalanta,8524,3,2,0,1,4,3,1,6
-Serie A,55,9,Udinese,8600,2,1,1,0,4,3,1,4
-Serie A,55,10,Sassuolo,7943,3,1,1,1,5,5,0,4
-Serie A,55,11,Napoli,9875,3,1,0,2,5,5,0,3
-Serie A,55,12,Cagliari,8529,2,1,0,1,1,1,0,3
+Serie A,55,9,Cagliari,8529,3,2,0,1,2,1,1,6
+Serie A,55,10,Udinese,8600,2,1,1,0,4,3,1,4
+Serie A,55,11,Sassuolo,7943,3,1,1,1,5,5,0,4
+Serie A,55,12,Napoli,9875,3,1,0,2,5,5,0,3
 Serie A,55,13,Torino,9804,3,1,0,2,4,5,-1,3
-Serie A,55,14,Lecce,9888,2,1,0,1,2,4,-2,3
+Serie A,55,14,Lecce,9888,3,1,0,2,2,5,-3,3
 Serie A,55,15,Parma,10167,3,0,1,2,1,4,-3,1
 Serie A,55,16,Monza,6504,3,0,1,2,4,8,-4,1
 Serie A,55,17,Bologna,9857,3,0,1,2,2,4,-2,1
@@ -397,19 +397,19 @@ Super Lig,71,1,Galatasaray,8637,4,3,1,0,12,6,6,10
 Super Lig,71,2,Beşiktaş,10188,4,3,0,1,9,4,5,9
 Super Lig,71,3,Kocaelispor,1569,4,3,0,1,5,3,2,9
 Super Lig,71,4,Trabzonspor,9752,4,2,1,1,9,4,5,7
-Super Lig,71,5,Amed Sportif,96498,4,2,1,1,7,5,2,7
-Super Lig,71,6,Gençlerbirliği,7800,4,2,1,1,4,7,-3,7
-Super Lig,71,7,Fenerbahçe,8695,4,2,0,2,8,6,2,6
-Super Lig,71,8,Kasımpaşa,4685,4,1,3,0,5,4,1,6
-Super Lig,71,9,Rizespor,2166,3,2,0,1,3,3,0,6
-Super Lig,71,10,Başakşehir,1933,4,1,1,2,6,6,0,4
-Super Lig,71,11,Alanyaspor,4678,3,1,1,1,3,3,0,4
-Super Lig,71,12,Gaziantep FK,4081,3,1,1,1,3,3,0,4
+Super Lig,71,5,Gaziantep FK,4081,4,2,1,1,7,4,3,7
+Super Lig,71,6,Amed Sportif,96498,4,2,1,1,7,5,2,7
+Super Lig,71,7,Alanyaspor,4678,4,2,1,1,4,3,1,7
+Super Lig,71,8,Gençlerbirliği,7800,4,2,1,1,4,7,-3,7
+Super Lig,71,9,Fenerbahçe,8695,4,2,0,2,8,6,2,6
+Super Lig,71,10,Kasımpaşa,4685,4,1,3,0,5,4,1,6
+Super Lig,71,11,Rizespor,2166,4,2,0,2,3,4,-1,6
+Super Lig,71,12,Başakşehir,1933,4,1,1,2,6,6,0,4
 Super Lig,71,13,Samsunspor,9750,4,1,1,2,5,6,-1,4
 Super Lig,71,14,Çorum FK,357274,4,1,1,2,7,9,-2,4
 Super Lig,71,15,Erzurumspor FK,281467,4,1,1,2,2,8,-6,4
 Super Lig,71,16,Eyüpspor,4681,4,1,0,3,2,6,-4,3
-Super Lig,71,17,Göztepe,1925,3,0,1,2,5,7,-2,1
+Super Lig,71,17,Göztepe,1925,4,0,1,3,6,11,-5,1
 Super Lig,71,18,Konyaspor,8622,4,0,0,4,3,8,-5,0
 A-League,113,1,Adelaide United,8008,0,0,0,0,0,0,0,0
 A-League,113,2,Auckland FC,1642068,0,0,0,0,0,0,0,0
