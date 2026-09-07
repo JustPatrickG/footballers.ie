@@ -7122,6 +7122,19 @@
   ]
  },
  {
+  "fotmob_id": "5109959",
+  "url": "/matches/sacramento-republic-fc-vs-san-antonio-fc/9v1rzwi2#5109959",
+  "kickoff": "2026-09-20T23:00:00Z",
+  "comp": "USL Championship",
+  "home": "Sacramento Republic FC",
+  "away": "San Antonio FC",
+  "home_id": "521004",
+  "away_id": "722269",
+  "slugs": [
+   "lee-desmond"
+  ]
+ },
+ {
   "fotmob_id": "5959580",
   "url": "/matches/ross-county-vs-aberdeen-b/ahc42mvc#5959580",
   "kickoff": "2026-09-08T18:45:00Z",
@@ -9239,32 +9252,6 @@
   ]
  },
  {
-  "fotmob_id": "6022235",
-  "url": "/matches/aston-villa-u18-vs-brentford-u18/1vfl2xvvq#6022235",
-  "kickoff": "2026-09-05T11:00:00Z",
-  "comp": "Premier League U18",
-  "home": "Brentford U18",
-  "away": "Aston Villa U18",
-  "home_id": "2137381",
-  "away_id": "1113564",
-  "slugs": [
-   "aaron-oreilly"
-  ]
- },
- {
-  "fotmob_id": "6022227",
-  "url": "/matches/tottenham-hotspur-u18-vs-crystal-palace-u18/xnvg7o9z#6022227",
-  "kickoff": "2026-09-05T10:00:00Z",
-  "comp": "Premier League U18",
-  "home": "Crystal Palace U18",
-  "away": "Tottenham Hotspur U18",
-  "home_id": "1183385",
-  "away_id": "1113562",
-  "slugs": [
-   "alfie-mulvenna"
-  ]
- },
- {
   "fotmob_id": "6022237",
   "url": "/matches/birmingham-city-u18-vs-ipswich-town-u18/1o9dm2d4i#6022237",
   "kickoff": "2026-09-05T12:00:00Z",
@@ -9275,19 +9262,6 @@
   "away_id": "1791531",
   "slugs": [
    "christopher-atherton"
-  ]
- },
- {
-  "fotmob_id": "6022232",
-  "url": "/matches/manchester-united-u18-vs-middlesbrough-u18/vnasa88f#6022232",
-  "kickoff": "2026-09-05T11:00:00Z",
-  "comp": "Premier League U18",
-  "home": "Manchester United U18",
-  "away": "Middlesbrough U18",
-  "home_id": "1113551",
-  "away_id": "1113557",
-  "slugs": [
-   "eamonn-tohill"
   ]
  },
  {
