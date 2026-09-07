@@ -5080,23 +5080,10 @@
   ]
  },
  {
-  "fotmob_id": "5991412",
-  "url": "/matches/cosenza-vs-catania/1uv3yh#5991412",
-  "kickoff": "2026-09-07T18:30:00Z",
-  "comp": "Serie C",
-  "home": "Catania",
-  "away": "Cosenza",
-  "home_id": "8530",
-  "away_id": "6456",
-  "slugs": [
-   "ed-mcjannett"
-  ]
- },
- {
   "fotmob_id": "5991418",
   "url": "/matches/cavese-vs-cosenza/1anuuc#5991418",
   "kickoff": "2026-09-12T13:00:00Z",
-  "comp": "Serie C Grp. C",
+  "comp": "Serie C",
   "home": "Cosenza",
   "away": "Cavese",
   "home_id": "6456",
@@ -6028,6 +6015,19 @@
    "jake-griffin",
    "matthew-harris",
    "sam-foley"
+  ]
+ },
+ {
+  "fotmob_id": "5749669",
+  "url": "/matches/lazio-vs-udinese/2fhtto#5749669",
+  "kickoff": "2026-09-07T18:45:00Z",
+  "comp": "Serie A",
+  "home": "Udinese",
+  "away": "Lazio",
+  "home_id": "8600",
+  "away_id": "8543",
+  "slugs": [
+   "james-abankwah"
   ]
  },
  {
@@ -7582,6 +7582,19 @@
   ]
  },
  {
+  "fotmob_id": "5837137",
+  "url": "/matches/bromley-vs-afc-wimbledon/9kagq09#5837137",
+  "kickoff": "2026-09-07T19:00:00Z",
+  "comp": "League One",
+  "home": "Bromley",
+  "away": "AFC Wimbledon",
+  "home_id": "45729",
+  "away_id": "158319",
+  "slugs": [
+   "owen-mason"
+  ]
+ },
+ {
   "fotmob_id": "5906426",
   "url": "/matches/southend-united-vs-yeovil-town/2xsa8v#5906426",
   "kickoff": "2026-09-05T11:30:00Z",
@@ -8467,29 +8480,16 @@
   ]
  },
  {
-  "fotmob_id": "5749669",
-  "url": "/matches/lazio-vs-udinese/2fhtto#5749669",
-  "kickoff": "2026-09-07T18:45:00Z",
-  "comp": "Serie A",
-  "home": "Udinese",
-  "away": "Lazio",
-  "home_id": "8600",
-  "away_id": "8543",
+  "fotmob_id": "5991412",
+  "url": "/matches/cosenza-vs-catania/1uv3yh#5991412",
+  "kickoff": "2026-09-07T18:30:00Z",
+  "comp": "Serie C",
+  "home": "Catania",
+  "away": "Cosenza",
+  "home_id": "8530",
+  "away_id": "6456",
   "slugs": [
-   "james-abankwah"
-  ]
- },
- {
-  "fotmob_id": "5837137",
-  "url": "/matches/bromley-vs-afc-wimbledon/9kagq09#5837137",
-  "kickoff": "2026-09-07T19:00:00Z",
-  "comp": "League One",
-  "home": "Bromley",
-  "away": "AFC Wimbledon",
-  "home_id": "45729",
-  "away_id": "158319",
-  "slugs": [
-   "owen-mason"
+   "ed-mcjannett"
   ]
  },
  {
@@ -8577,19 +8577,6 @@
   "away_id": "2172",
   "slugs": [
    "ali-reghba"
-  ]
- },
- {
-  "fotmob_id": "5884836",
-  "url": "/matches/pena-dep-santa-eulalia-vs-deportiva-minera/ix6uahq#5884836",
-  "kickoff": "2026-09-06T09:00:00Z",
-  "comp": "Segunda Federaci\u00f3n",
-  "home": "Deportiva Minera",
-  "away": "Pe\u00f1a Dep. Santa Eulalia",
-  "home_id": "278805",
-  "away_id": "8210",
-  "slugs": [
-   "kevin-toner"
   ]
  },
  {
