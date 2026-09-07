@@ -13,13 +13,13 @@ League One,108,11,Blackpool,8483,5,2,1,2,9,7,2,7
 League One,108,12,Notts County,9819,5,1,4,0,7,6,1,7
 League One,108,13,Plymouth Argyle,8401,5,2,1,2,7,8,-1,7
 League One,108,14,Barnsley,8283,5,2,1,2,6,8,-2,7
-League One,108,15,Stevenage,10253,5,1,3,1,9,6,3,6
-League One,108,16,Mansfield Town,9818,5,2,0,3,8,11,-3,6
-League One,108,17,Leicester City,8197,5,1,2,2,4,7,-3,5
-League One,108,18,Milton Keynes Dons,8645,5,0,4,1,7,9,-2,4
-League One,108,19,AFC Wimbledon,158319,4,1,1,2,2,7,-5,4
+League One,108,15,AFC Wimbledon,158319,5,2,1,2,4,7,-3,7
+League One,108,16,Stevenage,10253,5,1,3,1,9,6,3,6
+League One,108,17,Mansfield Town,9818,5,2,0,3,8,11,-3,6
+League One,108,18,Leicester City,8197,5,1,2,2,4,7,-3,5
+League One,108,19,Milton Keynes Dons,8645,5,0,4,1,7,9,-2,4
 League One,108,20,Peterborough United,8677,5,1,1,3,3,9,-6,4
-League One,108,21,Bromley,45729,4,1,1,2,4,13,-9,4
+League One,108,21,Bromley,45729,5,1,1,3,4,15,-11,4
 League One,108,22,Doncaster Rovers,9903,5,0,3,2,6,8,-2,3
 League One,108,23,Wycombe Wanderers,8676,5,0,3,2,7,12,-5,3
 League One,108,24,Wigan Athletic,8528,5,1,0,4,5,11,-6,3
@@ -292,17 +292,17 @@ LaLiga,87,5,Deportivo A Coruña,9783,4,2,2,0,8,5,3,8
 LaLiga,87,6,Atlético Madrid,9906,4,2,1,1,7,6,1,7
 LaLiga,87,7,Sevilla,8302,4,2,1,1,7,6,1,7
 LaLiga,87,8,Osasuna,8371,4,2,1,1,5,6,-1,7
-LaLiga,87,9,Athletic Club,8315,4,2,0,2,6,5,1,6
-LaLiga,87,10,Levante,8581,4,1,2,1,5,5,0,5
-LaLiga,87,11,Espanyol,8558,4,1,1,2,6,5,1,4
-LaLiga,87,12,Racing Santander,8696,4,1,1,2,7,8,-1,4
-LaLiga,87,13,Rayo Vallecano,8370,4,1,1,2,7,10,-3,4
-LaLiga,87,14,Real Sociedad,8560,4,1,1,2,3,6,-3,4
+LaLiga,87,9,Real Sociedad,8560,5,2,1,2,5,6,-1,7
+LaLiga,87,10,Athletic Club,8315,4,2,0,2,6,5,1,6
+LaLiga,87,11,Levante,8581,4,1,2,1,5,5,0,5
+LaLiga,87,12,Espanyol,8558,4,1,1,2,6,5,1,4
+LaLiga,87,13,Racing Santander,8696,4,1,1,2,7,8,-1,4
+LaLiga,87,14,Rayo Vallecano,8370,4,1,1,2,7,10,-3,4
 LaLiga,87,15,Getafe,8305,4,1,1,2,2,5,-3,4
 LaLiga,87,16,Celta Vigo,9910,5,0,3,2,2,5,-3,3
 LaLiga,87,17,Villarreal,10205,4,0,2,2,6,8,-2,2
 LaLiga,87,18,Málaga,9864,4,0,2,2,1,7,-6,2
-LaLiga,87,19,Elche,10268,3,0,1,2,3,9,-6,1
+LaLiga,87,19,Elche,10268,4,0,1,3,3,11,-8,1
 LaLiga,87,20,Valencia,10267,4,0,1,3,1,9,-8,1
 2. Bundesliga,146,1,Hertha BSC,8177,4,4,0,0,12,5,7,12
 2. Bundesliga,146,2,1. FC Nürnberg,8165,4,3,1,0,13,5,8,10
@@ -375,15 +375,15 @@ Highland / Lowland,9545,17,Wick Academy,1776,9,1,0,8,5,26,-21,3
 Highland / Lowland,9545,18,Rothes,97917,8,1,0,7,6,33,-27,3
 Serie A,55,1,Roma,8686,3,3,0,0,10,1,9,9
 Serie A,55,2,Inter,8636,3,3,0,0,8,3,5,9
-Serie A,55,3,Milan,8564,3,2,1,0,5,2,3,7
-Serie A,55,4,Juventus,9885,3,2,1,0,4,1,3,7
-Serie A,55,5,Como,10171,3,2,1,0,7,3,4,7
-Serie A,55,6,Frosinone,9891,3,2,0,1,6,3,3,6
-Serie A,55,7,Lazio,8543,2,2,0,0,2,0,2,6
+Serie A,55,3,Lazio,8543,3,3,0,0,4,1,3,9
+Serie A,55,4,Milan,8564,3,2,1,0,5,2,3,7
+Serie A,55,5,Juventus,9885,3,2,1,0,4,1,3,7
+Serie A,55,6,Como,10171,3,2,1,0,7,3,4,7
+Serie A,55,7,Frosinone,9891,3,2,0,1,6,3,3,6
 Serie A,55,8,Atalanta,8524,3,2,0,1,4,3,1,6
 Serie A,55,9,Cagliari,8529,3,2,0,1,2,1,1,6
-Serie A,55,10,Udinese,8600,2,1,1,0,4,3,1,4
-Serie A,55,11,Sassuolo,7943,3,1,1,1,5,5,0,4
+Serie A,55,10,Sassuolo,7943,3,1,1,1,5,5,0,4
+Serie A,55,11,Udinese,8600,3,1,1,1,5,5,0,4
 Serie A,55,12,Napoli,9875,3,1,0,2,5,5,0,3
 Serie A,55,13,Torino,9804,3,1,0,2,4,5,-1,3
 Serie A,55,14,Lecce,9888,3,1,0,2,2,5,-3,3
@@ -397,8 +397,8 @@ Super Lig,71,1,Galatasaray,8637,4,3,1,0,12,6,6,10
 Super Lig,71,2,Beşiktaş,10188,4,3,0,1,9,4,5,9
 Super Lig,71,3,Kocaelispor,1569,4,3,0,1,5,3,2,9
 Super Lig,71,4,Trabzonspor,9752,4,2,1,1,9,4,5,7
-Super Lig,71,5,Gaziantep FK,4081,4,2,1,1,7,4,3,7
-Super Lig,71,6,Amed Sportif,96498,4,2,1,1,7,5,2,7
+Super Lig,71,5,Amed Sportif,96498,4,2,1,1,7,5,2,7
+Super Lig,71,6,Gaziantep FK,4081,4,2,1,1,7,5,2,7
 Super Lig,71,7,Alanyaspor,4678,4,2,1,1,4,3,1,7
 Super Lig,71,8,Gençlerbirliği,7800,4,2,1,1,4,7,-3,7
 Super Lig,71,9,Fenerbahçe,8695,4,2,0,2,8,6,2,6
@@ -409,7 +409,7 @@ Super Lig,71,13,Samsunspor,9750,4,1,1,2,5,6,-1,4
 Super Lig,71,14,Çorum FK,357274,4,1,1,2,7,9,-2,4
 Super Lig,71,15,Erzurumspor FK,281467,4,1,1,2,2,8,-6,4
 Super Lig,71,16,Eyüpspor,4681,4,1,0,3,2,6,-4,3
-Super Lig,71,17,Göztepe,1925,4,0,1,3,6,11,-5,1
+Super Lig,71,17,Göztepe,1925,4,0,1,3,7,11,-4,1
 Super Lig,71,18,Konyaspor,8622,4,0,0,4,3,8,-5,0
 A-League,113,1,Adelaide United,8008,0,0,0,0,0,0,0,0
 A-League,113,2,Auckland FC,1642068,0,0,0,0,0,0,0,0

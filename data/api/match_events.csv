@@ -7328,6 +7328,21 @@ match_id,minute,type,player,team,venue
 2026-09-06-vancouver-fc-v-supra-du-quebec,73,sub_on,Alessandro Biello,Supra du Québec,The Stadium at Langley Events Centre
 2026-09-06-vancouver-fc-v-supra-du-quebec,73,sub_on,Thomas Lebeuf,Supra du Québec,The Stadium at Langley Events Centre
 2026-09-06-vancouver-fc-v-supra-du-quebec,73,sub_on,Safwane Mlah,Supra du Québec,The Stadium at Langley Events Centre
+2026-09-07-bromley-v-afc-wimbledon,8,goal,Jayden Stockley,AFC Wimbledon,Copperjax Community Stadium
+2026-09-07-bromley-v-afc-wimbledon,28,sub_off,James Tilley,AFC Wimbledon,Copperjax Community Stadium
+2026-09-07-bromley-v-afc-wimbledon,28,sub_on,Callum Maycock,AFC Wimbledon,Copperjax Community Stadium
+2026-09-07-bromley-v-afc-wimbledon,29,sub_off,Deon Woodman,Bromley,Copperjax Community Stadium
+2026-09-07-bromley-v-afc-wimbledon,29,sub_off,Shamal George,Bromley,Copperjax Community Stadium
+2026-09-07-bromley-v-afc-wimbledon,29,sub_on,Kamarl Grant,Bromley,Copperjax Community Stadium
+2026-09-07-bromley-v-afc-wimbledon,29,sub_on,Owen Mason,Bromley,Copperjax Community Stadium
+2026-09-07-bromley-v-afc-wimbledon,44,yellow,Dan Sweeney,AFC Wimbledon,Copperjax Community Stadium
+2026-09-07-bromley-v-afc-wimbledon,59,sub_off,Richard Taylor,Bromley,Copperjax Community Stadium
+2026-09-07-bromley-v-afc-wimbledon,59,sub_on,Mickel Miller,Bromley,Copperjax Community Stadium
+2026-09-07-bromley-v-afc-wimbledon,67,goal,Myles Hippolyte,AFC Wimbledon,Copperjax Community Stadium
+2026-09-07-bromley-v-afc-wimbledon,68,sub_off,Michael Cheek,Bromley,Copperjax Community Stadium
+2026-09-07-bromley-v-afc-wimbledon,68,sub_off,William Hondermarck,Bromley,Copperjax Community Stadium
+2026-09-07-bromley-v-afc-wimbledon,68,sub_on,Victor Adeboyejo,Bromley,Copperjax Community Stadium
+2026-09-07-bromley-v-afc-wimbledon,68,sub_on,John McKiernan,Bromley,Copperjax Community Stadium
 2026-09-07-cagliari-v-lecce,29,goal,Daniel Maldini,Cagliari,Unipol Domus
 2026-09-07-cagliari-v-lecce,37,yellow,Kialonda Gaspar,Lecce,Unipol Domus
 2026-09-07-cagliari-v-lecce,46,sub_off,Oumar Ngom,Lecce,Unipol Domus
@@ -7353,7 +7368,10 @@ match_id,minute,type,player,team,venue
 2026-09-07-cagliari-v-lecce,90,yellow,Alessandro Deiola,Cagliari,Unipol Domus
 2026-09-07-cagliari-v-lecce,90,yellow,Jamil Siebert,Lecce,Unipol Domus
 2026-09-07-cagliari-v-lecce,90,yellow,Wladimiro Falcone,Lecce,Unipol Domus
-2026-09-07-catania-v-cosenza,,,,,Stadium
+2026-09-07-catania-v-cosenza,27,goal,Emanuele Cicerelli,Catania,Stadium
+2026-09-07-catania-v-cosenza,54,goal,Gabriel Lunetta,Catania,Stadium
+2026-09-07-catania-v-cosenza,61,goal,Flavio Russo,Catania,Stadium
+2026-09-07-catania-v-cosenza,85,goal,Roberto Insigne,Catania,Stadium
 2026-09-07-goztepe-v-gaziantep-fk,2,goal,Halil Dervişoğlu,Gaziantep FK,ISONEM Park Gürsel Aksel Stadyumu
 2026-09-07-goztepe-v-gaziantep-fk,10,goal,Myenty Abena,Gaziantep FK,ISONEM Park Gürsel Aksel Stadyumu
 2026-09-07-goztepe-v-gaziantep-fk,31,missed_penalty,Novatus Miroshi,Göztepe,ISONEM Park Gürsel Aksel Stadyumu
@@ -7383,3 +7401,27 @@ match_id,minute,type,player,team,venue
 2026-09-07-goztepe-v-gaziantep-fk,72,red,Ogün Bayrak,Göztepe,ISONEM Park Gürsel Aksel Stadyumu
 2026-09-07-goztepe-v-gaziantep-fk,75,yellow,Trivante Stewart,Gaziantep FK,ISONEM Park Gürsel Aksel Stadyumu
 2026-09-07-goztepe-v-gaziantep-fk,78,yellow,Sinclair Armstrong,Göztepe,ISONEM Park Gürsel Aksel Stadyumu
+2026-09-07-udinese-v-lazio,13,yellow,Jakub Piotrowski,Udinese,Bluenergy Stadium
+2026-09-07-udinese-v-lazio,15,sub_off,Jakub Piotrowski,Udinese,Bluenergy Stadium
+2026-09-07-udinese-v-lazio,15,sub_on,Lennon Miller,Udinese,Bluenergy Stadium
+2026-09-07-udinese-v-lazio,23,yellow,Lennon Miller,Udinese,Bluenergy Stadium
+2026-09-07-udinese-v-lazio,25,yellow,Gustav Isaksen,Lazio,Bluenergy Stadium
+2026-09-07-udinese-v-lazio,38,sub_off,Oumar Solet,Udinese,Bluenergy Stadium
+2026-09-07-udinese-v-lazio,38,sub_on,Christian Kabasele,Udinese,Bluenergy Stadium
+2026-09-07-udinese-v-lazio,45,yellow,Jesper Karlström,Udinese,Bluenergy Stadium
+2026-09-07-udinese-v-lazio,46,sub_off,Unai Gómez,Udinese,Bluenergy Stadium
+2026-09-07-udinese-v-lazio,46,sub_on,Vakoun Issouf Bayo,Udinese,Bluenergy Stadium
+2026-09-07-udinese-v-lazio,49,goal,Jesper Karlström,Udinese,Bluenergy Stadium
+2026-09-07-udinese-v-lazio,53,sub_off,Gustav Isaksen,Lazio,Bluenergy Stadium
+2026-09-07-udinese-v-lazio,53,sub_off,Andrea Pinamonti,Lazio,Bluenergy Stadium
+2026-09-07-udinese-v-lazio,53,sub_on,Matteo Cancellieri,Lazio,Bluenergy Stadium
+2026-09-07-udinese-v-lazio,53,sub_on,Tijjani Noslin,Lazio,Bluenergy Stadium
+2026-09-07-udinese-v-lazio,67,yellow,Vakoun Issouf Bayo,Udinese,Bluenergy Stadium
+2026-09-07-udinese-v-lazio,75,goal,Davide Frattesi,Lazio,Bluenergy Stadium
+2026-09-07-udinese-v-lazio,76,sub_off,James Abankwah,Udinese,Bluenergy Stadium
+2026-09-07-udinese-v-lazio,76,sub_off,Keinan Davis,Udinese,Bluenergy Stadium
+2026-09-07-udinese-v-lazio,76,sub_on,Nicolò Bertola,Udinese,Bluenergy Stadium
+2026-09-07-udinese-v-lazio,76,sub_on,Oier Zarraga,Udinese,Bluenergy Stadium
+2026-09-07-udinese-v-lazio,80,sub_off,Davide Frattesi,Lazio,Bluenergy Stadium
+2026-09-07-udinese-v-lazio,80,sub_on,Albert Guðmundsson,Lazio,Bluenergy Stadium
+2026-09-07-udinese-v-lazio,84,yellow,Nicolò Bertola,Udinese,Bluenergy Stadium
