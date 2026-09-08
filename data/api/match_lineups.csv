@@ -53633,288 +53633,971 @@ match_id,side,team,formation,status,updated,role,number,name,slug,pos,x,y
 2026-09-07-udinese-v-lazio,home,Udinese,3-4-2-1,,2026-09-07T20:36:19Z,start,23,Mërgim Vojvoda,,,0.485,0.875
 2026-09-07-udinese-v-lazio,home,Udinese,3-4-2-1,,2026-09-07T20:36:19Z,start,28,Oumar Solet,,,0.292,0.5
 2026-09-07-udinese-v-lazio,home,Udinese,3-4-2-1,,2026-09-07T20:36:19Z,start,46,Unai Gómez,,,0.678,0.3
+2026-09-08-afc-bournemouth-v-lincoln-city,away,Lincoln City,4-4-2,,2026-09-08T21:16:34Z,bench,4,Andrei Coubiș,,,,
+2026-09-08-afc-bournemouth-v-lincoln-city,away,Lincoln City,4-4-2,,2026-09-08T21:16:34Z,bench,18,Ben House,,,,
+2026-09-08-afc-bournemouth-v-lincoln-city,away,Lincoln City,4-4-2,,2026-09-08T21:16:34Z,bench,25,Deji Elerewe,,,,
+2026-09-08-afc-bournemouth-v-lincoln-city,away,Lincoln City,4-4-2,,2026-09-08T21:16:34Z,bench,29,Ethan Wheatley,,,,
+2026-09-08-afc-bournemouth-v-lincoln-city,away,Lincoln City,4-4-2,,2026-09-08T21:16:34Z,bench,1,George Wickens,,,,
+2026-09-08-afc-bournemouth-v-lincoln-city,away,Lincoln City,4-4-2,,2026-09-08T21:16:34Z,bench,24,Ivan Varfolomeev,,,,
+2026-09-08-afc-bournemouth-v-lincoln-city,away,Lincoln City,4-4-2,,2026-09-08T21:16:34Z,bench,17,Robert Street,,,,
+2026-09-08-afc-bournemouth-v-lincoln-city,away,Lincoln City,4-4-2,,2026-09-08T21:16:34Z,bench,15,Sonny Bradley,,,,
+2026-09-08-afc-bournemouth-v-lincoln-city,away,Lincoln City,4-4-2,,2026-09-08T21:16:34Z,bench,19,Tanto Olaofe,,,,
+2026-09-08-afc-bournemouth-v-lincoln-city,away,Lincoln City,4-4-2,,2026-09-08T21:16:34Z,start,20,Callum Elder,,,0.357,0.125
+2026-09-08-afc-bournemouth-v-lincoln-city,away,Lincoln City,4-4-2,,2026-09-08T21:16:34Z,start,27,Chiedozie Ogbene,chiedozie-ogbene,,0.613,0.875
+2026-09-08-afc-bournemouth-v-lincoln-city,away,Lincoln City,4-4-2,,2026-09-08T21:16:34Z,start,33,Daniel Oyegoke,,,0.357,0.625
+2026-09-08-afc-bournemouth-v-lincoln-city,away,Lincoln City,4-4-2,,2026-09-08T21:16:34Z,start,16,Dom Jefferies,,,0.357,0.875
+2026-09-08-afc-bournemouth-v-lincoln-city,away,Lincoln City,4-4-2,,2026-09-08T21:16:34Z,start,46,Joe Gauci,,,0.1,0.5
+2026-09-08-afc-bournemouth-v-lincoln-city,away,Lincoln City,4-4-2,,2026-09-08T21:16:34Z,start,23,Joshua Honohan,josh-honohan,,0.613,0.125
+2026-09-08-afc-bournemouth-v-lincoln-city,away,Lincoln City,4-4-2,,2026-09-08T21:16:34Z,start,11,Mikkel Ladefoged,,,0.87,0.7
+2026-09-08-afc-bournemouth-v-lincoln-city,away,Lincoln City,4-4-2,,2026-09-08T21:16:34Z,start,7,Reeco Hackett,,,0.87,0.3
+2026-09-08-afc-bournemouth-v-lincoln-city,away,Lincoln City,4-4-2,,2026-09-08T21:16:34Z,start,6,Ryley Towler,,,0.357,0.375
+2026-09-08-afc-bournemouth-v-lincoln-city,away,Lincoln City,4-4-2,,2026-09-08T21:16:34Z,start,8,Tom Bayliss,,,0.613,0.625
+2026-09-08-afc-bournemouth-v-lincoln-city,away,Lincoln City,4-4-2,,2026-09-08T21:16:34Z,start,26,Yunus Emre Konak,,,0.613,0.375
+2026-09-08-afc-bournemouth-v-lincoln-city,home,AFC Bournemouth,4-2-3-1,,2026-09-08T21:16:34Z,bench,3,Adrien Truffert,,,,
+2026-09-08-afc-bournemouth-v-lincoln-city,home,AFC Bournemouth,4-2-3-1,,2026-09-08T21:16:34Z,bench,8,Alex Scott,,,,
+2026-09-08-afc-bournemouth-v-lincoln-city,home,AFC Bournemouth,4-2-3-1,,2026-09-08T21:16:34Z,bench,27,Alex Tóth,,,,
+2026-09-08-afc-bournemouth-v-lincoln-city,home,AFC Bournemouth,4-2-3-1,,2026-09-08T21:16:34Z,bench,29,Daniel Jebbison,,,,
+2026-09-08-afc-bournemouth-v-lincoln-city,home,AFC Bournemouth,4-2-3-1,,2026-09-08T21:16:34Z,bench,1,Djordje Petrović,,,,
+2026-09-08-afc-bournemouth-v-lincoln-city,home,AFC Bournemouth,4-2-3-1,,2026-09-08T21:16:34Z,bench,24,Juanlu Sánchez,,,,
+2026-09-08-afc-bournemouth-v-lincoln-city,home,AFC Bournemouth,4-2-3-1,,2026-09-08T21:16:34Z,bench,16,Marcus Tavernier,,,,
+2026-09-08-afc-bournemouth-v-lincoln-city,home,AFC Bournemouth,4-2-3-1,,2026-09-08T21:16:34Z,bench,37,Rayan,,,,
+2026-09-08-afc-bournemouth-v-lincoln-city,home,AFC Bournemouth,4-2-3-1,,2026-09-08T21:16:34Z,bench,12,Tyler Adams,,,,
+2026-09-08-afc-bournemouth-v-lincoln-city,home,AFC Bournemouth,4-2-3-1,,2026-09-08T21:16:34Z,start,14,António Silva,,,0.292,0.375
+2026-09-08-afc-bournemouth-v-lincoln-city,home,AFC Bournemouth,4-2-3-1,,2026-09-08T21:16:34Z,start,18,Bafodé Diakité,,,0.292,0.625
+2026-09-08-afc-bournemouth-v-lincoln-city,home,AFC Bournemouth,4-2-3-1,,2026-09-08T21:16:34Z,start,11,Ben Gannon-Doak,,,0.678,0.163
+2026-09-08-afc-bournemouth-v-lincoln-city,home,AFC Bournemouth,4-2-3-1,,2026-09-08T21:16:34Z,start,7,David Brooks,,,0.678,0.837
+2026-09-08-afc-bournemouth-v-lincoln-city,home,AFC Bournemouth,4-2-3-1,,2026-09-08T21:16:34Z,start,5,James Hill,,,0.292,0.875
+2026-09-08-afc-bournemouth-v-lincoln-city,home,AFC Bournemouth,4-2-3-1,,2026-09-08T21:16:34Z,start,6,Julio Soler,,,0.292,0.125
+2026-09-08-afc-bournemouth-v-lincoln-city,home,AFC Bournemouth,4-2-3-1,,2026-09-08T21:16:34Z,start,19,Justin Kluivert,,,0.678,0.5
+2026-09-08-afc-bournemouth-v-lincoln-city,home,AFC Bournemouth,4-2-3-1,,2026-09-08T21:16:34Z,start,4,Lewis Cook,,,0.485,0.7
+2026-09-08-afc-bournemouth-v-lincoln-city,home,AFC Bournemouth,4-2-3-1,,2026-09-08T21:16:34Z,start,20,Michele Di Gregorio,,,0.1,0.5
+2026-09-08-afc-bournemouth-v-lincoln-city,home,AFC Bournemouth,4-2-3-1,,2026-09-08T21:16:34Z,start,10,Ryan Christie,,,0.485,0.3
+2026-09-08-afc-bournemouth-v-lincoln-city,home,AFC Bournemouth,4-2-3-1,,2026-09-08T21:16:34Z,start,30,Álvaro Rodriguez,,,0.87,0.5
+2026-09-08-aldershot-town-v-west-ham-united-u21,away,West Ham United U21,3-4-3,,2026-09-08T21:16:34Z,bench,12,Andre Dike,,,,
+2026-09-08-aldershot-town-v-west-ham-united-u21,away,West Ham United U21,3-4-3,,2026-09-08T21:16:34Z,bench,14,Callum Leacock,,,,
+2026-09-08-aldershot-town-v-west-ham-united-u21,away,West Ham United U21,3-4-3,,2026-09-08T21:16:34Z,bench,13,Finley Hooper,,,,
+2026-09-08-aldershot-town-v-west-ham-united-u21,away,West Ham United U21,3-4-3,,2026-09-08T21:16:34Z,bench,17,Gabriel Caliste,,,,
+2026-09-08-aldershot-town-v-west-ham-united-u21,away,West Ham United U21,3-4-3,,2026-09-08T21:16:34Z,bench,15,Joel Kerr,,,,
+2026-09-08-aldershot-town-v-west-ham-united-u21,away,West Ham United U21,3-4-3,,2026-09-08T21:16:34Z,bench,16,Lewis Beckford,,,,
+2026-09-08-aldershot-town-v-west-ham-united-u21,away,West Ham United U21,3-4-3,,2026-09-08T21:16:34Z,bench,18,Reggie Morris-Agyemang,,,,
+2026-09-08-aldershot-town-v-west-ham-united-u21,away,West Ham United U21,3-4-3,,2026-09-08T21:16:34Z,start,4,Airidas Golambeckis,,,0.357,0.5
+2026-09-08-aldershot-town-v-west-ham-united-u21,away,West Ham United U21,3-4-3,,2026-09-08T21:16:34Z,start,9,Daniel Cummings,,,0.87,0.5
+2026-09-08-aldershot-town-v-west-ham-united-u21,away,West Ham United U21,3-4-3,,2026-09-08T21:16:34Z,start,3,Ezra Mayers,,,0.357,0.21
+2026-09-08-aldershot-town-v-west-ham-united-u21,away,West Ham United U21,3-4-3,,2026-09-08T21:16:34Z,start,10,Jephthah Medine,,,0.87,0.21
+2026-09-08-aldershot-town-v-west-ham-united-u21,away,West Ham United U21,3-4-3,,2026-09-08T21:16:34Z,start,7,Jethro Medine,,,0.87,0.79
+2026-09-08-aldershot-town-v-west-ham-united-u21,away,West Ham United U21,3-4-3,,2026-09-08T21:16:34Z,start,5,Josh Briggs,,,0.357,0.79
+2026-09-08-aldershot-town-v-west-ham-united-u21,away,West Ham United U21,3-4-3,,2026-09-08T21:16:34Z,start,1,Lanre Awesu,,,0.1,0.5
+2026-09-08-aldershot-town-v-west-ham-united-u21,away,West Ham United U21,3-4-3,,2026-09-08T21:16:34Z,start,8,Preston Fearon,,,0.613,0.625
+2026-09-08-aldershot-town-v-west-ham-united-u21,away,West Ham United U21,3-4-3,,2026-09-08T21:16:34Z,start,11,Regan Clayton,,,0.613,0.125
+2026-09-08-aldershot-town-v-west-ham-united-u21,away,West Ham United U21,3-4-3,,2026-09-08T21:16:34Z,start,6,Riley Hargan,,,0.613,0.375
+2026-09-08-aldershot-town-v-west-ham-united-u21,away,West Ham United U21,3-4-3,,2026-09-08T21:16:34Z,start,2,Ryan Battrum,,,0.613,0.875
+2026-09-08-aldershot-town-v-west-ham-united-u21,home,Aldershot Town,4-3-3,,2026-09-08T21:16:34Z,bench,19,Alfonso Tenconi,,,,
+2026-09-08-aldershot-town-v-west-ham-united-u21,home,Aldershot Town,4-3-3,,2026-09-08T21:16:34Z,bench,26,Joe Lewis-Evans,,,,
+2026-09-08-aldershot-town-v-west-ham-united-u21,home,Aldershot Town,4-3-3,,2026-09-08T21:16:34Z,bench,27,Jordan Alves,,,,
+2026-09-08-aldershot-town-v-west-ham-united-u21,home,Aldershot Town,4-3-3,,2026-09-08T21:16:34Z,bench,25,Riley Hadley,,,,
+2026-09-08-aldershot-town-v-west-ham-united-u21,home,Aldershot Town,4-3-3,,2026-09-08T21:16:34Z,bench,17,Tyrese Dyce,,,,
+2026-09-08-aldershot-town-v-west-ham-united-u21,home,Aldershot Town,4-3-3,,2026-09-08T21:16:34Z,start,21,Brody Peart,,,0.87,0.21
+2026-09-08-aldershot-town-v-west-ham-united-u21,home,Aldershot Town,4-3-3,,2026-09-08T21:16:34Z,start,13,Charlie Patmore,,,0.1,0.5
+2026-09-08-aldershot-town-v-west-ham-united-u21,home,Aldershot Town,4-3-3,,2026-09-08T21:16:34Z,start,24,Elijah Oladunjoye,,,0.357,0.875
+2026-09-08-aldershot-town-v-west-ham-united-u21,home,Aldershot Town,4-3-3,,2026-09-08T21:16:34Z,start,11,Hakeem Sandah,,,0.613,0.79
+2026-09-08-aldershot-town-v-west-ham-united-u21,home,Aldershot Town,4-3-3,,2026-09-08T21:16:34Z,start,16,Jack Matton,,,0.357,0.625
+2026-09-08-aldershot-town-v-west-ham-united-u21,home,Aldershot Town,4-3-3,,2026-09-08T21:16:34Z,start,4,Jacob Borgnis,,,0.613,0.5
+2026-09-08-aldershot-town-v-west-ham-united-u21,home,Aldershot Town,4-3-3,,2026-09-08T21:16:34Z,start,9,Marcus Dinanga,,,0.87,0.5
+2026-09-08-aldershot-town-v-west-ham-united-u21,home,Aldershot Town,4-3-3,,2026-09-08T21:16:34Z,start,20,Marcus Wyllie,,,0.613,0.21
+2026-09-08-aldershot-town-v-west-ham-united-u21,home,Aldershot Town,4-3-3,,2026-09-08T21:16:34Z,start,12,Michael Stickland,,,0.357,0.375
+2026-09-08-aldershot-town-v-west-ham-united-u21,home,Aldershot Town,4-3-3,,2026-09-08T21:16:34Z,start,3,Ollie Harfield,,,0.357,0.125
+2026-09-08-aldershot-town-v-west-ham-united-u21,home,Aldershot Town,4-3-3,,2026-09-08T21:16:34Z,start,7,Tristan Abrahams,,,0.87,0.79
+2026-09-08-blackburn-rovers-v-sheffield-united,away,Sheffield United,4-4-2,,2026-09-08T21:16:34Z,bench,17,Adam Davies,,,,
+2026-09-08-blackburn-rovers-v-sheffield-united,away,Sheffield United,4-4-2,,2026-09-08T21:16:34Z,bench,33,Jamal Baptiste,,,,
+2026-09-08-blackburn-rovers-v-sheffield-united,away,Sheffield United,4-4-2,,2026-09-08T21:16:34Z,bench,44,Jaïro Riedewald,,,,
+2026-09-08-blackburn-rovers-v-sheffield-united,away,Sheffield United,4-4-2,,2026-09-08T21:16:34Z,bench,10,Jordan Ayew,,,,
+2026-09-08-blackburn-rovers-v-sheffield-united,away,Sheffield United,4-4-2,,2026-09-08T21:16:34Z,bench,27,Kalvin Phillips,,,,
+2026-09-08-blackburn-rovers-v-sheffield-united,away,Sheffield United,4-4-2,,2026-09-08T21:16:34Z,bench,2,Matt Doherty,matt-doherty,,,
+2026-09-08-blackburn-rovers-v-sheffield-united,away,Sheffield United,4-4-2,,2026-09-08T21:16:34Z,bench,4,Ollie Arblaster,,,,
+2026-09-08-blackburn-rovers-v-sheffield-united,away,Sheffield United,4-4-2,,2026-09-08T21:16:34Z,bench,45,Patrick Bamford,,,,
+2026-09-08-blackburn-rovers-v-sheffield-united,away,Sheffield United,4-4-2,,2026-09-08T21:16:34Z,bench,23,Tyrese Campbell,,,,
+2026-09-08-blackburn-rovers-v-sheffield-united,away,Sheffield United,4-4-2,,2026-09-08T21:16:34Z,start,22,Ben Brereton,,,0.87,0.3
+2026-09-08-blackburn-rovers-v-sheffield-united,away,Sheffield United,4-4-2,,2026-09-08T21:16:34Z,start,8,Hamza Choudhury,,,0.357,0.875
+2026-09-08-blackburn-rovers-v-sheffield-united,away,Sheffield United,4-4-2,,2026-09-08T21:16:34Z,start,5,Japhet Tanganga,,,0.357,0.625
+2026-09-08-blackburn-rovers-v-sheffield-united,away,Sheffield United,4-4-2,,2026-09-08T21:16:34Z,start,7,Joe Rothwell,,,0.613,0.375
+2026-09-08-blackburn-rovers-v-sheffield-united,away,Sheffield United,4-4-2,,2026-09-08T21:16:34Z,start,15,Liam Kitching,,,0.357,0.375
+2026-09-08-blackburn-rovers-v-sheffield-united,away,Sheffield United,4-4-2,,2026-09-08T21:16:34Z,start,1,Michael Cooper,,,0.1,0.5
+2026-09-08-blackburn-rovers-v-sheffield-united,away,Sheffield United,4-4-2,,2026-09-08T21:16:34Z,start,30,Rhys Norrington-Davies,,,0.357,0.125
+2026-09-08-blackburn-rovers-v-sheffield-united,away,Sheffield United,4-4-2,,2026-09-08T21:16:34Z,start,11,Romelle Donovan,,,0.613,0.875
+2026-09-08-blackburn-rovers-v-sheffield-united,away,Sheffield United,4-4-2,,2026-09-08T21:16:34Z,start,3,Sam McCallum,,,0.613,0.125
+2026-09-08-blackburn-rovers-v-sheffield-united,away,Sheffield United,4-4-2,,2026-09-08T21:16:34Z,start,42,Sydie Peck,,,0.613,0.625
+2026-09-08-blackburn-rovers-v-sheffield-united,away,Sheffield United,4-4-2,,2026-09-08T21:16:34Z,start,9,Thomas Cannon,tom-cannon,,0.87,0.7
+2026-09-08-blackburn-rovers-v-sheffield-united,home,Blackburn Rovers,4-2-3-1,,2026-09-08T21:16:34Z,bench,28,Adam Forshaw,,,,
+2026-09-08-blackburn-rovers-v-sheffield-united,home,Blackburn Rovers,4-2-3-1,,2026-09-08T21:16:34Z,bench,22,Balázs Tóth,,,,
+2026-09-08-blackburn-rovers-v-sheffield-united,home,Blackburn Rovers,4-2-3-1,,2026-09-08T21:16:34Z,bench,53,Frank Vare,,,,
+2026-09-08-blackburn-rovers-v-sheffield-united,home,Blackburn Rovers,4-2-3-1,,2026-09-08T21:16:34Z,bench,27,Gady Beyuku,,,,
+2026-09-08-blackburn-rovers-v-sheffield-united,home,Blackburn Rovers,4-2-3-1,,2026-09-08T21:16:34Z,bench,42,Harry Lister,,,,
+2026-09-08-blackburn-rovers-v-sheffield-united,home,Blackburn Rovers,4-2-3-1,,2026-09-08T21:16:34Z,bench,3,Harry Pickering,,,,
+2026-09-08-blackburn-rovers-v-sheffield-united,home,Blackburn Rovers,4-2-3-1,,2026-09-08T21:16:34Z,bench,45,Harvey Higgins,,,,
+2026-09-08-blackburn-rovers-v-sheffield-united,home,Blackburn Rovers,4-2-3-1,,2026-09-08T21:16:34Z,bench,17,Hayden Carter,,,,
+2026-09-08-blackburn-rovers-v-sheffield-united,home,Blackburn Rovers,4-2-3-1,,2026-09-08T21:16:34Z,bench,30,Jake Garrett,,,,
+2026-09-08-blackburn-rovers-v-sheffield-united,home,Blackburn Rovers,4-2-3-1,,2026-09-08T21:16:34Z,start,1,Aynsley Pears,,,0.1,0.5
+2026-09-08-blackburn-rovers-v-sheffield-united,home,Blackburn Rovers,4-2-3-1,,2026-09-08T21:16:34Z,start,11,Jayden Fevrier,,,0.87,0.5
+2026-09-08-blackburn-rovers-v-sheffield-united,home,Blackburn Rovers,4-2-3-1,,2026-09-08T21:16:34Z,start,31,Kristi Montgomery,,,0.485,0.7
+2026-09-08-blackburn-rovers-v-sheffield-united,home,Blackburn Rovers,4-2-3-1,,2026-09-08T21:16:34Z,start,21,Oladapo Afolayan,,,0.678,0.163
+2026-09-08-blackburn-rovers-v-sheffield-united,home,Blackburn Rovers,4-2-3-1,,2026-09-08T21:16:34Z,start,2,Ryan Alebiosu,,,0.292,0.875
+2026-09-08-blackburn-rovers-v-sheffield-united,home,Blackburn Rovers,4-2-3-1,,2026-09-08T21:16:34Z,start,25,Ryoya Morishita,,,0.678,0.837
+2026-09-08-blackburn-rovers-v-sheffield-united,home,Blackburn Rovers,4-2-3-1,,2026-09-08T21:16:34Z,start,8,Sam Morsy,,,0.485,0.3
+2026-09-08-blackburn-rovers-v-sheffield-united,home,Blackburn Rovers,4-2-3-1,,2026-09-08T21:16:34Z,start,15,Sean McLoughlin,sean-mcloughlin,,0.292,0.375
+2026-09-08-blackburn-rovers-v-sheffield-united,home,Blackburn Rovers,4-2-3-1,,2026-09-08T21:16:34Z,start,10,Todd Cantwell,,,0.678,0.5
+2026-09-08-blackburn-rovers-v-sheffield-united,home,Blackburn Rovers,4-2-3-1,,2026-09-08T21:16:34Z,start,6,Tom Atcheson,,,0.292,0.625
+2026-09-08-blackburn-rovers-v-sheffield-united,home,Blackburn Rovers,4-2-3-1,,2026-09-08T21:16:34Z,start,4,Yuri Ribeiro,,,0.292,0.125
+2026-09-08-bolton-wanderers-v-west-ham-united,away,West Ham United,4-4-1-1,,2026-09-08T21:16:34Z,bench,18,Adama Boiro,,,,
+2026-09-08-bolton-wanderers-v-west-ham-united,away,West Ham United,4-4-1-1,,2026-09-08T21:16:34Z,bench,49,Finlay Herrick,,,,
+2026-09-08-bolton-wanderers-v-west-ham-united,away,West Ham United,4-4-1-1,,2026-09-08T21:16:34Z,bench,66,Joshua Ajala,,,,
+2026-09-08-bolton-wanderers-v-west-ham-united,away,West Ham United,4-4-1-1,,2026-09-08T21:16:34Z,bench,9,Joël Piroe,,,,
+2026-09-08-bolton-wanderers-v-west-ham-united,away,West Ham United,4-4-1-1,,2026-09-08T21:16:34Z,bench,34,Joël Veltman,,,,
+2026-09-08-bolton-wanderers-v-west-ham-united,away,West Ham United,4-4-1-1,,2026-09-08T21:16:34Z,bench,21,Keiber Lamadrid,,,,
+2026-09-08-bolton-wanderers-v-west-ham-united,away,West Ham United,4-4-1-1,,2026-09-08T21:16:34Z,bench,61,Lewis Orford,,,,
+2026-09-08-bolton-wanderers-v-west-ham-united,away,West Ham United,4-4-1-1,,2026-09-08T21:16:34Z,bench,10,Manor Solomon,,,,
+2026-09-08-bolton-wanderers-v-west-ham-united,away,West Ham United,4-4-1-1,,2026-09-08T21:16:34Z,bench,5,Morato,,,,
+2026-09-08-bolton-wanderers-v-west-ham-united,away,West Ham United,4-4-1-1,,2026-09-08T21:16:34Z,start,7,Arne Engels,,,0.485,0.375
+2026-09-08-bolton-wanderers-v-west-ham-united,away,West Ham United,4-4-1-1,,2026-09-08T21:16:34Z,start,14,Divine Mukasa,,,0.485,0.625
+2026-09-08-bolton-wanderers-v-west-ham-united,away,West Ham United,4-4-1-1,,2026-09-08T21:16:34Z,start,35,Edvin Austbø,,,0.485,0.125
+2026-09-08-bolton-wanderers-v-west-ham-united,away,West Ham United,4-4-1-1,,2026-09-08T21:16:34Z,start,20,Jarrod Bowen,,,0.485,0.875
+2026-09-08-bolton-wanderers-v-west-ham-united,away,West Ham United,4-4-1-1,,2026-09-08T21:16:34Z,start,15,Konstantinos Mavropanos,,,0.292,0.625
+2026-09-08-bolton-wanderers-v-west-ham-united,away,West Ham United,4-4-1-1,,2026-09-08T21:16:34Z,start,2,Kyle Walker-Peters,,,0.292,0.875
+2026-09-08-bolton-wanderers-v-west-ham-united,away,West Ham United,4-4-1-1,,2026-09-08T21:16:34Z,start,1,Mads Hermansen,,,0.1,0.5
+2026-09-08-bolton-wanderers-v-west-ham-united,away,West Ham United,4-4-1-1,,2026-09-08T21:16:34Z,start,3,Max Kilman,,,0.292,0.375
+2026-09-08-bolton-wanderers-v-west-ham-united,away,West Ham United,4-4-1-1,,2026-09-08T21:16:34Z,start,17,Mohamadou Kanté,,,0.678,0.5
+2026-09-08-bolton-wanderers-v-west-ham-united,away,West Ham United,4-4-1-1,,2026-09-08T21:16:34Z,start,30,Oliver Scarles,,,0.292,0.125
+2026-09-08-bolton-wanderers-v-west-ham-united,away,West Ham United,4-4-1-1,,2026-09-08T21:16:34Z,start,19,Pablo,,,0.87,0.5
+2026-09-08-bolton-wanderers-v-west-ham-united,home,Bolton Wanderers,4-2-3-1,,2026-09-08T21:16:34Z,bench,17,Atsuki Ito,,,,
+2026-09-08-bolton-wanderers-v-west-ham-united,home,Bolton Wanderers,4-2-3-1,,2026-09-08T21:16:34Z,bench,6,Ben Davies,,,,
+2026-09-08-bolton-wanderers-v-west-ham-united,home,Bolton Wanderers,4-2-3-1,,2026-09-08T21:16:34Z,bench,1,Jack Bonham,jack-bonham,,,
+2026-09-08-bolton-wanderers-v-west-ham-united,home,Bolton Wanderers,4-2-3-1,,2026-09-08T21:16:34Z,bench,26,Jayden Nelson,,,,
+2026-09-08-bolton-wanderers-v-west-ham-united,home,Bolton Wanderers,4-2-3-1,,2026-09-08T21:16:34Z,bench,45,John McAtee,,,,
+2026-09-08-bolton-wanderers-v-west-ham-united,home,Bolton Wanderers,4-2-3-1,,2026-09-08T21:16:34Z,bench,39,Ryan Hardie,,,,
+2026-09-08-bolton-wanderers-v-west-ham-united,home,Bolton Wanderers,4-2-3-1,,2026-09-08T21:16:34Z,bench,9,Thelonius Bair,,,,
+2026-09-08-bolton-wanderers-v-west-ham-united,home,Bolton Wanderers,4-2-3-1,,2026-09-08T21:16:34Z,bench,11,Thierry Gale,,,,
+2026-09-08-bolton-wanderers-v-west-ham-united,home,Bolton Wanderers,4-2-3-1,,2026-09-08T21:16:34Z,bench,4,Xavier Simons,,,,
+2026-09-08-bolton-wanderers-v-west-ham-united,home,Bolton Wanderers,4-2-3-1,,2026-09-08T21:16:34Z,start,3,Chris Forino-Joseph,,,0.292,0.375
+2026-09-08-bolton-wanderers-v-west-ham-united,home,Bolton Wanderers,4-2-3-1,,2026-09-08T21:16:34Z,start,18,Eoin Toal,,,0.292,0.625
+2026-09-08-bolton-wanderers-v-west-ham-united,home,Bolton Wanderers,4-2-3-1,,2026-09-08T21:16:34Z,start,21,Ethan Erhahon,,,0.485,0.3
+2026-09-08-bolton-wanderers-v-west-ham-united,home,Bolton Wanderers,4-2-3-1,,2026-09-08T21:16:34Z,start,22,Gaizka Larrazabal,,,0.292,0.875
+2026-09-08-bolton-wanderers-v-west-ham-united,home,Bolton Wanderers,4-2-3-1,,2026-09-08T21:16:34Z,start,31,Gavin Bazunu,gavin-bazunu,,0.1,0.5
+2026-09-08-bolton-wanderers-v-west-ham-united,home,Bolton Wanderers,4-2-3-1,,2026-09-08T21:16:34Z,start,8,Josh Sheehan,,,0.485,0.7
+2026-09-08-bolton-wanderers-v-west-ham-united,home,Bolton Wanderers,4-2-3-1,,2026-09-08T21:16:34Z,start,7,Kyliane Dong,,,0.678,0.163
+2026-09-08-bolton-wanderers-v-west-ham-united,home,Bolton Wanderers,4-2-3-1,,2026-09-08T21:16:34Z,start,25,Max Conway,,,0.292,0.125
+2026-09-08-bolton-wanderers-v-west-ham-united,home,Bolton Wanderers,4-2-3-1,,2026-09-08T21:16:34Z,start,20,Rúben Rodrigues,,,0.678,0.5
+2026-09-08-bolton-wanderers-v-west-ham-united,home,Bolton Wanderers,4-2-3-1,,2026-09-08T21:16:34Z,start,10,Sam Dalby,,,0.87,0.5
+2026-09-08-bolton-wanderers-v-west-ham-united,home,Bolton Wanderers,4-2-3-1,,2026-09-08T21:16:34Z,start,16,Samuel Iling-Junior,,,0.678,0.837
 2026-09-08-boston-united-v-west-bromwich-albion-u21,away,West Bromwich Albion U21,4-4-2,,2026-09-08T18:12:03Z,bench,17,Antonio Perkins,,,,
+2026-09-08-boston-united-v-west-bromwich-albion-u21,away,West Bromwich Albion U21,4-4-2,,2026-09-08T21:16:34Z,bench,17,Antonio Perkins,,,,
 2026-09-08-boston-united-v-west-bromwich-albion-u21,away,West Bromwich Albion U21,4-4-2,,2026-09-08T18:12:03Z,bench,20,Harry French,,,,
+2026-09-08-boston-united-v-west-bromwich-albion-u21,away,West Bromwich Albion U21,4-4-2,,2026-09-08T21:16:34Z,bench,20,Harry French,,,,
 2026-09-08-boston-united-v-west-bromwich-albion-u21,away,West Bromwich Albion U21,4-4-2,,2026-09-08T18:12:03Z,bench,15,Jamal Mohammed,,,,
+2026-09-08-boston-united-v-west-bromwich-albion-u21,away,West Bromwich Albion U21,4-4-2,,2026-09-08T21:16:34Z,bench,15,Jamal Mohammed,,,,
 2026-09-08-boston-united-v-west-bromwich-albion-u21,away,West Bromwich Albion U21,4-4-2,,2026-09-08T18:12:03Z,bench,28,Joe Belmont,,,,
+2026-09-08-boston-united-v-west-bromwich-albion-u21,away,West Bromwich Albion U21,4-4-2,,2026-09-08T21:16:34Z,bench,28,Joe Belmont,,,,
 2026-09-08-boston-united-v-west-bromwich-albion-u21,away,West Bromwich Albion U21,4-4-2,,2026-09-08T18:12:03Z,bench,21,Nathan Dlamini,,,,
+2026-09-08-boston-united-v-west-bromwich-albion-u21,away,West Bromwich Albion U21,4-4-2,,2026-09-08T21:16:34Z,bench,21,Nathan Dlamini,,,,
 2026-09-08-boston-united-v-west-bromwich-albion-u21,away,West Bromwich Albion U21,4-4-2,,2026-09-08T18:12:03Z,bench,13,William Rutter,,,,
+2026-09-08-boston-united-v-west-bromwich-albion-u21,away,West Bromwich Albion U21,4-4-2,,2026-09-08T21:16:34Z,bench,13,William Rutter,,,,
 2026-09-08-boston-united-v-west-bromwich-albion-u21,away,West Bromwich Albion U21,4-4-2,,2026-09-08T18:12:03Z,start,3,Adam Letlat,,,0.357,0.125
+2026-09-08-boston-united-v-west-bromwich-albion-u21,away,West Bromwich Albion U21,4-4-2,,2026-09-08T21:16:34Z,start,3,Adam Letlat,,,0.613,0.625
 2026-09-08-boston-united-v-west-bromwich-albion-u21,away,West Bromwich Albion U21,4-4-2,,2026-09-08T18:12:03Z,start,2,Alfie Maughan,,,0.357,0.875
+2026-09-08-boston-united-v-west-bromwich-albion-u21,away,West Bromwich Albion U21,4-4-2,,2026-09-08T21:16:34Z,start,2,Alfie Maughan,,,0.613,0.375
 2026-09-08-boston-united-v-west-bromwich-albion-u21,away,West Bromwich Albion U21,4-4-2,,2026-09-08T18:12:03Z,start,23,Brian Okonkwo,,,0.1,0.5
+2026-09-08-boston-united-v-west-bromwich-albion-u21,away,West Bromwich Albion U21,4-4-2,,2026-09-08T21:16:34Z,start,23,Brian Okonkwo,,,0.1,0.5
 2026-09-08-boston-united-v-west-bromwich-albion-u21,away,West Bromwich Albion U21,4-4-2,,2026-09-08T18:12:03Z,start,18,Carter Pinnington,,,0.357,0.375
+2026-09-08-boston-united-v-west-bromwich-albion-u21,away,West Bromwich Albion U21,4-4-2,,2026-09-08T21:16:34Z,start,18,Carter Pinnington,,,0.87,0.3
 2026-09-08-boston-united-v-west-bromwich-albion-u21,away,West Bromwich Albion U21,4-4-2,,2026-09-08T18:12:03Z,start,6,Charlie Blackshields,,,0.613,0.625
+2026-09-08-boston-united-v-west-bromwich-albion-u21,away,West Bromwich Albion U21,4-4-2,,2026-09-08T21:16:34Z,start,6,Charlie Blackshields,,,0.357,0.875
 2026-09-08-boston-united-v-west-bromwich-albion-u21,away,West Bromwich Albion U21,4-4-2,,2026-09-08T18:12:03Z,start,11,Jaiden Francis-Caesar,,,0.87,0.7
+2026-09-08-boston-united-v-west-bromwich-albion-u21,away,West Bromwich Albion U21,4-4-2,,2026-09-08T21:16:34Z,start,11,Jaiden Francis-Caesar,,,0.613,0.875
 2026-09-08-boston-united-v-west-bromwich-albion-u21,away,West Bromwich Albion U21,4-4-2,,2026-09-08T18:12:03Z,start,4,Matthew Crowther,,,0.613,0.375
+2026-09-08-boston-united-v-west-bromwich-albion-u21,away,West Bromwich Albion U21,4-4-2,,2026-09-08T21:16:34Z,start,4,Matthew Crowther,,,0.357,0.375
 2026-09-08-boston-united-v-west-bromwich-albion-u21,away,West Bromwich Albion U21,4-4-2,,2026-09-08T18:12:03Z,start,5,Noah Dupont,,,0.357,0.625
+2026-09-08-boston-united-v-west-bromwich-albion-u21,away,West Bromwich Albion U21,4-4-2,,2026-09-08T21:16:34Z,start,5,Noah Dupont,,,0.357,0.125
 2026-09-08-boston-united-v-west-bromwich-albion-u21,away,West Bromwich Albion U21,4-4-2,,2026-09-08T18:12:03Z,start,7,Remar McNeil,,,0.613,0.875
+2026-09-08-boston-united-v-west-bromwich-albion-u21,away,West Bromwich Albion U21,4-4-2,,2026-09-08T21:16:34Z,start,7,Remar McNeil,,,0.613,0.125
 2026-09-08-boston-united-v-west-bromwich-albion-u21,away,West Bromwich Albion U21,4-4-2,,2026-09-08T18:12:03Z,start,10,Rio Parmar,,,0.87,0.3
+2026-09-08-boston-united-v-west-bromwich-albion-u21,away,West Bromwich Albion U21,4-4-2,,2026-09-08T21:16:34Z,start,10,Rio Parmar,,,0.87,0.7
 2026-09-08-boston-united-v-west-bromwich-albion-u21,away,West Bromwich Albion U21,4-4-2,,2026-09-08T18:12:03Z,start,8,Ryan Colesby,,,0.613,0.125
+2026-09-08-boston-united-v-west-bromwich-albion-u21,away,West Bromwich Albion U21,4-4-2,,2026-09-08T21:16:34Z,start,8,Ryan Colesby,,,0.357,0.625
 2026-09-08-boston-united-v-west-bromwich-albion-u21,home,Boston United,3-4-3,,2026-09-08T18:12:03Z,bench,4,Connor Teale,,,,
+2026-09-08-boston-united-v-west-bromwich-albion-u21,home,Boston United,3-4-3,,2026-09-08T21:16:34Z,bench,4,Connor Teale,,,,
 2026-09-08-boston-united-v-west-bromwich-albion-u21,home,Boston United,3-4-3,,2026-09-08T18:12:03Z,bench,20,Jake Rooney,,,,
+2026-09-08-boston-united-v-west-bromwich-albion-u21,home,Boston United,3-4-3,,2026-09-08T21:16:34Z,bench,20,Jake Rooney,,,,
 2026-09-08-boston-united-v-west-bromwich-albion-u21,home,Boston United,3-4-3,,2026-09-08T18:12:03Z,bench,27,Kai Mauro,,,,
+2026-09-08-boston-united-v-west-bromwich-albion-u21,home,Boston United,3-4-3,,2026-09-08T21:16:34Z,bench,27,Kai Mauro,,,,
 2026-09-08-boston-united-v-west-bromwich-albion-u21,home,Boston United,3-4-3,,2026-09-08T18:12:03Z,bench,18,Lennon Wheeldon,,,,
+2026-09-08-boston-united-v-west-bromwich-albion-u21,home,Boston United,3-4-3,,2026-09-08T21:16:34Z,bench,18,Lennon Wheeldon,,,,
 2026-09-08-boston-united-v-west-bromwich-albion-u21,home,Boston United,3-4-3,,2026-09-08T18:12:03Z,bench,3,Lewis Shipley,,,,
+2026-09-08-boston-united-v-west-bromwich-albion-u21,home,Boston United,3-4-3,,2026-09-08T21:16:34Z,bench,3,Lewis Shipley,,,,
 2026-09-08-boston-united-v-west-bromwich-albion-u21,home,Boston United,3-4-3,,2026-09-08T18:12:03Z,bench,13,Louis Chadwick,,,,
+2026-09-08-boston-united-v-west-bromwich-albion-u21,home,Boston United,3-4-3,,2026-09-08T21:16:34Z,bench,13,Louis Chadwick,,,,
 2026-09-08-boston-united-v-west-bromwich-albion-u21,home,Boston United,3-4-3,,2026-09-08T18:12:03Z,bench,9,Tom Cursons,,,,
+2026-09-08-boston-united-v-west-bromwich-albion-u21,home,Boston United,3-4-3,,2026-09-08T21:16:34Z,bench,9,Tom Cursons,,,,
 2026-09-08-boston-united-v-west-bromwich-albion-u21,home,Boston United,3-4-3,,2026-09-08T18:12:03Z,start,22,Ben Hammond,,,0.613,0.625
+2026-09-08-boston-united-v-west-bromwich-albion-u21,home,Boston United,3-4-3,,2026-09-08T21:16:34Z,start,22,Ben Hammond,,,0.613,0.125
 2026-09-08-boston-united-v-west-bromwich-albion-u21,home,Boston United,3-4-3,,2026-09-08T18:12:03Z,start,10,Connor McBride,,,0.87,0.21
+2026-09-08-boston-united-v-west-bromwich-albion-u21,home,Boston United,3-4-3,,2026-09-08T21:16:34Z,start,10,Connor McBride,,,0.357,0.21
 2026-09-08-boston-united-v-west-bromwich-albion-u21,home,Boston United,3-4-3,,2026-09-08T18:12:03Z,start,5,George Ward,,,0.357,0.79
+2026-09-08-boston-united-v-west-bromwich-albion-u21,home,Boston United,3-4-3,,2026-09-08T21:16:34Z,start,5,George Ward,,,0.357,0.5
 2026-09-08-boston-united-v-west-bromwich-albion-u21,home,Boston United,3-4-3,,2026-09-08T18:12:03Z,start,17,Georgie Gent,,,0.613,0.125
+2026-09-08-boston-united-v-west-bromwich-albion-u21,home,Boston United,3-4-3,,2026-09-08T21:16:34Z,start,17,Georgie Gent,,,0.613,0.375
 2026-09-08-boston-united-v-west-bromwich-albion-u21,home,Boston United,3-4-3,,2026-09-08T18:12:03Z,start,23,Jamie Grimes,,,0.357,0.21
+2026-09-08-boston-united-v-west-bromwich-albion-u21,home,Boston United,3-4-3,,2026-09-08T21:16:34Z,start,23,Jamie Grimes,,,0.87,0.79
 2026-09-08-boston-united-v-west-bromwich-albion-u21,home,Boston United,3-4-3,,2026-09-08T18:12:03Z,start,11,Kenneth Aboh,,,0.87,0.79
+2026-09-08-boston-united-v-west-bromwich-albion-u21,home,Boston United,3-4-3,,2026-09-08T21:16:34Z,start,11,Kenneth Aboh,,,0.613,0.875
 2026-09-08-boston-united-v-west-bromwich-albion-u21,home,Boston United,3-4-3,,2026-09-08T18:12:03Z,start,14,Lenell John-Lewis,,,0.87,0.5
+2026-09-08-boston-united-v-west-bromwich-albion-u21,home,Boston United,3-4-3,,2026-09-08T21:16:34Z,start,14,Lenell John-Lewis,,,0.613,0.625
 2026-09-08-boston-united-v-west-bromwich-albion-u21,home,Boston United,3-4-3,,2026-09-08T18:12:03Z,start,29,Liam Clayton,,,0.357,0.5
+2026-09-08-boston-united-v-west-bromwich-albion-u21,home,Boston United,3-4-3,,2026-09-08T21:16:34Z,start,29,Liam Clayton,,,0.87,0.5
 2026-09-08-boston-united-v-west-bromwich-albion-u21,home,Boston United,3-4-3,,2026-09-08T18:12:03Z,start,1,Luke Faxon,,,0.1,0.5
+2026-09-08-boston-united-v-west-bromwich-albion-u21,home,Boston United,3-4-3,,2026-09-08T21:16:34Z,start,1,Luke Faxon,,,0.1,0.5
 2026-09-08-boston-united-v-west-bromwich-albion-u21,home,Boston United,3-4-3,,2026-09-08T18:12:03Z,start,30,Nicholas Pozo,,,0.613,0.375
+2026-09-08-boston-united-v-west-bromwich-albion-u21,home,Boston United,3-4-3,,2026-09-08T21:16:34Z,start,30,Nicholas Pozo,,,0.87,0.21
 2026-09-08-boston-united-v-west-bromwich-albion-u21,home,Boston United,3-4-3,,2026-09-08T18:12:03Z,start,2,Sai Sachdev,,,0.613,0.875
+2026-09-08-boston-united-v-west-bromwich-albion-u21,home,Boston United,3-4-3,,2026-09-08T21:16:34Z,start,2,Sai Sachdev,,,0.357,0.79
+2026-09-08-cardiff-city-v-stoke-city,away,Stoke City,3-5-2,,2026-09-08T21:16:34Z,bench,4,Ben Pearson,,,,
+2026-09-08-cardiff-city-v-stoke-city,away,Stoke City,3-5-2,,2026-09-08T21:16:34Z,bench,17,Eric Bocat,,,,
+2026-09-08-cardiff-city-v-stoke-city,away,Stoke City,3-5-2,,2026-09-08T21:16:34Z,bench,43,Freddie Anderson,,,,
+2026-09-08-cardiff-city-v-stoke-city,away,Stoke City,3-5-2,,2026-09-08T21:16:34Z,bench,7,Jack McGlynn,,,,
+2026-09-08-cardiff-city-v-stoke-city,away,Stoke City,3-5-2,,2026-09-08T21:16:34Z,bench,24,Joshua Griffiths,,,,
+2026-09-08-cardiff-city-v-stoke-city,away,Stoke City,3-5-2,,2026-09-08T21:16:34Z,bench,10,Jun-Ho Bae,,,,
+2026-09-08-cardiff-city-v-stoke-city,away,Stoke City,3-5-2,,2026-09-08T21:16:34Z,bench,11,Lamine Cissé,,,,
+2026-09-08-cardiff-city-v-stoke-city,away,Stoke City,3-5-2,,2026-09-08T21:16:34Z,bench,42,Million Manhoef,,,,
+2026-09-08-cardiff-city-v-stoke-city,away,Stoke City,3-5-2,,2026-09-08T21:16:34Z,bench,19,Tomás Rigo,,,,
+2026-09-08-cardiff-city-v-stoke-city,away,Stoke City,3-5-2,,2026-09-08T21:16:34Z,start,2,Ben Johnson,,,0.613,0.89
+2026-09-08-cardiff-city-v-stoke-city,away,Stoke City,3-5-2,,2026-09-08T21:16:34Z,start,16,Ben Wilmot,,,0.357,0.79
+2026-09-08-cardiff-city-v-stoke-city,away,Stoke City,3-5-2,,2026-09-08T21:16:34Z,start,27,Djibril Soumaré,,,0.613,0.5
+2026-09-08-cardiff-city-v-stoke-city,away,Stoke City,3-5-2,,2026-09-08T21:16:34Z,start,8,Ethan Galbraith,,,0.613,0.305
+2026-09-08-cardiff-city-v-stoke-city,away,Stoke City,3-5-2,,2026-09-08T21:16:34Z,start,15,George Hirst,,,0.87,0.7
+2026-09-08-cardiff-city-v-stoke-city,away,Stoke City,3-5-2,,2026-09-08T21:16:34Z,start,13,Justin Devenny,,,0.613,0.695
+2026-09-08-cardiff-city-v-stoke-city,away,Stoke City,3-5-2,,2026-09-08T21:16:34Z,start,21,Luca Bombino,,,0.613,0.11
+2026-09-08-cardiff-city-v-stoke-city,away,Stoke City,3-5-2,,2026-09-08T21:16:34Z,start,5,Luke Graham,,,0.357,0.21
+2026-09-08-cardiff-city-v-stoke-city,away,Stoke City,3-5-2,,2026-09-08T21:16:34Z,start,40,Maksym Talovierov,,,0.357,0.5
+2026-09-08-cardiff-city-v-stoke-city,away,Stoke City,3-5-2,,2026-09-08T21:16:34Z,start,9,Róbert Bozeník,,,0.87,0.3
+2026-09-08-cardiff-city-v-stoke-city,away,Stoke City,3-5-2,,2026-09-08T21:16:34Z,start,1,Viktor Johansson,,,0.1,0.5
+2026-09-08-cardiff-city-v-stoke-city,home,Cardiff City,4-2-3-1,,2026-09-08T21:16:34Z,bench,47,Callum Robinson,callum-robinson,,,
+2026-09-08-cardiff-city-v-stoke-city,home,Cardiff City,4-2-3-1,,2026-09-08T21:16:34Z,bench,23,Calum Scanlon,,,,
+2026-09-08-cardiff-city-v-stoke-city,home,Cardiff City,4-2-3-1,,2026-09-08T21:16:34Z,bench,45,Cian Ashford,,,,
+2026-09-08-cardiff-city-v-stoke-city,home,Cardiff City,4-2-3-1,,2026-09-08T21:16:34Z,bench,14,David Turnbull,,,,
+2026-09-08-cardiff-city-v-stoke-city,home,Cardiff City,4-2-3-1,,2026-09-08T21:16:34Z,bench,30,Harry Tyrer,,,,
+2026-09-08-cardiff-city-v-stoke-city,home,Cardiff City,4-2-3-1,,2026-09-08T21:16:34Z,bench,40,Noah Anyadike,,,,
+2026-09-08-cardiff-city-v-stoke-city,home,Cardiff City,4-2-3-1,,2026-09-08T21:16:34Z,bench,43,Paul Moreno,,,,
+2026-09-08-cardiff-city-v-stoke-city,home,Cardiff City,4-2-3-1,,2026-09-08T21:16:34Z,bench,33,Rob Tankiewicz,,,,
+2026-09-08-cardiff-city-v-stoke-city,home,Cardiff City,4-2-3-1,,2026-09-08T21:16:34Z,bench,44,Ronan Kpakio,,,,
+2026-09-08-cardiff-city-v-stoke-city,home,Cardiff City,4-2-3-1,,2026-09-08T21:16:34Z,start,18,Alex Robertson,,,0.485,0.7
+2026-09-08-cardiff-city-v-stoke-city,home,Cardiff City,4-2-3-1,,2026-09-08T21:16:34Z,start,16,Chris Willock,,,0.678,0.163
+2026-09-08-cardiff-city-v-stoke-city,home,Cardiff City,4-2-3-1,,2026-09-08T21:16:34Z,start,4,Gabriel Osho,,,0.292,0.375
+2026-09-08-cardiff-city-v-stoke-city,home,Cardiff City,4-2-3-1,,2026-09-08T21:16:34Z,start,8,Jack Moylan,jack-moylan,,0.678,0.5
+2026-09-08-cardiff-city-v-stoke-city,home,Cardiff City,4-2-3-1,,2026-09-08T21:16:34Z,start,3,Joel Bagan,joel-bagan,,0.292,0.125
+2026-09-08-cardiff-city-v-stoke-city,home,Cardiff City,4-2-3-1,,2026-09-08T21:16:34Z,start,27,Joel Colwill,,,0.485,0.3
+2026-09-08-cardiff-city-v-stoke-city,home,Cardiff City,4-2-3-1,,2026-09-08T21:16:34Z,start,5,Krystian Bielik,,,0.292,0.625
+2026-09-08-cardiff-city-v-stoke-city,home,Cardiff City,4-2-3-1,,2026-09-08T21:16:34Z,start,1,Nathan Trott,,,0.1,0.5
+2026-09-08-cardiff-city-v-stoke-city,home,Cardiff City,4-2-3-1,,2026-09-08T21:16:34Z,start,11,Ollie Tanner,,,0.678,0.837
+2026-09-08-cardiff-city-v-stoke-city,home,Cardiff City,4-2-3-1,,2026-09-08T21:16:34Z,start,38,Perry Ng,,,0.292,0.875
+2026-09-08-cardiff-city-v-stoke-city,home,Cardiff City,4-2-3-1,,2026-09-08T21:16:34Z,start,9,Yousef Salech,,,0.87,0.5
 2026-09-08-doncaster-rovers-v-huddersfield-town,away,Huddersfield Town,4-2-3-1,,2026-09-08T18:12:03Z,bench,11,Ashley Fletcher,,,,
+2026-09-08-doncaster-rovers-v-huddersfield-town,away,Huddersfield Town,4-2-3-1,,2026-09-08T21:16:34Z,bench,11,Ashley Fletcher,,,,
 2026-09-08-doncaster-rovers-v-huddersfield-town,away,Huddersfield Town,4-2-3-1,,2026-09-08T18:12:03Z,bench,20,Cameron Humphreys,,,,
+2026-09-08-doncaster-rovers-v-huddersfield-town,away,Huddersfield Town,4-2-3-1,,2026-09-08T21:16:34Z,bench,20,Cameron Humphreys,,,,
 2026-09-08-doncaster-rovers-v-huddersfield-town,away,Huddersfield Town,4-2-3-1,,2026-09-08T18:12:03Z,bench,36,Ian Togo,,,,
+2026-09-08-doncaster-rovers-v-huddersfield-town,away,Huddersfield Town,4-2-3-1,,2026-09-08T21:16:34Z,bench,36,Ian Togo,,,,
 2026-09-08-doncaster-rovers-v-huddersfield-town,away,Huddersfield Town,4-2-3-1,,2026-09-08T18:12:03Z,bench,15,Ibane Bowat,,,,
+2026-09-08-doncaster-rovers-v-huddersfield-town,away,Huddersfield Town,4-2-3-1,,2026-09-08T21:16:34Z,bench,15,Ibane Bowat,,,,
 2026-09-08-doncaster-rovers-v-huddersfield-town,away,Huddersfield Town,4-2-3-1,,2026-09-08T18:12:03Z,bench,38,Jamie Spencer,,,,
+2026-09-08-doncaster-rovers-v-huddersfield-town,away,Huddersfield Town,4-2-3-1,,2026-09-08T21:16:34Z,bench,38,Jamie Spencer,,,,
 2026-09-08-doncaster-rovers-v-huddersfield-town,away,Huddersfield Town,4-2-3-1,,2026-09-08T18:12:03Z,bench,1,Matthew Young,,,,
+2026-09-08-doncaster-rovers-v-huddersfield-town,away,Huddersfield Town,4-2-3-1,,2026-09-08T21:16:34Z,bench,1,Matthew Young,,,,
 2026-09-08-doncaster-rovers-v-huddersfield-town,away,Huddersfield Town,4-2-3-1,,2026-09-08T18:12:03Z,bench,29,Max Murray,,,,
+2026-09-08-doncaster-rovers-v-huddersfield-town,away,Huddersfield Town,4-2-3-1,,2026-09-08T21:16:34Z,bench,29,Max Murray,,,,
 2026-09-08-doncaster-rovers-v-huddersfield-town,away,Huddersfield Town,4-2-3-1,,2026-09-08T18:12:03Z,start,8,Archie Collins,,,0.485,0.7
+2026-09-08-doncaster-rovers-v-huddersfield-town,away,Huddersfield Town,4-2-3-1,,2026-09-08T21:16:34Z,start,8,Archie Collins,,,0.485,0.3
 2026-09-08-doncaster-rovers-v-huddersfield-town,away,Huddersfield Town,4-2-3-1,,2026-09-08T18:12:03Z,start,19,Bali Mumba,,,0.292,0.125
+2026-09-08-doncaster-rovers-v-huddersfield-town,away,Huddersfield Town,4-2-3-1,,2026-09-08T21:16:34Z,start,19,Bali Mumba,,,0.292,0.125
 2026-09-08-doncaster-rovers-v-huddersfield-town,away,Huddersfield Town,4-2-3-1,,2026-09-08T18:12:03Z,start,25,Bojan Radulović,,,0.87,0.5
+2026-09-08-doncaster-rovers-v-huddersfield-town,away,Huddersfield Town,4-2-3-1,,2026-09-08T21:16:34Z,start,25,Bojan Radulović,,,0.87,0.5
 2026-09-08-doncaster-rovers-v-huddersfield-town,away,Huddersfield Town,4-2-3-1,,2026-09-08T18:12:03Z,start,14,Ethan Brierley,,,0.485,0.3
+2026-09-08-doncaster-rovers-v-huddersfield-town,away,Huddersfield Town,4-2-3-1,,2026-09-08T21:16:34Z,start,14,Ethan Brierley,,,0.485,0.7
 2026-09-08-doncaster-rovers-v-huddersfield-town,away,Huddersfield Town,4-2-3-1,,2026-09-08T18:12:03Z,start,31,Jak Alnwick,,,0.1,0.5
+2026-09-08-doncaster-rovers-v-huddersfield-town,away,Huddersfield Town,4-2-3-1,,2026-09-08T21:16:34Z,start,31,Jak Alnwick,,,0.1,0.5
 2026-09-08-doncaster-rovers-v-huddersfield-town,away,Huddersfield Town,4-2-3-1,,2026-09-08T18:12:03Z,start,27,Jay Smith-Sway,,,0.678,0.163
+2026-09-08-doncaster-rovers-v-huddersfield-town,away,Huddersfield Town,4-2-3-1,,2026-09-08T21:16:34Z,start,27,Jay Smith-Sway,,,0.678,0.163
 2026-09-08-doncaster-rovers-v-huddersfield-town,away,Huddersfield Town,4-2-3-1,,2026-09-08T18:12:03Z,start,5,Joseph Low,,,0.292,0.625
+2026-09-08-doncaster-rovers-v-huddersfield-town,away,Huddersfield Town,4-2-3-1,,2026-09-08T21:16:34Z,start,5,Joseph Low,,,0.292,0.625
 2026-09-08-doncaster-rovers-v-huddersfield-town,away,Huddersfield Town,4-2-3-1,,2026-09-08T18:12:03Z,start,2,Lasse Sørensen,,,0.292,0.875
+2026-09-08-doncaster-rovers-v-huddersfield-town,away,Huddersfield Town,4-2-3-1,,2026-09-08T21:16:34Z,start,2,Lasse Sørensen,,,0.292,0.875
 2026-09-08-doncaster-rovers-v-huddersfield-town,away,Huddersfield Town,4-2-3-1,,2026-09-08T18:12:03Z,start,7,Lynden Gooch,,,0.678,0.837
+2026-09-08-doncaster-rovers-v-huddersfield-town,away,Huddersfield Town,4-2-3-1,,2026-09-08T21:16:34Z,start,7,Lynden Gooch,,,0.678,0.837
 2026-09-08-doncaster-rovers-v-huddersfield-town,away,Huddersfield Town,4-2-3-1,,2026-09-08T18:12:03Z,start,10,Marcus Harness,marcus-harness,,0.678,0.5
+2026-09-08-doncaster-rovers-v-huddersfield-town,away,Huddersfield Town,4-2-3-1,,2026-09-08T21:16:34Z,start,10,Marcus Harness,marcus-harness,,0.678,0.5
 2026-09-08-doncaster-rovers-v-huddersfield-town,away,Huddersfield Town,4-2-3-1,,2026-09-08T18:12:03Z,start,37,Marlie Neil,,,0.292,0.375
+2026-09-08-doncaster-rovers-v-huddersfield-town,away,Huddersfield Town,4-2-3-1,,2026-09-08T21:16:34Z,start,37,Marlie Neil,,,0.292,0.375
 2026-09-08-doncaster-rovers-v-huddersfield-town,home,Doncaster Rovers,4-2-3-1,,2026-09-08T18:12:03Z,bench,38,Alex Pavan,,,,
+2026-09-08-doncaster-rovers-v-huddersfield-town,home,Doncaster Rovers,4-2-3-1,,2026-09-08T21:16:34Z,bench,38,Alex Pavan,,,,
 2026-09-08-doncaster-rovers-v-huddersfield-town,home,Doncaster Rovers,4-2-3-1,,2026-09-08T18:12:03Z,bench,48,Ashton Swales,,,,
+2026-09-08-doncaster-rovers-v-huddersfield-town,home,Doncaster Rovers,4-2-3-1,,2026-09-08T21:16:34Z,bench,48,Ashton Swales,,,,
 2026-09-08-doncaster-rovers-v-huddersfield-town,home,Doncaster Rovers,4-2-3-1,,2026-09-08T18:12:03Z,bench,47,Hakeeb Adelakun,,,,
+2026-09-08-doncaster-rovers-v-huddersfield-town,home,Doncaster Rovers,4-2-3-1,,2026-09-08T21:16:34Z,bench,47,Hakeeb Adelakun,,,,
 2026-09-08-doncaster-rovers-v-huddersfield-town,home,Doncaster Rovers,4-2-3-1,,2026-09-08T18:12:03Z,bench,21,Isaac Hutchinson,,,,
+2026-09-08-doncaster-rovers-v-huddersfield-town,home,Doncaster Rovers,4-2-3-1,,2026-09-08T21:16:34Z,bench,21,Isaac Hutchinson,,,,
 2026-09-08-doncaster-rovers-v-huddersfield-town,home,Doncaster Rovers,4-2-3-1,,2026-09-08T18:12:03Z,bench,41,Jacob Bryant,,,,
+2026-09-08-doncaster-rovers-v-huddersfield-town,home,Doncaster Rovers,4-2-3-1,,2026-09-08T21:16:34Z,bench,41,Jacob Bryant,,,,
 2026-09-08-doncaster-rovers-v-huddersfield-town,home,Doncaster Rovers,4-2-3-1,,2026-09-08T18:12:03Z,bench,46,Jonny Tomlinson,,,,
+2026-09-08-doncaster-rovers-v-huddersfield-town,home,Doncaster Rovers,4-2-3-1,,2026-09-08T21:16:34Z,bench,46,Jonny Tomlinson,,,,
 2026-09-08-doncaster-rovers-v-huddersfield-town,home,Doncaster Rovers,4-2-3-1,,2026-09-08T18:12:03Z,bench,39,Lincoln Pawlak,,,,
+2026-09-08-doncaster-rovers-v-huddersfield-town,home,Doncaster Rovers,4-2-3-1,,2026-09-08T21:16:34Z,bench,39,Lincoln Pawlak,,,,
 2026-09-08-doncaster-rovers-v-huddersfield-town,home,Doncaster Rovers,4-2-3-1,,2026-09-08T18:12:03Z,start,25,Bayley McCann,,,0.292,0.875
+2026-09-08-doncaster-rovers-v-huddersfield-town,home,Doncaster Rovers,4-2-3-1,,2026-09-08T21:16:34Z,start,25,Bayley McCann,,,0.292,0.875
 2026-09-08-doncaster-rovers-v-huddersfield-town,home,Doncaster Rovers,4-2-3-1,,2026-09-08T18:12:03Z,start,9,Brandon Hanlan,,,0.87,0.5
+2026-09-08-doncaster-rovers-v-huddersfield-town,home,Doncaster Rovers,4-2-3-1,,2026-09-08T21:16:34Z,start,9,Brandon Hanlan,,,0.87,0.5
 2026-09-08-doncaster-rovers-v-huddersfield-town,home,Doncaster Rovers,4-2-3-1,,2026-09-08T18:12:03Z,start,20,Darren Robinson,,,0.485,0.3
+2026-09-08-doncaster-rovers-v-huddersfield-town,home,Doncaster Rovers,4-2-3-1,,2026-09-08T21:16:34Z,start,20,Darren Robinson,,,0.485,0.3
 2026-09-08-doncaster-rovers-v-huddersfield-town,home,Doncaster Rovers,4-2-3-1,,2026-09-08T18:12:03Z,start,8,George Broadbent,,,0.485,0.7
+2026-09-08-doncaster-rovers-v-huddersfield-town,home,Doncaster Rovers,4-2-3-1,,2026-09-08T21:16:34Z,start,8,George Broadbent,,,0.485,0.7
 2026-09-08-doncaster-rovers-v-huddersfield-town,home,Doncaster Rovers,4-2-3-1,,2026-09-08T18:12:03Z,start,15,Harry Clifton,,,0.678,0.837
+2026-09-08-doncaster-rovers-v-huddersfield-town,home,Doncaster Rovers,4-2-3-1,,2026-09-08T21:16:34Z,start,15,Harry Clifton,,,0.678,0.837
 2026-09-08-doncaster-rovers-v-huddersfield-town,home,Doncaster Rovers,4-2-3-1,,2026-09-08T18:12:03Z,start,3,James Husband,,,0.292,0.125
+2026-09-08-doncaster-rovers-v-huddersfield-town,home,Doncaster Rovers,4-2-3-1,,2026-09-08T21:16:34Z,start,3,James Husband,,,0.292,0.125
 2026-09-08-doncaster-rovers-v-huddersfield-town,home,Doncaster Rovers,4-2-3-1,,2026-09-08T18:12:03Z,start,19,Jordan Thomas,,,0.678,0.5
+2026-09-08-doncaster-rovers-v-huddersfield-town,home,Doncaster Rovers,4-2-3-1,,2026-09-08T21:16:34Z,start,19,Jordan Thomas,,,0.678,0.5
 2026-09-08-doncaster-rovers-v-huddersfield-town,home,Doncaster Rovers,4-2-3-1,,2026-09-08T18:12:03Z,start,42,Josh Clarke,,,0.1,0.5
+2026-09-08-doncaster-rovers-v-huddersfield-town,home,Doncaster Rovers,4-2-3-1,,2026-09-08T21:16:34Z,start,42,Josh Clarke,,,0.1,0.5
 2026-09-08-doncaster-rovers-v-huddersfield-town,home,Doncaster Rovers,4-2-3-1,,2026-09-08T18:12:03Z,start,11,Leon Ayinde,leon-ayinde,,0.678,0.163
+2026-09-08-doncaster-rovers-v-huddersfield-town,home,Doncaster Rovers,4-2-3-1,,2026-09-08T21:16:34Z,start,11,Leon Ayinde,leon-ayinde,,0.678,0.163
 2026-09-08-doncaster-rovers-v-huddersfield-town,home,Doncaster Rovers,4-2-3-1,,2026-09-08T18:12:03Z,start,5,Matthew Pearson,,,0.292,0.375
+2026-09-08-doncaster-rovers-v-huddersfield-town,home,Doncaster Rovers,4-2-3-1,,2026-09-08T21:16:34Z,start,5,Matthew Pearson,,,0.292,0.375
 2026-09-08-doncaster-rovers-v-huddersfield-town,home,Doncaster Rovers,4-2-3-1,,2026-09-08T18:12:03Z,start,27,Seán Grehan,sean-grehan,,0.292,0.625
+2026-09-08-doncaster-rovers-v-huddersfield-town,home,Doncaster Rovers,4-2-3-1,,2026-09-08T21:16:34Z,start,27,Seán Grehan,sean-grehan,,0.292,0.625
 2026-09-08-exeter-city-v-tottenham-hotspur-u21,away,Tottenham Hotspur U21,4-2-3-1,,2026-09-08T18:12:03Z,bench,82,Elisha Sowunmi,,,,
+2026-09-08-exeter-city-v-tottenham-hotspur-u21,away,Tottenham Hotspur U21,4-2-3-1,,2026-09-08T21:16:34Z,bench,82,Elisha Sowunmi,,,,
 2026-09-08-exeter-city-v-tottenham-hotspur-u21,away,Tottenham Hotspur U21,4-2-3-1,,2026-09-08T18:12:03Z,bench,81,Maxwell Adedeji,,,,
+2026-09-08-exeter-city-v-tottenham-hotspur-u21,away,Tottenham Hotspur U21,4-2-3-1,,2026-09-08T21:16:34Z,bench,81,Maxwell Adedeji,,,,
 2026-09-08-exeter-city-v-tottenham-hotspur-u21,away,Tottenham Hotspur U21,4-2-3-1,,2026-09-08T18:12:03Z,bench,84,Miracle Adewole,,,,
+2026-09-08-exeter-city-v-tottenham-hotspur-u21,away,Tottenham Hotspur U21,4-2-3-1,,2026-09-08T21:16:34Z,bench,84,Miracle Adewole,,,,
 2026-09-08-exeter-city-v-tottenham-hotspur-u21,away,Tottenham Hotspur U21,4-2-3-1,,2026-09-08T18:12:03Z,bench,87,Oliver Boast,,,,
+2026-09-08-exeter-city-v-tottenham-hotspur-u21,away,Tottenham Hotspur U21,4-2-3-1,,2026-09-08T21:16:34Z,bench,87,Oliver Boast,,,,
 2026-09-08-exeter-city-v-tottenham-hotspur-u21,away,Tottenham Hotspur U21,4-2-3-1,,2026-09-08T18:12:03Z,bench,86,Ronny Moncur,,,,
+2026-09-08-exeter-city-v-tottenham-hotspur-u21,away,Tottenham Hotspur U21,4-2-3-1,,2026-09-08T21:16:34Z,bench,86,Ronny Moncur,,,,
 2026-09-08-exeter-city-v-tottenham-hotspur-u21,away,Tottenham Hotspur U21,4-2-3-1,,2026-09-08T18:12:03Z,bench,77,Samual Archer,,,,
+2026-09-08-exeter-city-v-tottenham-hotspur-u21,away,Tottenham Hotspur U21,4-2-3-1,,2026-09-08T21:16:34Z,bench,77,Samual Archer,,,,
 2026-09-08-exeter-city-v-tottenham-hotspur-u21,away,Tottenham Hotspur U21,4-2-3-1,,2026-09-08T18:12:03Z,start,48,Alfie Dorrington,,,0.292,0.625
+2026-09-08-exeter-city-v-tottenham-hotspur-u21,away,Tottenham Hotspur U21,4-2-3-1,,2026-09-08T21:16:34Z,start,48,Alfie Dorrington,,,0.292,0.625
 2026-09-08-exeter-city-v-tottenham-hotspur-u21,away,Tottenham Hotspur U21,4-2-3-1,,2026-09-08T18:12:03Z,start,58,Ellis Lehane,,,0.678,0.163
+2026-09-08-exeter-city-v-tottenham-hotspur-u21,away,Tottenham Hotspur U21,4-2-3-1,,2026-09-08T21:16:34Z,start,58,Ellis Lehane,,,0.678,0.163
 2026-09-08-exeter-city-v-tottenham-hotspur-u21,away,Tottenham Hotspur U21,4-2-3-1,,2026-09-08T18:12:03Z,start,71,George Feeney,,,0.678,0.837
+2026-09-08-exeter-city-v-tottenham-hotspur-u21,away,Tottenham Hotspur U21,4-2-3-1,,2026-09-08T21:16:34Z,start,71,George Feeney,,,0.678,0.837
 2026-09-08-exeter-city-v-tottenham-hotspur-u21,away,Tottenham Hotspur U21,4-2-3-1,,2026-09-08T18:12:03Z,start,78,Harry Byrne,,,0.485,0.3
+2026-09-08-exeter-city-v-tottenham-hotspur-u21,away,Tottenham Hotspur U21,4-2-3-1,,2026-09-08T21:16:34Z,start,78,Harry Byrne,,,0.485,0.3
 2026-09-08-exeter-city-v-tottenham-hotspur-u21,away,Tottenham Hotspur U21,4-2-3-1,,2026-09-08T18:12:03Z,start,51,Jacob Knightbridge,,,0.1,0.5
+2026-09-08-exeter-city-v-tottenham-hotspur-u21,away,Tottenham Hotspur U21,4-2-3-1,,2026-09-08T21:16:34Z,start,51,Jacob Knightbridge,,,0.1,0.5
 2026-09-08-exeter-city-v-tottenham-hotspur-u21,away,Tottenham Hotspur U21,4-2-3-1,,2026-09-08T18:12:03Z,start,76,James Rowswell,,,0.292,0.875
+2026-09-08-exeter-city-v-tottenham-hotspur-u21,away,Tottenham Hotspur U21,4-2-3-1,,2026-09-08T21:16:34Z,start,76,James Rowswell,,,0.292,0.875
 2026-09-08-exeter-city-v-tottenham-hotspur-u21,away,Tottenham Hotspur U21,4-2-3-1,,2026-09-08T18:12:03Z,start,74,Maeson King,,,0.292,0.125
+2026-09-08-exeter-city-v-tottenham-hotspur-u21,away,Tottenham Hotspur U21,4-2-3-1,,2026-09-08T21:16:34Z,start,74,Maeson King,,,0.292,0.125
 2026-09-08-exeter-city-v-tottenham-hotspur-u21,away,Tottenham Hotspur U21,4-2-3-1,,2026-09-08T18:12:03Z,start,66,Malachi Hardy,,,0.292,0.375
+2026-09-08-exeter-city-v-tottenham-hotspur-u21,away,Tottenham Hotspur U21,4-2-3-1,,2026-09-08T21:16:34Z,start,66,Malachi Hardy,,,0.292,0.375
 2026-09-08-exeter-city-v-tottenham-hotspur-u21,away,Tottenham Hotspur U21,4-2-3-1,,2026-09-08T18:12:03Z,start,72,Reiss Elliott-Parris,,,0.87,0.5
+2026-09-08-exeter-city-v-tottenham-hotspur-u21,away,Tottenham Hotspur U21,4-2-3-1,,2026-09-08T21:16:34Z,start,72,Reiss Elliott-Parris,,,0.87,0.5
 2026-09-08-exeter-city-v-tottenham-hotspur-u21,away,Tottenham Hotspur U21,4-2-3-1,,2026-09-08T18:12:03Z,start,89,Tye Hall,,,0.485,0.7
+2026-09-08-exeter-city-v-tottenham-hotspur-u21,away,Tottenham Hotspur U21,4-2-3-1,,2026-09-08T21:16:34Z,start,89,Tye Hall,,,0.485,0.7
 2026-09-08-exeter-city-v-tottenham-hotspur-u21,away,Tottenham Hotspur U21,4-2-3-1,,2026-09-08T18:12:03Z,start,49,Tyrese Hall,,,0.678,0.5
+2026-09-08-exeter-city-v-tottenham-hotspur-u21,away,Tottenham Hotspur U21,4-2-3-1,,2026-09-08T21:16:34Z,start,49,Tyrese Hall,,,0.678,0.5
 2026-09-08-exeter-city-v-tottenham-hotspur-u21,home,Exeter City,4-2-3-1,,2026-09-08T18:12:03Z,bench,44,George Williams,,,,
+2026-09-08-exeter-city-v-tottenham-hotspur-u21,home,Exeter City,3-1-4-2,,2026-09-08T21:16:34Z,bench,44,George Williams,,,,
 2026-09-08-exeter-city-v-tottenham-hotspur-u21,home,Exeter City,4-2-3-1,,2026-09-08T18:12:03Z,bench,1,Jack Bycroft,,,,
+2026-09-08-exeter-city-v-tottenham-hotspur-u21,home,Exeter City,3-1-4-2,,2026-09-08T21:16:34Z,bench,1,Jack Bycroft,,,,
 2026-09-08-exeter-city-v-tottenham-hotspur-u21,home,Exeter City,4-2-3-1,,2026-09-08T18:12:03Z,bench,10,Josh Gordon,,,,
+2026-09-08-exeter-city-v-tottenham-hotspur-u21,home,Exeter City,3-1-4-2,,2026-09-08T21:16:34Z,bench,10,Josh Gordon,,,,
 2026-09-08-exeter-city-v-tottenham-hotspur-u21,home,Exeter City,4-2-3-1,,2026-09-08T18:12:03Z,bench,2,Lakyle Samuel,,,,
+2026-09-08-exeter-city-v-tottenham-hotspur-u21,home,Exeter City,3-1-4-2,,2026-09-08T21:16:34Z,bench,2,Lakyle Samuel,,,,
 2026-09-08-exeter-city-v-tottenham-hotspur-u21,home,Exeter City,4-2-3-1,,2026-09-08T18:12:03Z,bench,47,Liam Cartwright,,,,
+2026-09-08-exeter-city-v-tottenham-hotspur-u21,home,Exeter City,3-1-4-2,,2026-09-08T21:16:34Z,bench,47,Liam Cartwright,,,,
 2026-09-08-exeter-city-v-tottenham-hotspur-u21,home,Exeter City,4-2-3-1,,2026-09-08T18:12:03Z,bench,19,Sonny Cox,,,,
+2026-09-08-exeter-city-v-tottenham-hotspur-u21,home,Exeter City,3-1-4-2,,2026-09-08T21:16:34Z,bench,19,Sonny Cox,,,,
 2026-09-08-exeter-city-v-tottenham-hotspur-u21,home,Exeter City,4-2-3-1,,2026-09-08T18:12:03Z,bench,43,Tobias Alsop,,,,
+2026-09-08-exeter-city-v-tottenham-hotspur-u21,home,Exeter City,3-1-4-2,,2026-09-08T21:16:34Z,bench,43,Tobias Alsop,,,,
 2026-09-08-exeter-city-v-tottenham-hotspur-u21,home,Exeter City,4-2-3-1,,2026-09-08T18:12:03Z,start,15,Ajay Matthews,,,0.678,0.837
+2026-09-08-exeter-city-v-tottenham-hotspur-u21,home,Exeter City,3-1-4-2,,2026-09-08T21:16:34Z,start,15,Ajay Matthews,,,0.87,0.7
 2026-09-08-exeter-city-v-tottenham-hotspur-u21,home,Exeter City,4-2-3-1,,2026-09-08T18:12:03Z,start,32,Danny Rose,,,0.87,0.5
+2026-09-08-exeter-city-v-tottenham-hotspur-u21,home,Exeter City,3-1-4-2,,2026-09-08T21:16:34Z,start,32,Danny Rose,,,0.87,0.3
 2026-09-08-exeter-city-v-tottenham-hotspur-u21,home,Exeter City,4-2-3-1,,2026-09-08T18:12:03Z,start,23,Ethan Sutherland,,,0.678,0.163
+2026-09-08-exeter-city-v-tottenham-hotspur-u21,home,Exeter City,3-1-4-2,,2026-09-08T21:16:34Z,start,23,Ethan Sutherland,,,0.678,0.125
 2026-09-08-exeter-city-v-tottenham-hotspur-u21,home,Exeter City,4-2-3-1,,2026-09-08T18:12:03Z,start,22,Frankie Phillips,,,0.1,0.5
+2026-09-08-exeter-city-v-tottenham-hotspur-u21,home,Exeter City,3-1-4-2,,2026-09-08T21:16:34Z,start,22,Frankie Phillips,,,0.1,0.5
 2026-09-08-exeter-city-v-tottenham-hotspur-u21,home,Exeter City,4-2-3-1,,2026-09-08T18:12:03Z,start,20,George Birch,,,0.678,0.5
+2026-09-08-exeter-city-v-tottenham-hotspur-u21,home,Exeter City,3-1-4-2,,2026-09-08T21:16:34Z,start,20,George Birch,,,0.678,0.875
 2026-09-08-exeter-city-v-tottenham-hotspur-u21,home,Exeter City,4-2-3-1,,2026-09-08T18:12:03Z,start,6,Jack Taylor,jack-taylor,,0.292,0.625
+2026-09-08-exeter-city-v-tottenham-hotspur-u21,home,Exeter City,3-1-4-2,,2026-09-08T21:16:34Z,start,6,Jack Taylor,jack-taylor,,0.292,0.5
 2026-09-08-exeter-city-v-tottenham-hotspur-u21,home,Exeter City,4-2-3-1,,2026-09-08T18:12:03Z,start,18,Liam Oakes,,,0.292,0.875
+2026-09-08-exeter-city-v-tottenham-hotspur-u21,home,Exeter City,3-1-4-2,,2026-09-08T21:16:34Z,start,18,Liam Oakes,,,0.485,0.5
 2026-09-08-exeter-city-v-tottenham-hotspur-u21,home,Exeter City,4-2-3-1,,2026-09-08T18:12:03Z,start,46,Louie Cayless,,,0.485,0.3
+2026-09-08-exeter-city-v-tottenham-hotspur-u21,home,Exeter City,3-1-4-2,,2026-09-08T21:16:34Z,start,46,Louie Cayless,,,0.292,0.79
 2026-09-08-exeter-city-v-tottenham-hotspur-u21,home,Exeter City,4-2-3-1,,2026-09-08T18:12:03Z,start,3,Luca Woodhouse,,,0.292,0.375
+2026-09-08-exeter-city-v-tottenham-hotspur-u21,home,Exeter City,3-1-4-2,,2026-09-08T21:16:34Z,start,3,Luca Woodhouse,,,0.292,0.21
 2026-09-08-exeter-city-v-tottenham-hotspur-u21,home,Exeter City,4-2-3-1,,2026-09-08T18:12:03Z,start,8,Taylor Perry,,,0.485,0.7
+2026-09-08-exeter-city-v-tottenham-hotspur-u21,home,Exeter City,3-1-4-2,,2026-09-08T21:16:34Z,start,8,Taylor Perry,,,0.678,0.625
 2026-09-08-exeter-city-v-tottenham-hotspur-u21,home,Exeter City,4-2-3-1,,2026-09-08T18:12:03Z,start,24,Vincent Harper,,,0.292,0.125
+2026-09-08-exeter-city-v-tottenham-hotspur-u21,home,Exeter City,3-1-4-2,,2026-09-08T21:16:34Z,start,24,Vincent Harper,,,0.678,0.375
 2026-09-08-fc-halifax-town-v-wolverhampton-wanderers-u21,away,Wolverhampton Wanderers U21,4-2-3-1,,2026-09-08T18:12:03Z,bench,16,Aaron Aneke,,,,
+2026-09-08-fc-halifax-town-v-wolverhampton-wanderers-u21,away,Wolverhampton Wanderers U21,4-2-3-1,,2026-09-08T21:16:34Z,bench,16,Aaron Aneke,,,,
 2026-09-08-fc-halifax-town-v-wolverhampton-wanderers-u21,away,Wolverhampton Wanderers U21,4-2-3-1,,2026-09-08T18:12:03Z,bench,14,Alfie Arnold,,,,
+2026-09-08-fc-halifax-town-v-wolverhampton-wanderers-u21,away,Wolverhampton Wanderers U21,4-2-3-1,,2026-09-08T21:16:34Z,bench,14,Alfie Arnold,,,,
 2026-09-08-fc-halifax-town-v-wolverhampton-wanderers-u21,away,Wolverhampton Wanderers U21,4-2-3-1,,2026-09-08T18:12:03Z,bench,13,Dapo Anunlopo,,,,
+2026-09-08-fc-halifax-town-v-wolverhampton-wanderers-u21,away,Wolverhampton Wanderers U21,4-2-3-1,,2026-09-08T21:16:34Z,bench,13,Dapo Anunlopo,,,,
 2026-09-08-fc-halifax-town-v-wolverhampton-wanderers-u21,away,Wolverhampton Wanderers U21,4-2-3-1,,2026-09-08T18:12:03Z,bench,17,Emilio Ballard-Matthews,,,,
+2026-09-08-fc-halifax-town-v-wolverhampton-wanderers-u21,away,Wolverhampton Wanderers U21,4-2-3-1,,2026-09-08T21:16:34Z,bench,17,Emilio Ballard-Matthews,,,,
 2026-09-08-fc-halifax-town-v-wolverhampton-wanderers-u21,away,Wolverhampton Wanderers U21,4-2-3-1,,2026-09-08T18:12:03Z,bench,15,Luke Rawlings,,,,
+2026-09-08-fc-halifax-town-v-wolverhampton-wanderers-u21,away,Wolverhampton Wanderers U21,4-2-3-1,,2026-09-08T21:16:34Z,bench,15,Luke Rawlings,,,,
 2026-09-08-fc-halifax-town-v-wolverhampton-wanderers-u21,away,Wolverhampton Wanderers U21,4-2-3-1,,2026-09-08T18:12:03Z,bench,18,Nathan Fraser,nathan-fraser,,,
+2026-09-08-fc-halifax-town-v-wolverhampton-wanderers-u21,away,Wolverhampton Wanderers U21,4-2-3-1,,2026-09-08T21:16:34Z,bench,18,Nathan Fraser,nathan-fraser,,,
 2026-09-08-fc-halifax-town-v-wolverhampton-wanderers-u21,away,Wolverhampton Wanderers U21,4-2-3-1,,2026-09-08T18:12:03Z,bench,12,Temple Ojinnaka,,,,
+2026-09-08-fc-halifax-town-v-wolverhampton-wanderers-u21,away,Wolverhampton Wanderers U21,4-2-3-1,,2026-09-08T21:16:34Z,bench,12,Temple Ojinnaka,,,,
 2026-09-08-fc-halifax-town-v-wolverhampton-wanderers-u21,away,Wolverhampton Wanderers U21,4-2-3-1,,2026-09-08T18:12:03Z,start,4,Alfie White,,,0.87,0.5
+2026-09-08-fc-halifax-town-v-wolverhampton-wanderers-u21,away,Wolverhampton Wanderers U21,4-2-3-1,,2026-09-08T21:16:34Z,start,4,Alfie White,,,0.292,0.375
 2026-09-08-fc-halifax-town-v-wolverhampton-wanderers-u21,away,Wolverhampton Wanderers U21,4-2-3-1,,2026-09-08T18:12:03Z,start,9,Dani Ángel,,,0.292,0.875
+2026-09-08-fc-halifax-town-v-wolverhampton-wanderers-u21,away,Wolverhampton Wanderers U21,4-2-3-1,,2026-09-08T21:16:34Z,start,9,Dani Ángel,,,0.87,0.5
 2026-09-08-fc-halifax-town-v-wolverhampton-wanderers-u21,away,Wolverhampton Wanderers U21,4-2-3-1,,2026-09-08T18:12:03Z,start,7,Enso González,,,0.485,0.3
+2026-09-08-fc-halifax-town-v-wolverhampton-wanderers-u21,away,Wolverhampton Wanderers U21,4-2-3-1,,2026-09-08T21:16:34Z,start,7,Enso González,,,0.678,0.837
 2026-09-08-fc-halifax-town-v-wolverhampton-wanderers-u21,away,Wolverhampton Wanderers U21,4-2-3-1,,2026-09-08T18:12:03Z,start,8,Fin Ashworth,,,0.292,0.625
+2026-09-08-fc-halifax-town-v-wolverhampton-wanderers-u21,away,Wolverhampton Wanderers U21,4-2-3-1,,2026-09-08T21:16:34Z,start,8,Fin Ashworth,,,0.485,0.7
 2026-09-08-fc-halifax-town-v-wolverhampton-wanderers-u21,away,Wolverhampton Wanderers U21,4-2-3-1,,2026-09-08T18:12:03Z,start,1,Josh Gracey,,,0.1,0.5
+2026-09-08-fc-halifax-town-v-wolverhampton-wanderers-u21,away,Wolverhampton Wanderers U21,4-2-3-1,,2026-09-08T21:16:34Z,start,1,Josh Gracey,,,0.1,0.5
 2026-09-08-fc-halifax-town-v-wolverhampton-wanderers-u21,away,Wolverhampton Wanderers U21,4-2-3-1,,2026-09-08T18:12:03Z,start,6,Makenzie Bradbury,,,0.292,0.375
+2026-09-08-fc-halifax-town-v-wolverhampton-wanderers-u21,away,Wolverhampton Wanderers U21,4-2-3-1,,2026-09-08T21:16:34Z,start,6,Makenzie Bradbury,,,0.485,0.3
 2026-09-08-fc-halifax-town-v-wolverhampton-wanderers-u21,away,Wolverhampton Wanderers U21,4-2-3-1,,2026-09-08T18:12:03Z,start,3,Max Nolan-Ruddock,,,0.678,0.163
+2026-09-08-fc-halifax-town-v-wolverhampton-wanderers-u21,away,Wolverhampton Wanderers U21,4-2-3-1,,2026-09-08T21:16:34Z,start,3,Max Nolan-Ruddock,,,0.292,0.125
 2026-09-08-fc-halifax-town-v-wolverhampton-wanderers-u21,away,Wolverhampton Wanderers U21,4-2-3-1,,2026-09-08T18:12:03Z,start,10,Min-Kyu Ji,,,0.678,0.837
+2026-09-08-fc-halifax-town-v-wolverhampton-wanderers-u21,away,Wolverhampton Wanderers U21,4-2-3-1,,2026-09-08T21:16:34Z,start,10,Min-Kyu Ji,,,0.678,0.5
 2026-09-08-fc-halifax-town-v-wolverhampton-wanderers-u21,away,Wolverhampton Wanderers U21,4-2-3-1,,2026-09-08T18:12:03Z,start,2,Myles Dayman,,,0.292,0.125
+2026-09-08-fc-halifax-town-v-wolverhampton-wanderers-u21,away,Wolverhampton Wanderers U21,4-2-3-1,,2026-09-08T21:16:34Z,start,2,Myles Dayman,,,0.292,0.875
 2026-09-08-fc-halifax-town-v-wolverhampton-wanderers-u21,away,Wolverhampton Wanderers U21,4-2-3-1,,2026-09-08T18:12:03Z,start,5,Sebastian Lochhead,,,0.678,0.5
+2026-09-08-fc-halifax-town-v-wolverhampton-wanderers-u21,away,Wolverhampton Wanderers U21,4-2-3-1,,2026-09-08T21:16:34Z,start,5,Sebastian Lochhead,,,0.292,0.625
 2026-09-08-fc-halifax-town-v-wolverhampton-wanderers-u21,away,Wolverhampton Wanderers U21,4-2-3-1,,2026-09-08T18:12:03Z,start,11,Tom Edozie,,,0.485,0.7
+2026-09-08-fc-halifax-town-v-wolverhampton-wanderers-u21,away,Wolverhampton Wanderers U21,4-2-3-1,,2026-09-08T21:16:34Z,start,11,Tom Edozie,,,0.678,0.163
+2026-09-08-fc-halifax-town-v-wolverhampton-wanderers-u21,home,FC Halifax Town,4-2-3-1,,2026-09-08T21:16:34Z,bench,11,Connor Douglas,,,,
 2026-09-08-fc-halifax-town-v-wolverhampton-wanderers-u21,home,FC Halifax Town,4-2-3-1,,2026-09-08T18:12:03Z,bench,9,Conor Carty,conor-carty,,,
+2026-09-08-fc-halifax-town-v-wolverhampton-wanderers-u21,home,FC Halifax Town,4-2-3-1,,2026-09-08T21:16:34Z,bench,9,Conor Carty,conor-carty,,,
 2026-09-08-fc-halifax-town-v-wolverhampton-wanderers-u21,home,FC Halifax Town,4-2-3-1,,2026-09-08T18:12:03Z,bench,7,Owen Bray,,,,
+2026-09-08-fc-halifax-town-v-wolverhampton-wanderers-u21,home,FC Halifax Town,4-2-3-1,,2026-09-08T21:16:34Z,bench,7,Owen Bray,,,,
 2026-09-08-fc-halifax-town-v-wolverhampton-wanderers-u21,home,FC Halifax Town,4-2-3-1,,2026-09-08T18:12:03Z,bench,5,Shaun Hobson,,,,
+2026-09-08-fc-halifax-town-v-wolverhampton-wanderers-u21,home,FC Halifax Town,4-2-3-1,,2026-09-08T21:16:34Z,bench,5,Shaun Hobson,,,,
 2026-09-08-fc-halifax-town-v-wolverhampton-wanderers-u21,home,FC Halifax Town,4-2-3-1,,2026-09-08T18:12:03Z,bench,21,Theo Wainman,,,,
+2026-09-08-fc-halifax-town-v-wolverhampton-wanderers-u21,home,FC Halifax Town,4-2-3-1,,2026-09-08T21:16:34Z,bench,21,Theo Wainman,,,,
 2026-09-08-fc-halifax-town-v-wolverhampton-wanderers-u21,home,FC Halifax Town,4-2-3-1,,2026-09-08T18:12:03Z,bench,33,True Grant,,,,
+2026-09-08-fc-halifax-town-v-wolverhampton-wanderers-u21,home,FC Halifax Town,4-2-3-1,,2026-09-08T21:16:34Z,bench,33,True Grant,,,,
 2026-09-08-fc-halifax-town-v-wolverhampton-wanderers-u21,home,FC Halifax Town,4-2-3-1,,2026-09-08T18:12:03Z,bench,4,Will Hugill,,,,
+2026-09-08-fc-halifax-town-v-wolverhampton-wanderers-u21,home,FC Halifax Town,4-2-3-1,,2026-09-08T21:16:34Z,bench,4,Will Hugill,,,,
 2026-09-08-fc-halifax-town-v-wolverhampton-wanderers-u21,home,FC Halifax Town,4-2-3-1,,2026-09-08T18:12:03Z,start,14,Amari Morgan-Smith,,,0.87,0.5
+2026-09-08-fc-halifax-town-v-wolverhampton-wanderers-u21,home,FC Halifax Town,4-2-3-1,,2026-09-08T21:16:34Z,start,14,Amari Morgan-Smith,,,0.87,0.5
 2026-09-08-fc-halifax-town-v-wolverhampton-wanderers-u21,home,FC Halifax Town,4-2-3-1,,2026-09-08T18:12:03Z,start,18,Arian Allen,,,0.678,0.5
+2026-09-08-fc-halifax-town-v-wolverhampton-wanderers-u21,home,FC Halifax Town,4-2-3-1,,2026-09-08T21:16:34Z,start,18,Arian Allen,,,0.678,0.837
 2026-09-08-fc-halifax-town-v-wolverhampton-wanderers-u21,home,FC Halifax Town,4-2-3-1,,2026-09-08T18:12:03Z,start,17,Ben Tollitt,,,0.678,0.163
+2026-09-08-fc-halifax-town-v-wolverhampton-wanderers-u21,home,FC Halifax Town,4-2-3-1,,2026-09-08T21:16:34Z,start,17,Ben Tollitt,,,0.678,0.163
 2026-09-08-fc-halifax-town-v-wolverhampton-wanderers-u21,home,FC Halifax Town,4-2-3-1,,2026-09-08T18:12:03Z,start,30,Cody Johnson,,,0.485,0.3
+2026-09-08-fc-halifax-town-v-wolverhampton-wanderers-u21,home,FC Halifax Town,4-2-3-1,,2026-09-08T21:16:34Z,start,30,Cody Johnson,,,0.485,0.7
 2026-09-08-fc-halifax-town-v-wolverhampton-wanderers-u21,home,FC Halifax Town,4-2-3-1,,2026-09-08T18:12:03Z,start,27,Cruz Allen,,,0.485,0.7
+2026-09-08-fc-halifax-town-v-wolverhampton-wanderers-u21,home,FC Halifax Town,4-2-3-1,,2026-09-08T21:16:34Z,start,27,Cruz Allen,,,0.678,0.5
 2026-09-08-fc-halifax-town-v-wolverhampton-wanderers-u21,home,FC Halifax Town,4-2-3-1,,2026-09-08T18:12:03Z,start,16,Deniche Hill,,,0.292,0.125
+2026-09-08-fc-halifax-town-v-wolverhampton-wanderers-u21,home,FC Halifax Town,4-2-3-1,,2026-09-08T21:16:34Z,start,16,Deniche Hill,,,0.292,0.125
 2026-09-08-fc-halifax-town-v-wolverhampton-wanderers-u21,home,FC Halifax Town,4-2-3-1,,2026-09-08T18:12:03Z,start,2,Max Bardell,max-bardell,,0.292,0.375
+2026-09-08-fc-halifax-town-v-wolverhampton-wanderers-u21,home,FC Halifax Town,4-2-3-1,,2026-09-08T21:16:34Z,start,2,Max Bardell,max-bardell,,0.292,0.375
 2026-09-08-fc-halifax-town-v-wolverhampton-wanderers-u21,home,FC Halifax Town,4-2-3-1,,2026-09-08T18:12:03Z,start,3,Raheem Conte,,,0.292,0.875
+2026-09-08-fc-halifax-town-v-wolverhampton-wanderers-u21,home,FC Halifax Town,4-2-3-1,,2026-09-08T21:16:34Z,start,3,Raheem Conte,,,0.292,0.875
 2026-09-08-fc-halifax-town-v-wolverhampton-wanderers-u21,home,FC Halifax Town,4-2-3-1,,2026-09-08T18:12:03Z,start,1,Sam Johnson,,,0.1,0.5
+2026-09-08-fc-halifax-town-v-wolverhampton-wanderers-u21,home,FC Halifax Town,4-2-3-1,,2026-09-08T21:16:34Z,start,1,Sam Johnson,,,0.1,0.5
 2026-09-08-fc-halifax-town-v-wolverhampton-wanderers-u21,home,FC Halifax Town,4-2-3-1,,2026-09-08T18:12:03Z,start,20,Tayt-Lemar Trusty,,,0.678,0.837
+2026-09-08-fc-halifax-town-v-wolverhampton-wanderers-u21,home,FC Halifax Town,4-2-3-1,,2026-09-08T21:16:34Z,start,20,Tayt-Lemar Trusty,,,0.485,0.3
 2026-09-08-fc-halifax-town-v-wolverhampton-wanderers-u21,home,FC Halifax Town,4-2-3-1,,2026-09-08T18:12:03Z,start,8,Will Flint,,,0.292,0.625
+2026-09-08-fc-halifax-town-v-wolverhampton-wanderers-u21,home,FC Halifax Town,4-2-3-1,,2026-09-08T21:16:34Z,start,8,Will Flint,,,0.292,0.625
 2026-09-08-gateshead-fc-v-derby-county-u21,away,Derby County U21,4-2-3-1,,2026-09-08T18:12:03Z,bench,13,Alfie Halliwell,,,,
+2026-09-08-gateshead-fc-v-derby-county-u21,away,Derby County U21,4-2-3-1,,2026-09-08T21:16:34Z,bench,13,Alfie Halliwell,,,,
 2026-09-08-gateshead-fc-v-derby-county-u21,away,Derby County U21,4-2-3-1,,2026-09-08T18:12:03Z,bench,,Jaydan Davidson,,,,
+2026-09-08-gateshead-fc-v-derby-county-u21,away,Derby County U21,4-2-3-1,,2026-09-08T21:16:34Z,bench,15,Jaydan Davidson,,,,
 2026-09-08-gateshead-fc-v-derby-county-u21,away,Derby County U21,4-2-3-1,,2026-09-08T18:12:03Z,bench,16,Justin Oguntolu,,,,
+2026-09-08-gateshead-fc-v-derby-county-u21,away,Derby County U21,4-2-3-1,,2026-09-08T21:16:34Z,bench,16,Justin Oguntolu,,,,
 2026-09-08-gateshead-fc-v-derby-county-u21,away,Derby County U21,4-2-3-1,,2026-09-08T18:12:03Z,bench,17,Kean Wren,,,,
+2026-09-08-gateshead-fc-v-derby-county-u21,away,Derby County U21,4-2-3-1,,2026-09-08T21:16:34Z,bench,17,Kean Wren,,,,
 2026-09-08-gateshead-fc-v-derby-county-u21,away,Derby County U21,4-2-3-1,,2026-09-08T18:12:03Z,bench,4,Rio Canoville,,,,
+2026-09-08-gateshead-fc-v-derby-county-u21,away,Derby County U21,4-2-3-1,,2026-09-08T21:16:34Z,bench,14,Rio Canoville,,,,
 2026-09-08-gateshead-fc-v-derby-county-u21,away,Derby County U21,4-2-3-1,,2026-09-08T18:12:03Z,bench,12,Sean Corry,,,,
+2026-09-08-gateshead-fc-v-derby-county-u21,away,Derby County U21,4-2-3-1,,2026-09-08T21:16:34Z,bench,12,Sean Corry,,,,
 2026-09-08-gateshead-fc-v-derby-county-u21,away,Derby County U21,4-2-3-1,,2026-09-08T18:12:03Z,bench,3,Tristan Gill,,,,
+2026-09-08-gateshead-fc-v-derby-county-u21,away,Derby County U21,4-2-3-1,,2026-09-08T21:16:34Z,bench,18,Tristan Gill,,,,
 2026-09-08-gateshead-fc-v-derby-county-u21,away,Derby County U21,4-2-3-1,,2026-09-08T18:12:03Z,start,5,Adisa Osayande,,,0.292,0.625
+2026-09-08-gateshead-fc-v-derby-county-u21,away,Derby County U21,4-2-3-1,,2026-09-08T21:16:34Z,start,4,Adisa Osayande,,,0.292,0.625
 2026-09-08-gateshead-fc-v-derby-county-u21,away,Derby County U21,4-2-3-1,,2026-09-08T18:12:03Z,start,16,Cameron Wilson,,,0.678,0.5
+2026-09-08-gateshead-fc-v-derby-county-u21,away,Derby County U21,4-2-3-1,,2026-09-08T21:16:34Z,start,10,Cameron Wilson,,,0.678,0.5
 2026-09-08-gateshead-fc-v-derby-county-u21,away,Derby County U21,4-2-3-1,,2026-09-08T18:12:03Z,start,6,Charlie Smith,,,0.678,0.837
+2026-09-08-gateshead-fc-v-derby-county-u21,away,Derby County U21,4-2-3-1,,2026-09-08T21:16:34Z,start,7,Charlie Smith,,,0.678,0.837
 2026-09-08-gateshead-fc-v-derby-county-u21,away,Derby County U21,4-2-3-1,,2026-09-08T18:12:03Z,start,14,Frankie Jones,,,0.678,0.163
+2026-09-08-gateshead-fc-v-derby-county-u21,away,Derby County U21,4-2-3-1,,2026-09-08T21:16:34Z,start,11,Frankie Jones,,,0.678,0.163
 2026-09-08-gateshead-fc-v-derby-county-u21,away,Derby County U21,4-2-3-1,,2026-09-08T18:12:03Z,start,1,Harry Evans,,,0.1,0.5
+2026-09-08-gateshead-fc-v-derby-county-u21,away,Derby County U21,4-2-3-1,,2026-09-08T21:16:34Z,start,1,Harry Evans,,,0.1,0.5
 2026-09-08-gateshead-fc-v-derby-county-u21,away,Derby County U21,4-2-3-1,,2026-09-08T18:12:03Z,start,2,Isaac Gordon,,,0.292,0.875
+2026-09-08-gateshead-fc-v-derby-county-u21,away,Derby County U21,4-2-3-1,,2026-09-08T21:16:34Z,start,2,Isaac Gordon,,,0.292,0.875
 2026-09-08-gateshead-fc-v-derby-county-u21,away,Derby County U21,4-2-3-1,,2026-09-08T18:12:03Z,start,12,Keilen Robinson,,,0.292,0.125
+2026-09-08-gateshead-fc-v-derby-county-u21,away,Derby County U21,4-2-3-1,,2026-09-08T21:16:34Z,start,3,Keilen Robinson,,,0.292,0.125
 2026-09-08-gateshead-fc-v-derby-county-u21,away,Derby County U21,4-2-3-1,,2026-09-08T18:12:03Z,start,6,Marcel Tola,,,0.485,0.7
 2026-09-08-gateshead-fc-v-derby-county-u21,away,Derby County U21,4-2-3-1,,2026-09-08T18:12:03Z,start,8,Marley Mintus,,,0.485,0.3
+2026-09-08-gateshead-fc-v-derby-county-u21,away,Derby County U21,4-2-3-1,,2026-09-08T21:16:34Z,start,8,Marley Mintus,,,0.485,0.3
+2026-09-08-gateshead-fc-v-derby-county-u21,away,Derby County U21,4-2-3-1,,2026-09-08T21:16:34Z,start,6,Marsel Tola,,,0.485,0.7
 2026-09-08-gateshead-fc-v-derby-county-u21,away,Derby County U21,4-2-3-1,,2026-09-08T18:12:03Z,start,,Raymond Offor,,,0.292,0.375
+2026-09-08-gateshead-fc-v-derby-county-u21,away,Derby County U21,4-2-3-1,,2026-09-08T21:16:34Z,start,5,Raymond Offor,,,0.292,0.375
 2026-09-08-gateshead-fc-v-derby-county-u21,away,Derby County U21,4-2-3-1,,2026-09-08T18:12:03Z,start,17,Trialist A,,,0.87,0.5
+2026-09-08-gateshead-fc-v-derby-county-u21,away,Derby County U21,4-2-3-1,,2026-09-08T21:16:34Z,start,9,Trialist A,,,0.87,0.5
 2026-09-08-gateshead-fc-v-derby-county-u21,home,Gateshead FC,4-2-3-1,,2026-09-08T18:12:03Z,bench,14,Ashley Boatswain,,,,
+2026-09-08-gateshead-fc-v-derby-county-u21,home,Gateshead FC,4-2-3-1,,2026-09-08T21:16:34Z,bench,14,Ashley Boatswain,,,,
 2026-09-08-gateshead-fc-v-derby-county-u21,home,Gateshead FC,4-2-3-1,,2026-09-08T18:12:03Z,bench,23,Billy Chadwick,,,,
+2026-09-08-gateshead-fc-v-derby-county-u21,home,Gateshead FC,4-2-3-1,,2026-09-08T21:16:34Z,bench,23,Billy Chadwick,,,,
 2026-09-08-gateshead-fc-v-derby-county-u21,home,Gateshead FC,4-2-3-1,,2026-09-08T18:12:03Z,bench,11,Joshua Anifowose,,,,
+2026-09-08-gateshead-fc-v-derby-county-u21,home,Gateshead FC,4-2-3-1,,2026-09-08T21:16:34Z,bench,11,Joshua Anifowose,,,,
 2026-09-08-gateshead-fc-v-derby-county-u21,home,Gateshead FC,4-2-3-1,,2026-09-08T18:12:03Z,bench,24,Kyle Ferguson,,,,
+2026-09-08-gateshead-fc-v-derby-county-u21,home,Gateshead FC,4-2-3-1,,2026-09-08T21:16:34Z,bench,24,Kyle Ferguson,,,,
 2026-09-08-gateshead-fc-v-derby-county-u21,home,Gateshead FC,4-2-3-1,,2026-09-08T18:12:03Z,bench,12,Pete Jameson,,,,
+2026-09-08-gateshead-fc-v-derby-county-u21,home,Gateshead FC,4-2-3-1,,2026-09-08T21:16:34Z,bench,12,Pete Jameson,,,,
 2026-09-08-gateshead-fc-v-derby-county-u21,home,Gateshead FC,4-2-3-1,,2026-09-08T18:12:03Z,bench,,Preston Leach,,,,
+2026-09-08-gateshead-fc-v-derby-county-u21,home,Gateshead FC,4-2-3-1,,2026-09-08T21:16:34Z,bench,30,Preston Leach,,,,
 2026-09-08-gateshead-fc-v-derby-county-u21,home,Gateshead FC,4-2-3-1,,2026-09-08T18:12:03Z,bench,17,Rocco Coyle,,,,
+2026-09-08-gateshead-fc-v-derby-county-u21,home,Gateshead FC,4-2-3-1,,2026-09-08T21:16:34Z,bench,17,Rocco Coyle,,,,
 2026-09-08-gateshead-fc-v-derby-county-u21,home,Gateshead FC,4-2-3-1,,2026-09-08T18:12:03Z,start,18,Ben Williams,,,0.292,0.375
+2026-09-08-gateshead-fc-v-derby-county-u21,home,Gateshead FC,4-2-3-1,,2026-09-08T21:16:34Z,start,18,Ben Williams,,,0.292,0.375
 2026-09-08-gateshead-fc-v-derby-county-u21,home,Gateshead FC,4-2-3-1,,2026-09-08T18:12:03Z,start,31,Daniel Robert Cameron,,,0.1,0.5
+2026-09-08-gateshead-fc-v-derby-county-u21,home,Gateshead FC,4-2-3-1,,2026-09-08T21:16:34Z,start,31,Daniel Robert Cameron,,,0.1,0.5
 2026-09-08-gateshead-fc-v-derby-county-u21,home,Gateshead FC,4-2-3-1,,2026-09-08T18:12:03Z,start,27,David Eguaibor,david-eguaibor,,0.87,0.5
+2026-09-08-gateshead-fc-v-derby-county-u21,home,Gateshead FC,4-2-3-1,,2026-09-08T21:16:34Z,start,27,David Eguaibor,david-eguaibor,,0.87,0.5
 2026-09-08-gateshead-fc-v-derby-county-u21,home,Gateshead FC,4-2-3-1,,2026-09-08T18:12:03Z,start,3,David Ferguson,,,0.292,0.125
+2026-09-08-gateshead-fc-v-derby-county-u21,home,Gateshead FC,4-2-3-1,,2026-09-08T21:16:34Z,start,3,David Ferguson,,,0.292,0.125
 2026-09-08-gateshead-fc-v-derby-county-u21,home,Gateshead FC,4-2-3-1,,2026-09-08T18:12:03Z,start,28,Harrison Holgate,,,0.292,0.625
+2026-09-08-gateshead-fc-v-derby-county-u21,home,Gateshead FC,4-2-3-1,,2026-09-08T21:16:34Z,start,28,Harrison Holgate,,,0.292,0.625
 2026-09-08-gateshead-fc-v-derby-county-u21,home,Gateshead FC,4-2-3-1,,2026-09-08T18:12:03Z,start,32,Harry Chapman,,,0.678,0.163
+2026-09-08-gateshead-fc-v-derby-county-u21,home,Gateshead FC,4-2-3-1,,2026-09-08T21:16:34Z,start,32,Harry Chapman,,,0.678,0.163
 2026-09-08-gateshead-fc-v-derby-county-u21,home,Gateshead FC,4-2-3-1,,2026-09-08T18:12:03Z,start,7,Jordy Hiwula-Mayifuila,,,0.678,0.837
+2026-09-08-gateshead-fc-v-derby-county-u21,home,Gateshead FC,4-2-3-1,,2026-09-08T21:16:34Z,start,7,Jordy Hiwula-Mayifuila,,,0.678,0.837
 2026-09-08-gateshead-fc-v-derby-county-u21,home,Gateshead FC,4-2-3-1,,2026-09-08T18:12:03Z,start,22,Martin Smith,,,0.485,0.7
+2026-09-08-gateshead-fc-v-derby-county-u21,home,Gateshead FC,4-2-3-1,,2026-09-08T21:16:34Z,start,22,Martin Smith,,,0.485,0.7
 2026-09-08-gateshead-fc-v-derby-county-u21,home,Gateshead FC,4-2-3-1,,2026-09-08T18:12:03Z,start,21,Michael Spellman,,,0.678,0.5
+2026-09-08-gateshead-fc-v-derby-county-u21,home,Gateshead FC,4-2-3-1,,2026-09-08T21:16:34Z,start,21,Michael Spellman,,,0.678,0.5
 2026-09-08-gateshead-fc-v-derby-county-u21,home,Gateshead FC,4-2-3-1,,2026-09-08T18:12:03Z,start,8,Sam Bowen,,,0.485,0.3
+2026-09-08-gateshead-fc-v-derby-county-u21,home,Gateshead FC,4-2-3-1,,2026-09-08T21:16:34Z,start,8,Sam Bowen,,,0.485,0.3
 2026-09-08-gateshead-fc-v-derby-county-u21,home,Gateshead FC,4-2-3-1,,2026-09-08T18:12:03Z,start,2,Thomas Lavery,,,0.292,0.875
+2026-09-08-gateshead-fc-v-derby-county-u21,home,Gateshead FC,4-2-3-1,,2026-09-08T21:16:34Z,start,2,Thomas Lavery,,,0.292,0.875
+2026-09-08-leyton-orient-v-bradford-city,away,Bradford City,3-4-2-1,,2026-09-08T21:16:34Z,bench,8,Adam Phillips,,,,
+2026-09-08-leyton-orient-v-bradford-city,away,Bradford City,3-4-2-1,,2026-09-08T21:16:34Z,bench,15,Aden Baldwin,,,,
+2026-09-08-leyton-orient-v-bradford-city,away,Bradford City,3-4-2-1,,2026-09-08T21:16:34Z,bench,10,Antoni Sarcevic,,,,
+2026-09-08-leyton-orient-v-bradford-city,away,Bradford City,3-4-2-1,,2026-09-08T21:16:34Z,bench,6,Callum Connolly,,,,
+2026-09-08-leyton-orient-v-bradford-city,away,Bradford City,3-4-2-1,,2026-09-08T21:16:34Z,bench,1,Cameron Dawson,,,,
+2026-09-08-leyton-orient-v-bradford-city,away,Bradford City,3-4-2-1,,2026-09-08T21:16:34Z,bench,3,Ibou Touray,,,,
+2026-09-08-leyton-orient-v-bradford-city,away,Bradford City,3-4-2-1,,2026-09-08T21:16:34Z,bench,9,Jake Beesley,,,,
+2026-09-08-leyton-orient-v-bradford-city,away,Bradford City,3-4-2-1,,2026-09-08T21:16:34Z,bench,28,Matthew Pennington,,,,
+2026-09-08-leyton-orient-v-bradford-city,away,Bradford City,3-4-2-1,,2026-09-08T21:16:34Z,bench,25,Nick Powell,,,,
+2026-09-08-leyton-orient-v-bradford-city,away,Bradford City,3-4-2-1,,2026-09-08T21:16:34Z,start,27,Corey O'Keeffe,corey-okeeffe,,0.485,0.125
+2026-09-08-leyton-orient-v-bradford-city,away,Bradford City,3-4-2-1,,2026-09-08T21:16:34Z,start,32,George Lapslie,,,0.678,0.7
+2026-09-08-leyton-orient-v-bradford-city,away,Bradford City,3-4-2-1,,2026-09-08T21:16:34Z,start,14,Hayden Matthews,,,0.292,0.5
+2026-09-08-leyton-orient-v-bradford-city,away,Bradford City,3-4-2-1,,2026-09-08T21:16:34Z,start,20,Henry Cartwright,,,0.485,0.375
+2026-09-08-leyton-orient-v-bradford-city,away,Bradford City,3-4-2-1,,2026-09-08T21:16:34Z,start,21,Jon McCracken,,,0.1,0.5
+2026-09-08-leyton-orient-v-bradford-city,away,Bradford City,3-4-2-1,,2026-09-08T21:16:34Z,start,19,Kayden Jackson,,,0.485,0.875
+2026-09-08-leyton-orient-v-bradford-city,away,Bradford City,3-4-2-1,,2026-09-08T21:16:34Z,start,22,Kieran Morgan,,,0.485,0.625
+2026-09-08-leyton-orient-v-bradford-city,away,Bradford City,3-4-2-1,,2026-09-08T21:16:34Z,start,5,Macaulay Gillesphey,,,0.292,0.21
+2026-09-08-leyton-orient-v-bradford-city,away,Bradford City,3-4-2-1,,2026-09-08T21:16:34Z,start,2,Reece Welch,,,0.292,0.79
+2026-09-08-leyton-orient-v-bradford-city,away,Bradford City,3-4-2-1,,2026-09-08T21:16:34Z,start,11,Stephen Humphrys,,,0.87,0.5
+2026-09-08-leyton-orient-v-bradford-city,away,Bradford City,3-4-2-1,,2026-09-08T21:16:34Z,start,24,Will Swan,,,0.678,0.3
+2026-09-08-leyton-orient-v-bradford-city,home,Leyton Orient,4-2-3-1,,2026-09-08T21:16:34Z,bench,20,Alex Gilbert,alex-gilbert,,,
+2026-09-08-leyton-orient-v-bradford-city,home,Leyton Orient,4-2-3-1,,2026-09-08T21:16:34Z,bench,25,Charlie Wellens,,,,
+2026-09-08-leyton-orient-v-bradford-city,home,Leyton Orient,4-2-3-1,,2026-09-08T21:16:34Z,bench,18,Dane Scarlett,,,,
+2026-09-08-leyton-orient-v-bradford-city,home,Leyton Orient,4-2-3-1,,2026-09-08T21:16:34Z,bench,11,Demetri Mitchell,,,,
+2026-09-08-leyton-orient-v-bradford-city,home,Leyton Orient,4-2-3-1,,2026-09-08T21:16:34Z,bench,2,Fin Stevens,,,,
+2026-09-08-leyton-orient-v-bradford-city,home,Leyton Orient,4-2-3-1,,2026-09-08T21:16:34Z,bench,9,Jaze Kabia,jaze-kabia,,,
+2026-09-08-leyton-orient-v-bradford-city,home,Leyton Orient,4-2-3-1,,2026-09-08T21:16:34Z,bench,5,Joseph Olowu,,,,
+2026-09-08-leyton-orient-v-bradford-city,home,Leyton Orient,4-2-3-1,,2026-09-08T21:16:34Z,bench,1,Nathan Baxter,,,,
+2026-09-08-leyton-orient-v-bradford-city,home,Leyton Orient,4-2-3-1,,2026-09-08T21:16:34Z,bench,22,Yusuf Akhamrich,,,,
+2026-09-08-leyton-orient-v-bradford-city,home,Leyton Orient,4-2-3-1,,2026-09-08T21:16:34Z,start,17,Armando Dobra,,,0.678,0.5
+2026-09-08-leyton-orient-v-bradford-city,home,Leyton Orient,4-2-3-1,,2026-09-08T21:16:34Z,start,8,Idris El Mizouni,,,0.485,0.3
+2026-09-08-leyton-orient-v-bradford-city,home,Leyton Orient,4-2-3-1,,2026-09-08T21:16:34Z,start,14,Isaac Hayden,,,0.292,0.875
+2026-09-08-leyton-orient-v-bradford-city,home,Leyton Orient,4-2-3-1,,2026-09-08T21:16:34Z,start,3,James Morris,,,0.292,0.125
+2026-09-08-leyton-orient-v-bradford-city,home,Leyton Orient,4-2-3-1,,2026-09-08T21:16:34Z,start,49,Nicholas Oyekunle,,,0.87,0.5
+2026-09-08-leyton-orient-v-bradford-city,home,Leyton Orient,4-2-3-1,,2026-09-08T21:16:34Z,start,13,Noah Phillips,,,0.1,0.5
+2026-09-08-leyton-orient-v-bradford-city,home,Leyton Orient,4-2-3-1,,2026-09-08T21:16:34Z,start,34,Phillip Chinedu,,,0.292,0.375
+2026-09-08-leyton-orient-v-bradford-city,home,Leyton Orient,4-2-3-1,,2026-09-08T21:16:34Z,start,28,Sean Clare,,,0.485,0.7
+2026-09-08-leyton-orient-v-bradford-city,home,Leyton Orient,4-2-3-1,,2026-09-08T21:16:34Z,start,44,Theo Archibald,,,0.678,0.837
+2026-09-08-leyton-orient-v-bradford-city,home,Leyton Orient,4-2-3-1,,2026-09-08T21:16:34Z,start,27,Tony Springett,tony-springett,,0.678,0.163
+2026-09-08-leyton-orient-v-bradford-city,home,Leyton Orient,4-2-3-1,,2026-09-08T21:16:34Z,start,6,William Forrester,,,0.292,0.625
+2026-09-08-lille-v-real-betis,away,Real Betis,4-2-3-1,,2026-09-08T21:16:34Z,bench,25,Dani Ceballos,,,,
+2026-09-08-lille-v-real-betis,away,Real Betis,4-2-3-1,,2026-09-08T21:16:34Z,bench,13,Diego Conde,,,,
+2026-09-08-lille-v-real-betis,away,Real Betis,4-2-3-1,,2026-09-08T21:16:34Z,bench,11,Fran García,,,,
+2026-09-08-lille-v-real-betis,away,Real Betis,4-2-3-1,,2026-09-08T21:16:34Z,bench,20,Giovani Lo Celso,,,,
+2026-09-08-lille-v-real-betis,away,Real Betis,4-2-3-1,,2026-09-08T21:16:34Z,bench,27,José Antonio Morante,,,,
+2026-09-08-lille-v-real-betis,away,Real Betis,4-2-3-1,,2026-09-08T21:16:34Z,bench,9,Juan Hernández,,,,
+2026-09-08-lille-v-real-betis,away,Real Betis,4-2-3-1,,2026-09-08T21:16:34Z,bench,31,Manu González,,,,
+2026-09-08-lille-v-real-betis,away,Real Betis,4-2-3-1,,2026-09-08T21:16:34Z,bench,21,Marc Roca,,,,
+2026-09-08-lille-v-real-betis,away,Real Betis,4-2-3-1,,2026-09-08T21:16:34Z,bench,18,Nelson Deossa,,,,
+2026-09-08-lille-v-real-betis,away,Real Betis,4-2-3-1,,2026-09-08T21:16:34Z,bench,16,Valentín Gómez,,,,
+2026-09-08-lille-v-real-betis,away,Real Betis,4-2-3-1,,2026-09-08T21:16:34Z,bench,15,Álvaro Fidalgo,,,,
+2026-09-08-lille-v-real-betis,away,Real Betis,4-2-3-1,,2026-09-08T21:16:34Z,bench,12,Ángel Ortiz,,,,
+2026-09-08-lille-v-real-betis,away,Real Betis,4-2-3-1,,2026-09-08T21:16:34Z,start,7,Antony,,,0.678,0.837
+2026-09-08-lille-v-real-betis,away,Real Betis,4-2-3-1,,2026-09-08T21:16:34Z,start,6,Facundo Bernal,,,0.485,0.7
+2026-09-08-lille-v-real-betis,away,Real Betis,4-2-3-1,,2026-09-08T21:16:34Z,start,2,Héctor Bellerín,,,0.292,0.875
+2026-09-08-lille-v-real-betis,away,Real Betis,4-2-3-1,,2026-09-08T21:16:34Z,start,22,Isco,,,0.678,0.5
+2026-09-08-lille-v-real-betis,away,Real Betis,4-2-3-1,,2026-09-08T21:16:34Z,start,23,Júnior Firpo,,,0.292,0.125
+2026-09-08-lille-v-real-betis,away,Real Betis,4-2-3-1,,2026-09-08T21:16:34Z,start,5,Marc Bartra,,,0.292,0.625
+2026-09-08-lille-v-real-betis,away,Real Betis,4-2-3-1,,2026-09-08T21:16:34Z,start,4,Natan,,,0.292,0.375
+2026-09-08-lille-v-real-betis,away,Real Betis,4-2-3-1,,2026-09-08T21:16:34Z,start,8,Pablo Fornals,,,0.485,0.3
+2026-09-08-lille-v-real-betis,away,Real Betis,4-2-3-1,,2026-09-08T21:16:34Z,start,17,Rodrigo Riquelme,,,0.678,0.163
+2026-09-08-lille-v-real-betis,away,Real Betis,4-2-3-1,,2026-09-08T21:16:34Z,start,19,Troy Parrott,troy-parrott,,0.87,0.5
+2026-09-08-lille-v-real-betis,away,Real Betis,4-2-3-1,,2026-09-08T21:16:34Z,start,1,Álvaro Vallés,,,0.1,0.5
+2026-09-08-lille-v-real-betis,home,Lille,4-2-3-1,,2026-09-08T21:16:34Z,bench,19,Başar Önal,,,,
+2026-09-08-lille-v-real-betis,home,Lille,4-2-3-1,,2026-09-08T21:16:34Z,bench,24,Calvin Verdonk,,,,
+2026-09-08-lille-v-real-betis,home,Lille,4-2-3-1,,2026-09-08T21:16:34Z,bench,7,Dilane Bakwa,,,,
+2026-09-08-lille-v-real-betis,home,Lille,4-2-3-1,,2026-09-08T21:16:34Z,bench,26,Isaac Cossier,,,,
+2026-09-08-lille-v-real-betis,home,Lille,4-2-3-1,,2026-09-08T21:16:34Z,bench,2,Loun Srdanovic,,,,
+2026-09-08-lille-v-real-betis,home,Lille,4-2-3-1,,2026-09-08T21:16:34Z,bench,14,Maurits Kjærgaard,,,,
+2026-09-08-lille-v-real-betis,home,Lille,4-2-3-1,,2026-09-08T21:16:34Z,bench,17,Ngal Ayel Mukau,,,,
+2026-09-08-lille-v-real-betis,home,Lille,4-2-3-1,,2026-09-08T21:16:34Z,bench,9,Olivier Giroud,,,,
+2026-09-08-lille-v-real-betis,home,Lille,4-2-3-1,,2026-09-08T21:16:34Z,bench,12,Orlando Gill,,,,
+2026-09-08-lille-v-real-betis,home,Lille,4-2-3-1,,2026-09-08T21:16:34Z,bench,11,Osame Sahraoui,,,,
+2026-09-08-lille-v-real-betis,home,Lille,4-2-3-1,,2026-09-08T21:16:34Z,bench,35,Soriba Diaoune,,,,
+2026-09-08-lille-v-real-betis,home,Lille,4-2-3-1,,2026-09-08T21:16:34Z,bench,23,Tanguy Nianzou,,,,
+2026-09-08-lille-v-real-betis,home,Lille,4-2-3-1,,2026-09-08T21:16:34Z,start,4,Alexsandro Ribeiro,,,0.292,0.375
+2026-09-08-lille-v-real-betis,home,Lille,4-2-3-1,,2026-09-08T21:16:34Z,start,18,Ayase Ueda,,,0.87,0.5
+2026-09-08-lille-v-real-betis,home,Lille,4-2-3-1,,2026-09-08T21:16:34Z,start,21,Benjamin André,,,0.485,0.7
+2026-09-08-lille-v-real-betis,home,Lille,4-2-3-1,,2026-09-08T21:16:34Z,start,1,Berke Özer,,,0.1,0.5
+2026-09-08-lille-v-real-betis,home,Lille,4-2-3-1,,2026-09-08T21:16:34Z,start,8,Ethan Mbappé,,,0.678,0.837
+2026-09-08-lille-v-real-betis,home,Lille,4-2-3-1,,2026-09-08T21:16:34Z,start,28,Gaëtan Perrin,,,0.678,0.163
+2026-09-08-lille-v-real-betis,home,Lille,4-2-3-1,,2026-09-08T21:16:34Z,start,10,Hákon Arnar Haraldsson,,,0.678,0.5
+2026-09-08-lille-v-real-betis,home,Lille,4-2-3-1,,2026-09-08T21:16:34Z,start,6,Nabil Bentaleb,,,0.485,0.3
+2026-09-08-lille-v-real-betis,home,Lille,4-2-3-1,,2026-09-08T21:16:34Z,start,3,Nathan Ngoy,,,0.292,0.625
+2026-09-08-lille-v-real-betis,home,Lille,4-2-3-1,,2026-09-08T21:16:34Z,start,15,Romain Perraud,,,0.292,0.125
+2026-09-08-lille-v-real-betis,home,Lille,4-2-3-1,,2026-09-08T21:16:34Z,start,22,Tiago Santos,,,0.292,0.875
+2026-09-08-millwall-v-newcastle-united,away,Newcastle United,4-2-3-1,,2026-09-08T21:16:34Z,bench,8,Aladji Bamba,,,,
+2026-09-08-millwall-v-newcastle-united,away,Newcastle United,4-2-3-1,,2026-09-08T21:16:34Z,bench,19,Anthony Elanga,,,,
+2026-09-08-millwall-v-newcastle-united,away,Newcastle United,4-2-3-1,,2026-09-08T21:16:34Z,bench,17,Bazoumana Touré,,,,
+2026-09-08-millwall-v-newcastle-united,away,Newcastle United,4-2-3-1,,2026-09-08T21:16:34Z,bench,67,Lewis Miley,,,,
+2026-09-08-millwall-v-newcastle-united,away,Newcastle United,4-2-3-1,,2026-09-08T21:16:34Z,bench,12,Malick Thiaw,,,,
+2026-09-08-millwall-v-newcastle-united,away,Newcastle United,4-2-3-1,,2026-09-08T21:16:34Z,bench,20,Matias Fernandez-Pardo,,,,
+2026-09-08-millwall-v-newcastle-united,away,Newcastle United,4-2-3-1,,2026-09-08T21:16:34Z,bench,1,Nick Pope,,,,
+2026-09-08-millwall-v-newcastle-united,away,Newcastle United,4-2-3-1,,2026-09-08T21:16:34Z,bench,14,Sean Steur,,,,
+2026-09-08-millwall-v-newcastle-united,away,Newcastle United,4-2-3-1,,2026-09-08T21:16:34Z,bench,2,Valentino Livramento,,,,
+2026-09-08-millwall-v-newcastle-united,away,Newcastle United,4-2-3-1,,2026-09-08T21:16:34Z,start,37,Amar Dedić,,,0.292,0.875
+2026-09-08-millwall-v-newcastle-united,away,Newcastle United,4-2-3-1,,2026-09-08T21:16:34Z,start,5,Fabian Schär,,,0.292,0.625
+2026-09-08-millwall-v-newcastle-united,away,Newcastle United,4-2-3-1,,2026-09-08T21:16:34Z,start,11,Harvey Barnes,,,0.678,0.163
+2026-09-08-millwall-v-newcastle-united,away,Newcastle United,4-2-3-1,,2026-09-08T21:16:34Z,start,23,Jacob Murphy,,,0.678,0.837
+2026-09-08-millwall-v-newcastle-united,away,Newcastle United,4-2-3-1,,2026-09-08T21:16:34Z,start,41,Jacob Ramsey,,,0.485,0.3
+2026-09-08-millwall-v-newcastle-united,away,Newcastle United,4-2-3-1,,2026-09-08T21:16:34Z,start,28,Joseph Willock,,,0.678,0.5
+2026-09-08-millwall-v-newcastle-united,away,Newcastle United,4-2-3-1,,2026-09-08T21:16:34Z,start,3,Lewis Hall,,,0.292,0.125
+2026-09-08-millwall-v-newcastle-united,away,Newcastle United,4-2-3-1,,2026-09-08T21:16:34Z,start,21,Lukás Hornícek,,,0.1,0.5
+2026-09-08-millwall-v-newcastle-united,away,Newcastle United,4-2-3-1,,2026-09-08T21:16:34Z,start,6,Nico González,,,0.485,0.7
+2026-09-08-millwall-v-newcastle-united,away,Newcastle United,4-2-3-1,,2026-09-08T21:16:34Z,start,4,Sven Botman,,,0.292,0.375
+2026-09-08-millwall-v-newcastle-united,away,Newcastle United,4-2-3-1,,2026-09-08T21:16:34Z,start,9,Yoane Wissa,,,0.87,0.5
+2026-09-08-millwall-v-newcastle-united,home,Millwall,4-2-3-1,,2026-09-08T21:16:34Z,bench,44,Alfie Massey,,,,
+2026-09-08-millwall-v-newcastle-united,home,Millwall,4-2-3-1,,2026-09-08T21:16:34Z,bench,37,George Beaumont,,,,
+2026-09-08-millwall-v-newcastle-united,home,Millwall,4-2-3-1,,2026-09-08T21:16:34Z,bench,41,George Evans,,,,
+2026-09-08-millwall-v-newcastle-united,home,Millwall,4-2-3-1,,2026-09-08T21:16:34Z,bench,57,Regan Anderson,,,,
+2026-09-08-millwall-v-newcastle-united,home,Millwall,4-2-3-1,,2026-09-08T21:16:34Z,bench,51,Sacha Tsugita Vieira,,,,
+2026-09-08-millwall-v-newcastle-united,home,Millwall,4-2-3-1,,2026-09-08T21:16:34Z,bench,7,Taïryk Arconte,,,,
+2026-09-08-millwall-v-newcastle-united,home,Millwall,4-2-3-1,,2026-09-08T21:16:34Z,bench,55,Tristan Parkes,,,,
+2026-09-08-millwall-v-newcastle-united,home,Millwall,4-2-3-1,,2026-09-08T21:16:34Z,bench,35,Yanis Issoufou,,,,
+2026-09-08-millwall-v-newcastle-united,home,Millwall,4-2-3-1,,2026-09-08T21:16:34Z,bench,3,Zak Sturge,,,,
+2026-09-08-millwall-v-newcastle-united,home,Millwall,4-2-3-1,,2026-09-08T21:16:34Z,start,6,Caleb Taylor,,,0.292,0.625
+2026-09-08-millwall-v-newcastle-united,home,Millwall,4-2-3-1,,2026-09-08T21:16:34Z,start,10,Camiel Neghli,,,0.678,0.163
+2026-09-08-millwall-v-newcastle-united,home,Millwall,4-2-3-1,,2026-09-08T21:16:34Z,start,16,Daniel Kelly,daniel-kelly,,0.485,0.7
+2026-09-08-millwall-v-newcastle-united,home,Millwall,4-2-3-1,,2026-09-08T21:16:34Z,start,12,Elkan Baggott,,,0.292,0.125
+2026-09-08-millwall-v-newcastle-united,home,Millwall,4-2-3-1,,2026-09-08T21:16:34Z,start,34,Filip Marschall,,,0.1,0.5
+2026-09-08-millwall-v-newcastle-united,home,Millwall,4-2-3-1,,2026-09-08T21:16:34Z,start,5,Jake Cooper,,,0.292,0.375
+2026-09-08-millwall-v-newcastle-united,home,Millwall,4-2-3-1,,2026-09-08T21:16:34Z,start,14,Jenson Metcalfe,,,0.485,0.3
+2026-09-08-millwall-v-newcastle-united,home,Millwall,4-2-3-1,,2026-09-08T21:16:34Z,start,2,Jordi Osei-Tutu,,,0.292,0.875
+2026-09-08-millwall-v-newcastle-united,home,Millwall,4-2-3-1,,2026-09-08T21:16:34Z,start,13,Lyndon Dykes,,,0.678,0.5
+2026-09-08-millwall-v-newcastle-united,home,Millwall,4-2-3-1,,2026-09-08T21:16:34Z,start,11,Romain Esse,,,0.678,0.837
+2026-09-08-millwall-v-newcastle-united,home,Millwall,4-2-3-1,,2026-09-08T21:16:34Z,start,29,Zak Lovelace,,,0.87,0.5
 2026-09-08-scunthorpe-united-v-nottingham-forest-u21,away,Nottingham Forest U21,4-2-3-1,,2026-09-08T18:12:03Z,bench,12,Aaron Bott,,,,
+2026-09-08-scunthorpe-united-v-nottingham-forest-u21,away,Nottingham Forest U21,3-4-2-1,,2026-09-08T21:16:34Z,bench,12,Aaron Bott,,,,
 2026-09-08-scunthorpe-united-v-nottingham-forest-u21,away,Nottingham Forest U21,4-2-3-1,,2026-09-08T18:12:03Z,bench,14,Buba Sanneh,,,,
+2026-09-08-scunthorpe-united-v-nottingham-forest-u21,away,Nottingham Forest U21,3-4-2-1,,2026-09-08T21:16:34Z,bench,14,Buba Sanneh,,,,
 2026-09-08-scunthorpe-united-v-nottingham-forest-u21,away,Nottingham Forest U21,4-2-3-1,,2026-09-08T18:12:03Z,bench,16,Chinazaekpere Nwosu,,,,
+2026-09-08-scunthorpe-united-v-nottingham-forest-u21,away,Nottingham Forest U21,3-4-2-1,,2026-09-08T21:16:34Z,bench,16,Chinazaekpere Nwosu,,,,
 2026-09-08-scunthorpe-united-v-nottingham-forest-u21,away,Nottingham Forest U21,4-2-3-1,,2026-09-08T18:12:03Z,bench,18,Jayden Powell,,,,
+2026-09-08-scunthorpe-united-v-nottingham-forest-u21,away,Nottingham Forest U21,3-4-2-1,,2026-09-08T21:16:34Z,bench,18,Jayden Powell,,,,
 2026-09-08-scunthorpe-united-v-nottingham-forest-u21,away,Nottingham Forest U21,4-2-3-1,,2026-09-08T18:12:03Z,bench,17,Kanye Bradshaw,,,,
+2026-09-08-scunthorpe-united-v-nottingham-forest-u21,away,Nottingham Forest U21,3-4-2-1,,2026-09-08T21:16:34Z,bench,17,Kanye Bradshaw,,,,
 2026-09-08-scunthorpe-united-v-nottingham-forest-u21,away,Nottingham Forest U21,4-2-3-1,,2026-09-08T18:12:03Z,bench,19,Shakur Samuels,,,,
+2026-09-08-scunthorpe-united-v-nottingham-forest-u21,away,Nottingham Forest U21,3-4-2-1,,2026-09-08T21:16:34Z,bench,19,Shakur Samuels,,,,
 2026-09-08-scunthorpe-united-v-nottingham-forest-u21,away,Nottingham Forest U21,4-2-3-1,,2026-09-08T18:12:03Z,bench,15,Spencer Sutton,,,,
+2026-09-08-scunthorpe-united-v-nottingham-forest-u21,away,Nottingham Forest U21,3-4-2-1,,2026-09-08T21:16:34Z,bench,15,Spencer Sutton,,,,
 2026-09-08-scunthorpe-united-v-nottingham-forest-u21,away,Nottingham Forest U21,4-2-3-1,,2026-09-08T18:12:03Z,start,8,Archie Whitehall,,,0.485,0.3
+2026-09-08-scunthorpe-united-v-nottingham-forest-u21,away,Nottingham Forest U21,3-4-2-1,,2026-09-08T21:16:34Z,start,8,Archie Whitehall,,,0.485,0.375
 2026-09-08-scunthorpe-united-v-nottingham-forest-u21,away,Nottingham Forest U21,4-2-3-1,,2026-09-08T18:12:03Z,start,6,Blaine McClure,,,0.485,0.7
+2026-09-08-scunthorpe-united-v-nottingham-forest-u21,away,Nottingham Forest U21,3-4-2-1,,2026-09-08T21:16:34Z,start,6,Blaine McClure,,,0.485,0.625
 2026-09-08-scunthorpe-united-v-nottingham-forest-u21,away,Nottingham Forest U21,4-2-3-1,,2026-09-08T18:12:03Z,start,4,David Modupe,,,0.292,0.625
+2026-09-08-scunthorpe-united-v-nottingham-forest-u21,away,Nottingham Forest U21,3-4-2-1,,2026-09-08T21:16:34Z,start,4,David Modupe,,,0.292,0.5
+2026-09-08-scunthorpe-united-v-nottingham-forest-u21,away,Nottingham Forest U21,3-4-2-1,,2026-09-08T21:16:34Z,start,10,Donnell McNeilly,,,0.678,0.3
 2026-09-08-scunthorpe-united-v-nottingham-forest-u21,away,Nottingham Forest U21,4-2-3-1,,2026-09-08T18:12:03Z,start,5,Ethan Broomes,,,0.292,0.125
+2026-09-08-scunthorpe-united-v-nottingham-forest-u21,away,Nottingham Forest U21,3-4-2-1,,2026-09-08T21:16:34Z,start,5,Ethan Brooms,,,0.292,0.21
 2026-09-08-scunthorpe-united-v-nottingham-forest-u21,away,Nottingham Forest U21,4-2-3-1,,2026-09-08T18:12:03Z,start,1,George Murray-Jones,,,0.1,0.5
+2026-09-08-scunthorpe-united-v-nottingham-forest-u21,away,Nottingham Forest U21,3-4-2-1,,2026-09-08T21:16:34Z,start,1,George Murray-Jones,,,0.1,0.5
 2026-09-08-scunthorpe-united-v-nottingham-forest-u21,away,Nottingham Forest U21,4-2-3-1,,2026-09-08T18:12:03Z,start,10,Grady McDonnell,grady-mcdonnell,,0.678,0.5
 2026-09-08-scunthorpe-united-v-nottingham-forest-u21,away,Nottingham Forest U21,4-2-3-1,,2026-09-08T18:12:03Z,start,11,Jamie Newton,,,0.678,0.163
+2026-09-08-scunthorpe-united-v-nottingham-forest-u21,away,Nottingham Forest U21,3-4-2-1,,2026-09-08T21:16:34Z,start,11,Jamie Newton,,,0.485,0.125
 2026-09-08-scunthorpe-united-v-nottingham-forest-u21,away,Nottingham Forest U21,4-2-3-1,,2026-09-08T18:12:03Z,start,2,Jimmy Sinclair,,,0.292,0.875
+2026-09-08-scunthorpe-united-v-nottingham-forest-u21,away,Nottingham Forest U21,3-4-2-1,,2026-09-08T21:16:34Z,start,2,Jimmy Sinclair,,,0.485,0.875
 2026-09-08-scunthorpe-united-v-nottingham-forest-u21,away,Nottingham Forest U21,4-2-3-1,,2026-09-08T18:12:03Z,start,9,Kalum Thompson,,,0.87,0.5
+2026-09-08-scunthorpe-united-v-nottingham-forest-u21,away,Nottingham Forest U21,3-4-2-1,,2026-09-08T21:16:34Z,start,9,Kalum Thompson,,,0.87,0.5
 2026-09-08-scunthorpe-united-v-nottingham-forest-u21,away,Nottingham Forest U21,4-2-3-1,,2026-09-08T18:12:03Z,start,7,Kristian Clarke,,,0.678,0.837
+2026-09-08-scunthorpe-united-v-nottingham-forest-u21,away,Nottingham Forest U21,3-4-2-1,,2026-09-08T21:16:34Z,start,7,Kristian Clarke,,,0.678,0.7
 2026-09-08-scunthorpe-united-v-nottingham-forest-u21,away,Nottingham Forest U21,4-2-3-1,,2026-09-08T18:12:03Z,start,3,Matthew Orr,,,0.292,0.375
+2026-09-08-scunthorpe-united-v-nottingham-forest-u21,away,Nottingham Forest U21,3-4-2-1,,2026-09-08T21:16:34Z,start,3,Matthew Orr,,,0.292,0.79
 2026-09-08-scunthorpe-united-v-nottingham-forest-u21,home,Scunthorpe United,4-2-3-1,,2026-09-08T18:12:03Z,bench,9,Danny Whitehall,,,,
+2026-09-08-scunthorpe-united-v-nottingham-forest-u21,home,Scunthorpe United,4-3-3,,2026-09-08T21:16:34Z,bench,9,Danny Whitehall,,,,
 2026-09-08-scunthorpe-united-v-nottingham-forest-u21,home,Scunthorpe United,4-2-3-1,,2026-09-08T18:12:03Z,bench,24,Harry Shipstone,,,,
+2026-09-08-scunthorpe-united-v-nottingham-forest-u21,home,Scunthorpe United,4-3-3,,2026-09-08T21:16:34Z,bench,24,Harry Shipstone,,,,
 2026-09-08-scunthorpe-united-v-nottingham-forest-u21,home,Scunthorpe United,4-2-3-1,,2026-09-08T18:12:03Z,bench,4,Jéan Belehouan,,,,
+2026-09-08-scunthorpe-united-v-nottingham-forest-u21,home,Scunthorpe United,4-3-3,,2026-09-08T21:16:34Z,bench,4,Jéan Belehouan,,,,
 2026-09-08-scunthorpe-united-v-nottingham-forest-u21,home,Scunthorpe United,4-2-3-1,,2026-09-08T18:12:03Z,bench,1,Louis Jones,,,,
+2026-09-08-scunthorpe-united-v-nottingham-forest-u21,home,Scunthorpe United,4-3-3,,2026-09-08T21:16:34Z,bench,1,Louis Jones,,,,
 2026-09-08-scunthorpe-united-v-nottingham-forest-u21,home,Scunthorpe United,4-2-3-1,,2026-09-08T18:12:03Z,bench,44,Ross Barrows,,,,
+2026-09-08-scunthorpe-united-v-nottingham-forest-u21,home,Scunthorpe United,4-3-3,,2026-09-08T21:16:34Z,bench,44,Ross Barrows,,,,
 2026-09-08-scunthorpe-united-v-nottingham-forest-u21,home,Scunthorpe United,4-2-3-1,,2026-09-08T18:12:03Z,bench,33,Tyler Denton,,,,
+2026-09-08-scunthorpe-united-v-nottingham-forest-u21,home,Scunthorpe United,4-3-3,,2026-09-08T21:16:34Z,bench,33,Tyler Denton,,,,
 2026-09-08-scunthorpe-united-v-nottingham-forest-u21,home,Scunthorpe United,4-2-3-1,,2026-09-08T18:12:03Z,bench,16,Tyrell Sellars-Fleming,,,,
+2026-09-08-scunthorpe-united-v-nottingham-forest-u21,home,Scunthorpe United,4-3-3,,2026-09-08T21:16:34Z,bench,16,Tyrell Sellars-Fleming,,,,
 2026-09-08-scunthorpe-united-v-nottingham-forest-u21,home,Scunthorpe United,4-2-3-1,,2026-09-08T18:12:03Z,start,3,Branden Horton,,,0.292,0.125
+2026-09-08-scunthorpe-united-v-nottingham-forest-u21,home,Scunthorpe United,4-3-3,,2026-09-08T21:16:34Z,start,3,Branden Horton,,,0.357,0.125
 2026-09-08-scunthorpe-united-v-nottingham-forest-u21,home,Scunthorpe United,4-2-3-1,,2026-09-08T18:12:03Z,start,7,Declan Howe,,,0.678,0.5
+2026-09-08-scunthorpe-united-v-nottingham-forest-u21,home,Scunthorpe United,4-3-3,,2026-09-08T21:16:34Z,start,7,Declan Howe,,,0.87,0.79
 2026-09-08-scunthorpe-united-v-nottingham-forest-u21,home,Scunthorpe United,4-2-3-1,,2026-09-08T18:12:03Z,start,12,Hugh Parker,hugh-parker,,0.87,0.5
+2026-09-08-scunthorpe-united-v-nottingham-forest-u21,home,Scunthorpe United,4-3-3,,2026-09-08T21:16:34Z,start,12,Hugh Parker,hugh-parker,,0.87,0.21
 2026-09-08-scunthorpe-united-v-nottingham-forest-u21,home,Scunthorpe United,4-2-3-1,,2026-09-08T18:12:03Z,start,31,James Gale,,,0.485,0.7
+2026-09-08-scunthorpe-united-v-nottingham-forest-u21,home,Scunthorpe United,4-3-3,,2026-09-08T21:16:34Z,start,31,James Gale,,,0.613,0.79
 2026-09-08-scunthorpe-united-v-nottingham-forest-u21,home,Scunthorpe United,4-2-3-1,,2026-09-08T18:12:03Z,start,11,Joe Rowley,,,0.485,0.3
+2026-09-08-scunthorpe-united-v-nottingham-forest-u21,home,Scunthorpe United,4-3-3,,2026-09-08T21:16:34Z,start,11,Joe Rowley,,,0.613,0.5
 2026-09-08-scunthorpe-united-v-nottingham-forest-u21,home,Scunthorpe United,4-2-3-1,,2026-09-08T18:12:03Z,start,21,Joe Starbuck,,,0.292,0.875
+2026-09-08-scunthorpe-united-v-nottingham-forest-u21,home,Scunthorpe United,4-3-3,,2026-09-08T21:16:34Z,start,21,Joe Starbuck,,,0.357,0.875
 2026-09-08-scunthorpe-united-v-nottingham-forest-u21,home,Scunthorpe United,4-2-3-1,,2026-09-08T18:12:03Z,start,18,Kyle Hurst,,,0.678,0.837
+2026-09-08-scunthorpe-united-v-nottingham-forest-u21,home,Scunthorpe United,4-3-3,,2026-09-08T21:16:34Z,start,18,Kyle Hurst,,,0.613,0.21
 2026-09-08-scunthorpe-united-v-nottingham-forest-u21,home,Scunthorpe United,4-2-3-1,,2026-09-08T18:12:03Z,start,10,Luke Brennan,,,0.678,0.163
+2026-09-08-scunthorpe-united-v-nottingham-forest-u21,home,Scunthorpe United,4-3-3,,2026-09-08T21:16:34Z,start,10,Luke Brennan,,,0.87,0.5
 2026-09-08-scunthorpe-united-v-nottingham-forest-u21,home,Scunthorpe United,4-2-3-1,,2026-09-08T18:12:03Z,start,25,Maison Campbell,,,0.1,0.5
+2026-09-08-scunthorpe-united-v-nottingham-forest-u21,home,Scunthorpe United,4-3-3,,2026-09-08T21:16:34Z,start,25,Maison Campbell,,,0.1,0.5
 2026-09-08-scunthorpe-united-v-nottingham-forest-u21,home,Scunthorpe United,4-2-3-1,,2026-09-08T18:12:03Z,start,15,Stanley Ashbee,,,0.292,0.375
+2026-09-08-scunthorpe-united-v-nottingham-forest-u21,home,Scunthorpe United,4-3-3,,2026-09-08T21:16:34Z,start,15,Stanley Ashbee,,,0.357,0.375
 2026-09-08-scunthorpe-united-v-nottingham-forest-u21,home,Scunthorpe United,4-2-3-1,,2026-09-08T18:12:03Z,start,5,Will Evans,,,0.292,0.625
+2026-09-08-scunthorpe-united-v-nottingham-forest-u21,home,Scunthorpe United,4-3-3,,2026-09-08T21:16:34Z,start,5,Will Evans,,,0.357,0.625
 2026-09-08-solihull-moors-v-leeds-united-u21,away,Leeds United U21,4-2-3-1,,2026-09-08T18:12:03Z,bench,12,George Kenyon,,,,
+2026-09-08-solihull-moors-v-leeds-united-u21,away,Leeds United U21,4-2-3-1,,2026-09-08T21:16:34Z,bench,12,George Kenyon,,,,
 2026-09-08-solihull-moors-v-leeds-united-u21,away,Leeds United U21,4-2-3-1,,2026-09-08T18:12:03Z,bench,14,Jacob Render,,,,
+2026-09-08-solihull-moors-v-leeds-united-u21,away,Leeds United U21,4-2-3-1,,2026-09-08T21:16:34Z,bench,14,Jacob Render,,,,
 2026-09-08-solihull-moors-v-leeds-united-u21,away,Leeds United U21,4-2-3-1,,2026-09-08T18:12:03Z,bench,16,Jonathan Howson,,,,
+2026-09-08-solihull-moors-v-leeds-united-u21,away,Leeds United U21,4-2-3-1,,2026-09-08T21:16:34Z,bench,16,Jonathan Howson,,,,
 2026-09-08-solihull-moors-v-leeds-united-u21,away,Leeds United U21,4-2-3-1,,2026-09-08T18:12:03Z,bench,19,Louie Philpott,,,,
+2026-09-08-solihull-moors-v-leeds-united-u21,away,Leeds United U21,4-2-3-1,,2026-09-08T21:16:34Z,bench,19,Louie Philpott,,,,
 2026-09-08-solihull-moors-v-leeds-united-u21,away,Leeds United U21,4-2-3-1,,2026-09-08T18:12:03Z,bench,17,Luke Matykiewicz,,,,
+2026-09-08-solihull-moors-v-leeds-united-u21,away,Leeds United U21,4-2-3-1,,2026-09-08T21:16:34Z,bench,17,Luke Matykiewicz,,,,
 2026-09-08-solihull-moors-v-leeds-united-u21,away,Leeds United U21,4-2-3-1,,2026-09-08T18:12:03Z,bench,15,Samuel Alker,,,,
+2026-09-08-solihull-moors-v-leeds-united-u21,away,Leeds United U21,4-2-3-1,,2026-09-08T21:16:34Z,bench,15,Samuel Alker,,,,
 2026-09-08-solihull-moors-v-leeds-united-u21,away,Leeds United U21,4-2-3-1,,2026-09-08T18:12:03Z,start,5,Alfie Cresswell,,,0.485,0.3
+2026-09-08-solihull-moors-v-leeds-united-u21,away,Leeds United U21,4-2-3-1,,2026-09-08T21:16:34Z,start,5,Alfie Cresswell,,,0.485,0.3
 2026-09-08-solihull-moors-v-leeds-united-u21,away,Leeds United U21,4-2-3-1,,2026-09-08T18:12:03Z,start,11,Callum Mills,,,0.678,0.5
+2026-09-08-solihull-moors-v-leeds-united-u21,away,Leeds United U21,4-2-3-1,,2026-09-08T21:16:34Z,start,11,Callum Mills,,,0.678,0.5
 2026-09-08-solihull-moors-v-leeds-united-u21,away,Leeds United U21,4-2-3-1,,2026-09-08T18:12:03Z,start,9,Carrick Njinko,,,0.87,0.5
+2026-09-08-solihull-moors-v-leeds-united-u21,away,Leeds United U21,4-2-3-1,,2026-09-08T21:16:34Z,start,9,Carrick Njinko,,,0.87,0.5
 2026-09-08-solihull-moors-v-leeds-united-u21,away,Leeds United U21,4-2-3-1,,2026-09-08T18:12:03Z,start,10,Freddie Lane,,,0.678,0.163
+2026-09-08-solihull-moors-v-leeds-united-u21,away,Leeds United U21,4-2-3-1,,2026-09-08T21:16:34Z,start,10,Freddie Lane,,,0.678,0.163
 2026-09-08-solihull-moors-v-leeds-united-u21,away,Leeds United U21,4-2-3-1,,2026-09-08T18:12:03Z,start,2,Harvey Vincent,,,0.292,0.875
+2026-09-08-solihull-moors-v-leeds-united-u21,away,Leeds United U21,4-2-3-1,,2026-09-08T21:16:34Z,start,2,Harvey Vincent,,,0.292,0.875
 2026-09-08-solihull-moors-v-leeds-united-u21,away,Leeds United U21,4-2-3-1,,2026-09-08T18:12:03Z,start,4,Jacob Howard,,,0.292,0.625
+2026-09-08-solihull-moors-v-leeds-united-u21,away,Leeds United U21,4-2-3-1,,2026-09-08T21:16:34Z,start,4,Jacob Howard,,,0.292,0.625
 2026-09-08-solihull-moors-v-leeds-united-u21,away,Leeds United U21,4-2-3-1,,2026-09-08T18:12:03Z,start,3,Jayden Lienou,,,0.292,0.125
+2026-09-08-solihull-moors-v-leeds-united-u21,away,Leeds United U21,4-2-3-1,,2026-09-08T21:16:34Z,start,3,Jayden Lienou,,,0.292,0.125
 2026-09-08-solihull-moors-v-leeds-united-u21,away,Leeds United U21,4-2-3-1,,2026-09-08T18:12:03Z,start,7,Josh McDonald,,,0.678,0.837
+2026-09-08-solihull-moors-v-leeds-united-u21,away,Leeds United U21,4-2-3-1,,2026-09-08T21:16:34Z,start,7,Josh McDonald,,,0.678,0.837
 2026-09-08-solihull-moors-v-leeds-united-u21,away,Leeds United U21,4-2-3-1,,2026-09-08T18:12:03Z,start,6,Louis Enahoro-Marcus,,,0.292,0.375
+2026-09-08-solihull-moors-v-leeds-united-u21,away,Leeds United U21,4-2-3-1,,2026-09-08T21:16:34Z,start,6,Louis Enahoro-Marcus,,,0.292,0.375
 2026-09-08-solihull-moors-v-leeds-united-u21,away,Leeds United U21,4-2-3-1,,2026-09-08T18:12:03Z,start,8,Oliver Pickles,,,0.485,0.7
+2026-09-08-solihull-moors-v-leeds-united-u21,away,Leeds United U21,4-2-3-1,,2026-09-08T21:16:34Z,start,8,Oliver Pickles,,,0.485,0.7
 2026-09-08-solihull-moors-v-leeds-united-u21,away,Leeds United U21,4-2-3-1,,2026-09-08T18:12:03Z,start,1,Rory Mahady,,,0.1,0.5
+2026-09-08-solihull-moors-v-leeds-united-u21,away,Leeds United U21,4-2-3-1,,2026-09-08T21:16:34Z,start,1,Rory Mahady,,,0.1,0.5
 2026-09-08-solihull-moors-v-leeds-united-u21,home,Solihull Moors,3-4-3,,2026-09-08T18:12:03Z,bench,28,Charlie Watts,,,,
+2026-09-08-solihull-moors-v-leeds-united-u21,home,Solihull Moors,3-4-3,,2026-09-08T21:16:34Z,bench,28,Charlie Watts,,,,
 2026-09-08-solihull-moors-v-leeds-united-u21,home,Solihull Moors,3-4-3,,2026-09-08T18:12:03Z,bench,4,Jamie Andrews,,,,
+2026-09-08-solihull-moors-v-leeds-united-u21,home,Solihull Moors,3-4-3,,2026-09-08T21:16:34Z,bench,4,Jamie Andrews,,,,
 2026-09-08-solihull-moors-v-leeds-united-u21,home,Solihull Moors,3-4-3,,2026-09-08T18:12:03Z,bench,7,Joe Sbarra,,,,
+2026-09-08-solihull-moors-v-leeds-united-u21,home,Solihull Moors,3-4-3,,2026-09-08T21:16:34Z,bench,7,Joe Sbarra,,,,
 2026-09-08-solihull-moors-v-leeds-united-u21,home,Solihull Moors,3-4-3,,2026-09-08T18:12:03Z,bench,32,Luca Hancock,,,,
+2026-09-08-solihull-moors-v-leeds-united-u21,home,Solihull Moors,3-4-3,,2026-09-08T21:16:34Z,bench,32,Luca Hancock,,,,
 2026-09-08-solihull-moors-v-leeds-united-u21,home,Solihull Moors,3-4-3,,2026-09-08T18:12:03Z,bench,1,Max Metcalfe,,,,
+2026-09-08-solihull-moors-v-leeds-united-u21,home,Solihull Moors,3-4-3,,2026-09-08T21:16:34Z,bench,1,Max Metcalfe,,,,
 2026-09-08-solihull-moors-v-leeds-united-u21,home,Solihull Moors,3-4-3,,2026-09-08T18:12:03Z,bench,8,Scott High,,,,
+2026-09-08-solihull-moors-v-leeds-united-u21,home,Solihull Moors,3-4-3,,2026-09-08T21:16:34Z,bench,8,Scott High,,,,
 2026-09-08-solihull-moors-v-leeds-united-u21,home,Solihull Moors,3-4-3,,2026-09-08T18:12:03Z,bench,23,Tyrell Warren,,,,
+2026-09-08-solihull-moors-v-leeds-united-u21,home,Solihull Moors,3-4-3,,2026-09-08T21:16:34Z,bench,23,Tyrell Warren,,,,
 2026-09-08-solihull-moors-v-leeds-united-u21,home,Solihull Moors,3-4-3,,2026-09-08T18:12:03Z,start,22,Ben Wodskou,,,0.87,0.21
+2026-09-08-solihull-moors-v-leeds-united-u21,home,Solihull Moors,3-4-3,,2026-09-08T21:16:34Z,start,22,Ben Wodskou,,,0.87,0.21
 2026-09-08-solihull-moors-v-leeds-united-u21,home,Solihull Moors,3-4-3,,2026-09-08T18:12:03Z,start,11,Ben Worman,,,0.87,0.5
+2026-09-08-solihull-moors-v-leeds-united-u21,home,Solihull Moors,3-4-3,,2026-09-08T21:16:34Z,start,11,Ben Worman,,,0.87,0.5
 2026-09-08-solihull-moors-v-leeds-united-u21,home,Solihull Moors,3-4-3,,2026-09-08T18:12:03Z,start,27,Callum McFarlane,,,0.87,0.79
+2026-09-08-solihull-moors-v-leeds-united-u21,home,Solihull Moors,3-4-3,,2026-09-08T21:16:34Z,start,27,Callum McFarlane,,,0.87,0.79
 2026-09-08-solihull-moors-v-leeds-united-u21,home,Solihull Moors,3-4-3,,2026-09-08T18:12:03Z,start,3,Cameron Green,,,0.357,0.21
+2026-09-08-solihull-moors-v-leeds-united-u21,home,Solihull Moors,3-4-3,,2026-09-08T21:16:34Z,start,3,Cameron Green,,,0.357,0.21
 2026-09-08-solihull-moors-v-leeds-united-u21,home,Solihull Moors,3-4-3,,2026-09-08T18:12:03Z,start,16,Craig Farquhar,,,0.357,0.5
+2026-09-08-solihull-moors-v-leeds-united-u21,home,Solihull Moors,3-4-3,,2026-09-08T21:16:34Z,start,16,Craig Farquhar,,,0.357,0.5
 2026-09-08-solihull-moors-v-leeds-united-u21,home,Solihull Moors,3-4-3,,2026-09-08T18:12:03Z,start,30,Flynn Benjamin Coffey,,,0.613,0.875
+2026-09-08-solihull-moors-v-leeds-united-u21,home,Solihull Moors,3-4-3,,2026-09-08T21:16:34Z,start,30,Flynn Coffey,,,0.613,0.875
 2026-09-08-solihull-moors-v-leeds-united-u21,home,Solihull Moors,3-4-3,,2026-09-08T18:12:03Z,start,2,Justin Hanks,,,0.357,0.79
+2026-09-08-solihull-moors-v-leeds-united-u21,home,Solihull Moors,3-4-3,,2026-09-08T21:16:34Z,start,2,Justin Hanks,,,0.357,0.79
 2026-09-08-solihull-moors-v-leeds-united-u21,home,Solihull Moors,3-4-3,,2026-09-08T18:12:03Z,start,15,Matty Carson,,,0.613,0.125
+2026-09-08-solihull-moors-v-leeds-united-u21,home,Solihull Moors,3-4-3,,2026-09-08T21:16:34Z,start,15,Matty Carson,,,0.613,0.125
 2026-09-08-solihull-moors-v-leeds-united-u21,home,Solihull Moors,3-4-3,,2026-09-08T18:12:03Z,start,12,Nathaniel Ford,,,0.1,0.5
+2026-09-08-solihull-moors-v-leeds-united-u21,home,Solihull Moors,3-4-3,,2026-09-08T21:16:34Z,start,12,Nathaniel Ford,,,0.1,0.5
 2026-09-08-solihull-moors-v-leeds-united-u21,home,Solihull Moors,3-4-3,,2026-09-08T18:12:03Z,start,20,Rio Shipston,,,0.613,0.625
+2026-09-08-solihull-moors-v-leeds-united-u21,home,Solihull Moors,3-4-3,,2026-09-08T21:16:34Z,start,20,Rio Shipston,,,0.613,0.625
 2026-09-08-solihull-moors-v-leeds-united-u21,home,Solihull Moors,3-4-3,,2026-09-08T18:12:03Z,start,18,Ryan Woods,,,0.613,0.375
+2026-09-08-solihull-moors-v-leeds-united-u21,home,Solihull Moors,3-4-3,,2026-09-08T21:16:34Z,start,18,Ryan Woods,,,0.613,0.375
+2026-09-08-southampton-v-swansea-city,away,Swansea City,4-2-3-1,,2026-09-08T21:16:34Z,bench,33,Adam Idah,adam-idah,,,
+2026-09-08-southampton-v-swansea-city,away,Swansea City,4-2-3-1,,2026-09-08T21:16:34Z,bench,1,Andrew Fisher,,,,
+2026-09-08-southampton-v-swansea-city,away,Swansea City,4-2-3-1,,2026-09-08T21:16:34Z,bench,3,Jenson Seelt,,,,
+2026-09-08-southampton-v-swansea-city,away,Swansea City,4-2-3-1,,2026-09-08T21:16:34Z,bench,10,Ji-Sung Eom,,,,
+2026-09-08-southampton-v-swansea-city,away,Swansea City,4-2-3-1,,2026-09-08T21:16:34Z,bench,2,Josh Key,,,,
+2026-09-08-southampton-v-swansea-city,away,Swansea City,4-2-3-1,,2026-09-08T21:16:34Z,bench,7,Melker Widell,,,,
+2026-09-08-southampton-v-swansea-city,away,Swansea City,4-2-3-1,,2026-09-08T21:16:34Z,bench,35,Ronald Pereira,,,,
+2026-09-08-southampton-v-swansea-city,away,Swansea City,4-2-3-1,,2026-09-08T21:16:34Z,bench,46,Stephen Eustaquio,,,,
+2026-09-08-southampton-v-swansea-city,away,Swansea City,4-2-3-1,,2026-09-08T21:16:34Z,bench,20,Tiago Parente,,,,
+2026-09-08-southampton-v-swansea-city,away,Swansea City,4-2-3-1,,2026-09-08T21:16:34Z,start,5,Ben Cabango,,,0.292,0.625
+2026-09-08-southampton-v-swansea-city,away,Swansea City,4-2-3-1,,2026-09-08T21:16:34Z,start,8,Elijah Just,,,0.678,0.5
+2026-09-08-southampton-v-swansea-city,away,Swansea City,4-2-3-1,,2026-09-08T21:16:34Z,start,26,Filip Lissah,,,0.292,0.875
+2026-09-08-southampton-v-swansea-city,away,Swansea City,4-2-3-1,,2026-09-08T21:16:34Z,start,4,Jay Fulton,,,0.485,0.7
+2026-09-08-southampton-v-swansea-city,away,Swansea City,4-2-3-1,,2026-09-08T21:16:34Z,start,30,Joseph Opoku,,,0.678,0.837
+2026-09-08-southampton-v-swansea-city,away,Swansea City,4-2-3-1,,2026-09-08T21:16:34Z,start,14,Josh Tymon,,,0.292,0.125
+2026-09-08-southampton-v-swansea-city,away,Swansea City,4-2-3-1,,2026-09-08T21:16:34Z,start,22,Lawrence Vigouroux,,,0.1,0.5
+2026-09-08-southampton-v-swansea-city,away,Swansea City,4-2-3-1,,2026-09-08T21:16:34Z,start,6,Marko Stamenić,,,0.485,0.3
+2026-09-08-southampton-v-swansea-city,away,Swansea City,4-2-3-1,,2026-09-08T21:16:34Z,start,49,Moussa Kounfolo Yeo,,,0.678,0.163
+2026-09-08-southampton-v-swansea-city,away,Swansea City,4-2-3-1,,2026-09-08T21:16:34Z,start,23,Stephen Welsh,,,0.292,0.375
+2026-09-08-southampton-v-swansea-city,away,Swansea City,4-2-3-1,,2026-09-08T21:16:34Z,start,9,Žan Vipotnik,,,0.87,0.5
+2026-09-08-southampton-v-swansea-city,home,Southampton,4-2-3-1,,2026-09-08T21:16:34Z,bench,26,Cameron Bragg,,,,
+2026-09-08-southampton-v-swansea-city,home,Southampton,4-2-3-1,,2026-09-08T21:16:34Z,bench,28,Divin Mubama,,,,
+2026-09-08-southampton-v-swansea-city,home,Southampton,4-2-3-1,,2026-09-08T21:16:34Z,bench,25,George Long,,,,
+2026-09-08-southampton-v-swansea-city,home,Southampton,4-2-3-1,,2026-09-08T21:16:34Z,bench,5,Jack Stephens,,,,
+2026-09-08-southampton-v-swansea-city,home,Southampton,4-2-3-1,,2026-09-08T21:16:34Z,bench,27,Kuryu Matsuki,,,,
+2026-09-08-southampton-v-swansea-city,home,Southampton,4-2-3-1,,2026-09-08T21:16:34Z,bench,11,Lewis Dobbin,,,,
+2026-09-08-southampton-v-swansea-city,home,Southampton,4-2-3-1,,2026-09-08T21:16:34Z,bench,23,Samuel Edozie,,,,
+2026-09-08-southampton-v-swansea-city,home,Southampton,4-2-3-1,,2026-09-08T21:16:34Z,bench,34,Welington,,,,
+2026-09-08-southampton-v-swansea-city,home,Southampton,4-2-3-1,,2026-09-08T21:16:34Z,bench,6,Zach Abbott,,,,
+2026-09-08-southampton-v-swansea-city,home,Southampton,4-2-3-1,,2026-09-08T21:16:34Z,start,9,Cyle Larin,,,0.87,0.5
+2026-09-08-southampton-v-swansea-city,home,Southampton,4-2-3-1,,2026-09-08T21:16:34Z,start,1,Daniel Peretz,,,0.1,0.5
+2026-09-08-southampton-v-swansea-city,home,Southampton,4-2-3-1,,2026-09-08T21:16:34Z,start,10,Finn Azaz,finn-azaz,,0.678,0.5
+2026-09-08-southampton-v-swansea-city,home,Southampton,4-2-3-1,,2026-09-08T21:16:34Z,start,4,Flynn Downes,,,0.485,0.7
+2026-09-08-southampton-v-swansea-city,home,Southampton,4-2-3-1,,2026-09-08T21:16:34Z,start,14,James Bree,,,0.292,0.875
+2026-09-08-southampton-v-swansea-city,home,Southampton,4-2-3-1,,2026-09-08T21:16:34Z,start,30,James Ward-Prowse,,,0.485,0.3
+2026-09-08-southampton-v-swansea-city,home,Southampton,4-2-3-1,,2026-09-08T21:16:34Z,start,13,Keven Schlotterbeck,,,0.292,0.375
+2026-09-08-southampton-v-swansea-city,home,Southampton,4-2-3-1,,2026-09-08T21:16:34Z,start,7,Léo Scienza,,,0.678,0.163
+2026-09-08-southampton-v-swansea-city,home,Southampton,4-2-3-1,,2026-09-08T21:16:34Z,start,15,Nathan Wood,,,0.292,0.625
+2026-09-08-southampton-v-swansea-city,home,Southampton,4-2-3-1,,2026-09-08T21:16:34Z,start,3,Ryan Manning,ryan-manning,,0.292,0.125
+2026-09-08-southampton-v-swansea-city,home,Southampton,4-2-3-1,,2026-09-08T21:16:34Z,start,18,Tom Fellows,,,0.678,0.837
+2026-09-08-sunderland-v-hull-city,away,Hull City,4-2-3-1,,2026-09-08T21:16:34Z,bench,55,Archie Howard,,,,
+2026-09-08-sunderland-v-hull-city,away,Hull City,4-2-3-1,,2026-09-08T21:16:34Z,bench,36,Christos Mouzakitis,,,,
+2026-09-08-sunderland-v-hull-city,away,Hull City,4-2-3-1,,2026-09-08T21:16:34Z,bench,21,Elliot Stroud,,,,
+2026-09-08-sunderland-v-hull-city,away,Hull City,4-2-3-1,,2026-09-08T21:16:34Z,bench,11,Joe Gelhardt,,,,
+2026-09-08-sunderland-v-hull-city,away,Hull City,4-2-3-1,,2026-09-08T21:16:34Z,bench,15,John Egan,john-egan,,,
+2026-09-08-sunderland-v-hull-city,away,Hull City,4-2-3-1,,2026-09-08T21:16:34Z,bench,26,Kieran Dowell,,,,
+2026-09-08-sunderland-v-hull-city,away,Hull City,4-2-3-1,,2026-09-08T21:16:34Z,bench,27,Regan Slater,,,,
+2026-09-08-sunderland-v-hull-city,away,Hull City,4-2-3-1,,2026-09-08T21:16:34Z,bench,3,Ryan Giles,,,,
+2026-09-08-sunderland-v-hull-city,away,Hull City,4-2-3-1,,2026-09-08T21:16:34Z,bench,18,Óscar Zambrano,,,,
+2026-09-08-sunderland-v-hull-city,away,Hull City,4-2-3-1,,2026-09-08T21:16:34Z,start,12,Dillon Phillips,,,0.1,0.5
+2026-09-08-sunderland-v-hull-city,away,Hull City,4-2-3-1,,2026-09-08T21:16:34Z,start,14,Jens Hjertø-Dahl,,,0.678,0.5
+2026-09-08-sunderland-v-hull-city,away,Hull City,4-2-3-1,,2026-09-08T21:16:34Z,start,2,Lewie Coyle,,,0.292,0.875
+2026-09-08-sunderland-v-hull-city,away,Hull City,4-2-3-1,,2026-09-08T21:16:34Z,start,29,Lucas Gourna-Douath,,,0.485,0.3
+2026-09-08-sunderland-v-hull-city,away,Hull City,4-2-3-1,,2026-09-08T21:16:34Z,start,22,Lucas Herrington,,,0.292,0.625
+2026-09-08-sunderland-v-hull-city,away,Hull City,4-2-3-1,,2026-09-08T21:16:34Z,start,25,Matt Crooks,,,0.485,0.7
+2026-09-08-sunderland-v-hull-city,away,Hull City,4-2-3-1,,2026-09-08T21:16:34Z,start,23,Matt Targett,,,0.292,0.125
+2026-09-08-sunderland-v-hull-city,away,Hull City,4-2-3-1,,2026-09-08T21:16:34Z,start,50,Mohamed-Ali Cho,,,0.678,0.837
+2026-09-08-sunderland-v-hull-city,away,Hull City,4-2-3-1,,2026-09-08T21:16:34Z,start,32,Nobel Mendy,,,0.292,0.375
+2026-09-08-sunderland-v-hull-city,away,Hull City,4-2-3-1,,2026-09-08T21:16:34Z,start,47,Robinio Vaz,,,0.87,0.5
+2026-09-08-sunderland-v-hull-city,away,Hull City,4-2-3-1,,2026-09-08T21:16:34Z,start,7,Sorba Thomas,,,0.678,0.163
+2026-09-08-sunderland-v-hull-city,home,Sunderland,4-2-3-1,,2026-09-08T21:16:34Z,bench,8,Alan Browne,alan-browne,,,
+2026-09-08-sunderland-v-hull-city,home,Sunderland,4-2-3-1,,2026-09-08T21:16:34Z,bench,5,Daniel Ballard,,,,
+2026-09-08-sunderland-v-hull-city,home,Sunderland,4-2-3-1,,2026-09-08T21:16:34Z,bench,40,Jack Whittaker,,,,
+2026-09-08-sunderland-v-hull-city,home,Sunderland,4-2-3-1,,2026-09-08T21:16:34Z,bench,48,Jenson Jones,,,,
+2026-09-08-sunderland-v-hull-city,home,Sunderland,4-2-3-1,,2026-09-08T21:16:34Z,bench,27,Noah Sadiki,,,,
+2026-09-08-sunderland-v-hull-city,home,Sunderland,4-2-3-1,,2026-09-08T21:16:34Z,bench,21,Simon Moore,,,,
+2026-09-08-sunderland-v-hull-city,home,Sunderland,4-2-3-1,,2026-09-08T21:16:34Z,bench,12,Thomas Meunier,,,,
+2026-09-08-sunderland-v-hull-city,home,Sunderland,4-2-3-1,,2026-09-08T21:16:34Z,bench,57,Timur Tuterov,,,,
+2026-09-08-sunderland-v-hull-city,home,Sunderland,4-2-3-1,,2026-09-08T21:16:34Z,bench,77,Tom Proctor,,,,
+2026-09-08-sunderland-v-hull-city,home,Sunderland,4-2-3-1,,2026-09-08T21:16:34Z,start,7,Chemsdine Talbi,,,0.678,0.5
+2026-09-08-sunderland-v-hull-city,home,Sunderland,4-2-3-1,,2026-09-08T21:16:34Z,start,11,Chris Rigg,,,0.485,0.7
+2026-09-08-sunderland-v-hull-city,home,Sunderland,4-2-3-1,,2026-09-08T21:16:34Z,start,6,Dayann Méthalie,,,0.292,0.125
+2026-09-08-sunderland-v-hull-city,home,Sunderland,4-2-3-1,,2026-09-08T21:16:34Z,start,37,Jocelin Ta Bi,,,0.678,0.837
+2026-09-08-sunderland-v-hull-city,home,Sunderland,4-2-3-1,,2026-09-08T21:16:34Z,start,29,Jules Ahoka,,,0.485,0.3
+2026-09-08-sunderland-v-hull-city,home,Sunderland,4-2-3-1,,2026-09-08T21:16:34Z,start,13,Luke O'Nien,,,0.292,0.625
+2026-09-08-sunderland-v-hull-city,home,Sunderland,4-2-3-1,,2026-09-08T21:16:34Z,start,39,Malick Fofana,,,0.678,0.163
+2026-09-08-sunderland-v-hull-city,home,Sunderland,4-2-3-1,,2026-09-08T21:16:34Z,start,31,Melker Ellborg,,,0.1,0.5
+2026-09-08-sunderland-v-hull-city,home,Sunderland,4-2-3-1,,2026-09-08T21:16:34Z,start,15,Omar Alderete,,,0.292,0.375
+2026-09-08-sunderland-v-hull-city,home,Sunderland,4-2-3-1,,2026-09-08T21:16:34Z,start,32,Trai Hume,,,0.292,0.875
+2026-09-08-sunderland-v-hull-city,home,Sunderland,4-2-3-1,,2026-09-08T21:16:34Z,start,18,Wilson Isidor,,,0.87,0.5
 2026-09-08-sutton-united-v-birmingham-u21,away,Birmingham U21,4-2-3-1,,2026-09-08T18:12:03Z,bench,16,Blake Campbell,,,,
+2026-09-08-sutton-united-v-birmingham-u21,away,Birmingham U21,4-2-3-1,,2026-09-08T21:16:34Z,bench,13,Blake Campbell,,,,
 2026-09-08-sutton-united-v-birmingham-u21,away,Birmingham U21,4-2-3-1,,2026-09-08T18:12:03Z,bench,12,Connor Reilly,,,,
+2026-09-08-sutton-united-v-birmingham-u21,away,Birmingham U21,4-2-3-1,,2026-09-08T21:16:34Z,bench,15,Connor Reilly,,,,
 2026-09-08-sutton-united-v-birmingham-u21,away,Birmingham U21,4-2-3-1,,2026-09-08T18:12:03Z,bench,8,Finn Eamonn McGreevy,,,,
+2026-09-08-sutton-united-v-birmingham-u21,away,Birmingham U21,4-2-3-1,,2026-09-08T21:16:34Z,bench,16,Finn McGreevy,finn-mcgreevy,,,
 2026-09-08-sutton-united-v-birmingham-u21,away,Birmingham U21,4-2-3-1,,2026-09-08T18:12:03Z,bench,1,Shea Birmingham,,,,
+2026-09-08-sutton-united-v-birmingham-u21,away,Birmingham U21,4-2-3-1,,2026-09-08T21:16:34Z,bench,12,Shea Birmingham,,,,
 2026-09-08-sutton-united-v-birmingham-u21,away,Birmingham U21,4-2-3-1,,2026-09-08T18:12:03Z,bench,15,Taha Elmansuri,,,,
+2026-09-08-sutton-united-v-birmingham-u21,away,Birmingham U21,4-2-3-1,,2026-09-08T21:16:34Z,bench,14,Taha Elmansuri,,,,
 2026-09-08-sutton-united-v-birmingham-u21,away,Birmingham U21,4-2-3-1,,2026-09-08T18:12:03Z,start,14,Alezandro Da Silva,,,0.485,0.7
+2026-09-08-sutton-united-v-birmingham-u21,away,Birmingham U21,4-2-3-1,,2026-09-08T21:16:34Z,start,10,Alezandro Da Silva,,,0.485,0.7
 2026-09-08-sutton-united-v-birmingham-u21,away,Birmingham U21,4-2-3-1,,2026-09-08T18:12:03Z,start,4,Billy Burrell,,,0.292,0.625
+2026-09-08-sutton-united-v-birmingham-u21,away,Birmingham U21,4-2-3-1,,2026-09-08T21:16:34Z,start,4,Billy Burrell,,,0.292,0.625
 2026-09-08-sutton-united-v-birmingham-u21,away,Birmingham U21,4-2-3-1,,2026-09-08T18:12:03Z,start,6,Cobi Maddox,,,0.485,0.3
+2026-09-08-sutton-united-v-birmingham-u21,away,Birmingham U21,4-2-3-1,,2026-09-08T21:16:34Z,start,6,Cobi Maddox,,,0.485,0.3
 2026-09-08-sutton-united-v-birmingham-u21,away,Birmingham U21,4-2-3-1,,2026-09-08T18:12:03Z,start,3,Curran Chahal,,,0.292,0.125
+2026-09-08-sutton-united-v-birmingham-u21,away,Birmingham U21,4-2-3-1,,2026-09-08T21:16:34Z,start,3,Curran Chahal,,,0.292,0.125
 2026-09-08-sutton-united-v-birmingham-u21,away,Birmingham U21,4-2-3-1,,2026-09-08T18:12:03Z,start,5,Jack Quirk,,,0.292,0.375
+2026-09-08-sutton-united-v-birmingham-u21,away,Birmingham U21,4-2-3-1,,2026-09-08T21:16:34Z,start,5,Jack Quirk,,,0.292,0.375
 2026-09-08-sutton-united-v-birmingham-u21,away,Birmingham U21,4-2-3-1,,2026-09-08T18:12:03Z,start,10,Menzi Mazwi,,,0.678,0.837
+2026-09-08-sutton-united-v-birmingham-u21,away,Birmingham U21,4-2-3-1,,2026-09-08T21:16:34Z,start,8,Menzi Mazwi,,,0.678,0.837
 2026-09-08-sutton-united-v-birmingham-u21,away,Birmingham U21,4-2-3-1,,2026-09-08T18:12:03Z,start,2,Riquelme Thompson-Jones,,,0.292,0.875
+2026-09-08-sutton-united-v-birmingham-u21,away,Birmingham U21,4-2-3-1,,2026-09-08T21:16:34Z,start,2,Riquelme Thompson-Jones,,,0.292,0.875
 2026-09-08-sutton-united-v-birmingham-u21,away,Birmingham U21,4-2-3-1,,2026-09-08T18:12:03Z,start,7,Salif Bamba,,,0.678,0.5
+2026-09-08-sutton-united-v-birmingham-u21,away,Birmingham U21,4-2-3-1,,2026-09-08T21:16:34Z,start,7,Salif Bamba,,,0.678,0.5
 2026-09-08-sutton-united-v-birmingham-u21,away,Birmingham U21,4-2-3-1,,2026-09-08T18:12:03Z,start,11,Scott Wright,,,0.678,0.163
+2026-09-08-sutton-united-v-birmingham-u21,away,Birmingham U21,4-2-3-1,,2026-09-08T21:16:34Z,start,11,Scott Wright,,,0.678,0.163
 2026-09-08-sutton-united-v-birmingham-u21,away,Birmingham U21,4-2-3-1,,2026-09-08T18:12:03Z,start,9,Tobey Ugorji,,,0.87,0.5
+2026-09-08-sutton-united-v-birmingham-u21,away,Birmingham U21,4-2-3-1,,2026-09-08T21:16:34Z,start,9,Tobey Ugorji,,,0.87,0.5
 2026-09-08-sutton-united-v-birmingham-u21,away,Birmingham U21,4-2-3-1,,2026-09-08T18:12:03Z,start,13,Tyrese Warmington,,,0.1,0.5
+2026-09-08-sutton-united-v-birmingham-u21,away,Birmingham U21,4-2-3-1,,2026-09-08T21:16:34Z,start,1,Tyrese Warmington,,,0.1,0.5
 2026-09-08-sutton-united-v-birmingham-u21,home,Sutton United,4-4-2,,2026-09-08T18:12:03Z,bench,10,Charlie Carter,,,,
+2026-09-08-sutton-united-v-birmingham-u21,home,Sutton United,4-4-2,,2026-09-08T21:16:34Z,bench,10,Charlie Carter,,,,
 2026-09-08-sutton-united-v-birmingham-u21,home,Sutton United,4-4-2,,2026-09-08T18:12:03Z,bench,7,Emmanuel Osadebe,emmanuel-osadebe,,,
+2026-09-08-sutton-united-v-birmingham-u21,home,Sutton United,4-4-2,,2026-09-08T21:16:34Z,bench,7,Emmanuel Osadebe,emmanuel-osadebe,,,
 2026-09-08-sutton-united-v-birmingham-u21,home,Sutton United,4-4-2,,2026-09-08T18:12:03Z,bench,8,Jake Taylor,,,,
+2026-09-08-sutton-united-v-birmingham-u21,home,Sutton United,4-4-2,,2026-09-08T21:16:34Z,bench,8,Jake Taylor,,,,
 2026-09-08-sutton-united-v-birmingham-u21,home,Sutton United,4-4-2,,2026-09-08T18:12:03Z,bench,24,Omotolani Bello,,,,
+2026-09-08-sutton-united-v-birmingham-u21,home,Sutton United,4-4-2,,2026-09-08T21:16:34Z,bench,24,Omotolani Bello,,,,
 2026-09-08-sutton-united-v-birmingham-u21,home,Sutton United,4-4-2,,2026-09-08T18:12:03Z,bench,11,Samuel Folarin,,,,
+2026-09-08-sutton-united-v-birmingham-u21,home,Sutton United,4-4-2,,2026-09-08T21:16:34Z,bench,11,Samuel Folarin,,,,
 2026-09-08-sutton-united-v-birmingham-u21,home,Sutton United,4-4-2,,2026-09-08T18:12:03Z,bench,1,Spike Brits,,,,
+2026-09-08-sutton-united-v-birmingham-u21,home,Sutton United,4-4-2,,2026-09-08T21:16:34Z,bench,1,Spike Brits,,,,
 2026-09-08-sutton-united-v-birmingham-u21,home,Sutton United,4-4-2,,2026-09-08T18:12:03Z,bench,9,Temi Babalola,,,,
+2026-09-08-sutton-united-v-birmingham-u21,home,Sutton United,4-4-2,,2026-09-08T21:16:34Z,bench,9,Temi Babalola,,,,
 2026-09-08-sutton-united-v-birmingham-u21,home,Sutton United,4-4-2,,2026-09-08T18:12:03Z,start,3,Besart Topallaj,,,0.357,0.125
+2026-09-08-sutton-united-v-birmingham-u21,home,Sutton United,4-4-2,,2026-09-08T21:16:34Z,start,3,Besart Topallaj,,,0.357,0.125
 2026-09-08-sutton-united-v-birmingham-u21,home,Sutton United,4-4-2,,2026-09-08T18:12:03Z,start,16,Brandon Njoku,,,0.87,0.3
+2026-09-08-sutton-united-v-birmingham-u21,home,Sutton United,4-4-2,,2026-09-08T21:16:34Z,start,16,Brandon Njoku,,,0.87,0.3
 2026-09-08-sutton-united-v-birmingham-u21,home,Sutton United,4-4-2,,2026-09-08T18:12:03Z,start,6,Charlie Bell,,,0.613,0.875
+2026-09-08-sutton-united-v-birmingham-u21,home,Sutton United,4-4-2,,2026-09-08T21:16:34Z,start,6,Charlie Bell,,,0.613,0.875
 2026-09-08-sutton-united-v-birmingham-u21,home,Sutton United,4-4-2,,2026-09-08T18:12:03Z,start,13,Chris Haigh,,,0.1,0.5
+2026-09-08-sutton-united-v-birmingham-u21,home,Sutton United,4-4-2,,2026-09-08T21:16:34Z,start,13,Chris Haigh,,,0.1,0.5
 2026-09-08-sutton-united-v-birmingham-u21,home,Sutton United,4-4-2,,2026-09-08T18:12:03Z,start,12,Dan Urpens,,,0.357,0.375
+2026-09-08-sutton-united-v-birmingham-u21,home,Sutton United,4-4-2,,2026-09-08T21:16:34Z,start,12,Dan Urpens,,,0.357,0.375
 2026-09-08-sutton-united-v-birmingham-u21,home,Sutton United,4-4-2,,2026-09-08T18:12:03Z,start,18,David Ogbonna,,,0.87,0.7
+2026-09-08-sutton-united-v-birmingham-u21,home,Sutton United,4-4-2,,2026-09-08T21:16:34Z,start,18,David Ogbonna,,,0.87,0.7
 2026-09-08-sutton-united-v-birmingham-u21,home,Sutton United,4-4-2,,2026-09-08T18:12:03Z,start,20,Jermaine Francis,,,0.357,0.875
+2026-09-08-sutton-united-v-birmingham-u21,home,Sutton United,4-4-2,,2026-09-08T21:16:34Z,start,20,Jermaine Francis,,,0.357,0.875
 2026-09-08-sutton-united-v-birmingham-u21,home,Sutton United,4-4-2,,2026-09-08T18:12:03Z,start,23,Noah Nzuzi,,,0.613,0.125
+2026-09-08-sutton-united-v-birmingham-u21,home,Sutton United,4-4-2,,2026-09-08T21:16:34Z,start,23,Noah Nzuzi,,,0.613,0.125
 2026-09-08-sutton-united-v-birmingham-u21,home,Sutton United,4-4-2,,2026-09-08T18:12:03Z,start,14,Omar Mussa,,,0.613,0.625
+2026-09-08-sutton-united-v-birmingham-u21,home,Sutton United,4-4-2,,2026-09-08T21:16:34Z,start,14,Omar Mussa,,,0.613,0.625
 2026-09-08-sutton-united-v-birmingham-u21,home,Sutton United,4-4-2,,2026-09-08T18:12:03Z,start,22,Ronny Ruiz,,,0.613,0.375
+2026-09-08-sutton-united-v-birmingham-u21,home,Sutton United,4-4-2,,2026-09-08T21:16:34Z,start,22,Ronny Ruiz,,,0.613,0.375
 2026-09-08-sutton-united-v-birmingham-u21,home,Sutton United,4-4-2,,2026-09-08T18:12:03Z,start,17,Toby Byron,,,0.357,0.625
+2026-09-08-sutton-united-v-birmingham-u21,home,Sutton United,4-4-2,,2026-09-08T21:16:34Z,start,17,Toby Byron,,,0.357,0.625
 2026-09-08-tps-v-sjk,away,SJK,3-4-3,,2026-09-08T17:11:04Z,bench,27,Apostolos Vellios,,,,
 2026-09-08-tps-v-sjk,away,SJK,3-4-3,,2026-09-08T17:11:04Z,bench,51,Aziz Cisse,,,,
 2026-09-08-tps-v-sjk,away,SJK,3-4-3,,2026-09-08T17:11:04Z,bench,42,Caio Araújo,,,,
@@ -53952,36 +54635,220 @@ match_id,side,team,formation,status,updated,role,number,name,slug,pos,x,y
 2026-09-08-tps-v-sjk,home,TPS,4-3-3,,2026-09-08T17:11:04Z,start,6,Pau Juvanteny,,,0.613,0.79
 2026-09-08-tps-v-sjk,home,TPS,4-3-3,,2026-09-08T17:11:04Z,start,41,Samuel Anini Jr.,,,0.87,0.21
 2026-09-08-tps-v-sjk,home,TPS,4-3-3,,2026-09-08T17:11:04Z,start,22,Timo Zaal,,,0.613,0.5
+2026-09-08-watford-v-preston-north-end,away,Preston North End,5-3-2,,2026-09-08T21:16:34Z,bench,23,Andrew Moran,andrew-moran,,,
+2026-09-08-watford-v-preston-north-end,away,Preston North End,5-3-2,,2026-09-08T21:16:34Z,bench,12,Caleb Wiley,,,,
+2026-09-08-watford-v-preston-north-end,away,Preston North End,5-3-2,,2026-09-08T21:16:34Z,bench,37,Delano Burgzorg,,,,
+2026-09-08-watford-v-preston-north-end,away,Preston North End,5-3-2,,2026-09-08T21:16:34Z,bench,9,Jusef Erabi,,,,
+2026-09-08-watford-v-preston-north-end,away,Preston North End,5-3-2,,2026-09-08T21:16:34Z,bench,21,Lee Nicholls,,,,
+2026-09-08-watford-v-preston-north-end,away,Preston North End,5-3-2,,2026-09-08T21:16:34Z,bench,20,Liam Gibbs,,,,
+2026-09-08-watford-v-preston-north-end,away,Preston North End,5-3-2,,2026-09-08T21:16:34Z,bench,6,Liam Lindsay,,,,
+2026-09-08-watford-v-preston-north-end,away,Preston North End,5-3-2,,2026-09-08T21:16:34Z,bench,17,Stanley Mills,,,,
+2026-09-08-watford-v-preston-north-end,away,Preston North End,5-3-2,,2026-09-08T21:16:34Z,bench,11,Thierry Small,,,,
+2026-09-08-watford-v-preston-north-end,away,Preston North End,5-3-2,,2026-09-08T21:16:34Z,start,7,Alfie Devine,,,0.613,0.21
+2026-09-08-watford-v-preston-north-end,away,Preston North End,5-3-2,,2026-09-08T21:16:34Z,start,3,Andrija Vukčević,,,0.371,0.11
+2026-09-08-watford-v-preston-north-end,away,Preston North End,5-3-2,,2026-09-08T21:16:34Z,start,10,Callum Lang,,,0.87,0.7
+2026-09-08-watford-v-preston-north-end,away,Preston North End,5-3-2,,2026-09-08T21:16:34Z,start,1,Daniel Iversen,,,0.1,0.5
+2026-09-08-watford-v-preston-north-end,away,Preston North End,5-3-2,,2026-09-08T21:16:34Z,start,4,Harry Clarke,,,0.371,0.89
+2026-09-08-watford-v-preston-north-end,away,Preston North End,5-3-2,,2026-09-08T21:16:34Z,start,38,Johnny Kenny,johnny-kenny,,0.87,0.3
+2026-09-08-watford-v-preston-north-end,away,Preston North End,5-3-2,,2026-09-08T21:16:34Z,start,14,Jordan Storey,,,0.357,0.5
+2026-09-08-watford-v-preston-north-end,away,Preston North End,5-3-2,,2026-09-08T21:16:34Z,start,15,Jordan Thompson,,,0.613,0.5
+2026-09-08-watford-v-preston-north-end,away,Preston North End,5-3-2,,2026-09-08T21:16:34Z,start,19,Lewis Gibson,,,0.357,0.305
+2026-09-08-watford-v-preston-north-end,away,Preston North End,5-3-2,,2026-09-08T21:16:34Z,start,27,Léo Leroy,,,0.613,0.79
+2026-09-08-watford-v-preston-north-end,away,Preston North End,5-3-2,,2026-09-08T21:16:34Z,start,24,Odel Offiah,,,0.357,0.695
+2026-09-08-watford-v-preston-north-end,home,Watford,4-2-3-1,,2026-09-08T21:16:34Z,bench,56,Albert Eames,,,,
+2026-09-08-watford-v-preston-north-end,home,Watford,4-2-3-1,,2026-09-08T21:16:34Z,bench,26,Daniel Bachmann,,,,
+2026-09-08-watford-v-preston-north-end,home,Watford,4-2-3-1,,2026-09-08T21:16:34Z,bench,17,Iker Bravo,,,,
+2026-09-08-watford-v-preston-north-end,home,Watford,4-2-3-1,,2026-09-08T21:16:34Z,bench,33,Jordan Zemura,,,,
+2026-09-08-watford-v-preston-north-end,home,Watford,4-2-3-1,,2026-09-08T21:16:34Z,bench,9,Luca Kjerrumgaard,,,,
+2026-09-08-watford-v-preston-north-end,home,Watford,4-2-3-1,,2026-09-08T21:16:34Z,bench,7,Othmane Maamma,,,,
+2026-09-08-watford-v-preston-north-end,home,Watford,4-2-3-1,,2026-09-08T21:16:34Z,bench,24,Sam Walker,,,,
+2026-09-08-watford-v-preston-north-end,home,Watford,4-2-3-1,,2026-09-08T21:16:34Z,bench,45,Stephy Mavididi,,,,
+2026-09-08-watford-v-preston-north-end,home,Watford,4-2-3-1,,2026-09-08T21:16:34Z,start,21,Amin Nabizada,,,0.678,0.837
+2026-09-08-watford-v-preston-north-end,home,Watford,4-2-3-1,,2026-09-08T21:16:34Z,start,39,Edo Kayembe,,,0.485,0.7
+2026-09-08-watford-v-preston-north-end,home,Watford,4-2-3-1,,2026-09-08T21:16:34Z,start,1,Federico Ravaglia,,,0.1,0.5
+2026-09-08-watford-v-preston-north-end,home,Watford,4-2-3-1,,2026-09-08T21:16:34Z,start,5,Hector Kyprianou,,,0.485,0.3
+2026-09-08-watford-v-preston-north-end,home,Watford,4-2-3-1,,2026-09-08T21:16:34Z,start,4,Kévin Keben,,,0.292,0.875
+2026-09-08-watford-v-preston-north-end,home,Watford,4-2-3-1,,2026-09-08T21:16:34Z,start,20,Mamadou Doumbia,,,0.87,0.5
+2026-09-08-watford-v-preston-north-end,home,Watford,4-2-3-1,,2026-09-08T21:16:34Z,start,22,Martín Payero,,,0.678,0.5
+2026-09-08-watford-v-preston-north-end,home,Watford,4-2-3-1,,2026-09-08T21:16:34Z,start,6,Matthew Pollock,,,0.292,0.625
+2026-09-08-watford-v-preston-north-end,home,Watford,4-2-3-1,,2026-09-08T21:16:34Z,start,23,Omar Traoré,,,0.292,0.125
+2026-09-08-watford-v-preston-north-end,home,Watford,4-2-3-1,,2026-09-08T21:16:34Z,start,11,Rocco Vata,rocco-vata,,0.678,0.163
+2026-09-08-watford-v-preston-north-end,home,Watford,4-2-3-1,,2026-09-08T21:16:34Z,start,3,Soumaïla Coulibaly,,,0.292,0.375
 2026-09-08-wealdstone-v-stoke-city-u21,away,Stoke City U21,4-2-3-1,,2026-09-08T18:12:03Z,bench,13,Caleb Clothier,,,,
+2026-09-08-wealdstone-v-stoke-city-u21,away,Stoke City U21,4-3-3,,2026-09-08T21:16:34Z,bench,13,Caleb Clothier,,,,
 2026-09-08-wealdstone-v-stoke-city-u21,away,Stoke City U21,4-2-3-1,,2026-09-08T18:12:03Z,bench,14,Fletcher Poole,,,,
+2026-09-08-wealdstone-v-stoke-city-u21,away,Stoke City U21,4-3-3,,2026-09-08T21:16:34Z,bench,14,Fletcher Poole,,,,
 2026-09-08-wealdstone-v-stoke-city-u21,away,Stoke City U21,4-2-3-1,,2026-09-08T18:12:03Z,bench,15,Paul Makavore,,,,
+2026-09-08-wealdstone-v-stoke-city-u21,away,Stoke City U21,4-3-3,,2026-09-08T21:16:34Z,bench,15,Paul Makavore,,,,
 2026-09-08-wealdstone-v-stoke-city-u21,away,Stoke City U21,4-2-3-1,,2026-09-08T18:12:03Z,bench,12,Ryan Liu,,,,
+2026-09-08-wealdstone-v-stoke-city-u21,away,Stoke City U21,4-3-3,,2026-09-08T21:16:34Z,bench,12,Ryan Liu,,,,
 2026-09-08-wealdstone-v-stoke-city-u21,away,Stoke City U21,4-2-3-1,,2026-09-08T18:12:03Z,bench,16,Sanchez Phillips,,,,
+2026-09-08-wealdstone-v-stoke-city-u21,away,Stoke City U21,4-3-3,,2026-09-08T21:16:34Z,bench,16,Sanchez Phillips,,,,
 2026-09-08-wealdstone-v-stoke-city-u21,away,Stoke City U21,4-2-3-1,,2026-09-08T18:12:03Z,start,9,Adriel Walker,,,0.87,0.5
+2026-09-08-wealdstone-v-stoke-city-u21,away,Stoke City U21,4-3-3,,2026-09-08T21:16:34Z,start,9,Adriel Walker,,,0.87,0.5
 2026-09-08-wealdstone-v-stoke-city-u21,away,Stoke City U21,4-2-3-1,,2026-09-08T18:12:03Z,start,3,Anas Dauda,,,0.292,0.125
+2026-09-08-wealdstone-v-stoke-city-u21,away,Stoke City U21,4-3-3,,2026-09-08T21:16:34Z,start,3,Anas Dauda,,,0.357,0.125
 2026-09-08-wealdstone-v-stoke-city-u21,away,Stoke City U21,4-2-3-1,,2026-09-08T18:12:03Z,start,7,Elliot Fearn,,,0.678,0.837
+2026-09-08-wealdstone-v-stoke-city-u21,away,Stoke City U21,4-3-3,,2026-09-08T21:16:34Z,start,7,Elliot Fearn,,,0.87,0.79
 2026-09-08-wealdstone-v-stoke-city-u21,away,Stoke City U21,4-2-3-1,,2026-09-08T18:12:03Z,start,6,Gabriel Kelly,gabriel-kelly,,0.485,0.7
+2026-09-08-wealdstone-v-stoke-city-u21,away,Stoke City U21,4-3-3,,2026-09-08T21:16:34Z,start,6,Gabriel Kelly,gabriel-kelly,,0.613,0.5
 2026-09-08-wealdstone-v-stoke-city-u21,away,Stoke City U21,4-2-3-1,,2026-09-08T18:12:03Z,start,8,George Morrison,,,0.485,0.3
+2026-09-08-wealdstone-v-stoke-city-u21,away,Stoke City U21,4-3-3,,2026-09-08T21:16:34Z,start,8,George Morrison,,,0.613,0.79
 2026-09-08-wealdstone-v-stoke-city-u21,away,Stoke City U21,4-2-3-1,,2026-09-08T18:12:03Z,start,5,Harry Collins,,,0.292,0.625
+2026-09-08-wealdstone-v-stoke-city-u21,away,Stoke City U21,4-3-3,,2026-09-08T21:16:34Z,start,5,Harry Collins,,,0.357,0.625
 2026-09-08-wealdstone-v-stoke-city-u21,away,Stoke City U21,4-2-3-1,,2026-09-08T18:12:03Z,start,2,Jaden Mears,,,0.292,0.875
+2026-09-08-wealdstone-v-stoke-city-u21,away,Stoke City U21,4-3-3,,2026-09-08T21:16:34Z,start,2,Jaden Mears,,,0.357,0.875
 2026-09-08-wealdstone-v-stoke-city-u21,away,Stoke City U21,4-2-3-1,,2026-09-08T18:12:03Z,start,1,Noah Cooper,,,0.1,0.5
+2026-09-08-wealdstone-v-stoke-city-u21,away,Stoke City U21,4-3-3,,2026-09-08T21:16:34Z,start,1,Noah Cooper,,,0.1,0.5
 2026-09-08-wealdstone-v-stoke-city-u21,away,Stoke City U21,4-2-3-1,,2026-09-08T18:12:03Z,start,10,Tristan Achu,,,0.678,0.5
+2026-09-08-wealdstone-v-stoke-city-u21,away,Stoke City U21,4-3-3,,2026-09-08T21:16:34Z,start,10,Tristan Achu,,,0.613,0.21
 2026-09-08-wealdstone-v-stoke-city-u21,away,Stoke City U21,4-2-3-1,,2026-09-08T18:12:03Z,start,11,Tyler Martin,,,0.678,0.163
+2026-09-08-wealdstone-v-stoke-city-u21,away,Stoke City U21,4-3-3,,2026-09-08T21:16:34Z,start,11,Tyler Martin,,,0.87,0.21
 2026-09-08-wealdstone-v-stoke-city-u21,away,Stoke City U21,4-2-3-1,,2026-09-08T18:12:03Z,start,4,Will Thompson,,,0.292,0.375
+2026-09-08-wealdstone-v-stoke-city-u21,away,Stoke City U21,4-3-3,,2026-09-08T21:16:34Z,start,4,Will Thompson,,,0.357,0.375
 2026-09-08-wealdstone-v-stoke-city-u21,home,Wealdstone,3-4-3,,2026-09-08T18:12:03Z,bench,12,Aidan Francis-Clarke,,,,
+2026-09-08-wealdstone-v-stoke-city-u21,home,Wealdstone,3-4-3,,2026-09-08T21:16:34Z,bench,12,Aidan Francis-Clarke,,,,
 2026-09-08-wealdstone-v-stoke-city-u21,home,Wealdstone,3-4-3,,2026-09-08T18:12:03Z,bench,29,Amaru Kaunda,,,,
+2026-09-08-wealdstone-v-stoke-city-u21,home,Wealdstone,3-4-3,,2026-09-08T21:16:34Z,bench,29,Amaru Kaunda,,,,
+2026-09-08-wealdstone-v-stoke-city-u21,home,Wealdstone,3-4-3,,2026-09-08T21:16:34Z,bench,31,Burrows,,,,
 2026-09-08-wealdstone-v-stoke-city-u21,home,Wealdstone,3-4-3,,2026-09-08T18:12:03Z,bench,20,Callum Lee,,,,
+2026-09-08-wealdstone-v-stoke-city-u21,home,Wealdstone,3-4-3,,2026-09-08T21:16:34Z,bench,20,Callum Lee,,,,
 2026-09-08-wealdstone-v-stoke-city-u21,home,Wealdstone,3-4-3,,2026-09-08T18:12:03Z,bench,10,Jayden Harris,,,,
+2026-09-08-wealdstone-v-stoke-city-u21,home,Wealdstone,3-4-3,,2026-09-08T21:16:34Z,bench,10,Jayden Harris,,,,
 2026-09-08-wealdstone-v-stoke-city-u21,home,Wealdstone,3-4-3,,2026-09-08T18:12:03Z,bench,31,Matty Burrows,,,,
 2026-09-08-wealdstone-v-stoke-city-u21,home,Wealdstone,3-4-3,,2026-09-08T18:12:03Z,bench,24,Seamus Atem,,,,
+2026-09-08-wealdstone-v-stoke-city-u21,home,Wealdstone,3-4-3,,2026-09-08T21:16:34Z,bench,24,Seamus Atem,,,,
 2026-09-08-wealdstone-v-stoke-city-u21,home,Wealdstone,3-4-3,,2026-09-08T18:12:03Z,start,25,Aaron Fernandez,,,0.357,0.5
 2026-09-08-wealdstone-v-stoke-city-u21,home,Wealdstone,3-4-3,,2026-09-08T18:12:03Z,start,15,Aaron Henry,,,0.613,0.375
+2026-09-08-wealdstone-v-stoke-city-u21,home,Wealdstone,3-4-3,,2026-09-08T21:16:34Z,start,15,Aaron Henry,,,0.613,0.375
 2026-09-08-wealdstone-v-stoke-city-u21,home,Wealdstone,3-4-3,,2026-09-08T18:12:03Z,start,11,Daniel Chesters,,,0.613,0.875
+2026-09-08-wealdstone-v-stoke-city-u21,home,Wealdstone,3-4-3,,2026-09-08T21:16:34Z,start,11,Daniel Chesters,,,0.613,0.875
 2026-09-08-wealdstone-v-stoke-city-u21,home,Wealdstone,3-4-3,,2026-09-08T18:12:03Z,start,8,Dylan Kadji,,,0.613,0.625
+2026-09-08-wealdstone-v-stoke-city-u21,home,Wealdstone,3-4-3,,2026-09-08T21:16:34Z,start,8,Dylan Kadji,,,0.613,0.625
 2026-09-08-wealdstone-v-stoke-city-u21,home,Wealdstone,3-4-3,,2026-09-08T18:12:03Z,start,13,Endurance Johnson,,,0.1,0.5
+2026-09-08-wealdstone-v-stoke-city-u21,home,Wealdstone,3-4-3,,2026-09-08T21:16:34Z,start,13,Endurance Johnson,,,0.1,0.5
 2026-09-08-wealdstone-v-stoke-city-u21,home,Wealdstone,3-4-3,,2026-09-08T18:12:03Z,start,2,Jack Cook,,,0.357,0.79
+2026-09-08-wealdstone-v-stoke-city-u21,home,Wealdstone,3-4-3,,2026-09-08T21:16:34Z,start,2,Jack Cook,,,0.357,0.79
 2026-09-08-wealdstone-v-stoke-city-u21,home,Wealdstone,3-4-3,,2026-09-08T18:12:03Z,start,23,Jaydn Mundle-Smith,,,0.357,0.21
+2026-09-08-wealdstone-v-stoke-city-u21,home,Wealdstone,3-4-3,,2026-09-08T21:16:34Z,start,23,Jaydn Mundle-Smith,,,0.357,0.21
 2026-09-08-wealdstone-v-stoke-city-u21,home,Wealdstone,3-4-3,,2026-09-08T18:12:03Z,start,3,Joe Newton,,,0.613,0.125
+2026-09-08-wealdstone-v-stoke-city-u21,home,Wealdstone,3-4-3,,2026-09-08T21:16:34Z,start,3,Joe Newton,,,0.613,0.125
+2026-09-08-wealdstone-v-stoke-city-u21,home,Wealdstone,3-4-3,,2026-09-08T21:16:34Z,start,25,Luis Fernandez,,,0.357,0.5
 2026-09-08-wealdstone-v-stoke-city-u21,home,Wealdstone,3-4-3,,2026-09-08T18:12:03Z,start,9,Olufela Olomola,,,0.87,0.5
+2026-09-08-wealdstone-v-stoke-city-u21,home,Wealdstone,3-4-3,,2026-09-08T21:16:34Z,start,9,Olufela Olomola,,,0.87,0.79
 2026-09-08-wealdstone-v-stoke-city-u21,home,Wealdstone,3-4-3,,2026-09-08T18:12:03Z,start,27,Tyrelle Newton,,,0.87,0.21
+2026-09-08-wealdstone-v-stoke-city-u21,home,Wealdstone,3-4-3,,2026-09-08T21:16:34Z,start,27,Tyrelle Newton,,,0.87,0.21
 2026-09-08-wealdstone-v-stoke-city-u21,home,Wealdstone,3-4-3,,2026-09-08T18:12:03Z,start,19,Wilson Waweru,wilson-waweru,,0.87,0.79
+2026-09-08-wealdstone-v-stoke-city-u21,home,Wealdstone,3-4-3,,2026-09-08T21:16:34Z,start,19,Wilson Waweru,wilson-waweru,,0.87,0.5
+2026-09-08-woking-v-southampton-u21,away,Southampton U21,4-4-2,,2026-09-08T21:16:34Z,bench,15,Calum Anderson,,,,
+2026-09-08-woking-v-southampton-u21,away,Southampton U21,4-4-2,,2026-09-08T21:16:34Z,bench,14,Davon Gbajumo,,,,
+2026-09-08-woking-v-southampton-u21,away,Southampton U21,4-4-2,,2026-09-08T21:16:34Z,bench,12,Jake Vallance,,,,
+2026-09-08-woking-v-southampton-u21,away,Southampton U21,4-4-2,,2026-09-08T21:16:34Z,bench,17,Lewis Bailey,,,,
+2026-09-08-woking-v-southampton-u21,away,Southampton U21,4-4-2,,2026-09-08T21:16:34Z,bench,18,Luke Hawe,,,,
+2026-09-08-woking-v-southampton-u21,away,Southampton U21,4-4-2,,2026-09-08T21:16:34Z,bench,16,Max Little,,,,
+2026-09-08-woking-v-southampton-u21,away,Southampton U21,4-4-2,,2026-09-08T21:16:34Z,bench,13,Xander Grieves,,,,
+2026-09-08-woking-v-southampton-u21,away,Southampton U21,4-4-2,,2026-09-08T21:16:34Z,start,8,Aston Daley,,,0.613,0.375
+2026-09-08-woking-v-southampton-u21,away,Southampton U21,4-4-2,,2026-09-08T21:16:34Z,start,3,Broghan Sewell,,,0.357,0.125
+2026-09-08-woking-v-southampton-u21,away,Southampton U21,4-4-2,,2026-09-08T21:16:34Z,start,1,Dylan Moody,,,0.1,0.5
+2026-09-08-woking-v-southampton-u21,away,Southampton U21,4-4-2,,2026-09-08T21:16:34Z,start,2,Hansel Adjei-Afriyie,,,0.357,0.875
+2026-09-08-woking-v-southampton-u21,away,Southampton U21,4-4-2,,2026-09-08T21:16:34Z,start,11,Harry Gathercole,,,0.613,0.875
+2026-09-08-woking-v-southampton-u21,away,Southampton U21,4-4-2,,2026-09-08T21:16:34Z,start,5,Joachim Kayi Sanda,,,0.357,0.375
+2026-09-08-woking-v-southampton-u21,away,Southampton U21,4-4-2,,2026-09-08T21:16:34Z,start,6,Korban McMullan,,,0.613,0.625
+2026-09-08-woking-v-southampton-u21,away,Southampton U21,4-4-2,,2026-09-08T21:16:34Z,start,4,Lewis Day,,,0.357,0.625
+2026-09-08-woking-v-southampton-u21,away,Southampton U21,4-4-2,,2026-09-08T21:16:34Z,start,9,Princewill Ehibhatiomhan,,,0.87,0.3
+2026-09-08-woking-v-southampton-u21,away,Southampton U21,4-4-2,,2026-09-08T21:16:34Z,start,7,Romeo Akachukwu,romeo-akachukwu,,0.613,0.125
+2026-09-08-woking-v-southampton-u21,away,Southampton U21,4-4-2,,2026-09-08T21:16:34Z,start,10,Sufianu Sillah Dibaga,,,0.87,0.7
+2026-09-08-woking-v-southampton-u21,home,Woking,3-5-2,,2026-09-08T21:16:34Z,bench,4,Chinwike Okoli,,,,
+2026-09-08-woking-v-southampton-u21,home,Woking,3-5-2,,2026-09-08T21:16:34Z,bench,25,Jake Forster-Caskey,,,,
+2026-09-08-woking-v-southampton-u21,home,Woking,3-5-2,,2026-09-08T21:16:34Z,bench,32,John Marquis,,,,
+2026-09-08-woking-v-southampton-u21,home,Woking,3-5-2,,2026-09-08T21:16:34Z,bench,37,Kemall Wilson,,,,
+2026-09-08-woking-v-southampton-u21,home,Woking,3-5-2,,2026-09-08T21:16:34Z,bench,18,Liam Dulson,,,,
+2026-09-08-woking-v-southampton-u21,home,Woking,3-5-2,,2026-09-08T21:16:34Z,bench,40,Mikey Verga,,,,
+2026-09-08-woking-v-southampton-u21,home,Woking,3-5-2,,2026-09-08T21:16:34Z,bench,15,Roy Syla,,,,
+2026-09-08-woking-v-southampton-u21,home,Woking,3-5-2,,2026-09-08T21:16:34Z,start,10,Aiden O'Brien,,,0.87,0.7
+2026-09-08-woking-v-southampton-u21,home,Woking,3-5-2,,2026-09-08T21:16:34Z,start,30,Anthony Georgiou,,,0.613,0.11
+2026-09-08-woking-v-southampton-u21,home,Woking,3-5-2,,2026-09-08T21:16:34Z,start,,Craig Ross,,,0.1,0.5
+2026-09-08-woking-v-southampton-u21,home,Woking,3-5-2,,2026-09-08T21:16:34Z,start,7,Harrison Sohna,,,0.613,0.5
+2026-09-08-woking-v-southampton-u21,home,Woking,3-5-2,,2026-09-08T21:16:34Z,start,21,Jaiden Putman,,,0.613,0.89
+2026-09-08-woking-v-southampton-u21,home,Woking,3-5-2,,2026-09-08T21:16:34Z,start,24,Josh Ayres,,,0.87,0.3
+2026-09-08-woking-v-southampton-u21,home,Woking,3-5-2,,2026-09-08T21:16:34Z,start,16,Olatunji Akinola,,,0.357,0.5
+2026-09-08-woking-v-southampton-u21,home,Woking,3-5-2,,2026-09-08T21:16:34Z,start,6,Shadrach Ogie,shadrach-ogie,,0.357,0.21
+2026-09-08-woking-v-southampton-u21,home,Woking,3-5-2,,2026-09-08T21:16:34Z,start,26,Steven Turner,,,0.613,0.305
+2026-09-08-woking-v-southampton-u21,home,Woking,3-5-2,,2026-09-08T21:16:34Z,start,23,Tim Akinola,,,0.613,0.695
+2026-09-08-woking-v-southampton-u21,home,Woking,3-5-2,,2026-09-08T21:16:34Z,start,5,Timi Odusina,,,0.357,0.79
+2026-09-08-worthing-v-norwich-city-u21,away,Norwich City U21,4-2-3-1,,2026-09-08T21:16:34Z,bench,16,Finlay Oligbo,,,,
+2026-09-08-worthing-v-norwich-city-u21,away,Norwich City U21,4-2-3-1,,2026-09-08T21:16:34Z,bench,13,Luis Lines,,,,
+2026-09-08-worthing-v-norwich-city-u21,away,Norwich City U21,4-2-3-1,,2026-09-08T21:16:34Z,bench,17,Luke Chukwu,,,,
+2026-09-08-worthing-v-norwich-city-u21,away,Norwich City U21,4-2-3-1,,2026-09-08T21:16:34Z,bench,15,Reece Wilkes,,,,
+2026-09-08-worthing-v-norwich-city-u21,away,Norwich City U21,4-2-3-1,,2026-09-08T21:16:34Z,bench,14,Takudzwa Gwanzura,,,,
+2026-09-08-worthing-v-norwich-city-u21,away,Norwich City U21,4-2-3-1,,2026-09-08T21:16:34Z,bench,12,Tyler Williams,,,,
+2026-09-08-worthing-v-norwich-city-u21,away,Norwich City U21,4-2-3-1,,2026-09-08T21:16:34Z,bench,18,Zach Sclare,,,,
+2026-09-08-worthing-v-norwich-city-u21,away,Norwich City U21,4-2-3-1,,2026-09-08T21:16:34Z,start,6,Alan Domeracki,,,0.485,0.3
+2026-09-08-worthing-v-norwich-city-u21,away,Norwich City U21,4-2-3-1,,2026-09-08T21:16:34Z,start,11,Elliot Myles,,,0.678,0.163
+2026-09-08-worthing-v-norwich-city-u21,away,Norwich City U21,4-2-3-1,,2026-09-08T21:16:34Z,start,9,Finn Corke,,,0.87,0.5
+2026-09-08-worthing-v-norwich-city-u21,away,Norwich City U21,4-2-3-1,,2026-09-08T21:16:34Z,start,8,Luke Towler,,,0.485,0.7
+2026-09-08-worthing-v-norwich-city-u21,away,Norwich City U21,4-2-3-1,,2026-09-08T21:16:34Z,start,7,Reuben Cooper,,,0.678,0.837
+2026-09-08-worthing-v-norwich-city-u21,away,Norwich City U21,4-2-3-1,,2026-09-08T21:16:34Z,start,2,Rio Mundle,,,0.292,0.875
+2026-09-08-worthing-v-norwich-city-u21,away,Norwich City U21,4-2-3-1,,2026-09-08T21:16:34Z,start,5,Sonny Rowland,,,0.292,0.375
+2026-09-08-worthing-v-norwich-city-u21,away,Norwich City U21,4-2-3-1,,2026-09-08T21:16:34Z,start,4,Theodore Adelusi,,,0.292,0.625
+2026-09-08-worthing-v-norwich-city-u21,away,Norwich City U21,4-2-3-1,,2026-09-08T21:16:34Z,start,10,Toby Chilvers,,,0.678,0.5
+2026-09-08-worthing-v-norwich-city-u21,away,Norwich City U21,4-2-3-1,,2026-09-08T21:16:34Z,start,3,Vatan Özcan,,,0.292,0.125
+2026-09-08-worthing-v-norwich-city-u21,away,Norwich City U21,4-2-3-1,,2026-09-08T21:16:34Z,start,1,Vicente Reyes,,,0.1,0.5
+2026-09-08-worthing-v-norwich-city-u21,home,Worthing,4-2-3-1,,2026-09-08T21:16:34Z,bench,30,Callum Beck,,,,
+2026-09-08-worthing-v-norwich-city-u21,home,Worthing,4-2-3-1,,2026-09-08T21:16:34Z,bench,31,Fin Smith,,,,
+2026-09-08-worthing-v-norwich-city-u21,home,Worthing,4-2-3-1,,2026-09-08T21:16:34Z,bench,29,Freddie Kokot,,,,
+2026-09-08-worthing-v-norwich-city-u21,home,Worthing,4-2-3-1,,2026-09-08T21:16:34Z,bench,32,Guillermo De La Cruz,,,,
+2026-09-08-worthing-v-norwich-city-u21,home,Worthing,4-2-3-1,,2026-09-08T21:16:34Z,bench,19,Oliver Godziemski,,,,
+2026-09-08-worthing-v-norwich-city-u21,home,Worthing,4-2-3-1,,2026-09-08T21:16:34Z,bench,18,Owen Spicer,,,,
+2026-09-08-worthing-v-norwich-city-u21,home,Worthing,4-2-3-1,,2026-09-08T21:16:34Z,bench,9,Wiktor Makowski,,,,
+2026-09-08-worthing-v-norwich-city-u21,home,Worthing,4-2-3-1,,2026-09-08T21:16:34Z,start,11,Ashley Nathaniel-George,,,0.678,0.163
+2026-09-08-worthing-v-norwich-city-u21,home,Worthing,4-2-3-1,,2026-09-08T21:16:34Z,start,24,Charley Kendall,,,0.678,0.5
+2026-09-08-worthing-v-norwich-city-u21,home,Worthing,4-2-3-1,,2026-09-08T21:16:34Z,start,28,Charlie Waller,,,0.292,0.125
+2026-09-08-worthing-v-norwich-city-u21,home,Worthing,4-2-3-1,,2026-09-08T21:16:34Z,start,12,Harry Ransom,,,0.292,0.375
+2026-09-08-worthing-v-norwich-city-u21,home,Worthing,4-2-3-1,,2026-09-08T21:16:34Z,start,25,Harvey Boddy,harvey-boddy,,0.485,0.3
+2026-09-08-worthing-v-norwich-city-u21,home,Worthing,4-2-3-1,,2026-09-08T21:16:34Z,start,6,Jayden Moore,,,0.292,0.625
+2026-09-08-worthing-v-norwich-city-u21,home,Worthing,4-2-3-1,,2026-09-08T21:16:34Z,start,27,Jordan Young,,,0.678,0.837
+2026-09-08-worthing-v-norwich-city-u21,home,Worthing,4-2-3-1,,2026-09-08T21:16:34Z,start,21,Jose Marquez,,,0.87,0.5
+2026-09-08-worthing-v-norwich-city-u21,home,Worthing,4-2-3-1,,2026-09-08T21:16:34Z,start,15,Ricky Aguiar,,,0.485,0.7
+2026-09-08-worthing-v-norwich-city-u21,home,Worthing,4-2-3-1,,2026-09-08T21:16:34Z,start,16,Sam Packham,,,0.292,0.875
+2026-09-08-worthing-v-norwich-city-u21,home,Worthing,4-2-3-1,,2026-09-08T21:16:34Z,start,13,Taylor Seymour,,,0.1,0.5
+2026-09-08-wrexham-v-burnley,away,Burnley,4-2-3-1,,2026-09-08T21:16:34Z,bench,17,Andréas Hountondji,,,,
+2026-09-08-wrexham-v-burnley,away,Burnley,4-2-3-1,,2026-09-08T21:16:34Z,bench,15,Anel Ahmedhodžić,,,,
+2026-09-08-wrexham-v-burnley,away,Burnley,4-2-3-1,,2026-09-08T21:16:34Z,bench,27,Armando Broja,,,,
+2026-09-08-wrexham-v-burnley,away,Burnley,4-2-3-1,,2026-09-08T21:16:34Z,bench,47,Ellis Clark,,,,
+2026-09-08-wrexham-v-burnley,away,Burnley,4-2-3-1,,2026-09-08T21:16:34Z,bench,37,Grégoire Coudert,,,,
+2026-09-08-wrexham-v-burnley,away,Burnley,4-2-3-1,,2026-09-08T21:16:34Z,bench,18,Hjalmar Ekdal,,,,
+2026-09-08-wrexham-v-burnley,away,Burnley,4-2-3-1,,2026-09-08T21:16:34Z,bench,30,Lluc Castell,,,,
+2026-09-08-wrexham-v-burnley,away,Burnley,4-2-3-1,,2026-09-08T21:16:34Z,bench,23,Lucas Pires,,,,
+2026-09-08-wrexham-v-burnley,away,Burnley,4-2-3-1,,2026-09-08T21:16:34Z,bench,5,Reo Hatate,,,,
+2026-09-08-wrexham-v-burnley,away,Burnley,4-2-3-1,,2026-09-08T21:16:34Z,start,21,Aaron Ramsey,,,0.678,0.837
+2026-09-08-wrexham-v-burnley,away,Burnley,4-2-3-1,,2026-09-08T21:16:34Z,start,14,Connor Roberts,,,0.292,0.125
+2026-09-08-wrexham-v-burnley,away,Burnley,4-2-3-1,,2026-09-08T21:16:34Z,start,44,Igor Julio,,,0.292,0.375
+2026-09-08-wrexham-v-burnley,away,Burnley,4-2-3-1,,2026-09-08T21:16:34Z,start,29,Josh Laurent,,,0.678,0.5
+2026-09-08-wrexham-v-burnley,away,Burnley,4-2-3-1,,2026-09-08T21:16:34Z,start,2,Kyle Walker,,,0.292,0.625
+2026-09-08-wrexham-v-burnley,away,Burnley,4-2-3-1,,2026-09-08T21:16:34Z,start,19,Largie Ramazani,,,0.678,0.163
+2026-09-08-wrexham-v-burnley,away,Burnley,4-2-3-1,,2026-09-08T21:16:34Z,start,3,Max Alleyne,,,0.485,0.3
+2026-09-08-wrexham-v-burnley,away,Burnley,4-2-3-1,,2026-09-08T21:16:34Z,start,1,Max Weiß,,,0.1,0.5
+2026-09-08-wrexham-v-burnley,away,Burnley,4-2-3-1,,2026-09-08T21:16:34Z,start,22,Oliver Sonne,,,0.292,0.875
+2026-09-08-wrexham-v-burnley,away,Burnley,4-2-3-1,,2026-09-08T21:16:34Z,start,8,Ugo Raghouber,,,0.485,0.7
+2026-09-08-wrexham-v-burnley,away,Burnley,4-2-3-1,,2026-09-08T21:16:34Z,start,11,Zeki Amdouni,,,0.87,0.5
+2026-09-08-wrexham-v-burnley,home,Wrexham,3-4-2-1,,2026-09-08T21:16:34Z,bench,17,Callum O'Hare,,,,
+2026-09-08-wrexham-v-burnley,home,Wrexham,3-4-2-1,,2026-09-08T21:16:34Z,bench,30,Daniel Imray,,,,
+2026-09-08-wrexham-v-burnley,home,Wrexham,3-4-2-1,,2026-09-08T21:16:34Z,bench,21,Danny Ward,,,,
+2026-09-08-wrexham-v-burnley,home,Wrexham,3-4-2-1,,2026-09-08T21:16:34Z,bench,6,Joe Worrall,,,,
+2026-09-08-wrexham-v-burnley,home,Wrexham,3-4-2-1,,2026-09-08T21:16:34Z,bench,33,Nathan Broadhead,,,,
+2026-09-08-wrexham-v-burnley,home,Wrexham,3-4-2-1,,2026-09-08T21:16:34Z,bench,20,Oliver Rathbone,,,,
+2026-09-08-wrexham-v-burnley,home,Wrexham,3-4-2-1,,2026-09-08T21:16:34Z,bench,47,Ryan Longman,,,,
+2026-09-08-wrexham-v-burnley,home,Wrexham,3-4-2-1,,2026-09-08T21:16:34Z,bench,28,Sam Smith,,,,
+2026-09-08-wrexham-v-burnley,home,Wrexham,3-4-2-1,,2026-09-08T21:16:34Z,bench,26,Zak Vyner,,,,
+2026-09-08-wrexham-v-burnley,home,Wrexham,3-4-2-1,,2026-09-08T21:16:34Z,start,22,Anthony Patterson,,,0.1,0.5
+2026-09-08-wrexham-v-burnley,home,Wrexham,3-4-2-1,,2026-09-08T21:16:34Z,start,8,Ben Whiteman,,,0.485,0.375
+2026-09-08-wrexham-v-burnley,home,Wrexham,3-4-2-1,,2026-09-08T21:16:34Z,start,2,Callum Doyle,,,0.292,0.21
+2026-09-08-wrexham-v-burnley,home,Wrexham,3-4-2-1,,2026-09-08T21:16:34Z,start,5,Dominic Hyam,,,0.292,0.5
+2026-09-08-wrexham-v-burnley,home,Wrexham,3-4-2-1,,2026-09-08T21:16:34Z,start,12,Issa Kaboré,,,0.485,0.875
+2026-09-08-wrexham-v-burnley,home,Wrexham,3-4-2-1,,2026-09-08T21:16:34Z,start,3,Jacques Ekomié,,,0.485,0.125
+2026-09-08-wrexham-v-burnley,home,Wrexham,3-4-2-1,,2026-09-08T21:16:34Z,start,10,Josh Windass,,,0.678,0.7
+2026-09-08-wrexham-v-burnley,home,Wrexham,3-4-2-1,,2026-09-08T21:16:34Z,start,19,Kieffer Moore,,,0.87,0.5
+2026-09-08-wrexham-v-burnley,home,Wrexham,3-4-2-1,,2026-09-08T21:16:34Z,start,27,Lewis O'Brien,,,0.678,0.3
+2026-09-08-wrexham-v-burnley,home,Wrexham,3-4-2-1,,2026-09-08T21:16:34Z,start,37,Matthew James,,,0.485,0.625
+2026-09-08-wrexham-v-burnley,home,Wrexham,3-4-2-1,,2026-09-08T21:16:34Z,start,4,Max Cleworth,,,0.292,0.79
