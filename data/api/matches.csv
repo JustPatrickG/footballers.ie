@@ -138,15 +138,15 @@ kickoff,competition,home,away,home_id,away_id,home_score,away_score,status,minut
 2026-09-07T18:45:00Z,Serie A,Udinese,Lazio,8600,8543,1,2,ft,,james-abankwah
 2026-09-07T19:00:00Z,League One,Bromley,AFC Wimbledon,45729,158319,0,2,ft,,owen-mason
 2026-09-08T15:00:00Z,Veikkausliiga Relegation Group,TPS,SJK,6633,162162,,,scheduled,,aaron-okpolokpo;josh-okpolokpo
-2026-09-08T18:00:00Z,EFL Trophy,Exeter City,Tottenham Hotspur U21,9833,860802,,,scheduled,,aaron-maguire;charlie-cummins;jake-doyle-hayes
-2026-09-08T18:00:00Z,National League Cup,FC Halifax Town,Wolverhampton Wanderers U21,10195,773683,,,scheduled,,conor-carty;max-bardell;nathan-fraser;zak-gilsenan
-2026-09-08T18:00:00Z,National League Cup,Gateshead FC,Derby County U21,6189,773680,,,scheduled,,david-eguaibor
-2026-09-08T18:00:00Z,National League Cup,Sutton United,Birmingham U21,158316,1796111,,,scheduled,,emmanuel-osadebe;finn-mcgreevy
-2026-09-08T18:00:00Z,National League Cup,Wealdstone,Stoke City U21,161812,773650,,,scheduled,,gabriel-kelly;pijus-otegbayo;wilson-waweru
-2026-09-08T18:00:00Z,National League Cup,Boston United,West Bromwich Albion U21,8646,773656,,,scheduled,,gavan-holohan;niall-canavan
-2026-09-08T18:00:00Z,National League Cup,Scunthorpe United,Nottingham Forest U21,8412,1389162,,,scheduled,,grady-mcdonnell;hugh-parker
-2026-09-08T18:00:00Z,EFL Trophy,Doncaster Rovers,Huddersfield Town,9903,9796,,,scheduled,,james-collins;jay-mcgrath;leon-ayinde;marcus-harness;neill-byrne;sean-grehan;sean-roughan
-2026-09-08T18:00:00Z,National League Cup,Solihull Moors,Leeds United U21,161801,1177187,,,scheduled,,jevon-mills
+2026-09-08T18:00:00Z,EFL Trophy,Exeter City,Tottenham Hotspur U21,9833,860802,,,live,,aaron-maguire;charlie-cummins;jake-doyle-hayes
+2026-09-08T18:00:00Z,National League Cup,FC Halifax Town,Wolverhampton Wanderers U21,10195,773683,,,live,,conor-carty;max-bardell;nathan-fraser;zak-gilsenan
+2026-09-08T18:00:00Z,National League Cup,Gateshead FC,Derby County U21,6189,773680,,,live,,david-eguaibor
+2026-09-08T18:00:00Z,National League Cup,Sutton United,Birmingham U21,158316,1796111,,,live,,emmanuel-osadebe;finn-mcgreevy
+2026-09-08T18:00:00Z,National League Cup,Wealdstone,Stoke City U21,161812,773650,,,live,,gabriel-kelly;pijus-otegbayo;wilson-waweru
+2026-09-08T18:00:00Z,National League Cup,Boston United,West Bromwich Albion U21,8646,773656,,,live,,gavan-holohan;niall-canavan
+2026-09-08T18:00:00Z,National League Cup,Scunthorpe United,Nottingham Forest U21,8412,1389162,,,live,,grady-mcdonnell;hugh-parker
+2026-09-08T18:00:00Z,EFL Trophy,Doncaster Rovers,Huddersfield Town,9903,9796,,,live,,james-collins;jay-mcgrath;leon-ayinde;marcus-harness;neill-byrne;sean-grehan;sean-roughan
+2026-09-08T18:00:00Z,National League Cup,Solihull Moors,Leeds United U21,161801,1177187,,,live,,jevon-mills
 2026-09-08T18:30:00Z,National League Cup,Worthing,Norwich City U21,282351,773658,,,scheduled,,harvey-boddy;vinnie-leonard
 2026-09-08T18:30:00Z,National League Cup,Aldershot Town,West Ham United U21,8465,773649,,,scheduled,,scott-davies
 2026-09-08T18:45:00Z,EFL Cup,Leyton Orient,Bradford City,8351,8484,,,scheduled,,aaron-connolly;alex-gilbert;corey-okeeffe;jaze-kabia;killian-cahill;ollie-oneill;tony-springett;tyreik-wright
@@ -532,3 +532,5 @@ kickoff,competition,home,away,home_id,away_id,home_score,away_score,status,minut
 2026-09-20T21:00:00Z,USL Championship,Indy Eleven,Oakland Roots SC,514649,1130413,,,scheduled,,josh-obrien
 2026-09-20T23:00:00Z,USL Championship,Sacramento Republic FC,San Antonio FC,521004,722269,,,scheduled,,lee-desmond
 2026-09-21T18:00:00Z,Premier League 2,Bournemouth U21,Stoke City U21,2128213,773650,,,scheduled,,ade-solanke;gabriel-kelly;pijus-otegbayo
+2026-09-22T18:00:00Z,EFL Trophy Southern Grp. A,Cheltenham,Exeter,8680,9833,,,scheduled,,charlie-cummins;jake-doyle-hayes
+2026-09-22T18:00:00Z,EFL Trophy Northern Grp. F,Burton,Nottingham Forest U21,9792,1389162,,,scheduled,,grady-mcdonnell
