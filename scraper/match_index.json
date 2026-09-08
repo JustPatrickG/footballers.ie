@@ -481,6 +481,21 @@
   ]
  },
  {
+  "fotmob_id": "6016317",
+  "url": "/matches/swindon-town-vs-newport-county/3brl60#6016317",
+  "kickoff": "2026-09-22T18:00:00Z",
+  "comp": "EFL Trophy Southern Grp. E",
+  "home": "Swindon",
+  "away": "Newport",
+  "home_id": "9795",
+  "away_id": "10262",
+  "slugs": [
+   "aaron-drinan",
+   "ciaran-brennan",
+   "gavin-kilkenny"
+  ]
+ },
+ {
   "fotmob_id": "5100950",
   "url": "/matches/shamrock-rovers-vs-shelbourne/t2rdi#5100950",
   "kickoff": "2026-09-04T19:00:00Z",
@@ -744,8 +759,7 @@
   "away_id": "860802",
   "slugs": [
    "aaron-maguire",
-   "charlie-cummins",
-   "jake-doyle-hayes"
+   "charlie-cummins"
   ]
  },
  {
@@ -944,20 +958,6 @@
   "away_id": "9864",
   "slugs": [
    "aaron-ochoa"
-  ]
- },
- {
-  "fotmob_id": "6145898",
-  "url": "/matches/tps-vs-sjk/6jloiir#6145898",
-  "kickoff": "2026-09-08T15:00:00Z",
-  "comp": "Veikkausliiga Relegation Group",
-  "home": "TPS",
-  "away": "SJK",
-  "home_id": "6633",
-  "away_id": "162162",
-  "slugs": [
-   "aaron-okpolokpo",
-   "josh-okpolokpo"
   ]
  },
  {
@@ -1290,6 +1290,26 @@
   ]
  },
  {
+  "fotmob_id": "6015572",
+  "url": "/matches/oldham-athletic-vs-fleetwood-town/ph8jmz#6015572",
+  "kickoff": "2026-09-22T18:00:00Z",
+  "comp": "EFL Trophy Northern Grp. G",
+  "home": "Oldham",
+  "away": "Fleetwood",
+  "home_id": "9785",
+  "away_id": "45723",
+  "slugs": [
+   "adam-murphy",
+   "calum-kavanagh",
+   "frankie-mcmahon-brown",
+   "jesse-dempsey",
+   "lewis-temple",
+   "ronan-coughlan",
+   "ryan-delaney",
+   "sean-costelloe"
+  ]
+ },
+ {
   "fotmob_id": "5100964",
   "url": "/matches/shelbourne-vs-derry-city/1n3lmn#5100964",
   "kickoff": "2026-09-11T18:45:00Z",
@@ -1507,6 +1527,21 @@
    "charlie-mcneill",
    "ian-lawlor",
    "kian-mcmahon-brown"
+  ]
+ },
+ {
+  "fotmob_id": "6014862",
+  "url": "/matches/crewe-alexandra-vs-aston-villa-u21/7fxvhh0j#6014862",
+  "kickoff": "2026-09-22T18:00:00Z",
+  "comp": "EFL Trophy Northern Grp. B",
+  "home": "Crewe",
+  "away": "Aston Villa U21",
+  "home_id": "9784",
+  "away_id": "1070261",
+  "slugs": [
+   "adrien-thibaut",
+   "charlie-mcneill",
+   "ian-lawlor"
   ]
  },
  {
@@ -2122,6 +2157,22 @@
   ]
  },
  {
+  "fotmob_id": "6014860",
+  "url": "/matches/blackpool-vs-wigan-athletic/2e5ie6#6014860",
+  "kickoff": "2026-09-22T18:00:00Z",
+  "comp": "EFL Trophy Northern Grp. B",
+  "home": "Wigan",
+  "away": "Blackpool",
+  "home_id": "8528",
+  "away_id": "8483",
+  "slugs": [
+   "andy-lyons",
+   "cj-hamilton",
+   "dara-costelloe",
+   "sonny-perkins"
+  ]
+ },
+ {
   "fotmob_id": "5101276",
   "url": "/matches/ucd-vs-athlone-town/4nt58#5101276",
   "kickoff": "2026-09-11T18:45:00Z",
@@ -2225,6 +2276,22 @@
    "conor-mccarthy",
    "joe-obrien-whitmarsh",
    "kian-mcmahon-brown"
+  ]
+ },
+ {
+  "fotmob_id": "6015012",
+  "url": "/matches/tranmere-rovers-vs-shrewsbury-town/2qpqah#6015012",
+  "kickoff": "2026-09-22T18:00:00Z",
+  "comp": "EFL Trophy Northern Grp. E",
+  "home": "Tranmere",
+  "away": "Shrewsbury",
+  "home_id": "8313",
+  "away_id": "9896",
+  "slugs": [
+   "anthony-scully",
+   "jacob-slater",
+   "kian-mcmahon-brown",
+   "lee-oconnor"
   ]
  },
  {
@@ -2425,6 +2492,21 @@
    "jonny-smith",
    "lewis-temple",
    "ryan-delaney"
+  ]
+ },
+ {
+  "fotmob_id": "6015883",
+  "url": "/matches/rochdale-vs-liverpool-u21/7fasjjml#6015883",
+  "kickoff": "2026-09-22T18:00:00Z",
+  "comp": "EFL Trophy Northern Grp. H",
+  "home": "Rochdale",
+  "away": "Liverpool U21",
+  "home_id": "8493",
+  "away_id": "1070259",
+  "slugs": [
+   "baba-adeeko",
+   "cian-hayes",
+   "jonny-smith"
   ]
  },
  {
@@ -3033,6 +3115,20 @@
   ]
  },
  {
+  "fotmob_id": "6016309",
+  "url": "/matches/luton-town-vs-ipswich-town-u21/krwtdhlx#6016309",
+  "kickoff": "2026-09-22T18:00:00Z",
+  "comp": "EFL Trophy Southern Grp. D",
+  "home": "Luton",
+  "away": "Ipswich Town U21",
+  "home_id": "8346",
+  "away_id": "1796115",
+  "slugs": [
+   "callum-marshall",
+   "josh-keeley"
+  ]
+ },
+ {
   "fotmob_id": "5865462",
   "url": "/matches/ujpest-vs-ferencvaros/26rgqz#5865462",
   "kickoff": "2026-09-06T15:45:00Z",
@@ -3383,6 +3479,23 @@
   ]
  },
  {
+  "fotmob_id": "6016322",
+  "url": "/matches/cambridge-united-vs-gillingham/3b64c6#6016322",
+  "kickoff": "2026-09-22T18:00:00Z",
+  "comp": "EFL Trophy Southern Grp. G",
+  "home": "Gillingham",
+  "away": "Cambridge",
+  "home_id": "10173",
+  "away_id": "9834",
+  "slugs": [
+   "cathal-heffernan",
+   "conor-mcmanus",
+   "glenn-mcconnell",
+   "sam-curtis",
+   "shane-mcloughlin"
+  ]
+ },
+ {
   "fotmob_id": "5793928",
   "url": "/matches/aberdeen-vs-kilmarnock/2evgck#5793928",
   "kickoff": "2026-09-05T14:00:00Z",
@@ -3545,6 +3658,22 @@
    "jacob-slater",
    "jake-doyle-hayes",
    "lee-oconnor"
+  ]
+ },
+ {
+  "fotmob_id": "6016267",
+  "url": "/matches/cheltenham-town-vs-exeter-city/2u1d9e#6016267",
+  "kickoff": "2026-09-22T18:00:00Z",
+  "comp": "EFL Trophy Southern Grp. A",
+  "home": "Cheltenham",
+  "away": "Exeter",
+  "home_id": "8680",
+  "away_id": "9833",
+  "slugs": [
+   "charlie-cummins",
+   "jake-doyle-hayes",
+   "jordan-shipley",
+   "pierce-sweeney"
   ]
  },
  {
@@ -3733,6 +3862,24 @@
   ]
  },
  {
+  "fotmob_id": "6015564",
+  "url": "/matches/notts-county-vs-grimsby-town/390043#6015564",
+  "kickoff": "2026-09-22T18:00:00Z",
+  "comp": "EFL Trophy Northern Grp. F",
+  "home": "Notts County",
+  "away": "Grimsby",
+  "home_id": "9819",
+  "away_id": "10005",
+  "slugs": [
+   "cian-doyle",
+   "conor-grant",
+   "darius-lipsiuc",
+   "luke-browne",
+   "reece-staunton",
+   "rory-finneran"
+  ]
+ },
+ {
   "fotmob_id": "5847430",
   "url": "/matches/ballymena-united-vs-carrick-rangers/8gxnkkv#5847430",
   "kickoff": "2026-09-15T18:45:00Z",
@@ -3831,6 +3978,22 @@
   ]
  },
  {
+  "fotmob_id": "6015563",
+  "url": "/matches/burton-albion-vs-nottingham-forest-u21/chj7kumf#6015563",
+  "kickoff": "2026-09-22T18:00:00Z",
+  "comp": "EFL Trophy Northern Grp. F",
+  "home": "Burton",
+  "away": "Nottingham Forest U21",
+  "home_id": "9792",
+  "away_id": "1389162",
+  "slugs": [
+   "ciaran-gilligan",
+   "gbemi-arubi",
+   "grady-mcdonnell",
+   "mark-omahony"
+  ]
+ },
+ {
   "fotmob_id": "5837896",
   "url": "/matches/colchester-united-vs-bristol-rovers/2u446k#5837896",
   "kickoff": "2026-09-01T18:45:00Z",
@@ -3887,6 +4050,20 @@
   "slugs": [
    "connor-obrien",
    "oisin-gallagher",
+   "seamus-conneely"
+  ]
+ },
+ {
+  "fotmob_id": "6014404",
+  "url": "/matches/accrington-stanley-vs-sunderland-u21/3wkzs4qj#6014404",
+  "kickoff": "2026-09-22T18:00:00Z",
+  "comp": "EFL Trophy Northern Grp. A",
+  "home": "Accrington",
+  "away": "Sunderland U21",
+  "home_id": "8671",
+  "away_id": "773657",
+  "slugs": [
+   "connor-obrien",
    "seamus-conneely"
   ]
  },
@@ -3951,6 +4128,20 @@
    "connor-oriordan",
    "luca-connell",
    "warren-ohora"
+  ]
+ },
+ {
+  "fotmob_id": "6015571",
+  "url": "/matches/barnsley-vs-leeds-united-u21/8ysvo6kc#6015571",
+  "kickoff": "2026-09-22T18:00:00Z",
+  "comp": "EFL Trophy Northern Grp. G",
+  "home": "Barnsley",
+  "away": "Leeds United U21",
+  "home_id": "8283",
+  "away_id": "1177187",
+  "slugs": [
+   "connor-oriordan",
+   "luca-connell"
   ]
  },
  {
@@ -4040,10 +4231,7 @@
   "home_id": "10195",
   "away_id": "773683",
   "slugs": [
-   "conor-carty",
-   "max-bardell",
-   "nathan-fraser",
-   "zak-gilsenan"
+   "conor-carty"
   ]
  },
  {
@@ -4872,6 +5060,23 @@
   ]
  },
  {
+  "fotmob_id": "6016310",
+  "url": "/matches/colchester-united-vs-peterborough-united/2ezhg4#6016310",
+  "kickoff": "2026-09-22T18:00:00Z",
+  "comp": "EFL Trophy Southern Grp. D",
+  "home": "Peterborough",
+  "away": "Colchester",
+  "home_id": "8677",
+  "away_id": "8416",
+  "slugs": [
+   "david-okagbue",
+   "evan-weir",
+   "liam-kelly",
+   "sean-raggett",
+   "thomas-oconnor"
+  ]
+ },
+ {
   "fotmob_id": "5847440",
   "url": "/matches/ballymena-united-vs-dungannon-swifts/mf8ss#5847440",
   "kickoff": "2026-09-19T14:00:00Z",
@@ -5010,6 +5215,19 @@
   "away": "York City",
   "home_id": "9786",
   "away_id": "9916",
+  "slugs": [
+   "dylan-duffy"
+  ]
+ },
+ {
+  "fotmob_id": "6015006",
+  "url": "/matches/chesterfield-vs-port-vale/367288#6015006",
+  "kickoff": "2026-09-22T18:00:00Z",
+  "comp": "EFL Trophy Northern Grp. D",
+  "home": "Chesterfield",
+  "away": "Port Vale",
+  "home_id": "9786",
+  "away_id": "9799",
   "slugs": [
    "dylan-duffy"
   ]
@@ -5200,6 +5418,21 @@
   ]
  },
  {
+  "fotmob_id": "6014988",
+  "url": "/matches/rotherham-united-vs-york-city/2ou56y#6014988",
+  "kickoff": "2026-09-22T18:00:00Z",
+  "comp": "EFL Trophy Northern Grp. C",
+  "home": "York City",
+  "away": "Rotherham",
+  "home_id": "9916",
+  "away_id": "8119",
+  "slugs": [
+   "emmanuel-adegboyega",
+   "joe-rafferty",
+   "joshua-kayode"
+  ]
+ },
+ {
   "fotmob_id": "5906420",
   "url": "/matches/barrow-vs-sutton-united/687t0jh#5906420",
   "kickoff": "2026-09-05T14:00:00Z",
@@ -5213,26 +5446,12 @@
   ]
  },
  {
-  "fotmob_id": "6000927",
-  "url": "/matches/sutton-united-vs-birmingham-u21/ode6ax95#6000927",
-  "kickoff": "2026-09-08T18:00:00Z",
-  "comp": "National League Cup",
-  "home": "Sutton United",
-  "away": "Birmingham U21",
-  "home_id": "158316",
-  "away_id": "1796111",
-  "slugs": [
-   "emmanuel-osadebe",
-   "finn-mcgreevy"
-  ]
- },
- {
   "fotmob_id": "5906437",
   "url": "/matches/scunthorpe-united-vs-sutton-united/6dv871c#5906437",
   "kickoff": "2026-09-12T14:00:00Z",
   "comp": "National League",
   "home": "Sutton United",
-  "away": "Scunthorpe",
+  "away": "Scunthorpe United",
   "home_id": "158316",
   "away_id": "8412",
   "slugs": [
@@ -5486,8 +5705,7 @@
   "away_id": "773650",
   "slugs": [
    "gabriel-kelly",
-   "pijus-otegbayo",
-   "wilson-waweru"
+   "pijus-otegbayo"
   ]
  },
  {
@@ -5514,20 +5732,6 @@
   "away": "Boston United",
   "home_id": "10254",
   "away_id": "8646",
-  "slugs": [
-   "gavan-holohan",
-   "niall-canavan"
-  ]
- },
- {
-  "fotmob_id": "6000926",
-  "url": "/matches/boston-united-vs-west-bromwich-albion-u21/3wkno647#6000926",
-  "kickoff": "2026-09-08T18:00:00Z",
-  "comp": "National League Cup",
-  "home": "Boston United",
-  "away": "West Bromwich Albion U21",
-  "home_id": "8646",
-  "away_id": "773656",
   "slugs": [
    "gavan-holohan",
    "niall-canavan"
@@ -5647,20 +5851,6 @@
   "away_id": "1113569",
   "slugs": [
    "george-moloney"
-  ]
- },
- {
-  "fotmob_id": "6000874",
-  "url": "/matches/scunthorpe-united-vs-nottingham-forest-u21/cgnaqosx#6000874",
-  "kickoff": "2026-09-08T18:00:00Z",
-  "comp": "National League Cup",
-  "home": "Scunthorpe United",
-  "away": "Nottingham Forest U21",
-  "home_id": "8412",
-  "away_id": "1389162",
-  "slugs": [
-   "grady-mcdonnell",
-   "hugh-parker"
   ]
  },
  {
@@ -6083,9 +6273,7 @@
    "jay-mcgrath",
    "leon-ayinde",
    "marcus-harness",
-   "neill-byrne",
-   "sean-grehan",
-   "sean-roughan"
+   "neill-byrne"
   ]
  },
  {
@@ -6120,6 +6308,20 @@
   ]
  },
  {
+  "fotmob_id": "6016296",
+  "url": "/matches/walsall-vs-stevenage/3e6vib#6016296",
+  "kickoff": "2026-09-22T18:00:00Z",
+  "comp": "EFL Trophy Southern Grp. B",
+  "home": "Walsall",
+  "away": "Stevenage",
+  "home_id": "10006",
+  "away_id": "10253",
+  "slugs": [
+   "james-furlong",
+   "ronan-maher"
+  ]
+ },
+ {
   "fotmob_id": "5837139",
   "url": "/matches/plymouth-argyle-vs-doncaster-rovers/2rqwkv#5837139",
   "kickoff": "2026-09-05T14:00:00Z",
@@ -6146,6 +6348,20 @@
   "away": "Plymouth Argyle",
   "home_id": "8197",
   "away_id": "8401",
+  "slugs": [
+   "james-storer",
+   "ronan-curtis"
+  ]
+ },
+ {
+  "fotmob_id": "6016316",
+  "url": "/matches/plymouth-argyle-vs-crystal-palace-u21/ae5cat7j#6016316",
+  "kickoff": "2026-09-22T18:00:00Z",
+  "comp": "EFL Trophy Southern Grp. E",
+  "home": "Plymouth",
+  "away": "Crystal Palace U21",
+  "home_id": "8401",
+  "away_id": "1267874",
   "slugs": [
    "james-storer",
    "ronan-curtis"
@@ -6238,19 +6454,6 @@
    "killian-cahill",
    "owen-mason",
    "tony-springett"
-  ]
- },
- {
-  "fotmob_id": "6000911",
-  "url": "/matches/solihull-moors-vs-leeds-united-u21/bftkd43r#6000911",
-  "kickoff": "2026-09-08T18:00:00Z",
-  "comp": "National League Cup",
-  "home": "Solihull Moors",
-  "away": "Leeds United U21",
-  "home_id": "161801",
-  "away_id": "1177187",
-  "slugs": [
-   "jevon-mills"
   ]
  },
  {
@@ -6747,6 +6950,21 @@
   "away_id": "1114695",
   "slugs": [
    "joshua-keeya"
+  ]
+ },
+ {
+  "fotmob_id": "6016329",
+  "url": "/matches/milton-keynes-dons-vs-crawley-town/2h0ted#6016329",
+  "kickoff": "2026-09-22T18:00:00Z",
+  "comp": "EFL Trophy Southern Grp. H",
+  "home": "MK Dons",
+  "away": "Crawley",
+  "home_id": "8645",
+  "away_id": "8647",
+  "slugs": [
+   "justin-ferizaj",
+   "lewis-richards",
+   "louie-watson"
   ]
  },
  {
@@ -7777,6 +7995,19 @@
   ]
  },
  {
+  "fotmob_id": "6014405",
+  "url": "/matches/sheffield-wednesday-vs-salford-city/jnfbwlf#6014405",
+  "kickoff": "2026-09-22T18:00:00Z",
+  "comp": "EFL Trophy Northern Grp. A",
+  "home": "Salford",
+  "away": "Sheff Wed",
+  "home_id": "282326",
+  "away_id": "10163",
+  "slugs": [
+   "ryan-graydon"
+  ]
+ },
+ {
   "fotmob_id": "5905884",
   "url": "/matches/preussen-munster-vs-tsv-havelse/26mhqe1#5905884",
   "kickoff": "2026-09-05T12:00:00Z",
@@ -7832,7 +8063,7 @@
   "fotmob_id": "6000893",
   "url": "/matches/aldershot-town-vs-west-ham-united-u21/3wi849gk#6000893",
   "kickoff": "2026-09-08T18:30:00Z",
-  "comp": "National League Cup",
+  "comp": "National League Cup Group B",
   "home": "Aldershot Town",
   "away": "West Ham United U21",
   "home_id": "8465",
@@ -7959,19 +8190,6 @@
   ]
  },
  {
-  "fotmob_id": "5959578",
-  "url": "/matches/montrose-vs-dundee-fc-b/ah3qp4ps#5959578",
-  "kickoff": "2026-09-08T18:45:00Z",
-  "comp": "Challenge Cup",
-  "home": "Montrose",
-  "away": "Dundee FC B",
-  "home_id": "8257",
-  "away_id": "1273049",
-  "slugs": [
-   "sean-mcginty"
-  ]
- },
- {
   "fotmob_id": "5794545",
   "url": "/matches/cove-rangers-vs-montrose/1oj8vj#5794545",
   "kickoff": "2026-09-12T14:00:00Z",
@@ -7980,6 +8198,19 @@
   "away": "Cove Rangers",
   "home_id": "8257",
   "away_id": "6002",
+  "slugs": [
+   "sean-mcginty"
+  ]
+ },
+ {
+  "fotmob_id": "5959578",
+  "url": "/matches/montrose-vs-dundee-fc-b/ah3qp4ps#5959578",
+  "kickoff": "2026-09-08T18:45:00Z",
+  "comp": "Challenge Cup",
+  "home": "Montrose",
+  "away": "Dundee FC B",
+  "home_id": "8257",
+  "away_id": "1273049",
   "slugs": [
    "sean-mcginty"
   ]
@@ -8389,6 +8620,19 @@
   ]
  },
  {
+  "fotmob_id": "6016295",
+  "url": "/matches/leicester-city-vs-fulham-u21/4tghf0t2#6016295",
+  "kickoff": "2026-09-22T18:00:00Z",
+  "comp": "EFL Trophy Southern Grp. B",
+  "home": "Leicester",
+  "away": "Fulham U21",
+  "home_id": "8197",
+  "away_id": "860801",
+  "slugs": [
+   "warren-ohora"
+  ]
+ },
+ {
   "fotmob_id": "5906428",
   "url": "/matches/kidderminster-harriers-vs-wealdstone/6swr7sk#5906428",
   "kickoff": "2026-09-05T14:00:00Z",
@@ -8451,6 +8695,75 @@
   "away_id": "2205",
   "slugs": [
    "billy-vance"
+  ]
+ },
+ {
+  "fotmob_id": "6145898",
+  "url": "/matches/tps-vs-sjk/6jloiir#6145898",
+  "kickoff": "2026-09-08T15:00:00Z",
+  "comp": "Veikkausliiga Relegation Group",
+  "home": "TPS",
+  "away": "SJK",
+  "home_id": "6633",
+  "away_id": "162162",
+  "slugs": [
+   "aaron-okpolokpo",
+   "josh-okpolokpo"
+  ]
+ },
+ {
+  "fotmob_id": "6000927",
+  "url": "/matches/sutton-united-vs-birmingham-u21/ode6ax95#6000927",
+  "kickoff": "2026-09-08T18:00:00Z",
+  "comp": "National League Cup",
+  "home": "Sutton United",
+  "away": "Birmingham U21",
+  "home_id": "158316",
+  "away_id": "1796111",
+  "slugs": [
+   "emmanuel-osadebe",
+   "finn-mcgreevy"
+  ]
+ },
+ {
+  "fotmob_id": "6000926",
+  "url": "/matches/boston-united-vs-west-bromwich-albion-u21/3wkno647#6000926",
+  "kickoff": "2026-09-08T18:00:00Z",
+  "comp": "National League Cup",
+  "home": "Boston United",
+  "away": "West Bromwich Albion U21",
+  "home_id": "8646",
+  "away_id": "773656",
+  "slugs": [
+   "gavan-holohan",
+   "niall-canavan"
+  ]
+ },
+ {
+  "fotmob_id": "6000874",
+  "url": "/matches/scunthorpe-united-vs-nottingham-forest-u21/cgnaqosx#6000874",
+  "kickoff": "2026-09-08T18:00:00Z",
+  "comp": "National League Cup",
+  "home": "Scunthorpe United",
+  "away": "Nottingham Forest U21",
+  "home_id": "8412",
+  "away_id": "1389162",
+  "slugs": [
+   "grady-mcdonnell",
+   "hugh-parker"
+  ]
+ },
+ {
+  "fotmob_id": "6000911",
+  "url": "/matches/solihull-moors-vs-leeds-united-u21/bftkd43r#6000911",
+  "kickoff": "2026-09-08T18:00:00Z",
+  "comp": "National League Cup",
+  "home": "Solihull Moors",
+  "away": "Leeds United U21",
+  "home_id": "161801",
+  "away_id": "1177187",
+  "slugs": [
+   "jevon-mills"
   ]
  },
  {
