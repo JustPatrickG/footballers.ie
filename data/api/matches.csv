@@ -107,10 +107,8 @@ kickoff,competition,home,away,home_id,away_id,home_score,away_score,status,minut
 2026-09-06T22:00:00Z,Premier League,Vancouver FC,Supra du Québec,1436202,1899648,3,2,ft,,tom-field
 2026-09-07T16:30:00Z,Serie A,Cagliari,Lecce,8529,9888,1,0,ft,,corrie-ndaba
 2026-09-07T17:00:00Z,Süper Lig,Göztepe,Gaziantep FK,1925,4081,2,4,ft,,sinclair-armstrong
-2026-09-07T18:30:00Z,Serie C,Catania,Cosenza,8530,6456,,,live,,ed-mcjannett
 2026-09-07T18:45:00Z,Serie A,Udinese,Lazio,8600,8543,1,2,ft,,james-abankwah
 2026-09-07T19:00:00Z,League One,Bromley,AFC Wimbledon,45729,158319,0,2,ft,,owen-mason
-2026-09-08T15:00:00Z,Veikkausliiga Relegation Group,TPS,SJK,6633,162162,,,scheduled,,aaron-okpolokpo;josh-okpolokpo
 2026-09-08T18:00:00Z,National League Cup,Hornchurch,Ipswich Town U21,4047,1796115,3,0,ft,,alex-noonan
 2026-09-08T18:00:00Z,National League Cup,FC Halifax Town,Wolverhampton Wanderers U21,10195,773683,3,0,ft,,conor-carty;max-bardell;nathan-fraser
 2026-09-08T18:00:00Z,National League Cup,Gateshead FC,Derby County U21,6189,773680,1,3,ft,,david-eguaibor
@@ -118,11 +116,7 @@ kickoff,competition,home,away,home_id,away_id,home_score,away_score,status,minut
 2026-09-08T18:00:00Z,National League Cup,Wealdstone,Stoke City U21,161812,773650,6,0,ft,,gabriel-kelly;wilson-waweru
 2026-09-08T18:00:00Z,National League Cup,Scunthorpe United,Nottingham Forest U21,8412,1389162,2,1,ft,,grady-mcdonnell;hugh-parker
 2026-09-08T18:00:00Z,EFL Trophy,Doncaster Rovers,Huddersfield Town,9903,9796,1,3,ft,,leon-ayinde;marcus-harness;sean-grehan
-2026-09-08T18:00:00Z,EFL Trophy,Exeter City,Tottenham Hotspur U21,9833,860802,,,live,,aaron-maguire;charlie-cummins
-2026-09-08T18:00:00Z,National League Cup,Boston United,West Bromwich Albion U21,8646,773656,,,live,,gavan-holohan;niall-canavan
-2026-09-08T18:00:00Z,National League Cup,Solihull Moors,Leeds United U21,161801,1177187,,,live,,jevon-mills
 2026-09-08T18:30:00Z,National League Cup,Worthing,Norwich City U21,282351,773658,0,0,ft,,harvey-boddy
-2026-09-08T18:30:00Z,National League Cup Group B,Aldershot Town,West Ham United U21,8465,773649,,,scheduled,,scott-davies
 2026-09-08T18:45:00Z,Championship,Southampton,Swansea City,8466,10003,3,1,ft,,adam-idah;finn-azaz;ryan-manning
 2026-09-08T18:45:00Z,EFL Cup,Sunderland,Hull City,8472,8667,1,0,ft,,alan-browne;john-egan
 2026-09-08T18:45:00Z,EFL Cup,Leyton Orient,Bradford City,8351,8484,1,3,ft,,alex-gilbert;corey-okeeffe;jaze-kabia;tony-springett
@@ -131,26 +125,8 @@ kickoff,competition,home,away,home_id,away_id,home_score,away_score,status,minut
 2026-09-08T18:45:00Z,EFL Cup,AFC Bournemouth,Lincoln City,8678,8430,4,0,ft,,chiedozie-ogbene;josh-honohan
 2026-09-08T18:45:00Z,Championship,Blackburn Rovers,Sheffield United,8655,8657,1,2,ft,,matt-doherty;sean-mcloughlin;tom-cannon
 2026-09-08T18:45:00Z,National League Cup,Woking,Southampton U21,8345,773645,4,1,ft,,romeo-akachukwu;shadrach-ogie
-2026-09-08T18:45:00Z,National League North,King's Lynn Town,Hednesford,45731,9923,,,scheduled,,adam-rooney;jesse-nwabueze;liam-kinsella
-2026-09-08T18:45:00Z,National League North,Chorley,Darlington,274599,8598,,,scheduled,,bobby-jones
-2026-09-08T18:45:00Z,National League North,Buxton,Brackley Town,161824,158321,,,scheduled,,cian-coleman;shane-byrne
-2026-09-08T18:45:00Z,National League South,Folkestone Invicta,Horsham,6206,105554,,,scheduled,,danny-burke
-2026-09-08T18:45:00Z,Challenge Cup,East Kilbride,Bonnyrigg Rose,575419,183953,,,scheduled,,darragh-oconnor
-2026-09-08T18:45:00Z,National League South,Weston Super Mare,AFC Totton,6314,275027,,,scheduled,,dominic-bernard;sean-long
-2026-09-08T18:45:00Z,National League North,Chester FC,Merthyr Town,9797,5762,,,scheduled,,jake-griffin;matthew-harris;sam-foley
-2026-09-08T18:45:00Z,Premiership,Larne,Bangor,2206,77755,,,scheduled,,jordan-mceneff;josh-ukek;ronan-doherty
-2026-09-08T18:45:00Z,National League South,Dorking Wanderers,Chelmsford,580438,45724,,,scheduled,,josh-barrett
-2026-09-08T18:45:00Z,National League South,Salisbury,Slough Town,1114695,6432,,,live,,joshua-keeya
-2026-09-08T18:45:00Z,Challenge Cup,Ross County,Aberdeen B,8649,1273052,,,scheduled,,len-osullivan
-2026-09-08T18:45:00Z,National League North,Spennymoor Town FC,Spalding United,557101,580400,,,live,,michael-kelly
-2026-09-08T18:45:00Z,Championship,Wrexham,Burnley,9841,8191,,,live,,michael-obafemi
-2026-09-08T18:45:00Z,Challenge Cup,Spartans FC,Hamilton Academical,6661,8429,,,live,,ricardo-dinanga
-2026-09-08T18:45:00Z,Challenge Cup,Airdrieonians,St. Mirren B,8176,1273057,,,live,,robbie-mahon
-2026-09-08T18:45:00Z,Challenge Cup,Berwick Rangers,Hibernian B,8368,1273051,,,live,,sean-brennan
-2026-09-08T18:45:00Z,Challenge Cup,Montrose,Dundee FC B,8257,1273049,,,scheduled,,sean-mcginty
 2026-09-08T19:00:00Z,Championship,Bolton Wanderers,West Ham United,8559,8654,2,3,ft,,gavin-bazunu;jack-bonham
 2026-09-08T19:00:00Z,Champions League,Lille,Real Betis,8639,8603,2,3,ft,,troy-parrott
-2026-09-08T19:00:00Z,EFL Cup,Millwall,Newcastle United,10004,10261,,,scheduled,,mark-sykes
 2026-09-08T23:00:00Z,USL Jägermeister Cup,Hartford Athletic,Colorado Springs Switchbacks FC,1003206,614321,2,1,ft,,barry-coffey
 2026-09-09T15:00:00Z,Veikkausliiga Championship Group,HJK,FC Inter Turku,9861,6550,,,scheduled,,david-eze;david-ezeh
 2026-09-09T15:30:00Z,Super Cup,Levski Sofia,CSKA Sofia,8632,10144,,,scheduled,,armstrong-oko-flex
@@ -537,3 +513,27 @@ kickoff,competition,home,away,home_id,away_id,home_score,away_score,status,minut
 2026-09-22T18:45:00Z,Challenge Cup,Bonnyrigg Rose,Airdrieonians,183953,8176,,,scheduled,,robbie-mahon
 2026-09-22T18:45:00Z,Challenge Cup,Berwick Rangers,Stranraer,8368,9926,,,scheduled,,sean-brennan
 2026-09-22T18:45:00Z,Challenge Cup,Formartine United,Montrose,351618,8257,,,scheduled,,sean-mcginty
+2026-09-07T18:30:00Z,Serie C,Catania,Cosenza,8530,6456,,,live,,ed-mcjannett
+2026-09-08T15:00:00Z,Veikkausliiga Relegation Group,TPS,SJK,6633,162162,,,scheduled,,aaron-okpolokpo;josh-okpolokpo
+2026-09-08T18:00:00Z,EFL Trophy,Exeter City,Tottenham Hotspur U21,9833,860802,,,live,,aaron-maguire;charlie-cummins
+2026-09-08T18:00:00Z,National League Cup,Boston United,West Bromwich Albion U21,8646,773656,,,live,,gavan-holohan;niall-canavan
+2026-09-08T18:00:00Z,National League Cup,Solihull Moors,Leeds United U21,161801,1177187,,,live,,jevon-mills
+2026-09-08T18:30:00Z,National League Cup Group B,Aldershot Town,West Ham United U21,8465,773649,,,scheduled,,scott-davies
+2026-09-08T18:45:00Z,National League North,King's Lynn Town,Hednesford,45731,9923,,,scheduled,,adam-rooney;jesse-nwabueze;liam-kinsella
+2026-09-08T18:45:00Z,National League North,Chorley,Darlington,274599,8598,,,scheduled,,bobby-jones
+2026-09-08T18:45:00Z,National League North,Buxton,Brackley Town,161824,158321,,,scheduled,,cian-coleman;shane-byrne
+2026-09-08T18:45:00Z,National League South,Folkestone Invicta,Horsham,6206,105554,,,scheduled,,danny-burke
+2026-09-08T18:45:00Z,Challenge Cup,East Kilbride,Bonnyrigg Rose,575419,183953,,,scheduled,,darragh-oconnor
+2026-09-08T18:45:00Z,National League South,Weston Super Mare,AFC Totton,6314,275027,,,scheduled,,dominic-bernard;sean-long
+2026-09-08T18:45:00Z,National League North,Chester FC,Merthyr Town,9797,5762,,,scheduled,,jake-griffin;matthew-harris;sam-foley
+2026-09-08T18:45:00Z,Premiership,Larne,Bangor,2206,77755,,,scheduled,,jordan-mceneff;josh-ukek;ronan-doherty
+2026-09-08T18:45:00Z,National League South,Dorking Wanderers,Chelmsford,580438,45724,,,scheduled,,josh-barrett
+2026-09-08T18:45:00Z,National League South,Salisbury,Slough Town,1114695,6432,,,live,,joshua-keeya
+2026-09-08T18:45:00Z,Challenge Cup,Ross County,Aberdeen B,8649,1273052,,,scheduled,,len-osullivan
+2026-09-08T18:45:00Z,National League North,Spennymoor Town FC,Spalding United,557101,580400,,,live,,michael-kelly
+2026-09-08T18:45:00Z,Championship,Wrexham,Burnley,9841,8191,,,live,,michael-obafemi
+2026-09-08T18:45:00Z,Challenge Cup,Spartans FC,Hamilton Academical,6661,8429,,,live,,ricardo-dinanga
+2026-09-08T18:45:00Z,Challenge Cup,Airdrieonians,St. Mirren B,8176,1273057,,,live,,robbie-mahon
+2026-09-08T18:45:00Z,Challenge Cup,Berwick Rangers,Hibernian B,8368,1273051,,,live,,sean-brennan
+2026-09-08T18:45:00Z,Challenge Cup,Montrose,Dundee FC B,8257,1273049,,,scheduled,,sean-mcginty
+2026-09-08T19:00:00Z,EFL Cup,Millwall,Newcastle United,10004,10261,,,scheduled,,mark-sykes
