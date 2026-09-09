@@ -127,7 +127,6 @@
    "adam-ohalloran",
    "adam-oreilly",
    "anthony-oconnor",
-   "barry-cotter",
    "brian-maher",
    "brooklyn-lyons-foster",
    "callum-downey",
@@ -241,7 +240,6 @@
    "aaron-brennan",
    "adam-oreilly",
    "arlo-doherty",
-   "barry-cotter",
    "bobby-keohan",
    "brian-maher",
    "brooklyn-lyons-foster",
@@ -1241,7 +1239,6 @@
   "slugs": [
    "adam-oreilly",
    "ademipo-odubeko",
-   "barry-cotter",
    "brian-maher",
    "brooklyn-lyons-foster",
    "callum-downey",
@@ -1801,6 +1798,34 @@
   "away_id": "1796115",
   "slugs": [
    "alex-noonan"
+  ]
+ },
+ {
+  "fotmob_id": "1000019119",
+  "url": "/matches/sunderland-u21-vs-ipswich-town-u21/164utu77b#1000019119",
+  "kickoff": "2026-09-11T18:00:00Z",
+  "comp": "Premier League 2",
+  "home": "Sunderland U21",
+  "away": "Ipswich Town U21",
+  "home_id": "773657",
+  "away_id": "1796115",
+  "slugs": [
+   "alex-noonan"
+  ]
+ },
+ {
+  "fotmob_id": "6016309",
+  "url": "/matches/luton-town-vs-ipswich-town-u21/krwtdhlx#6016309",
+  "kickoff": "2026-09-22T18:00:00Z",
+  "comp": "EFL Trophy Southern Grp. D",
+  "home": "Luton",
+  "away": "Ipswich Town U21",
+  "home_id": "8346",
+  "away_id": "1796115",
+  "slugs": [
+   "alex-noonan",
+   "callum-marshall",
+   "josh-keeley"
   ]
  },
  {
@@ -2957,20 +2982,6 @@
    "corey-okeeffe",
    "josh-keeley",
    "tyreik-wright"
-  ]
- },
- {
-  "fotmob_id": "6016309",
-  "url": "/matches/luton-town-vs-ipswich-town-u21/krwtdhlx#6016309",
-  "kickoff": "2026-09-22T18:00:00Z",
-  "comp": "EFL Trophy Southern Grp. D",
-  "home": "Luton",
-  "away": "Ipswich Town U21",
-  "home_id": "8346",
-  "away_id": "1796115",
-  "slugs": [
-   "callum-marshall",
-   "josh-keeley"
   ]
  },
  {
@@ -6120,6 +6131,32 @@
   ]
  },
  {
+  "fotmob_id": "5976891",
+  "url": "/matches/fc-metaloglobus-bucuresti-vs-csm-olimpia-satu-mare/uvpho1gp#5976891",
+  "kickoff": "2026-09-12T08:00:00Z",
+  "comp": "Liga II",
+  "home": "FC Metaloglobus Bucure\u0219ti",
+  "away": "CSM Olimpia Satu Mare",
+  "home_id": "404509",
+  "away_id": "1795466",
+  "slugs": [
+   "jimmy-mwanga"
+  ]
+ },
+ {
+  "fotmob_id": "5976899",
+  "url": "/matches/cs-afumati-vs-csm-olimpia-satu-mare/uzlss5ho#5976899",
+  "kickoff": "2026-09-19T08:00:00Z",
+  "comp": "Liga II",
+  "home": "CSM Olimpia Satu Mare",
+  "away": "CS Afuma\u021bi",
+  "home_id": "1795466",
+  "away_id": "408362",
+  "slugs": [
+   "jimmy-mwanga"
+  ]
+ },
+ {
   "fotmob_id": "5071322",
   "url": "/matches/houston-dynamo-fc-vs-charlotte-fc/bbnlt3e7#5071322",
   "kickoff": "2026-09-05T23:30:00Z",
@@ -7630,27 +7667,27 @@
   ]
  },
  {
-  "fotmob_id": "1000016971",
-  "url": "/matches/berwick-rangers-vs-tranent/9kasi4aa#1000016971",
-  "kickoff": "2026-09-12T14:00:00Z",
+  "fotmob_id": "1000016980",
+  "url": "/matches/berwick-rangers-vs-civil-service-strollers/2legwkb#1000016980",
+  "kickoff": "2026-09-15T18:45:00Z",
   "comp": "Lowland League East",
-  "home": "Berwick Rangers",
-  "away": "Tranent",
-  "home_id": "8368",
-  "away_id": "1215940",
+  "home": "Civil Service Strollers",
+  "away": "Berwick Rangers",
+  "home_id": "97910",
+  "away_id": "8368",
   "slugs": [
    "sean-brennan"
   ]
  },
  {
-  "fotmob_id": "1000016980",
-  "url": "/matches/berwick-rangers-vs-civil-service-strollers/2legwkb#1000016980",
-  "kickoff": "2026-09-15T18:45:00Z",
+  "fotmob_id": "1000016971",
+  "url": "/matches/berwick-rangers-vs-tranent/9kasi4aa#1000016971",
+  "kickoff": "2026-09-12T14:00:00Z",
   "comp": "Highland / Lowland",
-  "home": "Civil Service Strollers",
-  "away": "Berwick Rangers",
-  "home_id": "97910",
-  "away_id": "8368",
+  "home": "Berwick Rangers",
+  "away": "Tranent",
+  "home_id": "8368",
+  "away_id": "1215940",
   "slugs": [
    "sean-brennan"
   ]
@@ -8523,19 +8560,6 @@
   "away_id": "1177187",
   "slugs": [
    "jevon-mills"
-  ]
- },
- {
-  "fotmob_id": "5991412",
-  "url": "/matches/cosenza-vs-catania/1uv3yh#5991412",
-  "kickoff": "2026-09-07T18:30:00Z",
-  "comp": "Serie C",
-  "home": "Catania",
-  "away": "Cosenza",
-  "home_id": "8530",
-  "away_id": "6456",
-  "slugs": [
-   "ed-mcjannett"
   ]
  }
 ]
