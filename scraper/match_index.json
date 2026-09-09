@@ -2408,19 +2408,6 @@
   ]
  },
  {
-  "fotmob_id": "5109923",
-  "url": "/matches/charleston-battery-vs-hartford-athletic/8nyinx36#5109923",
-  "kickoff": "2026-09-02T23:00:00Z",
-  "comp": "USL Championship",
-  "home": "Charleston Battery",
-  "away": "Hartford Athletic",
-  "home_id": "162183",
-  "away_id": "1003206",
-  "slugs": [
-   "barry-coffey"
-  ]
- },
- {
   "fotmob_id": "5109937",
   "url": "/matches/tampa-bay-rowdies-vs-hartford-athletic/9723hhfx#5109937",
   "kickoff": "2026-09-12T23:00:00Z",
@@ -3104,6 +3091,23 @@
    "frankie-mcmahon-brown",
    "lewis-temple",
    "ryan-delaney"
+  ]
+ },
+ {
+  "fotmob_id": "5836822",
+  "url": "/matches/charlton-athletic-vs-queens-park-rangers/2v9483#5836822",
+  "kickoff": "2026-09-09T19:00:00Z",
+  "comp": "Championship",
+  "home": "Charlton Athletic",
+  "away": "Queens Park Rangers",
+  "home_id": "8451",
+  "away_id": "10172",
+  "slugs": [
+   "calum-ward",
+   "conor-coventry",
+   "harvey-vale",
+   "jimmy-dunne",
+   "millenic-alli"
   ]
  },
  {
@@ -6719,6 +6723,20 @@
   ]
  },
  {
+  "fotmob_id": "5793915",
+  "url": "/matches/st-johnstone-vs-celtic/2spihd#5793915",
+  "kickoff": "2026-09-09T19:00:00Z",
+  "comp": "Premiership",
+  "home": "St. Johnstone",
+  "away": "Celtic",
+  "home_id": "8467",
+  "away_id": "9925",
+  "slugs": [
+   "liam-scales",
+   "ruari-paton"
+  ]
+ },
+ {
   "fotmob_id": "5793933",
   "url": "/matches/st-mirren-vs-celtic/37u1ls#5793933",
   "kickoff": "2026-09-05T19:00:00Z",
@@ -7323,19 +7341,6 @@
   "slugs": [
    "romeo-akachukwu",
    "shadrach-ogie"
-  ]
- },
- {
-  "fotmob_id": "5793915",
-  "url": "/matches/st-johnstone-vs-celtic/2spihd#5793915",
-  "kickoff": "2026-09-09T19:00:00Z",
-  "comp": "Premiership",
-  "home": "St. Johnstone",
-  "away": "Celtic",
-  "home_id": "8467",
-  "away_id": "9925",
-  "slugs": [
-   "ruari-paton"
   ]
  },
  {
@@ -8026,24 +8031,6 @@
   "away_id": "2205",
   "slugs": [
    "billy-vance"
-  ]
- },
- {
-  "fotmob_id": "5836822",
-  "url": "/matches/charlton-athletic-vs-queens-park-rangers/2v9483#5836822",
-  "kickoff": "2026-09-09T19:00:00Z",
-  "comp": "Championship",
-  "home": "Charlton Athletic",
-  "away": "Queens Park Rangers",
-  "home_id": "8451",
-  "away_id": "10172",
-  "slugs": [
-   "calum-ward",
-   "conor-coventry",
-   "dan-mcnamara",
-   "harvey-vale",
-   "jimmy-dunne",
-   "millenic-alli"
   ]
  },
  {
