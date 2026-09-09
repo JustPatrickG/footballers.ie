@@ -1,5 +1,69 @@
 [
  {
+  "slug": "joe-bradshaw-named-in-liverpool-uyl-starting-xi",
+  "date": "2026-09-09",
+  "tag": "CALLUP",
+  "headline": "Joe Bradshaw named in Liverpool UYL starting XI",
+  "standfirst": "The tweet included a link to the match information.",
+  "body": "Joe Bradshaw has been selected to start for Liverpool's Under‑21 side in their upcoming UYL fixture, as confirmed by a recent social‑media post. The announcement was shared via a tweet that also contained a link to further details about the match.",
+  "author": "Jack Deane",
+  "image": "",
+  "player_slug": "",
+  "expires": "",
+  "use_player_photo": "yes",
+  "partner": "",
+  "partner_url": "",
+  "_confidence": 0.96,
+  "_facts": [
+   "Joe Bradshaw is starting for Liverpool in the Under‑21 League."
+  ]
+ },
+ {
+  "slug": "aaron-brennan-debuts-as-waterford-beat-sligo-rovers",
+  "date": "2026-09-09",
+  "tag": "RESULT",
+  "headline": "Aaron Brennan Debuts as Waterford Beat Sligo Rovers",
+  "standfirst": "Waterford secured a cup triumph against Sligo Rovers on Friday.",
+  "body": "![](img/articles/aaron-brennan-debuts-as-waterford-beat-sligo-rovers/lead.jpg)\n\nAaron Brennan, a Waterford academy product, appeared for the first time with the senior squad during a cup tie on Friday, as the team defeated Sligo Rovers. The match, overseen by manager Graham Coughlan, ended in victory for Waterford. A photograph captured Brennan celebrating alongside his family after the win.",
+  "author": "Jack Deane",
+  "image": "img/articles/aaron-brennan-debuts-as-waterford-beat-sligo-rovers/lead.jpg",
+  "player_slug": "graham-coughlan",
+  "expires": "",
+  "use_player_photo": "",
+  "partner": "",
+  "partner_url": "",
+  "_confidence": 0.95,
+  "_facts": [
+   "Aaron Brennan, a Waterford youngster, made his senior debut",
+   "The debut occurred during a cup victory over Sligo Rovers",
+   "The match took place on Friday night",
+   "Graham Coughlan is the manager of Waterford"
+  ]
+ },
+ {
+  "slug": "tom-cannon-scores-equaliser-as-sheffield-united-beat-blackburn",
+  "date": "2026-09-09",
+  "tag": "RESULT",
+  "headline": "Tom Cannon scores equaliser as Sheffield United beat Blackburn",
+  "standfirst": "The result counted as another important win for Sheffield United",
+  "body": "![](img/articles/tom-cannon-scores-equaliser-as-sheffield-united-beat-blackburn/lead.jpg)\n\nTom Cannon found the net to level the score for Sheffield United, who eventually turned the game around to claim a 2-1 victory over Blackburn Rovers at Ewood Park. Managed by Chris Wilder, Sheffield United recovered from an early deficit and secured another important win in the Championship.",
+  "author": "Jack Deane",
+  "image": "img/articles/tom-cannon-scores-equaliser-as-sheffield-united-beat-blackburn/lead.jpg",
+  "player_slug": "tom-cannon",
+  "expires": "",
+  "use_player_photo": "",
+  "partner": "",
+  "partner_url": "",
+  "_confidence": 0.97,
+  "_facts": [
+   "Tom Cannon scored the equaliser for Sheffield United",
+   "Sheffield United came from behind to win 2-1 against Blackburn Rovers",
+   "The match took place at Ewood Park",
+   "Chris Wilder is the manager of Sheffield United",
+   "The victory was described as an important win"
+  ]
+ },
+ {
   "slug": "finn-azaz-scores-as-southampton-win-3-1",
   "date": "2026-09-08",
   "tag": "RESULT",
