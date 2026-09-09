@@ -153,10 +153,10 @@ kickoff,competition,home,away,home_id,away_id,home_score,away_score,status,minut
 2026-09-08T23:00:00Z,USL Jägermeister Cup,Hartford Athletic,Colorado Springs Switchbacks FC,1003206,614321,2,1,ft,,barry-coffey
 2026-09-09T15:00:00Z,Veikkausliiga Championship Group,HJK,FC Inter Turku,9861,6550,,,scheduled,,david-eze;david-ezeh
 2026-09-09T15:30:00Z,Super Cup,Levski Sofia,CSKA Sofia,8632,10144,2,4,ft,,armstrong-oko-flex
-2026-09-09T16:45:00Z,Champions League,Barcelona,Feyenoord,8634,10235,,,scheduled,,liam-bossin
-2026-09-09T18:45:00Z,Championship,Derby County,West Bromwich Albion,10170,8659,,,scheduled,,eiran-cashin;jayson-molumby;max-johnston;max-oleary;mikey-johnston;sammie-szmodics
+2026-09-09T16:45:00Z,Champions League,Barcelona,Feyenoord,8634,10235,5,1,ft,,liam-bossin
+2026-09-09T18:45:00Z,Championship,Derby County,West Bromwich Albion,10170,8659,,,live,,eiran-cashin;jayson-molumby;max-johnston;max-oleary;mikey-johnston;sammie-szmodics
 2026-09-09T18:45:00Z,Premiership,Rangers,St. Mirren,8548,9800,,,scheduled,,killian-phillips
-2026-09-09T19:00:00Z,Championship,Charlton Athletic,Queens Park Rangers,8451,10172,,,scheduled,,calum-ward;conor-coventry;dan-mcnamara;harvey-vale;jimmy-dunne;millenic-alli
+2026-09-09T19:00:00Z,Championship,Charlton Athletic,Queens Park Rangers,8451,10172,,,live,,calum-ward;conor-coventry;dan-mcnamara;harvey-vale;jimmy-dunne;millenic-alli
 2026-09-09T19:00:00Z,Premiership,St. Johnstone,Celtic,8467,9925,,,scheduled,,liam-scales;ruari-paton
 2026-09-09T23:30:00Z,Major League Soccer,DC United,Columbus Crew,6602,6001,,,scheduled,,brooks-lennon
 2026-09-09T23:30:00Z,Major League Soccer,CF Montréal,Charlotte FC,161195,1323940,,,scheduled,,joe-byrne
@@ -272,6 +272,7 @@ kickoff,competition,home,away,home_id,away_id,home_score,away_score,status,minut
 2026-09-12T14:00:00Z,National League North,Morecambe,Brackley Town,8489,158321,,,scheduled,,shane-byrne
 2026-09-12T14:00:00Z,Championship,Raith Rovers,Arbroath,10250,8280,,,scheduled,,zak-delaney
 2026-09-12T14:00:00Z,Premiership,Crusaders,Limavady,1937,2205,,,scheduled,,billy-vance
+2026-09-12T14:00:00Z,Championship,Charlton Athletic,Portsmouth,8451,8462,,,scheduled,,conor-coventry;dan-mcnamara;millenic-alli
 2026-09-12T16:00:00Z,Veikkausliiga Relegation Group,FF Jaro,SJK,8473,162162,,,scheduled,,aaron-okpolokpo;josh-okpolokpo
 2026-09-12T16:30:00Z,Premier League,Tottenham Hotspur,Everton,8586,8668,,,scheduled,,desmond-armstrong;jake-obrien;mark-travers
 2026-09-12T16:30:00Z,National League,Carlisle United,Southend United,10196,8652,,,scheduled,,promise-omochere
