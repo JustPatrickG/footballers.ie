@@ -54,15 +54,15 @@ Championship,48,4,Queens Park Rangers,10172,6,3,2,1,7,4,3,11
 Championship,48,5,Charlton Athletic,8451,6,3,2,1,6,7,-1,11
 Championship,48,6,Middlesbrough,8549,5,3,1,1,8,5,3,10
 Championship,48,7,Bristol City,8427,5,3,1,1,9,7,2,10
-Championship,48,8,Norwich City,9850,6,3,0,3,10,8,2,9
-Championship,48,9,Millwall,10004,5,3,0,2,10,8,2,9
+Championship,48,8,Millwall,10004,5,3,0,2,10,8,2,9
+Championship,48,9,Norwich City,9850,6,3,0,3,10,9,1,9
 Championship,48,10,Sheffield United,8657,6,2,3,1,8,8,0,9
 Championship,48,11,Wolverhampton Wanderers,8602,5,2,2,1,13,10,3,8
 Championship,48,12,Watford,9817,6,2,2,2,6,7,-1,8
 Championship,48,13,Southampton,8466,6,3,2,1,14,7,7,7
 Championship,48,14,Wrexham,9841,6,1,4,1,7,5,2,7
-Championship,48,15,Stoke City,10194,6,2,1,3,9,10,-1,7
-Championship,48,16,Birmingham City,8658,6,1,4,1,7,8,-1,7
+Championship,48,15,Birmingham City,8658,6,1,4,1,8,8,0,7
+Championship,48,16,Stoke City,10194,6,2,1,3,9,10,-1,7
 Championship,48,17,Portsmouth,8462,5,2,0,3,7,8,-1,6
 Championship,48,18,Blackburn Rovers,8655,6,1,2,3,7,9,-2,5
 Championship,48,19,Lincoln City,8430,5,1,2,2,4,6,-2,5
@@ -71,13 +71,13 @@ Championship,48,21,Bolton Wanderers,8559,6,1,1,4,6,12,-6,4
 Championship,48,22,Derby County,10170,6,1,1,4,5,11,-6,4
 Championship,48,23,Burnley,8191,6,0,3,3,7,13,-6,3
 Championship,48,24,Preston North End,8411,6,1,0,5,6,12,-6,3
-Premiership,64,1,Celtic,9925,6,5,1,0,13,3,10,16
-Premiership,64,2,Heart of Midlothian,9860,5,4,0,1,12,5,7,12
-Premiership,64,3,St. Mirren,9800,6,3,2,1,8,5,3,11
-Premiership,64,4,Rangers,8548,6,3,2,1,6,4,2,11
+Premiership,64,1,Celtic,9925,6,6,0,0,14,3,11,18
+Premiership,64,2,Rangers,8548,6,4,1,1,7,4,3,13
+Premiership,64,3,Heart of Midlothian,9860,5,4,0,1,12,5,7,12
+Premiership,64,4,St. Mirren,9800,6,3,1,2,8,6,2,10
 Premiership,64,5,Motherwell,9927,5,2,2,1,8,5,3,8
-Premiership,64,6,St. Johnstone,8467,6,2,2,2,8,8,0,8
-Premiership,64,7,Dundee FC,8284,6,2,1,3,7,6,1,7
+Premiership,64,6,Dundee FC,8284,6,2,1,3,7,6,1,7
+Premiership,64,7,St. Johnstone,8467,6,2,1,3,8,9,-1,7
 Premiership,64,8,Hibernian,10251,5,2,0,3,7,9,-2,6
 Premiership,64,9,Dundee United,9938,6,1,2,3,6,11,-5,5
 Premiership,64,10,Aberdeen,8485,5,1,1,3,2,7,-5,4
@@ -322,6 +322,20 @@ LaLiga,87,20,Valencia,10267,4,0,1,3,1,9,-8,1
 2. Bundesliga,146,16,Holstein Kiel,8150,4,0,3,1,6,8,-2,3
 2. Bundesliga,146,17,Dynamo Dresden,8480,4,1,0,3,5,10,-5,3
 2. Bundesliga,146,18,Darmstadt,8262,4,0,1,3,2,7,-5,1
+First Professional League,270,1,Levski Sofia,8632,8,8,0,0,21,4,17,24
+First Professional League,270,2,Ludogorets Razgrad,210173,8,6,2,0,14,6,8,20
+First Professional League,270,3,CSKA Sofia,10144,7,5,2,0,17,5,12,17
+First Professional League,270,4,CSKA 1948,944215,8,5,1,2,15,8,7,16
+First Professional League,270,5,Arda Kardzhali,944173,8,5,1,2,13,7,6,16
+First Professional League,270,6,Slavia Sofia,10134,8,2,4,2,8,6,2,10
+First Professional League,270,7,Botev Plovdiv,10131,8,3,1,4,11,14,-3,10
+First Professional League,270,8,Spartak Varna,10145,8,2,3,3,10,14,-4,9
+First Professional League,270,9,Septemvri Sofia,312976,8,2,2,4,7,13,-6,8
+First Professional League,270,10,Botev Vratsa,187880,8,2,1,5,7,17,-10,7
+First Professional League,270,11,Lokomotiv Plovdiv,10129,8,2,0,6,4,10,-6,6
+First Professional League,270,12,Cherno More Varna,10141,8,1,1,6,8,17,-9,4
+First Professional League,270,13,Dunav Ruse,46474,8,1,1,6,7,15,-8,4
+First Professional League,270,14,PFC Lokomotiv Sofia 1929,10128,7,0,3,4,8,14,-6,3
 Highland / Lowland,9545,1,Tranent,1215940,6,6,0,0,13,2,11,18
 Highland / Lowland,9545,1,Auchinleck Talbot,183952,7,5,1,1,28,7,21,16
 Highland / Lowland,9545,1,Brora Rangers,97904,9,7,2,0,28,8,20,23

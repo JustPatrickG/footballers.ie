@@ -8099,7 +8099,27 @@ match_id,minute,type,player,team,venue
 2026-09-09-barcelona-v-feyenoord,83,sub_on,Gavi,Barcelona,Spotify Camp Nou
 2026-09-09-barcelona-v-feyenoord,83,sub_on,Gabriel Jesus,Barcelona,Spotify Camp Nou
 2026-09-09-barcelona-v-feyenoord,85,goal,Gabriel Jesus,Barcelona,Spotify Camp Nou
-2026-09-09-charlton-athletic-v-queens-park-rangers,,,,,The Valley
+2026-09-09-charlton-athletic-v-queens-park-rangers,36,sub_off,Tariq Lamptey,Queens Park Rangers,The Valley
+2026-09-09-charlton-athletic-v-queens-park-rangers,36,sub_on,Dennis Cirkin,Queens Park Rangers,The Valley
+2026-09-09-charlton-athletic-v-queens-park-rangers,45,yellow,Julien Stéphan,Queens Park Rangers,The Valley
+2026-09-09-charlton-athletic-v-queens-park-rangers,46,sub_off,Miles Leaburn,Charlton Athletic,The Valley
+2026-09-09-charlton-athletic-v-queens-park-rangers,46,sub_on,Joe Rankin-Costello,Charlton Athletic,The Valley
+2026-09-09-charlton-athletic-v-queens-park-rangers,48,sub_off,Jimmy Dunne,Queens Park Rangers,The Valley
+2026-09-09-charlton-athletic-v-queens-park-rangers,48,sub_on,Jake Clarke-Salter,Queens Park Rangers,The Valley
+2026-09-09-charlton-athletic-v-queens-park-rangers,65,sub_off,Sonny Carey,Charlton Athletic,The Valley
+2026-09-09-charlton-athletic-v-queens-park-rangers,65,sub_on,Micah Mbick,Charlton Athletic,The Valley
+2026-09-09-charlton-athletic-v-queens-park-rangers,74,yellow,Kealey Adamson,Queens Park Rangers,The Valley
+2026-09-09-charlton-athletic-v-queens-park-rangers,76,yellow,Jake Clarke-Salter,Queens Park Rangers,The Valley
+2026-09-09-charlton-athletic-v-queens-park-rangers,79,sub_off,Kealey Adamson,Queens Park Rangers,The Valley
+2026-09-09-charlton-athletic-v-queens-park-rangers,79,sub_off,Paul Smyth,Queens Park Rangers,The Valley
+2026-09-09-charlton-athletic-v-queens-park-rangers,79,sub_off,Alfie Lloyd,Queens Park Rangers,The Valley
+2026-09-09-charlton-athletic-v-queens-park-rangers,79,sub_on,Amadou Salif Mbengue,Queens Park Rangers,The Valley
+2026-09-09-charlton-athletic-v-queens-park-rangers,79,sub_on,Justin Obikwu,Queens Park Rangers,The Valley
+2026-09-09-charlton-athletic-v-queens-park-rangers,79,sub_on,Leon Scarlett,Queens Park Rangers,The Valley
+2026-09-09-charlton-athletic-v-queens-park-rangers,85,sub_off,Oliver Skipp,Charlton Athletic,The Valley
+2026-09-09-charlton-athletic-v-queens-park-rangers,85,sub_on,Alan Mwamba,Charlton Athletic,The Valley
+2026-09-09-charlton-athletic-v-queens-park-rangers,88,sub_off,Tyreece Campbell,Charlton Athletic,The Valley
+2026-09-09-charlton-athletic-v-queens-park-rangers,88,sub_on,Millenic Alli,Charlton Athletic,The Valley
 2026-09-09-derby-county-v-west-bromwich-albion,10,yellow,Harry Whitwell,West Bromwich Albion,Pride Park Stadium
 2026-09-09-derby-county-v-west-bromwich-albion,16,goal,Aune Selland Heggebø,West Bromwich Albion,Pride Park Stadium
 2026-09-09-derby-county-v-west-bromwich-albion,26,yellow,Brayann Pereira,West Bromwich Albion,Pride Park Stadium
@@ -8133,5 +8153,51 @@ match_id,minute,type,player,team,venue
 2026-09-09-levski-sofia-v-cska-sofia,68,sub_off,Christian Makoun,Levski Sofia,Vasil Levski
 2026-09-09-levski-sofia-v-cska-sofia,68,sub_on,Juan Perea,Levski Sofia,Vasil Levski
 2026-09-09-levski-sofia-v-cska-sofia,70,goal,Joël Zwarts,CSKA Sofia,Vasil Levski
-2026-09-09-rangers-v-st-mirren,,,,,Ibrox Stadium
-2026-09-09-st-johnstone-v-celtic,,,,,McDiarmid Park
+2026-09-09-rangers-v-st-mirren,55,yellow,Calvin Ramsay,St. Mirren,Ibrox Stadium
+2026-09-09-rangers-v-st-mirren,60,sub_off,Kevin Kelsy,Rangers,Ibrox Stadium
+2026-09-09-rangers-v-st-mirren,60,sub_off,Badredine Bouanani,Rangers,Ibrox Stadium
+2026-09-09-rangers-v-st-mirren,60,sub_on,Findlay Curtis,Rangers,Ibrox Stadium
+2026-09-09-rangers-v-st-mirren,60,sub_on,Min-Su Kim,Rangers,Ibrox Stadium
+2026-09-09-rangers-v-st-mirren,62,sub_off,Chris Mochrie,St. Mirren,Ibrox Stadium
+2026-09-09-rangers-v-st-mirren,62,sub_off,Calvin Ramsay,St. Mirren,Ibrox Stadium
+2026-09-09-rangers-v-st-mirren,62,sub_on,Luke Thomas,St. Mirren,Ibrox Stadium
+2026-09-09-rangers-v-st-mirren,62,sub_on,Jayden Richardson,St. Mirren,Ibrox Stadium
+2026-09-09-rangers-v-st-mirren,62,yellow,Dujon Sterling,Rangers,Ibrox Stadium
+2026-09-09-rangers-v-st-mirren,77,sub_off,Nicolas Raskin,Rangers,Ibrox Stadium
+2026-09-09-rangers-v-st-mirren,77,sub_off,Nikolas Agrafiotis,St. Mirren,Ibrox Stadium
+2026-09-09-rangers-v-st-mirren,77,sub_off,Ismeal Kabia,St. Mirren,Ibrox Stadium
+2026-09-09-rangers-v-st-mirren,77,sub_on,Cameron Devlin,Rangers,Ibrox Stadium
+2026-09-09-rangers-v-st-mirren,77,sub_on,Jake Young,St. Mirren,Ibrox Stadium
+2026-09-09-rangers-v-st-mirren,77,sub_on,Eseosa Sule,St. Mirren,Ibrox Stadium
+2026-09-09-rangers-v-st-mirren,78,sub_off,Djeidi Gassama,Rangers,Ibrox Stadium
+2026-09-09-rangers-v-st-mirren,78,sub_on,Bojan Miovski,Rangers,Ibrox Stadium
+2026-09-09-rangers-v-st-mirren,84,sub_off,Daniel Neil,Rangers,Ibrox Stadium
+2026-09-09-rangers-v-st-mirren,84,sub_on,Tochi Chukwuani,Rangers,Ibrox Stadium
+2026-09-09-rangers-v-st-mirren,90,goal,Bojan Miovski,Rangers,Ibrox Stadium
+2026-09-09-rangers-v-st-mirren,90,sub_off,Declan John,St. Mirren,Ibrox Stadium
+2026-09-09-rangers-v-st-mirren,90,sub_on,Marcello De Barros,St. Mirren,Ibrox Stadium
+2026-09-09-st-johnstone-v-celtic,53,goal,Mika Baur,Celtic,McDiarmid Park
+2026-09-09-st-johnstone-v-celtic,55,yellow,Josh Campbell,St. Johnstone,McDiarmid Park
+2026-09-09-st-johnstone-v-celtic,63,sub_off,Jason Holt,St. Johnstone,McDiarmid Park
+2026-09-09-st-johnstone-v-celtic,63,sub_off,Josh Fowler,St. Johnstone,McDiarmid Park
+2026-09-09-st-johnstone-v-celtic,63,sub_on,Samuel Stanton,St. Johnstone,McDiarmid Park
+2026-09-09-st-johnstone-v-celtic,63,sub_on,Ruari Paton,St. Johnstone,McDiarmid Park
+2026-09-09-st-johnstone-v-celtic,67,sub_off,Oliver Sørensen,Celtic,McDiarmid Park
+2026-09-09-st-johnstone-v-celtic,67,sub_on,Benjamin Nygren,Celtic,McDiarmid Park
+2026-09-09-st-johnstone-v-celtic,69,yellow,Reece McAlear,St. Johnstone,McDiarmid Park
+2026-09-09-st-johnstone-v-celtic,73,sub_off,Haissem Hassan,Celtic,McDiarmid Park
+2026-09-09-st-johnstone-v-celtic,73,sub_off,Dane Murray,Celtic,McDiarmid Park
+2026-09-09-st-johnstone-v-celtic,73,sub_on,James Forrest,Celtic,McDiarmid Park
+2026-09-09-st-johnstone-v-celtic,73,sub_on,Camilo Durán,Celtic,McDiarmid Park
+2026-09-09-st-johnstone-v-celtic,74,sub_off,Taylor Steven,St. Johnstone,McDiarmid Park
+2026-09-09-st-johnstone-v-celtic,74,sub_off,Josh Campbell,St. Johnstone,McDiarmid Park
+2026-09-09-st-johnstone-v-celtic,74,sub_on,Danny Schmidt,St. Johnstone,McDiarmid Park
+2026-09-09-st-johnstone-v-celtic,74,sub_on,Kai Fotheringham,St. Johnstone,McDiarmid Park
+2026-09-09-st-johnstone-v-celtic,82,yellow,Liam Scales,Celtic,McDiarmid Park
+2026-09-09-st-johnstone-v-celtic,86,sub_off,Kasper Waarts Høgh,Celtic,McDiarmid Park
+2026-09-09-st-johnstone-v-celtic,86,sub_on,Shumaira Mheuka,Celtic,McDiarmid Park
+2026-09-09-st-johnstone-v-celtic,87,sub_off,Liam Scales,Celtic,McDiarmid Park
+2026-09-09-st-johnstone-v-celtic,87,sub_off,Joel Cotterill,St. Johnstone,McDiarmid Park
+2026-09-09-st-johnstone-v-celtic,87,sub_on,Kieran Tierney,Celtic,McDiarmid Park
+2026-09-09-st-johnstone-v-celtic,87,sub_on,Macaulay Tait,St. Johnstone,McDiarmid Park
+2026-09-09-st-johnstone-v-celtic,90,yellow,Mika Baur,Celtic,McDiarmid Park
