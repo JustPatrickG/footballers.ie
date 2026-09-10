@@ -169,16 +169,16 @@ aaron-molloy,2026-04-01,Louisville City FC,0-2,Open Cup,90,0,0,7.40
 aaron-molloy,2026-04-04,Colorado Springs Switchbacks FC,1-1,USL Championship,90,0,0,6.70
 aaron-molloy,2026-04-11,Rhode Island FC,1-3,USL Championship,90,0,0,6.40
 aaron-molloy,2026-04-19,Orange County SC,0-0,USL Championship,90,0,0,7.40
-aaron-molloy,2026-04-25,Forward Madison FC,4-2,USL Jägermeister Cup,90,0,0,7.90
+aaron-molloy,2026-04-25,Forward Madison FC,4-2,USL Cup,90,0,0,7.90
 aaron-molloy,2026-05-03,Las Vegas Lights FC,1-2,USL Championship,90,1,0,7.70
 aaron-molloy,2026-05-08,Monterey Bay FC,3-1,USL Championship,90,0,1,7.90
 aaron-molloy,2026-05-23,Indy Eleven,1-3,USL Championship,90,1,0,7.70
 aaron-molloy,2026-05-31,El Paso Locomotive FC,4-1,USL Championship,90,0,1,8.80
-aaron-molloy,2026-06-06,Detroit City FC,1-1,USL Jägermeister Cup,90,0,0,7.80
+aaron-molloy,2026-06-06,Detroit City FC,1-1,USL Cup,90,0,0,7.80
 aaron-molloy,2026-06-13,San Antonio FC,2-0,USL Championship,90,0,0,7.90
-aaron-molloy,2026-06-20,Indy Eleven,0-0,USL Jägermeister Cup,90,0,0,8.50
+aaron-molloy,2026-06-20,Indy Eleven,0-0,USL Cup,90,0,0,8.50
 aaron-molloy,2026-07-04,Tampa Bay Rowdies,4-1,USL Championship,90,0,2,8.80
-aaron-molloy,2026-07-12,Louisville City FC,2-4,USL Jägermeister Cup,90,0,2,7.80
+aaron-molloy,2026-07-12,Louisville City FC,2-4,USL Cup,90,0,2,7.80
 aaron-molloy,2026-07-15,New Mexico United,1-4,USL Championship,90,0,0,6.20
 aaron-molloy,2026-07-22,Oakland Roots SC,2-0,USL Championship,90,0,0,7.20
 aaron-molloy,2026-07-26,FC Tulsa,0-0,USL Championship,90,0,0,8.00
@@ -249,7 +249,6 @@ adam-brennan,2026-08-20,KuPS,1-1,Conference League Qualification,10,0,0,
 adam-brennan,2026-08-27,KuPS,0-1,Conference League Qualification,8,0,0,
 adam-brennan,2026-08-30,Derry City,3-3,Premier Division,79,0,0,6.30
 adam-brennan,2026-09-04,Shelbourne,0-0,Premier Division,75,0,0,6.30
-adam-idah,2025-09-09,Armenia,1-2,World Cup Qualification UEFA,45,0,1,6.80
 adam-idah,2025-09-13,Hull City,2-2,Championship,26,0,0,6.10
 adam-idah,2025-09-17,Nottingham Forest,3-2,EFL Cup,79,0,0,6.30
 adam-idah,2025-09-20,Birmingham City,0-1,Championship,16,0,0,5.70
@@ -589,7 +588,6 @@ alex-gilbert,2026-04-06,Swansea City,2-2,Championship,9,0,0,
 alex-gilbert,2026-04-11,Portsmouth,0-1,Championship,6,0,0,
 alex-gilbert,2026-04-19,Ipswich Town,2-2,Championship,61,0,0,6.90
 alex-gilbert,2026-04-25,Watford,5-1,Championship,90,0,0,7.50
-alex-murphy,2025-09-09,Andorra U21,1-0,EURO U-21 Qualification,90,0,0,
 alex-murphy,2025-09-24,Bradford City,4-1,EFL Cup,1,0,0,
 alex-murphy,2025-10-05,Tottenham Hotspur U21,1-4,Premier League 2,90,0,0,6.30
 alex-murphy,2025-10-27,Crystal Palace U21,2-0,Premier League 2,74,0,1,8.10
@@ -1112,7 +1110,7 @@ bobby-wales,2026-03-14,Port Vale,0-0,League One,6,0,0,
 bobby-wales,2026-08-22,Dundee United,2-0,Premiership,10,0,0,6.20
 bobby-wales,2026-08-30,Hibernian,1-2,Premiership,15,0,0,6.10
 bobby-wales,2026-09-02,St. Johnstone,1-1,Premiership,64,0,0,6.20
-bobby-wales,2026-09-06,Heart of Midlothian,1-2,Premiership,80,0,0,5.80
+bobby-wales,2026-09-06,Heart of Midlothian,1-2,Premiership,80,0,0,5.70
 bosun-lawal,2025-09-13,Birmingham City,1-0,Championship,90,1,0,8.60
 bosun-lawal,2025-09-20,Queens Park Rangers,0-1,Championship,90,0,0,7.20
 bosun-lawal,2025-09-27,Norwich City,1-1,Championship,90,0,0,6.80
@@ -1437,7 +1435,6 @@ cameron-reid,2025-10-11,Lossiemouth,1-1,Highland / Lowland,90,0,0,
 cameron-reid,2025-10-18,Keith,0-0,Highland / Lowland,30,0,0,
 cameron-reid,2025-11-01,Strathspey Thistle,1-1,Highland / Lowland,90,0,0,
 cameron-reid,2026-04-08,Inverurie Loco Works,1-3,Highland / Lowland,90,0,0,
-caoimhin-kelleher,2025-09-09,Armenia,1-2,World Cup Qualification UEFA,90,0,0,7.20
 caoimhin-kelleher,2025-09-13,Chelsea,2-2,Premier League,90,0,0,7.10
 caoimhin-kelleher,2025-09-20,Fulham,1-3,Premier League,90,0,0,5.20
 caoimhin-kelleher,2025-09-27,Manchester United,3-1,Premier League,90,0,0,8.80
@@ -1547,7 +1544,6 @@ cathal-heffernan,2026-08-22,Barrow,2-2,National League,90,1,0,
 cathal-heffernan,2026-08-29,Huddersfield Town,1-2,League One,90,0,0,6.50
 cathal-heffernan,2026-09-01,Bradford City,2-1,League One,90,0,0,7.10
 cathal-heffernan,2026-09-05,Burton Albion,2-2,League One,90,0,0,6.50
-cathal-mccarthy,2025-09-09,Andorra U21,1-0,EURO U-21 Qualification,90,0,0,
 cathal-mccarthy,2025-10-10,Slovakia U21,2-2,EURO U-21 Qualification,90,0,0,
 cathal-mccarthy,2025-12-29,Middlesbrough,1-0,Championship,84,0,0,6.90
 cathal-mccarthy,2026-01-11,Blackburn Rovers,0-0,FA Cup,31,0,0,6.50
@@ -1648,7 +1644,6 @@ charlie-mcneill,2026-08-25,Barnsley,2-3,EFL Cup,90,0,1,8.00
 charlie-mcneill,2026-08-29,Port Vale,0-0,League Two,3,0,0,
 charlie-mcneill,2026-09-01,Walsall,2-2,League Two,58,0,0,6.40
 charlie-mcneill,2026-09-05,York City,1-1,League Two,62,0,0,6.00
-chiedozie-ogbene,2025-09-09,Armenia,1-2,World Cup Qualification UEFA,45,0,0,6.10
 chiedozie-ogbene,2025-09-20,Charlton Athletic,0-1,Championship,67,0,0,6.30
 chiedozie-ogbene,2025-09-27,Oxford United,1-0,Championship,90,0,1,7.20
 chiedozie-ogbene,2025-09-30,Southampton,1-2,Championship,82,0,0,7.10
@@ -2902,7 +2897,6 @@ dara-mcguinness,2025-09-22,Sligo Rovers,0-1,Premier Division,90,0,0,5.70
 dara-mcguinness,2025-09-26,Cork City,2-1,Premier Division,88,0,1,6.80
 dara-mcguinness,2025-10-17,Bohemian FC,2-0,Premier Division,65,0,0,7.40
 dara-mcguinness,2025-10-24,Drogheda United,1-1,Premier Division,38,0,0,6.10
-dara-oshea,2025-09-09,Armenia,1-2,World Cup Qualification UEFA,90,0,0,6.30
 dara-oshea,2025-09-12,Sheffield United,5-0,Championship,90,0,0,7.70
 dara-oshea,2025-09-27,Portsmouth,2-1,Championship,90,0,0,7.50
 dara-oshea,2025-09-30,Bristol City,1-1,Championship,90,0,0,6.90
@@ -3084,7 +3078,6 @@ darragh-leahy,2025-11-01,Galway United FC,1-1,Premier Division,90,0,0,6.70
 darragh-leahy,2025-11-07,Bray Wanderers,2-1,Premier Division Qualification,90,0,0,7.30
 darragh-leahy,2026-07-09,Nõmme JK Kalju,0-1,Conference League Qualification,90,0,0,
 darragh-leahy,2026-07-16,Nõmme JK Kalju,2-2,Conference League Qualification,90,0,0,
-darragh-lenihan,2025-09-09,FC Halifax Town,1-2,National League Cup,45,0,0,7.10
 darragh-lenihan,2025-09-13,Preston North End,2-2,Championship,90,0,0,6.90
 darragh-markey,2025-09-19,Sligo Rovers,1-1,Premier Division,45,0,0,6.60
 darragh-markey,2025-09-22,Shelbourne,2-1,Premier Division,28,0,0,6.10
@@ -3988,7 +3981,6 @@ eoin-farrell,2026-07-07,Sabah FK,0-2,Champions League Qualification,90,0,0,
 eoin-farrell,2026-07-14,Sabah FK,1-2,Champions League Qualification,60,0,0,
 eoin-farrell,2026-07-23,Flora Tallinn,0-1,Conference League Qualification,29,0,0,
 eoin-farrell,2026-07-30,Flora Tallinn,1-0,Conference League Qualification,81,0,0,
-eoin-kenny,2025-09-09,Georgia U21,1-1,EURO U-21 Qualification,90,0,0,
 eoin-kenny,2025-10-09,Malta U21,2-0,EURO U-21 Qualification,90,0,0,
 eoin-kenny,2025-11-13,Latvia U21,1-0,EURO U-21 Qualification,90,0,0,
 eoin-kenny,2025-11-18,Greece U21,0-4,EURO U-21 Qualification,90,0,0,
@@ -4086,7 +4078,6 @@ evan-caffrey,2026-08-09,St. Patrick's Athletic,1-2,Premier Division,90,0,0,7.40
 evan-caffrey,2026-08-13,Ajax,2-2,Conference League Qualification,90,0,2,8.20
 evan-caffrey,2026-08-28,Galway United FC,1-1,Premier Division,90,0,0,7.30
 evan-caffrey,2026-09-04,Shamrock Rovers,0-0,Premier Division,90,0,0,6.70
-evan-ferguson,2025-09-09,Armenia,1-2,World Cup Qualification UEFA,90,1,0,7.10
 evan-ferguson,2025-09-14,Torino,0-1,Serie A,45,0,0,6.20
 evan-ferguson,2025-09-21,Lazio,1-0,Serie A,66,0,0,6.50
 evan-ferguson,2025-09-24,Nice,2-1,Europa League,21,0,0,6.00
@@ -4191,7 +4182,6 @@ fiacre-kelleher,2025-10-13,Shelbourne,1-2,Premier Division,90,0,0,6.70
 fiacre-kelleher,2025-10-17,Drogheda United,0-1,Premier Division,90,0,0,7.20
 fiacre-kelleher,2025-10-25,Sligo Rovers,1-1,Premier Division,90,0,0,7.20
 fiacre-kelleher,2025-11-01,Derry City,0-1,Premier Division,90,0,0,6.80
-finn-azaz,2025-09-09,Armenia,1-2,World Cup Qualification UEFA,70,0,0,6.30
 finn-azaz,2025-09-14,Portsmouth,0-0,Championship,74,0,0,6.40
 finn-azaz,2025-09-20,Hull City,1-3,Championship,75,0,0,7.00
 finn-azaz,2025-09-27,Middlesbrough,1-1,Championship,64,0,0,6.70
@@ -4249,7 +4239,6 @@ finn-azaz,2026-08-29,Millwall,5-1,Championship,90,1,1,9.10
 finn-azaz,2026-09-01,Birmingham City,1-1,Championship,90,0,0,6.70
 finn-azaz,2026-09-05,Lincoln City,1-1,Championship,78,0,0,6.50
 finn-azaz,2026-09-08,Swansea City,3-1,Championship,90,1,0,8.10
-finn-flanagan,2025-09-09,Harrogate Town,0-1,EFL Trophy,90,0,0,7.50
 finn-flanagan,2025-10-15,Newcastle United U21,2-2,EFL Trophy,79,1,0,8.40
 finn-flanagan,2025-11-04,Huddersfield Town,1-3,EFL Trophy,45,0,0,6.50
 francely-lomboto,2026-02-06,Drogheda United,0-1,Premier Division,90,0,0,5.60
@@ -4731,13 +4720,13 @@ harvey-neville,2026-03-28,Pittsburgh Riverhounds SC,2-3,USL Championship,90,0,1,
 harvey-neville,2026-04-04,Tampa Bay Rowdies,0-1,USL Championship,90,0,0,6.80
 harvey-neville,2026-04-11,Detroit City FC,0-1,USL Championship,90,0,0,6.30
 harvey-neville,2026-04-18,Louisville City FC,0-1,USL Championship,90,0,0,7.50
-harvey-neville,2026-04-25,Miami FC,0-1,USL Jägermeister Cup,90,0,0,6.80
+harvey-neville,2026-04-25,Miami FC,0-1,USL Cup,90,0,0,6.80
 harvey-neville,2026-05-02,Charleston Battery,0-4,USL Championship,90,0,0,5.60
 harvey-neville,2026-05-09,Indy Eleven,1-2,USL Championship,90,0,0,6.60
-harvey-neville,2026-05-13,Sarasota Paradise,2-0,USL Jägermeister Cup,90,0,0,7.20
+harvey-neville,2026-05-13,Sarasota Paradise,2-0,USL Cup,90,0,0,7.20
 harvey-neville,2026-05-27,San Antonio FC,4-4,USL Championship,90,0,0,5.60
 harvey-neville,2026-05-31,Brooklyn,2-2,USL Championship,75,0,0,6.20
-harvey-neville,2026-06-06,Tampa Bay Rowdies,0-2,USL Jägermeister Cup,33,0,0,6.10
+harvey-neville,2026-06-06,Tampa Bay Rowdies,0-2,USL Cup,33,0,0,6.10
 harvey-neville,2026-06-11,Monterey Bay FC,1-2,USL Championship,90,0,0,5.60
 harvey-neville,2026-06-14,Detroit City FC,2-6,USL Championship,90,0,0,5.00
 harvey-neville,2026-06-21,Charleston Battery,2-5,USL Championship,90,0,0,3.50
@@ -4858,7 +4847,6 @@ ian-lawlor,2026-04-11,Grimsby Town,2-3,League Two,90,0,0,4.70
 ian-lawlor,2026-04-18,Milton Keynes Dons,1-3,League Two,90,0,0,4.80
 ian-lawlor,2026-04-25,Chesterfield,0-2,League Two,90,0,0,6.70
 ian-lawlor,2026-05-02,Cambridge United,0-0,League Two,90,0,0,9.00
-issa-kargbo,2025-09-09,Ethiopia,2-0,World Cup Qualification CAF,64,0,0,
 issa-kargbo,2025-09-13,Watford,1-0,Championship,20,0,0,5.70
 issa-kargbo,2025-09-27,Charlton Athletic,0-3,Championship,31,0,0,5.60
 issa-kargbo,2025-09-30,Swansea City,1-2,Championship,45,0,0,6.10
@@ -5091,7 +5079,6 @@ jack-moylan,2026-08-29,Sheffield United,2-2,Championship,85,1,0,8.00
 jack-moylan,2026-09-02,Queens Park Rangers,1-2,Championship,80,0,0,5.90
 jack-moylan,2026-09-05,Portsmouth,0-2,Championship,90,0,0,6.40
 jack-moylan,2026-09-08,Stoke City,1-1,Championship,90,0,0,6.70
-jack-taylor,2025-09-09,Armenia,1-2,World Cup Qualification UEFA,45,0,0,6.40
 jack-taylor,2025-10-14,Armenia,1-0,World Cup Qualification UEFA,9,0,0,
 jack-taylor,2025-10-17,Middlesbrough,1-2,Championship,6,0,0,
 jack-taylor,2025-10-21,Charlton Athletic,0-3,Championship,15,0,0,6.30
@@ -5133,7 +5120,6 @@ jack-taylor,2026-04-19,Middlesbrough,2-2,Championship,90,0,0,7.20
 jack-taylor,2026-04-22,Charlton Athletic,2-1,Championship,70,0,0,6.70
 jack-taylor,2026-04-25,West Bromwich Albion,0-0,Championship,90,0,0,7.90
 jack-taylor,2026-05-02,Queens Park Rangers,3-0,Championship,86,0,0,7.80
-jacob-devaney,2025-09-09,Andorra U21,1-0,EURO U-21 Qualification,90,0,0,
 jacob-devaney,2025-09-16,Brackley Town,1-2,National League Cup,90,1,0,8.00
 jacob-devaney,2025-09-21,Liverpool U21,2-1,Premier League 2,90,0,0,7.40
 jacob-devaney,2025-09-27,Crystal Palace U21,4-1,Premier League 2,90,1,1,8.50
@@ -5273,7 +5259,6 @@ jake-doyle-hayes,2026-08-15,Grimsby Town,0-1,League Two,58,0,0,6.40
 jake-doyle-hayes,2026-08-22,Accrington Stanley,2-0,League Two,81,0,0,7.50
 jake-doyle-hayes,2026-09-01,Barnet,1-1,League Two,58,0,0,6.10
 jake-doyle-hayes,2026-09-05,Walsall,0-0,League Two,80,0,0,7.00
-jake-griffin,2025-09-09,Middlesbrough U21,2-1,National League Cup,90,0,0,7.30
 jake-griffin,2025-09-27,Chelsea U21,2-1,Premier League 2,90,0,0,7.30
 jake-griffin,2025-10-03,Blackburn Rovers U21,3-1,Premier League 2,90,0,0,7.60
 jake-griffin,2025-10-25,Sunderland U21,2-1,Premier League 2,90,0,0,8.00
@@ -5326,7 +5311,6 @@ jake-mulraney,2026-07-28,Ararat Armenia,2-1,Champions League Qualification,77,0,
 jake-mulraney,2026-08-04,Egnatia,3-1,Europa League Qualification,45,0,0,
 jake-mulraney,2026-08-13,Egnatia,1-5,Europa League Qualification,64,0,0,
 jake-mulraney,2026-08-30,Derry City,3-3,Premier Division,17,0,0,6.10
-jake-obrien,2025-09-09,Armenia,1-2,World Cup Qualification UEFA,90,0,0,6.50
 jake-obrien,2025-09-13,Aston Villa,0-0,Premier League,90,0,0,7.20
 jake-obrien,2025-09-20,Liverpool,1-2,Premier League,90,0,0,6.00
 jake-obrien,2025-09-23,Wolverhampton Wanderers,0-2,EFL Cup,90,0,0,6.90
@@ -5377,7 +5361,6 @@ jake-obrien,2026-07-28,Stoke City,0-1,Club Friendlies,29,0,0,
 jake-obrien,2026-08-01,Hamburger SV,2-1,Club Friendlies,90,0,0,
 jake-obrien,2026-08-08,VfB Stuttgart,1-3,Club Friendlies,76,0,0,
 jake-obrien,2026-08-12,Newcastle United,3-1,Club Friendlies,7,0,0,
-james-abankwah,2025-09-09,Andorra U21,1-0,EURO U-21 Qualification,90,0,0,
 james-abankwah,2025-10-01,Portsmouth,2-2,Championship,70,0,0,7.20
 james-abankwah,2025-10-04,Oxford United,2-1,Championship,90,0,0,8.40
 james-abankwah,2025-10-10,Slovakia U21,2-2,EURO U-21 Qualification,90,0,0,
@@ -5737,7 +5720,6 @@ jamie-mcgrath,2026-08-27,Gent,2-3,Conference League Qualification,83,0,1,7.70
 jamie-mcgrath,2026-08-30,Dundee FC,2-1,Premiership,90,0,0,7.40
 jamie-mcgrath,2026-09-03,Heart of Midlothian,1-3,Premiership,90,0,0,7.10
 jamie-mcgrath,2026-09-06,St. Johnstone,1-2,Premiership,90,0,0,6.90
-jamie-mullins,2025-09-09,Andorra U21,1-0,EURO U-21 Qualification,90,0,0,
 jamie-mullins,2025-09-20,Northampton Town,2-0,League One,62,0,0,7.10
 jamie-mullins,2025-09-27,AFC Wimbledon,1-2,League One,45,0,0,5.80
 jamie-mullins,2025-10-04,Barnsley,2-2,League One,66,0,0,6.20
@@ -5779,7 +5761,6 @@ jamie-mullins,2026-08-07,Stevenage,1-2,EFL Cup,77,0,0,6.60
 jamie-mullins,2026-08-18,Reading,1-1,EFL Trophy,67,0,0,7.20
 jamie-mullins,2026-08-22,Plymouth Argyle,1-1,League One,57,0,0,6.30
 jamie-odonnell,2026-07-03,Shamrock Rovers,1-2,Premier Division,12,0,0,6.00
-jason-knight,2025-09-09,Armenia,1-2,World Cup Qualification UEFA,90,0,0,6.40
 jason-knight,2025-09-13,Sheffield Wednesday,3-0,Championship,90,0,0,7.10
 jason-knight,2025-09-21,Oxford United,1-3,Championship,90,0,0,6.30
 jason-knight,2025-09-27,Preston North End,0-0,Championship,85,0,0,6.70
@@ -6932,15 +6913,15 @@ josh-obrien,2026-03-31,Union Omaha,1-2,Open Cup,45,0,0,6.70
 josh-obrien,2026-04-04,Pittsburgh Riverhounds SC,1-1,USL Championship,90,0,0,7.20
 josh-obrien,2026-04-11,Monterey Bay FC,3-1,USL Championship,90,0,0,7.50
 josh-obrien,2026-04-19,Birmingham Legion FC,2-2,USL Championship,90,1,0,7.80
-josh-obrien,2026-04-25,Union Omaha,1-2,USL Jägermeister Cup,90,0,0,6.50
+josh-obrien,2026-04-25,Union Omaha,1-2,USL Cup,90,0,0,6.50
 josh-obrien,2026-05-02,Tampa Bay Rowdies,0-1,USL Championship,90,0,0,6.20
 josh-obrien,2026-05-09,Sporting JAX,2-1,USL Championship,90,0,0,6.60
-josh-obrien,2026-05-16,Fort Wayne,2-2,USL Jägermeister Cup,90,0,0,7.10
+josh-obrien,2026-05-16,Fort Wayne,2-2,USL Cup,90,0,0,7.10
 josh-obrien,2026-05-23,Lexington SC,3-1,USL Championship,90,1,0,7.90
 josh-obrien,2026-05-30,Rhode Island FC,1-0,USL Championship,90,0,0,6.80
-josh-obrien,2026-06-06,Forward Madison FC,2-0,USL Jägermeister Cup,90,1,0,8.30
+josh-obrien,2026-06-06,Forward Madison FC,2-0,USL Cup,90,1,0,8.30
 josh-obrien,2026-06-13,Pittsburgh Riverhounds SC,0-1,USL Championship,90,0,0,6.70
-josh-obrien,2026-06-20,Lexington SC,0-0,USL Jägermeister Cup,90,0,0,6.00
+josh-obrien,2026-06-20,Lexington SC,0-0,USL Cup,90,0,0,6.00
 josh-obrien,2026-07-04,Charleston Battery,2-0,USL Championship,90,1,0,7.70
 josh-obrien,2026-07-15,Miami FC,0-2,USL Championship,90,0,0,6.00
 josh-obrien,2026-07-18,Detroit City FC,0-2,USL Championship,90,0,0,6.60
@@ -7021,7 +7002,6 @@ kameron-ledwidge,2026-08-09,St. Patrick's Athletic,1-2,Premier Division,19,0,0,7
 kameron-ledwidge,2026-08-13,Ajax,2-2,Conference League Qualification,90,0,0,6.60
 kameron-ledwidge,2026-08-28,Galway United FC,1-1,Premier Division,90,0,0,7.20
 kameron-ledwidge,2026-09-04,Shamrock Rovers,0-0,Premier Division,90,0,0,7.10
-kasey-mcateer,2025-09-09,Armenia,1-2,World Cup Qualification UEFA,45,0,0,6.40
 kasey-mcateer,2025-09-12,Sheffield United,5-0,Championship,71,0,0,6.60
 kasey-mcateer,2025-09-27,Portsmouth,2-1,Championship,16,0,0,6.40
 kasey-mcateer,2025-09-30,Bristol City,1-1,Championship,84,0,0,6.90
@@ -7260,12 +7240,12 @@ kieran-sadlier,2026-03-28,Pittsburgh Riverhounds SC,2-3,USL Championship,34,0,0,
 kieran-sadlier,2026-04-04,Tampa Bay Rowdies,0-1,USL Championship,76,0,0,6.10
 kieran-sadlier,2026-04-11,Detroit City FC,0-1,USL Championship,66,0,0,5.90
 kieran-sadlier,2026-04-18,Louisville City FC,0-1,USL Championship,19,0,0,5.80
-kieran-sadlier,2026-04-25,Miami FC,0-1,USL Jägermeister Cup,90,0,0,6.70
+kieran-sadlier,2026-04-25,Miami FC,0-1,USL Cup,90,0,0,6.70
 kieran-sadlier,2026-05-09,Indy Eleven,1-2,USL Championship,28,0,0,6.50
-kieran-sadlier,2026-05-13,Sarasota Paradise,2-0,USL Jägermeister Cup,70,0,1,7.90
+kieran-sadlier,2026-05-13,Sarasota Paradise,2-0,USL Cup,70,0,1,7.90
 kieran-sadlier,2026-05-27,San Antonio FC,4-4,USL Championship,70,2,0,8.50
 kieran-sadlier,2026-05-31,Brooklyn,2-2,USL Championship,75,0,1,7.60
-kieran-sadlier,2026-06-06,Tampa Bay Rowdies,0-2,USL Jägermeister Cup,66,0,0,6.40
+kieran-sadlier,2026-06-06,Tampa Bay Rowdies,0-2,USL Cup,66,0,0,6.40
 kieran-sadlier,2026-06-11,Monterey Bay FC,1-2,USL Championship,90,1,0,7.70
 kieran-sadlier,2026-06-14,Detroit City FC,2-6,USL Championship,27,1,0,7.10
 kieran-sadlier,2026-06-21,Charleston Battery,2-5,USL Championship,83,0,0,6.90
@@ -7386,12 +7366,12 @@ kyle-mcdonagh,2026-07-03,Shamrock Rovers,1-2,Premier Division,2,0,0,
 kyle-mcdonagh,2026-07-31,Dundalk,1-1,Premier Division,9,0,0,
 kyle-mcdonagh,2026-08-07,Derry City,0-2,Premier Division,65,0,0,6.00
 kyle-mcdonagh,2026-08-28,Bohemian FC,0-3,Premier Division,13,0,0,6.50
-lee-desmond,2025-09-10,Rhode Island FC,0-0,USL Jägermeister Cup,90,0,0,7.20
+lee-desmond,2025-09-10,Rhode Island FC,0-0,USL Cup,90,0,0,7.20
 lee-desmond,2025-09-14,Phoenix Rising FC,2-2,USL Championship,90,0,0,6.70
 lee-desmond,2025-09-21,Colorado Springs Switchbacks FC,2-0,USL Championship,90,0,0,7.90
 lee-desmond,2025-09-28,Monterey Bay FC,0-1,USL Championship,90,0,0,7.30
 lee-desmond,2025-10-02,Orange County SC,2-1,USL Championship,45,0,0,6.80
-lee-desmond,2025-10-05,Hartford Athletic,0-1,USL Jägermeister Cup,90,0,0,7.40
+lee-desmond,2025-10-05,Hartford Athletic,0-1,USL Cup,90,0,0,7.40
 lee-desmond,2025-10-11,Hartford Athletic,2-3,USL Championship,90,0,0,6.40
 lee-desmond,2025-10-17,Lexington SC,2-2,USL Championship,90,0,0,7.00
 lee-desmond,2025-10-23,Charleston Battery,1-0,USL Championship,90,0,1,8.10
@@ -7406,16 +7386,16 @@ lee-desmond,2026-04-05,Phoenix Rising FC,2-0,USL Championship,90,0,0,7.60
 lee-desmond,2026-04-12,Las Vegas Lights FC,1-1,USL Championship,90,0,0,6.50
 lee-desmond,2026-04-15,Minnesota United,0-0,Open Cup,120,0,0,7.60
 lee-desmond,2026-04-21,Brooklyn,1-1,USL Championship,90,0,0,7.20
-lee-desmond,2026-04-26,Spokane Velocity FC,4-0,USL Jägermeister Cup,90,0,0,7.70
+lee-desmond,2026-04-26,Spokane Velocity FC,4-0,USL Cup,90,0,0,7.70
 lee-desmond,2026-05-03,Orange County SC,3-2,USL Championship,90,0,0,7.50
-lee-desmond,2026-05-17,Oakland Roots SC,1-0,USL Jägermeister Cup,90,0,0,7.40
+lee-desmond,2026-05-17,Oakland Roots SC,1-0,USL Cup,90,0,0,7.40
 lee-desmond,2026-05-24,San Antonio FC,1-2,USL Championship,90,0,0,6.20
 lee-desmond,2026-05-31,Phoenix Rising FC,0-2,USL Championship,45,0,0,6.60
-lee-desmond,2026-06-07,Monterey Bay FC,1-1,USL Jägermeister Cup,90,0,0,7.10
+lee-desmond,2026-06-07,Monterey Bay FC,1-1,USL Cup,90,0,0,7.10
 lee-desmond,2026-06-14,Colorado Springs Switchbacks FC,1-0,USL Championship,90,0,0,7.60
 lee-desmond,2026-06-21,New Mexico United,0-1,USL Championship,90,0,0,7.70
 lee-desmond,2026-07-09,Rhode Island FC,2-1,USL Championship,90,0,0,7.30
-lee-desmond,2026-07-12,Boise,0-2,USL Jägermeister Cup,90,0,0,6.50
+lee-desmond,2026-07-12,Boise,0-2,USL Cup,90,0,0,6.50
 lee-desmond,2026-07-18,Charleston Battery,1-1,USL Championship,90,0,0,7.00
 lee-desmond,2026-07-26,Oakland Roots SC,3-1,USL Championship,90,0,0,7.50
 lee-desmond,2026-08-02,Sporting JAX,5-0,USL Championship,90,1,0,8.50
@@ -8180,7 +8160,6 @@ mark-travers,2026-07-28,Stoke City,0-1,Club Friendlies,61,0,0,
 mark-travers,2026-08-01,Hamburger SV,2-1,Club Friendlies,81,0,0,
 mark-travers,2026-08-08,VfB Stuttgart,1-3,Club Friendlies,76,0,0,
 mark-travers,2026-08-12,Newcastle United,3-1,Club Friendlies,90,0,0,7.30
-mason-melia,2025-09-09,Andorra U21,1-0,EURO U-21 Qualification,90,0,0,
 mason-melia,2025-09-19,Galway United FC,1-1,Premier Division,84,0,0,7.00
 mason-melia,2025-09-22,Cork City,4-0,Premier Division,64,2,0,9.00
 mason-melia,2025-09-27,Sligo Rovers,0-1,Premier Division,90,0,0,6.30
@@ -8632,7 +8611,6 @@ naj-razi,2026-07-21,Ararat Armenia,0-2,Champions League Qualification,1,0,0,
 naj-razi,2026-07-28,Ararat Armenia,2-1,Champions League Qualification,5,0,0,
 naj-razi,2026-07-31,Drogheda United,0-0,Premier Division,90,0,0,6.40
 naj-razi,2026-08-04,Egnatia,3-1,Europa League Qualification,21,0,0,
-nathan-collins,2025-09-09,Armenia,1-2,World Cup Qualification UEFA,90,0,0,6.40
 nathan-collins,2025-09-13,Chelsea,2-2,Premier League,90,0,0,6.30
 nathan-collins,2025-09-16,Aston Villa,1-1,EFL Cup,38,0,0,6.50
 nathan-collins,2025-09-20,Fulham,1-3,Premier League,90,0,0,5.80
@@ -8809,7 +8787,6 @@ niall-morahan,2026-08-09,Waterford FC,1-3,Premier Division,45,0,0,5.60
 niall-morahan,2026-08-13,FC Midtjylland,2-3,Conference League Qualification,32,0,1,7.30
 niall-morahan,2026-08-21,Derry City,5-3,Premier Division,1,0,0,
 niall-morahan,2026-08-28,Sligo Rovers,3-0,Premier Division,8,0,0,
-noah-jauny,2025-09-09,Andorra U21,1-0,EURO U-21 Qualification,90,0,0,
 noah-jauny,2025-10-10,Slovakia U21,2-2,EURO U-21 Qualification,90,0,0,
 noah-jauny,2025-11-14,England U21,0-2,EURO U-21 Qualification,90,0,0,
 noah-jauny,2025-11-18,Andorra U21,0-4,EURO U-21 Qualification,90,0,0,
@@ -8961,7 +8938,6 @@ owen-elding,2026-08-09,Rangers,2-1,Premiership,1,0,0,
 owen-elding,2026-08-13,KF Shkendija,0-0,Conference League Qualification,71,0,0,
 owen-elding,2026-08-16,Partick Thistle,1-0,League Cup,73,1,0,
 owen-elding,2026-08-20,Gent,0-0,Conference League Qualification,64,0,0,
-owen-mason,2025-09-09,Harrogate Town,0-1,EFL Trophy,90,0,0,6.00
 owen-mason,2025-10-15,Newcastle United U21,2-2,EFL Trophy,90,0,0,6.60
 owen-mason,2025-11-04,Huddersfield Town,1-3,EFL Trophy,90,0,0,5.90
 owen-mason,2025-12-06,Accrington Stanley,2-2,FA Cup,120,0,0,
@@ -9378,7 +9354,6 @@ robert-cornwall,2026-07-31,Sligo Rovers,1-1,Premier Division,90,0,0,6.70
 robert-cornwall,2026-08-07,Shamrock Rovers,2-3,Premier Division,90,1,0,7.80
 robert-cornwall,2026-08-21,Galway United FC,1-2,Premier Division,71,0,0,6.30
 robert-cornwall,2026-08-28,Drogheda United,3-2,Premier Division,1,0,0,
-rocco-vata,2025-09-09,Andorra U21,1-0,EURO U-21 Qualification,90,0,0,
 rocco-vata,2025-09-13,Blackburn Rovers,0-1,Championship,55,0,0,6.40
 rocco-vata,2025-09-22,Millwall,0-1,Championship,2,0,0,
 rocco-vata,2025-10-01,Portsmouth,2-2,Championship,55,1,1,7.70
@@ -9886,7 +9861,6 @@ ryan-johansson,2026-08-15,Ingolstadt,1-1,3. Liga,90,1,0,7.50
 ryan-johansson,2026-08-21,Karlsruher SC,1-2,DFB Pokal,85,0,0,6.40
 ryan-johansson,2026-08-30,Viktoria Köln 1904,1-4,3. Liga,75,0,0,5.70
 ryan-johansson,2026-09-05,TSV Havelse,2-1,3. Liga,90,0,1,8.20
-ryan-manning,2025-09-09,Armenia,1-2,World Cup Qualification UEFA,81,0,0,6.50
 ryan-manning,2025-09-14,Portsmouth,0-0,Championship,90,0,0,7.60
 ryan-manning,2025-09-20,Hull City,1-3,Championship,83,0,0,6.20
 ryan-manning,2025-09-23,Liverpool,1-2,EFL Cup,90,0,0,7.20
@@ -9972,7 +9946,6 @@ ryan-sheridan,2026-08-02,Derry City,1-1,Premier Division,8,0,0,
 ryan-sheridan,2026-08-09,Shelbourne,2-1,Premier Division,24,0,0,6.60
 ryan-sheridan,2026-08-21,Drogheda United,2-0,Premier Division,2,0,1,
 ryan-sheridan,2026-08-28,Waterford FC,0-2,Premier Division,31,0,0,6.30
-ryan-sweeney,2025-09-09,Harrogate Town,0-1,EFL Trophy,90,0,0,7.50
 ryan-sweeney,2025-09-13,Stevenage,1-1,League One,90,0,0,7.90
 ryan-sweeney,2025-09-20,Port Vale,1-2,League One,14,0,0,5.20
 ryan-sweeney,2025-10-04,Reading,1-1,League One,25,0,0,6.20
@@ -10010,7 +9983,7 @@ ryan-sweeney,2026-08-19,Manchester City U21,1-4,EFL Trophy,45,0,0,5.70
 ryan-sweeney,2026-08-22,Peterborough United,1-2,League One,90,0,0,6.80
 ryan-sweeney,2026-08-30,Luton Town,5-2,League One,53,0,0,6.60
 ryan-sweeney,2026-09-02,Reading,0-5,League One,90,0,0,5.20
-ryan-sweeney,2026-09-05,Bradford City,0-1,League One,90,0,0,6.90
+ryan-sweeney,2026-09-05,Bradford City,0-1,League One,90,0,0,7.00
 sam-curtis,2026-01-04,Milton Keynes Dons,2-2,League Two,76,1,0,7.60
 sam-curtis,2026-01-17,Bromley,0-0,League Two,82,0,0,6.80
 sam-curtis,2026-01-24,Newport County,1-2,League Two,90,0,0,6.10
@@ -10266,7 +10239,6 @@ sean-gannon,2026-08-06,Ajax,1-3,Conference League Qualification,1,0,0,
 sean-gannon,2026-08-13,Ajax,2-2,Conference League Qualification,30,0,0,6.40
 sean-gannon,2026-08-28,Galway United FC,1-1,Premier Division,90,0,0,7.60
 sean-gannon,2026-09-04,Shamrock Rovers,0-0,Premier Division,45,0,0,6.20
-sean-grehan,2025-09-09,Andorra U21,1-0,EURO U-21 Qualification,90,0,0,
 sean-grehan,2025-09-13,Wigan Athletic,0-3,League One,31,0,0,6.60
 sean-grehan,2025-09-24,Tottenham Hotspur,0-3,EFL Cup,90,0,0,6.40
 sean-grehan,2025-09-27,Luton Town,0-1,League One,70,0,0,6.90
@@ -10809,7 +10781,6 @@ sonny-perkins,2026-08-22,Leyton Orient,0-2,League One,65,0,0,6.00
 sonny-perkins,2026-08-30,AFC Wimbledon,0-1,League One,74,0,0,6.10
 sonny-perkins,2026-09-02,Milton Keynes Dons,3-1,League One,90,0,0,7.10
 sonny-perkins,2026-09-05,Stockport County,0-4,League One,21,0,0,5.90
-stephen-mclaughlin,2025-09-09,Harrogate Town,0-1,EFL Trophy,66,0,0,7.20
 stephen-mclaughlin,2025-09-13,Stevenage,1-1,League One,45,0,0,6.30
 stephen-mclaughlin,2025-09-20,Port Vale,1-2,League One,51,0,0,6.70
 stephen-mclaughlin,2025-09-27,Rotherham United,2-1,League One,89,0,0,7.80
@@ -11276,7 +11247,7 @@ tyler-goodrham,2026-08-08,Leyton Orient,0-2,EFL Cup,74,0,0,6.60
 tyler-goodrham,2026-08-15,Milton Keynes Dons,2-2,League One,90,0,0,7.20
 tyler-goodrham,2026-08-22,Stevenage,2-1,League One,2,0,0,
 tyler-goodrham,2026-09-01,Huddersfield Town,1-3,League One,63,0,0,6.90
-tyler-goodrham,2026-09-05,Leicester City,4-0,League One,20,0,0,6.00
+tyler-goodrham,2026-09-05,Leicester City,4-0,League One,20,0,0,5.90
 tyreik-sammy,2025-09-17,Rabotnički U19,5-0,UEFA Youth League,90,1,0,
 tyreik-sammy,2025-10-01,Rabotnički U19,7-1,UEFA Youth League,90,3,1,
 tyreik-sammy,2025-10-22,Žilina U19,2-2,UEFA Youth League,90,1,0,
