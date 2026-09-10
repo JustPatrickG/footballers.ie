@@ -8099,7 +8099,26 @@ match_id,minute,type,player,team,venue
 2026-09-09-barcelona-v-feyenoord,83,sub_on,Gavi,Barcelona,Spotify Camp Nou
 2026-09-09-barcelona-v-feyenoord,83,sub_on,Gabriel Jesus,Barcelona,Spotify Camp Nou
 2026-09-09-barcelona-v-feyenoord,85,goal,Gabriel Jesus,Barcelona,Spotify Camp Nou
-2026-09-09-cf-montreal-v-charlotte-fc,,,,,Stade Saputo
+2026-09-09-cf-montreal-v-charlotte-fc,28,sub_off,Archie Goodwin,Charlotte FC,Stade Saputo
+2026-09-09-cf-montreal-v-charlotte-fc,28,sub_on,Idan Toklomati,Charlotte FC,Stade Saputo
+2026-09-09-cf-montreal-v-charlotte-fc,34,goal,Daniel Ríos,CF Montréal,Stade Saputo
+2026-09-09-cf-montreal-v-charlotte-fc,37,goal,Liel Abada,Charlotte FC,Stade Saputo
+2026-09-09-cf-montreal-v-charlotte-fc,45,yellow,Victor Loturi,CF Montréal,Stade Saputo
+2026-09-09-cf-montreal-v-charlotte-fc,67,sub_off,Luca de la Torre,Charlotte FC,Stade Saputo
+2026-09-09-cf-montreal-v-charlotte-fc,67,sub_off,Liel Abada,Charlotte FC,Stade Saputo
+2026-09-09-cf-montreal-v-charlotte-fc,67,sub_on,Brandt Bronico,Charlotte FC,Stade Saputo
+2026-09-09-cf-montreal-v-charlotte-fc,67,sub_on,Rodolfo Aloko,Charlotte FC,Stade Saputo
+2026-09-09-cf-montreal-v-charlotte-fc,68,yellow,David Schnegg,Charlotte FC,Stade Saputo
+2026-09-09-cf-montreal-v-charlotte-fc,75,sub_off,Brayan Ceballos,CF Montréal,Stade Saputo
+2026-09-09-cf-montreal-v-charlotte-fc,75,sub_on,Dawid Bugaj,CF Montréal,Stade Saputo
+2026-09-09-cf-montreal-v-charlotte-fc,81,goal,Idan Toklomati,Charlotte FC,Stade Saputo
+2026-09-09-cf-montreal-v-charlotte-fc,81,yellow,Brandan Craig,CF Montréal,Stade Saputo
+2026-09-09-cf-montreal-v-charlotte-fc,86,sub_off,Brayan Vera,CF Montréal,Stade Saputo
+2026-09-09-cf-montreal-v-charlotte-fc,86,sub_off,Daniel Ríos,CF Montréal,Stade Saputo
+2026-09-09-cf-montreal-v-charlotte-fc,86,sub_on,Efraín Morales,CF Montréal,Stade Saputo
+2026-09-09-cf-montreal-v-charlotte-fc,86,sub_on,Owen Graham-Roache,CF Montréal,Stade Saputo
+2026-09-09-cf-montreal-v-charlotte-fc,88,sub_off,Allan Saint-Maximin,Charlotte FC,Stade Saputo
+2026-09-09-cf-montreal-v-charlotte-fc,88,sub_on,Morrison Agyemang,Charlotte FC,Stade Saputo
 2026-09-09-charlton-athletic-v-queens-park-rangers,36,sub_off,Tariq Lamptey,Queens Park Rangers,The Valley
 2026-09-09-charlton-athletic-v-queens-park-rangers,36,sub_on,Dennis Cirkin,Queens Park Rangers,The Valley
 2026-09-09-charlton-athletic-v-queens-park-rangers,45,yellow,Julien Stéphan,Queens Park Rangers,The Valley
@@ -8122,8 +8141,31 @@ match_id,minute,type,player,team,venue
 2026-09-09-charlton-athletic-v-queens-park-rangers,88,sub_off,Tyreece Campbell,Charlton Athletic,The Valley
 2026-09-09-charlton-athletic-v-queens-park-rangers,88,sub_on,Millenic Alli,Charlton Athletic,The Valley
 2026-09-09-dc-united-v-columbus-crew,12,yellow,Tarun Karumanchi,Columbus Crew,Audi Field
-2026-09-09-dc-united-v-columbus-crew,19,yellow,Peglow,DC United,Audi Field
 2026-09-09-dc-united-v-columbus-crew,19,yellow,Cesar Ruvalcaba,Columbus Crew,Audi Field
+2026-09-09-dc-united-v-columbus-crew,19,yellow,Peglow,DC United,Audi Field
+2026-09-09-dc-united-v-columbus-crew,24,goal,Tai Baribo,DC United,Audi Field
+2026-09-09-dc-united-v-columbus-crew,37,goal,Tai Baribo,DC United,Audi Field
+2026-09-09-dc-united-v-columbus-crew,46,sub_off,Jackson Hopkins,DC United,Audi Field
+2026-09-09-dc-united-v-columbus-crew,46,sub_off,Cesar Ruvalcaba,Columbus Crew,Audi Field
+2026-09-09-dc-united-v-columbus-crew,46,sub_off,Taha Habroune,Columbus Crew,Audi Field
+2026-09-09-dc-united-v-columbus-crew,46,sub_on,Matti Peltola,DC United,Audi Field
+2026-09-09-dc-united-v-columbus-crew,46,sub_on,Steven Moreira,Columbus Crew,Audi Field
+2026-09-09-dc-united-v-columbus-crew,46,sub_on,Brais Méndez,Columbus Crew,Audi Field
+2026-09-09-dc-united-v-columbus-crew,49,goal,Santiago Rodríguez,Columbus Crew,Audi Field
+2026-09-09-dc-united-v-columbus-crew,57,yellow,Kye Rowles,DC United,Audi Field
+2026-09-09-dc-united-v-columbus-crew,60,sub_off,Josef Martínez,Columbus Crew,Audi Field
+2026-09-09-dc-united-v-columbus-crew,60,sub_on,Gonzalo Tapia,Columbus Crew,Audi Field
+2026-09-09-dc-united-v-columbus-crew,70,sub_off,Dylan Chambost,Columbus Crew,Audi Field
+2026-09-09-dc-united-v-columbus-crew,70,sub_off,Louis Munteanu,DC United,Audi Field
+2026-09-09-dc-united-v-columbus-crew,70,sub_on,André Gomes,Columbus Crew,Audi Field
+2026-09-09-dc-united-v-columbus-crew,70,sub_on,Nathan Ordaz,DC United,Audi Field
+2026-09-09-dc-united-v-columbus-crew,77,sub_off,Tai Baribo,DC United,Audi Field
+2026-09-09-dc-united-v-columbus-crew,77,sub_on,Brandon Servania,DC United,Audi Field
+2026-09-09-dc-united-v-columbus-crew,81,sub_off,Santiago Rodríguez,Columbus Crew,Audi Field
+2026-09-09-dc-united-v-columbus-crew,81,sub_on,Jamal Thiaré,Columbus Crew,Audi Field
+2026-09-09-dc-united-v-columbus-crew,90,sub_off,Peglow,DC United,Audi Field
+2026-09-09-dc-united-v-columbus-crew,90,sub_on,Sean Nealis,DC United,Audi Field
+2026-09-09-dc-united-v-columbus-crew,90,yellow,Sean Johnson,DC United,Audi Field
 2026-09-09-derby-county-v-west-bromwich-albion,10,yellow,Harry Whitwell,West Bromwich Albion,Pride Park Stadium
 2026-09-09-derby-county-v-west-bromwich-albion,16,goal,Aune Selland Heggebø,West Bromwich Albion,Pride Park Stadium
 2026-09-09-derby-county-v-west-bromwich-albion,26,yellow,Brayann Pereira,West Bromwich Albion,Pride Park Stadium
@@ -8205,4 +8247,25 @@ match_id,minute,type,player,team,venue
 2026-09-09-st-johnstone-v-celtic,87,sub_on,Kieran Tierney,Celtic,McDiarmid Park
 2026-09-09-st-johnstone-v-celtic,87,sub_on,Macaulay Tait,St. Johnstone,McDiarmid Park
 2026-09-09-st-johnstone-v-celtic,90,yellow,Mika Baur,Celtic,McDiarmid Park
-2026-09-10-new-york-city-fc-v-new-england-revolution,,,,,Citi Field
+2026-09-10-austin-fc-v-colorado-rapids,22,goal,Paxten Aaronson,Colorado Rapids,Q2 Stadium
+2026-09-10-austin-fc-v-colorado-rapids,27,sub_off,Youssef Maziz,Colorado Rapids,Q2 Stadium
+2026-09-10-austin-fc-v-colorado-rapids,27,sub_on,Joshua Atencio,Colorado Rapids,Q2 Stadium
+2026-09-10-austin-fc-v-colorado-rapids,45,yellow,Joshua Atencio,Colorado Rapids,Q2 Stadium
+2026-09-10-new-york-city-fc-v-new-england-revolution,12,goal,Carles Gil,New England Revolution,Citi Field
+2026-09-10-new-york-city-fc-v-new-england-revolution,18,yellow,Alhassan Yusuf,New England Revolution,Citi Field
+2026-09-10-new-york-city-fc-v-new-england-revolution,19,sub_off,Alhassan Yusuf,New England Revolution,Citi Field
+2026-09-10-new-york-city-fc-v-new-england-revolution,19,sub_on,Jackson Yueill,New England Revolution,Citi Field
+2026-09-10-new-york-city-fc-v-new-england-revolution,31,yellow,Matt Polster,New England Revolution,Citi Field
+2026-09-10-new-york-city-fc-v-new-england-revolution,63,sub_off,Aiden O'Neill,New York City FC,Citi Field
+2026-09-10-new-york-city-fc-v-new-england-revolution,63,sub_off,Agustín Ojeda,New York City FC,Citi Field
+2026-09-10-new-york-city-fc-v-new-england-revolution,63,sub_on,Hannes Wolf,New York City FC,Citi Field
+2026-09-10-new-york-city-fc-v-new-england-revolution,63,sub_on,Luighi,New York City FC,Citi Field
+2026-09-10-new-york-city-fc-v-new-england-revolution,71,goal,Luighi,New York City FC,Citi Field
+2026-09-10-new-york-city-fc-v-new-england-revolution,72,sub_off,Dor Turgeman,New England Revolution,Citi Field
+2026-09-10-new-york-city-fc-v-new-england-revolution,72,sub_off,Matt Polster,New England Revolution,Citi Field
+2026-09-10-new-york-city-fc-v-new-england-revolution,72,sub_on,Dániel Gazdag,New England Revolution,Citi Field
+2026-09-10-new-york-city-fc-v-new-england-revolution,72,sub_on,Ilay Feingold,New England Revolution,Citi Field
+2026-09-10-new-york-city-fc-v-new-england-revolution,80,sub_off,Peyton Miller,New England Revolution,Citi Field
+2026-09-10-new-york-city-fc-v-new-england-revolution,80,sub_off,Jack Harrison,New England Revolution,Citi Field
+2026-09-10-new-york-city-fc-v-new-england-revolution,80,sub_on,Luca Langoni,New England Revolution,Citi Field
+2026-09-10-new-york-city-fc-v-new-england-revolution,80,sub_on,Wilson Harris,New England Revolution,Citi Field
