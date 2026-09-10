@@ -8099,6 +8099,7 @@ match_id,minute,type,player,team,venue
 2026-09-09-barcelona-v-feyenoord,83,sub_on,Gavi,Barcelona,Spotify Camp Nou
 2026-09-09-barcelona-v-feyenoord,83,sub_on,Gabriel Jesus,Barcelona,Spotify Camp Nou
 2026-09-09-barcelona-v-feyenoord,85,goal,Gabriel Jesus,Barcelona,Spotify Camp Nou
+2026-09-09-cf-montreal-v-charlotte-fc,,,,,Stade Saputo
 2026-09-09-charlton-athletic-v-queens-park-rangers,36,sub_off,Tariq Lamptey,Queens Park Rangers,The Valley
 2026-09-09-charlton-athletic-v-queens-park-rangers,36,sub_on,Dennis Cirkin,Queens Park Rangers,The Valley
 2026-09-09-charlton-athletic-v-queens-park-rangers,45,yellow,Julien Stéphan,Queens Park Rangers,The Valley
@@ -8120,6 +8121,9 @@ match_id,minute,type,player,team,venue
 2026-09-09-charlton-athletic-v-queens-park-rangers,85,sub_on,Alan Mwamba,Charlton Athletic,The Valley
 2026-09-09-charlton-athletic-v-queens-park-rangers,88,sub_off,Tyreece Campbell,Charlton Athletic,The Valley
 2026-09-09-charlton-athletic-v-queens-park-rangers,88,sub_on,Millenic Alli,Charlton Athletic,The Valley
+2026-09-09-dc-united-v-columbus-crew,12,yellow,Tarun Karumanchi,Columbus Crew,Audi Field
+2026-09-09-dc-united-v-columbus-crew,19,yellow,Peglow,DC United,Audi Field
+2026-09-09-dc-united-v-columbus-crew,19,yellow,Cesar Ruvalcaba,Columbus Crew,Audi Field
 2026-09-09-derby-county-v-west-bromwich-albion,10,yellow,Harry Whitwell,West Bromwich Albion,Pride Park Stadium
 2026-09-09-derby-county-v-west-bromwich-albion,16,goal,Aune Selland Heggebø,West Bromwich Albion,Pride Park Stadium
 2026-09-09-derby-county-v-west-bromwich-albion,26,yellow,Brayann Pereira,West Bromwich Albion,Pride Park Stadium
@@ -8201,3 +8205,4 @@ match_id,minute,type,player,team,venue
 2026-09-09-st-johnstone-v-celtic,87,sub_on,Kieran Tierney,Celtic,McDiarmid Park
 2026-09-09-st-johnstone-v-celtic,87,sub_on,Macaulay Tait,St. Johnstone,McDiarmid Park
 2026-09-09-st-johnstone-v-celtic,90,yellow,Mika Baur,Celtic,McDiarmid Park
+2026-09-10-new-york-city-fc-v-new-england-revolution,,,,,Citi Field
