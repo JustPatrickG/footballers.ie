@@ -1,6 +1,5 @@
 {
   "buildCommand": "python3 build/gen.py",
-  "ignoreCommand": "exit 0",
   "outputDirectory": "site",
   "installCommand": "npm install --no-audit --no-fund",
   "framework": null,
