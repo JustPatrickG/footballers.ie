@@ -2842,25 +2842,12 @@
   ]
  },
  {
-  "fotmob_id": "5071337",
-  "url": "/matches/columbus-crew-vs-dc-united/1bah4k#5071337",
-  "kickoff": "2026-09-09T23:30:00Z",
-  "comp": "Major League Soccer",
-  "home": "DC United",
-  "away": "Columbus Crew",
-  "home_id": "6602",
-  "away_id": "6001",
-  "slugs": [
-   "brooks-lennon"
-  ]
- },
- {
   "fotmob_id": "5071352",
   "url": "/matches/columbus-crew-vs-red-bull-new-york/1ams94#5071352",
   "kickoff": "2026-09-12T23:30:00Z",
   "comp": "Major League Soccer",
-  "home": "Columbus",
-  "away": "NY Red Bulls",
+  "home": "Columbus Crew",
+  "away": "Red Bull New York",
   "home_id": "6001",
   "away_id": "6514",
   "slugs": [
@@ -6005,24 +5992,11 @@
   ]
  },
  {
-  "fotmob_id": "5071338",
-  "url": "/matches/cf-montreal-vs-charlotte-fc/e2miwxvn#5071338",
-  "kickoff": "2026-09-09T23:30:00Z",
-  "comp": "Major League Soccer",
-  "home": "CF Montr\u00e9al",
-  "away": "Charlotte FC",
-  "home_id": "161195",
-  "away_id": "1323940",
-  "slugs": [
-   "joe-byrne"
-  ]
- },
- {
   "fotmob_id": "5071351",
   "url": "/matches/fc-cincinnati-vs-charlotte-fc/qpqbgm3g#5071351",
   "kickoff": "2026-09-12T23:30:00Z",
   "comp": "Major League Soccer",
-  "home": "Cincinnati",
+  "home": "FC Cincinnati",
   "away": "Charlotte FC",
   "home_id": "722265",
   "away_id": "1323940",
@@ -6135,24 +6109,11 @@
   ]
  },
  {
-  "fotmob_id": "5071342",
-  "url": "/matches/colorado-rapids-vs-austin-fc/9lxf18pm#5071342",
-  "kickoff": "2026-09-10T00:30:00Z",
-  "comp": "Major League Soccer",
-  "home": "Austin FC",
-  "away": "Colorado Rapids",
-  "home_id": "1218886",
-  "away_id": "8314",
-  "slugs": [
-   "jon-gallagher"
-  ]
- },
- {
   "fotmob_id": "5071364",
   "url": "/matches/vancouver-whitecaps-vs-austin-fc/evalqx4k#5071364",
   "kickoff": "2026-09-13T22:30:00Z",
   "comp": "Major League Soccer",
-  "home": "Vancouver",
+  "home": "Vancouver Whitecaps",
   "away": "Austin FC",
   "home_id": "307691",
   "away_id": "1218886",
@@ -6420,14 +6381,14 @@
   ]
  },
  {
-  "fotmob_id": "5071339",
-  "url": "/matches/new-england-revolution-vs-new-york-city-fc/1y73nbgv#5071339",
-  "kickoff": "2026-09-10T00:00:00Z",
+  "fotmob_id": "5071360",
+  "url": "/matches/real-salt-lake-vs-new-york-city-fc/1y7c7e8s#5071360",
+  "kickoff": "2026-09-13T01:30:00Z",
   "comp": "Major League Soccer",
-  "home": "New York City FC",
-  "away": "New England Revolution",
-  "home_id": "546238",
-  "away_id": "6580",
+  "home": "Real Salt Lake",
+  "away": "New York City FC",
+  "home_id": "6606",
+  "away_id": "546238",
   "slugs": [
    "kevin-otoole"
   ]
@@ -8031,6 +7992,58 @@
   "away_id": "2205",
   "slugs": [
    "billy-vance"
+  ]
+ },
+ {
+  "fotmob_id": "5071337",
+  "url": "/matches/columbus-crew-vs-dc-united/1bah4k#5071337",
+  "kickoff": "2026-09-09T23:30:00Z",
+  "comp": "Major League Soccer",
+  "home": "DC United",
+  "away": "Columbus Crew",
+  "home_id": "6602",
+  "away_id": "6001",
+  "slugs": [
+   "brooks-lennon"
+  ]
+ },
+ {
+  "fotmob_id": "5071338",
+  "url": "/matches/cf-montreal-vs-charlotte-fc/e2miwxvn#5071338",
+  "kickoff": "2026-09-09T23:30:00Z",
+  "comp": "Major League Soccer",
+  "home": "CF Montr\u00e9al",
+  "away": "Charlotte FC",
+  "home_id": "161195",
+  "away_id": "1323940",
+  "slugs": [
+   "joe-byrne"
+  ]
+ },
+ {
+  "fotmob_id": "5071342",
+  "url": "/matches/colorado-rapids-vs-austin-fc/9lxf18pm#5071342",
+  "kickoff": "2026-09-10T00:30:00Z",
+  "comp": "Major League Soccer",
+  "home": "Austin FC",
+  "away": "Colorado Rapids",
+  "home_id": "1218886",
+  "away_id": "8314",
+  "slugs": [
+   "jon-gallagher"
+  ]
+ },
+ {
+  "fotmob_id": "5071339",
+  "url": "/matches/new-england-revolution-vs-new-york-city-fc/1y73nbgv#5071339",
+  "kickoff": "2026-09-10T00:00:00Z",
+  "comp": "Major League Soccer",
+  "home": "New York City FC",
+  "away": "New England Revolution",
+  "home_id": "546238",
+  "away_id": "6580",
+  "slugs": [
+   "kevin-otoole"
   ]
  },
  {
