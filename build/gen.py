@@ -830,6 +830,19 @@ OUT = os.path.join(HERE, "..", "site")   # always repo-root/site, whatever the C
 CSS = open(os.path.join(HERE, "style.css")).read()
 APPJS = open(os.path.join(HERE, "app.js")).read()
 
+# These two used to be inlined into every page. At 96 KB + 71 KB across 3,282
+# pages that was ~550 MB of the same two files repeated, which is what put
+# Vercel's deployment storage 30x over the Hobby limit. Served as files they
+# are downloaded once and cached, so the site is faster as well as smaller.
+# The content hash in the name is the cache-buster: change the file and the
+# URL changes, so nobody is ever served a stale copy.
+import hashlib as _hashlib
+def _asset_name(kind, text):
+    h = _hashlib.sha1(text.encode("utf-8")).hexdigest()[:10]
+    return f"assets/{kind}.{h}.{'css' if kind == 'style' else 'js'}"
+CSS_HREF = _asset_name("style", CSS)
+APPJS_SRC = _asset_name("app", APPJS)
+
 NAV = [("News","news.html"),("Players","players.html"),("Transfers","transfers.html"),
        ("Clubs","clubs.html"),("Ireland","ireland.html"),("Fixtures","fixtures.html"),
        ("Alerts","alerts.html")]
@@ -1118,7 +1131,7 @@ def shell(title, desc, root, active, body, extra_head="", canonical="",
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-<style>{CSS}</style>{ANALYTICS_JS}{extra_head}
+<link rel="stylesheet" href="{root}{CSS_HREF}">{ANALYTICS_JS}{extra_head}
 </head>
 <body{body_attr}>
 {loader}
@@ -1160,7 +1173,7 @@ def shell(title, desc, root, active, body, extra_head="", canonical="",
 </footer>
 </div>
 <script>window.FB_CLUBS={json.dumps({k: club_slug(v) for k, v in sorted(_CLUB_PAGES.items())})};window.FB_SUBSCRIBE_URL={json.dumps(NEWSLETTER_ACTION)};window.FB_ACCOUNTS={json.dumps([{k:a.get(k,"") for k in ("email","name","role","hash")} for a in ACCOUNTS])};</script>
-<script>{APPJS}</script>
+<script src="{root}{APPJS_SRC}"></script>
 </body>
 </html>"""
 
@@ -4991,6 +5004,11 @@ for _f in ("admin.html",):
     _p = os.path.join(HERE, _f)
     if os.path.exists(_p):
         shutil.copy2(_p, os.path.join(OUT, "build", _f))
+
+os.makedirs(os.path.join(OUT, "assets"), exist_ok=True)
+for _rel, _text in ((CSS_HREF, CSS), (APPJS_SRC, APPJS)):
+    with open(os.path.join(OUT, _rel), "w", encoding="utf-8") as _f2:
+        _f2.write(_text)
 
 for _f in ("og-image.png", "apple-touch-icon.png", "favicon.svg", "favicon.ico", "live.json"):
     _p = os.path.join(HERE, "..", _f)
