@@ -111,9 +111,11 @@ kickoff,competition,home,away,home_id,away_id,home_score,away_score,status,minut
 2026-09-08T19:00:00Z,Championship,Bolton Wanderers,West Ham United,8559,8654,2,3,ft,,gavin-bazunu;jack-bonham
 2026-09-08T19:00:00Z,Champions League,Lille,Real Betis,8639,8603,2,3,ft,,troy-parrott
 2026-09-08T23:00:00Z,USL Cup,Hartford Athletic,Colorado Springs Switchbacks FC,1003206,614321,2,1,ft,,barry-coffey
+2026-09-09T15:00:00Z,Veikkausliiga Championship Group,HJK,FC Inter Turku,9861,6550,,,scheduled,,david-eze;david-ezeh
 2026-09-09T15:30:00Z,Super Cup,Levski Sofia,CSKA Sofia,8632,10144,2,4,ft,,armstrong-oko-flex;barry-cotter
 2026-09-09T16:45:00Z,Champions League,Barcelona,Feyenoord,8634,10235,5,1,ft,,liam-bossin
 2026-09-09T18:45:00Z,Championship,Derby County,West Bromwich Albion,10170,8659,0,1,ft,,eiran-cashin;jayson-molumby;max-johnston;max-oleary;sammie-szmodics
+2026-09-09T18:45:00Z,Premiership,Rangers,St. Mirren,8548,9800,,,scheduled,,killian-phillips
 2026-09-09T19:00:00Z,Championship,Charlton Athletic,Queens Park Rangers,8451,10172,0,0,ft,,calum-ward;conor-coventry;harvey-vale;jimmy-dunne;millenic-alli
 2026-09-09T19:00:00Z,Premiership,St. Johnstone,Celtic,8467,9925,0,1,ft,,liam-scales;ruari-paton
 2026-09-09T23:30:00Z,MLS,DC United,Columbus Crew,6602,6001,2,1,ft,,brooks-lennon
@@ -433,6 +435,7 @@ kickoff,competition,home,away,home_id,away_id,home_score,away_score,status,minut
 2026-09-19T14:00:00Z,League One,East Fife,Montrose,9758,8257,,,scheduled,,sean-mcginty
 2026-09-19T14:00:00Z,National League,Woking,Kidderminster Harriers,8345,10284,,,scheduled,,shadrach-ogie
 2026-09-19T14:00:00Z,Isthmian Premier Division,St Albans,Burgess Hill Town,10174,282340,,,scheduled,,shamir-fenelon
+2026-09-19T14:00:00Z,League One,Luton Town,Bradford City,8346,8484,,,scheduled,,callum-marshall;josh-keeley
 2026-09-19T14:30:00Z,Superliga,CFR Cluj,Botoșani,9731,188191,,,scheduled,,roland-idowu
 2026-09-19T16:00:00Z,Eliteserien,Molde,Aalesund,9917,8404,,,scheduled,,trent-kone-doherty
 2026-09-19T16:15:00Z,Belgian Pro League,Sporting Charleroi,Cercle Brugge,9986,9984,,,scheduled,,tayo-adaramola
@@ -503,5 +506,3 @@ kickoff,competition,home,away,home_id,away_id,home_score,away_score,status,minut
 2026-09-22T18:45:00Z,Challenge Cup,Berwick Rangers,Stranraer,8368,9926,,,scheduled,,sean-brennan
 2026-09-22T18:45:00Z,Challenge Cup,Formartine United,Montrose,351618,8257,,,scheduled,,sean-mcginty
 2026-09-24T02:00:00Z,Premier League,Vancouver FC,Inter Toronto FC,1436202,1022954,,,scheduled,,tom-field
-2026-09-09T15:00:00Z,Veikkausliiga Championship Group,HJK,FC Inter Turku,9861,6550,,,scheduled,,david-eze;david-ezeh
-2026-09-09T18:45:00Z,Premiership,Rangers,St. Mirren,8548,9800,,,scheduled,,killian-phillips
