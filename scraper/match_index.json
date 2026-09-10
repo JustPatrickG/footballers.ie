@@ -2829,6 +2829,19 @@
   ]
  },
  {
+  "fotmob_id": "5071337",
+  "url": "/matches/columbus-crew-vs-dc-united/1bah4k#5071337",
+  "kickoff": "2026-09-09T23:30:00Z",
+  "comp": "MLS",
+  "home": "DC United",
+  "away": "Columbus Crew",
+  "home_id": "6602",
+  "away_id": "6001",
+  "slugs": [
+   "brooks-lennon"
+  ]
+ },
+ {
   "fotmob_id": "5071324",
   "url": "/matches/columbus-crew-vs-colorado-rapids/1p0ea4#5071324",
   "kickoff": "2026-09-05T23:30:00Z",
@@ -5979,6 +5992,19 @@
   ]
  },
  {
+  "fotmob_id": "5071338",
+  "url": "/matches/cf-montreal-vs-charlotte-fc/e2miwxvn#5071338",
+  "kickoff": "2026-09-09T23:30:00Z",
+  "comp": "MLS",
+  "home": "CF Montr\u00e9al",
+  "away": "Charlotte FC",
+  "home_id": "161195",
+  "away_id": "1323940",
+  "slugs": [
+   "joe-byrne"
+  ]
+ },
+ {
   "fotmob_id": "5071322",
   "url": "/matches/houston-dynamo-fc-vs-charlotte-fc/bbnlt3e7#5071322",
   "kickoff": "2026-09-05T23:30:00Z",
@@ -6093,6 +6119,19 @@
   "away_id": "9747",
   "slugs": [
    "john-patrick"
+  ]
+ },
+ {
+  "fotmob_id": "5071342",
+  "url": "/matches/colorado-rapids-vs-austin-fc/9lxf18pm#5071342",
+  "kickoff": "2026-09-10T00:30:00Z",
+  "comp": "MLS",
+  "home": "Austin FC",
+  "away": "Colorado Rapids",
+  "home_id": "1218886",
+  "away_id": "8314",
+  "slugs": [
+   "jon-gallagher"
   ]
  },
  {
@@ -6365,6 +6404,19 @@
    "billy-vance",
    "kealan-dillon",
    "paul-doyle"
+  ]
+ },
+ {
+  "fotmob_id": "5071339",
+  "url": "/matches/new-england-revolution-vs-new-york-city-fc/1y73nbgv#5071339",
+  "kickoff": "2026-09-10T00:00:00Z",
+  "comp": "MLS",
+  "home": "New York City FC",
+  "away": "New England Revolution",
+  "home_id": "546238",
+  "away_id": "6580",
+  "slugs": [
+   "kevin-otoole"
   ]
  },
  {
@@ -7773,6 +7825,19 @@
   ]
  },
  {
+  "fotmob_id": "1000008707",
+  "url": "/matches/inter-toronto-fc-vs-vancouver-fc/12l2wusxo#1000008707",
+  "kickoff": "2026-09-24T02:00:00Z",
+  "comp": "Premier League",
+  "home": "Vancouver FC",
+  "away": "Inter Toronto FC",
+  "home_id": "1436202",
+  "away_id": "1022954",
+  "slugs": [
+   "tom-field"
+  ]
+ },
+ {
   "fotmob_id": "5104997",
   "url": "/matches/kfum-vs-molde/18h6hq#5104997",
   "kickoff": "2026-09-06T15:00:00Z",
@@ -7992,58 +8057,6 @@
   "away_id": "2205",
   "slugs": [
    "billy-vance"
-  ]
- },
- {
-  "fotmob_id": "5071337",
-  "url": "/matches/columbus-crew-vs-dc-united/1bah4k#5071337",
-  "kickoff": "2026-09-09T23:30:00Z",
-  "comp": "Major League Soccer",
-  "home": "DC United",
-  "away": "Columbus Crew",
-  "home_id": "6602",
-  "away_id": "6001",
-  "slugs": [
-   "brooks-lennon"
-  ]
- },
- {
-  "fotmob_id": "5071338",
-  "url": "/matches/cf-montreal-vs-charlotte-fc/e2miwxvn#5071338",
-  "kickoff": "2026-09-09T23:30:00Z",
-  "comp": "Major League Soccer",
-  "home": "CF Montr\u00e9al",
-  "away": "Charlotte FC",
-  "home_id": "161195",
-  "away_id": "1323940",
-  "slugs": [
-   "joe-byrne"
-  ]
- },
- {
-  "fotmob_id": "5071342",
-  "url": "/matches/colorado-rapids-vs-austin-fc/9lxf18pm#5071342",
-  "kickoff": "2026-09-10T00:30:00Z",
-  "comp": "Major League Soccer",
-  "home": "Austin FC",
-  "away": "Colorado Rapids",
-  "home_id": "1218886",
-  "away_id": "8314",
-  "slugs": [
-   "jon-gallagher"
-  ]
- },
- {
-  "fotmob_id": "5071339",
-  "url": "/matches/new-england-revolution-vs-new-york-city-fc/1y73nbgv#5071339",
-  "kickoff": "2026-09-10T00:00:00Z",
-  "comp": "Major League Soccer",
-  "home": "New York City FC",
-  "away": "New England Revolution",
-  "home_id": "546238",
-  "away_id": "6580",
-  "slugs": [
-   "kevin-otoole"
   ]
  },
  {
@@ -8340,20 +8353,6 @@
   "away_id": "1273049",
   "slugs": [
    "sean-mcginty"
-  ]
- },
- {
-  "fotmob_id": "6145898",
-  "url": "/matches/tps-vs-sjk/6jloiir#6145898",
-  "kickoff": "2026-09-08T15:00:00Z",
-  "comp": "Veikkausliiga Relegation Group",
-  "home": "TPS",
-  "away": "SJK",
-  "home_id": "6633",
-  "away_id": "162162",
-  "slugs": [
-   "aaron-okpolokpo",
-   "josh-okpolokpo"
   ]
  },
  {
