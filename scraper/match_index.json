@@ -2892,6 +2892,20 @@
   ]
  },
  {
+  "fotmob_id": "5837157",
+  "url": "/matches/luton-town-vs-stevenage/2uzjhi#5837157",
+  "kickoff": "2026-09-10T19:00:00Z",
+  "comp": "League One",
+  "home": "Stevenage",
+  "away": "Luton Town",
+  "home_id": "10253",
+  "away_id": "8346",
+  "slugs": [
+   "callum-marshall",
+   "josh-keeley"
+  ]
+ },
+ {
   "fotmob_id": "5837142",
   "url": "/matches/luton-town-vs-leyton-orient/2b02ok#5837142",
   "kickoff": "2026-09-05T14:00:00Z",
@@ -2908,26 +2922,12 @@
   ]
  },
  {
-  "fotmob_id": "5837157",
-  "url": "/matches/luton-town-vs-stevenage/2uzjhi#5837157",
-  "kickoff": "2026-09-10T19:00:00Z",
-  "comp": "League One",
-  "home": "Stevenage",
-  "away": "Luton Town",
-  "home_id": "10253",
-  "away_id": "8346",
-  "slugs": [
-   "callum-marshall",
-   "josh-keeley"
-  ]
- },
- {
   "fotmob_id": "5837165",
   "url": "/matches/luton-town-vs-bradford-city/2cbv5x#5837165",
   "kickoff": "2026-09-19T14:00:00Z",
   "comp": "League One",
-  "home": "Luton",
-  "away": "Bradford",
+  "home": "Luton Town",
+  "away": "Bradford City",
   "home_id": "8346",
   "away_id": "8484",
   "slugs": [
@@ -5703,21 +5703,6 @@
    "jacob-devaney",
    "jamie-mcgrath",
    "ruari-paton"
-  ]
- },
- {
-  "fotmob_id": "5793925",
-  "url": "/matches/heart-midlothian-vs-hibernian/3ceu2k#5793925",
-  "kickoff": "2026-09-03T18:45:00Z",
-  "comp": "Premiership",
-  "home": "Hibernian",
-  "away": "Heart of Midlothian",
-  "home_id": "10251",
-  "away_id": "9860",
-  "slugs": [
-   "jacob-devaney",
-   "jamie-mcgrath",
-   "oisin-mcentee"
   ]
  },
  {
