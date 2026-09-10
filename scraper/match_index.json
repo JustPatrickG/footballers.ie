@@ -8087,20 +8087,6 @@
   ]
  },
  {
-  "fotmob_id": "6016266",
-  "url": "/matches/exeter-city-vs-tottenham-hotspur-u21/4u40np2z#6016266",
-  "kickoff": "2026-09-08T18:00:00Z",
-  "comp": "EFL Trophy",
-  "home": "Exeter City",
-  "away": "Tottenham Hotspur U21",
-  "home_id": "9833",
-  "away_id": "860802",
-  "slugs": [
-   "aaron-maguire",
-   "charlie-cummins"
-  ]
- },
- {
   "fotmob_id": "5907055",
   "url": "/matches/hednesford-vs-kings-lynn-town/pm2h8o#5907055",
   "kickoff": "2026-09-08T18:45:00Z",
@@ -8353,33 +8339,6 @@
   "away_id": "1273049",
   "slugs": [
    "sean-mcginty"
-  ]
- },
- {
-  "fotmob_id": "6000926",
-  "url": "/matches/boston-united-vs-west-bromwich-albion-u21/3wkno647#6000926",
-  "kickoff": "2026-09-08T18:00:00Z",
-  "comp": "National League Cup",
-  "home": "Boston United",
-  "away": "West Bromwich Albion U21",
-  "home_id": "8646",
-  "away_id": "773656",
-  "slugs": [
-   "gavan-holohan",
-   "niall-canavan"
-  ]
- },
- {
-  "fotmob_id": "6000911",
-  "url": "/matches/solihull-moors-vs-leeds-united-u21/bftkd43r#6000911",
-  "kickoff": "2026-09-08T18:00:00Z",
-  "comp": "National League Cup",
-  "home": "Solihull Moors",
-  "away": "Leeds United U21",
-  "home_id": "161801",
-  "away_id": "1177187",
-  "slugs": [
-   "jevon-mills"
   ]
  }
 ]
