@@ -5162,19 +5162,6 @@
   ]
  },
  {
-  "fotmob_id": "5904747",
-  "url": "/matches/besiktas-vs-erzurumspor-fk/jjeaxvb#5904747",
-  "kickoff": "2026-09-11T17:00:00Z",
-  "comp": "Super Lig",
-  "home": "Be\u015fikta\u015f",
-  "away": "Erzurumspor FK",
-  "home_id": "10188",
-  "away_id": "281467",
-  "slugs": [
-   "festy-ebosele"
-  ]
- },
- {
   "fotmob_id": "5904757",
   "url": "/matches/samsunspor-vs-erzurumspor-fk/jha55gv#5904757",
   "kickoff": "2026-09-20T14:00:00Z",
@@ -6470,19 +6457,6 @@
   ]
  },
  {
-  "fotmob_id": "5911521",
-  "url": "/matches/unterhaching-vs-tsv-aubstadt/s0dawi5#5911521",
-  "kickoff": "2026-09-11T17:00:00Z",
-  "comp": "Regionalliga Bayern",
-  "home": "TSV Aubstadt",
-  "away": "Unterhaching",
-  "home_id": "340719",
-  "away_id": "8486",
-  "slugs": [
-   "kyle-degelman"
-  ]
- },
- {
   "fotmob_id": "5911530",
   "url": "/matches/spvgg-bayreuth-vs-tsv-aubstadt/rwd5oe8#5911530",
   "kickoff": "2026-09-15T17:00:00Z",
@@ -6904,19 +6878,6 @@
   "away": "Empoli",
   "home_id": "6488",
   "away_id": "8534",
-  "slugs": [
-   "matteo-egan"
-  ]
- },
- {
-  "fotmob_id": "5967073",
-  "url": "/matches/empoli-vs-arezzo/2slyq9#5967073",
-  "kickoff": "2026-09-11T17:00:00Z",
-  "comp": "Serie B",
-  "home": "Empoli",
-  "away": "Arezzo",
-  "home_id": "8534",
-  "away_id": "9849",
   "slugs": [
    "matteo-egan"
   ]
@@ -8027,6 +7988,45 @@
   "away_id": "2205",
   "slugs": [
    "billy-vance"
+  ]
+ },
+ {
+  "fotmob_id": "5904747",
+  "url": "/matches/besiktas-vs-erzurumspor-fk/jjeaxvb#5904747",
+  "kickoff": "2026-09-11T17:00:00Z",
+  "comp": "Super Lig",
+  "home": "Be\u015fikta\u015f",
+  "away": "Erzurumspor FK",
+  "home_id": "10188",
+  "away_id": "281467",
+  "slugs": [
+   "festy-ebosele"
+  ]
+ },
+ {
+  "fotmob_id": "5911521",
+  "url": "/matches/unterhaching-vs-tsv-aubstadt/s0dawi5#5911521",
+  "kickoff": "2026-09-11T17:00:00Z",
+  "comp": "Regionalliga Bayern",
+  "home": "TSV Aubstadt",
+  "away": "Unterhaching",
+  "home_id": "340719",
+  "away_id": "8486",
+  "slugs": [
+   "kyle-degelman"
+  ]
+ },
+ {
+  "fotmob_id": "5967073",
+  "url": "/matches/empoli-vs-arezzo/2slyq9#5967073",
+  "kickoff": "2026-09-11T17:00:00Z",
+  "comp": "Serie B",
+  "home": "Empoli",
+  "away": "Arezzo",
+  "home_id": "8534",
+  "away_id": "9849",
+  "slugs": [
+   "matteo-egan"
   ]
  }
 ]

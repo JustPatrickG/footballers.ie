@@ -121,9 +121,6 @@ kickoff,competition,home,away,home_id,away_id,home_score,away_score,status,minut
 2026-09-10T00:30:00Z,MLS,Austin FC,Colorado Rapids,1218886,8314,1,1,ft,,jon-gallagher
 2026-09-10T13:00:00Z,UEFA Youth League,Como U19,RB Leipzig U19,2161028,667906,1,1,ft,,josh-harpur
 2026-09-10T19:00:00Z,League One,Stevenage,Luton Town,10253,8346,2,1,ft,,callum-marshall;josh-keeley
-2026-09-11T17:00:00Z,Super Lig,Beşiktaş,Erzurumspor FK,10188,281467,,,scheduled,,festy-ebosele
-2026-09-11T17:00:00Z,Regionalliga Bayern,TSV Aubstadt,Unterhaching,340719,8486,,,scheduled,,kyle-degelman
-2026-09-11T17:00:00Z,Serie B,Empoli,Arezzo,8534,9849,,,scheduled,,matteo-egan
 2026-09-11T18:00:00Z,Premier League 2,Derby County U21,Tottenham Hotspur U21,773680,860802,,,scheduled,,aaron-maguire
 2026-09-11T18:00:00Z,Premier League 2,Sunderland U21,Ipswich Town U21,773657,1796115,,,scheduled,,alex-noonan
 2026-09-11T18:00:00Z,Eerste Divisie,VVV-Venlo,TOP Oss,9839,7781,,,scheduled,,eanna-clancy
@@ -501,3 +498,6 @@ kickoff,competition,home,away,home_id,away_id,home_score,away_score,status,minut
 2026-09-22T18:45:00Z,Challenge Cup,Berwick Rangers,Stranraer,8368,9926,,,scheduled,,sean-brennan
 2026-09-22T18:45:00Z,Challenge Cup,Formartine United,Montrose,351618,8257,,,scheduled,,sean-mcginty
 2026-09-24T02:00:00Z,Premier League,Vancouver FC,Inter Toronto FC,1436202,1022954,,,scheduled,,tom-field
+2026-09-11T17:00:00Z,Super Lig,Beşiktaş,Erzurumspor FK,10188,281467,,,scheduled,,festy-ebosele
+2026-09-11T17:00:00Z,Regionalliga Bayern,TSV Aubstadt,Unterhaching,340719,8486,,,scheduled,,kyle-degelman
+2026-09-11T17:00:00Z,Serie B,Empoli,Arezzo,8534,9849,,,scheduled,,matteo-egan
