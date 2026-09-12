@@ -8680,9 +8680,233 @@ match_id,minute,type,player,team,venue
 2026-09-11-wexford-fc-v-finn-harps,51,goal,Jake Doyle,Wexford FC,Stadium
 2026-09-11-wexford-fc-v-finn-harps,60,goal,Bernardo Monteiro,Finn Harps,Stadium
 2026-09-11-wexford-fc-v-finn-harps,87,goal,Oran Brogan,Finn Harps,Stadium
+2026-09-12-afc-bournemouth-v-brentford,34,goal,Kevin Schade,Brentford,Vitality Stadium
+2026-09-12-afc-bournemouth-v-brentford,38,goal,Justin Kluivert,AFC Bournemouth,Vitality Stadium
+2026-09-12-afc-bournemouth-v-brentford,45,yellow,Igor Thiago,Brentford,Vitality Stadium
+2026-09-12-afc-bournemouth-v-brentford,45,yellow,Marcus Tavernier,AFC Bournemouth,Vitality Stadium
+2026-09-12-afc-bournemouth-v-brentford,52,goal,Marcus Tavernier,AFC Bournemouth,Vitality Stadium
+2026-09-12-afc-bournemouth-v-brentford,56,goal,Kevin Schade,Brentford,Vitality Stadium
+2026-09-12-afc-bournemouth-v-brentford,60,sub_off,Yehor Yarmoliuk,Brentford,Vitality Stadium
+2026-09-12-afc-bournemouth-v-brentford,60,sub_off,Keane Lewis-Potter,Brentford,Vitality Stadium
+2026-09-12-afc-bournemouth-v-brentford,60,sub_off,Jaidon Anthony,Brentford,Vitality Stadium
+2026-09-12-afc-bournemouth-v-brentford,60,sub_on,Mikkel Damsgaard,Brentford,Vitality Stadium
+2026-09-12-afc-bournemouth-v-brentford,60,sub_on,Malick Diouf,Brentford,Vitality Stadium
+2026-09-12-afc-bournemouth-v-brentford,60,sub_on,Dango Ouattara,Brentford,Vitality Stadium
+2026-09-12-afc-bournemouth-v-brentford,63,yellow,James Hill,AFC Bournemouth,Vitality Stadium
+2026-09-12-afc-bournemouth-v-brentford,66,sub_off,Justin Kluivert,AFC Bournemouth,Vitality Stadium
+2026-09-12-afc-bournemouth-v-brentford,66,sub_on,Ryan Christie,AFC Bournemouth,Vitality Stadium
+2026-09-12-afc-bournemouth-v-brentford,71,sub_off,Aaron Hickey,Brentford,Vitality Stadium
+2026-09-12-afc-bournemouth-v-brentford,71,sub_on,Michael Kayode,Brentford,Vitality Stadium
+2026-09-12-afc-bournemouth-v-brentford,82,sub_off,Rayan,AFC Bournemouth,Vitality Stadium
+2026-09-12-afc-bournemouth-v-brentford,82,sub_off,Tyler Adams,AFC Bournemouth,Vitality Stadium
+2026-09-12-afc-bournemouth-v-brentford,82,sub_on,Ben Gannon-Doak,AFC Bournemouth,Vitality Stadium
+2026-09-12-afc-bournemouth-v-brentford,82,sub_on,Lewis Cook,AFC Bournemouth,Vitality Stadium
+2026-09-12-afc-bournemouth-v-brentford,83,sub_off,Marcus Tavernier,AFC Bournemouth,Vitality Stadium
+2026-09-12-afc-bournemouth-v-brentford,83,sub_on,David Brooks,AFC Bournemouth,Vitality Stadium
+2026-09-12-afc-bournemouth-v-brentford,85,yellow,Lewis Cook,AFC Bournemouth,Vitality Stadium
+2026-09-12-afc-bournemouth-v-brentford,87,yellow,Adam Smith,AFC Bournemouth,Vitality Stadium
+2026-09-12-afc-bournemouth-v-brentford,89,yellow,David Brooks,AFC Bournemouth,Vitality Stadium
+2026-09-12-afc-bournemouth-v-brentford,90,sub_off,Evanilson,AFC Bournemouth,Vitality Stadium
+2026-09-12-afc-bournemouth-v-brentford,90,sub_on,Álvaro Rodriguez,AFC Bournemouth,Vitality Stadium
+2026-09-12-afc-wimbledon-v-doncaster-rovers,6,sub_off,Matthew Pearson,Doncaster Rovers,The Cherry Red Records Stadium
+2026-09-12-afc-wimbledon-v-doncaster-rovers,6,sub_on,Seán Grehan,Doncaster Rovers,The Cherry Red Records Stadium
+2026-09-12-afc-wimbledon-v-doncaster-rovers,27,yellow,Jayden Stockley,AFC Wimbledon,The Cherry Red Records Stadium
+2026-09-12-afc-wimbledon-v-doncaster-rovers,31,yellow,Leon Ayinde,Doncaster Rovers,The Cherry Red Records Stadium
+2026-09-12-afc-wimbledon-v-doncaster-rovers,43,goal,Myles Hippolyte,AFC Wimbledon,The Cherry Red Records Stadium
+2026-09-12-afc-wimbledon-v-doncaster-rovers,58,sub_off,George Broadbent,Doncaster Rovers,The Cherry Red Records Stadium
+2026-09-12-afc-wimbledon-v-doncaster-rovers,58,sub_on,Isaac Hutchinson,Doncaster Rovers,The Cherry Red Records Stadium
+2026-09-12-afc-wimbledon-v-doncaster-rovers,64,sub_off,Ollie Harrison,AFC Wimbledon,The Cherry Red Records Stadium
+2026-09-12-afc-wimbledon-v-doncaster-rovers,64,sub_off,Aron Sasu,AFC Wimbledon,The Cherry Red Records Stadium
+2026-09-12-afc-wimbledon-v-doncaster-rovers,64,sub_on,Zack Nelson,AFC Wimbledon,The Cherry Red Records Stadium
+2026-09-12-afc-wimbledon-v-doncaster-rovers,64,sub_on,Donnell McNeilly,AFC Wimbledon,The Cherry Red Records Stadium
+2026-09-12-afc-wimbledon-v-doncaster-rovers,65,sub_off,Leon Ayinde,Doncaster Rovers,The Cherry Red Records Stadium
+2026-09-12-afc-wimbledon-v-doncaster-rovers,65,sub_off,James Husband,Doncaster Rovers,The Cherry Red Records Stadium
+2026-09-12-afc-wimbledon-v-doncaster-rovers,65,sub_on,Jordan Thomas,Doncaster Rovers,The Cherry Red Records Stadium
+2026-09-12-afc-wimbledon-v-doncaster-rovers,65,sub_on,Bayley McCann,Doncaster Rovers,The Cherry Red Records Stadium
+2026-09-12-afc-wimbledon-v-doncaster-rovers,70,sub_off,Freddie Simmonds,AFC Wimbledon,The Cherry Red Records Stadium
+2026-09-12-afc-wimbledon-v-doncaster-rovers,70,sub_on,Andy Yiadom,AFC Wimbledon,The Cherry Red Records Stadium
+2026-09-12-afc-wimbledon-v-doncaster-rovers,76,yellow,Owen Bailey,Doncaster Rovers,The Cherry Red Records Stadium
+2026-09-12-afc-wimbledon-v-doncaster-rovers,84,yellow,Myles Hippolyte,AFC Wimbledon,The Cherry Red Records Stadium
+2026-09-12-afc-wimbledon-v-doncaster-rovers,90,yellow,Tommy Simkin,Doncaster Rovers,The Cherry Red Records Stadium
+2026-09-12-airdrieonians-v-alloa-athletic,11,goal,Liam McLeish,Airdrieonians,Excelsior Stadium
+2026-09-12-airdrieonians-v-alloa-athletic,36,yellow,Callum Burnside,Airdrieonians,Excelsior Stadium
+2026-09-12-airdrieonians-v-alloa-athletic,51,yellow,Sam Fisher,Airdrieonians,Excelsior Stadium
+2026-09-12-airdrieonians-v-alloa-athletic,52,yellow,Cameron O'Donnell,Alloa Athletic,Excelsior Stadium
+2026-09-12-airdrieonians-v-alloa-athletic,62,sub_off,Grant Marchant,Alloa Athletic,Excelsior Stadium
+2026-09-12-airdrieonians-v-alloa-athletic,62,sub_on,Luca Ross,Alloa Athletic,Excelsior Stadium
+2026-09-12-airdrieonians-v-alloa-athletic,69,sub_off,Liam McLeish,Airdrieonians,Excelsior Stadium
+2026-09-12-airdrieonians-v-alloa-athletic,69,sub_off,Callum Burnside,Airdrieonians,Excelsior Stadium
+2026-09-12-airdrieonians-v-alloa-athletic,69,sub_on,Dapo Mebude,Airdrieonians,Excelsior Stadium
+2026-09-12-airdrieonians-v-alloa-athletic,69,sub_on,Gavin Gallagher,Airdrieonians,Excelsior Stadium
+2026-09-12-airdrieonians-v-alloa-athletic,77,yellow,Steven Hetherington,Alloa Athletic,Excelsior Stadium
+2026-09-12-airdrieonians-v-alloa-athletic,78,sub_off,Steven Hetherington,Alloa Athletic,Excelsior Stadium
+2026-09-12-airdrieonians-v-alloa-athletic,78,sub_off,Luke Rankin,Alloa Athletic,Excelsior Stadium
+2026-09-12-airdrieonians-v-alloa-athletic,78,sub_off,Kyle Glasgow,Alloa Athletic,Excelsior Stadium
+2026-09-12-airdrieonians-v-alloa-athletic,78,sub_on,Kurtis Roberts,Alloa Athletic,Excelsior Stadium
+2026-09-12-airdrieonians-v-alloa-athletic,78,sub_on,Max Cameron,Alloa Athletic,Excelsior Stadium
+2026-09-12-airdrieonians-v-alloa-athletic,78,sub_on,Aiden Crilly,Alloa Athletic,Excelsior Stadium
+2026-09-12-airdrieonians-v-alloa-athletic,81,sub_off,Sam Fisher,Airdrieonians,Excelsior Stadium
+2026-09-12-airdrieonians-v-alloa-athletic,81,sub_off,Matty Yates,Airdrieonians,Excelsior Stadium
+2026-09-12-airdrieonians-v-alloa-athletic,81,sub_on,Kwame Boateng,Airdrieonians,Excelsior Stadium
+2026-09-12-airdrieonians-v-alloa-athletic,81,sub_on,Josh Gentles,Airdrieonians,Excelsior Stadium
 2026-09-12-arsenal-u18-v-crystal-palace-u18,33,goal,Emerson Nwaneri,Arsenal U18,Stadium
 2026-09-12-arsenal-u18-v-crystal-palace-u18,84,goal,Callan Hamill,Arsenal U18,Stadium
 2026-09-12-arsenal-u21-v-chelsea-u21,14,goal,Leo Black,Chelsea U21,Mangata Developments Stadium Meadow Park
+2026-09-12-arsenal-u21-v-chelsea-u21,41,goal,Reggie Watson,Chelsea U21,Mangata Developments Stadium Meadow Park
+2026-09-12-arsenal-u21-v-chelsea-u21,45,yellow,Elijah Upson,Arsenal U21,Mangata Developments Stadium Meadow Park
+2026-09-12-arsenal-u21-v-chelsea-u21,60,sub_off,Marli Salmon,Arsenal U21,Mangata Developments Stadium Meadow Park
+2026-09-12-arsenal-u21-v-chelsea-u21,60,sub_off,Max Dowman,Arsenal U21,Mangata Developments Stadium Meadow Park
+2026-09-12-arsenal-u21-v-chelsea-u21,60,sub_off,Igor Tyjon,Arsenal U21,Mangata Developments Stadium Meadow Park
+2026-09-12-arsenal-u21-v-chelsea-u21,60,sub_on,Jaden Dixon,Arsenal U21,Mangata Developments Stadium Meadow Park
+2026-09-12-arsenal-u21-v-chelsea-u21,60,sub_on,Theo Julienne,Arsenal U21,Mangata Developments Stadium Meadow Park
+2026-09-12-arsenal-u21-v-chelsea-u21,60,sub_on,Evan Mooney,Arsenal U21,Mangata Developments Stadium Meadow Park
+2026-09-12-arsenal-u21-v-chelsea-u21,67,sub_off,Habeeb Ogunneye,Arsenal U21,Mangata Developments Stadium Meadow Park
+2026-09-12-arsenal-u21-v-chelsea-u21,67,sub_on,Archie Stevens,Arsenal U21,Mangata Developments Stadium Meadow Park
+2026-09-12-arsenal-u21-v-chelsea-u21,69,sub_off,Elijah Upson,Arsenal U21,Mangata Developments Stadium Meadow Park
+2026-09-12-arsenal-u21-v-chelsea-u21,69,sub_on,Brayden Clarke,Arsenal U21,Mangata Developments Stadium Meadow Park
+2026-09-12-arsenal-u21-v-chelsea-u21,71,yellow,Jaden Dixon,Arsenal U21,Mangata Developments Stadium Meadow Park
+2026-09-12-arsenal-u21-v-chelsea-u21,72,goal,Reggie Watson,Chelsea U21,Mangata Developments Stadium Meadow Park
+2026-09-12-arsenal-u21-v-chelsea-u21,78,sub_off,Harrison Bettoni,Chelsea U21,Mangata Developments Stadium Meadow Park
+2026-09-12-arsenal-u21-v-chelsea-u21,78,sub_on,Kendry Páez,Chelsea U21,Mangata Developments Stadium Meadow Park
+2026-09-12-arsenal-u21-v-chelsea-u21,79,goal,James Scanlon,Arsenal U21,Mangata Developments Stadium Meadow Park
+2026-09-12-arsenal-u21-v-chelsea-u21,84,sub_off,Alfie Osborne,Chelsea U21,Mangata Developments Stadium Meadow Park
+2026-09-12-arsenal-u21-v-chelsea-u21,84,sub_on,Lewi Richards,Chelsea U21,Mangata Developments Stadium Meadow Park
+2026-09-12-arsenal-u21-v-chelsea-u21,87,sub_off,Sol Gordon,Chelsea U21,Mangata Developments Stadium Meadow Park
+2026-09-12-arsenal-u21-v-chelsea-u21,87,sub_on,Calvin Diakite,Chelsea U21,Mangata Developments Stadium Meadow Park
+2026-09-12-arsenal-u21-v-chelsea-u21,90,goal,Chizaram Ezenwata,Chelsea U21,Mangata Developments Stadium Meadow Park
+2026-09-12-arsenal-u21-v-chelsea-u21,90,yellow,Chizaram Ezenwata,Chelsea U21,Mangata Developments Stadium Meadow Park
+2026-09-12-aston-villa-v-nottingham-forest,25,sub_off,Pau Torres,Aston Villa,Villa Park
+2026-09-12-aston-villa-v-nottingham-forest,25,sub_on,Tyrone Mings,Aston Villa,Villa Park
+2026-09-12-aston-villa-v-nottingham-forest,43,yellow,Dan Ndoye,Nottingham Forest,Villa Park
+2026-09-12-aston-villa-v-nottingham-forest,45,yellow,Nicolas Jackson,Aston Villa,Villa Park
+2026-09-12-aston-villa-v-nottingham-forest,45,yellow,Murillo,Nottingham Forest,Villa Park
+2026-09-12-aston-villa-v-nottingham-forest,46,goal,Liam Delap,Nottingham Forest,Villa Park
+2026-09-12-aston-villa-v-nottingham-forest,46,sub_off,Nicolas Jackson,Aston Villa,Villa Park
+2026-09-12-aston-villa-v-nottingham-forest,46,sub_off,George Hemmings,Aston Villa,Villa Park
+2026-09-12-aston-villa-v-nottingham-forest,46,sub_on,Tammy Abraham,Aston Villa,Villa Park
+2026-09-12-aston-villa-v-nottingham-forest,46,sub_on,Alysson Edward,Aston Villa,Villa Park
+2026-09-12-aston-villa-v-nottingham-forest,56,yellow,Xaver Schlager,Nottingham Forest,Villa Park
+2026-09-12-aston-villa-v-nottingham-forest,63,sub_off,Emiliano Buendía,Aston Villa,Villa Park
+2026-09-12-aston-villa-v-nottingham-forest,63,sub_off,Ross Barkley,Aston Villa,Villa Park
+2026-09-12-aston-villa-v-nottingham-forest,63,sub_on,Ibrahim Mbaye,Aston Villa,Villa Park
+2026-09-12-aston-villa-v-nottingham-forest,63,sub_on,Johan Manzambi,Aston Villa,Villa Park
+2026-09-12-aston-villa-v-nottingham-forest,74,goal,Alysson Edward,Aston Villa,Villa Park
+2026-09-12-aston-villa-v-nottingham-forest,75,sub_off,Dan Ndoye,Nottingham Forest,Villa Park
+2026-09-12-aston-villa-v-nottingham-forest,75,sub_on,Igor Jesus,Nottingham Forest,Villa Park
+2026-09-12-aston-villa-v-nottingham-forest,75,yellow,Liam Delap,Nottingham Forest,Villa Park
+2026-09-12-aston-villa-v-nottingham-forest,80,yellow,James McAtee,Nottingham Forest,Villa Park
+2026-09-12-aston-villa-v-nottingham-forest,82,sub_off,James McAtee,Nottingham Forest,Villa Park
+2026-09-12-aston-villa-v-nottingham-forest,82,sub_on,Ibrahim Sangaré,Nottingham Forest,Villa Park
+2026-09-12-aston-villa-v-nottingham-forest,88,goal,Igor Jesus,Nottingham Forest,Villa Park
+2026-09-12-aston-villa-v-nottingham-forest,90,sub_off,Liam Delap,Nottingham Forest,Villa Park
+2026-09-12-aston-villa-v-nottingham-forest,90,sub_on,Chris Wood,Nottingham Forest,Villa Park
+2026-09-12-aston-villa-v-nottingham-forest,90,yellow,Tyrone Mings,Aston Villa,Villa Park
+2026-09-12-bamber-bridge-v-alfreton-town,87,goal,James Butterworth,Bamber Bridge,Irongate Stadium
+2026-09-12-barnet-v-accrington-stanley,6,yellow,Tyler Walton,Accrington Stanley,The Hive Stadium
+2026-09-12-barnet-v-accrington-stanley,16,yellow,Josh Woods,Accrington Stanley,The Hive Stadium
+2026-09-12-barnet-v-accrington-stanley,27,goal,Charlie Caton,Accrington Stanley,The Hive Stadium
+2026-09-12-barnet-v-accrington-stanley,29,yellow,Joseph Anderson,Accrington Stanley,The Hive Stadium
+2026-09-12-barnet-v-accrington-stanley,46,sub_off,Charlie Caton,Accrington Stanley,The Hive Stadium
+2026-09-12-barnet-v-accrington-stanley,46,sub_off,Nnamdi Ofoborh,Barnet,The Hive Stadium
+2026-09-12-barnet-v-accrington-stanley,46,sub_on,Alex Henderson,Accrington Stanley,The Hive Stadium
+2026-09-12-barnet-v-accrington-stanley,46,sub_on,Damola Ajayi,Barnet,The Hive Stadium
+2026-09-12-barnet-v-accrington-stanley,55,yellow,Devon Matthews,Accrington Stanley,The Hive Stadium
+2026-09-12-barnet-v-accrington-stanley,57,goal,Charlie Lakin,Barnet,The Hive Stadium
+2026-09-12-barnet-v-accrington-stanley,63,sub_off,Tom Knowles,Barnet,The Hive Stadium
+2026-09-12-barnet-v-accrington-stanley,63,sub_off,Oisín Gallagher,Barnet,The Hive Stadium
+2026-09-12-barnet-v-accrington-stanley,63,sub_on,Romoney Crichlow-Noble,Barnet,The Hive Stadium
+2026-09-12-barnet-v-accrington-stanley,63,sub_on,Jake Reeves,Barnet,The Hive Stadium
+2026-09-12-barnet-v-accrington-stanley,64,sub_off,Tyler Walton,Accrington Stanley,The Hive Stadium
+2026-09-12-barnet-v-accrington-stanley,64,sub_off,Shaun Whalley,Accrington Stanley,The Hive Stadium
+2026-09-12-barnet-v-accrington-stanley,64,sub_on,Charlie Warren,Accrington Stanley,The Hive Stadium
+2026-09-12-barnet-v-accrington-stanley,64,sub_on,Joel Catesby,Accrington Stanley,The Hive Stadium
+2026-09-12-barnet-v-accrington-stanley,72,goal,Charlie Lakin,Barnet,The Hive Stadium
+2026-09-12-barnet-v-accrington-stanley,75,second_yellow,Devon Matthews,Accrington Stanley,The Hive Stadium
+2026-09-12-barnet-v-accrington-stanley,76,sub_off,Aidan Borland,Accrington Stanley,The Hive Stadium
+2026-09-12-barnet-v-accrington-stanley,76,sub_off,Josh Woods,Accrington Stanley,The Hive Stadium
+2026-09-12-barnet-v-accrington-stanley,76,sub_on,Séamus Conneely,Accrington Stanley,The Hive Stadium
+2026-09-12-barnet-v-accrington-stanley,76,sub_on,Cole Stockton,Accrington Stanley,The Hive Stadium
+2026-09-12-barnet-v-accrington-stanley,81,yellow,Connor O'Brien,Accrington Stanley,The Hive Stadium
+2026-09-12-barnet-v-accrington-stanley,88,sub_off,Idris Kanu,Barnet,The Hive Stadium
+2026-09-12-barnet-v-accrington-stanley,88,sub_off,Kabongo Tshimanga,Barnet,The Hive Stadium
+2026-09-12-barnet-v-accrington-stanley,88,sub_on,Isiah Noel-Williams,Barnet,The Hive Stadium
+2026-09-12-barnet-v-accrington-stanley,88,sub_on,Jack Maskell,Barnet,The Hive Stadium
+2026-09-12-berwick-rangers-v-tranent,24,goal,Greg Binnie,Berwick Rangers,Shielfield Park
+2026-09-12-berwick-rangers-v-tranent,28,goal,Nicholas Aitchison,Tranent,Shielfield Park
+2026-09-12-berwick-rangers-v-tranent,48,yellow,Ryan Murray,Tranent,Shielfield Park
+2026-09-12-berwick-rangers-v-tranent,61,goal,Harry Girdwood,Tranent,Shielfield Park
+2026-09-12-berwick-rangers-v-tranent,64,sub_off,Ryan Murray,Tranent,Shielfield Park
+2026-09-12-berwick-rangers-v-tranent,64,sub_off,Jamie McMurdo,Tranent,Shielfield Park
+2026-09-12-berwick-rangers-v-tranent,64,sub_on,Ben Miller,Tranent,Shielfield Park
+2026-09-12-berwick-rangers-v-tranent,64,sub_on,Tiwi Daramola,Tranent,Shielfield Park
+2026-09-12-berwick-rangers-v-tranent,69,yellow,Tiwi Daramola,Tranent,Shielfield Park
+2026-09-12-berwick-rangers-v-tranent,71,sub_off,Alex Harris,Berwick Rangers,Shielfield Park
+2026-09-12-berwick-rangers-v-tranent,71,sub_off,Greg Binnie,Berwick Rangers,Shielfield Park
+2026-09-12-berwick-rangers-v-tranent,71,sub_off,Corey Thomson,Tranent,Shielfield Park
+2026-09-12-berwick-rangers-v-tranent,71,sub_on,Bayley Klimionek,Berwick Rangers,Shielfield Park
+2026-09-12-berwick-rangers-v-tranent,71,sub_on,Michael Mbewe,Berwick Rangers,Shielfield Park
+2026-09-12-berwick-rangers-v-tranent,71,sub_on,Euan Banks,Tranent,Shielfield Park
+2026-09-12-berwick-rangers-v-tranent,75,sub_off,Harry Girdwood,Tranent,Shielfield Park
+2026-09-12-berwick-rangers-v-tranent,75,sub_on,Jack Duncan,Tranent,Shielfield Park
+2026-09-12-berwick-rangers-v-tranent,83,sub_off,Kyle Somers,Berwick Rangers,Shielfield Park
+2026-09-12-berwick-rangers-v-tranent,83,sub_off,Ryan Turner,Berwick Rangers,Shielfield Park
+2026-09-12-berwick-rangers-v-tranent,83,sub_on,Isaac Deh,Berwick Rangers,Shielfield Park
+2026-09-12-berwick-rangers-v-tranent,83,sub_on,Jamie Pyper,Berwick Rangers,Shielfield Park
+2026-09-12-berwick-rangers-v-tranent,90,yellow,Euan Banks,Tranent,Shielfield Park
+2026-09-12-bishops-stortford-v-leamington,24,goal,Les Thompson,Bishop's Stortford,Woodside Park
+2026-09-12-bishops-stortford-v-leamington,45,goal,Christopher Wreh,Leamington,Woodside Park
+2026-09-12-bishops-stortford-v-leamington,67,goal,Frank Norris,Bishop's Stortford,Woodside Park
+2026-09-12-bishops-stortford-v-leamington,86,goal,Jackson Chukwu-Nsofor,Bishop's Stortford,Woodside Park
+2026-09-12-bishops-stortford-v-leamington,90,red,Nathaniel Kelly,Leamington,Woodside Park
+2026-09-12-blackburn-rovers-v-millwall,14,yellow,Hayden Carter,Blackburn Rovers,Ewood Park
+2026-09-12-blackburn-rovers-v-millwall,16,sub_off,Yuri Ribeiro,Blackburn Rovers,Ewood Park
+2026-09-12-blackburn-rovers-v-millwall,16,sub_on,Harry Pickering,Blackburn Rovers,Ewood Park
+2026-09-12-blackburn-rovers-v-millwall,38,yellow,Sam Morsy,Blackburn Rovers,Ewood Park
+2026-09-12-blackburn-rovers-v-millwall,41,goal,Oladapo Afolayan,Blackburn Rovers,Ewood Park
+2026-09-12-blackburn-rovers-v-millwall,45,yellow,Harry Pickering,Blackburn Rovers,Ewood Park
+2026-09-12-blackburn-rovers-v-millwall,45,yellow,Zak Sturge,Millwall,Ewood Park
+2026-09-12-blackburn-rovers-v-millwall,46,sub_off,Ryan Alebiosu,Blackburn Rovers,Ewood Park
+2026-09-12-blackburn-rovers-v-millwall,46,sub_off,Jordi Osei-Tutu,Millwall,Ewood Park
+2026-09-12-blackburn-rovers-v-millwall,46,sub_off,Romain Esse,Millwall,Ewood Park
+2026-09-12-blackburn-rovers-v-millwall,46,sub_on,Gady Beyuku,Blackburn Rovers,Ewood Park
+2026-09-12-blackburn-rovers-v-millwall,46,sub_on,Mark Sykes,Millwall,Ewood Park
+2026-09-12-blackburn-rovers-v-millwall,46,sub_on,Yanis Issoufou,Millwall,Ewood Park
+2026-09-12-blackburn-rovers-v-millwall,51,goal,Lyndon Dykes,Millwall,Ewood Park
+2026-09-12-blackburn-rovers-v-millwall,51,yellow,Gady Beyuku,Blackburn Rovers,Ewood Park
+2026-09-12-blackburn-rovers-v-millwall,58,goal,Oladapo Afolayan,Blackburn Rovers,Ewood Park
+2026-09-12-blackburn-rovers-v-millwall,69,sub_off,Oladapo Afolayan,Blackburn Rovers,Ewood Park
+2026-09-12-blackburn-rovers-v-millwall,69,sub_on,Jayden Fevrier,Blackburn Rovers,Ewood Park
+2026-09-12-blackburn-rovers-v-millwall,70,sub_off,Todd Cantwell,Blackburn Rovers,Ewood Park
+2026-09-12-blackburn-rovers-v-millwall,70,sub_on,Andri Guðjohnsen,Blackburn Rovers,Ewood Park
+2026-09-12-blackburn-rovers-v-millwall,76,sub_off,Derek Mazou-Sacko,Millwall,Ewood Park
+2026-09-12-blackburn-rovers-v-millwall,76,sub_on,Daniel Kelly,Millwall,Ewood Park
+2026-09-12-blackburn-rovers-v-millwall,81,yellow,Jenson Metcalfe,Millwall,Ewood Park
+2026-09-12-blackburn-rovers-v-millwall,82,sub_off,Jenson Metcalfe,Millwall,Ewood Park
+2026-09-12-blackburn-rovers-v-millwall,82,sub_off,Jake Cooper,Millwall,Ewood Park
+2026-09-12-blackburn-rovers-v-millwall,82,sub_on,Elkan Baggott,Millwall,Ewood Park
+2026-09-12-blackburn-rovers-v-millwall,82,sub_on,Zak Lovelace,Millwall,Ewood Park
+2026-09-12-blackburn-rovers-v-millwall,86,yellow,Jayden Fevrier,Blackburn Rovers,Ewood Park
+2026-09-12-blackburn-rovers-v-millwall,90,goal,Andri Guðjohnsen,Blackburn Rovers,Ewood Park
+2026-09-12-blackburn-rovers-v-millwall,90,yellow,Mark Sykes,Millwall,Ewood Park
+2026-09-12-blackpool-v-bromley,10,goal,Albie Morgan,Blackpool,Bloomfield Road
+2026-09-12-blackpool-v-bromley,18,goal,Victor Adeboyejo,Bromley,Bloomfield Road
+2026-09-12-blackpool-v-bromley,26,sub_off,Richard Taylor,Bromley,Bloomfield Road
+2026-09-12-blackpool-v-bromley,26,sub_on,Chanse Headman,Bromley,Bloomfield Road
+2026-09-12-blackpool-v-bromley,43,yellow,Owen Mason,Bromley,Bloomfield Road
+2026-09-12-blackpool-v-bromley,44,goal,Tom Bloxham,Blackpool,Bloomfield Road
+2026-09-12-blackpool-v-bromley,55,own_goal,Jordan Brown,Bromley,Bloomfield Road
+2026-09-12-blackpool-v-bromley,63,sub_off,Dion Charles,Blackpool,Bloomfield Road
+2026-09-12-blackpool-v-bromley,63,sub_off,Mitchell Pinnock,Bromley,Bloomfield Road
+2026-09-12-blackpool-v-bromley,63,sub_on,Jerry Yates,Blackpool,Bloomfield Road
+2026-09-12-blackpool-v-bromley,63,sub_on,Mickel Miller,Bromley,Bloomfield Road
+2026-09-12-blackpool-v-bromley,74,sub_off,Victor Adeboyejo,Bromley,Bloomfield Road
+2026-09-12-blackpool-v-bromley,74,sub_off,John McKiernan,Bromley,Bloomfield Road
+2026-09-12-blackpool-v-bromley,74,sub_off,Finley Munroe,Blackpool,Bloomfield Road
+2026-09-12-blackpool-v-bromley,74,sub_off,Jordan Brown,Blackpool,Bloomfield Road
+2026-09-12-blackpool-v-bromley,74,sub_on,Michael Cheek,Bromley,Bloomfield Road
+2026-09-12-blackpool-v-bromley,74,sub_on,Ben Thompson,Bromley,Bloomfield Road
+2026-09-12-blackpool-v-bromley,74,sub_on,Zac Ashworth,Blackpool,Bloomfield Road
+2026-09-12-blackpool-v-bromley,74,sub_on,Leighton Clarkson,Blackpool,Bloomfield Road
 2026-09-12-bolton-wanderers-v-cardiff-city,31,yellow,Ben Davies,Bolton Wanderers,Toughsheet Community Stadium
 2026-09-12-bolton-wanderers-v-cardiff-city,32,yellow,Kyliane Dong,Bolton Wanderers,Toughsheet Community Stadium
 2026-09-12-bolton-wanderers-v-cardiff-city,37,yellow,Samuel Iling-Junior,Bolton Wanderers,Toughsheet Community Stadium
@@ -8691,6 +8915,128 @@ match_id,minute,type,player,team,venue
 2026-09-12-bolton-wanderers-v-cardiff-city,46,sub_off,Samuel Iling-Junior,Bolton Wanderers,Toughsheet Community Stadium
 2026-09-12-bolton-wanderers-v-cardiff-city,46,sub_on,Thelonius Bair,Bolton Wanderers,Toughsheet Community Stadium
 2026-09-12-bolton-wanderers-v-cardiff-city,46,sub_on,Thierry Gale,Bolton Wanderers,Toughsheet Community Stadium
+2026-09-12-boston-united-v-wealdstone,12,goal,Jamie Grimes,Boston United,The Jakemans Community Stadium
+2026-09-12-boston-united-v-wealdstone,27,goal,Dylan Kadji,Wealdstone,The Jakemans Community Stadium
+2026-09-12-boston-united-v-wealdstone,46,sub_off,Joe Newton,Wealdstone,The Jakemans Community Stadium
+2026-09-12-boston-united-v-wealdstone,46,sub_on,Jack Cook,Wealdstone,The Jakemans Community Stadium
+2026-09-12-boston-united-v-wealdstone,52,yellow,Dylan Kadji,Wealdstone,The Jakemans Community Stadium
+2026-09-12-boston-united-v-wealdstone,62,yellow,Jack Wells-Morrison,Wealdstone,The Jakemans Community Stadium
+2026-09-12-boston-united-v-wealdstone,65,goal,Olufela Olomola,Wealdstone,The Jakemans Community Stadium
+2026-09-12-boston-united-v-wealdstone,66,goal,Jaydn Mundle-Smith,Wealdstone,The Jakemans Community Stadium
+2026-09-12-boston-united-v-wealdstone,70,sub_off,Lennon Wheeldon,Boston United,The Jakemans Community Stadium
+2026-09-12-boston-united-v-wealdstone,70,sub_on,Tom Cursons,Boston United,The Jakemans Community Stadium
+2026-09-12-boston-united-v-wealdstone,71,yellow,Tom Cursons,Boston United,The Jakemans Community Stadium
+2026-09-12-boston-united-v-wealdstone,71,yellow,Kyle Smith,Wealdstone,The Jakemans Community Stadium
+2026-09-12-boston-united-v-wealdstone,73,sub_off,Olufela Olomola,Wealdstone,The Jakemans Community Stadium
+2026-09-12-boston-united-v-wealdstone,73,sub_off,Dylan Kadji,Wealdstone,The Jakemans Community Stadium
+2026-09-12-boston-united-v-wealdstone,73,sub_on,Wilson Waweru,Wealdstone,The Jakemans Community Stadium
+2026-09-12-boston-united-v-wealdstone,73,sub_on,Daniel Chesters,Wealdstone,The Jakemans Community Stadium
+2026-09-12-boston-united-v-wealdstone,77,sub_off,Oliver Bostock,Boston United,The Jakemans Community Stadium
+2026-09-12-boston-united-v-wealdstone,77,sub_on,Jack Holmes,Boston United,The Jakemans Community Stadium
+2026-09-12-boston-united-v-wealdstone,87,sub_off,Kenneth Aboh,Boston United,The Jakemans Community Stadium
+2026-09-12-boston-united-v-wealdstone,87,sub_on,Connor McBride,Boston United,The Jakemans Community Stadium
+2026-09-12-burgess-hill-town-v-ramsgate,1,goal,Billy Munday,Ramsgate,Leylands Park
+2026-09-12-burgess-hill-town-v-ramsgate,48,goal,Chris Whelpdale,Burgess Hill Town,Leylands Park
+2026-09-12-burgess-hill-town-v-ramsgate,51,goal,Rowan Liburd,Ramsgate,Leylands Park
+2026-09-12-burgess-hill-town-v-ramsgate,90,goal,Chris Whelpdale,Burgess Hill Town,Leylands Park
+2026-09-12-buxton-v-chester-fc,27,goal,Sisa Tuntulwana,Buxton,The Tarmac Silverlands Stadium
+2026-09-12-buxton-v-chester-fc,37,goal,Billy Waters,Chester FC,The Tarmac Silverlands Stadium
+2026-09-12-buxton-v-chester-fc,41,goal,Devlan Moses,Buxton,The Tarmac Silverlands Stadium
+2026-09-12-buxton-v-chester-fc,78,goal,Sisa Tuntulwana,Buxton,The Tarmac Silverlands Stadium
+2026-09-12-cambridge-united-v-reading,38,goal,Jack Marriott,Reading,Cledara Abbey Stadium
+2026-09-12-cambridge-united-v-reading,46,sub_off,Raees Bangura-Williams,Cambridge United,Cledara Abbey Stadium
+2026-09-12-cambridge-united-v-reading,46,sub_off,Owen Moxon,Cambridge United,Cledara Abbey Stadium
+2026-09-12-cambridge-united-v-reading,46,sub_on,Shayne Lavery,Cambridge United,Cledara Abbey Stadium
+2026-09-12-cambridge-united-v-reading,46,sub_on,Pelly-Ruddock Mpanzu,Cambridge United,Cledara Abbey Stadium
+2026-09-12-cambridge-united-v-reading,52,goal,Liam Bennett,Cambridge United,Cledara Abbey Stadium
+2026-09-12-cambridge-united-v-reading,62,goal,Kelland Watts,Cambridge United,Cledara Abbey Stadium
+2026-09-12-cambridge-united-v-reading,66,yellow,Gassan Ahadme,Cambridge United,Cledara Abbey Stadium
+2026-09-12-cambridge-united-v-reading,71,sub_off,Kyreece Lisbie,Reading,Cledara Abbey Stadium
+2026-09-12-cambridge-united-v-reading,71,sub_on,Randell Williams,Reading,Cledara Abbey Stadium
+2026-09-12-cambridge-united-v-reading,72,sub_off,Jack Marriott,Reading,Cledara Abbey Stadium
+2026-09-12-cambridge-united-v-reading,72,sub_on,Jacob Brown,Reading,Cledara Abbey Stadium
+2026-09-12-cambridge-united-v-reading,78,sub_off,Haydon Roberts,Reading,Cledara Abbey Stadium
+2026-09-12-cambridge-united-v-reading,78,sub_off,Andy Rinomhota,Reading,Cledara Abbey Stadium
+2026-09-12-cambridge-united-v-reading,78,sub_on,Jamie Reid,Reading,Cledara Abbey Stadium
+2026-09-12-cambridge-united-v-reading,78,sub_on,Charlie Savage,Reading,Cledara Abbey Stadium
+2026-09-12-cambridge-united-v-reading,80,yellow,Callum Perry,Cambridge United,Cledara Abbey Stadium
+2026-09-12-cambridge-united-v-reading,85,sub_off,Callum Perry,Cambridge United,Cledara Abbey Stadium
+2026-09-12-cambridge-united-v-reading,85,sub_off,Gassan Ahadme,Cambridge United,Cledara Abbey Stadium
+2026-09-12-cambridge-united-v-reading,85,sub_on,Zak Bradshaw,Cambridge United,Cledara Abbey Stadium
+2026-09-12-cambridge-united-v-reading,85,sub_on,Sam Curtis,Cambridge United,Cledara Abbey Stadium
+2026-09-12-cambridge-united-v-reading,90,sub_off,Ben Knight,Cambridge United,Cledara Abbey Stadium
+2026-09-12-cambridge-united-v-reading,90,sub_on,Louis Appéré,Cambridge United,Cledara Abbey Stadium
+2026-09-12-cambridge-united-v-reading,90,yellow,Randell Williams,Reading,Cledara Abbey Stadium
+2026-09-12-carlisle-united-v-southend-united,4,goal,Georgie Kelly,Carlisle United,Brunton Park
+2026-09-12-carlisle-united-v-southend-united,7,yellow,Kyle McAdam,Southend United,Brunton Park
+2026-09-12-carrick-rangers-v-cliftonville,11,goal,Caleb Hawthorne,Carrick Rangers,Taylors Avenue
+2026-09-12-carrick-rangers-v-cliftonville,16,goal,Anisius Lewis,Cliftonville,Taylors Avenue
+2026-09-12-carrick-rangers-v-cliftonville,36,goal,Ben Quinn,Cliftonville,Taylors Avenue
+2026-09-12-carrick-rangers-v-cliftonville,90,goal,Dean McMaster,Cliftonville,Taylors Avenue
+2026-09-12-charlton-athletic-v-portsmouth,69,sub_off,Rocco Shein,Portsmouth,The Valley
+2026-09-12-charlton-athletic-v-portsmouth,69,sub_on,Ebou Adams,Portsmouth,The Valley
+2026-09-12-charlton-athletic-v-portsmouth,74,sub_off,Jayden Meghoma,Portsmouth,The Valley
+2026-09-12-charlton-athletic-v-portsmouth,74,sub_off,Tyrese Shade,Portsmouth,The Valley
+2026-09-12-charlton-athletic-v-portsmouth,74,sub_on,Zak Swanson,Portsmouth,The Valley
+2026-09-12-charlton-athletic-v-portsmouth,74,sub_on,Ryan Kavuma-McQueen,Portsmouth,The Valley
+2026-09-12-charlton-athletic-v-portsmouth,76,sub_off,Millenic Alli,Charlton Athletic,The Valley
+2026-09-12-charlton-athletic-v-portsmouth,76,sub_on,Charlie Kelman,Charlton Athletic,The Valley
+2026-09-12-charlton-athletic-v-portsmouth,85,sub_off,Terry Devlin,Portsmouth,The Valley
+2026-09-12-charlton-athletic-v-portsmouth,85,sub_on,Regan Poole,Portsmouth,The Valley
+2026-09-12-charlton-athletic-v-portsmouth,86,yellow,Miles Leaburn,Charlton Athletic,The Valley
+2026-09-12-charlton-athletic-v-portsmouth,86,yellow,Ebou Adams,Portsmouth,The Valley
+2026-09-12-chelsea-v-hull,7,goal,Morgan Rogers,Chelsea,Stamford Bridge
+2026-09-12-chelsea-v-hull,17,yellow,Oli McBurnie,Hull,Stamford Bridge
+2026-09-12-chelsea-v-hull,28,goal,Mohamed Belloumi,Hull,Stamford Bridge
+2026-09-12-chelsea-v-hull,34,goal,Mohamed Belloumi,Hull,Stamford Bridge
+2026-09-12-chelsea-v-hull,46,sub_off,Jorrel Hato,Chelsea,Stamford Bridge
+2026-09-12-chelsea-v-hull,46,sub_on,Pep Chavarría,Chelsea,Stamford Bridge
+2026-09-12-chelsea-v-hull,50,yellow,John Egan,Hull,Stamford Bridge
+2026-09-12-chelsea-v-hull,52,yellow,Matt Crooks,Hull,Stamford Bridge
+2026-09-12-chelsea-v-hull,59,sub_off,Nobel Mendy,Hull,Stamford Bridge
+2026-09-12-chelsea-v-hull,59,sub_on,Lucas Herrington,Hull,Stamford Bridge
+2026-09-12-chelsea-v-hull,60,sub_off,Mohamed Belloumi,Hull,Stamford Bridge
+2026-09-12-chelsea-v-hull,60,sub_off,Elliot Stroud,Hull,Stamford Bridge
+2026-09-12-chelsea-v-hull,60,sub_on,Mohamed-Ali Cho,Hull,Stamford Bridge
+2026-09-12-chelsea-v-hull,60,sub_on,Sorba Thomas,Hull,Stamford Bridge
+2026-09-12-chelsea-v-hull,66,goal,João Pedro,Chelsea,Stamford Bridge
+2026-09-12-chelsea-v-hull,69,sub_off,Matt Crooks,Hull,Stamford Bridge
+2026-09-12-chelsea-v-hull,69,sub_on,Tim Iroegbunam,Hull,Stamford Bridge
+2026-09-12-chelsea-v-hull,70,sub_off,Roméo Lavia,Chelsea,Stamford Bridge
+2026-09-12-chelsea-v-hull,70,sub_on,Valentín Barco,Chelsea,Stamford Bridge
+2026-09-12-chelsea-v-hull,78,sub_off,Malo Gusto,Chelsea,Stamford Bridge
+2026-09-12-chelsea-v-hull,78,sub_on,Danny Welbeck,Chelsea,Stamford Bridge
+2026-09-12-chelsea-v-hull,80,yellow,Valentín Barco,Chelsea,Stamford Bridge
+2026-09-12-chelsea-v-hull,82,sub_off,Oli McBurnie,Hull,Stamford Bridge
+2026-09-12-chelsea-v-hull,82,sub_off,Lewie Coyle,Hull,Stamford Bridge
+2026-09-12-chelsea-v-hull,82,sub_on,Robinio Vaz,Hull,Stamford Bridge
+2026-09-12-chelsea-v-hull,82,sub_on,Brooke Norton-Cuffy,Hull,Stamford Bridge
+2026-09-12-chelsea-v-hull,86,sub_off,Wesley Fofana,Chelsea,Stamford Bridge
+2026-09-12-chelsea-v-hull,86,sub_off,Pedro Neto,Chelsea,Stamford Bridge
+2026-09-12-chelsea-v-hull,86,sub_on,Maxence Lacroix,Chelsea,Stamford Bridge
+2026-09-12-chelsea-v-hull,86,sub_on,Estêvão,Chelsea,Stamford Bridge
+2026-09-12-chelsea-v-hull,88,yellow,Tim Iroegbunam,Hull,Stamford Bridge
+2026-09-12-chelsea-v-hull,90,yellow,Brooke Norton-Cuffy,Hull,Stamford Bridge
+2026-09-12-colchester-united-v-crewe-alexandra,27,goal,Harry Anderson,Colchester United,JobServe Community Stadium
+2026-09-12-colchester-united-v-crewe-alexandra,46,yellow,Calum Agius,Crewe Alexandra,JobServe Community Stadium
+2026-09-12-colchester-united-v-crewe-alexandra,54,sub_off,Jordan Gibson,Crewe Alexandra,JobServe Community Stadium
+2026-09-12-colchester-united-v-crewe-alexandra,54,sub_on,Adrien Thibaut,Crewe Alexandra,JobServe Community Stadium
+2026-09-12-colchester-united-v-crewe-alexandra,69,sub_off,Calum Agius,Crewe Alexandra,JobServe Community Stadium
+2026-09-12-colchester-united-v-crewe-alexandra,69,sub_off,Jay Williams,Colchester United,JobServe Community Stadium
+2026-09-12-colchester-united-v-crewe-alexandra,69,sub_on,Charlie McNeill,Crewe Alexandra,JobServe Community Stadium
+2026-09-12-colchester-united-v-crewe-alexandra,69,sub_on,Paul Digby,Colchester United,JobServe Community Stadium
+2026-09-12-colchester-united-v-crewe-alexandra,72,sub_off,Kylian Kouassi,Colchester United,JobServe Community Stadium
+2026-09-12-colchester-united-v-crewe-alexandra,72,sub_on,Bradley Ihionvien,Colchester United,JobServe Community Stadium
+2026-09-12-colchester-united-v-crewe-alexandra,73,sub_off,Oscar Thorn,Colchester United,JobServe Community Stadium
+2026-09-12-colchester-united-v-crewe-alexandra,73,sub_on,Jaden Williams,Colchester United,JobServe Community Stadium
+2026-09-12-colchester-united-v-crewe-alexandra,75,sub_off,Joel Tabiner,Crewe Alexandra,JobServe Community Stadium
+2026-09-12-colchester-united-v-crewe-alexandra,75,sub_on,Kyle Ure,Crewe Alexandra,JobServe Community Stadium
+2026-09-12-colchester-united-v-crewe-alexandra,87,sub_off,Moses Sesay,Colchester United,JobServe Community Stadium
+2026-09-12-colchester-united-v-crewe-alexandra,87,sub_off,Jack Payne,Colchester United,JobServe Community Stadium
+2026-09-12-colchester-united-v-crewe-alexandra,87,sub_on,Frankie Terry,Colchester United,JobServe Community Stadium
+2026-09-12-colchester-united-v-crewe-alexandra,87,sub_on,Kane Vincent-Young,Colchester United,JobServe Community Stadium
+2026-09-12-colchester-united-v-crewe-alexandra,90,goal,Josh Stephenson,Crewe Alexandra,JobServe Community Stadium
+2026-09-12-colwyn-bay-v-connahs-quay-nomads,10,goal,Callum West,Connah's Quay Nomads,Llanelian Road
 2026-09-12-cosenza-v-cavese,,,,,Stadium
 2026-09-12-crawley-town-v-cheltenham-town,7,goal,Dylan Morgan,Crawley Town,Broadfield Stadium
 2026-09-12-crawley-town-v-cheltenham-town,32,goal,Charlie McCann,Cheltenham Town,Broadfield Stadium
@@ -8720,6 +9066,39 @@ match_id,minute,type,player,team,venue
 2026-09-12-crawley-town-v-cheltenham-town,86,sub_on,Jonny Russell,Crawley Town,Broadfield Stadium
 2026-09-12-crawley-town-v-cheltenham-town,87,sub_off,Dylan Morgan,Crawley Town,Broadfield Stadium
 2026-09-12-crawley-town-v-cheltenham-town,87,sub_on,Malcolm Ebiowei,Crawley Town,Broadfield Stadium
+2026-09-12-crusaders-v-limavady,28,goal,Philip Lowry,Limavady,Seaview
+2026-09-12-crusaders-v-limavady,50,goal,Jamie McGonigle,Limavady,Seaview
+2026-09-12-crusaders-v-limavady,70,goal,Elliot Dunlop,Crusaders,Seaview
+2026-09-12-crystal-palace-v-ipswich,14,goal,Anan Khalaili,Crystal Palace,Selhurst Park
+2026-09-12-crystal-palace-v-ipswich,23,goal,Emersonn,Ipswich,Selhurst Park
+2026-09-12-crystal-palace-v-ipswich,34,red,Axel Disasi,Crystal Palace,Selhurst Park
+2026-09-12-crystal-palace-v-ipswich,37,sub_off,Yéremi Pino,Crystal Palace,Selhurst Park
+2026-09-12-crystal-palace-v-ipswich,37,sub_on,Takehiro Tomiyasu,Crystal Palace,Selhurst Park
+2026-09-12-crystal-palace-v-ipswich,43,yellow,Jack Clarke,Ipswich,Selhurst Park
+2026-09-12-crystal-palace-v-ipswich,45,goal,Leif Davis,Ipswich,Selhurst Park
+2026-09-12-crystal-palace-v-ipswich,58,yellow,Abdul Fatawu,Ipswich,Selhurst Park
+2026-09-12-crystal-palace-v-ipswich,62,sub_off,Abdul Fatawu,Ipswich,Selhurst Park
+2026-09-12-crystal-palace-v-ipswich,62,sub_on,Jaden Philogene-Bidace,Ipswich,Selhurst Park
+2026-09-12-crystal-palace-v-ipswich,63,sub_off,Emersonn,Ipswich,Selhurst Park
+2026-09-12-crystal-palace-v-ipswich,63,sub_off,Jack Clarke,Ipswich,Selhurst Park
+2026-09-12-crystal-palace-v-ipswich,63,sub_on,Zian Flemming,Ipswich,Selhurst Park
+2026-09-12-crystal-palace-v-ipswich,63,sub_on,Daizen Maeda,Ipswich,Selhurst Park
+2026-09-12-crystal-palace-v-ipswich,70,yellow,Saša Lukić,Ipswich,Selhurst Park
+2026-09-12-crystal-palace-v-ipswich,75,goal,Jørgen Strand Larsen,Crystal Palace,Selhurst Park
+2026-09-12-crystal-palace-v-ipswich,77,sub_off,Adam Wharton,Crystal Palace,Selhurst Park
+2026-09-12-crystal-palace-v-ipswich,77,sub_off,Tyrick Mitchell,Crystal Palace,Selhurst Park
+2026-09-12-crystal-palace-v-ipswich,77,sub_off,Saša Lukić,Ipswich,Selhurst Park
+2026-09-12-crystal-palace-v-ipswich,77,sub_on,Will Hughes,Crystal Palace,Selhurst Park
+2026-09-12-crystal-palace-v-ipswich,77,sub_on,Ben Chilwell,Crystal Palace,Selhurst Park
+2026-09-12-crystal-palace-v-ipswich,77,sub_on,Florentino,Ipswich,Selhurst Park
+2026-09-12-crystal-palace-v-ipswich,84,sub_off,Daichi Kamada,Crystal Palace,Selhurst Park
+2026-09-12-crystal-palace-v-ipswich,84,sub_off,Jørgen Strand Larsen,Crystal Palace,Selhurst Park
+2026-09-12-crystal-palace-v-ipswich,84,sub_on,Jefferson Lerma,Crystal Palace,Selhurst Park
+2026-09-12-crystal-palace-v-ipswich,84,sub_on,Zavier Gozo,Crystal Palace,Selhurst Park
+2026-09-12-crystal-palace-v-ipswich,89,sub_off,Jacob Greaves,Ipswich,Selhurst Park
+2026-09-12-crystal-palace-v-ipswich,89,sub_on,Abdoul Ouattara,Ipswich,Selhurst Park
+2026-09-12-crystal-palace-v-ipswich,90,goal,Zian Flemming,Ipswich,Selhurst Park
+2026-09-12-crystal-palace-v-ipswich,90,yellow,Chris Richards,Crystal Palace,Selhurst Park
 2026-09-12-derby-county-v-birmingham-city,19,yellow,Mohammed Fuseini,Derby County,Pride Park Stadium
 2026-09-12-derby-county-v-birmingham-city,21,yellow,Alexander Cochrane,Birmingham City,Pride Park Stadium
 2026-09-12-derby-county-v-birmingham-city,40,goal,Bobby Clark,Derby County,Pride Park Stadium
@@ -8727,8 +9106,152 @@ match_id,minute,type,player,team,venue
 2026-09-12-derby-county-v-birmingham-city,44,yellow,August Priske,Birmingham City,Pride Park Stadium
 2026-09-12-derby-county-v-birmingham-city,54,sub_off,Henrik Meister,Derby County,Pride Park Stadium
 2026-09-12-derby-county-v-birmingham-city,54,sub_on,Oscar Fraulo,Derby County,Pride Park Stadium
+2026-09-12-dunfermline-athletic-v-queens-park,7,goal,Josh Cooper,Dunfermline Athletic,KDM Group East End Park
+2026-09-12-dunfermline-athletic-v-queens-park,18,yellow,Nikolay Todorov,Queen's Park,KDM Group East End Park
+2026-09-12-dunfermline-athletic-v-queens-park,29,goal,Rory MacLeod,Dunfermline Athletic,KDM Group East End Park
+2026-09-12-dunfermline-athletic-v-queens-park,46,sub_off,Nikolay Todorov,Queen's Park,KDM Group East End Park
+2026-09-12-dunfermline-athletic-v-queens-park,46,sub_off,Louis Longridge,Queen's Park,KDM Group East End Park
+2026-09-12-dunfermline-athletic-v-queens-park,46,sub_on,Tyrece McDonnell,Queen's Park,KDM Group East End Park
+2026-09-12-dunfermline-athletic-v-queens-park,46,sub_on,Aiden McCallion,Queen's Park,KDM Group East End Park
+2026-09-12-dunfermline-athletic-v-queens-park,49,yellow,Scott Martin,Queen's Park,KDM Group East End Park
+2026-09-12-dunfermline-athletic-v-queens-park,58,yellow,Rory MacLeod,Dunfermline Athletic,KDM Group East End Park
+2026-09-12-dunfermline-athletic-v-queens-park,61,yellow,Alfons Amade,Dunfermline Athletic,KDM Group East End Park
+2026-09-12-dunfermline-athletic-v-queens-park,70,sub_off,Olamilekan Adams,Dunfermline Athletic,KDM Group East End Park
+2026-09-12-dunfermline-athletic-v-queens-park,70,sub_off,Allan Oyirwoth,Dunfermline Athletic,KDM Group East End Park
+2026-09-12-dunfermline-athletic-v-queens-park,70,sub_off,Alfons Amade,Dunfermline Athletic,KDM Group East End Park
+2026-09-12-dunfermline-athletic-v-queens-park,70,sub_on,Christopher Kane,Dunfermline Athletic,KDM Group East End Park
+2026-09-12-dunfermline-athletic-v-queens-park,70,sub_on,Kian Corbally,Dunfermline Athletic,KDM Group East End Park
+2026-09-12-dunfermline-athletic-v-queens-park,70,sub_on,Charlie Gilmour,Dunfermline Athletic,KDM Group East End Park
+2026-09-12-dunfermline-athletic-v-queens-park,72,sub_off,Scott Martin,Queen's Park,KDM Group East End Park
+2026-09-12-dunfermline-athletic-v-queens-park,72,sub_off,Michael Ruth,Queen's Park,KDM Group East End Park
+2026-09-12-dunfermline-athletic-v-queens-park,72,sub_on,Ben Brannan,Queen's Park,KDM Group East End Park
+2026-09-12-dunfermline-athletic-v-queens-park,72,sub_on,Jack Hamilton,Queen's Park,KDM Group East End Park
+2026-09-12-dunfermline-athletic-v-queens-park,72,yellow,Andy Tod,Dunfermline Athletic,KDM Group East End Park
+2026-09-12-dunfermline-athletic-v-queens-park,79,sub_off,Lewis Stewart,Queen's Park,KDM Group East End Park
+2026-09-12-dunfermline-athletic-v-queens-park,79,sub_on,Callum Smith,Queen's Park,KDM Group East End Park
+2026-09-12-dunfermline-athletic-v-queens-park,82,sub_off,Rory MacLeod,Dunfermline Athletic,KDM Group East End Park
+2026-09-12-dunfermline-athletic-v-queens-park,82,sub_off,Josh Cooper,Dunfermline Athletic,KDM Group East End Park
+2026-09-12-dunfermline-athletic-v-queens-park,82,sub_on,Shea Kearney,Dunfermline Athletic,KDM Group East End Park
+2026-09-12-dunfermline-athletic-v-queens-park,82,sub_on,Zak Rudden,Dunfermline Athletic,KDM Group East End Park
+2026-09-12-dunfermline-athletic-v-queens-park,84,yellow,Sam Cleall-Harding,Dunfermline Athletic,KDM Group East End Park
+2026-09-12-east-kilbride-v-peterhead,11,sub_off,Joshua Kerr,Peterhead,K-Park Training Academy
+2026-09-12-east-kilbride-v-peterhead,11,sub_on,Tobias Davies-Browne,Peterhead,K-Park Training Academy
+2026-09-12-east-kilbride-v-peterhead,14,goal,Cameron Elliott,East Kilbride,K-Park Training Academy
+2026-09-12-east-kilbride-v-peterhead,31,yellow,Rhys Armstrong,East Kilbride,K-Park Training Academy
+2026-09-12-east-kilbride-v-peterhead,41,yellow,Dylan Forrest,Peterhead,K-Park Training Academy
+2026-09-12-east-kilbride-v-peterhead,47,goal,Lyall Keir,Peterhead,K-Park Training Academy
+2026-09-12-east-kilbride-v-peterhead,52,sub_off,Callum McKenzie,East Kilbride,K-Park Training Academy
+2026-09-12-east-kilbride-v-peterhead,52,sub_off,João Baldé,East Kilbride,K-Park Training Academy
+2026-09-12-east-kilbride-v-peterhead,52,sub_off,Lewis McGrattan,East Kilbride,K-Park Training Academy
+2026-09-12-east-kilbride-v-peterhead,52,sub_on,Finlay Gray,East Kilbride,K-Park Training Academy
+2026-09-12-east-kilbride-v-peterhead,52,sub_on,Liam Kennedy,East Kilbride,K-Park Training Academy
+2026-09-12-east-kilbride-v-peterhead,52,sub_on,Malek Zaid,East Kilbride,K-Park Training Academy
+2026-09-12-east-kilbride-v-peterhead,64,sub_off,Fraser Mackie,Peterhead,K-Park Training Academy
+2026-09-12-east-kilbride-v-peterhead,64,sub_on,James Stokes,Peterhead,K-Park Training Academy
+2026-09-12-east-kilbride-v-peterhead,70,sub_off,Blair Yule,Peterhead,K-Park Training Academy
+2026-09-12-east-kilbride-v-peterhead,70,sub_off,Dylan Forrest,Peterhead,K-Park Training Academy
+2026-09-12-east-kilbride-v-peterhead,70,sub_on,Peter Pawlett,Peterhead,K-Park Training Academy
+2026-09-12-east-kilbride-v-peterhead,70,sub_on,Robel Teklemichael,Peterhead,K-Park Training Academy
+2026-09-12-east-kilbride-v-peterhead,71,sub_off,Alexander Smith,East Kilbride,K-Park Training Academy
+2026-09-12-east-kilbride-v-peterhead,71,sub_on,Craig McGuffie,East Kilbride,K-Park Training Academy
+2026-09-12-east-kilbride-v-peterhead,74,goal,Cameron Elliott,East Kilbride,K-Park Training Academy
+2026-09-12-east-kilbride-v-peterhead,76,yellow,Robel Teklemichael,Peterhead,K-Park Training Academy
+2026-09-12-east-kilbride-v-peterhead,82,yellow,Darragh O'Connor,East Kilbride,K-Park Training Academy
+2026-09-12-east-kilbride-v-peterhead,83,yellow,Tobias Davies-Browne,Peterhead,K-Park Training Academy
+2026-09-12-east-kilbride-v-peterhead,89,goal,Cameron Elliott,East Kilbride,K-Park Training Academy
+2026-09-12-ebbsfleet-united-v-salisbury,41,goal,Robbie Gallagher,Salisbury,Morrow Stadium
+2026-09-12-ebbsfleet-united-v-salisbury,84,goal,Finlay Barnes,Ebbsfleet United,Morrow Stadium
+2026-09-12-fc-halifax-town-v-hornchurch,45,goal,Zak Gilsenan,FC Halifax Town,The Shay Stadium
+2026-09-12-fc-halifax-town-v-hornchurch,59,sub_off,Jack Powell,Hornchurch,The Shay Stadium
+2026-09-12-fc-halifax-town-v-hornchurch,59,sub_on,Henry Hearn,Hornchurch,The Shay Stadium
+2026-09-12-fc-halifax-town-v-hornchurch,65,goal,Ben Tollitt,FC Halifax Town,The Shay Stadium
+2026-09-12-fc-halifax-town-v-hornchurch,74,sub_off,Zak Gilsenan,FC Halifax Town,The Shay Stadium
+2026-09-12-fc-halifax-town-v-hornchurch,74,sub_on,Will Hugill,FC Halifax Town,The Shay Stadium
+2026-09-12-fc-halifax-town-v-hornchurch,75,yellow,Miles Bracking,Hornchurch,The Shay Stadium
+2026-09-12-fc-halifax-town-v-hornchurch,76,sub_off,Aaron Rowe,Hornchurch,The Shay Stadium
+2026-09-12-fc-halifax-town-v-hornchurch,76,sub_on,Charlie Pegrum,Hornchurch,The Shay Stadium
+2026-09-12-fc-halifax-town-v-hornchurch,82,sub_off,Josh Walker,Hornchurch,The Shay Stadium
+2026-09-12-fc-halifax-town-v-hornchurch,82,sub_off,Henry Sandat,Hornchurch,The Shay Stadium
+2026-09-12-fc-halifax-town-v-hornchurch,82,sub_on,Bobby Kelman,Hornchurch,The Shay Stadium
+2026-09-12-fc-halifax-town-v-hornchurch,82,sub_on,Asher Yearwood,Hornchurch,The Shay Stadium
+2026-09-12-fc-halifax-town-v-hornchurch,86,goal,Tayt-Lemar Trusty,FC Halifax Town,The Shay Stadium
+2026-09-12-fc-halifax-town-v-hornchurch,87,sub_off,Conor Carty,FC Halifax Town,The Shay Stadium
+2026-09-12-fc-halifax-town-v-hornchurch,87,sub_off,Connor Douglas,FC Halifax Town,The Shay Stadium
+2026-09-12-fc-halifax-town-v-hornchurch,87,sub_on,Amari Morgan-Smith,FC Halifax Town,The Shay Stadium
+2026-09-12-fc-halifax-town-v-hornchurch,87,sub_on,Owen Bray,FC Halifax Town,The Shay Stadium
+2026-09-12-fc-halifax-town-v-hornchurch,90,sub_off,Tayt-Lemar Trusty,FC Halifax Town,The Shay Stadium
+2026-09-12-fc-halifax-town-v-hornchurch,90,sub_off,Ben Tollitt,FC Halifax Town,The Shay Stadium
+2026-09-12-fc-halifax-town-v-hornchurch,90,sub_on,Arian Allen,FC Halifax Town,The Shay Stadium
+2026-09-12-fc-halifax-town-v-hornchurch,90,sub_on,Cruz Allen,FC Halifax Town,The Shay Stadium
+2026-09-12-fc-halifax-town-v-hornchurch,90,yellow,Arian Allen,FC Halifax Town,The Shay Stadium
 2026-09-12-fc-metaloglobus-bucuresti-v-csm-olimpia-satu-mare,24,goal,Denis Golda,CSM Olimpia Satu Mare,Stadium
 2026-09-12-fc-metaloglobus-bucuresti-v-csm-olimpia-satu-mare,67,goal,Ime Ndon,FC Metaloglobus București,Stadium
+2026-09-12-fc-united-of-manchester-v-warrington-town,42,goal,Adam Le Fondre,FC United of Manchester,Broadhurst Park
+2026-09-12-fc-united-of-manchester-v-warrington-town,50,goal,Matt Grivosti,FC United of Manchester,Broadhurst Park
+2026-09-12-fc-united-of-manchester-v-warrington-town,53,goal,Callum Edwards,Warrington Town,Broadhurst Park
+2026-09-12-fc-united-of-manchester-v-warrington-town,68,goal,Ruben Grewal,FC United of Manchester,Broadhurst Park
+2026-09-12-fc-united-of-manchester-v-warrington-town,81,goal,Niall Watson,FC United of Manchester,Broadhurst Park
+2026-09-12-fc-united-of-manchester-v-warrington-town,88,goal,<TBD>,FC United of Manchester,Broadhurst Park
+2026-09-12-ff-jaro-v-sjk,27,goal,Ville Vuorinen,FF Jaro,Project Liv Arena
+2026-09-12-forest-green-rovers-v-gateshead-fc,11,yellow,Josh Home,Gateshead FC,The New Lawn
+2026-09-12-forest-green-rovers-v-gateshead-fc,30,yellow,Luke Supyk,Gateshead FC,The New Lawn
+2026-09-12-forest-green-rovers-v-gateshead-fc,33,yellow,Jack Robinson,Gateshead FC,The New Lawn
+2026-09-12-forest-green-rovers-v-gateshead-fc,43,goal,Kyle McAllister,Forest Green Rovers,The New Lawn
+2026-09-12-forest-green-rovers-v-gateshead-fc,45,yellow,Kelvin Abrefa,Forest Green Rovers,The New Lawn
+2026-09-12-forest-green-rovers-v-gateshead-fc,46,sub_off,Kyle Ajayi,Forest Green Rovers,The New Lawn
+2026-09-12-forest-green-rovers-v-gateshead-fc,46,sub_on,Gabe Kircough,Forest Green Rovers,The New Lawn
+2026-09-12-forest-green-rovers-v-gateshead-fc,55,sub_off,Rocco Coyle,Gateshead FC,The New Lawn
+2026-09-12-forest-green-rovers-v-gateshead-fc,55,sub_off,Jordy Hiwula-Mayifuila,Gateshead FC,The New Lawn
+2026-09-12-forest-green-rovers-v-gateshead-fc,55,sub_on,Martin Smith,Gateshead FC,The New Lawn
+2026-09-12-forest-green-rovers-v-gateshead-fc,55,sub_on,Fenton John,Gateshead FC,The New Lawn
+2026-09-12-forest-green-rovers-v-gateshead-fc,56,sub_off,Alex Lankshear,Gateshead FC,The New Lawn
+2026-09-12-forest-green-rovers-v-gateshead-fc,56,sub_on,Freddie Issaka,Gateshead FC,The New Lawn
+2026-09-12-forest-green-rovers-v-gateshead-fc,60,sub_off,Kyle Kelly,Forest Green Rovers,The New Lawn
+2026-09-12-forest-green-rovers-v-gateshead-fc,60,sub_on,Nick Haughton,Forest Green Rovers,The New Lawn
+2026-09-12-forest-green-rovers-v-gateshead-fc,66,goal,Ricardo Rees,Forest Green Rovers,The New Lawn
+2026-09-12-forest-green-rovers-v-gateshead-fc,69,goal,Jayden Clarke,Forest Green Rovers,The New Lawn
+2026-09-12-forest-green-rovers-v-gateshead-fc,70,sub_off,Kelvin Abrefa,Forest Green Rovers,The New Lawn
+2026-09-12-forest-green-rovers-v-gateshead-fc,70,sub_on,Omari Patrick,Forest Green Rovers,The New Lawn
+2026-09-12-forest-green-rovers-v-gateshead-fc,73,sub_off,Sean Etaluku,Forest Green Rovers,The New Lawn
+2026-09-12-forest-green-rovers-v-gateshead-fc,73,sub_off,Ricardo Rees,Forest Green Rovers,The New Lawn
+2026-09-12-forest-green-rovers-v-gateshead-fc,73,sub_on,Oliver Ewing,Forest Green Rovers,The New Lawn
+2026-09-12-forest-green-rovers-v-gateshead-fc,73,sub_on,D'Mani Bughail-Mellor,Forest Green Rovers,The New Lawn
+2026-09-12-forest-green-rovers-v-gateshead-fc,74,yellow,Tate Campbell,Forest Green Rovers,The New Lawn
+2026-09-12-forest-green-rovers-v-gateshead-fc,84,yellow,Oliver Ewing,Forest Green Rovers,The New Lawn
+2026-09-12-forest-green-rovers-v-gateshead-fc,90,goal,Oliver Ewing,Forest Green Rovers,The New Lawn
+2026-09-12-gillingham-v-tranmere-rovers,26,yellow,Robbie McKenzie,Gillingham,Priestfield Stadium
+2026-09-12-gillingham-v-tranmere-rovers,31,yellow,Nathan Smith,Tranmere Rovers,Priestfield Stadium
+2026-09-12-gillingham-v-tranmere-rovers,35,yellow,Eli King,Gillingham,Priestfield Stadium
+2026-09-12-gillingham-v-tranmere-rovers,55,sub_off,Harry Waldock,Gillingham,Priestfield Stadium
+2026-09-12-gillingham-v-tranmere-rovers,55,sub_on,Garath McCleary,Gillingham,Priestfield Stadium
+2026-09-12-gillingham-v-tranmere-rovers,58,sub_off,Dylan Jones,Tranmere Rovers,Priestfield Stadium
+2026-09-12-gillingham-v-tranmere-rovers,58,sub_on,Jordan Davies,Tranmere Rovers,Priestfield Stadium
+2026-09-12-gillingham-v-tranmere-rovers,68,goal,Logan Dobbs,Gillingham,Priestfield Stadium
+2026-09-12-gillingham-v-tranmere-rovers,70,sub_off,Charlie Whitaker,Tranmere Rovers,Priestfield Stadium
+2026-09-12-gillingham-v-tranmere-rovers,70,sub_off,Sam Finley,Tranmere Rovers,Priestfield Stadium
+2026-09-12-gillingham-v-tranmere-rovers,70,sub_on,Zane Okoro,Tranmere Rovers,Priestfield Stadium
+2026-09-12-gillingham-v-tranmere-rovers,70,sub_on,Tom Conlon,Tranmere Rovers,Priestfield Stadium
+2026-09-12-gillingham-v-tranmere-rovers,79,sub_off,Nathan Smith,Tranmere Rovers,Priestfield Stadium
+2026-09-12-gillingham-v-tranmere-rovers,79,sub_off,Jacob Slater,Tranmere Rovers,Priestfield Stadium
+2026-09-12-gillingham-v-tranmere-rovers,79,sub_on,George Nevett,Tranmere Rovers,Priestfield Stadium
+2026-09-12-gillingham-v-tranmere-rovers,79,sub_on,David Kamara,Tranmere Rovers,Priestfield Stadium
+2026-09-12-gillingham-v-tranmere-rovers,80,goal,Ronan Hale,Gillingham,Priestfield Stadium
+2026-09-12-gillingham-v-tranmere-rovers,80,sub_off,Logan Dobbs,Gillingham,Priestfield Stadium
+2026-09-12-gillingham-v-tranmere-rovers,80,sub_on,Jack Daley,Gillingham,Priestfield Stadium
+2026-09-12-gillingham-v-tranmere-rovers,82,sub_off,Ronan Hale,Gillingham,Priestfield Stadium
+2026-09-12-gillingham-v-tranmere-rovers,82,sub_on,Lamin Sillah,Gillingham,Priestfield Stadium
+2026-09-12-gillingham-v-tranmere-rovers,86,yellow,Conor McManus,Gillingham,Priestfield Stadium
+2026-09-12-gillingham-v-tranmere-rovers,90,sub_off,Robbie McKenzie,Gillingham,Priestfield Stadium
+2026-09-12-gillingham-v-tranmere-rovers,90,sub_off,Conor McManus,Gillingham,Priestfield Stadium
+2026-09-12-gillingham-v-tranmere-rovers,90,sub_on,Michael Luxton,Gillingham,Priestfield Stadium
+2026-09-12-gillingham-v-tranmere-rovers,90,sub_on,Sheldon Kendall,Gillingham,Priestfield Stadium
+2026-09-12-gillingham-v-tranmere-rovers,90,yellow,Will Vaulks,Tranmere Rovers,Priestfield Stadium
+2026-09-12-glentoran-v-bangor,39,goal,Lewis Francis,Bangor,The Oval
+2026-09-12-glentoran-v-bangor,56,goal,James Douglas,Glentoran,The Oval
+2026-09-12-gosport-borough-v-taunton-town,36,goal,Ablie Jallow,Gosport Borough,Privett Park
+2026-09-12-gosport-borough-v-taunton-town,75,goal,Trevor Caborn,Gosport Borough,Privett Park
+2026-09-12-gosport-borough-v-taunton-town,83,goal,Scott Robinson,Taunton Town,Privett Park
+2026-09-12-gosport-borough-v-taunton-town,90,goal,Kristian Campbell,Gosport Borough,Privett Park
 2026-09-12-grimsby-town-v-bristol-rovers,10,yellow,Ben Purrington,Bristol Rovers,Blundell Park
 2026-09-12-grimsby-town-v-bristol-rovers,22,goal,Kieran Green,Grimsby Town,Blundell Park
 2026-09-12-grimsby-town-v-bristol-rovers,26,sub_off,Riley Harbottle,Bristol Rovers,Blundell Park
@@ -8739,11 +9262,31 @@ match_id,minute,type,player,team,venue
 2026-09-12-ha-noi-fc-v-song-lam-nghe-an,14,yellow,Abdel-Amine Tran,Song Lam Nghe An,Stadium
 2026-09-12-ha-noi-fc-v-song-lam-nghe-an,35,goal,Bruno Paraíba,Song Lam Nghe An,Stadium
 2026-09-12-ha-noi-fc-v-song-lam-nghe-an,53,goal,Cyrus Christie,Song Lam Nghe An,Stadium
+2026-09-12-ha-noi-fc-v-song-lam-nghe-an,56,yellow,Hồ Khắc Ngọc,Song Lam Nghe An,Stadium
+2026-09-12-ha-noi-fc-v-song-lam-nghe-an,58,yellow,Joseph Onoja,Song Lam Nghe An,Stadium
+2026-09-12-ha-noi-fc-v-song-lam-nghe-an,86,goal,Quang Vinh Nguyen,Song Lam Nghe An,Stadium
+2026-09-12-ha-noi-fc-v-song-lam-nghe-an,90,goal,Quang Vinh Nguyen,Song Lam Nghe An,Stadium
+2026-09-12-ha-noi-fc-v-song-lam-nghe-an,90,goal,Van Tung Nguyen,Ha Nội FC,Stadium
+2026-09-12-hebburn-town-v-hednesford,6,goal,Tom Allan,Hebburn Town,The Trustmark Group Stadium
+2026-09-12-hebburn-town-v-hednesford,29,goal,Elliot Forbes,Hebburn Town,The Trustmark Group Stadium
+2026-09-12-hebburn-town-v-hednesford,45,goal,Ahkeem Rose,Hednesford,The Trustmark Group Stadium
+2026-09-12-hebburn-town-v-hednesford,76,red,Sonny Sharples,Hednesford,The Trustmark Group Stadium
+2026-09-12-hitchin-town-v-stourbridge,49,goal,Krystian Pearce,Stourbridge,Top Field
+2026-09-12-hitchin-town-v-stourbridge,89,goal,Taylor Rhiney,Hitchin Town,Top Field
+2026-09-12-horsham-v-chesham-united,28,goal,Alex Lafleur,Chesham United,Fusion Aviation Community Stadium
+2026-09-12-horsham-v-chesham-united,47,goal,Jamie Yila,Horsham,Fusion Aviation Community Stadium
+2026-09-12-horsham-v-chesham-united,54,goal,Jayden Bennetts,Chesham United,Fusion Aviation Community Stadium
+2026-09-12-horsham-v-chesham-united,89,red,Marco Haigh,Horsham,Fusion Aviation Community Stadium
+2026-09-12-horsham-v-chesham-united,90,goal,Hisham Kasimu,Chesham United,Fusion Aviation Community Stadium
+2026-09-12-horsham-v-chesham-united,90,goal,Alex Lafleur,Chesham United,Fusion Aviation Community Stadium
 2026-09-12-ipswich-town-u18-v-southampton-u18,5,goal,Wyatt Comley,Southampton U18,Stadium
 2026-09-12-ipswich-town-u18-v-southampton-u18,28,goal,Wyatt Comley,Southampton U18,Stadium
 2026-09-12-ipswich-town-u18-v-southampton-u18,52,goal,Junior Kuzanga,Southampton U18,Stadium
 2026-09-12-ipswich-town-u18-v-southampton-u18,56,goal,Archie Lovatt,Southampton U18,Stadium
 2026-09-12-ipswich-town-u18-v-southampton-u18,90,goal,Roman Burton-Yurevich,Ipswich Town U18,Stadium
+2026-09-12-kilmarnock-v-aberdeen,,,,,"The BBSP Stadium, Rugby Park"
+2026-09-12-kings-lynn-town-v-chorley,41,goal,Jesse Nwabueze,King's Lynn Town,The Walks
+2026-09-12-kings-lynn-town-v-chorley,62,goal,Reece Hall-Johnson,King's Lynn Town,The Walks
 2026-09-12-leyton-orient-v-wycombe-wanderers,13,goal,Jayden Wareham,Wycombe Wanderers,BetWright Stadium
 2026-09-12-leyton-orient-v-wycombe-wanderers,30,yellow,Daniel Harvie,Wycombe Wanderers,BetWright Stadium
 2026-09-12-leyton-orient-v-wycombe-wanderers,37,own_goal,Jack Grimmer,Leyton Orient,BetWright Stadium
@@ -8762,6 +9305,78 @@ match_id,minute,type,player,team,venue
 2026-09-12-magdeburg-v-kaiserslautern,61,sub_on,Mika Haas,Kaiserslautern,Avnet Arena
 2026-09-12-magdeburg-v-kaiserslautern,61,sub_on,Paul Joly,Kaiserslautern,Avnet Arena
 2026-09-12-magdeburg-v-kaiserslautern,65,yellow,Maxwell Gyamfi,Kaiserslautern,Avnet Arena
+2026-09-12-maldon-tiptree-v-whitehawk,8,goal,Rhys Murphy,Whitehawk,Wallace Binder Stadium
+2026-09-12-maldon-tiptree-v-whitehawk,44,goal,Kai Redgrave,Maldon & Tiptree,Wallace Binder Stadium
+2026-09-12-maldon-tiptree-v-whitehawk,45,goal,Rhys Murphy,Whitehawk,Wallace Binder Stadium
+2026-09-12-maldon-tiptree-v-whitehawk,64,goal,Eze Ebuzoeme,Maldon & Tiptree,Wallace Binder Stadium
+2026-09-12-maldon-tiptree-v-whitehawk,66,goal,Chaynie Burgin,Maldon & Tiptree,Wallace Binder Stadium
+2026-09-12-mansfield-town-v-huddersfield-town,38,sub_off,Ryan Ledson,Huddersfield Town,One Call Stadium
+2026-09-12-mansfield-town-v-huddersfield-town,38,sub_on,Archie Collins,Huddersfield Town,One Call Stadium
+2026-09-12-mansfield-town-v-huddersfield-town,45,yellow,Nathan Moriah-Welsh,Mansfield Town,One Call Stadium
+2026-09-12-mansfield-town-v-huddersfield-town,46,sub_off,Stephen McLaughlin,Mansfield Town,One Call Stadium
+2026-09-12-mansfield-town-v-huddersfield-town,46,sub_on,Owen Dodgson,Mansfield Town,One Call Stadium
+2026-09-12-mansfield-town-v-huddersfield-town,47,red,Owen Dodgson,Mansfield Town,One Call Stadium
+2026-09-12-mansfield-town-v-huddersfield-town,54,sub_off,David McGoldrick,Mansfield Town,One Call Stadium
+2026-09-12-mansfield-town-v-huddersfield-town,54,sub_off,Nathan Moriah-Welsh,Mansfield Town,One Call Stadium
+2026-09-12-mansfield-town-v-huddersfield-town,54,sub_on,Luke Bolton,Mansfield Town,One Call Stadium
+2026-09-12-mansfield-town-v-huddersfield-town,54,sub_on,Lucas Akins,Mansfield Town,One Call Stadium
+2026-09-12-mansfield-town-v-huddersfield-town,61,sub_off,Bojan Radulović,Huddersfield Town,One Call Stadium
+2026-09-12-mansfield-town-v-huddersfield-town,61,sub_off,Ibane Bowat,Huddersfield Town,One Call Stadium
+2026-09-12-mansfield-town-v-huddersfield-town,61,sub_on,Ashley Fletcher,Huddersfield Town,One Call Stadium
+2026-09-12-mansfield-town-v-huddersfield-town,61,sub_on,Bali Mumba,Huddersfield Town,One Call Stadium
+2026-09-12-mansfield-town-v-huddersfield-town,66,sub_off,George Maris,Mansfield Town,One Call Stadium
+2026-09-12-mansfield-town-v-huddersfield-town,66,sub_on,Kyle Knoyle,Mansfield Town,One Call Stadium
+2026-09-12-mansfield-town-v-huddersfield-town,74,sub_off,Elliott Hewitt,Mansfield Town,One Call Stadium
+2026-09-12-mansfield-town-v-huddersfield-town,74,sub_on,Rhys Oates,Mansfield Town,One Call Stadium
+2026-09-12-mansfield-town-v-huddersfield-town,79,sub_off,Marcus Harness,Huddersfield Town,One Call Stadium
+2026-09-12-mansfield-town-v-huddersfield-town,79,sub_on,Jay Smith-Sway,Huddersfield Town,One Call Stadium
+2026-09-12-marine-v-darlington,30,goal,Mark Beck,Darlington,The Marine Travel Arena
+2026-09-12-marine-v-darlington,32,goal,Conor McAleny,Marine,The Marine Travel Arena
+2026-09-12-marine-v-darlington,73,goal,Charlie Jolley,Marine,The Marine Travel Arena
+2026-09-12-mk-dons-v-peterborough,29,goal,Aaron Collins,MK Dons,Stadium MK
+2026-09-12-mk-dons-v-peterborough,51,sub_off,Harrison Jones,Peterborough,Stadium MK
+2026-09-12-mk-dons-v-peterborough,51,sub_off,Evan Weir,Peterborough,Stadium MK
+2026-09-12-mk-dons-v-peterborough,51,sub_off,Ben Woods,Peterborough,Stadium MK
+2026-09-12-mk-dons-v-peterborough,51,sub_on,Harry Ashfield,Peterborough,Stadium MK
+2026-09-12-mk-dons-v-peterborough,51,sub_on,Harley Mills,Peterborough,Stadium MK
+2026-09-12-mk-dons-v-peterborough,51,sub_on,Brandon Khela,Peterborough,Stadium MK
+2026-09-12-mk-dons-v-peterborough,57,sub_off,Boluwatife Shofowoke,Peterborough,Stadium MK
+2026-09-12-mk-dons-v-peterborough,57,sub_on,Danny Ormerod,Peterborough,Stadium MK
+2026-09-12-mk-dons-v-peterborough,61,sub_off,Gethin Jones,MK Dons,Stadium MK
+2026-09-12-mk-dons-v-peterborough,61,sub_on,Marvin Ekpiteta,MK Dons,Stadium MK
+2026-09-12-mk-dons-v-peterborough,73,sub_off,Daniel Crowley,MK Dons,Stadium MK
+2026-09-12-mk-dons-v-peterborough,73,sub_on,Jay Matete,MK Dons,Stadium MK
+2026-09-12-mk-dons-v-peterborough,74,sub_off,Aaron Collins,MK Dons,Stadium MK
+2026-09-12-mk-dons-v-peterborough,74,sub_on,Rushian Hepburn-Murphy,MK Dons,Stadium MK
+2026-09-12-mk-dons-v-peterborough,78,sub_off,Liam Kelly,Peterborough,Stadium MK
+2026-09-12-mk-dons-v-peterborough,78,sub_on,Christopher Conn-Clarke,Peterborough,Stadium MK
+2026-09-12-mk-dons-v-peterborough,80,yellow,Cohen Bramall,MK Dons,Stadium MK
+2026-09-12-mk-dons-v-peterborough,85,goal,Christopher Conn-Clarke,Peterborough,Stadium MK
+2026-09-12-mk-dons-v-peterborough,86,yellow,Alex Gilbey,MK Dons,Stadium MK
+2026-09-12-montrose-v-cove-rangers,10,goal,Blair Lyons,Montrose,Links Park
+2026-09-12-montrose-v-cove-rangers,46,sub_off,Dylan Ross,Cove Rangers,Links Park
+2026-09-12-montrose-v-cove-rangers,46,sub_off,Joseph Teasdale,Cove Rangers,Links Park
+2026-09-12-montrose-v-cove-rangers,46,sub_on,Edimond Oppong,Cove Rangers,Links Park
+2026-09-12-montrose-v-cove-rangers,46,sub_on,Liam Parker,Cove Rangers,Links Park
+2026-09-12-montrose-v-cove-rangers,48,goal,Harry Craig,Montrose,Links Park
+2026-09-12-montrose-v-cove-rangers,63,sub_off,Christopher Maguire,Cove Rangers,Links Park
+2026-09-12-montrose-v-cove-rangers,63,sub_on,Destiny Oladipo,Cove Rangers,Links Park
+2026-09-12-montrose-v-cove-rangers,67,goal,Destiny Oladipo,Cove Rangers,Links Park
+2026-09-12-montrose-v-cove-rangers,71,sub_off,Blair Lyons,Montrose,Links Park
+2026-09-12-montrose-v-cove-rangers,71,sub_off,Jake Sutherland,Montrose,Links Park
+2026-09-12-montrose-v-cove-rangers,71,sub_off,Harry Craig,Montrose,Links Park
+2026-09-12-montrose-v-cove-rangers,71,sub_on,Graham Webster,Montrose,Links Park
+2026-09-12-montrose-v-cove-rangers,71,sub_on,Ewan Loudon,Montrose,Links Park
+2026-09-12-montrose-v-cove-rangers,71,sub_on,Shaun Byrne,Montrose,Links Park
+2026-09-12-montrose-v-cove-rangers,78,sub_off,Flynn Duffy,Montrose,Links Park
+2026-09-12-montrose-v-cove-rangers,78,sub_on,Keir Bertie,Montrose,Links Park
+2026-09-12-montrose-v-cove-rangers,81,sub_off,Max Barry,Cove Rangers,Links Park
+2026-09-12-montrose-v-cove-rangers,81,sub_on,Tristan Stephen,Cove Rangers,Links Park
+2026-09-12-montrose-v-cove-rangers,86,sub_off,Gary Oliver,Montrose,Links Park
+2026-09-12-montrose-v-cove-rangers,86,sub_on,Ryan Williamson,Montrose,Links Park
+2026-09-12-morecambe-v-brackley-town,45,goal,Elliot Newby,Morecambe,Halo Aerospace Stadium
+2026-09-12-morecambe-v-brackley-town,47,own_goal,Josh Tomlinson,Morecambe,Halo Aerospace Stadium
+2026-09-12-morecambe-v-brackley-town,53,goal,William Smith,Morecambe,Halo Aerospace Stadium
 2026-09-12-new-mexico-united-v-indy-eleven,16,goal,Luther Archimède,New Mexico United,Rio Grande Credit Union Field at Isotopes Park
 2026-09-12-new-mexico-united-v-indy-eleven,18,goal,Greg Hurst,New Mexico United,Rio Grande Credit Union Field at Isotopes Park
 2026-09-12-new-mexico-united-v-indy-eleven,45,yellow,Joe Hafferty,Indy Eleven,Rio Grande Credit Union Field at Isotopes Park
@@ -8784,12 +9399,316 @@ match_id,minute,type,player,team,venue
 2026-09-12-new-mexico-united-v-indy-eleven,86,sub_on,Cristian Nava,New Mexico United,Rio Grande Credit Union Field at Isotopes Park
 2026-09-12-new-mexico-united-v-indy-eleven,88,yellow,Ousman Jabang,New Mexico United,Rio Grande Credit Union Field at Isotopes Park
 2026-09-12-new-mexico-united-v-indy-eleven,90,yellow,Kipp Keller,New Mexico United,Rio Grande Credit Union Field at Isotopes Park
+2026-09-12-newport-county-v-fleetwood-town,30,yellow,Mark Helm,Fleetwood Town,Rodney Parade
+2026-09-12-newport-county-v-fleetwood-town,38,goal,Christian Doidge,Newport County,Rodney Parade
+2026-09-12-newport-county-v-fleetwood-town,41,yellow,Finley Potter,Fleetwood Town,Rodney Parade
+2026-09-12-newport-county-v-fleetwood-town,45,yellow,Ched Evans,Fleetwood Town,Rodney Parade
+2026-09-12-newport-county-v-fleetwood-town,54,yellow,Shaun Rooney,Fleetwood Town,Rodney Parade
+2026-09-12-newport-county-v-fleetwood-town,57,sub_off,Mark Helm,Fleetwood Town,Rodney Parade
+2026-09-12-newport-county-v-fleetwood-town,57,sub_off,Raffaele Cirino,Fleetwood Town,Rodney Parade
+2026-09-12-newport-county-v-fleetwood-town,57,sub_on,Crispin McLean,Fleetwood Town,Rodney Parade
+2026-09-12-newport-county-v-fleetwood-town,57,sub_on,Danny Andrew,Fleetwood Town,Rodney Parade
+2026-09-12-newport-county-v-fleetwood-town,63,sub_off,Ched Evans,Fleetwood Town,Rodney Parade
+2026-09-12-newport-county-v-fleetwood-town,63,sub_off,Ronan Coughlan,Fleetwood Town,Rodney Parade
+2026-09-12-newport-county-v-fleetwood-town,63,sub_on,Will Davies,Fleetwood Town,Rodney Parade
+2026-09-12-newport-county-v-fleetwood-town,63,sub_on,Aaron Loupalo-Bi,Fleetwood Town,Rodney Parade
+2026-09-12-newport-county-v-fleetwood-town,68,goal,Aaron Loupalo-Bi,Fleetwood Town,Rodney Parade
+2026-09-12-newport-county-v-fleetwood-town,69,sub_off,Michael Adu-Poku,Newport County,Rodney Parade
+2026-09-12-newport-county-v-fleetwood-town,69,sub_on,Yahya Bamba,Newport County,Rodney Parade
+2026-09-12-newport-county-v-fleetwood-town,70,sub_off,Shaquille Gwengwe,Newport County,Rodney Parade
+2026-09-12-newport-county-v-fleetwood-town,70,sub_on,Kieron Evans,Newport County,Rodney Parade
+2026-09-12-newport-county-v-fleetwood-town,79,sub_off,Adam Murphy,Fleetwood Town,Rodney Parade
+2026-09-12-newport-county-v-fleetwood-town,79,sub_on,Josh Robertson,Fleetwood Town,Rodney Parade
+2026-09-12-newport-county-v-fleetwood-town,82,sub_off,Matty Jacob,Newport County,Rodney Parade
+2026-09-12-newport-county-v-fleetwood-town,82,sub_on,Joe Thomas,Newport County,Rodney Parade
+2026-09-12-newport-county-v-fleetwood-town,89,sub_off,Christian Doidge,Newport County,Rodney Parade
+2026-09-12-newport-county-v-fleetwood-town,89,sub_off,Matt Dibley-Dias,Newport County,Rodney Parade
+2026-09-12-newport-county-v-fleetwood-town,89,sub_on,Tanatswa Nyakuhwa,Newport County,Rodney Parade
+2026-09-12-newport-county-v-fleetwood-town,89,sub_on,Matt Smith,Newport County,Rodney Parade
+2026-09-12-newport-county-v-fleetwood-town,90,yellow,Rhys Bennett,Fleetwood Town,Rodney Parade
 2026-09-12-nottingham-forest-u18-v-middlesbrough-u18,49,goal,Eamonn Tohill,Middlesbrough U18,Stadium
 2026-09-12-notts-county-v-bradford-city,11,yellow,Ibou Touray,Bradford City,Meadow Lane
 2026-09-12-notts-county-v-bradford-city,14,yellow,Antoni Sarcevic,Bradford City,Meadow Lane
 2026-09-12-notts-county-v-bradford-city,39,yellow,Jack Evans,Notts County,Meadow Lane
 2026-09-12-notts-county-v-bradford-city,41,sub_off,Adam Phillips,Bradford City,Meadow Lane
 2026-09-12-notts-county-v-bradford-city,41,sub_on,Kayden Jackson,Bradford City,Meadow Lane
+2026-09-12-oldham-athletic-v-chesterfield,18,goal,Lee Bonis,Chesterfield,Boundary Park
+2026-09-12-oldham-athletic-v-chesterfield,18,missed_penalty,Lee Bonis,Chesterfield,Boundary Park
+2026-09-12-oldham-athletic-v-chesterfield,28,yellow,Oliver Norburn,Oldham Athletic,Boundary Park
+2026-09-12-oldham-athletic-v-chesterfield,30,yellow,Remeao Hutton,Chesterfield,Boundary Park
+2026-09-12-oldham-athletic-v-chesterfield,37,yellow,Kyle McFadzean,Chesterfield,Boundary Park
+2026-09-12-oldham-athletic-v-chesterfield,50,goal,Favour Fawunmi,Oldham Athletic,Boundary Park
+2026-09-12-oldham-athletic-v-chesterfield,52,goal,Dilan Markanday,Chesterfield,Boundary Park
+2026-09-12-oldham-athletic-v-chesterfield,55,yellow,Ryan Delaney,Oldham Athletic,Boundary Park
+2026-09-12-oldham-athletic-v-chesterfield,57,sub_off,Favour Fawunmi,Oldham Athletic,Boundary Park
+2026-09-12-oldham-athletic-v-chesterfield,57,sub_off,Ryan Delaney,Oldham Athletic,Boundary Park
+2026-09-12-oldham-athletic-v-chesterfield,57,sub_on,Noah Chilvers,Oldham Athletic,Boundary Park
+2026-09-12-oldham-athletic-v-chesterfield,57,sub_on,Manny Monthé,Oldham Athletic,Boundary Park
+2026-09-12-oldham-athletic-v-chesterfield,61,sub_off,Ryan Stirk,Chesterfield,Boundary Park
+2026-09-12-oldham-athletic-v-chesterfield,61,sub_on,Tom Naylor,Chesterfield,Boundary Park
+2026-09-12-oldham-athletic-v-chesterfield,66,sub_off,Oliver Norburn,Oldham Athletic,Boundary Park
+2026-09-12-oldham-athletic-v-chesterfield,66,sub_on,Tom Pett,Oldham Athletic,Boundary Park
+2026-09-12-oldham-athletic-v-chesterfield,70,sub_off,Louie Marsh,Chesterfield,Boundary Park
+2026-09-12-oldham-athletic-v-chesterfield,70,sub_on,Liam Mandeville,Chesterfield,Boundary Park
+2026-09-12-oldham-athletic-v-chesterfield,78,sub_off,Calum Kavanagh,Oldham Athletic,Boundary Park
+2026-09-12-oldham-athletic-v-chesterfield,78,sub_off,Kane Drummond,Oldham Athletic,Boundary Park
+2026-09-12-oldham-athletic-v-chesterfield,78,sub_on,Kai Payne,Oldham Athletic,Boundary Park
+2026-09-12-oldham-athletic-v-chesterfield,78,sub_on,Elliott Nevitt,Oldham Athletic,Boundary Park
+2026-09-12-oldham-athletic-v-chesterfield,80,sub_off,Remeao Hutton,Chesterfield,Boundary Park
+2026-09-12-oldham-athletic-v-chesterfield,80,sub_off,George McEachran,Chesterfield,Boundary Park
+2026-09-12-oldham-athletic-v-chesterfield,80,sub_on,Junior Eccleston,Chesterfield,Boundary Park
+2026-09-12-oldham-athletic-v-chesterfield,80,sub_on,Kiano Dyer,Chesterfield,Boundary Park
+2026-09-12-oldham-athletic-v-chesterfield,81,sub_off,Josh Koroma,Chesterfield,Boundary Park
+2026-09-12-oldham-athletic-v-chesterfield,81,sub_on,Joel Randall,Chesterfield,Boundary Park
+2026-09-12-oldham-athletic-v-chesterfield,82,yellow,Junior Eccleston,Chesterfield,Boundary Park
+2026-09-12-oxford-united-v-burton-albion,23,yellow,Joe Lewis,Burton Albion,The Kassam Stadium
+2026-09-12-oxford-united-v-burton-albion,38,yellow,Jamie McDonnell,Oxford United,The Kassam Stadium
+2026-09-12-oxford-united-v-burton-albion,46,sub_off,Jack Armer,Burton Albion,The Kassam Stadium
+2026-09-12-oxford-united-v-burton-albion,46,sub_on,Harvey Araujo,Burton Albion,The Kassam Stadium
+2026-09-12-oxford-united-v-burton-albion,61,sub_off,William Collar,Burton Albion,The Kassam Stadium
+2026-09-12-oxford-united-v-burton-albion,61,sub_off,Brodie Spencer,Oxford United,The Kassam Stadium
+2026-09-12-oxford-united-v-burton-albion,61,sub_off,Jamie McDonnell,Oxford United,The Kassam Stadium
+2026-09-12-oxford-united-v-burton-albion,61,sub_off,Caylan Vickers,Burton Albion,The Kassam Stadium
+2026-09-12-oxford-united-v-burton-albion,61,sub_on,Sulyman Krubally,Burton Albion,The Kassam Stadium
+2026-09-12-oxford-united-v-burton-albion,61,sub_on,Jack Currie,Oxford United,The Kassam Stadium
+2026-09-12-oxford-united-v-burton-albion,61,sub_on,Gatlin O'Donkor,Oxford United,The Kassam Stadium
+2026-09-12-oxford-united-v-burton-albion,61,sub_on,Kain Adom,Burton Albion,The Kassam Stadium
+2026-09-12-oxford-united-v-burton-albion,68,sub_off,Joe Lewis,Burton Albion,The Kassam Stadium
+2026-09-12-oxford-united-v-burton-albion,68,sub_on,Jason Sraha,Burton Albion,The Kassam Stadium
+2026-09-12-oxford-united-v-burton-albion,74,sub_off,Kai Andrews,Oxford United,The Kassam Stadium
+2026-09-12-oxford-united-v-burton-albion,74,sub_on,Tyler Goodrham,Oxford United,The Kassam Stadium
+2026-09-12-oxford-united-v-burton-albion,76,goal,Siriki Dembélé,Oxford United,The Kassam Stadium
+2026-09-12-oxford-united-v-burton-albion,86,sub_off,Mark Harris,Oxford United,The Kassam Stadium
+2026-09-12-oxford-united-v-burton-albion,86,sub_on,Louie Sibley,Oxford United,The Kassam Stadium
+2026-09-12-oxford-united-v-burton-albion,87,sub_off,Mo Missanga,Oxford United,The Kassam Stadium
+2026-09-12-oxford-united-v-burton-albion,87,sub_on,Leo Snowden,Oxford United,The Kassam Stadium
+2026-09-12-oxford-united-v-burton-albion,90,goal,Louie Sibley,Oxford United,The Kassam Stadium
+2026-09-12-oxford-united-v-burton-albion,90,goal,Gatlin O'Donkor,Oxford United,The Kassam Stadium
+2026-09-12-plymouth-v-barnsley,1,goal,Oliver Irow,Plymouth,Home Park
+2026-09-12-plymouth-v-barnsley,9,yellow,Sam Gale,Barnsley,Home Park
+2026-09-12-plymouth-v-barnsley,21,goal,Ronan Curtis,Plymouth,Home Park
+2026-09-12-plymouth-v-barnsley,46,sub_off,Jonathan Bland,Barnsley,Home Park
+2026-09-12-plymouth-v-barnsley,46,sub_off,Reyes Cleary,Barnsley,Home Park
+2026-09-12-plymouth-v-barnsley,46,sub_off,Makenzie Kirk,Barnsley,Home Park
+2026-09-12-plymouth-v-barnsley,46,sub_on,Luca Connell,Barnsley,Home Park
+2026-09-12-plymouth-v-barnsley,46,sub_on,Amani Richards,Barnsley,Home Park
+2026-09-12-plymouth-v-barnsley,46,sub_on,Ben Touré,Barnsley,Home Park
+2026-09-12-plymouth-v-barnsley,50,goal,Aribim Pepple,Plymouth,Home Park
+2026-09-12-plymouth-v-barnsley,63,sub_off,Ronan Curtis,Plymouth,Home Park
+2026-09-12-plymouth-v-barnsley,63,sub_off,Alexander Mitchell,Plymouth,Home Park
+2026-09-12-plymouth-v-barnsley,63,sub_on,Owen Oseni,Plymouth,Home Park
+2026-09-12-plymouth-v-barnsley,63,sub_on,Mathias Ross,Plymouth,Home Park
+2026-09-12-plymouth-v-barnsley,70,sub_off,Luke Alker,Barnsley,Home Park
+2026-09-12-plymouth-v-barnsley,70,sub_on,Clayton Taylor,Barnsley,Home Park
+2026-09-12-plymouth-v-barnsley,73,sub_off,Matthew Sorinola,Plymouth,Home Park
+2026-09-12-plymouth-v-barnsley,73,sub_on,Joe Edwards,Plymouth,Home Park
+2026-09-12-plymouth-v-barnsley,74,sub_off,Tyreeq Bakinson,Plymouth,Home Park
+2026-09-12-plymouth-v-barnsley,74,sub_on,Bradley Ibrahim,Plymouth,Home Park
+2026-09-12-plymouth-v-barnsley,76,yellow,Mathias Ross,Plymouth,Home Park
+2026-09-12-plymouth-v-barnsley,80,sub_off,Oliver Irow,Plymouth,Home Park
+2026-09-12-plymouth-v-barnsley,80,sub_on,Caleb Watts,Plymouth,Home Park
+2026-09-12-plymouth-v-barnsley,80,yellow,Will Evans,Plymouth,Home Park
+2026-09-12-plymouth-v-barnsley,90,yellow,Tyrese Noslin,Barnsley,Home Park
+2026-09-12-port-vale-v-exeter-city,57,yellow,Jake Doyle-Hayes,Exeter City,Vale Park
+2026-09-12-port-vale-v-exeter-city,63,sub_off,Gwion Edwards,Exeter City,Vale Park
+2026-09-12-port-vale-v-exeter-city,63,sub_on,Jack Taylor,Exeter City,Vale Park
+2026-09-12-port-vale-v-exeter-city,70,goal,George Byers,Port Vale,Vale Park
+2026-09-12-port-vale-v-exeter-city,71,sub_off,Danny Rose,Exeter City,Vale Park
+2026-09-12-port-vale-v-exeter-city,71,sub_off,Jake Doyle-Hayes,Exeter City,Vale Park
+2026-09-12-port-vale-v-exeter-city,71,sub_on,George Birch,Exeter City,Vale Park
+2026-09-12-port-vale-v-exeter-city,71,sub_on,Taylor Perry,Exeter City,Vale Park
+2026-09-12-port-vale-v-exeter-city,73,yellow,Jordan Gabriel,Port Vale,Vale Park
+2026-09-12-port-vale-v-exeter-city,76,sub_off,Ben Waine,Port Vale,Vale Park
+2026-09-12-port-vale-v-exeter-city,76,sub_on,George Hall,Port Vale,Vale Park
+2026-09-12-port-vale-v-exeter-city,77,yellow,George Byers,Port Vale,Vale Park
+2026-09-12-port-vale-v-exeter-city,79,sub_off,Edward James,Exeter City,Vale Park
+2026-09-12-port-vale-v-exeter-city,79,sub_off,Vincent Harper,Exeter City,Vale Park
+2026-09-12-port-vale-v-exeter-city,79,sub_on,Lakyle Samuel,Exeter City,Vale Park
+2026-09-12-port-vale-v-exeter-city,79,sub_on,Ethan Sutherland,Exeter City,Vale Park
+2026-09-12-port-vale-v-exeter-city,86,sub_off,Oliver Lynch,Port Vale,Vale Park
+2026-09-12-port-vale-v-exeter-city,86,sub_off,Lewis Montsma,Port Vale,Vale Park
+2026-09-12-port-vale-v-exeter-city,86,sub_off,George Byers,Port Vale,Vale Park
+2026-09-12-port-vale-v-exeter-city,86,sub_on,Tyreece Simpson,Port Vale,Vale Park
+2026-09-12-port-vale-v-exeter-city,86,sub_on,Cameron Humphreys,Port Vale,Vale Park
+2026-09-12-port-vale-v-exeter-city,86,sub_on,Onel Hernández,Port Vale,Vale Park
+2026-09-12-port-vale-v-exeter-city,90,yellow,Taylor Perry,Exeter City,Vale Park
+2026-09-12-port-vale-v-exeter-city,90,yellow,Ben Garrity,Port Vale,Vale Park
+2026-09-12-portadown-v-larne,7,goal,Tomas Cosgrove,Larne,Shamrock Park
+2026-09-12-portadown-v-larne,28,red,Kevin O'Hara,Larne,Shamrock Park
+2026-09-12-portadown-v-larne,57,goal,Sean Graham,Larne,Shamrock Park
+2026-09-12-preston-north-end-v-lincoln-city,54,yellow,Harry Clarke,Preston North End,Deepdale
+2026-09-12-preston-north-end-v-lincoln-city,58,sub_off,Tom Bayliss,Lincoln City,Deepdale
+2026-09-12-preston-north-end-v-lincoln-city,58,sub_on,Ivan Varfolomeev,Lincoln City,Deepdale
+2026-09-12-preston-north-end-v-lincoln-city,59,sub_off,Robert Street,Lincoln City,Deepdale
+2026-09-12-preston-north-end-v-lincoln-city,59,sub_on,Freddie Draper,Lincoln City,Deepdale
+2026-09-12-preston-north-end-v-lincoln-city,64,sub_off,Liam Gibbs,Preston North End,Deepdale
+2026-09-12-preston-north-end-v-lincoln-city,64,sub_off,Johnny Kenny,Preston North End,Deepdale
+2026-09-12-preston-north-end-v-lincoln-city,64,sub_off,Callum Lang,Preston North End,Deepdale
+2026-09-12-preston-north-end-v-lincoln-city,64,sub_on,Léo Leroy,Preston North End,Deepdale
+2026-09-12-preston-north-end-v-lincoln-city,64,sub_on,Delano Burgzorg,Preston North End,Deepdale
+2026-09-12-preston-north-end-v-lincoln-city,64,sub_on,Jusef Erabi,Preston North End,Deepdale
+2026-09-12-preston-north-end-v-lincoln-city,68,sub_off,Daniel Oyegoke,Lincoln City,Deepdale
+2026-09-12-preston-north-end-v-lincoln-city,68,sub_off,Reeco Hackett,Lincoln City,Deepdale
+2026-09-12-preston-north-end-v-lincoln-city,68,sub_on,Dom Jefferies,Lincoln City,Deepdale
+2026-09-12-preston-north-end-v-lincoln-city,68,sub_on,Chiedozie Ogbene,Lincoln City,Deepdale
+2026-09-12-preston-north-end-v-lincoln-city,72,sub_off,Andrija Vukčević,Preston North End,Deepdale
+2026-09-12-preston-north-end-v-lincoln-city,72,sub_on,Thierry Small,Preston North End,Deepdale
+2026-09-12-preston-north-end-v-lincoln-city,78,sub_off,Stanley Mills,Preston North End,Deepdale
+2026-09-12-preston-north-end-v-lincoln-city,78,sub_on,Andrew Hughes,Preston North End,Deepdale
+2026-09-12-preston-north-end-v-lincoln-city,81,goal,Freddie Draper,Lincoln City,Deepdale
+2026-09-12-preston-north-end-v-lincoln-city,86,yellow,Dom Jefferies,Lincoln City,Deepdale
+2026-09-12-preston-north-end-v-lincoln-city,88,sub_off,Adam Reach,Lincoln City,Deepdale
+2026-09-12-preston-north-end-v-lincoln-city,88,sub_on,Ryley Towler,Lincoln City,Deepdale
+2026-09-12-raith-rovers-v-arbroath,8,goal,George Oakley,Raith Rovers,Stark's Park
+2026-09-12-raith-rovers-v-arbroath,15,goal,George Oakley,Raith Rovers,Stark's Park
+2026-09-12-raith-rovers-v-arbroath,21,sub_off,Craig Watson,Arbroath,Stark's Park
+2026-09-12-raith-rovers-v-arbroath,21,sub_on,Andy Winter,Arbroath,Stark's Park
+2026-09-12-raith-rovers-v-arbroath,26,red,Charlie Dewar,Arbroath,Stark's Park
+2026-09-12-raith-rovers-v-arbroath,27,goal,Jai Rowe,Raith Rovers,Stark's Park
+2026-09-12-raith-rovers-v-arbroath,45,yellow,Jack Baird,Raith Rovers,Stark's Park
+2026-09-12-raith-rovers-v-arbroath,47,yellow,Kai Montagu,Raith Rovers,Stark's Park
+2026-09-12-raith-rovers-v-arbroath,59,sub_off,George Oakley,Raith Rovers,Stark's Park
+2026-09-12-raith-rovers-v-arbroath,59,sub_off,Kai Montagu,Raith Rovers,Stark's Park
+2026-09-12-raith-rovers-v-arbroath,59,sub_on,Dylan Easton,Raith Rovers,Stark's Park
+2026-09-12-raith-rovers-v-arbroath,59,sub_on,Scott Brown,Raith Rovers,Stark's Park
+2026-09-12-raith-rovers-v-arbroath,63,goal,Dylan Easton,Raith Rovers,Stark's Park
+2026-09-12-raith-rovers-v-arbroath,65,sub_off,Rudi Allan Molotnikov,Arbroath,Stark's Park
+2026-09-12-raith-rovers-v-arbroath,65,sub_on,Michael McKenna,Arbroath,Stark's Park
+2026-09-12-raith-rovers-v-arbroath,69,sub_off,John Robertson,Raith Rovers,Stark's Park
+2026-09-12-raith-rovers-v-arbroath,69,sub_off,Jack Baird,Raith Rovers,Stark's Park
+2026-09-12-raith-rovers-v-arbroath,69,sub_on,Arron Lyall,Raith Rovers,Stark's Park
+2026-09-12-raith-rovers-v-arbroath,69,sub_on,Callum Fordyce,Raith Rovers,Stark's Park
+2026-09-12-raith-rovers-v-arbroath,77,sub_off,Ryan Dow,Arbroath,Stark's Park
+2026-09-12-raith-rovers-v-arbroath,77,sub_off,Jude Bonnar,Arbroath,Stark's Park
+2026-09-12-raith-rovers-v-arbroath,77,sub_on,Brody Paterson,Arbroath,Stark's Park
+2026-09-12-raith-rovers-v-arbroath,77,sub_on,Scott McGill,Arbroath,Stark's Park
+2026-09-12-ross-county-v-hamilton-academical,,,,,Global Energy Stadium
+2026-09-12-ross-county-v-hibernian,7,goal,Thibault Klidje,Hibernian,Global Energy Stadium
+2026-09-12-ross-county-v-hibernian,16,goal,Adam Mayor,Hibernian,Global Energy Stadium
+2026-09-12-ross-county-v-hibernian,39,goal,Ante Šuto,Hibernian,Global Energy Stadium
+2026-09-12-ross-county-v-hibernian,46,sub_off,Dylan Smith,Ross County,Global Energy Stadium
+2026-09-12-ross-county-v-hibernian,46,sub_off,Luke McCarvel,Ross County,Global Energy Stadium
+2026-09-12-ross-county-v-hibernian,46,sub_on,Adam Forrester,Ross County,Global Energy Stadium
+2026-09-12-ross-county-v-hibernian,46,sub_on,Kieran Phillips,Ross County,Global Energy Stadium
+2026-09-12-ross-county-v-hibernian,51,yellow,Joe Newell,Hibernian,Global Energy Stadium
+2026-09-12-ross-county-v-hibernian,58,sub_off,Joe Newell,Hibernian,Global Energy Stadium
+2026-09-12-ross-county-v-hibernian,58,sub_on,Jacob Devaney,Hibernian,Global Energy Stadium
+2026-09-12-ross-county-v-hibernian,60,sub_off,Adam Emslie,Ross County,Global Energy Stadium
+2026-09-12-ross-county-v-hibernian,60,sub_off,Jack Turner,Ross County,Global Energy Stadium
+2026-09-12-ross-county-v-hibernian,60,sub_on,Ricco Diack,Ross County,Global Energy Stadium
+2026-09-12-ross-county-v-hibernian,60,sub_on,Chris Hamilton,Ross County,Global Energy Stadium
+2026-09-12-ross-county-v-hibernian,61,yellow,Ricco Diack,Ross County,Global Energy Stadium
+2026-09-12-ross-county-v-hibernian,65,yellow,Jacob Devaney,Hibernian,Global Energy Stadium
+2026-09-12-ross-county-v-hibernian,69,sub_off,Thibault Klidje,Hibernian,Global Energy Stadium
+2026-09-12-ross-county-v-hibernian,69,sub_off,Callum Wright,Hibernian,Global Energy Stadium
+2026-09-12-ross-county-v-hibernian,69,sub_on,Nathan Lowe,Hibernian,Global Energy Stadium
+2026-09-12-ross-county-v-hibernian,69,sub_on,Miguel Chaiwa,Hibernian,Global Energy Stadium
+2026-09-12-ross-county-v-hibernian,71,sub_off,Brian Graham,Ross County,Global Energy Stadium
+2026-09-12-ross-county-v-hibernian,71,sub_on,Ross Docherty,Ross County,Global Energy Stadium
+2026-09-12-ross-county-v-hibernian,79,sub_off,Felix Passlack,Hibernian,Global Energy Stadium
+2026-09-12-ross-county-v-hibernian,79,sub_off,Adam Mayor,Hibernian,Global Energy Stadium
+2026-09-12-ross-county-v-hibernian,79,sub_on,Nicky Cadden,Hibernian,Global Energy Stadium
+2026-09-12-ross-county-v-hibernian,79,sub_on,Alex Williams,Hibernian,Global Energy Stadium
+2026-09-12-ross-county-v-hibernian,83,yellow,Chris Hamilton,Ross County,Global Energy Stadium
+2026-09-12-ross-county-v-hibernian,86,yellow,Nathan Lowe,Hibernian,Global Energy Stadium
+2026-09-12-rotherham-v-salford,9,goal,Ryan Graydon,Salford,AESSEAL New York Stadium
+2026-09-12-rotherham-v-salford,26,yellow,Denzel Hall,Rotherham,AESSEAL New York Stadium
+2026-09-12-rotherham-v-salford,31,goal,Joe Powell,Salford,AESSEAL New York Stadium
+2026-09-12-rotherham-v-salford,33,goal,Brandon Cover,Rotherham,AESSEAL New York Stadium
+2026-09-12-rotherham-v-salford,35,goal,Paul Mullin,Rotherham,AESSEAL New York Stadium
+2026-09-12-rotherham-v-salford,44,yellow,Kallum Cesay,Salford,AESSEAL New York Stadium
+2026-09-12-rotherham-v-salford,55,goal,Ossama Ashley,Rotherham,AESSEAL New York Stadium
+2026-09-12-rotherham-v-salford,55,yellow,Abraham Odoh,Salford,AESSEAL New York Stadium
+2026-09-12-rotherham-v-salford,59,sub_off,Ryan Graydon,Salford,AESSEAL New York Stadium
+2026-09-12-rotherham-v-salford,59,sub_off,Fábio Tavares,Rotherham,AESSEAL New York Stadium
+2026-09-12-rotherham-v-salford,59,sub_on,Kelly N'Mai,Salford,AESSEAL New York Stadium
+2026-09-12-rotherham-v-salford,59,sub_on,George Sebine,Rotherham,AESSEAL New York Stadium
+2026-09-12-rotherham-v-salford,64,yellow,Josh Austerfield,Rotherham,AESSEAL New York Stadium
+2026-09-12-rotherham-v-salford,66,sub_off,Paul Mullin,Rotherham,AESSEAL New York Stadium
+2026-09-12-rotherham-v-salford,66,sub_off,Aaron Nemane,Rotherham,AESSEAL New York Stadium
+2026-09-12-rotherham-v-salford,66,sub_on,Tom Bradshaw,Rotherham,AESSEAL New York Stadium
+2026-09-12-rotherham-v-salford,66,sub_on,Jili Buyabu,Rotherham,AESSEAL New York Stadium
+2026-09-12-rotherham-v-salford,69,second_yellow,Abraham Odoh,Salford,AESSEAL New York Stadium
+2026-09-12-rotherham-v-salford,73,yellow,Jili Buyabu,Rotherham,AESSEAL New York Stadium
+2026-09-12-rotherham-v-salford,74,goal,Macaulay Langstaff,Salford,AESSEAL New York Stadium
+2026-09-12-rotherham-v-salford,78,sub_off,Joe Powell,Salford,AESSEAL New York Stadium
+2026-09-12-rotherham-v-salford,78,sub_off,Brendan Sarpong-Wiredu,Salford,AESSEAL New York Stadium
+2026-09-12-rotherham-v-salford,78,sub_on,Jorge Grant,Salford,AESSEAL New York Stadium
+2026-09-12-rotherham-v-salford,78,sub_on,Elliot Bonds,Salford,AESSEAL New York Stadium
+2026-09-12-rotherham-v-salford,79,sub_off,Ossama Ashley,Rotherham,AESSEAL New York Stadium
+2026-09-12-rotherham-v-salford,79,sub_off,Kieran Ngwenya,Rotherham,AESSEAL New York Stadium
+2026-09-12-rotherham-v-salford,79,sub_on,Jayce Fitzgerald,Rotherham,AESSEAL New York Stadium
+2026-09-12-rotherham-v-salford,79,sub_on,Emmanuel Adegboyega,Rotherham,AESSEAL New York Stadium
+2026-09-12-rotherham-v-salford,88,sub_off,Kallum Cesay,Salford,AESSEAL New York Stadium
+2026-09-12-rotherham-v-salford,88,sub_off,Luke Molyneux,Salford,AESSEAL New York Stadium
+2026-09-12-rotherham-v-salford,88,sub_on,Oliver Turton,Salford,AESSEAL New York Stadium
+2026-09-12-rotherham-v-salford,88,sub_on,Dan Scarr,Salford,AESSEAL New York Stadium
+2026-09-12-scarborough-athletic-v-merthyr-town,,,,,Scarborough Sports Village
+2026-09-12-sheffield-wednesday-v-wigan-athletic,50,yellow,Reggie Walsh,Wigan Athletic,Hillsborough
+2026-09-12-sheffield-wednesday-v-wigan-athletic,53,yellow,Liam Cooper,Sheffield Wednesday,Hillsborough
+2026-09-12-sheffield-wednesday-v-wigan-athletic,62,sub_off,Callum Slattery,Sheffield Wednesday,Hillsborough
+2026-09-12-sheffield-wednesday-v-wigan-athletic,62,sub_off,Yan Valery,Sheffield Wednesday,Hillsborough
+2026-09-12-sheffield-wednesday-v-wigan-athletic,62,sub_off,Mason Burstow,Sheffield Wednesday,Hillsborough
+2026-09-12-sheffield-wednesday-v-wigan-athletic,62,sub_on,Davis Keillor-Dunn,Sheffield Wednesday,Hillsborough
+2026-09-12-sheffield-wednesday-v-wigan-athletic,62,sub_on,Liam Palmer,Sheffield Wednesday,Hillsborough
+2026-09-12-sheffield-wednesday-v-wigan-athletic,62,sub_on,Ali Al Hamadi,Sheffield Wednesday,Hillsborough
+2026-09-12-sheffield-wednesday-v-wigan-athletic,70,sub_off,Reggie Walsh,Wigan Athletic,Hillsborough
+2026-09-12-sheffield-wednesday-v-wigan-athletic,70,sub_off,Sonny Perkins,Wigan Athletic,Hillsborough
+2026-09-12-sheffield-wednesday-v-wigan-athletic,70,sub_on,Dara Costelloe,Wigan Athletic,Hillsborough
+2026-09-12-sheffield-wednesday-v-wigan-athletic,70,sub_on,Scott Hogan,Wigan Athletic,Hillsborough
+2026-09-12-sheffield-wednesday-v-wigan-athletic,74,sub_off,Ricardo Santos,Sheffield Wednesday,Hillsborough
+2026-09-12-sheffield-wednesday-v-wigan-athletic,74,sub_on,Gabriel Otegbayo,Sheffield Wednesday,Hillsborough
+2026-09-12-sheffield-wednesday-v-wigan-athletic,78,sub_off,Jamal Lowe,Sheffield Wednesday,Hillsborough
+2026-09-12-sheffield-wednesday-v-wigan-athletic,78,sub_on,Harry Gray,Sheffield Wednesday,Hillsborough
+2026-09-12-sheffield-wednesday-v-wigan-athletic,84,sub_off,Fraser Murray,Wigan Athletic,Hillsborough
+2026-09-12-sheffield-wednesday-v-wigan-athletic,84,sub_on,Connor Barrett,Wigan Athletic,Hillsborough
+2026-09-12-sheffield-wednesday-v-wigan-athletic,88,sub_off,Charlie Gray,Wigan Athletic,Hillsborough
+2026-09-12-sheffield-wednesday-v-wigan-athletic,88,sub_on,Archie Harris,Wigan Athletic,Hillsborough
+2026-09-12-sheffield-wednesday-v-wigan-athletic,90,yellow,Harry Gray,Sheffield Wednesday,Hillsborough
+2026-09-12-sheffield-wednesday-v-wigan-athletic,90,yellow,Connor Barrett,Wigan Athletic,Hillsborough
+2026-09-12-sheffield-wednesday-v-wigan-athletic,90,yellow,Dara Costelloe,Wigan Athletic,Hillsborough
+2026-09-12-shrewsbury-town-v-northampton-town,8,goal,Kian McMahon-Brown,Shrewsbury Town,The Croud Meadow
+2026-09-12-shrewsbury-town-v-northampton-town,45,goal,Kevin Berkoe,Shrewsbury Town,The Croud Meadow
+2026-09-12-shrewsbury-town-v-northampton-town,46,sub_off,Logan Briggs,Northampton Town,The Croud Meadow
+2026-09-12-shrewsbury-town-v-northampton-town,46,sub_on,Owen Dale,Northampton Town,The Croud Meadow
+2026-09-12-shrewsbury-town-v-northampton-town,57,yellow,Kian McMahon-Brown,Shrewsbury Town,The Croud Meadow
+2026-09-12-shrewsbury-town-v-northampton-town,68,sub_off,Sam Hoskins,Northampton Town,The Croud Meadow
+2026-09-12-shrewsbury-town-v-northampton-town,68,sub_off,Nathaniel Opoku,Northampton Town,The Croud Meadow
+2026-09-12-shrewsbury-town-v-northampton-town,68,sub_on,Sam Chambers,Northampton Town,The Croud Meadow
+2026-09-12-shrewsbury-town-v-northampton-town,68,sub_on,Matthew Warhurst,Northampton Town,The Croud Meadow
+2026-09-12-shrewsbury-town-v-northampton-town,69,sub_off,Harvey Saunders,Northampton Town,The Croud Meadow
+2026-09-12-shrewsbury-town-v-northampton-town,69,sub_on,Kamarai Simon-Swyer,Northampton Town,The Croud Meadow
+2026-09-12-shrewsbury-town-v-northampton-town,74,sub_off,Jay Turner-Cooke,Shrewsbury Town,The Croud Meadow
+2026-09-12-shrewsbury-town-v-northampton-town,74,sub_on,Will Gray,Shrewsbury Town,The Croud Meadow
+2026-09-12-shrewsbury-town-v-northampton-town,81,yellow,Sam Chambers,Northampton Town,The Croud Meadow
+2026-09-12-shrewsbury-town-v-northampton-town,85,sub_off,Kevin Berkoe,Shrewsbury Town,The Croud Meadow
+2026-09-12-shrewsbury-town-v-northampton-town,85,sub_on,Lino Sousa,Shrewsbury Town,The Croud Meadow
+2026-09-12-shrewsbury-town-v-northampton-town,88,sub_off,Josh Davison,Shrewsbury Town,The Croud Meadow
+2026-09-12-shrewsbury-town-v-northampton-town,88,sub_on,Michael Golding,Shrewsbury Town,The Croud Meadow
+2026-09-12-shrewsbury-town-v-northampton-town,89,sub_off,Kian McMahon-Brown,Shrewsbury Town,The Croud Meadow
+2026-09-12-shrewsbury-town-v-northampton-town,89,sub_on,Isaac Fletcher,Shrewsbury Town,The Croud Meadow
+2026-09-12-solihull-moors-v-aldershot-town,13,yellow,Tyrese Dyce,Aldershot Town,Damson Park
+2026-09-12-solihull-moors-v-aldershot-town,23,missed_penalty,Ben Wodskou,Solihull Moors,Damson Park
+2026-09-12-solihull-moors-v-aldershot-town,32,yellow,Michael Stickland,Aldershot Town,Damson Park
+2026-09-12-solihull-moors-v-aldershot-town,34,yellow,Tristan Abrahams,Aldershot Town,Damson Park
+2026-09-12-solihull-moors-v-aldershot-town,44,goal,Ben Wodskou,Solihull Moors,Damson Park
+2026-09-12-solihull-moors-v-aldershot-town,46,sub_off,Marcus Wyllie,Aldershot Town,Damson Park
+2026-09-12-solihull-moors-v-aldershot-town,46,sub_off,Tyrese Dyce,Aldershot Town,Damson Park
+2026-09-12-solihull-moors-v-aldershot-town,46,sub_off,Tristan Abrahams,Aldershot Town,Damson Park
+2026-09-12-solihull-moors-v-aldershot-town,46,sub_on,Elijah Oladunjoye,Aldershot Town,Damson Park
+2026-09-12-solihull-moors-v-aldershot-town,46,sub_on,Alfonso Tenconi,Aldershot Town,Damson Park
+2026-09-12-solihull-moors-v-aldershot-town,46,sub_on,Marcus Dinanga,Aldershot Town,Damson Park
+2026-09-12-solihull-moors-v-aldershot-town,56,sub_off,Ben Wodskou,Solihull Moors,Damson Park
+2026-09-12-solihull-moors-v-aldershot-town,56,sub_on,Callum McFarlane,Solihull Moors,Damson Park
+2026-09-12-solihull-moors-v-aldershot-town,63,yellow,Basil Tuma,Aldershot Town,Damson Park
+2026-09-12-solihull-moors-v-aldershot-town,65,yellow,Jamie Andrews,Solihull Moors,Damson Park
+2026-09-12-solihull-moors-v-aldershot-town,71,sub_off,Conor Lawless,Aldershot Town,Damson Park
+2026-09-12-solihull-moors-v-aldershot-town,71,sub_on,Brody Peart,Aldershot Town,Damson Park
+2026-09-12-solihull-moors-v-aldershot-town,72,goal,Brody Peart,Aldershot Town,Damson Park
+2026-09-12-solihull-moors-v-aldershot-town,72,sub_off,Hakeem Sandah,Aldershot Town,Damson Park
+2026-09-12-solihull-moors-v-aldershot-town,72,sub_on,Jordan Alves,Aldershot Town,Damson Park
+2026-09-12-solihull-moors-v-aldershot-town,77,yellow,Tyrell Warren,Solihull Moors,Damson Park
+2026-09-12-solihull-moors-v-aldershot-town,90,goal,Jordan Alves,Aldershot Town,Damson Park
 2026-09-12-southampton-u21-v-bournemouth-u21,11,goal,Sufianu Sillah Dibaga,Southampton U21,Staplewood Training Ground
 2026-09-12-southampton-u21-v-bournemouth-u21,16,goal,Romeo Akachukwu,Southampton U21,Staplewood Training Ground
 2026-09-12-southampton-u21-v-bournemouth-u21,25,goal,Ethan Sills,Bournemouth U21,Staplewood Training Ground
@@ -8804,6 +9723,191 @@ match_id,minute,type,player,team,venue
 2026-09-12-southampton-u21-v-bournemouth-u21,64,sub_off,Dane Ndimukum,Bournemouth U21,Staplewood Training Ground
 2026-09-12-southampton-u21-v-bournemouth-u21,64,sub_on,Adrian Oluwande,Bournemouth U21,Staplewood Training Ground
 2026-09-12-southampton-u21-v-bournemouth-u21,64,sub_on,Nefeye Osazee,Bournemouth U21,Staplewood Training Ground
+2026-09-12-southampton-v-bristol-city,38,goal,Cyle Larin,Southampton,St. Mary's Stadium
+2026-09-12-southampton-v-bristol-city,46,sub_off,Flynn Downes,Southampton,St. Mary's Stadium
+2026-09-12-southampton-v-bristol-city,46,sub_on,Cameron Bragg,Southampton,St. Mary's Stadium
+2026-09-12-southampton-v-bristol-city,54,yellow,Lisav Naif Eissat,Bristol City,St. Mary's Stadium
+2026-09-12-southampton-v-bristol-city,58,sub_off,Dominic Ballard,Bristol City,St. Mary's Stadium
+2026-09-12-southampton-v-bristol-city,58,sub_off,Yu Hirakawa,Bristol City,St. Mary's Stadium
+2026-09-12-southampton-v-bristol-city,58,sub_on,Sam Greenwood,Bristol City,St. Mary's Stadium
+2026-09-12-southampton-v-bristol-city,58,sub_on,Jed Wallace,Bristol City,St. Mary's Stadium
+2026-09-12-southampton-v-bristol-city,61,goal,Cyle Larin,Southampton,St. Mary's Stadium
+2026-09-12-southampton-v-bristol-city,66,goal,Lorent Tolaj,Bristol City,St. Mary's Stadium
+2026-09-12-southampton-v-bristol-city,69,sub_off,Léo Scienza,Southampton,St. Mary's Stadium
+2026-09-12-southampton-v-bristol-city,69,sub_on,Tom Fellows,Southampton,St. Mary's Stadium
+2026-09-12-southampton-v-bristol-city,77,sub_off,George Tanner,Bristol City,St. Mary's Stadium
+2026-09-12-southampton-v-bristol-city,77,sub_on,Tomi Horvat,Bristol City,St. Mary's Stadium
+2026-09-12-southampton-v-bristol-city,78,sub_off,Rio Cardines,Bristol City,St. Mary's Stadium
+2026-09-12-southampton-v-bristol-city,78,sub_off,Cyle Larin,Southampton,St. Mary's Stadium
+2026-09-12-southampton-v-bristol-city,78,sub_on,Cameron Pring,Bristol City,St. Mary's Stadium
+2026-09-12-southampton-v-bristol-city,78,sub_on,Divin Mubama,Southampton,St. Mary's Stadium
+2026-09-12-southampton-v-bristol-city,82,goal,Kuryu Matsuki,Southampton,St. Mary's Stadium
+2026-09-12-southampton-v-bristol-city,83,sub_off,Lorent Tolaj,Bristol City,St. Mary's Stadium
+2026-09-12-southampton-v-bristol-city,83,sub_on,Elijah Adebayo,Bristol City,St. Mary's Stadium
+2026-09-12-southampton-v-bristol-city,85,goal,Finn Azaz,Southampton,St. Mary's Stadium
+2026-09-12-southampton-v-bristol-city,88,sub_off,Ryan Manning,Southampton,St. Mary's Stadium
+2026-09-12-southampton-v-bristol-city,88,sub_off,Finn Azaz,Southampton,St. Mary's Stadium
+2026-09-12-southampton-v-bristol-city,88,sub_on,Welington,Southampton,St. Mary's Stadium
+2026-09-12-southampton-v-bristol-city,88,sub_on,Lewis Dobbin,Southampton,St. Mary's Stadium
+2026-09-12-southampton-v-bristol-city,89,yellow,Sam Greenwood,Bristol City,St. Mary's Stadium
+2026-09-12-spalding-united-v-bedford-town,15,goal,Josh Castiglione,Bedford Town,Sir Halley Stewart Field
+2026-09-12-spalding-united-v-bedford-town,43,goal,Bartosz Cybulski,Spalding United,Sir Halley Stewart Field
+2026-09-12-spalding-united-v-bedford-town,49,goal,Bartosz Cybulski,Spalding United,Sir Halley Stewart Field
+2026-09-12-spartans-fc-v-forfar-athletic,6,goal,Mark Stowe,Spartans FC,The Vanloq Community Stadium
+2026-09-12-spartans-fc-v-forfar-athletic,36,yellow,Jordan Tapping,Spartans FC,The Vanloq Community Stadium
+2026-09-12-spartans-fc-v-forfar-athletic,41,goal,Cameron Russell,Spartans FC,The Vanloq Community Stadium
+2026-09-12-spartans-fc-v-forfar-athletic,43,goal,Mark Stowe,Spartans FC,The Vanloq Community Stadium
+2026-09-12-spartans-fc-v-forfar-athletic,46,sub_off,Adam Brown,Forfar Athletic,The Vanloq Community Stadium
+2026-09-12-spartans-fc-v-forfar-athletic,46,sub_off,Rocco Hickey-Fugaccia,Forfar Athletic,The Vanloq Community Stadium
+2026-09-12-spartans-fc-v-forfar-athletic,46,sub_on,Scott Shepherd,Forfar Athletic,The Vanloq Community Stadium
+2026-09-12-spartans-fc-v-forfar-athletic,46,sub_on,Luca Perrie,Forfar Athletic,The Vanloq Community Stadium
+2026-09-12-spartans-fc-v-forfar-athletic,60,yellow,Bradley Whyte,Spartans FC,The Vanloq Community Stadium
+2026-09-12-spartans-fc-v-forfar-athletic,62,yellow,Matthew Mudie,Spartans FC,The Vanloq Community Stadium
+2026-09-12-spartans-fc-v-forfar-athletic,63,sub_off,Jake Dolzanski,Forfar Athletic,The Vanloq Community Stadium
+2026-09-12-spartans-fc-v-forfar-athletic,63,sub_off,Martin Rennie,Forfar Athletic,The Vanloq Community Stadium
+2026-09-12-spartans-fc-v-forfar-athletic,63,sub_on,Blair Alston,Forfar Athletic,The Vanloq Community Stadium
+2026-09-12-spartans-fc-v-forfar-athletic,63,sub_on,Callum Wilson,Forfar Athletic,The Vanloq Community Stadium
+2026-09-12-spartans-fc-v-forfar-athletic,67,sub_off,Matthew Mudie,Spartans FC,The Vanloq Community Stadium
+2026-09-12-spartans-fc-v-forfar-athletic,67,sub_off,Bradley Whyte,Spartans FC,The Vanloq Community Stadium
+2026-09-12-spartans-fc-v-forfar-athletic,67,sub_on,Jamie Dishington,Spartans FC,The Vanloq Community Stadium
+2026-09-12-spartans-fc-v-forfar-athletic,67,sub_on,Brogan Walls,Spartans FC,The Vanloq Community Stadium
+2026-09-12-spartans-fc-v-forfar-athletic,72,sub_off,Ethan Crombie,Forfar Athletic,The Vanloq Community Stadium
+2026-09-12-spartans-fc-v-forfar-athletic,72,sub_off,Ethan Drysdale,Spartans FC,The Vanloq Community Stadium
+2026-09-12-spartans-fc-v-forfar-athletic,72,sub_on,Aiden Haddow,Forfar Athletic,The Vanloq Community Stadium
+2026-09-12-spartans-fc-v-forfar-athletic,72,sub_on,Benjamin Heal,Spartans FC,The Vanloq Community Stadium
+2026-09-12-spartans-fc-v-forfar-athletic,73,goal,Luca Perrie,Forfar Athletic,The Vanloq Community Stadium
+2026-09-12-spartans-fc-v-forfar-athletic,74,goal,Cammy Russell,Spartans FC,The Vanloq Community Stadium
+2026-09-12-spartans-fc-v-forfar-athletic,79,goal,Mark Stowe,Spartans FC,The Vanloq Community Stadium
+2026-09-12-spartans-fc-v-forfar-athletic,80,sub_off,Cameron Russell,Spartans FC,The Vanloq Community Stadium
+2026-09-12-spartans-fc-v-forfar-athletic,80,sub_on,Mackenzie Ross,Spartans FC,The Vanloq Community Stadium
+2026-09-12-stockport-county-v-leicester-city,11,goal,Liam Cullen,Leicester City,Edgeley Park
+2026-09-12-stockport-county-v-leicester-city,22,goal,Jack Diamond,Stockport County,Edgeley Park
+2026-09-12-stockport-county-v-leicester-city,30,goal,Emil Riis Jakobsen,Leicester City,Edgeley Park
+2026-09-12-stockport-county-v-leicester-city,36,yellow,Ethan Pye,Stockport County,Edgeley Park
+2026-09-12-stockport-county-v-leicester-city,48,goal,Emil Riis Jakobsen,Leicester City,Edgeley Park
+2026-09-12-stockport-county-v-leicester-city,50,yellow,Louis Page,Leicester City,Edgeley Park
+2026-09-12-stockport-county-v-leicester-city,52,goal,John Lundstram,Leicester City,Edgeley Park
+2026-09-12-stockport-county-v-leicester-city,57,goal,Oliver Norwood,Stockport County,Edgeley Park
+2026-09-12-stockport-county-v-leicester-city,61,goal,Kyle Wootton,Stockport County,Edgeley Park
+2026-09-12-stockport-county-v-leicester-city,63,yellow,Kyron Gordon,Stockport County,Edgeley Park
+2026-09-12-stockport-county-v-leicester-city,70,sub_off,Sammy Braybrooke,Leicester City,Edgeley Park
+2026-09-12-stockport-county-v-leicester-city,70,sub_on,Bobby Reid,Leicester City,Edgeley Park
+2026-09-12-stockport-county-v-leicester-city,71,sub_off,Harry Wood,Stockport County,Edgeley Park
+2026-09-12-stockport-county-v-leicester-city,71,sub_off,Lewis Bate,Stockport County,Edgeley Park
+2026-09-12-stockport-county-v-leicester-city,71,sub_on,Mikaël Mandron,Stockport County,Edgeley Park
+2026-09-12-stockport-county-v-leicester-city,71,sub_on,Jason Adigun,Stockport County,Edgeley Park
+2026-09-12-stockport-county-v-leicester-city,76,sub_off,Emil Riis Jakobsen,Leicester City,Edgeley Park
+2026-09-12-stockport-county-v-leicester-city,76,sub_on,Tom Watson,Leicester City,Edgeley Park
+2026-09-12-stockport-county-v-leicester-city,79,sub_off,Ryan Glover,Stockport County,Edgeley Park
+2026-09-12-stockport-county-v-leicester-city,79,sub_off,Eoghan O'Connell,Stockport County,Edgeley Park
+2026-09-12-stockport-county-v-leicester-city,79,sub_on,Ethan Ennis,Stockport County,Edgeley Park
+2026-09-12-stockport-county-v-leicester-city,79,sub_on,Mamadou Jobe,Stockport County,Edgeley Park
+2026-09-12-stockport-county-v-leicester-city,87,sub_off,Warren O'Hora,Leicester City,Edgeley Park
+2026-09-12-stockport-county-v-leicester-city,87,sub_off,Will Alves,Leicester City,Edgeley Park
+2026-09-12-stockport-county-v-leicester-city,87,sub_off,Liam Cullen,Leicester City,Edgeley Park
+2026-09-12-stockport-county-v-leicester-city,87,sub_off,Jack Diamond,Stockport County,Edgeley Park
+2026-09-12-stockport-county-v-leicester-city,87,sub_on,Olabade Aluko,Leicester City,Edgeley Park
+2026-09-12-stockport-county-v-leicester-city,87,sub_on,Ilari Kangasniemi,Leicester City,Edgeley Park
+2026-09-12-stockport-county-v-leicester-city,87,sub_on,Wes Burns,Leicester City,Edgeley Park
+2026-09-12-stockport-county-v-leicester-city,87,sub_on,Benoný Andrésson,Stockport County,Edgeley Park
+2026-09-12-sutton-united-v-scunthorpe-united,39,goal,Kyle Hurst,Scunthorpe United,Borough Sports Ground
+2026-09-12-sutton-united-v-scunthorpe-united,44,yellow,Danny Whitehall,Scunthorpe United,Borough Sports Ground
+2026-09-12-sutton-united-v-scunthorpe-united,59,sub_off,Temi Babalola,Sutton United,Borough Sports Ground
+2026-09-12-sutton-united-v-scunthorpe-united,59,sub_on,David Ogbonna,Sutton United,Borough Sports Ground
+2026-09-12-sutton-united-v-scunthorpe-united,61,yellow,Emmanuel Osadebe,Sutton United,Borough Sports Ground
+2026-09-12-sutton-united-v-scunthorpe-united,62,yellow,Branden Horton,Scunthorpe United,Borough Sports Ground
+2026-09-12-sutton-united-v-scunthorpe-united,63,sub_off,Kyle Hurst,Scunthorpe United,Borough Sports Ground
+2026-09-12-sutton-united-v-scunthorpe-united,63,sub_off,Declan Howe,Scunthorpe United,Borough Sports Ground
+2026-09-12-sutton-united-v-scunthorpe-united,63,sub_on,Alfie Beestin,Scunthorpe United,Borough Sports Ground
+2026-09-12-sutton-united-v-scunthorpe-united,63,sub_on,Tyrell Sellars-Fleming,Scunthorpe United,Borough Sports Ground
+2026-09-12-sutton-united-v-scunthorpe-united,64,sub_off,Branden Horton,Scunthorpe United,Borough Sports Ground
+2026-09-12-sutton-united-v-scunthorpe-united,64,sub_on,Tyler Denton,Scunthorpe United,Borough Sports Ground
+2026-09-12-sutton-united-v-scunthorpe-united,66,yellow,Dan Urpens,Sutton United,Borough Sports Ground
+2026-09-12-sutton-united-v-scunthorpe-united,69,goal,Tyrell Sellars-Fleming,Scunthorpe United,Borough Sports Ground
+2026-09-12-sutton-united-v-scunthorpe-united,74,sub_off,Joe Starbuck,Scunthorpe United,Borough Sports Ground
+2026-09-12-sutton-united-v-scunthorpe-united,74,sub_on,Jéan Belehouan,Scunthorpe United,Borough Sports Ground
+2026-09-12-sutton-united-v-scunthorpe-united,78,sub_off,Brandon Njoku,Sutton United,Borough Sports Ground
+2026-09-12-sutton-united-v-scunthorpe-united,78,sub_off,Joe Knight,Sutton United,Borough Sports Ground
+2026-09-12-sutton-united-v-scunthorpe-united,78,sub_on,Samuel Folarin,Sutton United,Borough Sports Ground
+2026-09-12-sutton-united-v-scunthorpe-united,78,sub_on,Jermaine Francis,Sutton United,Borough Sports Ground
+2026-09-12-sutton-united-v-scunthorpe-united,80,sub_off,Danny Whitehall,Scunthorpe United,Borough Sports Ground
+2026-09-12-sutton-united-v-scunthorpe-united,80,sub_on,Hugh Parker,Scunthorpe United,Borough Sports Ground
+2026-09-12-sutton-united-v-scunthorpe-united,85,sub_off,Jake Taylor,Sutton United,Borough Sports Ground
+2026-09-12-sutton-united-v-scunthorpe-united,85,sub_on,Charlie Bell,Sutton United,Borough Sports Ground
+2026-09-12-swansea-city-v-burnley,13,goal,Adam Idah,Swansea City,Swansea.com Stadium
+2026-09-12-swansea-city-v-burnley,33,goal,Moussa Kounfolo Yeo,Swansea City,Swansea.com Stadium
+2026-09-12-swansea-city-v-burnley,46,sub_off,Josh Key,Swansea City,Swansea.com Stadium
+2026-09-12-swansea-city-v-burnley,46,sub_on,Filip Lissah,Swansea City,Swansea.com Stadium
+2026-09-12-swansea-city-v-burnley,54,sub_off,Aaron Ramsey,Burnley,Swansea.com Stadium
+2026-09-12-swansea-city-v-burnley,54,sub_on,Lucas Pires,Burnley,Swansea.com Stadium
+2026-09-12-swansea-city-v-burnley,58,goal,Largie Ramazani,Burnley,Swansea.com Stadium
+2026-09-12-swansea-city-v-burnley,59,yellow,Moussa Kounfolo Yeo,Swansea City,Swansea.com Stadium
+2026-09-12-swansea-city-v-burnley,59,yellow,Lucas Pires,Burnley,Swansea.com Stadium
+2026-09-12-swansea-city-v-burnley,64,sub_off,Moussa Kounfolo Yeo,Swansea City,Swansea.com Stadium
+2026-09-12-swansea-city-v-burnley,64,sub_off,Adam Idah,Swansea City,Swansea.com Stadium
+2026-09-12-swansea-city-v-burnley,64,sub_on,Ronald Pereira,Swansea City,Swansea.com Stadium
+2026-09-12-swansea-city-v-burnley,64,sub_on,Žan Vipotnik,Swansea City,Swansea.com Stadium
+2026-09-12-swansea-city-v-burnley,65,sub_off,Ugo Raghouber,Burnley,Swansea.com Stadium
+2026-09-12-swansea-city-v-burnley,65,sub_on,Jamie Vardy,Burnley,Swansea.com Stadium
+2026-09-12-swansea-city-v-burnley,68,goal,Žan Vipotnik,Swansea City,Swansea.com Stadium
+2026-09-12-swansea-city-v-burnley,72,yellow,Filip Lissah,Swansea City,Swansea.com Stadium
+2026-09-12-swansea-city-v-burnley,77,sub_off,Elijah Just,Swansea City,Swansea.com Stadium
+2026-09-12-swansea-city-v-burnley,77,sub_on,Gonçalo Franco,Swansea City,Swansea.com Stadium
+2026-09-12-swansea-city-v-burnley,82,sub_off,Oliver Sonne,Burnley,Swansea.com Stadium
+2026-09-12-swansea-city-v-burnley,82,sub_off,Largie Ramazani,Burnley,Swansea.com Stadium
+2026-09-12-swansea-city-v-burnley,82,sub_off,Zeki Amdouni,Burnley,Swansea.com Stadium
+2026-09-12-swansea-city-v-burnley,82,sub_on,Andréas Hountondji,Burnley,Swansea.com Stadium
+2026-09-12-swansea-city-v-burnley,82,sub_on,Armando Broja,Burnley,Swansea.com Stadium
+2026-09-12-swansea-city-v-burnley,82,sub_on,Reo Hatate,Burnley,Swansea.com Stadium
+2026-09-12-swansea-city-v-burnley,85,sub_off,Stephen Eustaquio,Swansea City,Swansea.com Stadium
+2026-09-12-swansea-city-v-burnley,85,sub_on,Jay Fulton,Swansea City,Swansea.com Stadium
+2026-09-12-torquay-united-v-dorking-wanderers,23,goal,Deon Moore,Torquay United,Plainmoor Ground
+2026-09-12-torquay-united-v-dorking-wanderers,32,goal,Dawid Rogalski,Dorking Wanderers,Plainmoor Ground
+2026-09-12-torquay-united-v-dorking-wanderers,55,goal,Josh Barrett,Dorking Wanderers,Plainmoor Ground
+2026-09-12-torquay-united-v-dorking-wanderers,68,goal,Sonny Blu Lo-Everton,Torquay United,Plainmoor Ground
+2026-09-12-torquay-united-v-dorking-wanderers,79,red,Jake Wannell,Torquay United,Plainmoor Ground
+2026-09-12-tottenham-hotspur-v-everton,,,,,Tottenham Hotspur Stadium
+2026-09-12-walsall-v-rochdale,29,yellow,Charlie Crew,Walsall,Pallet-Track Bescot Stadium
+2026-09-12-walsall-v-rochdale,53,yellow,Babajide Adeeko,Rochdale,Pallet-Track Bescot Stadium
+2026-09-12-walsall-v-rochdale,61,sub_off,Antony Evans,Walsall,Pallet-Track Bescot Stadium
+2026-09-12-walsall-v-rochdale,61,sub_off,Charlie Crew,Walsall,Pallet-Track Bescot Stadium
+2026-09-12-walsall-v-rochdale,61,sub_on,Courtney Clarke,Walsall,Pallet-Track Bescot Stadium
+2026-09-12-walsall-v-rochdale,61,sub_on,Isaac Moore,Walsall,Pallet-Track Bescot Stadium
+2026-09-12-walsall-v-rochdale,65,sub_off,Luke Hannant,Rochdale,Pallet-Track Bescot Stadium
+2026-09-12-walsall-v-rochdale,65,sub_on,Glenn Middleton,Rochdale,Pallet-Track Bescot Stadium
+2026-09-12-walsall-v-rochdale,75,sub_off,Kane Taylor,Rochdale,Pallet-Track Bescot Stadium
+2026-09-12-walsall-v-rochdale,75,sub_on,Jonny Smith,Rochdale,Pallet-Track Bescot Stadium
+2026-09-12-walsall-v-rochdale,77,yellow,Harvey Gilmour,Rochdale,Pallet-Track Bescot Stadium
+2026-09-12-walsall-v-rochdale,82,sub_off,Tai Sodje,Walsall,Pallet-Track Bescot Stadium
+2026-09-12-walsall-v-rochdale,82,sub_on,Andrew Dallas,Walsall,Pallet-Track Bescot Stadium
+2026-09-12-walsall-v-rochdale,84,sub_off,Dan Moss,Rochdale,Pallet-Track Bescot Stadium
+2026-09-12-walsall-v-rochdale,84,sub_off,Emmanuel Dieseruvwe,Rochdale,Pallet-Track Bescot Stadium
+2026-09-12-walsall-v-rochdale,84,sub_on,Laurence Maguire,Rochdale,Pallet-Track Bescot Stadium
+2026-09-12-walsall-v-rochdale,84,sub_on,Olutobi Adebayo-Rowling,Rochdale,Pallet-Track Bescot Stadium
+2026-09-12-walsall-v-rochdale,89,sub_off,Elicha Ahui,Walsall,Pallet-Track Bescot Stadium
+2026-09-12-walsall-v-rochdale,89,sub_on,Lewis Simper,Walsall,Pallet-Track Bescot Stadium
+2026-09-12-walsall-v-rochdale,90,yellow,Glenn Middleton,Rochdale,Pallet-Track Bescot Stadium
+2026-09-12-watford-v-stoke-city,19,yellow,Iker Bravo,Watford,Vicarage Road
+2026-09-12-watford-v-stoke-city,33,yellow,Djibril Soumaré,Stoke City,Vicarage Road
+2026-09-12-watford-v-stoke-city,42,sub_off,Jordan Zemura,Watford,Vicarage Road
+2026-09-12-watford-v-stoke-city,42,sub_on,Omar Traoré,Watford,Vicarage Road
+2026-09-12-watford-v-stoke-city,45,goal,Jack McGlynn,Stoke City,Vicarage Road
+2026-09-12-watford-v-stoke-city,57,goal,Eric Bocat,Stoke City,Vicarage Road
+2026-09-12-watford-v-stoke-city,58,sub_off,Stephy Mavididi,Watford,Vicarage Road
+2026-09-12-watford-v-stoke-city,58,sub_off,Othmane Maamma,Watford,Vicarage Road
+2026-09-12-watford-v-stoke-city,58,sub_on,Rocco Vata,Watford,Vicarage Road
+2026-09-12-watford-v-stoke-city,58,sub_on,Amin Nabizada,Watford,Vicarage Road
+2026-09-12-watford-v-stoke-city,65,sub_off,Lamine Cissé,Stoke City,Vicarage Road
+2026-09-12-watford-v-stoke-city,65,sub_on,George Hirst,Stoke City,Vicarage Road
+2026-09-12-watford-v-stoke-city,69,sub_off,Iker Bravo,Watford,Vicarage Road
+2026-09-12-watford-v-stoke-city,69,sub_on,Luca Kjerrumgaard,Watford,Vicarage Road
+2026-09-12-watford-v-stoke-city,80,sub_off,Eric Bocat,Stoke City,Vicarage Road
+2026-09-12-watford-v-stoke-city,80,sub_on,Luca Bombino,Stoke City,Vicarage Road
+2026-09-12-watford-v-stoke-city,82,yellow,George Hirst,Stoke City,Vicarage Road
+2026-09-12-watford-v-stoke-city,90,goal,Amin Nabizada,Watford,Vicarage Road
+2026-09-12-watford-v-stoke-city,90,sub_off,Jack McGlynn,Stoke City,Vicarage Road
+2026-09-12-watford-v-stoke-city,90,sub_on,Ben Pearson,Stoke City,Vicarage Road
+2026-09-12-watford-v-stoke-city,90,yellow,Amin Nabizada,Watford,Vicarage Road
 2026-09-12-west-bromwich-albion-u18-v-aston-villa-u18,26,goal,Danyal Iqbal,West Bromwich Albion U18,Stadium
 2026-09-12-west-bromwich-albion-u18-v-aston-villa-u18,71,goal,Harry French,West Bromwich Albion U18,Stadium
 2026-09-12-west-bromwich-albion-u18-v-aston-villa-u18,81,second_yellow,Reuben Saa,West Bromwich Albion U18,Stadium
@@ -8811,6 +9915,38 @@ match_id,minute,type,player,team,venue
 2026-09-12-west-bromwich-albion-v-queens-park-rangers,35,sub_on,Leon Scarlett,Queens Park Rangers,The Hawthorns
 2026-09-12-west-bromwich-albion-v-queens-park-rangers,38,own_goal,Chris Mepham,Queens Park Rangers,The Hawthorns
 2026-09-12-west-bromwich-albion-v-queens-park-rangers,41,goal,Callum Styles,West Bromwich Albion,The Hawthorns
+2026-09-12-weston-super-mare-v-dagenham-redbridge,41,red,Samuel Adenola,Dagenham & Redbridge,The Optima Stadium
+2026-09-12-weston-super-mare-v-dagenham-redbridge,44,red,Jagger Cane,Weston Super Mare,The Optima Stadium
+2026-09-12-weston-super-mare-v-dagenham-redbridge,89,goal,Ollie Hulbert,Weston Super Mare,The Optima Stadium
+2026-09-12-woking-v-altrincham,14,yellow,Steven Turner,Woking,The Laithwaite Community Stadium
+2026-09-12-woking-v-altrincham,21,goal,Matthew Ward,Woking,The Laithwaite Community Stadium
+2026-09-12-woking-v-altrincham,26,goal,John Marquis,Woking,The Laithwaite Community Stadium
+2026-09-12-woking-v-altrincham,37,goal,John Marquis,Woking,The Laithwaite Community Stadium
+2026-09-12-woking-v-altrincham,44,goal,Aidan Barlow,Altrincham,The Laithwaite Community Stadium
+2026-09-12-woking-v-altrincham,58,yellow,Matthew Kosylo,Altrincham,The Laithwaite Community Stadium
+2026-09-12-woking-v-altrincham,60,goal,Tim Akinola,Woking,The Laithwaite Community Stadium
+2026-09-12-woking-v-altrincham,64,yellow,Otis Khan,Altrincham,The Laithwaite Community Stadium
+2026-09-12-woking-v-altrincham,65,sub_off,Charlie Kirk,Altrincham,The Laithwaite Community Stadium
+2026-09-12-woking-v-altrincham,65,sub_off,Matthew Kosylo,Altrincham,The Laithwaite Community Stadium
+2026-09-12-woking-v-altrincham,65,sub_off,Jake Southern-Cooper,Altrincham,The Laithwaite Community Stadium
+2026-09-12-woking-v-altrincham,65,sub_on,Kane Hemmings,Altrincham,The Laithwaite Community Stadium
+2026-09-12-woking-v-altrincham,65,sub_on,Reuben Lopata-White,Altrincham,The Laithwaite Community Stadium
+2026-09-12-woking-v-altrincham,65,sub_on,Sam Barnes,Altrincham,The Laithwaite Community Stadium
+2026-09-12-woking-v-altrincham,66,sub_off,John Marquis,Woking,The Laithwaite Community Stadium
+2026-09-12-woking-v-altrincham,66,sub_on,Liam Dulson,Woking,The Laithwaite Community Stadium
+2026-09-12-woking-v-altrincham,71,goal,Roy Syla,Woking,The Laithwaite Community Stadium
+2026-09-12-woking-v-altrincham,72,sub_off,Shadrach Ogie,Woking,The Laithwaite Community Stadium
+2026-09-12-woking-v-altrincham,72,sub_off,Aiden O'Brien,Woking,The Laithwaite Community Stadium
+2026-09-12-woking-v-altrincham,72,sub_off,Tim Akinola,Woking,The Laithwaite Community Stadium
+2026-09-12-woking-v-altrincham,72,sub_on,Anthony Georgiou,Woking,The Laithwaite Community Stadium
+2026-09-12-woking-v-altrincham,72,sub_on,Josh Kelly,Woking,The Laithwaite Community Stadium
+2026-09-12-woking-v-altrincham,72,sub_on,Jake Forster-Caskey,Woking,The Laithwaite Community Stadium
+2026-09-12-woking-v-altrincham,76,sub_off,Owen Evans,Altrincham,The Laithwaite Community Stadium
+2026-09-12-woking-v-altrincham,76,sub_off,Otis Khan,Altrincham,The Laithwaite Community Stadium
+2026-09-12-woking-v-altrincham,76,sub_on,Andrew Firth,Altrincham,The Laithwaite Community Stadium
+2026-09-12-woking-v-altrincham,76,sub_on,Jack Hinchy,Altrincham,The Laithwaite Community Stadium
+2026-09-12-woking-v-altrincham,79,sub_off,Matthew Ward,Woking,The Laithwaite Community Stadium
+2026-09-12-woking-v-altrincham,79,sub_on,Harrison Sohna,Woking,The Laithwaite Community Stadium
 2026-09-12-worthing-v-barrow,17,yellow,Danny Amos,Barrow,Sussex Transport Community Stadium
 2026-09-12-worthing-v-barrow,20,goal,Mikey Lane,Barrow,Sussex Transport Community Stadium
 2026-09-12-worthing-v-barrow,31,sub_off,Jose Marquez,Worthing,Sussex Transport Community Stadium
@@ -8818,3 +9954,31 @@ match_id,minute,type,player,team,venue
 2026-09-12-worthing-v-barrow,38,yellow,Isaac Marriott,Barrow,Sussex Transport Community Stadium
 2026-09-12-worthing-v-barrow,45,goal,Mikey Lane,Barrow,Sussex Transport Community Stadium
 2026-09-12-worthing-v-barrow,45,yellow,Michael Jordan Williams,Barrow,Sussex Transport Community Stadium
+2026-09-12-york-city-v-swindon-town,16,goal,Alex Newby,York City,LNER Community Stadium
+2026-09-12-york-city-v-swindon-town,24,goal,Oliver Banks,York City,LNER Community Stadium
+2026-09-12-york-city-v-swindon-town,38,sub_off,Billy Kirkman,Swindon Town,LNER Community Stadium
+2026-09-12-york-city-v-swindon-town,38,sub_on,Joseph Hungbo,Swindon Town,LNER Community Stadium
+2026-09-12-york-city-v-swindon-town,46,sub_off,Ben Middlemas,Swindon Town,LNER Community Stadium
+2026-09-12-york-city-v-swindon-town,46,sub_on,Paul Glatzel,Swindon Town,LNER Community Stadium
+2026-09-12-york-city-v-swindon-town,60,sub_off,Joe Snowdon,Swindon Town,LNER Community Stadium
+2026-09-12-york-city-v-swindon-town,60,sub_on,Antwoine Hackford,Swindon Town,LNER Community Stadium
+2026-09-12-york-city-v-swindon-town,67,red,Mitch Clark,Swindon Town,LNER Community Stadium
+2026-09-12-york-city-v-swindon-town,69,yellow,Mark Kitching,York City,LNER Community Stadium
+2026-09-12-york-city-v-swindon-town,69,yellow,Ian Holloway,Swindon Town,LNER Community Stadium
+2026-09-12-york-city-v-swindon-town,72,goal,Alex Newby,York City,LNER Community Stadium
+2026-09-12-york-city-v-swindon-town,74,sub_off,Jeff King,York City,LNER Community Stadium
+2026-09-12-york-city-v-swindon-town,74,sub_off,Alex Hunt,York City,LNER Community Stadium
+2026-09-12-york-city-v-swindon-town,74,sub_off,Ryan Fallowfield,York City,LNER Community Stadium
+2026-09-12-york-city-v-swindon-town,74,sub_off,Alex Newby,York City,LNER Community Stadium
+2026-09-12-york-city-v-swindon-town,74,sub_on,Joe Felix,York City,LNER Community Stadium
+2026-09-12-york-city-v-swindon-town,74,sub_on,Arthur Read,York City,LNER Community Stadium
+2026-09-12-york-city-v-swindon-town,74,sub_on,Jack Hunt,York City,LNER Community Stadium
+2026-09-12-york-city-v-swindon-town,74,sub_on,Jovan Malcolm,York City,LNER Community Stadium
+2026-09-12-york-city-v-swindon-town,77,sub_off,Anthony Munda,Swindon Town,LNER Community Stadium
+2026-09-12-york-city-v-swindon-town,77,sub_on,James Ball,Swindon Town,LNER Community Stadium
+2026-09-12-york-city-v-swindon-town,78,sub_off,Aaron Drinan,Swindon Town,LNER Community Stadium
+2026-09-12-york-city-v-swindon-town,78,sub_on,Daniel Butterworth,Swindon Town,LNER Community Stadium
+2026-09-12-york-city-v-swindon-town,82,goal,Ollie Pearce,York City,LNER Community Stadium
+2026-09-12-york-city-v-swindon-town,85,sub_off,Harry Boyes,York City,LNER Community Stadium
+2026-09-12-york-city-v-swindon-town,85,sub_on,Craig Hewitt,York City,LNER Community Stadium
+2026-09-12-york-city-v-swindon-town,87,yellow,Daniel Butterworth,Swindon Town,LNER Community Stadium
