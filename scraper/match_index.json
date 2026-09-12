@@ -6093,19 +6093,6 @@
   ]
  },
  {
-  "fotmob_id": "5109926",
-  "url": "/matches/indy-eleven-vs-birmingham-legion-fc/ep724kx5#5109926",
-  "kickoff": "2026-09-05T23:00:00Z",
-  "comp": "USL Championship",
-  "home": "Indy Eleven",
-  "away": "Birmingham Legion FC",
-  "home_id": "514649",
-  "away_id": "1003207",
-  "slugs": [
-   "josh-obrien"
-  ]
- },
- {
   "fotmob_id": "5109946",
   "url": "/matches/indy-eleven-vs-new-mexico-united/ep73143u#5109946",
   "kickoff": "2026-09-12T01:30:00Z",
@@ -6114,6 +6101,19 @@
   "away": "Indy Eleven",
   "home_id": "1003208",
   "away_id": "514649",
+  "slugs": [
+   "josh-obrien"
+  ]
+ },
+ {
+  "fotmob_id": "5109926",
+  "url": "/matches/indy-eleven-vs-birmingham-legion-fc/ep724kx5#5109926",
+  "kickoff": "2026-09-05T23:00:00Z",
+  "comp": "USL Championship",
+  "home": "Indy Eleven",
+  "away": "Birmingham Legion FC",
+  "home_id": "514649",
+  "away_id": "1003207",
   "slugs": [
    "josh-obrien"
   ]
