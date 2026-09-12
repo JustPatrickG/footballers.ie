@@ -9217,6 +9217,36 @@ match_id,minute,type,player,team,venue
 2026-09-12-crystal-palace-v-ipswich-town,90,goal,Zian Flemming,Ipswich Town,Selhurst Park
 2026-09-12-crystal-palace-v-ipswich-town,90,yellow,Chris Richards,Crystal Palace,Selhurst Park
 2026-09-12-cska-sofia-v-arda-kardzhali,2,goal,Birsent Karagaren,Arda Kardzhali,Vasil Levski
+2026-09-12-cska-sofia-v-arda-kardzhali,34,yellow,Dominik Yankov,Arda Kardzhali,Vasil Levski
+2026-09-12-cska-sofia-v-arda-kardzhali,41,goal,Stefano Sensi,CSKA Sofia,Vasil Levski
+2026-09-12-cska-sofia-v-arda-kardzhali,42,yellow,Vyacheslav Velev,Arda Kardzhali,Vasil Levski
+2026-09-12-cska-sofia-v-arda-kardzhali,45,yellow,Jean-Philippe Gbamin,CSKA Sofia,Vasil Levski
+2026-09-12-cska-sofia-v-arda-kardzhali,46,sub_off,Dominik Yankov,Arda Kardzhali,Vasil Levski
+2026-09-12-cska-sofia-v-arda-kardzhali,46,sub_off,Cătălin Itu,CSKA Sofia,Vasil Levski
+2026-09-12-cska-sofia-v-arda-kardzhali,46,sub_on,Adama Traoré,Arda Kardzhali,Vasil Levski
+2026-09-12-cska-sofia-v-arda-kardzhali,46,sub_on,Léo Pereira,CSKA Sofia,Vasil Levski
+2026-09-12-cska-sofia-v-arda-kardzhali,48,goal,Léo Pereira,CSKA Sofia,Vasil Levski
+2026-09-12-cska-sofia-v-arda-kardzhali,53,goal,Joël Zwarts,CSKA Sofia,Vasil Levski
+2026-09-12-cska-sofia-v-arda-kardzhali,67,sub_off,Stefano Sensi,CSKA Sofia,Vasil Levski
+2026-09-12-cska-sofia-v-arda-kardzhali,67,sub_off,James Eto'o,CSKA Sofia,Vasil Levski
+2026-09-12-cska-sofia-v-arda-kardzhali,67,sub_off,Stanislav Ivanov,Arda Kardzhali,Vasil Levski
+2026-09-12-cska-sofia-v-arda-kardzhali,67,sub_off,Georgi Nikolov,Arda Kardzhali,Vasil Levski
+2026-09-12-cska-sofia-v-arda-kardzhali,67,sub_on,Petko Panayotov,CSKA Sofia,Vasil Levski
+2026-09-12-cska-sofia-v-arda-kardzhali,67,sub_on,Mohamed Brahimi,CSKA Sofia,Vasil Levski
+2026-09-12-cska-sofia-v-arda-kardzhali,67,sub_on,Antonio Vutov,Arda Kardzhali,Vasil Levski
+2026-09-12-cska-sofia-v-arda-kardzhali,67,sub_on,Preslav Bachev,Arda Kardzhali,Vasil Levski
+2026-09-12-cska-sofia-v-arda-kardzhali,68,sub_off,Birsent Karagaren,Arda Kardzhali,Vasil Levski
+2026-09-12-cska-sofia-v-arda-kardzhali,68,sub_on,Atanas Kabov,Arda Kardzhali,Vasil Levski
+2026-09-12-cska-sofia-v-arda-kardzhali,71,sub_off,Joël Zwarts,CSKA Sofia,Vasil Levski
+2026-09-12-cska-sofia-v-arda-kardzhali,71,sub_on,Leandro Godoy,CSKA Sofia,Vasil Levski
+2026-09-12-cska-sofia-v-arda-kardzhali,72,goal,Ioannis Pittas,CSKA Sofia,Vasil Levski
+2026-09-12-cska-sofia-v-arda-kardzhali,82,sub_off,Pastor,CSKA Sofia,Vasil Levski
+2026-09-12-cska-sofia-v-arda-kardzhali,82,sub_on,Barry Cotter,CSKA Sofia,Vasil Levski
+2026-09-12-cska-sofia-v-arda-kardzhali,85,yellow,Martin Paskalev,Arda Kardzhali,Vasil Levski
+2026-09-12-cska-sofia-v-arda-kardzhali,86,yellow,Anatoli Gospodinov,Arda Kardzhali,Vasil Levski
+2026-09-12-cska-sofia-v-arda-kardzhali,89,sub_off,Viktor Popov,Arda Kardzhali,Vasil Levski
+2026-09-12-cska-sofia-v-arda-kardzhali,89,sub_on,Dimitar Velkovski,Arda Kardzhali,Vasil Levski
+2026-09-12-cska-sofia-v-arda-kardzhali,90,yellow,Antonio Vutov,Arda Kardzhali,Vasil Levski
 2026-09-12-derby-county-v-birmingham-city,19,yellow,Mohammed Fuseini,Derby County,Pride Park Stadium
 2026-09-12-derby-county-v-birmingham-city,21,yellow,Alexander Cochrane,Birmingham City,Pride Park Stadium
 2026-09-12-derby-county-v-birmingham-city,40,goal,Bobby Clark,Derby County,Pride Park Stadium
@@ -9452,6 +9482,7 @@ match_id,minute,type,player,team,venue
 2026-09-12-leyton-orient-v-wycombe-wanderers,39,sub_on,Armando Dobra,Leyton Orient,BetWright Stadium
 2026-09-12-leyton-orient-v-wycombe-wanderers,45,goal,Fred Onyedinma,Wycombe Wanderers,BetWright Stadium
 2026-09-12-longford-town-v-treaty-united,10,goal,Cian Curtis,Treaty United,Stadium
+2026-09-12-longford-town-v-treaty-united,36,goal,Mark Byrne,Treaty United,Stadium
 2026-09-12-magdeburg-v-kaiserslautern,12,goal,Emmanuel Iyoha,Magdeburg,Avnet Arena
 2026-09-12-magdeburg-v-kaiserslautern,16,goal,Alexander Nollenberger,Magdeburg,Avnet Arena
 2026-09-12-magdeburg-v-kaiserslautern,46,sub_off,Erencan Yardımcı,Kaiserslautern,Avnet Arena
@@ -9611,7 +9642,29 @@ match_id,minute,type,player,team,venue
 2026-09-12-notts-county-v-bradford-city,39,yellow,Jack Evans,Notts County,Meadow Lane
 2026-09-12-notts-county-v-bradford-city,41,sub_off,Adam Phillips,Bradford City,Meadow Lane
 2026-09-12-notts-county-v-bradford-city,41,sub_on,Kayden Jackson,Bradford City,Meadow Lane
-2026-09-12-oh-leuven-v-cercle-brugge,,,,,King Power at Den Dreef Stadion
+2026-09-12-oh-leuven-v-cercle-brugge,25,goal,Davis Opoku,OH Leuven,King Power at Den Dreef Stadion
+2026-09-12-oh-leuven-v-cercle-brugge,46,sub_off,Dante Vanzeir,Cercle Brugge,King Power at Den Dreef Stadion
+2026-09-12-oh-leuven-v-cercle-brugge,46,sub_on,Babatunde Akinsola,Cercle Brugge,King Power at Den Dreef Stadion
+2026-09-12-oh-leuven-v-cercle-brugge,48,yellow,Siebe Schrijvers,OH Leuven,King Power at Den Dreef Stadion
+2026-09-12-oh-leuven-v-cercle-brugge,62,sub_off,Erick Nunes,Cercle Brugge,King Power at Den Dreef Stadion
+2026-09-12-oh-leuven-v-cercle-brugge,62,sub_off,Steve Ngoura,Cercle Brugge,King Power at Den Dreef Stadion
+2026-09-12-oh-leuven-v-cercle-brugge,62,sub_on,Viggo Martens,Cercle Brugge,King Power at Den Dreef Stadion
+2026-09-12-oh-leuven-v-cercle-brugge,62,sub_on,Krys Kouassi,Cercle Brugge,King Power at Den Dreef Stadion
+2026-09-12-oh-leuven-v-cercle-brugge,66,yellow,Valy Konaté,Cercle Brugge,King Power at Den Dreef Stadion
+2026-09-12-oh-leuven-v-cercle-brugge,70,sub_off,Siebe Schrijvers,OH Leuven,King Power at Den Dreef Stadion
+2026-09-12-oh-leuven-v-cercle-brugge,70,sub_off,Abdoul Traoré,OH Leuven,King Power at Den Dreef Stadion
+2026-09-12-oh-leuven-v-cercle-brugge,70,sub_on,William Balikwisha,OH Leuven,King Power at Den Dreef Stadion
+2026-09-12-oh-leuven-v-cercle-brugge,70,sub_on,Shin Yamada,OH Leuven,King Power at Den Dreef Stadion
+2026-09-12-oh-leuven-v-cercle-brugge,71,yellow,Emmanuel Kakou,Cercle Brugge,King Power at Den Dreef Stadion
+2026-09-12-oh-leuven-v-cercle-brugge,77,sub_off,Valy Konaté,Cercle Brugge,King Power at Den Dreef Stadion
+2026-09-12-oh-leuven-v-cercle-brugge,77,sub_off,Emmanuel Kakou,Cercle Brugge,King Power at Den Dreef Stadion
+2026-09-12-oh-leuven-v-cercle-brugge,77,sub_on,Lucas Michal,Cercle Brugge,King Power at Den Dreef Stadion
+2026-09-12-oh-leuven-v-cercle-brugge,77,sub_on,Abdoul Ouattara,Cercle Brugge,King Power at Den Dreef Stadion
+2026-09-12-oh-leuven-v-cercle-brugge,81,yellow,Lukas Mondele,Cercle Brugge,King Power at Den Dreef Stadion
+2026-09-12-oh-leuven-v-cercle-brugge,90,goal,Krys Kouassi,Cercle Brugge,King Power at Den Dreef Stadion
+2026-09-12-oh-leuven-v-cercle-brugge,90,sub_off,Robin Mirisola,OH Leuven,King Power at Den Dreef Stadion
+2026-09-12-oh-leuven-v-cercle-brugge,90,sub_on,Kyan Vaesen,OH Leuven,King Power at Den Dreef Stadion
+2026-09-12-oh-leuven-v-cercle-brugge,90,yellow,Kyan Vaesen,OH Leuven,King Power at Den Dreef Stadion
 2026-09-12-oldham-athletic-v-chesterfield,18,goal,Lee Bonis,Chesterfield,Boundary Park
 2026-09-12-oldham-athletic-v-chesterfield,18,missed_penalty,Lee Bonis,Chesterfield,Boundary Park
 2026-09-12-oldham-athletic-v-chesterfield,28,yellow,Oliver Norburn,Oldham Athletic,Boundary Park
@@ -10047,6 +10100,32 @@ match_id,minute,type,player,team,venue
 2026-09-12-stockport-county-v-leicester-city,87,sub_on,Ilari Kangasniemi,Leicester City,Edgeley Park
 2026-09-12-stockport-county-v-leicester-city,87,sub_on,Wes Burns,Leicester City,Edgeley Park
 2026-09-12-stockport-county-v-leicester-city,87,sub_on,Benoný Andrésson,Stockport County,Edgeley Park
+2026-09-12-sunderland-v-arsenal,28,yellow,Reinildo,Sunderland,Stadium of Light
+2026-09-12-sunderland-v-arsenal,39,yellow,Mikel Arteta,Arsenal,Stadium of Light
+2026-09-12-sunderland-v-arsenal,46,sub_off,Ben White,Arsenal,Stadium of Light
+2026-09-12-sunderland-v-arsenal,46,sub_off,Myles Lewis-Skelly,Arsenal,Stadium of Light
+2026-09-12-sunderland-v-arsenal,46,sub_on,Jurriën Timber,Arsenal,Stadium of Light
+2026-09-12-sunderland-v-arsenal,46,sub_on,Bruno Guimarães,Arsenal,Stadium of Light
+2026-09-12-sunderland-v-arsenal,56,missed_penalty,Enzo Le Fée,Sunderland,Stadium of Light
+2026-09-12-sunderland-v-arsenal,58,goal,Bruno Guimarães,Arsenal,Stadium of Light
+2026-09-12-sunderland-v-arsenal,66,yellow,Daniel Ballard,Sunderland,Stadium of Light
+2026-09-12-sunderland-v-arsenal,69,yellow,Granit Xhaka,Sunderland,Stadium of Light
+2026-09-12-sunderland-v-arsenal,70,sub_off,Nilson Angulo,Sunderland,Stadium of Light
+2026-09-12-sunderland-v-arsenal,70,sub_on,Wilson Isidor,Sunderland,Stadium of Light
+2026-09-12-sunderland-v-arsenal,76,sub_off,Thomas Meunier,Sunderland,Stadium of Light
+2026-09-12-sunderland-v-arsenal,76,sub_on,Malick Fofana,Sunderland,Stadium of Light
+2026-09-12-sunderland-v-arsenal,81,sub_off,Christos Tzolis,Arsenal,Stadium of Light
+2026-09-12-sunderland-v-arsenal,81,sub_off,Declan Rice,Arsenal,Stadium of Light
+2026-09-12-sunderland-v-arsenal,81,sub_on,Eberechi Eze,Arsenal,Stadium of Light
+2026-09-12-sunderland-v-arsenal,81,sub_on,Martín Zubimendi,Arsenal,Stadium of Light
+2026-09-12-sunderland-v-arsenal,81,yellow,Brian Brobbey,Sunderland,Stadium of Light
+2026-09-12-sunderland-v-arsenal,85,sub_off,Martin Ødegaard,Arsenal,Stadium of Light
+2026-09-12-sunderland-v-arsenal,85,sub_on,Mikel Merino,Arsenal,Stadium of Light
+2026-09-12-sunderland-v-arsenal,90,goal,Bukayo Saka,Arsenal,Stadium of Light
+2026-09-12-sunderland-v-arsenal,90,second_yellow,Reinildo,Sunderland,Stadium of Light
+2026-09-12-sunderland-v-arsenal,90,yellow,Gabriel,Arsenal,Stadium of Light
+2026-09-12-sunderland-v-arsenal,90,yellow,Nordi Mukiele,Sunderland,Stadium of Light
+2026-09-12-sunderland-v-arsenal,90,yellow,Kai Havertz,Arsenal,Stadium of Light
 2026-09-12-sutton-united-v-scunthorpe-united,39,goal,Kyle Hurst,Scunthorpe United,Borough Sports Ground
 2026-09-12-sutton-united-v-scunthorpe-united,44,yellow,Danny Whitehall,Scunthorpe United,Borough Sports Ground
 2026-09-12-sutton-united-v-scunthorpe-united,59,sub_off,Temi Babalola,Sutton United,Borough Sports Ground
