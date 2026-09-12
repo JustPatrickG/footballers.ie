@@ -12,7 +12,6 @@ aaron-brennan,2026-10-09T18:45:00Z,Bohemian FC,A,FAI Cup
 aaron-brennan,2026-10-16T18:45:00Z,Bohemian FC,A,Premier Division
 aaron-brennan,2026-10-19T18:45:00Z,Galway United FC,H,Premier Division
 aaron-brennan,2026-10-23T18:45:00Z,Drogheda United,H,Premier Division
-aaron-connolly,2026-09-12T11:30:00Z,Wycombe,H,League One
 aaron-connolly,2026-09-15T18:00:00Z,Arsenal U21,H,EFL Trophy Southern Grp. F
 aaron-connolly,2026-09-19T14:00:00Z,Stevenage,H,League One
 aaron-connolly,2026-09-26T14:00:00Z,Mansfield,A,League One
@@ -35,6 +34,7 @@ aaron-drinan,2026-10-03T14:00:00Z,Rochdale,A,League Two
 aaron-drinan,2026-10-10T11:30:00Z,Crewe,H,League Two
 aaron-drinan,2026-10-17T14:00:00Z,Walsall,H,League Two
 aaron-drinan,2026-10-20T18:45:00Z,Barnet,A,League Two
+aaron-drinan,2026-10-24T11:30:00Z,Bristol Rovers,A,League Two
 aaron-greene,2026-09-18T19:00:00Z,Waterford FC,H,Premier Division
 aaron-greene,2026-10-09T19:00:00Z,Drogheda United,H,Premier Division
 aaron-greene,2026-10-12T19:00:00Z,Bohemian FC,H,Premier Division
@@ -84,6 +84,7 @@ aaron-okpolokpo,2026-10-09T15:00:00Z,FC Lahti,H,Veikkausliiga Relegation Group
 aaron-okpolokpo,2026-10-17T11:00:00Z,Ilves,A,Veikkausliiga Relegation Group
 aaron-oreilly,2026-09-19T10:00:00Z,Brighton U18,H,Premier League U18
 aaron-oreilly,2026-10-17T11:30:00Z,West Ham U18,A,Premier League U18
+aaron-oreilly,2026-10-24T11:00:00Z,Arsenal U18,H,Premier League U18
 adam-banim,2026-09-14T18:45:00Z,Dundalk,A,Premier Division
 adam-banim,2026-09-19T18:45:00Z,Sligo Rovers,A,Premier Division
 adam-banim,2026-10-16T18:45:00Z,Shelbourne,H,Premier Division
@@ -152,7 +153,6 @@ adam-wells,2026-09-25T18:45:00Z,Bray Wanderers,H,First Division
 adam-wells,2026-10-02T18:45:00Z,Treaty United,A,First Division
 adam-wells,2026-10-09T18:45:00Z,Longford Town,H,First Division
 adam-wells,2026-10-16T18:45:00Z,Wexford FC,A,First Division
-ade-solanke,2026-09-12T11:00:00Z,Southampton U21,A,Premier League 2
 ade-solanke,2026-09-21T18:00:00Z,Stoke City U21,H,Premier League 2
 ade-solanke,2026-10-18T12:30:00Z,Brighton & Hove Albion U21,A,Premier League 2
 ademipo-odubeko,2026-09-14T18:45:00Z,Drogheda United,H,Premier Division
@@ -220,7 +220,6 @@ alan-zborowski,2026-09-25T18:45:00Z,Athlone Town,H,First Division
 alan-zborowski,2026-10-02T18:45:00Z,Bray Wanderers,A,First Division
 alan-zborowski,2026-10-09T18:45:00Z,Kerry FC,H,First Division
 alan-zborowski,2026-10-16T18:45:00Z,Treaty United,A,First Division
-alex-gilbert,2026-09-12T11:30:00Z,Wycombe,H,League One
 alex-gilbert,2026-09-15T18:00:00Z,Arsenal U21,H,EFL Trophy Southern Grp. F
 alex-gilbert,2026-09-19T14:00:00Z,Stevenage,H,League One
 alex-gilbert,2026-09-26T14:00:00Z,Mansfield,A,League One
@@ -228,7 +227,6 @@ alex-gilbert,2026-10-03T14:00:00Z,Plymouth,H,League One
 alex-gilbert,2026-10-10T14:00:00Z,Bradford,A,League One
 alex-gilbert,2026-10-17T14:00:00Z,Blackpool,H,League One
 alex-gilbert,2026-10-21T19:00:00Z,Reading,A,League One
-alex-murphy,2026-09-12T11:00:00Z,Magdeburg,A,2. Bundesliga
 alex-murphy,2026-09-19T11:00:00Z,Eintracht Braunschweig,H,2. Bundesliga
 alex-murphy,2026-10-09T16:30:00Z,FC Heidenheim,A,2. Bundesliga
 alex-murphy,2026-10-17T11:00:00Z,Bochum,H,2. Bundesliga
@@ -297,10 +295,10 @@ andy-spain,2026-09-25T18:45:00Z,Cobh Ramblers,A,First Division
 andy-spain,2026-10-02T18:45:00Z,Cork City,H,First Division
 andy-spain,2026-10-09T18:45:00Z,Treaty United,H,First Division
 andy-spain,2026-10-16T18:45:00Z,Longford Town,A,First Division
-anselmo-garcia-macnulty,2026-09-12T11:00:00Z,Kaiserslautern,H,2. Bundesliga
 anselmo-garcia-macnulty,2026-09-18T16:30:00Z,Greuther Fürth,A,2. Bundesliga
 anselmo-garcia-macnulty,2026-10-10T11:00:00Z,Hannover 96,H,2. Bundesliga
 anselmo-garcia-macnulty,2026-10-18T11:30:00Z,Dynamo Dresden,A,2. Bundesliga
+anselmo-garcia-macnulty,2026-10-24T11:00:00Z,Karlsruher SC,H,2. Bundesliga
 anthony-adenopo,2026-09-18T18:45:00Z,Wexford FC,A,First Division
 anthony-adenopo,2026-09-25T18:45:00Z,Athlone Town,H,First Division
 anthony-adenopo,2026-10-02T18:45:00Z,Bray Wanderers,A,First Division
@@ -536,7 +534,6 @@ callum-odowda,2026-10-10T15:00:00Z,Debrecen,H,NB I
 callum-odowda,2026-10-15T19:00:00Z,Viktoria Plzeň,H,Europa League
 callum-odowda,2026-10-18T16:00:00Z,Kisvárda,A,NB I
 callum-odowda,2026-10-22T16:45:00Z,Torreense,H,Europa League
-callum-robinson,2026-09-12T11:30:00Z,Bolton,A,Championship
 callum-robinson,2026-09-19T11:30:00Z,Charlton,H,Championship
 callum-robinson,2026-10-10T14:00:00Z,Blackburn,A,Championship
 callum-robinson,2026-10-13T18:45:00Z,Watford,H,Championship
@@ -691,7 +688,6 @@ cian-dillon,2026-09-18T18:45:00Z,Shelbourne,H,Premier Division
 cian-dillon,2026-10-02T18:45:00Z,Bohemian FC,H,Premier Division
 cian-dillon,2026-10-17T18:45:00Z,Sligo Rovers,A,Premier Division
 cian-dillon,2026-10-23T18:45:00Z,Derry City,A,Premier Division
-cian-doyle,2026-09-12T11:30:00Z,Bristol Rovers,H,League Two
 cian-doyle,2026-09-19T14:00:00Z,Crawley,H,League Two
 cian-doyle,2026-09-22T18:00:00Z,Notts County,A,EFL Trophy Northern Grp. F
 cian-doyle,2026-09-26T14:00:00Z,Newport,A,League Two
@@ -745,6 +741,7 @@ ciaran-brennan,2026-10-06T18:00:00Z,Plymouth,H,EFL Trophy Southern Grp. E
 ciaran-brennan,2026-10-10T14:00:00Z,Colchester,H,League Two
 ciaran-brennan,2026-10-17T14:00:00Z,York City,H,League Two
 ciaran-brennan,2026-10-20T18:45:00Z,Rotherham,A,League Two
+ciaran-brennan,2026-10-24T11:30:00Z,Cheltenham,A,League Two
 ciaran-coll,2026-09-12T14:00:00Z,Bangor,H,Premiership
 ciaran-coll,2026-09-15T18:45:00Z,Coleraine,H,Premiership
 ciaran-coll,2026-09-19T14:00:00Z,Cliftonville,A,Premiership
@@ -761,7 +758,6 @@ ciaran-gilligan,2026-10-06T18:00:00Z,Grimsby,A,EFL Trophy Northern Grp. F
 ciaran-gilligan,2026-10-10T14:00:00Z,Doncaster,A,League One
 ciaran-gilligan,2026-10-17T11:30:00Z,Peterborough,A,League One
 ciaran-gilligan,2026-10-20T18:45:00Z,Bradford,H,League One
-ciaran-kelly,2026-09-12T11:30:00Z,Grimsby,A,League Two
 ciaran-kelly,2026-09-19T14:00:00Z,Gillingham,A,League Two
 ciaran-kelly,2026-09-26T14:00:00Z,Exeter,H,League Two
 ciaran-kelly,2026-10-03T14:00:00Z,Crewe,A,League Two
@@ -769,6 +765,7 @@ ciaran-kelly,2026-10-06T18:00:00Z,Wycombe,A,EFL Trophy Southern Grp. C
 ciaran-kelly,2026-10-10T14:00:00Z,Barnet,H,League Two
 ciaran-kelly,2026-10-17T11:30:00Z,Shrewsbury,A,League Two
 ciaran-kelly,2026-10-20T18:45:00Z,Salford,H,League Two
+ciaran-kelly,2026-10-24T11:30:00Z,Swindon,H,League Two
 ciaran-kilduff,2026-09-14T18:45:00Z,St. Patrick's Athletic,H,Premier Division
 ciaran-kilduff,2026-09-18T18:45:00Z,Shelbourne,H,Premier Division
 ciaran-kilduff,2026-10-02T18:45:00Z,Bohemian FC,H,Premier Division
@@ -909,6 +906,7 @@ conor-coventry,2026-09-19T11:30:00Z,Cardiff,A,Championship
 conor-coventry,2026-10-10T11:30:00Z,Bristol City,H,Championship
 conor-coventry,2026-10-13T18:45:00Z,Burnley,A,Championship
 conor-coventry,2026-10-17T11:30:00Z,Watford,A,Championship
+conor-coventry,2026-10-24T11:30:00Z,Norwich,H,Championship
 conor-drinan,2026-09-18T18:45:00Z,UCD,H,First Division
 conor-drinan,2026-09-26T18:30:00Z,Longford Town,A,First Division
 conor-drinan,2026-10-02T18:45:00Z,Athlone Town,A,First Division
@@ -921,7 +919,6 @@ conor-gleeson,2026-10-10T14:00:00Z,Derry City,H,FAI Cup
 conor-gleeson,2026-10-16T18:45:00Z,Shamrock Rovers,H,Premier Division
 conor-gleeson,2026-10-19T18:45:00Z,Waterford FC,A,Premier Division
 conor-gleeson,2026-10-23T18:45:00Z,St. Patrick's Athletic,H,Premier Division
-conor-grant,2026-09-12T11:30:00Z,Bradford,H,League One
 conor-grant,2026-09-19T14:00:00Z,Reading,A,League One
 conor-grant,2026-09-22T18:00:00Z,Grimsby,H,EFL Trophy Northern Grp. F
 conor-grant,2026-09-26T14:00:00Z,Blackpool,H,League One
@@ -974,6 +971,7 @@ conor-mccarthy,2026-10-06T18:00:00Z,Cambridge,A,EFL Trophy Southern Grp. G
 conor-mccarthy,2026-10-10T14:00:00Z,York City,A,League Two
 conor-mccarthy,2026-10-17T14:00:00Z,Grimsby,A,League Two
 conor-mccarthy,2026-10-20T18:45:00Z,Tranmere,H,League Two
+conor-mccarthy,2026-10-24T11:30:00Z,Colchester,H,League Two
 conor-mcmanus,2026-09-12T14:00:00Z,Tranmere,H,League Two
 conor-mcmanus,2026-09-19T14:00:00Z,Bristol Rovers,H,League Two
 conor-mcmanus,2026-09-22T18:00:00Z,Cambridge,H,EFL Trophy Southern Grp. G
@@ -999,6 +997,7 @@ conor-shaughnessy,2026-10-11T11:00:00Z,Southampton,A,Championship
 conor-shaughnessy,2026-10-14T18:45:00Z,Sheff Utd,H,Championship
 conor-shaughnessy,2026-10-17T14:00:00Z,Norwich,A,Championship
 conor-shaughnessy,2026-10-20T18:45:00Z,Wolves,A,Championship
+conor-shaughnessy,2026-10-24T11:30:00Z,Millwall,H,Championship
 conor-tourish,2026-09-18T18:45:00Z,Longford Town,H,First Division
 conor-tourish,2026-09-25T18:45:00Z,Treaty United,A,First Division
 conor-tourish,2026-10-02T18:45:00Z,Kerry FC,H,First Division
@@ -1016,7 +1015,6 @@ corey-chambers,2026-09-25T18:45:00Z,Finn Harps,H,First Division
 corey-chambers,2026-10-02T18:45:00Z,UCD,H,First Division
 corey-chambers,2026-10-09T18:45:00Z,Athlone Town,A,First Division
 corey-chambers,2026-10-16T18:45:00Z,Cobh Ramblers,H,First Division
-corey-okeeffe,2026-09-12T11:30:00Z,Notts County,A,League One
 corey-okeeffe,2026-09-19T14:00:00Z,Luton,A,League One
 corey-okeeffe,2026-09-22T18:30:00Z,Newcastle United U21,H,EFL Trophy Northern Grp. C
 corey-okeeffe,2026-09-26T14:00:00Z,Barnsley,H,League One
@@ -1039,7 +1037,6 @@ cristiano-bramley,2026-09-25T18:45:00Z,UCD,A,First Division
 cristiano-bramley,2026-10-02T18:45:00Z,Cobh Ramblers,H,First Division
 cristiano-bramley,2026-10-09T18:45:00Z,Wexford FC,H,First Division
 cristiano-bramley,2026-10-16T18:45:00Z,Finn Harps,A,First Division
-cyrus-christie,2026-09-12T12:15:00Z,Song Lam Nghe An,H,V-League
 cyrus-christie,2026-09-20T12:15:00Z,Da Nẵng,H,Cup
 cyrus-christie,2026-10-11T12:15:00Z,Bac Ninh,H,V-League
 cyrus-christie,2026-10-18T12:15:00Z,Công An Hà Nội,A,V-League
@@ -1060,7 +1057,6 @@ daithi-folan,2026-09-18T18:45:00Z,Shelbourne,H,Premier Division
 daithi-folan,2026-10-02T18:45:00Z,Bohemian FC,H,Premier Division
 daithi-folan,2026-10-17T18:45:00Z,Sligo Rovers,A,Premier Division
 daithi-folan,2026-10-23T18:45:00Z,Derry City,A,Premier Division
-dan-casey,2026-09-12T11:30:00Z,Leyton Orient,A,League One
 dan-casey,2026-09-15T18:00:00Z,Chelsea U21,H,EFL Trophy Southern Grp. C
 dan-casey,2026-09-19T14:00:00Z,Wigan,A,League One
 dan-casey,2026-09-26T14:00:00Z,Reading,H,League One
@@ -1074,6 +1070,7 @@ dan-mcnamara,2026-09-19T11:30:00Z,Cardiff,A,Championship
 dan-mcnamara,2026-10-10T11:30:00Z,Bristol City,H,Championship
 dan-mcnamara,2026-10-13T18:45:00Z,Burnley,A,Championship
 dan-mcnamara,2026-10-17T11:30:00Z,Watford,A,Championship
+dan-mcnamara,2026-10-24T11:30:00Z,Norwich,H,Championship
 daniel-chukwu,2026-09-14T18:45:00Z,Dundalk,A,Premier Division
 daniel-chukwu,2026-09-19T18:45:00Z,Sligo Rovers,A,Premier Division
 daniel-chukwu,2026-10-16T18:45:00Z,Shelbourne,H,Premier Division
@@ -1147,6 +1144,7 @@ dara-costelloe,2026-10-03T14:00:00Z,Mansfield,H,League One
 dara-costelloe,2026-10-10T14:00:00Z,Stevenage,A,League One
 dara-costelloe,2026-10-17T14:00:00Z,Reading,H,League One
 dara-costelloe,2026-10-20T18:45:00Z,Oxford Utd,A,League One
+dara-costelloe,2026-10-24T11:30:00Z,Huddersfield,A,League One
 dara-mccormick,2026-09-18T18:45:00Z,Wexford FC,A,First Division
 dara-mccormick,2026-09-25T18:45:00Z,Athlone Town,H,First Division
 dara-mccormick,2026-10-02T18:45:00Z,Bray Wanderers,A,First Division
@@ -1171,7 +1169,6 @@ dare-kareem,2026-09-25T18:45:00Z,Finn Harps,H,First Division
 dare-kareem,2026-10-02T18:45:00Z,UCD,H,First Division
 dare-kareem,2026-10-09T18:45:00Z,Athlone Town,A,First Division
 dare-kareem,2026-10-16T18:45:00Z,Cobh Ramblers,H,First Division
-darius-lipsiuc,2026-09-12T11:30:00Z,Bradford,H,League One
 darius-lipsiuc,2026-09-19T14:00:00Z,Reading,A,League One
 darius-lipsiuc,2026-09-22T18:00:00Z,Grimsby,H,EFL Trophy Northern Grp. F
 darius-lipsiuc,2026-09-26T14:00:00Z,Blackpool,H,League One
@@ -1410,7 +1407,6 @@ dylan-watts,2026-10-09T19:00:00Z,Drogheda United,H,Premier Division
 dylan-watts,2026-10-12T19:00:00Z,Bohemian FC,H,Premier Division
 dylan-watts,2026-10-16T18:45:00Z,Galway United FC,A,Premier Division
 dylan-watts,2026-10-23T19:00:00Z,Sligo Rovers,H,Premier Division
-eamonn-tohill,2026-09-12T11:00:00Z,Nottm Forest U18,A,Premier League U18
 eamonn-tohill,2026-09-19T11:00:00Z,Blackburn U18,H,Premier League U18
 eamonn-tohill,2026-10-17T10:00:00Z,Leeds U18,A,Premier League U18
 eamonn-tohill,2026-10-24T10:00:00Z,Newcastle U18,H,Premier League U18
@@ -1426,7 +1422,6 @@ ed-mccarthy,2026-10-10T14:00:00Z,Derry City,H,FAI Cup
 ed-mccarthy,2026-10-16T18:45:00Z,Shamrock Rovers,H,Premier Division
 ed-mccarthy,2026-10-19T18:45:00Z,Waterford FC,A,Premier Division
 ed-mccarthy,2026-10-23T18:45:00Z,St. Patrick's Athletic,H,Premier Division
-ed-mcjannett,2026-09-12T13:00:00Z,Cavese,H,Serie C Grp. C
 ed-mcjannett,2026-09-15T16:30:00Z,Giugliano,A,Serie C Grp. C
 ed-mcjannett,2026-09-19T12:30:00Z,Scafatese,H,Serie C Grp. C
 ed-mcjannett,2026-09-26T15:30:00Z,Bari,A,Serie C Grp. C
@@ -1455,11 +1450,11 @@ egor-vassenin,2026-09-18T18:45:00Z,Shelbourne,H,Premier Division
 egor-vassenin,2026-10-02T18:45:00Z,Bohemian FC,H,Premier Division
 egor-vassenin,2026-10-17T18:45:00Z,Sligo Rovers,A,Premier Division
 egor-vassenin,2026-10-23T18:45:00Z,Derry City,A,Premier Division
-eiran-cashin,2026-09-12T11:30:00Z,Birmingham,H,Championship
 eiran-cashin,2026-09-19T14:00:00Z,Burnley,A,Championship
 eiran-cashin,2026-10-10T14:00:00Z,Wrexham,H,Championship
 eiran-cashin,2026-10-14T18:45:00Z,QPR,A,Championship
 eiran-cashin,2026-10-17T14:00:00Z,Stoke,H,Championship
+eiran-cashin,2026-10-24T11:30:00Z,Sheff Utd,A,Championship
 emmanuel-adegboyega,2026-09-12T14:00:00Z,Salford,H,League Two
 emmanuel-adegboyega,2026-09-19T14:00:00Z,Northampton,A,League Two
 emmanuel-adegboyega,2026-09-22T18:00:00Z,York City,A,EFL Trophy Northern Grp. C
@@ -1477,6 +1472,7 @@ emmanuel-osadebe,2026-09-30T18:45:00Z,Tamworth,A,National League
 emmanuel-osadebe,2026-10-03T14:00:00Z,Kidderminster Harriers,A,National League
 emmanuel-osadebe,2026-10-09T18:45:00Z,Boreham Wood,H,National League
 emmanuel-osadebe,2026-10-13T18:00:00Z,West Bromwich Albion U21,H,National League Cup Group D
+emmanuel-osadebe,2026-10-24T11:30:00Z,Harrogate Town,A,National League
 emre-topcu,2026-09-12T18:30:00Z,Treaty United,H,First Division
 emre-topcu,2026-09-18T18:45:00Z,Finn Harps,A,First Division
 emre-topcu,2026-09-26T18:30:00Z,Cork City,H,First Division
@@ -1525,6 +1521,7 @@ eoin-kenny,2026-10-11T11:00:00Z,Southampton,A,Championship
 eoin-kenny,2026-10-14T18:45:00Z,Sheff Utd,H,Championship
 eoin-kenny,2026-10-17T14:00:00Z,Norwich,A,Championship
 eoin-kenny,2026-10-20T18:45:00Z,Wolves,A,Championship
+eoin-kenny,2026-10-24T11:30:00Z,Millwall,H,Championship
 eric-koufie,2026-09-18T18:45:00Z,Athlone Town,A,First Division
 eric-koufie,2026-09-25T18:45:00Z,Wexford FC,H,First Division
 eric-koufie,2026-10-02T18:45:00Z,Finn Harps,A,First Division
@@ -1642,6 +1639,7 @@ franco-umeh,2026-10-11T11:00:00Z,Southampton,A,Championship
 franco-umeh,2026-10-14T18:45:00Z,Sheff Utd,H,Championship
 franco-umeh,2026-10-17T14:00:00Z,Norwich,A,Championship
 franco-umeh,2026-10-20T18:45:00Z,Wolves,A,Championship
+franco-umeh,2026-10-24T11:30:00Z,Millwall,H,Championship
 frankie-mcmahon-brown,2026-09-12T14:00:00Z,Chesterfield,H,League Two
 frankie-mcmahon-brown,2026-09-19T11:30:00Z,Rochdale,A,League Two
 frankie-mcmahon-brown,2026-09-22T18:00:00Z,Fleetwood,H,EFL Trophy Northern Grp. G
@@ -1684,7 +1682,7 @@ gavan-holohan,2026-09-29T18:45:00Z,FC Halifax Town,A,National League
 gavan-holohan,2026-10-03T14:00:00Z,Yeovil,A,National League
 gavan-holohan,2026-10-10T14:00:00Z,Southend,H,National League
 gavan-holohan,2026-10-13T18:00:00Z,Southampton U21,H,National League Cup Group D
-gavin-bazunu,2026-09-12T11:30:00Z,Cardiff,H,Championship
+gavan-holohan,2026-10-24T11:30:00Z,Eastleigh,A,National League
 gavin-bazunu,2026-09-20T12:30:00Z,Norwich,A,Championship
 gavin-bazunu,2026-10-10T14:00:00Z,Stoke,H,Championship
 gavin-bazunu,2026-10-13T18:45:00Z,Wolves,A,Championship
@@ -1704,6 +1702,7 @@ gavin-kilkenny,2026-10-03T14:00:00Z,Rochdale,A,League Two
 gavin-kilkenny,2026-10-10T11:30:00Z,Crewe,H,League Two
 gavin-kilkenny,2026-10-17T14:00:00Z,Walsall,H,League Two
 gavin-kilkenny,2026-10-20T18:45:00Z,Barnet,A,League Two
+gavin-kilkenny,2026-10-24T11:30:00Z,Bristol Rovers,A,League Two
 gavin-mcateer,2026-09-18T18:45:00Z,Longford Town,H,First Division
 gavin-mcateer,2026-09-25T18:45:00Z,Treaty United,A,First Division
 gavin-mcateer,2026-10-02T18:45:00Z,Kerry FC,H,First Division
@@ -1725,6 +1724,7 @@ gbemi-arubi,2026-10-17T11:30:00Z,Peterborough,A,League One
 gbemi-arubi,2026-10-20T18:45:00Z,Bradford,H,League One
 george-moloney,2026-09-19T10:00:00Z,Reading U18,H,Premier League U18
 george-moloney,2026-10-17T10:00:00Z,Brighton U18,A,Premier League U18
+george-moloney,2026-10-24T11:00:00Z,West Brom U18,H,Premier League U18
 gideon-tetteh,2026-09-18T18:45:00Z,Cobh Ramblers,H,First Division
 gideon-tetteh,2026-09-25T18:45:00Z,Kerry FC,A,First Division
 gideon-tetteh,2026-10-02T18:45:00Z,Longford Town,H,First Division
@@ -1819,7 +1819,6 @@ harry-vaughan,2026-10-09T18:45:00Z,Waterford FC,H,FAI Cup
 harry-vaughan,2026-10-12T19:00:00Z,Shamrock Rovers,A,Premier Division
 harry-vaughan,2026-10-16T18:45:00Z,Waterford FC,H,Premier Division
 harry-vaughan,2026-10-23T18:45:00Z,Shelbourne,H,Premier Division
-harvey-boddy,2026-09-12T11:30:00Z,Barrow,H,National League
 harvey-boddy,2026-09-15T18:45:00Z,Hornchurch,H,National League
 harvey-boddy,2026-09-19T11:30:00Z,Hartlepool United,A,National League
 harvey-boddy,2026-09-26T14:00:00Z,FC Halifax Town,H,National League
@@ -1876,7 +1875,6 @@ issa-kargbo,2026-09-19T14:00:00Z,Portsmouth,A,Championship
 issa-kargbo,2026-10-10T14:00:00Z,Cardiff,H,Championship
 issa-kargbo,2026-10-13T18:45:00Z,Bristol City,A,Championship
 issa-kargbo,2026-10-17T14:00:00Z,West Brom,A,Championship
-jack-bonham,2026-09-12T11:30:00Z,Cardiff,H,Championship
 jack-bonham,2026-09-20T12:30:00Z,Norwich,A,Championship
 jack-bonham,2026-10-10T14:00:00Z,Stoke,H,Championship
 jack-bonham,2026-10-13T18:45:00Z,Wolves,A,Championship
@@ -1907,7 +1905,6 @@ jack-lawless,2026-10-16T18:45:00Z,Finn Harps,A,First Division
 jack-moorhouse,2026-09-19T14:00:00Z,Motherwell,H,Premiership
 jack-moorhouse,2026-10-10T14:00:00Z,Falkirk,A,Premiership
 jack-moorhouse,2026-10-17T14:00:00Z,Rangers,H,Premiership
-jack-moylan,2026-09-12T11:30:00Z,Bolton,A,Championship
 jack-moylan,2026-09-19T11:30:00Z,Charlton,H,Championship
 jack-moylan,2026-10-10T14:00:00Z,Blackburn,A,Championship
 jack-moylan,2026-10-13T18:45:00Z,Watford,H,Championship
@@ -2078,7 +2075,6 @@ jamie-mcgrath,2026-09-15T18:45:00Z,Kilmarnock,H,Premiership
 jamie-mcgrath,2026-09-19T14:00:00Z,Aberdeen,H,Premiership
 jamie-mcgrath,2026-10-10T14:00:00Z,Dundee United,A,Premiership
 jamie-mcgrath,2026-10-17T14:00:00Z,Falkirk,H,Premiership
-jamie-mullins,2026-09-12T11:30:00Z,Leyton Orient,A,League One
 jamie-mullins,2026-09-15T18:00:00Z,Chelsea U21,H,EFL Trophy Southern Grp. C
 jamie-mullins,2026-09-19T14:00:00Z,Wigan,A,League One
 jamie-mullins,2026-09-26T14:00:00Z,Reading,H,League One
@@ -2127,12 +2123,10 @@ jay-mcgrath,2026-10-10T14:00:00Z,Burton,H,League One
 jay-mcgrath,2026-10-17T14:00:00Z,Leicester,A,League One
 jay-mcgrath,2026-10-20T18:45:00Z,Stockport County,H,League One
 jay-oshea,2026-10-23T09:00:00Z,Perth Glory,H,A-League
-jayson-molumby,2026-09-12T11:30:00Z,QPR,H,Championship
 jayson-molumby,2026-09-20T11:00:00Z,Wolves,A,Championship
 jayson-molumby,2026-10-10T11:30:00Z,Birmingham,H,Championship
 jayson-molumby,2026-10-13T18:45:00Z,Wrexham,A,Championship
 jayson-molumby,2026-10-17T14:00:00Z,Blackburn,H,Championship
-jaze-kabia,2026-09-12T11:30:00Z,Wycombe,H,League One
 jaze-kabia,2026-09-15T18:00:00Z,Arsenal U21,H,EFL Trophy Southern Grp. F
 jaze-kabia,2026-09-19T14:00:00Z,Stevenage,H,League One
 jaze-kabia,2026-09-26T14:00:00Z,Mansfield,A,League One
@@ -2202,7 +2196,7 @@ joe-obrien-whitmarsh,2026-10-06T18:00:00Z,Cambridge,A,EFL Trophy Southern Grp. G
 joe-obrien-whitmarsh,2026-10-10T14:00:00Z,York City,A,League Two
 joe-obrien-whitmarsh,2026-10-17T14:00:00Z,Grimsby,A,League Two
 joe-obrien-whitmarsh,2026-10-20T18:45:00Z,Tranmere,H,League Two
-joe-quigley,2026-09-12T11:30:00Z,Grimsby,A,League Two
+joe-obrien-whitmarsh,2026-10-24T11:30:00Z,Colchester,H,League Two
 joe-quigley,2026-09-19T14:00:00Z,Gillingham,A,League Two
 joe-quigley,2026-09-26T14:00:00Z,Exeter,H,League Two
 joe-quigley,2026-10-03T14:00:00Z,Crewe,A,League Two
@@ -2210,6 +2204,7 @@ joe-quigley,2026-10-06T18:00:00Z,Wycombe,A,EFL Trophy Southern Grp. C
 joe-quigley,2026-10-10T14:00:00Z,Barnet,H,League Two
 joe-quigley,2026-10-17T11:30:00Z,Shrewsbury,A,League Two
 joe-quigley,2026-10-20T18:45:00Z,Salford,H,League Two
+joe-quigley,2026-10-24T11:30:00Z,Swindon,H,League Two
 joe-rafferty,2026-09-12T14:00:00Z,Salford,H,League Two
 joe-rafferty,2026-09-19T14:00:00Z,Northampton,A,League Two
 joe-rafferty,2026-09-22T18:00:00Z,York City,A,EFL Trophy Northern Grp. C
@@ -2228,7 +2223,6 @@ joe-shaughnessy,2026-09-15T10:00:00Z,Kashima Antlers,A,AFC Champions League Elit
 joe-shaughnessy,2026-10-13T07:45:00Z,Gamba Osaka,H,AFC Champions League Elite East
 joe-shaughnessy,2026-10-17T08:40:00Z,Central Coast,A,A-League
 joe-shaughnessy,2026-10-24T04:00:00Z,Macarthur FC,H,A-League
-joel-bagan,2026-09-12T11:30:00Z,Bolton,A,Championship
 joel-bagan,2026-09-19T11:30:00Z,Charlton,H,Championship
 joel-bagan,2026-10-10T14:00:00Z,Blackburn,A,Championship
 joel-bagan,2026-10-13T18:45:00Z,Watford,H,Championship
@@ -2321,7 +2315,6 @@ jordan-mceneff,2026-09-25T18:45:00Z,Dungannon Swifts,H,Premiership
 jordan-mceneff,2026-10-03T14:00:00Z,Linfield,H,Premiership
 jordan-mceneff,2026-10-10T14:00:00Z,Crusaders,A,Premiership
 jordan-mceneff,2026-10-17T14:00:00Z,Coleraine,H,Premiership
-jordan-shipley,2026-09-12T11:30:00Z,Crawley,A,League Two
 jordan-shipley,2026-09-19T14:00:00Z,Colchester,A,League Two
 jordan-shipley,2026-09-22T18:00:00Z,Exeter,H,EFL Trophy Southern Grp. A
 jordan-shipley,2026-09-26T14:00:00Z,Chesterfield,H,League Two
@@ -2330,6 +2323,7 @@ jordan-shipley,2026-10-10T14:00:00Z,Salford,H,League Two
 jordan-shipley,2026-10-13T18:00:00Z,Tottenham Hotspur U21,H,EFL Trophy Southern Grp. A
 jordan-shipley,2026-10-17T14:00:00Z,Oldham,A,League Two
 jordan-shipley,2026-10-20T18:45:00Z,Fleetwood,H,League Two
+jordan-shipley,2026-10-24T11:30:00Z,Newport,H,League Two
 josh-adam,2026-09-18T19:00:00Z,Drogheda United,H,Premier Division
 josh-adam,2026-10-02T18:45:00Z,Dundalk,A,Premier Division
 josh-adam,2026-10-09T18:45:00Z,Waterford FC,H,FAI Cup
@@ -2421,7 +2415,6 @@ junior-thiam,2026-10-10T14:00:00Z,Derry City,H,FAI Cup
 junior-thiam,2026-10-16T18:45:00Z,Shamrock Rovers,H,Premier Division
 junior-thiam,2026-10-19T18:45:00Z,Waterford FC,A,Premier Division
 junior-thiam,2026-10-23T18:45:00Z,St. Patrick's Athletic,H,Premier Division
-justin-ferizaj,2026-09-12T11:30:00Z,Cheltenham,H,League Two
 justin-ferizaj,2026-09-19T14:00:00Z,Grimsby,A,League Two
 justin-ferizaj,2026-09-22T18:00:00Z,MK Dons,A,EFL Trophy Southern Grp. H
 justin-ferizaj,2026-09-26T11:30:00Z,Barnet,H,League Two
@@ -2430,11 +2423,11 @@ justin-ferizaj,2026-10-06T18:45:00Z,Bromley,H,EFL Trophy Southern Grp. H
 justin-ferizaj,2026-10-10T14:00:00Z,Chesterfield,H,League Two
 justin-ferizaj,2026-10-17T14:00:00Z,Salford,A,League Two
 justin-ferizaj,2026-10-20T18:45:00Z,Shrewsbury,H,League Two
-justin-osagie,2026-09-12T13:00:00Z,Arsenal U21,A,Premier League 2
 justin-osagie,2026-09-15T18:00:00Z,Wycombe,A,EFL Trophy Southern Grp. C
 justin-osagie,2026-09-19T14:00:00Z,Fulham U21,H,Premier League 2
 justin-osagie,2026-10-13T18:00:00Z,Reading,A,EFL Trophy Southern Grp. C
 justin-osagie,2026-10-16T18:00:00Z,Stoke City U21,A,Premier League 2
+justin-osagie,2026-10-24T13:00:00Z,Liverpool U21,H,Premier League 2
 kai-oneill,2026-09-18T18:45:00Z,Wexford FC,A,First Division
 kai-oneill,2026-09-25T18:45:00Z,Athlone Town,H,First Division
 kai-oneill,2026-10-02T18:45:00Z,Bray Wanderers,A,First Division
@@ -2548,7 +2541,6 @@ killian-brouder,2026-10-10T14:00:00Z,Derry City,H,FAI Cup
 killian-brouder,2026-10-16T18:45:00Z,Shamrock Rovers,H,Premier Division
 killian-brouder,2026-10-19T18:45:00Z,Waterford FC,A,Premier Division
 killian-brouder,2026-10-23T18:45:00Z,St. Patrick's Athletic,H,Premier Division
-killian-cahill,2026-09-12T11:30:00Z,Wycombe,H,League One
 killian-cahill,2026-09-15T18:00:00Z,Arsenal U21,H,EFL Trophy Southern Grp. F
 killian-cahill,2026-09-19T14:00:00Z,Stevenage,H,League One
 killian-cahill,2026-09-26T14:00:00Z,Mansfield,A,League One
@@ -2576,6 +2568,7 @@ kyle-degelman,2026-10-03T14:00:00Z,FC Memmingen,H,Regionalliga Bayern
 kyle-degelman,2026-10-10T12:00:00Z,TSV Landsberg,A,Regionalliga Bayern
 kyle-degelman,2026-10-13T16:30:00Z,FV Illertissen,H,Regionalliga Bayern
 kyle-degelman,2026-10-17T13:30:00Z,TSV Schwaben Augsburg,A,Regionalliga Bayern
+kyle-degelman,2026-10-24T12:00:00Z,Nürnberg II,A,Regionalliga Bayern
 kyle-mcdonagh,2026-09-14T18:45:00Z,Galway United FC,H,Premier Division
 kyle-mcdonagh,2026-09-19T18:45:00Z,St. Patrick's Athletic,H,Premier Division
 kyle-mcdonagh,2026-10-09T18:45:00Z,Shelbourne,A,Premier Division
@@ -2653,7 +2646,6 @@ leon-keogh,2026-09-25T18:45:00Z,UCD,A,First Division
 leon-keogh,2026-10-02T18:45:00Z,Cobh Ramblers,H,First Division
 leon-keogh,2026-10-09T18:45:00Z,Wexford FC,H,First Division
 leon-keogh,2026-10-16T18:45:00Z,Finn Harps,A,First Division
-lewis-richards,2026-09-12T11:30:00Z,Cheltenham,H,League Two
 lewis-richards,2026-09-19T14:00:00Z,Grimsby,A,League Two
 lewis-richards,2026-09-22T18:00:00Z,MK Dons,A,EFL Trophy Southern Grp. H
 lewis-richards,2026-09-26T11:30:00Z,Barnet,H,League Two
@@ -2703,7 +2695,6 @@ liam-scales,2026-10-10T14:00:00Z,Motherwell,A,Premiership
 liam-scales,2026-10-15T19:00:00Z,Benfica,A,Europa League
 liam-scales,2026-10-17T14:00:00Z,Hearts,H,Premiership
 liam-scales,2026-10-22T19:00:00Z,Celta Vigo,H,Europa League
-louie-watson,2026-09-12T11:30:00Z,Cheltenham,H,League Two
 louie-watson,2026-09-19T14:00:00Z,Grimsby,A,League Two
 louie-watson,2026-09-22T18:00:00Z,MK Dons,A,EFL Trophy Southern Grp. H
 louie-watson,2026-09-26T11:30:00Z,Barnet,H,League Two
@@ -2735,7 +2726,6 @@ luca-connell,2026-10-06T18:00:00Z,Fleetwood,A,EFL Trophy Northern Grp. G
 luca-connell,2026-10-10T14:00:00Z,Stockport County,A,League One
 luca-connell,2026-10-17T14:00:00Z,Cambridge,H,League One
 luca-connell,2026-10-20T18:45:00Z,Luton,A,League One
-luke-browne,2026-09-12T11:30:00Z,Bradford,H,League One
 luke-browne,2026-09-19T14:00:00Z,Reading,A,League One
 luke-browne,2026-09-22T18:00:00Z,Grimsby,H,EFL Trophy Northern Grp. F
 luke-browne,2026-09-26T14:00:00Z,Blackpool,H,League One
@@ -2806,6 +2796,7 @@ marcus-harness,2026-10-06T18:00:00Z,Rochdale,H,EFL Trophy Northern Grp. H
 marcus-harness,2026-10-10T14:00:00Z,Sheff Wed,H,League One
 marcus-harness,2026-10-17T14:00:00Z,Plymouth,A,League One
 marcus-harness,2026-10-20T18:45:00Z,Peterborough,H,League One
+marcus-harness,2026-10-24T11:30:00Z,Wigan,H,League One
 mark-connolly,2026-09-14T18:45:00Z,Waterford FC,A,Premier Division
 mark-connolly,2026-09-18T18:45:00Z,Galway United FC,H,Premier Division
 mark-connolly,2026-10-10T14:00:00Z,Galway United FC,A,FAI Cup
@@ -2838,6 +2829,7 @@ mark-sykes,2026-09-19T11:30:00Z,West Ham,H,Championship
 mark-sykes,2026-10-10T14:00:00Z,Preston,A,Championship
 mark-sykes,2026-10-13T18:45:00Z,Swansea,H,Championship
 mark-sykes,2026-10-17T11:30:00Z,Lincoln,H,Championship
+mark-sykes,2026-10-24T11:30:00Z,Portsmouth,A,Championship
 mark-travers,2026-09-12T16:30:00Z,Tottenham,A,Premier League
 mark-travers,2026-09-16T18:45:00Z,Wolves,H,EFL Cup
 mark-travers,2026-09-19T14:00:00Z,Ipswich,H,Premier League
@@ -2864,6 +2856,7 @@ mason-murphy,2026-10-23T18:45:00Z,Drogheda United,H,Premier Division
 matteo-egan,2026-09-20T17:30:00Z,Modena,A,Serie B
 matteo-egan,2026-10-10T13:00:00Z,Palermo,H,Serie B
 matteo-egan,2026-10-17T13:00:00Z,Ascoli,A,Serie B
+matteo-egan,2026-10-24T13:00:00Z,LR Vicenza,H,Serie B
 matthew-alonge,2026-09-18T18:45:00Z,Cork City,A,First Division
 matthew-alonge,2026-09-25T18:45:00Z,Bray Wanderers,H,First Division
 matthew-alonge,2026-10-02T18:45:00Z,Treaty United,A,First Division
@@ -2894,6 +2887,7 @@ matthew-moore,2026-09-19T12:00:00Z,Meppen,H,3. Liga
 matthew-moore,2026-10-10T12:00:00Z,MSV Duisburg,A,3. Liga
 matthew-moore,2026-10-13T17:00:00Z,VfB Stuttgart II,A,3. Liga
 matthew-moore,2026-10-17T12:00:00Z,SC Verl,H,3. Liga
+matthew-moore,2026-10-24T12:00:00Z,Waldhof Mannheim,A,3. Liga
 matthew-murray,2026-09-18T18:45:00Z,UCD,H,First Division
 matthew-murray,2026-09-26T18:30:00Z,Longford Town,A,First Division
 matthew-murray,2026-10-02T18:45:00Z,Athlone Town,A,First Division
@@ -2917,11 +2911,11 @@ max-ferguson,2026-09-18T18:45:00Z,Shelbourne,H,Premier Division
 max-ferguson,2026-10-02T18:45:00Z,Bohemian FC,H,Premier Division
 max-ferguson,2026-10-17T18:45:00Z,Sligo Rovers,A,Premier Division
 max-ferguson,2026-10-23T18:45:00Z,Derry City,A,Premier Division
-max-johnston,2026-09-12T11:30:00Z,Birmingham,H,Championship
 max-johnston,2026-09-19T14:00:00Z,Burnley,A,Championship
 max-johnston,2026-10-10T14:00:00Z,Wrexham,H,Championship
 max-johnston,2026-10-14T18:45:00Z,QPR,A,Championship
 max-johnston,2026-10-17T14:00:00Z,Stoke,H,Championship
+max-johnston,2026-10-24T11:30:00Z,Sheff Utd,A,Championship
 max-kovalevskis,2026-09-18T19:00:00Z,Waterford FC,H,Premier Division
 max-kovalevskis,2026-10-09T19:00:00Z,Drogheda United,H,Premier Division
 max-kovalevskis,2026-10-12T19:00:00Z,Bohemian FC,H,Premier Division
@@ -2932,7 +2926,6 @@ max-murphy,2026-09-25T18:45:00Z,Kerry FC,A,First Division
 max-murphy,2026-10-02T18:45:00Z,Longford Town,H,First Division
 max-murphy,2026-10-09T18:45:00Z,Bray Wanderers,A,First Division
 max-murphy,2026-10-16T18:45:00Z,UCD,H,First Division
-max-oleary,2026-09-12T11:30:00Z,QPR,H,Championship
 max-oleary,2026-09-20T11:00:00Z,Wolves,A,Championship
 max-oleary,2026-10-10T11:30:00Z,Birmingham,H,Championship
 max-oleary,2026-10-13T18:45:00Z,Wrexham,A,Championship
@@ -2973,7 +2966,6 @@ mikey-carroll,2026-09-25T18:45:00Z,Athlone Town,H,First Division
 mikey-carroll,2026-10-02T18:45:00Z,Bray Wanderers,A,First Division
 mikey-carroll,2026-10-09T18:45:00Z,Kerry FC,H,First Division
 mikey-carroll,2026-10-16T18:45:00Z,Treaty United,A,First Division
-mikey-johnston,2026-09-12T11:30:00Z,QPR,H,Championship
 mikey-johnston,2026-09-20T11:00:00Z,Wolves,A,Championship
 mikey-johnston,2026-10-10T11:30:00Z,Birmingham,H,Championship
 mikey-johnston,2026-10-13T18:45:00Z,Wrexham,A,Championship
@@ -3000,6 +2992,7 @@ millenic-alli,2026-09-19T11:30:00Z,Cardiff,A,Championship
 millenic-alli,2026-10-10T11:30:00Z,Bristol City,H,Championship
 millenic-alli,2026-10-13T18:45:00Z,Burnley,A,Championship
 millenic-alli,2026-10-17T11:30:00Z,Watford,A,Championship
+millenic-alli,2026-10-24T11:30:00Z,Norwich,H,Championship
 naj-razi,2026-09-18T19:00:00Z,Waterford FC,H,Premier Division
 naj-razi,2026-10-09T19:00:00Z,Drogheda United,H,Premier Division
 naj-razi,2026-10-12T19:00:00Z,Bohemian FC,H,Premier Division
@@ -3033,6 +3026,7 @@ niall-canavan,2026-09-29T18:45:00Z,FC Halifax Town,A,National League
 niall-canavan,2026-10-03T14:00:00Z,Yeovil,A,National League
 niall-canavan,2026-10-10T14:00:00Z,Southend,H,National League
 niall-canavan,2026-10-13T18:00:00Z,Southampton U21,H,National League Cup Group D
+niall-canavan,2026-10-24T11:30:00Z,Eastleigh,A,National League
 niall-holohan,2026-09-18T18:45:00Z,Cork City,A,First Division
 niall-holohan,2026-09-25T18:45:00Z,Bray Wanderers,H,First Division
 niall-holohan,2026-10-02T18:45:00Z,Treaty United,A,First Division
@@ -3101,7 +3095,6 @@ oisin-obrien,2026-10-10T14:00:00Z,Galway United FC,A,FAI Cup
 oisin-obrien,2026-10-16T18:45:00Z,Drogheda United,A,Premier Division
 oisin-obrien,2026-10-19T18:45:00Z,St. Patrick's Athletic,H,Premier Division
 oisin-obrien,2026-10-23T18:45:00Z,Dundalk,H,Premier Division
-ollie-oneill,2026-09-12T11:30:00Z,Wycombe,H,League One
 ollie-oneill,2026-09-15T18:00:00Z,Arsenal U21,H,EFL Trophy Southern Grp. F
 ollie-oneill,2026-09-19T14:00:00Z,Stevenage,H,League One
 ollie-oneill,2026-09-26T14:00:00Z,Mansfield,A,League One
@@ -3222,7 +3215,6 @@ philip-cooney,2026-09-25T18:45:00Z,UCD,A,First Division
 philip-cooney,2026-10-02T18:45:00Z,Cobh Ramblers,H,First Division
 philip-cooney,2026-10-09T18:45:00Z,Wexford FC,H,First Division
 philip-cooney,2026-10-16T18:45:00Z,Finn Harps,A,First Division
-philip-sanyaolu,2026-09-12T11:30:00Z,Grimsby,A,League Two
 philip-sanyaolu,2026-09-19T14:00:00Z,Gillingham,A,League Two
 philip-sanyaolu,2026-09-26T14:00:00Z,Exeter,H,League Two
 philip-sanyaolu,2026-10-03T14:00:00Z,Crewe,A,League Two
@@ -3230,7 +3222,7 @@ philip-sanyaolu,2026-10-06T18:00:00Z,Wycombe,A,EFL Trophy Southern Grp. C
 philip-sanyaolu,2026-10-10T14:00:00Z,Barnet,H,League Two
 philip-sanyaolu,2026-10-17T11:30:00Z,Shrewsbury,A,League Two
 philip-sanyaolu,2026-10-20T18:45:00Z,Salford,H,League Two
-pierce-sweeney,2026-09-12T11:30:00Z,Crawley,A,League Two
+philip-sanyaolu,2026-10-24T11:30:00Z,Swindon,H,League Two
 pierce-sweeney,2026-09-19T14:00:00Z,Colchester,A,League Two
 pierce-sweeney,2026-09-22T18:00:00Z,Exeter,H,EFL Trophy Southern Grp. A
 pierce-sweeney,2026-09-26T14:00:00Z,Chesterfield,H,League Two
@@ -3239,6 +3231,7 @@ pierce-sweeney,2026-10-10T14:00:00Z,Salford,H,League Two
 pierce-sweeney,2026-10-13T18:00:00Z,Tottenham Hotspur U21,H,EFL Trophy Southern Grp. A
 pierce-sweeney,2026-10-17T14:00:00Z,Oldham,A,League Two
 pierce-sweeney,2026-10-20T18:45:00Z,Fleetwood,H,League Two
+pierce-sweeney,2026-10-24T11:30:00Z,Newport,H,League Two
 pijus-otegbayo,2026-09-21T18:00:00Z,Bournemouth U21,A,Premier League 2
 pijus-otegbayo,2026-10-13T18:00:00Z,FC Halifax Town,A,National League Cup Group A
 pijus-otegbayo,2026-10-16T18:00:00Z,Chelsea U21,H,Premier League 2
@@ -3258,7 +3251,6 @@ rabby-tabu-minzamba,2026-10-10T14:00:00Z,Hanwell Town,H,Southern Premier Divisio
 rabby-tabu-minzamba,2026-10-13T18:45:00Z,Gloucester City,A,Southern Premier Division South
 rabby-tabu-minzamba,2026-10-17T14:00:00Z,Evesham United,A,Southern Premier Division South
 rabby-tabu-minzamba,2026-10-20T18:45:00Z,Bracknell Town,H,Southern Premier Division South
-reece-staunton,2026-09-12T11:30:00Z,Bristol Rovers,H,League Two
 reece-staunton,2026-09-19T14:00:00Z,Crawley,H,League Two
 reece-staunton,2026-09-22T18:00:00Z,Notts County,A,EFL Trophy Northern Grp. F
 reece-staunton,2026-09-26T14:00:00Z,Newport,A,League Two
@@ -3406,7 +3398,6 @@ rory-feely,2026-09-26T18:30:00Z,Longford Town,A,First Division
 rory-feely,2026-10-02T18:45:00Z,Athlone Town,A,First Division
 rory-feely,2026-10-09T18:45:00Z,Finn Harps,H,First Division
 rory-feely,2026-10-16T18:45:00Z,Kerry FC,A,First Division
-rory-finneran,2026-09-12T11:30:00Z,Bradford,H,League One
 rory-finneran,2026-09-19T14:00:00Z,Reading,A,League One
 rory-finneran,2026-09-22T18:00:00Z,Grimsby,H,EFL Trophy Northern Grp. F
 rory-finneran,2026-09-26T14:00:00Z,Blackpool,H,League One
@@ -3486,6 +3477,7 @@ ryan-johansson,2026-09-20T14:30:00Z,Waldhof Mannheim,A,3. Liga
 ryan-johansson,2026-10-10T12:00:00Z,RW Essen,H,3. Liga
 ryan-johansson,2026-10-13T17:00:00Z,Düsseldorf,H,3. Liga
 ryan-johansson,2026-10-17T12:00:00Z,Sonnenhof Großaspach,A,3. Liga
+ryan-johansson,2026-10-24T12:00:00Z,Fortuna Köln,H,3. Liga
 ryan-kelly,2026-09-18T18:45:00Z,Treaty United,H,First Division
 ryan-kelly,2026-09-25T18:45:00Z,UCD,A,First Division
 ryan-kelly,2026-10-02T18:45:00Z,Cobh Ramblers,H,First Division
@@ -3570,11 +3562,11 @@ sam-todd,2026-10-09T18:45:00Z,Waterford FC,H,FAI Cup
 sam-todd,2026-10-12T19:00:00Z,Shamrock Rovers,A,Premier Division
 sam-todd,2026-10-16T18:45:00Z,Waterford FC,H,Premier Division
 sam-todd,2026-10-23T18:45:00Z,Shelbourne,H,Premier Division
-sammie-szmodics,2026-09-12T11:30:00Z,Birmingham,H,Championship
 sammie-szmodics,2026-09-19T14:00:00Z,Burnley,A,Championship
 sammie-szmodics,2026-10-10T14:00:00Z,Wrexham,H,Championship
 sammie-szmodics,2026-10-14T18:45:00Z,QPR,A,Championship
 sammie-szmodics,2026-10-17T14:00:00Z,Stoke,H,Championship
+sammie-szmodics,2026-10-24T11:30:00Z,Sheff Utd,A,Championship
 samuel-ogungbe,2026-09-14T18:45:00Z,Dundalk,A,Premier Division
 samuel-ogungbe,2026-09-19T18:45:00Z,Sligo Rovers,A,Premier Division
 samuel-ogungbe,2026-10-16T18:45:00Z,Shelbourne,H,Premier Division
@@ -3724,6 +3716,7 @@ sean-raggett,2026-10-06T18:45:00Z,Luton,H,EFL Trophy Southern Grp. D
 sean-raggett,2026-10-10T14:00:00Z,Newport,A,League Two
 sean-raggett,2026-10-17T14:00:00Z,Exeter,H,League Two
 sean-raggett,2026-10-20T18:45:00Z,Chesterfield,A,League Two
+sean-raggett,2026-10-24T11:30:00Z,Northampton,A,League Two
 sean-roughan,2026-09-12T14:00:00Z,Mansfield,A,League One
 sean-roughan,2026-09-19T14:00:00Z,Bromley,A,League One
 sean-roughan,2026-09-26T14:00:00Z,Luton,H,League One
@@ -3732,6 +3725,7 @@ sean-roughan,2026-10-06T18:00:00Z,Rochdale,H,EFL Trophy Northern Grp. H
 sean-roughan,2026-10-10T14:00:00Z,Sheff Wed,H,League One
 sean-roughan,2026-10-17T14:00:00Z,Plymouth,A,League One
 sean-roughan,2026-10-20T18:45:00Z,Peterborough,H,League One
+sean-roughan,2026-10-24T11:30:00Z,Wigan,H,League One
 sean-spaight,2026-09-14T18:45:00Z,St. Patrick's Athletic,H,Premier Division
 sean-spaight,2026-09-18T18:45:00Z,Shelbourne,H,Premier Division
 sean-spaight,2026-10-02T18:45:00Z,Bohemian FC,H,Premier Division
@@ -3805,11 +3799,11 @@ shaun-platt,2026-09-18T18:45:00Z,Shelbourne,H,Premier Division
 shaun-platt,2026-10-02T18:45:00Z,Bohemian FC,H,Premier Division
 shaun-platt,2026-10-17T18:45:00Z,Sligo Rovers,A,Premier Division
 shaun-platt,2026-10-23T18:45:00Z,Derry City,A,Premier Division
-shaun-wade,2026-09-12T13:00:00Z,Arsenal U21,A,Premier League 2
 shaun-wade,2026-09-15T18:00:00Z,Wycombe,A,EFL Trophy Southern Grp. C
 shaun-wade,2026-09-19T14:00:00Z,Fulham U21,H,Premier League 2
 shaun-wade,2026-10-13T18:00:00Z,Reading,A,EFL Trophy Southern Grp. C
 shaun-wade,2026-10-16T18:00:00Z,Stoke City U21,A,Premier League 2
+shaun-wade,2026-10-24T13:00:00Z,Liverpool U21,H,Premier League 2
 shaunie-bradley,2026-09-18T18:45:00Z,Longford Town,H,First Division
 shaunie-bradley,2026-09-25T18:45:00Z,Treaty United,A,First Division
 shaunie-bradley,2026-10-02T18:45:00Z,Kerry FC,H,First Division
@@ -3837,6 +3831,7 @@ sonny-perkins,2026-10-03T14:00:00Z,Mansfield,H,League One
 sonny-perkins,2026-10-10T14:00:00Z,Stevenage,A,League One
 sonny-perkins,2026-10-17T14:00:00Z,Reading,H,League One
 sonny-perkins,2026-10-20T18:45:00Z,Oxford Utd,A,League One
+sonny-perkins,2026-10-24T11:30:00Z,Huddersfield,A,League One
 stefan-ugbesia,2026-09-12T18:30:00Z,Treaty United,H,First Division
 stefan-ugbesia,2026-09-18T18:45:00Z,Finn Harps,A,First Division
 stefan-ugbesia,2026-09-26T18:30:00Z,Cork City,H,First Division
@@ -3943,7 +3938,6 @@ tony-mcnamee,2026-09-25T18:45:00Z,Treaty United,A,First Division
 tony-mcnamee,2026-10-02T18:45:00Z,Kerry FC,H,First Division
 tony-mcnamee,2026-10-09T18:45:00Z,Cork City,A,First Division
 tony-mcnamee,2026-10-16T18:45:00Z,Bray Wanderers,H,First Division
-tony-springett,2026-09-12T11:30:00Z,Wycombe,H,League One
 tony-springett,2026-09-15T18:00:00Z,Arsenal U21,H,EFL Trophy Southern Grp. F
 tony-springett,2026-09-19T14:00:00Z,Stevenage,H,League One
 tony-springett,2026-09-26T14:00:00Z,Mansfield,A,League One
@@ -3978,7 +3972,6 @@ tyreik-sammy,2026-09-25T18:45:00Z,UCD,A,First Division
 tyreik-sammy,2026-10-02T18:45:00Z,Cobh Ramblers,H,First Division
 tyreik-sammy,2026-10-09T18:45:00Z,Wexford FC,H,First Division
 tyreik-sammy,2026-10-16T18:45:00Z,Finn Harps,A,First Division
-tyreik-wright,2026-09-12T11:30:00Z,Notts County,A,League One
 tyreik-wright,2026-09-19T14:00:00Z,Luton,A,League One
 tyreik-wright,2026-09-22T18:30:00Z,Newcastle United U21,H,EFL Trophy Northern Grp. C
 tyreik-wright,2026-09-26T14:00:00Z,Barnsley,H,League One
@@ -4014,6 +4007,7 @@ warren-ohora,2026-10-06T18:00:00Z,Stevenage,A,EFL Trophy Southern Grp. B
 warren-ohora,2026-10-10T14:00:00Z,Peterborough,H,League One
 warren-ohora,2026-10-17T14:00:00Z,Doncaster,H,League One
 warren-ohora,2026-10-20T18:45:00Z,Bromley,A,League One
+warren-ohora,2026-10-24T11:30:00Z,Luton,A,League One
 will-ferry,2026-09-19T14:00:00Z,St. Mirren,A,Premiership
 will-ferry,2026-10-10T14:00:00Z,Hibernian,H,Premiership
 will-ferry,2026-10-17T14:00:00Z,St. Johnstone,A,Premiership
