@@ -5443,6 +5443,20 @@
   ]
  },
  {
+  "fotmob_id": "5109972",
+  "url": "/matches/loudoun-united-fc-vs-sporting-jax/1bxz8xvzp#5109972",
+  "kickoff": "2026-09-25T23:30:00Z",
+  "comp": "USL Championship",
+  "home": "Sporting JAX",
+  "away": "Loudoun United FC",
+  "home_id": "1737991",
+  "away_id": "1003205",
+  "slugs": [
+   "harvey-neville",
+   "kieran-sadlier"
+  ]
+ },
+ {
   "fotmob_id": "5906425",
   "url": "/matches/harrogate-town-vs-scunthorpe-united/27nzfl#5906425",
   "kickoff": "2026-09-05T14:00:00Z",
@@ -6262,19 +6276,6 @@
   "away": "New England Revolution",
   "home_id": "546238",
   "away_id": "6580",
-  "slugs": [
-   "kevin-otoole"
-  ]
- },
- {
-  "fotmob_id": "5071321",
-  "url": "/matches/new-york-city-fc-vs-nashville-sc/dmztmw7m#5071321",
-  "kickoff": "2026-09-04T23:30:00Z",
-  "comp": "MLS",
-  "home": "New York City FC",
-  "away": "Nashville SC",
-  "home_id": "546238",
-  "away_id": "915807",
   "slugs": [
    "kevin-otoole"
   ]
