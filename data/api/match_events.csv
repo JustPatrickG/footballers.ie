@@ -8682,6 +8682,7 @@ match_id,minute,type,player,team,venue
 2026-09-11-wexford-fc-v-finn-harps,87,goal,Oran Brogan,Finn Harps,Stadium
 2026-09-12-arsenal-u18-v-crystal-palace-u18,33,goal,Emerson Nwaneri,Arsenal U18,Stadium
 2026-09-12-arsenal-u18-v-crystal-palace-u18,84,goal,Callan Hamill,Arsenal U18,Stadium
+2026-09-12-arsenal-u21-v-chelsea-u21,,,,,Mangata Developments Stadium Meadow Park
 2026-09-12-bolton-wanderers-v-cardiff-city,31,yellow,Ben Davies,Bolton Wanderers,Toughsheet Community Stadium
 2026-09-12-bolton-wanderers-v-cardiff-city,32,yellow,Kyliane Dong,Bolton Wanderers,Toughsheet Community Stadium
 2026-09-12-bolton-wanderers-v-cardiff-city,37,yellow,Samuel Iling-Junior,Bolton Wanderers,Toughsheet Community Stadium
@@ -8690,6 +8691,7 @@ match_id,minute,type,player,team,venue
 2026-09-12-bolton-wanderers-v-cardiff-city,46,sub_off,Samuel Iling-Junior,Bolton Wanderers,Toughsheet Community Stadium
 2026-09-12-bolton-wanderers-v-cardiff-city,46,sub_on,Thelonius Bair,Bolton Wanderers,Toughsheet Community Stadium
 2026-09-12-bolton-wanderers-v-cardiff-city,46,sub_on,Thierry Gale,Bolton Wanderers,Toughsheet Community Stadium
+2026-09-12-cosenza-v-cavese,,,,,Stadium
 2026-09-12-crawley-town-v-cheltenham-town,7,goal,Dylan Morgan,Crawley Town,Broadfield Stadium
 2026-09-12-crawley-town-v-cheltenham-town,32,goal,Charlie McCann,Cheltenham Town,Broadfield Stadium
 2026-09-12-crawley-town-v-cheltenham-town,35,goal,Andreas Weimann,Cheltenham Town,Broadfield Stadium
@@ -8697,6 +8699,20 @@ match_id,minute,type,player,team,venue
 2026-09-12-crawley-town-v-cheltenham-town,42,yellow,Charlie Barker,Crawley Town,Broadfield Stadium
 2026-09-12-crawley-town-v-cheltenham-town,45,yellow,Jake Evans,Cheltenham Town,Broadfield Stadium
 2026-09-12-crawley-town-v-cheltenham-town,54,goal,Charlie McCann,Cheltenham Town,Broadfield Stadium
+2026-09-12-crawley-town-v-cheltenham-town,64,sub_off,Dion Pereira,Crawley Town,Broadfield Stadium
+2026-09-12-crawley-town-v-cheltenham-town,64,sub_on,Pemi Aderoju,Crawley Town,Broadfield Stadium
+2026-09-12-crawley-town-v-cheltenham-town,67,yellow,Jude Arthurs,Crawley Town,Broadfield Stadium
+2026-09-12-crawley-town-v-cheltenham-town,70,sub_off,Shaun McWilliams,Cheltenham Town,Broadfield Stadium
+2026-09-12-crawley-town-v-cheltenham-town,70,sub_off,Jake Evans,Cheltenham Town,Broadfield Stadium
+2026-09-12-crawley-town-v-cheltenham-town,70,sub_on,Freddy Willcox,Cheltenham Town,Broadfield Stadium
+2026-09-12-crawley-town-v-cheltenham-town,70,sub_on,Ryan Broom,Cheltenham Town,Broadfield Stadium
+2026-09-12-crawley-town-v-cheltenham-town,72,yellow,Priestley Farquharson,Crawley Town,Broadfield Stadium
+2026-09-12-crawley-town-v-cheltenham-town,75,sub_off,Louie Watson,Crawley Town,Broadfield Stadium
+2026-09-12-crawley-town-v-cheltenham-town,75,sub_off,Danilo Orsi,Crawley Town,Broadfield Stadium
+2026-09-12-crawley-town-v-cheltenham-town,75,sub_on,Klaudio Krasniqi,Crawley Town,Broadfield Stadium
+2026-09-12-crawley-town-v-cheltenham-town,75,sub_on,Gianmarco Di Biase,Crawley Town,Broadfield Stadium
+2026-09-12-crawley-town-v-cheltenham-town,78,sub_off,Andreas Weimann,Cheltenham Town,Broadfield Stadium
+2026-09-12-crawley-town-v-cheltenham-town,78,sub_on,Kirsten Otchere,Cheltenham Town,Broadfield Stadium
 2026-09-12-derby-county-v-birmingham-city,19,yellow,Mohammed Fuseini,Derby County,Pride Park Stadium
 2026-09-12-derby-county-v-birmingham-city,21,yellow,Alexander Cochrane,Birmingham City,Pride Park Stadium
 2026-09-12-derby-county-v-birmingham-city,40,goal,Bobby Clark,Derby County,Pride Park Stadium
@@ -8712,7 +8728,9 @@ match_id,minute,type,player,team,venue
 2026-09-12-grimsby-town-v-bristol-rovers,26,sub_on,Ciarán Kelly,Bristol Rovers,Blundell Park
 2026-09-12-grimsby-town-v-bristol-rovers,38,yellow,Shaqai Forde,Bristol Rovers,Blundell Park
 2026-09-12-grimsby-town-v-bristol-rovers,40,goal,Géza Dávid Turi,Grimsby Town,Blundell Park
-2026-09-12-ha-noi-fc-v-song-lam-nghe-an,,,,,Stadium
+2026-09-12-ha-noi-fc-v-song-lam-nghe-an,9,yellow,Nguyễn Hai Long,Ha Nội FC,Stadium
+2026-09-12-ha-noi-fc-v-song-lam-nghe-an,14,yellow,Abdel-Amine Tran,Song Lam Nghe An,Stadium
+2026-09-12-ha-noi-fc-v-song-lam-nghe-an,35,goal,Bruno Paraíba,Song Lam Nghe An,Stadium
 2026-09-12-ipswich-town-u18-v-southampton-u18,5,goal,Wyatt Comley,Southampton U18,Stadium
 2026-09-12-ipswich-town-u18-v-southampton-u18,28,goal,Wyatt Comley,Southampton U18,Stadium
 2026-09-12-ipswich-town-u18-v-southampton-u18,52,goal,Junior Kuzanga,Southampton U18,Stadium
