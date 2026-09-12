@@ -1446,19 +1446,6 @@
   ]
  },
  {
-  "fotmob_id": "5795453",
-  "url": "/matches/sunderland-vs-arsenal/2ro5o6#5795453",
-  "kickoff": "2026-09-12T19:00:00Z",
-  "comp": "Premier League",
-  "home": "Sunderland",
-  "away": "Arsenal",
-  "home_id": "8472",
-  "away_id": "9825",
-  "slugs": [
-   "alan-browne"
-  ]
- },
- {
   "fotmob_id": "6112330",
   "url": "/matches/sunderland-vs-az-alkmaar/2w4bg3#6112330",
   "kickoff": "2026-09-16T19:00:00Z",
@@ -2237,6 +2224,19 @@
   ]
  },
  {
+  "fotmob_id": "5760492",
+  "url": "/matches/cska-sofia-vs-arda-kardzhali/5t6upmp4#5760492",
+  "kickoff": "2026-09-12T18:15:00Z",
+  "comp": "First Professional League",
+  "home": "CSKA Sofia",
+  "away": "Arda Kardzhali",
+  "home_id": "10144",
+  "away_id": "944173",
+  "slugs": [
+   "barry-cotter"
+  ]
+ },
+ {
   "fotmob_id": "5760472",
   "url": "/matches/pfc-lokomotiv-sofia-1929-vs-cska-sofia/3ecipk#5760472",
   "kickoff": "2026-09-16T16:00:00Z",
@@ -2969,6 +2969,21 @@
    "glenn-mcconnell",
    "sam-curtis",
    "shane-mcloughlin"
+  ]
+ },
+ {
+  "fotmob_id": "6030662",
+  "url": "/matches/aberdeen-vs-kilmarnock/2evgck#6030662",
+  "kickoff": "2026-09-12T16:45:00Z",
+  "comp": "League Cup",
+  "home": "Kilmarnock",
+  "away": "Aberdeen",
+  "home_id": "8597",
+  "away_id": "8485",
+  "slugs": [
+   "cathal-mccarthy",
+   "connor-ronan",
+   "gavin-molloy"
   ]
  },
  {
@@ -7298,6 +7313,19 @@
   ]
  },
  {
+  "fotmob_id": "5795453",
+  "url": "/matches/sunderland-vs-arsenal/2ro5o6#5795453",
+  "kickoff": "2026-09-12T19:00:00Z",
+  "comp": "Premier League",
+  "home": "Sunderland",
+  "away": "Arsenal",
+  "home_id": "8472",
+  "away_id": "9825",
+  "slugs": [
+   "alan-browne"
+  ]
+ },
+ {
   "fotmob_id": "6145900",
   "url": "/matches/ff-jaro-vs-sjk/6orlq1n#6145900",
   "kickoff": "2026-09-12T16:00:00Z",
@@ -7308,19 +7336,6 @@
   "away_id": "162162",
   "slugs": [
    "aaron-okpolokpo"
-  ]
- },
- {
-  "fotmob_id": "5760492",
-  "url": "/matches/cska-sofia-vs-arda-kardzhali/5t6upmp4#5760492",
-  "kickoff": "2026-09-12T18:15:00Z",
-  "comp": "First Professional League",
-  "home": "CSKA Sofia",
-  "away": "Arda Kardzhali",
-  "home_id": "10144",
-  "away_id": "944173",
-  "slugs": [
-   "barry-cotter"
   ]
  },
  {
@@ -7366,21 +7381,6 @@
    "stefan-ugbesia",
    "steven-healy",
    "taylor-mccarthy"
-  ]
- },
- {
-  "fotmob_id": "6030662",
-  "url": "/matches/aberdeen-vs-kilmarnock/2evgck#6030662",
-  "kickoff": "2026-09-12T16:45:00Z",
-  "comp": "League Cup",
-  "home": "Kilmarnock",
-  "away": "Aberdeen",
-  "home_id": "8597",
-  "away_id": "8485",
-  "slugs": [
-   "cathal-mccarthy",
-   "connor-ronan",
-   "gavin-molloy"
   ]
  },
  {
