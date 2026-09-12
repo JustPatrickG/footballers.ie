@@ -5797,19 +5797,6 @@
   ]
  },
  {
-  "fotmob_id": "5976891",
-  "url": "/matches/fc-metaloglobus-bucuresti-vs-csm-olimpia-satu-mare/uvpho1gp#5976891",
-  "kickoff": "2026-09-12T08:00:00Z",
-  "comp": "Liga II",
-  "home": "FC Metaloglobus Bucure\u0219ti",
-  "away": "CSM Olimpia Satu Mare",
-  "home_id": "404509",
-  "away_id": "1795466",
-  "slugs": [
-   "jimmy-mwanga"
-  ]
- },
- {
   "fotmob_id": "5976899",
   "url": "/matches/cs-afumati-vs-csm-olimpia-satu-mare/uzlss5ho#5976899",
   "kickoff": "2026-09-19T08:00:00Z",
@@ -7866,6 +7853,19 @@
   "away_id": "2205",
   "slugs": [
    "billy-vance"
+  ]
+ },
+ {
+  "fotmob_id": "5976891",
+  "url": "/matches/fc-metaloglobus-bucuresti-vs-csm-olimpia-satu-mare/uvpho1gp#5976891",
+  "kickoff": "2026-09-12T08:00:00Z",
+  "comp": "Liga II",
+  "home": "FC Metaloglobus Bucure\u0219ti",
+  "away": "CSM Olimpia Satu Mare",
+  "home_id": "404509",
+  "away_id": "1795466",
+  "slugs": [
+   "jimmy-mwanga"
   ]
  },
  {
