@@ -359,9 +359,9 @@ barry-coffey,2026-09-12T23:00:00Z,Tampa Bay Rowdies,H,USL Championship
 barry-coffey,2026-09-16T22:00:00Z,Sporting JAX,H,USL Championship
 barry-coffey,2026-09-20T02:30:00Z,Las Vegas Lights FC,A,USL Championship
 barry-coffey,2026-09-25T23:00:00Z,Louisville City FC,H,USL Championship
-barry-coffey,2026-10-03T23:00:00Z,Charleston Battery,H,USL Championship
 barry-coffey,2026-10-04T19:00:00Z,Louisville City FC,H,USL Cup
 barry-coffey,2026-10-10T23:00:00Z,Pittsburgh Riverhounds SC,A,USL Championship
+barry-coffey,2026-10-14T23:00:00Z,Charleston Battery,H,USL Championship
 barry-coffey,2026-10-17T23:00:00Z,Brooklyn,H,USL Championship
 barry-cotter,2026-09-12T18:15:00Z,Arda Kardzhali,H,First Professional League
 barry-cotter,2026-09-16T16:00:00Z,PFC Lokomotiv Sofia 1929,A,First Professional League
@@ -528,6 +528,7 @@ callum-marshall,2026-10-06T18:45:00Z,Colchester,A,EFL Trophy Southern Grp. D
 callum-marshall,2026-10-10T14:00:00Z,Wycombe,A,League One
 callum-marshall,2026-10-17T11:30:00Z,MK Dons,A,League One
 callum-marshall,2026-10-20T18:45:00Z,Barnsley,H,League One
+callum-marshall,2026-10-24T11:30:00Z,Leicester,H,League One
 callum-odowda,2026-09-17T19:00:00Z,Celtic,A,Europa League
 callum-odowda,2026-09-20T17:30:00Z,Nyíregyháza Spartacus FC,A,NB I
 callum-odowda,2026-10-10T15:00:00Z,Debrecen,H,NB I
@@ -1760,6 +1761,7 @@ grady-mcdonnell,2026-09-22T18:00:00Z,Burton,A,EFL Trophy Northern Grp. F
 grady-mcdonnell,2026-10-06T18:00:00Z,Wealdstone,A,National League Cup Group A
 grady-mcdonnell,2026-10-13T18:00:00Z,Notts County,A,EFL Trophy Northern Grp. F
 grady-mcdonnell,2026-10-17T14:00:00Z,Manchester United U21,H,Premier League 2
+grady-mcdonnell,2026-10-24T11:00:00Z,Reading U21,A,Premier League 2
 graham-burke,2026-09-18T19:00:00Z,Waterford FC,H,Premier Division
 graham-burke,2026-10-09T19:00:00Z,Drogheda United,H,Premier Division
 graham-burke,2026-10-12T19:00:00Z,Bohemian FC,H,Premier Division
@@ -1830,7 +1832,7 @@ harvey-neville,2026-09-12T23:00:00Z,Rhode Island FC,H,USL Championship
 harvey-neville,2026-09-16T22:00:00Z,Hartford Athletic,A,USL Championship
 harvey-neville,2026-09-25T23:30:00Z,Loudoun United FC,H,USL Championship
 harvey-neville,2026-09-30T23:00:00Z,Miami FC,A,USL Championship
-harvey-neville,2026-10-02T23:30:00Z,Louisville City FC,H,USL Championship
+harvey-neville,2026-10-04T21:00:00Z,Louisville City FC,H,USL Championship
 harvey-neville,2026-10-10T21:00:00Z,Birmingham Legion FC,H,USL Championship
 harvey-warren,2026-09-14T18:45:00Z,St. Patrick's Athletic,H,Premier Division
 harvey-warren,2026-09-18T18:45:00Z,Shelbourne,H,Premier Division
@@ -2360,6 +2362,7 @@ josh-keeley,2026-10-06T18:45:00Z,Colchester,A,EFL Trophy Southern Grp. D
 josh-keeley,2026-10-10T14:00:00Z,Wycombe,A,League One
 josh-keeley,2026-10-17T11:30:00Z,MK Dons,A,League One
 josh-keeley,2026-10-20T18:45:00Z,Barnsley,H,League One
+josh-keeley,2026-10-24T11:30:00Z,Leicester,H,League One
 josh-obrien,2026-09-15T23:00:00Z,Brooklyn,H,USL Championship
 josh-obrien,2026-09-20T21:00:00Z,Oakland Roots SC,H,USL Championship
 josh-obrien,2026-09-26T23:00:00Z,Miami FC,H,USL Championship
@@ -2376,6 +2379,7 @@ josh-odwyer,2026-09-13T08:30:00Z,SKN St. Pölten,H,2. Liga
 josh-odwyer,2026-09-18T16:30:00Z,Floridsdorfer AC,A,2. Liga
 josh-odwyer,2026-10-10T13:30:00Z,Sturm Graz II,H,2. Liga
 josh-odwyer,2026-10-17T15:30:00Z,BW Linz,A,2. Liga
+josh-odwyer,2026-10-24T13:30:00Z,SW Bregenz,H,2. Liga
 josh-okpolokpo,2026-09-12T16:00:00Z,FF Jaro,A,Veikkausliiga Relegation Group
 josh-okpolokpo,2026-09-18T15:00:00Z,IFK Mariehamn,H,Veikkausliiga Relegation Group
 josh-okpolokpo,2026-10-09T15:00:00Z,FC Lahti,H,Veikkausliiga Relegation Group
@@ -2532,7 +2536,7 @@ kieran-sadlier,2026-09-12T23:00:00Z,Rhode Island FC,H,USL Championship
 kieran-sadlier,2026-09-16T22:00:00Z,Hartford Athletic,A,USL Championship
 kieran-sadlier,2026-09-25T23:30:00Z,Loudoun United FC,H,USL Championship
 kieran-sadlier,2026-09-30T23:00:00Z,Miami FC,A,USL Championship
-kieran-sadlier,2026-10-02T23:30:00Z,Louisville City FC,H,USL Championship
+kieran-sadlier,2026-10-04T21:00:00Z,Louisville City FC,H,USL Championship
 kieran-sadlier,2026-10-10T21:00:00Z,Birmingham Legion FC,H,USL Championship
 killian-brouder,2026-09-14T18:45:00Z,Sligo Rovers,A,Premier Division
 killian-brouder,2026-09-18T18:45:00Z,Derry City,A,Premier Division
