@@ -8680,8 +8680,55 @@ match_id,minute,type,player,team,venue
 2026-09-11-wexford-fc-v-finn-harps,51,goal,Jake Doyle,Wexford FC,Stadium
 2026-09-11-wexford-fc-v-finn-harps,60,goal,Bernardo Monteiro,Finn Harps,Stadium
 2026-09-11-wexford-fc-v-finn-harps,87,goal,Oran Brogan,Finn Harps,Stadium
+2026-09-12-arsenal-u18-v-crystal-palace-u18,33,goal,Emerson Nwaneri,Arsenal U18,Stadium
+2026-09-12-arsenal-u18-v-crystal-palace-u18,84,goal,Callan Hamill,Arsenal U18,Stadium
+2026-09-12-bolton-wanderers-v-cardiff-city,31,yellow,Ben Davies,Bolton Wanderers,Toughsheet Community Stadium
+2026-09-12-bolton-wanderers-v-cardiff-city,32,yellow,Kyliane Dong,Bolton Wanderers,Toughsheet Community Stadium
+2026-09-12-bolton-wanderers-v-cardiff-city,37,yellow,Samuel Iling-Junior,Bolton Wanderers,Toughsheet Community Stadium
+2026-09-12-bolton-wanderers-v-cardiff-city,42,yellow,Joel Colwill,Cardiff City,Toughsheet Community Stadium
+2026-09-12-crawley-town-v-cheltenham-town,7,goal,Dylan Morgan,Crawley Town,Broadfield Stadium
+2026-09-12-crawley-town-v-cheltenham-town,32,goal,Charlie McCann,Cheltenham Town,Broadfield Stadium
+2026-09-12-crawley-town-v-cheltenham-town,35,goal,Andreas Weimann,Cheltenham Town,Broadfield Stadium
+2026-09-12-crawley-town-v-cheltenham-town,35,yellow,Dylan Morgan,Crawley Town,Broadfield Stadium
+2026-09-12-crawley-town-v-cheltenham-town,42,yellow,Charlie Barker,Crawley Town,Broadfield Stadium
+2026-09-12-crawley-town-v-cheltenham-town,45,yellow,Jake Evans,Cheltenham Town,Broadfield Stadium
+2026-09-12-derby-county-v-birmingham-city,19,yellow,Mohammed Fuseini,Derby County,Pride Park Stadium
+2026-09-12-derby-county-v-birmingham-city,21,yellow,Alexander Cochrane,Birmingham City,Pride Park Stadium
+2026-09-12-derby-county-v-birmingham-city,40,goal,Bobby Clark,Derby County,Pride Park Stadium
+2026-09-12-derby-county-v-birmingham-city,42,goal,Carlos Vicente,Birmingham City,Pride Park Stadium
+2026-09-12-derby-county-v-birmingham-city,44,yellow,August Priske,Birmingham City,Pride Park Stadium
 2026-09-12-fc-metaloglobus-bucuresti-v-csm-olimpia-satu-mare,24,goal,Denis Golda,CSM Olimpia Satu Mare,Stadium
 2026-09-12-fc-metaloglobus-bucuresti-v-csm-olimpia-satu-mare,67,goal,Ime Ndon,FC Metaloglobus București,Stadium
+2026-09-12-grimsby-town-v-bristol-rovers,10,yellow,Ben Purrington,Bristol Rovers,Blundell Park
+2026-09-12-grimsby-town-v-bristol-rovers,22,goal,Kieran Green,Grimsby Town,Blundell Park
+2026-09-12-grimsby-town-v-bristol-rovers,26,sub_off,Riley Harbottle,Bristol Rovers,Blundell Park
+2026-09-12-grimsby-town-v-bristol-rovers,26,sub_on,Ciarán Kelly,Bristol Rovers,Blundell Park
+2026-09-12-grimsby-town-v-bristol-rovers,38,yellow,Shaqai Forde,Bristol Rovers,Blundell Park
+2026-09-12-grimsby-town-v-bristol-rovers,40,goal,Géza Dávid Turi,Grimsby Town,Blundell Park
+2026-09-12-ha-noi-fc-v-song-lam-nghe-an,,,,,Stadium
+2026-09-12-ipswich-town-u18-v-southampton-u18,5,goal,Wyatt Comley,Southampton U18,Stadium
+2026-09-12-ipswich-town-u18-v-southampton-u18,28,goal,Wyatt Comley,Southampton U18,Stadium
+2026-09-12-ipswich-town-u18-v-southampton-u18,52,goal,Junior Kuzanga,Southampton U18,Stadium
+2026-09-12-ipswich-town-u18-v-southampton-u18,56,goal,Archie Lovatt,Southampton U18,Stadium
+2026-09-12-ipswich-town-u18-v-southampton-u18,90,goal,Roman Burton-Yurevich,Ipswich Town U18,Stadium
+2026-09-12-leyton-orient-v-wycombe-wanderers,13,goal,Jayden Wareham,Wycombe Wanderers,BetWright Stadium
+2026-09-12-leyton-orient-v-wycombe-wanderers,30,yellow,Daniel Harvie,Wycombe Wanderers,BetWright Stadium
+2026-09-12-leyton-orient-v-wycombe-wanderers,37,own_goal,Jack Grimmer,Leyton Orient,BetWright Stadium
+2026-09-12-leyton-orient-v-wycombe-wanderers,39,sub_off,Demetri Mitchell,Leyton Orient,BetWright Stadium
+2026-09-12-leyton-orient-v-wycombe-wanderers,39,sub_on,Armando Dobra,Leyton Orient,BetWright Stadium
+2026-09-12-leyton-orient-v-wycombe-wanderers,45,goal,Fred Onyedinma,Wycombe Wanderers,BetWright Stadium
+2026-09-12-magdeburg-v-kaiserslautern,12,goal,Emmanuel Iyoha,Magdeburg,Avnet Arena
+2026-09-12-magdeburg-v-kaiserslautern,16,goal,Alexander Nollenberger,Magdeburg,Avnet Arena
+2026-09-12-magdeburg-v-kaiserslautern,46,sub_off,Erencan Yardımcı,Kaiserslautern,Avnet Arena
+2026-09-12-magdeburg-v-kaiserslautern,46,sub_off,Marlon Ritter,Kaiserslautern,Avnet Arena
+2026-09-12-magdeburg-v-kaiserslautern,46,sub_on,Mërgim Berisha,Kaiserslautern,Avnet Arena
+2026-09-12-magdeburg-v-kaiserslautern,46,sub_on,Mário Sauer,Kaiserslautern,Avnet Arena
+2026-09-12-magdeburg-v-kaiserslautern,53,goal,Emmanuel Iyoha,Magdeburg,Avnet Arena
+2026-09-12-magdeburg-v-kaiserslautern,61,sub_off,Alex Murphy,Kaiserslautern,Avnet Arena
+2026-09-12-magdeburg-v-kaiserslautern,61,sub_off,Simon Asta,Kaiserslautern,Avnet Arena
+2026-09-12-magdeburg-v-kaiserslautern,61,sub_on,Mika Haas,Kaiserslautern,Avnet Arena
+2026-09-12-magdeburg-v-kaiserslautern,61,sub_on,Paul Joly,Kaiserslautern,Avnet Arena
+2026-09-12-magdeburg-v-kaiserslautern,65,yellow,Maxwell Gyamfi,Kaiserslautern,Avnet Arena
 2026-09-12-new-mexico-united-v-indy-eleven,16,goal,Luther Archimède,New Mexico United,Rio Grande Credit Union Field at Isotopes Park
 2026-09-12-new-mexico-united-v-indy-eleven,18,goal,Greg Hurst,New Mexico United,Rio Grande Credit Union Field at Isotopes Park
 2026-09-12-new-mexico-united-v-indy-eleven,45,yellow,Joe Hafferty,Indy Eleven,Rio Grande Credit Union Field at Isotopes Park
@@ -8704,3 +8751,37 @@ match_id,minute,type,player,team,venue
 2026-09-12-new-mexico-united-v-indy-eleven,86,sub_on,Cristian Nava,New Mexico United,Rio Grande Credit Union Field at Isotopes Park
 2026-09-12-new-mexico-united-v-indy-eleven,88,yellow,Ousman Jabang,New Mexico United,Rio Grande Credit Union Field at Isotopes Park
 2026-09-12-new-mexico-united-v-indy-eleven,90,yellow,Kipp Keller,New Mexico United,Rio Grande Credit Union Field at Isotopes Park
+2026-09-12-nottingham-forest-u18-v-middlesbrough-u18,49,goal,Eamonn Tohill,Middlesbrough U18,Stadium
+2026-09-12-notts-county-v-bradford-city,11,yellow,Ibou Touray,Bradford City,Meadow Lane
+2026-09-12-notts-county-v-bradford-city,14,yellow,Antoni Sarcevic,Bradford City,Meadow Lane
+2026-09-12-notts-county-v-bradford-city,39,yellow,Jack Evans,Notts County,Meadow Lane
+2026-09-12-notts-county-v-bradford-city,41,sub_off,Adam Phillips,Bradford City,Meadow Lane
+2026-09-12-notts-county-v-bradford-city,41,sub_on,Kayden Jackson,Bradford City,Meadow Lane
+2026-09-12-southampton-u21-v-bournemouth-u21,11,goal,Sufianu Sillah Dibaga,Southampton U21,Staplewood Training Ground
+2026-09-12-southampton-u21-v-bournemouth-u21,16,goal,Romeo Akachukwu,Southampton U21,Staplewood Training Ground
+2026-09-12-southampton-u21-v-bournemouth-u21,25,goal,Ethan Sills,Bournemouth U21,Staplewood Training Ground
+2026-09-12-southampton-u21-v-bournemouth-u21,35,goal,Mads Roerslev,Southampton U21,Staplewood Training Ground
+2026-09-12-southampton-u21-v-bournemouth-u21,45,red,Ademide Solanke,Bournemouth U21,Staplewood Training Ground
+2026-09-12-southampton-u21-v-bournemouth-u21,46,sub_off,Max Lyall-Rajendra,Bournemouth U21,Staplewood Training Ground
+2026-09-12-southampton-u21-v-bournemouth-u21,46,sub_on,Eugene Nyarko,Bournemouth U21,Staplewood Training Ground
+2026-09-12-southampton-u21-v-bournemouth-u21,49,yellow,Korban McMullan,Southampton U21,Staplewood Training Ground
+2026-09-12-southampton-u21-v-bournemouth-u21,60,sub_off,Mads Roerslev,Southampton U21,Staplewood Training Ground
+2026-09-12-southampton-u21-v-bournemouth-u21,60,sub_on,Hansel Adjei-Afriyie,Southampton U21,Staplewood Training Ground
+2026-09-12-southampton-u21-v-bournemouth-u21,64,sub_off,Jaheim Azzouz Scafe,Bournemouth U21,Staplewood Training Ground
+2026-09-12-southampton-u21-v-bournemouth-u21,64,sub_off,Dane Ndimukum,Bournemouth U21,Staplewood Training Ground
+2026-09-12-southampton-u21-v-bournemouth-u21,64,sub_on,Adrian Oluwande,Bournemouth U21,Staplewood Training Ground
+2026-09-12-southampton-u21-v-bournemouth-u21,64,sub_on,Nefeye Osazee,Bournemouth U21,Staplewood Training Ground
+2026-09-12-west-bromwich-albion-u18-v-aston-villa-u18,26,goal,Danyal Iqbal,West Bromwich Albion U18,Stadium
+2026-09-12-west-bromwich-albion-u18-v-aston-villa-u18,71,goal,Harry French,West Bromwich Albion U18,Stadium
+2026-09-12-west-bromwich-albion-u18-v-aston-villa-u18,81,second_yellow,Reuben Saa,West Bromwich Albion U18,Stadium
+2026-09-12-west-bromwich-albion-v-queens-park-rangers,35,sub_off,Paul Smyth,Queens Park Rangers,The Hawthorns
+2026-09-12-west-bromwich-albion-v-queens-park-rangers,35,sub_on,Leon Scarlett,Queens Park Rangers,The Hawthorns
+2026-09-12-west-bromwich-albion-v-queens-park-rangers,38,own_goal,Chris Mepham,Queens Park Rangers,The Hawthorns
+2026-09-12-west-bromwich-albion-v-queens-park-rangers,41,goal,Callum Styles,West Bromwich Albion,The Hawthorns
+2026-09-12-worthing-v-barrow,17,yellow,Danny Amos,Barrow,Sussex Transport Community Stadium
+2026-09-12-worthing-v-barrow,20,goal,Mikey Lane,Barrow,Sussex Transport Community Stadium
+2026-09-12-worthing-v-barrow,31,sub_off,Jose Marquez,Worthing,Sussex Transport Community Stadium
+2026-09-12-worthing-v-barrow,31,sub_on,Charley Kendall,Worthing,Sussex Transport Community Stadium
+2026-09-12-worthing-v-barrow,38,yellow,Isaac Marriott,Barrow,Sussex Transport Community Stadium
+2026-09-12-worthing-v-barrow,45,goal,Mikey Lane,Barrow,Sussex Transport Community Stadium
+2026-09-12-worthing-v-barrow,45,yellow,Michael Jordan Williams,Barrow,Sussex Transport Community Stadium
