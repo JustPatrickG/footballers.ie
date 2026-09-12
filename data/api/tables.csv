@@ -138,14 +138,14 @@ National League,117,1,Boreham Wood,2488,7,5,2,0,17,9,8,17
 National League,117,2,Harrogate Town,7946,7,5,1,1,18,10,8,16
 National League,117,3,AFC Fylde,282396,7,4,2,1,17,10,7,14
 National League,117,4,Kidderminster Harriers,10284,7,4,2,1,12,7,5,14
-National League,117,5,Aldershot Town,8465,7,4,2,1,9,5,4,14
-National League,117,6,Southend United,8652,7,4,1,2,12,9,3,13
+National League,117,5,Southend United,8652,7,4,2,1,14,10,4,14
+National League,117,6,Aldershot Town,8465,7,4,2,1,9,5,4,14
 National League,117,7,Forest Green Rovers,9828,7,4,0,3,11,10,1,12
 National League,117,8,Hornchurch,4047,7,4,0,3,10,11,-1,12
 National League,117,9,Sutton United,158316,7,4,0,3,7,8,-1,12
-National League,117,10,Carlisle United,10196,7,3,2,2,14,10,4,11
-National League,117,11,Yeovil Town,10198,7,3,2,2,13,12,1,11
-National League,117,12,Eastleigh,161803,7,3,2,2,9,8,1,11
+National League,117,10,Yeovil Town,10198,7,3,2,2,13,12,1,11
+National League,117,11,Eastleigh,161803,7,3,2,2,9,8,1,11
+National League,117,12,Carlisle United,10196,7,2,3,2,15,12,3,9
 National League,117,13,FC Halifax Town,10195,7,3,0,4,12,10,2,9
 National League,117,14,Hartlepool United,8488,7,3,0,4,5,6,-1,9
 National League,117,15,Altrincham,9915,7,3,0,4,8,13,-5,9
@@ -173,20 +173,20 @@ First Division,218,2,UCD,1578,31,14,7,10,55,40,15,49
 First Division,218,3,Bray Wanderers,1629,31,13,8,10,59,44,15,47
 First Division,218,4,Cobh Ramblers,2383,31,13,6,12,38,43,-5,45
 First Division,218,5,Kerry FC,1426348,31,11,9,11,39,36,3,42
-First Division,218,6,Longford Town,4569,30,11,8,11,41,39,2,41
+First Division,218,6,Longford Town,4569,31,11,8,12,41,40,1,41
 First Division,218,7,Athlone Town,2378,31,11,8,12,33,36,-3,41
 First Division,218,8,Wexford FC,62337,31,10,7,14,34,46,-12,37
-First Division,218,9,Treaty United,1233534,30,7,9,14,29,45,-16,30
+First Division,218,9,Treaty United,1233534,31,8,9,14,30,45,-15,33
 First Division,218,10,Finn Harps,1627,31,6,7,18,29,63,-34,25
 League of Ireland First Division,218,1,Cork City,2201,31,21,5,5,64,29,35,68
 League of Ireland First Division,218,2,UCD,1578,31,14,7,10,55,40,15,49
 League of Ireland First Division,218,3,Bray Wanderers,1629,31,13,8,10,59,44,15,47
 League of Ireland First Division,218,4,Cobh Ramblers,2383,31,13,6,12,38,43,-5,45
 League of Ireland First Division,218,5,Kerry FC,1426348,31,11,9,11,39,36,3,42
-League of Ireland First Division,218,6,Longford Town,4569,30,11,8,11,41,39,2,41
+League of Ireland First Division,218,6,Longford Town,4569,31,11,8,12,41,40,1,41
 League of Ireland First Division,218,7,Athlone Town,2378,31,11,8,12,33,36,-3,41
 League of Ireland First Division,218,8,Wexford FC,62337,31,10,7,14,34,46,-12,37
-League of Ireland First Division,218,9,Treaty United,1233534,30,7,9,14,29,45,-16,30
+League of Ireland First Division,218,9,Treaty United,1233534,31,8,9,14,30,45,-15,33
 League of Ireland First Division,218,10,Finn Harps,1627,31,6,7,18,29,63,-34,25
 USL Championship,8972,1,Tampa Bay Rowdies,197328,23,14,6,3,40,20,20,48
 USL Championship,8972,1,New Mexico United,1003208,22,12,5,5,33,23,10,41
@@ -291,8 +291,8 @@ LaLiga,87,4,Real Madrid,8633,4,3,0,1,10,3,7,9
 LaLiga,87,5,Real Betis,8603,4,3,0,1,5,5,0,9
 LaLiga,87,6,Deportivo A Coruña,9783,4,2,2,0,8,5,3,8
 LaLiga,87,7,Espanyol,8558,5,2,1,2,8,5,3,7
-LaLiga,87,8,Atlético Madrid,9906,4,2,1,1,7,6,1,7
-LaLiga,87,9,Athletic Club,8315,5,2,1,2,6,5,1,7
+LaLiga,87,8,Athletic Club,8315,5,2,1,2,7,6,1,7
+LaLiga,87,9,Atlético Madrid,9906,4,2,1,1,7,6,1,7
 LaLiga,87,10,Racing Santander,8696,5,2,1,2,9,9,0,7
 LaLiga,87,11,Real Sociedad,8560,5,2,1,2,6,8,-2,7
 LaLiga,87,12,Osasuna,8371,5,2,1,2,5,8,-3,7
@@ -302,31 +302,31 @@ LaLiga,87,15,Getafe,8305,4,1,1,2,2,5,-3,4
 LaLiga,87,16,Celta Vigo,9910,5,0,3,2,2,5,-3,3
 LaLiga,87,17,Villarreal,10205,4,0,2,2,6,8,-2,2
 LaLiga,87,18,Málaga,9864,4,0,2,2,1,7,-6,2
-LaLiga,87,19,Elche,10268,5,0,2,3,5,12,-7,2
+LaLiga,87,19,Elche,10268,5,0,2,3,6,13,-7,2
 LaLiga,87,20,Valencia,10267,5,0,1,4,1,10,-9,1
 2. Bundesliga,146,1,1. FC Nürnberg,8165,5,4,1,0,15,6,9,13
 2. Bundesliga,146,2,Hertha BSC,8177,4,4,0,0,12,5,7,12
-2. Bundesliga,146,3,Magdeburg,8188,5,3,0,2,10,8,2,9
-2. Bundesliga,146,4,FC Heidenheim,94937,4,3,0,1,11,10,1,9
-2. Bundesliga,146,5,Wolfsburg,8721,4,2,2,0,10,6,4,8
+2. Bundesliga,146,3,Wolfsburg,8721,5,2,3,0,10,6,4,9
+2. Bundesliga,146,4,Magdeburg,8188,5,3,0,2,10,8,2,9
+2. Bundesliga,146,5,FC Heidenheim,94937,4,3,0,1,11,10,1,9
 2. Bundesliga,146,6,Kaiserslautern,8350,5,2,2,1,5,4,1,8
 2. Bundesliga,146,7,Bochum,9911,5,2,1,2,4,4,0,7
 2. Bundesliga,146,8,VfL Osnabrück,9775,4,2,0,2,7,8,-1,6
 2. Bundesliga,146,9,Greuther Fürth,8357,5,1,2,2,8,10,-2,5
 2. Bundesliga,146,10,Karlsruher SC,8295,4,1,2,1,6,8,-2,5
 2. Bundesliga,146,11,Eintracht Braunschweig,9776,5,1,1,3,12,12,0,4
-2. Bundesliga,146,12,Energie Cottbus,8398,4,1,1,2,10,12,-2,4
-2. Bundesliga,146,13,Arminia Bielefeld,9912,5,1,1,3,8,10,-2,4
-2. Bundesliga,146,14,Hannover 96,9904,5,1,1,3,5,8,-3,4
-2. Bundesliga,146,15,Darmstadt,8262,5,1,1,3,4,8,-4,4
-2. Bundesliga,146,16,Dynamo Dresden,8480,5,1,1,3,7,12,-5,4
-2. Bundesliga,146,17,St. Pauli,8152,4,0,3,1,6,7,-1,3
+2. Bundesliga,146,12,St. Pauli,8152,5,0,4,1,6,7,-1,4
+2. Bundesliga,146,13,Energie Cottbus,8398,4,1,1,2,10,12,-2,4
+2. Bundesliga,146,14,Arminia Bielefeld,9912,5,1,1,3,8,10,-2,4
+2. Bundesliga,146,15,Hannover 96,9904,5,1,1,3,5,8,-3,4
+2. Bundesliga,146,16,Darmstadt,8262,5,1,1,3,4,8,-4,4
+2. Bundesliga,146,17,Dynamo Dresden,8480,5,1,1,3,7,12,-5,4
 2. Bundesliga,146,18,Holstein Kiel,8150,4,0,3,1,6,8,-2,3
 First Professional League,270,1,Levski Sofia,8632,8,8,0,0,21,4,17,24
 First Professional League,270,2,Ludogorets Razgrad,210173,8,6,2,0,14,6,8,20
-First Professional League,270,3,CSKA 1948,944215,9,6,1,2,16,8,8,19
-First Professional League,270,4,CSKA Sofia,10144,7,5,2,0,17,5,12,17
-First Professional League,270,5,Arda Kardzhali,944173,8,5,1,2,13,7,6,16
+First Professional League,270,3,CSKA 1948,944215,9,6,1,2,17,9,8,19
+First Professional League,270,4,Arda Kardzhali,944173,9,6,1,2,14,7,7,19
+First Professional League,270,5,CSKA Sofia,10144,8,5,2,1,17,6,11,17
 First Professional League,270,6,Slavia Sofia,10134,8,2,4,2,8,6,2,10
 First Professional League,270,7,Botev Plovdiv,10131,8,3,1,4,11,14,-3,10
 First Professional League,270,8,Spartak Varna,10145,8,2,3,3,10,14,-4,9
@@ -335,7 +335,7 @@ First Professional League,270,10,Botev Vratsa,187880,8,2,1,5,7,17,-10,7
 First Professional League,270,11,Lokomotiv Plovdiv,10129,8,2,0,6,4,10,-6,6
 First Professional League,270,12,Cherno More Varna,10141,9,1,2,6,10,19,-9,5
 First Professional League,270,13,PFC Lokomotiv Sofia 1929,10128,8,0,4,4,10,16,-6,4
-First Professional League,270,14,Dunav Ruse,46474,9,1,1,7,7,16,-9,4
+First Professional League,270,14,Dunav Ruse,46474,9,1,1,7,8,17,-9,4
 Highland / Lowland,9545,1,Tranent,1215940,7,7,0,0,15,3,12,21
 Highland / Lowland,9545,1,Auchinleck Talbot,183952,8,6,1,1,31,8,23,19
 Highland / Lowland,9545,1,Brora Rangers,97904,9,7,2,0,28,8,20,23
@@ -387,15 +387,15 @@ Highland / Lowland,9545,16,Invergordon,1809963,9,2,1,6,10,20,-10,7
 Highland / Lowland,9545,17,Newton Stewart,97913,7,0,1,6,7,31,-24,1
 Highland / Lowland,9545,17,Wick Academy,1776,9,1,0,8,5,26,-21,3
 Highland / Lowland,9545,18,Rothes,97917,8,1,0,7,6,33,-27,3
-Serie A,55,1,Lazio,8543,4,4,0,0,6,1,5,12
+Serie A,55,1,Lazio,8543,4,3,1,0,6,3,3,10
 Serie A,55,2,Roma,8686,3,3,0,0,10,1,9,9
 Serie A,55,3,Inter,8636,3,3,0,0,8,3,5,9
-Serie A,55,4,Como,10171,3,2,1,0,7,3,4,7
-Serie A,55,5,Frosinone,9891,4,2,1,1,7,4,3,7
-Serie A,55,6,Juventus,9885,3,2,1,0,4,1,3,7
-Serie A,55,7,Milan,8564,4,2,1,1,5,4,1,7
-Serie A,55,8,Atalanta,8524,3,2,0,1,4,3,1,6
-Serie A,55,9,Cagliari,8529,3,2,0,1,2,1,1,6
+Serie A,55,4,Milan,8564,4,2,2,0,7,4,3,8
+Serie A,55,5,Como,10171,3,2,1,0,7,3,4,7
+Serie A,55,6,Frosinone,9891,4,2,1,1,7,4,3,7
+Serie A,55,7,Juventus,9885,3,2,1,0,4,1,3,7
+Serie A,55,8,Atalanta,8524,4,2,1,1,4,3,1,7
+Serie A,55,9,Cagliari,8529,4,2,1,1,2,1,1,7
 Serie A,55,10,Sassuolo,7943,3,1,1,1,5,5,0,4
 Serie A,55,11,Udinese,8600,3,1,1,1,5,5,0,4
 Serie A,55,12,Napoli,9875,3,1,0,2,5,5,0,3
@@ -411,20 +411,20 @@ Super Lig,71,1,Beşiktaş,10188,5,4,0,1,12,4,8,12
 Super Lig,71,2,Galatasaray,8637,4,3,1,0,12,6,6,10
 Super Lig,71,3,Kocaelispor,1569,4,3,0,1,5,3,2,9
 Super Lig,71,4,Rizespor,2166,5,3,0,2,5,4,1,9
-Super Lig,71,5,Trabzonspor,9752,4,2,1,1,9,4,5,7
-Super Lig,71,6,Çorum FK,357274,5,2,1,2,12,10,2,7
-Super Lig,71,7,Amed Sportif,96498,4,2,1,1,7,5,2,7
-Super Lig,71,8,Gaziantep FK,4081,4,2,1,1,7,5,2,7
-Super Lig,71,9,Alanyaspor,4678,4,2,1,1,4,3,1,7
+Super Lig,71,5,Alanyaspor,4678,5,2,2,1,6,5,1,8
+Super Lig,71,6,Trabzonspor,9752,5,2,1,2,9,5,4,7
+Super Lig,71,7,Çorum FK,357274,5,2,1,2,12,10,2,7
+Super Lig,71,8,Amed Sportif,96498,4,2,1,1,7,5,2,7
+Super Lig,71,9,Gaziantep FK,4081,4,2,1,1,7,5,2,7
 Super Lig,71,10,Gençlerbirliği,7800,4,2,1,1,4,7,-3,7
 Super Lig,71,11,Fenerbahçe,8695,4,2,0,2,8,6,2,6
 Super Lig,71,12,Kasımpaşa,4685,4,1,3,0,5,4,1,6
 Super Lig,71,13,Başakşehir,1933,4,1,1,2,6,6,0,4
 Super Lig,71,14,Samsunspor,9750,5,1,1,3,6,11,-5,4
 Super Lig,71,15,Erzurumspor FK,281467,5,1,1,3,2,11,-9,4
-Super Lig,71,16,Eyüpspor,4681,5,1,0,4,2,8,-6,3
-Super Lig,71,17,Göztepe,1925,4,0,1,3,7,11,-4,1
-Super Lig,71,18,Konyaspor,8622,4,0,0,4,3,8,-5,0
+Super Lig,71,16,Konyaspor,8622,5,1,0,4,4,8,-4,3
+Super Lig,71,17,Eyüpspor,4681,5,1,0,4,2,8,-6,3
+Super Lig,71,18,Göztepe,1925,5,0,2,3,9,13,-4,2
 A-League,113,1,Adelaide United,8008,0,0,0,0,0,0,0,0
 A-League,113,2,Auckland FC,1642068,0,0,0,0,0,0,0,0
 A-League,113,3,Brisbane Roar FC,8118,0,0,0,0,0,0,0,0
@@ -462,10 +462,10 @@ Eredivisie,57,2,PSV Eindhoven,8640,5,4,1,0,18,6,12,13
 Eredivisie,57,3,FC Twente,8611,6,4,1,1,12,5,7,13
 Eredivisie,57,4,Feyenoord,10235,5,3,2,0,13,7,6,11
 Eredivisie,57,5,Excelsior,10218,5,3,1,1,12,5,7,10
-Eredivisie,57,6,Fortuna Sittard,6422,5,3,1,1,11,9,2,10
-Eredivisie,57,7,Go Ahead Eagles,6433,6,2,3,1,14,12,2,9
-Eredivisie,57,8,FC Groningen,8674,6,2,2,2,11,12,-1,8
-Eredivisie,57,9,Ajax,8593,4,2,1,1,9,5,4,7
+Eredivisie,57,6,Ajax,8593,5,3,1,1,10,5,5,10
+Eredivisie,57,7,Fortuna Sittard,6422,6,3,1,2,11,10,1,10
+Eredivisie,57,8,Go Ahead Eagles,6433,6,2,3,1,15,13,2,9
+Eredivisie,57,9,FC Groningen,8674,6,2,2,2,12,13,-1,8
 Eredivisie,57,10,NEC Nijmegen,8464,5,2,1,2,11,9,2,7
 Eredivisie,57,11,Sparta Rotterdam,8614,5,1,2,2,9,9,0,5
 Eredivisie,57,12,SC Heerenveen,10228,5,1,2,2,7,9,-2,5
